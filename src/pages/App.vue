@@ -16,6 +16,9 @@
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="radiobutton">Radiobutton</router-link>
                 </li>
+                <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="input">Input</router-link>
+                </li>
             </ul>
         </li>
         <li class="aside-menu__item"></li>

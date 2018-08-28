@@ -1,7 +1,7 @@
 .radio-button{
   display: inline-block;
   cursor: pointer;
-  &-input{
+  &-element{
     display: none;
   }
   &-container{
@@ -36,14 +36,14 @@
     }
 
 
-    .radio-button-input:checked+&{
+    .radio-button-element:checked+&{
       &:after {
         background-color: @b2c-purple-low;
         opacity: 1;
         visibility: visible;
       }
     }
-    .radio-button-input[disabled] + &{
+    .radio-button-element[disabled] + &{
       cursor: default;
       &:before{
         border-color: @b2b-cool-gray05;

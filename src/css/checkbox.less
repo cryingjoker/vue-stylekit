@@ -1,7 +1,7 @@
 .checkbox{
   display: inline-block;
   cursor: pointer;
-  &-input{
+  &-element{
     display: none;
   }
   &-icon{
@@ -29,14 +29,14 @@
       top: 0;
     }
 
-    .checkbox-input:checked+&{
+    .checkbox-element:checked+&{
       .checkbox-icon{
         stroke: @b2c-purple-low;
         opacity: 1;
         visibility: visible;
       }
     }
-    .checkbox-input[disabled] + &{
+    .checkbox-element[disabled] + &{
       cursor: default;
       &:before{
         border-color: @b2b-cool-gray05;

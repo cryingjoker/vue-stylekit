@@ -1,6 +1,6 @@
 <template>
     <label class="radio-button">
-        <input type="checkbox" :disabled="isDisabled" class="radio-button-input">
+        <input type="checkbox" :disabled="isDisabled" class="radio-button-element">
         <div class="radio-button-container">
             <slot></slot>
         </div>
@@ -14,7 +14,6 @@
         props:['isDisabled'],
         name: "rt-radio-button",
         mounted: function () {
-            console.info('-->>',this)
         }
     };
 </script>

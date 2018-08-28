@@ -1,0 +1,55 @@
+.input{
+  display: inline-block;
+  position: relative;
+  min-width: 211px;
+  &-element{
+    border: none;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+
+  }
+  &-hover-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: @form-elements-border-color;
+    transition-timing-function: ease-in-out;
+    transition-property: background, height;
+    transition-duration: 0.2s;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      transition-timing-function: ease-in-out;
+      transition-property: background, width;
+      transition-duration: 0.4s;
+      background: @b2b-purple-low;
+    }
+    .input-element:hover+&,
+    .input-element:focus+&{
+      height: 2px;
+      &:before{
+        width: 100%;
+      }
+    }
+    .input-element[disabled]+&{
+      &:before{
+        height: 0;
+        border-bottom: 1px dotted @b2b-cool-gray;
+      }
+    }
+    .input--error &{
+      height: 2px;
+      &:before{
+        background-color: @error-color;
+      }
+    }
+  }
+
+
+}
