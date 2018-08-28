@@ -1,5 +1,5 @@
 {
-  "name": "vue stylekit",
+  "name": "vue_stylekit",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -33,7 +33,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-vue-app": "^2.0.0",
     "chai": "^4.1.1",
-    "cross-env": "^5.1.3",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.23.1",
     "eslint": "^4.0.0",
     "eslint-loader": "^1.7.1",
