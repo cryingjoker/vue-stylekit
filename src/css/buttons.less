@@ -1,0 +1,121 @@
+.button{
+  border-radius: 5px;
+  height: 49px;
+  margin: 0px;
+  font-size: 16px;
+  text-transform: none;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: cubic-bezier(.1,.4,1,.39);
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  .ripple-wave{
+    background-color: @default-wive-color;
+  }
+  &-with-ripple{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &+&{
+    margin-left: 19px;
+  }
+  &-vertical{
+    display: table;
+    &+&{
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  &-small{
+    font-size: 14px;
+    height: 34px;
+    .ripple{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    //&:active {
+    //  .ripple-wave {
+    //    transform: scale(30) translateZ(0);
+    //    opacity: 0.27;
+    //  }
+    //}
+  }
+  &:before{
+    opacity: 0;
+    display: none;
+  }
+  &-orange{
+    color: #fff;
+    background-color: @b2b-orange-hight;
+    &:hover,
+    &:active{
+      background-color: @b2b-orange-low;
+    }
+    &[disabled]{
+      background-color: @disable-button-color;
+    }
+    .ripple-wave {
+      background-color: @color-button-wive-color;
+    }
+
+  }
+  &-orange-border{
+    border: 2px solid @b2b-orange-hight;
+    background-color: transparent;
+    &:hover,
+    &:active {
+      background-color: transparent !important;
+    }
+    &[disabled]{
+      border-color: @disable-button-color;
+      color: @disable-button-color;
+    }
+    .ripple-wave {
+      background-color: @b2b-orange-low;
+    }
+
+  }
+  &-purple{
+    color: #fff;
+    background-color: @b2b-purple-hight;
+    &:hover,
+    &:active{
+        background-color: @b2b-purple-low;
+    }
+    &[disabled]{
+      background-color: @disable-button-color;
+    }
+    .ripple-wave {
+      background-color: @color-button-wive-color;
+    }
+  }
+  &-purple-border{
+    border:2px solid @b2b-purple-hight;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent !important;
+    }
+    .ripple{
+      box-shadow: none;
+    }
+    &[disabled]{
+      border-color: @disable-button-color;
+    }
+
+    .ripple-wave{
+      background-color: @b2b-purple-low;
+    }
+    &[disabled]{
+      border-color: @disable-button-color;
+      color: @disable-button-color;
+    }
+
+  }
+  &-transparent{
+    &[disabled]{
+      color: @disable-button-color;
+    }
+  }
+}
