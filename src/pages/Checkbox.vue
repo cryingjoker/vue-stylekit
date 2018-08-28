@@ -1,13 +1,22 @@
 <template>
-    <!--<div class="app-content">-->
+    <div class="app-content">
 
-        <!--<div class="app-title"></div>-->
-        <!--<div class="app-body">-->
-            <!--<div class="app-row">-->
-                <!--<rt-checkbox v-model="array" value="1">Array</rt-checkbox>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+        <div class="app-title"></div>
+        <div class="app-body">
+            <div class="app-row">
+                <p>checkbox</p>
+            </div>
+            <div class="app-row">
+                <rt-checkbox>Интернет</rt-checkbox>
+            </div>
+            <div class="app-row">
+                <p>disabled checkbox</p>
+            </div>
+            <div class="app-row">
+                <rt-checkbox :is-disabled="true">Интернет</rt-checkbox>
+            </div>
+        </div>
+    </div>
 
 
 </template>
@@ -19,8 +28,7 @@
     componentsList[Checkbox.name] = Checkbox;
     export default {
         name: 'Checkbox',
-        components: {componentsList},
-
+        components: componentsList,
         methods: {},
         mounted() {
         },
