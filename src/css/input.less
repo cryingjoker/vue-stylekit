@@ -1,10 +1,4 @@
 .input{
-  display: inline-block;
-  position: relative;
-  min-width: 211px;
-  height: 52px;
-  padding-top: 22px;
-  box-sizing: border-box;
   &-element{
     border: none;
     width: 100%;
@@ -24,80 +18,19 @@
     top: 25px;
     cursor: pointer;
     z-index: 2;
-    opacity: 0.3;
+    opacity: 0.7;
     transition-timing-function: ease-in-out;
     transition-property: opacity;
     transition-duration: 0.2s;
     animation: 0.3s showClearInput ease-in-out;
-
+    &__icon{
+      fill: @b2b-black;
+    }
     &:hover{
       opacity: 1;
     }
   }
-  &-placeholder{
-    position: absolute;
-    top: 22px;
-    transition-timing-function: ease-in-out;
-    transition-property: background, font-size, top, color;
-    transition-duration: 0.2s;
-    z-index: 1;
 
-    .input-element:focus+.input-hover-line+&,
-    &--hidden{
-      top: 0;
-      font-size: 14px;
-      color: @b2b-cool-gray;
-      .input-element:focus + .input-hover-line + &,
-      .input:hover &{
-        color: @b2b-gray;
-      }
-    }
-  }
-  &-hover-line{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    width: 100%;
-    background-color: @form-elements-border-color;
-    transition-timing-function: ease-in-out;
-    transition-property: background, height;
-    transition-duration: 0.2s;
-    &:before{
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 100%;
-      transition-timing-function: ease-in-out;
-      transition-property: background, width;
-      transition-duration: 0.4s;
-      background: @b2b-purple-low;
-    }
-    .input-element:hover+&,
-    .input-element:focus+&{
-      height: 2px;
-      &:before{
-        width: 100%;
-      }
-    }
-    .input-element[disabled]+&{
-      background-image: url('data:image/svg+xml;utf8,<svg width="5" height="2" xmlns="http://www.w3.org/2000/svg"><path d="M.535 1.25h5.528" stroke="@{b2b-gray}" fill="none" fill-rule="evenodd" stroke-dasharray="3" stroke-linecap="square"/></svg>');
-      height: 2px;
-      background-color: transparent;
-      &:before{
-        height: 0;
-        width: 0;
-      }
-    }
-    .input--error &{
-      height: 2px;
-      &:before{
-        background-color: @error-color;
-        width: 100%;
-      }
-    }
-  }
   &-error-message{
     position: absolute;
     color: @error-color;
@@ -131,7 +64,7 @@
     transform: rotate(60deg);
   }
   100%{
-    opacity: 0.3;
+    opacity: 0.7;
     visibility: visible;
     transform: rotate(0deg);
   }

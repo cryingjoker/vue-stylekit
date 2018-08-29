@@ -1,22 +1,12 @@
 <template>
-    <div class="input" :class="{'input--error':hasError}">
+    <div class="input text-field" :class="{'input--error':hasError}">
         <input type="text" class="input-element" @input="inputHandler">
-        <div class="input-hover-line"></div>
-        <div v-if="!!placeholder" class="input-placeholder" :class="{'input-placeholder--hidden':hasInputText }">
+        <div class="text-field__line"></div>
+        <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
             {{placeholder}}
         </div>
         <div class="input-clear" v-if="!!hasInputText & !disabled" @click="clearInput">
-            <svg class="input-clear__icon" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"
-                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Elements" transform="translate(-246.000000, -2777.000000)" fill="#000000">
-                        <g id="clear" transform="translate(246.000000, 2777.000000)">
-                            <polygon id="Shape"
-                                     points="14 1.4 12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4 12.6 14 14 12.6 8.4 7"></polygon>
-                        </g>
-                    </g>
-                </g>
-            </svg>
+            <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z" fill-rule="evenodd"/></svg>
         </div>
         <p class="input-error-message" v-if="!!hasError">{{errorMessage}}</p>
     </div>

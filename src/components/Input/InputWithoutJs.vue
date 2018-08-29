@@ -1,5 +1,5 @@
 <template>
-    <div class="input" :class="{'input--error':hasError}">
+    <div class="input text-field" :class="{'input--error':hasError}">
         <input type="text" class="input-element" :placeholder="placeholder" >
         <div class="input-hover-line"></div>
         <p class="input-error-message">{{errorMessage}}</p>

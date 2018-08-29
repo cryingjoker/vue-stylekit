@@ -1,0 +1,19 @@
+.floating-placeholder{
+  position: absolute;
+  top: 22px;
+  transition-timing-function: ease-in-out;
+  transition-property: background, font-size, top, color;
+  transition-duration: 0.2s;
+  z-index: 1;
+
+  .input-element:focus+.input-hover-line+&,
+  &--go-top{
+    top: 0;
+    font-size: 14px;
+    color: @b2b-cool-gray;
+    .input-element:focus + .input-hover-line + &,
+    .text-field:hover &{
+      color: @b2b-gray;
+    }
+  }
+}

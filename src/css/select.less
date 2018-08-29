@@ -1,0 +1,31 @@
+.select {
+  max-width: 211px;
+  &-arrow{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    &__icon{
+      fill: @b2b-black;
+      opacity: 0.7;
+      transition-timing-function: ease-in-out;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+      .select:hover &{
+        opacity: 1;
+      }
+    }
+  }
+  &-value{
+    margin-top: -5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  &-input{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    padding-right: 20px;
+  }
+}
