@@ -3,10 +3,11 @@
   &__inner{
     display: block;
     text-align: left;
+    width: 100%;
   }
   &-arrow{
     position: absolute;
-    top: 25px;
+    top: 30px;
     right: 0;
     transform: rotate(0deg);
     transition-timing-function: ease-in-out;
@@ -65,20 +66,25 @@
       padding-bottom: 7px;
       padding-left: 14px;
       padding-right: 14px;
-      transition-timing-function: ease-in-out;
-      transition-property: background, color;
-      transition-duration: 0.2s;
       line-height: 20px;
       cursor: pointer;
       border: none;
       width: 100%;
       display: block;
       text-align: left;
+      transition-timing-function: ease-in-out;
+      transition-property: background, color;
+      transition-duration: 0.05s;
+      .select-option--select &{
+        font-weight: 600;
+      }
       .select-option--select &,
       &:focus,
       &:hover {
         background-color: @b2b-purple-hight;
-        color: white
+        color: white;
+        transition-duration: 0s;
+
 
       }
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="select text-field" :class="{'select--error':hasError}">
-        <keep-alive>
-            <label class="floating-placeholder floating-placeholder--go-top">{{label}}</label>
+        <label>
+            <p class="floating-placeholder floating-placeholder--go-top">{{label}}</p>
             <div class="select-value">
                 <p class="select-input">{{localValue}}</p>
                 <div class="select-arrow">
@@ -10,45 +10,121 @@
                     </svg>
                 </div>
             </div>
-        </keep-alive>
-        <div class="text-field__line"></div>
-        <div class="select-list">
-            <slot></slot>
-        </div>
+            <div class="text-field__line"></div>
+            <select class="select-list">
+                <slot></slot>
+            </select>
+        </label>
 
     </div>
 </template>
-
 <script>
     export default {
         props: {
-            'options': {},
-            'hasError': Boolean,
-            'label': String,
-            'value': String
+            options: {},
+            hasError: Boolean,
+            label: String,
+            value: String
         },
         data() {
             return {
-                localValue: this.value ? this.value : '' ,
-            }
+                localValue: this.value ? this.value : "",
+                RtSelect: {
+                    setValue: this.setValue,
+                    selectedValue: this.value
+                },
+                isOpen: false,
+                selected: {}
+            };
         },
-        inject: {
-            selected : {}
-        },
-
         name: "rt-select-without-js",
         methods: {
-            setValue() {
-                this.selected = this.value;
+            setValue(value) {
+                this.localValue = value;
+                this.RtSelect.selectedValue = value;
+                this.emitSelected(this.localValue);
+                this.isOpen = false;
+                this.removeBindEvents();
             },
-        },
-        watch:{
-            localValue (val) {
-                this.$emit('input', val)
+            toggleOpen() {
+                this.isOpen = !this.isOpen;
+                if (this.isOpen) {
+                    this.scrollToSelected();
+                    setTimeout(() => {
+                        this.bindEvents();
+                    });
+                } else {
+                    this.removeBindEvents();
+                }
             },
+            emitSelected(value) {
+                this.$emit("rt-selected", value);
+            },
+            bindMouseEvents(e) {
+                if (!e.target.closest(".select--is-open")) {
+                    this.isOpen = false;
+                    this.removeBindEvents()
+                }
+            },
+            bindKeyboardEvents(e) {
+                if (e.keyCode && e.keyCode === 27) {
+                    this.isOpen = false;
+                    this.removeBindEvents()
+                }
+                else {
+                    if (e.keyCode === 38 || e.keyCode === 40) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        let selectedItem = this.$el.querySelector(".select-option--select");
+                        const focusedItem = this.$el.querySelector(".select-option__inner:focus");
+                        const optionItems = this.$el.querySelectorAll(".select-option");
+                        const optionItemsLength = optionItems.length;
+                        if (focusedItem) {
+                            selectedItem = focusedItem.parentNode
+                        }
+                        let selectedIndex = [...selectedItem.parentNode.children].indexOf((selectedItem));
+
+                        if (e.keyCode === 38) {
+                            selectedIndex = (selectedIndex - 1 + optionItemsLength) % optionItemsLength;
+                        } else {
+                            selectedIndex = (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
+                        }
+                        optionItems[selectedIndex].querySelector('.select-option__inner').focus();
+
+                    }
+                }
+            },
+            removeBindEvents() {
+                document.removeEventListener("click", this.bindMouseEvents);
+                document.removeEventListener("keydown", this.bindKeyboardEvents);
+            },
+            bindEvents() {
+                document.addEventListener("click", this.bindMouseEvents);
+                document.addEventListener("keydown", this.bindKeyboardEvents);
+            },
+            scrollToSelected() {
+                const selectElement = this.$el.querySelector(".select-option--select");
+                if (selectElement) {
+                    const scrollPosition =
+                        selectElement.offsetTop - selectElement.parentNode.offsetTop;
+                    selectElement.parentNode.scrollTop = scrollPosition;
+                }
+            }
         },
-        mounted () {
-            this.setValue();
+        beforeDestroy() {
+            this.removeBindEvents();
+        },
+        provide() {
+            const RtSelect = this.RtSelect;
+            return {RtSelect};
+        },
+        watch: {
+            localValue(val) {
+                this.$emit("input", val);
+            }
+        },
+        mounted() {
+            this.setValue(this.value);
         }
     };
 </script>
