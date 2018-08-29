@@ -1,15 +1,16 @@
 <template>
     <div class="select text-field" :class="{'select--error':hasError, 'select--is-open' : isOpen}">
-        <label class="floating-placeholder floating-placeholder--go-top">{{label}}</label>
-        <div class="select-value" @click="toggleOpen">
-            <p class="select-input">{{localValue}}</p>
-            <div class="select-arrow">
-                <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0l5 5 5-5z" fill-rule="evenodd"/>
-                </svg>
+        <button class="select__inner" @click="toggleOpen">
+            <label class="floating-placeholder floating-placeholder--go-top">{{label}}</label>
+            <div class="select-value">
+                <p class="select-input">{{localValue}}</p>
+                <div class="select-arrow">
+                    <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0l5 5 5-5z" fill-rule="evenodd"/>
+                    </svg>
+                </div>
             </div>
-        </div>
-
+        </button>
         <div class="text-field__line"></div>
         <div class="select-list">
             <slot></slot>
@@ -42,6 +43,7 @@
                 this.RtSelect.selectedValue = value;
                 this.emitSelected(this.localValue);
                 this.isOpen = false;
+                this.removeBindEvents();
             },
             toggleOpen() {
                 this.isOpen = !this.isOpen;
@@ -57,24 +59,47 @@
             emitSelected(value) {
                 this.$emit("rt-selected", value);
             },
-            closeByEvent(e) {
+            bindMouseEvents(e) {
+                if (!e.target.closest(".select--is-open")) {
+                    this.isOpen = false;
+                    this.removeBindEvents()
+                }
+            },
+            bindKeyboardEvents(e) {
                 if (e.keyCode && e.keyCode === 27) {
                     this.isOpen = false;
                     this.removeBindEvents()
-                } else {
-                    if (!e.target.closest(".select--is-open")) {
-                        this.isOpen = false;
-                        this.removeBindEvents()
+                }
+                else {
+                    if (e.keyCode === 38 || e.keyCode === 40) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        let selectedItem = this.$el.querySelector(".select-option--select");
+                        const focusedItem = this.$el.querySelector(".select-option__inner:focus");
+                        const optionItems = this.$el.querySelectorAll(".select-option");
+                        const optionItemsLength = optionItems.length;
+                        if (focusedItem) {
+                            selectedItem = focusedItem.parentNode
+                        }
+                        let selectedIndex = [...selectedItem.parentNode.children].indexOf((selectedItem));
+
+                        if (e.keyCode === 38) {
+                            selectedIndex = (selectedIndex - 1 + optionItemsLength) % optionItemsLength;
+                        } else {
+                            selectedIndex = (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
+                        }
+                        optionItems[selectedIndex].querySelector('.select-option__inner').focus();
+
                     }
                 }
             },
             removeBindEvents() {
-                document.removeEventListener("click", this.closeByEvent);
-                document.removeEventListener("keydown", this.closeByEvent);
+                document.removeEventListener("click", this.bindMouseEvents);
+                document.removeEventListener("keydown", this.bindKeyboardEvents);
             },
             bindEvents() {
-                document.addEventListener("click", this.closeByEvent);
-                document.addEventListener("keydown", this.closeByEvent);
+                document.addEventListener("click", this.bindMouseEvents);
+                document.addEventListener("keydown", this.bindKeyboardEvents);
             },
             scrollToSelected() {
                 const selectElement = this.$el.querySelector(".select-option--select");

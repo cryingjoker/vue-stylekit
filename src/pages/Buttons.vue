@@ -93,7 +93,6 @@
     componentsList[
         ButtonWithoutRippleComponent.name
         ] = ButtonWithoutRippleComponent;
-    console.info("componentsList", componentsList);
 
     export default {
         name: "app-buttons",

@@ -1,6 +1,8 @@
 <template>
     <div class="select-option" :class="optionClasses" @click="setSelection">
-        <slot></slot>
+        <button class="select-option__inner">
+            <slot></slot>
+        </button>
     </div>
 </template>
 
@@ -45,8 +47,6 @@
                 }
                 const slot = this.$slots.default;
                 return slot ? slot[0].text.trim() : ''
-
-
             }
         },
 

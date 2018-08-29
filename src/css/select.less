@@ -1,5 +1,9 @@
 .select {
   max-width: 211px;
+  &__inner{
+    display: block;
+    text-align: left;
+  }
   &-arrow{
     position: absolute;
     top: 25px;
@@ -56,20 +60,27 @@
     }
   }
   &-option{
-    padding-top: 6px;
-    padding-bottom: 7px;
-    padding-left: 14px;
-    padding-right: 14px;
-    transition-timing-function: ease-in-out;
-    transition-property: background, color;
-    transition-duration: 0.2s;
-    line-height: 20px;
-    cursor: pointer;
-    &--select,
-    &:hover{
-      background-color: @b2b-purple-hight;
-      color: white
+    &__inner {
+      padding-top: 6px;
+      padding-bottom: 7px;
+      padding-left: 14px;
+      padding-right: 14px;
+      transition-timing-function: ease-in-out;
+      transition-property: background, color;
+      transition-duration: 0.2s;
+      line-height: 20px;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      display: block;
+      text-align: left;
+      .select-option--select &,
+      &:focus,
+      &:hover {
+        background-color: @b2b-purple-hight;
+        color: white
 
+      }
     }
   }
 }
