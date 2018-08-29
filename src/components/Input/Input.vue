@@ -26,7 +26,6 @@
                 localValue: this.value ? this.value : '' ,
                 hasInputText: this.value ? this.value.length > 0 : false
             }
-
         },
         name: "rt-input",
         methods: {
@@ -48,7 +47,6 @@
                 this.localValue = '';
                 this.setValue();
             }
-
         },
         watch:{
             localValue (val) {

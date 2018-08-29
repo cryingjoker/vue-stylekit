@@ -1,7 +1,7 @@
 <template>
     <div class="input text-field" :class="{'input--error':hasError}">
         <input type="text" class="input-element" :placeholder="placeholder" >
-        <div class="input-hover-line"></div>
+        <div class="text-field__line"></div>
         <p class="input-error-message">{{errorMessage}}</p>
     </div>
 
