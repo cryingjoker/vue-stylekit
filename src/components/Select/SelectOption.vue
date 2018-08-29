@@ -11,12 +11,14 @@
     export default {
         inject: {
             RtSelect : {},
-
         },
-        props: {},
+        props: {
+            value: String
+        },
         data() {
             return {
-                localValue: this.value ? this.value : '' ,
+
+                localValue: this.text ? this.text : '' ,
                 isSelected: false
             }
         },
@@ -33,13 +35,13 @@
         },
         methods: {
             setIsSelected(){
-                this.isSelected = this.selectedValue === this.value;
+                this.isSelected = this.selectedValue === this.text;
             },
             setValue() {
-                this.value = this.getTextContent()
+                this.text = this.getTextContent()
             },
             setSelection(){
-                this.RtSelect.setValue(this.value);
+                this.RtSelect.setValue({text:this.text,value:this.key});
             },
             getTextContent() {
                 if (this.$el) {

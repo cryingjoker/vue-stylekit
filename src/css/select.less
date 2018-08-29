@@ -59,6 +59,17 @@
       visibility: visible;
       max-height: 200px;
     }
+    &-native{
+      display: block;
+      width: 100%;
+      border: none;
+      background: none;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+    }
   }
   &-option{
     &__inner {
@@ -74,7 +85,7 @@
       text-align: left;
       transition-timing-function: ease-in-out;
       transition-property: background, color;
-      transition-duration: 0.05s;
+      transition-duration: 0.06s;
       .select-option--select &{
         font-weight: 600;
       }

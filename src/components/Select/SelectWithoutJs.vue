@@ -1,19 +1,19 @@
 <template>
     <div class="select text-field" :class="{'select--error':hasError}">
         <label>
-            <p class="floating-placeholder floating-placeholder--go-top">{{label}}</p>
-            <div class="select-value">
-                <p class="select-input">{{localValue}}</p>
-                <div class="select-arrow">
-                    <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0l5 5 5-5z" fill-rule="evenodd"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="text-field__line"></div>
-            <select class="select-list">
+        <p class="floating-placeholder floating-placeholder--go-top">{{label}}</p>
+
+        <div class="select-value">
+            <select class="select-list-native">
                 <slot></slot>
             </select>
+            <div class="select-arrow">
+                <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0l5 5 5-5z" fill-rule="evenodd"/>
+                </svg>
+            </div>
+        </div>
+        <div class="text-field__line"></div>
         </label>
 
     </div>
@@ -24,7 +24,8 @@
             options: {},
             hasError: Boolean,
             label: String,
-            value: String
+            value: String,
+            text: String
         },
         data() {
             return {
@@ -124,7 +125,7 @@
             }
         },
         mounted() {
-            this.setValue(this.value);
+            this.setValue(this.text);
         }
     };
 </script>

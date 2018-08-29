@@ -23,14 +23,15 @@
             options: {},
             hasError: Boolean,
             label: String,
-            value: String
+            value: String,
+            text: String
         },
         data() {
             return {
-                localValue: this.value ? this.value : "",
+                localValue: this.text ? this.value : "",
                 RtSelect: {
                     setValue: this.setValue,
-                    selectedValue: this.value
+                    selectedValue: this.text
                 },
                 isOpen: false,
                 selected: {}
@@ -38,12 +39,14 @@
         },
         name: "rt-select",
         methods: {
-            setValue(value) {
-                this.localValue = value;
-                this.RtSelect.selectedValue = value;
+            setValue(data) {
+                const {value, text} = data;
+                this.localValue = text;
+                this.RtSelect.selectedValue = text;
                 this.emitSelected(this.localValue);
                 this.isOpen = false;
                 this.removeBindEvents();
+                this.$emit('select',data);
             },
             toggleOpen() {
                 this.isOpen = !this.isOpen;
@@ -123,7 +126,7 @@
             }
         },
         mounted() {
-            this.setValue(this.value);
+            this.setValue({text:this.text, value: this.value});
         }
     };
 </script>
