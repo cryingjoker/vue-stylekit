@@ -1,6 +1,6 @@
 <template>
-    <div class="select text-field" :class="{'select--error':hasError, 'select--is-open' : isOpen}">
-        <button class="select__inner" @click="toggleOpen">
+    <div class="select text-field" :class="selectClasses">
+        <button class="select__inner" @click="toggleOpen" :disabled="disabled">
             <label class="floating-placeholder floating-placeholder--go-top">{{label}}</label>
             <div class="select-value">
                 <p class="select-input">{{localValue}}</p>
@@ -12,7 +12,7 @@
             </div>
         </button>
         <div class="text-field__line"></div>
-        <div class="select-list">
+        <div class="select-list" v-if="!disabled">
             <slot></slot>
         </div>
     </div>
@@ -24,7 +24,8 @@
             hasError: Boolean,
             label: String,
             value: String,
-            text: String
+            text: String,
+            disabled: Boolean
         },
         data() {
             return {
@@ -38,6 +39,15 @@
             };
         },
         name: "rt-select",
+        computed: {
+            selectClasses() {
+                return {
+                    'select--error': this.hasError,
+                    'select--is-open': this.isOpen,
+                    'select--disabled': Boolean(this.disabled)
+                }
+            }
+        },
         methods: {
             setValue(data) {
                 const {value, text} = data;
@@ -46,17 +56,19 @@
                 this.emitSelected(this.localValue);
                 this.isOpen = false;
                 this.removeBindEvents();
-                this.$emit('select',data);
+                this.$emit('select', data);
             },
             toggleOpen() {
-                this.isOpen = !this.isOpen;
-                if (this.isOpen) {
-                    this.scrollToSelected();
-                    setTimeout(() => {
-                        this.bindEvents();
-                    });
-                } else {
-                    this.removeBindEvents();
+                if(!this.disabled) {
+                    this.isOpen = !this.isOpen;
+                    if (this.isOpen) {
+                        this.scrollToSelected();
+                        setTimeout(() => {
+                            this.bindEvents();
+                        });
+                    } else {
+                        this.removeBindEvents();
+                    }
                 }
             },
             emitSelected(value) {
@@ -126,7 +138,7 @@
             }
         },
         mounted() {
-            this.setValue({text:this.text, value: this.value});
+            this.setValue({text: this.text, value: this.value});
         }
     };
 </script>

@@ -26,6 +26,9 @@
       .select:hover &{
         opacity: 1;
       }
+      .select--disabled &{
+        opacity: 0.3!important;
+      }
     }
   }
   &-value{
@@ -33,6 +36,9 @@
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
+    .select--disabled &{
+      color: @b2b-cool-gray;
+    }
   }
   &-input{
     white-space: nowrap;
@@ -44,6 +50,7 @@
   &-list{
     position: absolute;
     width: 100%;
+    z-index: 2;
     background-color: white;
     top: 52px;
     box-shadow: 0 5px 10px @box-shadow-background;

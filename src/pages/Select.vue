@@ -9,6 +9,12 @@
                 <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл">
                     <option v-for="(option, index) in optionsList" :value="String(index)" :key="'index'+Math.random().toString(5).slice(4)">{{option}}</option>
                 </rt-select-without-js>
+
+            </div>
+            <div class="app-row">
+                <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
+                    <option v-for="(option, index) in optionsList" :value="String(index)" :key="'index'+Math.random().toString(5).slice(4)">{{option}}</option>
+                </rt-select-without-js>
             </div>
 
             <div class="app-row">
@@ -19,6 +25,12 @@
                     <rt-select-option v-for="(option, index) in optionsList" :value="String(index)" :key="'index'+Math.random().toString(5).slice(4)">{{option}}</rt-select-option>
                 </rt-select>
             </div>
+            <div class="app-row">
+                <rt-select label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
+                    <rt-select-option v-for="(option, index) in optionsList" :value="String(index)" :key="'index'+Math.random().toString(5).slice(4)">{{option}}</rt-select-option>
+                </rt-select>
+            </div>
+
 
         </div>
     </div>

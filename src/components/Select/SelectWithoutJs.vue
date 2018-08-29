@@ -1,10 +1,10 @@
 <template>
-    <div class="select text-field" :class="{'select--error':hasError}">
+    <div class="select text-field" :class="selectClasses">
         <label>
         <p class="floating-placeholder floating-placeholder--go-top">{{label}}</p>
 
         <div class="select-value">
-            <select class="select-list-native">
+            <select class="select-list-native" :disabled="disabled">
                 <slot></slot>
             </select>
             <div class="select-arrow">
@@ -25,7 +25,8 @@
             hasError: Boolean,
             label: String,
             value: String,
-            text: String
+            text: String,
+            disabled: Boolean
         },
         data() {
             return {
@@ -39,6 +40,16 @@
             };
         },
         name: "rt-select-without-js",
+        computed: {
+
+            selectClasses() {
+                return {
+                    'select--error': this.hasError,
+                    'select--is-open': this.isOpen,
+                    'select--disabled': Boolean(this.disabled)
+                }
+            }
+        },
         methods: {
             setValue(value) {
                 this.localValue = value;
