@@ -1,7 +1,7 @@
-import Vue from "vue";
 import Input from "./Input.vue";
-
+import InputWithoutJs from './InputWithoutJs.vue'
 export {
-    Input
+    Input,
+    InputWithoutJs
 }
 
