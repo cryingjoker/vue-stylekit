@@ -101,17 +101,17 @@ const config = {
   ]
 };
 
-if (minify) {
-  config.optimization.minimizer = [
-    new OptimizeCSSAssetsPlugin(),
-    // Enabled by default in production mode if
-    // the `minimizer` option isn't overridden.
-    new UglifyJsPlugin({
-      cache: true,
-      parallel: true
-    })
-  ];
-}
+// if (minify) {
+//   config.optimization.minimizer = [
+//     new OptimizeCSSAssetsPlugin(),
+//     // Enabled by default in production mode if
+//     // the `minimizer` option isn't overridden.
+//     new UglifyJsPlugin({
+//       cache: true,
+//       parallel: true
+//     })
+//   ];
+// }
 
 if (env !== `development`) {
   config.plugins.push(new MiniCssExtractPlugin());
