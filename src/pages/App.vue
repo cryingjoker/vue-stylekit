@@ -23,6 +23,9 @@
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="input">Input</router-link>
                 </li>
                 <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="textarea">Textarea</router-link>
+                </li>
+                <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
                 </li>
             </ul>

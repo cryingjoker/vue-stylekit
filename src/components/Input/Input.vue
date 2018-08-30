@@ -1,5 +1,5 @@
 <template>
-    <div class="input text-field" :class="{'input--error':hasError}">
+    <div class="input text-field" :class="{'text-field--error':hasError}">
         <input type="text" class="input-element" @input="inputHandler">
         <div class="text-field__line"></div>
         <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
@@ -8,7 +8,7 @@
         <div class="input-clear" v-if="!!hasInputText & !disabled" @click="clearInput">
             <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z" fill-rule="evenodd"/></svg>
         </div>
-        <p class="input-error-message" v-if="!!hasError">{{errorMessage}}</p>
+        <p class="text-field__error-message" v-if="!!hasError">{{errorMessage}}</p>
     </div>
 </template>
 

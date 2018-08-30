@@ -16,6 +16,9 @@
       transition-timing-function: ease-in-out;
       transition-property: background, height;
       transition-duration: 0.2s;
+      .textarea &{
+        position: relative;
+      }
       &:before{
         content: '';
         position: absolute;
@@ -30,14 +33,17 @@
       .select:hover &,
       .select--is-open &,
       .input-element:hover+&,
-      .input-element:focus+&{
+      .input-element:focus+&,
+      .textarea-element:hover+&,
+      .textarea-element:focus+&{
         height: 2px;
         &:before{
           width: 100%;
         }
       }
       .select--disabled &,
-      .input-element[disabled]+&{
+      .input-element[disabled]+&,
+      .textarea--disabled &{
         background-image: url('data:image/svg+xml;utf8,<svg width="5" height="2" xmlns="http://www.w3.org/2000/svg"><path d="M.535 1.25h5.528" stroke="@{b2b-gray}" fill="none" fill-rule="evenodd" stroke-dasharray="3" stroke-linecap="square"/></svg>');
         height: 2px;
         background-color: transparent;
@@ -46,7 +52,7 @@
           width: 0;
         }
       }
-      .input--error &{
+      .text-field--error &{
         height: 2px;
         &:before{
           background-color: @error-color;
@@ -54,4 +60,23 @@
         }
       }
     }
+  &__error-message{
+    position: absolute;
+    color: @error-color;
+    bottom: -20px;
+    left: 0;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity, visibility;
+    transition-duration: 0.4s;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    .text-field--error &{
+      opacity: 0.5;
+      visibility: visible;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
 }

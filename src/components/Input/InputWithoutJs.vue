@@ -1,8 +1,8 @@
 <template>
-    <div class="input text-field" :class="{'input--error':hasError}">
+    <div class="input text-field" :class="{'text-field--error':hasError}">
         <input type="text" class="input-element" :placeholder="placeholder" >
         <div class="text-field__line"></div>
-        <p class="input-error-message">{{errorMessage}}</p>
+        <p class="text-field__error-message" v-if="!!hasError">{{errorMessage}}</p>
     </div>
 
 </template>
