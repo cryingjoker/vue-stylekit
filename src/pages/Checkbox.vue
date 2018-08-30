@@ -1,16 +1,18 @@
 <template>
     <div class="app-content">
 
-        <div class="app-title"></div>
+        <div class="app-title">
+            <h1 class="rt-font-hero">Checkbox</h1>
+        </div>
         <div class="app-body">
             <div class="app-row">
-                <p>checkbox</p>
+                <p class="rt-font-h3">checkbox</p>
             </div>
             <div class="app-row">
                 <rt-checkbox>Интернет</rt-checkbox>
             </div>
             <div class="app-row">
-                <p>disabled checkbox</p>
+                <p class="rt-font-h3">disabled checkbox</p>
             </div>
             <div class="app-row">
                 <rt-checkbox :is-disabled="true">Интернет</rt-checkbox>

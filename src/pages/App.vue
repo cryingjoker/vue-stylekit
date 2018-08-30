@@ -5,6 +5,9 @@
         <li class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
         </li>
+        <li class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="typography">Typography</router-link>
+        </li>
         <!--<li class="aside-menu__item" to="color">Color list</li>-->
         <li class="aside-menu__item"></li>
         <li class="aside-menu__item">

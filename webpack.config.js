@@ -1,165 +1,125 @@
-const path = require('path');
-const fs = require('fs');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const NODE_ENV = process.env.NODE_ENV;
-const setPath = function(folderName) {
-  return path.join(__dirname, folderName);
-}
+const { VueLoaderPlugin } = require(`vue-loader`);
+// const nodeSassMagicImporter = require(`node-sass-magic-importer`);
+const path = require(`path`);
 
-const buildingForLocal = () => {
-  return (NODE_ENV === 'development');
-};
+const HtmlWebpackPlugin = require(`html-webpack-plugin`);
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+// const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
+const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`);
 
-const setPublicPath = () => {
-  let env = NODE_ENV;
-  if (env === 'production') {
-    return 'https://your-directory/production/';
-  } else if (env === 'staging') {
-    return 'https://your-directory/staging/';
-  } else {
-    return '/';
-  }
-};
-
-const extractHTML = new HtmlWebpackPlugin({
-  title: 'History Search',
-  filename: 'index.html',
-  inject: true,
-  template: setPath('/src/tpl/tpl.ejs'),
-  minify: {
-    removeAttributeQuotes: true,
-    collapseWhitespace: true,
-    html5: true,
-    minifyCSS: true,
-    removeComments: true,
-    removeEmptyAttributes: true
-  },
-  environment: process.env.NODE_ENV,
-  isLocalBuild: buildingForLocal(),
-  imgPath: (!buildingForLocal()) ? 'assets' : 'src/assets'
-});
-
+const env = process.env.NODE_ENV;
+const minify = env === `production`;
+const sourceMap = env === `development`;
 
 const config = {
-  /**
-   * You can use these too for bigger projects. For now it is 0 conf mode for me!
-   */
-  // entry: {
-  //   build: path.join(setPath('src'), 'main.js'),
-  //   vendor: path.join('setPath('src'), 'vendor.js')
-  // },
-  // output: {
-  //   path: buildingForLocal() ? path.resolve(__dirname) : setPath('dist'), //this one sets the path to serve
-  //   publicPath: setPublicPath(),
-  //   filename: buildingForLocal() ? 'js/[name].js' : 'js/[name].[hash].js'
-  // },
-
-  optimization:{
-    runtimeChunk: false,
+  entry: path.join(__dirname, `src`, `index.js`),
+  mode: env,
+  output: {
+    publicPath: `/`
+  },
+  optimization: {
     splitChunks: {
-      chunks: "all", //Taken from https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
+      // Must be specified for HtmlWebpackPlugin to work correctly.
+      // See: https://github.com/jantimon/html-webpack-plugin/issues/882
+      chunks: `all`
     }
   },
-  resolveLoader: {
-    modules: [setPath('node_modules')]
-  },
-  mode: buildingForLocal() ? 'development' : 'production',
-  devServer: {
-    historyApiFallback: true,
-    noInfo: false
-  },
-  plugins: [
-    extractHTML,
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "css/styles.[hash].css",
-      chunkFilename: "[id].css"
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        isStaging: (NODE_ENV === 'development' || NODE_ENV === 'staging'),
-        NODE_ENV: '"'+NODE_ENV+'"'
-      }
-    })
-  ],
+  devtool: sourceMap ? `cheap-module-eval-source-map` : undefined,
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-            presets :[
-                '@babel/env',
-                '@babel/stage-0',
-                '@babel/es2015'
-            ],
-            preserveWhitespace: false,
-        }
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: [{
-          loader: "babel-loader",
-          options: { presets: ['es2015'] }
-        }]
-      },
-      {
-        test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader"
+          {
+            loader: `vue-loader`
+          }
         ]
       },
       {
+        test: /\.css$/,
+        use: ["css-loader"]
+      },
+      {
+        test: /\.js$/,
+        loader: `babel-loader`,
+        include: [path.join(__dirname, `src`)]
+      },
+      {
         test: /\.less$/,
-        use: !buildingForLocal() ?
-            [
-              MiniCssExtractPlugin.loader,
-              "css-loader", 'less-loader'
-            ] :
-            [{
-                loader: "style-loader" // creates style nodes from JS strings
-              }, {
-                loader: "css-loader" // translates CSS into CommonJS
-              }, {
-                loader: "less-loader",
-
-              }
-                ]
+        use: [
+          {
+            loader: `style-loader`
+          },
+          {
+            loader: `css-loader`
+          },
+          {
+            loader: `less-loader`
+          }
+        ]
       },
-        {
+      {
         test: /\.styl/,
-        use: !buildingForLocal() ?
-            [
-              MiniCssExtractPlugin.loader,
-              "css-loader", 'less-loader'
-            ] :
-            [{
-                loader: "style-loader" // creates style nodes from JS strings
-              }, {
-                loader: "css-loader" // translates CSS into CommonJS
-              }, {
-                loader: "stylus-loader"
-              }
-                ]
+        use: [
+          {
+            loader: `style-loader`
+          },
+          {
+            loader: `css-loader`
+          },
+          {
+            loader: `stylus-loader`
+          }
+        ]
       },
-      // {
-      //   test: /\.svg$/,
-      //   loader: 'svg-sprite-loader'
-      // },
-      // {
-      //   test: /\.(png|jpg|gif)$/,
-      //   loader: 'file-loader',
-      //   query: {
-      //     name: '[name].[ext]?[hash]',
-      //     useRelativePath: buildingForLocal()
-      //   }
-      // }
+      {
+        test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
+        loader: `url-loader`,
+        options: {
+          name: `[name].[hash:20].[ext]`,
+          limit: 10000
+        }
+      }
     ]
   },
+  plugins: [
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      filename: path.join(__dirname, `dist`, `index.html`),
+      template: path.join(__dirname, `static`, `index.html`),
+      inject: true,
+      minify: minify
+        ? {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // More options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+          }
+        : false
+    })
+  ]
 };
+
+if (minify) {
+  config.optimization.minimizer = [
+    new OptimizeCSSAssetsPlugin(),
+    // Enabled by default in production mode if
+    // the `minimizer` option isn't overridden.
+    new UglifyJsPlugin({
+      cache: true,
+      parallel: true
+    })
+  ];
+}
+
+if (env !== `development`) {
+  config.plugins.push(new MiniCssExtractPlugin());
+
+  // const sassLoader = config.module.rules.find(({ test }) => test.test(`.scss`));
+  // Replace the `vue-style-loader` with
+  // the MiniCssExtractPlugin loader.
+  // sassLoader.use[0] = MiniCssExtractPlugin.loader;
+}
+
 module.exports = config;

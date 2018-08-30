@@ -48,7 +48,7 @@
         }
     }
 </script>
-<style>
+<style lang="css">
     .ripple-animation-enter {
         opacity: .26;
         transform: scale(.26) translateZ(0);

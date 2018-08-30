@@ -1,5 +1,13 @@
-.app {
-  display: flex;
+
+.app {display: flex;
+  &-title{
+    margin-bottom: 25px;
+    padding-top: 40px;
+    .rt-font-hero{
+      text-decoration: underline;
+      text-decoration-color: @b2b-red-hight;
+    }
+  }
   &-row{
     &+&{
       margin-top: 40px;
@@ -16,7 +24,6 @@
 
 .aside-menu {
   font-size: 14px;
-  font-family: "Roboto";
   box-sizing: border-box;
   margin-left: 16px;
 

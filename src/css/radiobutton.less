@@ -1,13 +1,14 @@
 .radio-button{
   display: inline-block;
   cursor: pointer;
+  user-select: none;
   &-element{
     display: none;
   }
   &-container{
     position: relative;
     padding-left: 29px;
-    padding-top: 3px;
+    user-select: none;
     &:before {
       content: '';
       width: 20px;

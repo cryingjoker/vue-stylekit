@@ -1,9 +1,11 @@
 <template>
     <div class="app-content">
-        <div class="app-title"></div>
+        <div class="app-title">
+            <h1 class="rt-font-hero">Select</h1>
+        </div>
         <div class="app-body">
             <div class="app-row">
-                <p>Select without js</p>
+                <p class="rt-font-h3">Select without js</p>
             </div>
             <div class="app-row">
                 <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл">
@@ -18,7 +20,7 @@
             </div>
 
             <div class="app-row">
-                <p>Select with js</p>
+                <p class="rt-font-h3">Select with js</p>
             </div>
             <div class="app-row">
                 <rt-select label="Оборудование" value="0" text="Новгородская обл">

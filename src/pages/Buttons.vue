@@ -1,10 +1,12 @@
 <template>
     <div class="app-content">
 
-        <div class="app-title"></div>
+        <div class="app-title">
+            <h1 class="rt-font-hero">Buttons</h1>
+        </div>
         <div class="app-body">
             <div class="app-row">
-                <p>simple buttons</p>
+                <p class="rt-font-h3">simple buttons</p>
             </div>
             <div class="app-row">
                 <rt-button-without-ripple class="button-purple">Подключить</rt-button-without-ripple>
@@ -40,7 +42,7 @@
                 </rt-button-without-ripple>
             </div>
             <div class="app-row">
-                <p>buttons with js ripple</p>
+                <p class="rt-font-h3">buttons with js ripple</p>
             </div>
             <div class="app-row">
                 <rt-button class="button-purple">Подключить</rt-button>
@@ -61,7 +63,7 @@
 
 
             <div class="app-row">
-                <p> Horizontal buttons</p>
+                <p class="rt-font-h3"> Horizontal buttons</p>
             </div>
             <div class="app-row">
 
@@ -69,7 +71,7 @@
                 <rt-button class="button-purple">Подключить</rt-button>
             </div>
             <div class="app-row">
-                <p> Vertical buttons</p>
+                <p class="rt-font-h3"> Vertical buttons</p>
             </div>
             <div class="app-row">
                 <rt-button class="button-vertical button-purple">Подключить</rt-button>
