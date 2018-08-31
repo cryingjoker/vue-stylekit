@@ -5,13 +5,12 @@
   font-size: 16px;
   text-transform: none;
   box-sizing: border-box;
-  padding-left: 24px;
-  padding-right: 24px;
+  text-align: center;
   transition-timing-function: ease-in-out;
-  transition-timing-function: cubic-bezier(.1,.4,1,.39);
   transition-property: background-color;
   transition-duration: 0.4s;
   .ripple-wave{
+    transition-timing-function: cubic-bezier(.1,.4,1,.39);
     background-color: @default-wive-color;
   }
   &-with-ripple{
@@ -19,13 +18,13 @@
     padding-right: 0;
   }
   &+&{
-    margin-left: 19px;
+    margin-left: @horizontal-space;
   }
   &-vertical{
     display: table;
     &+&{
       margin-left: 0;
-      margin-top: 20px;
+      margin-top: @vertical-space;
     }
   }
   &-small{
@@ -55,6 +54,9 @@
     }
     &[disabled]{
       background-color: @disable-button-color;
+      .rt-dark-theme &{
+        background-color: @disable-button-color-dark-theme;
+      }
     }
     .ripple-wave {
       background-color: @color-button-wive-color;
@@ -91,6 +93,9 @@
 
     &[disabled]{
       background-color: @disable-button-color;
+      .rt-dark-theme &{
+        background-color: @disable-button-color-dark-theme;
+      }
     }
     .ripple-wave {
       background-color: @color-button-wive-color;

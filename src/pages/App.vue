@@ -1,7 +1,7 @@
 <template>
-<div class="app">
+<div class="app container d-flex flex-row">
     <keep-alive>
-      <ul class="aside-menu">
+      <ul class="aside-menu col-2">
         <li class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
         </li>

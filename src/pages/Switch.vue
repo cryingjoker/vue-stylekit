@@ -1,21 +1,25 @@
 <template>
-    <div class="app-content">
+    <div class="app-content col-10">
 
         <div class="app-title">
-            <h1 class="rt-font-hero">Switch</h1>
+            <h1 class="rt-font-hero row">Switch</h1>
         </div>
         <div class="app-body">
-            <div class="app-row">
-                <p class="rt-font-h3">switch</p>
+            <div class="app-row row">
+                <p class="rt-font-h3 col">switch</p>
             </div>
-            <div class="app-row">
-                <rt-switch>Интернет</rt-switch>
+            <div class="app-row row">
+                <div class="col">
+                    <rt-switch>Интернет</rt-switch>
+                </div>
             </div>
-            <div class="app-row">
-                <p class="rt-font-h3">disabled switch</p>
+            <div class="app-row row">
+                <p class="rt-font-h3 col">disabled switch</p>
             </div>
-            <div class="app-row">
-                <rt-switch :is-disabled="true">Интернет</rt-switch>
+            <div class="app-row row">
+                <div class="col">
+                    <rt-switch :is-disabled="true">Интернет</rt-switch>
+                </div>
             </div>
         </div>
     </div>

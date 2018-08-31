@@ -1,39 +1,39 @@
 <template>
-    <div class="app-content">
-        <div class="app-title"><h1 class="rt-font-hero">Typography</h1></div>
+    <div class="app-content  col-10">
+        <div class="app-title row"><h1 class="col rt-font-hero">Typography</h1></div>
         <div class="app-body">
-            <div class="app-row">
-                <h1 class="rt-font-hero">Hero / .rt-font-hero</h1>
+            <div class="app-row row">
+                <h1 class="rt-font-hero col">Hero <span class="rt-font-label rt-code">.rt-font-hero</span></h1>
             </div>
-            <div class="app-row">
-                <h1 class="rt-font-h1">H1 / .rt-font-h1 or h1</h1>
+            <div class="app-row row">
+                <h1 class="rt-font-h1 col">H1 <span class="rt-font-label"><span class="rt-code">.rt-font-h1</span> or <span class="rt-code">h1</span></span></h1>
             </div>
-            <div class="app-row">
-                <h2 class="rt-font-h2">H2 / .rt-font-h1 or h2</h2>
+            <div class="app-row row">
+                <h2 class="rt-font-h2 col">H2 <span class="rt-font-label"><span class="rt-code">.rt-font-h1</span> or <span class="rt-code">h2</span></span></h2>
             </div>
-            <div class="app-row">
-                <h3 class="rt-font-h3">H3 / .rt-font-h3 or h3</h3>
+            <div class="app-row row">
+                <h3 class="rt-font-h3 col">H3 <span class="rt-font-label"><span class="rt-code">.rt-font-h3</span> or <span class="rt-code">h3</span></span></h3>
             </div>
-            <div class="app-row">
-                <h4 class="rt-font-h4">H4 / .rt-font-h4 or h4</h4>
+            <div class="app-row row">
+                <h4 class="rt-font-h4 col">H4 <span class="rt-font-label"><span class="rt-code">.rt-font-h4</span> or <span class="rt-code">h4</span></span></h4>
             </div>
-            <div class="app-row">
-                <p class="rt-font-paragraph rt-font-bold">Paragraph / .rt-font-bold.rt-font-paragraph</p>
+            <div class="app-row row">
+                <p class="rt-font-paragraph rt-font-bold col">Paragraph <span class="rt-font-label rt-code">.rt-font-bold.rt-font-paragraph</span></p>
             </div>
-            <div class="app-row">
-                <p class="rt-font-paragraph">Paragraph / rt-font-paragraph</p>
+            <div class="app-row row">
+                <p class="rt-font-paragraph col">Paragraph <span class="rt-font-label rt-code">rt-font-paragraph</span></p>
             </div>
-            <div class="app-row">
-                <p class="rt-font-paragraph rt-font-bold">Paragraph / .rt-font-bold.rt-font-paragraph</p>
+            <div class="app-row row">
+                <p class="rt-font-paragraph rt-font-bold col">Paragraph <span class="rt-font-label rt-code">.rt-font-bold.rt-font-paragraph</span></p>
             </div>
-            <div class="app-row">
-                <p class="rt-font-bold">Paragraph / .rt-font-bold or b or strong </p>
+            <div class="app-row row">
+                <p class="rt-font-bold col">Paragraph  <span class="rt-font-label"> <span class="rt-code">.rt-font-bold</span> or <span class="rt-code">b</span> or <span class="rt-code">strong</span></span> </p>
             </div>
-            <div class="app-row">
-                <p>Paragraph / simple text</p>
+            <div class="app-row row">
+                <p class="col">Paragraph <span class="rt-font-label">- simple text</span></p>
             </div>
-            <div class="app-row">
-                <p class="rt-font-label">Label / .rt-font-label</p>
+            <div class="app-row row">
+                <p class="rt-font-label col">Label <span class="rt-font-label rt-code">.rt-font-label</span></p>
             </div>
 
         </div>
