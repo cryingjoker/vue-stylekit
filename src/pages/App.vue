@@ -20,6 +20,9 @@
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="radiobutton">Radiobutton</router-link>
                 </li>
                 <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="switch">Switch</router-link>
+                </li>
+                <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="input">Input</router-link>
                 </li>
                 <li class="aside-menu__item">
