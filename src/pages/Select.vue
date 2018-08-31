@@ -49,7 +49,7 @@ componentsList[SelectWithoutJs.name] = SelectWithoutJs;
 
 
 export default {
-  name: "Input",
+  name: "app-input",
   components: componentsList,
   data: () => ({
     inputModelValue: "test",

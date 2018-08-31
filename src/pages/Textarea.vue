@@ -51,7 +51,7 @@ componentsList[Textarea.name] = Textarea;
 componentsList[TextareaStatic.name] = TextareaStatic;
 componentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
 export default {
-  name: "Textarea",
+  name: "app-textarea",
   components: componentsList,
   methods: {},
   mounted() {},

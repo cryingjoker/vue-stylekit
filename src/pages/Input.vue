@@ -53,7 +53,7 @@ const componentsList = {};
 componentsList[Input.name] = Input;
 componentsList[InputWithoutJs.name] = InputWithoutJs;
 export default {
-  name: "Input",
+  name: "app-input",
   components: componentsList,
   data: () => ({
     inputModelValue: "test"

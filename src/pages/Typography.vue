@@ -43,7 +43,7 @@
 
 <script>
 export default {
-  name: "Typography",
+  name: "app-typography",
   methods: {},
   mounted() {},
   created() {}

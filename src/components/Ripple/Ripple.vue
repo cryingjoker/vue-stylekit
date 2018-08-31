@@ -53,14 +53,14 @@ export default {
     },
     getHitPosition($event, elementSize) {
       return {
-        left:
-          $event.clientX -
-          this.$el.getBoundingClientRect().left -
-          elementSize / 2,
-        top:
-          $event.clientY -
-          this.$el.getBoundingClientRect().top -
-          elementSize / 2
+        left:$event.offsetX,
+          // $event.clientX -
+          // this.$el.getBoundingClientRect().left -
+          // elementSize / 2,
+        top: $event.offsetY
+          // $event.clientY -
+          // this.$el.getBoundingClientRect().top -
+          // elementSize / 2
       };
     }
   }

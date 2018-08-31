@@ -51,6 +51,7 @@
                 <rt-button class="button-orange-border">Подключить</rt-button>
                 <rt-button>Подключить</rt-button>
                 <rt-button class="button-transparent" disabled>Подключить</rt-button>
+                <rt-button class="button-white">Подключить</rt-button>
             </div>
             <div class="app-row">
                 <rt-button class="button-small button-purple">Подключить</rt-button>
