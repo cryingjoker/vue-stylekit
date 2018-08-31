@@ -1,5 +1,5 @@
 <template>
-    <div class="app-content">
+    <div class="app-content  col-md-3">
         <div class="app-title">
             <h1 class="rt-font-hero">Select</h1>
         </div>

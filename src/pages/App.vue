@@ -1,7 +1,8 @@
 <template>
 <div class="app container d-flex flex-row">
+    <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
     <keep-alive>
-      <ul class="aside-menu col-2">
+      <ul class="aside-menu col-2 col-md-3" :class="{'aside-menu--active' : this.showMenu}">
         <li class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
         </li>
@@ -50,11 +51,23 @@
 
 export default {
   name: "App",
+    data:()=>({
+        showMenu: false,
+
+    }),
   components: componentsList,
+    watch: {
+        '$route' (to, from) {
+            this.showMenu = false;
+        }
+    },
   methods: {
+      menuTrigger(){
+          this.showMenu = true;
+      },
+
       switchTheme(isChecked){
           const bodyClassList = document.body.classList.value.split(' ');
-          console.info('bodyClassList',bodyClassList)
           if(isChecked){
               bodyClassList.push('rt-dark-theme');
           }else{

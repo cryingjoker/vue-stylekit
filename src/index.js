@@ -4,10 +4,12 @@ import VueRouter from "vue-router";
 import routes from "./utils/routes";
 import RootPage from "./pages/App.vue";
 
+var VueTouch = require('vue-touch')
 
 import stylesReset from "./css/reset/index.styl";
 import styles from "./css/styles.less";
 
+Vue.use(VueTouch, {name: 'v-touch'})
 Vue.use(VueRouter);
 
 const router = new VueRouter({
