@@ -1,24 +1,29 @@
-.checkbox{
+.checkbox {
   display: inline-block;
   cursor: pointer;
   user-select: none;
-  &-element{
+  &-element {
     display: none;
   }
-  &-icon{
-    position: absolute;
-    left: 5px;
-    top: 6px;
-    opacity: 0;
-    visibility: hidden;
-    transition-timing-function: ease-in-out;
-    transition-property: stroke, opacity, visibility;
-    transition-duration: 0.2s;
-  }
-  &-container{
+
+  &-container {
     position: relative;
     padding-left: 29px;
     user-select: none;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4.5px;
+      top: 5.5px;
+      width: 12px;
+      height: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition-timing-function: ease-in-out;
+      transition-property: stroke, opacity, visibility;
+      transition-duration: 0.2s;
+      background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{b2c-purple-low}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
+    }
     &:before {
       content: '';
       width: 20px;
@@ -28,31 +33,44 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-color: #fff;
+      transition-timing-function: ease-in-out;
+      transition-property: background;
+      transition-duration: 0.2s;
+      .rt-dark-theme & {
+        background-color: #fff;
+      }
     }
 
-    .checkbox-element:checked+&{
-      .checkbox-icon{
-        stroke: @b2c-purple-low;
+    .checkbox-element:checked + & {
+      &:after {
         opacity: 1;
         visibility: visible;
+
       }
     }
-    .checkbox-element[disabled] + &{
+    .checkbox-element[disabled] + & {
       cursor: default;
-      .rt-dark-theme &{
+      .rt-dark-theme & {
         opacity: 0.4;
       }
-      &:before{
+      &:before {
         border-color: @b2b-cool-gray05;
       }
       color: @b2b-cool-gray;
-      .checkbox-icon{
+      &:before {
         opacity: 1;
         visibility: visible;
-        stroke: @b2b-cool-gray;
-        .rt-dark-theme &{
-          stroke: @dark-theme-background;
+      }
+      &:after {
+        opacity: 0.4;
+        visibility: visible;
+        background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{dark-theme-background}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
+      }
+      .rt-dark-theme & {
+        &:after {
+          opacity: 0.4;
+          visibility: visible;
+          background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{dark-theme-background}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
         }
       }
     }
