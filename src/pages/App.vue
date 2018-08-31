@@ -38,16 +38,31 @@
     </keep-alive>
 
     <router-view></router-view>
-
+    <rt-switch @input="switchTheme" class="dark-theme-switcher">Dark theme</rt-switch>
 
 </div>
 </template>
 
 <script>
+    import {Switch} from '../components/Switch';
+    const componentsList = {};
+    componentsList[Switch.name] = Switch;
+
 export default {
   name: "App",
-  components: {},
-  methods: {},
+  components: componentsList,
+  methods: {
+      switchTheme(isChecked){
+          const bodyClassList = document.body.classList.value.split(' ');
+          console.info('bodyClassList',bodyClassList)
+          if(isChecked){
+              bodyClassList.push('rt-dark-theme');
+          }else{
+              bodyClassList.splice(bodyClassList.indexOf('rt-dark-theme'),1);
+          }
+          document.body.classList = bodyClassList.join(' ');
+      }
+  },
   mounted() {},
   created() {}
 };

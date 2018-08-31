@@ -48,13 +48,16 @@
     padding-top: 10px;
     padding-bottom: 10px;
     display: block;
-    padding-left: 25px;
+    padding-left: 30px;
     padding-right: 15px;
     transition-duration: 0.3s;
     transition-property: background, color;
     transition-timing-function: ease-in-out;
     cursor: pointer;
     position: relative;
+    .rt-dark-theme &{
+      color: @b2b-cool-gray05
+    }
     &:before{
       content: '';
       width: 10px;
@@ -74,8 +77,10 @@
     }
     &:hover,
     &:focus{
-      background-color: #fff;
       color: @b2b-black;
+      .rt-dark-theme &{
+        color: white;
+      }
     }
     &--active {
       color: @b2b-black;
@@ -86,4 +91,9 @@
     }
 
   }
+}
+.dark-theme-switcher{
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

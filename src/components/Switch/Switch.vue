@@ -11,19 +11,18 @@
     const componentsList = {};
 
     export default {
-        props:['isDisabled','checkded'],
+        props:['isDisabled','checked'],
         name: "rt-switch",
         methods: {
             setValue() {
-                this.$el.querySelector('.switch-element').checkded = this.checkded;
-                this.setValueLength();
+                this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
             },
             inputHandler(){
                 this.$emit('input',this.$el.querySelector('.switch-element').checked)
             }
         },
         mounted: function () {
-
+            this.setValue();
         }
     };
 </script>
