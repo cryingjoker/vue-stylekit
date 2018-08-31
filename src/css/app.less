@@ -8,7 +8,11 @@
   font-style: normal;
   font-weight: 200;
 }
-.app {display: flex;
+.app {
+  display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
   &-title{
     margin-bottom: 25px;
     padding-top: 40px;
@@ -28,21 +32,57 @@
     padding-right: @horizontal-space*2;
     padding-top: 50px;
     padding-bottom: 30px;
+    @media (max-width: 1024px) {
+      padding-left: @horizontal-space;
+      padding-right: @horizontal-space;
+    }
   }
 }
-
+.menu-trigger{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 900;
+  cursor: pointer;
+  color: @b2c-red-low;
+  text-decoration: underline;
+}
 .aside-menu {
   font-size: 14px;
   box-sizing: border-box;
   margin-left: 16px;
+  transition-duration: 0.3s;
+  transition-property: left;
+  transition-timing-function: ease-in-out;
 
-  &:first-child{
-    padding-top: 100px;
-    width: 200px;
-    margin-left: 0;
-    border-right: 1px solid @b2b-cool-gray05;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    padding-top: @vertical-space*2;
     min-height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    left: -100vw;
+    .aside-menu{
+      left: 0;
+      padding-top: @vertical-space;
+    }
+    .rt-dark-theme{
+      background-color: @dark-theme-background;
+    }
+    &--active{
+      left: 0;
+    }
   }
+  padding-top: 100px;
+  border-right: 1px solid @b2b-cool-gray05;
+  min-height: 100vh;
+  .aside-menu{
+    min-height: 0;
+    padding-top: @vertical-space;
+    border: none;
+  }
+
 
   &__submenu-title{
     margin-left: 25px;

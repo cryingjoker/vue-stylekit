@@ -1,5 +1,5 @@
 <template>
-    <div class="app-content col-10">
+    <div class="app-content col-10  col-md-3">
         <div class="app-title">
             <h1 class="rt-font-hero row">RadioButton</h1>
         </div>

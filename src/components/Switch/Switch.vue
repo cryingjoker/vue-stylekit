@@ -18,7 +18,6 @@
                 this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
             },
             inputHandler(){
-                console.info('inputHandler')
                 this.$emit('change',this.$el.querySelector('.switch-element').checked)
             }
         },
