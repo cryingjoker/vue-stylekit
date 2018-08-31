@@ -1138,19 +1138,17 @@
             setValue: function () {
                 this.$el.querySelector(".switch-element").checked = Boolean(this.checked)
             }, inputHandler: function () {
-                this.$emit("input", this.$el.querySelector(".switch-element").checked)
+                console.info("inputHandler"), this.$emit("change", this.$el.querySelector(".switch-element").checked)
             }
         }, mounted: function () {
             this.setValue()
         }
     }, qt = Object(l.a)(Mt, function () {
         var t = this.$createElement, e = this._self._c || t;
-        return e("label", {
-            staticClass: "switch",
-            on: {input: this.inputHandler}
-        }, [e("input", {
+        return e("label", {staticClass: "switch"}, [e("input", {
             staticClass: "switch-element",
-            attrs: {type: "checkbox", disabled: this.isDisabled}
+            attrs: {name: "test", type: "checkbox", disabled: this.isDisabled},
+            on: {change: this.inputHandler}
         }), this._v(" "), e("div", {staticClass: "switch-container"}, [this._t("default")], 2)])
     }, [], !1, null, null, null);
     qt.options.__file = "Switch.vue";
@@ -1231,7 +1229,7 @@
             attrs: {"active-class": "aside-menu__link--active", to: "select"}
         }, [t._v("Select")])], 1)])]), t._v(" "), n("li", {staticClass: "aside-menu__item"})])]), t._v(" "), n("router-view"), t._v(" "), n("rt-switch", {
             staticClass: "dark-theme-switcher",
-            on: {input: t.switchTheme}
+            on: {change: t.switchTheme}
         }, [t._v("Dark theme")])], 1)
     }, [], !1, null, null, null);
     Ht.options.__file = "App.vue";
