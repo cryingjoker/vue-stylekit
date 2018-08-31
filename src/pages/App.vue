@@ -38,7 +38,7 @@
     </keep-alive>
 
     <router-view></router-view>
-    <rt-switch @input="switchTheme" class="dark-theme-switcher">Dark theme</rt-switch>
+    <rt-switch @change="switchTheme" class="dark-theme-switcher">Dark theme</rt-switch>
 
 </div>
 </template>

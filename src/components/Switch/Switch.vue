@@ -1,6 +1,6 @@
 <template>
-    <label class="switch" @input="inputHandler">
-        <input type="checkbox" :disabled="isDisabled" class="switch-element">
+    <label class="switch">
+        <input name="test" @change="inputHandler" type="checkbox" :disabled="isDisabled" class="switch-element">
         <div class="switch-container">
             <slot></slot>
         </div>
@@ -18,7 +18,8 @@
                 this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
             },
             inputHandler(){
-                this.$emit('input',this.$el.querySelector('.switch-element').checked)
+                console.info('inputHandler')
+                this.$emit('change',this.$el.querySelector('.switch-element').checked)
             }
         },
         mounted: function () {
