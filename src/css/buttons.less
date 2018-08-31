@@ -48,7 +48,7 @@
   }
   &-orange{
     color: #fff;
-    background-color: @b2b-orange-hight;
+    background-color: @b2c-orange-low;
     &:hover,
     &:active{
       background-color: @b2b-orange-low;
@@ -62,8 +62,9 @@
 
   }
   &-orange-border{
-    border: 2px solid @b2b-orange-hight;
+    border: 2px solid @b2c-orange-low;
     background-color: transparent;
+    color: @b2c-orange-low;
     &:hover,
     &:active {
       background-color: transparent !important;
@@ -73,17 +74,21 @@
       color: @disable-button-color;
     }
     .ripple-wave {
-      background-color: @b2b-orange-low;
+      background-color: @b2c-orange-low;
     }
 
   }
+  &-white {
+    border:2px solid white;
+  }
   &-purple{
     color: #fff;
-    background-color: @b2b-purple-hight;
+    background-color: @b2c-purple-low;
     &:hover,
     &:active{
         background-color: @b2b-purple-low;
     }
+
     &[disabled]{
       background-color: @disable-button-color;
     }
@@ -92,8 +97,9 @@
     }
   }
   &-purple-border{
-    border:2px solid @b2b-purple-hight;
+    border:2px solid @b2c-purple-low;
     background-color: transparent;
+    color: @b2c-purple-low;
     &:hover {
       background-color: transparent !important;
     }

@@ -20,7 +20,7 @@
       top: 0px;
       transition-timing-function: ease-in-out;
       transition-property: background-color;
-      transition-duration: 0.2s;
+      transition-duration: 0.1s;
     }
     &:after{
       content: '';
@@ -33,19 +33,32 @@
       top: 3px;
       transition-timing-function: ease-in-out;
       transition-property: margin, background-color;
-      transition-duration: 0.2s;
+      transition-duration: 0.1s;
+
     }
     .switch-element:checked+&{
       &:before{
         background-color: @b2b-purple-hight05;
+        .rt-dark-theme &{
+          background-color: @b2c-purple-low02;
+        }
       }
       &:after{
-        background-color: @b2b-purple-low;
+        background-color: @b2c-purple-low;
         margin-left: 15px;
       }
     }
     .switch-element[disabled]+&{
       color: @disable-button-color;
+      .rt-dark-theme &{
+        opacity: 0.3;
+      }
+      &:before{
+        background-color: @form-elements-border-color05;
+      }
+      &:after{
+        background-color: @form-elements-border-color;
+      }
     }
 
   }

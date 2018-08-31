@@ -2,6 +2,9 @@
 
 @b2c-purple-low: #7700ff;
 
+@b2c-purple-low02: fade(@b2c-purple-low,20%);
+
+
 @b2c-red-low: #BC104B;
 
 @b2c-dark-blue-low: #273A64;
@@ -18,22 +21,25 @@
 
 @b2c-dark: #101828;
 
-@b2c-dark09: rgba(16,24,40,0.9);
+@b2c-dark09: fade(@b2c-dark,90%);
 
-@b2c-dark08: rgba(16,24,40,0.8);
+@b2c-dark08: fade(@b2c-dark,80%);
 
-@b2c-dark07: rgba(16,24,40,0.7);
+@b2c-dark07: fade(@b2c-dark,70%);
 
-@b2c-dark06: rgba(16,24,40,0.6);
+@b2c-dark06: fade(@b2c-dark,60%);
+
+@b2c-dark02: fade(@b2c-dark,20%);
+
+@b2c-dark01: fade(@b2c-dark,10%);
 
 @b2c-grey: #979799;
 
 @b2c-cool-grey: #E3E8EC;
 
-@b2c-cool-grey05:  rgba(227, 233,236,0.5);
+@b2c-cool-grey05:  fade(#E3E8EC,50%);
 
-
-
+@b2c-cool-grey03: fade(@b2c-grey,80%);
 // b2b colors list // :
 
 @b2b-purple-low: #6605c6;
@@ -103,3 +109,4 @@
 @box-shadow-background: rgba(0,0,0,0.1);
 
 @dark-theme-background: fade(@b2c-dark,90%);
+@dark-theme-dropdown-background: #202432;

@@ -28,17 +28,21 @@
       position: absolute;
       left: 0;
       top: 0;
+      background-color: #fff;
     }
 
     .checkbox-element:checked+&{
       .checkbox-icon{
-        stroke: @b2b-purple-low;
+        stroke: @b2c-purple-low;
         opacity: 1;
         visibility: visible;
       }
     }
     .checkbox-element[disabled] + &{
       cursor: default;
+      .rt-dark-theme &{
+        opacity: 0.4;
+      }
       &:before{
         border-color: @b2b-cool-gray05;
       }
@@ -47,6 +51,9 @@
         opacity: 1;
         visibility: visible;
         stroke: @b2b-cool-gray;
+        .rt-dark-theme &{
+          stroke: @dark-theme-background;
+        }
       }
     }
   }

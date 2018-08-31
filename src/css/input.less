@@ -9,7 +9,8 @@
     z-index: 2;
     background-color: transparent;
     &[disabled]{
-      color: @b2b-cool-gray;
+      color: @b2c-cool-grey03;
+      //color: @b2c-cool-grey05;
     }
   }
   &-clear{
@@ -25,6 +26,10 @@
     animation: 0.3s showClearInput ease-in-out;
     &__icon{
       fill: @b2b-black;
+      .rt-dark-theme &{
+        fill: white;
+      }
+
     }
     &:hover{
       opacity: 1;

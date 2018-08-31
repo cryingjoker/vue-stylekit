@@ -17,6 +17,7 @@
       box-sizing: border-box;
       border: 2px solid @b2b-cool-gray;
       position: absolute;
+      background-color: white;
       left: 0;
       top: 0;
     }
@@ -42,15 +43,22 @@
         background-color: @b2c-purple-low;
         opacity: 1;
         visibility: visible;
+
       }
     }
     .radio-button-element[disabled] + &{
       cursor: default;
+      .rt-dark-theme &{
+        opacity: 0.4;
+      }
       &:before{
         border-color: @b2b-cool-gray05;
       }
       &:after{
         background-color: @b2b-cool-gray;
+        .rt-dark-theme &{
+          background-color: @b2c-dark;
+        }
       }
       color: @b2b-cool-gray;
 
