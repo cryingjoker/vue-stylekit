@@ -13,6 +13,12 @@
   @media (max-width: 1024px) {
     flex-direction: column;
   }
+
+  &--hide-scroll{
+    @media (max-width: 1024px) {
+      overflow: hidden;
+    }
+  }
   &-title{
     margin-bottom: 25px;
     padding-top: 40px;
@@ -33,8 +39,8 @@
     padding-top: 50px;
     padding-bottom: 30px;
     @media (max-width: 1024px) {
-      padding-left: @horizontal-space;
-      padding-right: @horizontal-space;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -58,11 +64,14 @@
 
   @media (max-width: 1024px) {
     position: absolute;
+    overflow-y: auto;
     padding-top: @vertical-space*2;
     min-height: 100vh;
     background-color: #fff;
     z-index: 999;
-    left: -100vw;
+    max-width: 100vw;
+    padding-right: 0px;
+    left: -120vw;
     .aside-menu{
       left: 0;
       padding-top: @vertical-space;
@@ -71,7 +80,7 @@
       background-color: @dark-theme-background;
     }
     &--active{
-      left: 0;
+      left: -20px;
     }
   }
   padding-top: 100px;

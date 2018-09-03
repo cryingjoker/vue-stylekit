@@ -1,6 +1,7 @@
 <template>
-<div class="app container d-flex flex-row">
+<div class="app container d-flex flex-row" :class="{'app--hide-scroll' : this.showMenu}">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
+
     <keep-alive>
       <ul class="aside-menu col-2 col-md-3" :class="{'aside-menu--active' : this.showMenu}">
         <li class="aside-menu__item">
