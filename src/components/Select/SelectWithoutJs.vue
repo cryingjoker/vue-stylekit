@@ -14,6 +14,7 @@
             </div>
         </div>
         <div class="text-field__line"></div>
+            <p class="text-field__error-message" v-if="!!hasError">{{errorMessage}}</p>
         </label>
 
     </div>
@@ -26,7 +27,8 @@
             label: String,
             value: String,
             text: String,
-            disabled: Boolean
+            disabled: Boolean,
+            errorMessage: String
         },
         data() {
             return {
@@ -44,7 +46,7 @@
 
             selectClasses() {
                 return {
-                    'select--error': this.hasError,
+                    'select--error text-field--error': this.hasError,
                     'select--is-open': this.isOpen,
                     'select--disabled': Boolean(this.disabled)
                 }
