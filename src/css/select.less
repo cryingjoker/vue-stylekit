@@ -1,5 +1,5 @@
 .select {
-  max-width: 211px;
+  width: 100%;
   .rt-dark-theme &{
     color: white;
   }
@@ -79,14 +79,16 @@
     }
     &-native{
       display: block;
-      width: 100%;
+      width: calc(100% - 20px);
       border: none;
       background: none;
       outline: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       text-indent: 1px;
-      text-overflow: '';
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
   &-option{

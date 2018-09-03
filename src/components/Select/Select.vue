@@ -15,6 +15,7 @@
         <div class="select-list" v-if="!disabled">
             <slot></slot>
         </div>
+        <p class="text-field__error-message" v-if="!!hasError">{{errorMessage}}</p>
     </div>
 </template>
 <script>
@@ -25,7 +26,8 @@
             label: String,
             value: String,
             text: String,
-            disabled: Boolean
+            disabled: Boolean,
+            errorMessage: String
         },
         data() {
             return {
@@ -42,7 +44,7 @@
         computed: {
             selectClasses() {
                 return {
-                    'select--error': this.hasError,
+                    'select--error text-field--error': this.hasError,
                     'select--is-open': this.isOpen,
                     'select--disabled': Boolean(this.disabled)
                 }

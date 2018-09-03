@@ -72,13 +72,15 @@
     max-width: 100vw;
     padding-right: 0px;
     left: -120vw;
+    .rt-dark-theme &{
+      background-color: @dark-theme-background;
+    }
     .aside-menu{
       left: 0;
       padding-top: @vertical-space;
+
     }
-    .rt-dark-theme{
-      background-color: @dark-theme-background;
-    }
+
     &--active{
       left: -20px;
     }
