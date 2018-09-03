@@ -59,11 +59,11 @@
                     <rt-input placeholder="Электронная почта"></rt-input>
                 </div>
                 <div class="col-2 col-md-2 rt-mb-space-top">
-                    <span class="rt-font-label flex-fill rt-space-bottom05">input in 2 col</span>
+                    <span class="rt-font-label flex-fill rt-space-bottom05  rt-font-no-wrpa">input in 2 col</span>
                     <rt-input placeholder="Улица"></rt-input>
                 </div>
                 <div class="col-1 col-md-1 rt-mb-space-top">
-                    <span class="rt-font-label flex-fill rt-space-bottom05">input in 1 c</span>
+                    <span class="rt-font-label flex-fill rt-space-bottom05  rt-font-no-wrpa">input in 1 c</span>
                     <rt-input placeholder="Дом"></rt-input>
                 </div>
 
