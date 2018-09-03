@@ -55,14 +55,14 @@
                     <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea</span>
                     <rt-textarea placeholder="Textarea"></rt-textarea>
                 </div>
-                <div class="col-4  col-md-2 rt-mb-space-top">
+                <div class="col-4  col-md-2 rt-mb-space-top d-flex flex-column">
                     <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea with error</span>
                     <rt-textarea placeholder="Textarea" errorMessage="textarea error message"
                                  :hasError="true"></rt-textarea>
                 </div>
 
 
-                <div class="col-4  col-md-1 rt-mb-space-top">
+                <div class="col-4  col-md-1 rt-mb-space-top d-flex flex-column">
                     <span class="rt-font-label flex-fill rt-space-bottom05">dynamic disabled textarea</span>
                     <rt-textarea placeholder="Textarea" errorMessage="textarea error message"
                                  :disabled="true"></rt-textarea>
