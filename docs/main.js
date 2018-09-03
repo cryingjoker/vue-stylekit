@@ -902,7 +902,7 @@
                 key: "index" + Math.random().toString(5).slice(4),
                 attrs: {value: String(a)}
             }, [t._v(t._s(e) + "\n                    ")])
-        }))], 1)]), t._v(" "), n("div", {staticClass: "app-row row"}, [n("div", {staticClass: "col-6 col-md-2 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("select with error")]), t._v(" "), n("rt-select", {
+        }))], 1)]), t._v(" "), n("div", {staticClass: "app-row row"}, [n("div", {staticClass: "col-6 col-md-2 rt-mb-space-top d-flex flex-column"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("select with error")]), t._v(" "), n("rt-select", {
             attrs: {
                 label: "Оборудование",
                 value: "0",
@@ -915,7 +915,7 @@
                 key: "index" + Math.random().toString(5).slice(4),
                 attrs: {value: String(a)}
             }, [t._v(t._s(e) + "\n                    ")])
-        }))], 1), t._v(" "), n("div", {staticClass: "col-6 col-md-1 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("disabled select")]), t._v(" "), n("rt-select", {
+        }))], 1), t._v(" "), n("div", {staticClass: "col-6 col-md-1 rt-mb-space-top d-flex flex-column"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("disabled select")]), t._v(" "), n("rt-select", {
             attrs: {
                 label: "Оборудование",
                 value: "0",
@@ -1135,13 +1135,13 @@
                 placeholder: "Textarea",
                 disabled: !0
             }
-        })], 1)]), t._v(" "), n("div", {staticClass: "app-row row"}, [n("div", {staticClass: "col-4  col-md-2 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic textarea")]), t._v(" "), n("rt-textarea", {attrs: {placeholder: "Textarea"}})], 1), t._v(" "), n("div", {staticClass: "col-4  col-md-2 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic textarea with error")]), t._v(" "), n("rt-textarea", {
+        })], 1)]), t._v(" "), n("div", {staticClass: "app-row row"}, [n("div", {staticClass: "col-4  col-md-2 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic textarea")]), t._v(" "), n("rt-textarea", {attrs: {placeholder: "Textarea"}})], 1), t._v(" "), n("div", {staticClass: "col-4  col-md-2 rt-mb-space-top d-flex flex-column"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic textarea with error")]), t._v(" "), n("rt-textarea", {
             attrs: {
                 placeholder: "Textarea",
                 errorMessage: "textarea error message",
                 hasError: !0
             }
-        })], 1), t._v(" "), n("div", {staticClass: "col-4  col-md-1 rt-mb-space-top"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic disabled textarea")]), t._v(" "), n("rt-textarea", {
+        })], 1), t._v(" "), n("div", {staticClass: "col-4  col-md-1 rt-mb-space-top d-flex flex-column"}, [n("span", {staticClass: "rt-font-label flex-fill rt-space-bottom05"}, [t._v("dynamic disabled textarea")]), t._v(" "), n("rt-textarea", {
             attrs: {
                 placeholder: "Textarea",
                 errorMessage: "textarea error message",
