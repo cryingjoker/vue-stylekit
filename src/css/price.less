@@ -1,10 +1,13 @@
 .rt-price{
-  //display: inline-block;
-  //vertical-align: baseline;
   color: @b2b-black07;
   font-weight: 200;
   white-space: nowrap;
-
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  .rt-dark-theme &{
+    color: @b2b-white07;
+  }
   &__opinion{
     display: inline-block;
     vertical-align: baseline;
@@ -28,9 +31,12 @@
       bottom: 0;
       margin-top: auto;
       margin-bottom: auto;
-    }
-    .rt-dark-theme{
-      color: @b2b-white07;
+      transition-timing-function: ease-in-out;
+      transition-property: background;
+      transition-duration: 0.4s;
+      .rt-dark-theme &{
+        background-color: @b2b-white07;
+      }
 
     }
   }
@@ -58,6 +64,12 @@
     &-item{
       &+&{
         border-top: 1px solid @b2b-black07;
+        transition-timing-function: ease-in-out;
+        transition-property: border;
+        transition-duration: 0.4s;
+        .rt-dark-theme &{
+          border-color: @b2b-white07;
+        }
       }
     }
   }
