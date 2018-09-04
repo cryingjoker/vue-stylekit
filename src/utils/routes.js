@@ -6,6 +6,7 @@ import Select from  '../pages/Select.vue'
 import Typography from  '../pages/Typography.vue'
 import Textarea from  '../pages/Textarea.vue'
 import Switch from  '../pages/Switch.vue'
+import PromoTv from '../pages/promo/tv.vue'
 const routes = [
   {path: '/buttons', name: 'app-buttons', component: Buttons},
   {path: '/checkbox', name: 'app-checkbox', component: Checkbox},
@@ -15,6 +16,7 @@ const routes = [
   {path: '/textarea', name: 'app-textarea', component: Textarea},
   {path: '/select', name: 'app-select', component: Select},
   {path: '/typography', name: 'app-typography', component: Typography},
+  {path: '/promo/tv', name: 'promoTv', component: PromoTv},
     {path: '', name:'default'}
 ]
 
