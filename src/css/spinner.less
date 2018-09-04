@@ -1,0 +1,101 @@
+.spinner{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  &--small-scale{
+    transform: scale(0.5);
+  }
+  &--absolute{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &--fixed{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &--small{
+    width: 40px;
+    height: 40px;
+  }
+  &--fill{
+    width: 100%;
+    height: 100%;
+  }
+  &__big-circle{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    animation: 1.5s roundBig linear infinite;
+  }
+
+  &__small-circle{
+    width: 52%;
+    height: 52%;
+    position: absolute;
+    top: 24%;
+    left: 24%;
+    animation: 2s roundBig linear infinite;
+  }
+  &__icon{
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes roundBig {
+  0%{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300px;
+    transform: rotate(0deg);
+  }
+  50%{
+    stroke-dashoffset: 300px;
+    stroke-dasharray: 300px;
+    transform: rotate(180deg);
+  }
+  60%{
+    stroke-dashoffset: 400px;
+    stroke-dasharray: 300px;
+    transform: rotate(360deg);
+  }
+  100%{
+    stroke-dashoffset: 600px;
+    stroke-dasharray: 300px;
+    transform: rotate(360deg);
+  }
+
+}
+@keyframes roundSmall {
+  0%{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100px;
+    transform: rotate(0deg);
+  }
+  50%{
+    stroke-dashoffset: 100px;
+    stroke-dasharray: 100px;
+    transform: rotate(180deg);
+  }
+  60%{
+    stroke-dashoffset: 140px;
+    stroke-dasharray: 100px;
+    transform: rotate(180deg);
+  }
+  100%{
+    stroke-dashoffset: 200px;
+    stroke-dasharray: 100px;
+    transform: rotate(360deg);
+  }
+
+}

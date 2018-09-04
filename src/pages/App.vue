@@ -32,6 +32,9 @@
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
                 </li>
+                <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
+                </li>
             </ul>
         </li>
         <li class="aside-menu__item"></li>
@@ -81,7 +84,6 @@ export default {
 
   },
   created() {
-      console.info('this.$route.path',this.$route.path,this.$route.path.search('promo')>=0)
       if(this.$route.path.search('promo')>=0){
           this.isPromo = true;
       }

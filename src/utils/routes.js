@@ -1,11 +1,13 @@
-import Buttons from '../pages/Buttons.vue'
-import Checkbox from '../pages/Checkbox.vue'
-import RadioButton from  '../pages/RadioButton.vue'
-import Input from  '../pages/Input.vue'
-import Select from  '../pages/Select.vue'
-import Typography from  '../pages/Typography.vue'
-import Textarea from  '../pages/Textarea.vue'
-import Switch from  '../pages/Switch.vue'
+import Buttons from '../pages/Buttons.vue';
+import Checkbox from '../pages/Checkbox.vue';
+import RadioButton from  '../pages/RadioButton.vue';
+import Input from  '../pages/Input.vue';
+import Select from  '../pages/Select.vue';
+import Typography from  '../pages/Typography.vue';
+import Textarea from  '../pages/Textarea.vue';
+import Switch from  '../pages/Switch.vue';
+import Spinner from '../pages/Spinner.vue';
+
 const routes = [
   {path: '/buttons', name: 'app-buttons', component: Buttons},
   {path: '/checkbox', name: 'app-checkbox', component: Checkbox},
@@ -15,6 +17,7 @@ const routes = [
   {path: '/textarea', name: 'app-textarea', component: Textarea},
   {path: '/select', name: 'app-select', component: Select},
   {path: '/typography', name: 'app-typography', component: Typography},
+  {path: '/spinner', name: 'app-spinner', component: Spinner},
     {path: '', name:'default'}
 ]
 
