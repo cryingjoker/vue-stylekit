@@ -7,6 +7,7 @@ import Typography from  '../pages/Typography.vue';
 import Textarea from  '../pages/Textarea.vue';
 import Switch from  '../pages/Switch.vue';
 import Spinner from '../pages/Spinner.vue';
+import Price from '../pages/Price.vue'
 
 const routes = [
   {path: '/buttons', name: 'app-buttons', component: Buttons},
@@ -18,6 +19,7 @@ const routes = [
   {path: '/select', name: 'app-select', component: Select},
   {path: '/typography', name: 'app-typography', component: Typography},
   {path: '/spinner', name: 'app-spinner', component: Spinner},
+  {path: '/price', name: 'app-price', component: Price},
     {path: '', name:'default'}
 ]
 

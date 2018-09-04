@@ -35,6 +35,9 @@
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
                 </li>
+                <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
+                </li>
             </ul>
         </li>
         <li class="aside-menu__item"></li>
