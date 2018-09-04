@@ -1,23 +1,23 @@
 <template>
-    <div class="app-content col-10 col-md-3">
+    <div class="app-content rt-col-10 rt-col-md-3">
 
         <div class="app-title">
             <h1 class="rt-font-hero row">Checkbox</h1>
         </div>
         <div class="app-body">
             <div class="app-row row">
-                <p class="rt-font-h3 col">checkbox</p>
+                <p class="rt-font-h3 rt-col">checkbox</p>
             </div>
             <div class="app-row row">
-                <div class="col">
+                <div class="rt-col">
                     <rt-checkbox>Интернет</rt-checkbox>
                 </div>
             </div>
             <div class="app-row row">
-                <p class="rt-font-h3 col">disabled checkbox</p>
+                <p class="rt-font-h3 rt-col">disabled checkbox</p>
             </div>
             <div class="app-row row">
-                <div class="col">
+                <div class="rt-col">
                     <rt-checkbox :is-disabled="true">Интернет</rt-checkbox>
                 </div>
             </div>

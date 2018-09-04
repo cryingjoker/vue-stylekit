@@ -1,0 +1,343 @@
+@panelsHeight: 60px;
+
+.main-navigation { // Основное меню прилипает только > md
+  background: #fff;
+  .boxShadow('0 0 20px rgba(0,0,0,.1), 0 0 3px rgba(0,0,0,.1)');
+  .flex();
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  z-index: 100;
+
+  &__inner {
+    padding: 40px 0;
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 100%;
+        height: 100%;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+    background: url('@{base_path}images/close.svg');
+    cursor: pointer;
+    display: block;
+    z-index: 12;
+    &._white {
+      background: url('@{base_path}images/close_white.svg');
+    }
+  }
+
+  // Выезжающие лайауты сверху
+  &__layouts {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  &__screen {
+    background-color: #fff;
+    color: #000;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 0;
+    -webkit-transition: max-height 1s cubic-bezier(.075,.82,.165,1);
+    transition: max-height 1s cubic-bezier(.075,.82,.165,1);
+    will-change: max-height;
+    .boxShadow('inset 0 0 1px rgba(0,0,0,.3)');
+    z-index: 11;
+    &.visible {
+      max-height: calc(~'100vh - 120px');
+    }
+    &_cabinet {
+      background-color: #2d2d2d;
+    }
+  }
+
+  // Верхнее прилипающее основное меню
+  &__panels-area {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    &__main-menu {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: @panelsHeight;
+    }
+    &__product-menu {
+      .flex();
+      height: @panelsHeight;
+      &__layout {
+        margin: 0 auto;
+        max-width: 100%;
+        width: @layoutWidth;
+      }
+    }
+  }
+  &__burger-link {
+    -ms-flex-preferred-size: @panelsHeight;
+    flex-basis: @panelsHeight;
+    cursor: pointer;
+    margin-top: 5px;
+    position: relative;
+    height: @panelsHeight;
+    width: @panelsHeight;
+    svg {
+      width: 100%;
+      height: 100%;
+      rect {
+        fill: #2d2d2d;
+        width: 21px;
+        height: 3px;
+      }
+    }
+  }
+
+  /* А теперь модификации для .main-navigation */
+  &__logo {
+    .flexCenter();
+    margin-right: 10px;
+  }
+  // Ссылки на ЛК по сегментам
+  &__segment {
+    &__item {
+      color: #000;
+      font-size: 14px;
+      margin: 0 5px;
+      padding: 0 5px;
+      text-decoration: none;
+      white-space: nowrap;
+      &.active {
+        cursor: default;
+        .opacity(1);
+      }
+    }
+  }
+  // Ссылки с правой стороны шапки
+  &__change-region {
+    height: @panelsHeight;
+    margin-right: 10px;
+    padding: 0;
+  }
+  &__cabinet {
+    display: none;
+    vertical-align: middle;
+    background-color: #2d2d2d;
+    &._show {
+      display: inline-block;
+    }
+    &-link {
+      display: inline-block;
+      color: #ffffff;
+      height: @panelsHeight;
+      line-height: @panelsHeight;
+      padding: 0 0.75rem;
+      &:hover {
+        background-color: #383838;
+        cursor: pointer;
+      }
+      &_login,
+      &_connect {
+        padding: 0 20px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    padding: 0;
+  }
+  // Плашка предпросмотра меню второго уровня
+  &__view {
+    margin-top: 0;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    .transition('height .3s ease');
+    z-index: 101;
+
+    &__block {
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,.1);
+      .boxShadow('0 4px 5px 0 rgba(0, 0, 0, .06)');
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      visibility: hidden;
+
+      .wrapped-menu {
+        position: relative;
+      }
+
+      .menu-secondary {
+        display: block;
+        margin-bottom: 25px;
+        a {
+          font-size: 16px;
+          font-style: normal;
+          line-height: 20px;
+          text-align: left;
+          .linkStyle();
+        }
+      }
+    }
+
+    &.opened {
+      .main-navigation__view__block {
+        height: auto;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+#mainNav {
+  // Фикс для плавного просмотра основного меню
+  .block-tabs__item {
+    text-align: center;
+
+    &:hover {
+      &:before {
+        content: "";
+        top: 0;
+        left: -50%;
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+    &:last-child {
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#mainNavDesc {
+  display: none;
+  opacity: 0;
+  overflow-y: auto;
+  .transition(all 1.5s ease);
+}
+#mainNavLinks {
+  opacity: 0;
+  padding: 35px 30px 25px;
+  .transition(all 2s ease);
+}
+#mainNavViews {
+  &.opened {
+    #mainNavDesc,
+    #mainNavLinks {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: @bp-md - 1) {
+  .main-navigation {
+    top: auto !important;
+    position: relative;
+  }
+
+  #pageContent {
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: @bp-md) {
+  @viewMenuBlockHeight: 299px;
+  .main-navigation {
+    // Делаем основное меню прилипающим
+    position: fixed;
+    right: 0;
+
+    &__change-region {
+      margin-right: 15px;
+    }
+
+    &__cabinet {
+      margin-left: 16px;
+    }
+
+    &__logo {
+      margin-left: 0;
+    }
+
+    &__segment {
+      &__item {
+        &.active {
+          .opacity(.5);
+        }
+      }
+    }
+
+    &__view {
+      &__block {
+        .menu-secondary {
+          display: block;
+          position: relative;
+        }
+        &.active {
+          height: 440px;
+        }
+      }
+      &.opened {
+        height: @viewMenuBlockHeight !important;
+      }
+    }
+  }
+
+  #mainNavDesc,
+  #mainNavLinks {
+    display: block;
+    width: 50%;
+  }
+  #mainNavLinks {
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 0;
+    height: @viewMenuBlockHeight !important;
+  }
+}
+
+@media (min-width: @maxLayoutSpace) {
+  .main-navigation {
+    &__logo {
+      margin-right: 30px;
+    }
+  }
+}
+
+// Секция расширенного меню
+.rtk-portalmenu {
+  margin: 0;
+  padding-top: 40px;
+}
+
+  // модификатор для номеров у которых есть placeholder
+.tel--top0 {
+    top: -1px;
+    font-size: 14px;
+}

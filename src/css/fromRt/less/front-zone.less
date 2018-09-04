@@ -1,0 +1,272 @@
+html {
+    font-size: 10px;
+    // Запрещаем свайп за горизонтальный оверлей #RTRU-888
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    &.screen-opened {
+        overflow-x: initial;
+    }
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Rubik, Arial, sans-serif;
+    font-size: 14px;
+    &.screen-opened {
+        overflow: hidden;
+    }
+}
+
+#pageContent {
+    min-height: 600px;
+    .page-title {
+        font-size: 36px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+}
+
+
+.rtk-modal {
+    background: transparent;
+    .v--modal {
+        background-color: white;
+        text-align: left;
+        .borderRadius(0);
+        .boxShadow( 0 20px 60px -2px rgba(27, 33, 58, .4));
+        display: table;
+        width: auto;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: auto;
+        padding: 0;
+    }
+    .vue-dialog {
+        border: none;
+        &-buttons {
+            .flex();
+            .flexWidth(100%);
+            border-top: 1px solid #eee;
+            padding: 14px 20px;
+        }
+    }
+    &__close {
+        color: rgba(0, 0, 0, .5);
+        display: block;
+        margin-top: 20px;
+        right: 20px;
+        position: absolute;
+        z-index: 22;
+    }
+}
+
+body {
+    // При входе в админку, если панель вверху, то опускаем ниже панели навигации
+    &.toolbar-fixed {
+        .rtk-modal .v--modal {
+            top: 39px !important;
+        } // Если развернуто меню в админке
+        &.toolbar-horizontal.toolbar-tray-open {
+            .rtk-modal .v--modal {
+                top: 79px !important;
+            }
+        }
+    }
+    // При адапте админ-меню становится абсолютным
+    @media (max-width: 610px) {
+        .toolbar-bar {
+            top: -39px !important;
+        }
+    }
+}
+
+.app-icon {
+    .borderRadius(50%);
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 7px;
+    position: relative;
+    stroke: rgba(0, 0, 0, .7);
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+
+    // Размеры
+    &_w100 {
+        width: 100px;
+        height: 100px;
+        &:not(.themed__icon):not(.app-icon_flat):not(.app-icon_rounded) {
+            padding: 15px !important;
+        }
+    }
+    &_w80 {
+        width: 80px;
+        height: 80px;
+        &:not(.themed__icon):not(.app-icon_flat):not(.app-icon_rounded) {
+            padding: 10px !important;
+        }
+    }
+    &_w55 {
+        width: 55px;
+        height: 55px;
+        &:not(.themed__icon):not(.app-icon_flat):not(.app-icon_rounded) {
+            padding: 7px !important;
+        }
+    }
+    &_w40 {
+        width: 40px;
+        height: 40px;
+        &:not(.themed__icon):not(.app-icon_flat):not(.app-icon_rounded) {
+            padding: 4px !important;
+        }
+    }
+    &_w34 {
+        width: 34px;
+        height: 34px;
+        &:not(.themed__icon):not(.app-icon_flat) {
+            padding: 3px !important;
+        }
+        &.app-icon_rounded:not(.themed__icon) {
+            // Специальный размер для иконок подвала
+            padding: 0 !important;
+        }
+    }
+    &_w20 {
+        width: 20px;
+        height: 20px;
+        &:not(.themed__icon):not(.app-icon_flat):not(.app-icon_rounded) {
+            padding: 2px !important;
+        }
+    }
+    // Подпись с характеристикой
+    .caption {
+        &.top {
+            background: @color_main;
+            .borderRadius(5px);
+            color: white;
+            font-size: 12px;
+            line-height: 14px;
+            min-width: 25px;
+            padding: 3px 6px;
+            position: absolute;
+            top: -@gutterWidth / 2;
+            right: -10px;
+        }
+    }
+    // Темизация
+    &_rounded {
+        .borderRadius(10%);
+        border-width: 0;
+        padding: 5px !important;
+    }
+    &_flat {
+        border-width: 0;
+        padding: 0 !important;
+    }
+    &.color_alert {
+        stroke: @color_alert;
+    }
+    &.color_lightly-gray {
+        stroke: @color_lightly_gray;
+    }
+    svg {
+        margin: auto;
+        stroke: inherit;
+        * {
+            stroke: inherit;
+            stroke-width: 2px;
+        }
+    }
+
+    &.svg- {
+        &logo,
+        &icon_345 {
+            path {
+                fill: inherit;
+                stroke: transparent;
+            }
+        }
+        &social {
+            // Соцсети
+            &_twitter {
+                background: #00a9e6;
+                [pid="0"] {
+                    fill: #ffffff;
+                    stroke: transparent;
+                }
+            }
+            &_vk {
+                background: #4c75a3;
+                [pid="0"] {
+                    fill: #ffffff;
+                    stroke: transparent;
+                }
+            }
+            &_facebook {
+                background: #3c5a99;
+                [pid="0"] {
+                    fill: #ffffff;
+                    stroke: transparent;
+                }
+            }
+            &_ok {
+                background: #ff8400;
+                [pid="0"] {
+                    fill: #ffffff;
+                    stroke: transparent;
+                }
+            }
+            &_youtube {
+                background: #ff0000;
+                [pid="0"] {
+                    fill: #ffffff;
+                    stroke: transparent;
+                }
+            }
+            &_insta {
+                background: #ffffff;
+                [pid="0"] {
+                    fill: url(#svgicon-social_insta-a);
+                    stroke: transparent;
+                }
+                [pid="1"] {
+                    fill: url(#svgicon-social_insta-b);
+                    stroke: transparent;
+                }
+                [pid="2"] {
+                    fill: url(#svgicon-social_insta-c);
+                    stroke: transparent;
+                }
+            }
+            &_flickr {
+                background: #ffffff;
+                [pid="0"] {
+                    fill: #005be2;
+                    stroke: transparent;
+                }
+                [pid="1"] {
+                    fill: #ff0081;
+                    stroke: transparent;
+                }
+            }
+        }
+        &fa {
+            background: #3c5a99;
+            .borderRadius(3px);
+            padding: 0 !important;
+            svg {
+                stroke: rgb(255, 255, 255);
+                position: absolute;
+                right: -8px;
+                bottom: -3px;
+                width: 125% !important;
+                height: 125% !important;
+            }
+            path {
+                fill: #fff;
+                stroke-width: 1px;
+            }
+        }
+    }
+}

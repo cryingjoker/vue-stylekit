@@ -1,0 +1,112 @@
+.promo{
+  &-color-line{
+    @media (min-width: 768px) {
+      height: 626px;
+    }
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  &-title{
+    margin-bottom: @vertical-space*1.75;
+    margin-top: -45px;
+
+  }
+  &-left-line-image{
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 1286px;
+    bottom: 0;
+    background-position: left center;
+    @media (max-width: 1625px) {
+      left: calc( 66.66vw - 1345px );
+    }
+    @media (max-width: 1841px) and (min-width:1476px){
+      left: calc(100vw - 1476px - 405px);
+    }
+    @media (min-width: 1841px) {
+      left: 0;
+    }
+  }
+  &-reg-app{
+    background-color: @promo-line-app-background;
+  }
+  &-color-block{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+    &--hide-overflow{
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    &--dark-blue{
+      background: @promo-dark-blue-background;
+    }
+    &--blue{
+      background: @promo-blue-background;
+    }
+  }
+  &-tv{
+    &-icon {
+      height: 92px;
+      vertical-align: top;
+    }
+    &-channel{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &__item{
+        min-width: 11.7%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        vertical-align: middle;
+        align-self: center;
+        padding-top: @vertical-space/2;
+        @media (max-width: 768px) {
+          min-width: 20%;
+        }
+      }
+      &__img{
+        width: fit-content;
+        height: auto;
+      }
+    }
+  }
+  &-shelf{
+    &__list{
+      padding-top: 10px;
+    }
+    &__image{
+      width: 100%;
+    }
+    &__pseudo-item{
+      opacity: 0.3;
+    }
+    &__info{
+      opacity: 0.5;
+      margin-top: @vertical-space/2;
+
+    }
+    &__label{
+      max-width: 100%;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+}
+
+.flex-column-center-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}

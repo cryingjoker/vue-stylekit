@@ -1,5 +1,5 @@
 <template>
-    <button class="button button-with-ripple">
+    <button class="rt-button rt-button-with-ripple">
         <rt-ripple :not-render="isDisabled">
             <slot></slot>
         </rt-ripple>

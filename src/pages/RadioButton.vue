@@ -1,5 +1,5 @@
 <template>
-    <div class="app-content col-10  col-md-3">
+    <div class="app-content rt-col-10  rt-col-md-3">
         <div class="app-title">
             <h1 class="rt-font-hero row">RadioButton</h1>
         </div>
@@ -8,15 +8,15 @@
                 <p class="rt-font-h3 row">radiobutton</p>
             </div>
             <div class="app-row row">
-                <div class="col">
+                <div class="rt-col">
                     <rt-radio-button>Интернет</rt-radio-button>
                 </div>
             </div>
             <div class="app-row row">
-                <p class="rt-font-h3 col">disabled radiobutton</p>
+                <p class="rt-font-h3 rt-col">disabled radiobutton</p>
             </div>
             <div class="app-row row">
-                <div class="col">
+                <div class="rt-col">
                     <rt-radio-button :is-disabled="true">Интернет</rt-radio-button>
                 </div>
             </div>
