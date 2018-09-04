@@ -20,10 +20,6 @@
     </div>
 </template>
 
-<!--value: Number,-->
-<!--oldValue: Number,-->
-<!--currency: String,-->
-<!--timeInterval: String-->
 <script>
     import {Price} from '../components/Price';
 

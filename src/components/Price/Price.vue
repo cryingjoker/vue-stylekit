@@ -15,7 +15,6 @@
                     if (typeof this.oldValue === 'number') {
                         return 'oldval-price'
                     }
-                    console.info('this.isOption-->>',this.isOption);
                     if (this.isOption) {
                         return 'option-price'
                     }
