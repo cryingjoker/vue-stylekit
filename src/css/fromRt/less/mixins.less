@@ -1,0 +1,464 @@
+/**
+ * Здесь полезные плюшки (миксины) для переиспользования
+ */
+
+/**
+ * Конвертер стиля элемента, кнопки или ссылки во флэт-дизайн
+ * @normal - цвет в обычном состоянии
+ * @hovered - цвет при наведении
+ */
+.flatMe(@normal, @hovered) {
+  background-color: transparent !important;
+  border-color: @normal;
+  color: @normal;
+  &:hover,
+  &:active,
+  &:active {
+    border-color: @hovered;
+    color: @hovered;
+  }
+}
+
+/**
+ * Флекс-контейнер
+ */
+.flex(@wrap: nowrap, @direction: row) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+/**
+ * Позиционирование по вертикале внутреннего содержимого флекс-бокса
+ * @pos - вертикальная позция
+ */
+ .flexAlign(@pos) {
+  -webkit-box-align: @pos;
+  -ms-flex-align: @pos;
+  align-items: @pos;
+}
+
+/**
+ * Отображение флекс-бокса абстрагировать как строку, ячейку...
+ */
+ .flexDirection(@val) {
+  -webkit-box-direction: normal;
+  -ms-flex-direction: @val;
+  flex-direction: @val;
+}
+
+/**
+ * Отображение содержимого флекс-бокса разбивать на строки, ячейки - перенос
+ */
+ .flexFlow(@val) {
+  -webkit-box-flow: normal;
+  -ms-flex-flow: @val;
+  flex-flow: @val;
+}
+
+.flexCenter() {
+  .flex();
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flexColumn() {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/**
+ * Позиционирование по горизонтале внутреннего содержимого флекс-бокса
+ * @pos - горизонтальная позция
+ */
+ .flexJustify(@pos) {
+  -webkit-box-pack: @pos;
+  -ms-flex-pack: @pos;
+  justify-content: @pos;
+}
+
+.flexRow() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/**
+ * Задаёт размер флексбокса
+ */
+ .flexWidth(@size) {
+  -webkit-box-flex: @size;
+  -ms-flex: @size;
+  flex: @size;
+}
+
+.flexPercentage(@proc) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 @proc;
+  flex: 0 0 @proc;
+  max-width: @proc; // Для IE необходимо ещё проставлять max-width
+}
+
+/**
+ * Скругленные углы
+ * @rad - радиус скругления, [ 0 10px 0 10px ]. По-умолчанию, 0
+ */
+.borderRadius(@rad: 0) {
+	-webkit-border-radius: @rad;
+	-moz-border-radius: @rad;
+	-ms-border-radius: @rad;
+	border-radius: @rad;
+}
+
+
+/**
+ * Тень для блока
+ * @params = [@inset @top @left @blur @color]
+ * @top - сдвиг сверху, px
+ * @left - сдвиг слева, px
+ * @blur - значение сглаживания, px
+ * @color - цвет тени, [color]
+ * @inset - внутренняя или нет. По-умолчанию, нет
+ */
+.boxShadow(@params) {
+  -webkit-box-shadow: ~'@{params}';
+  -moz-box-shadow: ~'@{params}';
+  box-shadow: ~'@{params}';
+}
+
+.linkStyle {
+  color: rgba(0,0,0,1);
+  text-decoration: none;
+  .transition(color .3s ease);
+
+  &:hover:not(.disabled):not(span),
+  &.is-active {
+    color: rgba(0,0,0,.3);
+  }
+}
+.linkUnderlineStyle {
+  color: rgba(0,0,0,.7);
+  text-decoration: underline;
+  .transition(color .3s ease);
+  &:hover,
+  &.disabled {
+      color: rgba(0,0,0,1) !important;
+  }
+}
+
+
+/**
+ * Простейший линейный градиент
+ * @from - цвет и позиция начальной точки
+ * @to - цвет и позиция конечной точки
+ */
+.gradient(@from, @to, @angle: 0deg) {
+  background: -moz-linear-gradient(@angle,  @from, @to); // FF3.6+
+  background: -webkit-gradient(@angle, from(@from), to(@to)); // Chrome, Safari4+
+  background: -webkit-linear-gradient(@angle, from(@from), to(@to)); // Chrome10+, Safari5.1+
+  background: -o-linear-gradient(@angle, from(@from), to(@to)); // Opera 11.10+
+  background: -ms-linear-gradient(@angle, from(@from), to(@to)); // IE10+
+  background: linear-gradient(@angle, @fromOptimizeCSSAssetsPlugin);
+}
+
+/**
+ * Прозрачность
+ * @opacity - коэффициент прозрачности [0-1]
+ */
+.opacity(@opacity) {
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{@opacity * 100})'; // IE8
+	filter: alpha(opacity=@opacity); //IE8-9
+	opacity: @opacity; // нормальные браузеры
+}
+
+
+/**
+ * Эффект анимации
+ * @params - текущие параметры анимации
+ */
+.transition(@paramsList) {
+  @params: ~'@{paramsList}';
+  -webkit-transition: @params;
+  -moz-transition: @params;
+  -o-transition: @params;
+  -ms-transition: @params;
+  transition: @params;
+}
+
+
+/**
+ * Трансформации
+ * @params - текущие параметры
+ */
+.transform(@paramsList) {
+  @params: ~'@{paramsList}';
+  -webkit-transform: @params;
+  -moz-transform: @params;
+  -o-transform: @params;
+  -ms-transform: @params;
+  transform: @params;
+}
+
+/**
+ * Запрещает перенос текста, вставляет 3 точки в конце строки если она длиньше 100%
+ */
+ .textEllipsis () {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/**
+ * Запрещает автоматический перенос текста
+ */
+.textNoCarry () {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/**
+ * Атоматический перенос текста
+ */
+ .textCarry() {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+//Миксина для формирования позиции колонки
+.createPositionColumn(@bpName) {
+  .start-@{bpName} {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    text-align: start
+  }
+  .center-@{bpName} {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center
+  }
+  .end-@{bpName} {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: end
+  }
+  .top-@{bpName} {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  .middle-@{bpName} {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+  .bottom-@{bpName} {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+  }
+  .around-@{bpName} {
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+  }
+  .between-@{bpName} {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+  .first-@{bpName} {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1
+  }
+  .last-@{bpName} {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1
+  }
+}
+
+// Миксина для создания колонки для определенного breakpoint
+.createColumn(@bpName) {
+  .col-@{bpName}-1 {
+    .flexPercentage(8.333333%);
+  }
+  .col-@{bpName}-2 {
+    .flexPercentage(16.666667%);
+  }
+  .col-@{bpName}-3 {
+    .flexPercentage(25%);
+  }
+  .col-@{bpName}-4 {
+    .flexPercentage(33.333333%);
+  }
+  .col-@{bpName}-5 {
+    .flexPercentage(41.666667%);
+  }
+  .col-@{bpName}-6 {
+    .flexPercentage(50%);
+  }
+  .col-@{bpName}-7 {
+    .flexPercentage(58.333333%);
+  }
+  .col-@{bpName}-8 {
+    .flexPercentage(66.666667%);
+  }
+  .col-@{bpName}-9 {
+    .flexPercentage(75%);
+  }
+  .col-@{bpName}-10 {
+    .flexPercentage(83.333333%);
+  }
+  .col-@{bpName}-11 {
+    .flexPercentage(91.666667%);
+  }
+  .col-@{bpName}-12 {
+    .flexPercentage(100%);
+  }
+}
+
+@spaces: 0, 5, 10, 15, 20, 25, 30, 40, 50;
+/**
+ * Генераторы внутренних отступов padding
+ */
+.generatePads(@pos, @bpName:'') {
+  .-(@i: length(@spaces)) when (@i > 0) {
+    @size: extract(@spaces, @i);
+    & when (@bpName = '') {
+      &.pad-@{pos}-@{size} {
+        padding-@{pos}: ~'@{size}px' !important;
+      }
+    }
+    & when not (@bpName = '') {
+      &.pad-@{bpName}-@{pos}-@{size} {
+        padding-@{pos}: ~'@{size}px' !important;
+      }
+    }
+    .-((@i - 1));
+  } .-;
+}
+.generateSyncPads(@bpName:'') {
+  .-(@ix: length(@spaces)) when (@ix > 0) {
+    @size: extract(@spaces, @ix);
+    & when (@bpName = '') {
+      &.pad-hor-@{size} {
+        padding-left: ~'@{size}px' !important;
+        padding-right: ~'@{size}px' !important;
+      }
+      &.pad-vert-@{size} {
+        padding-top: ~'@{size}px' !important;
+        padding-bottom: ~'@{size}px' !important;
+      }
+    }
+    & when not (@bpName = '') {
+      &.pad-@{bpName}-hor-@{size} {
+        padding-left: ~'@{size}px' !important;
+        padding-right: ~'@{size}px' !important;
+      }
+      &.pad-@{bpName}-vert-@{size} {
+        padding-top: ~'@{size}px' !important;
+        padding-bottom: ~'@{size}px' !important;
+      }
+    }
+    .-((@ix - 1));
+  } .-;
+}
+
+/**
+ * Генераторы внешних отступов margin
+ */
+ .generateMarg(@pos, @bpName:'') {
+  .-(@i: length(@spaces)) when (@i > 0) {
+    @size: extract(@spaces, @i);
+    & when (@bpName = '') {
+      &.marg-@{pos}-@{size} {
+        margin-@{pos}: ~'@{size}px' !important;
+      }
+    }
+    & when not (@bpName = '') {
+      &.marg-@{bpName}-@{pos}-@{size} {
+        margin-@{pos}: ~'@{size}px' !important;
+      }
+    }
+    .-((@i - 1));
+  } .-;
+}
+.generateSyncMarg(@bpName:'') {
+  .-(@ix: length(@spaces)) when (@ix > 0) {
+    @size: extract(@spaces, @ix);
+    & when (@bpName = '') {
+      &.marg-hor-@{size} {
+        margin-left: ~'@{size}px' !important;
+        margin-right: ~'@{size}px' !important;
+      }
+      &.marg-vert-@{size} {
+        margin-top: ~'@{size}px' !important;
+        margin-bottom: ~'@{size}px' !important;
+      }
+    }
+    & when not (@bpName = '') {
+      &.marg-@{bpName}-hor-@{size} {
+        margin-left: ~'@{size}px' !important;
+        margin-right: ~'@{size}px' !important;
+      }
+      &.marg-@{bpName}-vert-@{size} {
+        margin-top: ~'@{size}px' !important;
+        margin-bottom: ~'@{size}px' !important;
+      }
+    }
+    .-((@ix - 1));
+  } .-;
+}
+
+/**
+ * Анимация
+ * @rule - принимаемое значение свойства
+ * @prop - задаваемое свойство анимации, по-молчанию не задаётся
+ */
+ .animation(@rule, @prop: false) {
+  & when (@prop = false) {
+    -webkit-animation: @rule;
+    -moz-animation: @rule;
+    -ms-animation: @rule;
+    -o-animation: @rule;
+    animation: @rule;
+  }
+
+  & when not (@prop = false) {
+    -webkit-animation-@{prop}: @rule;
+    -moz-animation-@{prop}: @rule;
+    -ms-animation-@{prop}: @rule;
+    -o-animation-@{prop}: @rule;
+    animation-@{prop}: @rule;
+  }
+}
+
+.keyframes(@name, @rule) {
+  @-webkit-keyframes @name { @rule(); }
+  @-moz-keyframes @name { @rule(); }
+  @-ms-keyframes @name { @rule(); }
+  @-o-keyframes @name { @rule(); }
+  @keyframes @name { @rule(); }
+}

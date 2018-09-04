@@ -1,0 +1,389 @@
+/**
+ Стандартные стили для переиспользуемых селекторов, сетка
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.container {
+  padding-left: @gridPadding;
+  padding-right: @gridPadding;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media (min-width: @bp-md) {
+  .container {
+    max-width: @bp-md - 49;
+  }
+  .createPositionColumn(md);
+}
+@media (min-width: @bp-lg) {
+  .container {
+    max-width: @bp-lg - 33;
+  }
+  .createPositionColumn(lg);
+}
+@media (min-width: @bp-xl) {
+  .container {
+    max-width: @bp-xl - 61;
+  }
+  .createPositionColumn(xl);
+}
+@media (min-width: @bp-xxl) {
+  .container {
+    max-width: @bp-xxl - 61;
+  }
+  .createPositionColumn(xxl);
+}
+
+.row {
+  .flexRow();
+  margin-right: -@gridPadding;
+  margin-left: -@gridPadding;
+}
+.pad-less {
+  margin-left: -@gridPadding;
+  margin-right: -@gridPadding;
+}
+
+.flex-panel {
+  .flex();
+  &-center {
+    .flexCenter();
+  }
+  &-space- {
+    &between {
+      .flexJustify(space-between);
+    }
+  }
+  &__inner-center > * {
+    .flexCenter();
+  }
+}
+
+.justify-content-md-start   { justify-content: flex-start; }
+.justify-content-md-end     { justify-content: flex-end; }
+.justify-content-md-center  { justify-content: center; }
+.justify-content-md-between { justify-content: space-between; }
+.justify-content-md-around  { justify-content: space-around; }
+
+.falign (@pos) {
+  -webkit-box-align: @pos;
+  -ms-flex-align: @pos;
+  align-items: @pos;
+}
+.align-items {
+  &-start {
+    .falign(flex-start);
+  }
+  &-center {
+    .falign(center);
+  }
+  &-end {
+    .falign(flex-end);
+  }
+}
+.align-self {
+  &-start {
+    align-self: flex-start;
+  }
+  &-center {
+    align-self: center;
+  }
+  &-end {
+    align-self: flex-end;
+  }
+}
+.justify-content-end {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xxl,
+.col-xxl-1,
+.col-xxl-10,
+.col-xxl-11,
+.col-xxl-12,
+.col-xxl-2,
+.col-xxl-3,
+.col-xxl-4,
+.col-xxl-5,
+.col-xxl-6,
+.col-xxl-7,
+.col-xxl-8,
+.col-xxl-9,
+.col-xxl-auto {
+  min-height: 1px;
+  padding-right: @gridPadding;
+  padding-left: @gridPadding;
+  position: relative;
+  width: 100%;
+}
+
+.col {
+  .flexColumn();
+}
+
+.generatePads(top);
+.generatePads(left);
+.generatePads(right);
+.generatePads(bottom);
+.generateSyncPads();
+
+.generateMarg(top);
+.generateMarg(left);
+.generateMarg(right);
+.generateMarg(bottom);
+.generateSyncMarg();
+
+@media (max-width: @bp-sm - 1) {
+  .generatePads(top, xs);
+  .generatePads(left, xs);
+  .generatePads(right, xs);
+  .generatePads(bottom, xs);
+  .generateSyncPads(xs);
+
+  .generatePads(top, on-xs);
+  .generatePads(left, on-xs);
+  .generatePads(right, on-xs);
+  .generatePads(bottom, on-xs);
+  .generateSyncPads(on-xs);
+  .generateMarg(top, on-xs);
+  .generateMarg(left, on-xs);
+  .generateMarg(right, on-xs);
+  .generateMarg(bottom, on-xs);
+  .generateSyncMarg(on-xs);
+}
+
+@media (min-width: @bp-sm) {
+  .createColumn(sm);
+  .generatePads(top, sm);
+  .generatePads(left, sm);
+  .generatePads(right, sm);
+  .generatePads(bottom, sm);
+  .generateSyncPads(sm);
+  .generateMarg(top, sm);
+  .generateMarg(left, sm);
+  .generateMarg(right, sm);
+  .generateMarg(bottom, sm);
+  .generateSyncMarg(sm);
+}
+@media (max-width: @bp-md - 1) {
+  .generatePads(top, on-sm);
+  .generatePads(left, on-sm);
+  .generatePads(right, on-sm);
+  .generatePads(bottom, on-sm);
+  .generateSyncPads(on-sm);
+  .generateMarg(top, on-sm);
+  .generateMarg(left, on-sm);
+  .generateMarg(right, on-sm);
+  .generateMarg(bottom, on-sm);
+  .generateSyncMarg(on-sm);
+}
+
+@media (min-width: @bp-md) {
+  .createColumn(md);
+  .generatePads(top, md);
+  .generatePads(left, md);
+  .generatePads(right, md);
+  .generatePads(bottom, md);
+  .generateSyncPads(md);
+  .generateMarg(top, md);
+  .generateMarg(left, md);
+  .generateMarg(right, md);
+  .generateMarg(bottom, md);
+  .generateSyncMarg(md);
+}
+@media (max-width: @bp-lg - 1) {
+  .generatePads(top, on-md);
+  .generatePads(left, on-md);
+  .generatePads(right, on-md);
+  .generatePads(bottom, on-md);
+  .generateSyncPads(on-md);
+  .generateMarg(top, on-md);
+  .generateMarg(left, on-md);
+  .generateMarg(right, on-md);
+  .generateMarg(bottom, on-md);
+  .generateSyncMarg(on-md);
+}
+
+@media (min-width: @bp-lg) {
+  .createColumn(lg);
+  .generatePads(top, lg);
+  .generatePads(left, lg);
+  .generatePads(right, lg);
+  .generatePads(bottom, lg);
+  .generateSyncPads(lg);
+  .generateMarg(top, lg);
+  .generateMarg(left, lg);
+  .generateMarg(right, lg);
+  .generateMarg(bottom, lg);
+  .generateSyncMarg(lg);
+}
+@media (max-width: @bp-xl - 1) {
+  .generatePads(top, on-lg);
+  .generatePads(left, on-lg);
+  .generatePads(right, on-lg);
+  .generatePads(bottom, on-lg);
+  .generateSyncPads(on-lg);
+  .generateMarg(top, on-lg);
+  .generateMarg(left, on-lg);
+  .generateMarg(right, on-lg);
+  .generateMarg(bottom, on-lg);
+  .generateSyncMarg(on-lg);
+}
+
+@media (min-width: @bp-xl) {
+  .createColumn(xl);
+  .generatePads(top, xl);
+  .generatePads(left, xl);
+  .generatePads(right, xl);
+  .generatePads(bottom, xl);
+  .generateSyncPads(xl);
+  .generateMarg(top, xl);
+  .generateMarg(left, xl);
+  .generateMarg(right, xl);
+  .generateMarg(bottom, xl);
+  .generateSyncMarg(xl);
+}
+@media (max-width: @bp-xxl - 1) {
+  .generatePads(top, on-xl);
+  .generatePads(left, on-xl);
+  .generatePads(right, on-xl);
+  .generatePads(bottom, on-xl);
+  .generateSyncPads(on-xl);
+  .generateMarg(top, on-xl);
+  .generateMarg(left, on-xl);
+  .generateMarg(right, on-xl);
+  .generateMarg(bottom, on-xl);
+  .generateSyncMarg(on-xl);
+}
+
+@media (min-width: @bp-xxl) {
+  .createColumn(xxl);
+  .generatePads(top, xxl);
+  .generatePads(left, xxl);
+  .generatePads(right, xxl);
+  .generatePads(bottom, xxl);
+  .generateSyncPads(xxl);
+  .generateMarg(top, xxl);
+  .generateMarg(left, xxl);
+  .generateMarg(right, xxl);
+  .generateMarg(bottom, xxl);
+  .generateSyncMarg(xxl);
+}
+
+.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+.col-md-auto {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+.middle-xs {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.middle {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

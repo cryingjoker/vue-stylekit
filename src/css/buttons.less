@@ -1,4 +1,4 @@
-.button{
+.rt-button{
   border-radius: 5px;
   height: 49px;
   margin: 0px;
@@ -9,6 +9,8 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color;
   transition-duration: 0.4s;
+  padding-left: @horizontal-space;
+  padding-right: @horizontal-space;
   .ripple-wave{
     transition-timing-function: cubic-bezier(.1,.4,1,.39);
     background-color: @default-wive-color;
@@ -16,6 +18,7 @@
   &-with-ripple{
     padding-left: 0;
     padding-right: 0;
+    overflow: hidden;
   }
   &+&{
     margin-left: @horizontal-space;
@@ -42,7 +45,7 @@
     //}
   }
   &-mb-small {
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       font-size: 14px;
       height: 34px;
       .ripple{

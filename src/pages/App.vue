@@ -1,9 +1,8 @@
 <template>
-<div class="app container d-flex flex-row" :class="{'app--hide-scroll' : this.showMenu}">
+<div class="app d-flex flex-row" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
-
     <keep-alive>
-      <ul class="aside-menu col-2 col-md-3" :class="{'aside-menu--active' : this.showMenu}">
+      <ul class="aside-menu rt-col-2 rt-col-md-3" :class="{'aside-menu--active' : this.showMenu,'d-none': this.isPromo}">
         <li class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
         </li>
@@ -33,6 +32,12 @@
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
                 </li>
+                <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
+                </li>
+                <li class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
+                </li>
             </ul>
         </li>
         <li class="aside-menu__item"></li>
@@ -54,6 +59,7 @@ export default {
   name: "App",
     data:()=>({
         showMenu: false,
+        isPromo: false,
 
     }),
   components: componentsList,
@@ -77,7 +83,13 @@ export default {
           document.body.classList = bodyClassList.join(' ');
       }
   },
-  mounted() {},
-  created() {}
+  mounted() {
+
+  },
+  created() {
+      if(this.$route.path.search('promo')>=0){
+          this.isPromo = true;
+      }
+  }
 };
 </script>
