@@ -13,7 +13,7 @@
         <li class="aside-menu__item"></li>
         <li class="aside-menu__item">
             <p class="aside-menu__submenu-title">Forms</p>
-            <ul class="aside-menu">
+            <ul class="aside-sub-menu">
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="checkbox">Checkbox</router-link>
                 </li>
@@ -32,15 +32,24 @@
                 <li class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
                 </li>
+
+
+            </ul>
+        </li>
+          <li class="aside-menu__item">
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
+          </li>
+          <li class="aside-menu__item">
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
+          </li>
+        <li class="aside-menu__item">
+            <p class="aside-menu__submenu-title">Complex elements</p>
+            <ul class="aside-sub-menu">
                 <li class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
-                </li>
-                <li class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="cards">Card</router-link>
                 </li>
             </ul>
         </li>
-        <li class="aside-menu__item"></li>
       </ul>
     </keep-alive>
 
@@ -51,7 +60,7 @@
 </template>
 
 <script>
-    import {Switch} from '../components/Switch';
+    import {Switch} from '@/Components/main-elements/Switch';
     const componentsList = {};
     componentsList[Switch.name] = Switch;
 
