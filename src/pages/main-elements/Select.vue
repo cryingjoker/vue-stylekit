@@ -80,7 +80,7 @@
 
 
 <script>
-import { Select, SelectOption, SelectWithoutJs } from "../components/Select";
+import { Select, SelectOption, SelectWithoutJs } from "@/components/main-elements/Select/index";
 
 const componentsList = {};
 componentsList[Select.name] = Select;

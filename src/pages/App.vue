@@ -51,7 +51,7 @@
 </template>
 
 <script>
-    import {Switch} from '../components/Switch';
+    import {Switch} from '@/Components/main-elements/Switch';
     const componentsList = {};
     componentsList[Switch.name] = Switch;
 

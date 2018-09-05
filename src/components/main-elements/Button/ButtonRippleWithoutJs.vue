@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import {RippleWihoutJsComponent} from '../Ripple'
+    import {RippleWihoutJsComponent} from '../Ripple/index'
     const componentsList = {};
     componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent;
     export default {

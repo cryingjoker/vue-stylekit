@@ -29,7 +29,7 @@
 
 
 <script>
-    import {Checkbox} from '../components/Checkbox';
+    import {Checkbox} from '@/components/main-elements/Checkbox';
     const componentsList = {};
     componentsList[Checkbox.name] = Checkbox;
     export default {

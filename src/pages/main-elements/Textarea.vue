@@ -75,7 +75,7 @@
 
 
 <script>
-    import {Textarea, TextareaStatic, TextareaWithoutJs} from "../components/Textarea";
+    import {Textarea, TextareaStatic, TextareaWithoutJs} from "@/components/main-elements/Textarea/index";
 
     const componentsList = {};
     componentsList[Textarea.name] = Textarea;

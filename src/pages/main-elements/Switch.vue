@@ -1,37 +1,39 @@
 <template>
     <div class="app-content rt-col-10  rt-col-md-3">
+
         <div class="app-title">
-            <h1 class="rt-font-hero row">RadioButton</h1>
+            <h1 class="rt-font-hero row">Switch</h1>
         </div>
         <div class="app-body">
-            <div class="app-row">
-                <p class="rt-font-h3 row">radiobutton</p>
+            <div class="app-row row">
+                <p class="rt-font-h3 rt-col">switch</p>
             </div>
             <div class="app-row row">
                 <div class="rt-col">
-                    <rt-radio-button>Интернет</rt-radio-button>
+                    <rt-switch>Интернет</rt-switch>
                 </div>
             </div>
             <div class="app-row row">
-                <p class="rt-font-h3 rt-col">disabled radiobutton</p>
+                <p class="rt-font-h3 rt-col">disabled switch</p>
             </div>
             <div class="app-row row">
                 <div class="rt-col">
-                    <rt-radio-button :is-disabled="true">Интернет</rt-radio-button>
+                    <rt-switch :is-disabled="true">Интернет</rt-switch>
                 </div>
             </div>
         </div>
     </div>
+
+
 </template>
 
 
 <script>
-    import {RadioButton} from '../components/RadioButton';
-
+    import {Switch} from '@/components/main-elements/Switch/index';
     const componentsList = {};
-    componentsList[RadioButton.name] = RadioButton;
+    componentsList[Switch.name] = Switch;
     export default {
-        name: 'app-RadioButton',
+        name: 'app-switch',
         components: componentsList,
         methods: {},
         mounted() {
@@ -41,3 +43,5 @@
     }
 </script>
 
+<style scoped lang="scss">
+</style>

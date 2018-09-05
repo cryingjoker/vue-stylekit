@@ -1,13 +1,13 @@
-import Buttons from '../pages/Buttons.vue';
-import Checkbox from '../pages/Checkbox.vue';
-import RadioButton from  '../pages/RadioButton.vue';
-import Input from  '../pages/Input.vue';
-import Select from  '../pages/Select.vue';
-import Typography from  '../pages/Typography.vue';
-import Textarea from  '../pages/Textarea.vue';
-import Switch from  '../pages/Switch.vue';
-import Spinner from '../pages/Spinner.vue';
-import Price from '../pages/Price.vue'
+import Buttons from '../pages/main-elements/Buttons.vue';
+import Checkbox from '../pages/main-elements/Checkbox.vue';
+import RadioButton from '../pages/main-elements/RadioButton.vue';
+import Input from '../pages/main-elements/Input.vue';
+import Select from '../pages/main-elements/Select.vue';
+import Typography from '../pages/main-elements/Typography.vue';
+import Textarea from '../pages/main-elements/Textarea.vue';
+import Switch from '../pages/main-elements/Switch.vue';
+import Spinner from '../pages/main-elements/Spinner.vue';
+import Price from '../pages/main-elements/Price.vue'
 
 const routes = [
   {path: '/buttons', name: 'app-buttons', component: Buttons},

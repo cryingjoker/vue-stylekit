@@ -77,7 +77,7 @@
 
 
 <script>
-import { Input, InputWithoutJs } from "../components/Input";
+import { Input, InputWithoutJs } from "@/Components/main-elements/Input";
 
 const componentsList = {};
 componentsList[Input.name] = Input;
