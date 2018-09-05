@@ -27,6 +27,7 @@ export default {
         const size = this.getElementSize();
         const hitPosition = this.getHitPosition($event, size);
         const sizeNormalize = size + "px";
+        const sizeOffsetNormalize = -1*size/2+"px";
         const hash = Math.random()
           .toString(36)
           .slice(4);
@@ -34,10 +35,13 @@ export default {
           waveStyles: {
             width: sizeNormalize,
             height: sizeNormalize,
+            'margin-top': sizeOffsetNormalize,
+            'margin-left': sizeOffsetNormalize,
             ...hitPosition
           },
           key: hash
         });
+        console.info('this.ripplesList',this.ripplesList);
 
       }
     },
