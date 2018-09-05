@@ -1,5 +1,5 @@
 <template>
-    <button class="rt-button rt-button-with-ripple">
+    <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}">
         <rt-ripple :not-render="isDisabled">
             <slot></slot>
         </rt-ripple>
@@ -12,7 +12,9 @@
     componentsList[RippleComponent.name] = RippleComponent;
 
     export default {
-        props: [],
+        props: {
+            isBlock: Boolean,
+        },
         data: ()=>({
             isDisabled : true
         }),

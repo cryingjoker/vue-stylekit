@@ -1,6 +1,6 @@
 <template>
-    <div class="input text-field" :class="{'text-field--error':hasError}">
-        <input type="text" class="input-element" @input="inputHandler">
+    <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':this.isWhite}">
+        <input autocomplete="off" autocapitalize="off" type="text" class="input-element" @input="inputHandler">
         <div class="text-field__line"></div>
         <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
             {{placeholder}}
@@ -19,7 +19,8 @@
             'placeholder': String,
             'hasError': Boolean,
             'errorMessage': String,
-            'value': String
+            'value': String,
+            'isWhite': Boolean
         },
         data() {
             return {

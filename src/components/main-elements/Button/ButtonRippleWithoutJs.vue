@@ -1,5 +1,5 @@
 <template>
-    <button class="rt-button rt-button-with-ripple">
+    <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}">
         <rt-ripple-without-js>
             <slot></slot>
         </rt-ripple-without-js>
@@ -11,7 +11,9 @@
     const componentsList = {};
     componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent;
     export default {
-        props: [],
+        props: {
+            isBlock: Boolean
+        },
         components: componentsList,
         name: "rt-button-ripple-without-js",
         mounted: function () {}

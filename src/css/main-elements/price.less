@@ -5,8 +5,13 @@
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
   transition-duration: 0.4s;
+
   .rt-dark-theme &{
     color: @b2b-white07;
+  }
+  .rt-card--has-white-color &{
+    color: white;
+    opacity: 0.9;
   }
   &__opinion{
     display: inline-block;
@@ -46,16 +51,21 @@
     vertical-align: baseline;
     padding-right: 5px;
     padding-left: 5px;
+    line-height: 70px;
 
   }
   &__value{
     font-size: 54px;
     line-height: 70px;
-    color: @b2c-orange-low;
     vertical-align: baseline;
+    color: @main-color09;
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px;
+    .rt-card--has-white-color &{
+      color: white;
+    }
+
   }
   &__info{
     display: inline-block;
@@ -67,6 +77,9 @@
         transition-timing-function: ease-in-out;
         transition-property: border;
         transition-duration: 0.4s;
+        .rt-card--has-white-color &{
+          border-top-color: white;
+        }
         .rt-dark-theme &{
           border-color: @b2b-white07;
         }

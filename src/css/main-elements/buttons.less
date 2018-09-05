@@ -11,8 +11,11 @@
   transition-duration: 0.4s;
   padding-left: @horizontal-space;
   padding-right: @horizontal-space;
+  &--is-block{
+    display: block;
+    min-width: 100%;
+  }
   .ripple-wave{
-    transition-timing-function: cubic-bezier(.1,.4,1,.39);
     background-color: @default-wive-color;
   }
   &-with-ripple{

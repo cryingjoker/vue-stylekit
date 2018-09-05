@@ -1,17 +1,22 @@
 <script type="text/jsx">
+
     export default {
         props: {
             value: Number,
             oldValue: Number,
             currency: String,
             timeInterval: String,
-            isOption: Boolean
+            isOption: Boolean,
+            onlyPrice: Boolean
         },
         data() {
             return {
-                normalizeValue: this.value ? parseInt(this.value) : this.value,
-                normalizeOldValue: this.oldValue ? parseInt(this.oldValue) : this.oldValue,
+                normalizeValue:  this.value ? (parseInt(this.value)+'').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : this.value,
+                normalizeOldValue: this.oldValue ? (parseInt(this.oldValue)+'').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') : this.oldValue,
                 priceType: (() => {
+                    if(this.onlyPrice){
+                        return 'only-price'
+                    }
                     if (typeof this.oldValue === 'number') {
                         return 'oldval-price'
                     }
@@ -39,6 +44,14 @@
         render: function (h) {
 
             switch (this.priceType) {
+                case 'only-price': return <div class="rt-price">
+
+                    <div class="rt-price__value">{this.normalizeValue}</div>
+                    <div class="rt-price__info">
+                        <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                    </div>
+                </div>
+                break;
                 case 'oldval-price':
                     return <div class="rt-price">
                         <div class="rt-price__old-value">{this.normalizeOldValue}</div>

@@ -41,7 +41,6 @@ export default {
           },
           key: hash
         });
-        console.info('this.ripplesList',this.ripplesList);
 
       }
     },
@@ -58,13 +57,7 @@ export default {
     getHitPosition($event, elementSize) {
       return {
         left:$event.offsetX,
-          // $event.clientX -
-          // this.$el.getBoundingClientRect().left -
-          // elementSize / 2,
         top: $event.offsetY
-          // $event.clientY -
-          // this.$el.getBoundingClientRect().top -
-          // elementSize / 2
       };
     }
   }

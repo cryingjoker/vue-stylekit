@@ -53,111 +53,114 @@
   color: @b2c-red-low;
   text-decoration: underline;
 }
-.aside-menu {
-  font-size: 14px;
-  box-sizing: border-box;
-  transition-duration: 0.3s;
-  transition-property: left;
-  transition-timing-function: ease-in-out;
-
-
-  @media (max-width: 768px) {
-    position: absolute;
-    overflow-y: auto;
-    padding-top: @vertical-space*2;
-    min-height: 100vh;
-    background-color: #fff;
-    z-index: 999;
-    max-width: 100vw;
-    padding-right: 0px;
-    left: -120vw;
-    .rt-dark-theme &{
-      background-color: @dark-theme-background;
-    }
-    .aside-menu{
-      left: 0;
-      padding-top: @vertical-space;
-
-    }
-
-    &--active{
-      left: -20px;
-    }
-  }
-  padding-top: 100px;
-  border-right: 1px solid @b2b-cool-gray05;
-  min-height: 100vh;
-  .aside-menu{
-    min-height: 0;
-    padding-top: @vertical-space;
-    border: none;
-  }
-
-
-  &__submenu-title{
-    margin-left: 25px;
-    margin-right: 15px;
-    border-bottom: 1px solid @b2b-cool-gray;
-    margin-top: 16px;
-    padding-bottom: 5px;
-  }
-  &__link {
-    color: @b2b-black06;
-    text-decoration: none!important;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: block;
-    padding-left: 30px;
-    padding-right: 15px;
+.aside {
+  &-menu {
+    overflow: auto;
+    font-size: 14px;
+    box-sizing: border-box;
     transition-duration: 0.3s;
-    transition-property: background, color;
+    transition-property: left;
     transition-timing-function: ease-in-out;
-    cursor: pointer;
-    position: relative;
-    .rt-dark-theme &{
-      color: @b2b-cool-gray05
-    }
-    &:before{
-      content: '';
-      width: 10px;
-      height: 1px;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+    @media (max-width: 768px) {
       position: absolute;
-      left: 10px;
-      top: 0;
-      bottom: 0;
-      opacity: 0;
-      margin-top: auto;
-      background-color: @b2b-red-hight;
-      margin-bottom: auto;
+      overflow-y: auto;
+      padding-top: @vertical-space*2;
+      background-color: #fff;
+      z-index: 999;
+      max-width: 100vw;
+      padding-right: 0px;
+      left: -120vw;
+      .rt-dark-theme & {
+        background-color: @dark-theme-background;
+      }
+
+      &--active {
+        left: -20px;
+      }
+    }
+    padding-top: 100px;
+    border-right: 1px solid @b2b-cool-gray05;
+
+
+    &__submenu-title {
+      margin-left: 25px;
+      margin-right: 15px;
+      border-bottom: 1px solid @b2b-cool-gray;
+      margin-top: 16px;
+      padding-bottom: 5px;
+    }
+    &__link {
+      color: @b2b-black06;
+      text-decoration: none !important;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: block;
+      padding-left: 30px;
+      padding-right: 15px;
       transition-duration: 0.3s;
-      transition-property: opacity;
+      transition-property: background, color;
       transition-timing-function: ease-in-out;
-      will-change: opacity;
-    }
-    &:hover,
-    &:focus{
-      color: @b2b-black;
-      .rt-dark-theme &{
-        color: white;
+      cursor: pointer;
+      position: relative;
+      .rt-dark-theme & {
+        color: @b2b-cool-gray05
       }
-    }
-    &--active {
-      color: @b2b-black;
-      &:before{
-        opacity: 1;
+      &:before {
+        content: '';
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        margin-top: auto;
+        background-color: @b2b-red-hight;
+        margin-bottom: auto;
+        transition-duration: 0.3s;
+        transition-property: opacity;
+        transition-timing-function: ease-in-out;
+        will-change: opacity;
+      }
+      &:hover,
+      &:focus {
+        color: @b2b-black;
+        .rt-dark-theme & {
+          color: white;
+        }
+      }
+      &--active {
+        color: @b2b-black;
+        &:before {
+          opacity: 1;
+        }
+
       }
 
     }
-
+  }
+  &-sub-menu{
+    margin-left: 20px;
+    padding-top: @vertical-space;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
 }
-.dark-theme-switcher{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.rt-code{
-  font-family: "RT Code";
-  display: inline-block;
-  color: @b2b-red-hight;
-}
+
+  .dark-theme-switcher{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .rt-code{
+    font-family: "RT Code";
+    display: inline-block;
+    color: @b2b-red-hight;
+  }
+

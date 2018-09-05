@@ -23,7 +23,6 @@
             setElementStyle(el){
                 const newStyle = {
                             ...this.waveStyle,
-                            opacity: 0.26,
                             visability: 'visible',
                             transform: 'scale(2)'
                         };
@@ -37,9 +36,8 @@
                 return inlineStyle.join(';');
             },
             hideWive(el){
-                this.$el.style.opacity = 0;
                 setTimeout(()=>{
-                    this.end();
+                    // this.end();
                 },40)
             },
             end(){

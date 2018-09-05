@@ -1,5 +1,5 @@
 <template>
-    <div class="input text-field" :class="{'text-field--error':hasError}">
+    <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':this.isWhite}">
         <input type="text" class="input-element" :placeholder="placeholder" >
         <div class="text-field__line"></div>
         <p class="text-field__error-message" v-if="!!hasError">{{errorMessage}}</p>
@@ -14,7 +14,8 @@
             'placeholder': String,
             'hasError': Boolean,
             'errorMessage': String,
-            'value': String
+            'value': String,
+            'isWhite': Boolean
         },
         data:()=>({
             inputText: ''

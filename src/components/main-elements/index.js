@@ -16,7 +16,7 @@ import Spinner from  "./Spinner/Spinner.vue"
 import Switch from  "./Switch/Switch.vue"
 import Textarea from  "./Textarea/Textarea.vue"
 import TextareaStatic from  "./Textarea/TextareaStatic.vue"
-import TextareaWithoutJs from  ".Textarea/TextareaWithoutJs.vue"
+import TextareaWithoutJs from  "./Textarea/TextareaWithoutJs.vue"
 
 export {
     Button,

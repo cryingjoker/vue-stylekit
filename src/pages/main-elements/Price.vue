@@ -7,9 +7,16 @@
                 <div class="rt-col-4 rt-col-md-3 rt-mb-space-top"><rt-price :value="750.231" :old-value="123.2"></rt-price></div>
                 <div class="rt-col-4 rt-col-md-3 rt-mb-space-top"><rt-price :value="750.231"></rt-price></div>
             </div>
+
             <div class="row rt-space-top">
                 <div class="rt-col-4 rt-col-md-3"><rt-price :value="69" :is-option="true" :currency="'€'" ></rt-price></div>
                 <div class="rt-col-4 rt-col-md-3 rt-mb-space-top"><rt-price :value="750.231" :time-interval="'час.'"></rt-price></div>
+            </div>
+            <div class="row rt-space-top">
+                <div class="rt-col-16 rt-col-md-3"><rt-price :value="1231223169" :is-option="true" :currency="'€'" ></rt-price></div>
+            </div>
+            <div class="row rt-space-top">
+                <div class="rt-col-16 rt-col-md-3"><rt-price :value="1231223169" :only-price="true" :currency="'€'" ></rt-price></div>
             </div>
 
 

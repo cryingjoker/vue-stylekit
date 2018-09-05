@@ -27,9 +27,26 @@
     height: 10px;
     background-color: #fff;
     transform: scale(2) translateZ(0);
-    transition-timing-function: cubic-bezier(.2,0,.19,1.01);
-    transition-property: opacity, transform, width, height, margin;
+    transition-timing-function: cubic-bezier(1,.22,.9,.65);
+    transition-property: transform, width, height, margin;
     transition-duration: 0.4s;
-
+    animation: 0.7s showRipple linear;
+    .white-wave &{
+      background-color: #fff;
+    }
   }
 }
+
+@keyframes showRipple {
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0.26;
+  }
+  100%{
+    opacity: 0;
+  }
+
+}
+

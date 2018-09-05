@@ -1,11 +1,15 @@
 <template>
-    <button class="rt-button">
+    <button class="rt-button" :class="{'rt-button--is-block' : this.isBlock}">
         <slot></slot>
     </button>
 </template>
 
 <script>
     export default {
-        name: "rt-button-without-ripple"
+        props: {
+            isBlock: Boolean
+        },
+
+        name: "rt-button-without-ripple",
     }
 </script>

@@ -15,12 +15,15 @@
       width: 40px;
       height: 25px;
       border-radius: 19px;
-      background-color: @form-elements-border-color05;
+      background-color: fade(@switcher-color,20%);
       left: 0px;
       top: 0px;
       transition-timing-function: ease-in-out;
       transition-property: background-color;
       transition-duration: 0.1s;
+      .rt-dark-theme &{
+        background-color: fade(@b2c-cool-grey, 20%);
+      }
     }
     &:after{
       content: '';
@@ -28,12 +31,15 @@
       width: 19px;
       height: 19px;
       border-radius: 50%;
-      background-color: @form-elements-border-color;
+      background-color: @switcher-color;
       left: 3px;
       top: 3px;
       transition-timing-function: ease-in-out;
       transition-property: margin, background-color;
       transition-duration: 0.1s;
+      .rt-dark-theme &{
+        background-color: @b2c-cool-grey;
+      }
 
     }
     .switch-element:checked+&{
