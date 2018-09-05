@@ -1538,7 +1538,7 @@
             attrs: {"is-block": !0}
         }, [n._v("Оплатить")])], 1)], 2)], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground4.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground4.png",
                 "background-cover": !0,
                 "background-blur": 5
             }
@@ -1547,7 +1547,7 @@
             attrs: {"is-block": !0}
         }, [n._v("Оплатить")])], 1)], 2)], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground3.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground3.png",
                 "is-white-color": !0,
                 "background-cover": !0,
                 "background-smoke": .3
@@ -1557,7 +1557,7 @@
             attrs: {"is-block": !0}
         }, [n._v("Оплатить")])], 1)], 2)], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground5.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground5.png",
                 "background-position": "bottom-right",
                 colSize: 2
             }
@@ -1568,7 +1568,7 @@
             }
         })], 1), n._v(" "), o("template", {slot: "footer"}, [o("p", {staticClass: "rt-font-paragraph rt-font-bold"}, [n._v("Звоните по новому")]), n._v(" "), o("p", {staticClass: "rt-font-paragraph rt-space-top05 rt-space-bottom"}, [n._v("Беспроцентная рассрочка на\n                            смартфоны Samsung Galaxy S8 для абонентов Ростелекома")]), n._v(" "), o("p", {staticClass: "rt-space-top"}, [n._v("Условия акции")])])], 2)], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground3.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground3.png",
                 "background-opacity": .5,
                 "background-position": "bottom-right",
                 "is-white-color": !0,
@@ -1578,7 +1578,7 @@
             }
         }, [o("template", {slot: "content"}, [o("p", {staticClass: "rt-font-paragraph rt-font-bold"}, [n._v("Родительский контроль")]), n._v(" "), o("p", {staticClass: "rt-space-top05 rt-card-text rt-space-right"}, [n._v("для безопасности детей\n                            в интернете")])]), n._v(" "), o("template", {slot: "footer"}, [o("p", [n._v("Выберите свой тип подписки")])])], 2)], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground6.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground6.png",
                 "background-cover": !0,
                 "background-opacity": .7,
                 "background-smoke": .3,
@@ -1594,7 +1594,7 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-cover": !0,
                 "background-opacity": .7,
                 "background-smoke": .3,
@@ -1610,7 +1610,7 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground7.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground7.png",
                 "background-cover": !0,
                 "background-opacity": .7,
                 "background-smoke": .2,
@@ -1646,7 +1646,7 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground8.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground8.png",
                 "background-cover": !0,
                 "is-white-color": !0,
                 "background-color-type": "black",
@@ -1662,7 +1662,7 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground9.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground9.png",
                 "background-position": "bottom-right",
                 colSize: 2
             }
@@ -1678,7 +1678,7 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground10.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground10.png",
                 "background-cover": !0,
                 "background-opacity": .7,
                 "background-smoke": .3,
@@ -1694,34 +1694,34 @@
             }
         }, [o("p", [n._v("Оплата услуг")])])], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-cover": !0,
                 "background-blur": 5
             }
         }, [o("p", {staticClass: "rt-card__label rt-font-paragraph"}, [n._v("Оплата услуг")])])], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
                 "background-repeat": !0,
-                "background-image": "/example-images/cardBackground2.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground2.png",
                 "background-smoke": .3
             }
         })], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-smoke": .5
             }
         })], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-8 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-cover": !0
             }
         })], 1), n._v(" "), o("div", {staticClass: "rt-col-4 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-cover": !0
             }
         })], 1)]), n._v(" "), o("div", {staticClass: "row"}, [o("div", {staticClass: "rt-col-12 rt-col-md-3 rt-space-top"}, [o("rt-card", {
             attrs: {
-                "background-image": "/example-images/cardBackground1.png",
+                "background-image": "/vue-stylekit/example-images/cardBackground1.png",
                 "background-cover": !0
             }
         })], 1)])])])
