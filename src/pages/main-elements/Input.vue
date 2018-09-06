@@ -1,4 +1,5 @@
 <template>
+    <div class="rt-container">
     <div class="app-content rt-col-md-3  rt-col-12">
         <div class="app-title">
                 <h1 class="rt-font-hero rt-col">Input</h1>
@@ -72,6 +73,7 @@
             </div>
 
         </div>
+    </div>
     </div>
 </template>
 

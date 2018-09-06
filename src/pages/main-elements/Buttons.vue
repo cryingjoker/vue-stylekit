@@ -1,4 +1,5 @@
 <template>
+    <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
             <div class="row">
@@ -199,7 +200,7 @@
         </div>
     </div>
 
-
+    </div>
 </template>
 
 <script>

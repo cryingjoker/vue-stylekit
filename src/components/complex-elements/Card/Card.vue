@@ -136,7 +136,6 @@
         },
 
         mounted: function () {
-            this.isDisabled = this.$el.disabled;
         }
 
     }

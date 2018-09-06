@@ -10,6 +10,8 @@ import Spinner from '@/pages/main-elements/Spinner.vue';
 import Price from '@/pages/main-elements/Price.vue'
 import Cards from '@/pages/complex-elements/Card.vue'
 import Tariff from '@/pages/complex-elements/Tariff.vue'
+import Icons from '@/pages/icons-elements/Icons.vue'
+import Banners from '@/pages/experiment-elements/Banners.vue'
 
 
 const routes = [
@@ -25,6 +27,8 @@ const routes = [
     {path: '/price', name: 'app-price', component: Price},
     {path: '/cards', name: 'app-cards', component: Cards},
     {path: '/tariffs', name: 'app-cards', component: Tariff},
+    {path: '/icons', name: 'app-icons', component: Icons},
+    {path: '/banners', name: 'app-banners', component: Banners},
     {path: '', name: 'default'}
 ]
 
