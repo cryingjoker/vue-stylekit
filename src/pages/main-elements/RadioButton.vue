@@ -1,11 +1,11 @@
 <template>
-    <div class="app-content rt-col-10  rt-col-md-3">
+    <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-            <h1 class="rt-font-hero row">RadioButton</h1>
+            <h1 class="rt-font-hero">RadioButton</h1>
         </div>
         <div class="app-body">
             <div class="app-row">
-                <p class="rt-font-h3 row">radiobutton</p>
+                <p class="rt-font-h3">radiobutton</p>
             </div>
             <div class="app-row row">
                 <div class="rt-col">

@@ -1,7 +1,7 @@
 <template>
-    <div class="app-content  t rt-col-10 rt-col-md-3">
+    <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-            <h1 class="rt-font-hero row">Textarea</h1>
+            <h1 class="rt-font-hero">Textarea</h1>
         </div>
         <div class="app-body">
             <div class="app-row row">

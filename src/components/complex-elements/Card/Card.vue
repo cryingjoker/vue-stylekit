@@ -77,7 +77,7 @@
                 }
                 if(typeof this.colSize !== 'undefined'){
                     if(this.colSize === 2){
-                        classArray['rt-col-6'] = true;
+                        classArray['rt-col-6 rt-col-md-3'] = true;
                     }
                 }
                 return classArray

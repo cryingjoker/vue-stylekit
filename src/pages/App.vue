@@ -1,61 +1,86 @@
 <template>
-<div class="app d-flex flex-row" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
+<div class="app rt-container" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
+    <div class="row">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
+
+    <div class="grid" :class="{'grid--active': this.showGrid}">
+        <div class="row">
+            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
+            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
+            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+            <div class="rt-col-1 demo-col mb-d-none"></div>
+        </div>
+    </div>
     <keep-alive>
-      <ul class="aside-menu rt-col-2 rt-col-md-3" :class="{'aside-menu--active' : this.showMenu,'d-none': this.isPromo}">
-        <li class="aside-menu__item">
+
+      <div class="aside-menu" :class="{'aside-menu--active' : this.showMenu,'d-none': this.isPromo}">
+          <rt-switch @change="gridToggle" class="grid-switcher">Grid</rt-switch>
+        <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
-        </li>
-        <li class="aside-menu__item">
+        </div>
+        <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="typography">Typography</router-link>
-        </li>
-        <!--<li class="aside-menu__item" to="color">Color list</li>-->
-        <li class="aside-menu__item"></li>
-        <li class="aside-menu__item">
+        </div>
+        <!--<div class="aside-menu__item" to="color">Color list</div>-->
+        <div class="aside-menu__item"></div>
+        <div class="aside-menu__item">
             <p class="aside-menu__submenu-title">Forms</p>
-            <ul class="aside-sub-menu">
-                <li class="aside-menu__item">
+            <div class="aside-sub-menu">
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="checkbox">Checkbox</router-link>
-                </li>
-                <li class="aside-menu__item">
+                </div>
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="radiobutton">Radiobutton</router-link>
-                </li>
-                <li class="aside-menu__item">
+                </div>
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="switch">Switch</router-link>
-                </li>
-                <li class="aside-menu__item">
+                </div>
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="input">Input</router-link>
-                </li>
-                <li class="aside-menu__item">
+                </div>
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="textarea">Textarea</router-link>
-                </li>
-                <li class="aside-menu__item">
+                </div>
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
-                </li>
+                </div>
 
 
-            </ul>
-        </li>
-          <li class="aside-menu__item">
+            </div>
+        </div>
+          <div class="aside-menu__item">
               <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
-          </li>
-          <li class="aside-menu__item">
+          </div>
+          <div class="aside-menu__item">
               <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
-          </li>
-        <li class="aside-menu__item">
+          </div>
+        <div class="aside-menu__item">
             <p class="aside-menu__submenu-title">Complex elements</p>
-            <ul class="aside-sub-menu">
-                <li class="aside-menu__item">
+            <div class="aside-sub-menu">
+                <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="cards">Card</router-link>
-                </li>
-            </ul>
-        </li>
-      </ul>
+                </div>
+                <div class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="tariffs">Tariff</router-link>
+                </div>
+            </div>
+        </div>
+      </div>
+
     </keep-alive>
 
     <router-view></router-view>
     <rt-switch @change="switchTheme" class="dark-theme-switcher">Dark theme</rt-switch>
 
+</div>
 </div>
 </template>
 
@@ -69,6 +94,7 @@ export default {
     data:()=>({
         showMenu: false,
         isPromo: false,
+        showGrid: false
 
     }),
   components: componentsList,
@@ -80,6 +106,9 @@ export default {
   methods: {
       menuTrigger(){
           this.showMenu = true;
+      },
+      gridToggle(){
+          this.showGrid = !this.showGrid;
       },
 
       switchTheme(isChecked){

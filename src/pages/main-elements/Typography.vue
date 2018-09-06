@@ -1,5 +1,5 @@
 <template>
-    <div class="app-content  rt-col-10  rt-col-md-3">
+    <div class="app-content  rt-col-12 rt-col-md-3">
         <div class="app-title row"><h1 class="col rt-font-hero">Typography</h1></div>
         <div class="app-body">
             <div class="app-row row">
