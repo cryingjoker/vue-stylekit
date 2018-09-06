@@ -13,6 +13,9 @@
         <rt-banner></rt-banner>
         <rt-banner class="rt-banner--has-max-width"></rt-banner>
 
+        <rt-banner color="yellow"></rt-banner>
+        <rt-banner color="yellow" class="rt-banner--has-max-width"></rt-banner>
+
     </div>
 </template>
 
