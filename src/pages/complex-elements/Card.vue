@@ -32,7 +32,7 @@
                                 номер лицевого счёта</p>
                         </template>
                         <template slot="footer">
-                            <rt-button :is-block="true" class="rt-button-white white-wave">Оплатить</rt-button>
+                            <rt-button :is-block="true" class="rt-button-purple white-wave">Оплатить</rt-button>
                         </template>
                     </rt-card>
                 </div>

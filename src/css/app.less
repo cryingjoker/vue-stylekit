@@ -73,6 +73,9 @@
     bottom: 0;
     width: 380px;
     padding-bottom: 60px;
+    .rt-dark-theme & {
+      background-color: @dark-theme-background;
+    }
     &:hover{
       @media (min-width: 768px) {
         left: 0;
@@ -86,9 +89,7 @@
       max-width: 100vw;
       padding-right: 0px;
       left: -120vw;
-      .rt-dark-theme & {
-        background-color: @dark-theme-background;
-      }
+
 
       &--active {
         @media (max-width: 768px) {

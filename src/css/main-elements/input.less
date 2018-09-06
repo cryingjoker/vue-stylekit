@@ -9,10 +9,12 @@
     z-index: 2;
     background-color: transparent;
     color: @main-color;
+
     &[disabled]{
       color: @b2c-cool-grey03;
       //color: @b2c-cool-grey05;
     }
+
     .rt-card--has-white-color &,
     .rt-input--white &{
       color: white;
@@ -20,11 +22,16 @@
       .rt-dark-theme &{
         color: white;
       }
+
     }
     .rt-dark-theme &{
       color: #fff;
     }
+    .rt-card &{
+      color: @main-color;
+    }
   }
+
   &-clear{
     position: absolute;
     right: 0;
@@ -38,9 +45,15 @@
     animation: 0.3s showClearInput ease-in-out;
     &__icon{
       fill: @b2b-black;
+
       .rt-dark-theme &,
-      .rt-card--has-white-color &,
       .rt-input--white &{
+        fill: white;
+      }
+      .rt-card &{
+        fill: @b2b-black;
+      }
+      .rt-card--has-white-color &{
         fill: white;
       }
 
