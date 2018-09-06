@@ -37,7 +37,8 @@
                     selectedValue: this.text
                 },
                 isOpen: false,
-                selected: {}
+                selected: {},
+                isOpenListOnTop: false
             };
         },
         name: "rt-select",
@@ -46,7 +47,8 @@
                 return {
                     'select--error text-field--error': this.hasError,
                     'select--is-open': this.isOpen,
-                    'select--disabled': Boolean(this.disabled)
+                    'select--disabled': Boolean(this.disabled),
+                    'select--invert-open-list': this.isOpenListOnTop
                 }
             }
         },
@@ -60,11 +62,16 @@
                 this.removeBindEvents();
                 this.$emit('select', data);
             },
-            toggleOpen() {
+            toggleOpen(e) {
+
                 if(!this.disabled) {
                     this.isOpen = !this.isOpen;
                     if (this.isOpen) {
                         this.scrollToSelected();
+                        console.info('document.body.offsetHeight - e.pageX < 200 && e.pageX > 200',window.innerHeight - e.clientY , e.clientY > 200)
+                        if(window.innerHeight - e.clientY < 200 && e.clientY > 200){
+                            this.isOpenListOnTop = true;
+                        }
                         setTimeout(() => {
                             this.bindEvents();
                         });

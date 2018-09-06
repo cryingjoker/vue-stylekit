@@ -10,11 +10,23 @@
         </div>
     </div>
     </div>
-        <rt-banner></rt-banner>
-        <rt-banner class="rt-banner--has-max-width"></rt-banner>
-
-        <rt-banner color="yellow"></rt-banner>
-        <rt-banner color="yellow" class="rt-banner--has-max-width"></rt-banner>
+        <rt-banner
+                background-color="dark-state"
+                :is-white-color="true"
+                background-image="/example-images/banerBackground1.png">
+            <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
+            <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
+                <br> и ни одного пропущенного звонка клиента</p>
+            <rt-button class="rt-button-orange rt-button-small ">Подробнее</rt-button>
+        </rt-banner>
+        <rt-banner
+                background-color="yellow"
+                background-image="/example-images/banerBackground2.png">
+            <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
+            <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
+                <br> и ни одного пропущенного звонка клиента</p>
+            <rt-button class="rt-button-orange rt-button-small ">Подробнее</rt-button>
+        </rt-banner>
 
     </div>
 </template>

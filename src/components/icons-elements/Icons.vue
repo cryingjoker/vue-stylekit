@@ -19,21 +19,7 @@
 
 
             cardBackgroundStyle() {
-                // const styles = {};
-                // if(this.backgroundImage){
-                //     styles.backgroundImage = 'url('+this.backgroundImage+')'
-                // }
-                // if(this.backgroundBlur){
-                //     styles.filter = "blur("+this.backgroundBlur+"px)"
-                // }
-                // console.info('this.backgroundOpacity',this.backgroundOpacity)
-                // if(typeof this.backgroundOpacity !== 'undefined'){
-                //     styles.opacity = this.backgroundOpacity
-                // }
-                // if(this.backgroundSmoke){
-                //
-                // }
-                // return styles
+
             }
         },
 
