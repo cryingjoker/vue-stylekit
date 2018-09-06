@@ -16,13 +16,15 @@
 .rt-banner{
   height: 500px;
   position: relative;
-  &--dark-state{
-    background-color: @b2b-dark-state;
-    width: 100%;
-  }
-  &--yellow{
-    background-color: @b2c-yellow-low;
-    width: 100%;
+  &--background{
+    &-dark-state {
+      background-color: @b2b-dark-state;
+      width: 100%;
+    }
+    &-yellow {
+      background-color: @b2c-yellow-low;
+      width: 100%;
+    }
   }
   &-triangle{
     position: absolute;
@@ -31,10 +33,11 @@
     left: 0vw;
     top: 0;
     z-index: 10;
-    .rt-banner--dark-state & {
+    margin-left: -2px;
+    .rt-banner--background-dark-state & {
       fill: @b2b-dark-state;
     }
-    .rt-banner--yellow &{
+    .rt-banner--background-yellow &{
       fill: @b2c-yellow-low;
     }
   }
@@ -46,25 +49,23 @@
     right: 0;
     top: 0;
     z-index: 10;
-    .rt-banner--dark-state & {
+    .rt-banner--background-dark-state & {
       fill: @b2b-dark-state;
     }
-    .rt-banner--yellow &{
+    .rt-banner--background-yellow &{
       fill: @b2c-yellow-low;
     }
     transform: rotate(180deg);
-    .rt-banner--has-max-width &{
-      @media (min-width: 1550px) and (max-width : 1920px){
-        right: calc(80vw - 1550px );
-        display: block;
-      }
-      @media (min-width : 1920px){
-        right: -2px;
-        display: block;
-      }
-
-
+    @media (min-width: 1550px) and (max-width : 1920px){
+      right: calc(80vw - 1550px );
+      display: block;
     }
+    @media (min-width : 1920px){
+      right: -2px;
+      display: block;
+    }
+
+
   }
   &+&{
     margin-top: 40px;
@@ -80,29 +81,18 @@
   }
   &-image{
     position: relative;
-    .rt-banner--dark-state & {
-      background-image: url('/example-images/banerBackground1.png');
-    }
-    .rt-banner--yellow &{
-      background-image: url('/example-images/banerBackground2.png');
-    }
     height: 100%;
-    width: 59vw;
+    width: 55vw;
     position: absolute;
-    right: 0;
+    left: 45vw;
     z-index: 1;
     top: 0;
     bottom: 0;
     -webkit-background-size: cover;
     background-size: cover;
-    .rt-banner--has-max-width &{
-      left: 45vw;
-      width: 55vw;
-      right: initial;
-      @media (min-width: 1500px) {
-        max-width: 1055px;
+    @media (min-width: 1500px) {
+      max-width: 1055px;
 
-      }
     }
     @media (min-width: 1480px) {
       width: 54vw;

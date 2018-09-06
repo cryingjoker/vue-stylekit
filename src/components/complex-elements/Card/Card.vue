@@ -70,7 +70,6 @@
 
             },
             cardContentClass() {
-                console.info('this.offsetTop',this.offsetTop);
                 const classArray = {};
                 if(this.offsetTop){
                     classArray['rt-card__content--has-offset-top'] = true;
@@ -124,7 +123,6 @@
                 if(this.backgroundBlur){
                     styles.filter = "blur("+this.backgroundBlur+"px)"
                 }
-                console.info('this.backgroundOpacity',this.backgroundOpacity)
                 if(typeof this.backgroundOpacity !== 'undefined'){
                     styles.opacity = this.backgroundOpacity
                 }

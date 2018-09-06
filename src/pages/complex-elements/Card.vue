@@ -22,21 +22,31 @@
                         </template>
                     </rt-card>
                 </div>
-
                 <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-image="'/example-images/cardBackground4.png'" :background-cover="true"
-                             :background-blur="5">
+                    <rt-card :background-color-type="'light-blue'" :background-blur="5" :is-white-color="true">
+
                         <template slot="content">
-                            <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p>
-                            <rt-input placeholder="телефон, email или счёт"></rt-input>
-                            <p class="rt-space-top05 rt-card-text rt-space-right">Введите номер телефона, email или
-                                номер лицевого счёта</p>
+                            <div class="rt-font-center rt-space-top15 rt-space-bottom">
+                                <svg width="97" height="79" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"
+                                       stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M37.0208333 1l-8.3125 15.0051282 19.59375 61.6 46.90625-61.6"/>
+                                        <path d="M59.1875 1L67.5 16.0051282l-19.59375 61.6L1 16.0051282"/>
+                                        <path d="M1 16.0051282L23.5625 1H72.25l22.5625 15.0051282z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="rt-font-paragraph rt-font-bold rt-space-top">Бонусы</p>
+                            <p class="rt-space-top05">Подключайте друзей  и зарабатывайте бонусы</p>
                         </template>
                         <template slot="footer">
-                            <rt-button :is-block="true" class="rt-button-purple white-wave">Оплатить</rt-button>
+                            <p>Условия акции</p>
                         </template>
+
+
                     </rt-card>
                 </div>
+
                 <div class="rt-col-6 rt-col-md-3 rt-space-top">
                     <rt-card :background-image="'/example-images/cardBackground5.png'"
                              :background-position="'bottom-right'"
@@ -110,12 +120,28 @@
             </div>
             <div class="row">
 
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-color-type="'red'" :background-blur="5">
-                        <p>Оплата услуг</p>
-                    </rt-card>
-                </div>
 
+                <div class="rt-col-6 rt-col-md-3 rt-space-top">
+                    <rt-card :background-image="'/example-images/cardBackground10.png'"
+                             :background-cover="true"
+                             :background-opacity="0.7"
+                             :background-smoke="0.3"
+                             :is-white-color="true"
+                             :offset-top="true"
+                             :background-color-type="'black'"
+                             :col-size="2">
+                        <template slot="content">
+                            <p class="rt-font-paragraph rt-font-bold">Игровой</p>
+                            <p class="rt-space-top05">Высокоскоростной <br> интернет и игровые бонусы <br>
+                                для увлеченных геймеров</p>
+                        </template>
+                        <template slot="footer">
+                            <p>Выберите свою игровую опцию</p>
+                        </template>
+
+                    </rt-card>
+
+                </div>
                 <div class="rt-col-6 rt-col-md-3 rt-space-top">
                     <rt-card :background-image="'/example-images/cardBackground1.png'"
                              :background-cover="true"
@@ -137,67 +163,7 @@
                     </rt-card>
 
                 </div>
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-color-type="'dark-blue'" :background-blur="5">
-                        <p>Оплата услуг</p>
-                    </rt-card>
-                </div>
 
-            </div>
-            <div class="row">
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-image="'/example-images/cardBackground7.png'"
-                             :background-cover="true"
-                             :background-opacity="0.7"
-                             :background-smoke="0.2"
-                             :is-white-color="true"
-                             :offset-top="true"
-                             :background-color-type="'black'">
-                        <template slot="content">
-                            <p class="rt-font-paragraph rt-font-bold">Мобильное ТВ</p>
-                            <p class="rt-space-top05">101 тв-канал с контентом на любой вкус в подарок </p>
-                        </template>
-                        <template slot="footer">
-                            <p>Подробнее</p>
-                        </template>
-
-                    </rt-card>
-
-                </div>
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-color-type="'light-blue'" :background-blur="5" :is-white-color="true">
-
-                        <template slot="content">
-                            <div class="rt-font-center rt-space-top15 rt-space-bottom">
-                                <svg width="97" height="79" xmlns="http://www.w3.org/2000/svg">
-                                    <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"
-                                       stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M37.0208333 1l-8.3125 15.0051282 19.59375 61.6 46.90625-61.6"/>
-                                        <path d="M59.1875 1L67.5 16.0051282l-19.59375 61.6L1 16.0051282"/>
-                                        <path d="M1 16.0051282L23.5625 1H72.25l22.5625 15.0051282z"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <p class="rt-font-paragraph rt-font-bold rt-space-top">Бонусы</p>
-                            <p class="rt-space-top05">Подключайте друзей  и зарабатывайте бонусы</p>
-                        </template>
-                        <template slot="footer">
-                            <p>Условия акции</p>
-                        </template>
-
-
-                    </rt-card>
-                </div>
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-color-type="'orange'" :background-blur="5">
-                        <p>Оплата услуг</p>
-                    </rt-card>
-                </div>
-                <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                    <rt-card :background-color-type="'yellow'" :background-blur="5">
-                        <p>Оплата услуг</p>
-                    </rt-card>
-                </div>
 
             </div>
             <div class="row">
@@ -245,11 +211,51 @@
 
                     </rt-card>
 
+
                 </div>
 
 
-            </div>
 
+            </div>
+            <div class="row">
+                <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                    <rt-card :background-image="'/example-images/cardBackground7.png'"
+                             :background-cover="true"
+                             :background-opacity="0.7"
+                             :background-smoke="0.2"
+                             :is-white-color="true"
+                             :offset-top="true"
+                             :background-color-type="'black'">
+                        <template slot="content">
+                            <p class="rt-font-paragraph rt-font-bold">Мобильное ТВ</p>
+                            <p class="rt-space-top05">101 тв-канал с контентом на любой вкус в подарок </p>
+                        </template>
+                        <template slot="footer">
+                            <p>Подробнее</p>
+                        </template>
+
+                    </rt-card>
+
+                </div>
+                <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                    <rt-card :background-color-type="'red'" :background-blur="5">
+                        <p>Оплата услуг</p>
+                    </rt-card>
+                </div>
+
+
+                <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                    <rt-card :background-color-type="'orange'" :background-blur="5">
+                        <p>Оплата услуг</p>
+                    </rt-card>
+                </div>
+                <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                    <rt-card :background-color-type="'yellow'" :background-blur="5">
+                        <p>Оплата услуг</p>
+                    </rt-card>
+                </div>
+
+            </div>
             <div class="row">
 
                 <div class="rt-col-3 rt-col-md-3 rt-space-top">
@@ -259,30 +265,14 @@
                 </div>
 
 
-                <div class="rt-col-6 rt-col-md-3 rt-space-top">
-                    <rt-card :background-image="'/example-images/cardBackground10.png'"
-                             :background-cover="true"
-                             :background-opacity="0.7"
-                             :background-smoke="0.3"
-                             :is-white-color="true"
-                             :offset-top="true"
-                             :background-color-type="'black'"
-                             :col-size="2">
-                        <template slot="content">
-                            <p class="rt-font-paragraph rt-font-bold">Игровой</p>
-                            <p class="rt-space-top05">Высокоскоростной <br> интернет и игровые бонусы <br>
-                                для увлеченных геймеров</p>
-                        </template>
-                        <template slot="footer">
-                            <p>Выберите свою игровую опцию</p>
-                        </template>
 
-                    </rt-card>
-
-                </div>
                 <div class="rt-col-3 rt-col-md-3 rt-space-top">
                     <rt-card :background-color-type="'green'" :background-blur="5">
                         <p>Оплата услуг</p>
+                    </rt-card>
+                </div>
+                <div class="rt-col-6 rt-col-md-3 rt-space-top">
+                    <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true">
                     </rt-card>
                 </div>
 
@@ -305,12 +295,6 @@
                     <rt-card :background-image="'/example-images/cardBackground1.png'" :background-smoke="0.5">
                     </rt-card>
                 </div>
-            </div>
-            <div class="row">
-                <div class="rt-col-6 rt-col-md-3 rt-space-top">
-                    <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true">
-                    </rt-card>
-                </div>
                 <div class="rt-col-3 rt-col-md-3 rt-space-top">
                     <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true">
                     </rt-card>
@@ -319,6 +303,11 @@
             <div class="row">
                 <div class="rt-col-12 rt-col-md-3 rt-space-top">
                     <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true">
+                    </rt-card>
+                </div>
+                <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                    <rt-card :background-color-type="'dark-blue'" :background-blur="5">
+                        <p>Оплата услуг</p>
                     </rt-card>
                 </div>
             </div>
