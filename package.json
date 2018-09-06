@@ -13,9 +13,20 @@
     "lint": "npm run lint:scripts && npm run lint:styles",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build"
-  },
 
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryingjoker/vue-stylekit.git"
+  },
   "keywords": [],
+  "author": "Alex Nikolaev / cryingjoker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cryingjoker/vue-stylekit/issues"
+  },
+  "homepage": "https://github.com/cryingjoker/vue-stylekit",
   "dependencies": {
     "normalize.css": "^8.0.0",
     "reset-css": "^4.0.1",
