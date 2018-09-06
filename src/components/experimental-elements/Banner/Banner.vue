@@ -1,5 +1,5 @@
 <template>
-    <div class="rt-banner rt-banner--dark-state rt-banner--color-white">
+    <div class="rt-banner" :class="banerClass">
         <div class="rt-container">
             <div class="row">
                 <div class="rt-col-6">
@@ -46,7 +46,7 @@
 
     export default {
         props: {
-
+            color: String
         },
         // data: ()=>({
         //     isDisabled : true
@@ -54,8 +54,14 @@
         components: componentsList,
         name: "rt-banner",
         computed: {
-            cardClass(){
-              // const classArray = {};
+            banerClass(){
+              const classArray = {};
+              if(this.color === 'yellow'){
+                  classArray['rt-banner--yellow'] = true
+              }else{
+                  classArray['rt-banner--dark-state'] = true
+                  classArray['rt-banner--color-white'] = true
+              }
               //
               // if(this.backgroundCover){
               //     classArray['rt-card--has-bg-cover'] = true;
@@ -82,7 +88,7 @@
               //         classArray['rt-card--has-smoke02'] = true;
               //     }
               // }
-              // return classArray
+              return classArray
 
             },
 

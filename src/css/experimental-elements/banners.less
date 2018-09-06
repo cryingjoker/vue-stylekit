@@ -20,6 +20,10 @@
     background-color: @b2b-dark-state;
     width: 100%;
   }
+  &--yellow{
+    background-color: @b2c-yellow-low;
+    width: 100%;
+  }
   &-triangle{
     position: absolute;
     width: 22vw;
@@ -27,7 +31,12 @@
     left: 0vw;
     top: 0;
     z-index: 10;
-    fill: @b2b-dark-state;
+    .rt-banner--dark-state & {
+      fill: @b2b-dark-state;
+    }
+    .rt-banner--yellow &{
+      fill: @b2c-yellow-low;
+    }
   }
   &-right-triangle{
     display: none;
@@ -37,7 +46,12 @@
     right: 0;
     top: 0;
     z-index: 10;
-    fill: @b2b-dark-state;
+    .rt-banner--dark-state & {
+      fill: @b2b-dark-state;
+    }
+    .rt-banner--yellow &{
+      fill: @b2c-yellow-low;
+    }
     transform: rotate(180deg);
     .rt-banner--has-max-width &{
       @media (min-width: 1550px) and (max-width : 1920px){
@@ -66,7 +80,12 @@
   }
   &-image{
     position: relative;
-    background-image: url('/example-images/banerBackground1.png');
+    .rt-banner--dark-state & {
+      background-image: url('/example-images/banerBackground1.png');
+    }
+    .rt-banner--yellow &{
+      background-image: url('/example-images/banerBackground2.png');
+    }
     height: 100%;
     width: 59vw;
     position: absolute;
