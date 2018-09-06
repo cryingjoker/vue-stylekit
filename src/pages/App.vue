@@ -1,5 +1,5 @@
 <template>
-<div class="app rt-container" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
+<div class="app" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
     <div class="row">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
 
