@@ -1,7 +1,7 @@
 <template>
-    <div class="app-content  rt-col-10 rt-col-md-3">
+    <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-            <h1 class="rt-font-hero row">Spinner</h1>
+            <h1 class="rt-font-hero">Spinner</h1>
         </div>
         <div class="app-body">
 

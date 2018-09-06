@@ -1,8 +1,9 @@
 <template>
-    <div class="app-content rt-col-10 rt-col-md-3">
+    <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
             <div class="row">
-                <h1 class="rt-font-hero rt-col">Buttons <span class="rt-code rt-font-h3"> .rt-button</span></h1>
+
+                <h1 class="rt-font-hero rt-col">Buttons <span class="rt-code rt-font-h3 rt-col"> .rt-button</span></h1>
             </div>
         </div>
         <div class="app-body">

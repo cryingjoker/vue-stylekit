@@ -8,38 +8,12 @@
   position: relative;
   min-height: 364px;
   overflow: hidden;
-  background-color: white;
   color: @main-color;
+
   &--has-white-color{
     color: #fff;
   }
-  &-black{
-    background-color: @dark-card-background;
-  }
-  &-purple{
-    background-color: @b2b-purple-low;
-  }
-  &-red{
-    background-color: @b2b-red-low;
-  }
-  &-dark-blue{
-    background-color: @b2b-dark-blue-low;
-  }
-  &-light-blue{
-    background-color: @b2b-light-blue-low;
-  }
-  &-yellow{
-    background-color: @b2b-yellow-low;
-  }
-  &-orange{
-    background-color: @b2b-orange-low;
-  }
-  &-pink{
-    background-color: @b2b-pink-low;
-  }
-  &-green{
-    background-color: @b2b-green-low;
-  }
+
   &--has-smoke{
     &:before{
       content: '';
@@ -80,6 +54,7 @@
     }
   }
   &__background{
+    background-color: white;
     position: absolute;
     top: -20px;
     border-radius: 10px;
@@ -89,6 +64,33 @@
     z-index: 1;
     background-position: center center;
     background-repeat: no-repeat;
+    .rt-card-black &{
+      background-color: @dark-card-background;
+    }
+    .rt-card-purple &{
+      background-color: @b2b-purple-low;
+    }
+    .rt-card-red &{
+      background-color: @b2b-red-low;
+    }
+    .rt-card-dark-blue &{
+      background-color: @b2b-dark-blue-low;
+    }
+    .rt-card-light-blue &{
+      background-color: @b2b-light-blue-low;
+    }
+    .rt-card-yellow &{
+      background-color: @b2b-yellow-low;
+    }
+    .rt-card-orange &{
+      background-color: @b2b-orange-low;
+    }
+    .rt-card-pink &{
+      background-color: @b2b-pink-low;
+    }
+    .rt-card-green &{
+      background-color: @b2b-green-low;
+    }
     &--position-background-top{
       background-position: center top;
     }

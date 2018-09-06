@@ -1,26 +1,26 @@
 <template>
-    <div class="app-content rt-col-md-3  rt-col-10">
+    <div class="app-content rt-col-md-3  rt-col-12">
         <div class="app-title">
-                <h1 class="rt-font-hero row">Input</h1>
+                <h1 class="rt-font-hero rt-col">Input</h1>
         </div>
         <div class="app-body">
             <div class="app-row row">
                 <p class="rt-font-h3 rt-col">Input without js</p>
             </div>
             <div class="app-row row">
-                <div class="rt-col-4 rt-col-md-3">
+                <div class="rt-col-3 rt-col-md-3">
                     <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
                 <rt-input-without-js :errorMessage="'ошибка: не является почтой'"
                                      :placeholder="'Электронная почта'"></rt-input-without-js>
                 </div>
-                <div class="rt-col-4 rt-col-md-3 rt-mb-space-top">
+                <div class="rt-col-3 rt-col-md-3 rt-mb-space-top">
                     <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
                     <rt-input-without-js :errorMessage="'ошибка: не является почтой'"
                                          :placeholder="'Электронная почта'"
                                          :has-error="true"></rt-input-without-js>
 
                 </div>
-                <div class="rt-col-4 rt-col-md-3 rt-mb-space-top">
+                <div class="rt-col-3 rt-col-md-3 rt-mb-space-top">
                     <span class="rt-font-label flex-fill rt-space-bottom05">disabled input</span>
                     <rt-input-without-js :errorMessage="'ошибка: не является почтой'"
                                          :disabled="true"
