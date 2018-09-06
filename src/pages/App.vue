@@ -1,6 +1,5 @@
 <template>
-<div class="app" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo,'rt-container': !this.isPromo}">
-    <div class="row">
+<div class="app" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo}">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
 
     <div class="grid" :class="{'grid--active': this.showGrid}">
@@ -73,6 +72,17 @@
                 </div>
             </div>
         </div>
+          <div class="aside-menu__item">
+            <p class="aside-menu__submenu-title">Experiment elements</p>
+            <div class="aside-sub-menu">
+                <div class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="banners">Banners</router-link>
+                </div>
+            </div>
+        </div>
+          <div class="aside-menu__item">
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="icons">Icons</router-link>
+          </div>
       </div>
 
     </keep-alive>
@@ -80,7 +90,6 @@
     <router-view></router-view>
     <rt-switch @change="switchTheme" class="dark-theme-switcher">Dark theme</rt-switch>
 
-</div>
 </div>
 </template>
 

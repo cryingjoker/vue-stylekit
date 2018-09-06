@@ -1,17 +1,17 @@
 <template>
+    <div>
     <div class="rt-container">
+        <div class="grid-center"></div>
     <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
             <div class="row">
-                <h1 class="rt-font-hero rt-col">Tariffs</h1>
-            </div>
-        </div>
-        <div class="app-body">
-            <div class="row">
-
+                <h1 class="rt-font-hero rt-col">Banners</h1>
             </div>
         </div>
     </div>
+    </div>
+        <rt-banner></rt-banner>
+        <rt-banner class="rt-banner--has-max-width"></rt-banner>
 
     </div>
 </template>
@@ -21,6 +21,7 @@
         Card,
     } from "@/components/complex-elements/Card";
     import {Input, Button, Price} from "@/components/main-elements"
+    import {Banner} from "@/components/experimental-elements"
 
     const componentsList = {};
 
@@ -28,10 +29,11 @@
     componentsList[Input.name] = Input;
     componentsList[Button.name] = Button;
     componentsList[Price.name] = Price;
+    componentsList[Banner.name] = Banner;
 
 
     export default {
-        name: "app-buttons",
+        name: "app-banners",
         components: componentsList,
         methods: {},
         mounted() {

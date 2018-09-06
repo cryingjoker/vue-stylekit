@@ -1,4 +1,5 @@
 <template>
+    <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title row"><h1 class="col rt-font-hero">Price</h1></div>
         <div class="app-body">
@@ -18,12 +19,8 @@
             <div class="row rt-space-top">
                 <div class="rt-col-16 rt-col-md-3"><rt-price :value="1231223169" :only-price="true" :currency="'€'" ></rt-price></div>
             </div>
-
-
-
-
-
         </div>
+    </div>
     </div>
 </template>
 
