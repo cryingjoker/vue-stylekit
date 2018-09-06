@@ -69,6 +69,11 @@
     transition-property: opacity, visibility, height,max-height;
     transition-duration: 0.2s;
     max-height: 0;
+    .select--invert-open-list &{
+      top: initial;
+      bottom: 56px;
+      box-shadow: 0 -5px 10px @box-shadow-background;
+    }
     .rt-dark-theme &{
       background-color: @dark-theme-dropdown-background;
     }
