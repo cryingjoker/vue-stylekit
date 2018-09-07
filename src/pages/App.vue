@@ -1,5 +1,5 @@
 <template>
-<div class="app" :class="{'app--hide-scroll' : this.showMenu, 'd-none': this.isPromo}">
+<div class="app" :class="{'app--hide-scroll' : this.showMenu}">
     <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
 
     <div class="grid" :class="{'grid--active': this.showGrid}">
@@ -20,7 +20,7 @@
     </div>
     <keep-alive>
 
-      <div class="aside-menu" :class="{'aside-menu--active' : this.showMenu,'d-none': this.isPromo}">
+      <div class="aside-menu" :class="{'aside-menu--active' : this.showMenu}">
           <rt-switch @change="gridToggle" class="grid-switcher">Grid</rt-switch>
         <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>

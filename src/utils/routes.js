@@ -12,6 +12,7 @@ import Cards from '@/pages/complex-elements/Card.vue'
 import Tariff from '@/pages/complex-elements/Tariff.vue'
 import Icons from '@/pages/icons-elements/Icons.vue'
 import Banners from '@/pages/experiment-elements/Banners.vue'
+import PromoTv from '../pages/promo/tv.vue'
 
 
 const routes = [
@@ -29,9 +30,10 @@ const routes = [
     {path: '/tariffs', name: 'app-cards', component: Tariff},
     {path: '/icons', name: 'app-icons', component: Icons},
     {path: '/banners', name: 'app-banners', component: Banners},
+    {path: '/promo/tv', name: 'promoTv', component: PromoTv},
     {path: '', name: 'default'}
 ]
 
-export default {
-    routes
+export default  {
+  routes
 }
