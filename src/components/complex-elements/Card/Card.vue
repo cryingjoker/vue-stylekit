@@ -1,5 +1,5 @@
 <template>
-    <div class="rt-card" :class="cardClass">
+    <div class="rt-card" :class="cardClass" :style="cardStyle">
         <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass"></div>
         <div class="rt-card__content" :class="cardContentClass">
             <div class="rt-card__body">
@@ -9,7 +9,6 @@
                 <slot name="footer"></slot>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -30,7 +29,8 @@
             isWhiteColor        : Boolean,
             backgroundPosition  : String, // [top, left, bottom, right, top-left, top-right, bottom-left, bottom-right]
             offsetTop           : Boolean,
-            colSize             : Number
+            colSize             : Number,
+            cardHeight          : Number
         },
         // data: ()=>({
         //     isDisabled : true
@@ -80,6 +80,13 @@
                     }
                 }
                 return classArray
+            },
+            cardStyle(){
+                const styles = {};
+                if(typeof this.cardHeight !== 'undefined'){
+                    styles.height = this.cardHeight+'px'
+                }
+                return styles
             },
             cardBackgroundClass(){
                 const classArray = {};
