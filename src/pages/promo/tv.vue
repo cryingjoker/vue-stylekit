@@ -216,13 +216,13 @@
                 <div class="row">
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card class="rt-font-light" background-image="/images/logoBig1.png" :is-white-color="true" card-height="459">
-                            <template slot="content">
+                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459">
+                            <template slot="header">
                                 <p class="rt-font-card-title">Волшебный мир Disney</p>
                                 <p>Болей за наших</p>
 
                             </template>
-                            <template slot="footer">
+                            <template slot="content">
                                 <div class="rt-card__icon rt-space-vertical">
                                     <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fill-rule="evenodd">
@@ -233,11 +233,13 @@
                                         </g>
                                     </svg>
                                 </div>
+                            </template>
+                            <template slot="footer">
                                 <p class="rt-space-bottom rt-font-small-paragraph">Волшебный мир Disney Это предложение
                                     для истинных поклонников Disney! Коллекция анимационных и художественных фильмов
                                     от знаменитой студии в одном разделе вашего телевизора.</p>
 
-                                <rt-button class=" rt-button-orange">Подключить</rt-button>
+                                <rt-button :is-block="true" class=" rt-button-orange">Подключить</rt-button>
 
                             </template>
 
@@ -245,13 +247,13 @@
                     </div>
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card class="rt-font-light" background-image="/images/logoBig2.png" :is-white-color="true" card-height="459">
-                            <template slot="content">
+                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459">
+                            <template slot="header">
                                 <p class="rt-font-card-title">ABC Studios</p>
                                 <p>Рейтинговые сериалы</p>
 
                             </template>
-                            <template slot="footer">
+                            <template slot="content">
                                 <div class="rt-card__icon rt-space-vertical">
                                     <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fill-rule="evenodd">
@@ -268,11 +270,12 @@
                                         </g>
                                     </svg>
                                 </div>
+                            </template>
+                            <template slot="footer">
                                 <p class="rt-space-bottom rt-font-small-paragraph">«Отчаянные домохозяйки» или «Анатомия страсти»? Не можете
                                     выбрать - смотрите оба! Ведь в подписке от голливудской студии ABC собраны самые
                                     известные сериалы! </p>
-
-                                <rt-button class=" rt-button-orange">Подключить</rt-button>
+                                <rt-button :is-block="true" class=" rt-button-orange">Подключить</rt-button>
 
                             </template>
 
@@ -280,14 +283,15 @@
                     </div>
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card class="rt-font-light" background-image="/images/logoBig3.png" :is-white-color="true" card-height="459">
-                            <template slot="content">
+                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459">
+                            <template slot="header">
 
                                 <p class="rt-font-card-title">TV1000Play</p>
                                 <p>Премьерные фильмы</p>
 
                             </template>
-                            <template slot="footer">
+
+                            <template slot="content">
                                 <div class="rt-card__icon rt-space-vertical">
                                     <svg width="140" height="56" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fill-rule="evenodd">
@@ -306,10 +310,13 @@
                                         </g>
                                     </svg>
                                 </div>
+                            </template>
+                            <template slot="footer">
+
                                 <p class="rt-space-bottom rt-font-small-paragraph">В пакет каналов Viasat Премиум HD входят фильмовые каналы
                                     TV1000 Premium HD, TV1000 Megahit HD, TV1000 Comedy HD, спортивные каналы Viasat
                                     Sport HD и Viasat Golf HD; познавательные Viasat Nature HD/</p>
-                                <rt-button class=" rt-button-orange">Подключить</rt-button>
+                                <rt-button :is-block="true" class=" rt-button-orange">Подключить</rt-button>
 
                             </template>
 
