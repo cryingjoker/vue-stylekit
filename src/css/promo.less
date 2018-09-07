@@ -8,6 +8,13 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    @media (max-width: 768px) {
+      height: initial;
+      min-height: initial;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
   }
   &-title{
     margin-bottom: @vertical-space*1.75;
@@ -108,5 +115,4 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
 }
