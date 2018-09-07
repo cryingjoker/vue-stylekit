@@ -43,8 +43,10 @@ body{
   font-weight: 400;
   line-height: 21px;
   font-size: 16px;
-  //word-break: break-all;
   hyphens: auto;
+  @media (max-width: 768px) {
+    line-height: 19px;
+  }
 }
 
 .rt-font{
@@ -73,6 +75,7 @@ body{
   &-promo-title{
     font-size: 36px;
     line-height: 50px;
+
   }
   h3,
   &-h3{
@@ -85,6 +88,9 @@ body{
     line-height: 35px;
     font-weight: 200;
     letter-spacing: 0.28px;
+    @media (max-width: 768px) {
+      line-height: 30px;
+    }
   }
   h4,
   &-h4{
@@ -104,6 +110,9 @@ body{
   &-paragraph{
     font-size: 18px;
     line-height: 27px;
+    @media (max-width: 768px) {
+      line-height: 24px;
+    }
   }
   &-small-paragraph{
     font-size: 14px;

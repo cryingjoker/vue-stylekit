@@ -4,10 +4,10 @@
             <div class="promo-left-line-image mb-d-none"
                  style="background-image: url(/images/tv-top-background.png);"></div>
             <div class="rt-col-8 mb-d-none"></div>
-            <div class="rt-col-3 rt-col-md-3">
+            <div class="rt-col-3 rt-col-md-3 flex-column-center-items">
 
 
-                <div class="flex-column-center-items rt-space-mb-horizontal05">
+                <div class="rt-space-mb-horizontal05">
                     <svg width="230" height="80" viewBox="0 0 230 80" xmlns="http://www.w3.org/2000/svg"
                          class="promo-title">
                         <g fill="#FFF" fill-rule="nonzero">
@@ -21,9 +21,10 @@
             </div>
 
         </div>
-        <div class="promo-reg-app rt-container rt-wrapper">
+        <div class="promo-reg-app">
+        <div class=" rt-container rt-wrapper">
             <div class="row">
-                <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05 rt-font-mb-center">
+                <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05 rt-mb-space-top  rt-font-mb-center">
                     <p class="rt-font-paragraph"> Зарегистрируйтесь через мобильное приложение и получите пакет
                         ТВ-каналов на месяц бесплатно</p>
                 </div>
@@ -37,6 +38,7 @@
                     </a>
                 </div>
             </div>
+        </div>
         </div>
         <div class="promo-color-block promo-color-block--dark-blue">
             <div class="rt-container rt-wrapper">
@@ -104,8 +106,12 @@
         <div class="promo-color-block promo-color-block--blue">
             <div class="rt-container rt-wrapper">
                 <h3 class="rt-font-promo-title rt-space-bottom">Сотни ТВ-каналов</h3>
-                <p class="rt-font-paragraph rt-space-bottom">Популярные российские и эксклюзивные  <br> зарубежные
-                    каналы в эфире и записи</p>
+                <div class="row">
+                <div class="rt-col-5 rt-col-md-3">
+                    <p class="rt-font-paragraph rt-space-bottom">Популярные российские и эксклюзивные   зарубежные
+                        каналы в эфире и записи</p>
+                </div>
+                </div>
                 <div class="promo-tv-channel rt-space-top05">
                     <div class="promo-tv-channel__item" style="min-width: 70px"><img class="promo-tv-channel__img"
                                                                                      src="/images/icon1.png" alt="">
@@ -354,10 +360,10 @@
                             </svg>
                         </div>
                         <h4 class="rt-font-h4">Управление <br> просмотром</h4>
-                        <p class="rt-space-top rt-font-light rt-space-right">Перемативайте, записывайте, ставьте на
+                        <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Перемативайте, записывайте, ставьте на
                             паузу — для максимально удобного просмотра</p>
                     </div>
-                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top rt-font-mb-center">
+                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
                         <div class="rt-space-bottom">
                             <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
                                 <g fill="none" fill-rule="evenodd">
@@ -379,10 +385,10 @@
                             </svg>
                         </div>
                         <h4 class="rt-font-h4">Разные <br> способы оплаты</h4>
-                        <p class="rt-space-top rt-font-light rt-space-right">Оформляйте ежемесячные подписки, берите
+                        <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Оформляйте ежемесячные подписки, берите
                             кино напрокат или покупайте навсегда</p>
                     </div>
-                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top rt-font-mb-center">
+                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
                         <div class="rt-space-bottom">
                             <svg width="76" height="76" xmlns="http://www.w3.org/2000/svg">
                                 <g fill="none" fill-rule="evenodd">
@@ -394,11 +400,11 @@
                             </svg>
                         </div>
                         <h4 class="rt-font-h4">Просмотр <br> без интернета</h4>
-                        <p class="rt-space-top rt-font-light rt-space-right">Возьмите кино в дорогу,<br> просто скачав
+                        <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Возьмите кино в дорогу,<br> просто скачав
                             то, что
                             <br> нравится </p>
                     </div>
-                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top rt-font-mb-center">
+                    <div class="col-3 rt-col-3 rt-col-md-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
                         <div class="rt-space-bottom">
                             <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
@@ -422,7 +428,7 @@
                             </svg>
                         </div>
                         <h4 class="rt-font-h4">Безопасно <br> для детей</h4>
-                        <p class="rt-space-top rt-font-light rt-space-right">Используйте функцию родительского контроля,<br>
+                        <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Используйте функцию родительского контроля,<br>
                             чтобы дети не увидели<br> лишнего</p>
                     </div>
                 </div>
