@@ -97,3 +97,65 @@
     }
   }
 }
+
+.circle-switcher{
+
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  &-container{
+    display: inline-block;
+  }
+
+  &__item{
+    //animation-duration: 5s;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    &:before{
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    &+&{
+      margin-left: @horizontal-space;
+    }
+  }
+  &__icon{
+    width: inherit;
+    height: inherit;
+    stroke: #fff;
+    stroke-dasharray: 60;
+    stroke-width: 1;
+    animation-duration: inherit;
+    animation-timing-function: linear ;
+    animation-name: switcherRound;
+  }
+}
+@keyframes switcherRound {
+  0% {
+    stroke-dashoffset: 60;
+
+  }
+  100% {
+    stroke-dashoffset: 120;
+
+  }
+}

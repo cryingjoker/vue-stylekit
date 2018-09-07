@@ -22,9 +22,9 @@
 
         </div>
         <div class="promo-reg-app">
-        <div class=" rt-container rt-wrapper">
+        <div class=" rt-container rt-wrapper rt-mb-space-vertical">
             <div class="row">
-                <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05 rt-mb-space-top  rt-font-mb-center">
+                <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05  rt-font-mb-center">
                     <p class="rt-font-paragraph"> Зарегистрируйтесь через мобильное приложение и получите пакет
                         ТВ-каналов на месяц бесплатно</p>
                 </div>
@@ -33,7 +33,7 @@
                     <a href="#" class="d-inline-block">
                         <img src="/images/applePlay.svg" alt="">
                     </a>
-                    <a href="#" class="d-inline-block rt-space-left rt-mb-space-horizontal-none">
+                    <a href="#" class="d-inline-block rt-space-left rt-mb-space-horizontal-none rt-mb-space-top">
                         <img src="/images/googlePlay.svg" alt="">
                     </a>
                 </div>
@@ -221,7 +221,7 @@
                 <p class="rt-font-paragraph rt-space-bottom">Новинки и классика от ведущих студий со всего мира</p>
                 <div class="row">
 
-                    <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
+                    <div class="col-4 rt-col-4 rt-col-md-3 rt-mb-space-vertical">
                         <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
                                 <p class="rt-font-card-title">Волшебный мир Disney</p>
@@ -252,7 +252,7 @@
                         </rt-card>
                     </div>
 
-                    <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
+                    <div class="col-4 rt-col-4 rt-col-md-3 rt-mb-space-vertical">
                         <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
                                 <p class="rt-font-card-title">ABC Studios</p>
@@ -288,7 +288,7 @@
                         </rt-card>
                     </div>
 
-                    <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
+                    <div class="col-4 rt-col-4 rt-col-md-3 rt-mb-space-vertical">
                         <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
 
@@ -445,10 +445,10 @@
                                 </p>
                             </div>
                             <div class="col rt-col-md-3 rt-space-top rt-font-mb-center">
-                                <a href="#" class="d-inline-block rt-space-top05">
+                                <a href="#" class="d-inline-block rt-space-top05 ">
                                     <img src="/images/applePlay.svg" alt="">
                                 </a>
-                                <a href="#" class="d-inline-block rt-space-left rt-mb-space-horizontal-none rt-space-top05">
+                                <a href="#" class="d-inline-block rt-space-left rt-mb-space-horizontal-none rt-space-top05 rt-mb-space-vertical">
                                     <img src="/images/googlePlay.svg" alt="">
                                 </a>
                             </div>
