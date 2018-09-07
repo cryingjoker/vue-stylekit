@@ -23,52 +23,52 @@
       <div class="aside-menu" :class="{'aside-menu--active' : this.showMenu}">
           <rt-switch @change="gridToggle" class="grid-switcher">Grid</rt-switch>
         <div class="aside-menu__item">
-          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="buttons">Buttons</router-link>
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/buttons">Buttons</router-link>
         </div>
         <div class="aside-menu__item">
-          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="typography">Typography</router-link>
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/typography">Typography</router-link>
         </div>
-        <!--<div class="aside-menu__item" to="color">Color list</div>-->
+        <!--<div class="aside-menu__item" to="/color">Color list</div>-->
         <div class="aside-menu__item"></div>
         <div class="aside-menu__item">
             <p class="aside-menu__submenu-title">Forms</p>
             <div class="aside-sub-menu">
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="checkbox">Checkbox</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/checkbox">Checkbox</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="radiobutton">Radiobutton</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/radiobutton">Radiobutton</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="switch">Switch</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/switch">Switch</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="input">Input</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/input">Input</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="textarea">Textarea</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/textarea">Textarea</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="select">Select</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/select">Select</router-link>
                 </div>
 
 
             </div>
         </div>
           <div class="aside-menu__item">
-              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="spinner">Spinner</router-link>
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/spinner">Spinner</router-link>
           </div>
           <div class="aside-menu__item">
-              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="price">Price</router-link>
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/price">Price</router-link>
           </div>
         <div class="aside-menu__item">
             <p class="aside-menu__submenu-title">Complex elements</p>
             <div class="aside-sub-menu">
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="cards">Card</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/cards">Card</router-link>
                 </div>
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="tariffs">Tariff</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/tariffs">Tariff</router-link>
                 </div>
             </div>
         </div>
@@ -76,12 +76,12 @@
             <p class="aside-menu__submenu-title">Experiment elements</p>
             <div class="aside-sub-menu">
                 <div class="aside-menu__item">
-                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="banners">Banners</router-link>
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/banners">Banners</router-link>
                 </div>
             </div>
         </div>
           <div class="aside-menu__item">
-              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="icons">Icons</router-link>
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/icons">Icons</router-link>
           </div>
       </div>
 
