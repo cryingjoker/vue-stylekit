@@ -2,7 +2,7 @@
     <div class="rt-card" :class="cardClass" :style="cardStyle">
         <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass"></div>
         <div class="rt-card__content" :class="cardContentClass">
-            <div class="rt-card__header" v-if="$slots.header">
+            <div class="rt-card__header" :style="cardHeaderStyle" v-if="$slots.header" >
                 <slot name="header"></slot>
             </div>
             <div class="rt-card__body">
@@ -33,7 +33,9 @@
             backgroundPosition  : String, // [top, left, bottom, right, top-left, top-right, bottom-left, bottom-right]
             offsetTop           : Boolean,
             colSize             : Number,
-            cardHeight          : Number
+            cardHeight          : Number,
+            cardHeaderHeight    : Number
+
         },
         // data: ()=>({
         //     isDisabled : true
@@ -89,6 +91,15 @@
                 if(typeof this.cardHeight !== 'undefined'){
                     styles.height = this.cardHeight+'px'
                 }
+                return styles
+            },
+            cardHeaderStyle(){
+                const styles = {};
+                if(typeof this.cardHeaderHeight !== 'undefined'){
+                    styles.maxHeight = this.cardHeaderHeight+'px'
+
+                }
+                console.info('styles',styles)
                 return styles
             },
             cardBackgroundClass(){
