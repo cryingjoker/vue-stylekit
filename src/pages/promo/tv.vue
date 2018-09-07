@@ -216,7 +216,7 @@
                 <div class="row">
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459">
+                        <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
                                 <p class="rt-font-card-title">Волшебный мир Disney</p>
                                 <p>Болей за наших</p>
@@ -247,7 +247,7 @@
                     </div>
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459">
+                        <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
                                 <p class="rt-font-card-title">ABC Studios</p>
                                 <p>Рейтинговые сериалы</p>
@@ -283,7 +283,7 @@
                     </div>
 
                     <div class="col-4 rt-col-4 rt-col-md-3 rt-space-top">
-                        <rt-card :background-cover="true" class="rt-font-light" background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459">
+                        <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light" background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459">
                             <template slot="header">
 
                                 <p class="rt-font-card-title">TV1000Play</p>
