@@ -17,7 +17,7 @@
             <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
             <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
                 <br> и ни одного пропущенного звонка клиента</p>
-            <rt-button class="rt-button-orange rt-button-small ">Подробнее</rt-button>
+            <rt-button class="rt-button-orange">Подробнее</rt-button>
         </rt-banner>
         <rt-banner
                 background-color="yellow"
@@ -25,7 +25,7 @@
             <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
             <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
                 <br> и ни одного пропущенного звонка клиента</p>
-            <rt-button class="rt-button-orange rt-button-small ">Подробнее</rt-button>
+            <rt-button class="rt-button-orange">Подробнее</rt-button>
         </rt-banner>
 
     </div>

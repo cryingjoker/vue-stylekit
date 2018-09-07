@@ -1,4 +1,4 @@
-onst gulp = require('gulp');
+const gulp = require('gulp');
 const shell = require('gulp-shell');
 
 gulp.task('copy', shell.task([
