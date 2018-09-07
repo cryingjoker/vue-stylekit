@@ -5,7 +5,7 @@ gulp.task('copy', shell.task([
         'git checkout gh-pages',
         'rm -rf ./docs',
         'mkdir docs',
-        'git merge master -m\'deploy\'\n',
+        'git merge origin/master -m\'deploy\'\n',
         'npm run build',
         'cp -R ./dist/* ./docs',
         'cd ./docs',
