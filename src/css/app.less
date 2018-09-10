@@ -188,7 +188,7 @@
     bottom: 0;
     height: 100vh;
   }
-  max-width: 1420px;
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   bottom: 100vh;
@@ -216,7 +216,9 @@
       top: 0;
       bottom: 0;
       background-color: fade(#7700FF,5%);
-      //background-color: fade(#fff,5%);
+      .rt-dark-theme & {
+        background-color: fade(#fff,5%);
+      }
     }
   }
 }

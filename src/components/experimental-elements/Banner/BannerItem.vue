@@ -1,9 +1,11 @@
 <template>
-    <div class="rt-banner-content">
+    <div class="rt-banner-content" :class="banerClass">
         <div class="rt-banner-content__inner">
             <slot></slot>
         </div>
     </div>
+
+
 </template>
 
 <script>
@@ -24,17 +26,22 @@
             backgroundImage: String,
             isWhiteColor: Boolean,
         },
+        inject: {
+            RtBanners : {},
+        },
+        data(){
+            return {
+                id: Math.random().toString(36).slice(4)
+            }
+        },
         components: componentsList,
-        name: "rt-banner-image",
+        name: "rt-banner-item",
         computed: {
             banerClass() {
                 const classArray = {};
-
-                if (this.backgroundColor) {
-                    classArray['rt-banner--background-' + this.backgroundColor] = true
-                }
-                if (this.isWhiteColor) {
-                    classArray['rt-banner--color-white'] = true
+                console.info('this.RtBanners.activeId === this.id',this.RtBanners.activeIndex === this.id,this.RtBanners.activeIndex ,this.index);
+                if (this.RtBanners.activeIndex === this.index) {
+                    classArray['rt-banner-content-active'] = true
                 }
                 return classArray
 
@@ -49,8 +56,18 @@
 
         },
 
-        mounted: function () {
-            console.info('this',this);
+        beforeMount: function () {
+
+            this.index = this.RtBanners.items.length
+            this.RtBanners.items.push({
+                backgroundColor: this.backgroundColor,
+                backgroundImage: this.backgroundImage,
+                isWhiteColor: this.isWhiteColor,
+                id:this.id
+            })
+
+
+
         }
 
     }
