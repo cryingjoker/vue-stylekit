@@ -18,7 +18,9 @@ const config = {
     entry: path.join(__dirname, `src`, `index.js`),
     mode: env,
     output: {
-        publicPath: `/`
+        publicPath: `/`,
+        // filename: 'bundle.js',
+        // path: path.resolve(__dirname, 'public'),
     },
     resolve:{
         alias:{

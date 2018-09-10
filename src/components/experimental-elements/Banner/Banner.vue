@@ -4,17 +4,31 @@
             <div class="row">
                 <div class="rt-col-1"></div>
                 <div class="rt-col-5">
-                    <div class="rt-banner-content">
-                        <div class="rt-banner-content__inner">
-                            <slot>
-                            </slot>
-                        </div>
-                    </div>
+                    <slot>
+                    </slot>
 
                 </div>
             </div>
         </div>
-
+        <div class="circle-switcher">
+            <div class="circle-switcher-container">
+                <div class="circle-switcher__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
+                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
+                    </svg>
+                </div>
+                <div class="circle-switcher__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
+                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
+                    </svg>
+                </div>
+                <div class="circle-switcher__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
+                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
         <div class="rt-banner-image" :style="imageStyle">
             <svg class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0v500h2L185 0z" fill-rule="evenodd"/>
@@ -43,31 +57,33 @@
     componentsList[Price.name] = Price;
 
 
+
     export default {
         props: {
-            backgroundColor:    String,
-            backgroundImage:    String,
-            isWhiteColor:       Boolean
+            backgroundColor: String,
+            backgroundImage: String,
+            isWhiteColor: Boolean,
+            backgroundImages: Array
         },
         components: componentsList,
         name: "rt-banner",
         computed: {
-            banerClass(){
-              const classArray = {};
+            banerClass() {
+                const classArray = {};
 
-              if(this.backgroundColor) {
-                  classArray['rt-banner--background-'+this.backgroundColor] = true
-              }
-              if(this.isWhiteColor){
-                  classArray['rt-banner--color-white'] = true
-              }
-              return classArray
+                if (this.backgroundColor) {
+                    classArray['rt-banner--background-' + this.backgroundColor] = true
+                }
+                if (this.isWhiteColor) {
+                    classArray['rt-banner--color-white'] = true
+                }
+                return classArray
 
             },
-            imageStyle(){
+            imageStyle() {
                 const styles = {};
-                if(this.backgroundImage){
-                    styles.backgroundImage = 'url('+this.backgroundImage+')'
+                if (this.backgroundImage) {
+                    styles.backgroundImage = 'url(' + this.backgroundImage + ')'
                 }
                 return styles
             }
