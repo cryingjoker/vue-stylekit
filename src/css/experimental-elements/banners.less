@@ -79,6 +79,18 @@
     justify-items: center;
     height: 500px;
     line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity, visibility;
+    transition-timing-function: ease-in-out;
+    &--active{
+      opacity: 1;
+      visibility: visible;
+    }
   }
   &-image{
     position: relative;

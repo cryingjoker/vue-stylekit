@@ -67,6 +67,20 @@
         },
         components: componentsList,
         name: "rt-banner",
+        data() {
+            return {
+                RtBanners: {
+                    items: [],
+                    activeIndex: 0
+                },
+                isOpenListOnTop: false
+            };
+        },
+
+        provide() {
+            const RtBanners = this.RtBanners || {};
+            return {RtBanners};
+        },
         computed: {
             banerClass() {
                 const classArray = {};
@@ -91,6 +105,9 @@
         },
 
         mounted: function () {
+            if(this.RtBanners.items.length > 0 && this.RtBanners.items[0].id){
+                console.info('this.RtBanners.items',this.RtBanners.items[0].id);
+            }
         }
 
     }

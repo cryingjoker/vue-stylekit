@@ -11,6 +11,8 @@
     </div>
     </div>
         <rt-banner>
+            <!--<rt-banner-item></rt-banner-item>-->
+            <!--<rt-banner-item></rt-banner-item>-->
             <rt-banner-item background-image="/example-images/banerBackground1.png"
                             :is-white-color="true"
                             background-color="dark-state">
