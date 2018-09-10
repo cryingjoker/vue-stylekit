@@ -24,9 +24,8 @@
         <rt-banner-item
                 background-color="yellow"
                 background-image="/example-images/banerBackground2.png">
-            <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
-            <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
-                <br> и ни одного пропущенного звонка клиента</p>
+            <p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p>
+            <p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малого бизнеса </p>
             <rt-button class="rt-button-orange">Подробнее</rt-button>
         </rt-banner-item>
         </rt-banner>

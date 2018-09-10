@@ -12,21 +12,8 @@
         </div>
         <div class="circle-switcher">
             <div class="circle-switcher-container">
-                <div class="circle-switcher__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
-                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
-                    </svg>
-                </div>
-                <div class="circle-switcher__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
-                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
-                    </svg>
-                </div>
-                <div class="circle-switcher__item">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" viewBox="0 0 9 9">
-                        <circle r="4" cx="4.5" cy="4.5" fill="transparent"/>
-                    </svg>
-                </div>
+                <rt-banner-paginator-item v-for="(option, index) in RtBanners.items" :index="index"  :key="'paginator-index'+Math.random().toString(5).slice(4)" ></rt-banner-paginator-item>
+
             </div>
         </div>
         <div class="rt-banner-image" :style="imageStyle">
@@ -42,19 +29,12 @@
 </template>
 
 <script>
-
-    import {
-        Card,
-    } from "@/components/complex-elements/Card";
-    import {Input, Button, Price} from "@/components/main-elements"
-    import {Banner} from "@/components/experimental-elements"
+    import BannerPaginatorItem from "./BannerPaginatorItem.vue"
 
     const componentsList = {};
 
-    componentsList[Card.name] = Card;
-    componentsList[Input.name] = Input;
-    componentsList[Button.name] = Button;
-    componentsList[Price.name] = Price;
+
+    componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 
 
 
@@ -71,7 +51,9 @@
             return {
                 RtBanners: {
                     items: [],
-                    activeIndex: 0
+                    activeIndex: 0,
+                    setActiveItem: this.setActiveItem,
+                    setStartTimer: this.setStartTimer
                 },
                 isOpenListOnTop: false
             };
@@ -84,31 +66,53 @@
         computed: {
             banerClass() {
                 const classArray = {};
-
-                if (this.backgroundColor) {
-                    classArray['rt-banner--background-' + this.backgroundColor] = true
-                }
-                if (this.isWhiteColor) {
-                    classArray['rt-banner--color-white'] = true
+                const activeIndex = this.RtBanners.activeIndex;
+                if(this.RtBanners.items[activeIndex]) {
+                    if (this.RtBanners.items[activeIndex].backgroundColor) {
+                        classArray['rt-banner--background-' + this.RtBanners.items[activeIndex].backgroundColor] = true
+                    }
+                    if (this.RtBanners.items[activeIndex].isWhiteColor) {
+                        classArray['rt-banner--color-white'] = true
+                    }
                 }
                 return classArray
 
             },
             imageStyle() {
                 const styles = {};
-                if (this.backgroundImage) {
-                    styles.backgroundImage = 'url(' + this.backgroundImage + ')'
+                const activeIndex = this.RtBanners.activeIndex;
+                if (this.RtBanners.items[activeIndex]) {
+                    styles.backgroundImage = 'url(' + this.RtBanners.items[activeIndex].backgroundImage+ ')'
                 }
                 return styles
             }
 
         },
-
+        methods: {
+            setActiveItem(){
+                this.RtBanners.activeIndex = index;
+                this.setStartTimer();
+            },
+            setStartTimer(){
+                if(this.RtBanners.timer){
+                    clearTimeout(this.RtBanners.timer);
+                }
+                this.RtBanners.timer = setTimeout(()=>{
+                    const index = (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
+                    this.RtBanners.activeIndex = index;
+                    this.setStartTimer();
+                },5000);
+            }
+        },
         mounted: function () {
+
             if(this.RtBanners.items.length > 0 && this.RtBanners.items[0].id){
-                console.info('this.RtBanners.items',this.RtBanners.items[0].id);
+                setTimeout(()=>{
+                    this.setStartTimer();
+                },100)
             }
         }
+
 
     }
 </script>
