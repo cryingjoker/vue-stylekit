@@ -99,7 +99,6 @@
                     styles.maxHeight = this.cardHeaderHeight+'px'
 
                 }
-                console.info('styles',styles)
                 return styles
             },
             cardBackgroundClass(){

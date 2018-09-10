@@ -16,6 +16,10 @@
 .rt-banner{
   height: 500px;
   position: relative;
+  transition-duration: 0.3s;
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+
   &--background{
     &-dark-state {
       background-color: @b2b-dark-state;
@@ -34,6 +38,10 @@
     top: 0;
     z-index: 10;
     margin-left: -2px;
+    fill: transparent;
+    transition-duration: 0.3s;
+    transition-property: fill;
+    transition-timing-function: ease-in-out;
     .rt-banner--background-dark-state & {
       fill: @b2b-dark-state;
     }
@@ -87,6 +95,8 @@
     transition-duration: 0.3s;
     transition-property: opacity, visibility;
     transition-timing-function: ease-in-out;
+    z-index: 3;
+
     &--active{
       opacity: 1;
       visibility: visible;
@@ -104,6 +114,9 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
+    transition-duration: 0.3s;
+    transition-property: background-image;
+    transition-timing-function: ease-in-out;
     @media (min-width: 1500px) {
       max-width: 1024px;
     }
@@ -124,7 +137,7 @@
   }
 
   &__item{
-    //animation-duration: 5s;
+    animation-duration: 5s;
     cursor: pointer;
     position: relative;
     z-index: 3;
@@ -154,12 +167,25 @@
     width: inherit;
     height: inherit;
     stroke: #fff;
-    stroke-dasharray: 60;
-    stroke-width: 1;
-    animation-duration: inherit;
-    animation-timing-function: linear ;
-    animation-name: switcherRound;
+    stroke-dasharray: 0;
+    stroke-width: 0;
+    transition-duration: 0.3s;
+    transition-property: stroke-dasharray, stroke-width;
+    transition-timing-function: ease-in-out;
+    .circle-switcher__item:hover &{
+      stroke-dasharray: 60;
+      stroke-width: 1;
+    }
+    .rt-banner--run-timer &{
+      stroke-dasharray: 60;
+      stroke-width: 1;
+      animation-duration: inherit;
+      animation-timing-function: linear ;
+      animation-name: switcherRound;
+    }
+
   }
+
 }
 @keyframes switcherRound {
   0% {

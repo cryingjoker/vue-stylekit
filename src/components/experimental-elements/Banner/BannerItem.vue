@@ -10,12 +10,6 @@
 
 <script>
 
-    import {
-        Card,
-    } from "@/components/complex-elements/Card";
-    import {Input, Button, Price} from "@/components/main-elements"
-    import {Banner} from "@/components/experimental-elements"
-
     const componentsList = {};
 
 
@@ -39,9 +33,8 @@
         computed: {
             banerClass() {
                 const classArray = {};
-                console.info('this.RtBanners.activeId === this.id',this.RtBanners.activeIndex === this.id,this.RtBanners.activeIndex ,this.index);
                 if (this.RtBanners.activeIndex === this.index) {
-                    classArray['rt-banner-content-active'] = true
+                    classArray['rt-banner-content--active'] = true
                 }
                 return classArray
 
