@@ -6,7 +6,7 @@ gulp.task('copy', shell.task([
         'rm -rf ./docs',
         'mkdir docs',
         'git merge master -m\'deploy\'\n',
-        'npm i',
+        // 'npm i',
         'npm run build',
         'cp -R ./dist/* ./docs',
         'cd ./docs',
