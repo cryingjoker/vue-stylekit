@@ -96,6 +96,10 @@
     transition-property: opacity, visibility;
     transition-timing-function: ease-in-out;
     z-index: 3;
+    @media (max-width: 768px) {
+      padding-right: @horizontal-space;
+      padding-left: @horizontal-space;
+    }
 
     &--active{
       opacity: 1;
@@ -117,6 +121,9 @@
     transition-duration: 0.3s;
     transition-property: background-image;
     transition-timing-function: ease-in-out;
+    @media (max-width: 768px) {
+      display: none;
+    }
     @media (min-width: 1500px) {
       max-width: 1024px;
     }
