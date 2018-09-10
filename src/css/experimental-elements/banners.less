@@ -172,6 +172,7 @@
     transition-duration: 0.3s;
     transition-property: stroke-dasharray, stroke-width;
     transition-timing-function: ease-in-out;
+    transform: rotate(-90deg);
     .circle-switcher__item:hover &{
       stroke-dasharray: 60;
       stroke-width: 1;
@@ -189,7 +190,7 @@
 }
 @keyframes switcherRound {
   0% {
-    stroke-dashoffset: 60;
+    stroke-dashoffset: 180;
 
   }
   100% {
