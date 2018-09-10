@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="themes/rt_ru/css/styles.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<script type="text/javascript">
+		window.drupalSettings = {
+			geography: {
+				localityId: 3092902,
+				localityName: "Краснодар",
+				regionEng: "krasnodar",
+				regionId: 3092903,
+				regionKladrId: 23,
+				regionName: "Краснодарский"
+			}
+		}
+	</script>
+</head>
+
+<body style="margin: 0; padding: 0;">
+	<div id="geo"></div>
+
+
+
+
+	<!-- @TODO-list:
+        +Cards
+        +Buttons
+        +Columns
+        +Modules-guttering
+        +Separators
+        +Colors
+        +Icons
+        xLogos
+        +Badges
+        +Headers
+        +Text
+        +Links
+        +Anchors
+        +Tabs
+        +Prices
+        +Tables
+        +Accordion
+        Inputs
+        -->
+	<!-- Required -->
+	<style>
+		.demo-box {
+			position: relative;
+			margin-bottom: 50px;
+		}
+
+		.demo-row {
+			margin-bottom: 30px;
+		}
+
+		.demo-block {
+			background: rgba(255, 255, 255, .7);
+			height: 200px;
+		}
+
+		.demo-sector {
+			border: 1px dashed #dfdfdf;
+		}
+
+		.demo-layer {
+			background: #404040;
+		}
+
+		.demo-tile {
+			background: white;
+			box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, .1);
+			display: block;
+			position: absolute;
+			top: 18px;
+			left: 0;
+			white-space: nowrap;
+			padding: 20px;
+			white-space: pre;
+			z-index: 2;
+		}
+
+		c {
+			cursor: pointer;
+			display: table;
+			box-sizing: border-box;
+			border: 1px solid rgba(191, 140, 78, .16);
+			background-color: rgba(255, 240, 223);
+			color: #cd8432;
+			padding: 0 3px;
+			border-radius: 3px;
+			font-family: monospace;
+			width: fit-content;
+			white-space: normal;
+			position: relative;
+		}
+	</style>
+	<script>
+		window.fishText = 'Съешь ещё этих мягких французских булок, да выпей же чаю'
+		window.fishTitle = 'Смотри как нравится'
+		window.fishTextButton = 'Подключить'
+		window.fishTextLink = 'Перейти'
+		window.onload = function (w) {
+			[].forEach.call(document.querySelectorAll('c'), function (h) {
+				h.title = 'Щелкни для просмотра HTML'
+				// Show HTML helper
+				h.addEventListener('click', function (e) {
+					if (!h.hasAttribute('data-opened') || h.getAttribute('data-opened') === 'false') {
+						var p = h.parentElement
+						var c = (h.hasAttribute('data-child')) ? getChildFromAttr(p, h.getAttribute('data-child')).cloneNode(true) : p.cloneNode(true)
+						var w = ""
+						var tile = document.createElement('DIV')
+						// Remove tech wrappers
+						w = getChild(c)
+						tile.className = 'demo-tile opened'
+						tile.innerText = w
+						h.appendChild(tile)
+						h.setAttribute('data-opened', 'true')
+						var listenClickOverlay = function (ec) {
+							if (ec.target !== tile && ec.target !== h) {
+								h.setAttribute('data-opened', 'false')
+								tile.parentNode.removeChild(tile)
+								window.removeEventListener('click', listenClickOverlay)
+							}
+						}
+						window.addEventListener('click', listenClickOverlay)
+					}
+				})
+			})
+		}
+
+		function getChildFromAttr(el, indexes) {
+			if (indexes === '') {
+				return el.children[1]
+			} else {
+				var splitted = indexes.split(',')
+				var get = el
+				var indexesArr = splitted
+				indexesArr.map(function (id) {
+					if (get.children[id]) get = get.children[id]
+				})
+				return get
+			}
+		}
+
+		function getChild(el, parent) {
+			[].forEach.call(el.childNodes, function (child, key) {
+				if (child.tagName === 'C' || child.tagName === 'SCRIPT') {
+					child.parentNode.removeChild(child)
+				}
+				if (child.childNodes.length > 0)
+					return getChild(child, el)
+			})
+			var out = parent || el
+			return out.outerHTML
+		}
+
+	</script>
+	<!-- ::Required -->
+
+
+
+
+
+
+	<!-- Updated:28.04T15:45 -->
+	<div class="wrapper">
+		<div class="container">
+
+			<div class="demo-box marg-top-50">
+				<h1 class="rtk-header rtk-header_l marg-bottom-20">UI-kit RT.ru</h1>
+				<div class="rtk-text">Здесь собраны финальные классы и необходимая вёрстка для CMS.
+					<br> Селекторная нагрузка стремится к БЭМ (.blok – блок, .blok__element – элемент, .blok_mod – модификатор.), но есть
+					и хелперы для работы в CMS (.text-center, .color-red).
+					<br> Формат классов вписан для emmet'а, скопипастив его и нажав таб сформирует необходимую строку (.block.block_mod
+					-> class="block block_mod").
+					<br> Стили на текущий момент обновляются и добавляются в бандл в сжатом виде, посредством LESS-препроцессора. Поэтому
+					нет смысла их править через инлайн вставки.
+					<br> Если стили ограничены или не хватает элементов,
+					<a href="mailto:viktor.sidorets@south.rt.ru">я с удовольствием их модифицирую</a>.
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h3 class="rtk-header rtk-header_m">Система сеток - bootstrap</h3>
+		</div>
+		<section class="demo-layer">
+			<div class="pad-vert-20">
+				<div class="container demo-sector">
+					<c>.container</c>
+					<div class="col-sm-8">
+						<p class="rtk-text rtk-text_l text-pre color-white">
+							Основное содержимое сайта помещается в контейнеры. Это текст, блоки, картинки, веб-компоненты и просто дивки
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="demo-layer pad-bottom-50">
+			<div class="layout demo-sector">
+				<c>.layout</c>
+				<div class="row align-items-center">
+					<div class="col-sm-12">
+						<p class="rtk-text rtk-text_l text-pre color-white">
+							Содержимое размещаемое в лайауте выходит за рамки контейнера, может быть использовано для построения различных промо-блоков
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="demo-layer pad-bottom-20">
+			<div class="layout pad-bottom-20">
+				<div class="row demo-sector no-gutter">
+					<c>.row</c>
+					<div class="col-sm-12 text-center">
+						<p class="rtk-text rtk-text_l color-white">
+							<b>.row</b> - Строка для обворачивания колонок сетки. Именно здесь надо прописывать правила для размещения колонок
+							(позиционирование)
+						</p>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="layout pad-bottom-20">
+				<div class="row demo-sector">
+					<c>.row</c>
+					<div class="col-sm-12 text-center">
+						<p class="rtk-text rtk-text_l color-white">Строка по-умолчанию выглядит шире чем лайаут, засчет отступов для колонок</p>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="layout pad-bottom-20">
+				<div class="row">
+					<c>.row</c>
+					<div class="col-sm-12 text-center">
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">Однако, отступ не отобразится если обернуть блок в колонку из этой же строки</p>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<div class="demo-box">
+							<p class="rtk-text rtk-text_l color-white">На данный момент сетка включает
+								<b>4 брейкпоинта</b> (разрешения для адаптивности), названных как в привычном бутстрапе</p>
+							<p class="rtk-text rtk-text_l text-bold color-white">[ sm ] - ширина экрана >= 576px</p>
+							<p class="rtk-text rtk-text_l text-bold color-white">[ md ] - ширина экрана >= 768px</p>
+							<p class="rtk-text rtk-text_l text-bold color-white">[ lg ] - ширина экрана >= 993px</p>
+							<p class="rtk-text rtk-text_l text-bold color-white">[ xl ] - ширина экрана >= 1083px</p>
+							<p class="rtk-text rtk-text_l text-bold color-white">[ xxl] - ширина экрана >= 1236px</p>
+							<p class="rtk-text rtk-text_l color-white">Брейкпоинты используются для колонок, чтобы при определенном разрешении
+								они перестраивались</p>
+							<br>
+							<p class="rtk-text rtk-text_l color-white">Сейчас используется сетка из
+								<b>12 колонок</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layout pad-bottom-20">
+				<div class="row">
+					<div class="col-sm-1 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-sm-1</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-sm-2 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-sm-2</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-sm-3 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-sm-3</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-sm-6 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-sm-6</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-sm-12 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-sm-12</p>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layout pad-bottom-20">
+				<div class="row">
+					<div class="col-lg-1 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-lg-1</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-lg-2 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-lg-2</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-lg-3</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-lg-6</p>
+							<br>
+						</div>
+					</div>
+					<div class="col-lg-12 text-center">
+						<c>.col</c>
+						<div class="demo-box demo-sector">
+							<br>
+							<p class="rtk-text rtk-text_l color-white">.col-lg-12</p>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<div class="container">
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Типография</h3>
+				<div class="row demo-row">
+					<div class="col-sm-5">
+						<c>.rtk-header.rtk-header_mega</c>
+						<div class="rtk-header rtk-header_mega">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<c>.rtk-header.rtk-header_promo</c>
+						<div class="rtk-header rtk-header_promo">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<c>.rtk-header.rtk-header_l</c>
+						<div class="rtk-header rtk-header_l">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-5">
+						<c>.rtk-header.rtk-header_m</c>
+						<div class="rtk-header rtk-header_m">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<c>.rtk-header.rtk-header_s</c>
+						<div class="rtk-header rtk-header_s">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<c>.rtk-header.rtk-header_xs</c>
+						<div class="rtk-header rtk-header_xs">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ::container -->
+
+		<div class="layout bg-dark demo-box" style="background: #777;">
+			<div class="container">
+				<c data-child="1">.rtk-header.rtk-header_white</c>
+				<div class="row align-items-center" style="height: 200px;">
+					<div class="col-sm-6">
+						<div class="rtk-header rtk-header_promo rtk-header_white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="rtk-header rtk-header_s rtk-header_white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ::container -->
+		</div>
+		<!-- ::layout -->
+
+		<div class="container">
+			<div class="demo-box">
+				<div class="row demo-row">
+					<div class="col-sm-7">
+						<c>.rtk-text.rtk-text_xl</c>
+						<div class="rtk-text rtk-text_xl text-pre">
+							<script>
+								document.write(window.fishText)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<c>.rtk-text.rtk-text_l</c>
+						<div class="rtk-text rtk-text_l text-pre">
+							<script>
+								document.write(window.fishText)
+
+							</script>
+						</div>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-4">
+						<c>.rtk-text.rtk-text_m</c>
+						<div class="rtk-text rtk-text_m text-pre">
+							<script>
+								document.write(window.fishText)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<c>.rtk-text.rtk-text_s</c>
+						<div class="rtk-text rtk-text_s text-pre">
+							<script>
+								document.write(window.fishText)
+
+							</script>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<c>.rtk-text.rtk-text_xs</c>
+						<div class="rtk-text rtk-text_xs text-pre">
+							<script>
+								document.write(window.fishText)
+
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Buttons</h3>
+				<div class="row demo-row">
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-primary</c>
+						<button class="btn btn-primary">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-warning</c>
+						<button class="btn btn-warning">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-primary.btn-flat</c>
+						<button class="btn btn-primary btn-flat">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-warning.btn-flat</c>
+						<button class="btn btn-warning btn-flat">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-6">
+						<c data-child="">.btn.btn-primary.promo</c>
+						<button class="btn btn-primary promo">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+					<div class="col-sm-6">
+						<c data-child="">.btn.btn-warning.promo</c>
+						<button class="btn btn-warning promo">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-primary.btn-flat.promo</c>
+						<button class="btn btn-primary btn-flat promo">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+					<div class="col-sm-6">
+						<c data-child>.btn.btn-warning.btn-flat.promo</c>
+						<button class="btn btn-warning btn-flat promo">
+							<script>document.write(window.fishTextButton)</script>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Links</h3>
+				<div class="row demo-row">
+					<div class="col-sm-4">
+						<c data-child>.rtk-link</c>
+						<a class="rtk-link" href="javascript:void(0)">
+							<script>
+								document.write(window.fishTextLink)
+
+							</script>
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<c data-child>.rtk-link.rtk-link_underline</c>
+						<a class="rtk-link rtk-link_underline" href="javascript:void(0)">
+							<script>
+								document.write(window.fishTextLink)
+
+							</script>
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<c>.rtk-file</c>
+						<a class="rtk-file" href="javascript:void(0)">
+							<div class="rtk-file__icon"></div>
+							<div class="rtk-file__name">Настройка NEC XaVi 825</div>
+						</a>
+						<div class="rtk-file__info">pdf, 473.6 Кб</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Helpers</h3>
+				<div class="row demo-row">
+					<div class="col-sm-4 demo-sector">
+						<c data-child>.text-left</c>
+						<h4 class="text-left">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-4 demo-sector">
+						<c data-child>.text-right</c>
+						<h4 class="text-right">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-4 demo-sector">
+						<c data-child>.text-center</c>
+						<h4 class="text-center">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-4 demo-sector">
+						<c data-child>.text-[left, right, center]-[xs, sm, md, lg, xl, xxl]</c>
+						<h4 class="text-right-sm">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-6 demo-sector">
+						<c data-child>.pad-[top, left, right, bottom, vert, hor]-[0, 5, 10, 15, 20, 25, 30, 40, 50]</c>
+						<h4 class="pad-vert-20">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-6 demo-sector">
+						<c data-child>.marg-[top, left, right, bottom, vert, hor]-[0, 5, 10, 15, 20, 25, 30, 40, 50]</c>
+						<h4 class="marg-hor-50">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-3">
+						<c data-child>.color-primary</c>
+						<h4 class="color-primary">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-warning</c>
+						<h4 class="color-warning">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-dark">
+						<c data-child>.color-white</c>
+						<h4 class="color-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-light-green</c>
+						<h4 class="color-light-green">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-black</c>
+						<h4 class="color-black">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-light-gray</c>
+						<h4 class="color-light-gray">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-dark">
+						<c data-child>.color-on-dark</c>
+						<h4 class="color-on-dark">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-lightly-gray</c>
+						<h4 class="color-lightly-gray">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.color-on-white</c>
+						<h4 class="color-on-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+				</div>
+
+				<div class="row demo-row">
+					<div class="col-sm-3 bg-primary">
+						<c>.bg-primary</c>
+						<h4 class="color-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-warning">
+						<c>.bg-warning</c>
+						<h4 class="color-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-dark">
+						<c>.bg-dark</c>
+						<h4 class="color-on-dark">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-white">
+						<c>.bg-white</c>
+						<h4 class="color-on-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-alert">
+						<c>.bg-alert</c>
+						<h4 class="color-white">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-3 sepearated_bottom">
+						<c>.sepearated_[bottom, left, right, top]</c>
+						<h4 class="color-primary">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 sepearated_right sepearated_on-dark bg-dark">
+						<c>.sepearated_on-dark</c>
+						<h4 class="color-on-dark">
+							<script>
+								document.write(window.fishTitle)
+
+							</script>
+						</h4>
+					</div>
+					<div class="col-sm-3 bg-dark">
+						<p>&nbsp;</p>
+					</div>
+				</div>
+				<div class="row demo-row">
+					<div class="col-sm-3">
+						<c data-child>.hidden</c>
+						<p class="hidden">Какая-нибудь кака</p>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.hide-on-[xs, sm, md, lg, xl, xxl]</c>
+						<p class="hide-on-sm">Этот текст не увидят обладатели телефончиков</p>
+					</div>
+					<div class="col-sm-3">
+						<c data-child>.show-on-[xs, sm, md, lg, xl, xxl]</c>
+						<p class="show-on-sm hidden">А этот текст увидят только обладатели телефончиков</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Cards</h3>
+				<div>
+					<c>.rtk-card</c>
+					<div class="row align-items-center">
+						<div class="col-sm-6">
+							<div class="rtk-card demo-block row align-items-center" style="height: 400px">
+								<div class="col-md-12 text-center">
+									<p class="rtk-text rtk-text_s">
+										<script>
+											document.write(window.fishText)
+
+										</script>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="col">
+								<div class="rtk-card demo-block row align-items-center">
+									<div class="col-md-12 text-center">
+										<p class="rtk-text rtk-text_s">
+											<script>
+												document.write(window.fishText)
+
+											</script>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="rtk-card demo-block row align-items-center">
+									<div class="col-md-12 text-center">
+										<p class="rtk-text rtk-text_s">
+											<script>
+												document.write(window.fishText)
+
+											</script>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<!-- Widgets only -->
+			<div class="demo-box">
+				<h2 class="rtk-header rtk-header_l">Веб-компоненты CMS
+					</h3>
+					<p class="rtk-text rtk-text_m marg-bottom-20">Следует обворачивать в класс <b>.wc-inline</b></p>
+					<br>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Иконки</h3>
+				<div>
+					<c>icon (обязательно обёртка ВК)</c>
+					<icon name="icon_25"></icon>
+					<icon url="https://n.rt.ru/sites/default/files/2018-04/icon_418.svg" view-name="flat" :candy="false"></icon>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+
+						<div class="wc-inline">
+							<div class="row">
+								<div class="col">
+									<icon name="icon_25"></icon>
+								</div>
+								<div class="col">
+									<icon name="icon_25" size="40"></icon>
+								</div>
+								<div class="col">
+									<icon name="icon_0" size="55"></icon>
+								</div>
+								<div class="col">
+									<icon name="icon_26" size="80"></icon>
+								</div>
+								<div class="col">
+									<icon name="icon_110" size="100"></icon>
+								</div>
+								<div class="col">
+									<icon url="https://n.rt.ru/sites/default/files/2018-04/icon_418.svg" view-name="flat" :candy="false"></icon>
+								</div>
+								<div class="col">
+									<icon url="https://n.rt.ru/sites/default/files/2018-04/icon_418.svg" name="icon_25"></icon>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<c>img (Иконки через тэг IMG)</c>
+					<div class="col">
+						<img src="https://n.rt.ru/sites/default/files/2018-04/icon_418.svg" alt="" />
+					</div>
+					<div class="col">
+						<img src="https://n.rt.ru/sites/default/files/2018-04/icon_419.svg" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<div class="row">
+					<c>price (обязательно обёртка ВК)</c>
+					<price value="2200"></price>
+					<price value="2500" units="руб.,мес."></price>
+					<price value="2500" units="руб.,мес." styles="inline,xxs,black"></price>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="wc-inline">
+							<price value="2200"></price>
+							<price value="2500" units="руб.,мес."></price>
+							<price value="2500" units="руб.,мес." styles="inline,xxs,black"></price>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<div class="row">
+					<c data-child="1,0">.js-link (обязательно обёртка ВК)</c>
+					<div class="hidden">
+						<a class="js-link" data-href="#spoilersGroups">Плавный скроллинг</a>
+					</div>
+				</div>
+				<div class="wc-inline">
+					<div class="row">
+						<div class="col-sm-2">
+							<c>Обычная ссылка</c>
+							<a class="rtk-link js-link" data-href="#spoilersGroups">Плавный скроллинг</a>
+						</div>
+						<div class="col-sm-10 block-tabs">
+							<c>Вкладка ссылка</c>
+							<div class="block-tabs__item active-trail">
+								<a data-href="#spoilersGroups" class="js-link">На что потратить</a>
+							</div>
+							<div class="block-tabs__item">
+								<a data-href="#spoilersGroups" class="js-link">Как накопить</a>
+							</div>
+							<div class="block-tabs__item">
+								<a data-href="#spoilersGroups" class="js-link">Стать участником</a>
+							</div>
+							<div class="block-tabs__item">
+								<a data-href="#spoilersGroups" class="js-link">Вопросы и ответы</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h4 class="rtk-header rtk-header_xxs marg-bottom-10">Таблицы</h4>
+				<div>
+					<c data-child="1,0">table-adaptive (обязательно обёртка ВК)</c>
+					<div class="hidden">
+						<table-adaptive>
+							<table>
+								<thead>
+									<th>Number</th>
+									<th>Text</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>Zero</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>One</td>
+									</tr>
+								</tbody>
+							</table>
+						</table-adaptive>
+					</div>
+					<div class="wc-inline">
+						<table-adaptive>
+							<table>
+								<thead>
+									<th>Number</th>
+									<th>Text</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0</td>
+										<td>Zero</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>One</td>
+									</tr>
+								</tbody>
+							</table>
+						</table-adaptive>
+					</div>
+				</div>
+			</div>
+
+			<!-- ::Widgets only -->
+			<hr>
+
+			<div class="demo-box">
+				<h2 class="rtk-header rtk-header_l">Работа с контентом</h2>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Описание опций</h3>
+				<div>
+					<c data-child="1,0,0">.rtk-product</c>
+					<div class="hidden">
+						<div class="rtk-product">
+							<spoiler>
+								<div class="rtk-product__header">
+									<div class="rtk-product__icon">
+										<icon name="icon_239"></icon>
+									</div>
+									<div class="rtk-product__label">
+										<h2 class="rtk-product__title">Фиксированный IP-адрес</h2>
+										<p class="rtk-product__desc">Получите фиксированный IP-адрес, чтобы размещать в Интернете собственные веб-ресурсы
+											и пользоваться всеми возможностями файлообменных сетей.</p>
+									</div>
+									<div class="rtk-product__price">
+										<div class="rtk-price rtk-price_xxs rtk-price_black rtk-price_inline">
+											<div class="rtk-price__value">200</div>
+											<div class="rtk-price-units">
+												<div class="rtk-price-units__unit">руб.</div>
+												<div class="rtk-price-units__unit">мес</div>
+											</div>
+										</div>
+									</div>
+									<div class="rtk-product__switch">
+										<!-- Switcher -->
+									</div>
+								</div>
+								<div class="rtk-product__body">Опция «Фиксированный IP» позволяет закрепить фиксированный «реальный» IP-адрес за
+									вашим оборудованием. Это позволит организовать размещение в сети собственных веб-ресурсов и полноценно пользоваться
+									всеми возможностями файлообменных сетей.</div>
+							</spoiler>
+						</div>
+					</div>
+				</div>
+				<div class="wc-inline">
+					<div class="rtk-card">
+						<div class="rtk-product">
+							<spoiler>
+								<div class="rtk-product__header">
+									<div class="rtk-product__icon">
+										<icon name="icon_111"></icon>
+									</div>
+									<div class="rtk-product__label">
+										<h2 class="rtk-product__title">Ускорение</h2>
+										<p class="rtk-product__desc">Увеличьте существующую скорость доступа в Интернет</p>
+									</div>
+									<div class="rtk-product__price">
+										<div class="rtk-price rtk-price_xxs rtk-price_black rtk-price_inline">
+											<div class="rtk-price__value">100</div>
+											<div class="rtk-price-units">
+												<div class="rtk-price-units__unit">руб.</div>
+												<div class="rtk-price-units__unit">мес</div>
+											</div>
+										</div>
+									</div>
+									<div class="rtk-product__switch">
+										<!-- Switcher -->
+									</div>
+								</div>
+								<div class="rtk-product__body">Ускорение - позволяет увеличить скорость без изменения скорости основного тарифа в
+									выбранный интервал времени</div>
+							</spoiler>
+						</div>
+						<div class="rtk-product">
+							<spoiler>
+								<div class="rtk-product__header">
+									<div class="rtk-product__icon">
+										<icon name="icon_239"></icon>
+									</div>
+									<div class="rtk-product__label">
+										<h2 class="rtk-product__title">Фиксированный IP-адрес</h2>
+										<p class="rtk-product__desc">Получите фиксированный IP-адрес, чтобы размещать в Интернете собственные веб-ресурсы
+											и пользоваться всеми возможностями файлообменных сетей.</p>
+									</div>
+									<div class="rtk-product__price">
+										<div class="rtk-price rtk-price_xxs rtk-price_black rtk-price_inline">
+											<div class="rtk-price__value">200</div>
+											<div class="rtk-price-units">
+												<div class="rtk-price-units__unit">руб.</div>
+												<div class="rtk-price-units__unit">мес</div>
+											</div>
+										</div>
+									</div>
+									<div class="rtk-product__switch">
+										<!-- Switcher -->
+									</div>
+								</div>
+								<div class="rtk-product__body">Опция «Фиксированный IP» позволяет закрепить фиксированный «реальный» IP-адрес за
+									вашим оборудованием. Это позволит организовать размещение в сети собственных веб-ресурсов и полноценно пользоваться
+									всеми возможностями файлообменных сетей.</div>
+							</spoiler>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 id="spoilersGroups" class="rtk-header rtk-header_m">Скрываемые блоки</h3>
+				<div>
+					<div>
+						<c data-child="1,0">spoiler</c>
+						<div class="hidden">
+							<spoiler class="js-collapser triangle-flat group">
+								<div class="group__item-title">Когда мне будут начислены бонусы?</div>
+								<div class="group__item-body">
+									<p class="rtk-text">За начисления по услугам связи: в течение 15 дней после окончания месяца, в котором были оказаны
+										услуги.
+									</p>
+									<p class="rtk-text">За единовременный платеж более 1000 руб.: в течение 15 дней после окончания месяца, в котором
+										был совершен платеж.</p>
+								</div>
+							</spoiler>
+						</div>
+					</div>
+					<div class="wc-inline">
+						<spoiler class="js-collapser triangle-flat group">
+							<div class="group__item-title">Когда мне будут начислены бонусы?</div>
+							<div class="group__item-body">
+								<p class="rtk-text">За начисления по услугам связи: в течение 15 дней после окончания месяца, в котором были оказаны
+									услуги.
+								</p>
+								<p class="rtk-text">За единовременный платеж более 1000 руб.: в течение 15 дней после окончания месяца, в котором
+									был совершен платеж.</p>
+							</div>
+						</spoiler>
+						<spoiler class="js-collapser triangle-flat group">
+							<div class="group__item-title">Сколько времени действует вознаграждение, заказанное за бонусы?</div>
+							<div class="group__item-body">
+								<p class="rtk-text">За начисления по услугам связи: в течение 15 дней после окончания месяца, в котором были оказаны
+									услуги.
+								</p>
+								<p class="rtk-text">За единовременный платеж более 1000 руб.: в течение 15 дней после окончания месяца, в котором
+									был совершен платеж.</p>
+							</div>
+						</spoiler>
+						<spoiler class="js-collapser triangle-flat group">
+							<div class="group__item-title">Переходят ли неиспользованные бонусы и бонусные минуты на следующий месяц?</div>
+							<div class="group__item-body">
+								<p class="rtk-text">За начисления по услугам связи: в течение 15 дней после окончания месяца, в котором были оказаны
+									услуги.
+								</p>
+								<p class="rtk-text">За единовременный платеж более 1000 руб.: в течение 15 дней после окончания месяца, в котором
+									был совершен платеж.</p>
+							</div>
+						</spoiler>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Встроенное видео</h3>
+				<div>
+					<c data-child="1,0">spoiler-video</c>
+					<div class="hidden">
+						<spoiler-video>
+							<video-thumb><img src="https://i.ytimg.com/vi/QvKFKkPaatQ/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLC70DAgKvIa5oInSpLqHSPTfPXM3g"
+								/></video-thumb>
+							<video-title>Самый мстительный кот в мире! Это надо видеть!</video-title>
+							<video-desc>Как известно, страшнее кошки зверя нет. И тому много доказательств. В этому выпуске мы специально для
+								вас подобрали несколько отважных котов, готовых на отчаянные поступки.</video-desc>
+							<video-body>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/QvKFKkPaatQ" frameborder="0" allow="autoplay; encrypted-media"
+								 allowfullscreen></iframe>
+							</video-body>
+						</spoiler-video>
+					</div>
+				</div>
+				<div class="wc-inline">
+					<spoiler-video>
+						<video-thumb><img src="https://i.ytimg.com/vi/QvKFKkPaatQ/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLC70DAgKvIa5oInSpLqHSPTfPXM3g"
+							/></video-thumb>
+						<video-title>Самый мстительный кот в мире! Это надо видеть!</video-title>
+						<video-desc>Как известно, страшнее кошки зверя нет. И тому много доказательств. В этому выпуске мы специально для вас
+							подобрали несколько отважных котов, готовых на отчаянные поступки.</video-desc>
+						<video-body>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/QvKFKkPaatQ" frameborder="0" allow="autoplay; encrypted-media"
+							 allowfullscreen></iframe>
+						</video-body>
+					</spoiler-video>
+				</div>
+			</div>
+
+
+			<div class="demo-box">
+				<h3 class="rtk-header rtk-header_m">Sticked</h3>
+				<div>
+					<c data-child="1,0,0">.sticked</c>
+					<div class="row">
+						<div class="col-sm-6">
+							<h3 class="rtk-header rtk-header_mega sticked marg-bottom-40">Преимущества</h3>
+						</div>
+						<div class="sepearated_left col-sm-6">
+							<div class="col-12 marg-bottom-40">
+								<h4 class="rtk-header rtk-header_m">Бесплатные звонки</h4>
+								<p class="rtk-text rtk-text_xl">Бесплатные звонки на домашние и мобильные номера Ростелеком.</p>
+							</div>
+							<div class="col-12 marg-bottom-40">
+								<h4 class="rtk-header rtk-header_m">Бонусы</h4>
+								<p class="rtk-text rtk-text_xl">Возможность копить бонусы и обменивать их на опции и услуги: минуты разговоров, пакеты
+									телеканалов, подарки в онлайн-играх.</p>
+							</div>
+							<div class="col-12 marg-bottom-40">
+								<h4 class="rtk-header rtk-header_m">Поддержка</h4>
+								<p class="rtk-text rtk-text_xl">Бесплатная доставка SIM-карт. Круглосуточная техническая поддержка.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ::container -->
+
+
+		<div class="demo-section">
+			<div class="bg-primary">
+				<c>.bg-primary</c>
+				<div class="layout">
+					<div class="row align-items-center">
+						<div class="col-md-6 pad-hor-30">
+							<h4 class="rtk-header rtk-header_l color-white">Мобильная<br>связь</h4>
+							<p class="rtk-text rtk-text_l color-white">Пользуйтесь домашней и мобильной связью Ростелеком, чтобы бесплатно звонить
+								на любые номера внутри сети</p>
+							<a class="btn btn-flat btn-white promo">Выбрать тариф</a>
+						</div>
+						<div class="col-md-6" style="height: 440px;">
+							<!-- Здесь могла быть ваша картинкас -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="layout pad-vert-50">
+				<c>Оформление блоков</c>
+				<div class="row">
+					<div class="col-sm-12 pad-bottom-30">
+						<div class="rtk-header rtk-header_l">Как подключить</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="rtk-text rtk-text_l">Удобнее всего оформить сим-карту Ростелекома на сайте, но вы можете сделать это позвонив
+							по номеру <a href="tel:88001000800" class="rtk-link">8-800-1000-800</a> или в ближайшем офисе Ростелекома</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="layout">
+				<c>Оформление этапов</c>
+				<div class="row">
+					<div class="col-md-4">
+						<p class="rtk-header rtk-header_mega color-primary">Шаг 1</p>
+						<p class="rtk-text rtk-text_xl text-bold marg-vert-5">Подзаголовок</p>
+						<p class="rtk-text rtk-text_m color-light-gray">В ближайшее время мы свяжемся с вами и уточним техническую возможность
+							подключения
+						</p>
+					</div>
+					<div class="col-md-4">
+						<p class="rtk-header rtk-header_mega color-light-gray">Шаг 2</p>
+						<p class="rtk-text rtk-text_m color-light-gray">В ближайшее время мы свяжемся с вами и уточним техническую возможность
+							подключения
+						</p>
+					</div>
+					<div class="col-md-4">
+						<p class="rtk-header rtk-header_mega color-warning">Шаг 2</p>
+						<p class="rtk-text rtk-text_m">В ближайшее время мы свяжемся с вами и уточним техническую возможность подключения</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="insertImages" class="layout pad-vert-50">
+				<c>Вставка картинок</c>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<img src="https://nspb.rt.ru/image/journal/article?img_id=1297655&t=1515687815075">
+					</div>
+				</div>
+			</div>
+
+			<div class="layout pad-vert-50">
+				<c>Оформление секций</c>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="col sticked">
+							<h3 class="rtk-header rtk-header_mega marg-bottom-40">В Ростелеком со своим номером</h3>
+							<a href="https://nspb.rt.ru/documents/20181/43737/zayavlenie_na_perenos_fiz_lic" class="btn btn-warning btn-flat promo">Скачать
+								заявление
+							</a>
+						</div>
+					</div>
+					<div class="sepearated_left col-sm-6">
+						<div class="col-12 marg-bottom-40">
+							<h4 class="rtk-header rtk-header_m">Заявка на сайте</h4>
+							<p class="rtk-text rtk-text_xl">Оставьте заявку для бесплатной доставки SIM-карты</p>
+							<p class="rtk-text rtk-text_xl">Наш курьер привезёт документы, отдаст SIM-карту и примет оплату — вам нужно только
+								показать паспорт</p>
+							<p class="rtk-text rtk-text_xl">Если вы хотите, чтобы встреча с курьером прошла быстрее, заполните заявление о переносе
+								номера заранее
+							</p>
+						</div>
+						<div class="col-12 marg-bottom-40">
+							<h4 class="rtk-header rtk-header_m">В салоне</h4>
+							<p class="rtk-text rtk-text_xl">Возьмите паспорт и приходите в любой офис Ростелекома. Заполните заявление о переносе
+								номера
+							</p>
+							<p class="rtk-text rtk-text_xl">Выберите тарифный план и получите новую SIM-карту</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="layout pad-vert-50">
+				<c>Оформление секций</c>
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="rtk-header rtk-header_mega marg-bottom-50">Возможности</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<!-- Здесь будет код иконки -->
+						<h4 class="rtk-header rtk-header_m marg-bottom-40">Мобильный интернет</h4>
+						<p class="rtk-text rtk-text_xl marg-bottom-20">Оставайтесь на связи, где бы вы ни были. Отвечайте на письма, просматривайте
+							соцсети, читайте новости в любом удобном месте</p>
+						<p class="rtk-text rtk-text_xl">3G и 4G интернет для ваших смартфонов и планшетов.</p>
+					</div>
+					<div class="col-sm-6">
+						<!-- Здесь будет код иконки -->
+						<h4 class="rtk-header rtk-header_m marg-bottom-40">Роуминг</h4>
+						<p class="rtk-text rtk-text_xl">За пределами домашнего региона ваш телефон автоматически подключится к роумингу. Звонки,
+							SMS и интернет-трафик будут стоить дороже. Подключите дополнительные опции, чтобы сэкономить на услугах связи в путешествиях.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="layout pad-vert-50">
+				<c data-child="1,0">Оформление секций</c>
+				<div class="hidden">
+					<div class="row">
+						<div class="col-md-6 pad-bottom-20">
+							<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+								<div class="rtk-promo__wrapper">
+									<div class="row no-gutter">
+										<div class="col-sm-8">
+											<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+												<div class="wc-inline">
+													<icon size="80" name="INTERNET_PARENT_CONTROL"></icon>
+												</div>
+											</div>
+											<div class="rtk-promo__title">Родительский контроль</div>
+											<div class="rtk-text_m">для безопасности детей<br>в&nbsp;интернете</div>
+										</div>
+									</div>
+									<div class="row no-gutter">
+										<div class="marg-top-40 pad-bottom-10">
+											<a class="rtk-promo__link" href="#">Выберите свой тип подписки</a>
+										</div>
+									</div>
+								</div>
+								<div class="rtk-promo__bg toning">
+									<img class="rtk-promo__bg-tag" src="https://drupal.south.rt.ru/sites/default/files/2018-07/img-110718.jpg" style="
+                              height: 133%;
+                              top: -32%;
+                            " />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 pad-bottom-20">
+							<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+								<div class="rtk-promo__wrapper">
+									<div class="row no-gutter">
+										<div class="col-sm-8">
+											<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+												<div class="wc-inline">
+													<icon size="80" name="INTERNET_GAMES"></icon>
+												</div>
+											</div>
+											<div class="rtk-promo__title">Игровой</div>
+											<div class="rtk-text_m">Самый за}{ватывающий интернет</div>
+										</div>
+									</div>
+									<div class="row no-gutter">
+										<div class="marg-top-40 pad-bottom-10">
+											<a class="rtk-promo__link" href="#">Выберите свою игровую опцию</a>
+										</div>
+									</div>
+								</div>
+								<div class="rtk-promo__bg toning">
+									<img class="rtk-promo__bg-tag" style="
+                            background: #EFB062;
+                            width: 100%;
+                            " />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 pad-bottom-20">
+							<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+								<div class="rtk-promo__wrapper">
+									<div class="row no-gutter">
+										<div class="col-sm-8">
+											<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+												<div class="wc-inline">
+													<icon size="80" name="INTERNET_ANTIVIRUS"></icon>
+												</div>
+											</div>
+											<div class="rtk-promo__title">Антивирусы</div>
+											<div class="rtk-text_m">Выгодная защита<br>для всех устройств</div>
+										</div>
+									</div>
+									<div class="row no-gutter">
+										<div class="marg-top-40 pad-bottom-10">
+											<a class="rtk-promo__link" href="#">
+												<img src="logo" />
+											</a>
+											<a class="rtk-promo__link" href="#">
+												<img src="logo" />
+											</a>
+											<a class="rtk-promo__link" href="#">
+												<img src="logo" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="rtk-promo__bg toning">
+									<img class="rtk-promo__bg-tag" style="
+                            background: #6685AD;
+                            width: 100%;
+                            " />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 pad-bottom-20">
+							<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+								<div class="rtk-promo__wrapper">
+									<div class="row no-gutter">
+										<div class="col-sm-8">
+											<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+												<div class="wc-inline">
+													<icon size="80" name="INTERNET_OFICE_365"></icon>
+												</div>
+											</div>
+											<div class="rtk-promo__title">Microsoft Office&nbsp;365</div>
+											<div class="rtk-text_m">Полный пакет программ для всей семьи</div>
+										</div>
+									</div>
+									<div class="row no-gutter">
+										<div class="marg-top-40 pad-bottom-10">
+											<a class="rtk-promo__link" href="#">Выберите свой тип подписки</a>
+										</div>
+									</div>
+								</div>
+								<div class="rtk-promo__bg toning">
+									<img class="rtk-promo__bg-tag" style="
+                            background: #309DC1;
+                            width: 100%;
+                            " />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Виджеты с доп услугами -->
+				<div class="row pad-top-30">
+					<div class="col-md-6 pad-bottom-20">
+						<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+							<div class="rtk-promo__wrapper">
+								<div class="row no-gutter">
+									<div class="col-sm-8">
+										<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+											<div class="wc-inline">
+												<icon size="80" name="INTERNET_PARENT_CONTROL"></icon>
+											</div>
+										</div>
+										<div class="rtk-promo__title">Родительский контроль</div>
+										<div class="rtk-text_m">для безопасности детей<br>в&nbsp;интернете</div>
+									</div>
+								</div>
+								<div class="row no-gutter">
+									<div class="marg-top-40 pad-bottom-10"><a class="rtk-promo__link" href="#">Выберите свой тип подписки</a></div>
+								</div>
+							</div>
+							<div class="rtk-promo__bg toning"><img class="rtk-promo__bg-tag" src="https://drupal.south.rt.ru/sites/default/files/2018-07/parent_control_0.jpg"
+								 style="height: 133%;	top: -32%;"></div>
+						</div>
+					</div>
+					<div class="col-md-6 pad-bottom-20">
+						<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+							<div class="rtk-promo__wrapper">
+								<div class="row no-gutter">
+									<div class="col-12">
+										<div class="row no-gutter">
+											<div class="col-sm-8">
+												<div class="rtk-promo__icon marg-top-50">
+													<div class="wc-inline">
+														<icon size="80" name="INTERNET_GAMES"></icon>
+													</div>
+												</div>
+												<div class="rtk-promo__title">Игровой</div>
+												<div class="rtk-text_m">Высокоскоростной интернет<br>и игровые бонусы<br>для увлечённых геймеров</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="row no-gutter">
+											<div class="pad-bottom-10"><a class="rtk-promo__link" href="#">Выберите свою игровую опцию</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="rtk-promo__bg toning"><img class="rtk-promo__bg-tag" src="https://drupal.south.rt.ru/sites/default/files/2018-07/games_0.png"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 pad-bottom-20">
+						<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+							<div class="rtk-promo__wrapper">
+								<div class="row no-gutter">
+									<div class="col-sm-8">
+										<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+											<div class="wc-inline">
+												<icon size="80" name="INTERNET_ANTIVIRUS"></icon>
+											</div>
+										</div>
+										<div class="rtk-promo__title">Антивирусы</div>
+										<div class="rtk-text_m">Выгодная защита<br>для всех устройств</div>
+									</div>
+								</div>
+								<div class="row no-gutter">
+									<div class="marg-top-25 pad-bottom-10">
+										<a class="rtk-promo__link" href="#"><img src="https://drupal.south.rt.ru/sites/default/files/2018-07/eset_0.png"></a>
+										<a class="rtk-promo__link marg-left-30" href="#"><img src="https://drupal.south.rt.ru/sites/default/files/2018-07/drweb_0.png"></a>
+										<a class="rtk-promo__link marg-left-30" href="#"><img src="https://drupal.south.rt.ru/sites/default/files/2018-07/kaspersky_0.png"></a>
+									</div>
+								</div>
+							</div>
+							<div class="rtk-promo__bg toning"><img class="rtk-promo__bg-tag" src="https://drupal.south.rt.ru/sites/default/files/2018-07/antivirus_0.jpg"></div>
+						</div>
+					</div>
+					<div class="col-md-6 pad-bottom-20">
+						<div class="rtk-card rtk-promo bg-primary rtk-promo-with_bg" style="height: 364px;">
+							<div class="rtk-promo__wrapper">
+								<div class="row no-gutter">
+									<div class="col-sm-8">
+										<div class="rtk-promo__icon marg-top-50 marg-bottom-20">
+											<div class="wc-inline">
+												<icon size="80" name="INTERNET_OFICE_365"></icon>
+											</div>
+										</div>
+										<div class="rtk-promo__title">Microsoft Office&nbsp;365</div>
+										<div class="rtk-text_m">Полный пакет программ<br>для всей семьи</div>
+									</div>
+								</div>
+								<div class="row no-gutter">
+									<div class="marg-top-40 pad-bottom-10">
+										<a class="rtk-promo__link" href="#">Выберите свой тип подписки</a>
+									</div>
+								</div>
+							</div>
+							<div class="rtk-promo__bg toning"><img class="rtk-promo__bg-tag" src="https://drupal.south.rt.ru/sites/default/files/2018-07/office_0.jpg"></div>
+						</div>
+					</div>
+				</div>
+				<!-- ::Виджеты с доп услугами -->
+
+
+			</div>
+		</div>
+		<!-- ::container -->
+
+	</div>
+	<!-- ::wrapper -->
+
+
+	<!--<script type="text/javascript" src="themes/rt_ru/js/scripts.js"></script>-->
+</body>
+
+</html>
