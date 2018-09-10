@@ -139,11 +139,15 @@
 }
 .rt-container {
   width: 100%;
-  padding-right: @horizontal-space;
-  padding-left: @horizontal-space;
+  padding-right: @horizontal-space*4;
+  padding-left: @horizontal-space*4;
   margin-right: auto;
   margin-left: auto;
   max-width: 1480px;
+  @media (max-width: 768px) {
+    padding-right: @horizontal-space;
+    padding-left: @horizontal-space;
+  }
 }
 
 .rt-space-left{
