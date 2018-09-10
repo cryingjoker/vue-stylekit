@@ -37,7 +37,7 @@
             },
             hideWive(el){
                 setTimeout(()=>{
-                    // this.end();
+                    this.end();
                 },40)
             },
             end(){
