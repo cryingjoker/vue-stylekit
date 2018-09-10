@@ -203,7 +203,10 @@
   left: 80px;
   right: 80px;
   z-index: 200;
-
+  @media (max-width: 768px) {
+    left: 20px;
+    right: 20px;
+  }
   .row{
     height: 100vh;
   }
@@ -218,6 +221,18 @@
       background-color: fade(#7700FF,5%);
       .rt-dark-theme & {
         background-color: fade(#fff,5%);
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 0;
+      bottom: 0;
+      background-color: fade(#000,5%);
+      .rt-dark-theme & {
+        background-color: fade(#fff, 5%);
       }
     }
   }
