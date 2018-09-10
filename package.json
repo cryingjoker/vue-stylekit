@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "babel server/server.mjs",
     "start": "npm run serve:dev",
     "build": "cross-env NODE_ENV=production webpack",
     "serve:dev": "cross-env NODE_ENV=development node bin/dev-server.js",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/cryingjoker/vue-stylekit",
   "dependencies": {
     "normalize.css": "^8.0.0",
+    "pug": "^2.0.3",
     "reset-css": "^4.0.1",
     "vue-router": "^3.0.1"
   },
@@ -53,6 +55,7 @@
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-vue": "^4.7.1",
+    "esm": "^3.0.82",
     "express": "^4.16.3",
     "file-loader": "^2.0.0",
     "gulp": "^3.9.1",
@@ -64,6 +67,7 @@
     "nib": "^1.1.2",
     "node-sass": "^4.9.3",
     "node-sass-magic-importer": "^5.2.0",
+    "open": "0.0.5",
     "opn": "^5.3.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.14.2",
@@ -82,6 +86,7 @@
     "vue-touch": "^2.0.0-beta.4",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.2.0",
     "webpack-serve": "^0.3.0"
   }
 }

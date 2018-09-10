@@ -22,7 +22,8 @@
 
         </div>
         <div class="promo-reg-app">
-        <div class=" rt-container rt-wrapper rt-mb-space-vertical">
+        <div class=" rt-container rt-mb-space-vertical">
+            <div class="rt-col-12">
             <div class="row">
                 <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05  rt-font-mb-center">
                     <p class="rt-font-paragraph"> Зарегистрируйтесь через мобильное приложение и получите пакет
@@ -38,10 +39,12 @@
                     </a>
                 </div>
             </div>
+            </div>
         </div>
         </div>
         <div class="promo-color-block promo-color-block--dark-blue">
-            <div class="rt-container rt-wrapper">
+            <div class="rt-container">
+                <div class="rt-col-12">
                 <div class="row">
                     <div class="col-12">
                         <h3 class="rt-font-promo-title rt-space-bottom rt-font-mb-center">На любых устройствах</h3>
@@ -100,11 +103,13 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
             </div>
         </div>
         <div class="promo-color-block promo-color-block--blue">
-            <div class="rt-container rt-wrapper">
+            <div class="rt-container">
+                <div class="rt-col-12">
                 <h3 class="rt-font-promo-title rt-space-bottom">Сотни ТВ-каналов</h3>
                 <div class="row">
                 <div class="rt-col-5 rt-col-md-3">
@@ -150,10 +155,12 @@
                     <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon16.png"
                                                              alt=""></div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="promo-color-block promo-color-block--dark-blue promo-color-block--hide-overflow">
-            <div class="rt-container rt-wrapper promo-shelf">
+            <div class="rt-container promo-shelf">
+                <div class="rt-col-12">
                 <h3 class="rt-font-promo-title rt-space-bottom">Тысячи фильмов и сериалов </h3>
                 <div class="row promo-shelf__list">
                     <div class="rt-pseudo-col rt-pseudo-col--left rt-col-2 promo-shelf__pseudo-item rt-space-top">
@@ -213,10 +220,12 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="promo-color-block promo-color-block--blue ">
-            <div class="rt-container rt-wrapper">
+            <div class="rt-container">
+                <div class="rt-col-12">
                 <h3 class="rt-font-promo-title">Тысячи фильмов и сериалов </h3>
                 <p class="rt-font-paragraph rt-space-bottom">Новинки и классика от ведущих студий со всего мира</p>
                 <div class="row">
@@ -330,10 +339,12 @@
                     </div>
 
                 </div>
+                </div>
             </div>
         </div>
         <div class="promo-color-block promo-color-block--dark-blue">
-            <div class="rt-container rt-wrapper">
+            <div class="rt-container">
+                <div class="rt-col-12">
                 <div class="row rt-row">
                     <div class="col-3 rt-col-3 rt-col-md-3 rt-font-mb-center">
                         <div class="rt-space-bottom">
@@ -432,10 +443,12 @@
                             чтобы дети не увидели<br> лишнего</p>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="promo-color-block promo-color-block--blue ">
-            <div class="rt-container rt-wrapper">
+            <div class="rt-container">
+                <div class="rt-col-12">
                 <div class="row">
                     <div class="col-9 rt-col-9 rt-col-md-3">
                         <div class="row">
@@ -465,6 +478,7 @@
                             </svg>
                         </a>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

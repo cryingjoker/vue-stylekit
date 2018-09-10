@@ -10,23 +10,25 @@
         </div>
     </div>
     </div>
-        <rt-banner
-                background-color="dark-state"
-                :is-white-color="true"
-                background-image="/example-images/banerBackground1.png">
-            <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
-            <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
-                <br> и ни одного пропущенного звонка клиента</p>
-            <rt-button class="rt-button-orange">Подробнее</rt-button>
-        </rt-banner>
-        <rt-banner
+        <rt-banner>
+            <rt-banner-item background-image="/example-images/banerBackground1.png"
+                            :is-white-color="true"
+                            background-color="dark-state">
+                <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
+                <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
+                    <br> и ни одного пропущенного звонка клиента</p>
+                <rt-button class="rt-button-orange">Подробнее</rt-button>
+            </rt-banner-item>
+        <rt-banner-item
                 background-color="yellow"
                 background-image="/example-images/banerBackground2.png">
             <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
             <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
                 <br> и ни одного пропущенного звонка клиента</p>
             <rt-button class="rt-button-orange">Подробнее</rt-button>
+        </rt-banner-item>
         </rt-banner>
+
 
     </div>
 </template>
@@ -36,7 +38,7 @@
         Card,
     } from "@/components/complex-elements/Card";
     import {Input, Button, Price} from "@/components/main-elements"
-    import {Banner} from "@/components/experimental-elements"
+    import {Banner, BannerItem} from "@/components/experimental-elements"
 
     const componentsList = {};
 
@@ -45,6 +47,7 @@
     componentsList[Button.name] = Button;
     componentsList[Price.name] = Price;
     componentsList[Banner.name] = Banner;
+    componentsList[BannerItem.name] = BannerItem;
 
 
     export default {
