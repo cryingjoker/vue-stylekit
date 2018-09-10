@@ -4,9 +4,9 @@
 
     <div class="grid" :class="{'grid--active': this.showGrid}">
         <div class="row">
-            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
-            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
-            <div class="rt-col-1 rt-col-md-1 demo-col"></div>
+            <div class="rt-col-1 rt-col-mb-1 demo-col"></div>
+            <div class="rt-col-1 rt-col-mb-1 demo-col"></div>
+            <div class="rt-col-1 rt-col-mb-1 demo-col"></div>
             <div class="rt-col-1 demo-col mb-d-none"></div>
             <div class="rt-col-1 demo-col mb-d-none"></div>
             <div class="rt-col-1 demo-col mb-d-none"></div>

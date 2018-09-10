@@ -1,6 +1,6 @@
 <template>
     <div class="rt-container">
-    <div class="app-content rt-col-12 rt-col-md-3">
+    <div class="app-content rt-col-12 rt-col-mb-3">
         <div class="app-title">
 
             <h1 class="rt-font-hero">Select</h1>
@@ -10,7 +10,7 @@
                 <p class="rt-font-h3 rt-col">Select without js</p>
             </div>
             <div class="app-row row">
-                <div class="rt-col-6 rt-col-md-2 flex-column d-flex">
+                <div class="rt-col-6 rt-col-mb-2 flex-column d-flex">
                     <span class="rt-font-label flex-fill rt-space-bottom05">simple select</span>
                     <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл">
                         <option v-for="(option, index) in optionsList" :value="String(index)"
@@ -19,7 +19,7 @@
                     </rt-select-without-js>
                 </div>
 
-                <div class="rt-col-6 rt-col-md-1 flex-column d-flex">
+                <div class="rt-col-6 rt-col-mb-1 flex-column d-flex">
                     <span class="rt-font-label flex-fill rt-space-bottom05">simple disabled select</span>
                     <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
                         <option v-for="(option, index) in optionsList" :value="String(index)"
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="app-row row">
-                <div class="col rt-col-md-3 flex-column d-flex">
+                <div class="col rt-col-mb-3 flex-column d-flex">
                     <span class="rt-font-label flex-fill rt-space-bottom05">simple select with error</span>
                     <rt-select-without-js label="Оборудование" value="0" :error-message="'ошибка: не выбран город'"
                                           text="Новгородская обл" :hasError="true">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="app-row row">
-                <div class="col rt-col-md-3">
+                <div class="col rt-col-mb-3">
                     <span class="rt-font-label flex-fill rt-space-bottom05">simple select</span>
                     <rt-select label="Оборудование" value="0" text="Новгородская обл">
                         <rt-select-option v-for="(option, index) in optionsList" :value="String(index)"
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="app-row row">
-                <div class="rt-col-6 rt-col-md-2 rt-mb-space-top d-flex flex-column">
+                <div class="rt-col-6 rt-col-mb-2 rt-mb-space-top d-flex flex-column">
                     <span class="rt-font-label flex-fill rt-space-bottom05">select with error</span>
                     <rt-select label="Оборудование" value="0" text="Новгородская обл"
                                :error-message="'ошибка: не выбран город'" :hasError="true">
@@ -65,7 +65,7 @@
                         </rt-select-option>
                     </rt-select>
                 </div>
-                <div class="rt-col-6 rt-col-md-1 rt-mb-space-top d-flex flex-column">
+                <div class="rt-col-6 rt-col-mb-1 rt-mb-space-top d-flex flex-column">
                     <span class="rt-font-label flex-fill rt-space-bottom05">disabled select</span>
                     <rt-select label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
                         <rt-select-option v-for="(option, index) in optionsList" :value="String(index)"

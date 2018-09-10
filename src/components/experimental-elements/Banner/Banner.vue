@@ -2,11 +2,10 @@
     <div class="rt-banner" :class="banerClass">
         <div class="rt-container">
             <div class="row">
-                <div class="rt-col-1"></div>
-                <div class="rt-col-5">
+                <div class="rt-col-1 mb-d-none"></div>
+                <div class="rt-col-5 rt-col-mb-3">
                     <slot>
                     </slot>
-
                 </div>
             </div>
         </div>
@@ -89,7 +88,7 @@
 
         },
         methods: {
-            setActiveItem(){
+            setActiveItem(index){
                 this.RtBanners.activeIndex = index;
                 this.setStartTimer();
             },
