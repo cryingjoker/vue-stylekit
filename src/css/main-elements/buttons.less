@@ -66,8 +66,11 @@
   &-orange{
     color: #fff;
     background-color: @b2c-orange-low;
-    &:hover,
-    &:active{
+    &:hover{
+      background-color: @b2b-orange-low;
+    }
+
+    &.rt-button-no-wive &:active{
       background-color: @b2b-orange-low;
     }
     &[disabled]{
@@ -85,8 +88,11 @@
     border: 2px solid @b2c-orange-low;
     background-color: transparent;
     color: @b2c-orange-low;
-    &:hover,
-    &:active {
+    &:hover{
+      background-color: transparent !important;
+    }
+
+    &.rt-button-no-wive &:active {
       background-color: transparent !important;
     }
     &[disabled]{
@@ -104,8 +110,11 @@
   &-purple{
     color: #fff;
     background-color: @b2c-purple-low;
-    &:hover,
-    &:active{
+    &:hover{
+        background-color: @b2b-purple-low;
+    }
+
+    &.rt-button-no-wive &:active{
         background-color: @b2b-purple-low;
     }
 
