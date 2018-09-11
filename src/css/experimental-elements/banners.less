@@ -13,7 +13,7 @@
   height: 100vh;
 
 }
-.rt-banner{
+.@{newAppName}-banner{
   height: 500px;
   position: relative;
   transition-duration: 0.3s;
@@ -42,10 +42,10 @@
     transition-duration: 0.3s;
     transition-property: fill;
     transition-timing-function: ease-in-out;
-    .rt-banner--background-dark-state & {
+    .@{newAppName}-banner--background-dark-state & {
       fill: @b2b-dark-state;
     }
-    .rt-banner--background-yellow &{
+    .@{newAppName}-banner--background-yellow &{
       fill: @b2c-yellow-low;
     }
   }
@@ -61,10 +61,10 @@
     transition-duration: 0.3s;
     transition-property: fill;
     transition-timing-function: ease-in-out;
-    .rt-banner--background-dark-state & {
+    .@{newAppName}-banner--background-dark-state & {
       fill: @b2b-dark-state;
     }
-    .rt-banner--background-yellow &{
+    .@{newAppName}-banner--background-yellow &{
       fill: @b2c-yellow-low;
     }
     transform: rotate(180deg);
@@ -100,7 +100,7 @@
     transition-property: opacity, visibility;
     transition-timing-function: ease-in-out;
     z-index: 3;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       padding-right: @horizontal-space;
       padding-left: @horizontal-space;
     }
@@ -125,7 +125,7 @@
     transition-duration: 0.3s;
     transition-property: background-image;
     transition-timing-function: ease-in-out;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       display: none;
     }
     @media (min-width: 1500px) {
@@ -188,7 +188,7 @@
       stroke-dasharray: 60;
       stroke-width: 1;
     }
-    .rt-banner--run-timer &{
+    .@{newAppName}-banner--run-timer &{
       stroke-dasharray: 60;
       stroke-width: 1;
       animation-duration: inherit;

@@ -10,19 +10,19 @@
 }
 .app {
   //display: flex;
-  //@media (max-width: 768px) {
+  //@media (max-width: @mobile-step-size) {
   //  flex-direction: column;
   //}
 
   &--hide-scroll{
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       overflow: hidden;
     }
   }
   &-title{
     margin-bottom: 25px;
     padding-top: 40px;
-    .rt-font-hero{
+    .@{newAppName}-font-hero{
       text-decoration: underline;
       text-decoration-color: @b2b-red-hight;
     }
@@ -38,7 +38,7 @@
     //padding-right: @horizontal-space*2;
     padding-top: 50px;
     padding-bottom: 30px;
-    //@media (max-width: 768px) {
+    //@media (max-width: @mobile-step-size) {
     //  padding-left: 0;
     //  padding-right: 0;
     //}
@@ -63,7 +63,7 @@
     transition-timing-function: ease-in-out;
     height: 100vh;
     top: 0;
-    @media (min-width: 768px) {
+    @media (min-width: @mobile-step-size) {
       left: -370px;
     }
     background-color: #fff;
@@ -73,15 +73,15 @@
     bottom: 0;
     width: 380px;
     padding-bottom: 60px;
-    .rt-dark-theme & {
+    .@{newAppName}-dark-theme & {
       background-color: @dark-theme-background;
     }
     &:hover{
-      @media (min-width: 768px) {
+      @media (min-width: @mobile-step-size) {
         left: 0;
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       overflow-y: auto;
       padding-top: @vertical-space*2;
       background-color: #fff;
@@ -92,7 +92,7 @@
 
 
       &--active {
-        @media (max-width: 768px) {
+        @media (max-width: @mobile-step-size) {
         left: 0px;
           }
       }
@@ -121,7 +121,7 @@
       transition-timing-function: ease-in-out;
       cursor: pointer;
       position: relative;
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         color: @b2b-cool-gray05
       }
       &:before {
@@ -144,7 +144,7 @@
       &:hover,
       &:focus {
         color: @b2b-black;
-        .rt-dark-theme & {
+        .@{newAppName}-dark-theme & {
           color: white;
         }
       }
@@ -161,7 +161,7 @@
   &-sub-menu{
     margin-left: 20px;
     padding-top: @vertical-space;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       margin-left: 0;
     }
   }
@@ -172,7 +172,7 @@
     top: 20px;
     right: 20px;
   }
-  .rt-code{
+  .@{newAppName}-code{
     font-family: "RT Code";
     display: inline-block;
     color: @b2b-red-hight;
@@ -203,7 +203,7 @@
   left: 80px;
   right: 80px;
   z-index: 200;
-  @media (max-width: 768px) {
+  @media (max-width: @mobile-step-size) {
     left: 20px;
     right: 20px;
   }
@@ -219,7 +219,7 @@
       top: 0;
       bottom: 0;
       background-color: fade(#7700FF,5%);
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         background-color: fade(#fff,5%);
       }
     }
@@ -231,7 +231,7 @@
       top: 0;
       bottom: 0;
       background-color: fade(#000,5%);
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         background-color: fade(#fff, 5%);
       }
     }

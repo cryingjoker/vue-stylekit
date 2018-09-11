@@ -1,4 +1,4 @@
-.rt-button{
+.@{newAppName}-button{
   border-radius: 5px;
   height: 49px;
   margin: 0px;
@@ -47,8 +47,8 @@
     //  }
     //}
   }
-  &-mb-small {
-    @media (max-width: 768px) {
+  &-md-small {
+    @media (max-width: @mobile-step-size) {
       font-size: 14px;
       height: 34px;
       .ripple{
@@ -66,13 +66,16 @@
   &-orange{
     color: #fff;
     background-color: @b2c-orange-low;
-    &:hover,
-    &:active{
+    &:hover{
+      background-color: @b2b-orange-low;
+    }
+
+    &.rt-button-no-wive &:active{
       background-color: @b2b-orange-low;
     }
     &[disabled]{
       background-color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @disable-button-color-dark-theme;
       }
     }
@@ -85,8 +88,11 @@
     border: 2px solid @b2c-orange-low;
     background-color: transparent;
     color: @b2c-orange-low;
-    &:hover,
-    &:active {
+    &:hover{
+      background-color: transparent !important;
+    }
+
+    &.rt-button-no-wive &:active {
       background-color: transparent !important;
     }
     &[disabled]{
@@ -104,14 +110,17 @@
   &-purple{
     color: #fff;
     background-color: @b2c-purple-low;
-    &:hover,
-    &:active{
+    &:hover{
+        background-color: @b2b-purple-low;
+    }
+
+    &.rt-button-no-wive &:active{
         background-color: @b2b-purple-low;
     }
 
     &[disabled]{
       background-color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @disable-button-color-dark-theme;
       }
     }

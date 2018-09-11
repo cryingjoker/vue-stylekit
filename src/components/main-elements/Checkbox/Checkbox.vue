@@ -1,9 +1,9 @@
 <template>
 
     <label class="cheсkbox">
-        <!--<rt-ripple :not-render="isDisabled">-->
-        <!--</rt-ripple>-->
-        <input type="checkbox" :disabled="isDisabled" class="checkbox-element">
+        <rt-ripple ref="ripple" :not-render="isDisabled">
+        </rt-ripple>
+        <input type="checkbox" :disabled="isDisabled" class="checkbox-element" @change="showWave">
 
         <div class="checkbox-container">
             <slot></slot>
@@ -20,7 +20,15 @@
         props:['isDisabled'],
         components: componentsList,
         name: "rt-checkbox",
-        mounted: function () {
-        }
+        methods: {
+            showWave(){
+                this.$refs.ripple.startRipple(
+                    {
+                        offsetX:10,
+                        offsetY:10
+                    }
+                );
+            }
+        },
     };
 </script>

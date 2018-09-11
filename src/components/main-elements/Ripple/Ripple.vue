@@ -46,7 +46,7 @@ export default {
     },
     getElementSize() {
       const { offsetWidth, offsetHeight } = this.$el;
-      return Math.round(Math.max(offsetWidth, offsetHeight));
+      return Math.round(Math.max(offsetWidth, offsetHeight,20));
     },
     removeWave(hashKey) {
       const index = this.ripplesList.findIndex((item)=>{

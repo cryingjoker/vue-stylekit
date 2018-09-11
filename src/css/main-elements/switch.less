@@ -2,6 +2,9 @@
   display: inline-block;
   cursor: pointer;
   user-select: none;
+  .ripple-wave{
+    background-color: @b2b-purple-low;
+  }
   &-element{
     display: none;
   }
@@ -21,11 +24,11 @@
       transition-timing-function: ease-in-out;
       transition-property: background-color;
       transition-duration: 0.1s;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: fade(@b2c-cool-grey, 20%);
       }
     }
-    &:after{
+    &__circle{
       content: '';
       position: absolute;
       width: 19px;
@@ -34,35 +37,35 @@
       background-color: @switcher-color;
       left: 3px;
       top: 3px;
-      transition-timing-function: ease-in-out;
+      transition-timing-function: cubic-bezier(1,.22,.9,.65);
       transition-property: margin, background-color;
       transition-duration: 0.1s;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @b2c-cool-grey;
       }
 
     }
-    .switch-element:checked+&{
+    .switch-element:checked + &{
       &:before{
         background-color: @b2b-purple-hight05;
-        .rt-dark-theme &{
+        .@{newAppName}-dark-theme &{
           background-color: @b2c-purple-low02;
         }
       }
-      &:after{
+      .switch-container__circle{
         background-color: @b2c-purple-low;
         margin-left: 15px;
       }
     }
     .switch-element[disabled]+&{
       color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         opacity: 0.3;
       }
       &:before{
         background-color: @form-elements-border-color05;
       }
-      &:after{
+      &__circle{
         background-color: @form-elements-border-color;
       }
     }

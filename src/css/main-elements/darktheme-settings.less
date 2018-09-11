@@ -1,10 +1,10 @@
 body{
-  transition-timing-function: ease-in-out;
+  transition: cubic-bezier(.11,.34,.97,.33);
   transition-property: background-color, color;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   color: @main-color;
 }
-.rt-dark-theme{
+.@{newAppName}-dark-theme{
   background-color: @dark-theme-background;
   color: white;
 }

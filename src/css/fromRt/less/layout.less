@@ -49,7 +49,7 @@ svg * {
     vector-effect: non-scaling-stroke;
 }
 
-@pageSelector: ~'.@{appName}-page';
+@pageSelector: ~'.@{newAppName}-page';
 @{pageSelector} {
     .flex();
     margin: 0;
@@ -172,7 +172,7 @@ svg * {
     }
 }
 
-@sidebarSelector: ~'.@{appName}-sidebar';
+@sidebarSelector: ~'.@{newAppName}-sidebar';
 @{sidebarSelector} {
     // Боковая панель конструктора
     &:not(@{sidebarSelector}_left) {
@@ -187,7 +187,7 @@ svg * {
     }
 }
 
-@notifySelector: ~'.@{appName}-notifications';
+@notifySelector: ~'.@{newAppName}-notifications';
 @{notifySelector} {
     position: relative;
     display: none;
@@ -216,7 +216,7 @@ svg * {
         line-height: 20px;
     }
     &__closer {
-        
+
     }
     /* Уровни критичности уведомления (severity) */
     &.default {
@@ -237,7 +237,7 @@ svg * {
 }
 
 // Раздел новостей и техработ
-@eventSelector: ~'.@{appName}-event';
+@eventSelector: ~'.@{newAppName}-event';
 @{eventSelector} {
     display: block;
     margin-left: 0 !important;
@@ -285,7 +285,7 @@ svg * {
         margin-bottom: 15px;
         text-align: left;
     }
-    
+
     &__legend {
         border: 1px solid #e7e7e7;
         .borderRadius( 5px );
@@ -354,7 +354,7 @@ svg * {
             &:hover {
                 background: #545454;
             }
-            
+
             a,
             a:hover {
                 color: inherit;
@@ -543,12 +543,12 @@ svg * {
 }
 
 // Карточки
-.@{appName}-card {
+.@{newAppName}-card {
     background: #ffffff;
     .boxShadow( '0 0 5px 0 rgba(0, 0, 0, .1)');
 }
 
-@date_selector: ~'.@{appName}-date';
+@date_selector: ~'.@{newAppName}-date';
 @{date_selector} {
     color: rgba(0, 0, 0, .7);
     .flexPercentage(90px);
@@ -571,7 +571,7 @@ svg * {
     }
 }
 
-@price_selector: ~'.@{appName}-price';
+@price_selector: ~'.@{newAppName}-price';
 @{price_selector} {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -651,7 +651,7 @@ svg * {
 }
 
 // Опции конструктора
-@product_selector: ~'.@{appName}-product';
+@product_selector: ~'.@{newAppName}-product';
 @{product_selector} {
     border-top: 1px solid @color_gray;
     font-family: 'Rubik', sans-serif;
@@ -748,7 +748,7 @@ svg * {
     }
 }
 
-@videoGuide_selector: ~'.@{appName}-spoiler-video';
+@videoGuide_selector: ~'.@{newAppName}-spoiler-video';
 @{videoGuide_selector} {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -784,7 +784,7 @@ svg * {
 }
 
 // Карточки предложений
-@modOffer: ~'.@{appName}-promo';
+@modOffer: ~'.@{newAppName}-promo';
 @{modOffer} {
     @modOfferOffset: @gutterWidth;
     color: rgba(0,0,0,.7);
@@ -936,8 +936,8 @@ svg * {
         @{modOffer}__title,
         @{modOffer}__desc,
         @{modOffer}__link,
-        .@{appName}-header,
-        .@{appName}-text {
+        .@{newAppName}-header,
+        .@{newAppName}-text {
             color: #FFFFFF !important;
         }
         @{modOffer}__icon {
@@ -960,8 +960,8 @@ svg * {
         @{modOffer}__title,
         @{modOffer}__desc,
         @{modOffer}__link,
-        .@{appName}-header,
-        .@{appName}-text {
+        .@{newAppName}-header,
+        .@{newAppName}-text {
             color: #FFFFFF !important;
         }
         @{modOffer}__icon {
@@ -981,7 +981,7 @@ svg * {
     }
 }
 
-.@{appName}-link {
+.@{newAppName}-link {
     .linkStyle();
 
     &_underline {
@@ -1005,7 +1005,7 @@ svg * {
 }
 
 // Файлы для скачивания
-.@{appName}-file {
+.@{newAppName}-file {
     color: #000000;
     display: table;
     font-size: 16px;
@@ -1225,7 +1225,7 @@ svg * {
     }
 }
 
-@tableSelector: ~'.@{appName}-table';
+@tableSelector: ~'.@{newAppName}-table';
 @{tableSelector} {
     border-collapse: collapse;
     table-layout: fixed;
@@ -1314,7 +1314,7 @@ svg * {
     }
 }
 
-@fieldSelector: ~'.@{appName}-input';
+@fieldSelector: ~'.@{newAppName}-input';
 @{fieldSelector} {
     background: transparent;
     display: block;
@@ -1449,7 +1449,7 @@ svg * {
 }
 
 // Бэйджы сторов мобильных
-.@{appName}-badge {
+.@{newAppName}-badge {
     width: 170px;
     height: 50px;
     background-color: #000;
@@ -1465,7 +1465,7 @@ svg * {
 }
 
 // Заголовки текста
-.@{appName}-header {
+.@{newAppName}-header {
     color: rgba(0, 0, 0, .7);
     font-family: Rubik, Arial, sans-serif;
     font-weight: 300;
@@ -1519,7 +1519,7 @@ svg * {
 }
 
 // Текст
-.@{appName}-text {
+.@{newAppName}-text {
     color: rgba(0, 0, 0, .7);
     font-size: 14px;
     line-height: 1.4;
@@ -1548,7 +1548,7 @@ svg * {
     }
 }
 
-.@{appName}-linklist {
+.@{newAppName}-linklist {
     list-style: none;
     margin: 0;
     padding: 0;
