@@ -36,7 +36,7 @@
       transition-timing-function: ease-in-out;
       transition-property: background;
       transition-duration: 0.2s;
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         background-color: #fff;
       }
     }
@@ -50,7 +50,7 @@
     }
     .checkbox-element[disabled] + & {
       cursor: default;
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         opacity: 0.4;
       }
       &:before {
@@ -66,7 +66,7 @@
         visibility: visible;
         background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{dark-theme-background}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
       }
-      .rt-dark-theme & {
+      .@{newAppName}-dark-theme & {
         &:after {
           opacity: 0.4;
           visibility: visible;

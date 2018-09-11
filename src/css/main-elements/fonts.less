@@ -44,13 +44,13 @@ body{
   line-height: 21px;
   font-size: 16px;
   hyphens: auto;
-  @media (max-width: 768px) {
+  @media (max-width: @mobile-step-size) {
     line-height: 19px;
     line-height: 1.5;
   }
 }
 
-.rt-font{
+.@{newAppName}-font{
   &-hero{
     line-height: 99px;
     font-size: 66px;
@@ -89,7 +89,7 @@ body{
     line-height: 35px;
     font-weight: 200;
     letter-spacing: 0.28px;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       line-height: 30px;
     }
   }
@@ -111,14 +111,14 @@ body{
   &-paragraph{
     font-size: 18px;
     line-height: 27px;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       line-height: 1.5;
     }
   }
   &-small-paragraph{
     font-size: 14px;
     line-height: 18px;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       line-height: 1.5;
     }
   }
@@ -142,7 +142,7 @@ body{
   }
   &-mb{
     &-center{
-      @media (max-width: 768px) {
+      @media (max-width: @mobile-step-size) {
         text-align: center;
       }
     }
@@ -177,6 +177,6 @@ body{
   }
 }
 
-.rt-wrapper{
+.@{newAppName}-wrapper{
   font-size: 16px;
 }

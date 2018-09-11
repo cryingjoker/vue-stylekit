@@ -21,7 +21,7 @@
       transition-timing-function: ease-in-out;
       transition-property: background-color;
       transition-duration: 0.1s;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: fade(@b2c-cool-grey, 20%);
       }
     }
@@ -37,7 +37,7 @@
       transition-timing-function: ease-in-out;
       transition-property: margin, background-color;
       transition-duration: 0.1s;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @b2c-cool-grey;
       }
 
@@ -45,7 +45,7 @@
     .switch-element:checked+&{
       &:before{
         background-color: @b2b-purple-hight05;
-        .rt-dark-theme &{
+        .@{newAppName}-dark-theme &{
           background-color: @b2c-purple-low02;
         }
       }
@@ -56,7 +56,7 @@
     }
     .switch-element[disabled]+&{
       color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         opacity: 0.3;
       }
       &:before{

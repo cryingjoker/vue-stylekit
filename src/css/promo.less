@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: @mobile-step-size) {
       height: initial;
       min-height: initial;
       padding-top: 150px;
@@ -39,7 +39,7 @@
   }
   &-reg-app{
     background-color: @promo-line-app-background;
-    .rt-dark-theme &{
+    .@{newAppName}-dark-theme &{
       color: @main-color;
     }
   }
@@ -75,7 +75,7 @@
         vertical-align: middle;
         align-self: center;
         padding-top: @vertical-space/2;
-        @media (max-width: 768px) {
+        @media (max-width: @mobile-step-size) {
           min-width: 20%;
         }
       }

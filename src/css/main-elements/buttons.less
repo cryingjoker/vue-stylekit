@@ -1,4 +1,4 @@
-.rt-button{
+.@{newAppName}-button{
   border-radius: 5px;
   height: 49px;
   margin: 0px;
@@ -47,8 +47,8 @@
     //  }
     //}
   }
-  &-mb-small {
-    @media (max-width: 768px) {
+  &-md-small {
+    @media (max-width: @mobile-step-size) {
       font-size: 14px;
       height: 34px;
       .ripple{
@@ -72,7 +72,7 @@
     }
     &[disabled]{
       background-color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @disable-button-color-dark-theme;
       }
     }
@@ -111,7 +111,7 @@
 
     &[disabled]{
       background-color: @disable-button-color;
-      .rt-dark-theme &{
+      .@{newAppName}-dark-theme &{
         background-color: @disable-button-color-dark-theme;
       }
     }

@@ -4,10 +4,10 @@
             <div class="promo-left-line-image mb-d-none"
                  style="background-image: url(/images/tv-top-background.png);"></div>
             <div class="rt-col-8 mb-d-none"></div>
-            <div class="rt-col-3 rt-col-mb-3 flex-column-center-items">
+            <div class="rt-col-3 rt-col-md-3 flex-column-center-items">
 
 
-                <div class="rt-space-mb-horizontal">
+                <div class="rt-space-md-horizontal">
                     <svg width="230" height="80" viewBox="0 0 230 80" xmlns="http://www.w3.org/2000/svg"
                          class="promo-title">
                         <g fill="#FFF" fill-rule="nonzero">
@@ -22,21 +22,21 @@
 
         </div>
         <div class="promo-reg-app">
-            <div class=" rt-container rt-mb-space-vertical">
+            <div class=" rt-container rt-md-space-vertical">
                 <div class="rt-col-12">
                     <div class="row">
-                        <div class="col-6 rt-col-6 rt-col-mb-3 rt-space-vertical05  rt-font-mb-center">
+                        <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05  rt-font-md-center">
                             <p class="rt-font-paragraph rt-space-left"> Зарегистрируйтесь через мобильное приложение и
                                 получите пакет
                                 ТВ-каналов на месяц бесплатно</p>
                         </div>
 
-                        <div class="col-6 rt-col-6 rt-font-right rt-col-mb-3 rt-font-mb-center rt-space-vertical05">
+                        <div class="col-6 rt-col-6 rt-font-right rt-col-md-3 rt-font-md-center rt-space-vertical05">
                             <a href="#" class="d-inline-block">
                                 <img src="/images/applePlay.svg" alt="">
                             </a>
                             <a href="#"
-                               class="d-inline-block rt-space-left rt-mb-space-horizontal-none rt-mb-space-top">
+                               class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-md-space-top">
                                 <img src="/images/googlePlay.svg" alt="">
                             </a>
                         </div>
@@ -49,17 +49,17 @@
                 <div class="rt-col-12">
                     <div class="row">
                         <div class="col-12">
-                            <h3 class="rt-font-promo-title rt-space-bottom rt-font-mb-center rt-space-left rt-space-mb-horizontal">На любых
+                            <h3 class="rt-font-promo-title rt-space-bottom rt-font-md-center rt-space-left rt-space-md-horizontal">На любых
                                 устройствах</h3>
-                            <p class="rt-font-paragraph rt-font-mb-center rt-space-left rt-space-mb-horizontal">Смотрите Wink там, где вам
+                            <p class="rt-font-paragraph rt-font-md-center rt-space-left rt-space-md-horizontal">Смотрите Wink там, где вам
                                 удобно: к одной
                                 учетной записи <br>
                                 можно подключить пять разных устройств бесплатно</p>
                         </div>
                     </div>
                     <div class="row rt-space-top">
-                        <div class="col-4 rt-col-4 rt-col-mb-3 rt-font-mb-center">
-                            <div class="rt-space-vertical rt-space-left rt-space-mb-horizontal">
+                        <div class="col-4 rt-col-4 rt-col-md-3 rt-font-md-center">
+                            <div class="rt-space-vertical rt-space-left rt-space-md-horizontal">
                                 <div class="tv-icon">
                                     <svg width="123" height="89" xmlns="http://www.w3.org/2000/svg">
                                         <g fill-rule="nonzero" stroke="#FFF" stroke-width="2" fill="none">
@@ -75,8 +75,8 @@
                                     <br>зарегистрируйтесь и смотрите то,<br> что нравится</p>
                             </div>
                         </div>
-                        <div class="col-4 rt-col-4  rt-col-mb-3 rt-font-mb-center">
-                            <div class="rt-space-vertical rt-space-left rt-space-mb-horizontal">
+                        <div class="col-4 rt-col-4  rt-col-md-3 rt-font-md-center">
+                            <div class="rt-space-vertical rt-space-left rt-space-md-horizontal">
                                 <div class="promo-tv-icon">
                                     <svg width="189" height="79" xmlns="http://www.w3.org/2000/svg">
                                         <g fill-rule="nonzero" stroke="#FFF" stroke-width="2" fill="none">
@@ -92,8 +92,8 @@
                                     зарегистрируйтесь и смотрите там,<br> где нравится</p>
                             </div>
                         </div>
-                        <div class="col-4 rt-col-4 rt-col-mb-3 rt-font-mb-center">
-                            <div class="rt-space-vertical rt-space-left rt-space-mb-horizontal">
+                        <div class="col-4 rt-col-4 rt-col-md-3 rt-font-md-center">
+                            <div class="rt-space-vertical rt-space-left rt-space-md-horizontal">
                                 <div class="promo-tv-icon">
                                     <svg width="123" height="86" xmlns="http://www.w3.org/2000/svg">
                                         <g fill-rule="nonzero" stroke="#FFF" stroke-width="2" fill="none">
@@ -114,10 +114,10 @@
         <div class="promo-color-block promo-color-block--blue">
             <div class="rt-container">
                 <div class="rt-col-12">
-                    <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-mb-horizontal">Сотни ТВ-каналов</h3>
+                    <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-md-horizontal">Сотни ТВ-каналов</h3>
                     <div class="row">
-                        <div class="rt-col-5 rt-col-mb-3">
-                            <p class="rt-font-paragraph rt-space-bottom rt-space-left rt-space-mb-horizontal">Популярные российские и
+                        <div class="rt-col-5 rt-col-md-3">
+                            <p class="rt-font-paragraph rt-space-bottom rt-space-left rt-space-md-horizontal">Популярные российские и
                                 эксклюзивные  зарубежные
                                 каналы в эфире и записи</p>
                         </div>
@@ -167,7 +167,7 @@
         <div class="promo-color-block promo-color-block--dark-blue promo-color-block--hide-overflow">
             <div class="rt-container promo-shelf">
                 <div class="rt-col-12">
-                    <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-mb-horizontal">Тысячи фильмов и сериалов </h3>
+                    <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-md-horizontal">Тысячи фильмов и сериалов </h3>
                     <div class="row promo-shelf__list">
                         <div class="rt-pseudo-col rt-pseudo-col--left rt-col-2 promo-shelf__pseudo-item rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo6.png" alt="">
@@ -176,42 +176,42 @@
                                 <p class="rt-font-big-label">Рейтинг 9.5</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo1.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Выживший</p>
                                 <p class="rt-font-big-label">Рейтинг 8.1</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo2.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Отмель</p>
                                 <p class="rt-font-big-label">Рейтинг 6.5</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo3.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Сила воли</p>
                                 <p class="rt-font-big-label">Рейтинг 7.3</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo4.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Суфражистка</p>
                                 <p class="rt-font-big-label">Рейтинг 9.5</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo5.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Зачетный препод </p>
                                 <p class="rt-font-big-label">Рейтинг 9.5</p>
                             </div>
                         </div>
-                        <div class="col-2 rt-col-2 rt-col-mb-1 rt-space-top">
+                        <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
                             <img class="promo-shelf__image" src="/images/logo6.png" alt="">
                             <div class="promo-shelf__info">
                                 <p class="rt-font-paragraph promo-shelf__label">Стартрек: Бесконечность</p>
@@ -237,7 +237,7 @@
                         всего мира</p>
                     <div class="row">
 
-                        <div class="col-4 rt-col-4 rt-col-mb-3 rt-mb-space-vertical">
+                        <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
                             <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
                                      background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459">
                                 <template slot="header">
@@ -270,7 +270,7 @@
                             </rt-card>
                         </div>
 
-                        <div class="col-4 rt-col-4 rt-col-mb-3 rt-mb-space-vertical">
+                        <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
                             <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
                                      background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459">
                                 <template slot="header">
@@ -308,7 +308,7 @@
                             </rt-card>
                         </div>
 
-                        <div class="col-4 rt-col-4 rt-col-mb-3 rt-mb-space-vertical">
+                        <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
                             <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
                                      background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459">
                                 <template slot="header">
@@ -359,7 +359,7 @@
             <div class="rt-container">
                 <div class="rt-col-12">
                     <div class="row rt-row">
-                        <div class="col-3 rt-col-3 rt-col-mb-3 rt-font-mb-center">
+                        <div class="col-3 rt-col-3 rt-col-md-3 rt-font-md-center">
                             <div class="rt-space-left">
                                 <div class="rt-space-bottom">
                                     <svg width="76" height="76" xmlns="http://www.w3.org/2000/svg">
@@ -387,12 +387,12 @@
                                     </svg>
                                 </div>
                                 <h4 class="rt-font-h4">Управление <br> просмотром</h4>
-                                <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">
+                                <p class="rt-space-top rt-font-light rt-space-right rt-md-space-horizontal-none">
                                     Перемативайте, записывайте, ставьте на
                                     паузу — для максимально удобного просмотра</p>
                             </div>
                         </div>
-                        <div class="col-3 rt-col-3 rt-col-mb-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
+                        <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
                             <div class="rt-space-left">
                             <div class="rt-space-bottom">
                                 <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
@@ -415,12 +415,12 @@
                                 </svg>
                             </div>
                             <h4 class="rt-font-h4">Разные <br> способы оплаты</h4>
-                            <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Оформляйте
+                            <p class="rt-space-top rt-font-light rt-space-right rt-md-space-horizontal-none">Оформляйте
                                 ежемесячные подписки, берите
                                 кино напрокат или покупайте навсегда</p>
                         </div>
                         </div>
-                        <div class="col-3 rt-col-3 rt-col-mb-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
+                        <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
                             <div class="rt-space-left">
                             <div class="rt-space-bottom">
                                 <svg width="76" height="76" xmlns="http://www.w3.org/2000/svg">
@@ -434,13 +434,13 @@
                                 </svg>
                             </div>
                             <h4 class="rt-font-h4">Просмотр <br> без интернета</h4>
-                            <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Возьмите
+                            <p class="rt-space-top rt-font-light rt-space-right rt-md-space-horizontal-none">Возьмите
                                 кино в дорогу,<br> просто скачав
                                 то, что
                                 <br> нравится </p>
                             </div>
                         </div>
-                        <div class="col-3 rt-col-3 rt-col-mb-3 rt-space-mb-horizontal rt-mb-space-top2 rt-font-mb-center">
+                        <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
                             <div class="rt-space-left">
                             <div class="rt-space-bottom">
                                 <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
@@ -466,7 +466,7 @@
                                 </svg>
                             </div>
                             <h4 class="rt-font-h4">Безопасно <br> для детей</h4>
-                            <p class="rt-space-top rt-font-light rt-space-right rt-mb-space-horizontal-none">Используйте
+                            <p class="rt-space-top rt-font-light rt-space-right rt-md-space-horizontal-none">Используйте
                                 функцию родительского контроля,<br>
                                 чтобы дети не увидели<br> лишнего</p>
                         </div>
@@ -479,28 +479,28 @@
             <div class="rt-container">
                 <div class="rt-col-12">
                     <div class="row">
-                        <div class="col-9 rt-col-9 rt-col-mb-3">
+                        <div class="col-9 rt-col-9 rt-col-md-3">
                             <div class="row">
-                                <div class="col-11 rt-col-mb-3">
+                                <div class="col-11 rt-col-md-3">
                                     <p class="rt-font-promo-title rt-font-light rt-space-left">Ваши пожелания и вопросы по работе
                                         приложения отправляйте на
                                         <a href="mailto:wink@rt.ru" class="rt-font-link">wink@rt.ru</a>
                                     </p>
                                 </div>
-                                <div class="col rt-col-mb-3 rt-space-top rt-font-mb-center">
+                                <div class="col rt-col-md-3 rt-space-top rt-font-md-center">
                                     <div class="rt-space-left">
                                     <a href="#" class="d-inline-block rt-space-top05 ">
                                         <img src="/images/applePlay.svg" alt="">
                                     </a>
                                     <a href="#"
-                                       class="d-inline-block rt-space-left rt-mb-space-horizontal-none rt-space-top05 rt-mb-space-vertical">
+                                       class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-space-top05 rt-md-space-vertical">
                                         <img src="/images/googlePlay.svg" alt="">
                                     </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 rt-col-3 rt-col-mb-3 rt-mb-space-top rt-font-mb-center">
+                        <div class="col-3 rt-col-3 rt-col-md-3 rt-md-space-top rt-font-md-center">
                             <a href="">
                                 <svg width="173" height="173" xmlns="http://www.w3.org/2000/svg">
                                     <g transform="translate(-1040 -3715)" fill-rule="nonzero" fill="none">
