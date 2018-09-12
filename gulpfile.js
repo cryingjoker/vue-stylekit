@@ -14,6 +14,8 @@ gulp.task('copy', shell.task([
         'perl -pi -w -e \'s/"\\/"/""/\' ./docs/main.js',
         'perl -pi -w -e \'s/\\/example-images\\//\\/vue-stylekit\\/example-images\\//g\' ./docs/main.js\n',
         'perl -pi -w -e \'s/\\/images\\//\\/vue-stylekit\\/images\\//g\' ./docs/main.js\n',
+        'perl -pi -w -e \'s/path:\\"\\//path:\\"\\/vue\\-stylekit\\/docs\\//g\' ./docs/main.js\n',
+        'perl -pi -w -e \'s/to\\:\\"\\//to\\:\\"\\/vue\\-stylekit\\/docs\\//g\' ./docs/main.js\n',
         'rm -rf ./dist',
         'git commit -a -m\'deploy\'\n',
         'git push',
