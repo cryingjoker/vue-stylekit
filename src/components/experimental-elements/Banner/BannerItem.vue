@@ -25,7 +25,7 @@
         },
         data(){
             return {
-                id: Math.random().toString(36).slice(4)
+                id: this._uid
             }
         },
         components: componentsList,

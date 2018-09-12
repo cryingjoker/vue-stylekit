@@ -5,21 +5,13 @@
 
 
     export default {
-        props: {
-
-        },
 
         components: componentsList,
         name: "rt-icon",
         computed: {
             cardClass(){
-
-
             },
-
-
             cardBackgroundStyle() {
-
             }
         },
 

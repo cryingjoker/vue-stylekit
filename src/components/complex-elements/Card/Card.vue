@@ -37,9 +37,7 @@
             cardHeaderHeight    : Number
 
         },
-        // data: ()=>({
-        //     isDisabled : true
-        // }),
+
         components: componentsList,
         name: "rt-card",
         computed: {
@@ -59,17 +57,15 @@
               if(this.backgroundRepeat){
                   classArray['rt-card--has-bg-repeat'] = true;
               }
-              if(typeof this.backgroundSmoke !== 'undefined'){
-                  this.backgroundSmoke
-                  if(this.backgroundSmoke === 0.5) {
-                      classArray['rt-card--has-smoke'] = true;
-                  }
-                  if(this.backgroundSmoke === 0.3){
-                      classArray['rt-card--has-smoke03'] = true;
-                  }
-                  if(this.backgroundSmoke === 0.2){
-                      classArray['rt-card--has-smoke02'] = true;
-                  }
+
+              if(this.backgroundSmoke === 0.5) {
+                  classArray['rt-card--has-smoke'] = true;
+              }
+              if(this.backgroundSmoke === 0.3){
+                  classArray['rt-card--has-smoke03'] = true;
+              }
+              if(this.backgroundSmoke === 0.2){
+                  classArray['rt-card--has-smoke02'] = true;
               }
               return classArray
 
@@ -79,7 +75,7 @@
                 if(this.offsetTop){
                     classArray['rt-card__content--has-offset-top'] = true;
                 }
-                if(typeof this.colSize !== 'undefined'){
+                if(this.colSize !== 'undefined'){
                     if(this.colSize === 2){
                         classArray['rt-col-6 rt-col-md-3'] = true;
                     }
