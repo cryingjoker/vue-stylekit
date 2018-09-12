@@ -32,7 +32,7 @@
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 2 * pathPrefix).join('/') + '/vue-stylekit/docs/?p=/' +
-        l.pathname.split('/').slice(2).join('/').replace(/&/g, '~and~') +
+        l.pathname.split('/').slice(3).join('/').replace(/&/g, '~and~') +
         (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
