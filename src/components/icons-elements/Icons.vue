@@ -1,28 +1,20 @@
 
 <script type="text/jsx">
+const componentsList = {}
 
-    const componentsList = {};
+export default {
+  name: "RtIcon",
 
+  components: componentsList,
+  computed: {
+    cardClass() {},
+    cardBackgroundStyle() {}
+  },
 
-    export default {
+  mounted: function() {},
 
-        components: componentsList,
-        name: "rt-icon",
-        computed: {
-            cardClass(){
-            },
-            cardBackgroundStyle() {
-            }
-        },
-
-        mounted: function () {
-        },
-
-        render: function () {
-          return <div class="rt-icon">
-
-            </div>
-        }
-
-    }
+  render: function() {
+    return <div class="rt-icon" />
+  }
+}
 </script>

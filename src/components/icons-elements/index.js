@@ -1,5 +1,3 @@
-import Icons from './Icons.vue'
+import Icons from "./Icons.vue"
 
-export {
-    Icons
-}
+export { Icons }

@@ -1,25 +1,25 @@
 #!/usr/bin/env node
-const compression = require(`compression`);
-const express = require(`express`);
-const path = require(`path`);
+const compression = require(`compression`)
+const express = require(`express`)
+const path = require(`path`)
 
-const openBrowser = require(`./lib/open-browser`);
+const openBrowser = require(`./lib/open-browser`)
 
-const app = express();
-const publicPath = path.join(process.cwd(), 'static');
-const port = 5000;
+const app = express()
+const publicPath = path.join(process.cwd(), "static")
+const port = 5000
 
-app.use(compression());
-app.use(`/`, express.static(publicPath, { index: false }));
+app.use(compression())
+app.use(`/`, express.static(publicPath, { index: false }))
 app.get(`/*`, (request, response) => {
-  response.sendFile(`${publicPath}/index.html`);
-});
+  response.sendFile(`${publicPath}/index.html`)
+})
 
-app.listen(port);
+app.listen(port)
 
 // eslint-disable-next-line no-console
-console.log(`Server started!`);
+console.log(`Server started!`)
 // eslint-disable-next-line no-console
-console.log(`http://localhost:${port}`);
+console.log(`http://localhost:${port}`)
 
-openBrowser(`http://localhost:${port}`);
+openBrowser(`http://localhost:${port}`)

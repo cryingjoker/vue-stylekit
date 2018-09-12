@@ -1,21 +1,21 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from "vue"
+import VueRouter from "vue-router"
 // import VueResource from "vue-resource";
-import routes from "./utils/routes";
-import RootPage from "./pages/App.vue";
+import routes from "./utils/routes"
+import RootPage from "./pages/App.vue"
 
-var VueTouch = require('vue-touch')
+var VueTouch = require("vue-touch")
 
-import stylesReset from "./css/reset/index.styl";
-import styles from "./css/styles.less";
+import stylesReset from "./css/reset/index.styl"
+import styles from "./css/styles.less"
 
-Vue.use(VueTouch, {name: 'v-touch'})
-Vue.use(VueRouter);
+Vue.use(VueTouch, { name: "v-touch" })
+Vue.use(VueRouter)
 
 const router = new VueRouter({
-    mode: 'history',
+  mode: "history",
   routes: routes.routes
-});
+})
 
 // Vue.mixin({
 //   methods: {
@@ -28,5 +28,5 @@ const App = new Vue({
   el: "#app",
   router,
   name: "App",
-  render: h => h(RootPage),
-});
+  render: h => h(RootPage)
+})

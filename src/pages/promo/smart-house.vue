@@ -1,32 +1,25 @@
 <template>
 
-    <div>
-        <div class="color-block--dark-blue"></div>
-    </div>
+  <div>
+    <div class="color-block--dark-blue" />
+  </div>
 </template>
 
 
 <script>
-    import {
-        Card,
-    } from "@/components/complex-elements/Card";
-    import {Button} from "@/components/main-elements"
+import { Card } from "@/components/complex-elements/Card"
+import { Button } from "@/components/main-elements"
 
-    const componentsList = {};
+const componentsList = {}
 
-    componentsList[Card.name] = Card;
-    componentsList[Button.name] = Button;
+componentsList[Card.name] = Card
+componentsList[Button.name] = Button
 
-
-    export default {
-        name: 'app-RadioButton',
-        components: componentsList,
-        methods: {},
-        mounted() {
-        },
-        created() {
-        }
-
-    }
+export default {
+  name: "AppRadioButton",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+}
 </script>
-

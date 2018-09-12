@@ -1,19 +1,19 @@
-const { VueLoaderPlugin } = require(`vue-loader`);
+const { VueLoaderPlugin } = require(`vue-loader`)
 // const nodeSassMagicImporter = require(`node-sass-magic-importer`);
-const path = require(`path`);
+const path = require(`path`)
 
-const HtmlWebpackPlugin = require(`html-webpack-plugin`);
-const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+const HtmlWebpackPlugin = require(`html-webpack-plugin`)
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`)
 // const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
-const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`);
+const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`)
 
-const env = process.env.NODE_ENV;
-const minify = env === `production`;
-const sourceMap = env === `development`;
-const convert = require('koa-connect');
-const history = require('connect-history-api-fallback');
+const env = process.env.NODE_ENV
+const minify = env === `production`
+const sourceMap = env === `development`
+const convert = require("koa-connect")
+const history = require("connect-history-api-fallback")
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 }
 
 const config = {
@@ -107,23 +107,23 @@ const config = {
       inject: true,
       minify: minify
         ? {
-          removeComments: true,
-          collapseWhitespace: true,
-          removeAttributeQuotes: true
-          // More options:
-          // https://github.com/kangax/html-minifier#options-quick-reference
-        }
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // More options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+          }
         : false
     })
   ],
   serve: {
     content: [__dirname],
-    add: (app) => {
-      app.use(convert(history()));
+    add: app => {
+      app.use(convert(history()))
     },
     port: 8080
   }
-};
+}
 
 // if (minify) {
 //     config.optimization.minimizer = [
@@ -138,7 +138,7 @@ const config = {
 // }
 
 if (env !== `development`) {
-  config.plugins.push(new MiniCssExtractPlugin());
+  config.plugins.push(new MiniCssExtractPlugin())
 
   // const sassLoader = config.module.rules.find(({ test }) => test.test(`.scss`));
   // Replace the `vue-style-loader` with
@@ -146,4 +146,4 @@ if (env !== `development`) {
   // sassLoader.use[0] = MiniCssExtractPlugin.loader;
 }
 
-module.exports = config;
+module.exports = config
