@@ -6,13 +6,13 @@
                     <a class="rt-tab-header__item" href="#one">one</a>
                     <a class="rt-tab-header__item" href="#two">two</a>
                     <a class="rt-tab-header__item" href="#three">three</a>
-                    <a class="rt-tab-header__item" href="#four">free</a>
+                    <a class="rt-tab-header__item" href="#four">four</a>
                 </rt-scroll-tabs>
             </div>
-            <div id="one" class="color-block--orange" style="height: 500px"></div>
-            <div id="two" class="color-block--pink" style="height: 500px; margin-top: 800px"></div>
-            <div id="three" class="color-block--red" style="height: 500px"></div>
-            <div id="four" class="color-block--purple" style="height: 500px"></div>
+            <div id="one" class="color-block--orange" style="height: 100vh"></div>
+            <div id="two" class="color-block--pink" style="height: 100vh; margin-top: 800px"></div>
+            <div id="three" class="color-block--red" style="height: 100vh"></div>
+            <div id="four" class="color-block--purple" style="height: 100vh"></div>
         </div>
     </div>
 </template>
