@@ -42,7 +42,12 @@
             backgroundColor: String,
             backgroundImage: String,
             isWhiteColor: Boolean,
-            backgroundImages: Array
+            backgroundImages: Array,
+            sleepTime: {
+              type: Number,
+              default: 5000
+            }
+
         },
         components: componentsList,
         name: "rt-banner",
@@ -100,15 +105,13 @@
                     const index = (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
                     this.RtBanners.activeIndex = index;
                     this.setStartTimer();
-                },5000);
+                },this.sleepTime);
             }
         },
         mounted: function () {
 
             if(this.RtBanners.items.length > 0 && this.RtBanners.items[0].id){
-                setTimeout(()=>{
-                    this.setStartTimer();
-                },100)
+                this.setStartTimer();
             }
         }
 

@@ -4,7 +4,6 @@
     </div>
 </template>
 <script>
-
   const componentsList = {};
 
   function scrollIt(destination, duration = 200, easing = "linear", callback) {
@@ -136,17 +135,13 @@
         }
       },
       scrollBind(e) {
-        const anchor = e.target.getAttribute('href');
+        const anchor = e.target.getAttribute("href");
         const anchorEl = document.querySelector(anchor);
         scrollIt(anchorEl);
         e.preventDefault();
       },
-    },
-
-    mounted() {
-      if (this.tabsClassname) {
+      initAnchorsList() {
         this.$el.querySelectorAll("." + this.tabsClassname).forEach((i) => {
-
           const anchor = i.getAttribute("href");
           const anchorEl = document.querySelector(anchor);
 
@@ -160,14 +155,29 @@
           }
         });
         this.calculateScroll();
-        window.addEventListener('scroll', this.calculateScroll);
+      },
+      debounceInitAnchorsList() {
+        let timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          this.initAnchorsList();
+        }, 200);
       }
     },
-    beforeDestroy(){
-      window.removeEventListener('scroll', this.calculateScroll);
+
+    mounted() {
+      if (this.tabsClassname) {
+        this.initAnchorsList();
+        window.addEventListener("scroll", this.calculateScroll);
+        window.addEventListener("resize", this.debounceInitAnchorsList);
+      }
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.calculateScroll);
+      window.removeEventListener("resize", this.debounceInitAnchorsList);
       this.$el.querySelectorAll("." + this.tabsClassname).forEach((i) => {
         i.removeEventListener("click", this.scrollBind);
-      })
+      });
     }
   };
 </script>

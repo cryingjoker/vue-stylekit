@@ -15,12 +15,12 @@
 <script>
     export default {
         props: {
-            'disabled': Boolean,
-            'placeholder': String,
-            'hasError': Boolean,
-            'errorMessage': String,
-            'value': String,
-            'isWhite': Boolean
+            disabled: Boolean,
+            placeholder: String,
+            hasError: Boolean,
+            errorMessage: String,
+            value: String,
+            isWhite: Boolean
         },
         data() {
             return {

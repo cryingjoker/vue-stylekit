@@ -14,10 +14,8 @@
     export default {
         props: {
             isBlock: Boolean,
+            isDisabled: Boolean
         },
-        data: ()=>({
-            isDisabled : true
-        }),
         methods:{
           triggerClick($event){
             this.$emit('click',$event);
