@@ -1,5 +1,5 @@
 <template>
-    <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}">
+    <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}" @click="triggerClick($event)">
         <rt-ripple :not-render="isDisabled">
             <slot></slot>
         </rt-ripple>
@@ -18,10 +18,16 @@
         data: ()=>({
             isDisabled : true
         }),
+        methods:{
+          triggerClick($event){
+            this.$emit('click',$event);
+          }
+        },
         components: componentsList,
         name: "rt-button",
         mounted: function () {
             this.isDisabled = this.$el.disabled;
+
         }
 
     }

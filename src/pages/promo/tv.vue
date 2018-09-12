@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="promo-color-block promo-color-block--dark-blue">
+        <div class="promo-color-block color-block--dark-blue">
             <div class="rt-container">
                 <div class="rt-col-12">
                     <div class="row">
@@ -111,7 +111,7 @@
 
             </div>
         </div>
-        <div class="promo-color-block promo-color-block--blue">
+        <div class="promo-color-block color-block--blue">
             <div class="rt-container">
                 <div class="rt-col-12">
                     <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-md-horizontal">Сотни ТВ-каналов</h3>
