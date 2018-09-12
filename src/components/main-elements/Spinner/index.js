@@ -1,7 +1,3 @@
-import Spinner from "./Spinner.vue";
+import Spinner from "./Spinner.vue"
 
-export {
-    Spinner,
-
-}
-
+export { Spinner }

@@ -1,29 +1,27 @@
 <template>
-    <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}" @click="triggerClick($event)">
-        <rt-ripple-without-js>
-            <slot></slot>
-        </rt-ripple-without-js>
-    </button>
+  <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}" @click="triggerClick($event)">
+    <rt-ripple-without-js>
+      <slot />
+    </rt-ripple-without-js>
+  </button>
 </template>
 
 <script>
-  import { RippleWihoutJsComponent } from "../Ripple/index";
+import { RippleWihoutJsComponent } from "../Ripple/index"
 
-  const componentsList = {};
-  componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent;
-  export default {
-    props: {
-      isBlock: Boolean
-    },
-    methods: {
-      triggerClick($event) {
-        this.$emit("click", $event);
-      }
-    },
-    components: componentsList,
-    name: "rt-button-ripple-without-js",
-    mounted: function() {
+const componentsList = {}
+componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent
+export default {
+  name: "RtButtonRippleWithoutJs",
+  components: componentsList,
+  props: {
+    isBlock: Boolean
+  },
+  mounted: function() {},
+  methods: {
+    triggerClick($event) {
+      this.$emit("click", $event)
     }
-
-  };
+  }
+}
 </script>

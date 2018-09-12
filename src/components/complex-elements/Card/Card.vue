@@ -1,156 +1,164 @@
 <template>
-    <div class="rt-card" :class="cardClass" :style="cardStyle">
-        <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass"></div>
-        <div class="rt-card__content" :class="cardContentClass">
-            <div class="rt-card__header" :style="cardHeaderStyle" v-if="$slots.header" >
-                <slot name="header"></slot>
-            </div>
-            <div class="rt-card__body">
-                <slot name="content"></slot>
-            </div>
-            <div class="rt-cart__footer">
-                <slot name="footer"></slot>
-            </div>
-        </div>
+  <div class="rt-card" :class="cardClass" :style="cardStyle">
+    <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass" />
+    <div class="rt-card__content" :class="cardContentClass">
+      <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
+        <slot name="header" />
+      </div>
+      <div class="rt-card__body">
+        <slot name="content" />
+      </div>
+      <div class="rt-cart__footer">
+        <slot name="footer" />
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
+const componentsList = {}
 
-    const componentsList = {};
+export default {
+  name: "RtCard",
 
+  components: componentsList,
+  props: {
+    backgroundColorType: String,
+    backgroundImage: String,
+    backgroundCover: Boolean,
+    backgroundRepeat: Boolean,
+    backgroundBlur: Number,
+    backgroundSmoke: Number,
+    backgroundOpacity: Number,
+    isWhiteColor: Boolean,
+    backgroundPosition: String, // [top, left, bottom, right, top-left, top-right, bottom-left, bottom-right]
+    offsetTop: Boolean,
+    colSize: Number,
+    cardHeight: Number,
+    cardHeaderHeight: Number
+  },
+  computed: {
+    cardClass() {
+      const classArray = {}
 
-    export default {
-        props: {
-            backgroundColorType : String,
-            backgroundImage     : String,
-            backgroundCover     : Boolean,
-            backgroundRepeat    : Boolean,
-            backgroundBlur      : Number,
-            backgroundSmoke     : Number,
-            backgroundOpacity   : Number,
-            isWhiteColor        : Boolean,
-            backgroundPosition  : String, // [top, left, bottom, right, top-left, top-right, bottom-left, bottom-right]
-            offsetTop           : Boolean,
-            colSize             : Number,
-            cardHeight          : Number,
-            cardHeaderHeight    : Number
+      if (this.backgroundCover) {
+        classArray["rt-card--has-bg-cover"] = true
+      }
+      if (this.isWhiteColor) {
+        classArray["rt-card--has-white-color"] = true
+      }
 
-        },
+      if (this.backgroundColorType) {
+        classArray["rt-card-" + this.backgroundColorType] = true
+      }
+      if (this.backgroundRepeat) {
+        classArray["rt-card--has-bg-repeat"] = true
+      }
 
-        components: componentsList,
-        name: "rt-card",
-        computed: {
-            cardClass(){
-              const classArray = {};
-
-              if(this.backgroundCover){
-                  classArray['rt-card--has-bg-cover'] = true;
-              }
-              if(this.isWhiteColor){
-                  classArray['rt-card--has-white-color'] = true;
-              }
-
-              if(this.backgroundColorType){
-                  classArray['rt-card-'+this.backgroundColorType] = true;
-              }
-              if(this.backgroundRepeat){
-                  classArray['rt-card--has-bg-repeat'] = true;
-              }
-
-              if(this.backgroundSmoke === 0.5) {
-                  classArray['rt-card--has-smoke'] = true;
-              }
-              if(this.backgroundSmoke === 0.3){
-                  classArray['rt-card--has-smoke03'] = true;
-              }
-              if(this.backgroundSmoke === 0.2){
-                  classArray['rt-card--has-smoke02'] = true;
-              }
-              return classArray
-
-            },
-            cardContentClass() {
-                const classArray = {};
-                if(this.offsetTop){
-                    classArray['rt-card__content--has-offset-top'] = true;
-                }
-                if(this.colSize !== 'undefined'){
-                    if(this.colSize === 2){
-                        classArray['rt-col-6 rt-col-md-3'] = true;
-                    }
-                }
-                return classArray
-            },
-            cardStyle(){
-                const styles = {};
-                if(typeof this.cardHeight !== 'undefined'){
-                    styles.height = this.cardHeight+'px'
-                }
-                return styles
-            },
-            cardHeaderStyle(){
-                const styles = {};
-                if(typeof this.cardHeaderHeight !== 'undefined'){
-                    styles.maxHeight = this.cardHeaderHeight+'px'
-
-                }
-                return styles
-            },
-            cardBackgroundClass(){
-                const classArray = {};
-                if(this.backgroundPosition){
-                    if(this.backgroundPosition.search(/(top)|(left)|(bottom)|(right)|(bottom-left)|(top-right)|(bottom-left)|(bottom-right)/) === 0) {
-                        switch (this.backgroundPosition) {
-                            case 'top':
-                                classArray['rt-card__background--position-background-top'] = true;
-                                break;
-                            case 'right':
-                                classArray['rt-card__background--position-background-right'] = true;
-                                break;
-                            case 'bottom':
-                                classArray['rt-card__background--position-background-bottom'] = true;
-                                break;
-                            case 'left':
-                                classArray['rt-card__background--position-background-left'] = true;
-                                break;
-                            case 'top-right':
-                                classArray['rt-card__background--position-background-top-right'] = true;
-                                break;
-                            case 'bottom-right':
-                                classArray['rt-card__background--position-background-bottom-right'] = true;
-                                break;
-                            case 'bottom-left':
-                                classArray['rt-card__background--position-background-bottom-left'] = true;
-                                break;
-                            case 'top-left':
-                                classArray['rt-card__background--position-background-top-left'] = true;
-                                break;
-                        }
-                    }
-                }
-                return classArray;
-            },
-            cardBackgroundStyle() {
-                const styles = {};
-                if(this.backgroundImage){
-                    styles.backgroundImage = 'url('+this.backgroundImage+')'
-                }
-                if(this.backgroundBlur){
-                    styles.filter = "blur("+this.backgroundBlur+"px)"
-                }
-                if(typeof this.backgroundOpacity !== 'undefined'){
-                    styles.opacity = this.backgroundOpacity
-                }
-                if(this.backgroundSmoke){
-
-                }
-                return styles
-            }
-        },
-
-        mounted: function () {
+      if (this.backgroundSmoke === 0.5) {
+        classArray["rt-card--has-smoke"] = true
+      }
+      if (this.backgroundSmoke === 0.3) {
+        classArray["rt-card--has-smoke03"] = true
+      }
+      if (this.backgroundSmoke === 0.2) {
+        classArray["rt-card--has-smoke02"] = true
+      }
+      return classArray
+    },
+    cardContentClass() {
+      const classArray = {}
+      if (this.offsetTop) {
+        classArray["rt-card__content--has-offset-top"] = true
+      }
+      if (this.colSize !== "undefined") {
+        if (this.colSize === 2) {
+          classArray["rt-col-6 rt-col-md-3"] = true
         }
-
+      }
+      return classArray
+    },
+    cardStyle() {
+      const styles = {}
+      if (typeof this.cardHeight !== "undefined") {
+        styles.height = this.cardHeight + "px"
+      }
+      return styles
+    },
+    cardHeaderStyle() {
+      const styles = {}
+      if (typeof this.cardHeaderHeight !== "undefined") {
+        styles.maxHeight = this.cardHeaderHeight + "px"
+      }
+      return styles
+    },
+    cardBackgroundClass() {
+      const classArray = {}
+      if (this.backgroundPosition) {
+        if (
+          this.backgroundPosition.search(
+            /(top)|(left)|(bottom)|(right)|(bottom-left)|(top-right)|(bottom-left)|(bottom-right)/
+          ) === 0
+        ) {
+          switch (this.backgroundPosition) {
+            case "top":
+              classArray["rt-card__background--position-background-top"] = true
+              break
+            case "right":
+              classArray[
+                "rt-card__background--position-background-right"
+              ] = true
+              break
+            case "bottom":
+              classArray[
+                "rt-card__background--position-background-bottom"
+              ] = true
+              break
+            case "left":
+              classArray["rt-card__background--position-background-left"] = true
+              break
+            case "top-right":
+              classArray[
+                "rt-card__background--position-background-top-right"
+              ] = true
+              break
+            case "bottom-right":
+              classArray[
+                "rt-card__background--position-background-bottom-right"
+              ] = true
+              break
+            case "bottom-left":
+              classArray[
+                "rt-card__background--position-background-bottom-left"
+              ] = true
+              break
+            case "top-left":
+              classArray[
+                "rt-card__background--position-background-top-left"
+              ] = true
+              break
+          }
+        }
+      }
+      return classArray
+    },
+    cardBackgroundStyle() {
+      const styles = {}
+      if (this.backgroundImage) {
+        styles.backgroundImage = "url(" + this.backgroundImage + ")"
+      }
+      if (this.backgroundBlur) {
+        styles.filter = "blur(" + this.backgroundBlur + "px)"
+      }
+      if (typeof this.backgroundOpacity !== "undefined") {
+        styles.opacity = this.backgroundOpacity
+      }
+      if (this.backgroundSmoke) {
+      }
+      return styles
     }
+  },
+
+  mounted: function() {}
+}
 </script>

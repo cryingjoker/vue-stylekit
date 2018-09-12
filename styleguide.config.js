@@ -1,3 +1,3 @@
 module.exports = {
-    components: 'src/components/**/[A-Z]*.vue'
+  components: "src/components/**/[A-Z]*.vue"
 }
