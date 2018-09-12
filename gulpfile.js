@@ -2,10 +2,10 @@ const gulp = require('gulp');
 const shell = require('gulp-shell');
 
 gulp.task('copy', shell.task([
-        'git checkout gh-pages',
+        // 'git checkout gh-pages',
         'rm -rf ./docs',
         'mkdir docs',
-        'git merge master -m\'deploy\'\n',
+        // 'git merge master -m\'deploy\'\n',
         'npm run build',
         'cp -R ./dist/* ./docs',
         'cd ./docs',
