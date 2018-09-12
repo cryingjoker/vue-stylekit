@@ -218,9 +218,12 @@
       right: 10px;
       top: 0;
       bottom: 0;
-      background-color: fade(#7700FF,5%);
+      background-color: fade(#7700FF,2%);
+      border-left: 1px solid fade(@b2c-orange-low, 30%);
+      border-right: 1px solid fade(@b2c-orange-low, 30%);
+      box-sizing: border-box;
       .@{newAppName}-dark-theme & {
-        background-color: fade(#fff,5%);
+        background-color: fade(#fff,3%);
       }
     }
     &:after{
@@ -230,10 +233,12 @@
       right: 30px;
       top: 0;
       bottom: 0;
-      background-color: fade(#000,5%);
-      .@{newAppName}-dark-theme & {
-        background-color: fade(#fff, 5%);
-      }
+      border-left: 1px solid fade(@b2c-red-low, 35%);
+      border-right: 1px solid fade(@b2c-red-low, 35%);
+
+      box-sizing: border-box;
+
+
     }
   }
 }
