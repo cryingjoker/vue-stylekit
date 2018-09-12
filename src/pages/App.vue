@@ -51,6 +51,9 @@
                 <div class="aside-menu__item">
                     <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/select">Select</router-link>
                 </div>
+                <div class="aside-menu__item">
+                    <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/scroll-tabs">Scroll Tabs</router-link>
+                </div>
 
 
             </div>

@@ -6,7 +6,7 @@ const path = require(`path`);
 const openBrowser = require(`./lib/open-browser`);
 
 const app = express();
-const publicPath = path.join(process.cwd(), `dist`);
+const publicPath = path.join(process.cwd(), 'static');
 const port = 5000;
 
 app.use(compression());

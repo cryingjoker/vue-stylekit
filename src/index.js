@@ -13,16 +13,17 @@ Vue.use(VueTouch, {name: 'v-touch'})
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+    mode: 'history',
   routes: routes.routes
 });
 
-Vue.mixin({
-  methods: {
-    _veryUsefulMethod() {
-      console.log("I am a global mixin. I should be used across the app.");
-    }
-  }
-});
+// Vue.mixin({
+//   methods: {
+//     _veryUsefulMethod() {
+//       console.log("I am a global mixin. I should be used across the app.");
+//     }
+//   }
+// });
 const App = new Vue({
   el: "#app",
   router,

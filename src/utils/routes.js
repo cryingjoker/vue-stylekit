@@ -12,7 +12,9 @@ import Cards from '@/pages/complex-elements/Card.vue'
 import Tariff from '@/pages/complex-elements/Tariff.vue'
 import Icons from '@/pages/icons-elements/Icons.vue'
 import Banners from '@/pages/experiment-elements/Banners.vue'
-import PromoTv from '../pages/promo/tv.vue'
+import PromoTv from '@/pages/promo/tv.vue'
+import smartHouse from '@/pages/promo/smart-house.vue'
+import ScrollTabs from '@/pages/main-elements/ScrollTabs.vue'
 
 
 const routes = [
@@ -28,9 +30,11 @@ const routes = [
     {path: '/price', name: 'app-price', component: Price},
     {path: '/cards', name: 'app-cards', component: Cards},
     {path: '/tariffs', name: 'app-cards', component: Tariff},
+    {path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs},
     {path: '/icons', name: 'app-icons', component: Icons},
     {path: '/banners', name: 'app-banners', component: Banners},
     {path: '/promo/tv', name: 'promoTv', component: PromoTv},
+    {path: '/promo/smart-house', name: 'smartHouse', component: smartHouse},
     {path: '', name: 'default'}
 ]
 
