@@ -3,9 +3,12 @@
     <div class="rt-container">
       <div class="row">
         <div class="rt-col-1 mb-d-none" />
-        <div class="rt-col-5 rt-col-md-3">
+        <div class="rt-col-4 rt-col-md-3">
+          <div class="rt-space-right">
           <slot />
+          </div>
         </div>
+        <div class="rt-col-1 mb-d-none" />
       </div>
     </div>
     <div class="circle-switcher">
