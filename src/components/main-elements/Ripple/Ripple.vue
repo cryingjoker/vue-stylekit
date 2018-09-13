@@ -17,7 +17,12 @@ componentsList[RippleWave.name] = RippleWave
 export default {
   name: "RtRipple",
   components: componentsList,
-  props: ["notRender"],
+  props: {
+    notRender: {
+      type: Boolean,
+      default : false
+    }
+  },
   data: () => ({
     ripplesList: []
   }),

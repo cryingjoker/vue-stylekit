@@ -1,27 +1,30 @@
 <template>
   <div class="rt-banner" :class="banerClass">
+
     <div class="rt-container">
+      <div class="rt-col-12">
       <div class="row">
         <div class="rt-col-1 mb-d-none" />
         <div class="rt-col-4 rt-col-md-3">
           <div class="rt-space-right">
-          <slot />
+            <slot />
           </div>
         </div>
         <div class="rt-col-1 mb-d-none" />
       </div>
+      </div>
     </div>
     <div class="circle-switcher">
-      <div class="circle-switcher-container" v-if="RtBanners.items && RtBanners.items.length > 1">
+      <div v-if="RtBanners.items && RtBanners.items.length > 1" class="circle-switcher-container">
         <rt-banner-paginator-item v-for="(option, index) in RtBanners.items" :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index" />
 
       </div>
     </div>
     <div class="rt-banner-image" :style="imageStyle">
-      <svg class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" v-if="!this.isFullscreenImage">
+      <svg v-if="!this.isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0v500h2L185 0z" fill-rule="evenodd" />
       </svg>
-      <svg class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg" v-if="!this.isFullscreenImage">
+      <svg v-if="!this.isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0v500h2L185 0z" fill-rule="evenodd" />
       </svg>
     </div>
@@ -46,7 +49,7 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: 'none'
+      default: "none"
     },
     isWhiteColor: {
       type: Boolean,
@@ -78,13 +81,13 @@ export default {
       const classArray = {}
       const activeIndex = this.RtBanners.activeIndex
       if (this.RtBanners.items[activeIndex]) {
-        if (this.RtBanners.items[activeIndex].backgroundColor !== 'none') {
+        if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
           classArray[
             "rt-banner--background-" +
               this.RtBanners.items[activeIndex].backgroundColor
           ] = true
         }
-        if(this.isFullscreenImage){
+        if (this.isFullscreenImage) {
           classArray["rt-banner--full-screen"] = true
         }
         if (this.RtBanners.items[activeIndex].isWhiteColor) {

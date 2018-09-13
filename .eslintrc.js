@@ -8,9 +8,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
+    // "standard",
     "eslint:recommended",
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
     "plugin:vue/recommended",
     "plugin:prettier/recommended"
   ],
@@ -20,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'generator-star-spacing': 'off',
     "semi": [2, "never"],
     "no-console": "off",
     "vue/max-attributes-per-line": "off",

@@ -1,0 +1,8 @@
+core/**/*
+vendor/**/*
+web/sites/**/files/**/*
+libraries/**/*
+web/sites/**/libraries/**/*
+web/profiles/**/libraries/**/*
+**/js_test_files/**/*
+**/node_modules/**/*
