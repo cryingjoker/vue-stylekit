@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="promo-color-block color-block--promo-dark-blue">
+    <div class="promo-color-block color-block--rule-color">
       <div class="rt-container">
         <div class="rt-col-12">
           <div class="row">
@@ -185,7 +185,7 @@
         </div>
       </div>
     </div>
-    <div class="promo-color-block color-block--promo-dark-blue promo-color-block--hide-overflow">
+    <div class="promo-color-block color-block--rule-color promo-color-block--hide-overflow">
       <div class="rt-container promo-shelf">
         <div class="rt-col-12">
           <h3 class="rt-font-promo-title rt-space-bottom rt-space-left rt-space-md-horizontal">Тысячи фильмов и сериалов </h3>
@@ -389,7 +389,7 @@
         </div>
       </div>
     </div>
-    <div class="promo-color-block color-block--promo-dark-blue">
+    <div class="promo-color-block color-block--rule-color">
       <div class="rt-container">
         <div class="rt-col-12">
           <div class="row rt-row">

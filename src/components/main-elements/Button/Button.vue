@@ -15,8 +15,15 @@ export default {
   name: "RtButton",
   components: componentsList,
   props: {
-    isBlock: Boolean,
-    isDisabled: Boolean
+    isBlock: {
+      type: Boolean,
+      default: false
+    },
+    isDisabled: {
+      type: Boolean,
+      default: false
+    },
+
   },
   mounted: function() {
     this.isDisabled = this.$el.disabled
