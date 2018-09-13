@@ -1,4 +1,4 @@
-.@{newAppName}-card {
+.rt-card {
   border-radius: 10px;
   display: flex;
   width: 100%;
@@ -9,6 +9,7 @@
   min-height: 364px;
   overflow: hidden;
   color: @main-color;
+  align-self: stretch;
 
   &--has-white-color{
     color: #fff;
@@ -64,31 +65,31 @@
     z-index: 1;
     background-position: center center;
     background-repeat: no-repeat;
-    .@{newAppName}-card-black &{
+    .rt-card-black &{
       background-color: @dark-card-background;
     }
-    .@{newAppName}-card-purple &{
+    .rt-card-purple &{
       background-color: @b2b-purple-low;
     }
-    .@{newAppName}-card-red &{
+    .rt-card-red &{
       background-color: @b2b-red-low;
     }
-    .@{newAppName}-card-dark-blue &{
+    .rt-card-dark-blue &{
       background-color: @b2b-dark-blue-low;
     }
-    .@{newAppName}-card-light-blue &{
+    .rt-card-light-blue &{
       background-color: @b2b-light-blue-low;
     }
-    .@{newAppName}-card-yellow &{
+    .rt-card-yellow &{
       background-color: @b2b-yellow-low;
     }
-    .@{newAppName}-card-orange &{
+    .rt-card-orange &{
       background-color: @b2b-orange-low;
     }
-    .@{newAppName}-card-pink &{
+    .rt-card-pink &{
       background-color: @b2b-pink-low;
     }
-    .@{newAppName}-card-green &{
+    .rt-card-green &{
       background-color: @b2b-green-low;
     }
     &--position-background-top{
@@ -115,10 +116,10 @@
     &--position-background-top-left{
       background-position: top left;
     }
-    .@{newAppName}-card--has-bg-repeat &{
+    .rt-card--has-bg-repeat &{
       background-repeat: repeat;
     }
-    .@{newAppName}-card--has-bg-cover &{
+    .rt-card--has-bg-cover &{
       -webkit-background-size: cover;
       background-size: cover;
     }

@@ -17,6 +17,7 @@ import Switch from "./Switch/Switch.vue"
 import Textarea from "./Textarea/Textarea.vue"
 import TextareaStatic from "./Textarea/TextareaStatic.vue"
 import TextareaWithoutJs from "./Textarea/TextareaWithoutJs.vue"
+import ScrollTabs from "./ScrollTabs/ScrollTabs.vue"
 
 export {
   Button,
@@ -37,5 +38,6 @@ export {
   Switch,
   Textarea,
   TextareaStatic,
-  TextareaWithoutJs
+  TextareaWithoutJs,
+  ScrollTabs
 }
