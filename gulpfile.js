@@ -21,6 +21,7 @@ gulp.task(
     "perl -pi -w -e 's/to\\:\\\"\\//to\\:\\\"\\/vue\\-stylekit\\/docs\\//g' ./docs/main.js\n",
     "perl -pi -w -e 's/src=/src=\\/vue\\-stylekit\\/docs\\//g' ./docs/index.html",
     // "perl -pi -w -e 's/BasisGrotesqu/docs\\/BasisGrotesqu/g' ./docs/main.js",
+    "perl -pi -w -e 's/\\<\\/script\\>\\<\\/head\\>/\\<\\/script\\>\\<link rel\\=\\\"stylesheet\\\" href\\=\\\"\\/vue\\-stylekit\\/docs\\/fonts.css\\\"\\/\\>\\<\\/head\\>/g' ./docs/index.html\n",
     "rm -rf ./dist",
     "git commit -a -m'deploy'\n",
     "git push",
