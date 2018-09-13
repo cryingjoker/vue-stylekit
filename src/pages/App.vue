@@ -122,6 +122,11 @@
                 Tv
               </router-link>
             </div>
+            <!--<div class="aside-menu__item">-->
+              <!--<router-link class="aside-menu__link" active-class="aside-menu__link&#45;&#45;active" to="/promo/smart-house">-->
+                <!--Smart House-->
+              <!--</router-link>-->
+            <!--</div>-->
           </div>
         </div>
         <div class="aside-menu__item">

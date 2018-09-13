@@ -29,4 +29,4 @@ gulp.task(
     "git checkout master"
   ])
 )
-//.@{newAppName} -> rt
+//.rt -> rt

@@ -50,7 +50,7 @@ body{
   }
 }
 
-.@{newAppName}-font{
+.rt-font{
   &-hero{
     line-height: 99px;
     font-size: 66px;
@@ -175,9 +175,26 @@ body{
   &-spacing018{
     letter-spacing: 0.18px;
   }
+
+  &-line-white{
+    //display: inline;
+    //background-color: #fff;
+    color: @main-color;.rt-card
+    //&:before{
+    //  content: '';
+    //  line-height: 0;
+    //  height: 0;
+    //  display: inline-block;
+    //}
+    &:after{
+      //content: '';
+      line-height: 0;
+      display: block;;
+    }
+  }
 }
 
-.@{newAppName}-wrapper{
+.rt-wrapper{
   font-size: 16px;
 }
 
