@@ -16,10 +16,16 @@
 .@{newAppName}-banner{
   height: 500px;
   position: relative;
+  z-index: 3;
   transition-duration: 0.3s;
   transition-property: background-color, color;
   transition-timing-function: ease-in-out;
-
+  &--fill-height{
+    height: 100vh;
+    .rt-banner-content{
+      height: 100vh;
+    }
+  }
   &--background{
     &-dark-state {
       background-color: @b2b-dark-state;
@@ -103,6 +109,10 @@
     @media (max-width: @mobile-step-size) {
       padding-right: @horizontal-space;
       padding-left: @horizontal-space;
+      width: 100%;
+      .@{newAppName}-banner--full-screen &{
+        justify-content: center;
+      }
     }
 
     &--active{

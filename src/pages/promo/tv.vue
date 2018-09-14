@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="section__bg bg-orange promo-color-line">
-      <div class="promo-left-line-image mb-d-none"
+      <div class="promo-left-line-image md-d-none"
            style="background-image: url(/images/tv-top-background.jpg);"
       />
-      <div class="rt-col-8 mb-d-none" />
+      <div class="rt-col-8 md-d-none" />
       <div class="rt-col-3 rt-col-md-3 flex-column-center-items">
 
 

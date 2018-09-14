@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <div class="color-block--rule-color">
+        <div class="color-block--rule-color sticked sticked-block" style="top: 0;">
             <rt-scroll-tabs class="rt-tab-header " active-tabs-classname="rt-tab-header__item--active"
                             tabs-classname="rt-tab-header__item">
                 <div class="rt-container color-white">
@@ -10,8 +10,8 @@
                             <div class="rt-col-8">
                                 <div class="rt-tab-nav">
                                     <a class="rt-tab-header__item" href="#about">О системе</a>
-                                    <a class="rt-tab-header__item" href="#two">Устройства</a>
-                                    <a class="rt-tab-header__item" href="#three">Подключение и управление</a>
+                                    <a class="rt-tab-header__item" href="#device">Устройства</a>
+                                    <a class="rt-tab-header__item" href="#connect">Подключение и управление</a>
                                 </div>
                             </div>
                             <div class="rt-col-4 flex-end-center">
@@ -25,11 +25,11 @@
         </div>
 
 
-        <rt-banner :is-fullscreen-image="true">
+        <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height">
             <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                             background-color="none"
             >
-
+                <div class="rt-md-space-right2">
                 <p class="rt-font-banner-label-bold color-line">
                     <span class="color-line-text">Умный   дом</span>
                 </p>
@@ -48,29 +48,32 @@
                     <rt-button class="rt-button-orange rt-space-horizontal05">Подключить</rt-button>
                     <rt-button class="rt-button-orange rt-space-horizontal">Войти</rt-button>
                 </div>
+                </div>
             </rt-banner-item>
         </rt-banner>
-        <div class="color-block--white">
+        <div class="color-block--white" id="about">
             <div class="rt-container">
                 <div class="rt-col-12 rt-space-top3">
                     <div class="row">
-                        <div class="rt-col-1"></div>
-                        <div class="rt-col-5 flex-center-center">
+                        <div class="rt-col-1 md-d-none"></div>
+                        <div class="rt-col-5 flex-center-center rt-md-space-bottom2 rt-col-md-3">
                             <div>
                                 <p class="rt-font-promo-title color-main07">О системе</p>
                                 <p class="rt-font-paragraph rt-space-top color-main05">«Умный дом» — это безопасный и
                                     комфортный дом. Вы будете знать обо всём, что в нём происходит, даже находясь в
-                                    другом городе. Система датчиков и устройств моментально уведомит вас о любых
+                                    другом городе. Система датчиков и устройств моментО системеально уведомит вас о любых
                                     происшествиях. А ещё вы сможете управлять бытовыми приборами удалённо: например, с
                                     помощью смартфона выключить утюг, даже если вы уже ушли из дома.</p>
                             </div>
                         </div>
                         <div class="rt-col-2">
-
                         </div>
-                        <div class="rt-col-4 flex-start-bottom rt-space-top25">
-                            <div class="rt-space-horizontal">
-                                <div class="phone"></div>
+                        <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
+                            <div class="rt-space-horizontal flex-md-center">
+                                <div class="phone">
+                                    <div class="phone__container"></div>
+                                    <img src="/images/smartHouse/app.jpg" class="phone__image"></img>
+                                </div>
                             </div>
 
                         </div>
@@ -82,7 +85,7 @@
             <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
                             background-color="none"
             >
-
+                <div class="rt-md-space-right2">
                 <p class="rt-font-banner-label-bold color-line rt-space-top">
                     <span class="color-line-text">Чем занят <br>  мой ребёнок?</span>
                 </p>
@@ -99,11 +102,13 @@
                 </p>
                 <div class="rt-space-top2">
                     <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
+                </div>
                 </div>
             </rt-banner-item>
             <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                             background-color="none"
             >
+                <div class="rt-md-space-right2">
 
                 <p class="rt-font-banner-label-bold color-line rt-space-top">
                     <span class="color-line-text">Чем занят <br>  мой ребёнок?</span>
@@ -121,12 +126,13 @@
                 </p>
                 <div class="rt-space-top2">
                     <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
+                </div>
                 </div>
             </rt-banner-item>
             <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                             background-color="none"
             >
-
+                <div class="rt-md-space-right2">
                 <p class="rt-font-banner-label-bold color-line rt-space-top">
                     <span class="color-line-text">Чем занят <br>  мой ребёнок?</span>
                 </p>
@@ -144,9 +150,10 @@
                 <div class="rt-space-top2">
                     <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
                 </div>
+                </div>
             </rt-banner-item>
         </rt-banner>
-        <div class="color-block--light-grey">
+        <div class="color-block--light-grey" id="device">
             <div class="rt-container rt-space-vertical">
                 <p class="rt-font-promo-title">Устройства</p>
                 <div class="rt-col-12">
@@ -157,17 +164,17 @@
                 </div>
             </div>
         </div>
-        <div class="color-block--white">
+        <div class="color-block--white no-overflow-y" id="connect">
             <div class="rt-container">
                 <div class="rt-col-12 rt-space-top3">
                     <div class="row">
-                        <div class="rt-col-1"></div>
-                        <div class="rt-col-5 flex-center-center">
+                        <div class="rt-col-1 md-d-none"></div>
+                        <div class="rt-col-5 flex-center-center rt-col-md-3">
                             <div>
                                 <p class="rt-font-promo-title color-main07">Подключение и управление</p>
                                 <p class="rt-font-paragraph rt-space-top color-main05">Установить и настроить «Умный дом» несложно,  в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас возникнут сложности, мы всё сделаем  за вас: просто скажите о своем желании оператору  при звонке. Услуга платная, о стоимости вам расскажет оператор.
                                     <br><br>Управлять устройствами можно с компьютера, планшета или смартфона — через личный кабинет и мобильное приложение.</p>
-                                <div class="rt-space-top15">
+                                <div class="rt-space-top15 rt-font-md-center">
                                     <a href="#" class="d-inline-block ">
                                         <img src="/images/applePlay.svg" alt="">
                                     </a>
@@ -179,12 +186,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rt-col-2">
+                        <div class="rt-col-2 md-d-none">
 
                         </div>
-                        <div class="rt-col-4 flex-start-bottom rt-space-top25">
-                            <div class="rt-space-horizontal">
-                                <div class="phone phone--is-big"></div>
+                        <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
+                            <div class="rt-space-horizontal flex-md-center">
+                                <div class="phone phone--is-big">
+                                    <div class="phone__container"></div>
+                                    <img src="/images/smartHouse/app.jpg" class="phone__image"></img>
+                                </div>
                             </div>
 
                         </div>
@@ -260,23 +270,19 @@
 </template>
 
 <style coped lang="less">
-    .phone {
-        background-image: url('/images/smartHouse/appPhone.png');
-        width: 100%;
-        height: 36.5vw;
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: cover;
-        min-height: 450px;
-        min-width: 300px;
-        max-height: 582px;
-        position: relative;
-        bottom: -30px;
+
+    .phone{
+        margin-bottom: -13vw;
+        @media (max-width: 968px) {
+            margin-bottom: -30vw;
+        }
         &--is-big{
-            bottom: 0;
+            margin-bottom: -11vw;
+            @media (max-width: 968px) {
+                margin-bottom: -26vw;
+            }
         }
     }
-
     .rt-banner.banner-support,
     .banner-support .rt-banner-content {
         height: 631px;
