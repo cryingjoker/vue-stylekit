@@ -6,6 +6,7 @@ import Select from "@/pages/main-elements/Select.vue"
 import Typography from "@/pages/main-elements/Typography.vue"
 import Textarea from "@/pages/main-elements/Textarea.vue"
 import Switch from "@/pages/main-elements/Switch.vue"
+import ColorLineText from "@/pages/main-elements/ColorLineText.vue"
 import Spinner from "@/pages/main-elements/Spinner.vue"
 import Price from "@/pages/main-elements/Price.vue"
 import Cards from "@/pages/complex-elements/Card.vue"
@@ -27,6 +28,7 @@ const routes = [
   { path: "/typography", name: "app-typography", component: Typography },
   { path: "/spinner", name: "app-spinner", component: Spinner },
   { path: "/price", name: "app-price", component: Price },
+  { path: "/color-line-text", name: "app-color-line-text", component: ColorLineText },
   { path: "/cards", name: "app-cards", component: Cards },
   { path: "/tariffs", name: "app-cards", component: Tariff },
   { path: "/scroll-tabs", name: "app-scrollTabs", component: ScrollTabs },
