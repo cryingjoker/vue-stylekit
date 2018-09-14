@@ -325,7 +325,11 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
-
+.d-stretch{
+  display: flex;
+  display: -ms-flexbox;
+  align-items: stretch;
+}
 .flex-md-center{
   @media (max-width: @mobile-step-size) {
     display: flex;
@@ -407,6 +411,9 @@
     padding-right: @horizontal-space*2;
   }
 
+  .@{newAppName}-md-space-top05 {
+    padding-top: @vertical-space*0.5;
+  }
   .@{newAppName}-md-space-top {
     padding-top: @vertical-space;
   }

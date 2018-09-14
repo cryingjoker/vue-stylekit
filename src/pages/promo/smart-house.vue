@@ -44,9 +44,13 @@
                       fill="#FFF"/><use fill="#FF4F12" xlink:href="#a"/></g></svg>
           </span>
                 </p>
-                <div class="rt-space-top2">
-                    <rt-button class="rt-button-orange rt-space-horizontal05">Подключить</rt-button>
-                    <rt-button class="rt-button-orange rt-space-horizontal">Войти</rt-button>
+                <div class="rt-space-top2 rt-font-md-center">
+                    <div class="rt-md-space-top05 rt-space-left rt-md-space-horizontal05">
+                        <rt-button class="rt-button-orange rt-space-horizontal05">Подключить</rt-button>
+                    </div>
+                    <div class="rt-md-space-top05 rt-md-space-horizontal05">
+                        <rt-button class="rt-button-orange rt-space-horizontal">Войти</rt-button>
+                    </div>
                 </div>
                 </div>
             </rt-banner-item>
