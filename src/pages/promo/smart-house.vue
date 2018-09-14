@@ -26,7 +26,7 @@
 
 
         <rt-banner :is-fullscreen-image="true">
-            <rt-banner-item background-image="/images/smartHouse/bg.png"
+            <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                             background-color="none"
             >
 
@@ -79,7 +79,7 @@
             </div>
         </div>
         <rt-banner :is-fullscreen-image="true" class="banner-support">
-            <rt-banner-item background-image="/images/smartHouse/bg2.png"
+            <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
                             background-color="none"
             >
 
@@ -101,7 +101,7 @@
                     <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
                 </div>
             </rt-banner-item>
-            <rt-banner-item background-image="/images/smartHouse/bg.png"
+            <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                             background-color="none"
             >
 
@@ -123,7 +123,7 @@
                     <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
                 </div>
             </rt-banner-item>
-            <rt-banner-item background-image="/example-imagesE0BABAFAFAFA/banerBackground1.png"
+            <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                             background-color="none"
             >
 

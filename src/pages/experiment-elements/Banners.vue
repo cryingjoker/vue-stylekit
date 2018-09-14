@@ -11,7 +11,7 @@
       </div>
     </div>
     <rt-banner>
-      <rt-banner-item background-image="/example-images/banerBackground1.png"
+      <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                       :is-white-color="true"
                       background-color="dark-state"
       >
@@ -22,7 +22,7 @@
       </rt-banner-item>
       <rt-banner-item
         background-color="yellow"
-        background-image="/example-images/banerBackground2.png"
+        background-image="/example-images/banerBackground2.jpg"
       >
         <p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p>
         <p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малого бизнеса </p>

@@ -1,6 +1,6 @@
 const gulp = require("gulp")
 const shell = require("gulp-shell")
-
+const imagemin = require('gulp-imagemin');
 gulp.task(
   "copy",
   shell.task([
@@ -29,4 +29,18 @@ gulp.task(
     "git checkout master"
   ])
 )
-//.@{newAppName} -> rt
+
+gulp.task(
+  "image",()=>{
+      gulp.src('./images/*.jpg')
+        .pipe(imagemin([
+          imagemin.jpegtran({
+            progressive: true
+          }),
+          imagemin.optipng({
+            optimizationLevel: 7
+          })
+        ]))
+        .pipe(gulp.dest('dist/images/'))
+  }
+)
