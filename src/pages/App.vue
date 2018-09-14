@@ -1,21 +1,21 @@
 <template>
   <div class="app" :class="{'app--hide-scroll' : this.showMenu}">
-    <div class="menu-trigger mb-d-block d-none" @click="menuTrigger">Menu</div>
+    <div class="menu-trigger md-d-block d-none" @click="menuTrigger">Menu</div>
 
     <div class="grid" :class="{'grid--active': this.showGrid}">
       <div class="row">
         <div class="rt-col-1 rt-col-md-1 demo-col" />
         <div class="rt-col-1 rt-col-md-1 demo-col" />
         <div class="rt-col-1 rt-col-md-1 demo-col" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
-        <div class="rt-col-1 demo-col mb-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none" />
       </div>
     </div>
     <keep-alive>

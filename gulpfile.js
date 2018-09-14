@@ -33,24 +33,7 @@ gulp.task(
 
 gulp.task(
   "image",()=>{
-      gulp.src('./images/smartHouse')
-        .pipe(imagemin([
-          imagemin.jpegtran({
-            progressive: true
-          }),
-          imagemin.optipng({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true,
-            multipass: true
-          })
-        ]))
-        .pipe(gulp.dest('tmpImages/'))
-  }
-)
-gulp.task(
-  "image",()=>{
-      gulp.src('./images/*')
+      gulp.src('./newImages/*')
         .pipe(imagemin([
           imagemin.jpegtran({
             progressive: true
@@ -70,7 +53,7 @@ gulp.task(
   "imageTiny",()=>{
       gulp.src('./tmpImages/*')
         .pipe(tiny())
-        .pipe(gulp.dest('dist/smartHouse/'))
+        .pipe(gulp.dest('dist/'))
   }
 )
 

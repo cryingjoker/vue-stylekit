@@ -90,7 +90,8 @@ function scrollIt(destination, duration = 200, easing = "linear", callback) {
       Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
     )
 
-    if (window.pageYOffset === destinationOffsetToScroll) {
+    const top = window.pageYOffset || document.documentElement.scrollTop;
+    if (Math.abs(top - destinationOffsetToScroll) < 20 ) {
       if (callback) {
         callback()
       }
@@ -126,12 +127,12 @@ export default {
   mounted() {
     if (this.tabsClassname) {
       this.initAnchorsList()
-      window.addEventListener("scroll", this.calculateScroll)
+      window.addEventListener("scroll", this.debounceCalculateScroll)
       window.addEventListener("resize", this.debounceInitAnchorsList)
     }
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.calculateScroll)
+    window.removeEventListener("scroll", this.debounceCalculateScroll)
     window.removeEventListener("resize", this.debounceInitAnchorsList)
     this.$el.querySelectorAll("." + this.tabsClassname).forEach(i => {
       i.removeEventListener("click", this.scrollBind)
@@ -139,6 +140,15 @@ export default {
   },
 
   methods: {
+    debounceCalculateScroll() {
+      let timeout;
+      clearTimeout(timeout)
+
+      timeout = setTimeout(() => {
+
+        this.calculateScroll()
+      }, 100)
+    },
     calculateScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const activeEl = this.$el.querySelector("." + this.activeTabsClassname)
@@ -152,38 +162,43 @@ export default {
           if (this.activeKey === key) {
             return false
           }
-          if (activeEl && !activeEl.classList.contains(key)) {
+
+          if (activeEl && activeEl.classList.contains(key)) {
             activeEl.classList.remove(this.activeTabsClassname)
           }
           this.activeKey = key
-          const nextEl = this.$el.querySelector('[href="' + key + '"]')
+          const nextEl = this.$el.querySelector('[href="#' + key + '"]')
           if (nextEl && !nextEl.classList.contains(this.activeTabsClassname)) {
-            this.$el
-              .querySelector('[href="' + key + '"]')
-              .classList.add(this.activeTabsClassname)
+            nextEl.classList.add(this.activeTabsClassname)
           }
-          this.$router.replace({ hash: key.replace(/\#/, "") })
+          window.history.replaceState(undefined, undefined, '#'+key)
           return false
         }
       })
-      if (activeEl && !hasFound) {
-        activeEl.classList.remove(this.activeTabsClassname)
-        this.$router.replace({ hash: "" })
-        this.activeKey = ""
+      const url = window.location.toString();
+      if (url.indexOf("#") > 0 && !hasFound) {
+        if(activeEl) {
+          activeEl.classList.remove(this.activeTabsClassname);
+          this.activeKey = "";
+        }
+        const clean_url = url.substring(0, url.indexOf("#"));
+        window.history.replaceState({}, document.title, clean_url);
       }
     },
     scrollBind(e) {
-      const anchor = e.target.getAttribute("href")
-      const anchorEl = document.querySelector(anchor)
-      scrollIt(anchorEl)
+      const anchor = e.target.getAttribute("href").replace('#','')
+
+      scrollIt(this.anchorObejects[anchor].x_start);
       e.preventDefault()
     },
-    initAnchorsList() {
-      this.$el.querySelectorAll("." + this.tabsClassname).forEach(i => {
-        const anchor = i.getAttribute("href")
-        const anchorEl = document.querySelector(anchor)
+    initAnchorsList(notBindClick) {
 
-        i.addEventListener("click", this.scrollBind)
+      this.$el.querySelectorAll("." + this.tabsClassname).forEach(i => {
+        const anchor = i.getAttribute("href").replace('#','')
+        const anchorEl = document.querySelector('[id="'+anchor+'"]')
+        if(!notBindClick) {
+          i.addEventListener("click", this.scrollBind)
+        }
 
         if (anchorEl) {
           this.anchorObejects[anchor] = {
@@ -198,8 +213,8 @@ export default {
       let timeout
       clearTimeout(timeout)
       timeout = setTimeout(() => {
-        this.initAnchorsList()
-      }, 200)
+        this.initAnchorsList(true)
+      }, 300)
     }
   }
 }
