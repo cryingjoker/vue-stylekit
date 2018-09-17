@@ -200,9 +200,6 @@
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <rt-card :background-image="'/example-images/cardBackground9.png'"
                      :background-position="'bottom-right'"
-
-
-
                      :col-size="2"
             >
               <template slot="content">

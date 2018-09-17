@@ -3,7 +3,8 @@
   display: flex;
   width: 100%;
   box-shadow: @card-shadow;
-  background-position: center center;
+  background-position-x: center;
+  background-position-y: center;
   background-repeat: no-repeat;
   position: relative;
   min-height: 364px;
@@ -11,16 +12,16 @@
   color: @main-color;
   align-self: stretch;
 
-  &--has-white-color{
+  &--has-white-color {
     color: #fff;
   }
 
-  &--has-smoke{
-    &:before{
+  &--has-smoke {
+    &:before {
       content: '';
       position: absolute;
       z-index: 2;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       top: 0;
       left: 0;
       bottom: 0;
@@ -28,12 +29,12 @@
       border-radius: 10px;
     }
   }
-  &--has-smoke03{
-    &:before{
+  &--has-smoke03 {
+    &:before {
       content: '';
       position: absolute;
       z-index: 2;
-      background-color: rgba(0,0,0,0.3);
+      background-color: rgba(0, 0, 0, 0.3);
       top: 0;
       left: 0;
       bottom: 0;
@@ -41,12 +42,12 @@
       border-radius: 10px;
     }
   }
-  &--has-smoke02{
-    &:before{
+  &--has-smoke02 {
+    &:before {
       content: '';
       position: absolute;
       z-index: 2;
-      background-color: rgba(0,0,0,0.2);
+      background-color: rgba(0, 0, 0, 0.2);
       top: 0;
       left: 0;
       bottom: 0;
@@ -54,7 +55,7 @@
       border-radius: 10px;
     }
   }
-  &__background{
+  &__background {
     background-color: white;
     position: absolute;
     top: -20px;
@@ -63,75 +64,83 @@
     left: -20px;
     right: -20px;
     z-index: 1;
-    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
-    .@{newAppName}-card-black &{
+    .@{newAppName}-card-black & {
       background-color: @dark-card-background;
     }
-    .@{newAppName}-card-purple &{
+    .@{newAppName}-card-purple & {
       background-color: @b2b-purple-low;
     }
-    .@{newAppName}-card-red &{
+    .@{newAppName}-card-red & {
       background-color: @b2b-red-low;
     }
-    .@{newAppName}-card-dark-blue &{
+    .@{newAppName}-card-dark-blue & {
       background-color: @b2b-dark-blue-low;
     }
-    .@{newAppName}-card-light-blue &{
+    .@{newAppName}-card-light-blue & {
       background-color: @b2b-light-blue-low;
     }
-    .@{newAppName}-card-yellow &{
+    .@{newAppName}-card-yellow & {
       background-color: @b2b-yellow-low;
     }
-    .@{newAppName}-card-orange &{
+    .@{newAppName}-card-orange & {
       background-color: @b2b-orange-low;
     }
-    .@{newAppName}-card-pink &{
+    .@{newAppName}-card-pink & {
       background-color: @b2b-pink-low;
     }
-    .@{newAppName}-card-green &{
+    .@{newAppName}-card-green & {
       background-color: @b2b-green-low;
     }
-    &--position-background-top{
-      background-position: center top;
+    &--position-background-top {
+      background-position-x: center;
+      background-position-y: top;
     }
-    &--position-background-right{
-      background-position: center right;
+    &--position-background-right {
+      background-position-x: calc(100% - 40px);
+      background-position-y: center;
     }
-    &--position-background-bottom{
-      background-position: center bottom;
+    &--position-background-bottom {
+      background-position-x: center;
+      background-position-y: bottom;
     }
-    &--position-background-left{
-      background-position: center left;
+    &--position-background-left {
+      background-position-x: 40px;
+      background-position-y: center;
     }
-    &--position-background-top-right{
-      background-position: top right;
+    &--position-background-top-right {
+      background-position-x: calc(100% - 40px);
+      background-position-y: top;
     }
-    &--position-background-bottom-right{
-      background-position: bottom right;
+    &--position-background-bottom-right {
+      background-position-x: calc(100% - 40px);
+      background-position-y: bottom;
     }
-    &--position-background-bottom-left{
-      background-position: bottom left;
+    &--position-background-bottom-left {
+      background-position-x: 40px;
+      background-position-y: bottom;
     }
-    &--position-background-top-left{
-      background-position: top left;
+    &--position-background-top-left {
+      background-position-x: 40px;
+      background-position-y: top;
     }
-    .@{newAppName}-card--has-bg-repeat &{
+    .@{newAppName}-card--has-bg-repeat & {
       background-repeat: repeat;
     }
-    .@{newAppName}-card--has-bg-cover &{
+    .@{newAppName}-card--has-bg-cover & {
       -webkit-background-size: cover;
       background-size: cover;
     }
     @media (max-width: @mobile-step-size) {
-      background-image: inherit!important;
+      background-image: inherit !important;
     }
   }
-  &__content{
+  &__content {
     position: relative;
     z-index: 3;
     min-width: 100%;
-    //height: 100%;
     padding-top: @vertical-space*1.5;
     padding-left: @horizontal-space;
     padding-right: @horizontal-space;
@@ -139,18 +148,21 @@
     display: flex;
     flex-direction: column;
     min-height: inherit;
-    &--has-offset-top{
+    .rt-col-6 & {
+      min-width: 50%;
+    }
+    &--has-offset-top {
       padding-top: @vertical-space*9;
     }
   }
-  &__body{
+  &__body {
     flex: 1
   }
-  &__header{
+  &__header {
     flex: 1
   }
 
-  &-text{
+  &-text {
     letter-spacing: 0.18px;
   }
 }

@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 const componentsList = {}
 
 export default {
