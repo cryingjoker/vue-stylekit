@@ -36,6 +36,12 @@
         <div class="app-row row">
           <p class="rt-font-label rt-col">Label <span class="rt-font-label rt-code">.rt-font-label</span></p>
         </div>
+        <div class="app-row row">
+          <p class="rt-font-label-uppercase rt-col">Label Uppercase <span class="rt-font-label rt-code">.rt-font-label-uppercase</span></p>
+        </div>
+        <div class="app-row row">
+          <p class="rt-font-small-upper rt-col">Small Uppercase <span class="rt-font-label rt-code">.rt-font-small-upper</span></p>
+        </div>
 
       </div>
     </div>

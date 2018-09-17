@@ -2,12 +2,12 @@
   <div class="rt-container">
     <div class="app-content  rt-col-12 rt-col-md-3">
       <div class="color-block--dark-blue color-white rt-space-horizontal sticked app-sticked">
-        <rt-scroll-tabs class="rt-contaner rt-tab-header" active-tabs-classname="rt-tab-header__item--active" tabs-classname="rt-tab-header__item">
-          <div class="rt-tab-nav">
-          <a class="rt-tab-header__item" href="#one">one</a>
-          <a class="rt-tab-header__item" href="#two">two</a>
-          <a class="rt-tab-header__item" href="#three">three</a>
-          <a class="rt-tab-header__item" href="#four">four</a>
+        <rt-scroll-tabs class="rt-contaner rt-scroll-tab-header" active-tabs-classname="rt-scroll-tab-header__item--active" tabs-classname="rt-scroll-tab-header__item">
+          <div class="rt-scroll-tab-nav">
+          <a class="rt-scroll-tab-header__item" href="#one">one</a>
+          <a class="rt-scroll-tab-header__item" href="#two">two</a>
+          <a class="rt-scroll-tab-header__item" href="#three">three</a>
+          <a class="rt-scroll-tab-header__item" href="#four">four</a>
           </div>
         </rt-scroll-tabs>
       </div>

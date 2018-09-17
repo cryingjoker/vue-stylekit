@@ -1,4 +1,5 @@
 .@{newAppName}-tabs {
+  width: 100%;
   &-navigation{
     display: flex;
     flex-direction: row;
@@ -22,27 +23,26 @@
           right: 0px;
           width: 0;
           bottom: 0;
-          height: 0px;
-          width: 100%;
+          height: 2px;
+          width: 0%;
           position: absolute;
           border-bottom: 2px solid transparent;
           transition-timing-function: ease-in-out;
-          transition-property: border, height, bottom;
+          transition-property: border, width, font-weight;
           transition-duration: 0.2s;
-          bottom: -2px;
 
         }
         &:hover,
         &:focus,
         .@{newAppName}-tabs-navigation__item--is-active &{
           &:before {
-            height: 2px;
-            bottom: 0;
+            width: 100%;
             border-bottom-color: inherit;
           }
         }
         .@{newAppName}-tabs-navigation__item--is-active &{
           cursor: default;
+          font-weight: bold;
         }
         cursor: pointer;
       }
