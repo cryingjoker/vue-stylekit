@@ -194,56 +194,56 @@
               <img class="promo-shelf__image" src="/images/logo6.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Стартрек: Бесконечность</p>
-                <p class="rt-font-big-label">Рейтинг 9.5</p>
+                <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo1.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Выживший</p>
-                <p class="rt-font-big-label">Рейтинг 8.1</p>
+                <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo2.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Отмель</p>
-                <p class="rt-font-big-label">Рейтинг 6.5</p>
+                <p class="rt-font-small-paragraph">Рейтинг 6.5</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo3.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Сила воли</p>
-                <p class="rt-font-big-label">Рейтинг 7.3</p>
+                <p class="rt-font-small-paragraph">Рейтинг 7.3</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo4.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Суфражистка</p>
-                <p class="rt-font-big-label">Рейтинг 9.5</p>
+                <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo5.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Зачетный препод </p>
-                <p class="rt-font-big-label">Рейтинг 9.5</p>
+                <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
               </div>
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <img class="promo-shelf__image" src="/images/logo6.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Стартрек: Бесконечность</p>
-                <p class="rt-font-big-label">Рейтинг 9.5</p>
+                <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
               </div>
             </div>
             <div class="rt-pseudo-col rt-pseudo-col--right rt-col-2 promo-shelf__pseudo-item rt-space-top">
               <img class="promo-shelf__image" src="/images/logo1.png" alt="">
               <div class="promo-shelf__info">
                 <p class="rt-font-paragraph promo-shelf__label">Выживший</p>
-                <p class="rt-font-big-label">Рейтинг 8.1</p>
+                <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
               </div>
             </div>
           </div>

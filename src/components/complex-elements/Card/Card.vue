@@ -5,12 +5,17 @@
       <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
         <slot name="header" />
       </div>
-      <div class="rt-card__body">
+      <div class="rt-card__body" :class="cardBodyClass" :style="bodyStyle">
         <slot name="content" />
       </div>
-      <div class="rt-cart__footer">
+
+      <div v-if="$slots['bottom-list']" class="rt-card__bottom-list">
+        <slot name="bottom-list" />
+      </div>
+      <div class="rt-card__footer">
         <slot name="footer" />
       </div>
+
     </div>
   </div>
 </template>
@@ -23,6 +28,10 @@ export default {
 
   components: componentsList,
   props: {
+    staticBodyHeight:{
+      type: Boolean,
+      default: false
+    },
     hideBackgroundOnMobile: {
       type: Boolean,
       default: false
@@ -88,8 +97,13 @@ export default {
       type : Number,
       default: null
     },
+    cardBodyHeight: {
+      type : Number,
+      default: null
+    },
   },
   computed: {
+
     cardClass() {
       const classArray = {};
 
@@ -133,10 +147,28 @@ export default {
       }
       return classArray;
     },
+    cardBodyClass() {
+
+      const classArray = {};
+      if (this.cardBodyHeight !== null) {
+        classArray['flex-center-center flex-fill'] = true;
+      }
+      if(this.staticBodyHeight){
+        classArray['rt-card__body--is-static'] = true;
+      }
+      return classArray;
+    },
     cardStyle() {
       const styles = {};
       if (this.cardHeight !== null) {
         styles.height = this.cardHeight + 'px';
+      }
+      return styles;
+    },
+    bodyStyle() {
+      const styles = {};
+      if (this.cardBodyHeight !== null) {
+        styles.minHeight = this.cardBodyHeight + 'px';
       }
       return styles;
     },

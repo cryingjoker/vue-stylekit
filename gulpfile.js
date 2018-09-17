@@ -53,7 +53,7 @@ gulp.task(
   "imageTiny",()=>{
       gulp.src('./tmpImages/*')
         .pipe(tiny())
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('./dist/'))
   }
 )
 
