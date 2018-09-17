@@ -23,6 +23,10 @@ export default {
 
   components: componentsList,
   props: {
+    hideBackgroundOnMobile: {
+      type: Boolean,
+      default: false
+    },
     backgrounSizeWidth: {
       type: Number,
       default: 0
@@ -111,6 +115,9 @@ export default {
       }
       if (this.backgroundSmoke === 0.2) {
         classArray['rt-card--has-smoke02'] = true;
+      }
+      if (this.hideBackgroundOnMobile) {
+        classArray['rt-card--hide-background-on-mobile'] = true;
       }
       return classArray;
     },

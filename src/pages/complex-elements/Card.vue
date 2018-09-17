@@ -9,7 +9,8 @@
       <div class="app-body">
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'purple'" :background-blur="5" :is-white-color="true">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'purple'" :background-blur="5" :is-white-color="true">
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p>
                 <rt-input placeholder="телефон, email или счёт" />
@@ -23,7 +24,8 @@
             </rt-card>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'light-blue'" :background-blur="5" :is-white-color="true">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'light-blue'" :background-blur="5" :is-white-color="true">
 
               <template slot="content">
                 <div class="rt-font-center rt-space-top15 rt-space-bottom">
@@ -49,7 +51,8 @@
           </div>
 
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground5.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground5.png'"
                      :background-position="'bottom-right'"
                      :col-size="2"
             >
@@ -69,7 +72,8 @@
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground3.png'" :is-white-color="true"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground3.png'" :is-white-color="true"
                      :background-cover="true" :background-smoke="0.3"
             >
               <template slot="content">
@@ -86,7 +90,8 @@
             </rt-card>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground3.png'" :background-opacity="0.5"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground3.png'" :background-opacity="0.5"
                      :background-position="'bottom-right'" :is-white-color="true" :background-cover="true"
                      :background-smoke="0.5" :offset-top="true"
             >
@@ -101,7 +106,8 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground6.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground6.png'"
                      :background-cover="true"
                      :background-opacity="0.7"
                      :background-smoke="0.3"
@@ -127,7 +133,8 @@
 
 
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground10.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground10.png'"
                      :background-cover="true"
                      :background-opacity="0.7"
                      :background-smoke="0.3"
@@ -149,7 +156,8 @@
 
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground1.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'"
                      :background-cover="true"
                      :background-opacity="0.7"
                      :background-smoke="0.3"
@@ -175,7 +183,8 @@
         </div>
         <div class="row">
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground8.png'"
+            <rt-card :hide-background-on-mobile="true"
+                     :background-image="'/example-images/cardBackground8.png'"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-color-type="'black'"
@@ -198,7 +207,8 @@
 
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground9.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground9.png'"
                      :background-position="'bottom-right'"
                      :col-size="2"
             >
@@ -225,7 +235,8 @@
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground7.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground7.png'"
                      :background-cover="true"
                      :background-opacity="0.7"
                      :background-smoke="0.2"
@@ -245,19 +256,22 @@
 
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'red'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'red'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
 
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'orange'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'orange'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'yellow'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'yellow'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
@@ -266,7 +280,8 @@
         <div class="row">
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'pink'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'pink'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
@@ -274,18 +289,21 @@
 
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'green'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'green'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
           </div>
 
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
                      :background-blur="5"
             >
               <p class="rt-card__label rt-font-paragraph">Оплата услуг</p>
@@ -293,23 +311,28 @@
             </rt-card>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-repeat="true" :background-image="'/example-images/cardBackground2.png'"
+            <rt-card :hide-background-on-mobile="true"
+                    :background-repeat="true" :background-image="'/example-images/cardBackground2.png'"
                      :background-smoke="0.3"
             />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground1.png'" :background-smoke="0.5" />
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'" :background-smoke="0.5" />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
           </div>
         </div>
         <div class="row">
           <div class="rt-col-12 rt-col-md-3 rt-space-top">
-            <rt-card :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
+            <rt-card :hide-background-on-mobile="true"
+                    :background-image="'/example-images/cardBackground1.png'" :background-cover="true" />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card :background-color-type="'dark-blue'" :background-blur="5">
+            <rt-card :hide-background-on-mobile="true"
+                    :background-color-type="'dark-blue'" :background-blur="5">
               <p>Оплата услуг</p>
             </rt-card>
           </div>
