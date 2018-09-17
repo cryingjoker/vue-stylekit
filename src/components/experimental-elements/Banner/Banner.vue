@@ -1,17 +1,17 @@
 <template>
-  <div class="rt-banner" :class="banerClass">
+  <div class="rt-banner" :class="banerClass" :style="bannerStyle">
 
     <div class="rt-container">
       <div class="rt-col-12">
-      <div class="row">
-        <div class="rt-col-1 md-d-none" />
-        <div class="rt-col-4 rt-col-md-3">
-          <div class="rt-space-right">
-            <slot />
+        <div class="row">
+          <div class="rt-col-1 md-d-none" />
+          <div class="rt-col-4 rt-col-md-3">
+            <div class="rt-space-right">
+              <slot />
+            </div>
           </div>
+          <div class="rt-col-1 md-d-none" />
         </div>
-        <div class="rt-col-1 md-d-none" />
-      </div>
       </div>
     </div>
     <div class="circle-switcher">
@@ -43,6 +43,10 @@ export default {
   name: "RtBanner",
   components: componentsList,
   props: {
+    contentMinHeight: {
+      type: [Number, String],
+      default: null
+    },
     isFullscreenImage: {
       type: Boolean,
       default: false
@@ -95,6 +99,17 @@ export default {
         }
       }
       return classArray
+    },
+    bannerStyle() {
+      const styles = {}
+      if (this.contentMinHeight) {
+        if (typeof this.contentMinHeight === "string") {
+          styles.minHeight = this.contentMinHeight
+        } else {
+          styles.minHeight = this.contentMinHeight + "px"
+        }
+      }
+      return styles
     },
     imageStyle() {
       const styles = {}

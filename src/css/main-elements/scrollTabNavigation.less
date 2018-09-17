@@ -1,10 +1,14 @@
 .@{newAppName}-scroll-tab{
+
   &-nav{
     display: flex;
   }
   &-header{
     height: 60px;
     flex-direction: row;
+    @media (max-width: @mobile-step-size) {
+      display: none;
+    }
 
     &__item{
       display: flex;

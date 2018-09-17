@@ -20,7 +20,7 @@ export default {
   props: {
     notRender: {
       type: Boolean,
-      default : false
+      default: false
     }
   },
   data: () => ({

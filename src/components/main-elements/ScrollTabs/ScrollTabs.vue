@@ -90,8 +90,8 @@ function scrollIt(destination, duration = 200, easing = "linear", callback) {
       Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
     )
 
-    const top = window.pageYOffset || document.documentElement.scrollTop;
-    if (Math.abs(top - destinationOffsetToScroll) < 20 ) {
+    const top = window.pageYOffset || document.documentElement.scrollTop
+    if (Math.abs(top - destinationOffsetToScroll) < 20) {
       if (callback) {
         callback()
       }
@@ -122,7 +122,7 @@ export default {
       activeKey: "",
       anchorObejects: [],
       timeoutDebounceInitAnchorsList: null,
-      timeoutDebounceCalculateScroll: null,
+      timeoutDebounceCalculateScroll: null
     }
   },
 
@@ -143,11 +143,9 @@ export default {
 
   methods: {
     debounceCalculateScroll() {
-
       clearTimeout(this.timeoutDebounceCalculateScroll)
 
       this.timeoutDebounceCalculateScroll = setTimeout(() => {
-
         this.calculateScroll()
       }, 10)
     },
@@ -163,7 +161,10 @@ export default {
         ) {
           hasFound = true
 
-          if (activeEl && activeEl.getAttribute('href').replace('#','') !== key) {
+          if (
+            activeEl &&
+            activeEl.getAttribute("href").replace("#", "") !== key
+          ) {
             activeEl.classList.remove(this.activeTabsClassname)
           }
           if (this.activeKey === key) {
@@ -174,32 +175,31 @@ export default {
           if (nextEl && !nextEl.classList.contains(this.activeTabsClassname)) {
             nextEl.classList.add(this.activeTabsClassname)
           }
-          window.history.replaceState(undefined, undefined, '#'+key)
+          window.history.replaceState(undefined, undefined, "#" + key)
           return false
         }
       })
-      const url = window.location.toString();
+      const url = window.location.toString()
       if (url.indexOf("#") > 0 && !hasFound) {
-        if(activeEl) {
-          activeEl.classList.remove(this.activeTabsClassname);
-          this.activeKey = "";
+        if (activeEl) {
+          activeEl.classList.remove(this.activeTabsClassname)
+          this.activeKey = ""
         }
-        const clean_url = url.substring(0, url.indexOf("#"));
-        window.history.replaceState({}, document.title, clean_url);
+        const clean_url = url.substring(0, url.indexOf("#"))
+        window.history.replaceState({}, document.title, clean_url)
       }
     },
     scrollBind(e) {
-      const anchor = e.target.getAttribute("href").replace('#','')
+      const anchor = e.target.getAttribute("href").replace("#", "")
 
-      scrollIt(this.anchorObejects[anchor].x_start);
+      scrollIt(this.anchorObejects[anchor].x_start)
       e.preventDefault()
     },
     initAnchorsList(notBindClick) {
-
       this.$el.querySelectorAll("." + this.tabsClassname).forEach(i => {
-        const anchor = i.getAttribute("href").replace('#','')
-        const anchorEl = document.querySelector('[id="'+anchor+'"]')
-        if(!notBindClick) {
+        const anchor = i.getAttribute("href").replace("#", "")
+        const anchorEl = document.querySelector('[id="' + anchor + '"]')
+        if (!notBindClick) {
           i.addEventListener("click", this.scrollBind)
         }
 
@@ -213,9 +213,8 @@ export default {
       this.calculateScroll()
     },
     debounceInitAnchorsList() {
-
       clearTimeout(this.timeoutDebounceInitAnchorsList)
-      this.timeoutDebounceInitAnchorsList  = setTimeout(() => {
+      this.timeoutDebounceInitAnchorsList = setTimeout(() => {
         this.initAnchorsList(true)
       }, 50)
     }

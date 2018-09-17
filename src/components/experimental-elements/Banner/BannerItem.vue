@@ -1,5 +1,5 @@
 <template>
-  <div class="rt-banner-content" :class="banerClass">
+  <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
     <div class="rt-banner-content__inner">
       <slot />
     </div>
@@ -15,9 +15,26 @@ export default {
   name: "RtBannerItem",
   components: componentsList,
   props: {
-    backgroundColor: String,
-    backgroundImage: String,
-    isWhiteColor: Boolean
+    contentMinHeight: {
+      type: [Number, String],
+      default: null
+    },
+    contentMinWidth: {
+      type: [Number, String],
+      default: null
+    },
+    backgroundColor: {
+      type: String,
+      default: null
+    },
+    backgroundImage: {
+      type: String,
+      default: null
+    },
+    isWhiteColor: {
+      type: Boolean,
+      default: false
+    }
   },
   inject: {
     RtBanners: {}
@@ -28,6 +45,24 @@ export default {
     }
   },
   computed: {
+    banerStyle() {
+      const styles = {}
+      if (this.contentMinWidth) {
+        if (typeof this.contentMinWidth === "string") {
+          styles.minWidth = this.contentMinWidth
+        } else {
+          styles.minWidth = this.contentMinWidth + "px"
+        }
+      }
+      if (this.contentMinHeight) {
+        if (typeof this.contentMinWidth === "string") {
+          styles.minHeight = this.contentMinHeight
+        } else {
+          styles.minHeight = this.contentMinHeight + "px"
+        }
+      }
+      return styles
+    },
     banerClass() {
       const classArray = {}
       if (this.RtBanners.activeIndex === this.index) {

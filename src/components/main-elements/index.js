@@ -45,5 +45,5 @@ export {
   ScrollTabs,
   Tabs,
   TabsNavigationItem,
-  TabsContentItem,
+  TabsContentItem
 }

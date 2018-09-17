@@ -1,7 +1,7 @@
 const gulp = require("gulp")
 const shell = require("gulp-shell")
-const imagemin = require('gulp-imagemin');
-var tiny = require('gulp-tinypng-nokey-plus');
+const imagemin = require("gulp-imagemin")
+var tiny = require("gulp-tinypng-nokey-plus")
 gulp.task(
   "copy",
   shell.task([
@@ -31,30 +31,30 @@ gulp.task(
   ])
 )
 
-gulp.task(
-  "image",()=>{
-      gulp.src('./newImages/*')
-        .pipe(imagemin([
-          imagemin.jpegtran({
-            progressive: true
-          }),
-          imagemin.optipng({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true,
-            multipass: true
-          })
-        ]))
-        .pipe(gulp.dest('tmpImages/'))
-  }
-)
+gulp.task("image", () => {
+  gulp
+    .src("./newImages/*")
+    .pipe(
+      imagemin([
+        imagemin.jpegtran({
+          progressive: true
+        }),
+        imagemin.optipng({
+          optimizationLevel: 5,
+          progressive: true,
+          interlaced: true,
+          multipass: true
+        })
+      ])
+    )
+    .pipe(gulp.dest("tmpImages/"))
+})
 
-gulp.task(
-  "imageTiny",()=>{
-      gulp.src('./tmpImages/*')
-        .pipe(tiny())
-        .pipe(gulp.dest('./dist/'))
-  }
-)
+gulp.task("imageTiny", () => {
+  gulp
+    .src("./tmpImages/*")
+    .pipe(tiny())
+    .pipe(gulp.dest("./dist/"))
+})
 
-gulp.task('optimize',['image','imageTiny'])
+gulp.task("optimize", ["image", "imageTiny"])

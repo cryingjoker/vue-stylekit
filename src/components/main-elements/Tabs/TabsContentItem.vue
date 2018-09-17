@@ -3,31 +3,26 @@ const componentsList = {}
 
 export default {
   name: "RtTabsContentItem",
+  components: componentsList,
   props: {
     name: {
       type: String,
       required: true
     }
   },
-  data(){
+  data() {
     return {
       isActive: false
     }
   },
-  components: componentsList,
 
   inject: {
     RtTabs: {}
   },
-  methods: {
-  },
-  render(h){
-    if(this.name === this.RtTabs.activeName){
-      return (
-        <div className="rt-tabs-content__item">
-          { this.$slots.default }
-        </div>
-      )
+  methods: {},
+  render(h) {
+    if (this.name === this.RtTabs.activeName) {
+      return <div className="rt-tabs-content__item">{this.$slots.default}</div>
     }
     return null
   }
