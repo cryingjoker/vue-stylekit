@@ -22,8 +22,7 @@ export default {
     isDisabled: {
       type: Boolean,
       default: false
-    },
-
+    }
   },
   mounted: function() {
     this.isDisabled = this.$el.disabled

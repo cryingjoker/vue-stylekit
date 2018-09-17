@@ -133,11 +133,8 @@
       -webkit-background-size: cover;
       background-size: cover;
     }
-
-    .@{newAppName}-card--hide-background-on-mobile &{
-      @media (max-width: @mobile-step-size) {
-        background-image: inherit!important;
-      }
+    @media (max-width: @mobile-step-size) {
+      background-image: inherit !important;
     }
   }
   &__content {

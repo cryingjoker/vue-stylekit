@@ -29,7 +29,11 @@ const routes = [
   { path: "/typography", name: "app-typography", component: Typography },
   { path: "/spinner", name: "app-spinner", component: Spinner },
   { path: "/price", name: "app-price", component: Price },
-  { path: "/color-line-text", name: "app-color-line-text", component: ColorLineText },
+  {
+    path: "/color-line-text",
+    name: "app-color-line-text",
+    component: ColorLineText
+  },
   { path: "/cards", name: "app-cards", component: Cards },
   { path: "/tariffs", name: "app-cards", component: Tariff },
   { path: "/scroll-tabs", name: "app-scrollTabs", component: ScrollTabs },
