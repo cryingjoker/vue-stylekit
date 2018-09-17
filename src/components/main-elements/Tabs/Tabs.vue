@@ -43,6 +43,7 @@ export default {
   methods: {
     setActiveTabName(name){
       this.RtTabs.activeName = name;
+      window.dispatchEvent(new Event("resize"));
     },
     addTabName(name){
       if(this.RtTabs.namesArray.length === 0){

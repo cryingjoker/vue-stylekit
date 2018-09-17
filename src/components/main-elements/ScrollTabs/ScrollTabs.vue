@@ -120,7 +120,9 @@ export default {
   data() {
     return {
       activeKey: "",
-      anchorObejects: []
+      anchorObejects: [],
+      timeoutDebounceInitAnchorsList: null,
+      timeoutDebounceCalculateScroll: null,
     }
   },
 
@@ -141,13 +143,13 @@ export default {
 
   methods: {
     debounceCalculateScroll() {
-      let timeout;
-      clearTimeout(timeout)
 
-      timeout = setTimeout(() => {
+      clearTimeout(this.timeoutDebounceCalculateScroll)
+
+      this.timeoutDebounceCalculateScroll = setTimeout(() => {
 
         this.calculateScroll()
-      }, 100)
+      }, 10)
     },
     calculateScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -156,15 +158,16 @@ export default {
       Object.keys(this.anchorObejects).forEach(key => {
         if (
           scrollTop >= this.anchorObejects[key].x_start &&
-          scrollTop < this.anchorObejects[key].x_end
+          scrollTop < this.anchorObejects[key].x_end &&
+          !hasFound
         ) {
           hasFound = true
+
+          if (activeEl && activeEl.getAttribute('href').replace('#','') !== key) {
+            activeEl.classList.remove(this.activeTabsClassname)
+          }
           if (this.activeKey === key) {
             return false
-          }
-
-          if (activeEl && activeEl.classList.contains(key)) {
-            activeEl.classList.remove(this.activeTabsClassname)
           }
           this.activeKey = key
           const nextEl = this.$el.querySelector('[href="#' + key + '"]')
@@ -202,7 +205,7 @@ export default {
 
         if (anchorEl) {
           this.anchorObejects[anchor] = {
-            x_start: anchorEl.offsetTop,
+            x_start: anchorEl.offsetTop - 80,
             x_end: anchorEl.offsetTop + anchorEl.offsetHeight
           }
         }
@@ -210,11 +213,11 @@ export default {
       this.calculateScroll()
     },
     debounceInitAnchorsList() {
-      let timeout
-      clearTimeout(timeout)
-      timeout = setTimeout(() => {
+
+      clearTimeout(this.timeoutDebounceInitAnchorsList)
+      this.timeoutDebounceInitAnchorsList  = setTimeout(() => {
         this.initAnchorsList(true)
-      }, 300)
+      }, 50)
     }
   }
 }
