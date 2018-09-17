@@ -165,10 +165,13 @@
                         <p class="rt-font-promo-title rt-space-bottom15">Устройства</p>
                     </div>
                     <rt-tabs>
-                        <template slot="navigation">rt-tabs
-                            <rt-tabs-nav-item name="Complects">Комплекты</rt-tabs-nav-item>
-                            <rt-tabs-nav-item name="Video">Видеокамеры</rt-tabs-nav-item>
-                            <rt-tabs-nav-item name="Sensors">Датчики</rt-tabs-nav-item>
+
+                        <template slot="navigation">
+                                <div class="rt-col d-flex">
+                                    <rt-tabs-nav-item name="Complects">Комплекты</rt-tabs-nav-item>
+                                    <rt-tabs-nav-item name="Video">Видеокамеры</rt-tabs-nav-item>
+                                    <rt-tabs-nav-item name="Sensors">Датчики</rt-tabs-nav-item>
+                                </div>
                         </template>
                         <template slot="content">
                             <rt-tabs-content-item name="Complects">
