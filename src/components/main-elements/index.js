@@ -18,6 +18,9 @@ import Textarea from "./Textarea/Textarea.vue"
 import TextareaStatic from "./Textarea/TextareaStatic.vue"
 import TextareaWithoutJs from "./Textarea/TextareaWithoutJs.vue"
 import ScrollTabs from "./ScrollTabs/ScrollTabs.vue"
+import Tabs from "./Tabs/Tabs.vue"
+import TabsNavigationItem from "./Tabs/TabsNavigationItem.vue"
+import TabsContentItem from "./Tabs/TabsContentItem.vue"
 
 export {
   Button,
@@ -39,5 +42,8 @@ export {
   Textarea,
   TextareaStatic,
   TextareaWithoutJs,
-  ScrollTabs
+  ScrollTabs,
+  Tabs,
+  TabsNavigationItem,
+  TabsContentItem,
 }
