@@ -39,10 +39,7 @@ const componentsList = {};
 componentsList[Checkbox.name] = Checkbox;
 export default {
   name: 'AppCheckbox',
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {},
+  components: componentsList
 };
 </script>
 
