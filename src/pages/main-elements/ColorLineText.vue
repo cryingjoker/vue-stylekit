@@ -31,9 +31,9 @@
 
 <script>
 export default {
-  name: "AppColorLineText",
+  name: 'AppColorLineText',
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

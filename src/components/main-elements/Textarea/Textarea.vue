@@ -1,6 +1,8 @@
 <template>
   <div class="text-field textarea" :class="textareaClasses">
-    <textarea class="textarea-element" rows="1" @change="inputHandler" @keyup="calculateHelght" @input="calculateHelght" />
+    <textarea class="textarea-element" rows="1" @change="inputHandler" @keyup="calculateHelght"
+              @input="calculateHelght"
+    />
     <div class="text-field__line" />
     <div v-if="!!placeholder" class="floating-placeholder" :class="placeholderClasses">
       {{ placeholder }}
@@ -12,67 +14,82 @@
 
 <script>
 export default {
-  name: "RtTextarea",
+  name: 'RtTextarea',
   props: {
-    disabled: Boolean,
-    placeholder: String,
-    hasError: Boolean,
-    errorMessage: String,
-    value: String
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    placeholder: {
+      type: String,
+      default: null
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    },
+    errorMessage: {
+      default: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: null
+    }
   },
   data: () => ({
-    inputText: "",
+    inputText: '',
     hasInputText: false
   }),
   computed: {
     textareaClasses() {
       return {
-        "textarea--disabled": this.disabled,
-        "textarea--not-empty": this.hasInputText,
-        "text-field--error": this.hasError
-      }
+        'textarea--disabled': this.disabled,
+        'textarea--not-empty': this.hasInputText,
+        'text-field--error': this.hasError
+      };
     },
     placeholderClasses() {
       return {
-        "floating-placeholder--go-top": this.hasInputText
-      }
+        'floating-placeholder--go-top': this.hasInputText
+      };
     }
   },
   watch: {
     localValue(val) {
-      this.$emit("change", val)
+      this.$emit('change', val);
     }
   },
   mounted: function() {
-    this.setValue()
-    this.setDisabled()
+    this.setValue();
+    this.setDisabled();
   },
   methods: {
     setValue() {
-      this.$el.querySelector(".textarea-element").value = this.localValue || ""
-      this.setValueLength()
+      this.$el.querySelector('.textarea-element').value = this.localValue || '';
+      this.setValueLength();
     },
     setDisabled() {
-      this.$el.querySelector(".textarea-element").disabled = Boolean(
+      this.$el.querySelector('.textarea-element').disabled = Boolean(
         this.disabled
-      )
+      );
     },
     setValueLength() {
-      this.hasInputText = this.localValue ? this.localValue.length > 0 : false
+      this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
     },
     inputHandler($event) {
-      this.localValue = this.$el.querySelector(".textarea-element").value
-      this.setValueLength()
+      this.localValue = this.$el.querySelector('.textarea-element').value;
+      this.setValueLength();
     },
     calculateHelght() {
-      const textarea = this.$el.querySelector(".textarea-element")
-      textarea.style.height = ""
-      textarea.style.height = textarea.scrollHeight
+      const textarea = this.$el.querySelector('.textarea-element');
+      textarea.style.height = '';
+      textarea.style.height = textarea.scrollHeight;
     },
     clearInput() {
-      this.localValue = ""
-      this.setValue()
+      this.localValue = '';
+      this.setValue();
     }
   }
-}
+};
 </script>

@@ -1,203 +1,243 @@
 .@{newAppName}-card {
-  border-radius: 10px;
-  display: flex;
-  width: 100%;
-  box-shadow: @card-shadow;
-  background-position-x: center;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: 364px;
-  overflow: hidden;
-  color: @main-color;
-  align-self: stretch;
-
-  &--has-white-color {
-    color: #fff;
-  }
-
-  &--has-smoke {
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      background-color: rgba(0, 0, 0, 0.5);
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 10px;
-    }
-  }
-  &--has-smoke03 {
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      background-color: rgba(0, 0, 0, 0.3);
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 10px;
-    }
-  }
-  &--has-smoke02 {
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      background-color: rgba(0, 0, 0, 0.2);
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 10px;
-    }
-  }
-  &__background {
-    background-color: white;
-    position: absolute;
-    top: -20px;
     border-radius: 10px;
-    bottom: -20px;
-    left: -20px;
-    right: -20px;
-    z-index: 1;
+    display: flex;
+    width: 100%;
+    box-shadow: @card-shadow;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
-    .@{newAppName}-card-black & {
-      background-color: @dark-card-background;
-    }
-    .@{newAppName}-card-purple & {
-      background-color: @b2b-purple-low;
-    }
-    .@{newAppName}-card-red & {
-      background-color: @b2b-red-low;
-    }
-    .@{newAppName}-card-dark-blue & {
-      background-color: @b2b-dark-blue-low;
-    }
-    .@{newAppName}-card-light-blue & {
-      background-color: @b2b-light-blue-low;
-    }
-    .@{newAppName}-card-yellow & {
-      background-color: @b2b-yellow-low;
-    }
-    .@{newAppName}-card-orange & {
-      background-color: @b2b-orange-low;
-    }
-    .@{newAppName}-card-pink & {
-      background-color: @b2b-pink-low;
-    }
-    .@{newAppName}-card-green & {
-      background-color: @b2b-green-low;
-    }
-    &--position-background-top {
-      background-position-x: center;
-      background-position-y: top;
-    }
-    &--position-background-right {
-      background-position-x: calc(100% - 40px);
-      background-position-y: center;
-    }
-    &--position-background-bottom {
-      background-position-x: center;
-      background-position-y: bottom;
-    }
-    &--position-background-left {
-      background-position-x: 40px;
-      background-position-y: center;
-    }
-    &--position-background-top-right {
-      background-position-x: calc(100% - 40px);
-      background-position-y: top;
-    }
-    &--position-background-bottom-right {
-      background-position-x: calc(100% - 40px);
-      background-position-y: bottom;
-    }
-    &--position-background-bottom-left {
-      background-position-x: 40px;
-      background-position-y: bottom;
-    }
-    &--position-background-top-left {
-      background-position-x: 40px;
-      background-position-y: top;
-    }
-    .@{newAppName}-card--has-bg-repeat & {
-      background-repeat: repeat;
-    }
-    .@{newAppName}-card--has-bg-cover & {
-      -webkit-background-size: cover;
-      background-size: cover;
-    }
-    @media (max-width: @mobile-step-size) {
-      background-image: inherit !important;
-    }
-  }
-  &__content {
     position: relative;
-    z-index: 3;
-    min-width: 100%;
-    padding-top: @vertical-space*1.5;
-    padding-bottom: @vertical-space;
-    display: flex;
-    flex-direction: column;
-    min-height: inherit;
-    .rt-col-6 & {
-      min-width: 50%;
+    overflow: hidden;
+    color: @main-color;
+    align-self: stretch;
+    @media (max-width: @mobile-step-size) {
+        flex-direction: column;
     }
-    &--has-offset-top {
-      padding-top: @vertical-space*9;
+    @media (min-width: @mobile-step-size) {
+        min-height: 364px;
     }
-  }
-
-  &__body {
-    flex: 1;
-    padding-left: @horizontal-space;
-    padding-right: @horizontal-space;
-    &--is-static{
-      flex: 0!important;
+    &--has-white-color {
+        color: #fff;
     }
-  }
-  &__header {
-    flex: 1;
-    padding-left: @horizontal-space;
-    padding-right: @horizontal-space;
-  }
-  &__bottom-list{
-    margin-top: @vertical-space*1.5;
-    padding-top: @vertical-space;
-    padding-left: @horizontal-space;
-    padding-right: @horizontal-space;
-    border-top: 2px solid @b2c-dark01;
-  }
-  &-img{
-    max-width: 100%;
-  }
-  &-text {
-    letter-spacing: 0.18px;
-  }
-  &-list{
-    &__item{
-      display: flex;
-      flex-direction: row;
-      &+&{
+    &--has-smoke {
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 10px;
+        }
+    }
+    &--has-smoke03 {
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 10px;
+        }
+    }
+    &--has-smoke02 {
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.2);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 10px;
+        }
+    }
+    &__background {
+        background-color: white;
+        position: absolute;
+        top: -20px;
+        border-radius: 10px;
+        bottom: -20px;
+        left: -20px;
+        right: -20px;
+        z-index: 1;
+        background-position-x: center;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        .@{newAppName}-card-black & {
+            background-color: @dark-card-background;
+        }
+        .@{newAppName}-card-purple & {
+            background-color: @b2b-purple-low;
+        }
+        .@{newAppName}-card-red & {
+            background-color: @b2b-red-low;
+        }
+        .@{newAppName}-card-dark-blue & {
+            background-color: @b2b-dark-blue-low;
+        }
+        .@{newAppName}-card-light-blue & {
+            background-color: @b2b-light-blue-low;
+        }
+        .@{newAppName}-card-yellow & {
+            background-color: @b2b-yellow-low;
+        }
+        .@{newAppName}-card-orange & {
+            background-color: @b2b-orange-low;
+        }
+        .@{newAppName}-card-pink & {
+            background-color: @b2b-pink-low;
+        }
+        .@{newAppName}-card-green & {
+            background-color: @b2b-green-low;
+        }
+        &--position-background-top {
+            background-position-x: center;
+            background-position-y: top;
+        }
+        &--position-background-right {
+            background-position-x: calc(100% - 40px);
+            background-position-y: center;
+        }
+        &--position-background-bottom {
+            background-position-x: center;
+            background-position-y: bottom;
+        }
+        &--position-background-left {
+            background-position-x: 40px;
+            background-position-y: center;
+        }
+        &--position-background-top-right {
+            background-position-x: calc(100% - 40px);
+            background-position-y: top;
+        }
+        &--position-background-bottom-right {
+            background-position-x: calc(100% - 40px);
+            background-position-y: bottom;
+        }
+        &--position-background-bottom-left {
+            background-position-x: 40px;
+            background-position-y: bottom;
+        }
+        &--position-background-top-left {
+            background-position-x: 40px;
+            background-position-y: top;
+        }
+        .@{newAppName}-card--has-bg-repeat & {
+            background-repeat: repeat;
+        }
+        .@{newAppName}-card--has-bg-cover & {
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        @media (max-width: @mobile-step-size) {
+            .rt-card--hide-background-on-mobile & {
+                background-image: inherit !important;
+            }
+        }
+    }
+    &__stand-alone-background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: @mobile-step-size) {
+            position: relative;
+            margin-top: @vertical-space;
+            width: 100% !important;
+            height: 100% !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            max-height: 40vw !important;
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: center center;
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 3;
+        min-width: 100%;
+        padding-top: @vertical-space*1.5;
+        padding-bottom: @vertical-space;
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        @media (max-width: @mobile-step-size) {
+            display: block;
+            flex: 1;
+        }
+        .rt-col-6 & {
+            min-width: 50%;
+        }
+        &--has-offset-top {
+            padding-top: @vertical-space*9;
+        }
+    }
+    &__body {
+        flex: 1;
+        padding-left: @horizontal-space;
+        padding-right: @horizontal-space;
+        &--is-empty {
+            @media (max-width: @mobile-step-size) {
+                display: none;
+            }
+        }
+        &--is-static {
+            flex: 0 !important;
+        }
+    }
+    &__footer {
+        padding-left: @horizontal-space*0.5;
+        padding-right: @horizontal-space*0.5;
+    }
+    &__header {
+        flex: 1;
+        padding-left: @horizontal-space;
+        padding-right: @horizontal-space;
+    }
+    &__bottom-list {
+        margin-top: @vertical-space*1.5;
         padding-top: @vertical-space;
-      }
+        padding-left: @horizontal-space;
+        padding-right: @horizontal-space;
+        border-top: 2px solid @b2c-dark01;
     }
-    &__icon{
-      width: 56px;
+    &-img {
+        max-width: 100%;
     }
-    &__name{
-      flex: 1;
-      padding-left: @horizontal-space*0.5;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    &-text {
+        letter-spacing: 0.18px;
     }
-
-  }
+    &-list {
+        &__item {
+            display: flex;
+            flex-direction: row;
+            &+& {
+                padding-top: @vertical-space;
+            }
+        }
+        &__icon {
+            width: 56px;
+        }
+        &__name {
+            flex: 1;
+            padding-left: @horizontal-space*0.5;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
 }

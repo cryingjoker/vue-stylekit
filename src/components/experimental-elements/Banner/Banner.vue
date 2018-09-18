@@ -21,10 +21,10 @@
       </div>
     </div>
     <div class="rt-banner-image" :style="imageStyle">
-      <svg v-if="!this.isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg">
+      <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0v500h2L185 0z" fill-rule="evenodd" />
       </svg>
-      <svg v-if="!this.isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg">
+      <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0v500h2L185 0z" fill-rule="evenodd" />
       </svg>
     </div>
@@ -33,14 +33,14 @@
 </template>
 
 <script>
-import BannerPaginatorItem from "./BannerPaginatorItem.vue"
+import BannerPaginatorItem from './BannerPaginatorItem.vue';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[BannerPaginatorItem.name] = BannerPaginatorItem
+componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 
 export default {
-  name: "RtBanner",
+  name: 'RtBanner',
   components: componentsList,
   props: {
     contentMinHeight: {
@@ -53,7 +53,7 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: "none"
+      default: 'none'
     },
     isWhiteColor: {
       type: Boolean,
@@ -73,75 +73,75 @@ export default {
         setStartTimer: this.setStartTimer
       },
       isOpenListOnTop: false
-    }
+    };
   },
 
   provide() {
-    const RtBanners = this.RtBanners || {}
-    return { RtBanners }
+    const RtBanners = this.RtBanners || {};
+    return { RtBanners };
   },
   computed: {
     banerClass() {
-      const classArray = {}
-      const activeIndex = this.RtBanners.activeIndex
+      const classArray = {};
+      const activeIndex = this.RtBanners.activeIndex;
       if (this.RtBanners.items[activeIndex]) {
-        if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
+        if (this.RtBanners.items[activeIndex].backgroundColor !== 'none') {
           classArray[
-            "rt-banner--background-" +
+            'rt-banner--background-' +
               this.RtBanners.items[activeIndex].backgroundColor
-          ] = true
+          ] = true;
         }
         if (this.isFullscreenImage) {
-          classArray["rt-banner--full-screen"] = true
+          classArray['rt-banner--full-screen'] = true;
         }
         if (this.RtBanners.items[activeIndex].isWhiteColor) {
-          classArray["rt-banner--color-white"] = true
+          classArray['rt-banner--color-white'] = true;
         }
       }
-      return classArray
+      return classArray;
     },
     bannerStyle() {
-      const styles = {}
+      const styles = {};
       if (this.contentMinHeight) {
-        if (typeof this.contentMinHeight === "string") {
-          styles.minHeight = this.contentMinHeight
+        if (typeof this.contentMinHeight === 'string') {
+          styles.minHeight = this.contentMinHeight;
         } else {
-          styles.minHeight = this.contentMinHeight + "px"
+          styles.minHeight = this.contentMinHeight + 'px';
         }
       }
-      return styles
+      return styles;
     },
     imageStyle() {
-      const styles = {}
-      const activeIndex = this.RtBanners.activeIndex
+      const styles = {};
+      const activeIndex = this.RtBanners.activeIndex;
       if (this.RtBanners.items[activeIndex]) {
         styles.backgroundImage =
-          "url(" + this.RtBanners.items[activeIndex].backgroundImage + ")"
+          'url(' + this.RtBanners.items[activeIndex].backgroundImage + ')';
       }
-      return styles
+      return styles;
     }
   },
   mounted: function() {
     if (this.RtBanners.items.length > 0 && this.RtBanners.items[0].id) {
-      this.setStartTimer()
+      this.setStartTimer();
     }
   },
   methods: {
     setActiveItem(index) {
-      this.RtBanners.activeIndex = index
-      this.setStartTimer()
+      this.RtBanners.activeIndex = index;
+      this.setStartTimer();
     },
     setStartTimer() {
       if (this.RtBanners.timer) {
-        clearTimeout(this.RtBanners.timer)
+        clearTimeout(this.RtBanners.timer);
       }
       this.RtBanners.timer = setTimeout(() => {
         const index =
-          (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length
-        this.RtBanners.activeIndex = index
-        this.setStartTimer()
-      }, this.sleepTime)
+          (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
+        this.RtBanners.activeIndex = index;
+        this.setStartTimer();
+      }, this.sleepTime);
     }
   }
-}
+};
 </script>

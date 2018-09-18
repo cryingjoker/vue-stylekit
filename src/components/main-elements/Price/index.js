@@ -1,3 +1,3 @@
-import Price from "./Price.vue"
+import Price from './Price.vue';
 
-export { Price }
+export { Price };

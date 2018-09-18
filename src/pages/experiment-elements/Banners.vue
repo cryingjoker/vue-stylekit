@@ -35,26 +35,26 @@
 </template>
 
 <script>
-import { Card } from "@/components/complex-elements/Card"
-import { Input, Button, Price } from "@/components/main-elements"
-import { Banner, BannerItem } from "@/components/experimental-elements"
+import { Card } from '@/components/complex-elements/Card';
+import { Input, Button, Price } from '@/components/main-elements';
+import { Banner, BannerItem } from '@/components/experimental-elements';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[Card.name] = Card
-componentsList[Input.name] = Input
-componentsList[Button.name] = Button
-componentsList[Price.name] = Price
-componentsList[Banner.name] = Banner
-componentsList[BannerItem.name] = BannerItem
+componentsList[Card.name] = Card;
+componentsList[Input.name] = Input;
+componentsList[Button.name] = Button;
+componentsList[Price.name] = Price;
+componentsList[Banner.name] = Banner;
+componentsList[BannerItem.name] = BannerItem;
 
 export default {
-  name: "AppBanners",
+  name: 'AppBanners',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

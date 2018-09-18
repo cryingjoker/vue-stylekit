@@ -14,10 +14,8 @@
 </template>
 
 <script>
-const componentsList = {}
-
 export default {
-  name: "RtSpinner",
+  name: 'RtSpinner',
   props: {
     isFixed: Boolean,
     isAbsolute: Boolean,
@@ -28,14 +26,14 @@ export default {
   computed: {
     spinnerClasses() {
       return {
-        "spinner--small-scale": this.scale,
-        "spinner--small": this.isSmall,
-        "spinner--fill": this.fill,
-        "spinner--absolute": this.isAbsolute,
-        "spinner--fixed": this.isFixed
-      }
+        'spinner--small-scale': this.scale,
+        'spinner--small': this.isSmall,
+        'spinner--fill': this.fill,
+        'spinner--absolute': this.isAbsolute,
+        'spinner--fixed': this.isFixed
+      };
     }
   },
   mounted: function() {}
-}
+};
 </script>

@@ -14,19 +14,18 @@
 </template>
 
 <script>
-import { Icons } from "@/components/icons-elements/"
 
-const componentsList = {}
 
-componentsList[Icons.name] = Icons
+const componentsList = {};
+
 
 export default {
-  name: "AppIcons",
+  name: 'AppIcons',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

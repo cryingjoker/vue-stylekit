@@ -83,19 +83,19 @@
 
 
 <script>
-import { Input, InputWithoutJs } from "@/Components/main-elements/Input"
+import { Input, InputWithoutJs } from '@/Components/main-elements/Input';
 
-const componentsList = {}
-componentsList[Input.name] = Input
-componentsList[InputWithoutJs.name] = InputWithoutJs
+const componentsList = {};
+componentsList[Input.name] = Input;
+componentsList[InputWithoutJs.name] = InputWithoutJs;
 export default {
-  name: "AppInput",
+  name: 'AppInput',
   components: componentsList,
   data: () => ({
-    inputModelValue: "test"
+    inputModelValue: 'test',
   }),
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

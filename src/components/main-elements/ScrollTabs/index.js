@@ -1,3 +1,3 @@
-import ScrollTabs from "./ScrollTabs.vue"
+import ScrollTabs from './ScrollTabs.vue';
 
-export { ScrollTabs }
+export { ScrollTabs };

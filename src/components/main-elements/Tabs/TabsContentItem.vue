@@ -1,8 +1,8 @@
 <script type="text/jsx">
-const componentsList = {}
+const componentsList = {};
 
 export default {
-  name: "RtTabsContentItem",
+  name: 'RtTabsContentItem',
   components: componentsList,
   props: {
     name: {
@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       isActive: false
-    }
+    };
   },
 
   inject: {
@@ -22,9 +22,9 @@ export default {
   methods: {},
   render(h) {
     if (this.name === this.RtTabs.activeName) {
-      return <div className="rt-tabs-content__item">{this.$slots.default}</div>
+      return <div className="rt-tabs-content__item">{this.$slots.default}</div>;
     }
-    return null
+    return null;
   }
-}
+};
 </script>

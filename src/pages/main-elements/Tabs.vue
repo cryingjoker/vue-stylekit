@@ -48,17 +48,17 @@
 import {
   Tabs,
   TabsNavigationItem,
-  TabsContentItem
-} from "@/components/main-elements/"
+  TabsContentItem,
+} from '@/components/main-elements/';
 
-const componentsList = {}
-componentsList[Tabs.name] = Tabs
-componentsList[TabsContentItem.name] = TabsContentItem
-componentsList[TabsNavigationItem.name] = TabsNavigationItem
+const componentsList = {};
+componentsList[Tabs.name] = Tabs;
+componentsList[TabsContentItem.name] = TabsContentItem;
+componentsList[TabsNavigationItem.name] = TabsNavigationItem;
 export default {
-  name: "AppTabs",
-  components: componentsList
-}
+  name: 'AppTabs',
+  components: componentsList,
+};
 </script>
 
 <style scoped lang="scss">

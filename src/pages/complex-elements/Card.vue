@@ -357,23 +357,23 @@
 </template>
 
 <script>
-import { Card } from "@/components/complex-elements/Card"
-import { Input, Button, Price } from "@/components/main-elements"
+import { Card } from '@/components/complex-elements/Card';
+import { Input, Button, Price } from '@/components/main-elements';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[Card.name] = Card
-componentsList[Input.name] = Input
-componentsList[Button.name] = Button
-componentsList[Price.name] = Price
+componentsList[Card.name] = Card;
+componentsList[Input.name] = Input;
+componentsList[Button.name] = Button;
+componentsList[Price.name] = Price;
 
 export default {
-  name: "AppButtons",
+  name: 'AppButtons',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

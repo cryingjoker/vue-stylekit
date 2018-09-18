@@ -25,18 +25,18 @@
 
 
 <script>
-import { Spinner } from "@/components/main-elements/Spinner/index"
-import { ButtonComponent } from "@/components/main-elements/Button/index"
-const componentsList = {}
-componentsList[Spinner.name] = Spinner
-componentsList[ButtonComponent.name] = ButtonComponent
+import { Spinner } from '@/components/main-elements/Spinner/index';
+import { ButtonComponent } from '@/components/main-elements/Button/index';
+const componentsList = {};
+componentsList[Spinner.name] = Spinner;
+componentsList[ButtonComponent.name] = ButtonComponent;
 
 export default {
-  name: "AppInput",
+  name: 'AppInput',
   components: componentsList,
   mounted() {},
   created() {},
 
-  methods: {}
-}
+  methods: {},
+};
 </script>

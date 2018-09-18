@@ -25,15 +25,15 @@
 </template>
 
 <script>
-import { Price } from "@/components/main-elements/Price/index"
+import { Price } from '@/components/main-elements/Price/index';
 
-const componentsList = {}
-componentsList[Price.name] = Price
+const componentsList = {};
+componentsList[Price.name] = Price;
 export default {
-  name: "AppTypography",
+  name: 'AppTypography',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

@@ -12,31 +12,40 @@
 </template>
 
 <script>
-import { RippleComponent } from "../Ripple/index"
-const componentsList = {}
-componentsList[RippleComponent.name] = RippleComponent
+import { RippleComponent } from '../Ripple/index';
+const componentsList = {};
+componentsList[RippleComponent.name] = RippleComponent;
 
 export default {
-  name: "RtSwitch",
+  name: 'RtSwitch',
   components: componentsList,
-  props: ["isDisabled", "checked"],
+  props: {
+    isDisabled: {
+      type: Boolean,
+      default: false
+    },
+    checked: {
+      type: Boolean,
+      default: false
+    }
+  },
   mounted: function() {
-    this.setValue()
+    this.setValue();
   },
   methods: {
     setValue() {
-      this.$el.querySelector(".switch-element").checked = Boolean(this.checked)
+      this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
     },
     inputHandler() {
-      this.$emit("change", this.$el.querySelector(".switch-element").checked)
-      this.showWave()
+      this.$emit('change', this.$el.querySelector('.switch-element').checked);
+      this.showWave();
     },
     showWave() {
       this.$refs.ripple.startRipple({
         offsetX: 10,
         offsetY: 10
-      })
+      });
     }
   }
-}
+};
 </script>

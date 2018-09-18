@@ -9,10 +9,10 @@
 </template>
 
 <script>
-const componentsList = {}
+const componentsList = {};
 
 export default {
-  name: "RtBannerItem",
+  name: 'RtBannerItem',
   components: componentsList,
   props: {
     contentMinHeight: {
@@ -20,6 +20,10 @@ export default {
       default: null
     },
     contentMinWidth: {
+      type: [Number, String],
+      default: null
+    },
+    contentMaxWidth: {
       type: [Number, String],
       default: null
     },
@@ -42,51 +46,58 @@ export default {
   data() {
     return {
       id: this._uid
-    }
+    };
   },
   computed: {
     banerStyle() {
-      const styles = {}
+      const styles = {};
       if (this.contentMinWidth) {
-        if (typeof this.contentMinWidth === "string") {
-          styles.minWidth = this.contentMinWidth
+        if (typeof this.contentMinWidth === 'string') {
+          styles.minWidth = this.contentMinWidth;
         } else {
-          styles.minWidth = this.contentMinWidth + "px"
+          styles.minWidth = this.contentMinWidth + 'px';
+        }
+      }
+      if (this.contentMaxWidth) {
+        if (typeof this.contentMaxWidth === 'string') {
+          styles.maxWidth = this.contentMaxWidth;
+        } else {
+          styles.maxWidth = this.contentMaxWidth + 'px';
         }
       }
       if (this.contentMinHeight) {
-        if (typeof this.contentMinWidth === "string") {
-          styles.minHeight = this.contentMinHeight
+        if (typeof this.contentMinWidth === 'string') {
+          styles.minHeight = this.contentMinHeight;
         } else {
-          styles.minHeight = this.contentMinHeight + "px"
+          styles.minHeight = this.contentMinHeight + 'px';
         }
       }
-      return styles
+      return styles;
     },
     banerClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
-        classArray["rt-banner-content--active"] = true
+        classArray['rt-banner-content--active'] = true;
       }
-      return classArray
+      return classArray;
     },
     imageStyle() {
-      const styles = {}
+      const styles = {};
       if (this.backgroundImage) {
-        styles.backgroundImage = "url(" + this.backgroundImage + ")"
+        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
       }
-      return styles
+      return styles;
     }
   },
 
   beforeMount: function() {
-    this.index = this.RtBanners.items.length
+    this.index = this.RtBanners.items.length;
     this.RtBanners.items.push({
       backgroundColor: this.backgroundColor,
       backgroundImage: this.backgroundImage,
       isWhiteColor: this.isWhiteColor,
       id: this.id
-    })
+    });
   }
-}
+};
 </script>

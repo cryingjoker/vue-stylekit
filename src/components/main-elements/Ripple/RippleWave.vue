@@ -6,45 +6,50 @@
 
 <script>
 export default {
-  name: "RtRippleWave",
-  props: ["waveStyle"],
+  name: 'RtRippleWave',
+  props: {
+    waveStyle: {
+      type: Object,
+      default: {}
+    },
+  },
   data: () => ({
-    style: {}
+    style: {},
   }),
   mounted: function() {
     setTimeout(() => {
-      this.setElementStyle(this.$el)
-    }, 10)
+      this.setElementStyle(this.$el);
+    }, 10);
     setTimeout(() => {
-      this.hideWive()
-    }, 400)
+      this.hideWive();
+    }, 400);
   },
   methods: {
-    setElementStyle(el) {
+    setElementStyle() {
       const newStyle = {
         ...this.waveStyle,
-        visability: "visible",
-        transform: "scale(2)"
-      }
-      this.$el.style.cssText += this.getInlineStyle(newStyle)
+        visability: 'visible',
+        transform: 'scale(2)',
+      };
+      this.$el.style.cssText += this.getInlineStyle(newStyle);
     },
     getInlineStyle(styleObj) {
-      let inlineStyle = []
+      let inlineStyle = [];
       Object.keys(styleObj).forEach(key => {
-        inlineStyle.push(key + ":" + styleObj[key])
-      })
-      return inlineStyle.join(";")
+        inlineStyle.push(key + ':' + styleObj[key]);
+      });
+      return inlineStyle.join(';');
     },
-    hideWive(el) {
+    hideWive() {
       setTimeout(() => {
-        this.end()
-      }, 40)
+        this.end();
+      }, 40);
     },
     end() {
-      this.$emit("on-timer-end")
-    }
-  }
-}
+      this.$emit('on-timer-end');
+    },
+  },
+};
 </script>
 <style lang="css">
     .ripple-animation-enter {
@@ -52,6 +57,7 @@ export default {
         transform: scale(.26) translateZ(0);
         transition: all 4000ms ease-out;
     }
+
     .ripple-animation-active {
         transition: all 4000ms ease-out;
     }

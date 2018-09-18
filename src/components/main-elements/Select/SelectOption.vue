@@ -11,53 +11,56 @@ export default {
   inject: {
     RtSelect: {}
   },
-  name: "RtSelectOption",
+  name: 'RtSelectOption',
   props: {
-    value: String
+    value: {
+      type: String,
+      default: null
+    }
   },
   data() {
     return {
-      localValue: this.text ? this.text : "",
+      localValue: this.text ? this.text : '',
       isSelected: false
-    }
+    };
   },
   computed: {
     selectedValue() {
-      return this.RtSelect.selectedValue
+      return this.RtSelect.selectedValue;
     },
     optionClasses() {
       return {
-        "select-option--select": this.isSelected
-      }
+        'select-option--select': this.isSelected
+      };
     }
   },
 
   watch: {
     selectedValue() {
-      this.setIsSelected()
+      this.setIsSelected();
     }
   },
   mounted() {
-    this.setValue()
-    this.setIsSelected()
+    this.setValue();
+    this.setIsSelected();
   },
   methods: {
     setIsSelected() {
-      this.isSelected = this.selectedValue === this.text
+      this.isSelected = this.selectedValue === this.text;
     },
     setValue() {
-      this.text = this.getTextContent()
+      this.text = this.getTextContent();
     },
     setSelection() {
-      this.RtSelect.setValue({ text: this.text, value: this.key })
+      this.RtSelect.setValue({ text: this.text, value: this.key });
     },
     getTextContent() {
       if (this.$el) {
-        return this.$el.textContent.trim()
+        return this.$el.textContent.trim();
       }
-      const slot = this.$slots.default
-      return slot ? slot[0].text.trim() : ""
+      const slot = this.$slots.default;
+      return slot ? slot[0].text.trim() : '';
     }
   }
-}
+};
 </script>

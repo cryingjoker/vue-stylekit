@@ -31,16 +31,16 @@
 
 
 <script>
-import { Checkbox } from "@/components/main-elements/Checkbox"
-const componentsList = {}
-componentsList[Checkbox.name] = Checkbox
+import { Checkbox } from '@/components/main-elements/Checkbox';
+const componentsList = {};
+componentsList[Checkbox.name] = Checkbox;
 export default {
-  name: "AppCheckbox",
+  name: 'AppCheckbox',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

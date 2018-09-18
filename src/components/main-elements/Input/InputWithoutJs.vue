@@ -1,5 +1,5 @@
 <template>
-  <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':this.isWhite}">
+  <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':isWhite}">
     <input type="text" class="input-element" :placeholder="placeholder">
     <div class="text-field__line" />
     <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
@@ -9,25 +9,46 @@
 
 <script>
 export default {
-  name: "RtInputWithoutJs",
+  name: 'RtInputWithoutJs',
   props: {
-    disabled: Boolean,
-    placeholder: String,
-    hasError: Boolean,
-    errorMessage: String,
-    value: String,
-    isWhite: Boolean
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    placeholder: {
+      type: String,
+      default: null
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    },
+    errorMessage: {
+      type: String,
+      default: null
+    },
+    value: {
+      type: String,
+      default: '',
+      required: true
+    },
+    isWhite: {
+      type: Boolean,
+      default: false
+    }
   },
   data: () => ({
-    inputText: ""
+    inputText: ''
   }),
   mounted: function() {
-    this.setDisabled()
+    this.setDisabled();
   },
   methods: {
     setDisabled() {
-      this.$el.querySelector(".input-element").disabled = Boolean(this.disabled)
+      this.$el.querySelector('.input-element').disabled = Boolean(
+        this.disabled
+      );
     }
   }
-}
+};
 </script>

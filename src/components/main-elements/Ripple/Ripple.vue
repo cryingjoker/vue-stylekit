@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import RippleWave from "./RippleWave.vue"
-const componentsList = {}
-componentsList[RippleWave.name] = RippleWave
+import RippleWave from './RippleWave.vue';
+const componentsList = {};
+componentsList[RippleWave.name] = RippleWave;
 export default {
-  name: "RtRipple",
+  name: 'RtRipple',
   components: componentsList,
   props: {
     notRender: {
@@ -30,41 +30,38 @@ export default {
   methods: {
     startRipple($event) {
       if (!this.notRender) {
-        const size = this.getElementSize()
-        const hitPosition = this.getHitPosition($event, size)
-        const sizeNormalize = size + "px"
-        const sizeOffsetNormalize = (-1 * size) / 2 + "px"
+        const size = this.getElementSize();
+        const hitPosition = this.getHitPosition($event, size);
+        const sizeNormalize = size + 'px';
+        const sizeOffsetNormalize = -1 * size / 2 + 'px';
         const hash = Math.random()
           .toString(36)
-          .slice(4)
+          .slice(4);
         this.ripplesList.push({
           waveStyles: {
             width: sizeNormalize,
             height: sizeNormalize,
-            "margin-top": sizeOffsetNormalize,
-            "margin-left": sizeOffsetNormalize,
+            'margin-top': sizeOffsetNormalize,
+            'margin-left': sizeOffsetNormalize,
             ...hitPosition
           },
           key: hash
-        })
+        });
       }
     },
     getElementSize() {
-      const { offsetWidth, offsetHeight } = this.$el
-      return Math.round(Math.max(offsetWidth, offsetHeight, 20))
+      const { offsetWidth, offsetHeight } = this.$el;
+      return Math.round(Math.max(offsetWidth, offsetHeight, 20));
     },
     removeWave(hashKey) {
-      const index = this.ripplesList.findIndex(item => {
-        return item.id === hashKey
-      })
-      this.ripplesList.splice(hashKey, 1)
+      this.ripplesList.splice(hashKey, 1);
     },
-    getHitPosition($event, elementSize) {
+    getHitPosition($event) {
       return {
-        left: $event.offsetX + "px",
-        top: $event.offsetY + "px"
-      }
+        left: $event.offsetX + 'px',
+        top: $event.offsetY + 'px'
+      };
     }
   }
-}
+};
 </script>
