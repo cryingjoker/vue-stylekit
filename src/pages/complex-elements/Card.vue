@@ -19,7 +19,7 @@
                 номер лицевого счёта</p>
               </template>
               <template slot="footer">
-                <rt-button :is-block="true" class="rt-button-white white-wave">Оплатить</rt-button>
+                <rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Оплатить</rt-button>
 
               </template>
             </rt-card>
@@ -77,7 +77,7 @@
             <rt-card
               :background-image="'/example-images/cardBackground3.png'" :is-white-color="true"
               :background-cover="true" :background-smoke="0.3"
-            >
+            > 
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p>
                 <rt-input placeholder="телефон, email или счёт" />
@@ -85,7 +85,7 @@
                 номер лицевого счёта</p>
               </template>
               <template slot="footer">
-                <rt-button :is-block="true" class="rt-button-white white-wave">Оплатить</rt-button>
+                <rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Оплатить</rt-button>
 
               </template>
 
@@ -176,12 +176,8 @@
               <template slot="footer">
                 <p>Выберите свой тип подписки</p>
               </template>
-
             </rt-card>
-
           </div>
-
-
         </div>
         <div class="row">
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
@@ -202,7 +198,7 @@
                 <div class="rt-font-right">
                   <rt-price :value="850" />
                 </div>
-                <rt-button :is-block="true" class="rt-button-white white-wave">Подключить</rt-button>
+                <rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Подключить</rt-button>
               </template>
 
             </rt-card>
@@ -372,7 +368,7 @@ export default {
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
 
