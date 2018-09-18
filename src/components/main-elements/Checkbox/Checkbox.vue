@@ -1,6 +1,6 @@
 <template>
 
-  <label class="cheсkbox">
+  <label class="checkbox">
     <rt-ripple ref="ripple" :not-render="isDisabled" />
     <input type="checkbox" :disabled="isDisabled" class="checkbox-element" @change="showWave">
 

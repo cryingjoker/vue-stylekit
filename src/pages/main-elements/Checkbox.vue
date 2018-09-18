@@ -12,6 +12,9 @@
         <div class="app-row row">
           <div class="rt-col">
             <rt-checkbox>Интернет</rt-checkbox>
+            <div class="rt-space-vertical"><rt-checkbox>Смс</rt-checkbox></div>
+            <rt-checkbox>Голосовая почта</rt-checkbox>
+            <div class="rt-space-vertical"><rt-checkbox>Звонки</rt-checkbox></div>
           </div>
         </div>
         <div class="app-row row">
