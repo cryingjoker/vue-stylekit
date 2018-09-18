@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="pre-component">
     <component :is="textAsVue"></component>
-    <pre>{{this.text}}</pre>
+    <p>{{this.text}}</p>
   </div>
 </template>
 

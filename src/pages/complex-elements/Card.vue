@@ -233,109 +233,57 @@
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-image="'/example-images/cardBackground7.png'"
-              :background-cover="true"
-              :background-opacity="0.7"
-              :background-smoke="0.2"
-              :is-white-color="true"
-              :offset-top="true"
-              :background-color-type="'black'"
-            >
-              <template slot="content">
-                <p class="rt-font-paragraph rt-font-bold">Мобильное ТВ</p>
-                <p class="rt-space-top05">101 тв-канал с контентом на любой вкус в подарок </p>
-              </template>
-              <template slot="footer">
-                <p>Подробнее</p>
-              </template>
-
-            </rt-card>
-
+            <pre-code text='<rt-card background-image="/example-images/cardBackground7.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.2" :is-white-color="true" :offset-top="true" background-color-type="black"
+            ><template slot="content"><p class="rt-font-paragraph rt-font-bold">Мобильное ТВ</p><p class="rt-space-top05">101 тв-канал с контентом на любой вкус в подарок </p></template><template slot="footer"><p>Подробнее</p></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'red'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+            <pre-code text='<rt-card background-color-type="red" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
 
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'orange'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+            <pre-code text='<rt-card background-color-type="orange" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'yellow'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+
+            <pre-code text='<rt-card background-color-type="yellow" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
 
         </div>
         <div class="row">
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'pink'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+            <pre-code text='<rt-card background-color-type="pink" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
 
 
 
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'green'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+            <pre-code text='<rt-card background-color-type="green" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-            <rt-card
-              :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
-            />
+            <pre-code text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
           </div>
 
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
-              :background-blur="5"
-            >
-              <p class="rt-card__label rt-font-paragraph">Оплата услуг</p>
-
-            </rt-card>
+            <pre-code text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true" :background-blur="5"><p class="rt-card__label rt-font-paragraph">Оплата услуг</p></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-repeat="true" :background-image="'/example-images/cardBackground2.png'"
-              :background-smoke="0.3"
-            />
+            <pre-code text='<rt-card :background-repeat="true" background-image="/example-images/cardBackground2.png" :background-smoke="0.3"/>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-image="'/example-images/cardBackground1.png'" :background-smoke="0.5"
-            />
+            <pre-code text='<rt-card background-image="/example-images/cardBackground1.png" :background-smoke="0.5"/>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
-            />
+            <pre-code text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-12 rt-col-md-3 rt-space-top">
-            <rt-card
-              :background-image="'/example-images/cardBackground1.png'" :background-cover="true"
-            />
+            <pre-code text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
+
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code text='<rt-card background-color-type="dark-blue" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
