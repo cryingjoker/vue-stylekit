@@ -161,7 +161,7 @@
             <rt-button class="rt-button-white">Подключить</rt-button>
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <rt-button class="rt-button-transparent" disabled>Подключить</rt-button>
+            <rt-button class="rt-button-transparent">Подключить</rt-button>
           </div>
         </div>
         <div class="app-row row">
@@ -178,10 +178,10 @@
             <rt-button class="rt-button-small rt-button-orange-border">Подключить</rt-button>
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <rt-button class="rt-button-small">Подключить</rt-button>
+            <rt-button class="rt-button-small rt-button-white">Подключить</rt-button>
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <rt-button class="rt-button-small rt-button-transparent" disabled>Подключить</rt-button>
+            <rt-button class="rt-button-small rt-button-transparent">Подключить</rt-button>
           </div>
         </div>
 
