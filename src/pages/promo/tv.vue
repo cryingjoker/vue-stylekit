@@ -27,7 +27,7 @@
       <div class=" rt-container rt-md-space-vertical">
         <div class="rt-col-12">
           <div class="row">
-            <div class="col-6 rt-col-6 rt-col-md-3 rt-space-vertical05  rt-font-md-center">
+            <div class="col-6 rt-col-6 rt-col-md-3  rt-font-md-center flex-start-center">
               <p class="rt-font-paragraph rt-space-left"> Зарегистрируйтесь через мобильное приложение и
               получите пакет
               ТВ-каналов на месяц бесплатно</p>
