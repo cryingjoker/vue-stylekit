@@ -7,10 +7,11 @@
     box-sizing: border-box;
     text-align: center;
     transition-timing-function: ease-in-out;
-    transition-property: background-color;
+    transition-property: background-color, box-shadow;
     transition-duration: 0.4s;
     padding-left: @horizontal-space;
     padding-right: @horizontal-space;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
     &--is-block {
         display: block;
         min-width: 100%;
@@ -63,11 +64,12 @@
     &-orange {
         color: #fff;
         background-color: @b2c-orange-low;
-        &:hover {
-            background-color: @b2b-orange-low;
-        }
         &.@{newAppName}-button-no-wive &:active {
             background-color: @b2b-orange-low;
+        }
+        &:hover,
+        &:focus {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 100px rgba(0, 0, 0, 0.1);
         }
         &[disabled] {
             background-color: @disable-button-color;
@@ -83,9 +85,6 @@
         border: 2px solid @b2c-orange-low;
         background-color: transparent;
         color: @b2c-orange-low;
-        &:hover {
-            background-color: transparent !important;
-        }
         &.@{newAppName}-button-no-wive &:active {
             background-color: transparent !important;
         }
@@ -103,11 +102,12 @@
     &-purple {
         color: #fff;
         background-color: @b2c-purple-low;
-        &:hover {
-            background-color: @b2b-purple-low;
-        }
         &.@{newAppName}-button-no-wive &:active {
             background-color: @b2b-purple-low;
+        }
+        &:hover,
+        &:focus {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 2px 100px rgba(0, 0, 0, 0.2);
         }
         &[disabled] {
             background-color: @disable-button-color;
@@ -123,15 +123,13 @@
         border: 2px solid @b2c-purple-low;
         background-color: transparent;
         color: @b2c-purple-low;
-        &:hover {
-            background-color: transparent !important;
-        }
         .ripple {
             box-shadow: none;
         }
         &[disabled] {
             border-color: @disable-button-color;
         }
+
         .ripple-wave {
             background-color: @b2b-purple-low;
         }
