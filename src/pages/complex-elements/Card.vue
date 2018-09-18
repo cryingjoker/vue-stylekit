@@ -14,7 +14,7 @@
             >
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p>
-                <rt-input placeholder="телефон, email или счёт" />
+                <rt-input value="" placeholder="телефон, email или счёт"/>
                 <p class="rt-space-top05 rt-card-text rt-space-right">Введите номер телефона, email или
                 номер лицевого счёта</p>
               </template>
@@ -77,10 +77,10 @@
             <rt-card
               :background-image="'/example-images/cardBackground3.png'" :is-white-color="true"
               :background-cover="true" :background-smoke="0.3"
-            > 
+            >
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p>
-                <rt-input placeholder="телефон, email или счёт" />
+                <rt-input value="" placeholder="телефон, email или счёт" />
                 <p class="rt-space-top05 rt-card-text rt-space-right">Введите номер телефона, email или
                 номер лицевого счёта</p>
               </template>
@@ -338,11 +338,7 @@
             />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <rt-card
-              :background-color-type="'dark-blue'" :background-blur="5"
-            >
-              <p>Оплата услуг</p>
-            </rt-card>
+            <pre-code text='<rt-card background-color-type="dark-blue" :background-blur="5"><p>Оплата услуг</p></rt-card>'></pre-code>
           </div>
         </div>
 
@@ -355,6 +351,7 @@
 <script>
 import { Card } from '@/components/complex-elements/Card';
 import { Input, Button, Price } from '@/components/main-elements';
+import { PreComponent } from '@/components/dev-components'
 
 const componentsList = {};
 
@@ -362,6 +359,8 @@ componentsList[Card.name] = Card;
 componentsList[Input.name] = Input;
 componentsList[Button.name] = Button;
 componentsList[Price.name] = Price;
+
+componentsList[PreComponent.name] = PreComponent;
 
 export default {
   name: 'AppButtons',
