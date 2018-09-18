@@ -10,7 +10,11 @@
         </div>
         <div class="app-row row">
           <div class="rt-col">
-            <rt-radio-button>Интернет</rt-radio-button>
+            <rt-radio-button name="type">Огонь</rt-radio-button>
+            <div class="rt-space-vertical">
+              <rt-radio-button name="type">Вода</rt-radio-button>
+            </div>
+            <rt-radio-button name="type">Медные трубы</rt-radio-button>
           </div>
         </div>
         <div class="app-row row">
@@ -18,7 +22,9 @@
         </div>
         <div class="app-row row">
           <div class="rt-col">
-            <rt-radio-button :is-disabled="true">Интернет</rt-radio-button>
+            <rt-radio-button name="type" :is-disabled="true">Огонь</rt-radio-button>
+            <rt-radio-button name="type" :is-disabled="true">Вода</rt-radio-button>
+            <rt-radio-button name="type" :is-disabled="true">Медные трубы</rt-radio-button>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <label class="radio-button">
     <rt-ripple ref="ripple" :not-render="isDisabled" />
-    <input type="checkbox" :disabled="isDisabled" class="radio-button-element" @change="showWave">
+    <input :name="name"  type="radio" :disabled="isDisabled" class="radio-button-element" @change="showWave">
     <div class="radio-button-container">
       <slot />
     </div>
@@ -16,6 +16,10 @@ export default {
   name: 'RtRadioButton',
   components: componentsList,
   props: {
+    name: {
+      type: String,
+      default: null
+    },
     isDisabled: {
       type: Boolean,
       default: false
