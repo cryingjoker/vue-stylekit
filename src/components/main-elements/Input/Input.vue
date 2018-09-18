@@ -1,5 +1,5 @@
 <template>
-  <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':this.isWhite}">
+  <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':isWhite}">
     <input autocomplete="off" autocapitalize="off" type="text" class="input-element" @input="inputHandler">
     <div class="text-field__line" />
     <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
@@ -14,49 +14,70 @@
 
 <script>
 export default {
-  name: "RtInput",
+  name: 'RtInput',
   props: {
-    disabled: Boolean,
-    placeholder: String,
-    hasError: Boolean,
-    errorMessage: String,
-    value: String,
-    isWhite: Boolean
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    placeholder: {
+      type: String,
+      default: null
+    },
+    hasError: {
+      type: Boolean,
+      default: false
+    },
+    errorMessage: {
+      type: String,
+      default: null
+    },
+    value: {
+      type: String,
+      default: '',
+      required: true
+    },
+    isWhite: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
-      localValue: this.value ? this.value : "",
+      localValue: this.value ? this.value : '',
       hasInputText: this.value ? this.value.length > 0 : false
-    }
+    };
   },
   watch: {
     localValue(val) {
-      this.$emit("input", val)
+      this.$emit('input', val);
     }
   },
   mounted() {
-    this.setValue()
-    this.setDisabled()
+    this.setValue();
+    this.setDisabled();
   },
   methods: {
     setValue() {
-      this.$el.querySelector(".input-element").value = this.localValue
-      this.setValueLength()
+      this.$el.querySelector('.input-element').value = this.localValue;
+      this.setValueLength();
     },
     setDisabled() {
-      this.$el.querySelector(".input-element").disabled = Boolean(this.disabled)
+      this.$el.querySelector('.input-element').disabled = Boolean(
+        this.disabled
+      );
     },
     setValueLength() {
-      this.hasInputText = this.localValue ? this.localValue.length > 0 : false
+      this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
     },
     inputHandler($event) {
-      this.localValue = this.$el.querySelector(".input-element").value
-      this.setValueLength()
+      this.localValue = this.$el.querySelector('.input-element').value;
+      this.setValueLength();
     },
     clearInput() {
-      this.localValue = ""
-      this.setValue()
+      this.localValue = '';
+      this.setValue();
     }
   }
-}
+};
 </script>

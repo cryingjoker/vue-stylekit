@@ -86,18 +86,18 @@
 import {
   Textarea,
   TextareaStatic,
-  TextareaWithoutJs
-} from "@/components/main-elements/Textarea/index"
+  TextareaWithoutJs,
+} from '@/components/main-elements/Textarea/index';
 
-const componentsList = {}
-componentsList[Textarea.name] = Textarea
-componentsList[TextareaStatic.name] = TextareaStatic
-componentsList[TextareaWithoutJs.name] = TextareaWithoutJs
+const componentsList = {};
+componentsList[Textarea.name] = Textarea;
+componentsList[TextareaStatic.name] = TextareaStatic;
+componentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
 export default {
-  name: "AppTextarea",
+  name: 'AppTextarea',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button class="rt-button rt-button-no-wive" :class="{'rt-button--is-block' : this.isBlock}"
+  <button class="rt-button rt-button-no-wive" :class="{'rt-button--is-block' : isBlock}"
           @click="triggerClick($event)"
   >
     <slot />
@@ -8,14 +8,14 @@
 
 <script>
 export default {
-  name: "RtButtonWithoutRipple",
+  name: 'RtButtonWithoutRipple',
   props: {
     isBlock: Boolean
   },
   methods: {
     triggerClick($event) {
-      this.$emit("click", $event)
+      this.$emit('click', $event);
     }
   }
-}
+};
 </script>

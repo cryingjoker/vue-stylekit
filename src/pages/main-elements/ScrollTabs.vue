@@ -19,15 +19,15 @@
   </div>
 </template>
 <script>
-import { ScrollTabs } from "@/components/main-elements/ScrollTabs/index"
+import { ScrollTabs } from '@/components/main-elements/ScrollTabs/index';
 
-const componentsList = {}
-componentsList[ScrollTabs.name] = ScrollTabs
+const componentsList = {};
+componentsList[ScrollTabs.name] = ScrollTabs;
 export default {
-  name: "AppTypography",
+  name: 'AppTypography',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

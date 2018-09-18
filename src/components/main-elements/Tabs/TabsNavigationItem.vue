@@ -7,10 +7,10 @@
 </template>
 
 <script>
-const componentsList = {}
+const componentsList = {};
 
 export default {
-  name: "RtTabsNavItem",
+  name: 'RtTabsNavItem',
   components: componentsList,
   props: {
     name: {
@@ -21,22 +21,22 @@ export default {
   computed: {
     tabsItemClass() {
       return {
-        "rt-tabs-navigation__item": true,
-        "rt-tabs-navigation__item--is-active":
+        'rt-tabs-navigation__item': true,
+        'rt-tabs-navigation__item--is-active':
           this.name === this.RtTabs.activeName
-      }
+      };
     }
   },
   mounted: function() {
-    this.RtTabs.addTabName(this.name)
+    this.RtTabs.addTabName(this.name);
   },
   inject: {
     RtTabs: {}
   },
   methods: {
     setActiveTabName() {
-      this.RtTabs.setActiveTabName(this.name)
+      this.RtTabs.setActiveTabName(this.name);
     }
   }
-}
+};
 </script>

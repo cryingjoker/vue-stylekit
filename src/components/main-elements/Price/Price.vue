@@ -1,58 +1,77 @@
 <script type="text/jsx">
 export default {
-  name: "RtPrice",
+  name: 'RtPrice',
   props: {
-    value: Number,
-    oldValue: Number,
-    currency: String,
-    timeInterval: String,
-    isOption: Boolean,
-    onlyPrice: Boolean
+    value: {
+      type: Number,
+      default: 0,
+      required: true
+    },
+    oldValue: {
+      type: Number,
+      default: null
+    },
+    currency: {
+      type: String,
+      default: 'руб'
+    },
+    timeInterval: {
+      type: String,
+      default: 'мес'
+    },
+    isOption: {
+      type: Boolean,
+      default: false
+    },
+    onlyPrice: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
       normalizeValue: this.value
-        ? (parseInt(this.value) + "").replace(
+        ? (parseInt(this.value) + '').replace(
             /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            "$1 "
+            '$1 '
           )
         : this.value,
       normalizeOldValue: this.oldValue
-        ? (parseInt(this.oldValue) + "").replace(
+        ? (parseInt(this.oldValue) + '').replace(
             /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            "$1 "
+            '$1 '
           )
         : this.oldValue,
       priceType: (() => {
         if (this.onlyPrice) {
-          return "only-price"
+          return 'only-price';
         }
-        if (typeof this.oldValue === "number") {
-          return "oldval-price"
+        if (this.oldValue) {
+          return 'oldval-price';
         }
         if (this.isOption) {
-          return "option-price"
+          return 'option-price';
         }
-        return "simple-price"
+        return 'simple-price';
       })(),
-      normalizeCurrency: this.currency || "руб.",
-      normalizeTimeInterval: this.timeInterval || "мес."
-    }
+      normalizeCurrency: this.currency,
+      normalizeTimeInterval: this.timeInterval
+    };
   },
   watch: {
     value(val) {
-      this.normalizeValue = this.value ? parseInt(this.value) : this.value
+      this.normalizeValue = this.value ? parseInt(this.value) : this.value;
     },
     oldValue(val) {
       this.normalizeOldValue = this.oldValue
         ? parseInt(this.oldValue)
-        : this.oldValue
+        : this.oldValue;
     }
   },
   mounted: function() {},
   render: function(h) {
     switch (this.priceType) {
-      case "only-price":
+      case 'only-price':
         return (
           <div class="rt-price">
             <div class="rt-price__value">{this.normalizeValue}</div>
@@ -60,9 +79,9 @@ export default {
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
             </div>
           </div>
-        )
-        break
-      case "oldval-price":
+        );
+        break;
+      case 'oldval-price':
         return (
           <div class="rt-price">
             <div class="rt-price__old-value">{this.normalizeOldValue}</div>
@@ -74,8 +93,8 @@ export default {
               </div>
             </div>
           </div>
-        )
-      case "option-price":
+        );
+      case 'option-price':
         return (
           <div class="rt-price">
             <div class="rt-price__opinion">от</div>
@@ -87,7 +106,7 @@ export default {
               </div>
             </div>
           </div>
-        )
+        );
       default:
         return (
           <div class="rt-price">
@@ -99,8 +118,8 @@ export default {
               </div>
             </div>
           </div>
-        )
+        );
     }
   }
-}
+};
 </script>

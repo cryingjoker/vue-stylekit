@@ -28,7 +28,7 @@
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
-                      :content-min-height="631" :content-min-width="'50vw'"
+                      :content-min-height="631"
       >
         <div class="rt-md-space-right2">
           <p class="rt-font-banner-label-bold color-line">
@@ -79,7 +79,7 @@
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone">
                   <div class="phone__container" />
-                  <img src="/images/smartHouse/app.jpg" class="phone__image"></img>
+                  <img src="/images/smartHouse/app.jpg" class="phone__image"/>
                 </div>
               </div>
 
@@ -88,10 +88,10 @@
         </div>
       </div>
     </div>
-    <rt-banner :is-fullscreen-image="true" class="banner-support" content-min-height="100vh" >
+    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
                       background-color="none"
-                      content-min-height="100vh" :content-min-width="'50vw'"
+                      content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <p class="rt-font-banner-label-bold color-line rt-space-top">
@@ -110,14 +110,14 @@
               /><use fill="#FF4F12" xlink:href="#a" /></g></svg>
             </span>
           </p>
-          <div class="rt-space-top2">
+          <div class="rt-space-top2 rt-md-space-top">
             <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
           </div>
         </div>
       </rt-banner-item>
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
-                      content-min-height="100vh" :content-min-width="'50vw'"
+                      content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
 
@@ -144,7 +144,7 @@
       </rt-banner-item>
       <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                       background-color="none"
-                      content-min-height="100vh" :content-min-width="'50vw'"
+                      content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <p class="rt-font-banner-label-bold color-line rt-space-top">
@@ -163,7 +163,7 @@
               /><use fill="#FF4F12" xlink:href="#a" /></g></svg>
             </span>
           </p>
-          <div class="rt-space-top2">
+          <div class="rt-space-top2 rt-md-space-top">
             <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
           </div>
         </div>
@@ -653,7 +653,7 @@
               </rt-tabs-content-item>
               <rt-tabs-content-item name="Video">
                 <div class="row">
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -698,7 +698,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -747,7 +747,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -796,7 +796,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -841,7 +841,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -890,7 +890,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -935,7 +935,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -980,7 +980,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -1024,7 +1024,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -1068,7 +1068,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -1112,7 +1112,7 @@
                       </template>
                     </rt-card>
                   </div>
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -1161,7 +1161,7 @@
               </rt-tabs-content-item>
               <rt-tabs-content-item name="Sensors">
                 <div class="row">
-                  <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
@@ -1244,7 +1244,7 @@
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone phone--is-big">
                   <div class="phone__container" />
-                  <img src="/images/smartHouse/app.jpg" class="phone__image"></img>
+                  <img src="/images/smartHouse/app.jpg" class="phone__image"/>
                 </div>
               </div>
 
@@ -1260,8 +1260,12 @@
             <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
               <rt-card :background-image="'/images/smartHouse/smart-house.png'"
                        :background-position="'right'"
-                       :backgroun-size-widht="260"
-                       :backgroun-size-height="264"
+                       :background-image-stand-alone="true"
+                       backgroun-size-width="33%"
+                       backgroun-size-height="60%"
+                       background-position-right="-5%"
+                       background-position-top="20%"
+
                        :col-size="2"
               >
                 <template slot="footer">
@@ -1279,7 +1283,10 @@
             </div>
             <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
               <rt-card :background-image="'/example-images/cardBackground9.png'"
+                       :background-image-stand-alone="true"
                        :background-position="'bottom-right'"
+                       backgroun-size-width="40%"
+                       backgroun-size-height="100%"
                        :col-size="2"
               >
 
@@ -1374,28 +1381,28 @@ import {
   Price,
   Tabs,
   TabsContentItem,
-  TabsNavigationItem
-} from "@/components/main-elements"
-import { Banner, BannerItem } from "@/components/experimental-elements"
-import { Card } from "@/components/complex-elements/Card"
+  TabsNavigationItem,
+} from '@/components/main-elements';
+import { Banner, BannerItem } from '@/components/experimental-elements';
+import { Card } from '@/components/complex-elements/Card';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[Price.name] = Price
-componentsList[Card.name] = Card
-componentsList[Button.name] = Button
-componentsList[ScrollTabs.name] = ScrollTabs
-componentsList[Banner.name] = Banner
-componentsList[BannerItem.name] = BannerItem
-componentsList[Tabs.name] = Tabs
-componentsList[TabsContentItem.name] = TabsContentItem
-componentsList[TabsNavigationItem.name] = TabsNavigationItem
+componentsList[Price.name] = Price;
+componentsList[Card.name] = Card;
+componentsList[Button.name] = Button;
+componentsList[ScrollTabs.name] = ScrollTabs;
+componentsList[Banner.name] = Banner;
+componentsList[BannerItem.name] = BannerItem;
+componentsList[Tabs.name] = Tabs;
+componentsList[TabsContentItem.name] = TabsContentItem;
+componentsList[TabsNavigationItem.name] = TabsNavigationItem;
 
 export default {
-  name: "AppRadioButton",
+  name: 'AppRadioButton',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

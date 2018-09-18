@@ -1,40 +1,40 @@
-const { VueLoaderPlugin } = require(`vue-loader`)
+const { VueLoaderPlugin } = require(`vue-loader`);
 // const nodeSassMagicImporter = require(`node-sass-magic-importer`);
-const path = require(`path`)
+const path = require(`path`);
 
-const HtmlWebpackPlugin = require(`html-webpack-plugin`)
-const MiniCssExtractPlugin = require(`mini-css-extract-plugin`)
+const HtmlWebpackPlugin = require(`html-webpack-plugin`);
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 // const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
-const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`)
+// const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`)
 
-const env = process.env.NODE_ENV
-const minify = env === `production`
-const sourceMap = env === `development`
-const convert = require("koa-connect")
-const history = require("connect-history-api-fallback")
+const env = process.env.NODE_ENV;
+const minify = env === `production`;
+const sourceMap = env === `development`;
+const convert = require('koa-connect');
+const history = require('connect-history-api-fallback');
 function resolve(dir) {
-  return path.join(__dirname, dir)
+  return path.join(__dirname, dir);
 }
 
 const config = {
   entry: path.join(__dirname, `src`, `index.js`),
   mode: env,
   output: {
-    publicPath: `/`
+    publicPath: `/`,
     // filename: 'bundle.js',
     // path: path.resolve(__dirname, 'public'),
   },
   resolve: {
     alias: {
-      "@": resolve("src")
-    }
+      '@': resolve('src'),
+    },
   },
   optimization: {
     splitChunks: {
       // Must be specified for HtmlWebpackPlugin to work correctly.
       // See: https://github.com/jantimon/html-webpack-plugin/issues/882
-      chunks: `all`
-    }
+      chunks: `all`,
+    },
   },
   devtool: sourceMap ? `cheap-module-eval-source-map` : undefined,
   module: {
@@ -46,58 +46,58 @@ const config = {
             loader: `vue-loader`,
             options: {
               transformAssetUrls: {
-                source: "./src/"
-              }
-            }
-          }
-        ]
+                source: './src/',
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ["css-loader"]
+        use: ['css-loader'],
       },
       {
         test: /\.js$/,
         loader: `babel-loader`,
-        include: [path.join(__dirname, `src`)]
+        include: [path.join(__dirname, `src`)],
       },
       {
         test: /\.less$/,
         use: [
           {
-            loader: `style-loader`
+            loader: `style-loader`,
           },
           {
-            loader: `css-loader`
+            loader: `css-loader`,
           },
           {
-            loader: `less-loader`
-          }
-        ]
+            loader: `less-loader`,
+          },
+        ],
       },
       {
         test: /\.styl/,
         use: [
           {
-            loader: `style-loader`
+            loader: `style-loader`,
           },
           {
-            loader: `css-loader`
+            loader: `css-loader`,
           },
           {
-            loader: `stylus-loader`
-          }
-        ]
+            loader: `stylus-loader`,
+          },
+        ],
       },
       {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
           name: `[name].[hash:20].[ext]`,
-          limit: 10000
-        }
-      }
-    ]
+          limit: 10000,
+        },
+      },
+    ],
   },
   plugins: [
     new VueLoaderPlugin(),
@@ -109,21 +109,21 @@ const config = {
         ? {
             removeComments: true,
             collapseWhitespace: true,
-            removeAttributeQuotes: true
+            removeAttributeQuotes: true,
             // More options:
             // https://github.com/kangax/html-minifier#options-quick-reference
           }
-        : false
-    })
+        : false,
+    }),
   ],
   serve: {
     content: [__dirname],
     add: app => {
-      app.use(convert(history()))
+      app.use(convert(history()));
     },
-    port: 8080
-  }
-}
+    port: 8080,
+  },
+};
 //
 // if (minify) {
 //   config.optimization.minimizer = [
@@ -138,7 +138,7 @@ const config = {
 // }
 
 if (env !== `development`) {
-  config.plugins.push(new MiniCssExtractPlugin())
+  config.plugins.push(new MiniCssExtractPlugin());
 
   // const sassLoader = config.module.rules.find(({ test }) => test.test(`.scss`));
   // Replace the `vue-style-loader` with
@@ -146,4 +146,4 @@ if (env !== `development`) {
   // sassLoader.use[0] = MiniCssExtractPlugin.loader;
 }
 
-module.exports = config
+module.exports = config;

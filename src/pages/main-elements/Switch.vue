@@ -31,16 +31,16 @@
 
 
 <script>
-import { Switch } from "@/components/main-elements/Switch/index"
-const componentsList = {}
-componentsList[Switch.name] = Switch
+import { Switch } from '@/components/main-elements/Switch/index';
+const componentsList = {};
+componentsList[Switch.name] = Switch;
 export default {
-  name: "AppSwitch",
+  name: 'AppSwitch',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

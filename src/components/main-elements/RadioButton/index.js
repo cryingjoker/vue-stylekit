@@ -1,3 +1,3 @@
-import RadioButton from "./RadioButton.vue"
+import RadioButton from './RadioButton.vue';
 
-export { RadioButton }
+export { RadioButton };

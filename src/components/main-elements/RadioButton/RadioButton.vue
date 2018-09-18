@@ -9,21 +9,26 @@
 </template>
 
 <script>
-import { RippleComponent } from "../Ripple/index"
-const componentsList = {}
-componentsList[RippleComponent.name] = RippleComponent
+import { RippleComponent } from '../Ripple/index';
+const componentsList = {};
+componentsList[RippleComponent.name] = RippleComponent;
 export default {
-  name: "RtRadioButton",
+  name: 'RtRadioButton',
   components: componentsList,
-  props: ["isDisabled"],
+  props: {
+    isDisabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   mounted: function() {},
   methods: {
     showWave() {
       this.$refs.ripple.startRipple({
         offsetX: 10,
         offsetY: 10
-      })
+      });
     }
   }
-}
+};
 </script>

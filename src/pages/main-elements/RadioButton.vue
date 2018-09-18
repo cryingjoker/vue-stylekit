@@ -28,15 +28,15 @@
 
 
 <script>
-import { RadioButton } from "@/components/main-elements/RadioButton/index"
+import { RadioButton } from '@/components/main-elements/RadioButton/index';
 
-const componentsList = {}
-componentsList[RadioButton.name] = RadioButton
+const componentsList = {};
+componentsList[RadioButton.name] = RadioButton;
 export default {
-  name: "AppRadioButton",
+  name: 'AppRadioButton',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

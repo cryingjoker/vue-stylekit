@@ -1,8 +1,8 @@
 <template>
-  <div class="app" :class="{'app--hide-scroll' : this.showMenu}">
+  <div class="app" :class="{'app--hide-scroll' : showMenu}">
     <div class="menu-trigger md-d-block d-none" @click="menuTrigger">Menu</div>
 
-    <div class="grid" :class="{'grid--active': this.showGrid}">
+    <div class="grid" :class="{'grid--active': showGrid}">
       <div class="row">
         <div class="rt-col-1 rt-col-md-1 demo-col" />
         <div class="rt-col-1 rt-col-md-1 demo-col" />
@@ -20,7 +20,7 @@
     </div>
     <keep-alive>
 
-      <div class="aside-menu" :class="{'aside-menu--active' : this.showMenu}">
+      <div class="aside-menu" :class="{'aside-menu--active' : showMenu}">
         <rt-switch class="grid-switcher" @change="gridToggle">Grid</rt-switch>
         <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/buttons">
@@ -128,14 +128,14 @@
             <div class="aside-menu__item">
               <router-link class="aside-menu__link" active-class="aside-menu__link--active"
                            to="/promo/tv"
->
+              >
                 Tv
               </router-link>
             </div>
             <div class="aside-menu__item">
               <router-link class="aside-menu__link" active-class="aside-menu__link--active"
                            to="/promo/smart-house"
->
+              >
                 Smart House
               </router-link>
             </div>
@@ -156,48 +156,47 @@
 </template>
 
 <script>
-import { Switch } from "@/Components/main-elements/Switch"
+import { Switch } from '@/Components/main-elements/Switch';
 
-const componentsList = {}
-componentsList[Switch.name] = Switch
+const componentsList = {};
+componentsList[Switch.name] = Switch;
 
 export default {
-  name: "App",
+  name: 'App',
   components: componentsList,
   data: () => ({
     showMenu: false,
     isPromo: false,
-    showGrid: false
+    showGrid: false,
   }),
   watch: {
     $route(to, from) {
-      this.showMenu = false
-    }
+      this.showMenu = false;
+    },
   },
-  mounted() {
-  },
+  mounted() {},
   created() {
-    if (this.$route.path.search("promo") >= 0) {
-      this.isPromo = true
+    if (this.$route.path.search('promo') >= 0) {
+      this.isPromo = true;
     }
   },
   methods: {
     menuTrigger() {
-      this.showMenu = true
+      this.showMenu = true;
     },
     gridToggle() {
-      this.showGrid = !this.showGrid
+      this.showGrid = !this.showGrid;
     },
 
     switchTheme(isChecked) {
-      const bodyClassList = document.body.classList.value.split(" ")
+      const bodyClassList = document.body.classList.value.split(' ');
       if (isChecked) {
-        bodyClassList.push("rt-dark-theme")
+        bodyClassList.push('rt-dark-theme');
       } else {
-        bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1)
+        bodyClassList.splice(bodyClassList.indexOf('rt-dark-theme'), 1);
       }
-      document.body.classList = bodyClassList.join(" ")
-    }
-  }
-}
+      document.body.classList = bodyClassList.join(' ');
+    },
+  },
+};
 </script>

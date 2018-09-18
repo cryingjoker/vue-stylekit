@@ -1,3 +1,3 @@
-import Card from "./Card/Card.vue"
+import Card from './Card/Card.vue';
 
-export { Card }
+export { Card };

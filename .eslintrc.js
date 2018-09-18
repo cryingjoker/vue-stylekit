@@ -7,22 +7,15 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
-  extends: [
-    // "standard",
-    "eslint:recommended",
-    "plugin:vue/recommended",
-    "plugin:prettier/recommended"
-  ],
+  extends: ['prettier', 'prettier/standard', 'plugin:vue/recommended'],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue', 'prettier'],
   // add your custom rules here
   rules: {
     'generator-star-spacing': 'off',
-    "semi": [2, "never"],
-    "no-console": "off",
-    "vue/max-attributes-per-line": "off",
-    "prettier/prettier": ["error", { "semi": false }]
+    semi: [2, 'always'],
+    'no-console': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'v-bind': 'shorthand'
   }
-}
+};

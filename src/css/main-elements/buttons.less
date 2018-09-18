@@ -1,161 +1,148 @@
-.@{newAppName}-button{
-  border-radius: 5px;
-  height: 49px;
-  margin: 0px;
-  font-size: 16px;
-  text-transform: none;
-  box-sizing: border-box;
-  text-align: center;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color;
-  transition-duration: 0.4s;
-  padding-left: @horizontal-space;
-  padding-right: @horizontal-space;
-  &--is-block{
-    display: block;
-    min-width: 100%;
-  }
-  .ripple-wave{
-    background-color: @default-wive-color;
-  }
-  &-with-ripple{
-    padding-left: 0;
-    padding-right: 0;
-    overflow: hidden;
-  }
-  &+&{
-    margin-left: @horizontal-space;
-  }
-  &-vertical{
-    display: table;
-    &+&{
-      margin-left: 0;
-      margin-top: @vertical-space;
-    }
-  }
-  &-small{
-    font-size: 14px;
-    height: 34px;
-    .ripple{
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-    //&:active {
-    //  .ripple-wave {
-    //    transform: scale(30) translateZ(0);
-    //    opacity: 0.27;
-    //  }
-    //}
-  }
-  &-md-small {
-    @media (max-width: @mobile-step-size) {
-      font-size: 14px;
-      height: 34px;
-      .ripple{
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-    }
-  }
-
-
-  &:before{
-    opacity: 0;
-    display: none;
-  }
-  &-orange{
-    color: #fff;
-    background-color: @b2c-orange-low;
-    &:hover{
-      background-color: @b2b-orange-low;
-    }
-
-    &.@{newAppName}-button-no-wive &:active{
-      background-color: @b2b-orange-low;
-    }
-    &[disabled]{
-      background-color: @disable-button-color;
-      .@{newAppName}-dark-theme &{
-        background-color: @disable-button-color-dark-theme;
-      }
+.@{newAppName}-button {
+    border-radius: 5px;
+    height: 49px;
+    margin: 0px;
+    font-size: 16px;
+    text-transform: none;
+    box-sizing: border-box;
+    text-align: center;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    padding-left: @horizontal-space;
+    padding-right: @horizontal-space;
+    &--is-block {
+        display: block;
+        min-width: 100%;
     }
     .ripple-wave {
-      background-color: @color-button-wive-color;
+        background-color: @default-wive-color;
     }
-
-  }
-  &-orange-border{
-    border: 2px solid @b2c-orange-low;
-    background-color: transparent;
-    color: @b2c-orange-low;
-    &:hover{
-      background-color: transparent !important;
+    &-with-ripple {
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
     }
-
-    &.@{newAppName}-button-no-wive &:active {
-      background-color: transparent !important;
+    &+& {
+        margin-left: @horizontal-space;
     }
-    &[disabled]{
-      border-color: @disable-button-color;
-      color: @disable-button-color;
+    &-vertical {
+        display: table;
+        &+& {
+            margin-left: 0;
+            margin-top: @vertical-space;
+        }
     }
-    .ripple-wave {
-      background-color: @b2c-orange-low;
+    &-small {
+        font-size: 14px;
+        height: 34px;
+        .ripple {
+            padding-left: 12px;
+            padding-right: 12px;
+        } //&:active {
+        //  .ripple-wave {
+        //    transform: scale(30) translateZ(0);
+        //    opacity: 0.27;
+        //  }
+        //}
     }
-
-  }
-  &-white {
-    border:2px solid white;
-  }
-  &-purple{
-    color: #fff;
-    background-color: @b2c-purple-low;
-    &:hover{
-        background-color: @b2b-purple-low;
+    &-md-small {
+        @media (max-width: @mobile-step-size) {
+            font-size: 14px;
+            height: 34px;
+            .ripple {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
     }
-
-    &.@{newAppName}-button-no-wive &:active{
-        background-color: @b2b-purple-low;
+    &:before {
+        opacity: 0;
+        display: none;
     }
-
-    &[disabled]{
-      background-color: @disable-button-color;
-      .@{newAppName}-dark-theme &{
-        background-color: @disable-button-color-dark-theme;
-      }
+    &-orange {
+        color: #fff;
+        background-color: @b2c-orange-low;
+        &:hover {
+            background-color: @b2b-orange-low;
+        }
+        &.@{newAppName}-button-no-wive &:active {
+            background-color: @b2b-orange-low;
+        }
+        &[disabled] {
+            background-color: @disable-button-color;
+            .@{newAppName}-dark-theme & {
+                background-color: @disable-button-color-dark-theme;
+            }
+        }
+        .ripple-wave {
+            background-color: @color-button-wive-color;
+        }
     }
-    .ripple-wave {
-      background-color: @color-button-wive-color;
+    &-orange-border {
+        border: 2px solid @b2c-orange-low;
+        background-color: transparent;
+        color: @b2c-orange-low;
+        &:hover {
+            background-color: transparent !important;
+        }
+        &.@{newAppName}-button-no-wive &:active {
+            background-color: transparent !important;
+        }
+        &[disabled] {
+            border-color: @disable-button-color;
+            color: @disable-button-color;
+        }
+        .ripple-wave {
+            background-color: @b2c-orange-low;
+        }
     }
-  }
-  &-purple-border{
-    border:2px solid @b2c-purple-low;
-    background-color: transparent;
-    color: @b2c-purple-low;
-    &:hover {
-      background-color: transparent !important;
+    &-white {
+        border: 2px solid white;
     }
-    .ripple{
-      box-shadow: none;
+    &-purple {
+        color: #fff;
+        background-color: @b2c-purple-low;
+        &:hover {
+            background-color: @b2b-purple-low;
+        }
+        &.@{newAppName}-button-no-wive &:active {
+            background-color: @b2b-purple-low;
+        }
+        &[disabled] {
+            background-color: @disable-button-color;
+            .@{newAppName}-dark-theme & {
+                background-color: @disable-button-color-dark-theme;
+            }
+        }
+        .ripple-wave {
+            background-color: @color-button-wive-color;
+        }
     }
-    &[disabled]{
-      border-color: @disable-button-color;
+    &-purple-border {
+        border: 2px solid @b2c-purple-low;
+        background-color: transparent;
+        color: @b2c-purple-low;
+        &:hover {
+            background-color: transparent !important;
+        }
+        .ripple {
+            box-shadow: none;
+        }
+        &[disabled] {
+            border-color: @disable-button-color;
+        }
+        .ripple-wave {
+            background-color: @b2b-purple-low;
+        }
+        &[disabled] {
+            border-color: @disable-button-color;
+            color: @disable-button-color;
+        }
     }
-
-    .ripple-wave{
-      background-color: @b2b-purple-low;
+    &-transparent {
+        &[disabled] {
+            color: @disable-button-color;
+        }
     }
-    &[disabled]{
-      border-color: @disable-button-color;
-      color: @disable-button-color;
-    }
-
-  }
-  &-transparent{
-    &[disabled]{
-      color: @disable-button-color;
-    }
-  }
 }
-
-

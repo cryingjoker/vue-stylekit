@@ -210,21 +210,23 @@
 <script>
 import {
   ButtonComponent,
-  ButtonWithoutRippleComponent
-} from "@/components/main-elements/Button/index"
+  ButtonWithoutRippleComponent,
+} from '@/components/main-elements/Button/index';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[ButtonComponent.name] = ButtonComponent
-componentsList[ButtonWithoutRippleComponent.name] = ButtonWithoutRippleComponent
+componentsList[ButtonComponent.name] = ButtonComponent;
+componentsList[
+  ButtonWithoutRippleComponent.name
+] = ButtonWithoutRippleComponent;
 
 export default {
-  name: "AppButtons",
+  name: 'AppButtons',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">

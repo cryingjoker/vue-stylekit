@@ -1,5 +1,6 @@
 <template>
   <div class="rt-card" :class="cardClass" :style="cardStyle">
+    <div v-if="backgroundImageStandAlone" class="rt-card__stand-alone-background" :style="standAloneBackgroundStyle" />
     <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass" />
     <div class="rt-card__content" :class="cardContentClass">
       <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
@@ -21,12 +22,13 @@
 </template>
 
 <script>
-const componentsList = {}
+import normalizeVariable from '@/components/mixins/normalizeVariable';
+const componentsList = {};
 
 export default {
-  name: "RtCard",
-
+  name: 'RtCard',
   components: componentsList,
+  mixins: [normalizeVariable],
   props: {
     staticBodyHeight: {
       type: Boolean,
@@ -37,12 +39,16 @@ export default {
       default: false
     },
     backgrounSizeWidth: {
-      type: Number,
-      default: 0
+      type: [Number, String],
+      default: null
+    },
+    backgroundImageStandAlone: {
+      type: Boolean,
+      default: false
     },
     backgrounSizeHeight: {
-      type: Number,
-      default: 0
+      type: [Number, String],
+      default: null
     },
     backgroundColorType: {
       type: String,
@@ -80,6 +86,22 @@ export default {
       type: String, // [top, left, bottom, right, top-left, top-right, bottom-left, bottom-right]
       default: null
     },
+    backgroundPositionTop: {
+      type: [String, Number],
+      default: null
+    },
+    backgroundPositionBottom: {
+      type: [String, Number],
+      default: null
+    },
+    backgroundPositionRight: {
+      type: [String, Number],
+      default: null
+    },
+    backgroundPositionLeft: {
+      type: [String, Number],
+      default: null
+    },
 
     offsetTop: {
       type: Boolean,
@@ -104,81 +126,84 @@ export default {
   },
   computed: {
     cardClass() {
-      const classArray = {}
+      const classArray = {};
 
       if (this.backgroundCover) {
-        classArray["rt-card--has-bg-cover"] = true
+        classArray['rt-card--has-bg-cover'] = true;
       }
       if (this.isWhiteColor) {
-        classArray["rt-card--has-white-color"] = true
+        classArray['rt-card--has-white-color'] = true;
       }
 
       if (this.backgroundColorType) {
-        classArray["rt-card-" + this.backgroundColorType] = true
+        classArray['rt-card-' + this.backgroundColorType] = true;
       }
       if (this.backgroundRepeat) {
-        classArray["rt-card--has-bg-repeat"] = true
+        classArray['rt-card--has-bg-repeat'] = true;
       }
 
       if (this.backgroundSmoke === 0.5) {
-        classArray["rt-card--has-smoke"] = true
+        classArray['rt-card--has-smoke'] = true;
       }
       if (this.backgroundSmoke === 0.3) {
-        classArray["rt-card--has-smoke03"] = true
+        classArray['rt-card--has-smoke03'] = true;
       }
       if (this.backgroundSmoke === 0.2) {
-        classArray["rt-card--has-smoke02"] = true
+        classArray['rt-card--has-smoke02'] = true;
       }
       if (this.hideBackgroundOnMobile) {
-        classArray["rt-card--hide-background-on-mobile"] = true
+        classArray['rt-card--hide-background-on-mobile'] = true;
       }
-      return classArray
+      return classArray;
     },
     cardContentClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.offsetTop) {
-        classArray["rt-card__content--has-offset-top"] = true
+        classArray['rt-card__content--has-offset-top'] = true;
       }
       if (this.colSize) {
         if (this.colSize === 2) {
-          classArray["rt-col-6 rt-col-md-3"] = true
+          classArray['rt-col-6 rt-col-md-3'] = true;
         }
       }
-      return classArray
+      return classArray;
     },
     cardBodyClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.cardBodyHeight !== null) {
-        classArray["flex-center-center flex-fill"] = true
+        classArray['flex-center-center flex-fill'] = true;
+      }
+      if (!this.$slots.content) {
+        classArray['rt-card__body--is-empty'] = true;
       }
       if (this.staticBodyHeight) {
-        classArray["rt-card__body--is-static"] = true
+        classArray['rt-card__body--is-static'] = true;
       }
-      return classArray
+      return classArray;
     },
     cardStyle() {
-      const styles = {}
+      const styles = {};
       if (this.cardHeight !== null) {
-        styles.height = this.cardHeight + "px"
+        styles.height = this.normalizeSize(this.cardHeight);
       }
-      return styles
+      return styles;
     },
     bodyStyle() {
-      const styles = {}
+      const styles = {};
       if (this.cardBodyHeight !== null) {
-        styles.minHeight = this.cardBodyHeight + "px"
+        styles.minHeight = this.normalizeSize(this.cardBodyHeight);
       }
-      return styles
+      return styles;
     },
     cardHeaderStyle() {
-      const styles = {}
-      if (typeof this.cardHeaderHeight !== "undefined") {
-        styles.maxHeight = this.cardHeaderHeight + "px"
+      const styles = {};
+      if (typeof this.cardHeaderHeight !== 'undefined') {
+        styles.maxHeight = this.normalizeSize(this.cardHeaderHeight);
       }
-      return styles
+      return styles;
     },
     cardBackgroundClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.backgroundPosition) {
         if (
           this.backgroundPosition.search(
@@ -186,77 +211,104 @@ export default {
           ) === 0
         ) {
           switch (this.backgroundPosition) {
-            case "top":
-              classArray["rt-card__background--position-background-top"] = true
-              break
-            case "right":
+            case 'top':
+              classArray['rt-card__background--position-background-top'] = true;
+              break;
+            case 'right':
               classArray[
-                "rt-card__background--position-background-right"
-              ] = true
-              break
-            case "bottom":
+                'rt-card__background--position-background-right'
+              ] = true;
+              break;
+            case 'bottom':
               classArray[
-                "rt-card__background--position-background-bottom"
-              ] = true
-              break
-            case "left":
-              classArray["rt-card__background--position-background-left"] = true
-              break
-            case "top-right":
+                'rt-card__background--position-background-bottom'
+              ] = true;
+              break;
+            case 'left':
               classArray[
-                "rt-card__background--position-background-top-right"
-              ] = true
-              break
-            case "bottom-right":
+                'rt-card__background--position-background-left'
+              ] = true;
+              break;
+            case 'top-right':
               classArray[
-                "rt-card__background--position-background-bottom-right"
-              ] = true
-              break
-            case "bottom-left":
+                'rt-card__background--position-background-top-right'
+              ] = true;
+              break;
+            case 'bottom-right':
               classArray[
-                "rt-card__background--position-background-bottom-left"
-              ] = true
-              break
-            case "top-left":
+                'rt-card__background--position-background-bottom-right'
+              ] = true;
+              break;
+            case 'bottom-left':
               classArray[
-                "rt-card__background--position-background-top-left"
-              ] = true
-              break
+                'rt-card__background--position-background-bottom-left'
+              ] = true;
+              break;
+            case 'top-left':
+              classArray[
+                'rt-card__background--position-background-top-left'
+              ] = true;
+              break;
           }
         }
       }
-      return classArray
+      return classArray;
     },
     cardBackgroundStyle() {
-      const styles = {}
-      if (this.backgroundImage) {
-        styles.backgroundImage = "url(" + this.backgroundImage + ")"
+      const styles = {};
+      if (this.backgroundImage && !this.backgroundImageStandAlone) {
+        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
       }
       if (this.backgrounSizeWidth && this.backgrounSizeHeight) {
-        styles.backgroundSize =
-          this.backgrounSizeWidth + "px " + this.backgrounSizeHeight + "px"
+        const backgrounSizeWidth = this.normalizeSize(this.backgrounSizeWidth);
+        const backgrounSizeHeight = this.normalizeSize(
+          this.backgrounSizeHeight
+        );
+        styles.backgroundSize = backgrounSizeWidth + ' ' + backgrounSizeHeight;
       } else {
         if (this.backgrounSizeWidth) {
-          styles.backgroundSize =
-            this.backgrounSizeWidth + "px " + this.backgrounSizeWidth + "px"
+          const backgrounSizeWidth = this.normalizeSize(
+            this.backgrounSizeWidth
+          );
+          styles.backgroundSize = backgrounSizeWidth;
         }
         if (this.backgrounSizeHeight) {
-          styles.backgroundSize =
-            this.backgrounSizeHeight + "px " + this.backgrounSizeHeight + "px"
+          const backgrounSizeHeight = this.normalizeSize(
+            this.backgrounSizeHeight
+          );
+          styles.backgroundSize = backgrounSizeHeight;
         }
       }
       if (this.backgroundBlur) {
-        styles.filter = "blur(" + this.backgroundBlur + "px)"
+        styles.filter = 'blur(' + this.normalizeSize(this.backgroundBlur) + ')';
       }
       if (this.backgroundOpacity) {
-        styles.opacity = this.backgroundOpacity
+        styles.opacity = this.backgroundOpacity;
       }
-      if (this.backgroundSmoke) {
+      return styles;
+    },
+    standAloneBackgroundStyle() {
+      if (this.backgroundImageStandAlone && this.backgroundImage) {
+        const styles = {};
+
+        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
+        styles.width =
+          this.normalizeSize(this.backgrounSizeWidth) ||
+          this.normalizeSize(this.backgrounSizeHeight);
+        styles.height =
+          this.normalizeSize(this.backgrounSizeHeight) ||
+          this.normalizeSize(this.backgrounSizeWidth);
+        styles.top = this.normalizeSize(this.backgroundPositionTop);
+        styles.bottom = this.normalizeSize(this.backgroundPositionBottom);
+        styles.right = this.normalizeSize(this.backgroundPositionRight);
+        styles.left = this.normalizeSize(this.backgroundPositionLeft);
+
+        return styles;
       }
-      return styles
+      return {};
     }
   },
 
   mounted: function() {}
-}
+};
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : this.isBlock}" @click="triggerClick($event)">
+  <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : isBlock}" @click="triggerClick($event)">
     <rt-ripple-without-js>
       <slot />
     </rt-ripple-without-js>
@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import { RippleWihoutJsComponent } from "../Ripple/index"
+import { RippleWihoutJsComponent } from '../Ripple/index';
 
-const componentsList = {}
-componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent
+const componentsList = {};
+componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent;
 export default {
-  name: "RtButtonRippleWithoutJs",
+  name: 'RtButtonRippleWithoutJs',
   components: componentsList,
   props: {
     isBlock: Boolean
@@ -20,8 +20,8 @@ export default {
   mounted: function() {},
   methods: {
     triggerClick($event) {
-      this.$emit("click", $event)
+      this.$emit('click', $event);
     }
   }
-}
+};
 </script>

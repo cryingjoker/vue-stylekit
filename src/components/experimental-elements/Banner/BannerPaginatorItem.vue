@@ -8,9 +8,12 @@
 
 <script>
 export default {
-  name: "RtBannerPaginatorItem",
+  name: 'RtBannerPaginatorItem',
   props: {
-    index: Number
+    index: {
+      type: Number,
+      default: null
+    }
   },
   inject: {
     RtBanners: {}
@@ -20,28 +23,28 @@ export default {
       id: Math.random()
         .toString(36)
         .slice(4)
-    }
+    };
   },
   computed: {
     paginatorItemClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
-        classArray["rt-banner--run-timer"] = true
+        classArray['rt-banner--run-timer'] = true;
       }
-      return classArray
+      return classArray;
     },
     paginatorItemIconClass() {
-      const classArray = {}
+      const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
-        classArray["circle-switcher__item--active"] = true
+        classArray['circle-switcher__item--active'] = true;
       }
-      return classArray
+      return classArray;
     }
   },
   methods: {
     setActiveItem() {
-      this.RtBanners.setActiveItem(this.index)
+      this.RtBanners.setActiveItem(this.index);
     }
   }
-}
+};
 </script>

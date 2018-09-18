@@ -1,74 +1,72 @@
-.switch{
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
-  .ripple-wave{
-    background-color: @b2b-purple-low;
-  }
-  &-element{
-    display: none;
-  }
-  &-container{
-    position: relative;
+.switch {
+    display: inline-block;
+    cursor: pointer;
     user-select: none;
-    padding-left: 49px;
-    &:before{
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 25px;
-      border-radius: 19px;
-      background-color: fade(@switcher-color,20%);
-      left: 0px;
-      top: 0px;
-      transition-timing-function: ease-in-out;
-      transition-property: background-color;
-      transition-duration: 0.1s;
-      .@{newAppName}-dark-theme &{
-        background-color: fade(@b2c-cool-grey, 20%);
-      }
+    .ripple-wave {
+        background-color: @b2b-purple-low;
     }
-    &__circle{
-      content: '';
-      position: absolute;
-      width: 19px;
-      height: 19px;
-      border-radius: 50%;
-      background-color: @switcher-color;
-      left: 3px;
-      top: 3px;
-      transition-timing-function: cubic-bezier(1,.22,.9,.65);
-      transition-property: margin, background-color;
-      transition-duration: 0.1s;
-      .@{newAppName}-dark-theme &{
-        background-color: @b2c-cool-grey;
-      }
-
+    &-element {
+        display: none;
     }
-    .switch-element:checked + &{
-      &:before{
-        background-color: @b2b-purple-hight05;
-        .@{newAppName}-dark-theme &{
-          background-color: @b2c-purple-low02;
+    &-container {
+        position: relative;
+        user-select: none;
+        padding-left: 49px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 25px;
+            border-radius: 19px;
+            background-color: fade(@switcher-color, 20%);
+            left: 0px;
+            top: 0px;
+            transition-timing-function: ease-in-out;
+            transition-property: background-color;
+            transition-duration: 0.1s;
+            .@{newAppName}-dark-theme & {
+                background-color: fade(@b2c-cool-grey, 20%);
+            }
         }
-      }
-      .switch-container__circle{
-        background-color: @b2c-purple-low;
-        margin-left: 15px;
-      }
+        &__circle {
+            content: '';
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background-color: @switcher-color;
+            left: 3px;
+            top: 3px;
+            transition-timing-function: cubic-bezier(1, .22, .9, .65);
+            transition-property: margin, background-color;
+            transition-duration: 0.1s;
+            .@{newAppName}-dark-theme & {
+                background-color: @b2c-cool-grey;
+            }
+        }
+        .switch-element:checked+& {
+            &:before {
+                background-color: @b2b-purple-hight05;
+                .@{newAppName}-dark-theme & {
+                    background-color: @b2c-purple-low02;
+                }
+            }
+            .switch-container__circle {
+                background-color: @b2c-purple-low;
+                margin-left: 15px;
+            }
+        }
+        .switch-element[disabled]+& {
+            color: @disable-button-color;
+            .@{newAppName}-dark-theme & {
+                opacity: 0.3;
+            }
+            &:before {
+                background-color: @form-elements-border-color05;
+            }
+            &__circle {
+                background-color: @form-elements-border-color;
+            }
+        }
     }
-    .switch-element[disabled]+&{
-      color: @disable-button-color;
-      .@{newAppName}-dark-theme &{
-        opacity: 0.3;
-      }
-      &:before{
-        background-color: @form-elements-border-color05;
-      }
-      &__circle{
-        background-color: @form-elements-border-color;
-      }
-    }
-
-  }
 }

@@ -576,19 +576,19 @@
 
 
 <script>
-import { Card } from "@/components/complex-elements/Card"
-import { Button } from "@/components/main-elements"
+import { Card } from '@/components/complex-elements/Card';
+import { Button } from '@/components/main-elements';
 
-const componentsList = {}
+const componentsList = {};
 
-componentsList[Card.name] = Card
-componentsList[Button.name] = Button
+componentsList[Card.name] = Card;
+componentsList[Button.name] = Button;
 
 export default {
-  name: "AppRadioButton",
+  name: 'AppRadioButton',
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>

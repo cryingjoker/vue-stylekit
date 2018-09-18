@@ -21,129 +21,146 @@
 </template>
 <script>
 export default {
-  name: "RtSelectWithoutJs",
+  name: 'RtSelectWithoutJs',
   props: {
-    options: {},
-    hasError: Boolean,
-    label: String,
-    value: String,
-    text: String,
-    disabled: Boolean,
-    errorMessage: String
+    hasError: {
+      type: Boolean,
+      default: false
+    },
+    label: {
+      type: String,
+      default: null
+    },
+    value: {
+      type: String,
+      default: null
+    },
+    text: {
+      type: String,
+      default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    errorMessage: {
+      type: String,
+      default: null
+    }
   },
   data() {
     return {
-      localValue: this.value ? this.value : "",
+      localValue: this.value ? this.value : '',
       RtSelect: {
         setValue: this.setValue,
         selectedValue: this.value
       },
       isOpen: false,
       selected: {}
-    }
+    };
   },
   computed: {
     selectClasses() {
       return {
-        "select--error text-field--error": this.hasError,
-        "select--is-open": this.isOpen,
-        "select--disabled": Boolean(this.disabled)
-      }
+        'select--error text-field--error': this.hasError,
+        'select--is-open': this.isOpen,
+        'select--disabled': Boolean(this.disabled)
+      };
     }
   },
   watch: {
     localValue(val) {
-      this.$emit("input", val)
+      this.$emit('input', val);
     }
   },
   beforeDestroy() {
-    this.removeBindEvents()
+    this.removeBindEvents();
   },
   mounted() {
-    this.setValue(this.text)
+    this.setValue(this.text);
   },
   methods: {
     setValue(value) {
-      this.localValue = value
-      this.RtSelect.selectedValue = value
-      this.emitSelected(this.localValue)
-      this.isOpen = false
-      this.removeBindEvents()
+      this.localValue = value;
+      this.RtSelect.selectedValue = value;
+      this.emitSelected(this.localValue);
+      this.isOpen = false;
+      this.removeBindEvents();
     },
     toggleOpen() {
-      this.isOpen = !this.isOpen
+      this.isOpen = !this.isOpen;
       if (this.isOpen) {
-        this.scrollToSelected()
+        this.scrollToSelected();
         setTimeout(() => {
-          this.bindEvents()
-        })
+          this.bindEvents();
+        });
       } else {
-        this.removeBindEvents()
+        this.removeBindEvents();
       }
     },
     emitSelected(value) {
-      this.$emit("rt-selected", value)
+      this.$emit('rt-selected', value);
     },
     bindMouseEvents(e) {
-      if (!e.target.closest(".select--is-open")) {
-        this.isOpen = false
-        this.removeBindEvents()
+      if (!e.target.closest('.select--is-open')) {
+        this.isOpen = false;
+        this.removeBindEvents();
       }
     },
     bindKeyboardEvents(e) {
       if (e.keyCode && e.keyCode === 27) {
-        this.isOpen = false
-        this.removeBindEvents()
+        this.isOpen = false;
+        this.removeBindEvents();
       } else {
         if (e.keyCode === 38 || e.keyCode === 40) {
-          e.preventDefault()
-          e.stopPropagation()
-          let selectedItem = this.$el.querySelector(".select-option--select")
+          e.preventDefault();
+          e.stopPropagation();
+          let selectedItem = this.$el.querySelector('.select-option--select');
           const focusedItem = this.$el.querySelector(
-            ".select-option__inner:focus"
-          )
-          const optionItems = this.$el.querySelectorAll(".select-option")
-          const optionItemsLength = optionItems.length
+            '.select-option__inner:focus'
+          );
+          const optionItems = this.$el.querySelectorAll('.select-option');
+          const optionItemsLength = optionItems.length;
           if (focusedItem) {
-            selectedItem = focusedItem.parentNode
+            selectedItem = focusedItem.parentNode;
           }
           let selectedIndex = [...selectedItem.parentNode.children].indexOf(
             selectedItem
-          )
+          );
 
           if (e.keyCode === 38) {
             selectedIndex =
-              (selectedIndex - 1 + optionItemsLength) % optionItemsLength
+              (selectedIndex - 1 + optionItemsLength) % optionItemsLength;
           } else {
             selectedIndex =
-              (selectedIndex + 1 + optionItemsLength) % optionItemsLength
+              (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
           }
           optionItems[selectedIndex]
-            .querySelector(".select-option__inner")
-            .focus()
+            .querySelector('.select-option__inner')
+            .focus();
         }
       }
     },
     removeBindEvents() {
-      document.removeEventListener("click", this.bindMouseEvents)
-      document.removeEventListener("keydown", this.bindKeyboardEvents)
+      document.removeEventListener('click', this.bindMouseEvents);
+      document.removeEventListener('keydown', this.bindKeyboardEvents);
     },
     bindEvents() {
-      document.addEventListener("click", this.bindMouseEvents)
-      document.addEventListener("keydown", this.bindKeyboardEvents)
+      document.addEventListener('click', this.bindMouseEvents);
+      document.addEventListener('keydown', this.bindKeyboardEvents);
     },
     scrollToSelected() {
-      const selectElement = this.$el.querySelector(".select-option--select")
+      const selectElement = this.$el.querySelector('.select-option--select');
       if (selectElement) {
         const scrollPosition =
-          selectElement.offsetTop - selectElement.parentNode.offsetTop
-        selectElement.parentNode.scrollTop = scrollPosition
+          selectElement.offsetTop - selectElement.parentNode.offsetTop;
+        selectElement.parentNode.scrollTop = scrollPosition;
       }
     }
   },
   provide() {
-    const RtSelect = this.RtSelect
-    return { RtSelect }
+    const RtSelect = this.RtSelect;
+    return { RtSelect };
   }
-}
+};
 </script>

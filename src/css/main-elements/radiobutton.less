@@ -1,67 +1,62 @@
-.radio-button{
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
-  &-element{
-    display: none;
-  }
-  &-container{
-    position: relative;
-    padding-left: 29px;
+.radio-button {
+    display: inline-block;
+    cursor: pointer;
     user-select: none;
-    &:before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      box-sizing: border-box;
-      border: 2px solid @b2b-cool-gray;
-      position: absolute;
-      background-color: white;
-      left: 0;
-      top: 0;
+    &-element {
+        display: none;
     }
-
-    &:after{
-      content: '';
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      box-sizing: border-box;
-      border-radius: 50%;
-      position: absolute;
-      left: 5px;
-      top: 5px;
-      transition-timing-function: ease-in-out;
-      transition-property: background, opacity, visibility;
-      transition-duration: 0.2s;
-    }
-
-
-    .radio-button-element:checked+&{
-      &:after {
-        background-color: @b2c-purple-low;
-        opacity: 1;
-        visibility: visible;
-
-      }
-    }
-    .radio-button-element[disabled] + &{
-      cursor: default;
-      .@{newAppName}-dark-theme &{
-        opacity: 0.4;
-      }
-      &:before{
-        border-color: @b2b-cool-gray05;
-      }
-      &:after{
-        background-color: @b2b-cool-gray;
-        .@{newAppName}-dark-theme &{
-          background-color: @b2c-dark;
+    &-container {
+        position: relative;
+        padding-left: 29px;
+        user-select: none;
+        &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 2px solid @b2b-cool-gray;
+            position: absolute;
+            background-color: white;
+            left: 0;
+            top: 0;
         }
-      }
-      color: @b2b-cool-gray;
-
+        &:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            transition-timing-function: ease-in-out;
+            transition-property: background, opacity, visibility;
+            transition-duration: 0.2s;
+        }
+        .radio-button-element:checked+& {
+            &:after {
+                background-color: @b2c-purple-low;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .radio-button-element[disabled]+& {
+            cursor: default;
+            .@{newAppName}-dark-theme & {
+                opacity: 0.4;
+            }
+            &:before {
+                border-color: @b2b-cool-gray05;
+            }
+            &:after {
+                background-color: @b2b-cool-gray;
+                .@{newAppName}-dark-theme & {
+                    background-color: @b2c-dark;
+                }
+            }
+            color: @b2b-cool-gray;
+        }
     }
-  }
 }
