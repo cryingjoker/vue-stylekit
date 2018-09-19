@@ -5,7 +5,7 @@
     font-style: normal;
     font-weight: 200;
 }
-
+@import "editor.main.css";
 .app {
     //display: flex;
     //@media (max-width: @mobile-step-size) {
@@ -160,7 +160,75 @@
 .pre-component{
   width: 100%;
   word-break: break-all;
+  &__trigger {
+    opacity: 0.1;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+    z-index: 10;
+    right: -10px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: @main-color03;
+    text-decoration: underline;
+    transition-duration: 0.3s;
+    transition-property: opacity, color, background-color;
+    transition-timing-function: ease-in-out;
+    .@{newAppName}-dark-theme &{
+      background-color: @b2b-white;
+      color: @main-color;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
 }
+.code-editor{
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 30vh;
+  min-height: 400px;
+  z-index: 100;
+  &__icon{
+
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    transition-duration: 0.3s;
+    transition-property: fill;
+    transition-timing-function: ease-in-out;
+    .@{newAppName}-dark-theme &{
+      fill: @b2c-purple-low;
+    }
+  }
+  &__close{
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+    padding: 7.5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: @b2c-purple-low;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    .@{newAppName}-dark-theme &{
+      background-color: #fff;
+    }
+  }
+  &__container{
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .dark-theme-switcher {
     position: absolute;
     top: 20px;
@@ -191,8 +259,7 @@
     bottom: 100vh;
     height: 0;
     transition-duration: 0.3s;
-    transition-property: height,
-    bottom;
+    transition-property: height, bottom;
     transition-timing-function: ease-in-out;
     position: fixed;
     top: 0;
@@ -239,4 +306,33 @@
 
 .app-sticked {
     top: 0;
+}
+
+.monaco-editor .view-line {
+  padding-left: 5px;
+}
+
+/* fix cursor location */
+.monaco-editor .cursor {
+  margin-left: 5px;
+}
+
+/* fix highlighted text selection */
+.monaco-editor .selectionHighlight {
+  margin-left: 5px;
+}
+
+/* fix highlighted brackets */
+.monaco-editor .bracket-match {
+  margin-left: 5px;
+}
+
+/* fix multiline text selection */
+.monaco-editor .cslr.selected-text {
+  margin-left: 5px;
+}
+
+/* fix multiline text selection */
+.monaco-editor .bottom-left-radius, .monaco-editor .top-left-radius {
+  margin-left: 5px;
 }

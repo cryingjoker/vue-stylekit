@@ -156,6 +156,7 @@
 </template>
 
 <script>
+  import { PreComponentEditor } from '@/components/test-components'
 import { Switch } from '@/Components/main-elements/Switch';
 
 const componentsList = {};
@@ -176,6 +177,7 @@ export default {
   },
   mounted() {},
   created() {
+    console.info('PreComponentEditor -->>',PreComponentEditor);
     if (this.$route.path.search('promo') >= 0) {
       this.isPromo = true;
     }
