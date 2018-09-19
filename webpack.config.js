@@ -4,6 +4,8 @@ const path = require(`path`);
 
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+
+const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
 // const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
 // const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`)
 
@@ -101,6 +103,7 @@ const config = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new MonacoWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, `dist`, `index.html`),
       template: path.join(__dirname, `static`, `index.html`),
