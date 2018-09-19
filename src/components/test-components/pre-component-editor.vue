@@ -9,18 +9,18 @@
     window.MonacoEnvironment = {
       getWorkerUrl: function (moduleId, label) {
         if (label === 'json') {
-          return '/vue-stylekit/docs/json.worker.bundle.js';
+          return '/vue-stylekit/docs/json.worker.js';
         }
         if (label === 'css') {
-          return '/vue-stylekit/docs/css.worker.bundle.js';
+          return '/vue-stylekit/docs/css.worker.js';
         }
         if (label === 'html') {
-          return '/vue-stylekit/docs/html.worker.bundle.js';
+          return '/vue-stylekit/docs/html.worker.js';
         }
         if (label === 'typescript' || label === 'javascript') {
-          return '/vue-stylekit/docs/ts.worker.bundle.js';
+          return '/vue-stylekit/docs/ts.worker.js';
         }
-        return '/vue-stylekit/docs/editor.worker.bundle.js';
+        return '/vue-stylekit/docs/editor.worker.js';
       }
     }
   }
