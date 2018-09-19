@@ -177,7 +177,6 @@ export default {
   },
   mounted() {},
   created() {
-    console.info('PreComponentEditor -->>',PreComponentEditor);
     if (this.$route.path.search('promo') >= 0) {
       this.isPromo = true;
     }
