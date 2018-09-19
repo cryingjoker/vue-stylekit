@@ -1,7 +1,7 @@
 
 
 import PreComponent from './PreComponent.vue';
-import PreComponentEditor from './pre-component-editor.vue';
+import PreComponentEditor from './PreComponentEditor.vue';
 
 export {
   PreComponent,

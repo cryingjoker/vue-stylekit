@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-  import PreComponentEditor from '@/components/test-components/pre-component-editor.vue'
+  import PreComponentEditor from '@/components/test-components/PreComponentEditor.vue'
   import { Card } from '@/components/complex-elements/Card';
   import { Input, Button, Price } from '@/components/main-elements';
   const preComponentsList = {};
