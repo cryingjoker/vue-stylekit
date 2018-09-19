@@ -26,7 +26,6 @@
   preComponentsList[Price.name] = Price;
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;
-  console.info('componentsList',componentsList);
   import Vue from 'vue/dist/vue.js';
   export default {
     name: "PreCode",
@@ -45,14 +44,12 @@
     methods:{
       close(){
         this.showCodeEditor = false;
-        console.info('close!')
 
       },
       toggleShow(){
         if(document.querySelector('.code-editor__close')){
           document.querySelector('.code-editor__close').dispatchEvent(new Event('click'));
         }
-        console.info('toggleShow')
         this.showCodeEditor = !this.showCodeEditor;
       }
     },

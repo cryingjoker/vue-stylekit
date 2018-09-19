@@ -42,7 +42,7 @@
         )
       setTimeout(()=>{
         this.editor.getAction("editor.action.formatDocument").run();
-      },100)
+      },300)
     }
   };
 </script>
