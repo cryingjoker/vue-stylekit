@@ -5,23 +5,25 @@
 
 <script>
   import * as monaco from 'monaco-editor';
-  // window.MonacoEnvironment = {
-  //   getWorkerUrl: function (moduleId, label) {
-  //     if (label === 'json') {
-  //       return './json.worker.bundle.js';
-  //     }
-  //     if (label === 'css') {
-  //       return './css.worker.bundle.js';
-  //     }
-  //     if (label === 'html') {
-  //       return './html.worker.bundle.js';
-  //     }
-  //     if (label === 'typescript' || label === 'javascript') {
-  //       return './ts.worker.bundle.js';
-  //     }
-  //     return './editor.worker.bundle.js';
-  //   }
-  // }
+  if(location.href.search('cryingjoker')>0) {
+    window.MonacoEnvironment = {
+      getWorkerUrl: function (moduleId, label) {
+        if (label === 'json') {
+          return '/vue-stylekit/docs/json.worker.bundle.js';
+        }
+        if (label === 'css') {
+          return '/vue-stylekit/docs/css.worker.bundle.js';
+        }
+        if (label === 'html') {
+          return '/vue-stylekit/docs/html.worker.bundle.js';
+        }
+        if (label === 'typescript' || label === 'javascript') {
+          return '/vue-stylekit/docs/ts.worker.bundle.js';
+        }
+        return '/vue-stylekit/docs/editor.worker.bundle.js';
+      }
+    }
+  }
   export default {
     name: "PreCodeEditor",
     props: {
