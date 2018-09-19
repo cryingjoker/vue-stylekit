@@ -48565,13 +48565,13 @@
     };
   }({
     editorWorkerService: "editor.worker.js",
-    css: "css.worker.js",
-    html: "html.worker.js",
-    json: "json.worker.js",
-    typescript: "typescript.worker.js",
-    javascript: "typescript.worker.js",
-    less: "css.worker.js",
-    scss: "css.worker.js"
+    css: "/vue-stylekit/docs/css.worker.js",
+    html: "/vue-stylekit/docs/html.worker.js",
+    json: "/vue-stylekit/docs/json.worker.js",
+    typescript: "/vue-stylekit/docs/typescript.worker.js",
+    javascript: "/vue-stylekit/docs/typescript.worker.js",
+    less: "/vue-stylekit/docs/css.worker.js",
+    scss: "/vue-stylekit/docs/css.worker.js"
   }), n(178), n(179), n(265), n(180), n(253), n(258), n(147), n(257), n(181), n(72), n(182), n(266), n(127), n(251), n(183), n(256), n(134), n(184), n(264), n(185), n(252), n(262), n(186), n(187), n(254), n(261), n(188), n(259), n(189), n(260), n(190), n(191), n(263), n(255), n(125), n(250), n(192), n(133), n(193), n(194), n(118), n(195), e.exports = n(345), n(197), n(198), n(199), n(200), n(201), n(202), n(203), n(204), n(205), n(206), n(207), n(208), n(209), n(210), n(211), n(212), n(213), n(214), n(215), n(216), n(217), n(218), n(219), n(220), n(221), n(222), n(223), n(224), n(225), n(226), n(227), n(228), n(229), n(230), n(231), n(232), n(233), n(234), n(235), n(236), n(237), n(238), n(239), n(240), n(241), n(242), n(243), n(244), n(245), n(196), n(246), n(247), n(248);
 }, function(e, t, n) {
   (function(t, n) {
