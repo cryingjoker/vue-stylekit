@@ -7,14 +7,12 @@
       <div class="app-body">
 
         <div class="app-row row">
-          <rt-spinner />
-          <rt-spinner :is-small="true" />
-          <rt-spinner :scale="true" />
+          <pre-code text='<rt-spinner />'></pre-code>
+          <pre-code text='<rt-spinner :is-small="true" />'></pre-code>
+          <pre-code text='<rt-spinner :scale="true" />'></pre-code>
         </div>
         <div class="app-row row">
-          <rt-button class="rt-button-white">
-            <rt-spinner :fill="true" :is-absolute="true" />Подождите
-          </rt-button>
+          <pre-code text='<rt-button class="rt-button-white" :isFetched="true"></rt-button>'></pre-code>
 
         </div>
 
@@ -25,11 +23,12 @@
 
 
 <script>
-import { Spinner } from '@/main-elements/Spinner/index';
-import { ButtonComponent } from '@/main-elements/Button/index';
+import { Spinner, Button } from '@/main-elements';
+import { PreComponent } from "@/test-components";
 const componentsList = {};
 componentsList[Spinner.name] = Spinner;
-componentsList[ButtonComponent.name] = ButtonComponent;
+componentsList[Button.name] = Button;
+componentsList[PreComponent.name] = PreComponent;
 
 export default {
   name: 'AppInput',

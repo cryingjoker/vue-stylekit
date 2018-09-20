@@ -20,7 +20,7 @@
             <pre-code text='<rt-price :value="69" :is-option="true" currency="€" />'></pre-code>
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
-            <pre-code text='<rt-price :value="750.231" :time-interval="час." />'></pre-code>
+            <pre-code text='<rt-price :value="750.231" time-interval="час." />'></pre-code>
           </div>
         </div>
         <div class="row rt-space-top">
