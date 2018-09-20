@@ -23,7 +23,9 @@
 <script>
   import PreComponentEditor from '@/test-components/PreComponentEditor.vue'
   import { Card } from '@/complex-elements/Card';
-  import { Input, Button, Price, RadioButton, Checkbox, ButtonWithoutRipple } from '@/main-elements';
+  import { Input, Button, Price, RadioButton, Checkbox, ButtonWithoutRipple,Tabs,
+    TabsNavigationItem,
+    TabsContentItem } from '@/main-elements';
   import { Banner, BannerItem } from '@/experimental-elements';
   const preComponentsList = {};
   preComponentsList[RadioButton.name] = RadioButton;
@@ -35,6 +37,9 @@
   preComponentsList[Banner.name] = Banner;
   preComponentsList[BannerItem.name] = BannerItem;
   preComponentsList[ButtonWithoutRipple.name] = ButtonWithoutRipple;
+  preComponentsList[Tabs.name] = Tabs;
+  preComponentsList[TabsNavigationItem.name] = TabsNavigationItem;
+  preComponentsList[TabsContentItem.name] = TabsContentItem;
 
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;

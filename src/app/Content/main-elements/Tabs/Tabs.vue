@@ -45,7 +45,6 @@ export default {
   computed: {
     navigationStyle() {
       const style = {};
-
       if (this.navigationHorizontalPadding) {
         style.paddingLeft = this.navigationHorizontalPadding + 'px';
         style.paddingRight = this.navigationHorizontalPadding + 'px';
