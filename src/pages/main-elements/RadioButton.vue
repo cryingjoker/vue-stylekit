@@ -8,22 +8,9 @@
         <div class="app-row">
           <p class="rt-font-h3">radiobutton</p>
         </div>
-        <div class="app-row row">
-          <div class="rt-col">
-            <div class="rt-space-vertical">
-              testModel = {{testModel}}
-            </div>
-            <rt-radio-button name="type" @change="setTestModel" value="0" :model="testModel">Огонь</rt-radio-button>
-            <div class="rt-space-vertical">
-              <rt-radio-button name="type" @change="setTestModel" value="1" :model="testModel">Вода</rt-radio-button>
-            </div>
-            <rt-radio-button name="type" @change="setTestModel" value="2" :model="testModel">Медные трубы</rt-radio-button>
-          </div>
-        </div>
-        <div class="rt-space-top25">
-        <pre-code text='<div><rt-radio-button name="ttype" value="0" >Огонь</rt-radio-button><div class="rt-space-vertical"><rt-radio-button name="ttype" value="1" >Вода</rt-radio-button></div><rt-radio-button name="ttype" value="2" >Медные трубы</rt-radio-button><div class="app-row row"><p class="rt-font-h3 rt-col">disabled radiobutton</p></div></div>'></pre-code>
-        </div>
+        <div class="rt-space-bottom2">testModel = {{testModel}}</div>
 
+        <pre-code text='<div class="app-row row rt-space-top2"><div class="rt-col"><rt-radio-button name="type" @change="setTestModel" value="0" :model="testModel">Огонь</rt-radio-button><div class="rt-space-vertical"><rt-radio-button name="type" @change="setTestModel" value="1" :model="testModel">Вода</rt-radio-button></div><rt-radio-button name="type" @change="setTestModel" value="2" :model="testModel">Медные трубы</rt-radio-button></div></div>'></pre-code>
         <div class="app-row row">
           <div class="rt-col">
             <rt-radio-button name="type" :is-disabled="true">Огонь</rt-radio-button>

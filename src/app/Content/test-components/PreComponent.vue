@@ -1,7 +1,6 @@
 <template>
   <div class="pre-component">
     <div class="pre-component__trigger" @click="toggleShow" :class="toggleClassObjects">show component</div>
-    <component :is="textAsVue"></component>
     <div class="code-editor" v-if="showCodeEditor">
       <div @click="close()" class="code-editor__close">
         <svg viewBox="0 0 14 14" class="code-editor__icon" xmlns="http://www.w3.org/2000/svg">
@@ -11,8 +10,10 @@
           9.44771525 19,10 L19,17 Z" fill-rule="evenodd" transform="rotate(45 25.778 -.778)"></path>
         </svg>
       </div>
-      <pre-code-editor :code="text"></pre-code-editor>
+
+      <pre-code-editor :code="normalizeCode"></pre-code-editor>
     </div>
+    <div class="wc-inline-render"></div>
   </div>
 </template>
 <script>
@@ -44,11 +45,39 @@
     },
 
     data: () => ({
+      textAsVue: null,
       showCodeEditor: false
     }),
+    mounted(){
+      this.getTextAsVue();
 
+    },
     components: componentsList,
     methods:{
+      getTextAsVue () {
+        if (this.text == null || this.textAsVue)
+          return null;
+        let options = {};
+        for(let key in this.$parent){
+          if(key.search(/(^\$)|(^\_)|(^constructor$)/) === -1){
+            options[key] = this.$parent[key];
+          }
+        }
+        if(this.normalizeCode) {
+          let component = new Vue({
+            el:'.wc-inline-render',
+            name: 'Content',
+            template: this.normalizeCode,
+            data: () => {
+              return options
+            },
+            components: preComponentsList
+          });
+
+
+        }
+
+      },
       close(){
         this.showCodeEditor = false;
 
@@ -61,19 +90,14 @@
       }
     },
     computed: {
+      normalizeCode() {
+        return this.text.replace(/\\\{\\\{/g,'\{\{')
+      },
       toggleClassObjects (){
           const classObject = {};
           if(this.showCodeEditor){
             classObject['pre-component__trigger--is-active'] = true;
           }
-      },
-      textAsVue () {
-        if (this.text == null)
-          return null;
-
-        let component = Vue.compile(this.text);
-        component.components = preComponentsList;
-        return component;
       }
     }
   };
