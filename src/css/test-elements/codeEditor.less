@@ -1,24 +1,31 @@
 .pre-component{
   width: 100%;
+
   word-break: break-all;
   position: relative;
+  box-shadow: 0px 0px 0px 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  transition-timing-function: ease-in-out;
+  &:hover{
+    box-shadow: 0px 0px 0px 1px fade(@b2b-purple-low,20%);
+  }
   &__trigger {
-    opacity: 0.3;
     position: absolute;
     top: -30px;
+    left: -15px;
     cursor: pointer;
     z-index: 10;
-    margin-left: 0px;
-    color: #0dff06;
-    padding: 4px;
+    opacity: 0.3;
     border-radius: 0px;
-    background-color: @main-color;
     transition-duration: 0.3s;
     transition-property: opacity, color, background-color;
     transition-timing-function: ease-in-out;
-    .@{newAppName}-dark-theme &{
-      background-color: #0dff06;
-      color: @main-color;
+
+    &-icon{
+      stroke: @b2b-purple-hight;
+      width: 30px;
+      height: 40px;
     }
     &:hover{
       opacity: 1;
