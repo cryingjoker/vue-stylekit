@@ -1382,9 +1382,9 @@ import {
   Tabs,
   TabsContentItem,
   TabsNavigationItem,
-} from '@/components/main-elements';
-import { Banner, BannerItem } from '@/components/experimental-elements';
-import { Card } from '@/components/complex-elements/Card';
+} from '@/main-elements';
+import { Banner, BannerItem } from '@/experimental-elements';
+import { Card } from '@/complex-elements/Card';
 
 const componentsList = {};
 

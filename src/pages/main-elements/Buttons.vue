@@ -211,7 +211,7 @@
 import {
   ButtonComponent,
   ButtonWithoutRippleComponent,
-} from '@/components/main-elements/Button/index';
+} from '@/main-elements/Button/index';
 
 const componentsList = {};
 

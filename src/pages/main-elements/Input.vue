@@ -83,7 +83,7 @@
 
 
 <script>
-import { Input, InputWithoutJs } from '@/Components/main-elements/Input';
+import { Input, InputWithoutJs } from '@/main-elements/Input';
 
 const componentsList = {};
 componentsList[Input.name] = Input;

@@ -576,8 +576,8 @@
 
 
 <script>
-import { Card } from '@/components/complex-elements/Card';
-import { Button } from '@/components/main-elements';
+import { Card } from '@/complex-elements/Card';
+import { Button } from '@/main-elements';
 
 const componentsList = {};
 

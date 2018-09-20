@@ -2,7 +2,7 @@
 
   <label class="checkbox">
     <rt-ripple ref="ripple" :not-render="isDisabled" />
-    <input type="checkbox" :disabled="isDisabled" class="checkbox-element" @change="showWave">
+    <input type="checkbox" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
 
     <div class="checkbox-container">
       <slot />
@@ -22,9 +22,17 @@ export default {
     isDisabled: {
       type: Boolean,
       default: false
+    },
+    checked: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
+    changeInput($event){
+      this.$emit('input', $event.target.checked);
+      this.showWave()
+    },
     showWave() {
       this.$refs.ripple.startRipple({
         offsetX: 10,

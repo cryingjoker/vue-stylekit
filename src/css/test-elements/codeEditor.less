@@ -1,23 +1,23 @@
 .pre-component{
   width: 100%;
   word-break: break-all;
+  position: relative;
   &__trigger {
-    opacity: 0.1;
+    opacity: 0.3;
     position: absolute;
-    top: -10px;
+    top: -30px;
     cursor: pointer;
     z-index: 10;
-    right: -10px;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: @main-color03;
-    text-decoration: underline;
+    margin-left: 0px;
+    color: #0dff06;
+    padding: 4px;
+    border-radius: 0px;
+    background-color: @main-color;
     transition-duration: 0.3s;
     transition-property: opacity, color, background-color;
     transition-timing-function: ease-in-out;
     .@{newAppName}-dark-theme &{
-      background-color: @b2b-white;
+      background-color: #0dff06;
       color: @main-color;
     }
     &:hover{

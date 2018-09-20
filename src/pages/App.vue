@@ -156,8 +156,8 @@
 </template>
 
 <script>
-  import { PreComponentEditor } from '@/components/test-components'
-import { Switch } from '@/Components/main-elements/Switch';
+  import { PreComponentEditor } from '@/test-components'
+import { Switch } from '@/main-elements/Switch';
 
 const componentsList = {};
 componentsList[Switch.name] = Switch;
