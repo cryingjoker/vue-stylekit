@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { Price } from '@/components/main-elements/Price/index';
+import { Price } from '@/main-elements/Price/index';
 
 const componentsList = {};
 componentsList[Price.name] = Price;

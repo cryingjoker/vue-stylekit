@@ -16,14 +16,21 @@
   </div>
 </template>
 <script>
-  import PreComponentEditor from '@/components/test-components/pre-component-editor.vue'
-  import { Card } from '@/components/complex-elements/Card';
-  import { Input, Button, Price } from '@/components/main-elements';
+  import PreComponentEditor from '@/test-components/PreComponentEditor.vue'
+  import { Card } from '@/complex-elements/Card';
+  import { Input, Button, Price, RadioButton, Checkbox } from '@/main-elements';
+  import { Banner, BannerItem } from '@/experimental-elements';
+
   const preComponentsList = {};
+  preComponentsList[RadioButton.name] = RadioButton;
+  preComponentsList[Checkbox.name] = Checkbox;
   preComponentsList[Card.name] = Card;
   preComponentsList[Input.name] = Input;
   preComponentsList[Button.name] = Button;
   preComponentsList[Price.name] = Price;
+  preComponentsList[Banner.name] = Banner;
+  preComponentsList[BannerItem.name] = BannerItem;
+
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;
   import Vue from 'vue/dist/vue.js';
@@ -63,6 +70,7 @@
       textAsVue () {
         if (this.text == null)
           return null;
+
         let component = Vue.compile(this.text);
         component.components = preComponentsList;
         return component;

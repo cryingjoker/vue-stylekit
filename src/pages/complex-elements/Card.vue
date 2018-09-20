@@ -105,9 +105,9 @@
   </div>
 </template>
 <script>
-import { Card } from '@/components/complex-elements/Card';
-import { Input, Button, Price } from '@/components/main-elements';
-import { PreComponent } from '@/components/test-components'
+import { Card } from '@/complex-elements/Card';
+import { Input, Button, Price } from '@/main-elements';
+import { PreComponent } from '@/test-components'
 
 const componentsList = {};
 

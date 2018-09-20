@@ -95,7 +95,7 @@ import {
   Select,
   SelectOption,
   SelectWithoutJs,
-} from '@/components/main-elements/Select/index';
+} from '@/main-elements/Select/index';
 
 const componentsList = {};
 componentsList[Select.name] = Select;

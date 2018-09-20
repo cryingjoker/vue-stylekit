@@ -28,7 +28,7 @@ const config = {
   },
   resolve: {
     alias: {
-      '@': resolve('src'),
+      '@': resolve('src/app/Content'),
     },
   },
   optimization: {

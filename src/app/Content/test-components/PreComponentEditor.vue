@@ -24,6 +24,7 @@
       }
     }
   }
+
   export default {
     name: "PreCodeEditor",
     props: {
@@ -60,7 +61,9 @@
         }
         )
       setTimeout(()=>{
-        this.editor.getAction("editor.action.formatDocument").run();
+        this.editor.getAction("editor.action.formatDocument")
+        this.editor.getAction("editor.action.formatDocument").run().then(()=>{
+        });
       },300)
     }
   };

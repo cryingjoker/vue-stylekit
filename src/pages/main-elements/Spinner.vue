@@ -25,8 +25,8 @@
 
 
 <script>
-import { Spinner } from '@/components/main-elements/Spinner/index';
-import { ButtonComponent } from '@/components/main-elements/Button/index';
+import { Spinner } from '@/main-elements/Spinner/index';
+import { ButtonComponent } from '@/main-elements/Button/index';
 const componentsList = {};
 componentsList[Spinner.name] = Spinner;
 componentsList[ButtonComponent.name] = ButtonComponent;

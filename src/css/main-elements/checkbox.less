@@ -46,6 +46,11 @@
                 background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{b2c-purple-low}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
             }
         }
+      .checkbox-element[disabled]:checked+&{
+        &:after {
+          opacity: 0.4;
+        }
+      }
         .checkbox-element[disabled]+& {
             cursor: default;
             .@{newAppName}-dark-theme & {
@@ -59,8 +64,9 @@
                 opacity: 1;
                 visibility: visible;
             }
+
             &:after {
-                opacity: 0.4;
+                opacity: 0;
                 visibility: visible;
                 background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"> <path d="M1 4.17l3.30782609 3.17L10.5930435 1" stroke="@{dark-theme-background}" stroke-width="3" fill="none" fill-rule="evenodd"/> </svg>');
             }

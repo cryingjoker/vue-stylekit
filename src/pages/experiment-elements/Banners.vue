@@ -10,37 +10,21 @@
         </div>
       </div>
     </div>
-    <rt-banner>
-      <rt-banner-item background-image="/example-images/banerBackground1.jpg"
-                      :is-white-color="true"
-                      background-color="dark-state"
-      >
-        <p class="rt-font-banner-label">Виртуальная <br>  телефония</p>
-        <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира 
-        <br> и ни одного пропущенного звонка клиента</p>
-        <rt-button class="rt-button-orange">Подробнее</rt-button>
-      </rt-banner-item>
-      <rt-banner-item
-        background-color="yellow"
-        background-image="/example-images/banerBackground2.jpg"
-      >
-        <p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p>
-        <p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малого бизнеса </p>
-        <rt-button class="rt-button-orange">Подробнее</rt-button>
-      </rt-banner-item>
-    </rt-banner>
+    <pre-code text='<rt-banner><rt-banner-item background-image="/example-images/banerBackground1.jpg":is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br>  телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item><rt-banner-item background-color="yellow"background-image="/example-images/banerBackground2.jpg"><p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p><p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малого бизнеса </p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
+
 
 
   </div>
 </template>
 
 <script>
-import { Card } from '@/components/complex-elements/Card';
-import { Input, Button, Price } from '@/components/main-elements';
-import { Banner, BannerItem } from '@/components/experimental-elements';
+import { Card } from '@/complex-elements/Card';
+import { Input, Button, Price } from '@/main-elements';
+import { Banner, BannerItem } from '@/experimental-elements';
+import { PreComponent } from '@/test-components'
 
 const componentsList = {};
-
+componentsList[PreComponent.name] = PreComponent;
 componentsList[Card.name] = Card;
 componentsList[Input.name] = Input;
 componentsList[Button.name] = Button;

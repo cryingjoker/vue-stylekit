@@ -1,22 +1,21 @@
-import Buttons from '@/pages/main-elements/Buttons.vue';
-import Checkbox from '@/pages/main-elements/Checkbox.vue';
-import RadioButton from '@/pages/main-elements/RadioButton.vue';
-import Input from '@/pages/main-elements/Input.vue';
-import Select from '@/pages/main-elements/Select.vue';
-import Typography from '@/pages/main-elements/Typography.vue';
-import Textarea from '@/pages/main-elements/Textarea.vue';
-import Switch from '@/pages/main-elements/Switch.vue';
-import ColorLineText from '@/pages/main-elements/ColorLineText.vue';
-import Spinner from '@/pages/main-elements/Spinner.vue';
-import Price from '@/pages/main-elements/Price.vue';
-import Cards from '@/pages/complex-elements/Card.vue';
-import Tariff from '@/pages/complex-elements/Tariff.vue';
-import Icons from '@/pages/icons-elements/Icons.vue';
-import Banners from '@/pages/experiment-elements/Banners.vue';
-import PromoTv from '@/pages/promo/tv.vue';
-import smartHouse from '@/pages/promo/smart-house.vue';
-import ScrollTabs from '@/pages/main-elements/ScrollTabs.vue';
-import Tabs from '@/pages/main-elements/Tabs.vue';
+import Buttons from '../pages/main-elements/Buttons.vue';
+import Checkbox from '../pages/main-elements/Checkbox.vue';
+import RadioButton from '../pages/main-elements/RadioButton.vue';
+import Input from '../pages/main-elements/Input.vue';
+import Select from '../pages/main-elements/Select.vue';
+import Typography from '../pages/main-elements/Typography.vue';
+import Textarea from '../pages/main-elements/Textarea.vue';
+import Switch from '../pages/main-elements/Switch.vue';
+import ColorLineText from '../pages/main-elements/ColorLineText.vue';
+import Spinner from '../pages/main-elements/Spinner.vue';
+import Price from '../pages/main-elements/Price.vue';
+import Cards from '../pages/complex-elements/Card.vue';
+import Icons from '../pages/icons-elements/Icons.vue';
+import Banners from '../pages/experiment-elements/Banners.vue';
+import PromoTv from '../pages/promo/tv.vue';
+import smartHouse from '../pages/promo/smart-house.vue';
+import ScrollTabs from '../pages/main-elements/ScrollTabs.vue';
+import Tabs from '../pages/main-elements/Tabs.vue';
 
 const routes = [
   { path: '/buttons', name: 'app-buttons', component: Buttons },
@@ -35,7 +34,6 @@ const routes = [
     component: ColorLineText,
   },
   { path: '/cards', name: 'app-cards', component: Cards },
-  { path: '/tariffs', name: 'app-cards', component: Tariff },
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
