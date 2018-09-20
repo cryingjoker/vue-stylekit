@@ -17,17 +17,12 @@
           <p class="rt-font-h3 rt-col">disabled checkbox</p>
         </div>
         <div class="app-row row">
-
           <pre-code
             text='<div class="rt-col"><div class="rt-space-vertical"><rt-checkbox :is-disabled="true">Интернет</rt-checkbox></div><rt-checkbox :is-disabled="true" :checked="true">Интернет</rt-checkbox></div>'></pre-code>
-
-
         </div>
       </div>
     </div>
   </div>
-
-
 </template>
 
 

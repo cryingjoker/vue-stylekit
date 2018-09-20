@@ -1,6 +1,10 @@
 <template>
   <div class="pre-component">
-    <div class="pre-component__trigger" @click="toggleShow" :class="toggleClassObjects">show component</div>
+    <div class="pre-component__trigger" @click="toggleShow" :class="toggleClassObjects">
+      <svg viewBox="0 0 1024 768" class="pre-component__trigger-icon">
+        <path d="M288 384L128 544l160 160 64-64-96-96 96-96-64-64zm128 64l96 96-96 96 64 64 160-160-160-160-64 64zM576 64H0v896h768V256L576 64zm128 832H64V128h448l192 192v576z"/>
+      </svg>
+    </div>
     <div class="code-editor" v-if="showCodeEditor">
       <div @click="close()" class="code-editor__close">
         <svg viewBox="0 0 14 14" class="code-editor__icon" xmlns="http://www.w3.org/2000/svg">
@@ -19,9 +23,10 @@
 <script>
   import PreComponentEditor from '@/test-components/PreComponentEditor.vue'
   import { Card } from '@/complex-elements/Card';
-  import { Input, Button, Price, RadioButton, Checkbox } from '@/main-elements';
+  import { Input, Button, Price, RadioButton, Checkbox, ButtonWithoutRipple,Tabs,
+    TabsNavigationItem, Spinner,
+    TabsContentItem } from '@/main-elements';
   import { Banner, BannerItem } from '@/experimental-elements';
-
   const preComponentsList = {};
   preComponentsList[RadioButton.name] = RadioButton;
   preComponentsList[Checkbox.name] = Checkbox;
@@ -31,6 +36,11 @@
   preComponentsList[Price.name] = Price;
   preComponentsList[Banner.name] = Banner;
   preComponentsList[BannerItem.name] = BannerItem;
+  preComponentsList[ButtonWithoutRipple.name] = ButtonWithoutRipple;
+  preComponentsList[Tabs.name] = Tabs;
+  preComponentsList[TabsNavigationItem.name] = TabsNavigationItem;
+  preComponentsList[TabsContentItem.name] = TabsContentItem;
+  preComponentsList[Spinner.name] = Spinner;
 
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;
