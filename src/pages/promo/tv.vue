@@ -392,7 +392,7 @@
             <div class="col-3 rt-col-3 rt-col-md-3 rt-font-md-center">
               <div class="rt-space-left">
                 <div class="rt-space-bottom">
-                  <svg width="76" height="76" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <linearGradient id="linearGradientA2" x1="100%" y1="0%" x2="-9.14756812%"
                                       y2="100%"
@@ -432,7 +432,7 @@
             <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
               <div class="rt-space-left">
                 <div class="rt-space-bottom">
-                  <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                       <path d="M75 37.5C75 58.21091 58.210909 75 37.5 75S0 58.21091 0 37.5 16.789091 0 37.5 0 75 16.78909 75 37.5"
                             fill="#ECA756"
@@ -465,7 +465,7 @@
             <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
               <div class="rt-space-left">
                 <div class="rt-space-bottom">
-                  <svg width="76" height="76" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                       <path d="M75.1524643 38.3046786c0 20.6122857-16.7091429 37.3214285-37.3214286 37.3214285-20.6122857 0-37.32142856-16.7091428-37.32142856-37.3214285C.50960714 17.6923929 17.21875.98325 37.8310357.98325s37.3214286 16.7091429 37.3214286 37.3214286"
                             fill="#C9C2E7"
@@ -487,7 +487,7 @@
             <div class="col-3 rt-col-3 rt-col-md-3 rt-space-md-horizontal rt-md-space-top2 rt-font-md-center">
               <div class="rt-space-left">
                 <div class="rt-space-bottom">
-                  <svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <linearGradient id="linearGradientA1" x1="8.10211047%" y1="0%" x2="50%"
                                       y2="100%"
