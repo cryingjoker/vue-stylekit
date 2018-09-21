@@ -70,6 +70,7 @@ export default {
   },
   mounted: function() {},
   render: function(h) {
+    console.info('this.priceType',this.priceType,this.normalizeCurrency);
     switch (this.priceType) {
       case 'only-price':
         return (
