@@ -15,7 +15,7 @@
         </svg>
       </div>
 
-      <pre-code-editor :code="normalizeCode"></pre-code-editor>
+      <pre-code-editor @change="changeComponentCode($event)" :code="normalizeCode"></pre-code-editor>
     </div>
     <div class="wc-inline-render"></div>
   </div>
@@ -55,17 +55,43 @@
     },
 
     data: () => ({
-      textAsVue: null,
+      component: null,
+      localCode: '',
       showCodeEditor: false
     }),
-    mounted(){
-      this.getTextAsVue();
 
+    watch: {
+      text(value) {
+        this.localCode = this.changeComponentCode(this.text);
+      }
+    },
+
+    mounted(){
+
+      this.localCode = this.text
+      this.getTextAsVue();
     },
     components: componentsList,
     methods:{
+
+      changeComponentCode(code){
+        if(code) {
+
+          this.localCode = code;
+
+          // this.getTextAsVue ();
+          // console.info(this.component.$el,this.component.$destroy,this.component._isBeingDestroyed);
+
+          this.component.$destroy();
+          this.component.$el.outerHTML = '<div class="wc-inline-render"></div>';
+          this.getTextAsVue ();
+
+        }
+
+      },
       getTextAsVue () {
-        if (this.text == null || this.textAsVue)
+
+        if (this.localCode == null)
           return null;
         let options = {};
         for(let key in this.$parent){
@@ -74,7 +100,7 @@
           }
         }
         if(this.normalizeCode) {
-          let component = new Vue({
+          this.component = new Vue({
             el:'.wc-inline-render',
             name: 'Content',
             template: this.normalizeCode,
@@ -83,8 +109,6 @@
             },
             components: preComponentsList
           });
-
-
         }
 
       },
@@ -101,7 +125,7 @@
     },
     computed: {
       normalizeCode() {
-        return this.text.replace(/\\\{\\\{/g,'\{\{')
+        return this.localCode ? this.localCode : this.text.replace(/\\\{\\\{/g,'\{\{');
       },
       toggleClassObjects (){
           const classObject = {};
