@@ -21,6 +21,7 @@ import ScrollTabs from './ScrollTabs/ScrollTabs.vue';
 import Tabs from './Tabs/Tabs.vue';
 import TabsNavigationItem from './Tabs/TabsNavigationItem.vue';
 import TabsContentItem from './Tabs/TabsContentItem.vue';
+import Annotation from './Annotation/Annotation.vue';
 
 export {
   Button,
@@ -45,5 +46,6 @@ export {
   ScrollTabs,
   Tabs,
   TabsNavigationItem,
-  TabsContentItem
+  TabsContentItem,
+  Annotation
 };
