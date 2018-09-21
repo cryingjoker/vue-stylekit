@@ -4,6 +4,7 @@
 </template>
 
 <script>
+  import debounce from 'lodash.debounce';
   import * as monaco from 'monaco-editor';
   if(location.href.search('cryingjoker')>0) {
     window.MonacoEnvironment = {
@@ -60,9 +61,18 @@
           }
         }
         )
+
+      const debouncedModelContentChange = debounce((changes) => {
+        this.$emit('change',this.editor.getValue())
+      }, 100);
+      this.editor.onDidChangeModelContent((changes)=>{
+        debouncedModelContentChange();
+      })
+
       setTimeout(()=>{
-        this.editor.getAction("editor.action.formatDocument")
+        this.editor.getAction("editor.action.formatDocument");
         this.editor.getAction("editor.action.formatDocument").run().then(()=>{
+
         });
       },300)
     }
