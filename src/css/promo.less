@@ -60,7 +60,8 @@
             justify-content: space-between;
             flex-wrap: wrap;
             &__item {
-                min-width: 11.7%;
+                min-width: 12%;
+                box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
                 align-self: center;
@@ -70,10 +71,97 @@
                 @media (max-width: @mobile-step-size) {
                     min-width: 20%;
                 }
+                  &--perii{
+                    min-width: 100px;
+                    .promo-tv-channel__img{
+                      width: 57px;
+                    }
+                  }
+                  &--sts{
+                    .promo-tv-channel__img{
+                      width: 130px;
+                    }
+                  }
+                  &--tnt{
+                    .promo-tv-channel__img{
+                      width: 105px;
+                    }
+                  }
+                  &--friday{
+                    //min-width: 110px;
+                    .promo-tv-channel__img{
+                      width: 100px;
+                    }
+                  }
+                  &--carusel{
+                    .promo-tv-channel__img{
+                      width: 120px;
+                    }
+                  }
+                  &--ntv{
+                    .promo-tv-channel__img{
+                      width: 88px;
+                    }
+                  }
+                  &--rossia1{
+                    .promo-tv-channel__img{
+                      width: 105px;
+                    }
+                  }
+                  &--muztv{
+                    .promo-tv-channel__img{
+                      width: 71px;
+                    }
+                  }
+                  &--sony{
+                    .promo-tv-channel__img{
+                      width: 75px;
+                    }
+                  }
+                  &--paramount{
+                    .promo-tv-channel__img{
+                      width: 85px;
+                    }
+                  }
+                  &--romans{
+                    min-height: 110px;
+                    .promo-tv-channel__img{
+                      width: 70px;
+                    }
+                  }
+                  &--mtv{
+                    min-width: 130px;
+                    .promo-tv-channel__img{
+                      width: 75px;
+                    }
+                  }
+                  &--matchtv{
+                    .promo-tv-channel__img{
+                      width: 80px;
+                    }
+                  }
+                  &--rentv{
+                    .promo-tv-channel__img{
+                      width: 65px;
+                    }
+                  }
+                  &--tvc{
+                    .promo-tv-channel__img{
+                      width: 70px;
+                    }
+                  }
+                  &--tv3{
+                    .promo-tv-channel__img{
+                      width: 70px;
+                    }
+                  }
+
             }
             &__img {
                 width: fit-content;
                 height: auto;
+                max-width: 100%;
+
             }
         }
     }

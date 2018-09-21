@@ -128,57 +128,53 @@
             </div>
           </div>
           <div class="promo-tv-channel rt-space-top05 rt-space-horizontal">
-            <div class="promo-tv-channel__item" style="min-width: 70px"><img class="promo-tv-channel__img"
-                                                                             src="/images/icon1.png" alt=""
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--perii"><img class="promo-tv-channel__img" src="/images/channels/perii.svg" alt=""
             >
             </div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon2.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sts"><img class="promo-tv-channel__img" src="/images/channels/sts.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon3.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tnt"><img class="promo-tv-channel__img" src="/images/channels/tnt.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon4.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--friday"><img class="promo-tv-channel__img" src="/images/channels/friday.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon5.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--carusel"><img class="promo-tv-channel__img" src="/images/channels/carusel.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon6.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--ntv"><img class="promo-tv-channel__img" src="/images/channels/ntv.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon7.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rossia1"><img class="promo-tv-channel__img" src="/images/channels/rossia1.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon8.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--muztv"><img class="promo-tv-channel__img" src="/images/channels/muztv.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon9.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sony"><img class="promo-tv-channel__img" src="/images/channels/sony.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon10.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--paramount"><img class="promo-tv-channel__img" src="/images/channels/paramount.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item" style="min-width: 180px"><img class="promo-tv-channel__img"
-                                                                              src="/images/icon11.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--romans"><img class="promo-tv-channel__img" src="/images/channels/romans.svg"
                                                                               alt=""
             >
             </div>
-            <div class="promo-tv-channel__item" style="min-width: 80px;"><img class="promo-tv-channel__img"
-                                                                              src="/images/icon12.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--mtv"><img class="promo-tv-channel__img" src="/images/channels/mtv.svg"
                                                                               alt=""
             ></div>
-            <div class="promo-tv-channel__item" style="min-width: 80px;"><img class="promo-tv-channel__img"
-                                                                              src="/images/icon13.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--matchtv"><img class="promo-tv-channel__img" src="/images/channels/matchtv.svg"
                                                                               alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon14.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rentv"><img class="promo-tv-channel__img" src="/images/channels/rentv.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon15.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tvc"><img class="promo-tv-channel__img" src="/images/channels/tvc.svg"
                                                      alt=""
             ></div>
-            <div class="promo-tv-channel__item"><img class="promo-tv-channel__img" src="/images/icon16.png"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tv3"><img class="promo-tv-channel__img" src="/images/channels/tv3.svg"
                                                      alt=""
             ></div>
           </div>
