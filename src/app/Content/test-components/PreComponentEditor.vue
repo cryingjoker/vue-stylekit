@@ -35,6 +35,13 @@
       }
     },
     mounted(){
+      if(monaco.languages.html.htmlDefaults.options) {
+        monaco.languages.html.htmlDefaults.options.format.wrapLineLength = 20;
+        monaco.languages.html.htmlDefaults.options.format.insertSpaces = true;
+      }
+      monaco.languages.html.htmlDefaults.indentInnerHtml = true;
+
+      console.info('monaco',monaco.languages.html.htmlDefaults.options.formatю);
       this.editor =
         monaco.editor.create(this.$refs.editor
           , {
