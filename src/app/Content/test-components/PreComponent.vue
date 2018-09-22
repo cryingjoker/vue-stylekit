@@ -35,7 +35,7 @@
   for(let key in experimentalElements){
     preComponentsList[experimentalElements[key].name] = experimentalElements[key];
   }
-  console.info("preComponentsList",preComponentsList);
+
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;
   import Vue from 'vue/dist/vue.js';
@@ -72,10 +72,6 @@
         if(code) {
 
           this.localCode = code;
-
-          // this.getTextAsVue ();
-          // console.info(this.component.$el,this.component.$destroy,this.component._isBeingDestroyed);
-
           this.component.$destroy();
           this.component.$el.outerHTML = '<div class="wc-inline-render"></div>';
           this.getTextAsVue ();
