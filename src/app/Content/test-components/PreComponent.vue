@@ -23,7 +23,7 @@
 <script>
   import PreComponentEditor from '@/test-components/PreComponentEditor.vue'
   import * as mainElements from '@/main-elements';
-  import * as complexElements from '@/main-elements';
+  import * as complexElements from '@/complex-elements';
   import * as experimentalElements from '@/experimental-elements';
   const preComponentsList = {};
   for(let key in mainElements){
@@ -35,7 +35,7 @@
   for(let key in experimentalElements){
     preComponentsList[experimentalElements[key].name] = experimentalElements[key];
   }
-
+  console.info("preComponentsList",preComponentsList);
   const componentsList = {};
   componentsList[PreComponentEditor.name] = PreComponentEditor;
   import Vue from 'vue/dist/vue.js';
