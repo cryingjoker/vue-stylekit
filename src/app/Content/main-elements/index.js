@@ -22,6 +22,7 @@ import Tabs from './Tabs/Tabs.vue';
 import TabsNavigationItem from './Tabs/TabsNavigationItem.vue';
 import TabsContentItem from './Tabs/TabsContentItem.vue';
 import Annotation from './Annotation/Annotation.vue';
+import ColorLineText from './ColorLineText/ColorLineText.vue'
 
 export {
   Button,
@@ -47,5 +48,6 @@ export {
   Tabs,
   TabsNavigationItem,
   TabsContentItem,
-  Annotation
+  Annotation,
+  ColorLineText
 };

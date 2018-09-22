@@ -57,7 +57,6 @@ export default {
     }
   },
   methods: {
-
     checkModel() {
       if (this.model !== null) {
         this.isChecked = this.model === this.value
