@@ -26,7 +26,6 @@
     computed: {
       colorLineIconClass() {
         const classObject = {};
-        console.info('this.colorIcon',this.colorIcon);
         if (this.colorIcon !== "orange") {
           classObject["color-line-paragraph-icon--" + this.colorIcon] = true;
         }
