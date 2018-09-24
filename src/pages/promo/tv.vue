@@ -273,7 +273,7 @@
           <div class="row">
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
                        background-image="/images/logoBig1.png" :is-white-color="true" :card-height="459"
               >
                 <template slot="header">
@@ -310,7 +310,7 @@
             </div>
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
                        background-image="/images/logoBig2.png" :is-white-color="true" :card-height="459"
               >
                 <template slot="header">
@@ -355,7 +355,7 @@
             </div>
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :card-header-height="120" :background-cover="true" class="rt-font-light"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
                        background-image="/images/logoBig3.png" :is-white-color="true" :card-height="459"
               >
                 <template slot="header">
@@ -555,7 +555,7 @@
             <div class="col-9 rt-col-9 rt-col-md-3">
               <div class="row">
                 <div class="col-11 rt-col-md-3">
-                  <p class="rt-font-promo-title rt-font-light rt-space-left">Ваши пожелания и вопросы по работе
+                  <p class="rt-font-promo-title rt-font-light rt-space-left">Ваши пожелания и вопросы по работе <br>
                   приложения отправляйте на
                     <a href="mailto:wink@rt.ru" class="rt-font-link">wink@rt.ru</a>
                   </p>

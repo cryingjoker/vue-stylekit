@@ -158,6 +158,9 @@ export default {
     },
     cardContentClass() {
       const classArray = {};
+      if (this.cardHeight !== null) {
+        classArray['rt-card__content--has-custom-height'] = true;
+      }
       if (this.offsetTop) {
         classArray['rt-card__content--has-offset-top'] = true;
       }
