@@ -4,8 +4,14 @@
   </div>
 </template>
 <script>
+import debounce from 'lodash.debounce';
 const componentsList = {};
-
+function getOffsetTop(el){
+  const position = el.getBoundingClientRect()
+  const scrollTop =
+    window.pageYOffset || document.documentElement.scrollTop;
+  return scrollTop + position.top
+};
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
   const easings = {
     linear(t) {
@@ -89,9 +95,9 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
       0,
       Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
     );
-
     const top = window.pageYOffset || document.documentElement.scrollTop;
-    if (Math.abs(top - destinationOffsetToScroll) < 20) {
+
+    if (Math.abs(top - destinationOffsetToScroll) <= 80) {
       if (callback) {
         callback();
       }
@@ -119,10 +125,9 @@ export default {
   },
   data() {
     return {
+      topPadding: 80,
       activeKey: '',
       anchorObejects: [],
-      timeoutDebounceInitAnchorsList: null,
-      timeoutDebounceCalculateScroll: null
     };
   },
 
@@ -142,13 +147,9 @@ export default {
   },
 
   methods: {
-    debounceCalculateScroll() {
-      clearTimeout(this.timeoutDebounceCalculateScroll);
-
-      this.timeoutDebounceCalculateScroll = setTimeout(() => {
-        this.calculateScroll();
-      }, 10);
-    },
+    debounceCalculateScroll: debounce(function(){
+      this.calculateScroll();
+    }, 10),
     calculateScroll() {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
@@ -156,7 +157,7 @@ export default {
       let hasFound = false;
       Object.keys(this.anchorObejects).forEach(key => {
         if (
-          scrollTop >= this.anchorObejects[key].x_start &&
+          scrollTop  >= this.anchorObejects[key].x_start - this.topPadding&&
           scrollTop < this.anchorObejects[key].x_end &&
           !hasFound
         ) {
@@ -192,7 +193,6 @@ export default {
     },
     scrollBind(e) {
       const anchor = e.target.getAttribute('href').replace('#', '');
-
       scrollIt(this.anchorObejects[anchor].x_start);
       e.preventDefault();
     },
@@ -200,25 +200,25 @@ export default {
       this.$el.querySelectorAll('.' + this.tabsClassname).forEach(i => {
         const anchor = i.getAttribute('href').replace('#', '');
         const anchorEl = document.querySelector('[id="' + anchor + '"]');
+
         if (!notBindClick) {
           i.addEventListener('click', this.scrollBind);
         }
 
         if (anchorEl) {
           this.anchorObejects[anchor] = {
-            x_start: anchorEl.offsetTop - 80,
-            x_end: anchorEl.offsetTop + anchorEl.offsetHeight
+            x_start: getOffsetTop(anchorEl) - this.topPadding,
+            x_end: getOffsetTop(anchorEl) + anchorEl.offsetHeight
           };
+
         }
       });
       this.calculateScroll();
     },
-    debounceInitAnchorsList() {
-      clearTimeout(this.timeoutDebounceInitAnchorsList);
-      this.timeoutDebounceInitAnchorsList = setTimeout(() => {
-        this.initAnchorsList(true);
-      }, 50);
-    }
+    debounceInitAnchorsList: debounce(function(){
+      this.initAnchorsList(true);
+    }, 150)
   }
+
 };
 </script>

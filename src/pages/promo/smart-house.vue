@@ -33,7 +33,7 @@
         <div class="rt-md-space-right2">
           <rt-color-line-text>
             <template slot="label">Умный дом</template>
-            <template slot="content">Ваш дом всегда под контролем,  <br> даже когда вы далеко.</template>
+            <template slot="content">Ваш дом всегда под контролем,<br>даже когда вы далеко.</template>
           </rt-color-line-text>
           <div class="rt-space-top2">
             <div class="rt-md-space-top05 rt-md-space-horizontal05 d-inline-block">
@@ -83,7 +83,7 @@
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
@@ -98,7 +98,7 @@
         <div class="rt-md-space-right2">
 
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2">
@@ -112,7 +112,7 @@
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
@@ -1221,13 +1221,13 @@
 
       </div>
     </div>
-    <div id="connect" class="color-block--white no-overflow-y">
+    <div class="color-block--white no-overflow-y">
       <div class="rt-container">
         <div class="rt-col-12 rt-space-top3">
           <div class="row">
             <div class="rt-col-1 md-d-none"/>
             <div class="rt-col-5 flex-center-center rt-col-md-3">
-              <div>
+              <div id="connect">
                 <p class="rt-font-promo-title color-main07">Подключение и управление</p>
                 <p class="rt-font-paragraph rt-space-top color-main05">Установить и настроить «Умный
                   дом» несложно, в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас
