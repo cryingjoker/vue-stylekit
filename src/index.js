@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 // import VueResource from "vue-resource";
 import routes from './utils/routes';
 import RootPage from './pages/App.vue';
-import RtVue from './app/rtIndex';
+import RtVue from './app/RtVue';
 // var VueTouch = require('vue-touch');
 
 Vue.use(VueRouter);
