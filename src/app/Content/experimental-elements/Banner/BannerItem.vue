@@ -76,7 +76,7 @@ export default {
     },
     banerClass() {
       const classArray = {};
-      if (this.RtBanners.activeIndex === this.index) {
+      if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
         classArray['rt-banner-content--active'] = true;
       }
       return classArray;
@@ -91,13 +91,15 @@ export default {
   },
 
   beforeMount: function() {
-    this.index = this.RtBanners.items.length;
-    this.RtBanners.items.push({
-      backgroundColor: this.backgroundColor,
-      backgroundImage: this.backgroundImage,
-      isWhiteColor: this.isWhiteColor,
-      id: this.id
-    });
+    if(this.RtBanners) {
+      this.index = this.RtBanners.items.length;
+      this.RtBanners.items.push({
+        backgroundColor: this.backgroundColor,
+        backgroundImage: this.backgroundImage,
+        isWhiteColor: this.isWhiteColor,
+        id: this.id
+      });
+    }
   }
 };
 </script>
