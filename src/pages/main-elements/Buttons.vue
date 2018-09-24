@@ -197,11 +197,11 @@ import {
 
 const componentsList = {};
 
-componentsList[ButtonComponent.name] = ButtonComponent;
-componentsList[PreComponent.name] = PreComponent;
-componentsList[
-  ButtonWithoutRippleComponent.name
-] = ButtonWithoutRippleComponent;
+// componentsList[ButtonComponent.name] = ButtonComponent;
+// componentsList[PreComponent.name] = PreComponent;
+// componentsList[
+//   ButtonWithoutRippleComponent.name
+// ] = ButtonWithoutRippleComponent;
 
 export default {
   name: 'AppButtons',

@@ -21,10 +21,10 @@
   </div>
 </template>
 <script>
-  import PreComponentEditor from '@/test-components/PreComponentEditor.vue'
-  import * as mainElements from '@/main-elements';
-  import * as complexElements from '@/complex-elements';
-  import * as experimentalElements from '@/experimental-elements';
+  import PreComponentEditor from './PreComponentEditor.vue'
+  import * as mainElements from '../main-elements/index';
+  import * as complexElements from '../complex-elements/index';
+  import * as experimentalElements from '../experimental-elements/index';
   const preComponentsList = {};
   for(let key in mainElements){
     preComponentsList[mainElements[key].name] = mainElements[key];

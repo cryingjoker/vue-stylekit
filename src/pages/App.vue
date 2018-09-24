@@ -156,11 +156,10 @@
 </template>
 
 <script>
-  import { PreComponentEditor } from '@/test-components'
-import { Switch } from '@/main-elements/Switch';
+
 
 const componentsList = {};
-componentsList[Switch.name] = Switch;
+// componentsList[Switch.name] = Switch;
 
 export default {
   name: 'App',

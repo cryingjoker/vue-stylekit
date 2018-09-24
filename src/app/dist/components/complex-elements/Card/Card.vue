@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import normalizeVariable from '@/mixins/normalizeVariable';
+import normalizeVariable from '../../mixins/normalizeVariable';
 const componentsList = {};
 
 export default {

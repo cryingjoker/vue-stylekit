@@ -3,27 +3,18 @@ import VueRouter from 'vue-router';
 // import VueResource from "vue-resource";
 import routes from './utils/routes';
 import RootPage from './pages/App.vue';
+import RtVue from './app/rtIndex';
+// var VueTouch = require('vue-touch');
 
-var VueTouch = require('vue-touch');
-
-import stylesReset from './css/reset/index.styl';
-import styles from './css/styles.less';
-
-Vue.use(VueTouch, { name: 'v-touch' });
 Vue.use(VueRouter);
+Vue.use(RtVue);
 
 const router = new VueRouter({
   mode: 'history',
   routes: routes.routes,
 });
 
-// Vue.mixin({
-//   methods: {
-//     _veryUsefulMethod() {
-//       console.log("I am a global mixin. I should be used across the app.");
-//     }
-//   }
-// });
+
 const App = new Vue({
   el: '#app',
   router,

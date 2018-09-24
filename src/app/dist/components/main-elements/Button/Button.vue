@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {  Spinner } from '@/main-elements/Spinner';
+import {  Spinner } from '../Spinner/index';
 import { RippleComponent } from '../Ripple/index';
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
