@@ -4,7 +4,7 @@
 </template>
 
 <script>
-  import debounce from 'lodash.debounce';
+  import debounce from 'debounce';
   import * as monaco from 'monaco-editor';
   if(location.href.search('cryingjoker')>0) {
     window.MonacoEnvironment = {

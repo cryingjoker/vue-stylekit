@@ -13,6 +13,7 @@ import Cards from '../pages/complex-elements/Card.vue';
 import Icons from '../pages/icons-elements/Icons.vue';
 import Banners from '../pages/experiment-elements/Banners.vue';
 import PromoTv from '../pages/promo/tv.vue';
+import PromoTvTV from '../pages/promo/tvtv.vue';
 import smartHouse from '../pages/promo/smart-house.vue';
 import ScrollTabs from '../pages/main-elements/ScrollTabs.vue';
 import Tabs from '../pages/main-elements/Tabs.vue';
@@ -39,6 +40,7 @@ const routes = [
   { path: '/banners', name: 'app-banners', component: Banners },
   { path: '/tabs', name: 'app-banners', component: Tabs },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },
+  { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
   { path: '', name: 'default' },
 ];

@@ -2,7 +2,7 @@
   <div class="rt-card" :class="cardClass" :style="cardStyle">
     <div v-if="backgroundImageStandAlone" class="rt-card__stand-alone-background" :style="standAloneBackgroundStyle" />
     <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass" />
-    <div class="rt-card__content" :class="cardContentClass">
+    <div class="rt-card__content" :cardContentStyle="cardContentStyle" :class="cardContentClass">
       <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
         <slot name="header" />
       </div>
@@ -185,6 +185,13 @@ export default {
       return classArray;
     },
     cardStyle() {
+      const styles = {};
+      if (this.cardHeight !== null) {
+        styles.height = this.normalizeSize(this.cardHeight);
+      }
+      return styles;
+    },
+    cardContentStyle() {
       const styles = {};
       if (this.cardHeight !== null) {
         styles.height = this.normalizeSize(this.cardHeight);

@@ -126,6 +126,7 @@ const config = {
     add: app => {
       app.use(convert(history()));
     },
+    // host:'10.0.1.6',
     port: 8080,
   },
 };
