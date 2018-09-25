@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import debounce from 'lodash.debounce';
+import debounce from 'debounce';
 const componentsList = {};
 function getOffsetTop(el){
   const position = el.getBoundingClientRect()
@@ -97,7 +97,7 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
     );
     const top = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (Math.abs(top - destinationOffsetToScroll) <= 80) {
+    if (Math.abs(top - destinationOffsetToScroll) <= 20) {
       if (callback) {
         callback();
       }
@@ -149,7 +149,7 @@ export default {
   methods: {
     debounceCalculateScroll: debounce(function(){
       this.calculateScroll();
-    }, 10),
+    }, 5),
     calculateScroll() {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
@@ -157,12 +157,11 @@ export default {
       let hasFound = false;
       Object.keys(this.anchorObejects).forEach(key => {
         if (
-          scrollTop  >= this.anchorObejects[key].x_start - this.topPadding&&
+          scrollTop  >= this.anchorObejects[key].x_start - this.topPadding - 10  &&
           scrollTop < this.anchorObejects[key].x_end &&
           !hasFound
         ) {
           hasFound = true;
-
           if (
             activeEl &&
             activeEl.getAttribute('href').replace('#', '') !== key
@@ -208,7 +207,7 @@ export default {
         if (anchorEl) {
           this.anchorObejects[anchor] = {
             x_start: getOffsetTop(anchorEl) - this.topPadding,
-            x_end: getOffsetTop(anchorEl) + anchorEl.offsetHeight
+            x_end: getOffsetTop(anchorEl) + anchorEl.offsetHeight  - this.topPadding
           };
 
         }

@@ -182,7 +182,9 @@
         display: flex;
         flex-direction: column;
         min-height: auto;
-        height: inherit;
+        @media (min-width: @mobile-step-size) {
+          min-height: 364px;
+        }
         @media (max-width: @mobile-step-size) {
           display: table;
         }
@@ -199,7 +201,7 @@
         }
     }
     &__body {
-        flex: 1;
+        flex: 1 0 auto;
         padding-left: @horizontal-space;
         padding-right: @horizontal-space;
         &--is-empty {
@@ -216,7 +218,7 @@
         padding-right: @horizontal-space;
     }
     &__header {
-        flex: 1;
+        flex: 1 0 auto;
         padding-left: @horizontal-space;
         padding-right: @horizontal-space;
     }
@@ -245,7 +247,7 @@
             width: 56px;
         }
         &__name {
-            flex: 1;
+            flex: 1 0 auto;
             padding-left: @horizontal-space*0.5;
             display: flex;
             flex-direction: row;

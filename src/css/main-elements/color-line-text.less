@@ -9,6 +9,11 @@
     flex-wrap: wrap;
     position: relative;
     padding-right: @horizontal-space*0.75;
+    &:before, &:after {
+      content: '';
+      width: 100%;
+      order: 1;
+    }
   }
   &-paragraph-icon {
     position: absolute;
