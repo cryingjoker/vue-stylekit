@@ -25,7 +25,7 @@
       </rt-scroll-tabs>
     </div>
 
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
+    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
                       :content-min-height="631"
@@ -76,10 +76,10 @@
         </div>
       </div>
     </div>
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
+    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
@@ -93,7 +93,7 @@
       </rt-banner-item>
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
 
@@ -108,7 +108,7 @@
       </rt-banner-item>
       <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
