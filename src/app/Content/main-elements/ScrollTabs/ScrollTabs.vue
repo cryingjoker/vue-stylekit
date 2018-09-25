@@ -133,9 +133,11 @@ export default {
 
   mounted() {
     if (this.tabsClassname) {
-      this.initAnchorsList();
-      window.addEventListener('scroll', this.debounceCalculateScroll);
-      window.addEventListener('resize', this.debounceInitAnchorsList);
+      setTimeout(()=>{
+        this.initAnchorsList();
+        window.addEventListener('scroll', this.debounceCalculateScroll);
+        window.addEventListener('resize', this.debounceInitAnchorsList);
+      },300)
     }
   },
   beforeDestroy() {

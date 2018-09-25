@@ -19,6 +19,10 @@ export default {
       type: [Number, String],
       default: null
     },
+    contentHeight: {
+      type: [Number, String],
+      default: null
+    },
     contentMinWidth: {
       type: [Number, String],
       default: null
@@ -65,8 +69,15 @@ export default {
           styles.maxWidth = this.contentMaxWidth + 'px';
         }
       }
+      if (this.contentHeight) {
+        if (typeof this.contentHeight === 'string') {
+          styles.height = this.contentHeight;
+        } else {
+          styles.height = this.contentHeight + 'px';
+        }
+      }
       if (this.contentMinHeight) {
-        if (typeof this.contentMinWidth === 'string') {
+        if (typeof this.contentMinHeight === 'string') {
           styles.minHeight = this.contentMinHeight;
         } else {
           styles.minHeight = this.contentMinHeight + 'px';
