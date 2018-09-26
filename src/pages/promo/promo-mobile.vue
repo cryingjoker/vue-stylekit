@@ -25,10 +25,10 @@
         </div>
       </rt-scroll-tabs>
     </div>
-
+    <div id="about">
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh"
                content-height="320px" id="tv">
-      <rt-banner-item background-image="/images/mobile/GettyImages-137925796_Edit.jpg"
+      <rt-banner-item background-image="/sites/default/files/img/GettyImages-137925796_Edit.jpg"
                       background-color="none"
                       content-min-height="431px"
 
@@ -44,6 +44,7 @@
         </div>
       </rt-banner-item>
     </rt-banner>
+    </div>
     <div class="rt-space-top2 rt-space-bottom2">
       <div class="rt-container">
         <div class="rt-col-12">
@@ -196,7 +197,7 @@
     </div>
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh"
                content-height="320px" id="tv">
-      <rt-banner-item background-image="/images/mobile/phone.jpg"
+      <rt-banner-item background-image="/sites/default/files/img/mobile-image-phone.jpg"
                       background-color="none"
                       content-min-height="431px"
 
@@ -213,11 +214,11 @@
         </div>
       </rt-banner-item>
     </rt-banner>
-    <div class="rt-container">
+    <div class="rt-container" id="device">
       <div class="rt-col-12 rt-space-top25 rt-md-space-top">
         <div class="row">
           <div class="rt-col-6 rt-col-md-3 rt-space-top25 rt-md-space-top">
-            <img class="promo-phone-app" src="/images/mobile/phoneApp.jpg" alt="">
+            <img class="promo-phone-app" src="/sites/default/files/img/mobile-image-phoneApp.jpg" alt="">
           </div>
           <div class="rt-col-5 rt-col-md-3 flex-end-bottom rt-space-bottom md-d-block rt-md-space-top2">
             <div>
@@ -261,7 +262,7 @@
       <div class="rt-col-12 rt-space-top25">
         <div class="row rt-space-top25 rt-font-light">
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-          <rt-card background-image="/images/mobile/1.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-1.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -278,7 +279,7 @@
           </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-          <rt-card background-image="/images/mobile/2.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-2.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -295,7 +296,7 @@
           </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-          <rt-card background-image="/images/mobile/3.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-3.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -312,7 +313,7 @@
           </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-          <rt-card background-image="/images/mobile/4.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-4.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -329,7 +330,7 @@
           </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-          <rt-card background-image="/images/mobile/5.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-5.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -346,7 +347,7 @@
           </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-          <rt-card background-image="/images/mobile/6.jpg"
+          <rt-card background-image="/sites/default/files/img/mobile-baner-6.jpg"
                    :background-opacity="0.85"
                    :offset-top="true"
                    :background-cover="true"
@@ -367,12 +368,16 @@
           </div>
         </div>
       </div>
-      <div class="rt-col-12">
+      <div class="rt-col-12" id="bonus">
         <p class="rt-font-h2 rt-space-top25 ">Дополнительные услуги</p>
         <p class="rt-space-top15 rt-space-bottom15">Полезные услуги, которые можно подключить вместе с тарифом или уже в
           процессе использования</p>
         <rt-button class="rt-button-orange-border rt-space-horizontal">Подробнее</rt-button>
       </div>
+      <div class="rt-col-12" id="call">
+        <p class="rt-font-h2 rt-space-top25 ">Тарифы</p>
+      </div>
+
       <div class="rt-col-12 rt-space-top15">
         <div class="row">
           <div class="rt-col-4 rt-col-md-3 rt-space-top">
@@ -474,27 +479,27 @@
 
 
     </div>
-    <div class="rt-container rt-space-top2 rt-space-bottom">
+    <div class="rt-container rt-space-top2 rt-space-bottom color-main07">
       <div class="rt-col-12">
         <rt-annotation label="Примечание">
           <template slot="content">
-            <p class="rt-annotation-item">Продукт «Яндекс.Диск» в рамках услуги «Домашний Интернет» предоставляется при
+            <p class="rt-annotation-item color-main05">Продукт «Яндекс.Диск» в рамках услуги «Домашний Интернет» предоставляется при
               наличии технической возможности.</p>
-            <p class="rt-annotation-item">Опция UNLIM – это безлимитный объем дискового пространства в Яндекс.Диск в
+            <p class="rt-annotation-item color-main05">Опция UNLIM – это безлимитный объем дискового пространства в Яндекс.Диск в
               рамках тарифного плана «ОБЛАЧНЫЙ», представляет собой ежемесячно (30 суток) увеличивающийся объем
               дискового пространства на 1ТБ.</p>
-            <p class="rt-annotation-item">Дополнительные опции: «Яндекс.Диск +100ГБ» - это +100 (сто) гигабайт в
+            <p class="rt-annotation-item color-main05">Дополнительные опции: «Яндекс.Диск +100ГБ» - это +100 (сто) гигабайт в
               дополнение к дисковому пространству, доступному пользователю в Яндекс.Диск. «Яндекс.Диск +1ТБ» - это + 1
               (один) терабайт в дополнение к дисковому пространству, доступному пользователю в Яндекс.Диск.</p>
-            <p class="rt-annotation-item">Опции предоставляются Партнером — Яндекс.Диск, ответственность за
+            <p class="rt-annotation-item color-main05">Опции предоставляются Партнером — Яндекс.Диск, ответственность за
               предоставление Опции несет Партнер. Использование Опции возможно при наличии аккаунта Абонента,
               зарегистрированного в сервисе Яндекс.Почта на https://mail.yandex.ru/ в рамках пользовательского
               соглашения между Абонентом и Партнером.</p>
-            <p class="rt-annotation-item">Активация продуктовой линейки «Яндекс.Диск» осуществляется в Едином личном
+            <p class="rt-annotation-item color-main05">Активация продуктовой линейки «Яндекс.Диск» осуществляется в Едином личном
               кабинете Абонента. Стоимость Опции UNLIM включена в стоимость Тарифного Плана «ОБЛАЧНЫЙ». Дополнительные
               опции «Яндекс.Диск +100ГБ» и «Яндекс.Диск +1ТБ» оплачиваются Абонентом отдельно. Если на счету Абонента
               недостаточно средств, активация не произойдёт.</p>
-            <p class="rt-annotation-item">Цены указаны в рублях с учетом НДС.</p>
+            <p class="rt-annotation-item color-main05">Цены указаны в рублях с учетом НДС.</p>
           </template>
         </rt-annotation>
       </div>
@@ -512,6 +517,14 @@
       left: 0;
       margin-left: 10%;
     }
+  }
+  .rt-font-h1{
+    font-size: 37px;
+    font-weight: 200;
+  }
+  .rt-font-h2{
+    font-size: 37px;
+    font-weight: 200;
   }
 </style>
 
