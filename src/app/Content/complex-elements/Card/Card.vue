@@ -38,7 +38,7 @@ export default {
       type: Boolean,
       default: false
     },
-    backgrounSizeWidth: {
+    backgroundSizeWidth: {
       type: [Number, String],
       default: null
     },
@@ -269,18 +269,18 @@ export default {
       if (this.backgroundImage && !this.backgroundImageStandAlone) {
         styles.backgroundImage = 'url(' + this.backgroundImage + ')';
       }
-      if (this.backgrounSizeWidth && this.backgrounSizeHeight) {
-        const backgrounSizeWidth = this.normalizeSize(this.backgrounSizeWidth);
+      if (this.backgroundSizeWidth && this.backgrounSizeHeight) {
+        const backgroundSizeWidth = this.normalizeSize(this.backgroundSizeWidth);
         const backgrounSizeHeight = this.normalizeSize(
           this.backgrounSizeHeight
         );
-        styles.backgroundSize = backgrounSizeWidth + ' ' + backgrounSizeHeight;
+        styles.backgroundSize = backgroundSizeWidth + ' ' + backgrounSizeHeight;
       } else {
-        if (this.backgrounSizeWidth) {
-          const backgrounSizeWidth = this.normalizeSize(
-            this.backgrounSizeWidth
+        if (this.backgroundSizeWidth) {
+          const backgroundSizeWidth = this.normalizeSize(
+            this.backgroundSizeWidth
           );
-          styles.backgroundSize = backgrounSizeWidth;
+          styles.backgroundSize = backgroundSizeWidth;
         }
         if (this.backgrounSizeHeight) {
           const backgrounSizeHeight = this.normalizeSize(
@@ -303,11 +303,11 @@ export default {
 
         styles.backgroundImage = 'url(' + this.backgroundImage + ')';
         styles.width =
-          this.normalizeSize(this.backgrounSizeWidth) ||
+          this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgrounSizeHeight);
         styles.height =
           this.normalizeSize(this.backgrounSizeHeight) ||
-          this.normalizeSize(this.backgrounSizeWidth);
+          this.normalizeSize(this.backgroundSizeWidth);
         styles.top = this.normalizeSize(this.backgroundPositionTop);
         styles.bottom = this.normalizeSize(this.backgroundPositionBottom);
         styles.right = this.normalizeSize(this.backgroundPositionRight);
