@@ -1269,7 +1269,7 @@
               <rt-card :background-image="'/images/smartHouse/smart-house.png'"
                        :background-position="'right'"
                        :background-image-stand-alone="true"
-                       backgroun-size-width="33%"
+                       background-size-width="33%"
                        backgroun-size-height="60%"
                        background-position-right="-5%"
                        background-position-top="20%"
@@ -1293,7 +1293,7 @@
               <rt-card :background-image="'/example-images/cardBackground9.png'"
                        :background-image-stand-alone="true"
                        :background-position="'bottom-right'"
-                       backgroun-size-width="40%"
+                       background-size-width="40%"
                        backgroun-size-height="100%"
                        :col-size="2"
               >

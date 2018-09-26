@@ -28,7 +28,7 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3"> rt-banner</div>
-            <div class="app-documentation__name rt-col-2">content-min-height</div>
+            <div class="app-documentation__name rt-col-2">(:)content-min-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту банера <br> number - любое число становится px
@@ -38,7 +38,7 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
-            <div class="app-documentation__name rt-col-2">content-height</div>
+            <div class="app-documentation__name rt-col-2">(:)content-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает высоту банера <br> number - любое число становится px
@@ -76,10 +76,10 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
-            <div class="app-documentation__name rt-col-2">:is-white-color</div>
+            <div class="app-documentation__name rt-col-2">:background-repeat</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает белый цвет текста
+              <div class="app-documentation__value-item rt-col-6">Устанавливает background-repeate опцию на картинке фона
               </div>
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span></div>
             </div>
@@ -87,7 +87,7 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3"> rt-banner-item</div>
-            <div class="app-documentation__name rt-col-2">content-min-height</div>
+            <div class="app-documentation__name rt-col-2">(:)content-min-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту слайда <br> number - любое число становится px
@@ -97,7 +97,7 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
-            <div class="app-documentation__name rt-col-2">content-height</div>
+            <div class="app-documentation__name rt-col-2">(:)content-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает высоту слайда <br> number - любое число становится px
@@ -108,7 +108,7 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
-            <div class="app-documentation__name rt-col-2">content-min-width</div>
+            <div class="app-documentation__name rt-col-2">(:)content-min-width</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную ширину слайда <br> number - любое число становится px
@@ -119,7 +119,7 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
-            <div class="app-documentation__name rt-col-2">content-max-width</div>
+            <div class="app-documentation__name rt-col-2">(:)content-max-width</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает максимальную ширину слайда <br> number - любое число становится px
@@ -148,6 +148,7 @@
               <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span></div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

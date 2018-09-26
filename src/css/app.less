@@ -179,6 +179,10 @@
     padding-top: 3px;
     padding-bottom: 3px;
     border-radius: 5px;
+    .app-documentation__warning &{
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   &--component{
     background-color: fade(#aaaaaa,30%);
@@ -197,6 +201,21 @@
   font-size: 12px;
   font-family: "RT Code";
   line-height: 16px;
+  &__warning{
+    text-decoration: underline;
+    text-decoration-color: #0c8cd1;
+    text-decoration-style: double;
+    margin-bottom: 5px;
+    display: inline-block;
+    &:before{
+      content: '! ';
+      color: #0c8cd1;
+    }
+    &:after{
+      content: ' !';
+      color: #0c8cd1;
+    }
+  }
   &__row {
     display: flex;
     flex-direction: row;
