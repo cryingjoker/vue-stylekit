@@ -21,7 +21,7 @@
     <keep-alive>
 
       <div class="aside-menu" :class="{'aside-menu--active' : showMenu}">
-        <rt-switch class="grid-switcher" @change="gridToggle">Grid</rt-switch>
+        <rt-switch class="grid-switcher" :checked="showGrid" @change="gridToggle">Grid</rt-switch>
         <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/buttons">
             Buttons
