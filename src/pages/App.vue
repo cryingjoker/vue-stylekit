@@ -150,7 +150,6 @@
     </keep-alive>
 
     <router-view />
-    {{isDarkTheme}}
     <rt-switch class="dark-theme-switcher" :checked="isDarkTheme" @change="switchTheme" >Dark theme</rt-switch>
 
   </div>
