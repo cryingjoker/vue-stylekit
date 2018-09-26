@@ -35,6 +35,88 @@
         </div>
       </div>
     </div>
+    <div class="rt-space-top25">
+      <div class="rt-col-12">
+        <div class="app-documentation">
+          <div class="app-documentation__label rt-font-h4 rt-space-left05 rt-space-bottom2">Possible options</div>
+          <div class="app-documentation__row rt-font-bold rt-space-bottom05">
+            <div class="app-documentation__name rt-col-2">component name</div>
+            <div class="app-documentation__name rt-col-3">component proporty</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3">proporty type</div>
+              <div class="app-documentation__value-item rt-col-6">about</div>
+              <div class="app-documentation__value-item rt-col-3">default value</div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-price</div>
+            <div class="app-documentation__name rt-col-3">:value</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">Обязательное поле</span>
+                <br>
+                Значение ценника
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">0</span>
+              </div>
+            </div>
+          </div>
+           <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-price</div>
+            <div class="app-documentation__name rt-col-3">:old-value</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Значение ценника до
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-price</div>
+            <div class="app-documentation__name rt-col-3">time-interval</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Значение временного интервала "мес" "день" и т.п.
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-price</div>
+            <div class="app-documentation__name rt-col-3">:is-option</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Boolean</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Отображение "от"
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-price</div>
+            <div class="app-documentation__name rt-col-3">:only-price</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Boolean</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Отображение только ценника в валюте
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
