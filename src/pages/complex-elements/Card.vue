@@ -123,8 +123,9 @@
 
       </div>
     </div>
-  </div>
-    <div class="rt-container rt-space-top25">
+
+
+    <div class="rt-space-top25">
       <div class="rt-col-12">
         <div class="app-documentation">
           <div class="app-documentation__label rt-font-h4 rt-space-left05 rt-space-bottom2">Possible options</div>
@@ -320,7 +321,7 @@
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6"> Задает расположение фона карточки
-              возможные значения : <br>
+                возможные значения : <br>
                 <span class="rt-code rt-code--fill">top</span>
                 <span class="rt-code rt-code--fill">left</span>
                 <span class="rt-code rt-code--fill">bottom</span>
@@ -344,7 +345,8 @@
                 class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
                 Устанавливает отступ картинки сверху<br> number - любое число становится px
-                <br>string - любые значения</div>
+                <br>string - любые значения
+              </div>
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
@@ -358,42 +360,43 @@
                 class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
                 Устанавливает отступ картинки слева<br> number - любое число становится px
-                <br>string - любые значения</div>
+                <br>string - любые значения
+              </div>
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
-        <div class="app-documentation__row rt-space-vertical">
+          <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">background-position-right</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
                 class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6"> <span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
+              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
                 Устанавливает отступ картинки справа<br> number - любое число становится px
                 <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
-        </div>
+          </div>
 
-      <div class="app-documentation__row rt-space-vertical">
+          <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">background-position-bottom</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
                 class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6"> <span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
+              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
                 Устанавливает отступ картинки снизу<br> number - любое число становится px
                 <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
-        </div>
+          </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:offset-top</div>
@@ -406,17 +409,21 @@
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--fill">false</span></div>
             </div>
-        </div>
+          </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:col-size</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Поджимает контент карточки / было создано для создания 6 колоночной карточки, где 3 колонки - текст, остальное - картинка.
-                <span class="app-documentation__warning">Доступно только значение <span class="rt-code rt-code--fill">2</span></span>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-6">Поджимает контент карточки / было создано для создания
+                6 колоночной карточки, где 3 колонки - текст, остальное - картинка.
+                <span class="app-documentation__warning">Доступно только значение <span
+                  class="rt-code rt-code--fill">2</span></span>
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -424,10 +431,12 @@
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:card-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает высоту карточки
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -435,27 +444,29 @@
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:card-header-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает высоту заголовка карточки
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:card-body-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает высоту контейнера для контента карточки
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
-
-
         </div>
+      </div>
     </div>
-
   </div>
 </template>
 <script>
