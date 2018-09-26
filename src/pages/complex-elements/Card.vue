@@ -338,7 +338,7 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-position-top</div>
+            <div class="app-documentation__name rt-col-3">(:)background-position-top</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
@@ -353,7 +353,7 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-position-left</div>
+            <div class="app-documentation__name rt-col-3">(:)background-position-left</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
@@ -368,7 +368,7 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-position-right</div>
+            <div class="app-documentation__name rt-col-3">(:)background-position-right</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
@@ -384,7 +384,7 @@
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-position-bottom</div>
+            <div class="app-documentation__name rt-col-3">(:)background-position-bottom</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
