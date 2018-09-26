@@ -150,7 +150,8 @@
     </keep-alive>
 
     <router-view />
-    <rt-switch class="dark-theme-switcher" @change="switchTheme">Dark theme</rt-switch>
+    {{isDarkTheme}}
+    <rt-switch class="dark-theme-switcher" :checked="isDarkTheme" @change="switchTheme" >Dark theme</rt-switch>
 
   </div>
 </template>
@@ -169,6 +170,7 @@ export default {
     showMenu: false,
     isPromo: false,
     showGrid: false,
+    isDarkTheme: false,
   }),
   watch: {
     $route(to, from) {
@@ -190,14 +192,28 @@ export default {
     },
 
     switchTheme(isChecked) {
+
       const bodyClassList = document.body.classList.value.split(' ');
       if (isChecked) {
         bodyClassList.push('rt-dark-theme');
+        localStorage.setItem('rt-dark',1)
+        this.isDarkTheme = true;
       } else {
         bodyClassList.splice(bodyClassList.indexOf('rt-dark-theme'), 1);
+        localStorage.setItem('rt-dark',0)
+        this.isDarkTheme = false;
       }
       document.body.classList = bodyClassList.join(' ');
     },
   },
+  mounted(){
+    if(!!+localStorage.getItem('rt-dark')){
+      const bodyClassList = document.body.classList.value.split(' ');
+      bodyClassList.push('rt-dark-theme');
+      document.body.classList = bodyClassList.join(' ');
+
+      this.isDarkTheme = true;
+    }
+  }
 };
 </script>

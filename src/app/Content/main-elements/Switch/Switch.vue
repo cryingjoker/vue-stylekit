@@ -1,6 +1,6 @@
 <template>
   <label class="switch">
-    <input name="test" type="checkbox" :disabled="isDisabled" class="switch-element" @change="inputHandler">
+    <input name="test" type="checkbox" :disabled="isDisabled" :checked="checked ? 'checked' : ''" class="switch-element" @change="inputHandler">
     <div class="switch-container">
       <div class="switch-container__circle">
         <rt-ripple ref="ripple" :not-render="isDisabled" />
@@ -27,7 +27,7 @@ export default {
     checked: {
       type: Boolean,
       default: false
-    }
+    },
   },
   mounted: function() {
     this.setValue();
