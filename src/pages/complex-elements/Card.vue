@@ -123,6 +123,7 @@
 
       </div>
     </div>
+  </div>
     <div class="rt-container rt-space-top25">
       <div class="rt-col-12">
         <div class="app-documentation">
@@ -453,7 +454,6 @@
 
 
         </div>
-      </div>
     </div>
 
   </div>
