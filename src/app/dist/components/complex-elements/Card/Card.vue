@@ -2,7 +2,7 @@
   <div class="rt-card" :class="cardClass" :style="cardStyle">
     <div v-if="backgroundImageStandAlone" class="rt-card__stand-alone-background" :style="standAloneBackgroundStyle" />
     <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass" />
-    <div class="rt-card__content" :class="cardContentClass">
+    <div class="rt-card__content" :cardContentStyle="cardContentStyle" :class="cardContentClass">
       <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
         <slot name="header" />
       </div>
@@ -38,7 +38,7 @@ export default {
       type: Boolean,
       default: false
     },
-    backgrounSizeWidth: {
+    backgroundSizeWidth: {
       type: [Number, String],
       default: null
     },
@@ -158,6 +158,9 @@ export default {
     },
     cardContentClass() {
       const classArray = {};
+      if (this.cardHeight !== null) {
+        classArray['rt-card__content--has-custom-height'] = true;
+      }
       if (this.offsetTop) {
         classArray['rt-card__content--has-offset-top'] = true;
       }
@@ -182,6 +185,13 @@ export default {
       return classArray;
     },
     cardStyle() {
+      const styles = {};
+      if (this.cardHeight !== null) {
+        styles.height = this.normalizeSize(this.cardHeight);
+      }
+      return styles;
+    },
+    cardContentStyle() {
       const styles = {};
       if (this.cardHeight !== null) {
         styles.height = this.normalizeSize(this.cardHeight);
@@ -259,18 +269,18 @@ export default {
       if (this.backgroundImage && !this.backgroundImageStandAlone) {
         styles.backgroundImage = 'url(' + this.backgroundImage + ')';
       }
-      if (this.backgrounSizeWidth && this.backgrounSizeHeight) {
-        const backgrounSizeWidth = this.normalizeSize(this.backgrounSizeWidth);
+      if (this.backgroundSizeWidth && this.backgrounSizeHeight) {
+        const backgroundSizeWidth = this.normalizeSize(this.backgroundSizeWidth);
         const backgrounSizeHeight = this.normalizeSize(
           this.backgrounSizeHeight
         );
-        styles.backgroundSize = backgrounSizeWidth + ' ' + backgrounSizeHeight;
+        styles.backgroundSize = backgroundSizeWidth + ' ' + backgrounSizeHeight;
       } else {
-        if (this.backgrounSizeWidth) {
-          const backgrounSizeWidth = this.normalizeSize(
-            this.backgrounSizeWidth
+        if (this.backgroundSizeWidth) {
+          const backgroundSizeWidth = this.normalizeSize(
+            this.backgroundSizeWidth
           );
-          styles.backgroundSize = backgrounSizeWidth;
+          styles.backgroundSize = backgroundSizeWidth;
         }
         if (this.backgrounSizeHeight) {
           const backgrounSizeHeight = this.normalizeSize(
@@ -293,11 +303,11 @@ export default {
 
         styles.backgroundImage = 'url(' + this.backgroundImage + ')';
         styles.width =
-          this.normalizeSize(this.backgrounSizeWidth) ||
+          this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgrounSizeHeight);
         styles.height =
           this.normalizeSize(this.backgrounSizeHeight) ||
-          this.normalizeSize(this.backgrounSizeWidth);
+          this.normalizeSize(this.backgroundSizeWidth);
         styles.top = this.normalizeSize(this.backgroundPositionTop);
         styles.bottom = this.normalizeSize(this.backgroundPositionBottom);
         styles.right = this.normalizeSize(this.backgroundPositionRight);

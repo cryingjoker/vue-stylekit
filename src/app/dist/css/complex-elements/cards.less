@@ -10,6 +10,12 @@
     overflow: hidden;
     color: @main-color;
     align-self: stretch;
+    &--has-bg-cover {
+      background-color: transparent;
+    }
+    &--transparent{
+      background-color: transparent;
+    }
     @media (max-width: @mobile-step-size) {
         flex-direction: column;
     }
@@ -70,6 +76,7 @@
         background-position-x: center;
         background-position-y: center;
         background-repeat: no-repeat;
+
         .@{newAppName}-card-black & {
             background-color: @dark-card-background;
         }
@@ -132,7 +139,7 @@
         .@{newAppName}-card--has-bg-repeat & {
             background-repeat: repeat;
         }
-        .@{newAppName}-card--has-bg-cover & {
+        .@{newAppName}-card--has-bg-cover &{
             -webkit-background-size: cover;
             background-size: cover;
         }
@@ -175,9 +182,16 @@
         display: flex;
         flex-direction: column;
         min-height: auto;
+        @media (min-width: @mobile-step-size) {
+          min-height: 364px;
+        }
         @media (max-width: @mobile-step-size) {
-            display: block;
-            flex: 1;
+          display: table;
+        }
+        &--has-custom-height{
+          @media (max-width: @mobile-step-size) {
+            display: flex;
+          }
         }
         .rt-col-6 & {
             min-width: 50%;
@@ -187,7 +201,7 @@
         }
     }
     &__body {
-        flex: 1;
+        flex: 1 0 auto;
         padding-left: @horizontal-space;
         padding-right: @horizontal-space;
         &--is-empty {
@@ -204,7 +218,7 @@
         padding-right: @horizontal-space;
     }
     &__header {
-        flex: 1;
+        flex: 1 0 auto;
         padding-left: @horizontal-space;
         padding-right: @horizontal-space;
     }
@@ -233,7 +247,7 @@
             width: 56px;
         }
         &__name {
-            flex: 1;
+            flex: 1 0 auto;
             padding-left: @horizontal-space*0.5;
             display: flex;
             flex-direction: row;

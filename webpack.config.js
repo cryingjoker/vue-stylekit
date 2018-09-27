@@ -56,7 +56,10 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: ['css-loader'],
+        use: [
+            // MiniCssExtractPlugin.loader,
+      {loader:`css-loader`},
+        ],
       },
       {
         test: /\.js$/,
@@ -69,9 +72,8 @@ const config = {
           {
             loader: `style-loader`,
           },
-          {
-            loader: `css-loader`,
-          },
+          // MiniCssExtractPlugin.loader,
+        {loader:`css-loader`},
           {
             loader: `less-loader`,
           },
@@ -83,9 +85,8 @@ const config = {
           {
             loader: `style-loader`,
           },
-          {
-            loader: `css-loader`,
-          },
+          // MiniCssExtractPlugin.loader,
+        {loader:`css-loader`},
           {
             loader: `stylus-loader`,
           },
@@ -126,6 +127,7 @@ const config = {
     add: app => {
       app.use(convert(history()));
     },
+    // host:'10.0.1.6',
     port: 8080,
   },
 };

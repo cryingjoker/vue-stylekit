@@ -25,7 +25,7 @@
       </rt-scroll-tabs>
     </div>
 
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
+    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
                       :content-min-height="631"
@@ -33,7 +33,7 @@
         <div class="rt-md-space-right2">
           <rt-color-line-text>
             <template slot="label">Умный дом</template>
-            <template slot="content">Ваш дом всегда под контролем,  <br> даже когда вы далеко.</template>
+            <template slot="content">Ваш дом всегда под контролем,<br>даже когда вы далеко.</template>
           </rt-color-line-text>
           <div class="rt-space-top2">
             <div class="rt-md-space-top05 rt-md-space-horizontal05 d-inline-block">
@@ -76,14 +76,14 @@
         </div>
       </div>
     </div>
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
+    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
       <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
@@ -93,12 +93,12 @@
       </rt-banner-item>
       <rt-banner-item background-image="/images/smartHouse/bg.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
 
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2">
@@ -108,11 +108,11 @@
       </rt-banner-item>
       <rt-banner-item background-image="/example-images/banerBackground1.jpg"
                       background-color="none"
-                      content-min-height="100vh"
+                      content-height="700px" content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят <br>  мой ребёнок?</template>
+            <template slot="label">Чем занят<br>мой ребёнок?</template>
             <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
@@ -1221,13 +1221,13 @@
 
       </div>
     </div>
-    <div id="connect" class="color-block--white no-overflow-y">
+    <div class="color-block--white no-overflow-y">
       <div class="rt-container">
         <div class="rt-col-12 rt-space-top3">
           <div class="row">
             <div class="rt-col-1 md-d-none"/>
             <div class="rt-col-5 flex-center-center rt-col-md-3">
-              <div>
+              <div id="connect">
                 <p class="rt-font-promo-title color-main07">Подключение и управление</p>
                 <p class="rt-font-paragraph rt-space-top color-main05">Установить и настроить «Умный
                   дом» несложно, в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас
@@ -1269,7 +1269,7 @@
               <rt-card :background-image="'/images/smartHouse/smart-house.png'"
                        :background-position="'right'"
                        :background-image-stand-alone="true"
-                       backgroun-size-width="33%"
+                       background-size-width="33%"
                        backgroun-size-height="60%"
                        background-position-right="-5%"
                        background-position-top="20%"
@@ -1293,7 +1293,7 @@
               <rt-card :background-image="'/example-images/cardBackground9.png'"
                        :background-image-stand-alone="true"
                        :background-position="'bottom-right'"
-                       backgroun-size-width="40%"
+                       background-size-width="40%"
                        backgroun-size-height="100%"
                        :col-size="2"
               >

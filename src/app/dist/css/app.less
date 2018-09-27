@@ -165,9 +165,71 @@
 }
 
 .@{newAppName}-code {
-    font-family: "RT Code";
+      font-family: "RT Code";
     display: inline-block;
     color: @b2b-red-hight;
+  &--fill{
+    background-color: fade(#E2C892,30%);
+    padding-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: -5px;
+    margin-right: 6px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    .app-documentation__warning &{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &--component{
+    background-color: fade(#aaaaaa,30%);
+    color: @b2b-green-low;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: -5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+  }
+}
+.app-documentation {
+  font-size: 12px;
+  font-family: "RT Code";
+  line-height: 16px;
+  &__warning{
+    text-decoration: underline;
+    text-decoration-color: #0c8cd1;
+    text-decoration-style: double;
+    margin-bottom: 5px;
+    display: inline-block;
+    &:before{
+      content: '! ';
+      color: #0c8cd1;
+    }
+    &:after{
+      content: ' !';
+      color: #0c8cd1;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    &+&{
+      border-top: 1px solid fade(#aaaaaa,30%);
+    }
+    &.rt-font-bold{
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    &.rt-font-bold + &{
+      border-top-width: 0;
+    }
+  }
 }
 
 .grid-switcher {

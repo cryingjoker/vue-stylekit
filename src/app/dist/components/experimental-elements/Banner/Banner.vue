@@ -47,6 +47,10 @@ export default {
       type: [Number, String],
       default: null
     },
+    contentHeight: {
+      type: [Number, String],
+      default: null
+    },
     isFullscreenImage: {
       type: Boolean,
       default: false
@@ -107,6 +111,13 @@ export default {
           styles.minHeight = this.contentMinHeight;
         } else {
           styles.minHeight = this.contentMinHeight + 'px';
+        }
+      }
+      if (this.contentHeight) {
+        if (typeof this.contentHeight === 'string') {
+          styles.height = this.contentHeight;
+        } else {
+          styles.height = this.contentHeight + 'px';
         }
       }
       return styles;
