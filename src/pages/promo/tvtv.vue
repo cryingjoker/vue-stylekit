@@ -611,32 +611,8 @@
 </style>
 
 <script>
-  import {
-    Button,
-    ScrollTabs,
-    Price,
-    Tabs,
-    TabsContentItem,
-    TabsNavigationItem,
-    Annotation,
-    ColorLineText
-  } from "@/main-elements";
-  import { Banner, BannerItem } from "@/experimental-elements";
-  import { Card } from "@/complex-elements/Card";
 
   const componentsList = {};
-
-  componentsList[Price.name] = Price;
-  componentsList[Card.name] = Card;
-  componentsList[Button.name] = Button;
-  componentsList[ScrollTabs.name] = ScrollTabs;
-  componentsList[Banner.name] = Banner;
-  componentsList[BannerItem.name] = BannerItem;
-  componentsList[Tabs.name] = Tabs;
-  componentsList[ColorLineText.name] = ColorLineText;
-  componentsList[TabsContentItem.name] = TabsContentItem;
-  componentsList[TabsNavigationItem.name] = TabsNavigationItem;
-  componentsList[Annotation.name] = Annotation;
 
   export default {
     name: "AppRadioButton",

@@ -1,8 +1,8 @@
 <template>
   <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : isBlock,'rt-button--is-fitched' : isFetched}" @click="triggerClick($event)">
-    <rt-ripple :not-render="isDisabled">
+    <rt-ripple :not-render="isDisabled" :twice-render="true">
       <rt-spinner v-if="isFetched" :fill="true" :is-absolute="true" />
-      <slot />
+        <slot />
     </rt-ripple>
   </button>
 </template>

@@ -12,7 +12,7 @@ const port = 5000;
 app.use(compression());
 app.use(`/`, express.static(publicPath, { index: false }));
 app.get(`/*`, (request, response) => {
-  response.sendFile(`${publicPath}/index.html`);
+  response.sendFile(`${publicPath}/static/index.html`);
 });
 
 app.listen(port);

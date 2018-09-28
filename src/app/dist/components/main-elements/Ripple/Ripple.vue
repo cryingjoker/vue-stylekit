@@ -3,7 +3,7 @@
 <!--@touchstart.passive-->
 <template>
   <div class="ripple"
-       @mousedown.passive="startRipple"
+       @mousedown.passive="renderRipple"
   >
     <rt-ripple-wave v-for="ripple in ripplesList" :key="ripple.key" :wave-style="ripple.waveStyles" @on-timer-end="removeWave(ripple.key)" />
     <slot />
@@ -21,6 +21,10 @@ export default {
     notRender: {
       type: Boolean,
       default: false
+    },
+    twiceRender: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -28,6 +32,14 @@ export default {
   }),
   mounted: function() {},
   methods: {
+    renderRipple($event) {
+      this.startRipple($event);
+      // if(this.twiceRender){
+      //   setTimeout(()=>{
+      //     this.startRipple($event);
+      //   },60)
+      // }
+    },
     startRipple($event) {
       if (!this.notRender) {
         const size = this.getElementSize();

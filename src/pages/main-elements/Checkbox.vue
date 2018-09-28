@@ -27,12 +27,8 @@
 
 
 <script>
-  import { PreComponent } from "@/test-components";
-  import { Checkbox } from "@/main-elements/Checkbox";
 
   const componentsList = {};
-  componentsList[Checkbox.name] = Checkbox;
-  componentsList[PreComponent.name] = PreComponent;
   export default {
     name: "AppCheckbox",
     components: componentsList

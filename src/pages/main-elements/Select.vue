@@ -91,16 +91,8 @@
 
 
 <script>
-import {
-  Select,
-  SelectOption,
-  SelectWithoutJs,
-} from '@/main-elements/Select/index';
 
 const componentsList = {};
-componentsList[Select.name] = Select;
-componentsList[SelectOption.name] = SelectOption;
-componentsList[SelectWithoutJs.name] = SelectWithoutJs;
 
 export default {
   name: 'AppInput',

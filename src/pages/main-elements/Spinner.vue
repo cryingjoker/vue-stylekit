@@ -23,12 +23,7 @@
 
 
 <script>
-import { Spinner, Button } from '@/main-elements';
-import { PreComponent } from "@/test-components";
 const componentsList = {};
-componentsList[Spinner.name] = Spinner;
-componentsList[Button.name] = Button;
-componentsList[PreComponent.name] = PreComponent;
 
 export default {
   name: 'AppInput',

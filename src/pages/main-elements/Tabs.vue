@@ -19,18 +19,8 @@
 
 
 <script>
-import {
-  Tabs,
-  TabsNavigationItem,
-  TabsContentItem,
-} from '@/main-elements/';
 
-import { PreComponent } from "@/test-components";
 const componentsList = {};
-componentsList[Tabs.name] = Tabs;
-componentsList[TabsContentItem.name] = TabsContentItem;
-componentsList[TabsNavigationItem.name] = TabsNavigationItem;
-componentsList[PreComponent.name] = PreComponent;
 export default {
   name: 'AppTabs',
   components: componentsList,

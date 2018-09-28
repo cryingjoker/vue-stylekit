@@ -595,13 +595,9 @@
 
 
 <script>
-  import { Card } from '@/complex-elements/Card';
-  import { Button } from '@/main-elements';
 
   const componentsList = {};
 
-  componentsList[Card.name] = Card;
-  componentsList[Button.name] = Button;
 
   export default {
     name: 'AppRadioButton',

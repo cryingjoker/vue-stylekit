@@ -60,12 +60,7 @@
 
 
 <script>
-import { Input, InputWithoutJs } from '@/main-elements/Input';
-import { PreComponent } from "@/test-components";
 const componentsList = {};
-componentsList[Input.name] = Input;
-componentsList[InputWithoutJs.name] = InputWithoutJs;
-componentsList[PreComponent.name] = PreComponent;
 
 export default {
   name: 'AppInput',

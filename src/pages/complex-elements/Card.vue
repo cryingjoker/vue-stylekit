@@ -7,6 +7,104 @@
         </div>
       </div>
       <div class="app-body">
+              <div class="row">
+                <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
+                  <rt-card :background-cover="true" :is-white-color="true"
+                           background-color-type="light-blue" :col-size="2">
+                    <template slot="header"><div class="rt-font-center"><svg width="97" height="79"
+                                                                             xmlns="http://www.w3.org/2000/svg">
+                      <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M37.0208333 1l-8.3125 15.0051282 19.59375 61.6 46.90625-61.6" />
+                        <path d="M59.1875 1L67.5 16.0051282l-19.59375 61.6L1 16.0051282" />
+                        <path d="M1 16.0051282L23.5625 1H72.25l22.5625 15.0051282z" />
+                      </g>
+                    </svg></div></template>
+                    <template slot="content">
+
+                      <p class="rt-font-paragraph rt-font-bold rt-space-top05">Бонусная программа</p>
+                      <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Подключайте друзей и
+                        зарабатывайте бонусы</p>
+                    </template>
+                    <template slot="footer">
+                      <a href="/bonus">
+                        <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                      </a>
+                    </template>
+                  </rt-card>
+                </div>
+                <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
+                  <rt-card :background-cover="true" :is-white-color="true" :background-smoke="0.5"
+                           background-color-type="green" :col-size="6">
+                    <template slot="header"><div class="rt-font-center"><img src="/sites/default/files/img/icon/news-icon.svg" height="79"/></div></template>
+                    <template slot="content">
+
+                      <p class="rt-font-paragraph rt-font-bold rt-space-top2">Новости</p>
+                      <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Анонсы акций, изменения в тарифах и новости Ростелеком</p>
+                    </template>
+                    <template slot="footer">
+                      <a href="https://www.old.rt.ru/press" target="_blank">
+                        <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Все новости</rt-button>
+                      </a>
+                    </template>
+                  </rt-card>
+                </div>
+                <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
+                  <rt-card background-image="/sites/default/files/2018-07/games_0.png" :background-opacity="0.9"
+                           :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="black"
+                           :col-size="2" :offset-top="true">
+                    <template slot="content">
+
+                      <p class="rt-font-paragraph rt-font-bold">Игровой</p>
+                      <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Высокоскоростной интернет и
+                        игровые
+                        бонусы
+                        для увлеченных геймеров</p>
+                    </template>
+                    <template slot="footer">
+                      <a href="/internet/constructor?offer=369771569758&lcs=active&tv-package=285383c0">
+                        <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Выберите свою
+                          игровую
+                          опцию</rt-button>
+                      </a>
+                    </template>
+                  </rt-card>
+                </div>
+                <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
+                  <rt-card background-image="/sites/default/files/img/licey.jpg" :background-opacity="0.9"
+                           :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="black"
+                           :col-size="2" :offset-top="true">
+                    <template slot="content">
+                      <p class="rt-font-paragraph rt-font-bold">Ростелеком Лицей</p>
+                      <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Поможем усвоить школьную
+                        программу онлайн</p>
+                    </template>
+                    <template slot="footer">
+                      <a href="https://lc.rt.ru" target="_blank">
+                        <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                      </a>
+                    </template>
+                  </rt-card>
+                </div>
+                <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
+                  <rt-card :background-opacity="0.9"
+                           :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="dark-blue"
+                           :col-size="2">
+                    <template slot="content">
+                      <div class="rt-font-center rt-space-top15 rt-space-bottom">
+                        <img src="/sites/default/files/img/icon/wink_80x80.svg" />
+                      </div>
+                      <p class="rt-font-paragraph rt-font-bold">Wink</p>
+                      <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Лучшие ТВ‑каналы, сериалы и фильмы в одном приложении</p>
+                    </template>
+                    <template slot="footer">
+                      <a href="/wink">
+                        <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Перейти</rt-button>
+                      </a>
+                    </template>
+                  </rt-card>
+                </div>
+              </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
@@ -470,18 +568,9 @@
   </div>
 </template>
 <script>
-  import { Card } from "@/complex-elements/Card";
-  import { Input, Button, Price } from "@/main-elements";
-  import { PreComponent } from "@/test-components";
 
   const componentsList = {};
 
-  componentsList[Card.name] = Card;
-  componentsList[Input.name] = Input;
-  componentsList[Button.name] = Button;
-  componentsList[Price.name] = Price;
-
-  componentsList[PreComponent.name] = PreComponent;
 
   export default {
     name: "AppButtons",

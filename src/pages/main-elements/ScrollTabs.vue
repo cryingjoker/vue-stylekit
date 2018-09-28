@@ -19,10 +19,8 @@
   </div>
 </template>
 <script>
-import { ScrollTabs } from '@/main-elements/ScrollTabs/index';
 
 const componentsList = {};
-componentsList[ScrollTabs.name] = ScrollTabs;
 export default {
   name: 'AppTypography',
   components: componentsList,

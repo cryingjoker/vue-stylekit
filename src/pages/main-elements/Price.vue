@@ -121,12 +121,8 @@
 </template>
 
 <script>
-import { Price } from '@/main-elements/Price/index';
-import { PreComponent } from "@/test-components";
 
 const componentsList = {};
-componentsList[Price.name] = Price;
-componentsList[PreComponent.name] = PreComponent;
 export default {
   name: 'AppTypography',
   components: componentsList,

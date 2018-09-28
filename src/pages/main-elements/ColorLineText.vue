@@ -18,12 +18,7 @@
 
 
 <script>
-  import { PreComponent } from "@/test-components";
-  import { ColorLineText } from "@/main-elements"
   const componentsList = {};
-  componentsList[PreComponent.name] = PreComponent;
-  componentsList[ColorLineText.name] = ColorLineText;
-
 
   export default {
     name: "AppColorLineText",

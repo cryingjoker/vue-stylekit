@@ -189,19 +189,9 @@
 </template>
 
 <script>
-import { PreComponent } from "@/test-components";
-import {
-  ButtonComponent,
-  ButtonWithoutRippleComponent,
-} from '@/main-elements/Button/index';
 
-const componentsList = {};
+  const componentsList = {};
 
-// componentsList[ButtonComponent.name] = ButtonComponent;
-// componentsList[PreComponent.name] = PreComponent;
-// componentsList[
-//   ButtonWithoutRippleComponent.name
-// ] = ButtonWithoutRippleComponent;
 
 export default {
   name: 'AppButtons',

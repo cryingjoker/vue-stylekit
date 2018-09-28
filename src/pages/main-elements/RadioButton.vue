@@ -25,11 +25,7 @@
 
 
 <script>
-import { RadioButton } from '@/main-elements/RadioButton/index';
-import { PreComponent } from '@/test-components'
 const componentsList = {};
-componentsList[RadioButton.name] = RadioButton;
-componentsList[PreComponent.name] = PreComponent;
 export default {
   name: 'AppRadioButton',
   data(){

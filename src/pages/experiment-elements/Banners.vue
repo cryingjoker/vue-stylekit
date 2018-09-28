@@ -156,19 +156,8 @@
 </template>
 
 <script>
-  import { Card } from "@/complex-elements/Card";
-  import { Input, Button, Price } from "@/main-elements";
-  import { Banner, BannerItem } from "@/experimental-elements";
-  import { PreComponent } from "@/test-components";
 
   const componentsList = {};
-  componentsList[PreComponent.name] = PreComponent;
-  componentsList[Card.name] = Card;
-  componentsList[Input.name] = Input;
-  componentsList[Button.name] = Button;
-  componentsList[Price.name] = Price;
-  componentsList[Banner.name] = Banner;
-  componentsList[BannerItem.name] = BannerItem;
 
   export default {
     name: "AppBanners",

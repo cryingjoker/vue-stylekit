@@ -83,16 +83,8 @@
 
 
 <script>
-import {
-  Textarea,
-  TextareaStatic,
-  TextareaWithoutJs,
-} from '@/main-elements/Textarea/index';
 
 const componentsList = {};
-componentsList[Textarea.name] = Textarea;
-componentsList[TextareaStatic.name] = TextareaStatic;
-componentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
 export default {
   name: 'AppTextarea',
   components: componentsList,

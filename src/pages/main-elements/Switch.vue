@@ -31,9 +31,7 @@
 
 
 <script>
-import { Switch } from '@/main-elements/Switch/index';
 const componentsList = {};
-componentsList[Switch.name] = Switch;
 export default {
   name: 'AppSwitch',
   components: componentsList,

@@ -41,6 +41,8 @@ import {
   PreComponent
 } from './dist/components/test-components';
 
+Vue.component(PreComponent.name, PreComponent);
+
 const RtVue = {
 
   install(Vue, config) {
@@ -74,9 +76,6 @@ const RtVue = {
     Vue.component(Banner.name,Banner);
     Vue.component(BannerItem.name, BannerItem);
     Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);
-
-
-    Vue.component(PreComponent.name, PreComponent);
   }
 };
 const version = '0.0.2';
