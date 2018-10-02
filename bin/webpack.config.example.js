@@ -1,37 +1,24 @@
 const { VueLoaderPlugin } = require(`vue-loader`);
 const path = require(`path`);
-
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
-const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
-
-const env = process.env.NODE_ENV;
-const minify = env === `production`;
-const sourceMap = env === `development`;
-function resolve(dir) {
-  return path.join(__dirname, dir);
-}
+const local_dirname = path.join(__dirname,'..');
 
 const config = {
   entry: {
-    app:[path.join(__dirname, `src`, `index.js`)],
+    app:[path.join(local_dirname, `src`,`example-pages`,`index.js`)],
   },
-  mode: env,
+  mode: 'development',
   output: {
     publicPath: `/`,
-  },
-  resolve: {
-    alias: {
-      '@': resolve('src/app/dist/components'),
-    },
   },
   optimization: {
     splitChunks: {
       chunks: `all`
     },
   },
-  devtool: sourceMap ? `cheap-module-eval-source-map` : undefined,
+  devtool: `cheap-module-eval-source-map`,
   module: {
     rules: [
       {
@@ -56,7 +43,7 @@ const config = {
       {
         test: /\.js$/,
         loader: `babel-loader`,
-        include: [path.join(__dirname, `src`)],
+        include: [path.join(local_dirname, `src`)],
       },
       {
         test: /\.less$/,
@@ -98,28 +85,18 @@ const config = {
       languages: ['html'],
     }),
     new HtmlWebpackPlugin({
-      filename: path.join(__dirname, `dist`, `index.html`),
-      template: path.join(__dirname, `static`, `index.html`),
+      filename: `index.html`,
+      template: path.join(local_dirname, `static`, `index.html`),
       inject: true,
-      minify: minify
-        ? {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeAttributeQuotes: true,
-          }
-        : false,
     }),
   ]
 };
 
 
-if (env !== `development`) {
-  config.plugins.push(new MiniCssExtractPlugin());
-}else{
-  config.entry.app.unshift('webpack-hot-middleware/client')
-  config.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  )
-}
+
+config.entry.app.unshift('webpack-hot-middleware/client');
+config.plugins.push(
+  new webpack.HotModuleReplacementPlugin()
+);
 
 module.exports = config;

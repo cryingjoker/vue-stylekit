@@ -1,0 +1,54 @@
+
+import Buttons from '../components/main-elements/Buttons.vue';
+import Checkbox from '../components/main-elements/Checkbox.vue';
+import RadioButton from '../components/main-elements/RadioButton.vue';
+import Input from '../components/main-elements/Input.vue';
+import Select from '../components/main-elements/Select.vue';
+import Typography from '../components/main-elements/Typography.vue';
+import Textarea from '../components/main-elements/Textarea.vue';
+import Switch from '../components/main-elements/Switch.vue';
+import ColorLineText from '../components/main-elements/ColorLineText.vue';
+import Spinner from '../components/main-elements/Spinner.vue';
+import Price from '../components/main-elements/Price.vue';
+import Cards from '../components/complex-elements/Card.vue';
+import Icons from '../components/icons-elements/Icons.vue';
+import Banners from '../components/experiment-elements/Banners.vue';
+import PromoTv from '../components/promo/tv.vue';
+import PromoTvTV from '../components/promo/tvtv.vue';
+import smartHouse from '../components/promo/smart-house.vue';
+import PromoMobile from '../components/promo/promo-mobile.vue';
+import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
+
+import Tabs from '../components/main-elements/Tabs.vue';
+
+const index = [
+  { path: '/buttons', name: 'app-buttons', component: Buttons },
+  { path: '/checkbox', name: 'app-checkbox', component: Checkbox },
+  { path: '/radiobutton', name: 'app-radiobutton', component: RadioButton },
+  { path: '/switch', name: 'app-switch', component: Switch },
+  { path: '/input', name: 'app-input', component: Input },
+  { path: '/textarea', name: 'app-textarea', component: Textarea },
+  { path: '/select', name: 'app-select', component: Select },
+  { path: '/typography', name: 'app-typography', component: Typography },
+  { path: '/spinner', name: 'app-spinner', component: Spinner },
+  { path: '/price', name: 'app-price', component: Price },
+  {
+    path: '/color-line-text',
+    name: 'app-color-line-text',
+    component: ColorLineText,
+  },
+  { path: '/cards', name: 'app-cards', component: Cards },
+  { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
+  { path: '/icons', name: 'app-icons', component: Icons },
+  { path: '/banners', name: 'app-banners', component: Banners },
+  { path: '/tabs', name: 'app-banners', component: Tabs },
+  { path: '/promo/tv', name: 'promoTv', component: PromoTv },
+  { path: '/promo/tvtv', name: 'prcontent-min-heightomoTv', component: PromoTvTV },
+  { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
+  { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
+  { path: '', name: 'default' },
+];
+
+export default {
+  routes: index,
+};
