@@ -344,7 +344,7 @@
           <div class="row promo-shelf__list">
             <div class="rt-pseudo-col rt-pseudo-col--left rt-col-2 promo-shelf__pseudo-item rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo6.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo6.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Стартрек: Бесконечность</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -353,7 +353,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo1.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo1.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Выживший</p>
                   <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
@@ -362,7 +362,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo2.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo2.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Отмель</p>
                   <p class="rt-font-small-paragraph">Рейтинг 6.5</p>
@@ -372,7 +372,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo3.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo3.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Сила воли</p>
                   <p class="rt-font-small-paragraph">Рейтинг 7.3</p>
@@ -381,7 +381,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo4.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo4.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Суфражистка</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -390,7 +390,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo5.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo5.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Зачетный препод </p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -399,7 +399,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo6.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo6.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Стартрек: Бесконечность</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -408,7 +408,7 @@
             </div>
             <div class="rt-pseudo-col rt-pseudo-col--right rt-col-2 promo-shelf__pseudo-item rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo1.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo1.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label color-main07">Выживший</p>
                   <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
@@ -571,7 +571,7 @@
                 Управление Интерактивным ТВ производится <br> с помощью пульта дистанционного управления.</p>
             </div>
             <div class="rt-col-6 rt-col-md-3 rt-md-space-top2">
-              <img class="promo-full-width-img" src="/images/tvtv/modem.png" alt="">
+              <img class="promo-full-width-img" src="/static/images/tvtv/modem.png" alt="">
             </div>
           </div>
 

@@ -2,7 +2,7 @@
   <div>
     <div class="promo-color-line color-block--orange">
       <div class="promo-left-line-image md-d-none"
-           style="background-image: url(/images/tv-top-background.jpg);"
+           style="background-image: url(/static/images/tv-top-background.jpg);"
       ></div>
       <div class="rt-col-8 md-d-none" ></div>
       <div class="rt-col-3 rt-col-md-3 flex-column-center-items">
@@ -35,12 +35,12 @@
 
             <div class="col-6 rt-col-6 rt-font-right rt-col-md-3 rt-font-md-center rt-space-vertical05">
               <a href="#" class="d-inline-block">
-                <img src="/images/applePlay.svg" alt="">
+                <img src="/static/images/applePlay.svg" alt="">
               </a>
               <a href="#"
                  class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-md-space-top"
               >
-                <img src="/images/googlePlay.svg" alt="">
+                <img src="/static/images/googlePlay.svg" alt="">
               </a>
             </div>
           </div>
@@ -128,53 +128,53 @@
             </div>
           </div>
           <div class="promo-tv-channel rt-space-top05 rt-space-horizontal">
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--perii"><img class="promo-tv-channel__img" src="/images/channels/perii.svg" alt=""
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--perii"><img class="promo-tv-channel__img" src="/static/images/channels/perii.svg" alt=""
             >
             </div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sts"><img class="promo-tv-channel__img" src="/images/channels/sts.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sts"><img class="promo-tv-channel__img" src="/static/images/channels/sts.svg"
                                                                                                                            alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tnt"><img class="promo-tv-channel__img" src="/images/channels/tnt.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tnt"><img class="promo-tv-channel__img" src="/static/images/channels/tnt.svg"
                                                                                                                            alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--friday"><img class="promo-tv-channel__img" src="/images/channels/friday.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--friday"><img class="promo-tv-channel__img" src="/static/images/channels/friday.svg"
                                                                                                                               alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--carusel"><img class="promo-tv-channel__img" src="/images/channels/carusel.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--carusel"><img class="promo-tv-channel__img" src="/static/images/channels/carusel.svg"
                                                                                                                                alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--ntv"><img class="promo-tv-channel__img" src="/images/channels/ntv.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--ntv"><img class="promo-tv-channel__img" src="/static/images/channels/ntv.svg"
                                                                                                                            alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rossia1"><img class="promo-tv-channel__img" src="/images/channels/rossia1.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rossia1"><img class="promo-tv-channel__img" src="/static/images/channels/rossia1.svg"
                                                                                                                                alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--muztv"><img class="promo-tv-channel__img" src="/images/channels/muztv.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--muztv"><img class="promo-tv-channel__img" src="/static/images/channels/muztv.svg"
                                                                                                                              alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sony"><img class="promo-tv-channel__img" src="/images/channels/sony.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--sony"><img class="promo-tv-channel__img" src="/static/images/channels/sony.svg"
                                                                                                                             alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--paramount"><img class="promo-tv-channel__img" src="/images/channels/paramount.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--paramount"><img class="promo-tv-channel__img" src="/static/images/channels/paramount.svg"
                                                                                                                                  alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--romans"><img class="promo-tv-channel__img" src="/images/channels/romans.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--romans"><img class="promo-tv-channel__img" src="/static/images/channels/romans.svg"
                                                                                                                               alt=""
             >
             </div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--mtv"><img class="promo-tv-channel__img" src="/images/channels/mtv.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--mtv"><img class="promo-tv-channel__img" src="/static/images/channels/mtv.svg"
                                                                                                                            alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--matchtv"><img class="promo-tv-channel__img" src="/images/channels/matchtv.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--matchtv"><img class="promo-tv-channel__img" src="/static/images/channels/matchtv.svg"
                                                                                                                                alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rentv"><img class="promo-tv-channel__img" src="/images/channels/rentv.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--rentv"><img class="promo-tv-channel__img" src="/static/images/channels/rentv.svg"
                                                                                                                              alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tvc"><img class="promo-tv-channel__img" src="/images/channels/tvc.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tvc"><img class="promo-tv-channel__img" src="/static/images/channels/tvc.svg"
                                                                                                                            alt=""
             ></div>
-            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tv3"><img class="promo-tv-channel__img" src="/images/channels/tv3.svg"
+            <div class="promo-tv-channel__item rt-space-horizontal05 rt-space-vertical05 promo-tv-channel__item--tv3"><img class="promo-tv-channel__img" src="/static/images/channels/tv3.svg"
                                                                                                                            alt=""
             ></div>
           </div>
@@ -188,7 +188,7 @@
           <div class="row promo-shelf__list">
             <div class="rt-pseudo-col rt-pseudo-col--left rt-col-2 promo-shelf__pseudo-item rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo6.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo6.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Стартрек: Бесконечность</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -197,7 +197,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo1.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo1.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Выживший</p>
                   <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
@@ -207,7 +207,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo2.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo2.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Отмель</p>
                   <p class="rt-font-small-paragraph">Рейтинг 6.5</p>
@@ -217,7 +217,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo3.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo3.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Сила воли</p>
                   <p class="rt-font-small-paragraph">Рейтинг 7.3</p>
@@ -226,7 +226,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo4.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo4.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Суфражистка</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -235,7 +235,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo5.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo5.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Зачетный препод </p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -244,7 +244,7 @@
             </div>
             <div class="col-2 rt-col-2 rt-col-md-1 rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo6.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo6.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Стартрек: Бесконечность</p>
                   <p class="rt-font-small-paragraph">Рейтинг 9.5</p>
@@ -253,7 +253,7 @@
             </div>
             <div class="rt-pseudo-col rt-pseudo-col--right rt-col-2 promo-shelf__pseudo-item rt-space-top">
               <a href="#">
-                <img class="promo-shelf__image" src="/images/logo1.png" alt="">
+                <img class="promo-shelf__image" src="/static/images/logo1.png" alt="">
                 <div class="promo-shelf__info">
                   <p class="rt-font-paragraph promo-shelf__label">Выживший</p>
                   <p class="rt-font-small-paragraph">Рейтинг 8.1</p>
@@ -563,12 +563,12 @@
                 <div class="col rt-col-md-3 rt-space-top rt-font-md-center">
                   <div class="rt-space-left">
                     <a href="#" class="d-inline-block rt-space-top05 ">
-                      <img src="/images/applePlay.svg" alt="">
+                      <img src="/static/images/applePlay.svg" alt="">
                     </a>
                     <a href="#"
                        class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-space-top05 rt-md-space-vertical"
                     >
-                      <img src="/images/googlePlay.svg" alt="">
+                      <img src="/static/images/googlePlay.svg" alt="">
                     </a>
                   </div>
                 </div>

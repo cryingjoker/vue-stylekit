@@ -24,6 +24,8 @@
  export { default as Annotation } from './Annotation/Annotation.vue';
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue'
  export { default as Card} from './Card/Card.vue';
+ export { default as CardImage} from './Card/CardImage.vue';
+ export { default as CardImageList} from './Card/CardImageList.vue';
  export { default as Banner } from './Banner/Banner.vue';
  export { default as BannerItem } from './Banner/BannerItem.vue';
  export { default as BannerPaginatorItem } from './Banner/BannerPaginatorItem.vue';

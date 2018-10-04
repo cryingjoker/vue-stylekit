@@ -138,18 +138,20 @@ export default {
       if (this.backgroundColorType) {
         classArray['rt-card-' + this.backgroundColorType] = true;
       }
-      if (this.backgroundRepeat) {
-        classArray['rt-card--has-bg-repeat'] = true;
-      }
+      if(this.backgroundImage) {
+        if (this.backgroundRepeat) {
+          classArray['rt-card--has-bg-repeat'] = true;
+        }
 
-      if (this.backgroundSmoke === 0.5) {
-        classArray['rt-card--has-smoke'] = true;
-      }
-      if (this.backgroundSmoke === 0.3) {
-        classArray['rt-card--has-smoke03'] = true;
-      }
-      if (this.backgroundSmoke === 0.2) {
-        classArray['rt-card--has-smoke02'] = true;
+        if (this.backgroundSmoke === 0.5) {
+          classArray['rt-card--has-smoke'] = true;
+        }
+        if (this.backgroundSmoke === 0.3) {
+          classArray['rt-card--has-smoke03'] = true;
+        }
+        if (this.backgroundSmoke === 0.2) {
+          classArray['rt-card--has-smoke02'] = true;
+        }
       }
       if (this.hideBackgroundOnMobile) {
         classArray['rt-card--hide-background-on-mobile'] = true;
@@ -289,11 +291,13 @@ export default {
           styles.backgroundSize = backgrounSizeHeight;
         }
       }
-      if (this.backgroundBlur) {
-        styles.filter = 'blur(' + this.normalizeSize(this.backgroundBlur) + ')';
-      }
-      if (this.backgroundOpacity) {
-        styles.opacity = this.backgroundOpacity;
+      if(this.backgroundImage) {
+        if (this.backgroundBlur) {
+          styles.filter = 'blur(' + this.normalizeSize(this.backgroundBlur) + ')';
+        }
+        if (this.backgroundOpacity) {
+          styles.opacity = this.backgroundOpacity;
+        }
       }
       return styles;
     },

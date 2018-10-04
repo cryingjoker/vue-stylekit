@@ -11,10 +11,10 @@
     color: @main-color;
     align-self: stretch;
     &--has-bg-cover {
-      background-color: transparent;
+        background-color: transparent;
     }
-    &--transparent{
-      background-color: transparent;
+    &--transparent {
+        background-color: transparent;
     }
     @media (max-width: @mobile-step-size) {
         flex-direction: column;
@@ -139,7 +139,7 @@
         .@{newAppName}-card--has-bg-repeat & {
             background-repeat: repeat;
         }
-        .@{newAppName}-card--has-bg-cover &{
+        .@{newAppName}-card--has-bg-cover & {
             -webkit-background-size: cover;
             background-size: cover;
         }
@@ -149,7 +149,7 @@
             }
         }
     }
-    &__stand-alone-background {
+    &__stand-alone-background {lib
         position: absolute;
         top: 0;
         bottom: 0;
@@ -183,15 +183,15 @@
         flex-direction: column;
         min-height: auto;
         @media (min-width: @mobile-step-size) {
-          min-height: 364px;
+            min-height: 364px;
         }
         @media (max-width: @mobile-step-size) {
-          display: table;
+            display: table;
         }
-        &--has-custom-height{
-          @media (max-width: @mobile-step-size) {
-            display: flex;
-          }
+        &--has-custom-height {
+            @media (max-width: @mobile-step-size) {
+                display: flex;
+            }
         }
         .rt-col-6 & {
             min-width: 50%;
@@ -239,7 +239,7 @@
         &__item {
             display: flex;
             flex-direction: row;
-            &+& {
+            & + & {
                 padding-top: @vertical-space;
             }
         }
@@ -253,5 +253,53 @@
             flex-direction: row;
             align-items: center;
         }
+    }
+}
+
+.@{newAppName}-card-image {
+    background-color: transparent;
+    flex-direction: column;
+    &__content {
+        padding-top: @vertical-space;
+    }
+    .rt-card__body {
+        padding-bottom: @vertical-space;
+    }
+    &__figure {
+        height: 364px;
+        min-height: 364px;
+        width: 100%;
+        flex: 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    &-list {
+        padding-top: @vertical-space*0.5;
+        padding-bottom: @vertical-space*0.5;
+        padding-left: @horizontal-space;
+        padding-right: @horizontal-space;
+        border-top: 1px solid @card-list-border;
+        border-bottom: 1px solid @card-list-border;
+
+        & + & {
+            margin-top: -1px;
+        }
+        &--has-icon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &__icon {
+            width: 55px + @horizontal-space*0.5;
+            padding-right: @horizontal-space*0.5;
+            box-sizing: border-box;
+        }
+        &__content {
+
+        }
+    }
+    .@{newAppName}-card-image-list:last-child {
+        border-bottom-width: 0;
     }
 }

@@ -30,7 +30,9 @@ import {
   Banner,
   BannerItem,
   BannerPaginatorItem,
-  Card
+  Card,
+  CardImage,
+  CardImageList
 } from './components';
 
 
@@ -63,6 +65,8 @@ const VueRtStyle = {
     Vue.component(Annotation.name, Annotation);
     Vue.component(ColorLineText.name, ColorLineText);
     Vue.component(Card.name, Card);
+    Vue.component(CardImage.name, CardImage);
+    Vue.component(CardImageList.name, CardImageList);
     Vue.component(Banner.name,Banner);
     Vue.component(BannerItem.name, BannerItem);
     Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);

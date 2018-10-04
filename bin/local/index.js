@@ -12,6 +12,7 @@ const webpack = require('webpack');
 const proxyMiddleware = require('http-proxy-middleware');
 const webpackConfig = require('../webpack.config.example.js');
 const Ora = require('ora');
+const local_dirname = path.join(__dirname,'..','..');
 
 const port = process.env.PORT || config.dev.port;
 
@@ -22,23 +23,23 @@ const compiler = webpack(webpackConfig);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   path: '/__webpack_hmr',
-  // quiet: true,
-  // stats: {
-  //   colors: false,
-  //   hash: false,
-  //   version: false,
-  //   timings: true,
-  //   assets: false,
-  //   chunks: false,
-  //   modules: false,
-  //   reasons: false,
-  //   children: false,
-  //   source: false,
-  //   errors: true,
-  //   errorDetails: true,
-  //   warnings: true,
-  //   publicPath: false
-  // },
+  quiet: true,
+  stats: {
+    colors: false,
+    hash: false,
+    version: false,
+    timings: true,
+    assets: false,
+    chunks: false,
+    modules: false,
+    reasons: false,
+    children: false,
+    source: false,
+    errors: true,
+    errorDetails: true,
+    warnings: true,
+    publicPath: false
+  },
   watchOptions: {
     aggregateTimeout: 300,
     poll: 1000
@@ -74,7 +75,9 @@ app.use(require('connect-history-api-fallback')())
 app.use(devMiddleware)
 
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.use(staticPath, express.static('./static'))
+
+
+app.use(staticPath, express.static(local_dirname+'/static'))
 
 const url = 'http://localhost:' + port
 spinner = new Ora({
