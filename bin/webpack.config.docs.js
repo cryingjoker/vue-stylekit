@@ -13,7 +13,7 @@ function resolve(dir) {
 
 const config = {
   entry: {
-    app:[path.join(local_dirname, `src`, `example-pages`, `index.js`)],
+    main:[path.join(local_dirname, `src`, `example-pages`, `index.js`)],
   },
   mode: env,
   output: {
