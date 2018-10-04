@@ -38,7 +38,6 @@ import {
 
 const VueRtStyle = {
   install(Vue, config) {
-    console.info('install',Vue.RtStyle,Vue);
     if(!Vue.RtStyle) {
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);

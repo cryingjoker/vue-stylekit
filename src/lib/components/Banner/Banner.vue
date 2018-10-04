@@ -1,6 +1,5 @@
 <template>
   <div class="rt-banner" :class="banerClass" :style="bannerStyle">
-
     <div class="rt-container">
       <div class="rt-col-12">
         <div class="row">
@@ -16,19 +15,21 @@
     </div>
     <div class="circle-switcher">
       <div v-if="RtBanners.items && RtBanners.items.length > 1" class="circle-switcher-container">
-        <rt-banner-paginator-item v-for="(option, index) in RtBanners.items" :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index" />
-
+        <rt-banner-paginator-item :sleep-time="sleepTime" v-for="(option, index) in RtBanners.items" :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index" />
       </div>
     </div>
-    <div class="rt-banner-image" :style="imageStyle">
-      <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500" style='transform: translate(-50% 0)'>
+    <div class="rt-banner-image" :style="imageStyle"><svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500" style='transform: translate(-50% 0)'>
         <polygon points="0 0,0 500,185 0 "/>
       </svg>
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500">
         <polygon points="0 500,185 0,0 0"/>
       </svg>
     </div>
-
+    <div class="rt-banner-logo rt-container" v-if="bannerLogo">
+      <div class="rt-col-12">
+        <img class="rt-banner-logo__image" :src="bannerLogo" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -66,7 +67,12 @@ export default {
     sleepTime: {
       type: Number,
       default: 5000
+    },
+    bannerLogo:{
+      type: String,
+      default: null
     }
+
   },
   data() {
     return {

@@ -53,6 +53,7 @@ export default {
       id: this._uid
     };
   },
+
   computed: {
     banerStyle() {
       const styles = {};
@@ -111,6 +112,8 @@ export default {
         isWhiteColor: this.isWhiteColor,
         id: this.id
       });
+      const preloadImage = new Image();
+      preloadImage.src = this.backgroundImage;
     }
   }
 };

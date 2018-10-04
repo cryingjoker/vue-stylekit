@@ -10,9 +10,10 @@
         </div>
       </div>
     </div>
+    <pre-code text='<rt-banner :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg"><rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item><rt-banner-item background-color="yellow" background-image="/static/example-images/banerBackground2.jpg"><p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p><p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
+    <pre-code text='<rt-banner :is-fullscreen-image="true" bannerLogo="/static/example-images/Logo.svg"><rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
+    <pre-code text='<rt-banner :sleep-time="10000"><rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item><rt-banner-item background-color="yellow" background-image="/static/example-images/banerBackground2.jpg"><p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p><p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
 
-    <pre-code
-      text='<rt-banner><rt-banner-item background-image="/static/example-images/banerBackground1.jpg":is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br>  телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item><rt-banner-item background-color="yellow"background-image="/static/example-images/banerBackground2.jpg"><p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p><p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малого бизнеса </p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
     <div class="rt-container rt-space-top25">
       <div class="rt-col-12">
         <div class="app-documentation">
@@ -30,36 +31,49 @@
             <div class="app-documentation__name rt-col-3"> rt-banner</div>
             <div class="app-documentation__name rt-col-2">(:)content-min-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту банера <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту банера <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">(:)content-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту банера <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту банера <br> number - любое число
+                становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">:is-fullscreen-image</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Boolean</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Boolean</span></div>
               <div class="app-documentation__value-item rt-col-6">Флаг установки фулскрин картинки</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">background-color</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает цвет фона банера <br> возможные значения
                 <br>
                 <span class="rt-font-label">
@@ -70,7 +84,8 @@
                   class="rt-code rt-code--fill">pink</span> <span class="rt-code rt-code--fill">green</span>
                 </span>
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -78,10 +93,37 @@
             <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">:background-repeat</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает background-repeate опцию на картинке фона
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Boolean</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает background-repeate опцию на картинке
+                фона
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3">rt-banner</div>
+            <div class="app-documentation__name rt-col-2">:sleep-time</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает время продолжительности слайда
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">5000</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3">rt-banner</div>
+            <div class="app-documentation__name rt-col-2">banner-logo</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Ссылка на логотип справа внизу
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
 
@@ -89,20 +131,30 @@
             <div class="app-documentation__name rt-col-3"> rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">(:)content-min-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту слайда <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту слайда <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">(:)content-height</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту слайда <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту слайда <br> number - любое число
+                становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -110,10 +162,15 @@
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">(:)content-min-width</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную ширину слайда <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную ширину слайда <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -121,10 +178,15 @@
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">(:)content-max-width</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Number</span> <span class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает максимальную ширину слайда <br> number - любое число становится px
-                <br>string - любые значения</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает максимальную ширину слайда <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -132,9 +194,11 @@
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">background-сolor</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает цвет фона слайда</div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
 
@@ -142,10 +206,12 @@
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
             <div class="app-documentation__name rt-col-2">:is-white-color</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--component">Boolean</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Boolean</span></div>
               <div class="app-documentation__value-item rt-col-6">Устанавливает белый цвет текста слайда
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span></div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
             </div>
           </div>
 
@@ -157,8 +223,8 @@
 
 <script>
 
+  // import componentsList from '../../componentsList'
   const componentsList = {};
-
   export default {
     name: "AppBanners",
     components: componentsList,
