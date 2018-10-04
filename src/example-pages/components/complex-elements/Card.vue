@@ -687,8 +687,7 @@
 </template>
 <script>
 
-  const componentsList = {};
-
+  import componentsList from '../../componentsList';
 
   export default {
     name: "AppButtons",

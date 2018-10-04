@@ -8,7 +8,7 @@ import RootPage from './components/App.vue';
 import styles from './css/index.less';
 
 Vue.use(VueRouter);
-Vue.use(VueRtStyle);
+
 Vue.use(VueRtDevStyle);
 
 
@@ -22,5 +22,6 @@ const App = new Vue({
   el: '#app',
   router,
   name: 'App',
+
   render: h => h(RootPage),
 });

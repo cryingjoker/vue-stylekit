@@ -158,7 +158,7 @@
 <script>
 
 
-const componentsList = {};
+import componentsList from '../componentsList'
 // componentsList[Switch.name] = Switch;
 
 export default {

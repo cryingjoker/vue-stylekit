@@ -5,6 +5,8 @@
     width: 100%;
     padding-top: 22px;
     box-sizing: border-box;
+
+
     &__line {
         position: absolute;
         bottom: 0;
@@ -17,6 +19,10 @@
         transition-timing-function: ease-in-out;
         transition-property: background, height;
         transition-duration: 0.2s;
+        pointer-events: none;
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
         .textarea & {
             position: relative;
         }
@@ -29,6 +35,9 @@
             transition-property: background, width;
             transition-duration: 0.4s;
             background: @b2c-purple-low;
+            appearance:none;
+            -webkit-appearance:none;
+            -moz-appearance:none;
         }
         .select__inner:focus+&,
         .select:hover &,

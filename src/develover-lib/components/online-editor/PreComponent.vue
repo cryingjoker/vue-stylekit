@@ -23,8 +23,72 @@
 <script>
   import PreComponentEditor from './PreComponentEditor.vue'
   const preComponentsList = {};
-  import VueRtStyle from '../../../lib'
+  import {
+    Button,
+    ButtonRippleWithoutJs,
+    ButtonWithoutRipple,
+    Checkbox,
+    Input,
+    InputWithoutJs,
+    Price,
+    RadioButton,
+    Ripple,
+    RippleWave,
+    RippleWihoutJs,
+    Select,
+    SelectOption,
+    SelectWithoutJs,
+    Spinner,
+    Switch,
+    Textarea,
+    TextareaStatic,
+    TextareaWithoutJs,
+    ScrollTabs,
+    Tabs,
+    TabsNavigationItem,
+    TabsContentItem,
+    Annotation,
+    ColorLineText,
+    Banner,
+    BannerItem,
+    BannerPaginatorItem,
+    Card,
+    CardImage,
+    CardImageList
+  } from '../../../lib/components/index';
+  import VueRtStyle from '../../../lib/'
   const componentsList = {};
+  preComponentsList[Button.name] = Button;
+    preComponentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
+    preComponentsList[ButtonWithoutRipple.name] = ButtonWithoutRipple;
+    preComponentsList[Checkbox.name] = Checkbox;
+    preComponentsList[Input.name] = Input;
+    preComponentsList[InputWithoutJs.name] = InputWithoutJs;
+    preComponentsList[Price.name] = Price;
+    preComponentsList[RadioButton.name] = RadioButton;
+    preComponentsList[Ripple.name] = Ripple;
+    preComponentsList[RippleWave.name] = RippleWave;
+    preComponentsList[RippleWihoutJs.name] = RippleWihoutJs;
+    preComponentsList[Select.name] = Select;
+    preComponentsList[SelectOption.name] = SelectOption;
+    preComponentsList[SelectWithoutJs.name] = SelectWithoutJs;
+    preComponentsList[Spinner.name] = Spinner;
+    preComponentsList[Switch.name] = Switch;
+    preComponentsList[Textarea.name] = Textarea;
+    preComponentsList[TextareaStatic.name] = TextareaStatic;
+    preComponentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
+    preComponentsList[ScrollTabs.name] = ScrollTabs;
+    preComponentsList[Tabs.name] = Tabs;
+    preComponentsList[TabsNavigationItem.name] = TabsNavigationItem;
+    preComponentsList[TabsContentItem.name] = TabsContentItem;
+    preComponentsList[Annotation.name] = Annotation;
+    preComponentsList[ColorLineText.name] = ColorLineText;
+    preComponentsList[Banner.name] = Banner;
+    preComponentsList[BannerItem.name] = BannerItem;
+    preComponentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
+    preComponentsList[Card.name] = Card;
+    preComponentsList[CardImage.name] = CardImage;
+    preComponentsList[CardImageList.name] = CardImageList;
   componentsList[PreComponentEditor.name] = PreComponentEditor;
   import Vue from 'vue/dist/vue.js';
   export default {
@@ -50,15 +114,13 @@
 
     mounted(){
 
-      this.localCode = this.text
+      this.localCode = this.text;
       this.getTextAsVue();
     },
     components: componentsList,
     methods:{
-
       changeComponentCode(code){
         if(code) {
-
           this.localCode = code;
           this.component.$destroy();
           this.component.$el.outerHTML = '<div class="wc-inline-render"></div>';
@@ -81,6 +143,7 @@
           this.component = new Vue({
             el:'.wc-inline-render',
             name: 'Content',
+            components: preComponentsList,
             template: this.normalizeCode,
             data: () => {
               return options

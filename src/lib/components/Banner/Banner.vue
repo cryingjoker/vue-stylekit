@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="rt-banner-image" :style="imageStyle">
-      <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500" transform='translate(-50% 0)'>
+      <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500" style='transform: translate(-50% 0)'>
         <polygon points="0 0,0 500,185 0 "/>
       </svg>
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500">
@@ -81,7 +81,7 @@ export default {
   },
 
   provide() {
-    const RtBanners = this.RtBanners || {};
+    const RtBanners = this.RtBanners;
     return { RtBanners };
   },
   computed: {

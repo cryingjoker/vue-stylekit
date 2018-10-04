@@ -47,6 +47,7 @@ export default {
   inject: {
     RtBanners: {}
   },
+
   data() {
     return {
       id: this._uid
