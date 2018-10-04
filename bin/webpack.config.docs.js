@@ -5,17 +5,15 @@ const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
-
+const local_dirname = path.join(__dirname,'..');
 const env = process.env.NODE_ENV;
-const minify = env === `production`;
-const sourceMap = env === `development`;
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
 const config = {
   entry: {
-    app:[path.join(__dirname, `src`, `index.js`)],
+    app:[path.join(local_dirname, `src`, `example-pages`, `index.js`)],
   },
   mode: env,
   output: {
@@ -31,7 +29,7 @@ const config = {
       chunks: `all`
     },
   },
-  devtool: sourceMap ? `cheap-module-eval-source-map` : undefined,
+  devtool:  undefined,
   module: {
     rules: [
       {
@@ -50,13 +48,13 @@ const config = {
       {
         test: /\.css$/,
         use: [
-      {loader:`css-loader`},
+          {loader:`css-loader`},
         ],
       },
       {
         test: /\.js$/,
         loader: `babel-loader`,
-        include: [path.join(__dirname, `src`)],
+        include: [path.join(local_dirname, `src`)],
       },
       {
         test: /\.less$/,
@@ -64,7 +62,7 @@ const config = {
           {
             loader: `style-loader`,
           },
-        {loader:`css-loader`},
+          {loader:`css-loader`},
           {
             loader: `less-loader`,
           },
@@ -76,7 +74,7 @@ const config = {
           {
             loader: `style-loader`,
           },
-        {loader:`css-loader`},
+          {loader:`css-loader`},
           {
             loader: `stylus-loader`,
           },
@@ -98,28 +96,21 @@ const config = {
       languages: ['html'],
     }),
     new HtmlWebpackPlugin({
-      filename: path.join(__dirname, `dist`, `index.html`),
-      template: path.join(__dirname, `static`, `index.html`),
+      filename: path.join(local_dirname, `dist`, `index.html`),
+      template: path.join(local_dirname, `static`, `index.html`),
       inject: true,
-      minify: minify
-        ? {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeAttributeQuotes: true,
-          }
-        : false,
+      minify:{
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+        }
     }),
   ]
 };
 
 
-if (env !== `development`) {
-  config.plugins.push(new MiniCssExtractPlugin());
-}else{
-  config.entry.app.unshift('webpack-hot-middleware/client')
-  config.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  )
-}
+
+config.plugins.push(new MiniCssExtractPlugin());
+
 
 module.exports = config;

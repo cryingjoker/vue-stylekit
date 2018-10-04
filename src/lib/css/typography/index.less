@@ -1,0 +1,144 @@
+body {
+    font-family: 'RT Fonts';
+    font-weight: 400;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    line-height: 1.5;
+}
+
+.@{newAppName}-font {
+    &-hero {
+        font-size: 66px;
+        font-weight: 200;
+    }
+    h1,
+    &-h1 {
+        font-size: 50px;
+        font-weight: 200;
+    }
+    &-banner-label {
+        font-size: 48px;
+        font-weight: 600;
+    }
+    &-banner-label-bold {
+        font-size: 48px;
+        font-weight: 800;
+        @media (max-width: @mobile-step-size) {
+            font-size: 38px;
+        }
+    }
+  &-banner-label-thin {
+        font-size: 48px;
+        font-weight: 200;
+        line-height: 63px;
+        @media (max-width: @mobile-step-size) {
+            font-size: 38px;
+        }
+    }
+    h2,
+    &-h2 {
+        font-size: 37px;
+        font-weight: 200;
+    }
+    &-promo-title {
+        font-size: 36px;
+    }
+    h3,
+    &-h3 {
+        font-size: 28px;
+        font-weight: 200;
+    }
+    &-promo {
+        font-size: 24px;
+        font-weight: 200;
+        letter-spacing: 0.28px;
+    }
+    h4,
+    &-h4 {
+        font-size: 21px;
+        font-weight: 200;
+    }
+    strong,
+    b,
+    &-bold {
+        font-weight: 800;
+    }
+    &-medium {
+        font-weight: 600;
+    }
+    &-paragraph {
+        font-size: 18px;
+    }
+    &-small-paragraph {
+        font-size: 14px;
+    }
+    &-label {
+        font-size: 12px;
+    }
+    &-label-uppercase {
+        font-size: 12px;
+        color: @main-color03;
+        text-transform: uppercase;
+    }
+    &-no-wrpa {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-md {
+        &-center {
+            @media (max-width: @mobile-step-size) {
+                text-align: center;
+            }
+        }
+    }
+    &-center {
+        text-align: center;
+    }
+    &-card-title {
+        font-size: 30px;
+    }
+    &-light {
+        font-weight: 200;
+    }
+    &-link {
+        color: inherit;
+        &:hover {
+            color: inherit;
+        }
+        text-decoration: underline;
+    }
+    &-small-upper {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    &-spacing2 {
+        letter-spacing: 2px;
+    }
+    &-spacing018 {
+        letter-spacing: 0.18px;
+    }
+    &-hypnens-off{
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      -moz-hyphens: none;
+      hyphens: none;
+      word-wrap: normal;
+    }
+}
+
+.@{newAppName}-wrapper {
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+}
+
