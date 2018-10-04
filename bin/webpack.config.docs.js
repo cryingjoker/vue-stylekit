@@ -1,24 +1,35 @@
 const { VueLoaderPlugin } = require(`vue-loader`);
 const path = require(`path`);
+
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
 const local_dirname = path.join(__dirname,'..');
+const env = process.env.NODE_ENV;
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
 
 const config = {
   entry: {
-    app:[path.join(local_dirname, `src`,`example-pages`,`index.js`)],
+    app:[path.join(local_dirname, `src`, `example-pages`, `index.js`)],
   },
-  mode: 'development',
+  mode: env,
   output: {
     publicPath: `/`,
+  },
+  resolve: {
+    alias: {
+      '@': resolve('src/app/dist/components'),
+    },
   },
   optimization: {
     splitChunks: {
       chunks: `all`
     },
   },
-  devtool: `cheap-module-eval-source-map`,
+  devtool:  undefined,
   module: {
     rules: [
       {
@@ -37,7 +48,7 @@ const config = {
       {
         test: /\.css$/,
         use: [
-      {loader:`css-loader`},
+          {loader:`css-loader`},
         ],
       },
       {
@@ -51,7 +62,7 @@ const config = {
           {
             loader: `style-loader`,
           },
-        {loader:`css-loader`},
+          {loader:`css-loader`},
           {
             loader: `less-loader`,
           },
@@ -63,7 +74,7 @@ const config = {
           {
             loader: `style-loader`,
           },
-        {loader:`css-loader`},
+          {loader:`css-loader`},
           {
             loader: `stylus-loader`,
           },
@@ -85,18 +96,21 @@ const config = {
       languages: ['html'],
     }),
     new HtmlWebpackPlugin({
-      filename: `index.html`,
+      filename: path.join(local_dirname, `dist`, `index.html`),
       template: path.join(local_dirname, `static`, `index.html`),
       inject: true,
+      minify:{
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+        }
     }),
   ]
 };
 
 
 
-config.entry.app.unshift('webpack-hot-middleware/client');
-config.plugins.push(
-  new webpack.HotModuleReplacementPlugin()
-);
+config.plugins.push(new MiniCssExtractPlugin());
+
 
 module.exports = config;

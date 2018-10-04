@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node bin/local/index.js",
     "build": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.lib.js",
+    "build:docs": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.docs.js",
     "serve:dev": "cross-env NODE_ENV=development node bin/dev-server.js",
     "serve:production": "cross-env NODE_ENV=production node bin/spa-server.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",

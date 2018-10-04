@@ -25,9 +25,9 @@ gulp.task(
     // "perl -pi -w -e 's/BasisGrotesqu/docs\\/BasisGrotesqu/g' ./docs/main.js",
     'perl -pi -w -e \'s/\\<\\/script\\>\\<\\/head\\>/\\<\\/script\\>\\<link rel\\=\\"stylesheet\\" href\\=\\"\\/vue\\-stylekit\\/docs\\/fonts.css\\"\\/\\>\\<\\/head\\>/g\' ./docs/index.html\n',
     'rm -rf ./dist',
-    "git commit -a -m'deploy'\n",
-    'git push',
-    'git checkout master',
+    // "git commit -a -m'deploy'\n",
+    // 'git push',
+    // 'git checkout master',
   ]),
 );
 
