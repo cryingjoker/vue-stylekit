@@ -27,7 +27,7 @@
     </div>
 
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh" id="tv">
-      <rt-banner-item background-image="/images/tvtv/bg.jpg"
+      <rt-banner-item background-image="/static/images/tvtv/bg.jpg"
                       background-color="none"
                       :content-min-height="631"
       >
