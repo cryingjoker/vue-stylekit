@@ -10,7 +10,7 @@ gulp.task(
     'mkdir docs',
     'mkdir docs/promo',
     "git merge master -m'deploy'",
-    'npm run build',
+    'npm run build:docs',
     'cp -R ./dist/* ./docs',
     'cp docs/BasisGrotesquePro*.* docs/promo/',
     'cp ./static/fonts.css ./docs/',
