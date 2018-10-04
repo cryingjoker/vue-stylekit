@@ -77,7 +77,7 @@ app.use(devMiddleware)
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 
 
-app.use(staticPath, express.static(local_dirname+'/static'))
+app.use('/static/', express.static(local_dirname+'/static'))
 
 const url = 'http://localhost:' + port
 spinner = new Ora({

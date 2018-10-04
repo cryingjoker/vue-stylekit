@@ -26,7 +26,7 @@
     </div>
 
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
-      <rt-banner-item background-image="/images/smartHouse/bg.jpg"
+      <rt-banner-item background-image="/static/images/smartHouse/bg.jpg"
                       background-color="none"
                       :content-min-height="631"
       >
@@ -77,7 +77,7 @@
       </div>
     </div>
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
-      <rt-banner-item background-image="/images/smartHouse/bg2.jpg"
+      <rt-banner-item background-image="/static/images/smartHouse/bg2.jpg"
                       background-color="none"
                       content-height="700px" content-min-height="100vh"
       >
@@ -91,7 +91,7 @@
           </div>
         </div>
       </rt-banner-item>
-      <rt-banner-item background-image="/images/smartHouse/bg.jpg"
+      <rt-banner-item background-image="/static/images/smartHouse/bg.jpg"
                       background-color="none"
                       content-height="700px" content-min-height="100vh"
       >
@@ -106,7 +106,7 @@
           </div>
         </div>
       </rt-banner-item>
-      <rt-banner-item background-image="/example-images/banerBackground1.jpg"
+      <rt-banner-item background-image="/static/example-images/banerBackground1.jpg"
                       background-color="none"
                       content-height="700px" content-min-height="100vh"
       >
@@ -1290,7 +1290,7 @@
 
             </div>
             <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-              <rt-card :background-image="'/example-images/cardBackground9.png'"
+              <rt-card :background-image="'/static/example-images/cardBackground9.png'"
                        :background-image-stand-alone="true"
                        :background-position="'bottom-right'"
                        background-size-width="40%"

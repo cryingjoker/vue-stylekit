@@ -9,7 +9,7 @@
       <div class="app-body">
         <div class="row">
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image card-image="/images/cardImage3.jpg">
+            <rt-card-image card-image="/static/images/cardImage3.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -54,7 +54,7 @@
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage3.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -66,7 +66,7 @@
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage3.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -80,7 +80,7 @@
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage1.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage1.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -92,7 +92,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage2.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage2.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -104,7 +104,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage3.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -114,7 +114,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image  :is-white-color="true"
-                            background-color-type="light-blue" :col-size="2" card-image="/images/cardImage1.jpg">
+                            background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage1.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
                 <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
@@ -235,21 +235,21 @@
 
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground5.png" background-position="bottom-right" :col-size="2"><template slot="content"><p class="rt-font-label">стоимость покупки</p><rt-price :value="1480" :only-price="true" /></template><template slot="footer"><p class="rt-font-paragraph rt-font-bold">Звоните по новому</p><p class="rt-font-paragraph rt-space-top05 rt-space-bottom">Беспроцентная рассрочка на смартфоны Samsung Galaxy S8 для абонентов Ростелекома</p><p class="rt-space-top">Условия акции</p></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground5.png" background-position="bottom-right" :col-size="2"><template slot="content"><p class="rt-font-label">стоимость покупки</p><rt-price :value="1480" :only-price="true" /></template><template slot="footer"><p class="rt-font-paragraph rt-font-bold">Звоните по новому</p><p class="rt-font-paragraph rt-space-top05 rt-space-bottom">Беспроцентная рассрочка на смартфоны Samsung Galaxy S8 для абонентов Ростелекома</p><p class="rt-space-top">Условия акции</p></template></rt-card>'></pre-code>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground3.png" :is-white-color="true" :background-cover="true" :background-smoke="0.3"><template slot="content"><p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p><rt-input value="" placeholder="телефон, email или счёт" /><p class="rt-space-top05 rt-card-text rt-space-right">Введите номер телефона, email или номер лицевого счёта</p></template><template slot="footer"><rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Оплатить</rt-button></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground3.png" :is-white-color="true" :background-cover="true" :background-smoke="0.3"><template slot="content"><p class="rt-font-paragraph rt-space-bottom rt-font-bold">Оплата услуг</p><rt-input value="" placeholder="телефон, email или счёт" /><p class="rt-space-top05 rt-card-text rt-space-right">Введите номер телефона, email или номер лицевого счёта</p></template><template slot="footer"><rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Оплатить</rt-button></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground3.png" :background-opacity="0.5" background-position="bottom-right" :is-white-color="true" :background-cover="true" :background-smoke="0.5" :offset-top="true"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Родительский контроль</p><p class="rt-space-top05 rt-card-text rt-space-right">для безопасности детей в интернете</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground3.png" :background-opacity="0.5" background-position="bottom-right" :is-white-color="true" :background-cover="true" :background-smoke="0.5" :offset-top="true"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Родительский контроль</p><p class="rt-space-top05 rt-card-text rt-space-right">для безопасности детей в интернете</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground6.png":background-cover="true":background-opacity="0.7":background-smoke="0.3":is-white-color="true":offset-top="true"background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Антивирусы</p><p class="rt-space-top05">Выгодная защита <br>для всех устройств</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground6.png":background-cover="true":background-opacity="0.7":background-smoke="0.3":is-white-color="true":offset-top="true"background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Антивирусы</p><p class="rt-space-top05">Выгодная защита <br>для всех устройств</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
           </div>
         </div>
         <div class="row">
@@ -257,26 +257,26 @@
 
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground10.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.3" :is-white-color="true" :offset-top="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Игровой</p><p class="rt-space-top05">Высокоскоростной <br> интернет и игровые бонусы <br>для увлеченных геймеров</p></template><template slot="footer"><p>Выберите свою игровую опцию</p></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground10.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.3" :is-white-color="true" :offset-top="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Игровой</p><p class="rt-space-top05">Высокоскоростной <br> интернет и игровые бонусы <br>для увлеченных геймеров</p></template><template slot="footer"><p>Выберите свою игровую опцию</p></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.3" :is-white-color="true" :offset-top="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Microsoft Office 365</p><p class="rt-space-top05">Полный пакет программ <br>для всей семьи</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.3" :is-white-color="true" :offset-top="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Microsoft Office 365</p><p class="rt-space-top05">Полный пакет программ <br>для всей семьи</p></template><template slot="footer"><p>Выберите свой тип подписки</p></template></rt-card>'></pre-code>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground8.png" :background-cover="true" :is-white-color="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Игровой Warface</p><p class="rt-space-top05 rt-font-small-upper rt-font-small-upper">интернет</p><p class="rt-space-top rt-font-spacing018">Крутые пушки всем <br> абонентам, оружие <br> навсегда, кредиты каждый<br> день</p></template><template slot="footer"><div class="rt-font-right"><rt-price :value="850" /></div><rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Подключить</rt-button></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground8.png" :background-cover="true" :is-white-color="true" background-color-type="black" :col-size="2"><template slot="content"><p class="rt-font-paragraph rt-font-bold">Игровой Warface</p><p class="rt-space-top05 rt-font-small-upper rt-font-small-upper">интернет</p><p class="rt-space-top rt-font-spacing018">Крутые пушки всем <br> абонентам, оружие <br> навсегда, кредиты каждый<br> день</p></template><template slot="footer"><div class="rt-font-right"><rt-price :value="850" /></div><rt-button :is-block="true" class="rt-button-small rt-button-white white-wave">Подключить</rt-button></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground9.png" background-position="bottom-right" :col-size="2"><template slot="content"><p class="rt-space-top05 rt-font-small-upper">стоимость покупки</p><rt-price :value="4990" :only-price="true" /></template><template slot="footer"><div class="rt-space-bottom2"><p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера</p><p class="rt-space-top05">Контролируйте все <br>происходящее на расстоянии <br>  и просматривайте записи на<br> любом устройстве. </p></div></template></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground9.png" background-position="bottom-right" :col-size="2"><template slot="content"><p class="rt-space-top05 rt-font-small-upper">стоимость покупки</p><rt-price :value="4990" :only-price="true" /></template><template slot="footer"><div class="rt-space-bottom2"><p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера</p><p class="rt-space-top05">Контролируйте все <br>происходящее на расстоянии <br>  и просматривайте записи на<br> любом устройстве. </p></div></template></rt-card>'></pre-code>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <pre-code text='<rt-card background-image="/example-images/cardBackground7.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.2" :is-white-color="true" :offset-top="true" background-color-type="black"
+            <pre-code text='<rt-card background-image="/static/example-images/cardBackground7.png" :background-cover="true" :background-opacity="0.7" :background-smoke="0.2" :is-white-color="true" :offset-top="true" background-color-type="black"
             ><template slot="content"><p class="rt-font-paragraph rt-font-bold">Мобильное ТВ</p><p class="rt-space-top05">101 тв-канал с контентом на любой вкус в подарок </p></template><template slot="footer"><p>Подробнее</p></template></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
@@ -303,32 +303,32 @@
           </div>
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
           </div>
 
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true" :background-blur="5"><p class="rt-card__label rt-font-paragraph">Оплата услуг</p></rt-card>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-cover="true" :background-blur="5"><p class="rt-card__label rt-font-paragraph">Оплата услуг</p></rt-card>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card :background-repeat="true" background-image="/example-images/cardBackground2.png" :background-smoke="0.3"/>'></pre-code>
+              text='<rt-card :background-repeat="true" background-image="/static/example-images/cardBackground2.png" :background-smoke="0.3"/>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-smoke="0.5"/>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-smoke="0.5"/>'></pre-code>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-12 rt-col-md-3 rt-space-top">
             <pre-code
-              text='<rt-card background-image="/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
+              text='<rt-card background-image="/static/example-images/cardBackground1.png" :background-cover="true"/>'></pre-code>
 
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
