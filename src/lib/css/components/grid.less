@@ -62,71 +62,71 @@
   width: auto;
   max-width: none;
 }
-
+@STEP_GRID : 8.333333%;
 .@{newAppName}-col-1 {
-  -ms-flex: 0 0 8.333333%;
-  flex: 0 0 8.333333%;
-  max-width: 8.333333%;
+  -ms-flex: 0 0 @STEP_GRID;
+  flex: 0 0 @STEP_GRID;
+  max-width: @STEP_GRID;
 }
 
 .@{newAppName}-col-2 {
-  -ms-flex: 0 0 16.666665%;
-  flex: 0 0 16.666665%;
-  max-width: 16.666665%;
+  -ms-flex: 0 0 @STEP_GRID*2;
+  flex: 0 0 @STEP_GRID*2;
+  max-width: @STEP_GRID*2;
 }
 
 .@{newAppName}-col-3 {
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
+  -ms-flex: 0 0 @STEP_GRID*3;
+  flex: 0 0 @STEP_GRID*3;
+  max-width: @STEP_GRID*3;
 }
 
 .@{newAppName}-col-4 {
-  -ms-flex: 0 0 33.333333%;
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
+  -ms-flex: 0 0 @STEP_GRID*4;
+  flex: 0 0 @STEP_GRID*4;
+  max-width: @STEP_GRID*4;
 }
 
 .@{newAppName}-col-5 {
-  -ms-flex: 0 0 41.666667%;
-  flex: 0 0 41.666667%;
-  max-width: 41.666667%;
+  -ms-flex: 0 0 @STEP_GRID*5;
+  flex: 0 0 @STEP_GRID*5;
+  max-width: @STEP_GRID*5;
 }
 
 .@{newAppName}-col-6 {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
+  -ms-flex: 0 0 @STEP_GRID*6;
+  flex: 0 0 @STEP_GRID*6;
+  max-width: @STEP_GRID*6;
 }
 
 .@{newAppName}-col-7 {
-  -ms-flex: 0 0 58.333333%;
-  flex: 0 0 58.333333%;
-  max-width: 58.333333%;
+  -ms-flex: 0 0 @STEP_GRID*7;
+  flex: 0 0 @STEP_GRID*7;
+  max-width: @STEP_GRID*7;
 }
 
 .@{newAppName}-col-8 {
-  -ms-flex: 0 0 66.666667%;
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
+  -ms-flex: 0 0 @STEP_GRID*8;
+  flex: 0 0 @STEP_GRID*8;
+  max-width: @STEP_GRID*8;
 }
 
 .@{newAppName}-col-9 {
-  -ms-flex: 0 0 75%;
-  flex: 0 0 75%;
-  max-width: 75%;
+  -ms-flex: 0 0 @STEP_GRID*9;
+  flex: 0 0 @STEP_GRID*9;
+  max-width: @STEP_GRID*9;
 }
 
 .@{newAppName}-col-10 {
-  -ms-flex: 0 0 83.333333%;
-  flex: 0 0 83.333333%;
-  max-width: 83.333333%;
+  -ms-flex: 0 0 @STEP_GRID*10;
+  flex: 0 0 @STEP_GRID*10;
+  max-width: @STEP_GRID*10;
 }
 
 .@{newAppName}-col-11 {
-  -ms-flex: 0 0 91.666667%;
-  flex: 0 0 91.666667%;
-  max-width: 91.666667%;
+  -ms-flex: 0 0 @STEP_GRID*11;
+  flex: 0 0 @STEP_GRID*11;
+  max-width: @STEP_GRID*11;
 }
 
 .@{newAppName}-col-12 {
@@ -192,13 +192,6 @@
   padding-right: @horizontal-space/2;
 }
 
-.@{newAppName}-space-left {
-  padding-left: @horizontal-space;
-}
-
-.@{newAppName}-space-right {
-  padding-right: @horizontal-space;
-}
 
 .@{newAppName}-space-top05 {
   padding-top: @vertical-space/2;
@@ -224,9 +217,6 @@
   padding-bottom: @vertical-space/2;
 }
 
-.@{newAppName}-space-bottom {
-  padding-bottom: @vertical-space;
-}
 
 .@{newAppName}-space-bottom15 {
   padding-bottom: @vertical-space*1.5;

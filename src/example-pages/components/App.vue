@@ -32,6 +32,16 @@
             Typography
           </router-link>
         </div>
+        <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/grid">
+            Grid class elements
+          </router-link>
+        </div>
+        <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/space">
+            Space class elements
+          </router-link>
+        </div>
         <!--<div class="aside-menu__item" to="/color">Color list</div>-->
         <div class="aside-menu__item" />
         <div class="aside-menu__item">
@@ -109,11 +119,6 @@
                 Card
               </router-link>
             </div>
-            <!--<div class="aside-menu__item">-->
-            <!--<router-link class="aside-menu__link" active-class="aside-menu__link&#45;&#45;active" to="/tariffs">-->
-            <!--Tariff-->
-            <!--</router-link>-->
-            <!--</div>-->
           </div>
         </div>
         <div class="aside-menu__item">
