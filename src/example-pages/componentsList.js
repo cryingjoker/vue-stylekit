@@ -29,7 +29,8 @@ import {
   BannerPaginatorItem,
   Card,
   CardImage,
-  CardImageList
+  CardImageList,
+  FullscreenImage
 } from '../lib/components/index';
 
 const componentsList = {};
@@ -64,5 +65,6 @@ componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 componentsList[Card.name] = Card;
 componentsList[CardImage.name] = CardImage;
 componentsList[CardImageList.name] = CardImageList;
+componentsList[FullscreenImage.name] = FullscreenImage;
 
 export default componentsList;

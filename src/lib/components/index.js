@@ -29,3 +29,4 @@
  export { default as Banner } from './Banner/Banner.vue';
  export { default as BannerItem } from './Banner/BannerItem.vue';
  export { default as BannerPaginatorItem } from './Banner/BannerPaginatorItem.vue';
+ export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';

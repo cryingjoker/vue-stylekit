@@ -18,10 +18,16 @@ import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
+import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
+import GridElements from '../components/main-elements/Grid.vue';
+import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
+
 
 import Tabs from '../components/main-elements/Tabs.vue';
 
 const index = [
+  { path: '/grid', name: 'app-grid', component: GridElements },
+  { path: '/space', name: 'app-grid', component: SpaceElements },
   { path: '/buttons', name: 'app-buttons', component: Buttons },
   { path: '/checkbox', name: 'app-checkbox', component: Checkbox },
   { path: '/radiobutton', name: 'app-radiobutton', component: RadioButton },
@@ -32,6 +38,7 @@ const index = [
   { path: '/typography', name: 'app-typography', component: Typography },
   { path: '/spinner', name: 'app-spinner', component: Spinner },
   { path: '/price', name: 'app-price', component: Price },
+  { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
