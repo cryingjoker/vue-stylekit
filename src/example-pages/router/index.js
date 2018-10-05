@@ -18,6 +18,8 @@ import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
+import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
+
 
 import Tabs from '../components/main-elements/Tabs.vue';
 
@@ -32,6 +34,7 @@ const index = [
   { path: '/typography', name: 'app-typography', component: Typography },
   { path: '/spinner', name: 'app-spinner', component: Spinner },
   { path: '/price', name: 'app-price', component: Price },
+  { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
