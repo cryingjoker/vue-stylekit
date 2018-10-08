@@ -218,6 +218,7 @@ export default {
       const classArray = {};
       if (this.backgroundPosition) {
         if (
+
           this.backgroundPosition.search(
             /(top)|(left)|(bottom)|(right)|(bottom-left)|(top-right)|(bottom-left)|(bottom-right)/
           ) === 0
