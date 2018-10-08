@@ -1,65 +1,137 @@
 .color-line {
-  display: inline;
-  position: relative;
-  line-height: 1.5;
-  word-break: break-word;
-  left: 15px;
-  &--is-paragraph {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    padding-right: @horizontal-space*0.75;
-    &:before, &:after {
-      content: '';
-      width: 100%;
-      order: 1;
-    }
-  }
-  &-paragraph-icon {
-    position: absolute;
-    position: absolute;
-    width: 37px;
-    height: 23px;
-    position: absolute;
-    bottom: -23px;
-    right: -14px;
-    fill: @b2c-orange-low;
-    overflow: visible;
-    &--purple {
-      fill: @b2c-purple-low;
-    }
-    &--red {
-      fill: @b2c-red-low;
-    }
-    &--dark-blue {
-      fill: @b2c-dark-blue-low;
-    }
-    &--light-blue {
-      fill: @b2c-light-blue-low;
-    }
-    &--yellow {
-      fill: @b2c-yellow-low;
-    }
-    &--pink {
-      fill: @b2c-pink-low;
-    }
-    &--green {
-      fill: @b2c-green-low;
-    }
-  }
-  &-text {
-    .color-line--is-paragraph & {
-      padding-top: @vertical-space;
-      padding-bottom: @vertical-space*0.5;
-      border-radius: 0 5px 0 0;
-    }
-    box-shadow: @horizontal-space*0.75 0 0 #fff,
-    -@horizontal-space*0.75 0 0 #fff;
-    padding-top: @vertical-space*0.5;
-    padding-bottom: @vertical-space;
     display: inline;
-    background-color: #fff;
-    color: @main-color;
     position: relative;
-  }
+    line-height: 1.5;
+    word-break: break-word;
+    left: 15px;
+
+    &--is-paragraph {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding-right: @horizontal-space*0.75;
+        &:before, &:after {
+            content: '';
+            width: 100%;
+            order: 1;
+        }
+    }
+    &-paragraph-icon {
+        position: absolute;
+        position: absolute;
+        width: 37px;
+        height: 23px;
+        position: absolute;
+        bottom: -23px;
+        right: -14px;
+        fill: @b2c-orange-low;
+        overflow: visible;
+        &--fill-purple {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-purple-low;
+            }
+        }
+        &--purple {
+            fill: @b2c-purple-low;
+        }
+        &--fill-red {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-red-low;
+            }
+        }
+        &--red {
+            fill: @b2c-red-low;
+        }
+        &--fill-dark-blue {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-dark-blue-low;
+            }
+        }
+        &--dark-blue {
+            fill: @b2c-dark-blue-low;
+        }
+        &--fill-light-blue {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-light-blue-low;
+            }
+        }
+        &--light-blue {
+            fill: @b2c-light-blue-low;
+        }
+        &--fill-yellow {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-yellow-low;
+            }
+        }
+        &--yellow {
+            fill: @b2c-yellow-low;
+        }
+        &--fill-pink {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-pink-low;
+            }
+        }
+        &--pink {
+            fill: @b2c-pink-low;
+        }
+        &--fill-green {
+            .color-line-paragraph-icon__background {
+                fill: @b2c-green-low;
+            }
+        }
+        &--green {
+            fill: @b2c-green-low;
+        }
+    }
+    &-text {
+        .color-line--is-paragraph & {
+            padding-top: @vertical-space;
+            padding-bottom: @vertical-space*0.5;
+            border-radius: 0 5px 0 0;
+        }
+        box-shadow: @horizontal-space*0.75 0 0 #fff,
+        -@horizontal-space*0.75 0 0 #fff;
+        padding-top: @vertical-space*0.5;
+        padding-bottom: @vertical-space;
+        display: inline;
+        background-color: #fff;
+        color: @main-color;
+        position: relative;
+        &--purple {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-purple-low,
+                -@horizontal-space*0.75 0 0 @b2c-purple-low;
+            background-color: @b2c-purple-low;
+        }
+        &--red {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-red-low,
+                -@horizontal-space*0.75 0 0 @b2c-red-low;
+            background-color: @b2c-red-low;
+        }
+        &--dark-blue {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-dark-blue-low,
+                -@horizontal-space*0.75 0 0 @b2c-dark-blue-low;
+            background-color: @b2c-dark-blue-low;
+        }
+        &--light-blue {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-light-blue-low,
+                -@horizontal-space*0.75 0 0 @b2c-light-blue-low;
+            background-color: @b2c-light-blue-low;
+        }
+        &--yellow {
+
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-yellow-low,
+                -@horizontal-space*0.75 0 0 @b2c-yellow-low;
+            background-color: @b2c-yellow-low;
+        }
+        &--pink {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-pink-low,
+                -@horizontal-space*0.75 0 0 @b2c-pink-low;
+            background-color: @b2c-pink-low;
+        }
+        &--green {
+            box-shadow: @horizontal-space*0.75 0 0 @b2c-green-low,
+                -@horizontal-space*0.75 0 0 @b2c-green-low;
+            background-color: @b2c-green-low;
+        }
+    }
 }
