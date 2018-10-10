@@ -19,8 +19,28 @@
                 <div class="app-documentation__name rt-col-8">padding-left: 20px</div>
               </div>
               <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-left15</div>
+                <div class="app-documentation__name rt-col-8">padding-left: 30px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-left2</div>
+                <div class="app-documentation__name rt-col-8">padding-left: 40px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-left25</div>
+                <div class="app-documentation__name rt-col-8">padding-left: 50px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-left3</div>
+                <div class="app-documentation__name rt-col-8">padding-left: 60px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-right</div>
                 <div class="app-documentation__name rt-col-8">padding-right: 20px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-right2</div>
+                <div class="app-documentation__name rt-col-8">padding-right: 40px</div>
               </div>
               <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-top</div>
@@ -59,6 +79,14 @@
                 <div class="app-documentation__name rt-col-8">padding-top: 60px</div>
               </div>
               <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-top4</div>
+                <div class="app-documentation__name rt-col-8">padding-top: 80px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-top6</div>
+                <div class="app-documentation__name rt-col-8">padding-top: 120px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-bottom05</div>
                 <div class="app-documentation__name rt-col-8">padding-bottom: 10px</div>
               </div>
@@ -74,6 +102,22 @@
               <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-bottom25</div>
                 <div class="app-documentation__name rt-col-8">padding-bottom: 50px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-bottom3</div>
+                <div class="app-documentation__name rt-col-8">padding-bottom: 60px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-bottom35</div>
+                <div class="app-documentation__name rt-col-8">padding-bottom: 70px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-bottom4</div>
+                <div class="app-documentation__name rt-col-8">padding-bottom: 80px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-bottom5</div>
+                <div class="app-documentation__name rt-col-8">padding-bottom: 100px</div>
               </div>
               <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-vertical</div>

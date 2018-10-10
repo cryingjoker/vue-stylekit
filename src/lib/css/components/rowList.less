@@ -1,0 +1,28 @@
+.@{newAppName}-row-list {
+    &__item{
+        padding-top: @vertical-space*0.5;
+        padding-bottom: @vertical-space*0.5;
+        display: flex;
+
+        &+&{
+            border-top: 1px solid @card-list-border;
+        }
+    }
+    &__icon{
+        padding-right: @horizontal-space;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+    &__option{
+        flex: 1;
+        display: flex;
+    }
+    &__value{
+        display: flex;
+        align-items: center;
+        flex: 0;
+        padding-left: @horizontal-space*2;
+    }
+}

@@ -1,6 +1,9 @@
 .@{newAppName}-scroll-tab {
     &-nav {
         display: flex;
+        justify-content: space-around;
+        white-space: nowrap;
+        font-size: 14px;
     }
     &-header {
         height: 60px;
@@ -25,11 +28,9 @@
             }
             &+& {
                 @media (min-width: @mobile-step-size) {
-                    margin-left: @horizontal-space*2;
+                    padding-left: @horizontal-space;
                 }
-                @media (max-width: @mobile-step-size) {
-                    margin-left: @horizontal-space;
-                }
+
             }
         }
     }

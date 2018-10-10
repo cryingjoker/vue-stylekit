@@ -42,8 +42,12 @@
             Space class elements
           </router-link>
         </div>
+        <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/row-list">
+            Row list
+          </router-link>
+        </div>
         <!--<div class="aside-menu__item" to="/color">Color list</div>-->
-        <div class="aside-menu__item" />
         <div class="aside-menu__item">
           <p class="aside-menu__submenu-title">Forms</p>
           <div class="aside-sub-menu">
