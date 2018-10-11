@@ -2,8 +2,11 @@ const { VueLoaderPlugin } = require(`vue-loader`);
 const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
-const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
+const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 const local_dirname = path.join(__dirname,'..');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+var vueLoaderConfig = require('./vue-loader.config')
+const HappyPack = require('happypack');
 
 const config = {
   entry: {
@@ -18,14 +21,18 @@ const config = {
       chunks: `all`
     },
   },
-  devtool: `cheap-module-eval-source-map`,
+  devtool: false,
+
   module: {
     rules: [
       {
         test: /\.vue$/,
         use: [
           {
-            loader: `vue-loader`,
+            loader: 'cache-loader'
+          },
+          {
+            loader: `happypack/loader?id=vue-loader`,
             options: {
               transformAssetUrls: {
                 source: './src/',
@@ -42,7 +49,8 @@ const config = {
       },
       {
         test: /\.js$/,
-        loader: `babel-loader`,
+        loader: `happypack/loader?id=babel-loader`,
+
         include: [path.join(local_dirname, `src`)],
       },
       {
@@ -70,17 +78,50 @@ const config = {
         ],
       },
       {
-        test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
+        test: /\.(webp|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
           name: `[name].[hash:20].[ext]`,
           limit: 10000,
         },
       },
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader'
+          },
+        ],
+      }
     ],
   },
   plugins: [
-    new VueLoaderPlugin(),
+    new HappyPack({
+      id: 'babel-loader',
+      threads: 4,
+      loaders: [{
+        loader: 'babel-loader',
+        options: { babelrc: true, cacheDirectory: true }
+      }]
+    }),
+
+    new HappyPack({
+      id: 'vue-loader',
+      threads: 4,
+      verbose: true,
+      loaders: ["vue-loader"],
+
+
+    }),
+    new HappyPack({
+      loaders: [{
+        path: 'vue-loader',
+        query: {
+          vueLoaderConfig
+        }
+      }]
+    }),
     new MonacoWebpackPlugin(webpack,{
       languages: ['html'],
     }),
@@ -96,6 +137,8 @@ const config = {
 
 config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins.push(
+  new HardSourceWebpackPlugin(),
+  new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin()
 );
 

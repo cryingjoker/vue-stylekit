@@ -79,6 +79,10 @@
                 <div class="app-documentation__name rt-col-8">padding-top: 60px</div>
               </div>
               <div class="app-documentation__row rt-space-vertical">
+                <div class="app-documentation__name rt-col-4">.rt-space-top35</div>
+                <div class="app-documentation__name rt-col-8">padding-top: 70px</div>
+              </div>
+              <div class="app-documentation__row rt-space-vertical">
                 <div class="app-documentation__name rt-col-4">.rt-space-top4</div>
                 <div class="app-documentation__name rt-col-8">padding-top: 80px</div>
               </div>
