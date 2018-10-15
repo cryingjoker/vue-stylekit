@@ -1,9 +1,12 @@
-const { VueLoaderPlugin } = require(`vue-loader`);
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
-const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
+const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 const local_dirname = path.join(__dirname,'..');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+var vueLoaderConfig = require('./vue-loader.config')
+const HappyPack = require('happypack');
 
 const config = {
   entry: {
@@ -18,19 +21,15 @@ const config = {
       chunks: `all`
     },
   },
-  devtool: `cheap-module-eval-source-map`,
+  devtool: false,
+
   module: {
     rules: [
       {
         test: /\.vue$/,
         use: [
           {
-            loader: `vue-loader`,
-            options: {
-              transformAssetUrls: {
-                source: './src/',
-              },
-            },
+            loader: "vue-loader"
           },
         ],
       },
@@ -43,6 +42,7 @@ const config = {
       {
         test: /\.js$/,
         loader: `babel-loader`,
+
         include: [path.join(local_dirname, `src`)],
       },
       {
@@ -80,7 +80,31 @@ const config = {
     ],
   },
   plugins: [
-    new VueLoaderPlugin(),
+    new HappyPack({
+      id: 'babel-loader',
+      threads: 4,
+      loaders: [{
+        loader: 'babel-loader',
+        options: { babelrc: true, cacheDirectory: true }
+      }]
+    }),
+
+    new HappyPack({
+      id: 'vue-loader',
+      threads: 4,
+      verbose: true,
+      loaders: ["vue-loader"],
+
+
+    }),
+    new HappyPack({
+      loaders: [{
+        path: 'vue-loader',
+        query: {
+          vueLoaderConfig
+        }
+      }]
+    }),
     new MonacoWebpackPlugin(webpack,{
       languages: ['html'],
     }),
@@ -96,6 +120,9 @@ const config = {
 
 config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins.push(
+  new VueLoaderPlugin(),
+  new HardSourceWebpackPlugin(),
+  new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin()
 );
 

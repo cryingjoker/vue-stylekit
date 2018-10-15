@@ -73,7 +73,7 @@ export default {
     switch (this.priceType) {
       case 'only-price':
         return (
-          <div class="rt-price">
+          <div class="rt-price rt-price-without-space">
             <div class="rt-price__value">{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
@@ -83,7 +83,7 @@ export default {
         break;
       case 'oldval-price':
         return (
-          <div class="rt-price">
+          <div class="rt-price rt-price-without-space">
             <div class="rt-price__old-value">{this.normalizeOldValue}</div>
             <div class="rt-price__value">{this.normalizeValue}</div>
             <div class="rt-price__info">
@@ -96,7 +96,7 @@ export default {
         );
       case 'option-price':
         return (
-          <div class="rt-price">
+          <div class="rt-price rt-price-without-space">
             <div class="rt-price__opinion">от</div>
             <div class="rt-price__value">{this.normalizeValue}</div>
             <div class="rt-price__info">
@@ -109,7 +109,7 @@ export default {
         );
       default:
         return (
-          <div class="rt-price">
+          <div class="rt-price rt-price-without-space">
             <div class="rt-price__option-value">{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>

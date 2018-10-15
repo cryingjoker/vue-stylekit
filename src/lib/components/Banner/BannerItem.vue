@@ -42,6 +42,10 @@ export default {
     isWhiteColor: {
       type: Boolean,
       default: false
+    },
+    backgroundPosition: {
+      type: String,
+      default: null
     }
   },
   inject: {
@@ -98,6 +102,9 @@ export default {
       const styles = {};
       if (this.backgroundImage) {
         styles.backgroundImage = 'url(' + this.backgroundImage + ')';
+      }
+      if(this.backgroundPosition){
+        styles.backgroundPosition = this.backgroundPosition;
       }
       return styles;
     }

@@ -159,9 +159,6 @@
             display: block;
         }
     }
-    & + & {
-        margin-top: 40px;
-    }
     &--color-white {
         color: white;
     }
@@ -194,6 +191,9 @@
             width: 100%;
             .@{newAppName}-banner--full-screen & {
                 justify-content: center;
+            }
+            .@{newAppName}-banner--full-screen.justify-left & {
+                justify-content: left;
             }
         }
         &--active {

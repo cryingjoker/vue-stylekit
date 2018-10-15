@@ -33,7 +33,9 @@ import {
   Card,
   CardImage,
   CardImageList,
-  FullscreenImage
+  FullscreenImage,
+  RowList,
+  RowListItem
 } from './components';
 
 
@@ -72,6 +74,9 @@ const VueRtStyle = {
       Vue.component(BannerItem.name, BannerItem);
       Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);
       Vue.component(FullscreenImage.name, FullscreenImage);
+      Vue.component(RowList.name, RowList);
+      Vue.component(RowListItem.name, RowListItem);
+
       Vue.RtStyle = true;
       Vue.config.test = true;
     }

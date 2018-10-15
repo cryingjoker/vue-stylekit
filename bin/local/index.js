@@ -28,7 +28,7 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
     colors: false,
     hash: false,
     version: false,
-    timings: true,
+    timings: false,
     assets: false,
     chunks: false,
     modules: false,

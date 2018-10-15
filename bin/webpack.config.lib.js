@@ -1,4 +1,4 @@
-const { VueLoaderPlugin } = require(`vue-loader`);
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const path = require(`path`);
 const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`);

@@ -30,7 +30,9 @@ import {
   Card,
   CardImage,
   CardImageList,
-  FullscreenImage
+  FullscreenImage,
+  RowList,
+  RowListItem
 } from '../lib/components/index';
 
 const componentsList = {};
@@ -66,5 +68,7 @@ componentsList[Card.name] = Card;
 componentsList[CardImage.name] = CardImage;
 componentsList[CardImageList.name] = CardImageList;
 componentsList[FullscreenImage.name] = FullscreenImage;
+componentsList[RowList.name] = RowList;
+componentsList[RowListItem.name] = RowListItem;
 
 export default componentsList;
