@@ -1,5 +1,5 @@
 <template>
-  <rt-banner :is-fullscreen-image="true">
+  <rt-banner :is-fullscreen-image="true" justify="left">
     <rt-banner-item background-image="/static/images/homeinternet/homeinternet-image3.jpg">
 
 

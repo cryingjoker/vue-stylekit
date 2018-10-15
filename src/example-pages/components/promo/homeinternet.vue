@@ -12,7 +12,7 @@
 
           <p class="rt-font-promo-title rt-space-horizontal color-main07 rt-space-bottom25">Технологии подключения</p>
           <div class="row rt-space-bottom5">
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3">
               <div class="rt-space-horizontal">
                 <svg width="76px" height="76px" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -52,7 +52,7 @@
                 </div>
               </div>
             </div>
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
               <div class="rt-space-horizontal">
                 <svg width="76px" height="76px" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

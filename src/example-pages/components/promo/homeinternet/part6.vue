@@ -4,7 +4,7 @@
       <div class="rt-container">
         <div class="rt-col-12">
           <div class="row">
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3">
               <rt-color-line-text>
                 <template slot="label">Защита ребёнка <br>  в интернете</template>
                 <template slot="content">Защита ваше ребенка от нежелательного <br>  контента в сети.
@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="row rt-space-top4 rt-font-hypnens-off">
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3">
               <rt-card>
                 <template slot="content">
                   <img width="363" src="/static/images/homeinternet/homeinternet-image18.jpg" alt="">
@@ -183,7 +183,7 @@
               </rt-card>
               <p class="color-white05 rt-space-top rt-font-label rt-space-left"><span class="rt-font-sup">1</span> стоимость продукта 1 на сайте АО «Лаборатория Касперского»</p>
             </div>
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
               <rt-card>
                 <template slot="content">
                   <img width="214" src="/static/images/homeinternet/homeinternet-image19.jpg" alt="">

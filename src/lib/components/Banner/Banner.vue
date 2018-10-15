@@ -44,6 +44,10 @@ export default {
   name: 'RtBanner',
   components: componentsList,
   props: {
+    justify: {
+      type: String,
+      default: null
+    },
     contentMinHeight: {
       type: [Number, String],
       default: null
@@ -103,7 +107,11 @@ export default {
         }
         if (this.isFullscreenImage) {
           classArray['rt-banner--full-screen'] = true;
+          if(this.justify){
+            classArray['justify-'+this.justify] = true;
+          }
         }
+
         if (this.RtBanners.items[activeIndex].isWhiteColor) {
           classArray['rt-banner--color-white'] = true;
         }

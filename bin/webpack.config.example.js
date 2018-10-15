@@ -1,4 +1,4 @@
-const { VueLoaderPlugin } = require(`vue-loader`);
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
@@ -29,15 +29,7 @@ const config = {
         test: /\.vue$/,
         use: [
           {
-            loader: 'cache-loader'
-          },
-          {
-            loader: `happypack/loader?id=vue-loader`,
-            options: {
-              transformAssetUrls: {
-                source: './src/',
-              },
-            },
+            loader: "vue-loader"
           },
         ],
       },
@@ -49,7 +41,7 @@ const config = {
       },
       {
         test: /\.js$/,
-        loader: `happypack/loader?id=babel-loader`,
+        loader: `babel-loader`,
 
         include: [path.join(local_dirname, `src`)],
       },
@@ -78,22 +70,13 @@ const config = {
         ],
       },
       {
-        test: /\.(webp|otf|ttf|woff|woff2|ani|eot|svg)$/,
+        test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
           name: `[name].[hash:20].[ext]`,
           limit: 10000,
         },
       },
-      {
-        test: /\.(gif|png|jpe?g)$/i,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader'
-          },
-        ],
-      }
     ],
   },
   plugins: [
@@ -137,6 +120,7 @@ const config = {
 
 config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins.push(
+  new VueLoaderPlugin(),
   new HardSourceWebpackPlugin(),
   new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin()

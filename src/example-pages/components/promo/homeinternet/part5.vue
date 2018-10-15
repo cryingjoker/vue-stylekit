@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="row rt-space-top4 rt-font-hypnens-off">
-            <div class="rt-col-4">
+            <div class="rt-col-4 rt-col-md-3">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image15.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">На всех устройствах</p>
@@ -24,7 +24,7 @@
                 </template>
               </rt-card-image>
             </div>
-            <div class="rt-col-4">
+            <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image16.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">Для мобильных устройств</p>
@@ -32,7 +32,7 @@
                 </template>
               </rt-card-image>
             </div>
-            <div class="rt-col-4">
+            <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image17.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">Выгодная годовая подписка</p>

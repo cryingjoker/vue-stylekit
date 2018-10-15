@@ -1,5 +1,5 @@
 <template>
-  <rt-banner :is-fullscreen-image="true" bannerLogo="/static/example-images/Logo.svg" background-position="top">
+  <rt-banner :is-fullscreen-image="true" bannerLogo="/static/example-images/Logo.svg" background-position="top" justify="left">
     <rt-banner-item background-image="/static/images/homeinternet/homeinternet-image1.jpg">
       <rt-color-line-text>
         <template slot="label">Интернет</template>

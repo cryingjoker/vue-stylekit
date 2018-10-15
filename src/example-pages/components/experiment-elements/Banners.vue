@@ -70,6 +70,17 @@
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
+            <div class="app-documentation__name rt-col-2">justify</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Сейчас принимает left - указывает на направление контанта слева</div>
+              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">background-color</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
               <div class="app-documentation__value-item rt-col-3"><span
