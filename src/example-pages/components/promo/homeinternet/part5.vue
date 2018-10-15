@@ -4,7 +4,7 @@
       <div class="rt-container">
         <div class="rt-col-12">
           <div class="row">
-            <div class="rt-col-6">
+            <div class="rt-col-6 rt-col-md-3">
               <rt-color-line-text>
                 <template slot="label">Безопасный <br> интернет</template>
                 <template slot="content">Надежная защита всех <br>  устройств вашей семьи
@@ -15,8 +15,8 @@
               </div>
             </div>
           </div>
-          <div class="row rt-space-top4 rt-font-hypnens-off">
-            <div class="rt-col-4 rt-col-md-3">
+          <div class="row rt-space-top4 rt-font-hypnens-off row--mobile-scroll">
+            <div class="rt-col-4 rt-col-md-3 d-md-flex-column">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image15.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">На всех устройствах</p>
@@ -24,7 +24,7 @@
                 </template>
               </rt-card-image>
             </div>
-            <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+            <div class="rt-col-4 rt-col-md-3 d-md-flex-column">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image16.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">Для мобильных устройств</p>
@@ -32,7 +32,7 @@
                 </template>
               </rt-card-image>
             </div>
-            <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+            <div class="rt-col-4 rt-col-md-3">
               <rt-card-image card-image="/static/images/homeinternet/homeinternet-image17.jpg">
                 <template slot="body">
                   <p class="rt-font-paragraph color-main07">Выгодная годовая подписка</p>
