@@ -80,6 +80,8 @@ export default {
   },
   data() {
     return {
+      touchstartX: null,
+      touchendX: null,
       RtBanners: {
         items: [],
         activeIndex: 0,
@@ -150,8 +152,34 @@ export default {
     if (this.RtBanners.items.length > 0 && this.RtBanners.items[0].id) {
       this.setStartTimer();
     }
+    this.$el.addEventListener('touchstart', this.setTouchStart);
+    this.$el.addEventListener('touchend', this.setTouchEnd);
+  },
+  beforeDestroy: function(){
+    this.$el.removeEventListener('touchstart', this.setTouchStart);
+    this.$el.removeEventListener('touchend', this.setTouchEnd);
   },
   methods: {
+    setTouchStart(e){
+      this.touchstartX = e.changedTouches[0].screenX
+    },
+    setTouchEnd(e){
+      this.touchendX = e.changedTouches[0].screenX
+      this.calculateSwipe();
+    },
+    calculateSwipe(){
+      if(this.touchendX > this.touchstartX){
+        this.RtBanners.activeIndex++;
+        if(this.RtBanners.activeIndex >= this.RtBanners.items.length){
+          this.RtBanners.activeIndex = 0;
+        }
+      }else{
+        this.RtBanners.activeIndex--;
+        if(this.RtBanners.activeIndex < 0){
+          this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+        }
+      }
+    },
     setActiveItem(index) {
       this.RtBanners.activeIndex = index;
       this.setStartTimer();
