@@ -1,8 +1,41 @@
 .@{newAppName}-row-list {
+    &__header{
+        display: flex;
+        cursor: pointer;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+        }
+
+    }
+    &__body{
+        transition-timing-function: ease-in-out;
+        transition-property: height, max-height, padding, opacity, top;
+        transition-duration: 0.4s;
+        max-height: 0vh;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        top: -40px;
+        &--has-icon-padding{
+            padding-left: 76px;
+        }
+        .@{newAppName}-row-list__item--active & {
+            top: 0;
+            padding-top: @vertical-space*1.5;
+            opacity: 1;
+            height: fit-content;
+            max-height: 200vh;
+
+        }
+    }
     &__item{
         padding-top: @vertical-space*0.5;
         padding-bottom: @vertical-space*0.5;
         display: flex;
+        &--with-slide{
+            flex-direction: column;
+        }
+
         @media (max-width: @iphone8) {
             flex-direction: column;
 
