@@ -163,6 +163,11 @@
     flex: 1 0 0;
 }
 .d-md-flex-column{
+    .@{newAppName}-card{
+        @media (max-width: @mobile-step-size) {
+            min-height: fit-content;
+        }
+    }
     @media (max-width: @mobile-step-size) {
         display: flex;
         flex-direction: column;
