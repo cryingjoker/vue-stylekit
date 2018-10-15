@@ -4,7 +4,7 @@
       <div class="rt-container">
         <div class="rt-col-12">
           <div class="row">
-            <div class="rt-col-6 rt-col-md-3">
+            <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
               <rt-color-line-text>
                 <template slot="label">Защита ребёнка <br>  в интернете</template>
                 <template slot="content">Защита ваше ребенка от нежелательного <br>  контента в сети.
@@ -12,11 +12,11 @@
               </rt-color-line-text>
             </div>
           </div>
-          <div class="row rt-space-top4 rt-font-hypnens-off">
-            <div class="rt-col-6 rt-col-md-3">
+          <div class="row row--mobile-scroll rt-space-top4 rt-font-hypnens-off">
+            <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
               <rt-card>
                 <template slot="content">
-                  <img width="363" src="/static/images/homeinternet/homeinternet-image18.jpg" alt="">
+                  <img class="rt-image-max-full-width" width="363" src="/static/images/homeinternet/homeinternet-image18.jpg" alt="">
                   <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top25">Kaspersky Internet Security</p>
                   <p class="rt-space-top color-main07 rt-space-right2">Подходит для смартфонов, планшетов, ноутбуков, компьютеров</p>
                 </template>
@@ -40,11 +40,9 @@
                         </svg>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main07">
                             Защищает 2 устройства <br>  одновременно
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -66,11 +64,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита от вирусов-вымогателей  и других вредоносных программ
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -92,11 +88,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита онлайн-платежей
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -118,11 +112,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Функция «Родительский контроль»
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -145,11 +137,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита от шифровальщиков
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -171,11 +161,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Блокировка баннеров и всплывающей рекламы
                           </p>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -183,10 +171,10 @@
               </rt-card>
               <p class="color-white05 rt-space-top rt-font-label rt-space-left"><span class="rt-font-sup">1</span> стоимость продукта 1 на сайте АО «Лаборатория Касперского»</p>
             </div>
-            <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
+            <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
               <rt-card>
                 <template slot="content">
-                  <img width="214" src="/static/images/homeinternet/homeinternet-image19.jpg" alt="">
+                  <img class="rt-image-max-full-width" width="214" src="/static/images/homeinternet/homeinternet-image19.jpg" alt="">
                   <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top25">ESET NOD32 Smart Security Family</p>
                   <p class="rt-space-top color-main07 rt-space-right2">Подходит для смартфонов, планшетов, ноутбуков  и Smart TV, компьютеров</p>
                 </template>
@@ -212,11 +200,9 @@
                         </svg>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main07">
                             Защищает 5 устройств <br>  одновременно
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -239,11 +225,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита «умных» устройств  (система «Умный дом»)
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -265,11 +249,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита Wi-Fi роутера
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -291,11 +273,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Функция «Родительский контроль»
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -318,11 +298,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита веб-камеры
                           </p>
-                        </div>
                       </div>
                     </div>
                     <div class="rt-card-list__item">
@@ -344,11 +322,9 @@
                         </div>
                       </div>
                       <div class="rt-card-list__name">
-                        <div>
                           <p class="rt-font-small-paragraph color-main05">
                             Защита от хакеров
                           </p>
-                        </div>
                       </div>
                     </div>
                   </div>

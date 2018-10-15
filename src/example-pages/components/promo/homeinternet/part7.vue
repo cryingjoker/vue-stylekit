@@ -4,7 +4,7 @@
 
       <div class="rt-container">
         <div class="rt-col-12">
-          <div class="row">
+          <div class="row row--mobile-scroll">
 
             <div class="rt-col-6 rt-col-md-3">
               <rt-color-line-text>
@@ -14,8 +14,8 @@
               </rt-color-line-text>
             </div>
           </div>
-          <div class="row rt-space-top4 rt-font-hypnens-off">
-            <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
+          <div class="row row--mobile-scroll rt-space-top4 rt-font-hypnens-off">
+            <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
               <rt-card>
                 <template slot="content">
                   <p class="rt-font-paragraph color-main07 rt-font-bold">Office 365 для дома</p>
@@ -202,7 +202,7 @@
               </rt-card>
               <p class="color-white05 rt-space-top rt-font-label rt-space-left"><span class="rt-font-sup">1</span> стоимость продукта 1 на сайте АО «Лаборатория Касперского»</p>
             </div>
-            <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
+            <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
               <rt-card>
                 <template slot="content">
                   <p class="rt-font-paragraph color-main07 rt-font-bold">Office 365 для дома</p>
