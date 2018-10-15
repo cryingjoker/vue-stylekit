@@ -147,17 +147,17 @@
             </div>
             <div class="aside-menu__item">
               <router-link class="aside-menu__link" active-class="aside-menu__link--active"
-                           to="/promo/smart-house"
+                           to="/promo/homeinternet"
               >
-                Smart House
+                Home Internet
               </router-link>
             </div>
           </div>
         </div>
-        <div class="aside-menu__item">
-          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/icons">Icons
-          </router-link>
-        </div>
+        <!--<div class="aside-menu__item">-->
+          <!--<router-link class="aside-menu__link" active-class="aside-menu__link&#45;&#45;active" to="/icons">Icons-->
+          <!--</router-link>-->
+        <!--</div>-->
       </div>
 
     </keep-alive>
