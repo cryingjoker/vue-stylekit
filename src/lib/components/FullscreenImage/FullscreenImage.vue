@@ -35,7 +35,7 @@ export default {
       styleObject.backgroundPosition = this.backgroundPosition;
     }
 
-    return <div class={"rt-fullscreen-image"+(this.isIos ? "rt-fullscreen-image--ios" : "")}>
+    return <div class={"rt-fullscreen-image"+(this.isIos ? " rt-fullscreen-image--ios" : "")}>
       <div class="rt-fullscreen-image__element" image-url={this.backgroundImage} style={styleObject}>
         {this.$slots.default}
       </div>

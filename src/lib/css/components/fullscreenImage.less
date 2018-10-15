@@ -9,7 +9,9 @@
         -webkit-background-size: cover;
         background-size: cover;
         @media (max-width: @mobile-step-size) {
-            background-attachment: scroll;
+            &.rt-fullscreen-image--ios {
+                background-attachment: scroll;
+            }
         }
     }
 }
