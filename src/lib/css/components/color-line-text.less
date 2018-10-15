@@ -87,6 +87,16 @@
         }
     }
     &-text {
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        -moz-hyphens: none;
+        hyphens: none;
+        word-wrap: normal;
+        br{
+            @media (max-width: @mobile-step-size) {
+                display: none;
+            }
+        }
         .color-line--is-paragraph & {
             padding-top: @vertical-space;
             padding-bottom: @vertical-space*0.5;
