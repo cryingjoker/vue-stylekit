@@ -3,6 +3,10 @@
         padding-top: @vertical-space*0.5;
         padding-bottom: @vertical-space*0.5;
         display: flex;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+
+        }
 
         &+&{
             border-top: 1px solid @card-list-border;
@@ -11,20 +15,50 @@
     &__icon{
         padding-right: @horizontal-space;
         display: flex;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+            padding-bottom: @vertical-space*0.5;
+        }
         align-items: center;
     }
     &__content{
+
         display: flex;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+        }
         align-items: center;
     }
     &__option{
         flex: 1;
         display: flex;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+        }
     }
     &__value{
         display: flex;
         align-items: center;
+        @media (max-width: @iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+            padding-top: @vertical-space*0.5;
+        }
+
         flex: 0;
-        padding-left: @horizontal-space*2;
+        @media (min-width: @iphone8) {
+            padding-left: @horizontal-space*2;
+        }
     }
 }
