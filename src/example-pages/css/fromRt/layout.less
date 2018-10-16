@@ -49,7 +49,7 @@ svg * {
     vector-effect: non-scaling-stroke;
 }
 
-@pageSelector: ~'.@{newAppName}-page';
+@pageSelector: ~'.@{appName}-page';
 @{pageSelector} {
     .flex();
     margin: 0;
@@ -172,7 +172,7 @@ svg * {
     }
 }
 
-@sidebarSelector: ~'.@{newAppName}-sidebar';
+@sidebarSelector: ~'.@{appName}-sidebar';
 @{sidebarSelector} {
     // Боковая панель конструктора
     &:not(@{sidebarSelector}_left) {
@@ -187,7 +187,7 @@ svg * {
     }
 }
 
-@notifySelector: ~'.@{newAppName}-notifications';
+@notifySelector: ~'.@{appName}-notifications';
 @{notifySelector} {
     position: relative;
     display: none;
@@ -237,7 +237,7 @@ svg * {
 }
 
 // Раздел новостей и техработ
-@eventSelector: ~'.@{newAppName}-event';
+@eventSelector: ~'.@{appName}-event';
 @{eventSelector} {
     display: block;
     margin-left: 0 !important;
@@ -543,12 +543,12 @@ svg * {
 }
 
 // Карточки
-.@{newAppName}-card {
+.@{appName}-card {
     background: #ffffff;
     .boxShadow( '0 0 5px 0 rgba(0, 0, 0, .1)');
 }
 
-@date_selector: ~'.@{newAppName}-date';
+@date_selector: ~'.@{appName}-date';
 @{date_selector} {
     color: rgba(0, 0, 0, .7);
     .flexPercentage(90px);
@@ -571,7 +571,7 @@ svg * {
     }
 }
 
-@price_selector: ~'.@{newAppName}-price';
+@price_selector: ~'.@{appName}-price';
 @{price_selector} {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -651,7 +651,7 @@ svg * {
 }
 
 // Опции конструктора
-@product_selector: ~'.@{newAppName}-product';
+@product_selector: ~'.@{appName}-product';
 @{product_selector} {
     border-top: 1px solid @color_gray;
     font-family: 'Rubik', sans-serif;
@@ -748,7 +748,7 @@ svg * {
     }
 }
 
-@videoGuide_selector: ~'.@{newAppName}-spoiler-video';
+@videoGuide_selector: ~'.@{appName}-spoiler-video';
 @{videoGuide_selector} {
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -784,7 +784,7 @@ svg * {
 }
 
 // Карточки предложений
-@modOffer: ~'.@{newAppName}-promo';
+@modOffer: ~'.@{appName}-promo';
 @{modOffer} {
     @modOfferOffset: @gutterWidth;
     color: rgba(0,0,0,.7);
@@ -936,8 +936,8 @@ svg * {
         @{modOffer}__title,
         @{modOffer}__desc,
         @{modOffer}__link,
-        .@{newAppName}-header,
-        .@{newAppName}-text {
+        .@{appName}-header,
+        .@{appName}-text {
             color: #FFFFFF !important;
         }
         @{modOffer}__icon {
@@ -960,8 +960,8 @@ svg * {
         @{modOffer}__title,
         @{modOffer}__desc,
         @{modOffer}__link,
-        .@{newAppName}-header,
-        .@{newAppName}-text {
+        .@{appName}-header,
+        .@{appName}-text {
             color: #FFFFFF !important;
         }
         @{modOffer}__icon {
@@ -981,7 +981,7 @@ svg * {
     }
 }
 
-.@{newAppName}-link {
+.@{appName}-link {
     .linkStyle();
 
     &_underline {
@@ -1005,7 +1005,7 @@ svg * {
 }
 
 // Файлы для скачивания
-.@{newAppName}-file {
+.@{appName}-file {
     color: #000000;
     display: table;
     font-size: 16px;
@@ -1225,7 +1225,7 @@ svg * {
     }
 }
 
-@tableSelector: ~'.@{newAppName}-table';
+@tableSelector: ~'.@{appName}-table';
 @{tableSelector} {
     border-collapse: collapse;
     table-layout: fixed;
@@ -1314,7 +1314,7 @@ svg * {
     }
 }
 
-@fieldSelector: ~'.@{newAppName}-input';
+@fieldSelector: ~'.@{appName}-input';
 @{fieldSelector} {
     background: transparent;
     display: block;
@@ -1449,7 +1449,7 @@ svg * {
 }
 
 // Бэйджы сторов мобильных
-.@{newAppName}-badge {
+.@{appName}-badge {
     width: 170px;
     height: 50px;
     background-color: #000;
@@ -1465,7 +1465,7 @@ svg * {
 }
 
 // Заголовки текста
-.@{newAppName}-header {
+.@{appName}-header {
     color: rgba(0, 0, 0, .7);
     font-family: Rubik, Arial, sans-serif;
     font-weight: 300;
@@ -1519,7 +1519,7 @@ svg * {
 }
 
 // Текст
-.@{newAppName}-text {
+.@{appName}-text {
     color: rgba(0, 0, 0, .7);
     font-size: 14px;
     line-height: 1.4;
@@ -1548,7 +1548,7 @@ svg * {
     }
 }
 
-.@{newAppName}-linklist {
+.@{appName}-linklist {
     list-style: none;
     margin: 0;
     padding: 0;

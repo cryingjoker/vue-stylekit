@@ -1,0 +1,73 @@
+.@{newAppName}-table {
+    table-layout: fixed;
+    text-align: left;
+    &-head {
+        &__item {
+            padding-bottom: @vertical-space*2.5;
+            vertical-align: middle;
+            @media (max-width: @mobile-step-size) {
+                display: block;
+            }
+            padding-left: @horizontal-space*0.5;
+            padding-right: @horizontal-space*0.5;
+            &+&{
+
+                @media (max-width: @mobile-step-size) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-body {
+        &__row {
+            @media (max-width: @mobile-step-size) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            & + & {
+                border-top: 2px solid fade(#E3E8EC, 60%);
+                .@{newAppName}-dark-theme & {
+                    border-top-color: @b2b-white06;
+                }
+                .@{newAppName}-table-body__item{
+                    padding-top: @vertical-space*1.25;
+                }
+            }
+        }
+        &__item {
+            vertical-align: middle;
+            padding-bottom: @vertical-space*0.75;
+            @media (max-width: @mobile-step-size) {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            padding-left: @horizontal-space*0.5;
+            padding-right: @horizontal-space*0.5;
+            &:first-child {
+                @media (max-width: @mobile-step-size) {
+                    display: block;
+                    flex: 0 1 100%;
+                    width: 100%;
+                    padding-bottom: @vertical-space*0.75;
+                    &:before{
+                        display: none;
+                    }
+                }
+
+            }
+            @media (max-width: @mobile-step-size) {
+                &:before {
+                    content: attr(label);
+                    font-size: 12px;
+                    display: block;
+                    padding-bottom: @horizontal-space *0.25;
+                    flex: 1;
+
+                }
+            }
+        }
+    }
+}
