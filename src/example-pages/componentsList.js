@@ -32,7 +32,11 @@ import {
   CardImageList,
   FullscreenImage,
   RowList,
-  RowListItem
+  RowListItem,
+  Table,
+  TableHeadItem,
+  TableRow,
+  TableItem
 } from '../lib/components/index';
 
 const componentsList = {};
@@ -71,4 +75,9 @@ componentsList[FullscreenImage.name] = FullscreenImage;
 componentsList[RowList.name] = RowList;
 componentsList[RowListItem.name] = RowListItem;
 
-export default componentsList;
+componentsList[Table.name] = Table;
+componentsList[TableHeadItem.name] = TableHeadItem;
+componentsList[TableRow.name] = TableRow;
+componentsList[TableItem.name] = TableItem;
+
+export default {...componentsList};

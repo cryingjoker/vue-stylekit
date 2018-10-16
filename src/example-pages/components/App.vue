@@ -112,6 +112,10 @@
           </router-link>
         </div>
         <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/table">Table
+          </router-link>
+        </div>
+        <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/fullscreen">Fullscreen Image
           </router-link>
         </div>

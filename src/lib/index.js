@@ -35,7 +35,11 @@ import {
   CardImageList,
   FullscreenImage,
   RowList,
-  RowListItem
+  RowListItem,
+  Table,
+  TableHeadItem,
+  TableItem,
+  TableRow
 } from './components';
 
 
@@ -76,6 +80,10 @@ const VueRtStyle = {
       Vue.component(FullscreenImage.name, FullscreenImage);
       Vue.component(RowList.name, RowList);
       Vue.component(RowListItem.name, RowListItem);
+      Vue.component(Table.name, Table);
+      Vue.component(TableHeadItem.name, TableHeadItem);
+      Vue.component(TableItem.name, TableItem);
+      Vue.component(TableRow.name, TableRow);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
@@ -83,7 +91,7 @@ const VueRtStyle = {
   }
 };
 
-const version = '0.0.4';
+const version = '0.0.7';
 VueRtStyle.version = version;
 
 export default VueRtStyle;

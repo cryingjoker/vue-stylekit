@@ -24,6 +24,7 @@ import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
 import Homeinternet from '../components/promo/homeinternet.vue'
 import RowList from '../components/main-elements/RowList.vue'
 import Tabs from '../components/main-elements/Tabs.vue';
+import Table from '../components/main-elements/Table.vue'
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -34,6 +35,7 @@ const index = [
   { path: '/switch', name: 'app-switch', component: Switch },
   { path: '/input', name: 'app-input', component: Input },
   { path: '/textarea', name: 'app-textarea', component: Textarea },
+  { path: '/table', name: 'app-table', component: Table },
   { path: '/select', name: 'app-select', component: Select },
   { path: '/typography', name: 'app-typography', component: Typography },
   { path: '/spinner', name: 'app-spinner', component: Spinner },
