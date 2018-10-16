@@ -5,27 +5,34 @@
     name: 'RtTableHeadItem',
     components: {},
     props: {
+      verticalAlign: {
+        type: String,
+        default: null
+      },
+      align: {
+        type: String,
+        default: null
+      },
+      width: {
+        type: [String, Number],
+        default: null
+      },
 
     },
     mounted: function() {
     },
-    // methods: {
-    //   setValue() {
-    //     this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
-    //   },
-    //   inputHandler() {
-    //     this.$emit('change', this.$el.querySelector('.switch-element').checked);
-    //     this.showWave();
-    //   },
-    //   showWave() {
-    //     this.$refs.ripple.startRipple({
-    //       offsetX: 10,
-    //       offsetY: 10
-    //     });
-    //   }
-    // }
     render: function(h) {
-      return <th class="rt-table-head__item">{this.$slots.default}</th>
+      const style = {};
+      if(this.verticalAlign){
+        style.verticalAlign = this.verticalAlign;
+      }
+      if(this.align){
+        style.textAlign = this.align;
+      }
+      if(this.width){
+        style.width = String(this.width).replace(/[0-9]/gi).length === 0 ? String(this.width) + 'px' : this.width;
+      }
+      return <th class="rt-table-head__item" style={style}>{this.$slots.default}</th>
     }
   };
 </script>
