@@ -47,22 +47,22 @@
                 </template>
                 <template slot="body">
                   <rt-table-row>
-                    <rt-table-item>Архангельская и Мурманская область, Республика Карелия</rt-table-item>
-                    <rt-table-item>Домашний телефон, Домашний интернет, Интерактивное ТВ</rt-table-item>
-                    <rt-table-item>60</rt-table-item>
-                    <rt-table-item>3</rt-table-item>
-                    <rt-table-item align="center">30</rt-table-item>
-                    <rt-table-item>7</rt-table-item>
+                    <rt-table-item><p>Архангельская и Мурманская область, Республика Карелия</p></rt-table-item>
+                    <rt-table-item><p>Домашний телефон, Домашний интернет, Интерактивное ТВ</p></rt-table-item>
+                    <rt-table-item><p>60</p></rt-table-item>
+                    <rt-table-item><p>3</p></rt-table-item>
+                    <rt-table-item align="center"><p>30</p></rt-table-item>
+                    <rt-table-item><p>7</p></rt-table-item>
                   </rt-table-row>
                   <rt-table-row>
-                    <rt-table-item>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и
+                    <rt-table-item><p>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и
                       Ленинградская области и город Санкт-Петербург
-                    </rt-table-item>
-                    <rt-table-item>Домашний телефон, Домашний интернет, Интерактивное ТВ</rt-table-item>
-                    <rt-table-item>30</rt-table-item>
-                    <rt-table-item>3</rt-table-item>
-                    <rt-table-item align="center">30</rt-table-item>
-                    <rt-table-item>7</rt-table-item>
+                    </p></rt-table-item>
+                    <rt-table-item><p>Домашний телефон, Домашний интернет, Интерактивное ТВ</p></rt-table-item>
+                    <rt-table-item><p>30</p></rt-table-item>
+                    <rt-table-item><p>3</p></rt-table-item>
+                    <rt-table-item align="center"><p>30</p></rt-table-item>
+                    <rt-table-item><p>7</p></rt-table-item>
                   </rt-table-row>
                 </template>
               </rt-table>

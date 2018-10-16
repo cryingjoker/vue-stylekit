@@ -3,6 +3,7 @@
     text-align: left;
     &-head {
         &__item {
+            display: table-cell;
             padding-bottom: @vertical-space*2.5;
             vertical-align: middle;
             @media (max-width: @mobile-step-size) {
@@ -22,6 +23,7 @@
     }
     &-body {
         &__row {
+            display: table-row;
             @media (max-width: @mobile-step-size) {
                 display: flex;
                 flex-wrap: wrap;
@@ -36,7 +38,9 @@
                 }
             }
         }
+
         &__item {
+            display: table-cell;
             vertical-align: middle;
             padding-bottom: @vertical-space*0.75;
             @media (max-width: @mobile-step-size) {
@@ -46,6 +50,8 @@
                 align-self: stretch;
                 width: auto!important;
                 text-align: left!important;
+                justify-content: space-around;
+                min-height: fit-content;
             }
             padding-left: @horizontal-space*0.5;
             padding-right: @horizontal-space*0.5;

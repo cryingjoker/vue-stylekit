@@ -41,7 +41,7 @@
       if(this.align){
         style.textAlign = this.align;
       }
-      return <td style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>{this.$slots.default}</td>;
+      return <div style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>{this.$slots.default}</div>;
     }
   };
 </script>

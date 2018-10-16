@@ -23,9 +23,9 @@
           return slotVNode
         })
       }
-      return <tr class="rt-table-body__row">
+      return <div class="rt-table-body__row">
         {renderSlots()}
-      </tr>
+      </div>
     }
   };
 </script>

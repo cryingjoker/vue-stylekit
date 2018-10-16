@@ -32,7 +32,7 @@
       if(this.width){
         style.width = String(this.width).replace(/[0-9]/gi).length === 0 ? String(this.width) + 'px' : this.width;
       }
-      return <th class="rt-table-head__item" style={style}>{this.$slots.default}</th>
+      return <div class="rt-table-head__item" style={style}>{this.$slots.default}</div>
     }
   };
 </script>
