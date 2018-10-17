@@ -31,7 +31,8 @@
 
 
 <script>
-const componentsList = {};
+// const componentsList = {};
+import componentsList from '../../componentsList'
 export default {
   name: 'AppSwitch',
   components: componentsList,
