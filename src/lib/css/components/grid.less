@@ -427,6 +427,13 @@
     display: -ms-flexbox;
     align-items: stretch;
 }
+.flex-md-start {
+    @media (max-width: @mobile-step-size) {
+        display: flex;
+        display: -ms-flexbox;
+        justify-content: flex-start;
+    }
+}
 
 .flex-md-center {
     @media (max-width: @mobile-step-size) {
