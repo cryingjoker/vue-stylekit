@@ -1,5 +1,5 @@
 <template>
-  <div class="rt-row-list">
+  <div class="rt-row-list row">
     <slot/>
   </div>
 </template>
