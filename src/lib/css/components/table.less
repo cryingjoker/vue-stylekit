@@ -33,14 +33,23 @@
                 flex-wrap: wrap;
             }
             & + & {
-                border-top: 2px solid fade(#E3E8EC, 60%);
-                .@{newAppName}-dark-theme & {
-                    border-top-color: @b2b-white06;
+                @media (max-width: @mobile-step-size) {
+                    border-top: 2px solid fade(#E3E8EC, 60%);
+                    .@{newAppName}-dark-theme & {
+                        border-top-color: @b2b-white06;
+                    }
                 }
                 .@{newAppName}-table-body__item{
                     padding-top: @vertical-space*1.25;
                     @media (max-width: @mobile-step-size) {
                         padding-top: @vertical-space*0.5;
+                    }
+                    @media (min-width: @mobile-step-size) {
+                        .@{newAppName}-dark-theme & {
+                            border-top-color: @b2b-white06;
+                        }
+
+                        border-top-color: @b2b-white06;
                     }
                 }
             }
