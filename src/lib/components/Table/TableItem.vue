@@ -41,7 +41,11 @@
       if(this.align){
         style.textAlign = this.align;
       }
-      return <div style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>{this.$slots.default}</div>;
+      return <div style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>
+        <div class="rt-table-body__content">
+          {this.$slots.default}
+        </div>
+        </div>;
     }
   };
 </script>
