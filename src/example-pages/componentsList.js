@@ -36,7 +36,8 @@ import {
   Table,
   TableHeadItem,
   TableRow,
-  TableItem
+  TableItem,
+  DownloadContent
 } from '../lib/components/index';
 
 const componentsList = {};
@@ -79,5 +80,6 @@ componentsList[Table.name] = Table;
 componentsList[TableHeadItem.name] = TableHeadItem;
 componentsList[TableRow.name] = TableRow;
 componentsList[TableItem.name] = TableItem;
+componentsList[DownloadContent.name] = DownloadContent;
 
 export default {...componentsList};

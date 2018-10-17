@@ -39,7 +39,8 @@ import {
   Table,
   TableHeadItem,
   TableItem,
-  TableRow
+  TableRow,
+  DownloadContent
 } from './components';
 
 
@@ -84,6 +85,7 @@ const VueRtStyle = {
       Vue.component(TableHeadItem.name, TableHeadItem);
       Vue.component(TableItem.name, TableItem);
       Vue.component(TableRow.name, TableRow);
+      Vue.component(DownloadContent.name, DownloadContent);
 
       Vue.RtStyle = true;
       Vue.config.test = true;

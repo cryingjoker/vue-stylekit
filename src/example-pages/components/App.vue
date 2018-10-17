@@ -120,6 +120,10 @@
           </router-link>
         </div>
         <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/download-content">Download content
+          </router-link>
+        </div>
+        <div class="aside-menu__item">
           <p class="aside-menu__submenu-title">Complex elements</p>
           <div class="aside-sub-menu">
             <div class="aside-menu__item">

@@ -25,6 +25,7 @@ import Homeinternet from '../components/promo/homeinternet.vue'
 import RowList from '../components/main-elements/RowList.vue'
 import Tabs from '../components/main-elements/Tabs.vue';
 import Table from '../components/main-elements/Table.vue'
+import DownloadContent from '../components/main-elements/DownloadContent.vue'
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -41,6 +42,7 @@ const index = [
   { path: '/spinner', name: 'app-spinner', component: Spinner },
   { path: '/price', name: 'app-price', component: Price },
   { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
+  { path: '/download-content', name: 'app-download-content', component: DownloadContent },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',

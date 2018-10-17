@@ -36,3 +36,4 @@
  export { default as TableHeadItem } from './Table/TableHeadItem.vue';
  export { default as TableItem } from './Table/TableItem.vue';
  export { default as TableRow } from './Table/TableRow.vue';
+ export { default as DownloadContent } from './DownloadContent/DownloadContent.vue';
