@@ -40,14 +40,14 @@
       }
       console.info('this.tableLabels',JSON.stringify(this.tableLabels));
 
-      return <table class="rt-table">
-        <thead class="rt-table-head" ref="head">
+      return <div class="rt-table">
+        <div class="rt-table-head" ref="head">
           {this.$slots.header}
-        </thead>
-        <tbody class="rt-table-body">
-          {renderBodyFn()}
-        </tbody>
-      </table>
+        </div>
+
+        {renderBodyFn()}
+
+      </div>
     }
   };
 </script>
