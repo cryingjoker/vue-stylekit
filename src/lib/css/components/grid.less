@@ -435,6 +435,13 @@
         justify-content: center;
     }
 }
+.flex-md-start {
+    @media (max-width: @mobile-step-size) {
+        display: flex;
+        display: -ms-flexbox;
+        justify-content: flex-start;
+    }
+}
 
 @media (max-width: @mobile-step-size) {
     .md-d-none {
