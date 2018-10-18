@@ -26,9 +26,13 @@
       </svg>
 
       <!--http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4-->
-      <!--<video autoplay class="rt-banner-video__content" src="https://06-lvl3-pdl.vimeocdn.com/01/251/4/101257125/272165593.mp4?expires=1539844684&token=02dbb0b249574731adb27"></video>-->
-      <video autoplay class="rt-banner-video__content" muted
+      <video autoplay class="rt-banner-video__content"
+             ref="video"
              src="https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4"></video>
+      <!--<video autoplay class="rt-banner-video__content"-->
+      <!--ref="video"-->
+      <!--src="https://04-lvl3-pdl.vimeocdn.com/01/1850/1/34254547/78068179.mp4?expires=1539878512&amp;token=09afbb94eb179c5a53067"></video>-->
+      <!--src="https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4"></video>-->
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 185 500">
         <polygon points="0 500,185 0,0 0"/>
@@ -179,21 +183,32 @@
       window.removeEventListener("resize", this.debounceCalculateScroll);
     },
     methods: {
+      stopVideo() {
+        this.$refs.video.pause();
+      },
+      playVideo() {
+        this.$refs.video.play();
+      },
       debounceCalculateScroll: function() {
         this.calculateScroll();
       },
       calculateScroll() {
-
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
         const el = this.$el;
-        if ((el.getBoundingClientRect().top + el.offsetHeight) * 1.5 < scrollTop || el.getBoundingClientRect().top - window.outerHeight*1.5 > scrollTop) {
+        const deltaY = Math.max(window.innerHeight, el.offsetHeight);
+
+        if (el.getBoundingClientRect().top > deltaY || el.getBoundingClientRect().top < -1 * deltaY) {
+          if (!this.hasPause) {
+            this.stopVideo();
+          }
           this.hasPause = true;
         } else {
           if (this.hasPause) {
             const index =
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
             this.RtBanners.activeIndex = index;
+            this.playVideo();
           }
           this.hasPause = false;
         }
@@ -236,7 +251,7 @@
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
             this.RtBanners.activeIndex = index;
           }
-          if(this.RtBanners.items.length > 1) {
+          if (this.RtBanners.items.length > 1) {
             this.setStartTimer();
           }
         }, this.sleepTime);

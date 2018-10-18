@@ -188,7 +188,9 @@ export default {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
       const el = this.$el;
-      if (el.getBoundingClientRect().top  > window.innerHeight*1.5 || el.getBoundingClientRect().top < -0.5*window.innerHeight) {
+      const deltaY = Math.max(window.innerHeight , el.offsetHeight);
+
+      if (el.getBoundingClientRect().top  > deltaY || el.getBoundingClientRect().top < -1 * deltaY) {
         this.hasPause = true;
       } else {
         if (this.hasPause) {
