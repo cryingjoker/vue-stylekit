@@ -35,7 +35,6 @@
 
 <script>
 import BannerPaginatorItem from './BannerPaginatorItem.vue';
-import debounce from "debounce";
 const componentsList = {};
 
 componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
@@ -180,15 +179,16 @@ export default {
       window.removeEventListener("scroll", this.debounceCalculateScroll);
       window.removeEventListener("resize", this.debounceCalculateScroll);
     },
-    debounceCalculateScroll: debounce(function() {
+    debounceCalculateScroll: function() {
       this.calculateScroll();
-    }, 5),
+      // need to understand why debounce not work
+    },
     calculateScroll() {
 
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
       const el = this.$el;
-      if ((el.clientTop + el.offsetHeight) * 1.5 < scrollTop || el.clientTop - window.outerHeight*1.5 > scrollTop) {
+      if (el.getBoundingClientRect().top  > window.innerHeight*1.5 || el.getBoundingClientRect().top < -0.5*window.innerHeight) {
         this.hasPause = true;
       } else {
         if (this.hasPause) {

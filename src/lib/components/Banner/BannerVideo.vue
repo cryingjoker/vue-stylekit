@@ -44,7 +44,7 @@
 
 <script>
   import BannerPaginatorItem from "./BannerPaginatorItem.vue";
-  import debounce from "debounce";
+  // import debounce from "debounce";
 
   const componentsList = {};
 
@@ -179,15 +179,15 @@
       window.removeEventListener("resize", this.debounceCalculateScroll);
     },
     methods: {
-      debounceCalculateScroll: debounce(function() {
+      debounceCalculateScroll: function() {
         this.calculateScroll();
-      }, 5),
+      },
       calculateScroll() {
 
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
         const el = this.$el;
-        if ((el.clientTop + el.offsetHeight) * 1.5 < scrollTop || el.clientTop - window.outerHeight*1.5 > scrollTop) {
+        if ((el.getBoundingClientRect().top + el.offsetHeight) * 1.5 < scrollTop || el.getBoundingClientRect().top - window.outerHeight*1.5 > scrollTop) {
           this.hasPause = true;
         } else {
           if (this.hasPause) {
