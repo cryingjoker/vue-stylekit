@@ -39,7 +39,6 @@
 
 <script>
 import  componentsList from '../../componentsList'
-console.info('componentsList',componentsList);
 // const componentsList = {};
 export default {
   name: 'AppSwitch',

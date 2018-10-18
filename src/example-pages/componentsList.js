@@ -27,6 +27,7 @@ import {
   Banner,
   BannerItem,
   BannerPaginatorItem,
+  BannerVideo,
   Card,
   CardImage,
   CardImageList,
@@ -67,6 +68,7 @@ componentsList[TabsContentItem.name] = TabsContentItem;
 componentsList[Annotation.name] = Annotation;
 componentsList[ColorLineText.name] = ColorLineText;
 componentsList[Banner.name] = Banner;
+componentsList[BannerVideo.name] = BannerVideo;
 componentsList[BannerItem.name] = BannerItem;
 componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 componentsList[Card.name] = Card;

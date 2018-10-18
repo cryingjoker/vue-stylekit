@@ -38,7 +38,6 @@
           return slotVNode;
         })
       }
-      console.info('this.tableLabels',JSON.stringify(this.tableLabels));
 
       return <div class="rt-table">
         <div class="rt-table-head" ref="head">

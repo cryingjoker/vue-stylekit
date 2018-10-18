@@ -22,13 +22,12 @@
 </template>
 
 <script>
-import normalizeVariable from '../mixins/normalizeVariable';
+
 const componentsList = {};
 
 export default {
   name: 'RtCard',
   components: componentsList,
-  mixins: [normalizeVariable],
   props: {
     staticBodyHeight: {
       type: Boolean,
@@ -122,6 +121,17 @@ export default {
     cardBodyHeight: {
       type: Number,
       default: null
+    }
+  },
+  methods: {
+    normalizeSize(size) {
+      if (typeof size === 'number') {
+        return size + 'px';
+      }
+      if (typeof size === 'string') {
+        return size;
+      }
+      return size;
     }
   },
   computed: {

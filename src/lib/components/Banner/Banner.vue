@@ -35,7 +35,7 @@
 
 <script>
 import BannerPaginatorItem from './BannerPaginatorItem.vue';
-
+import debounce from "debounce";
 const componentsList = {};
 
 componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
@@ -43,6 +43,9 @@ componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 export default {
   name: 'RtBanner',
   components: componentsList,
+  data: () => ({
+    hasPause: false
+  }),
   props: {
     justify: {
       type: String,
@@ -152,47 +155,80 @@ export default {
     if (this.RtBanners.items.length > 0 && this.RtBanners.items[0].id) {
       this.setStartTimer();
     }
-    this.$el.addEventListener('touchstart', this.setTouchStart);
-    this.$el.addEventListener('touchend', this.setTouchEnd);
+    this.$el.addEventListener("touchstart", this.setTouchStart);
+    this.$el.addEventListener("touchend", this.setTouchEnd);
+    window.addEventListener("scroll", this.debounceCalculateScroll);
+    window.addEventListener("resize", this.debounceCalculateScroll);
+    this.calculateScroll();
   },
-  beforeDestroy: function(){
-    this.$el.removeEventListener('touchstart', this.setTouchStart);
-    this.$el.removeEventListener('touchend', this.setTouchEnd);
+  beforeDestroy: function() {
+    this.$el.removeEventListener("touchstart", this.setTouchStart);
+    this.$el.removeEventListener("touchend", this.setTouchEnd);
+    window.removeEventListener("scroll", this.debounceCalculateScroll);
+    window.removeEventListener("resize", this.debounceCalculateScroll);
   },
   methods: {
-    setTouchStart(e){
-      this.touchstartX = e.changedTouches[0].screenX
+    debounceCalculateScroll: debounce(function() {
+      this.calculateScroll();
+    }, 5),
+    calculateScroll() {
+
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const el = this.$el;
+      if ((el.clientTop + el.offsetHeight) * 1.5 < scrollTop || el.clientTop - window.outerHeight*1.5 > scrollTop) {
+        this.hasPause = true;
+      } else {
+        if (this.hasPause) {
+          const index =
+            (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
+          this.RtBanners.activeIndex = index;
+        }
+        this.hasPause = false;
+      }
+
     },
-    setTouchEnd(e){
-      this.touchendX = e.changedTouches[0].screenX
+    setTouchStart(e) {
+      this.touchstartX = e.changedTouches[0].screenX;
+    },
+    setTouchEnd(e) {
+      this.touchendX = e.changedTouches[0].screenX;
       this.calculateSwipe();
     },
-    calculateSwipe(){
-      if(this.touchendX > this.touchstartX){
+    calculateSwipe() {
+      if (this.touchendX > this.touchstartX) {
         this.RtBanners.activeIndex++;
-        if(this.RtBanners.activeIndex >= this.RtBanners.items.length){
+        if (this.RtBanners.activeIndex >= this.RtBanners.items.length) {
           this.RtBanners.activeIndex = 0;
         }
-      }else{
+      } else {
         this.RtBanners.activeIndex--;
-        if(this.RtBanners.activeIndex < 0){
+        if (this.RtBanners.activeIndex < 0) {
           this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
         }
       }
     },
     setActiveItem(index) {
-      this.RtBanners.activeIndex = index;
-      this.setStartTimer();
+
+      if (!this.hasPause) {
+        this.RtBanners.activeIndex = index;
+        this.setStartTimer();
+      }
+
     },
     setStartTimer() {
       if (this.RtBanners.timer) {
         clearTimeout(this.RtBanners.timer);
       }
       this.RtBanners.timer = setTimeout(() => {
-        const index =
-          (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
-        this.RtBanners.activeIndex = index;
-        this.setStartTimer();
+        if (!this.hasPause) {
+          const index =
+            (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
+          this.RtBanners.activeIndex = index;
+        }
+        if(this.RtBanners.items.length > 1) {
+          this.setStartTimer();
+        }
       }, this.sleepTime);
     }
   }
