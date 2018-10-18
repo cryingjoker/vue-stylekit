@@ -31,6 +31,10 @@ export default {
       type: [Number, String],
       default: null
     },
+    backgroundVideo:{
+      type: String,
+      default: null
+    },
     backgroundColor: {
       type: String,
       default: null
@@ -97,28 +101,24 @@ export default {
         classArray['rt-banner-content--active'] = true;
       }
       return classArray;
-    },
-    imageStyle() {
-      const styles = {};
-      if (this.backgroundImage) {
-        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
-      }
-      if(this.backgroundPosition){
-        styles.backgroundPosition = this.backgroundPosition;
-      }
-      return styles;
     }
   },
 
   beforeMount: function() {
     if(this.RtBanners) {
       this.index = this.RtBanners.items.length;
-      this.RtBanners.items.push({
+      const bannerItemData = {
         backgroundColor: this.backgroundColor,
-        backgroundImage: this.backgroundImage,
         isWhiteColor: this.isWhiteColor,
         id: this.id
-      });
+      };
+      if(this.backgroundImage){
+        bannerItemData.backgroundImage = this.backgroundImage;
+      }
+      if(this.backgroundVideo){
+        bannerItemData.backgroundVideo = this.backgroundVideo;
+      }
+      this.RtBanners.items.push(bannerItemData);
       const preloadImage = new Image();
       preloadImage.src = this.backgroundImage;
     }

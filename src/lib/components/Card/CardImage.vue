@@ -11,11 +11,9 @@
 </template>
 <script>
 
-import normalizeVariable from '../mixins/normalizeVariable';
 
 export default {
   name: 'RtCardImage',
-  mixins: [normalizeVariable],
   props: {
     cardImage: {
       type: String,

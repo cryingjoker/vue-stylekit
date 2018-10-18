@@ -41,7 +41,6 @@
       }
       monaco.languages.html.htmlDefaults.indentInnerHtml = true;
 
-      // console.info('monaco',monaco.languages.html.htmlDefaults.options.formatю);
       this.editor =
         monaco.editor.create(this.$refs.editor
           , {

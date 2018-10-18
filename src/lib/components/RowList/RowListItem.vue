@@ -6,7 +6,6 @@
     }),
     methods: {
       toggleShow() {
-        console.info("toggleShow");
         this.show = !this.show;
       }
 

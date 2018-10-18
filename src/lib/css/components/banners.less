@@ -20,6 +20,20 @@
     transition-duration: 0.3s;
     transition-property: background-color, color;
     transition-timing-function: ease-in-out;
+    
+    &-video{
+        &__content{
+            height: 100%;
+            .rt-banner--full-screen &{
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
     &--fill-height {
         height: 100vh;
         .rt-banner-content {
@@ -231,6 +245,7 @@
             width: 100vw;
             left: 0;
             right: 0;
+            overflow-y: hidden;
         }
         @media (max-width: @mobile-step-size) {
             display: none;

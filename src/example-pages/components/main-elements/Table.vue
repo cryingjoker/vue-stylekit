@@ -84,8 +84,6 @@
     name: "AppTable",
     components: componentsList,
     mounted() {
-      console.info("componentsList", componentsList);
-      console.info(Array.isArray(componentsList));
     }
   };
 </script>
