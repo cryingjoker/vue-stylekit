@@ -155,19 +155,31 @@ export default {
     if (this.RtBanners.items.length > 0 && this.RtBanners.items[0].id) {
       this.setStartTimer();
     }
-    this.$el.addEventListener("touchstart", this.setTouchStart);
-    this.$el.addEventListener("touchend", this.setTouchEnd);
-    window.addEventListener("scroll", this.debounceCalculateScroll);
-    window.addEventListener("resize", this.debounceCalculateScroll);
+    this.addListners();
     this.calculateScroll();
   },
   beforeDestroy: function() {
-    this.$el.removeEventListener("touchstart", this.setTouchStart);
-    this.$el.removeEventListener("touchend", this.setTouchEnd);
-    window.removeEventListener("scroll", this.debounceCalculateScroll);
-    window.removeEventListener("resize", this.debounceCalculateScroll);
+    this.removeListners()
+  },
+  beforeUpdate: function(){
+    this.removeListners()
+  },
+  updated: function(){
+    this.addListners();
   },
   methods: {
+    addListners(){
+      this.$el.addEventListener("touchstart", this.setTouchStart);
+      this.$el.addEventListener("touchend", this.setTouchEnd);
+      window.addEventListener("scroll", this.debounceCalculateScroll);
+      window.addEventListener("resize", this.debounceCalculateScroll);
+    },
+    removeListners(){
+      this.$el.removeEventListener("touchstart", this.setTouchStart);
+      this.$el.removeEventListener("touchend", this.setTouchEnd);
+      window.removeEventListener("scroll", this.debounceCalculateScroll);
+      window.removeEventListener("resize", this.debounceCalculateScroll);
+    },
     debounceCalculateScroll: debounce(function() {
       this.calculateScroll();
     }, 5),
