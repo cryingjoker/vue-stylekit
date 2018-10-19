@@ -106,7 +106,7 @@
         touchendX: null,
         RtBanners: {
           items: [],
-          activeIndex: 0,
+          activeIndex: -1,
           setActiveItem: this.setActiveItem,
           setStartTimer: this.setStartTimer
         },
@@ -258,7 +258,6 @@
         this.calculateSwipe();
       },
       calculateSwipe() {
-        console.info(Math.abs(this.touchendX - this.touchstartX));
         if(Math.abs(this.touchendX - this.touchstartX) > 50) {
           if (this.touchendX > this.touchstartX) {
             this.RtBanners.activeIndex++;
