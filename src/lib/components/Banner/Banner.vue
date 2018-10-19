@@ -106,7 +106,7 @@
         touchendX: null,
         RtBanners: {
           items: [],
-          activeIndex: 0,
+          activeIndex: -1,
           setActiveItem: this.setActiveItem,
           setStartTimer: this.setStartTimer
         },
@@ -258,15 +258,17 @@
         this.calculateSwipe();
       },
       calculateSwipe() {
-        if (this.touchendX > this.touchstartX) {
-          this.RtBanners.activeIndex++;
-          if (this.RtBanners.activeIndex >= this.RtBanners.items.length) {
-            this.RtBanners.activeIndex = 0;
-          }
-        } else {
-          this.RtBanners.activeIndex--;
-          if (this.RtBanners.activeIndex < 0) {
-            this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+        if(Math.abs(this.touchendX - this.touchstartX) > 50) {
+          if (this.touchendX > this.touchstartX) {
+            this.RtBanners.activeIndex++;
+            if (this.RtBanners.activeIndex >= this.RtBanners.items.length) {
+              this.RtBanners.activeIndex = 0;
+            }
+          } else {
+            this.RtBanners.activeIndex--;
+            if (this.RtBanners.activeIndex < 0) {
+              this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+            }
           }
         }
       },
