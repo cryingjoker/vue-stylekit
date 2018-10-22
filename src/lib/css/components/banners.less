@@ -24,13 +24,15 @@
     &-video{
         &__content{
             height: 100%;
+            width: 100%;
+            object-fit: cover;
             .rt-banner--full-screen &{
-                width: auto;
-                height: auto;
+                width: 100%;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
             }
         }
     }
@@ -77,10 +79,10 @@
     &-triangle {
         position: absolute;
         height: 100%;
-        left: 0vw;
+        left: -1px;
         top: 0;
         z-index: 10;
-        margin-left: -2px;
+        margin-left: 0px;
         fill: transparent;
         transition-duration: 0.3s;
         transition-property: fill;
@@ -114,7 +116,7 @@
         display: none;
         position: absolute;
         height: 100%;
-        right: 0;
+        right: -1px;
         top: 0;
         z-index: 10;
         fill: transparent;
@@ -230,6 +232,7 @@
         position: relative;
         height: 100%;
         width: 55vw;
+        overflow: hidden;
         position: absolute;
         left: 45vw;
         z-index: 1;
@@ -241,11 +244,59 @@
         transition-duration: 0.3s;
         transition-property: background-image;
         transition-timing-function: ease-in-out;
+        &:before{
+            content: '';
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            left: -4px;
+            display: block;
+        }
+        &:after{
+            content: '';
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            right: -4px;
+            display: block;
+        }
+        &:before,
+        &:after{
+            .@{newAppName}-banner--background-dark-state & {
+                background-color: @b2b-dark-state;
+
+            }
+            .@{newAppName}-banner--background-yellow & {
+                background-color: @b2c-yellow-low;
+            }
+            .@{newAppName}-banner--background-red & {
+                background-color: @b2c-red-low;
+            }
+            .@{newAppName}-banner--background-dark-blue & {
+                background-color: @b2c-dark-blue-low;
+            }
+            .@{newAppName}-banner--background-light-blue & {
+                background-color: @b2c-light-blue-low;
+            }
+            .@{newAppName}-banner--background-orange & {
+                background-color: @b2c-orange-low;
+            }
+            .@{newAppName}-banner--background-pink & {
+                background-color: @b2c-pink-low;
+            }
+            .@{newAppName}-banner--background-green & {
+                background-color: @b2c-green-low;
+            }
+        }
         .@{newAppName}-banner--full-screen & {
             width: 100vw;
             left: 0;
             right: 0;
             overflow-y: hidden;
+            &:before,
+            &:after{
+                display: none;
+            }
         }
         @media (max-width: @mobile-step-size) {
             display: none;

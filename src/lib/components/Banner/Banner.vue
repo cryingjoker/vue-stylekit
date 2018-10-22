@@ -15,8 +15,8 @@
     </div>
     <div class="circle-switcher">
       <div v-if="RtBanners.items && RtBanners.items.length > 1 " class="circle-switcher-container" >
-        <rt-banner-paginator-item :sleep-time="sleepTime" v-for="(option, index) in RtBanners.items"
-                                  :is-pause="typeof stopAnimation  === 'boolean' ? stopAnimation  : false "
+        <rt-banner-paginator-item :sleep-time="option['slideTime'] || sleepTime" v-for="(option, index) in RtBanners.items"
+                                  :is-pause="isPause"
                                   :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index"/>
       </div>
     </div>
@@ -32,7 +32,8 @@
              muted
              class="rt-banner-video__content"
              ref="video"
-             :src="backgroundVideo"></video>
+             :src="backgroundVideo">
+      </video>
       <!--<video autoplay class="rt-banner-video__content"-->
       <!--ref="video"-->
       <!--src="https://04-lvl3-pdl.vimeocdn.com/01/1850/1/34254547/78068179.mp4?expires=1539878512&amp;token=09afbb94eb179c5a53067"></video>-->
@@ -93,18 +94,19 @@
       bannerLogo: {
         type: String,
         default: null
-      }
+      },
 
     },
     data:()=>({
+        isPause: false,
         touchstartX: null,
         touchendX: null,
         stopAnimation: false,
         RtBanners: {
           items: [],
           activeIndex: -1,
-          setActiveItem: this.setActiveItem,
-          setStartTimer: this.setStartTimer
+          setActiveItem: null,
+          setStartTimer: null
         },
         isOpenListOnTop: false
     }),
@@ -175,10 +177,17 @@
     },
     mounted: function() {
       if (this.RtBanners.items.length > 0 && this.RtBanners.items[0].id) {
+        if(this.RtBanners.activeIndex < 0){
+          this.RtBanners.activeIndex = 0;
+        }
         this.setStartTimer();
       }
       this.addListener();
       this.calculateScroll();
+    },
+    beforeMount(){
+      this.RtBanners.setActiveItem = this.setActiveItem;
+      this.RtBanners.setStartTimer =  this.setStartTimer;
     },
     beforeUpdate(){
       this.removeListener();
@@ -188,16 +197,16 @@
       this.calculateScroll();
     },
     beforeDestroy: function() {
+      this.RtBanners.items = [];
       this.removeListener();
     },
     methods: {
       setStopAnimation(){
-        this.stopAnimation =  true;
-        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+        this.isPause =  true;
       },
       removeStopAnimation(){
-        this.stopAnimation =  false;
-        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+        this.isPause =  false;
+        this.setStartTimer();
       },
       addListener(){
         this.$el.addEventListener("touchstart", this.setTouchStart);
@@ -284,19 +293,22 @@
         this.setStartTimer();
       },
       setStartTimer() {
-        if (this.RtBanners.timer) {
-          clearTimeout(this.RtBanners.timer);
+        const RtBanners = this.RtBanners;
+        if(RtBanners) {
+          if (RtBanners.timer) {
+            clearTimeout(RtBanners.timer);
+          }
+          RtBanners.timer = setTimeout(() => {
+            if (!this.stopAnimation && !this.isPause) {
+              const index =
+                (RtBanners.activeIndex + 1) % RtBanners.items.length;
+              RtBanners.activeIndex = index;
+            }
+            if (RtBanners.items.length > 1) {
+              this.setStartTimer();
+            }
+          }, RtBanners.items[RtBanners.activeIndex].slideTime || this.sleepTime);
         }
-        this.RtBanners.timer = setTimeout(() => {
-          if (!this.stopAnimation) {
-            const index =
-              (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
-            this.RtBanners.activeIndex = index;
-          }
-          if (this.RtBanners.items.length > 1) {
-            this.setStartTimer();
-          }
-        }, this.sleepTime);
       }
     }
   };

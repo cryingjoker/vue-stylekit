@@ -1,6 +1,12 @@
 <script type="text/jsx">
   export default {
     name: "RtRowListItem",
+    props:{
+      arrayIcon:{
+        type: Boolean,
+        default: false
+      }
+    },
     data: () => ({
       show: false
     }),
