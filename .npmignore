@@ -4,9 +4,13 @@ example-images/*
 examples/*
 tmpImages/*
 static/*
-
+example/*
+docs/*
 .idea/
 .vscode/
+example-pages/*
+src/example-pages/*
+gulpfile.js
 
 # Node modules directory
 node_modules/
