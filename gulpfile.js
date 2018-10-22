@@ -5,11 +5,11 @@ var tiny = require('gulp-tinypng-nokey-plus');
 gulp.task(
   'copy',
   shell.task([
-    'git checkout gh-pages',
+    // 'git checkout gh-pages',
     'rm -rf ./docs',
     'mkdir docs',
     'mkdir docs/promo',
-    "git merge master -m'deploy'",
+    // "git merge master -m'deploy'",
     'npm run build:docs',
     'cp -R ./dist/* ./docs',
     'cp docs/BasisGrotesquePro*.* docs/promo/',
@@ -25,9 +25,9 @@ gulp.task(
     // "perl -pi -w -e 's/BasisGrotesqu/docs\\/BasisGrotesqu/g' ./docs/main.js",
     'perl -pi -w -e \'s/\\<\\/script\\>\\<\\/head\\>/\\<\\/script\\>\\<link rel\\=\\"stylesheet\\" href\\=\\"\\/vue\\-stylekit\\/docs\\/fonts.css\\"\\/\\>\\<\\/head\\>/g\' ./docs/index.html\n',
     'rm -rf ./dist',
-    "git commit -a -m'deploy'\n",
+    "git commit -a -m'deploy docs'\n",
     'git push',
-    'git checkout master',
+    // 'git checkout master',
   ]),
 );
 
