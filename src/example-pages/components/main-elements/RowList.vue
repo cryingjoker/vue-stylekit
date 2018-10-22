@@ -5,6 +5,8 @@
         <h1 class="rt-font-hero">Row List</h1>
       </div>
       <div class="app-body">
+        <pre-code
+          text='
         <rt-row-list>
           <rt-row-list-item>
             <template slot="icon">
@@ -201,7 +203,7 @@
             </template>
           </rt-row-list-item>
         </rt-row-list>
-
+        '></pre-code>
       </div>
     </div>
   </div>

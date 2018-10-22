@@ -50,6 +50,10 @@ export default {
     backgroundPosition: {
       type: String,
       default: null
+    },
+    slideTime:{
+      type: [String, Number],
+      default: null
     }
   },
   inject: {
@@ -100,6 +104,7 @@ export default {
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
         classArray['rt-banner-content--active'] = true;
       }
+
       return classArray;
     }
   },
@@ -117,6 +122,9 @@ export default {
       }
       if(this.backgroundVideo){
         bannerItemData.backgroundVideo = this.backgroundVideo;
+      }
+      if(this.slideTime){
+        bannerItemData.slideTime = this.slideTime;
       }
       this.RtBanners.items.push(bannerItemData);
       const preloadImage = new Image();

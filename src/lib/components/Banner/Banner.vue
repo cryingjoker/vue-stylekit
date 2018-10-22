@@ -14,8 +14,9 @@
       </div>
     </div>
     <div class="circle-switcher">
-      <div v-if="RtBanners.items && RtBanners.items.length > 1" class="circle-switcher-container">
+      <div v-if="RtBanners.items && RtBanners.items.length > 1 " class="circle-switcher-container" >
         <rt-banner-paginator-item :sleep-time="sleepTime" v-for="(option, index) in RtBanners.items"
+                                  :is-pause="typeof stopAnimation  === 'boolean' ? stopAnimation  : false "
                                   :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index"/>
       </div>
     </div>
@@ -25,7 +26,7 @@
         <polygon points="0 0,0 500,185 0 "/>
       </svg>
 
-      <!--http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4-->
+
       <video v-if="backgroundVideo"
              autoplay
              muted
@@ -60,11 +61,6 @@
   export default {
     name: "RtBanner",
     components: componentsList,
-    data: () => ({
-      backgroundVideo: null,
-      activeVideoSrc: null,
-      hasPause: false
-    }),
     props: {
       justify: {
         type: String,
@@ -100,10 +96,10 @@
       }
 
     },
-    data() {
-      return {
+    data:()=>({
         touchstartX: null,
         touchendX: null,
+        stopAnimation: false,
         RtBanners: {
           items: [],
           activeIndex: -1,
@@ -111,8 +107,7 @@
           setStartTimer: this.setStartTimer
         },
         isOpenListOnTop: false
-      };
-    },
+    }),
 
     provide() {
       const RtBanners = this.RtBanners;
@@ -196,9 +191,19 @@
       this.removeListener();
     },
     methods: {
+      setStopAnimation(){
+        this.stopAnimation =  true;
+        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+      },
+      removeStopAnimation(){
+        this.stopAnimation =  false;
+        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+      },
       addListener(){
         this.$el.addEventListener("touchstart", this.setTouchStart);
         this.$el.addEventListener("touchend", this.setTouchEnd);
+        this.$el.addEventListener("mouseenter", this.setStopAnimation);
+        this.$el.addEventListener("mouseleave", this.removeStopAnimation);
         window.addEventListener("scroll", this.debounceCalculateScroll);
         window.addEventListener("resize", this.debounceCalculateScroll);
       },
@@ -207,6 +212,8 @@
         this.$el.removeEventListener("touchend", this.setTouchEnd);
         window.removeEventListener("scroll", this.debounceCalculateScroll);
         window.removeEventListener("resize", this.debounceCalculateScroll);
+        this.$el.removeEventListener("mouseenter", this.setStopAnimation);
+        this.$el.removeEventListener("mouseleave", this.removeStopAnimation);
       },
       stopVideo() {
         if(this.$refs.video) {
@@ -234,18 +241,18 @@
         const deltaY = Math.max(window.innerHeight, el.offsetHeight);
 
         if (el.getBoundingClientRect().top > deltaY || el.getBoundingClientRect().top < -1 * deltaY) {
-          if (!this.hasPause) {
+          if (!this.stopAnimation) {
             this.stopVideo();
           }
-          this.hasPause = true;
+          this.stopAnimation = true;
         } else {
-          if (this.hasPause) {
+          if (this.stopAnimation) {
             const index =
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
             this.RtBanners.activeIndex = index;
           }
 
-          this.hasPause = false;
+          this.stopAnimation = false;
         }
         this.playVideo();
 
@@ -273,18 +280,15 @@
         }
       },
       setActiveItem(index) {
-        if (!this.hasPause) {
-          this.RtBanners.activeIndex = index;
-          this.setStartTimer();
-        }
-
+        this.RtBanners.activeIndex = index;
+        this.setStartTimer();
       },
       setStartTimer() {
         if (this.RtBanners.timer) {
           clearTimeout(this.RtBanners.timer);
         }
         this.RtBanners.timer = setTimeout(() => {
-          if (!this.hasPause) {
+          if (!this.stopAnimation) {
             const index =
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
             this.RtBanners.activeIndex = index;

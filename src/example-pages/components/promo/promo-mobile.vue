@@ -507,12 +507,14 @@
   </div>
 </template>
 
-<style coped lang="less">
+<style>
   .promo-phone-app {
     width: 117%;
     left: -23%;
     position: relative;
-    @media (max-width: 968px) {
+  }
+  @media (max-width: 968px) {
+    .promo-phone-app {
       width: 80%;
       left: 0;
       margin-left: 10%;

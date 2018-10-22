@@ -4,6 +4,10 @@
     display: table;
     &-head {
         display: table-header-group;
+
+        &--fill{
+            background-color: fade(@b2c-purple-low,20%);
+        }
         &__item {
             display: table-cell;
             padding-bottom: @vertical-space*2.5;
@@ -31,6 +35,9 @@
             @media (max-width: @mobile-step-size) {
                 display: block;
                 flex-wrap: wrap;
+            }
+            &--fill{
+                background-color: fade(@b2c-purple-low,20%);
             }
             & + & {
                 @media (max-width: @mobile-step-size) {

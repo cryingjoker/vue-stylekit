@@ -10,9 +10,20 @@
       fileSize: {
         type: String,
         default: null
+      },
+      link: {
+        type: String,
+        default: null
       }
     },
     computed: {},
+    mounted(){
+      if(this.link){
+        if(!this.exception){
+          this.exception = this.link.split('.').pop().split(/\?#/)[0];
+        }
+      }
+    },
     render: function(h){
       return <div>
         <div class="download-content">
