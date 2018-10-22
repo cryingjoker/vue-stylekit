@@ -17,6 +17,10 @@ export default {
     sleepTime:{
       type: Number,
       default: null
+    },
+    isPause:{
+      type: Boolean,
+      default: false
     }
   },
   inject: {
@@ -35,6 +39,9 @@ export default {
       if (this.RtBanners.activeIndex === this.index) {
         classArray['rt-banner--run-timer'] = true;
       }
+      if(this.isPause){
+          classArray['rt-banner--pause'] = true;
+      }
       return classArray;
     },
     paginatorItemStyle(){
@@ -48,6 +55,7 @@ export default {
       const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
         classArray['circle-switcher__item--active'] = true;
+
       }
       return classArray;
     }

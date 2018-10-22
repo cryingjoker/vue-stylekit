@@ -20,7 +20,7 @@
     transition-duration: 0.3s;
     transition-property: background-color, color;
     transition-timing-function: ease-in-out;
-    
+
     &-video{
         &__content{
             height: 100%;
@@ -281,6 +281,7 @@
         width: 20px;
         height: 20px;
         box-sizing: border-box;
+        animation-play-state: running;
         &:before {
             content: '';
             width: 10px;
@@ -319,6 +320,11 @@
             animation-duration: inherit;
             animation-timing-function: linear;
             animation-name: switcherRound;
+        }
+        .@{newAppName}-banner--pause & {
+            animation-play-state: paused;
+            stroke-dashoffset: 120!important;
+            animation: none;
         }
     }
 }

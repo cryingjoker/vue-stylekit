@@ -5,6 +5,10 @@
     name: 'RtTableHeadItem',
     components: {},
     props: {
+      fill: {
+        type: Boolean,
+        default: false
+      },
       verticalAlign: {
         type: String,
         default: null

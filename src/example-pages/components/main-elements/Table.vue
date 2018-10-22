@@ -37,13 +37,13 @@
             <div class="rt-space-top3">
               <rt-table>
                 <template slot="header">
-                  <rt-table-head-item vertical-align="top"><p class="rt-font-h2">Территория</p></rt-table-head-item>
-                  <rt-table-head-item vertical-align="top">Наименование услуги</rt-table-head-item>
-                  <rt-table-head-item vertical-align="top">Бесплатный период, дней</rt-table-head-item>
-                  <rt-table-head-item vertical-align="top">Стоимость добровольной блокировки в базовый период (руб./в день)
+                  <rt-table-head-item :fill="true" vertical-align="top"><p class="rt-font-h2">Территория</p></rt-table-head-item>
+                  <rt-table-head-item :fill="true" vertical-align="top">Наименование услуги</rt-table-head-item>
+                  <rt-table-head-item :fill="true" vertical-align="top">Бесплатный период, дней</rt-table-head-item>
+                  <rt-table-head-item :fill="true" vertical-align="top">Стоимость добровольной блокировки в базовый период (руб./в день)
                   </rt-table-head-item>
-                  <rt-table-head-item width="300" vertical-align="top">Мораторий на блокировку, дней</rt-table-head-item>
-                  <rt-table-head-item vertical-align="top">Минимальный период блокировки, дней</rt-table-head-item>
+                  <rt-table-head-item :fill="true" width="300" vertical-align="top">Мораторий на блокировку, дней</rt-table-head-item>
+                  <rt-table-head-item :fill="true" vertical-align="top">Минимальный период блокировки, дней</rt-table-head-item>
                 </template>
                 <template slot="body">
                   <rt-table-row>
@@ -88,5 +88,3 @@
   };
 </script>
 
-<style scoped lang="scss">
-</style>

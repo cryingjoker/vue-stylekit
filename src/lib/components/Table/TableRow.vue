@@ -4,11 +4,14 @@
   export default {
     name: 'RtTableRow',
     components: {},
-
     inject: {
       tableLabels: {}
     },
     props: {
+      fill: {
+        type: Boolean,
+        default: false
+      }
     },
     render: function(h) {
       const renderSlots = ()=> {
@@ -23,7 +26,7 @@
           return slotVNode
         })
       }
-      return <div class="rt-table-body__row">
+      return <div class={'rt-table-body__row'+(this.fill ? ' rt-table-body__row--fill' : '')}>
         {renderSlots()}
       </div>
     }
