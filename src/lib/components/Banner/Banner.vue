@@ -16,7 +16,7 @@
     <div class="circle-switcher">
       <div v-if="RtBanners.items && RtBanners.items.length > 1 " class="circle-switcher-container" >
         <rt-banner-paginator-item :sleep-time="sleepTime" v-for="(option, index) in RtBanners.items"
-                                  :is-pause="typeof stopAnimation  === 'boolean' ? stopAnimation  : false "
+                                  :is-pause="isPause"
                                   :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index"/>
       </div>
     </div>
@@ -93,18 +93,19 @@
       bannerLogo: {
         type: String,
         default: null
-      }
+      },
 
     },
     data:()=>({
+        isPause: false,
         touchstartX: null,
         touchendX: null,
         stopAnimation: false,
         RtBanners: {
           items: [],
           activeIndex: -1,
-          setActiveItem: this.setActiveItem,
-          setStartTimer: this.setStartTimer
+          setActiveItem: null,
+          setStartTimer: null
         },
         isOpenListOnTop: false
     }),
@@ -180,6 +181,10 @@
       this.addListener();
       this.calculateScroll();
     },
+    beforeMount(){
+      this.RtBanners.setActiveItem = this.setActiveItem;
+      this.RtBanners.setStartTimer =  this.setStartTimer;
+    },
     beforeUpdate(){
       this.removeListener();
     },
@@ -188,16 +193,15 @@
       this.calculateScroll();
     },
     beforeDestroy: function() {
+      this.RtBanners.items = [];
       this.removeListener();
     },
     methods: {
       setStopAnimation(){
-        this.stopAnimation =  true;
-        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+        this.isPause =  true;
       },
       removeStopAnimation(){
-        this.stopAnimation =  false;
-        const svgCircles = this.$el.querySelectorAll('.circle-switcher__item');
+        this.isPause =  false;
       },
       addListener(){
         this.$el.addEventListener("touchstart", this.setTouchStart);
@@ -288,7 +292,7 @@
           clearTimeout(this.RtBanners.timer);
         }
         this.RtBanners.timer = setTimeout(() => {
-          if (!this.stopAnimation) {
+          if (!this.stopAnimation && !this.isPause) {
             const index =
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
             this.RtBanners.activeIndex = index;
