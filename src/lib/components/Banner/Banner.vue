@@ -34,10 +34,6 @@
              ref="video"
              :src="backgroundVideo">
       </video>
-      <!--<video autoplay class="rt-banner-video__content"-->
-      <!--ref="video"-->
-      <!--src="https://04-lvl3-pdl.vimeocdn.com/01/1850/1/34254547/78068179.mp4?expires=1539878512&amp;token=09afbb94eb179c5a53067"></video>-->
-      <!--src="https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4"></video>-->
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 185 500">
         <polygon points="0 500,185 0,0 0"/>

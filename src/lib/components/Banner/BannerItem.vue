@@ -1,7 +1,7 @@
 <template>
   <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
     <div class="rt-banner-content__inner">
-      <slot />
+      <slot/>
     </div>
   </div>
 
@@ -9,127 +9,155 @@
 </template>
 
 <script>
-const componentsList = {};
+  const componentsList = {};
 
-export default {
-  name: 'RtBannerItem',
-  components: componentsList,
-  props: {
-    contentMinHeight: {
-      type: [Number, String],
-      default: null
+  export default {
+    name: "RtBannerItem",
+    components: componentsList,
+    props: {
+      ancorHashLink: {
+        type: String,
+        default: null
+      },
+      ancorGetParamsLink: {
+        type: String,
+        default: null
+      },
+      contentMinHeight: {
+        type: [Number, String],
+        default: null
+      },
+      contentHeight: {
+        type: [Number, String],
+        default: null
+      },
+      contentMinWidth: {
+        type: [Number, String],
+        default: null
+      },
+      contentMaxWidth: {
+        type: [Number, String],
+        default: null
+      },
+      backgroundVideo: {
+        type: String,
+        default: null
+      },
+      backgroundColor: {
+        type: String,
+        default: null
+      },
+      backgroundImage: {
+        type: String,
+        default: null
+      },
+      isWhiteColor: {
+        type: Boolean,
+        default: false
+      },
+      backgroundPosition: {
+        type: String,
+        default: null
+      },
+      slideTime: {
+        type: [String, Number],
+        default: null
+      }
     },
-    contentHeight: {
-      type: [Number, String],
-      default: null
+    inject: {
+      RtBanners: {}
     },
-    contentMinWidth: {
-      type: [Number, String],
-      default: null
-    },
-    contentMaxWidth: {
-      type: [Number, String],
-      default: null
-    },
-    backgroundVideo:{
-      type: String,
-      default: null
-    },
-    backgroundColor: {
-      type: String,
-      default: null
-    },
-    backgroundImage: {
-      type: String,
-      default: null
-    },
-    isWhiteColor: {
-      type: Boolean,
-      default: false
-    },
-    backgroundPosition: {
-      type: String,
-      default: null
-    },
-    slideTime:{
-      type: [String, Number],
-      default: null
-    }
-  },
-  inject: {
-    RtBanners: {}
-  },
 
-  data() {
-    return {
-      id: this._uid
-    };
-  },
-
-  computed: {
-    banerStyle() {
-      const styles = {};
-      if (this.contentMinWidth) {
-        if (typeof this.contentMinWidth === 'string') {
-          styles.minWidth = this.contentMinWidth;
-        } else {
-          styles.minWidth = this.contentMinWidth + 'px';
-        }
-      }
-      if (this.contentMaxWidth) {
-        if (typeof this.contentMaxWidth === 'string') {
-          styles.maxWidth = this.contentMaxWidth;
-        } else {
-          styles.maxWidth = this.contentMaxWidth + 'px';
-        }
-      }
-      if (this.contentHeight) {
-        if (typeof this.contentHeight === 'string') {
-          styles.height = this.contentHeight;
-        } else {
-          styles.height = this.contentHeight + 'px';
-        }
-      }
-      if (this.contentMinHeight) {
-        if (typeof this.contentMinHeight === 'string') {
-          styles.minHeight = this.contentMinHeight;
-        } else {
-          styles.minHeight = this.contentMinHeight + 'px';
-        }
-      }
-      return styles;
-    },
-    banerClass() {
-      const classArray = {};
-      if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
-        classArray['rt-banner-content--active'] = true;
-      }
-
-      return classArray;
-    }
-  },
-
-  beforeMount: function() {
-    if(this.RtBanners) {
-      this.index = this.RtBanners.items.length;
-      const bannerItemData = {
-        backgroundColor: this.backgroundColor,
-        isWhiteColor: this.isWhiteColor,
-        id: this.id
+    data() {
+      return {
+        id: this._uid
       };
-      if(this.backgroundImage){
-        bannerItemData.backgroundImage = this.backgroundImage;
+    },
+
+    computed: {
+      banerStyle() {
+        const styles = {};
+        if (this.contentMinWidth) {
+          if (typeof this.contentMinWidth === "string") {
+            styles.minWidth = this.contentMinWidth;
+          } else {
+            styles.minWidth = this.contentMinWidth + "px";
+          }
+        }
+        if (this.contentMaxWidth) {
+          if (typeof this.contentMaxWidth === "string") {
+            styles.maxWidth = this.contentMaxWidth;
+          } else {
+            styles.maxWidth = this.contentMaxWidth + "px";
+          }
+        }
+        if (this.contentHeight) {
+          if (typeof this.contentHeight === "string") {
+            styles.height = this.contentHeight;
+          } else {
+            styles.height = this.contentHeight + "px";
+          }
+        }
+        if (this.contentMinHeight) {
+          if (typeof this.contentMinHeight === "string") {
+            styles.minHeight = this.contentMinHeight;
+          } else {
+            styles.minHeight = this.contentMinHeight + "px";
+          }
+        }
+        return styles;
+      },
+      banerClass() {
+        const classArray = {};
+        if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
+          classArray["rt-banner-content--active"] = true;
+        }
+
+        return classArray;
       }
-      if(this.backgroundVideo){
-        bannerItemData.backgroundVideo = this.backgroundVideo;
+    },
+
+    beforeMount: function() {
+      if (this.RtBanners) {
+        this.index = this.RtBanners.items.length;
+        const bannerItemData = {
+          backgroundColor: this.backgroundColor,
+          isWhiteColor: this.isWhiteColor,
+          id: this.id
+        };
+        if (this.backgroundImage) {
+          bannerItemData.backgroundImage = this.backgroundImage;
+        }
+        if (this.backgroundVideo) {
+          bannerItemData.backgroundVideo = this.backgroundVideo;
+        }
+        if (this.slideTime) {
+          bannerItemData.slideTime = this.slideTime;
+        }
+        if (this.ancorHashLink) {
+          bannerItemData.ancorHashLink = this.ancorHashLink;
+        }
+        if (this.ancorGetParamsLink) {
+          bannerItemData.ancorGetParamsLink = this.ancorGetParamsLink;
+        }
+
+        this.RtBanners.items.push(bannerItemData);
+        if (this.ancorHashLink && location.hash) {
+          if (location.hash.replace(/#/, "") === this.ancorHashLink) {
+            this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+          }
+        }
+        if (this.ancorGetParamsLink) {
+          let getParams = location.href.split("?");
+          if (getParams.length > 1) {
+            if (getParams[1].search(this.ancorGetParamsLink) >= 0) {
+              this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+            }
+          }
+        }
+        const preloadImage = new Image();
+        preloadImage.src = this.backgroundImage;
       }
-      if(this.slideTime){
-        bannerItemData.slideTime = this.slideTime;
-      }
-      this.RtBanners.items.push(bannerItemData);
-      const preloadImage = new Image();
-      preloadImage.src = this.backgroundImage;
     }
-  }
-};
+  };
 </script>

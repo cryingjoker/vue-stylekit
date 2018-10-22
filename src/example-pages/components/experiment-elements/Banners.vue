@@ -11,7 +11,20 @@
       </div>
     </div>
     <pre-code
-      text='<rt-banner :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg"><rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item><rt-banner-item background-color="yellow" background-image="/static/example-images/banerBackground2.jpg"><p class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p><p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
+      text='<rt-banner :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg">
+      <rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"
+                      background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p>
+        <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br>
+          возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+        <rt-button class="rt-button-orange">Подробнее</rt-button>
+      </rt-banner-item>
+      <rt-banner-item ancor-get-params-link="utm-source=vova-privet" ancor-hash-link="testBannerHash" background-color="yellow" background-image="/static/example-images/banerBackground2.jpg"><p
+        class="rt-font-banner-label">Помогаем бизнесу <br> экономить</p>
+        <p class="rt-space-top rt-space-bottom15">Цифровые сервисы и технологии по выгодным ценам для среднего и
+          малогобизнеса </p>
+        <rt-button class="rt-button-orange">Подробнее</rt-button>
+      </rt-banner-item>
+    </rt-banner>'></pre-code>
     <pre-code
       text='<rt-banner :is-fullscreen-image="true" bannerLogo="/static/example-images/Logo.svg"><rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p><p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item></rt-banner>'></pre-code>
     <pre-code
