@@ -96,7 +96,7 @@
       }
 
     },
-    data:{
+    data:()=>({
         touchstartX: null,
         touchendX: null,
         stopAnimation: false,
@@ -107,7 +107,7 @@
           setStartTimer: this.setStartTimer
         },
         isOpenListOnTop: false
-    },
+    }),
 
     provide() {
       const RtBanners = this.RtBanners;
