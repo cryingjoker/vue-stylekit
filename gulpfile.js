@@ -5,11 +5,11 @@ var tiny = require('gulp-tinypng-nokey-plus');
 gulp.task(
   'copy',
   shell.task([
-    // 'git checkout gh-pages',
+    'git checkout gh-pages',
     'rm -rf ./docs',
     'mkdir docs',
     'mkdir docs/promo',
-    // "git merge master -m'deploy'",
+    "git merge master -m'deploy'",
     'npm run build:docs',
     'cp -R ./dist/* ./docs',
     'cp docs/BasisGrotesquePro*.* docs/promo/',
