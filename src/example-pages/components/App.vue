@@ -1,6 +1,6 @@
 <template>
-  <div class="app" :class="{'app--hide-scroll' : showMenu}">
-    <div class="menu-trigger md-d-block d-none" @click="menuTrigger">Menu</div>
+  <div class="app" :class="{'app--hide-scroll' : showMenu}" v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu">
+    <div class="menu-trigger md-d-block d-none" @click="openMenu">Menu</div>
 
     <div class="grid" :class="{'grid--active': showGrid}">
       <div class="row">
@@ -178,9 +178,13 @@
 
 <script>
 
-
+import  VueRtStyle from '../../lib/index'
 import componentsList from '../componentsList'
-// componentsList[Switch.name] = Switch;
+console.info('VueRtStyle',VueRtStyle);
+const componentDirectives = {};
+
+componentDirectives[VueRtStyle.directives.SwipeRight.name] = VueRtStyle.directives.SwipeRight;
+componentDirectives[VueRtStyle.directives.SwipeLeft.name] = VueRtStyle.directives.SwipeLeft;
 
 export default {
   name: 'App',
@@ -196,15 +200,18 @@ export default {
       this.showMenu = false;
     },
   },
-  mounted() {},
+  directives: componentDirectives,
   created() {
     if (this.$route.path.search('promo') >= 0) {
       this.isPromo = true;
     }
   },
   methods: {
-    menuTrigger() {
+    openMenu() {
       this.showMenu = true;
+    },
+    closeMenu() {
+      this.showMenu = false;
     },
     gridToggle() {
       this.showGrid = !this.showGrid;

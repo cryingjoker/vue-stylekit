@@ -205,12 +205,12 @@
         this.setStartTimer();
       },
       addListener(){
-        this.$el.addEventListener("touchstart", this.setTouchStart);
-        this.$el.addEventListener("touchend", this.setTouchEnd);
-        this.$el.addEventListener("mouseenter", this.setStopAnimation);
-        this.$el.addEventListener("mouseleave", this.removeStopAnimation);
-        window.addEventListener("scroll", this.debounceCalculateScroll);
-        window.addEventListener("resize", this.debounceCalculateScroll);
+        this.$el.addEventListener("touchstart", this.setTouchStart, {passive: true});
+        this.$el.addEventListener("touchend", this.setTouchEnd, {passive: true});
+        this.$el.addEventListener("mouseenter", this.setStopAnimation, {passive: true});
+        this.$el.addEventListener("mouseleave", this.removeStopAnimation, {passive: true});
+        window.addEventListener("scroll", this.debounceCalculateScroll, {passive: false});
+        window.addEventListener("resize", this.debounceCalculateScroll, {passive: false});
       },
       removeListener(){
         this.$el.removeEventListener("touchstart", this.setTouchStart);

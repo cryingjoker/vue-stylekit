@@ -27,7 +27,7 @@ gulp.task(
     'rm -rf ./dist',
     "git commit -a -m'deploy docs'\n",
     'git push',
-    // 'git checkout master',
+    'git checkout master',
   ]),
 );
 

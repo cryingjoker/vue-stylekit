@@ -44,6 +44,9 @@ import {
 } from './components';
 
 
+
+import {SwipeLeft, SwipeRight} from './directives/Swipe/swipe';
+
 const VueRtStyle = {
   install(Vue, config) {
     if(!Vue.RtStyle) {
@@ -87,14 +90,19 @@ const VueRtStyle = {
       Vue.component(TableRow.name, TableRow);
       Vue.component(DownloadContent.name, DownloadContent);
 
+      Vue.directive(SwipeLeft.name, SwipeLeft);
+      Vue.directive(SwipeRight.name, SwipeRight);
+
       Vue.RtStyle = true;
       Vue.config.test = true;
     }
   }
 };
+VueRtStyle.directives = {SwipeLeft, SwipeRight};
 
 const version = '0.0.12';
 VueRtStyle.version = version;
+
 
 export default VueRtStyle;
 
