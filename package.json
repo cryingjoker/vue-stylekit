@@ -2,7 +2,7 @@
   "name": "vue_stylekit",
   "version": "0.0.11",
   "description": "",
-  "main": "index.js",
+  "main": "lib/vue-rt-style.js",
   "scripts": {
     "start": "node bin/local/index.js",
     "build": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.lib.js",
