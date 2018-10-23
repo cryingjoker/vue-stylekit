@@ -93,7 +93,7 @@ const VueRtStyle = {
   }
 };
 
-const version = '0.0.11';
+const version = '0.0.12';
 VueRtStyle.version = version;
 
 export default VueRtStyle;
