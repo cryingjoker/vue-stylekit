@@ -56,12 +56,10 @@ export default {
         if (currentStep == 0) {
           this.idealHeight = el.clientHeight;
         }
-        console.info(this.idealHeight , el.clientHeight);
         if (this.idealHeight === el.clientHeight) {
           this.stepCheck(++currentStep);
         } else {
           this.dropdownStepWidth = width + 40;
-          console.info('this.dropdownStepWidth',this.dropdownStepWidth);
           el.removeAttribute('style');
           this.bindResize();
         }
@@ -73,7 +71,6 @@ export default {
     },
     checkWidth(){
       const currentClienWidth = this.$el.clientWidth;
-      console.info('currentClienWidth',currentClienWidth);
       this.RtInlineDropdown.isDropdownMode = currentClienWidth <= this.dropdownStepWidth;
       if(this.resizeSteps && this.resizeSteps.length > 0){
         const windowWidth = window.innerWidth;

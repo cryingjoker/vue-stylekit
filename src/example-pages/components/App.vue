@@ -185,7 +185,12 @@
 
 import  VueRtStyle from '../../lib/index'
 import componentsList from '../componentsList'
-console.info('VueRtStyle',VueRtStyle);
+
+if(window){
+  window.VueRtStyle = {};
+  window.VueRtStyle.version = VueRtStyle.version;
+}
+
 const componentDirectives = {};
 
 componentDirectives[VueRtStyle.directives.SwipeRight.name] = VueRtStyle.directives.SwipeRight;
