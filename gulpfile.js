@@ -9,7 +9,7 @@ gulp.task(
     'rm -rf ./docs',
     'mkdir docs',
     'mkdir docs/promo',
-    "git merge master -m'deploy'",
+    "git merge master -m'update branch'",
     'npm run build:docs',
     'cp -R ./dist/* ./docs',
     'cp docs/BasisGrotesquePro*.* docs/promo/',
@@ -27,7 +27,7 @@ gulp.task(
     'rm -rf ./dist',
     "git commit -a -m'deploy docs'\n",
     'git push',
-    // 'git checkout master',
+    'git checkout master',
   ]),
 );
 

@@ -26,6 +26,7 @@ import RowList from '../components/main-elements/RowList.vue'
 import Tabs from '../components/main-elements/Tabs.vue';
 import Table from '../components/main-elements/Table.vue'
 import DownloadContent from '../components/main-elements/DownloadContent.vue'
+import InlineDropdown from '../components/main-elements/InlineDropdown.vue'
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -43,6 +44,7 @@ const index = [
   { path: '/price', name: 'app-price', component: Price },
   { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
   { path: '/download-content', name: 'app-download-content', component: DownloadContent },
+  { path: '/inline-dropdown', name: 'app-inline-dropdown', component: InlineDropdown },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',

@@ -40,9 +40,14 @@ import {
   TableHeadItem,
   TableItem,
   TableRow,
-  DownloadContent
+  DownloadContent,
+  InlineDropdown,
+  InlineDropdownItem
 } from './components';
 
+
+
+import {SwipeLeft, SwipeRight} from './directives/Swipe/swipe';
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -86,15 +91,24 @@ const VueRtStyle = {
       Vue.component(TableItem.name, TableItem);
       Vue.component(TableRow.name, TableRow);
       Vue.component(DownloadContent.name, DownloadContent);
+      Vue.component(InlineDropdown.name, InlineDropdown);
+      Vue.component(InlineDropdownItem.name, InlineDropdownItem);
+
+
+
+      Vue.directive(SwipeLeft.name, SwipeLeft);
+      Vue.directive(SwipeRight.name, SwipeRight);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
     }
   }
 };
+VueRtStyle.directives = {SwipeLeft, SwipeRight};
 
-const version = '0.0.11';
+const version = '0.0.12';
 VueRtStyle.version = version;
+
 
 export default VueRtStyle;
 

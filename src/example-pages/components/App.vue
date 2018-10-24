@@ -1,6 +1,6 @@
 <template>
-  <div class="app" :class="{'app--hide-scroll' : showMenu}">
-    <div class="menu-trigger md-d-block d-none" @click="menuTrigger">Menu</div>
+  <div class="app" :class="{'app--hide-scroll' : showMenu}" v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu">
+    <div class="menu-trigger md-d-block d-none" @click="openMenu">Menu</div>
 
     <div class="grid" :class="{'grid--active': showGrid}">
       <div class="row">
@@ -45,6 +45,11 @@
         <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/row-list">
             Row list
+          </router-link>
+        </div>
+        <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/inline-dropdown">
+            Inline dropdown
           </router-link>
         </div>
         <!--<div class="aside-menu__item" to="/color">Color list</div>-->
@@ -178,9 +183,18 @@
 
 <script>
 
-
+import  VueRtStyle from '../../lib/index'
 import componentsList from '../componentsList'
-// componentsList[Switch.name] = Switch;
+
+if(window){
+  window.VueRtStyle = {};
+  window.VueRtStyle.version = VueRtStyle.version;
+}
+
+const componentDirectives = {};
+
+componentDirectives[VueRtStyle.directives.SwipeRight.name] = VueRtStyle.directives.SwipeRight;
+componentDirectives[VueRtStyle.directives.SwipeLeft.name] = VueRtStyle.directives.SwipeLeft;
 
 export default {
   name: 'App',
@@ -196,15 +210,18 @@ export default {
       this.showMenu = false;
     },
   },
-  mounted() {},
+  directives: componentDirectives,
   created() {
     if (this.$route.path.search('promo') >= 0) {
       this.isPromo = true;
     }
   },
   methods: {
-    menuTrigger() {
+    openMenu() {
       this.showMenu = true;
+    },
+    closeMenu() {
+      this.showMenu = false;
     },
     gridToggle() {
       this.showGrid = !this.showGrid;

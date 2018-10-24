@@ -142,12 +142,12 @@ export default {
       }
     },
     removeBindEvents() {
-      document.removeEventListener('click', this.bindMouseEvents);
-      document.removeEventListener('keydown', this.bindKeyboardEvents);
+      document.removeEventListener('click', this.bindMouseEvents, true);
+      document.removeEventListener('keydown', this.bindKeyboardEvents, true);
     },
     bindEvents() {
-      document.addEventListener('click', this.bindMouseEvents);
-      document.addEventListener('keydown', this.bindKeyboardEvents);
+      document.addEventListener('click', this.bindMouseEvents, {passive: false});
+      document.addEventListener('keydown', this.bindKeyboardEvents, {passive: false});
     },
     scrollToSelected() {
       const selectElement = this.$el.querySelector('.select-option--select');

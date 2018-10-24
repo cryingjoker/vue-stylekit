@@ -33,8 +33,8 @@
       if (this.tabsClassname) {
         setTimeout(() => {
           this.initAnchorsList();
-          window.addEventListener("scroll", this.debounceCalculateScroll);
-          window.addEventListener("resize", this.debounceInitAnchorsList);
+          window.addEventListener("scroll", this.debounceCalculateScroll, {passive: true});
+          window.addEventListener("resize", this.debounceInitAnchorsList, {passive: true});
         }, 300);
       }
     },
@@ -204,7 +204,7 @@
           const anchorEl = document.querySelector("[id=\"" + anchor + "\"]");
 
           if (!notBindClick) {
-            i.addEventListener("click", this.scrollBind);
+            i.addEventListener("click", this.scrollBind, {passive: true});
           }
 
           if (anchorEl) {
