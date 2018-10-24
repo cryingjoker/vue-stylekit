@@ -12,7 +12,7 @@
       </div>
     </button>
     <div class="text-field__line" />
-    <div v-if="!disabled" class="select-list">
+    <div v-if="!disabled" class="select-list" :style="selectListStyle">
       <slot />
     </div>
     <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
@@ -45,6 +45,14 @@ export default {
     errorMessage: {
       type: String,
       default: null
+    },
+    dropdownMinWidth: {
+      type: [String, Number],
+      default: null
+    },
+    resetWrapperWidth:{
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -64,10 +72,26 @@ export default {
       return {
         'select--error text-field--error': this.hasError,
         'select--is-open': this.isOpen,
+        'select--is-reset-width' : this.resetWrapperWidth,
         'select--disabled': Boolean(this.disabled),
         'select--invert-open-list': this.isOpenListOnTop
       };
+    },
+    selectListStyle(){
+      if(this.dropdownMinWidth){
+        let width = this.dropdownMinWidth;
+        if(typeof this.dropdownMinWidth === 'number'){
+          width = width+'px';
+        }
+        return {
+          'min-width': width
+        }
+      }
     }
+  },
+  provide() {
+    const RtSelect = this.RtSelect;
+    return { RtSelect };
   },
   watch: {
     localValue(val) {
@@ -165,10 +189,7 @@ export default {
         selectElement.parentNode.scrollTop = scrollPosition;
       }
     }
-  },
-  provide() {
-    const RtSelect = this.RtSelect;
-    return { RtSelect };
   }
+
 };
 </script>

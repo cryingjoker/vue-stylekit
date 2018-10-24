@@ -8,9 +8,7 @@
 
 <script>
 export default {
-  inject: {
-    RtSelect: {}
-  },
+  inject: ['RtSelect'],
   name: 'RtSelectOption',
   props: {
     value: {
@@ -26,7 +24,11 @@ export default {
   },
   computed: {
     selectedValue() {
-      return this.RtSelect.selectedValue;
+      if(this.RtSelect) {
+        return this.RtSelect.selectedValue;
+      }else{
+        return '';
+      }
     },
     optionClasses() {
       return {

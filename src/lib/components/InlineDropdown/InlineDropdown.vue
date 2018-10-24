@@ -1,9 +1,9 @@
 
 <!--<rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"-->
 <script type="text/jsx">
-
-const componentsList = {};
-
+  import {Select} from '../index'
+  const componentsList = {};
+  componentsList[Select.name] = Select;
 export default {
   name: 'RtInlineDropdown',
   data:()=>({
@@ -31,6 +31,9 @@ export default {
     resizeSteps:{
       type: Array,
       default: []
+    },
+    dropdownMinWidth:{
+      type: [Number,String]
     }
   },
   mounted(){
@@ -47,21 +50,24 @@ export default {
         let nowrap = '';
         if (currentStep === 0) {
           nowrap = 'flex-wrap: nowrap;';
+
           this.$el.setAttribute('style', `${nowrap}`);
         } else {
           this.$el.removeAttribute('style');
         }
         const el = this.$el.querySelector('.rt-inline-dropdown__list');
-        el.setAttribute('style', `width: ${width}px!important; height:auto!important;${nowrap}`);
-        if (currentStep == 0) {
-          this.idealHeight = el.clientHeight;
-        }
-        if (this.idealHeight === el.clientHeight) {
-          this.stepCheck(++currentStep);
-        } else {
-          this.dropdownStepWidth = width + 40;
-          el.removeAttribute('style');
-          this.bindResize();
+        if(el) {
+          el.setAttribute('style', `width: ${width}px!important; height:auto!important;${nowrap}`);
+          if (currentStep == 0) {
+            this.idealHeight = el.clientHeight;
+          }
+          if (this.idealHeight === el.clientHeight) {
+            this.stepCheck(++currentStep);
+          } else {
+            this.dropdownStepWidth = width + 40;
+            el.removeAttribute('style');
+            this.bindResize();
+          }
         }
       }
     },
@@ -71,7 +77,11 @@ export default {
     },
     checkWidth(){
       const currentClienWidth = this.$el.clientWidth;
-      this.RtInlineDropdown.isDropdownMode = currentClienWidth <= this.dropdownStepWidth;
+
+      const isDropdownMode = currentClienWidth <= this.dropdownStepWidth;
+      if(this.RtInlineDropdown.isDropdownMode != isDropdownMode){
+        this.RtInlineDropdown.isDropdownMode = isDropdownMode;
+      }
       if(this.resizeSteps && this.resizeSteps.length > 0){
         const windowWidth = window.innerWidth;
 
@@ -100,10 +110,8 @@ export default {
     this.bindResize();
   },
   render(){
-
   return <div class="rt-inline-dropdown">
-
-    {this.RtInlineDropdown.isDropdownMode ? <rt-select text={this.RtInlineDropdown.activeItem}>
+    {this.RtInlineDropdown.isDropdownMode ? <rt-select text={this.RtInlineDropdown.activeItem} dropdown-min-width={this.dropdownMinWidth} reset-wrapper-width={true}>
         {this.$slots.default}
       </rt-select> :
       <div class="rt-inline-dropdown__list">

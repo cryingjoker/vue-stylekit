@@ -8,7 +8,7 @@
       <div class="app-body">
         <div class="app-row row">
           <div class="rt-col">
-            <rt-inline-dropdown :resizeSteps="[868]">
+            <rt-inline-dropdown :resizeSteps="[868]" :dropdown-min-width="300">
               <rt-inline-dropdown-item :is-active="true">Price</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>RadioButton</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Ripple</rt-inline-dropdown-item>
