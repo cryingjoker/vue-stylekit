@@ -40,7 +40,9 @@ import {
   TableHeadItem,
   TableItem,
   TableRow,
-  DownloadContent
+  DownloadContent,
+  InlineDropdown,
+  InlineDropdownItem
 } from './components';
 
 
@@ -89,6 +91,10 @@ const VueRtStyle = {
       Vue.component(TableItem.name, TableItem);
       Vue.component(TableRow.name, TableRow);
       Vue.component(DownloadContent.name, DownloadContent);
+      Vue.component(InlineDropdown.name, InlineDropdown);
+      Vue.component(InlineDropdownItem.name, InlineDropdownItem);
+
+
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);

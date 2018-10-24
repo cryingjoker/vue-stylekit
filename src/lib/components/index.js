@@ -37,3 +37,5 @@
  export { default as TableItem } from './Table/TableItem.vue';
  export { default as TableRow } from './Table/TableRow.vue';
  export { default as DownloadContent } from './DownloadContent/DownloadContent.vue';
+ export { default as InlineDropdown } from './InlineDropdown/InlineDropdown.vue';
+ export { default as InlineDropdownItem } from './InlineDropdown/InlineDropdownItem.vue';
