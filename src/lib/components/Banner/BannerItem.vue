@@ -31,6 +31,14 @@
         type: [Number, String],
         default: null
       },
+      contentMobileMinHeight: {
+        type: [Number, String],
+        default: null
+      },
+      contentMobileHeight: {
+        type: [Number, String],
+        default: null
+      },
       contentMinWidth: {
         type: [Number, String],
         default: null
@@ -77,34 +85,31 @@
     computed: {
       banerStyle() {
         const styles = {};
-        if (this.contentMinWidth) {
-          if (typeof this.contentMinWidth === "string") {
-            styles.minWidth = this.contentMinWidth;
-          } else {
-            styles.minWidth = this.contentMinWidth + "px";
+
+          if (this.contentMinWidth !== null) {
+            styles.minWidth = this.normalizeVariable(this.contentMinWidth);
+          }
+        if (this.contentMaxWidth !== null) {
+          styles.maxWidth = this.normalizeVariable(this.contentMaxWidth);
+        }
+
+        if(!this.RtBanners.isMobile) {
+          if (this.contentMinHeight) {
+            styles.minHeight = this.normalizeVariable(this.contentMinHeight);
+          }
+          if (this.contentHeight) {
+            styles.height = this.normalizeVariable(this.contentHeight);
+          }
+        }else {
+          if (this.contentMobileMinHeight !== null) {
+            styles.minHeight = this.normalizeVariable(this.contentMobileMinHeight);
+          }
+          if (this.contentMobileHeight !== null) {
+            styles.height = this.normalizeVariable(this.contentMobileHeight);
+
           }
         }
-        if (this.contentMaxWidth) {
-          if (typeof this.contentMaxWidth === "string") {
-            styles.maxWidth = this.contentMaxWidth;
-          } else {
-            styles.maxWidth = this.contentMaxWidth + "px";
-          }
-        }
-        if (this.contentHeight) {
-          if (typeof this.contentHeight === "string") {
-            styles.height = this.contentHeight;
-          } else {
-            styles.height = this.contentHeight + "px";
-          }
-        }
-        if (this.contentMinHeight) {
-          if (typeof this.contentMinHeight === "string") {
-            styles.minHeight = this.contentMinHeight;
-          } else {
-            styles.minHeight = this.contentMinHeight + "px";
-          }
-        }
+
         return styles;
       },
       banerClass() {
@@ -116,7 +121,14 @@
         return classArray;
       }
     },
-
+    methods: {
+      normalizeVariable(variable){
+        if(typeof variable === 'number'){
+          variable+='px'
+        }
+        return variable;
+      },
+    },
     beforeMount: function() {
       if (this.RtBanners) {
         this.index = this.RtBanners.items.length;

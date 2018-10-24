@@ -11,8 +11,10 @@
       </div>
     </div>
     <pre-code
-      text='<rt-banner :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg">
+      text='<rt-banner :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg" content-mobile-min-height="80vh" content-mobile-height="300px">
       <rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"
+                      content-mobile-min-height="80vh"
+                      content-mobile-height="200px"
                       background-color="dark-state"><p class="rt-font-banner-label">Виртуальная <br> телефония</p>
         <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br>
           возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
@@ -34,7 +36,7 @@
 
     <pre-code
       text='
-    <rt-banner :is-fullscreen-image="true" :sleep-time="30000">
+    <rt-banner :is-fullscreen-image="true" :sleep-time="30000"  content-mobile-min-height="100vh" content-mobile-height="400px">
       <rt-banner-item background-video="https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4"
                       :slide-time="50000"
                       :is-white-color="true" background-color="dark-state">
