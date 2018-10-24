@@ -110,6 +110,36 @@
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3"> rt-banner</div>
+            <div class="app-documentation__name rt-col-2">(:)content-mobile-min-height</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту банера для мобильного разрешения <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3">rt-banner</div>
+            <div class="app-documentation__name rt-col-2">(:)content-mobile-height</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту банера для мобильного разрешения <br> number - любое число
+                становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner</div>
             <div class="app-documentation__name rt-col-2">:is-fullscreen-image</div>
             <div class="app-documentation__value app-documentation__row rt-col-7">
@@ -238,6 +268,36 @@
                 class="rt-code rt-font-label rt-code--fill">null</span></div>
             </div>
           </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3"> rt-banner-item</div>
+            <div class="app-documentation__name rt-col-2">(:)content-mobile-min-height</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную высоту слайда <br> number -
+                любое число становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-3">rt-banner-item</div>
+            <div class="app-documentation__name rt-col-2">(:)content-mobile-height</div>
+            <div class="app-documentation__value app-documentation__row rt-col-7">
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--component">Number</span> <span
+                class="rt-code rt-font-label rt-code--component">String</span></div>
+              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту слайда для мобильного разрешения<br> number - любое число
+                становится px
+                <br>string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3"><span
+                class="rt-code rt-font-label rt-code--fill">null</span></div>
+            </div>
+          </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-3">rt-banner-item</div>
@@ -246,7 +306,7 @@
               <div class="app-documentation__value-item rt-col-3"><span
                 class="rt-code rt-font-label rt-code--component">Number</span> <span
                 class="rt-code rt-font-label rt-code--component">String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную ширину слайда <br> number -
+              <div class="app-documentation__value-item rt-col-6">Устанавливает минимальную ширину слайда для мобильного разрешения<br> number -
                 любое число становится px
                 <br>string - любые значения
               </div>
