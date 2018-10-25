@@ -12,6 +12,10 @@
     name: "RtScrollTabs",
     components: componentsList,
     props: {
+      removeBaseTag:{
+        type: Boolean,
+        default: false
+      },
       activeTabsClassname: {
         type: String,
         default: null
@@ -36,6 +40,15 @@
           window.addEventListener("scroll", this.debounceCalculateScroll, {passive: true});
           window.addEventListener("resize", this.debounceInitAnchorsList, {passive: true});
         }, 300);
+      }
+      if(this.removeBaseTag){
+        let baseNode = document.querySelector('base');
+        baseNode.parentNode.removeChild(baseNode);
+        let newBase = document.createElement("base");
+        let url = location.href;
+        url = url.split('#')[0]
+        newBase.setAttribute("href", url);
+        document.getElementsByTagName("head")[0].appendChild(newBase);
       }
     },
     beforeDestroy() {
