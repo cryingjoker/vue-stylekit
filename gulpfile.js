@@ -35,7 +35,7 @@ gulp.task("start", shell.task([
   ])
 );
 
-gulp.task("deploy", gulp.series("copy", "start"));
+gulp.task("deploy", ["copy", "start"]);
 
 gulp.task("image", () => {
   gulp
@@ -63,4 +63,4 @@ gulp.task("imageTiny", () => {
     .pipe(gulp.dest("./dist/"));
 });
 
-gulp.task("optimize", gulp.series("image", "imageTiny"));
+gulp.task("optimize", ["image", "imageTiny"]);
