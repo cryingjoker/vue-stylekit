@@ -144,7 +144,7 @@
             el:'.wc-inline-render',
             name: 'Content',
             components: preComponentsList,
-            template: this.normalizeCode,
+            template: this.normalizeCode.replace('/{/{','{{'),
             data: () => {
               return options
             },

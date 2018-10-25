@@ -8,7 +8,9 @@
       <div class="app-body">
         <div class="app-row row">
           <div class="rt-col">
-            <rt-tabs>
+
+            <pre-code
+              text='<rt-tabs>
               <template slot="navigation">
                 <rt-tabs-nav-item name="one">Готов!</rt-tabs-nav-item>
                 <rt-tabs-nav-item name="two">Смысл сайта</rt-tabs-nav-item>
@@ -17,7 +19,7 @@
               <template slot="content">
                 <rt-tabs-content-item name="one">
                   <ul>
-                    <li v-for="item in metroList">{{item.name}}</li>
+                    <li v-for="item in metroList">/{/{item.name}}</li>
                   </ul>
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name="two"><p class="rt-font-h1">Смысл сайта</p>
@@ -55,7 +57,7 @@
                     укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании
                     форм развития.</p></rt-tabs-content-item>
               </template>
-            </rt-tabs>
+            </rt-tabs>'></pre-code>
           </div>
         </div>
 

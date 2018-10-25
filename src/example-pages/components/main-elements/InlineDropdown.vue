@@ -8,7 +8,8 @@
       <div class="app-body">
         <div class="app-row row">
           <div class="rt-col">
-            <rt-inline-dropdown :resizeSteps="[868]" :dropdown-min-width="300">
+            <pre-code
+              text='<rt-inline-dropdown :resizeSteps="[868]" :dropdown-min-width="300">
               <rt-inline-dropdown-item :is-active="true">Price</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>RadioButton</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Ripple</rt-inline-dropdown-item>
@@ -19,7 +20,7 @@
               <rt-inline-dropdown-item>Switch</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Table</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Textarea</rt-inline-dropdown-item>
-            </rt-inline-dropdown>
+            </rt-inline-dropdown>'></pre-code>
           </div>
         </div>
       </div>
