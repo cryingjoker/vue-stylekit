@@ -35,6 +35,7 @@
  export { default as Table } from './Table/Table.vue';
  export { default as TableHeadItem } from './Table/TableHeadItem.vue';
  export { default as TableItem } from './Table/TableItem.vue';
+ export { default as TableCol } from './Table/TableCol.vue';
  export { default as TableRow } from './Table/TableRow.vue';
  export { default as DownloadContent } from './DownloadContent/DownloadContent.vue';
  export { default as InlineDropdown } from './InlineDropdown/InlineDropdown.vue';

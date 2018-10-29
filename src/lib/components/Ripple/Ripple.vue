@@ -18,6 +18,10 @@ export default {
   name: 'RtRipple',
   components: componentsList,
   props: {
+    notBindClick:{
+      type: Boolean,
+      default: false
+    },
     notRender: {
       type: Boolean,
       default: false
@@ -33,7 +37,9 @@ export default {
   mounted: function() {},
   methods: {
     renderRipple($event) {
-      this.startRipple($event);
+      if(!this.notBindClick) {
+        this.startRipple($event);
+      }
       // if(this.twiceRender){
       //   setTimeout(()=>{
       //     this.startRipple($event);

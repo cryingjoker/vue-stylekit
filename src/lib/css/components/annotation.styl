@@ -1,0 +1,48 @@
+.{newAppName}-annotation{
+  &--white-color{
+    color: rgba(#ffffff, 0.5);
+  }
+  padding-left: horizontal-space;
+  border-left: 1px solid rgba(#ffffff, 0.1);
+  font-size: 12px;
+  &__title{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+  }
+  &__arrow{
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition-timing-function: ease-in-out;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    .{newAppName}-annotation--white-color &{
+      fill: rgba(#ffffff, 0.5);
+    }
+    .{newAppName}-annotation--is-open &{
+      transform: rotate(180deg);
+    }
+
+  }
+  &__content{
+    max-height: 0px;
+    padding-top: 0;
+    transition-timing-function: ease-in-out;
+    transition-property: max-height, padding;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    .{newAppName}-annotation--is-open &{
+      max-height: 300vh;
+      padding-top: 20px;
+    }
+  }
+
+  &-item {
+    padding-top: horizontal-space;
+  }
+}
+

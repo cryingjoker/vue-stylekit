@@ -1,0 +1,141 @@
+.{newAppName}-table {
+    table-layout: fixed;
+    text-align: left;
+    display: table;
+    @media (max-width: mobile-step-size) {
+        width: 100%;
+    }
+    &-colgroup{
+        display: table-column-group;
+    }
+    &-col{
+        display: table-column;
+    }
+    &-head {
+        display: table-header-group;
+
+        &--fill{
+            background-color: rgba(b2c-purple-low,0.2);
+        }
+        &__item {
+            display: table-cell;
+            padding-bottom: 10px;
+            vertical-align: top;
+            color: b2b-black06;
+            &:first-child {
+                @media (max-width: mobile-step-size) {
+                    display: none;
+                }
+            }
+            @media (max-width: mobile-step-size) {
+                display: block;
+                width: auto!important;
+                text-align: left!important;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            padding-left: horizontal-space*0.5;
+            padding-right: horizontal-space*0.5;
+            &+&{
+
+                @media (max-width: mobile-step-size) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-body {
+        &__row {
+            display: table-row;
+            @media (max-width: mobile-step-size) {
+                display: block;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            &--fill{
+                background-color: rgba(b2c-purple-low,0.2);
+            }
+            & + & {
+                .{newAppName}-table-body__item{
+
+
+                    .{newAppName}-dark-theme & {
+                        border-top: 2px solid b2b-white05;
+                    }
+                    border-top: 2px solid b2c-cool-grey05;
+                }
+            }
+        }
+        &__content{
+            @media (max-width: mobile-step-size) {
+                -ms-flex: 0 0 66.666666%;
+                flex: 0 0 66.666666%;
+                max-width: 66.666666%;
+                padding-left: horizontal-space;
+                padding-right: 0px;
+            }
+        }
+        &__item {
+            display: table-cell;
+            vertical-align: top;
+            padding-bottom: 25px;
+            padding-top: 15px;
+
+            @media (max-width: mobile-step-size) {
+                flex: 1;
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                align-self: stretch;
+                width: auto!important;
+                text-align: left!important;
+                justify-content: space-around;
+                min-height: fit-content;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            padding-left: horizontal-space*0.5;
+            padding-right: horizontal-space*0.5;
+            &:first-child {
+                .rt-table-body__content{
+                    @media (max-width: mobile-step-size) {
+                        flex: 0 1 100%;
+                        width: 100%;
+                        max-width: 100%;
+                        padding-left: 0;
+                        padding-right: 0;
+                        font-size: 28px;
+                        color: b2c-dark;
+                        font-weight: 200;
+                    }
+                }
+                @media (max-width: mobile-step-size) {
+                    display: block;
+                    flex: 0 1 100%;
+                    width: 100%;
+                    padding-bottom: vertical-space*0.75;
+                    &:before{
+                        display: none;
+                    }
+                }
+
+            }
+            @media (max-width: mobile-step-size) {
+                &:before {
+                    content: attr(label);
+                    font-size: 16px;
+                    display: block;
+                    padding-bottom: horizontal-space *0.25;
+                    -ms-flex: 0 0 33.333333%;
+                    flex: 0 0 33.333333%;
+                    max-width: 33.333333%;
+                    padding-left: 0px;
+                    padding-right: 20px;
+                    box-sizing: border-box;
+                    color: b2c-dark06;
+
+                }
+            }
+        }
+    }
+}

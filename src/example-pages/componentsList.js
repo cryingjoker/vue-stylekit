@@ -37,6 +37,7 @@ import {
   TableHeadItem,
   TableRow,
   TableItem,
+  TableCol,
   DownloadContent
 } from '../lib/components/index';
 
@@ -80,6 +81,7 @@ componentsList[Table.name] = Table;
 componentsList[TableHeadItem.name] = TableHeadItem;
 componentsList[TableRow.name] = TableRow;
 componentsList[TableItem.name] = TableItem;
+componentsList[TableCol.name] = TableCol;
 componentsList[DownloadContent.name] = DownloadContent;
 
 export default {...componentsList};

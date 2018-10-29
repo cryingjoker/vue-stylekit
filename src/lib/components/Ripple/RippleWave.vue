@@ -10,7 +10,7 @@ export default {
   props: {
     waveStyle: {
       type: Object,
-      default: {}
+      default: function () { return {} }
     },
   },
   data: () => ({
@@ -21,8 +21,11 @@ export default {
       this.setElementStyle(this.$el);
     }, 10);
     setTimeout(() => {
-      this.hideWive();
+        this.hideWive();
     }, 400);
+  },
+  computed: {
+
   },
   methods: {
     setElementStyle() {
@@ -42,11 +45,13 @@ export default {
     },
     hideWive() {
       setTimeout(() => {
-        this.end();
-      }, 40);
+          this.end();
+      }, 400);
     },
     end() {
-      this.$emit('on-timer-end');
+      setTimeout(()=>{
+        this.$emit('on-timer-end');
+      },100)
     },
   },
 };

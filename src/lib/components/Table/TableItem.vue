@@ -16,10 +16,6 @@
         type: String,
         default: null
       },
-      width: {
-        type: [Number, String],
-        default: null
-      },
       colspan: {
         type: [Number, String],
         default: 1
@@ -32,15 +28,14 @@
     },
     render: function(h) {
       const style = {};
-      if(this.width !== null){
-        style.width = String(this.width).replace(/[0-9]/gi,'').length === 0 ? style.width+'px' : style.width;
-      }
+
       if(this.verticalAlign){
         style.verticalAlign = this.verticalAlign;
       }
       if(this.align){
         style.textAlign = this.align;
       }
+
       return <div style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>
         <div class="rt-table-body__content">
           {this.$slots.default}

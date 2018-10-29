@@ -1,0 +1,174 @@
+.{newAppName}-button {
+  border-radius: 5px;
+  height: 49px;
+  margin: 0px;
+  font-size: 16px;
+  text-transform: none;
+  box-sizing: border-box;
+  text-align: center;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, box-shadow, border, text-shadow, color,
+  opacity;
+  transition-duration: 0.4s;
+  padding-left: horizontal-space;
+  padding-right: horizontal-space;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  &[disabled] {
+    box-shadow: none !important;
+  }
+  &--is-fitched{
+    color: transparent!important;
+  }
+  &--is-block {
+    display: block;
+    min-width: 100%;
+  }
+  .ripple-wave {
+    background-color: default-wive-color;
+  }
+  &-with-ripple {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  & + & {
+    margin-left: horizontal-space;
+  }
+  &-vertical {
+    display: table;
+    & + & {
+      margin-left: 0;
+      margin-top: vertical-space;
+    }
+  }
+  &-small {
+    font-size: 14px;
+    height: 34px;
+    .ripple {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    //&:active {
+    //  .ripple-wave {
+    //    transform: scale(30) translateZ(0);
+    //    opacity: 0.27;
+    //  }
+    //}
+  }
+  &-md-small {
+    @media (max-width: mobile-step-size) {
+      font-size: 14px;
+      height: 34px;
+      .ripple {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+  &:before {
+    opacity: 0;
+    display: none;
+  }
+  &-orange {
+    color: #fff;
+    background-color: b2c-orange-low;
+    &.{newAppName}-button-no-wive &:active {
+      background-color: b2b-orange-low;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+      inset 0 2px 100px rgba(0, 0, 0, 0.1);
+    }
+    &[disabled] {
+      background-color: disable-button-color;
+      .{newAppName}-dark-theme & {
+        background-color: disable-button-color-dark-theme;
+      }
+    }
+    .ripple-wave {
+      background-color: color-button-wive-color;
+    }
+  }
+  &-orange-border {
+    border: 2px solid b2c-orange-low;
+    background-color: transparent;
+    color: b2c-orange-low;
+    &.{newAppName}-button-no-wive &:active {
+      background-color: transparent !important;
+    }
+    &[disabled] {
+      border-color: disable-button-color !important;
+      color: disable-button-color !important;
+    }
+    &:hover,
+    &:focus {
+      border-color: b2b-orange-low;
+      color: b2b-orange-low;
+    }
+    .ripple-wave {
+      background-color: b2b-orange-low;
+    }
+  }
+  &-white {
+    border: 2px solid white;
+    &:focus,
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &-purple {
+    color: #fff;
+    background-color: b2c-purple-low;
+    &.{newAppName}-button-no-wive &:active {
+      background-color: b2b-purple-low;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+      inset 0 2px 100px rgba(0, 0, 0, 0.1);
+    }
+    &[disabled] {
+      background-color: disable-button-color;
+      .{newAppName}-dark-theme & {
+        background-color: disable-button-color-dark-theme;
+      }
+    }
+    .ripple-wave {
+      background-color: color-button-wive-color;
+    }
+  }
+  &-purple-border {
+    border: 2px solid b2c-purple-low;
+    background-color: transparent;
+    color: b2c-purple-low;
+    .ripple {
+      box-shadow: none;
+    }
+    &[disabled] {
+      border-color: disable-button-color;
+    }
+    &:hover,
+    &:focus {
+      border-color: b2b-purple-low;
+      color: b2b-purple-low;
+    }
+    .ripple-wave {
+      background-color: b2b-purple-low;
+    }
+    &[disabled] {
+      border-color: disable-button-color;
+      color: disable-button-color;
+    }
+  }
+  &-transparent {
+    &[disabled] {
+      color: disable-button-color;
+    }
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}

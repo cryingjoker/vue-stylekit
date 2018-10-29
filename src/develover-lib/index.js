@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import styles from './css/vue-rt-style-develop.less';
-import mainStyles from './css/vue-rt-style-develop.less';
+// import styles from './css/vue-rt-style-develop.less';
+// import mainStyles from './css/vue-rt-style-develop.less';
 import { PreComponent, PreComponentEditor} from './components'
 
 import VueRtStyle from '../lib'

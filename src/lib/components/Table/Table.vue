@@ -17,7 +17,7 @@
       getLabelHtml(){
         if(this.$refs.head){
           this.$refs.head.querySelectorAll('.rt-table-head__item').forEach((nodeEl, nodeIndex)=>{
-            this.$set(this.tableLabels,nodeIndex, nodeEl.innerText)
+            this.$set(this.tableLabels,nodeIndex, nodeEl.innerText.trim())
           })
         }
       }
@@ -27,8 +27,19 @@
       this.getLabelHtml();
     },
     render: function(h) {
+      const columns = ()=>{
+        if(!this.$slots.columns){
+          return null
+        }
+        return <div class="rt-table-colgroup">
+          {this.$slots.columns}
+        </div>
+      }
       const renderBodyFn = ()=>{
         // this.tableLabels
+        if(!this.$slots.body){
+          return null
+        }
         return this.$slots.body.map((slotVNode)=>{
           if(slotVNode.tag && slotVNode.tag.search(/RtTableRow/gi) >=0 ){
             slotVNode.componentOptions = slotVNode.componentOptions || {};
@@ -39,14 +50,27 @@
         })
       }
 
-      return <div class="rt-table">
-        <div class="rt-table-head" ref="head">
-          {this.$slots.header}
+      if(this.$slots.label) {
+        return <div>
+          <p class="rt-font-h1 rt-space-bottom25">{this.$slots.label}</p>
+          <div class="rt-table">
+            {columns()}
+            <div class="rt-table-head" ref="head">
+              {this.$slots.header}
+            </div>
+            {renderBodyFn()}
+          </div>
         </div>
+      }else{
+        return <div className="rt-table">
+          {columns()}
+          <div className="rt-table-head" ref="head">
+            {this.$slots.header}
+          </div>
 
-        {renderBodyFn()}
-
-      </div>
+          {renderBodyFn()}
+        </div>
+      }
     }
   };
 </script>

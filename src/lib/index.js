@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import styles from './css/vue-rt-style.less';
+// import styles from './css/vue-rt-style.styl';
 
 import {
   Button,

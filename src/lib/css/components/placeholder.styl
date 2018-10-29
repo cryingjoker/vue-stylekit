@@ -1,0 +1,39 @@
+.floating-placeholder {
+    position: absolute;
+    top: 22px;
+    transition-timing-function: ease-in-out;
+    transition-property: background, font-size, top, color;
+    transition-duration: 0.2s;
+    z-index: 1;
+    color: input-placeholder-color;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0.5;
+    .{newAppName}-dark-theme &,
+    .{newAppName}-input--white & {
+        color: #FFFFFF;
+    }
+    .{newAppName}-card & {
+        color: main-color;
+    }
+    .{newAppName}-card--has-white-color & {
+        color: #FFFFFF;
+    }
+    .textarea--static & {
+        left: 20px;
+    }
+    .textarea-element:focus+.text-field__line+&,
+    .input-element:focus+.text-field__line+&,
+    &--go-top {
+        top: 0;
+        font-size: 14px;
+    }
+    .textarea--static.textarea--not-empty &,
+    .textarea--static .textarea-element &--go-top,
+    .textarea--static .textarea-element:focus+& {
+        top: 10px;
+        font-size: 14px;
+    }
+}

@@ -9,6 +9,47 @@
         <div class="app-row row">
           <div class="rt-col rt-font-hypnens-off">
             <rt-table>
+              <template slot="label">
+                Тарифы на добровольную блокировку
+              </template>
+              <template slot="columns">
+                <rt-table-col width="280px"></rt-table-col>
+                <rt-table-col width="180px"></rt-table-col>
+              </template>
+              <template slot="header">
+                <rt-table-head-item>Территория</rt-table-head-item>
+                <rt-table-head-item>Наименование услуги</rt-table-head-item>
+                <rt-table-head-item>Бесплатный период(дней)</rt-table-head-item>
+                <rt-table-head-item>Мораторий на блокировку(дней)</rt-table-head-item>
+                <rt-table-head-item>Минимальный период блокировки (дней)</rt-table-head-item>
+                <rt-table-head-item>Стоимость добровольной блокировки в базовый период (руб./в день)</rt-table-head-item>
+              </template>
+              <template slot="body">
+                <rt-table-row>
+                  <rt-table-item>Архангельская и Мурманская
+                    область Республика Корея</rt-table-item>
+                  <rt-table-item>Домашний интернет,
+                    Домашний телефон
+                    Интерактивное ТВ</rt-table-item>
+                  <rt-table-item>60</rt-table-item>
+                  <rt-table-item>3</rt-table-item>
+                  <rt-table-item>30</rt-table-item>
+                  <rt-table-item>7</rt-table-item>
+                </rt-table-row>
+                <rt-table-row>
+                  <rt-table-item>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и Ленинградская области и город Санкт-Петербург</rt-table-item>
+                  <rt-table-item>Домашний интернет,
+                    Домашний телефон
+                    Интерактивное ТВ</rt-table-item>
+                  <rt-table-item>60</rt-table-item>
+                  <rt-table-item>3</rt-table-item>
+                  <rt-table-item>30</rt-table-item>
+                  <rt-table-item>7</rt-table-item>
+                </rt-table-row>
+              </template>
+            </rt-table>
+            <rt-table>
+
               <template slot="header">
                 <rt-table-head-item><p class="rt-font-h2">Наименование и описание услуг</p></rt-table-head-item>
                 <rt-table-head-item>Стоимость, руб. <p class="rt-font-label">без оформления ежемесячной подписки</p>
