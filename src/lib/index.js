@@ -105,7 +105,7 @@ const VueRtStyle = {
 };
 VueRtStyle.directives = {SwipeLeft, SwipeRight};
 
-const version = '0.0.14';
+const version = '0.0.16';
 VueRtStyle.version = version;
 
 
