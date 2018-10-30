@@ -25,7 +25,8 @@
 
 
 <script>
-const componentsList = {};
+import componentsList from '../../componentsList'
+// const componentsList = {};
 export default {
   name: 'AppRadioButton',
   data(){

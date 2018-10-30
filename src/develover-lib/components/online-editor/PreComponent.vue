@@ -67,7 +67,6 @@
     preComponentsList[Price.name] = Price;
     preComponentsList[RadioButton.name] = RadioButton;
     preComponentsList[Ripple.name] = Ripple;
-    preComponentsList[RippleWave.name] = RippleWave;
     preComponentsList[RippleWihoutJs.name] = RippleWihoutJs;
     preComponentsList[Select.name] = Select;
     preComponentsList[SelectOption.name] = SelectOption;

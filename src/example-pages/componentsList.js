@@ -8,7 +8,6 @@ import {
   Price,
   RadioButton,
   Ripple,
-  RippleWave,
   RippleWihoutJs,
   Select,
   SelectOption,
@@ -40,7 +39,6 @@ import {
   TableCol,
   DownloadContent
 } from '../lib/components/index';
-
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
@@ -51,7 +49,6 @@ componentsList[InputWithoutJs.name] = InputWithoutJs;
 componentsList[Price.name] = Price;
 componentsList[RadioButton.name] = RadioButton;
 componentsList[Ripple.name] = Ripple;
-componentsList[RippleWave.name] = RippleWave;
 componentsList[RippleWihoutJs.name] = RippleWihoutJs;
 componentsList[Select.name] = Select;
 componentsList[SelectOption.name] = SelectOption;

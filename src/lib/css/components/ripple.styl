@@ -53,9 +53,9 @@
         opacity: 0;
         width: 10px;
         height: 10px;
-        background-color: #fff;
-        transform: scale(0.2) translateZ(0);
-        transition-timing-function: cubic-bezier(1, .22, .9, .65);
+        background-color: b2c-purple-low;
+        transform: scale(0.5) translateZ(0);
+        transition-timing-function: cubic-bezier(1, .2, .9, .65);
         transition-property: width, height, margin, transform, opacity, visibility;
         transition-duration: 0.2s;
         animation: 0.4s showRipple linear;
@@ -65,8 +65,12 @@
         }
     }
 }
+.button .ripple-wave {
+    transform: scale(1) translateZ(0);
+    transition-duration: 0.3s;
+}
 .radio-button .ripple-wave,
-.cheсkbox .ripple-wave,
+.checkbox .ripple-wave,
 .switch-container .ripple-wave {
     width: 1px;
     height: 1px;
