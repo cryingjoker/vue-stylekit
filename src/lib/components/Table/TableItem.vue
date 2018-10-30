@@ -8,6 +8,10 @@
       tableLabels: {}
     },
     props: {
+      mobileWidth:{
+        type: String,
+        default: null
+      },
       verticalAlign: {
         type: String,
         default: null
@@ -24,11 +28,10 @@
         type: Number,
         default: null
       },
-
     },
     render: function(h) {
       const style = {};
-
+      let classList = "rt-table-body__item";
       if(this.verticalAlign){
         style.verticalAlign = this.verticalAlign;
       }
@@ -36,7 +39,12 @@
         style.textAlign = this.align;
       }
 
-      return <div style={style} colspan={this.colspan} class="rt-table-body__item" label={this.tableLabels[this.slotIndex]}>
+      if(this.mobileWidth){
+        if(this.mobileWidth === '50%'){
+          classList += ' rt-table-body__item--half-mobile-width';
+        }
+      }
+      return <div style={style} colspan={this.colspan} class={classList} label={this.tableLabels[this.slotIndex]}>
         <div class="rt-table-body__content">
           {this.$slots.default}
         </div>

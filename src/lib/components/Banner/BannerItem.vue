@@ -1,11 +1,11 @@
 <template>
-  <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
-    <div class="rt-banner-content__inner">
-      <slot/>
+  <div>
+    <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
+      <div class="rt-banner-content__inner">
+        <slot/>
+      </div>
     </div>
   </div>
-
-
 </template>
 
 <script>
@@ -15,6 +15,14 @@
     name: "RtBannerItem",
     components: componentsList,
     props: {
+      link:{
+        type: String,
+        default: null
+      },
+      linkTarget:{
+        type: String,
+        default: null
+      },
       ancorHashLink: {
         type: String,
         default: null
@@ -151,6 +159,12 @@
         }
         if (this.ancorGetParamsLink) {
           bannerItemData.ancorGetParamsLink = this.ancorGetParamsLink;
+        }
+        if(this.link){
+          bannerItemData.link = this.link;
+        }
+        if(this.linkTarget){
+          bannerItemData.linkTarget = this.linkTarget;
         }
 
         this.RtBanners.items.push(bannerItemData);

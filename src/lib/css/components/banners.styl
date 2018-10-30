@@ -195,6 +195,15 @@
         transition-property: opacity, visibility;
         transition-timing-function: ease-in-out;
         z-index: 3;
+        &__link {
+            position: absolute;
+            left: 0;
+            right: 0
+            bottom: 0;
+            z-index: 15;
+            top: 0;
+            width: 100%;
+        }
         .rt-col-4 & {
             min-width: 430px;
             max-width: 500px;
@@ -204,8 +213,6 @@
             }
         }
         @media (max-width: mobile-step-size) {
-            //padding-right: horizontal-space;
-            //padding-left: horizontal-space;
             width: 100%;
             .{newAppName}-banner--full-screen & {
                 justify-content: center;
@@ -322,6 +329,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    z-index 20
     &-container {
         display: inline-block;
     }
