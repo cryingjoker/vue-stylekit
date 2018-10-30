@@ -13,11 +13,11 @@
     transition-property: left;
     transition-duration: 0.3s;
     .{newAppName}-button.{newAppName}-space-horizontal05 & {
-        width: calc(100% + horizontal-space);
+        width: "calc(100% + %s)" % horizontal-space;
         left: -1 * horizontal-space*0.5;
     }
     .{newAppName}-button.{newAppName}-space-horizontal & {
-        width: calc(100% + horizontal-space*2);
+        width: "calc(100% + %s)" % (horizontal-space*2);
         left: -1 * horizontal-space;
     }
     .radio-button &,
