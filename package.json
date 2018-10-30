@@ -1,6 +1,6 @@
 {
-  "name": "vue_stylekit",
-  "version": "0.0.13",
+  "name": "vue-rt-style",
+  "version": "0.0.14",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {

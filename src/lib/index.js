@@ -1,5 +1,6 @@
 import Vue from 'vue';
-// import styles from './css/vue-rt-style.styl';
+
+import styles from './css/vue-rt-style.styl';
 
 import {
   Button,
@@ -104,7 +105,7 @@ const VueRtStyle = {
 };
 VueRtStyle.directives = {SwipeLeft, SwipeRight};
 
-const version = '0.0.13';
+const version = '0.0.14';
 VueRtStyle.version = version;
 
 

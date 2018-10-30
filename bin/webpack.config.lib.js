@@ -47,21 +47,9 @@ const config = {
         include: [path.join(local_dirname, `src`)],
       },
       {
-        test: /\.less$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
-      },
-      {
         test: /\.styl/,
         use: [
-          {
-            loader: `style-loader`,
-          },
+          MiniCssExtractPlugin.loader,
           {loader:`css-loader`},
           {
             loader: `stylus-loader`,
