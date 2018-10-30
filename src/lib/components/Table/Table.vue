@@ -52,7 +52,7 @@
 
       if(this.$slots.label) {
         return <div>
-          <p class="rt-font-h1 rt-space-bottom25">{this.$slots.label}</p>
+          <p class="rt-font-h1 rt-space-bottom25 rt-td-space-bottom">{this.$slots.label}</p>
           <div class="rt-table">
             {columns()}
             <div class="rt-table-head" ref="head">
