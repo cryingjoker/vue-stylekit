@@ -57,6 +57,18 @@ const config = {
         ],
       },
       {
+        test: /\.styl/,
+        use: [
+          {
+            loader: `style-loader`,
+          },
+          {loader:`css-loader`},
+          {
+            loader: `stylus-loader`,
+          },
+        ],
+      },
+      {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
