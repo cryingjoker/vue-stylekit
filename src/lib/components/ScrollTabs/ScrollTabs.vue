@@ -12,6 +12,10 @@
     name: "RtScrollTabs",
     components: componentsList,
     props: {
+      mainFixedNodeClass: {
+        type: String,
+        default: null
+      },
       removeBaseTag:{
         type: Boolean,
         default: false
@@ -29,11 +33,20 @@
       return {
         topPadding: 80,
         activeKey: "",
-        anchorObejects: []
+        anchorObejects: [],
+        fixedNode: null,
+        fixedNodeHeight: null
       };
     },
 
     mounted() {
+      if(this.mainFixedNodeClass){
+        this.fixedNode = document.querySelector('.main-navigation');
+        if(this.fixedNode){
+          this.fixedNodeHeight = this.fixedNode.offsetHeight;
+        }
+
+      }
       if (this.tabsClassname) {
         setTimeout(() => {
           this.initAnchorsList();
@@ -225,7 +238,9 @@
               x_start: this.getOffsetTop(anchorEl) - this.topPadding,
               x_end: this.getOffsetTop(anchorEl) + anchorEl.offsetHeight - this.topPadding
             };
-
+            if(this.fixedNode && this.fixedNodeHeight){
+              this.anchorObejects[anchor].x_start += this.fixedNodeHeight;
+            }
           }
         });
         this.calculateScroll();
