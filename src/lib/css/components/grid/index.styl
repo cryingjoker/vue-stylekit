@@ -197,89 +197,84 @@ for devideStep in steps
   }
 }
 
-.md{
-  @media (max-width: mobile-step-size) {
-    &-d-none {
-      display none
-    }
-
-    &-d-inline {
-      display inline
-    }
-
-    &-d-inline-block {
-      display inline-block
-    }
-
-    &-d-block {
-      display block
-    }
-
-    &-d-table {
-      display table
-    }
-
-    &-d-table-row {
-      display table-row
-    }
-
-    &-d-table-cell {
-      display table-cell
-    }
-
-    &-d-flex {
-      display -ms-flexbox
-      display flex
-    }
-
-    &-d-inline-flex {
-      display -ms-inline-flexbox
-      display inline-flex
-    }
-  }
-}
 .td{
   @media (max-width: tablet-step-size) {
     &-d-none {
-      display none
+      display none!important
     }
 
     &-d-inline {
-      display inline
+      display inline!important
     }
 
     &-d-inline-block {
-      display inline-block
+      display inline-block!important
     }
 
     &-d-block {
-      display block
+      display block!important
     }
 
     &-d-table {
-      display table
+      display table!important
     }
 
     &-d-table-row {
-      display table-row
+      display table-row!important
     }
 
     &-d-table-cell {
-      display table-cell
+      display table-cell!important
     }
 
     &-d-flex {
-      display -ms-flexbox
-      display flex
+      display flex!important
     }
 
     &-d-inline-flex {
-      display -ms-inline-flexbox
-      display inline-flex
+      display inline-flex!important
     }
   }
 }
+.md{
+  @media (max-width: mobile-step-size) {
+    &-d-none {
+      display none!important
+    }
 
+    &-d-inline {
+      display inline!important
+    }
+
+    &-d-inline-block {
+      display inline-block!important
+    }
+
+    &-d-block {
+      display block!important
+    }
+
+    &-d-table {
+      display table!important
+    }
+
+    &-d-table-row {
+      display table-row!important
+    }
+
+    &-d-table-cell {
+      display table-cell!important
+    }
+
+    &-d-flex {
+      display flex!important
+    }
+
+    &-d-inline-flex {
+      display inline-flex!important
+    }
+  }
+}
 
 .{newAppName}-container {
   width 100%
