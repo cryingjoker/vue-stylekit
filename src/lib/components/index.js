@@ -7,7 +7,6 @@
  export { default as Price } from './Price/Price.vue';
  export { default as RadioButton } from './RadioButton/RadioButton.vue';
  export { default as Ripple } from './Ripple/Ripple.vue';
- export { default as RippleWave } from './Ripple/RippleWave.vue';
  export { default as RippleWihoutJs } from './Ripple/RippleWihoutJs.vue';
  export { default as Select } from './Select/Select.vue';
  export { default as SelectOption } from './Select/SelectOption.vue';
@@ -35,6 +34,7 @@
  export { default as Table } from './Table/Table.vue';
  export { default as TableHeadItem } from './Table/TableHeadItem.vue';
  export { default as TableItem } from './Table/TableItem.vue';
+ export { default as TableCol } from './Table/TableCol.vue';
  export { default as TableRow } from './Table/TableRow.vue';
  export { default as DownloadContent } from './DownloadContent/DownloadContent.vue';
  export { default as InlineDropdown } from './InlineDropdown/InlineDropdown.vue';

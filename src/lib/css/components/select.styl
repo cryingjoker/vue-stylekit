@@ -1,0 +1,125 @@
+.select {
+    width: 100%;
+    .{newAppName}-dark-theme & {
+        color: white;
+    }
+    &--is-reset-width{
+        width: auto!important;
+    }
+    &__inner {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    &-arrow {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        transform: rotate(0deg);
+        transition-timing-function: ease-in-out;
+        transition-property: transform;
+        transition-duration: 0.2s;
+        .select--is-open & {
+            transform: rotate(180deg);
+        }
+        &__icon {
+            fill: b2b-black;
+            opacity: 0.7;
+            transition-timing-function: ease-in-out;
+            transition-property: opacity, fill;
+            transition-duration: 0.2s;
+            .{newAppName}-dark-theme & {
+                fill: white;
+            }
+            .select:hover & {
+                opacity: 1;
+            }
+            .select--disabled & {
+                opacity: 0.3 !important;
+            }
+        }
+    }
+    &-value {
+        margin-top: -5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        .select--disabled & {
+            cursor: default;
+            color: b2c-cool-grey03;
+        }
+    }
+    &-input {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        overflow: hidden;
+        padding-right: 20px;
+    }
+    &-list {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        font-size: 14px;
+        background-color: white;
+        top: 52px;
+        box-shadow: 0 5px 10px box-shadow-background;
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+        transition-timing-function: ease-in-out;
+        transition-property: opacity, visibility, height, max-height;
+        transition-duration: 0.2s;
+        max-height: 0;
+        .select--invert-open-list & {
+            top: initial;
+            bottom: 56px;
+            box-shadow: 0 -5px 10px box-shadow-background;
+        }
+        .{newAppName}-dark-theme & {
+            background-color: dark-theme-dropdown-background;
+        }
+        .select--is-open & {
+            opacity: 1;
+            visibility: visible;
+            max-height: 200px;
+        }
+        &-native {
+            display: block;
+            width: calc(100% - 20px);
+            border: none;
+            background: none;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &-option {
+        &__inner {
+            padding-top: 6px;
+            padding-bottom: 7px;
+            padding-left: 14px;
+            padding-right: 14px;
+            line-height: 20px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            display: block;
+            text-align: left;
+            .select-option--select & {
+                font-weight: 800;
+                color: inherit;
+            }
+            &:focus,
+            &:hover {
+                background-color: b2b-purple-hight
+                color: white;
+                transition-duration: 0s;
+            }
+        }
+    }
+}

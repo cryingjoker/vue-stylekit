@@ -5,7 +5,7 @@ import VueRtStyle from '../lib/index';
 import VueRtDevStyle from '../develover-lib/index'
 import routes from './router';
 import RootPage from './components/App.vue';
-import styles from './css/index.less';
+import styles from './css/index.styl';
 
 Vue.use(VueRouter);
 

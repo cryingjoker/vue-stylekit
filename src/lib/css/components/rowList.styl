@@ -1,0 +1,87 @@
+.{newAppName}-row-list {
+    &__header{
+        display: flex;
+        cursor: pointer;
+        @media (max-width: iphone8) {
+            flex-direction: column;
+        }
+
+    }
+    &__body{
+        transition-timing-function: ease-in-out;
+        transition-property: height, max-height, padding, opacity, top;
+        transition-duration: 0.4s;
+        max-height: 0vh;
+        overflow: hidden;
+        opacity: 0;
+        top: -40px;
+        &--has-icon-padding{
+            padding-left: 76px;
+        }
+        .{newAppName}-row-list__item--active & {
+            top: 0;
+            padding-top: vertical-space*1.5;
+            opacity: 1;
+            max-height: 200vh;
+
+        }
+    }
+    &__item{
+        padding-top: vertical-space*0.5;
+        padding-bottom: vertical-space*0.5;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: iphone8) {
+            flex-direction: column;
+        }
+        &+&{
+            border-top: 1px solid card-list-border;
+        }
+    }
+    &__icon{
+        display: flex;
+        @media (max-width: iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+            padding-top: vertical-space*0.5;
+            padding-bottom: vertical-space*0.5;
+        }
+        align-items: center;
+    }
+    &__content{
+        display: flex;
+        @media (max-width: iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+        }
+        align-items: center;
+    }
+    &__option{
+        display: flex;
+
+        @media (max-width: iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            justify-content: left;
+            align-items: start;
+        }
+    }
+    &__value{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: mobile-step-size) {
+            justify-content: flex-start;
+            align-items: start;
+        }
+        @media (max-width: iphone8) {
+            flex-direction: column;
+            min-height: fit-content;
+            padding-top: vertical-space*0.5;
+        }
+    }
+}

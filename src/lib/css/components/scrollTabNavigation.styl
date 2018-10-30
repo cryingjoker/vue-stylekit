@@ -1,0 +1,35 @@
+.{newAppName}-scroll-tab {
+    &-nav {
+        display: flex;
+        justify-content: space-around;
+        white-space: nowrap;
+        font-size: 14px;
+        height: 100%;
+    }
+    &-header {
+        height: 60px;
+        flex-direction: row;
+        margin-left -1 * horizontal-space*0.5
+        @media (max-width: mobile-step-size) {
+            display: none;
+        }
+        &__item {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding-top: 2px;
+            border-bottom: 2px solid transparent;
+            transition-duration: 0.3s;
+            transition-property: border;
+            transition-timing-function: ease-in-out;
+            margin-left:horizontal-space*0.5
+            margin-right:horizontal-space*0.5
+            &--active {
+                border-bottom: 2px solid;
+            }
+        }
+    }
+}

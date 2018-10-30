@@ -1,0 +1,32 @@
+.download-content{
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition-timing-function: ease-in-out;
+    transition-property: color;
+    transition-duration: 0.2s;
+    &:hover{
+        color: main-color05;
+    }
+    &__icon{
+        position: absolute;
+        left: 0;
+        &-svg{
+            stroke: main-color;
+            transition-timing-function: ease-in-out;
+            transition-property: stroke;
+            transition-duration: 0.2s;
+            .download-content:hover &{
+                stroke: main-color05;
+            }
+        }
+    }
+    &__text{
+    }
+    &__info{
+        padding-top: 4px;
+        color: main-color05;
+
+    }
+}

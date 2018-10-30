@@ -3,10 +3,9 @@
     <input name="test" type="checkbox" :disabled="isDisabled" :checked="checked ? 'checked' : ''" class="switch-element" @change="inputHandler">
     <div class="switch-container">
       <div class="switch-container__circle">
-        <rt-ripple ref="ripple" :not-render="isDisabled" />
+        <rt-ripple ref="ripple" :not-bind-click="true" :not-render="isDisabled" />
       </div>
       <slot />
-
     </div>
   </label>
 </template>

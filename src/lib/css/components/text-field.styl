@@ -1,0 +1,92 @@
+.text-field {
+    display: inline-block;
+    position: relative;
+    height: 52px;
+    width: 100%;
+    padding-top: 22px;
+    box-sizing: border-box;
+
+
+    &__line {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        height: 1px;
+        width: 100%;
+        background-color: form-elements-border-color;
+        transition-timing-function: ease-in-out;
+        transition-property: background, height;
+        transition-duration: 0.2s;
+        pointer-events: none;
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        .textarea & {
+            position: relative;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            transition-timing-function: ease-in-out;
+            transition-property: background, width;
+            transition-duration: 0.4s;
+            background: b2c-purple-low;
+            appearance:none;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+        }
+        .select__inner:focus+&,
+        .select:hover &,
+        .select--is-open &,
+        .input-element:hover+&,
+        .input-element:focus+&,
+        .textarea-element:hover+&,
+        .textarea-element:focus+& {
+            height: 2px;
+            &:before {
+                width: 100%;
+            }
+        }
+        .select--disabled &,
+        .input-element[disabled]+&,
+        .textarea--disabled & {
+            background-image: url("data:image/svg+xml;utf8,<svg width='5' height='2' xmlns='http://www.w3.org/2000/svg'><path d='M.535 1.25h5.528' stroke='"+b2b-gray+"' fill='none' fill-rule='evenodd' stroke-dasharray='3' stroke-linecap='square'/></svg>");
+            height: 2px;
+            background-color: transparent;
+            &:before {
+                height: 0;
+                width: 0;
+            }
+        }
+        .text-field--error & {
+            height: 2px;
+            &:before {
+                background-color: error-color;
+                width: 100%;
+            }
+        }
+    }
+    &__error-message {
+        position: absolute;
+        color: error-color;
+        bottom: -20px;
+        left: 0;
+        transition-timing-function: ease-in-out;
+        transition-property: opacity, visibility;
+        transition-duration: 0.4s;
+        font-size: 14px;
+        opacity: 0;
+        visibility: hidden;
+        .text-field--error & {
+            opacity: 0.5;
+            visibility: visible;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

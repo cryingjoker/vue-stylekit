@@ -39,6 +39,8 @@
     <rt-banner :is-fullscreen-image="true" :sleep-time="30000"  content-mobile-min-height="100vh" content-mobile-height="400px">
       <rt-banner-item background-video="https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4"
                       :slide-time="50000"
+                      link-target="_blank"
+                      link="https://www.google.co.uk/search?q=yosemite+national+park"
                       :is-white-color="true" background-color="dark-state">
         <rt-color-line-text>
           <template slot="label">Расширяя границы</template>
@@ -55,6 +57,7 @@
         <rt-button class="rt-button-orange">Подробнее</rt-button>
       </rt-banner-item>
       <rt-banner-item
+        link="https://www.google.co.uk/search?q=ElephantsDream"
         background-video="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
         :is-white-color="true" background-color="orange" :slide-time="30000">
         <rt-color-line-text color-icon="purple">

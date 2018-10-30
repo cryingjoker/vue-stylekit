@@ -1,6 +1,7 @@
 <template>
   <div class="rt-banner" :class="banerClass" :style="bannerStyle">
     <div class="rt-container">
+      <a v-if="RtBanners && RtBanners.items && RtBanners.items[RtBanners.activeIndex] && RtBanners.items[RtBanners.activeIndex].link" class="rt-banner-content__link" :href="RtBanners.items[RtBanners.activeIndex].link" :target="RtBanners.items[RtBanners.activeIndex].linkTarget"></a>
       <div class="rt-col-12">
         <div class="row">
           <div class="rt-col-1 md-d-none"/>

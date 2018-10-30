@@ -1,0 +1,373 @@
+gridRender(steps,prefix,stepGrid,needMedia,mediaWidth)
+  for $i in 1..steps
+    .{newAppName}-col{prefix}-{$i}
+      if needMedia
+        @media (max-width: mediaWidth)
+          flex 0 0 ($i*stepGrid)
+          max-width ($i*stepGrid)
+      else
+        flex 0 0 ($i*stepGrid)
+        max-width ($i*stepGrid)
+
+
+spaceRender(prefix, needMedia, value, mediaWidth)
+  name = step
+
+  if step % 10 == 5
+    if step < 10
+      name = '0'+name
+
+  else
+    if step == 10
+      name = ''
+    else
+      name = (''+(step/10))
+  .{newAppName}{prefix}-space-top{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-top (value/10)*vertical-space
+    else
+      padding-top (value/10)*vertical-space
+  .{newAppName}{prefix}-space-bottom{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-bottom (value/10)*vertical-space
+    else
+      padding-bottom (value/10)*vertical-space
+  .{newAppName}{prefix}-space-vertical{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-top (value/10)*vertical-space
+        padding-bottom (value/10)*vertical-space
+    else
+      padding-top (value/10)*vertical-space
+      padding-bottom (value/10)*vertical-space
+
+  .{newAppName}{prefix}-space-left{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-left (value/10)*horizontal-space
+    else
+      padding-left (value/10)*horizontal-space
+  .{newAppName}{prefix}-space-right{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-right (value/10)*horizontal-space
+    else
+      padding-right (value/10)*horizontal-space
+  .{newAppName}{prefix}-space-horizontal{name}
+    if needMedia
+      @media (max-width: mediaWidth)
+        padding-left (value/10)*horizontal-space
+        padding-right (value/10)*horizontal-space
+    else
+      padding-left (value/10)*horizontal-space
+      padding-right (value/10)*horizontal-space
+
+steps = (desctop-step-grid 12),
+  (tablet-step-grid 6 "td" tablet-step-size),
+  (mobile-step-grid 3 "md" mobile-step-size)
+
+
+for devideStep in steps
+  media = 0
+  devicePrefix = ""
+  needMedia = false
+  if devideStep[1] < 12
+    media = devideStep[3]
+    devicePrefix = '-'+devideStep[2]
+    needMedia = true
+  for $i in 1..devideStep[1]
+    .{newAppName}-col{devicePrefix}-{$i}
+      +cache('mobile-column')
+        position relative
+        width 100%
+        padding-right (horizontal-space/2)
+        padding-left (horizontal-space/2)
+  gridRender(devideStep[1],devicePrefix,devideStep[0],needMedia,media)
+
+  for $i in 1..10
+    step = $i * 5
+    spaceRender(devicePrefix, needMedia, step, media)
+
+
+.row {
+  position relative
+  display -ms-flexbox
+  display flex
+  -ms-flex-wrap wrap
+  flex-wrap wrap
+  margin-right -1*horizontal-space/2
+  margin-left -1*horizontal-space/2
+  &--mobile-scroll {
+    flex-flow nowrap
+    overflow auto
+    margin-right -1*horizontal-space
+    margin-left -1*horizontal-space
+    padding-bottom vertical-space
+  }
+}
+
+
+
+.d-none {
+  display none
+}
+
+.d-inline {
+  display inline
+}
+
+.d-inline-block {
+  display inline-block
+}
+
+.d-block {
+  display block
+}
+
+.d-table {
+  display table
+}
+
+.d-table-row {
+  display table-row
+}
+
+.d-table-cell {
+  display table-cell
+}
+
+.d-flex {
+  display -ms-flexbox
+  display flex
+}
+
+.flex-end-center {
+  display flex
+  display -ms-flexbox
+  justify-content flex-end
+  align-items center
+}
+
+.flex-start-center {
+  display flex
+  display -ms-flexbox
+  justify-content flex-start
+  align-items center
+}
+
+.flex-center-center {
+  display flex
+  display -ms-flexbox
+  justify-content center
+  align-items center
+}
+
+.flex-end-bottom {
+  display flex
+  display -ms-flexbox
+  justify-content flex-end
+  align-items flex-end
+}
+
+.d-inline-flex {
+  display -ms-inline-flexbox
+  display inline-flex
+}
+
+.d-stretch {
+  display flex
+  display -ms-flexbox
+  align-items stretch
+}
+.flex-md-start {
+  @media (max-width: mobile-step-size) {
+    display flex
+    display -ms-flexbox
+    justify-content flex-start
+  }
+}
+
+.flex-md-center {
+  @media (max-width: mobile-step-size) {
+    display flex
+    display -ms-flexbox
+    justify-content center
+  }
+}
+
+.md{
+  @media (max-width: mobile-step-size) {
+    &-d-none {
+      display none
+    }
+
+    &-d-inline {
+      display inline
+    }
+
+    &-d-inline-block {
+      display inline-block
+    }
+
+    &-d-block {
+      display block
+    }
+
+    &-d-table {
+      display table
+    }
+
+    &-d-table-row {
+      display table-row
+    }
+
+    &-d-table-cell {
+      display table-cell
+    }
+
+    &-d-flex {
+      display -ms-flexbox
+      display flex
+    }
+
+    &-d-inline-flex {
+      display -ms-inline-flexbox
+      display inline-flex
+    }
+  }
+}
+.td{
+  @media (max-width: tablet-step-size) {
+    &-d-none {
+      display none
+    }
+
+    &-d-inline {
+      display inline
+    }
+
+    &-d-inline-block {
+      display inline-block
+    }
+
+    &-d-block {
+      display block
+    }
+
+    &-d-table {
+      display table
+    }
+
+    &-d-table-row {
+      display table-row
+    }
+
+    &-d-table-cell {
+      display table-cell
+    }
+
+    &-d-flex {
+      display -ms-flexbox
+      display flex
+    }
+
+    &-d-inline-flex {
+      display -ms-inline-flexbox
+      display inline-flex
+    }
+  }
+}
+
+
+.{newAppName}-container {
+  width 100%
+  padding-right horizontal-space*3.5
+  padding-left horizontal-space*3.5
+  margin-right auto
+  margin-left auto
+  max-width 1480px
+  @media (max-width: tablet-step-size) {
+    padding-right horizontal-space*0.5
+    padding-left horizontal-space*0.5
+  }
+}
+
+// from bootstrap 4
+.row {
+  position relative
+  display flex
+  flex-wrap wrap
+  margin-right -1*horizontal-space/2
+  margin-left -1*horizontal-space/2
+  &--mobile-scroll {
+    flex-flow nowrap
+    overflow auto
+    margin-right -1*horizontal-space
+    margin-left -1*horizontal-space
+    padding-bottom vertical-space
+  }
+}
+
+.no-gutters {
+  margin-right 0
+  margin-left 0
+}
+
+.no-gutters > .{newAppName}-col,
+.no-gutters > [class*="col-"] {
+  padding-right 0
+  padding-left 0
+}
+
+
+
+.d-flex {
+  display flex
+}
+
+.flex-row {
+  flex-direction row
+}
+
+.flex-column {
+  flex-direction column
+}
+
+.flex-fill {
+  flex 1 0 0
+}
+.d-md-flex-column{
+  .{newAppName}-card{
+    @media (max-width: mobile-step-size) {
+      min-height fit-content
+    }
+  }
+  @media (max-width: mobile-step-size) {
+    display flex
+    flex-direction column
+  }
+}
+
+
+
+
+.{newAppName}-pseudo-col {
+  position absolute
+  transition-timing-function ease-in-out
+  transition-property opacity, visibility
+  transition-duration 0.2s
+  @media (max-width: mobile-step-size) {
+    opacity 0
+    visibility hidden
+  }
+  &--left {
+    right 100%
+  }
+  &--right {
+    left 100%
+  }
+}
+
+

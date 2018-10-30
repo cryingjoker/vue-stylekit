@@ -2,22 +2,21 @@
 <!--@mousedown.passive-->
 <!--@touchstart.passive-->
 <template>
-  <div class="ripple"
-       @mousedown.passive="renderRipple"
-  >
-    <rt-ripple-wave v-for="ripple in ripplesList" :key="ripple.key" :wave-style="ripple.waveStyles" @on-timer-end="removeWave(ripple.key)" />
-    <slot />
+  <div class="ripple" @mousedown="renderRipple">
+    <slot/>
   </div>
 </template>
 
 <script>
-import RippleWave from './RippleWave.vue';
 const componentsList = {};
-componentsList[RippleWave.name] = RippleWave;
 export default {
   name: 'RtRipple',
   components: componentsList,
   props: {
+    notBindClick:{
+      type: Boolean,
+      default: false
+    },
     notRender: {
       type: Boolean,
       default: false
@@ -33,32 +32,40 @@ export default {
   mounted: function() {},
   methods: {
     renderRipple($event) {
-      this.startRipple($event);
-      // if(this.twiceRender){
-      //   setTimeout(()=>{
-      //     this.startRipple($event);
-      //   },60)
-      // }
+      if(!this.notBindClick) {
+        this.startRipple($event);
+      }
     },
+
     startRipple($event) {
       if (!this.notRender) {
-        const size = this.getElementSize();
+        const size = this.getElementSize()*1.5;
         const hitPosition = this.getHitPosition($event, size);
         const sizeNormalize = size + 'px';
         const sizeOffsetNormalize = -1 * size / 2 + 'px';
         const hash = Math.random()
           .toString(36)
           .slice(4);
-        this.ripplesList.push({
-          waveStyles: {
-            width: sizeNormalize,
-            height: sizeNormalize,
-            'margin-top': sizeOffsetNormalize,
-            'margin-left': sizeOffsetNormalize,
-            ...hitPosition
-          },
-          key: hash
-        });
+        const style = {
+          visability: 'visible',
+          transform: 'scale(2)',
+          width: sizeNormalize,
+          height: sizeNormalize,
+          'marginTop': sizeOffsetNormalize,
+          'marginLeft': sizeOffsetNormalize,
+          ...hitPosition
+        };
+        const el = document.createElement('div');
+        el.className = 'ripple-wave ripple-wave-active';
+        this.$el.appendChild(el);
+        setTimeout(()=>{
+          for(let i in style){
+            el.style[i] = style[i];
+          }
+          setTimeout(()=>{
+            // el.remove()
+          },400);
+        },10);
       }
     },
     getElementSize() {

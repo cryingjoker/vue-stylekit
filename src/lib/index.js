@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import styles from './css/vue-rt-style.less';
+// import styles from './css/vue-rt-style.styl';
 
 import {
   Button,
@@ -11,7 +11,6 @@ import {
   Price,
   RadioButton,
   Ripple,
-  RippleWave,
   RippleWihoutJs,
   Select,
   SelectOption,
@@ -61,7 +60,6 @@ const VueRtStyle = {
       Vue.component(Price.name, Price);
       Vue.component(RadioButton.name, RadioButton);
       Vue.component(Ripple.name, Ripple);
-      Vue.component(RippleWave.name, RippleWave);
       Vue.component(RippleWihoutJs.name, RippleWihoutJs);
       Vue.component(Select.name, Select);
       Vue.component(SelectOption.name, SelectOption);

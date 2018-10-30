@@ -1,6 +1,6 @@
 <template>
   <label class="radio-button">
-    <rt-ripple ref="ripple" :not-render="isDisabled" />
+    <rt-ripple :not-bind-click="true" ref="ripple" :not-render="isDisabled" />
     <input :name="name" ref="input" type="radio" :disabled="isDisabled" :checked="isChecked" class="radio-button-element" @change="changeModel">
     <div class="radio-button-container">
       <slot />
