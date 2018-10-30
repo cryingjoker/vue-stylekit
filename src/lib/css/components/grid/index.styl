@@ -3,11 +3,11 @@ gridRender(steps,prefix,stepGrid,needMedia,mediaWidth)
     .{newAppName}-col{prefix}-{$i}
       if needMedia
         @media (max-width: mediaWidth)
-          flex: 0 0 ($i*stepGrid)
-          max-width: ($i*stepGrid)
+          flex 0 0 ($i*stepGrid)
+          max-width ($i*stepGrid)
       else
-        flex: 0 0 ($i*stepGrid)
-        max-width: ($i*stepGrid)
+        flex 0 0 ($i*stepGrid)
+        max-width ($i*stepGrid)
 
 
 spaceRender(prefix, needMedia, value, mediaWidth)
@@ -80,8 +80,8 @@ for devideStep in steps
   for $i in 1..devideStep[1]
     .{newAppName}-col{devicePrefix}-{$i}
       +cache('mobile-column')
-        position: relative
-        width: 100%
+        position relative
+        width 100%
         padding-right (horizontal-space/2)
         padding-left (horizontal-space/2)
   gridRender(devideStep[1],devicePrefix,devideStep[0],needMedia,media)
@@ -92,267 +92,261 @@ for devideStep in steps
 
 
 .row {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -1*horizontal-space/2;
-  margin-left: -1*horizontal-space/2;
+  position relative
+  display -ms-flexbox
+  display flex
+  -ms-flex-wrap wrap
+  flex-wrap wrap
+  margin-right -1*horizontal-space/2
+  margin-left -1*horizontal-space/2
   &--mobile-scroll {
-    flex-flow: nowrap;
-    overflow: auto;
-    margin-right: -1*horizontal-space;
-    margin-left: -1*horizontal-space;
-    padding-bottom: vertical-space;
+    flex-flow nowrap
+    overflow auto
+    margin-right -1*horizontal-space
+    margin-left -1*horizontal-space
+    padding-bottom vertical-space
   }
 }
 
 
 
 .d-none {
-  display: none;
+  display none
 }
 
 .d-inline {
-  display: inline;
+  display inline
 }
 
 .d-inline-block {
-  display: inline-block;
+  display inline-block
 }
 
 .d-block {
-  display: block;
+  display block
 }
 
 .d-table {
-  display: table;
+  display table
 }
 
 .d-table-row {
-  display: table-row;
+  display table-row
 }
 
 .d-table-cell {
-  display: table-cell;
+  display table-cell
 }
 
 .d-flex {
-  display: -ms-flexbox;
-  display: flex;
+  display -ms-flexbox
+  display flex
 }
 
 .flex-end-center {
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: flex-end;
-  align-items: center;
+  display flex
+  display -ms-flexbox
+  justify-content flex-end
+  align-items center
 }
 
 .flex-start-center {
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: flex-start;
-  align-items: center;
+  display flex
+  display -ms-flexbox
+  justify-content flex-start
+  align-items center
 }
 
 .flex-center-center {
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: center;
-  align-items: center;
+  display flex
+  display -ms-flexbox
+  justify-content center
+  align-items center
 }
 
 .flex-end-bottom {
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: flex-end;
-  align-items: flex-end;
+  display flex
+  display -ms-flexbox
+  justify-content flex-end
+  align-items flex-end
 }
 
 .d-inline-flex {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display -ms-inline-flexbox
+  display inline-flex
 }
 
 .d-stretch {
-  display: flex;
-  display: -ms-flexbox;
-  align-items: stretch;
+  display flex
+  display -ms-flexbox
+  align-items stretch
 }
 .flex-md-start {
   @media (max-width: mobile-step-size) {
-    display: flex;
-    display: -ms-flexbox;
-    justify-content: flex-start;
+    display flex
+    display -ms-flexbox
+    justify-content flex-start
   }
 }
 
 .flex-md-center {
   @media (max-width: mobile-step-size) {
-    display: flex;
-    display: -ms-flexbox;
-    justify-content: center;
+    display flex
+    display -ms-flexbox
+    justify-content center
   }
 }
 
 .md{
   @media (max-width: mobile-step-size) {
     &-d-none {
-      display: none;
+      display none
     }
 
     &-d-inline {
-      display: inline;
+      display inline
     }
 
     &-d-inline-block {
-      display: inline-block;
+      display inline-block
     }
 
     &-d-block {
-      display: block;
+      display block
     }
 
     &-d-table {
-      display: table;
+      display table
     }
 
     &-d-table-row {
-      display: table-row;
+      display table-row
     }
 
     &-d-table-cell {
-      display: table-cell;
+      display table-cell
     }
 
     &-d-flex {
-      display: -ms-flexbox;
-      display: flex;
+      display -ms-flexbox
+      display flex
     }
 
     &-d-inline-flex {
-      display: -ms-inline-flexbox;
-      display: inline-flex;
+      display -ms-inline-flexbox
+      display inline-flex
     }
   }
 }
 .td{
   @media (max-width: tablet-step-size) {
     &-d-none {
-      display: none;
+      display none
     }
 
     &-d-inline {
-      display: inline;
+      display inline
     }
 
     &-d-inline-block {
-      display: inline-block;
+      display inline-block
     }
 
     &-d-block {
-      display: block;
+      display block
     }
 
     &-d-table {
-      display: table;
+      display table
     }
 
     &-d-table-row {
-      display: table-row;
+      display table-row
     }
 
     &-d-table-cell {
-      display: table-cell;
+      display table-cell
     }
 
     &-d-flex {
-      display: -ms-flexbox;
-      display: flex;
+      display -ms-flexbox
+      display flex
     }
 
     &-d-inline-flex {
-      display: -ms-inline-flexbox;
-      display: inline-flex;
+      display -ms-inline-flexbox
+      display inline-flex
     }
   }
 }
 
 
 .{newAppName}-container {
-  width: 100%;
-  padding-right: horizontal-space*3.5;
-  padding-left: horizontal-space*3.5;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1480px;
-  @media (max-width: mobile-step-size) {
-    padding-right: horizontal-space/2;
-    padding-left: horizontal-space/2;
+  width 100%
+  padding-right horizontal-space*3.5
+  padding-left horizontal-space*3.5
+  margin-right auto
+  margin-left auto
+  max-width 1480px
+  @media (max-width: tablet-step-size) {
+    padding-right horizontal-space*0.5
+    padding-left horizontal-space*0.5
   }
 }
 
 // from bootstrap 4
 .row {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -1*horizontal-space/2;
-  margin-left: -1*horizontal-space/2;
+  position relative
+  display flex
+  flex-wrap wrap
+  margin-right -1*horizontal-space/2
+  margin-left -1*horizontal-space/2
   &--mobile-scroll {
-    flex-flow: nowrap;
-    overflow: auto;
-    margin-right: -1*horizontal-space;
-    margin-left: -1*horizontal-space;
-    padding-bottom: vertical-space;
+    flex-flow nowrap
+    overflow auto
+    margin-right -1*horizontal-space
+    margin-left -1*horizontal-space
+    padding-bottom vertical-space
   }
 }
 
 .no-gutters {
-  margin-right: 0;
-  margin-left: 0;
+  margin-right 0
+  margin-left 0
 }
 
 .no-gutters > .{newAppName}-col,
 .no-gutters > [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right 0
+  padding-left 0
 }
 
 
 
 .d-flex {
-  display: -ms-flexbox;
-  display: flex;
+  display flex
 }
 
 .flex-row {
-  -ms-flex-direction: row;
-  flex-direction: row;
+  flex-direction row
 }
 
 .flex-column {
-  -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction column
 }
 
 .flex-fill {
-  -ms-flex: 1;
-  flex: 1 0 0;
+  flex 1 0 0
 }
 .d-md-flex-column{
   .{newAppName}-card{
     @media (max-width: mobile-step-size) {
-      min-height: fit-content;
+      min-height fit-content
     }
   }
   @media (max-width: mobile-step-size) {
-    display: flex;
-    flex-direction: column;
+    display flex
+    flex-direction column
   }
 }
 
@@ -360,19 +354,19 @@ for devideStep in steps
 
 
 .{newAppName}-pseudo-col {
-  position: absolute;
-  transition-timing-function: ease-in-out;
-  transition-property: opacity, visibility;
-  transition-duration: 0.2s;
+  position absolute
+  transition-timing-function ease-in-out
+  transition-property opacity, visibility
+  transition-duration 0.2s
   @media (max-width: mobile-step-size) {
-    opacity: 0;
-    visibility: hidden;
+    opacity 0
+    visibility hidden
   }
   &--left {
-    right: 100%;
+    right 100%
   }
   &--right {
-    left: 100%;
+    left 100%
   }
 }
 
