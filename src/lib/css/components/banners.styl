@@ -335,6 +335,7 @@
         height: 20px;
         box-sizing: border-box;
         animation-play-state: running;
+
         &:before {
             content: '';
             width: 10px;
@@ -348,6 +349,10 @@
             bottom: 0;
             right: 0;
             margin: auto;
+            animation-play-state: paused
+            transition-duration: 0.3s;
+            transition-property: background-color, width, height, border, margin, left, right;
+            transition-timing-function: ease-in-out;
         }
         & + & {
             margin-left: horizontal-space;
@@ -373,16 +378,54 @@
             animation-duration: inherit;
             animation-timing-function: linear;
             animation-name: switcherRound;
+
         }
         .{newAppName}-banner--pause & {
             animation-play-state: paused;
             stroke-dashoffset: 120!important;
             animation: none;
+            &.{newAppName}-banner--run-timer {
+                stroke-width: 0.5px;
+                cursor: default
+            }
         }
     }
 }
+.circle-switcher__item.{newAppName}-banner--run-timer.{newAppName}-banner--pause {
+    cursor: default
+    &:before {
+        content: '';
+        border-width 0
+        top: 0;
+        left: inherit
+        right inherit
+        bottom: 0;
+        margin-top: auto
+        margin-bottom: auto
+        width: 2px
+        height: 8px
+        position: absolute
+        left: 7px
+        background-color: #fff
+        border-radius 0
+    }
 
-keyframes switcherRound {
+    &:after {
+        content: '';
+        top: 0;
+        bottom: 0;
+        margin-top: auto
+        margin-bottom: auto
+        width: 2px
+        height: 8px
+        position: absolute
+        right: 7px
+        background-color: #fff
+        border-radius 0
+    }
+}
+
+@keyframes switcherRound {
     0% {
         stroke-dashoffset: 180
     }
