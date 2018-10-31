@@ -32,7 +32,8 @@
     "ora": "^3.0.0",
     "pug": "^2.0.3",
     "reset-css": "^4.0.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-merge": "^4.1.4"
   },
   "resolutions": {
     "jest/jest-cli/jest-haste-map/sane": "1.2.4",

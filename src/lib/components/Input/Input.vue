@@ -1,6 +1,6 @@
 <template>
   <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':isWhite}">
-    <input autocomplete="off" autocapitalize="off" type="text" class="input-element" @input="inputHandler">
+    <input autocomplete="off" autocapitalize="off" type="text" ref="input" class="input-element" @input="inputHandler">
     <div class="text-field__line" />
     <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
       {{ placeholder }}
@@ -56,8 +56,31 @@ export default {
   mounted() {
     this.setValue();
     this.setDisabled();
+    this.bindEvents()
+  },
+
+  updated(){
+    this.unbindEvents();
+    this.bindEvents();
+  },
+  beforeDestroy(){
+    this.unbindEvents();
   },
   methods: {
+    bindEvents(){
+      if(this['_events']) {
+        Object.keys(this['_events']).map((eventName) => {
+          this.$refs.input.addEventListener(eventName,this['_events'][eventName]);
+        })
+      }
+    },
+    unbindEvents(){
+      if(this['_events']) {
+        Object.keys(this['_events']).map((eventName) => {
+          this.$refs.input.removeEventListener(eventName,this['_events'][eventName]);
+        })
+      }
+    },
     setValue() {
       this.$el.querySelector('.input-element').value = this.localValue;
       this.setValueLength();

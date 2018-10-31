@@ -185,7 +185,6 @@
 
 import  VueRtStyle from '../../lib/index'
 import componentsList from '../componentsList'
-
 if(window){
   window.VueRtStyle = {};
   window.VueRtStyle.version = VueRtStyle.version;
