@@ -62,9 +62,9 @@
           </div>
         </div>
       }else{
-        return <div className="rt-table">
+        return <div class="rt-table">
           {columns()}
-          <div className="rt-table-head" ref="head">
+          <div class="rt-table-head" ref="head">
             {this.$slots.header}
           </div>
 

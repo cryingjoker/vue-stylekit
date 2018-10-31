@@ -72,9 +72,6 @@ export default {
   },
   created() {},
   methods: {
-    test(){
-      console.info('test')
-    }
   },
 };
 </script>
