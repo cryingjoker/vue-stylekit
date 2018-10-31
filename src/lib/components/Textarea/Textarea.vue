@@ -1,6 +1,6 @@
 <template>
   <div class="text-field textarea" :class="textareaClasses">
-    <textarea class="textarea-element" rows="1" @change="inputHandler" @keyup="calculateHelght"
+    <textarea class="textarea-element" ref="textarea" rows="1" @change="inputHandler" @keyup="calculateHelght"
               @input="calculateHelght"
     />
     <div class="text-field__line" />
@@ -65,6 +65,20 @@ export default {
     this.setDisabled();
   },
   methods: {
+    bindEvents(){
+      if(this['_events']) {
+        Object.keys(this['_events']).map((eventName) => {
+          this.$refs.input.addEventListener(eventName,this['_events'][eventName]);
+        })
+      }
+    },
+    unbindEvents(){
+      if(this['_events']) {
+        Object.keys(this['_events']).map((eventName) => {
+          this.$refs.input.removeEventListener(eventName,this['_events'][eventName]);
+        })
+      }
+    },
     setValue() {
       this.$el.querySelector('.textarea-element').value = this.localValue || '';
       this.setValueLength();

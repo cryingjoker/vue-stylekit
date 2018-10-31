@@ -68,7 +68,7 @@
       </rt-banner-item>
     </rt-banner>
     '></pre-code>
-
+    <documentation-creater json="{}"></documentation-creater>
     <div class="rt-container rt-space-top25">
       <div class="rt-col-12">
         <div class="app-documentation">
