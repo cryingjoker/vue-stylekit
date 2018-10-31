@@ -1,6 +1,6 @@
 {
-  "name": "vue_stylekit",
-  "version": "0.0.13",
+  "name": "vue-rt-vue_rt_style",
+  "version": "0.0.16",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -32,7 +32,8 @@
     "ora": "^3.0.0",
     "pug": "^2.0.3",
     "reset-css": "^4.0.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "webpack-merge": "^4.1.4"
   },
   "resolutions": {
     "jest/jest-cli/jest-haste-map/sane": "1.2.4",

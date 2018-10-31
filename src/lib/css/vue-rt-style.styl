@@ -1,12 +1,14 @@
+json('../../lib/variables.json')
+json('../../lib/color.json')
 
-@require '~nib/lib/nib/index'
+
 support-for-ie = false
 
+@require "reset.styl"
 
-@require "reset"
 @require "typography/index";
-@import "components/index";
-@import "promo";
+@require "components/index";
+@require "promo";
 
 .sticked-block {
   z-index: 10;

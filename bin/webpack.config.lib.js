@@ -1,8 +1,10 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
+const webpack = require('webpack');
 const path = require(`path`);
 const UglifyJsPlugin = require(`uglifyjs-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
+const nib = require('nib');
+const stylusLoader = require('stylus-loader');
 const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
 const env = process.env.NODE_ENV;
 const local_dirname = path.join(__dirname,'..');
@@ -47,26 +49,12 @@ const config = {
         include: [path.join(local_dirname, `src`)],
       },
       {
-        test: /\.less$/,
+        test: /\.styl$/,
         use: [
           MiniCssExtractPlugin.loader,
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
-      },
-      {
-        test: /\.styl/,
-        use: [
-          {
-            loader: `style-loader`,
-          },
-          {loader:`css-loader`},
-          {
-            loader: `stylus-loader`,
-          },
-        ],
+          {loader:'css-loader', options: { minimize: true }},
+          'stylus-loader'
+        ]
       },
       {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
@@ -89,8 +77,20 @@ const config = {
     ]
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    }),
+
+
+    new stylusLoader.OptionsPlugin({
+      default: {
+        use: [nib()],
+        import: ['~nib/lib/nib/index.styl']
+      }
+    }),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin()
+
   ]
 };
 

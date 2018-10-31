@@ -52,6 +52,11 @@
             Inline dropdown
           </router-link>
         </div>
+        <div class="aside-menu__item">
+          <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/annotation">
+            Annotation
+          </router-link>
+        </div>
         <!--<div class="aside-menu__item" to="/color">Color list</div>-->
         <div class="aside-menu__item">
           <p class="aside-menu__submenu-title">Forms</p>
@@ -185,7 +190,6 @@
 
 import  VueRtStyle from '../../lib/index'
 import componentsList from '../componentsList'
-
 if(window){
   window.VueRtStyle = {};
   window.VueRtStyle.version = VueRtStyle.version;
