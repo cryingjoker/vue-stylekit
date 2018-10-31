@@ -19,15 +19,15 @@
             content: ''
             position: absolute
             bottom: -2px
-            width: calc(100% - 20px)
+            width: 0
             height: 1px
             left: 20px
             background-color: b2b-black03
             transition-timing-function: cubic-bezier(1, .2, .9, .65);
             transition-property: width;
             transition-duration: 0.2s;
-            .{newAppName}-annotation--is-open & {
-                width: 0
+            .{newAppName}-annotation:hover & {
+                width: calc(100% - 20px)
             }
             .{newAppName}-annotation--white-color &,
             .{newAppName}-dark-theme & {
@@ -81,12 +81,12 @@
             transition-duration: 0.3s;
             position: absolute
             left: 6px
-            top: 40px
+            top: 20px
             .{newAppName}-annotation--white-color & {
                 background-color: b2b-white03
             }
             .{newAppName}-annotation--is-open & {
-                height: calc(100% - 40px)
+                height: calc(100% - 20px)
             }
             .{newAppName}-annotation--white-color &,
             .{newAppName}-dark-theme & {
@@ -100,12 +100,12 @@
 
         .{newAppName}-annotation--is-open & {
             max-height: 300vh;
-            padding-top: 20px;
+            padding-top: 10px;
         }
     }
 
     &-item {
-        padding-top: horizontal-space;
+        padding-top horizontal-space*0.5;
     }
 }
 

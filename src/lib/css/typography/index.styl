@@ -152,4 +152,19 @@ a {
     color: inherit;
 }
 
+.rt-numeric-list {
+    counter-reset: step-counter;
+    list-style-type: none;
+    &__item {
+        counter-increment: step-counter;
+        padding-left horizontal-space
+        position: relative
+        &:before {
+            content: counter(step-counter)'.';
+            position: absolute
+            left: 0
+        }
+    }
+}
+
 

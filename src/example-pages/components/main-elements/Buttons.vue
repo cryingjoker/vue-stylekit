@@ -181,7 +181,6 @@
           <p class="rt-font-h3"> Vertical buttons</p>
         </div>
         <pre-code text='<div class="app-row"><rt-button class="rt-button-vertical rt-button-purple">Подключить</rt-button><rt-button class="rt-button-vertical rt-button-purple">Подключить</rt-button></div>'></pre-code>
-
       </div>
     </div>
 
@@ -190,9 +189,7 @@
 
 <script>
 
-  const componentsList = {};
-
-
+  import componentsList from '../../componentsList'
 export default {
   name: 'AppButtons',
   components: componentsList,

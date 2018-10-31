@@ -40,8 +40,7 @@ import {
   DownloadContent
 } from '../lib/components/index';
 
-import DocumentationCreater from '../develover-lib/index'
-
+import { DocumentationBuilder } from '../develover-lib/components/index'
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
@@ -83,6 +82,6 @@ componentsList[TableRow.name] = TableRow;
 componentsList[TableItem.name] = TableItem;
 componentsList[TableCol.name] = TableCol;
 componentsList[DownloadContent.name] = DownloadContent;
-componentsList[DocumentationCreater.name] = DocumentationCreater;
+componentsList[DocumentationBuilder.name] = DocumentationBuilder;
 
 export default {...componentsList};
