@@ -239,7 +239,7 @@
               x_end: this.getOffsetTop(anchorEl) + anchorEl.offsetHeight - this.topPadding
             };
             if(this.fixedNode && this.fixedNodeHeight){
-              this.anchorObejects[anchor].x_start += this.fixedNodeHeight;
+              this.anchorObejects[anchor].x_start -= this.fixedNodeHeight;
             }
           }
         });
