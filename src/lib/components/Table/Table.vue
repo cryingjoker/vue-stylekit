@@ -4,10 +4,10 @@
     components: {},
     data: () => ({
       tableLabels: [],
-      slotVNode: {}
+      slotVNode: "test"
     }),
     provide(){
-      const tableLabels = this.tableLabels;
+      const tableLabels = this['tableLabels'];
       return {tableLabels};
     },
     props: {
@@ -15,11 +15,11 @@
 
     methods: {
       getLabelHtml(){
-        if(this.$refs.head){
-          this.$refs.head.querySelectorAll('.rt-table-head__item').forEach((nodeEl, nodeIndex)=>{
-            this.$set(this.tableLabels,nodeIndex, nodeEl.innerText.trim())
-          })
-        }
+        // if(this.$refs.head){
+        //   this.$refs.head.querySelectorAll('.rt-table-head__item').forEach((nodeEl, nodeIndex)=>{
+        //     this.$set(this.tableLabels,nodeIndex, nodeEl.innerText.trim())
+        //   })
+        // }
       }
     },
 
@@ -68,7 +68,7 @@
             {this.$slots.header}
           </div>
 
-          {renderBodyFn()}
+           {renderBodyFn()}
         </div>
       }
     }

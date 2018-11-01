@@ -12,6 +12,10 @@
   export default {
     name: "DocumentationBuilder",
     props: {
+      type: {
+        type: String,
+        default: "components"
+      },
       json: {
         type: Object,
         default: () => {
@@ -21,10 +25,8 @@
     },
 
     data: () => ({
-      component: null,
-      localCode: "",
-      showCodeEditor: false,
       labels: [
+        { name: "version", label: "release version" },
         { name: "name", label: "component name" },
         { name: "proporty", label: "component proporty" },
         { name: "type", label: "proporty type" },
@@ -33,26 +35,49 @@
       ]
     }),
 
-    watch: {
-      text(value) {
-        this.localCode = this.changeComponentCode(this.text);
+    render(h) {
+      if (!this.json["items"] || this.json["items"].length == 0) {
+        return null;
       }
-    },
 
-    mounted() {
-    },
-    components: componentsList,
-    render() {
       const header = (() => {
         return this.labels.map((item) => {
           return <rt-table-head-item>{item.name}</rt-table-head-item>;
         });
       })();
-      return <rt-table>
-        <template slot="header">
-          {header}
-        </template>
-      </rt-table>;
+      const bodyItem = (data) => {
+        return this.labels.map((labelItem) => {
+          if (labelItem.name === "version" && !data[labelItem.name]) {
+            data[labelItem.name] = "<= 0.0.15";
+          }
+          console.info("data[labelItem.name]", data[labelItem.name]);
+          return <rt-table-item>{data[labelItem.name]}</rt-table-item>;
+        });
+      };
+
+
+      const body = (() => {
+        if (this["json"] && this["json"]["items"]) {
+          return this["json"]["items"].map((row) => {
+            return <rt-table-row>{bodyItem(row)}</rt-table-row>;
+          });
+        } else {
+          return null;
+        }
+      })();
+      return <div class="rt-space-top25">
+        <rt-table>
+          <template slot="label">
+            {this.type}
+          </template>
+          <template slot="header">
+            {header}
+          </template>
+          <template slot="body">
+            {body}
+          </template>
+        </rt-table>
+      </div>;
     }
   };
 </script>

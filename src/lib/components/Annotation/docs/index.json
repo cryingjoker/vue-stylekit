@@ -1,0 +1,20 @@
+{
+  "items" : [
+    {
+      "version" : "<= 0.0.15",
+      "name" : "rt-annotation",
+      "proporty" : "label",
+      "type" : "String",
+      "about" : "Верхний текст примечания",
+      "value" : "null"
+    },
+    {
+      "version" : "<= 0.0.15",
+      "name" : "rt-annotation",
+      "proporty" : "has-white-color",
+      "type" : "String",
+      "about" : "flag белого цвета",
+      "value" : "null"
+    }
+  ]
+}

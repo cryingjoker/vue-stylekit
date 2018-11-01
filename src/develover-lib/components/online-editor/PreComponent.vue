@@ -14,80 +14,19 @@
           9.44771525 19,10 L19,17 Z" fill-rule="evenodd" transform="rotate(45 25.778 -.778)"></path>
         </svg>
       </div>
-
-      <pre-code-editor @change="changeComponentCode($event)" :code="normalizeCode"></pre-code-editor>
+      <pre-code-editor @change="changeComponentCode($event)" :code="normalizeCode.template"></pre-code-editor>
     </div>
-    <div class="wc-inline-render"></div>
+    <div class="wc-inline-render" :is="normalizeCode"></div>
   </div>
 </template>
 <script>
   import PreComponentEditor from './PreComponentEditor.vue'
-  const preComponentsList = {};
-  import {
-    Button,
-    ButtonRippleWithoutJs,
-    ButtonWithoutRipple,
-    Checkbox,
-    Input,
-    InputWithoutJs,
-    Price,
-    RadioButton,
-    Ripple,
-    RippleWave,
-    RippleWihoutJs,
-    Select,
-    SelectOption,
-    SelectWithoutJs,
-    Spinner,
-    Switch,
-    Textarea,
-    TextareaStatic,
-    TextareaWithoutJs,
-    ScrollTabs,
-    Tabs,
-    TabsNavigationItem,
-    TabsContentItem,
-    Annotation,
-    ColorLineText,
-    Banner,
-    BannerItem,
-    BannerPaginatorItem,
-    Card,
-    CardImage,
-    CardImageList
-  } from '../../../lib/components/index';
-  import VueRtStyle from '../../../lib/'
-  const componentsList = {};
-  preComponentsList[Button.name] = Button;
-    preComponentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
-    preComponentsList[ButtonWithoutRipple.name] = ButtonWithoutRipple;
-    preComponentsList[Checkbox.name] = Checkbox;
-    preComponentsList[Input.name] = Input;
-    preComponentsList[InputWithoutJs.name] = InputWithoutJs;
-    preComponentsList[Price.name] = Price;
-    preComponentsList[RadioButton.name] = RadioButton;
-    preComponentsList[Ripple.name] = Ripple;
-    preComponentsList[RippleWihoutJs.name] = RippleWihoutJs;
-    preComponentsList[Select.name] = Select;
-    preComponentsList[SelectOption.name] = SelectOption;
-    preComponentsList[SelectWithoutJs.name] = SelectWithoutJs;
-    preComponentsList[Spinner.name] = Spinner;
-    preComponentsList[Switch.name] = Switch;
-    preComponentsList[Textarea.name] = Textarea;
-    preComponentsList[TextareaStatic.name] = TextareaStatic;
-    preComponentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
-    preComponentsList[ScrollTabs.name] = ScrollTabs;
-    preComponentsList[Tabs.name] = Tabs;
-    preComponentsList[TabsNavigationItem.name] = TabsNavigationItem;
-    preComponentsList[TabsContentItem.name] = TabsContentItem;
-    preComponentsList[Annotation.name] = Annotation;
-    preComponentsList[ColorLineText.name] = ColorLineText;
-    preComponentsList[Banner.name] = Banner;
-    preComponentsList[BannerItem.name] = BannerItem;
-    preComponentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
-    preComponentsList[Card.name] = Card;
-    preComponentsList[CardImage.name] = CardImage;
-    preComponentsList[CardImageList.name] = CardImageList;
+
+
+  import componentsList from '../../../example-pages/componentsList'
+
+  console.info('componentsList',componentsList)
+
   componentsList[PreComponentEditor.name] = PreComponentEditor;
   import Vue from 'vue/dist/vue.js';
   export default {
@@ -98,7 +37,7 @@
         default: null
       },
     },
-
+    comments: componentsList,
     data: () => ({
       component: null,
       localCode: '',
@@ -121,8 +60,6 @@
       changeComponentCode(code){
         if(code) {
           this.localCode = code;
-          this.component.$destroy();
-          this.component.$el.outerHTML = '<div class="wc-inline-render"></div>';
           this.getTextAsVue ();
 
         }
@@ -137,19 +74,19 @@
             options[key] = this.$parent[key];
           }
         }
-        if(this.normalizeCode) {
-          Vue.use(VueRtStyle);
-          this.component = new Vue({
-            el:'.wc-inline-render',
-            name: 'Content',
-            components: preComponentsList,
-            template: this.normalizeCode.replace('/{/{','{{'),
-            data: () => {
-              return options
-            },
-            components: preComponentsList
-          });
-        }
+        // if(this.normalizeCode) {
+        //   Vue.use(VueRtStyle);
+        //   this.component = new Vue({
+        //     el:'.wc-inline-render',
+        //     name: 'Content',
+        //     components: preComponentsList,
+        //     template: this.normalizeCode,
+        //     data: () => {
+        //       return options
+        //     },
+        //     components: preComponentsList
+        //   });
+        // }
 
       },
       close(){
@@ -160,12 +97,17 @@
         if(document.querySelector('.code-editor__close')){
           document.querySelector('.code-editor__close').dispatchEvent(new Event('click'));
         }
+
         this.showCodeEditor = !this.showCodeEditor;
+        console.info('showCodeEditor',this.showCodeEditor)
       }
     },
     computed: {
       normalizeCode() {
-        return this.localCode ? this.localCode : this.text.replace(/\\\{\\\{/g,'\{\{');
+        return {
+          template:(this.localCode ? this.localCode : this.text.replace(/\\\{\\\{/g,'\{\{')).replace('/{/{','{{'),
+          components:componentsList,
+        };
       },
       toggleClassObjects (){
           const classObject = {};

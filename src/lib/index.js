@@ -1,5 +1,4 @@
 import Vue from 'vue';
-
 import styles from './css/vue-rt-style.styl';
 
 import {
@@ -92,8 +91,6 @@ const VueRtStyle = {
       Vue.component(DownloadContent.name, DownloadContent);
       Vue.component(InlineDropdown.name, InlineDropdown);
       Vue.component(InlineDropdownItem.name, InlineDropdownItem);
-
-
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);

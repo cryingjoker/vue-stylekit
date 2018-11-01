@@ -4,6 +4,7 @@
   export default {
     name: 'RtTableHeadItem',
     components: {},
+    inject: ['tableLabels'],
     props: {
       fill: {
         type: Boolean,
@@ -23,7 +24,11 @@
       },
 
     },
+    created(){
+      console.info('created')
+    },
     mounted: function() {
+      this.tableLabels.push(this.$el.innerText.trim());
     },
     render: function(h) {
       const style = {};

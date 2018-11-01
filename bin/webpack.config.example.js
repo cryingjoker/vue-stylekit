@@ -22,7 +22,11 @@ const config = {
     },
   },
   devtool: false,
-
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+  },
   module: {
     rules: [
       {
@@ -80,31 +84,7 @@ const config = {
     ],
   },
   plugins: [
-    new HappyPack({
-      id: 'babel-loader',
-      threads: 4,
-      loaders: [{
-        loader: 'babel-loader',
-        options: { babelrc: true, cacheDirectory: true }
-      }]
-    }),
 
-    new HappyPack({
-      id: 'vue-loader',
-      threads: 4,
-      verbose: true,
-      loaders: ["vue-loader"],
-
-
-    }),
-    new HappyPack({
-      loaders: [{
-        path: 'vue-loader',
-        query: {
-          vueLoaderConfig
-        }
-      }]
-    }),
     new MonacoWebpackPlugin(webpack,{
       languages: ['html'],
     }),
@@ -121,7 +101,6 @@ const config = {
 config.entry.app.unshift('webpack-hot-middleware/client');
 config.plugins.push(
   new VueLoaderPlugin(),
-  new HardSourceWebpackPlugin(),
   new webpack.NamedModulesPlugin(),
   new webpack.HotModuleReplacementPlugin()
 );

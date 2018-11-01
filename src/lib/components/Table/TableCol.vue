@@ -2,9 +2,7 @@
   export default {
     name: "RtTableCol",
     components: {},
-    inject: {
-      tableLabels: {}
-    },
+    inject: ['tableLabels'],
     props: {
       width: {
         type: [String, Number],

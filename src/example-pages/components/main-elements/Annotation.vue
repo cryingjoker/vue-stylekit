@@ -104,6 +104,8 @@
               </div>
           </template>
         </rt-annotation>'></pre-code>
+
+        <documentation-builder type="components" :json="documentation"></documentation-builder>
       </div>
     </div>
 
@@ -113,12 +115,18 @@
 <script>
 
   // const componentsList = {};
+  import documentation from '../../../lib/components/Annotation/docs/index.json'
   import componentsList from '../../componentsList'
 
   export default {
     name: 'AppButtons',
+    data: ()=>({
+      documentation : {}
+    }),
     components: componentsList,
-    mounted() {},
+    mounted() {
+      this.documentation = documentation;
+    },
     created() {},
     methods: {},
   };
