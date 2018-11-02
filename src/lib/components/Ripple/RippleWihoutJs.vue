@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'RtRippleWithoutJs',
+  name: "RtRippleWithoutJs",
   mounted: function() {}
 };
 </script>

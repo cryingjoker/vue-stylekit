@@ -15,17 +15,14 @@
   </rt-banner>
 </template>
 <script>
-  import componentsList from "../../../componentsList";
-  // const componentsList = {};
+import componentsList from "../../../componentsList";
+// const componentsList = {};
 
-
-  export default {
-    name: "homeintehrnetPartBanner",
-    components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+export default {
+  name: "homeintehrnetPartBanner",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

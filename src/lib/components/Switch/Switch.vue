@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import { default as RippleComponent } from '../Ripple/Ripple.vue';
+import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
 
 export default {
-  name: 'RtSwitch',
+  name: "RtSwitch",
   components: componentsList,
   props: {
     isDisabled: {
@@ -26,17 +26,17 @@ export default {
     checked: {
       type: Boolean,
       default: false
-    },
+    }
   },
   mounted: function() {
     this.setValue();
   },
   methods: {
     setValue() {
-      this.$el.querySelector('.switch-element').checked = Boolean(this.checked);
+      this.$el.querySelector(".switch-element").checked = Boolean(this.checked);
     },
     inputHandler() {
-      this.$emit('change', this.$el.querySelector('.switch-element').checked);
+      this.$emit("change", this.$el.querySelector(".switch-element").checked);
       this.showWave();
     },
     showWave() {

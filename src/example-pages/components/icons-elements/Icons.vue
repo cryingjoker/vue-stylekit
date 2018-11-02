@@ -14,17 +14,13 @@
 </template>
 
 <script>
-
-
 const componentsList = {};
 
-
 export default {
-  name: 'AppIcons',
+  name: "AppIcons",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
-

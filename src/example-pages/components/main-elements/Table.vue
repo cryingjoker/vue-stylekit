@@ -9,7 +9,8 @@
         <div class="app-row row">
           <div class="rt-col rt-font-hypnens-off">
             <pre-code
-              text='<rt-table>
+              text='
+              <rt-table>
               <template slot="label">
                 Тарифы на добровольную блокировку
               </template>
@@ -48,7 +49,8 @@
                   <rt-table-item>7</rt-table-item>
                 </rt-table-row>
               </template>
-            </rt-table>'></pre-code>
+            </rt-table>
+            '></pre-code>
             <pre-code
               text='<rt-table>
               <template slot="label">
@@ -100,14 +102,12 @@
 
 
 <script>
-  import componentsList from "../../componentsList";
+import componentsList from "../../componentsList";
 
-  // const componentsList = {};
-  export default {
-    name: "AppTable",
-    components: componentsList,
-    mounted() {
-    }
-  };
+// const componentsList = {};
+export default {
+  name: "AppTable",
+  components: componentsList,
+  mounted() {}
+};
 </script>
-

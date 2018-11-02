@@ -32,13 +32,12 @@
 
 <script>
 // const componentsList = {};
-import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 export default {
-  name: 'AppSwitch',
+  name: "AppSwitch",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
-

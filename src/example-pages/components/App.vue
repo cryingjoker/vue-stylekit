@@ -187,36 +187,37 @@
 </template>
 
 <script>
-
-import  VueRtStyle from '../../lib/index'
-import componentsList from '../componentsList'
-if(window){
+import VueRtStyle from "../../lib/index";
+import componentsList from "../componentsList";
+if (window) {
   window.VueRtStyle = {};
   window.VueRtStyle.version = VueRtStyle.version;
 }
 
 const componentDirectives = {};
 
-componentDirectives[VueRtStyle.directives.SwipeRight.name] = VueRtStyle.directives.SwipeRight;
-componentDirectives[VueRtStyle.directives.SwipeLeft.name] = VueRtStyle.directives.SwipeLeft;
+componentDirectives[VueRtStyle.directives.SwipeRight.name] =
+  VueRtStyle.directives.SwipeRight;
+componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
+  VueRtStyle.directives.SwipeLeft;
 
 export default {
-  name: 'App',
+  name: "App",
   components: componentsList,
   data: () => ({
     showMenu: false,
     isPromo: false,
     showGrid: false,
-    isDarkTheme: false,
+    isDarkTheme: false
   }),
   watch: {
     $route(to, from) {
       this.showMenu = false;
-    },
+    }
   },
   directives: componentDirectives,
   created() {
-    if (this.$route.path.search('promo') >= 0) {
+    if (this.$route.path.search("promo") >= 0) {
       this.isPromo = true;
     }
   },
@@ -232,25 +233,24 @@ export default {
     },
 
     switchTheme(isChecked) {
-
-      const bodyClassList = document.body.classList.value.split(' ');
+      const bodyClassList = document.body.classList.value.split(" ");
       if (isChecked) {
-        bodyClassList.push('rt-dark-theme');
-        localStorage.setItem('rt-dark',1)
+        bodyClassList.push("rt-dark-theme");
+        localStorage.setItem("rt-dark", 1);
         this.isDarkTheme = true;
       } else {
-        bodyClassList.splice(bodyClassList.indexOf('rt-dark-theme'), 1);
-        localStorage.setItem('rt-dark',0)
+        bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1);
+        localStorage.setItem("rt-dark", 0);
         this.isDarkTheme = false;
       }
-      document.body.classList = bodyClassList.join(' ');
-    },
+      document.body.classList = bodyClassList.join(" ");
+    }
   },
-  mounted(){
-    if(!!+localStorage.getItem('rt-dark')){
-      const bodyClassList = document.body.classList.value.split(' ');
-      bodyClassList.push('rt-dark-theme');
-      document.body.classList = bodyClassList.join(' ');
+  mounted() {
+    if (!!+localStorage.getItem("rt-dark")) {
+      const bodyClassList = document.body.classList.value.split(" ");
+      bodyClassList.push("rt-dark-theme");
+      document.body.classList = bodyClassList.join(" ");
 
       this.isDarkTheme = true;
     }

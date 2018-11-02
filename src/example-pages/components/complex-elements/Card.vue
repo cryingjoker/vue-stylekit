@@ -686,17 +686,13 @@
   </div>
 </template>
 <script>
+import componentsList from "../../componentsList";
 
-  import componentsList from '../../componentsList';
-
-  export default {
-    name: "AppButtons",
-    components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+export default {
+  name: "AppButtons",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>
-

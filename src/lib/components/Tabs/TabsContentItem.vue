@@ -2,7 +2,7 @@
 const componentsList = {};
 
 export default {
-  name: 'RtTabsContentItem',
+  name: "RtTabsContentItem",
   components: componentsList,
   props: {
     name: {

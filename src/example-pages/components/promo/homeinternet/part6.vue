@@ -339,17 +339,14 @@
   </rt-fullscreen-image>
 </template>
 <script>
-  import componentsList from "../../../componentsList";
-  // const componentsList = {};
+import componentsList from "../../../componentsList";
+// const componentsList = {};
 
-
-  export default {
-    name: "homeintehrnetPart6",
-    components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+export default {
+  name: "homeintehrnetPart6",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

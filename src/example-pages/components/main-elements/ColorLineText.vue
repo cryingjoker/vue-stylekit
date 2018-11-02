@@ -97,16 +97,14 @@
 
 
 <script>
-  const componentsList = {};
+const componentsList = {};
 
-  export default {
-    name: "AppColorLineText",
-    components: componentsList,
+export default {
+  name: "AppColorLineText",
+  components: componentsList,
 
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

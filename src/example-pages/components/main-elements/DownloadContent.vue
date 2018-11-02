@@ -25,14 +25,13 @@
   </div>
 </template>
 <script>
-
 // const componentsList = {};
-import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 export default {
-  name: 'AppDownloadContent',
+  name: "AppDownloadContent",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>

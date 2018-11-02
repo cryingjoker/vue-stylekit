@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: 'RtSelect',
+  name: "RtSelect",
   props: {
     hasError: {
       type: Boolean,
@@ -28,7 +28,7 @@ export default {
     },
     label: {
       type: String,
-      default: ''
+      default: ""
     },
     value: {
       type: String,
@@ -50,14 +50,14 @@ export default {
       type: [String, Number],
       default: null
     },
-    resetWrapperWidth:{
+    resetWrapperWidth: {
       type: Boolean,
       default: false
     }
   },
   data() {
     return {
-      localValue: this.text ? this.value : '',
+      localValue: this.text ? this.value : "",
       RtSelect: {
         setValue: this.setValue,
         selectedValue: this.text
@@ -70,22 +70,22 @@ export default {
   computed: {
     selectClasses() {
       return {
-        'select--error text-field--error': this.hasError,
-        'select--is-open': this.isOpen,
-        'select--is-reset-width' : this.resetWrapperWidth,
-        'select--disabled': Boolean(this.disabled),
-        'select--invert-open-list': this.isOpenListOnTop
+        "select--error text-field--error": this.hasError,
+        "select--is-open": this.isOpen,
+        "select--is-reset-width": this.resetWrapperWidth,
+        "select--disabled": Boolean(this.disabled),
+        "select--invert-open-list": this.isOpenListOnTop
       };
     },
-    selectListStyle(){
-      if(this.dropdownMinWidth){
+    selectListStyle() {
+      if (this.dropdownMinWidth) {
         let width = this.dropdownMinWidth;
-        if(typeof this.dropdownMinWidth === 'number'){
-          width = width+'px';
+        if (typeof this.dropdownMinWidth === "number") {
+          width = width + "px";
         }
         return {
-          'min-width': width
-        }
+          "min-width": width
+        };
       }
     }
   },
@@ -95,7 +95,7 @@ export default {
   },
   watch: {
     localValue(val) {
-      this.$emit('input', val);
+      this.$emit("input", val);
     }
   },
   beforeDestroy() {
@@ -112,7 +112,7 @@ export default {
       this.emitSelected(this.localValue);
       this.isOpen = false;
       this.removeBindEvents();
-      this.$emit('select', data);
+      this.$emit("select", data);
     },
     toggleOpen(e) {
       if (!this.disabled) {
@@ -131,10 +131,10 @@ export default {
       }
     },
     emitSelected(value) {
-      this.$emit('rt-selected', value);
+      this.$emit("rt-selected", value);
     },
     bindMouseEvents(e) {
-      if (!e.target.closest('.select--is-open')) {
+      if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
       }
@@ -147,11 +147,11 @@ export default {
         if (e.keyCode === 38 || e.keyCode === 40) {
           e.preventDefault();
           e.stopPropagation();
-          let selectedItem = this.$el.querySelector('.select-option--select');
+          let selectedItem = this.$el.querySelector(".select-option--select");
           const focusedItem = this.$el.querySelector(
-            '.select-option__inner:focus'
+            ".select-option__inner:focus"
           );
-          const optionItems = this.$el.querySelectorAll('.select-option');
+          const optionItems = this.$el.querySelectorAll(".select-option");
           const optionItemsLength = optionItems.length;
           if (focusedItem) {
             selectedItem = focusedItem.parentNode;
@@ -168,21 +168,25 @@ export default {
               (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
           }
           optionItems[selectedIndex]
-            .querySelector('.select-option__inner')
+            .querySelector(".select-option__inner")
             .focus();
         }
       }
     },
     removeBindEvents() {
-      document.removeEventListener('click', this.bindMouseEvents);
-      document.removeEventListener('keydown', this.bindKeyboardEvents);
+      document.removeEventListener("click", this.bindMouseEvents);
+      document.removeEventListener("keydown", this.bindKeyboardEvents);
     },
     bindEvents() {
-      document.addEventListener('click', this.bindMouseEvents, {passive: false});
-      document.addEventListener('keydown', this.bindKeyboardEvents, {passive: false});
+      document.addEventListener("click", this.bindMouseEvents, {
+        passive: false
+      });
+      document.addEventListener("keydown", this.bindKeyboardEvents, {
+        passive: false
+      });
     },
     scrollToSelected() {
-      const selectElement = this.$el.querySelector('.select-option--select');
+      const selectElement = this.$el.querySelector(".select-option--select");
       if (selectElement) {
         const scrollPosition =
           selectElement.offsetTop - selectElement.parentNode.offsetTop;
@@ -190,6 +194,5 @@ export default {
       }
     }
   }
-
 };
 </script>

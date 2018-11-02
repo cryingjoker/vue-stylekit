@@ -228,16 +228,13 @@
 </template>
 
 <script>
-
-  const componentsList = {};
-
+const componentsList = {};
 
 export default {
-  name: 'AppGridElements',
+  name: "AppGridElements",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
-

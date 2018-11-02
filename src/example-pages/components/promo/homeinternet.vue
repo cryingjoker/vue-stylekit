@@ -254,31 +254,28 @@
 
 
 <script>
-  import componentsList from "../../componentsList";
-  import HomeinternetPart1 from "./homeinternet/part1.vue";
-  import HomeinternetPart2 from "./homeinternet/part2.vue";
+import componentsList from "../../componentsList";
+import HomeinternetPart1 from "./homeinternet/part1.vue";
+import HomeinternetPart2 from "./homeinternet/part2.vue";
 
-  import HomeinternetPart4 from "./homeinternet/part4.vue";
-  import HomeinternetPart5 from "./homeinternet/part5.vue";
-  import HomeinternetPart6 from "./homeinternet/part6.vue";
-  import HomeinternetPart7 from "./homeinternet/part7.vue";
+import HomeinternetPart4 from "./homeinternet/part4.vue";
+import HomeinternetPart5 from "./homeinternet/part5.vue";
+import HomeinternetPart6 from "./homeinternet/part6.vue";
+import HomeinternetPart7 from "./homeinternet/part7.vue";
 
-  componentsList[HomeinternetPart1.name] = HomeinternetPart1;
-  componentsList[HomeinternetPart2.name] = HomeinternetPart2;
+componentsList[HomeinternetPart1.name] = HomeinternetPart1;
+componentsList[HomeinternetPart2.name] = HomeinternetPart2;
 
-  componentsList[HomeinternetPart4.name] = HomeinternetPart4;
-  componentsList[HomeinternetPart5.name] = HomeinternetPart5;
-  componentsList[HomeinternetPart6.name] = HomeinternetPart6;
-  componentsList[HomeinternetPart7.name] = HomeinternetPart7;
+componentsList[HomeinternetPart4.name] = HomeinternetPart4;
+componentsList[HomeinternetPart5.name] = HomeinternetPart5;
+componentsList[HomeinternetPart6.name] = HomeinternetPart6;
+componentsList[HomeinternetPart7.name] = HomeinternetPart7;
 
-
-  export default {
-    name: "Homeinternet",
-    components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+export default {
+  name: "Homeinternet",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

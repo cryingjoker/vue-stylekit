@@ -1,0 +1,28 @@
+{
+  "items" : [
+    {
+
+      "name" : "rt-inline-dropdown",
+      "proporty" : "resize-steps",
+      "type" : ["Number[]"],
+      "description" : "Ширина пересчета размеров",
+      "value" : "[]"
+    },
+    {
+
+      "name" : "rt-inline-dropdown",
+      "proporty" : "dropdown-min-width",
+      "type" : ["Number"],
+      "description" : "Минимальная ширина выпадающего списка",
+      "value" : "null"
+    },
+    {
+
+      "name" : "rt-inline-dropdown-item",
+      "proporty" : "is-active",
+      "type" : ["Boolean"],
+      "description" : "Активный элемент в выпадающем списке по default",
+      "value" : "false"
+    }
+  ]
+}

@@ -8,17 +8,17 @@
 
 <script>
 export default {
-  name: 'RtBannerPaginatorItem',
+  name: "RtBannerPaginatorItem",
   props: {
     index: {
       type: Number,
       default: null
     },
-    sleepTime:{
+    sleepTime: {
       type: Number,
       default: null
     },
-    isPause:{
+    isPause: {
       type: Boolean,
       default: false
     }
@@ -37,25 +37,24 @@ export default {
     paginatorItemClass() {
       const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
-        classArray['rt-banner--run-timer'] = true;
+        classArray["rt-banner--run-timer"] = true;
       }
-      if(this.isPause){
-          classArray['rt-banner--pause'] = true;
+      if (this.isPause) {
+        classArray["rt-banner--pause"] = true;
       }
       return classArray;
     },
-    paginatorItemStyle(){
-      if(this.sleepTime){
+    paginatorItemStyle() {
+      if (this.sleepTime) {
         return {
-          animationDuration: this.sleepTime/1000 +'s'
-        }
+          animationDuration: this.sleepTime / 1000 + "s"
+        };
       }
     },
     paginatorItemIconClass() {
       const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
-        classArray['circle-switcher__item--active'] = true;
-
+        classArray["circle-switcher__item--active"] = true;
       }
       return classArray;
     }

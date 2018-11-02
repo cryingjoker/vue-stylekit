@@ -121,13 +121,12 @@
 </template>
 
 <script>
-
 const componentsList = {};
 export default {
-  name: 'AppTypography',
+  name: "AppTypography",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>

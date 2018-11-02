@@ -1,6 +1,6 @@
 <script type="text/jsx">
 export default {
-  name: 'RtPrice',
+  name: "RtPrice",
   props: {
     value: {
       type: Number,
@@ -13,11 +13,11 @@ export default {
     },
     currency: {
       type: String,
-      default: 'руб'
+      default: "руб"
     },
     timeInterval: {
       type: String,
-      default: 'мес'
+      default: "мес"
     },
     isOption: {
       type: Boolean,
@@ -31,28 +31,28 @@ export default {
   data() {
     return {
       normalizeValue: this.value
-        ? (parseInt(this.value) + '').replace(
+        ? (parseInt(this.value) + "").replace(
             /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            '$1 '
+            "$1 "
           )
         : this.value,
       normalizeOldValue: this.oldValue
-        ? (parseInt(this.oldValue) + '').replace(
+        ? (parseInt(this.oldValue) + "").replace(
             /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            '$1 '
+            "$1 "
           )
         : this.oldValue,
       priceType: (() => {
         if (this.onlyPrice) {
-          return 'only-price';
+          return "only-price";
         }
         if (this.oldValue) {
-          return 'oldval-price';
+          return "oldval-price";
         }
         if (this.isOption) {
-          return 'option-price';
+          return "option-price";
         }
-        return 'simple-price';
+        return "simple-price";
       })(),
       normalizeCurrency: this.currency,
       normalizeTimeInterval: this.timeInterval
@@ -71,7 +71,7 @@ export default {
   mounted: function() {},
   render: function(h) {
     switch (this.priceType) {
-      case 'only-price':
+      case "only-price":
         return (
           <div class="rt-price rt-price-without-space">
             <div class="rt-price__value">{this.normalizeValue}</div>
@@ -81,7 +81,7 @@ export default {
           </div>
         );
         break;
-      case 'oldval-price':
+      case "oldval-price":
         return (
           <div class="rt-price rt-price-without-space">
             <div class="rt-price__old-value">{this.normalizeOldValue}</div>
@@ -94,7 +94,7 @@ export default {
             </div>
           </div>
         );
-      case 'option-price':
+      case "option-price":
         return (
           <div class="rt-price rt-price-without-space">
             <div class="rt-price__opinion">от</div>

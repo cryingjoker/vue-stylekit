@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'RtInputWithoutJs',
+  name: "RtInputWithoutJs",
   props: {
     disabled: {
       type: Boolean,
@@ -29,7 +29,7 @@ export default {
     },
     value: {
       type: String,
-      default: '',
+      default: "",
       required: true
     },
     isWhite: {
@@ -38,14 +38,14 @@ export default {
     }
   },
   data: () => ({
-    inputText: ''
+    inputText: ""
   }),
   mounted: function() {
     this.setDisabled();
   },
   methods: {
     setDisabled() {
-      this.$el.querySelector('.input-element').disabled = Boolean(
+      this.$el.querySelector(".input-element").disabled = Boolean(
         this.disabled
       );
     }

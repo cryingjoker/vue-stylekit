@@ -61,17 +61,15 @@
 
 <script>
 // const componentsList = {};
-import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 export default {
-  name: 'AppInput',
+  name: "AppInput",
   components: componentsList,
   data: () => ({
-    inputModelValue: 'test',
+    inputModelValue: "test"
   }),
-  mounted() {
-  },
+  mounted() {},
   created() {},
-  methods: {
-  },
+  methods: {}
 };
 </script>

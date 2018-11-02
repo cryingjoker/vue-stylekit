@@ -8,7 +8,51 @@
         </div>
       </div>
       <div class="app-body">
-        <div class="row">
+        <div class="app-row">
+          <p class="rt-font-h3">buttons with js ripple</p>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
+            <pre-code text='<rt-button class="rt-button-purple">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-orange">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-purple-border">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-orange-border">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-white">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-transparent">Подключить</rt-button>'></pre-code>
+          </div>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
+            <pre-code text='<rt-button class="rt-button-small rt-button-purple">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-small rt-button-orange">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-small rt-button-purple-border">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-small rt-button-orange-border">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-small rt-button-white">Подключить</rt-button>'></pre-code>
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code text='<rt-button class="rt-button-small rt-button-transparent">Подключить</rt-button>'></pre-code>
+          </div>
+        </div>
+
+        <div class="row rt-space-top">
           <div class="rt-col">
             <p class="rt-font-h3">simple buttons</p>
           </div>
@@ -126,49 +170,6 @@
             <pre-code text=' <rt-button-without-ripple class="rt-button-small rt-button-white" disabled>Подключить</rt-button-without-ripple>'></pre-code>
           </div>
         </div>
-        <div class="app-row">
-          <p class="rt-font-h3">buttons with js ripple</p>
-        </div>
-        <div class="app-row row">
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
-            <pre-code text='<rt-button class="rt-button-purple">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-orange">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-purple-border">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-orange-border">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-white">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-transparent">Подключить</rt-button>'></pre-code>
-          </div>
-        </div>
-        <div class="app-row row">
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
-            <pre-code text='<rt-button class="rt-button-small rt-button-purple">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-small rt-button-orange">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-small rt-button-purple-border">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-small rt-button-orange-border">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-small rt-button-white">Подключить</rt-button>'></pre-code>
-          </div>
-          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
-            <pre-code text='<rt-button class="rt-button-small rt-button-transparent">Подключить</rt-button>'></pre-code>
-          </div>
-        </div>
 
 
         <div class="app-row">
@@ -188,14 +189,12 @@
 </template>
 
 <script>
-
-  import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 export default {
-  name: 'AppButtons',
+  name: "AppButtons",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>
-

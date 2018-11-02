@@ -6,232 +6,1514 @@
           <h1 class="rt-font-hero rt-col">Space class elements</h1>
         </div>
       </div>
-      <div class="app-body">
-          <div class="rt-col-12">
-            <div class="app-documentation">
-              <div class="app-documentation__row">
-                <div class="app-documentation__label rt-col-4">Class name</div>
-                <div class="app-documentation__label rt-col-8">Description</div>
-              </div>
-
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left15</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 30px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left2</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left25</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 50px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left3</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 60px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-right</div>
-                <div class="app-documentation__name rt-col-8">padding-right: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-right2</div>
-                <div class="app-documentation__name rt-col-8">padding-right: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-left05</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 10px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-right05</div>
-                <div class="app-documentation__name rt-col-8">padding-right: 10px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top05</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 10px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top15</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 30px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top2</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top25</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 50px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top3</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 60px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top35</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 70px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top4</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 80px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-top6</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 120px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom05</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 10px</div>
-              </div>
-
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom15</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 30px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom2</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom25</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 50px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom3</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 60px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom35</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 70px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom4</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 80px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-bottom5</div>
-                <div class="app-documentation__name rt-col-8">padding-bottom: 100px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-vertical</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 20px <br> padding-bottom: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-vertical05</div>
-                <div class="app-documentation__name rt-col-8">padding-top: 10px <br> padding-bottom: 10px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-space-horizontal</div>
-                <div class="app-documentation__name rt-col-8">padding-left: 20px <br> padding-right: 20px</div>
-              </div>
-
-
-
-
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-horizontal-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-left: 0px <br> padding-right: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-vetical-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 0px <br> padding-bottom: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-top-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-bottom-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-bottom: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-left-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-left: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-right-none</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-right: 0px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-left</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-left: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-right</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br>  padding-right: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-right2</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-right: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-top05</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 10px </div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-top</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 20px </div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-top2</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-bottom</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-bottom: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-bottom2</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-bottom: 40px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-vertical</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-top: 20px <br> padding-bottom: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-horizontal</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-left: 20px <br> padding-right: 20px</div>
-              </div>
-              <div class="app-documentation__row rt-space-vertical">
-                <div class="app-documentation__name rt-col-4">.rt-md-space-horizontal05</div>
-                <div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code--fill">for mobile</span> <br> padding-left: 10px <br> padding-right: 10px</div>
-              </div>
-              <!--<div class="app-documentation__row rt-space-vertical">-->
-                <!--<div class="app-documentation__name rt-col-4">.rt-space-md-horizontal</div>-->
-                <!--<div class="app-documentation__name rt-col-8"><span class="rt-code rt-font-label rt-code&#45;&#45;fill">for mobile</span> <br> padding-left: 20px <br> padding-right: 20px</div>-->
-              <!--</div>-->
-
-
-            </div>
-          </div>
+      <div class="app-body rt-space-top25">
+        <div class="rt-col-12">
+          <rt-tabs>
+            <template slot="navigation">
+              <rt-tabs-nav-item name="all">All devices</rt-tabs-nav-item>
+              <rt-tabs-nav-item name="tablet">Tablet devices</rt-tabs-nav-item>
+              <rt-tabs-nav-item name="mobile">Mobile devices</rt-tabs-nav-item>
+            </template>
+            <template slot="content">
+              <rt-tabs-content-item name="all">
+                <documentation-builder type="classStyle" label="all width" :json="json"></documentation-builder>
+              </rt-tabs-content-item>
+              <rt-tabs-content-item name="tablet">
+                <documentation-builder type="classStyle" :label="'max-width: '+variables['tablet-step-size']" :json="tabletJson"></documentation-builder>
+              </rt-tabs-content-item>
+              <rt-tabs-content-item name="mobile">
+                <documentation-builder type="classStyle" :label="'max-width: '+variables['mobile-step-size']" :json="mobileJson"></documentation-builder>
+              </rt-tabs-content-item>
+            </template>
+          </rt-tabs>
+        </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-
   const componentsList = {};
+  import variables from '../../../lib/variables.json'
+  export default {
+    name: "AppGridElements",
+    components: componentsList,
+    mounted() {
+    },
+    created() {
+    },
+    data() {
+      return {
+        "variables": variables,
+        "json": {
+          "items": [
+            {
+              "name": ".rt-space-left",
+              "description": "`padding-left: 20px`"
+            },
+            {
+              "name": ".rt-space-left15",
+              "description": "`padding-left: 30px`"
+            },
+            {
+              "name": ".rt-space-left2",
+              "description": "`padding-left: 40px`"
+            },
+            {
+              "name": ".rt-space-left25",
+              "description": "`padding-left: 50px`"
+            },
+            {
+              "name": ".rt-space-left3",
+              "description": "`padding-left: 60px`"
+            },
+            {
+              "name": ".rt-space-left35",
+              "description": "`padding-left: 70px`"
+            },
+            {
+              "name": ".rt-space-left4",
+              "description": "`padding-left: 80px`"
+            },
+            {
+              "name": ".rt-space-left45",
+              "description": "`padding-left: 90px`"
+            },
+            {
+              "name": ".rt-space-left5",
+              "description": "`padding-left: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left55",
+              "description": "`padding-left: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left6",
+              "description": "`padding-left: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left65",
+              "description": "`padding-left: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left7",
+              "description": "`padding-left: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left75",
+              "description": "`padding-left: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left8",
+              "description": "`padding-left: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left85",
+              "description": "`padding-left: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-left9",
+              "description": "`padding-left: 180px`"
+            },
 
+            {
+              "name": ".rt-space-right",
+              "description": "`padding-right: 20px`"
+            },
+            {
+              "name": ".rt-space-right15",
+              "description": "`padding-right: 30px`"
+            },
+            {
+              "name": ".rt-space-right2",
+              "description": "`padding-right: 40px`"
+            },
+            {
+              "name": ".rt-space-right25",
+              "description": "`padding-right: 50px`"
+            },
+            {
+              "name": ".rt-space-right3",
+              "description": "`padding-right: 60px`"
+            },
+            {
+              "name": ".rt-space-right35",
+              "description": "`padding-right: 70px`"
+            },
+            {
+              "name": ".rt-space-right4",
+              "description": "`padding-right: 80px`"
+            },
+            {
+              "name": ".rt-space-right45",
+              "description": "`padding-right: 90px`"
+            },
+            {
+              "name": ".rt-space-right5",
+              "description": "`padding-right: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right55",
+              "description": "`padding-right: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right6",
+              "description": "`padding-right: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right65",
+              "description": "`padding-right: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right7",
+              "description": "`padding-right: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right75",
+              "description": "`padding-right: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right8",
+              "description": "`padding-right: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right85",
+              "description": "`padding-right: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-right9",
+              "description": "`padding-right: 180px`"
+            },
 
-export default {
-  name: 'AppGridElements',
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {},
-};
+            {
+              "name": ".rt-space-top",
+              "description": "`padding-top: 20px`"
+            },
+            {
+              "name": ".rt-space-top15",
+              "description": "`padding-top: 30px`"
+            },
+            {
+              "name": ".rt-space-top2",
+              "description": "`padding-top: 40px`"
+            },
+            {
+              "name": ".rt-space-top25",
+              "description": "`padding-top: 50px`"
+            },
+            {
+              "name": ".rt-space-top3",
+              "description": "`padding-top: 60px`"
+            },
+            {
+              "name": ".rt-space-top35",
+              "description": "`padding-top: 70px`"
+            },
+            {
+              "name": ".rt-space-top4",
+              "description": "`padding-top: 80px`"
+            },
+            {
+              "name": ".rt-space-top45",
+              "description": "`padding-top: 90px`"
+            },
+            {
+              "name": ".rt-space-top5",
+              "description": "`padding-top: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top55",
+              "description": "`padding-top: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top6",
+              "description": "`padding-top: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top65",
+              "description": "`padding-top: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top7",
+              "description": "`padding-top: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top75",
+              "description": "`padding-top: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top8",
+              "description": "`padding-top: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top85",
+              "description": "`padding-top: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top9",
+              "description": "`padding-top: 180px`"
+            },
+            {
+              "name": ".rt-space-bottom",
+              "description": "`padding-bottom: 20px`"
+            },
+            {
+              "name": ".rt-space-bottom15",
+              "description": "`padding-bottom: 30px`"
+            },
+            {
+              "name": ".rt-space-bottom2",
+              "description": "`padding-bottom: 40px`"
+            },
+            {
+              "name": ".rt-space-bottom25",
+              "description": "`padding-bottom: 50px`"
+            },
+            {
+              "name": ".rt-space-bottom3",
+              "description": "`padding-bottom: 60px`"
+            },
+            {
+              "name": ".rt-space-bottom35",
+              "description": "`padding-bottom: 70px`"
+            },
+            {
+              "name": ".rt-space-bottom4",
+              "description": "`padding-bottom: 80px`"
+            },
+            {
+              "name": ".rt-space-bottom45",
+              "description": "`padding-bottom: 90px`"
+            },
+            {
+              "name": ".rt-space-bottom5",
+              "description": "`padding-bottom: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom55",
+              "description": "`padding-bottom: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom6",
+              "description": "`padding-bottom: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom65",
+              "description": "`padding-bottom: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom7",
+              "description": "`padding-bottom: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom75",
+              "description": "`padding-bottom: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom8",
+              "description": "`padding-bottom: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom85",
+              "description": "`padding-bottom: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom9",
+              "description": "`padding-bottom: 180px`"
+            },
+
+            {
+              "name": ".rt-space-vertical",
+              "description": "```padding-top: 20px \npadding-bottom: 20px```"
+            },
+            {
+              "name": ".rt-space-vertical15",
+              "description": "```padding-top: 30px \npadding-bottom: 30px```"
+            },
+            {
+              "name": ".rt-space-vertical2",
+              "description": "```padding-top: 40px \npadding-bottom: 40px```"
+            },
+            {
+              "name": ".rt-space-vertical25",
+              "description": "```padding-top: 50px \npadding-bottom: 50px```"
+            },
+            {
+              "name": ".rt-space-vertical3",
+              "description": "```padding-top: 60px \npadding-bottom: 60px```"
+            },
+            {
+              "name": ".rt-space-vertical35",
+              "description": "```padding-top: 70px \npadding-bottom: 70px```"
+            },
+            {
+              "name": ".rt-space-vertical4",
+              "description": "```padding-top: 80px \npadding-bottom: 80px```"
+            },
+            {
+              "name": ".rt-space-vertical45",
+              "description": "```padding-top: 90px \npadding-bottom: 90px```"
+            },
+            {
+              "name": ".rt-space-vertical5",
+              "description": "```padding-top 100px \npadding-bottom: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical55",
+              "description": "```padding-top 110px \npadding-bottom: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical6",
+              "description": "```padding-top 120px \npadding-bottom: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical65",
+              "description": "```padding-top 130px \npadding-bottom: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical7",
+              "description": "```padding-top 140px \npadding-bottom: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical75",
+              "description": "```padding-top 150px \npadding-bottom: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical8",
+              "description": "```padding-top 160px \npadding-bottom: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical85",
+              "description": "```padding-top 170px \npadding-bottom: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical9",
+              "description": "```padding-top 180px \npadding-bottom: 180px```"
+            },
+            {
+              "name": ".rt-space-horizontal",
+              "description": "```padding-left: 20px \npright-bottom: 20px```"
+            },
+            {
+              "name": ".rt-space-horizontal15",
+              "description": "```padding-left: 30px \npright-bottom: 30px```"
+            },
+            {
+              "name": ".rt-space-horizontal2",
+              "description": "```padding-left: 40px \npright-bottom: 40px```"
+            },
+            {
+              "name": ".rt-space-horizontal25",
+              "description": "```padding-left: 50px \npright-bottom: 50px```"
+            },
+            {
+              "name": ".rt-space-horizontal3",
+              "description": "```padding-left: 60px \npright-bottom: 60px```"
+            },
+            {
+              "name": ".rt-space-horizontal35",
+              "description": "```padding-left: 70px \npright-bottom: 70px```"
+            },
+            {
+              "name": ".rt-space-horizontal4",
+              "description": "```padding-left: 80px \npright-bottom: 80px```"
+            },
+            {
+              "name": ".rt-space-horizontal45",
+              "description": "```padding-left: 90px \npright-bottom: 90px```"
+            },
+            {
+              "name": ".rt-space-horizontal5",
+              "description": "```padding-left 100px \npadding-right: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal55",
+              "description": "```padding-left 110px \npadding-right: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal6",
+              "description": "```padding-left 120px \npadding-right: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal65",
+              "description": "```padding-left 130px \npadding-right: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal7",
+              "description": "```padding-left 140px \npadding-right: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal75",
+              "description": "```padding-left 150px \npadding-right: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal8",
+              "description": "```padding-left 160px \npadding-right: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal85",
+              "description": "```padding-left 170px \npadding-right: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal9",
+              "description": "```padding-left 180px \npadding-right: 180px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-horizontal-none",
+              "description": "```padding-left 0px \npadding-right: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-vertical-none",
+              "description": "```padding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-none",
+              "description": "```padding-left 0px \npadding-right: 0px \npadding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-top-none",
+              "description": "```padding-top: 0px```"
+
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-space-bottom-none",
+              "description": "```padding-bottom: 0px```"
+            }
+          ]
+        },
+        "tabletJson":{
+          items:[
+            {
+              "name": ".rt-td-space-left",
+              "description": "*for tablet* \n\n`padding-left: 20px`"
+            },
+            {
+              "name": ".rt-td-space-left15",
+              "description": "*for tablet* \n\n`padding-left: 30px`"
+            },
+            {
+              "name": ".rt-td-space-left2",
+              "description": "*for tablet* \n\n`padding-left: 40px`"
+            },
+            {
+              "name": ".rt-td-space-left25",
+              "description": "*for tablet* \n\n`padding-left: 50px`"
+            },
+            {
+              "name": ".rt-td-space-left3",
+              "description": "*for tablet* \n\n`padding-left: 60px`"
+            },
+            {
+              "name": ".rt-td-space-left35",
+              "description": "*for tablet* \n\n`padding-left: 70px`"
+            },
+            {
+              "name": ".rt-td-space-left4",
+              "description": "*for tablet* \n\n`padding-left: 80px`"
+            },
+            {
+              "name": ".rt-td-space-left45",
+              "description": "*for tablet* \n\n`padding-left: 90px`"
+            },
+            {
+              "name": ".rt-td-space-left5",
+              "description": "*for tablet* \n\n`padding-left: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left55",
+              "description": "*for tablet* \n\n`padding-left: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left6",
+              "description": "*for tablet* \n\n`padding-left: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left65",
+              "description": "*for tablet* \n\n`padding-left: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left7",
+              "description": "*for tablet* \n\n`padding-left: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left75",
+              "description": "*for tablet* \n\n`padding-left: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left8",
+              "description": "*for tablet* \n\n`padding-left: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left85",
+              "description": "*for tablet* \n\n`padding-left: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-left9",
+              "description": "*for tablet* \n\n`padding-left: 180px`"
+            },
+
+            {
+              "name": ".rt-td-space-right",
+              "description": "*for tablet* \n\n`padding-right: 20px`"
+            },
+            {
+              "name": ".rt-td-space-right15",
+              "description": "*for tablet* \n\n`padding-right: 30px`"
+            },
+            {
+              "name": ".rt-td-space-right2",
+              "description": "*for tablet* \n\n`padding-right: 40px`"
+            },
+            {
+              "name": ".rt-td-space-right25",
+              "description": "*for tablet* \n\n`padding-right: 50px`"
+            },
+            {
+              "name": ".rt-td-space-right3",
+              "description": "*for tablet* \n\n`padding-right: 60px`"
+            },
+            {
+              "name": ".rt-td-space-right35",
+              "description": "*for tablet* \n\n`padding-right: 70px`"
+            },
+            {
+              "name": ".rt-td-space-right4",
+              "description": "*for tablet* \n\n`padding-right: 80px`"
+            },
+            {
+              "name": ".rt-td-space-right45",
+              "description": "*for tablet* \n\n`padding-right: 90px`"
+            },
+            {
+              "name": ".rt-td-space-right5",
+              "description": "*for tablet* \n\n`padding-right: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right55",
+              "description": "*for tablet* \n\n`padding-right: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right6",
+              "description": "*for tablet* \n\n`padding-right: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right65",
+              "description": "*for tablet* \n\n`padding-right: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right7",
+              "description": "*for tablet* \n\n`padding-right: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right75",
+              "description": "*for tablet* \n\n`padding-right: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right8",
+              "description": "*for tablet* \n\n`padding-right: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right85",
+              "description": "*for tablet* \n\n`padding-right: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-right9",
+              "description": "*for tablet* \n\n`padding-right: 180px`"
+            },
+
+            {
+              "name": ".rt-td-space-top",
+              "description": "*for tablet* \n\n`padding-top: 20px`"
+            },
+            {
+              "name": ".rt-td-space-top15",
+              "description": "*for tablet* \n\n`padding-top: 30px`"
+            },
+            {
+              "name": ".rt-td-space-top2",
+              "description": "*for tablet* \n\n`padding-top: 40px`"
+            },
+            {
+              "name": ".rt-td-space-top25",
+              "description": "*for tablet* \n\n`padding-top: 50px`"
+            },
+            {
+              "name": ".rt-td-space-top3",
+              "description": "*for tablet* \n\n`padding-top: 60px`"
+            },
+            {
+              "name": ".rt-td-space-top35",
+              "description": "*for tablet* \n\n`padding-top: 70px`"
+            },
+            {
+              "name": ".rt-td-space-top4",
+              "description": "*for tablet* \n\n`padding-top: 80px`"
+            },
+            {
+              "name": ".rt-td-space-top45",
+              "description": "*for tablet* \n\n`padding-top: 90px`"
+            },
+            {
+              "name": ".rt-td-space-top5",
+              "description": "*for tablet* \n\n`padding-top: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top55",
+              "description": "*for tablet* \n\n`padding-top: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top6",
+              "description": "*for tablet* \n\n`padding-top: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top65",
+              "description": "*for tablet* \n\n`padding-top: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top7",
+              "description": "*for tablet* \n\n`padding-top: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top75",
+              "description": "*for tablet* \n\n`padding-top: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top8",
+              "description": "*for tablet* \n\n`padding-top: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top85",
+              "description": "*for tablet* \n\n`padding-top: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top9",
+              "description": "*for tablet* \n\n`padding-top: 180px`"
+            },
+            {
+              "name": ".rt-td-space-bottom",
+              "description": "*for tablet* \n\n`padding-bottom: 20px`"
+            },
+            {
+              "name": ".rt-td-space-bottom15",
+              "description": "*for tablet* \n\n`padding-bottom: 30px`"
+            },
+            {
+              "name": ".rt-td-space-bottom2",
+              "description": "*for tablet* \n\n`padding-bottom: 40px`"
+            },
+            {
+              "name": ".rt-td-space-bottom25",
+              "description": "*for tablet* \n\n`padding-bottom: 50px`"
+            },
+            {
+              "name": ".rt-td-space-bottom3",
+              "description": "*for tablet* \n\n`padding-bottom: 60px`"
+            },
+            {
+              "name": ".rt-td-space-bottom35",
+              "description": "*for tablet* \n\n`padding-bottom: 70px`"
+            },
+            {
+              "name": ".rt-td-space-bottom4",
+              "description": "*for tablet* \n\n`padding-bottom: 80px`"
+            },
+            {
+              "name": ".rt-td-space-bottom45",
+              "description": "*for tablet* \n\n`padding-bottom: 90px`"
+            },
+            {
+              "name": ".rt-td-space-bottom5",
+              "description": "*for tablet* \n\n`padding-bottom: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom55",
+              "description": "*for tablet* \n\n`padding-bottom: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom6",
+              "description": "*for tablet* \n\n`padding-bottom: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom65",
+              "description": "*for tablet* \n\n`padding-bottom: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom7",
+              "description": "*for tablet* \n\n`padding-bottom: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom75",
+              "description": "*for tablet* \n\n`padding-bottom: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom8",
+              "description": "*for tablet* \n\n`padding-bottom: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom85",
+              "description": "*for tablet* \n\n`padding-bottom: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom9",
+              "description": "*for tablet* \n\n`padding-bottom: 180px`"
+            },
+
+            {
+              "name": ".rt-td-space-vertical",
+              "description": "*for tablet* \n\n```padding-top: 20px \npadding-bottom: 20px```"
+            },
+            {
+              "name": ".rt-td-space-vertical15",
+              "description": "*for tablet* \n\n```padding-top: 30px \npadding-bottom: 30px```"
+            },
+            {
+              "name": ".rt-td-space-vertical2",
+              "description": "*for tablet* \n\n```padding-top: 40px \npadding-bottom: 40px```"
+            },
+            {
+              "name": ".rt-td-space-vertical25",
+              "description": "*for tablet* \n\n```padding-top: 50px \npadding-bottom: 50px```"
+            },
+            {
+              "name": ".rt-td-space-vertical3",
+              "description": "*for tablet* \n\n```padding-top: 60px \npadding-bottom: 60px```"
+            },
+            {
+              "name": ".rt-td-space-vertical35",
+              "description": "*for tablet* \n\n```padding-top: 70px \npadding-bottom: 70px```"
+            },
+            {
+              "name": ".rt-td-space-vertical4",
+              "description": "*for tablet* \n\n```padding-top: 80px \npadding-bottom: 80px```"
+            },
+            {
+              "name": ".rt-td-space-vertical45",
+              "description": "*for tablet* \n\n```padding-top: 90px \npadding-bottom: 90px```"
+            },
+            {
+              "name": ".rt-td-space-vertical5",
+              "description": "*for tablet* \n\n```padding-top 100px \npadding-bottom: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical55",
+              "description": "*for tablet* \n\n```padding-top 110px \npadding-bottom: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical6",
+              "description": "*for tablet* \n\n```padding-top 120px \npadding-bottom: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical65",
+              "description": "*for tablet* \n\n```padding-top 130px \npadding-bottom: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical7",
+              "description": "*for tablet* \n\n```padding-top 140px \npadding-bottom: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical75",
+              "description": "*for tablet* \n\n```padding-top 150px \npadding-bottom: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical8",
+              "description": "*for tablet* \n\n```padding-top 160px \npadding-bottom: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical85",
+              "description": "*for tablet* \n\n```padding-top 170px \npadding-bottom: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical9",
+              "description": "*for tablet* \n\n```padding-top 180px \npadding-bottom: 180px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal",
+              "description": "*for tablet* \n\n```padding-left: 20px \npright-bottom: 20px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal15",
+              "description": "*for tablet* \n\n```padding-left: 30px \npright-bottom: 30px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal2",
+              "description": "*for tablet* \n\n```padding-left: 40px \npright-bottom: 40px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal25",
+              "description": "*for tablet* \n\n```padding-left: 50px \npright-bottom: 50px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal3",
+              "description": "*for tablet* \n\n```padding-left: 60px \npright-bottom: 60px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal35",
+              "description": "*for tablet* \n\n```padding-left: 70px \npright-bottom: 70px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal4",
+              "description": "*for tablet* \n\n```padding-left: 80px \npright-bottom: 80px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal45",
+              "description": "*for tablet* \n\n```padding-left: 90px \npright-bottom: 90px```"
+            },
+            {
+              "name": ".rt-td-space-horizontal5",
+              "description": "*for tablet* \n\n```padding-left 100px \npadding-right: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal55",
+              "description": "*for tablet* \n\n```padding-left 110px \npadding-right: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal6",
+              "description": "*for tablet* \n\n```padding-left 120px \npadding-right: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal65",
+              "description": "*for tablet* \n\n```padding-left 130px \npadding-right: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal7",
+              "description": "*for tablet* \n\n```padding-left 140px \npadding-right: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal75",
+              "description": "*for tablet* \n\n```padding-left 150px \npadding-right: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal8",
+              "description": "*for tablet* \n\n```padding-left 160px \npadding-right: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal85",
+              "description": "*for tablet* \n\n```padding-left 170px \npadding-right: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal9",
+              "description": "*for tablet* \n\n```padding-left 180px \npadding-right: 180px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-horizontal-none",
+              "description": "*for tablet* \n\n```padding-left 0px \npadding-right: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-vertical-none",
+              "description": "*for tablet* \n\n```padding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-none",
+              "description": "*for tablet* \n\n```padding-left 0px \npadding-right: 0px \npadding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-top-none",
+              "description": "*for tablet* \n\n```padding-top: 0px```"
+
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-td-space-bottom-none",
+              "description": "*for tablet* \n\n```padding-bottom: 0px```"
+            }
+          ]
+        },
+        "mobileJson":{
+          "items":[
+            {
+              "name": ".rt-md-space-left",
+              "description": "*for mobile* \n\n`padding-left: 20px`"
+            },
+            {
+              "name": ".rt-md-space-left15",
+              "description": "*for mobile* \n\n`padding-left: 30px`"
+            },
+            {
+              "name": ".rt-md-space-left2",
+              "description": "*for mobile* \n\n`padding-left: 40px`"
+            },
+            {
+              "name": ".rt-md-space-left25",
+              "description": "*for mobile* \n\n`padding-left: 50px`"
+            },
+            {
+              "name": ".rt-md-space-left3",
+              "description": "*for mobile* \n\n`padding-left: 60px`"
+            },
+            {
+              "name": ".rt-md-space-left35",
+              "description": "*for mobile* \n\n`padding-left: 70px`"
+            },
+            {
+              "name": ".rt-md-space-left4",
+              "description": "*for mobile* \n\n`padding-left: 80px`"
+            },
+            {
+              "name": ".rt-md-space-left45",
+              "description": "*for mobile* \n\n`padding-left: 90px`"
+            },
+            {
+              "name": ".rt-md-space-left5",
+              "description": "*for mobile* \n\n`padding-left: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left55",
+              "description": "*for mobile* \n\n`padding-left: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left6",
+              "description": "*for mobile* \n\n`padding-left: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left65",
+              "description": "*for mobile* \n\n`padding-left: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left7",
+              "description": "*for mobile* \n\n`padding-left: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left75",
+              "description": "*for mobile* \n\n`padding-left: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left8",
+              "description": "*for mobile* \n\n`padding-left: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left85",
+              "description": "*for mobile* \n\n`padding-left: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-left9",
+              "description": "*for mobile* \n\n`padding-left: 180px`"
+            },
+
+            {
+              "name": ".rt-md-space-right",
+              "description": "*for mobile* \n\n`padding-right: 20px`"
+            },
+            {
+              "name": ".rt-md-space-right15",
+              "description": "*for mobile* \n\n`padding-right: 30px`"
+            },
+            {
+              "name": ".rt-md-space-right2",
+              "description": "*for mobile* \n\n`padding-right: 40px`"
+            },
+            {
+              "name": ".rt-md-space-right25",
+              "description": "*for mobile* \n\n`padding-right: 50px`"
+            },
+            {
+              "name": ".rt-md-space-right3",
+              "description": "*for mobile* \n\n`padding-right: 60px`"
+            },
+            {
+              "name": ".rt-md-space-right35",
+              "description": "*for mobile* \n\n`padding-right: 70px`"
+            },
+            {
+              "name": ".rt-md-space-right4",
+              "description": "*for mobile* \n\n`padding-right: 80px`"
+            },
+            {
+              "name": ".rt-md-space-right45",
+              "description": "*for mobile* \n\n`padding-right: 90px`"
+            },
+            {
+              "name": ".rt-md-space-right5",
+              "description": "*for mobile* \n\n`padding-right: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right55",
+              "description": "*for mobile* \n\n`padding-right: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right6",
+              "description": "*for mobile* \n\n`padding-right: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right65",
+              "description": "*for mobile* \n\n`padding-right: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right7",
+              "description": "*for mobile* \n\n`padding-right: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right75",
+              "description": "*for mobile* \n\n`padding-right: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right8",
+              "description": "*for mobile* \n\n`padding-right: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right85",
+              "description": "*for mobile* \n\n`padding-right: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-right9",
+              "description": "*for mobile* \n\n`padding-right: 180px`"
+            },
+
+            {
+              "name": ".rt-md-space-top",
+              "description": "*for mobile* \n\n`padding-top: 20px`"
+            },
+            {
+              "name": ".rt-md-space-top15",
+              "description": "*for mobile* \n\n`padding-top: 30px`"
+            },
+            {
+              "name": ".rt-md-space-top2",
+              "description": "*for mobile* \n\n`padding-top: 40px`"
+            },
+            {
+              "name": ".rt-md-space-top25",
+              "description": "*for mobile* \n\n`padding-top: 50px`"
+            },
+            {
+              "name": ".rt-md-space-top3",
+              "description": "*for mobile* \n\n`padding-top: 60px`"
+            },
+            {
+              "name": ".rt-md-space-top35",
+              "description": "*for mobile* \n\n`padding-top: 70px`"
+            },
+            {
+              "name": ".rt-md-space-top4",
+              "description": "*for mobile* \n\n`padding-top: 80px`"
+            },
+            {
+              "name": ".rt-md-space-top45",
+              "description": "*for mobile* \n\n`padding-top: 90px`"
+            },
+            {
+              "name": ".rt-md-space-top5",
+              "description": "*for mobile* \n\n`padding-top: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top55",
+              "description": "*for mobile* \n\n`padding-top: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top6",
+              "description": "*for mobile* \n\n`padding-top: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top65",
+              "description": "*for mobile* \n\n`padding-top: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top7",
+              "description": "*for mobile* \n\n`padding-top: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top75",
+              "description": "*for mobile* \n\n`padding-top: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top8",
+              "description": "*for mobile* \n\n`padding-top: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top85",
+              "description": "*for mobile* \n\n`padding-top: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top9",
+              "description": "*for mobile* \n\n`padding-top: 180px`"
+            },
+            {
+              "name": ".rt-md-space-bottom",
+              "description": "*for mobile* \n\n`padding-bottom: 20px`"
+            },
+            {
+              "name": ".rt-md-space-bottom15",
+              "description": "*for mobile* \n\n`padding-bottom: 30px`"
+            },
+            {
+              "name": ".rt-md-space-bottom2",
+              "description": "*for mobile* \n\n`padding-bottom: 40px`"
+            },
+            {
+              "name": ".rt-md-space-bottom25",
+              "description": "*for mobile* \n\n`padding-bottom: 50px`"
+            },
+            {
+              "name": ".rt-md-space-bottom3",
+              "description": "*for mobile* \n\n`padding-bottom: 60px`"
+            },
+            {
+              "name": ".rt-md-space-bottom35",
+              "description": "*for mobile* \n\n`padding-bottom: 70px`"
+            },
+            {
+              "name": ".rt-md-space-bottom4",
+              "description": "*for mobile* \n\n`padding-bottom: 80px`"
+            },
+            {
+              "name": ".rt-md-space-bottom45",
+              "description": "*for mobile* \n\n`padding-bottom: 90px`"
+            },
+            {
+              "name": ".rt-md-space-bottom5",
+              "description": "*for mobile* \n\n`padding-bottom: 100px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom55",
+              "description": "*for mobile* \n\n`padding-bottom: 110px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom6",
+              "description": "*for mobile* \n\n`padding-bottom: 120px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom65",
+              "description": "*for mobile* \n\n`padding-bottom: 130px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom7",
+              "description": "*for mobile* \n\n`padding-bottom: 140px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom75",
+              "description": "*for mobile* \n\n`padding-bottom: 150px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom8",
+              "description": "*for mobile* \n\n`padding-bottom: 160px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom85",
+              "description": "*for mobile* \n\n`padding-bottom: 170px`"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom9",
+              "description": "*for mobile* \n\n`padding-bottom: 180px`"
+            },
+
+            {
+              "name": ".rt-md-space-vertical",
+              "description": "*for mobile* \n\n```padding-top: 20px \npadding-bottom: 20px```"
+            },
+            {
+              "name": ".rt-md-space-vertical15",
+              "description": "*for mobile* \n\n```padding-top: 30px \npadding-bottom: 30px```"
+            },
+            {
+              "name": ".rt-md-space-vertical2",
+              "description": "*for mobile* \n\n```padding-top: 40px \npadding-bottom: 40px```"
+            },
+            {
+              "name": ".rt-md-space-vertical25",
+              "description": "*for mobile* \n\n```padding-top: 50px \npadding-bottom: 50px```"
+            },
+            {
+              "name": ".rt-md-space-vertical3",
+              "description": "*for mobile* \n\n```padding-top: 60px \npadding-bottom: 60px```"
+            },
+            {
+              "name": ".rt-md-space-vertical35",
+              "description": "*for mobile* \n\n```padding-top: 70px \npadding-bottom: 70px```"
+            },
+            {
+              "name": ".rt-md-space-vertical4",
+              "description": "*for mobile* \n\n```padding-top: 80px \npadding-bottom: 80px```"
+            },
+            {
+              "name": ".rt-md-space-vertical45",
+              "description": "*for mobile* \n\n```padding-top: 90px \npadding-bottom: 90px```"
+            },
+            {
+              "name": ".rt-md-space-vertical5",
+              "description": "*for mobile* \n\n```padding-top 100px \npadding-bottom: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical55",
+              "description": "*for mobile* \n\n```padding-top 110px \npadding-bottom: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical6",
+              "description": "*for mobile* \n\n```padding-top 120px \npadding-bottom: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical65",
+              "description": "*for mobile* \n\n```padding-top 130px \npadding-bottom: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical7",
+              "description": "*for mobile* \n\n```padding-top 140px \npadding-bottom: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical75",
+              "description": "*for mobile* \n\n```padding-top 150px \npadding-bottom: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical8",
+              "description": "*for mobile* \n\n```padding-top 160px \npadding-bottom: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical85",
+              "description": "*for mobile* \n\n```padding-top 170px \npadding-bottom: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical9",
+              "description": "*for mobile* \n\n```padding-top 180px \npadding-bottom: 180px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal",
+              "description": "*for mobile* \n\n```padding-left: 20px \npright-bottom: 20px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal15",
+              "description": "*for mobile* \n\n```padding-left: 30px \npright-bottom: 30px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal2",
+              "description": "*for mobile* \n\n```padding-left: 40px \npright-bottom: 40px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal25",
+              "description": "*for mobile* \n\n```padding-left: 50px \npright-bottom: 50px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal3",
+              "description": "*for mobile* \n\n```padding-left: 60px \npright-bottom: 60px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal35",
+              "description": "*for mobile* \n\n```padding-left: 70px \npright-bottom: 70px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal4",
+              "description": "*for mobile* \n\n```padding-left: 80px \npright-bottom: 80px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal45",
+              "description": "*for mobile* \n\n```padding-left: 90px \npright-bottom: 90px```"
+            },
+            {
+              "name": ".rt-md-space-horizontal5",
+              "description": "*for mobile* \n\n```padding-left 100px \npadding-right: 100px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal55",
+              "description": "*for mobile* \n\n```padding-left 110px \npadding-right: 110px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal6",
+              "description": "*for mobile* \n\n```padding-left 120px \npadding-right: 120px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal65",
+              "description": "*for mobile* \n\n```padding-left 130px \npadding-right: 130px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal7",
+              "description": "*for mobile* \n\n```padding-left 140px \npadding-right: 140px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal75",
+              "description": "*for mobile* \n\n```padding-left 150px \npadding-right: 150px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal8",
+              "description": "*for mobile* \n\n```padding-left 160px \npadding-right: 160px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal85",
+              "description": "*for mobile* \n\n```padding-left 170px \npadding-right: 170px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal9",
+              "description": "*for mobile* \n\n```padding-left 180px \npadding-right: 180px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-horizontal-none",
+              "description": "*for mobile* \n\n```padding-left 0px \npadding-right: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-vertical-none",
+              "description": "*for mobile* \n\n```padding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-none",
+              "description": "*for mobile* \n\n```padding-left 0px \npadding-right: 0px \npadding-top 0px \npadding-bottom: 0px```"
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-top-none",
+              "description": "*for mobile* \n\n```padding-top: 0px```"
+
+            },
+            {
+              "version": " \>= 0.0.17",
+              "name": ".rt-md-space-bottom-none",
+              "description": "*for mobile* \n\n```padding-bottom: 0px```"
+            }
+          ]
+        }
+      };
+    },
+    methods: {}
+  };
 </script>
-

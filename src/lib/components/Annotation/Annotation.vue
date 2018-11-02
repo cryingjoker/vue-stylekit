@@ -23,43 +23,39 @@
 
 
 <script>
-
-  export default {
-    name: 'RtAnnotation',
-    props: {
-      label: {
-        type: String,
-        default: null,
-        required: true
-      },
-      hasWhiteColor: {
-        type: Boolean,
-        default: false
-      }
+export default {
+  name: "RtAnnotation",
+  props: {
+    label: {
+      type: String,
+      default: null,
+      required: true
     },
-    data(){
+    hasWhiteColor: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      isOpen: false
+    };
+  },
+  components: {},
+  mounted() {},
+  created() {},
+  methods: {
+    toggleOpen() {
+      this.isOpen = !this.isOpen;
+    }
+  },
+  computed: {
+    annotationClasses() {
       return {
-        isOpen : false
-      }
-    },
-    components: {},
-    mounted() {
-    },
-    created() {},
-    methods: {
-      toggleOpen(){
-        this.isOpen = !this.isOpen;
-      }
-    },
-    computed: {
-      annotationClasses() {
-        return {
-          'rt-annotation--white-color': this.hasWhiteColor,
-          'rt-annotation--is-open': this.isOpen,
-
-        };
-      }
-    },
-  };
+        "rt-annotation--white-color": this.hasWhiteColor,
+        "rt-annotation--is-open": this.isOpen
+      };
+    }
+  }
+};
 </script>
-

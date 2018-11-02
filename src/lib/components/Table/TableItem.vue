@@ -1,54 +1,63 @@
 <script type="text/jsx">
-
-
-  export default {
-    name: "RtTableItem",
-    components: {},
-    inject: {
-      tableLabels: {}
+export default {
+  name: "RtTableItem",
+  components: {},
+  inject: {
+    tableLabels: {}
+  },
+  props: {
+    mobileWidth: {
+      type: String,
+      default: null
     },
-    props: {
-      mobileWidth:{
-        type: String,
-        default: null
-      },
-      verticalAlign: {
-        type: String,
-        default: null
-      },
-      align: {
-        type: String,
-        default: null
-      },
-      colspan: {
-        type: [Number, String],
-        default: 1
-      },
-      slotIndex: {
-        type: Number,
-        default: null
-      },
+    html: {
+      type: String,
+      default: null
     },
-    render: function(h) {
-      const style = {};
-      let classList = "rt-table-body__item";
-      if(this.verticalAlign){
-        style.verticalAlign = this.verticalAlign;
-      }
-      if(this.align){
-        style.textAlign = this.align;
-      }
-
-      if(this.mobileWidth){
-        if(this.mobileWidth === '50%'){
-          classList += ' rt-table-body__item--half-mobile-width';
-        }
-      }
-      return <div style={style} colspan={this.colspan} class={classList} label={this.tableLabels[this.slotIndex]}>
-        <div class="rt-table-body__content">
-          {this.$slots.default}
-        </div>
-        </div>;
+    verticalAlign: {
+      type: String,
+      default: null
+    },
+    align: {
+      type: String,
+      default: null
+    },
+    colspan: {
+      type: [Number, String],
+      default: 1
+    },
+    slotIndex: {
+      type: Number,
+      default: null
     }
-  };
+  },
+  render: function(h) {
+    const style = {};
+    let classList = "rt-table-body__item";
+    if (this.verticalAlign) {
+      style.verticalAlign = this.verticalAlign;
+    }
+    if (this.align) {
+      style.textAlign = this.align;
+    }
+
+    if (this.mobileWidth) {
+      if (this.mobileWidth === "50%") {
+        classList += " rt-table-body__item--half-mobile-width";
+      }
+    }
+
+
+    return (
+      <div
+        style={style}
+        colspan={this.colspan}
+        class={classList}
+        label={this.tableLabels[this.slotIndex]}
+      >
+        <div class="rt-table-body__content" domPropsInnerHTML={this.html}>{this.$slots.default}</div>
+      </div>
+    );
+  }
+};
 </script>

@@ -8,13 +8,13 @@
 
 <script>
 export default {
-  name: 'RtButtonWithoutRipple',
+  name: "RtButtonWithoutRipple",
   props: {
     isBlock: Boolean
   },
   methods: {
     triggerClick($event) {
-      this.$emit('click', $event);
+      this.$emit("click", $event);
     }
   }
 };

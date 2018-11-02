@@ -1,25 +1,24 @@
 
 <!--<rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"-->
 <script type="text/jsx">
-  import {Select} from '../index'
-  const componentsList = {};
-  componentsList[Select.name] = Select;
+import { Select } from "../index";
+const componentsList = {};
+componentsList[Select.name] = Select;
 export default {
-  name: 'RtInlineDropdown',
-  data:()=>({
+  name: "RtInlineDropdown",
+  data: () => ({
     resizeTypeEnum: 0,
     RtInlineDropdown: {
       minClientY: null,
       maxClientY: null,
       stepToClose: null,
       activeItem: null,
-      isDropdownMode: false,
+      isDropdownMode: false
     },
 
     dropdownStyle: null,
     idealHeight: null,
     dropdownStepWidth: null
-
   }),
   provide() {
     const RtInlineDropdown = this.RtInlineDropdown;
@@ -28,36 +27,39 @@ export default {
   components: {},
 
   props: {
-    resizeSteps:{
+    resizeSteps: {
       type: Array,
       default: []
     },
-    dropdownMinWidth:{
-      type: [Number,String]
+    dropdownMinWidth: {
+      type: [Number, String]
     }
   },
-  mounted(){
+  mounted() {
     this.stepCheck();
   },
   methods: {
-    stepCheck(step){
-      if(this.RtInlineDropdown.isDropdownMode) {
+    stepCheck(step) {
+      if (this.RtInlineDropdown.isDropdownMode) {
         this.RtInlineDropdown.isDropdownMode = false;
         this.stepCheck();
-      }else {
+      } else {
         let currentStep = step ? step : 0;
         let width = 2000 - 10 * currentStep;
-        let nowrap = '';
+        let nowrap = "";
         if (currentStep === 0) {
-          nowrap = 'flex-wrap: nowrap;';
+          nowrap = "flex-wrap: nowrap;";
 
-          this.$el.setAttribute('style', `${nowrap}`);
+          this.$el.setAttribute("style", `${nowrap}`);
         } else {
-          this.$el.removeAttribute('style');
+          this.$el.removeAttribute("style");
         }
-        const el = this.$el.querySelector('.rt-inline-dropdown__list');
-        if(el) {
-          el.setAttribute('style', `width: ${width}px!important; height:auto!important;${nowrap}`);
+        const el = this.$el.querySelector(".rt-inline-dropdown__list");
+        if (el) {
+          el.setAttribute(
+            "style",
+            `width: ${width}px!important; height:auto!important;${nowrap}`
+          );
           if (currentStep == 0) {
             this.idealHeight = el.clientHeight;
           }
@@ -65,61 +67,65 @@ export default {
             this.stepCheck(++currentStep);
           } else {
             this.dropdownStepWidth = width + 40;
-            el.removeAttribute('style');
+            el.removeAttribute("style");
             this.bindResize();
           }
         }
       }
     },
-    bindResize(){
-      window.addEventListener('resize',this.checkWidth,{passive: true});
+    bindResize() {
+      window.addEventListener("resize", this.checkWidth, { passive: true });
       this.checkWidth();
     },
-    checkWidth(){
+    checkWidth() {
       const currentClienWidth = this.$el.clientWidth;
 
       const isDropdownMode = currentClienWidth <= this.dropdownStepWidth;
-      if(this.RtInlineDropdown.isDropdownMode != isDropdownMode){
+      if (this.RtInlineDropdown.isDropdownMode != isDropdownMode) {
         this.RtInlineDropdown.isDropdownMode = isDropdownMode;
       }
-      if(this.resizeSteps && this.resizeSteps.length > 0){
+      if (this.resizeSteps && this.resizeSteps.length > 0) {
         const windowWidth = window.innerWidth;
 
-        let enumIndex = this.resizeSteps.findIndex((a)=>{
-          return windowWidth < parseInt(a)
-        })
-        if(enumIndex < 0){
+        let enumIndex = this.resizeSteps.findIndex(a => {
+          return windowWidth < parseInt(a);
+        });
+        if (enumIndex < 0) {
           enumIndex = this.resizeSteps.length;
         }
-        if(this.resizeTypeEnum !== enumIndex){
+        if (this.resizeTypeEnum !== enumIndex) {
           this.resizeTypeEnum = enumIndex;
-          this.stepCheck()
+          this.stepCheck();
         }
       }
     },
-    unbindResize(){
-      window.removeEventListener('resize',this.checkWidth);
+    unbindResize() {
+      window.removeEventListener("resize", this.checkWidth);
     }
-
   },
-  beforeDestroy(){
-    this.unbindResize()
+  beforeDestroy() {
+    this.unbindResize();
   },
-  updated(){
+  updated() {
     this.unbindResize();
     this.bindResize();
   },
-  render(){
-  return <div class="rt-inline-dropdown">
-    {this.RtInlineDropdown.isDropdownMode ? <rt-select text={this.RtInlineDropdown.activeItem} dropdown-min-width={this.dropdownMinWidth} reset-wrapper-width={true}>
-        {this.$slots.default}
-      </rt-select> :
-      <div class="rt-inline-dropdown__list">
-        {this.$slots.default}
+  render() {
+    return (
+      <div class="rt-inline-dropdown">
+        {this.RtInlineDropdown.isDropdownMode ? (
+          <rt-select
+            text={this.RtInlineDropdown.activeItem}
+            dropdown-min-width={this.dropdownMinWidth}
+            reset-wrapper-width={true}
+          >
+            {this.$slots.default}
+          </rt-select>
+        ) : (
+          <div class="rt-inline-dropdown__list">{this.$slots.default}</div>
+        )}
       </div>
-    }
-  </div>
+    );
   }
-
 };
 </script>
