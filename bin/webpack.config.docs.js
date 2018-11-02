@@ -22,6 +22,7 @@ const config = {
   resolve: {
     alias: {
       '@': resolve('src/app/dist/components'),
+      'vue$': 'vue/dist/vue.esm.js'
     },
   },
   optimization: {
