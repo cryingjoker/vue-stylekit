@@ -68,73 +68,74 @@
 
 
 <script>
-  import componentsList from "../../componentsList";
-  // const componentsList = {};
-  export default {
-    name: "AppTabs",
-    components: componentsList,
-    data() {
-      return {
-        metroList: [{
+import componentsList from "../../componentsList";
+// const componentsList = {};
+export default {
+  name: "AppTabs",
+  components: componentsList,
+  data() {
+    return {
+      metroList: [
+        {
           type: "gray",
           name: "Южная",
           id: "12"
         },
-          {
-            type: "gray",
-            name: "Пражская",
-            id: "12"
-          },
-          {
-            type: "light-blue",
-            name: "Улица Горчакова",
-            id: "12"
-          }]
-      };
-    },
-    mounted() {
-      setTimeout(() => {
-        this.metroList = [
-          {
-            type: "light-blue",
-            name: "Бульвар Адмирала Ушакова",
-            id: "12"
-          },
-          {
-            type: "light-blue",
-            name: "Улица Скобелевская",
-            id: "12"
-          },
-          {
-            type: "light-blue",
-            name: "Улица Старокачаловская",
-            id: "12"
-          },
-          {
-            type: "light-blue",
-            name: "Лесопарковая",
-            id: "12"
-          },
-          {
-            type: "light-blue",
-            name: "Битцевский Парк",
-            id: "12"
-          },
-          {
-            type: "pink",
-            name: "Окружная",
-            id: "12"
-          },
-          {
-            type: "pink",
-            name: "Владыкино",
-            id: "12"
-          }
-        ];
-      }, 500);
+        {
+          type: "gray",
+          name: "Пражская",
+          id: "12"
+        },
+        {
+          type: "light-blue",
+          name: "Улица Горчакова",
+          id: "12"
+        }
+      ]
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.metroList = [
+        {
+          type: "light-blue",
+          name: "Бульвар Адмирала Ушакова",
+          id: "12"
+        },
+        {
+          type: "light-blue",
+          name: "Улица Скобелевская",
+          id: "12"
+        },
+        {
+          type: "light-blue",
+          name: "Улица Старокачаловская",
+          id: "12"
+        },
+        {
+          type: "light-blue",
+          name: "Лесопарковая",
+          id: "12"
+        },
+        {
+          type: "light-blue",
+          name: "Битцевский Парк",
+          id: "12"
+        },
+        {
+          type: "pink",
+          name: "Окружная",
+          id: "12"
+        },
+        {
+          type: "pink",
+          name: "Владыкино",
+          id: "12"
+        }
+      ];
+    }, 500);
 
-      // https://itunes.apple.com/search?term=jack+johnson&limit=25
-    }
-  };
+    // https://itunes.apple.com/search?term=jack+johnson&limit=25
+  }
+};
 </script>
-

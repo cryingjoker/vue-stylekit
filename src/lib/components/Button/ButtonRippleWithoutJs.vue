@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import { default as RippleWihoutJsComponent } from '../Ripple/Ripple.vue';
+import { default as RippleWihoutJsComponent } from "../Ripple/Ripple.vue";
 
 const componentsList = {};
 componentsList[RippleWihoutJsComponent.name] = RippleWihoutJsComponent;
 export default {
-  name: 'RtButtonRippleWithoutJs',
+  name: "RtButtonRippleWithoutJs",
   components: componentsList,
   props: {
     isBlock: Boolean
@@ -20,7 +20,7 @@ export default {
   mounted: function() {},
   methods: {
     triggerClick($event) {
-      this.$emit('click', $event);
+      this.$emit("click", $event);
     }
   }
 };

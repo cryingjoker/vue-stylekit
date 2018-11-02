@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import { default as RippleComponent } from '../Ripple/Ripple.vue';
+import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
 export default {
-  name: 'RtCheckbox',
+  name: "RtCheckbox",
   components: componentsList,
 
   props: {
@@ -29,9 +29,9 @@ export default {
     }
   },
   methods: {
-    changeInput($event){
-      this.$emit('input', $event.target.checked);
-      this.showWave()
+    changeInput($event) {
+      this.$emit("input", $event.target.checked);
+      this.showWave();
     },
     showWave() {
       this.$refs.ripple.startRipple({

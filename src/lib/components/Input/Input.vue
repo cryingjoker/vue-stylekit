@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'RtInput',
+  name: "RtInput",
   props: {
     disabled: {
       type: Boolean,
@@ -34,7 +34,7 @@ export default {
     },
     value: {
       type: String,
-      default: '',
+      default: "",
       required: true
     },
     isWhite: {
@@ -44,49 +44,55 @@ export default {
   },
   data() {
     return {
-      localValue: this.value ? this.value : '',
+      localValue: this.value ? this.value : "",
       hasInputText: this.value ? this.value.length > 0 : false
     };
   },
   watch: {
     localValue(val) {
-      this.$emit('input', val);
+      this.$emit("input", val);
     }
   },
   mounted() {
     this.setValue();
     this.setDisabled();
-    this.bindEvents()
+    this.bindEvents();
   },
 
-  updated(){
+  updated() {
     this.unbindEvents();
     this.bindEvents();
   },
-  beforeDestroy(){
+  beforeDestroy() {
     this.unbindEvents();
   },
   methods: {
-    bindEvents(){
-      if(this['_events']) {
-        Object.keys(this['_events']).map((eventName) => {
-          this.$refs.input.addEventListener(eventName,this['_events'][eventName]);
-        })
+    bindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.addEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
       }
     },
-    unbindEvents(){
-      if(this['_events']) {
-        Object.keys(this['_events']).map((eventName) => {
-          this.$refs.input.removeEventListener(eventName,this['_events'][eventName]);
-        })
+    unbindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.removeEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
       }
     },
     setValue() {
-      this.$el.querySelector('.input-element').value = this.localValue;
+      this.$el.querySelector(".input-element").value = this.localValue;
       this.setValueLength();
     },
     setDisabled() {
-      this.$el.querySelector('.input-element').disabled = Boolean(
+      this.$el.querySelector(".input-element").disabled = Boolean(
         this.disabled
       );
     },
@@ -94,11 +100,11 @@ export default {
       this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
     },
     inputHandler($event) {
-      this.localValue = this.$el.querySelector('.input-element').value;
+      this.localValue = this.$el.querySelector(".input-element").value;
       this.setValueLength();
     },
     clearInput() {
-      this.localValue = '';
+      this.localValue = "";
       this.setValue();
     }
   }

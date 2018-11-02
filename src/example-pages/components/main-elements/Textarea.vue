@@ -83,13 +83,12 @@
 
 
 <script>
-
 const componentsList = {};
 export default {
-  name: 'AppTextarea',
+  name: "AppTextarea",
   components: componentsList,
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>

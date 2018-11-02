@@ -86,7 +86,7 @@ for devideStep in steps
         padding-left (horizontal-space/2)
   gridRender(devideStep[1],devicePrefix,devideStep[0],needMedia,media)
 
-  for $i in 1..10
+  for $i in 1..18
     step = $i * 5
     spaceRender(devicePrefix, needMedia, step, media)
 
@@ -347,7 +347,6 @@ for devideStep in steps
 
 
 
-
 .{newAppName}-pseudo-col {
   position absolute
   transition-timing-function ease-in-out
@@ -364,5 +363,97 @@ for devideStep in steps
     left 100%
   }
 }
+.rt-space-horizontal-none {
+  padding-left: 0
+  padding-right: 0
+}
+.rt-td-space-horizontal-none {
+  @media (max-width: tablet-step-size) {
+    padding-left: 0
+    padding-right: 0
+  }
+}
+.rt-md-space-horizontal-none {
+  @media (max-width: mobile-step-size) {
+    padding-left: 0
+    padding-right: 0
+  }
+}
 
+.rt-td-space-left-none {
+  padding-left: 0
+}
+.rt-td-space-left-none {
+  @media (max-width: tablet-step-size) {
+    padding-left: 0
+  }
+}
+.rt-md-space-left-none {
+  @media (max-width: mobile-step-size) {
+    padding-left: 0
+  }
+}
+
+.rt-space-right-none {
+  padding-right: 0
+}
+.rt-td-space-right-none {
+  @media (max-width: tablet-step-size) {
+    padding-right: 0
+  }
+}
+.rt-md-space-right-none {
+  @media (max-width: mobile-step-size) {
+    padding-right: 0
+  }
+}
+
+.rt-space-top-none {
+  padding-top: 0
+}
+.rt-td-space-top-none {
+  @media (max-width: tablet-step-size) {
+    padding-top: 0
+  }
+}
+.rt-md-space-top-none {
+  @media (max-width: mobile-step-size) {
+    padding-top: 0
+  }
+}
+.rt-space-top-none {
+  padding-top: 0
+}
+.rt-td-space-bottom-none {
+  @media (max-width: tablet-step-size) {
+    padding-bottom: 0
+  }
+}
+.rt-md-space-bottom-none {
+  @media (max-width: mobile-step-size) {
+    padding-bottom: 0
+  }
+}
+.rt-td-space-vertical-none {
+  padding-top: 0
+  padding-bottom: 0
+  padding-left: 0
+  padding-right: 0
+}
+.rt-td-space-vertical-none {
+  @media (max-width: tablet-step-size) {
+    padding-top: 0
+    padding-bottom: 0
+    padding-left: 0
+    padding-right: 0
+  }
+}
+.rt-md-space-vertical-none {
+  @media (max-width: mobile-step-size) {
+    padding-top: 0
+    padding-bottom: 0
+    padding-left: 0
+    padding-right: 0
+  }
+}
 

@@ -26,11 +26,11 @@
 const componentsList = {};
 
 export default {
-  name: 'AppInput',
+  name: "AppInput",
   components: componentsList,
   mounted() {},
   created() {},
 
-  methods: {},
+  methods: {}
 };
 </script>

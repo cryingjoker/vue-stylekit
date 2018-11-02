@@ -19,13 +19,13 @@
   </div>
 </template>
 <script>
-  import componentsList from '../../componentsList'
-  // const componentsList = {};
-  export default {
-    name: 'AppTypography',
-    components: componentsList,
-    mounted() {},
-    created() {},
-    methods: {},
-  };
+import componentsList from "../../componentsList";
+// const componentsList = {};
+export default {
+  name: "AppTypography",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

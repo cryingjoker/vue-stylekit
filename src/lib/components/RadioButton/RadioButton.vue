@@ -9,31 +9,31 @@
 </template>
 
 <script>
-import { default as RippleComponent } from '../Ripple/Ripple.vue';
+import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
 export default {
-  name: 'RtRadioButton',
+  name: "RtRadioButton",
   components: componentsList,
-  data(){
+  data() {
     return {
       isChecked: this.checked
-    }
+    };
   },
   props: {
     name: {
       type: String,
       default: null
     },
-    checked:{
+    checked: {
       type: Boolean,
       default: false
     },
-    value:{
+    value: {
       type: [String, Number],
       default: null
     },
-    model:{
+    model: {
       type: [String, Number],
       default: null
     },
@@ -42,24 +42,23 @@ export default {
       default: false
     }
   },
-  watch:{
-    model(){
+  watch: {
+    model() {
       this.checkModel();
     }
   },
   mounted() {
     this.checkModel();
-
   },
-  watch:{
-    model(){
+  watch: {
+    model() {
       this.checkModel();
     }
   },
   methods: {
     checkModel() {
       if (this.model !== null) {
-        this.isChecked = this.model === this.value
+        this.isChecked = this.model === this.value;
       }
     },
     showWave() {
@@ -71,9 +70,9 @@ export default {
     changeModel($event) {
       this.isChecked = $event.target.checked;
 
-      this.$emit('input', this.value);
-      this.$emit('change',this.value);
-      this.showWave()
+      this.$emit("input", this.value);
+      this.$emit("change", this.value);
+      this.showWave();
     }
   }
 };

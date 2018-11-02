@@ -22,11 +22,10 @@
 </template>
 
 <script>
-
 const componentsList = {};
 
 export default {
-  name: 'RtCard',
+  name: "RtCard",
   components: componentsList,
   props: {
     staticBodyHeight: {
@@ -125,10 +124,10 @@ export default {
   },
   methods: {
     normalizeSize(size) {
-      if (typeof size === 'number') {
-        return size + 'px';
+      if (typeof size === "number") {
+        return size + "px";
       }
-      if (typeof size === 'string') {
+      if (typeof size === "string") {
         return size;
       }
       return size;
@@ -139,46 +138,46 @@ export default {
       const classArray = {};
 
       if (this.backgroundCover) {
-        classArray['rt-card--has-bg-cover'] = true;
+        classArray["rt-card--has-bg-cover"] = true;
       }
       if (this.isWhiteColor) {
-        classArray['rt-card--has-white-color'] = true;
+        classArray["rt-card--has-white-color"] = true;
       }
 
       if (this.backgroundColorType) {
-        classArray['rt-card-' + this.backgroundColorType] = true;
+        classArray["rt-card-" + this.backgroundColorType] = true;
       }
-      if(this.backgroundImage) {
+      if (this.backgroundImage) {
         if (this.backgroundRepeat) {
-          classArray['rt-card--has-bg-repeat'] = true;
+          classArray["rt-card--has-bg-repeat"] = true;
         }
 
         if (this.backgroundSmoke === 0.5) {
-          classArray['rt-card--has-smoke'] = true;
+          classArray["rt-card--has-smoke"] = true;
         }
         if (this.backgroundSmoke === 0.3) {
-          classArray['rt-card--has-smoke03'] = true;
+          classArray["rt-card--has-smoke03"] = true;
         }
         if (this.backgroundSmoke === 0.2) {
-          classArray['rt-card--has-smoke02'] = true;
+          classArray["rt-card--has-smoke02"] = true;
         }
       }
       if (this.hideBackgroundOnMobile) {
-        classArray['rt-card--hide-background-on-mobile'] = true;
+        classArray["rt-card--hide-background-on-mobile"] = true;
       }
       return classArray;
     },
     cardContentClass() {
       const classArray = {};
       if (this.cardHeight !== null) {
-        classArray['rt-card__content--has-custom-height'] = true;
+        classArray["rt-card__content--has-custom-height"] = true;
       }
       if (this.offsetTop) {
-        classArray['rt-card__content--has-offset-top'] = true;
+        classArray["rt-card__content--has-offset-top"] = true;
       }
       if (this.colSize) {
         if (this.colSize === 2) {
-          classArray['rt-col-6 rt-col-md-3'] = true;
+          classArray["rt-col-6 rt-col-md-3"] = true;
         }
       }
       return classArray;
@@ -186,13 +185,13 @@ export default {
     cardBodyClass() {
       const classArray = {};
       if (this.cardBodyHeight !== null) {
-        classArray['flex-center-center flex-fill'] = true;
+        classArray["flex-center-center flex-fill"] = true;
       }
       if (!this.$slots.content) {
-        classArray['rt-card__body--is-empty'] = true;
+        classArray["rt-card__body--is-empty"] = true;
       }
       if (this.staticBodyHeight) {
-        classArray['rt-card__body--is-static'] = true;
+        classArray["rt-card__body--is-static"] = true;
       }
       return classArray;
     },
@@ -219,7 +218,7 @@ export default {
     },
     cardHeaderStyle() {
       const styles = {};
-      if (typeof this.cardHeaderHeight !== 'undefined') {
+      if (typeof this.cardHeaderHeight !== "undefined") {
         styles.maxHeight = this.normalizeSize(this.cardHeaderHeight);
       }
       return styles;
@@ -228,48 +227,47 @@ export default {
       const classArray = {};
       if (this.backgroundPosition) {
         if (
-
           this.backgroundPosition.search(
             /(top)|(left)|(bottom)|(right)|(bottom-left)|(top-right)|(bottom-left)|(bottom-right)/
           ) === 0
         ) {
           switch (this.backgroundPosition) {
-            case 'top':
-              classArray['rt-card__background--position-background-top'] = true;
+            case "top":
+              classArray["rt-card__background--position-background-top"] = true;
               break;
-            case 'right':
+            case "right":
               classArray[
-                'rt-card__background--position-background-right'
+                "rt-card__background--position-background-right"
               ] = true;
               break;
-            case 'bottom':
+            case "bottom":
               classArray[
-                'rt-card__background--position-background-bottom'
+                "rt-card__background--position-background-bottom"
               ] = true;
               break;
-            case 'left':
+            case "left":
               classArray[
-                'rt-card__background--position-background-left'
+                "rt-card__background--position-background-left"
               ] = true;
               break;
-            case 'top-right':
+            case "top-right":
               classArray[
-                'rt-card__background--position-background-top-right'
+                "rt-card__background--position-background-top-right"
               ] = true;
               break;
-            case 'bottom-right':
+            case "bottom-right":
               classArray[
-                'rt-card__background--position-background-bottom-right'
+                "rt-card__background--position-background-bottom-right"
               ] = true;
               break;
-            case 'bottom-left':
+            case "bottom-left":
               classArray[
-                'rt-card__background--position-background-bottom-left'
+                "rt-card__background--position-background-bottom-left"
               ] = true;
               break;
-            case 'top-left':
+            case "top-left":
               classArray[
-                'rt-card__background--position-background-top-left'
+                "rt-card__background--position-background-top-left"
               ] = true;
               break;
           }
@@ -280,14 +278,17 @@ export default {
     cardBackgroundStyle() {
       const styles = {};
       if (this.backgroundImage && !this.backgroundImageStandAlone) {
-        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
+        styles.backgroundImage = "url(" + this.backgroundImage + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
-        const backgroundSizeWidth = this.normalizeSize(this.backgroundSizeWidth);
+        const backgroundSizeWidth = this.normalizeSize(
+          this.backgroundSizeWidth
+        );
         const backgroundSizeHeight = this.normalizeSize(
           this.backgroundSizeHeight
         );
-        styles.backgroundSize = backgroundSizeWidth + ' ' + backgroundSizeHeight;
+        styles.backgroundSize =
+          backgroundSizeWidth + " " + backgroundSizeHeight;
       } else {
         if (this.backgroundSizeWidth) {
           const backgroundSizeWidth = this.normalizeSize(
@@ -302,9 +303,10 @@ export default {
           styles.backgroundSize = backgroundSizeHeight;
         }
       }
-      if(this.backgroundImage) {
+      if (this.backgroundImage) {
         if (this.backgroundBlur) {
-          styles.filter = 'blur(' + this.normalizeSize(this.backgroundBlur) + ')';
+          styles.filter =
+            "blur(" + this.normalizeSize(this.backgroundBlur) + ")";
         }
         if (this.backgroundOpacity) {
           styles.opacity = this.backgroundOpacity;
@@ -316,7 +318,7 @@ export default {
       if (this.backgroundImageStandAlone && this.backgroundImage) {
         const styles = {};
 
-        styles.backgroundImage = 'url(' + this.backgroundImage + ')';
+        styles.backgroundImage = "url(" + this.backgroundImage + ")";
         styles.width =
           this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgroundSizeHeight);

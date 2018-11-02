@@ -508,38 +508,36 @@
 </template>
 
 <style>
+.promo-phone-app {
+  width: 117%;
+  left: -23%;
+  position: relative;
+}
+@media (max-width: 968px) {
   .promo-phone-app {
-    width: 117%;
-    left: -23%;
-    position: relative;
+    width: 80%;
+    left: 0;
+    margin-left: 10%;
   }
-  @media (max-width: 968px) {
-    .promo-phone-app {
-      width: 80%;
-      left: 0;
-      margin-left: 10%;
-    }
-  }
-  .rt-font-h1{
-    font-size: 37px;
-    font-weight: 200;
-  }
-  .rt-font-h2{
-    font-size: 37px;
-    font-weight: 200;
-  }
+}
+.rt-font-h1 {
+  font-size: 37px;
+  font-weight: 200;
+}
+.rt-font-h2 {
+  font-size: 37px;
+  font-weight: 200;
+}
 </style>
 
 <script>
-  const componentsList = {};
+const componentsList = {};
 
-  export default {
-    name: "AppRadioButton",
-    components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
-    methods: {}
-  };
+export default {
+  name: "AppRadioButton",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

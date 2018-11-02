@@ -113,22 +113,20 @@
 </template>
 
 <script>
+// const componentsList = {};
+import documentation from "../../../lib/components/Annotation/docs/index.json";
+import componentsList from "../../componentsList";
 
-  // const componentsList = {};
-  import documentation from '../../../lib/components/Annotation/docs/index.json'
-  import componentsList from '../../componentsList'
-
-  export default {
-    name: 'AppButtons',
-    data: ()=>({
-      documentation : {}
-    }),
-    components: componentsList,
-    mounted() {
-      this.documentation = documentation;
-    },
-    created() {},
-    methods: {},
-  };
+export default {
+  name: "AppButtons",
+  data: () => ({
+    documentation: {}
+  }),
+  components: componentsList,
+  mounted() {
+    this.documentation = documentation;
+  },
+  created() {},
+  methods: {}
+};
 </script>
-

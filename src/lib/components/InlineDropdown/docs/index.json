@@ -1,27 +1,27 @@
 {
   "items" : [
     {
-      "version" : "<= 0.0.15",
+
       "name" : "rt-inline-dropdown",
       "proporty" : "resize-steps",
-      "type" : "Number[]",
-      "about" : "Ширина пересчета размеров",
+      "type" : ["Number[]"],
+      "description" : "Ширина пересчета размеров",
       "value" : "[]"
     },
     {
-      "version" : "<= 0.0.15",
+
       "name" : "rt-inline-dropdown",
       "proporty" : "dropdown-min-width",
-      "type" : "Number",
-      "about" : "Минимальная ширина выпадающего списка",
+      "type" : ["Number"],
+      "description" : "Минимальная ширина выпадающего списка",
       "value" : "null"
     },
     {
-      "version" : "<= 0.0.15",
+
       "name" : "rt-inline-dropdown-item",
       "proporty" : "is-active",
-      "type" : "Boolean",
-      "about" : "Активный элемент в выпадающем списке по default",
+      "type" : ["Boolean"],
+      "description" : "Активный элемент в выпадающем списке по default",
       "value" : "false"
     }
   ]

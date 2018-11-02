@@ -13,45 +13,43 @@
   </div>
 </template>
 <script>
-
-  export default {
-    name: "RtColorLineText",
-    props: {
-      colorIcon: {
-        type: String, //['purple','red','dark-blue','light-blue','yellow','pink','green'],
-        default: "orange"
-      },
-      fillColor:{
-        type: String, //['purple','red','dark-blue','light-blue','yellow','pink','green'],
-        default: null
-      },
-      isWhiteColor:{
-        type: Boolean,
-        default: null
-      }
+export default {
+  name: "RtColorLineText",
+  props: {
+    colorIcon: {
+      type: String, //['purple','red','dark-blue','light-blue','yellow','pink','green'],
+      default: "orange"
     },
-    computed: {
-      colorLineIconClass() {
-        const classObject = {};
-        if (this.colorIcon !== "orange") {
-          classObject["color-line-paragraph-icon--" + this.colorIcon] = true;
-        }
-        if(this.fillColor) {
-          classObject["color-line-paragraph-icon--fill-" + this.fillColor] = true;
-        }
-        return classObject;
-      },
-      fillColorClass() {
-        const classObject = {};
-        if(this.fillColor) {
-          classObject["color-line-text--" + this.fillColor] = true;
-        }
-        if(this.isWhiteColor){
-          classObject["color-white"] = true;
-        }
-        return classObject;
-      },
-
+    fillColor: {
+      type: String, //['purple','red','dark-blue','light-blue','yellow','pink','green'],
+      default: null
+    },
+    isWhiteColor: {
+      type: Boolean,
+      default: null
     }
-  };
+  },
+  computed: {
+    colorLineIconClass() {
+      const classObject = {};
+      if (this.colorIcon !== "orange") {
+        classObject["color-line-paragraph-icon--" + this.colorIcon] = true;
+      }
+      if (this.fillColor) {
+        classObject["color-line-paragraph-icon--fill-" + this.fillColor] = true;
+      }
+      return classObject;
+    },
+    fillColorClass() {
+      const classObject = {};
+      if (this.fillColor) {
+        classObject["color-line-text--" + this.fillColor] = true;
+      }
+      if (this.isWhiteColor) {
+        classObject["color-white"] = true;
+      }
+      return classObject;
+    }
+  }
+};
 </script>

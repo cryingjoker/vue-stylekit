@@ -31,16 +31,15 @@
 
 
 <script>
-  import documentation from '../../../lib/components/InlineDropdown/docs/index.json'
-  export default {
-    name: "AppInlineDropdown",
-    data: ()=>({
-      documentation : {}
-    }),
-    components: {},
-    mounted() {
-      this.documentation = documentation;
-    }
-  };
+import documentation from "../../../lib/components/InlineDropdown/docs/index.json";
+export default {
+  name: "AppInlineDropdown",
+  data: () => ({
+    documentation: {}
+  }),
+  components: {},
+  mounted() {
+    this.documentation = documentation;
+  }
+};
 </script>
-

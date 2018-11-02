@@ -1,0 +1,180 @@
+{
+  "items": [
+    {
+      "name": "rt-banner",
+      "proporty": "(:)content-min-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает минимальную высоту банера \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": "(:)content-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает высоту банера \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "value": "null",
+      "name": " rt-banner",
+      "proporty": "(:)content-mobile-min-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает минимальную высоту банера для мобильного разрешения \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": "(:)content-mobile-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает высоту банера для мобильного разрешения \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": ":is-fullscreen-image",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Флаг установки фулскрин картинки",
+      "value": "false"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": "justify",
+      "type": "String",
+      "description": "Сейчас принимает left - указывает на направление контанта слева",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": "background-color",
+      "type": "String",
+      "description": "Устанавливает цвет фона банера \n возможные значения \n `dark-state` `yellow` `red` `dark-blue` `light-blue` `orange` `pink` `green`",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": ":background-repeat",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Устанавливает background-repeat опцию на картинке фона",
+      "value": "false"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": ":sleep-time",
+      "type": [
+        "Number"
+      ],
+      "description": "Устанавливает время продолжительности слайда",
+      "value": "5000"
+    },
+    {
+      "name": "rt-banner",
+      "proporty": "banner-logo",
+      "type": [
+        "String"
+      ],
+      "description": "Ссылка на логотип справа внизу",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "background-position",
+      "type": [
+        "String"
+      ],
+      "description": "Настройки background-position \n передается css значение",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "(:)content-min-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает минимальную высоту слайда \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "(:)content-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает высоту слайда \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": " rt-banner-item",
+      "proporty": "(:)content-mobile-min-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает минимальную высоту слайда \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "(:)content-mobile-height",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает высоту слайда для мобильного разрешения \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "(:)content-min-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает минимальную ширину слайда для мобильного разрешения\n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "(:)content-max-width",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает максимальную ширину слайда \n number - любое число становится px \n string - любые значения",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": "background-сolor",
+      "type": [
+        "String"
+      ],
+      "description": "Устанавливает цвет фона слайда",
+      "value": "null"
+    },
+    {
+      "name": "rt-banner-item",
+      "proporty": ":is-white-color",
+      "type": ["Boolean"],
+      "description": "Устанавливает белый цвет текста слайда",
+      "value": "false"
+    }
+  ]
+}

@@ -21,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: 'RtSelectWithoutJs',
+  name: "RtSelectWithoutJs",
   props: {
     hasError: {
       type: Boolean,
@@ -50,7 +50,7 @@ export default {
   },
   data() {
     return {
-      localValue: this.value ? this.value : '',
+      localValue: this.value ? this.value : "",
       RtSelect: {
         setValue: this.setValue,
         selectedValue: this.value
@@ -62,15 +62,15 @@ export default {
   computed: {
     selectClasses() {
       return {
-        'select--error text-field--error': this.hasError,
-        'select--is-open': this.isOpen,
-        'select--disabled': Boolean(this.disabled)
+        "select--error text-field--error": this.hasError,
+        "select--is-open": this.isOpen,
+        "select--disabled": Boolean(this.disabled)
       };
     }
   },
   watch: {
     localValue(val) {
-      this.$emit('input', val);
+      this.$emit("input", val);
     }
   },
   beforeDestroy() {
@@ -99,10 +99,10 @@ export default {
       }
     },
     emitSelected(value) {
-      this.$emit('rt-selected', value);
+      this.$emit("rt-selected", value);
     },
     bindMouseEvents(e) {
-      if (!e.target.closest('.select--is-open')) {
+      if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
       }
@@ -115,11 +115,11 @@ export default {
         if (e.keyCode === 38 || e.keyCode === 40) {
           e.preventDefault();
           e.stopPropagation();
-          let selectedItem = this.$el.querySelector('.select-option--select');
+          let selectedItem = this.$el.querySelector(".select-option--select");
           const focusedItem = this.$el.querySelector(
-            '.select-option__inner:focus'
+            ".select-option__inner:focus"
           );
-          const optionItems = this.$el.querySelectorAll('.select-option');
+          const optionItems = this.$el.querySelectorAll(".select-option");
           const optionItemsLength = optionItems.length;
           if (focusedItem) {
             selectedItem = focusedItem.parentNode;
@@ -136,21 +136,25 @@ export default {
               (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
           }
           optionItems[selectedIndex]
-            .querySelector('.select-option__inner')
+            .querySelector(".select-option__inner")
             .focus();
         }
       }
     },
     removeBindEvents() {
-      document.removeEventListener('click', this.bindMouseEvents, true);
-      document.removeEventListener('keydown', this.bindKeyboardEvents, true);
+      document.removeEventListener("click", this.bindMouseEvents, true);
+      document.removeEventListener("keydown", this.bindKeyboardEvents, true);
     },
     bindEvents() {
-      document.addEventListener('click', this.bindMouseEvents, {passive: false});
-      document.addEventListener('keydown', this.bindKeyboardEvents, {passive: false});
+      document.addEventListener("click", this.bindMouseEvents, {
+        passive: false
+      });
+      document.addEventListener("keydown", this.bindKeyboardEvents, {
+        passive: false
+      });
     },
     scrollToSelected() {
-      const selectElement = this.$el.querySelector('.select-option--select');
+      const selectElement = this.$el.querySelector(".select-option--select");
       if (selectElement) {
         const scrollPosition =
           selectElement.offsetTop - selectElement.parentNode.offsetTop;

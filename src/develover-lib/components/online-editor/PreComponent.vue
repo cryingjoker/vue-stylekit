@@ -20,101 +20,97 @@
   </div>
 </template>
 <script>
-  import PreComponentEditor from './PreComponentEditor.vue'
+import PreComponentEditor from "./PreComponentEditor.vue";
+
+import componentsList from "../../../example-pages/componentsList";
 
 
-  import componentsList from '../../../example-pages/componentsList'
+componentsList[PreComponentEditor.name] = PreComponentEditor;
+import Vue from "vue/dist/vue.js";
+export default {
+  name: "PreCode",
+  props: {
+    text: {
+      type: String,
+      default: null
+    }
+  },
+  comments: componentsList,
+  data: () => ({
+    component: null,
+    localCode: "",
+    showCodeEditor: false
+  }),
 
-  console.info('componentsList',componentsList)
+  watch: {
+    text(value) {
+      this.localCode = this.changeComponentCode(this.text);
+    }
+  },
 
-  componentsList[PreComponentEditor.name] = PreComponentEditor;
-  import Vue from 'vue/dist/vue.js';
-  export default {
-    name: "PreCode",
-    props: {
-      text:{
-        type: String,
-        default: null
-      },
-    },
-    comments: componentsList,
-    data: () => ({
-      component: null,
-      localCode: '',
-      showCodeEditor: false
-    }),
-
-    watch: {
-      text(value) {
-        this.localCode = this.changeComponentCode(this.text);
+  mounted() {
+    this.localCode = this.text;
+    this.getTextAsVue();
+  },
+  components: componentsList,
+  methods: {
+    changeComponentCode(code) {
+      if (code) {
+        this.localCode = code;
+        this.getTextAsVue();
       }
     },
-
-    mounted(){
-
-      this.localCode = this.text;
-      this.getTextAsVue();
-    },
-    components: componentsList,
-    methods:{
-      changeComponentCode(code){
-        if(code) {
-          this.localCode = code;
-          this.getTextAsVue ();
-
+    getTextAsVue() {
+      if (this.localCode == null) return null;
+      let options = {};
+      for (let key in this.$parent) {
+        if (key.search(/(^\$)|(^\_)|(^constructor$)/) === -1) {
+          options[key] = this.$parent[key];
         }
-      },
-      getTextAsVue () {
-
-        if (this.localCode == null)
-          return null;
-        let options = {};
-        for(let key in this.$parent){
-          if(key.search(/(^\$)|(^\_)|(^constructor$)/) === -1){
-            options[key] = this.$parent[key];
-          }
-        }
-        // if(this.normalizeCode) {
-        //   Vue.use(VueRtStyle);
-        //   this.component = new Vue({
-        //     el:'.wc-inline-render',
-        //     name: 'Content',
-        //     components: preComponentsList,
-        //     template: this.normalizeCode,
-        //     data: () => {
-        //       return options
-        //     },
-        //     components: preComponentsList
-        //   });
-        // }
-
-      },
-      close(){
-        this.showCodeEditor = false;
-
-      },
-      toggleShow(){
-        if(document.querySelector('.code-editor__close')){
-          document.querySelector('.code-editor__close').dispatchEvent(new Event('click'));
-        }
-
-        this.showCodeEditor = !this.showCodeEditor;
-        console.info('showCodeEditor',this.showCodeEditor)
       }
+      // if(this.normalizeCode) {
+      //   Vue.use(VueRtStyle);
+      //   this.component = new Vue({
+      //     el:'.wc-inline-render',
+      //     name: 'Content',
+      //     components: preComponentsList,
+      //     template: this.normalizeCode,
+      //     data: () => {
+      //       return options
+      //     },
+      //     components: preComponentsList
+      //   });
+      // }
     },
-    computed: {
-      normalizeCode() {
-        return {
-          template:(this.localCode ? this.localCode : this.text.replace(/\\\{\\\{/g,'\{\{')).replace('/{/{','{{'),
-          components:componentsList,
-        };
-      },
-      toggleClassObjects (){
-          const classObject = {};
-          if(this.showCodeEditor){
-            classObject['pre-component__trigger--is-active'] = true;
-          }
+    close() {
+      this.showCodeEditor = false;
+    },
+    toggleShow() {
+      if (document.querySelector(".code-editor__close")) {
+        document
+          .querySelector(".code-editor__close")
+          .dispatchEvent(new Event("click"));
+      }
+
+      this.showCodeEditor = !this.showCodeEditor;
+    }
+  },
+  computed: {
+    normalizeCode() {
+      return {
+        template: (this.localCode
+          ? this.localCode
+          : this.text.replace(/\\\{\\\{/g, "{{")
+        ).replace("/{/{", "{{"),
+        components: componentsList
+      };
+    },
+    toggleClassObjects() {
+      const classObject = {};
+      if (this.showCodeEditor) {
+        classObject["pre-component__trigger--is-active"] = true;
       }
     }
-  };
+  }
+};
 </script>

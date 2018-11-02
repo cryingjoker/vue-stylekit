@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'RtTextarea',
+  name: "RtTextarea",
   props: {
     disabled: {
       type: Boolean,
@@ -30,7 +30,7 @@ export default {
     },
     errorMessage: {
       default: String,
-      default: ''
+      default: ""
     },
     value: {
       type: String,
@@ -38,26 +38,26 @@ export default {
     }
   },
   data: () => ({
-    inputText: '',
+    inputText: "",
     hasInputText: false
   }),
   computed: {
     textareaClasses() {
       return {
-        'textarea--disabled': this.disabled,
-        'textarea--not-empty': this.hasInputText,
-        'text-field--error': this.hasError
+        "textarea--disabled": this.disabled,
+        "textarea--not-empty": this.hasInputText,
+        "text-field--error": this.hasError
       };
     },
     placeholderClasses() {
       return {
-        'floating-placeholder--go-top': this.hasInputText
+        "floating-placeholder--go-top": this.hasInputText
       };
     }
   },
   watch: {
     localValue(val) {
-      this.$emit('change', val);
+      this.$emit("change", val);
     }
   },
   mounted: function() {
@@ -66,11 +66,11 @@ export default {
   },
   methods: {
     setValue() {
-      this.$el.querySelector('.textarea-element').value = this.localValue || '';
+      this.$el.querySelector(".textarea-element").value = this.localValue || "";
       this.setValueLength();
     },
     setDisabled() {
-      this.$el.querySelector('.textarea-element').disabled = Boolean(
+      this.$el.querySelector(".textarea-element").disabled = Boolean(
         this.disabled
       );
     },
@@ -78,16 +78,16 @@ export default {
       this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
     },
     inputHandler($event) {
-      this.localValue = this.$el.querySelector('.textarea-element').value;
+      this.localValue = this.$el.querySelector(".textarea-element").value;
       this.setValueLength();
     },
     calculateHelght() {
-      const textarea = this.$el.querySelector('.textarea-element');
-      textarea.style.height = '';
+      const textarea = this.$el.querySelector(".textarea-element");
+      textarea.style.height = "";
       textarea.style.height = textarea.scrollHeight;
     },
     clearInput() {
-      this.localValue = '';
+      this.localValue = "";
       this.setValue();
     }
   }

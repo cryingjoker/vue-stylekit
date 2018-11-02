@@ -102,14 +102,12 @@
 
 
 <script>
-  import componentsList from "../../componentsList";
+import componentsList from "../../componentsList";
 
-  // const componentsList = {};
-  export default {
-    name: "AppTable",
-    components: componentsList,
-    mounted() {
-    }
-  };
+// const componentsList = {};
+export default {
+  name: "AppTable",
+  components: componentsList,
+  mounted() {}
+};
 </script>
-

@@ -1,10 +1,8 @@
 <script type="text/jsx">
-
 const componentsList = {};
 
-
 export default {
-  name: 'RtFullscreenImage',
+  name: "RtFullscreenImage",
   components: componentsList,
   props: {
     backgroundImage: {
@@ -14,27 +12,30 @@ export default {
     },
     backgroundPosition: {
       type: String,
-      default: null,
+      default: null
     }
-
   },
 
-  mounted() {
-
-  },
+  mounted() {},
 
   render(h) {
     const styleObject = {};
-          styleObject.backgroundImage = 'url('+this.backgroundImage+')';
-    if(this.backgroundPosition){
+    styleObject.backgroundImage = "url(" + this.backgroundImage + ")";
+    if (this.backgroundPosition) {
       styleObject.backgroundPosition = this.backgroundPosition;
     }
 
-    return <div class={"rt-fullscreen-image"}>
-      <div class="rt-fullscreen-image__element" image-url={this.backgroundImage} style={styleObject}>
-        {this.$slots.default}
+    return (
+      <div class={"rt-fullscreen-image"}>
+        <div
+          class="rt-fullscreen-image__element"
+          image-url={this.backgroundImage}
+          style={styleObject}
+        >
+          {this.$slots.default}
+        </div>
       </div>
-    </div>;
+    );
   }
 };
 </script>

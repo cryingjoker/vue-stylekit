@@ -209,11 +209,10 @@
   </div>
 </template>
 <script>
-
 // const componentsList = {};
-import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 export default {
-  name: 'AppRowList',
-  components: componentsList,
+  name: "AppRowList",
+  components: componentsList
 };
 </script>

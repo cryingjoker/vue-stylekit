@@ -27,11 +27,9 @@
 
 
 <script>
-
-  const componentsList = {};
-  export default {
-    name: "AppCheckbox",
-    components: componentsList
-  };
+const componentsList = {};
+export default {
+  name: "AppCheckbox",
+  components: componentsList
+};
 </script>
-

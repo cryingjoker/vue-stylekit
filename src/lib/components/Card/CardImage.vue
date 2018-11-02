@@ -10,24 +10,19 @@
   </div>
 </template>
 <script>
-
-
 export default {
-  name: 'RtCardImage',
+  name: "RtCardImage",
   props: {
     cardImage: {
       type: String,
       default: null,
       required: true
-    },
-
-
+    }
   },
   computed: {
-
-    figureImageStyle(){
+    figureImageStyle() {
       const styleObject = {};
-      styleObject.backgroundImage = 'url('+this.cardImage+')';
+      styleObject.backgroundImage = "url(" + this.cardImage + ")";
       return styleObject;
     }
   },

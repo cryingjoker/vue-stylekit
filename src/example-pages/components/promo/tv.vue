@@ -595,15 +595,13 @@
 
 
 <script>
+const componentsList = {};
 
-  const componentsList = {};
-
-
-  export default {
-    name: 'AppRadioButton',
-    components: componentsList,
-    mounted() {},
-    created() {},
-    methods: {},
-  };
+export default {
+  name: "AppRadioButton",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import styles from './css/vue-rt-style.styl';
+import Vue from "vue";
+import styles from "./css/vue-rt-style.styl";
 
 import {
   Button,
@@ -42,15 +42,13 @@ import {
   DownloadContent,
   InlineDropdown,
   InlineDropdownItem
-} from './components';
+} from "./components";
 
-
-
-import {SwipeLeft, SwipeRight} from './directives/Swipe/swipe';
+import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 
 const VueRtStyle = {
   install(Vue, config) {
-    if(!Vue.RtStyle) {
+    if (!Vue.RtStyle) {
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
       Vue.component(ButtonWithoutRipple.name, ButtonWithoutRipple);
@@ -100,15 +98,9 @@ const VueRtStyle = {
     }
   }
 };
-VueRtStyle.directives = {SwipeLeft, SwipeRight};
+VueRtStyle.directives = { SwipeLeft, SwipeRight };
 
-const version = '0.0.16';
+const version = "0.0.16";
 VueRtStyle.version = version;
 
-
 export default VueRtStyle;
-
-
-
-
-

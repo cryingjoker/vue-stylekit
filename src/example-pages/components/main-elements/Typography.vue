@@ -61,9 +61,9 @@
 
 <script>
 export default {
-  name: 'AppTypography',
+  name: "AppTypography",
   mounted() {},
   created() {},
-  methods: {},
+  methods: {}
 };
 </script>

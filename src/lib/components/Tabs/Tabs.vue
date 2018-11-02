@@ -13,7 +13,7 @@
 const componentsList = {};
 
 export default {
-  name: 'RtTabs',
+  name: "RtTabs",
   components: componentsList,
   props: {
     isDisabled: {
@@ -28,7 +28,7 @@ export default {
   data() {
     const dataObj = {
       RtTabs: {
-        activeName: '',
+        activeName: "",
         setActiveTabName: this.setActiveTabName,
         addTabName: this.addTabName,
         namesArray: []
@@ -46,8 +46,8 @@ export default {
     navigationStyle() {
       const style = {};
       if (this.navigationHorizontalPadding) {
-        style.paddingLeft = this.navigationHorizontalPadding + 'px';
-        style.paddingRight = this.navigationHorizontalPadding + 'px';
+        style.paddingLeft = this.navigationHorizontalPadding + "px";
+        style.paddingRight = this.navigationHorizontalPadding + "px";
       }
 
       return style;
@@ -57,7 +57,7 @@ export default {
   methods: {
     setActiveTabName(name) {
       this.RtTabs.activeName = name;
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
     },
     addTabName(name) {
       if (this.RtTabs.namesArray.length === 0) {

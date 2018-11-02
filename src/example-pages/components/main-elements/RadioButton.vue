@@ -25,22 +25,22 @@
 
 
 <script>
-import componentsList from '../../componentsList'
+import componentsList from "../../componentsList";
 // const componentsList = {};
 export default {
-  name: 'AppRadioButton',
-  data(){
+  name: "AppRadioButton",
+  data() {
     return {
-      testModel : 0
-    }
+      testModel: 0
+    };
   },
   components: componentsList,
   mounted() {},
   created() {},
   methods: {
-    setTestModel(value){
+    setTestModel(value) {
       this.testModel = value;
     }
-  },
+  }
 };
 </script>

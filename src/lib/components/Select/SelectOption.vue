@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  inject: ['RtSelect'],
-  name: 'RtSelectOption',
+  inject: ["RtSelect"],
+  name: "RtSelectOption",
   props: {
     value: {
       type: String,
@@ -18,21 +18,21 @@ export default {
   },
   data() {
     return {
-      localValue: this.text ? this.text : '',
+      localValue: this.text ? this.text : "",
       isSelected: false
     };
   },
   computed: {
     selectedValue() {
-      if(this.RtSelect) {
+      if (this.RtSelect) {
         return this.RtSelect.selectedValue;
-      }else{
-        return '';
+      } else {
+        return "";
       }
     },
     optionClasses() {
       return {
-        'select-option--select': this.isSelected
+        "select-option--select": this.isSelected
       };
     }
   },
@@ -61,7 +61,7 @@ export default {
         return this.$el.textContent.trim();
       }
       const slot = this.$slots.default;
-      return slot ? slot[0].text.trim() : '';
+      return slot ? slot[0].text.trim() : "";
     }
   }
 };

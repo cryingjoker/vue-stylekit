@@ -10,7 +10,7 @@
 const componentsList = {};
 
 export default {
-  name: 'RtTabsNavItem',
+  name: "RtTabsNavItem",
   components: componentsList,
   props: {
     name: {
@@ -21,8 +21,8 @@ export default {
   computed: {
     tabsItemClass() {
       return {
-        'rt-tabs-navigation__item': true,
-        'rt-tabs-navigation__item--is-active':
+        "rt-tabs-navigation__item": true,
+        "rt-tabs-navigation__item--is-active":
           this.name === this.RtTabs.activeName
       };
     }
