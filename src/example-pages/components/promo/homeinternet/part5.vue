@@ -51,7 +51,7 @@ import componentsList from "../../../componentsList";
 // const componentsList = {};
 
 export default {
-  name: "homeintehrnetPart5",
+  name: "HomeintehrnetPart5",
   components: componentsList,
   mounted() {},
   created() {},

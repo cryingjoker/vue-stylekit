@@ -1,7 +1,7 @@
 <template>
   <label class="radio-button">
-    <rt-ripple :not-bind-click="true" ref="ripple" :not-render="isDisabled" />
-    <input :name="name" ref="input" type="radio" :disabled="isDisabled" :checked="isChecked" class="radio-button-element" @change="changeModel">
+    <rt-ripple ref="ripple" :not-bind-click="true" :not-render="isDisabled" />
+    <input ref="input" :name="name" type="radio" :disabled="isDisabled" :checked="isChecked" class="radio-button-element" @change="changeModel">
     <div class="radio-button-container">
       <slot />
     </div>
@@ -15,11 +15,6 @@ componentsList[RippleComponent.name] = RippleComponent;
 export default {
   name: "RtRadioButton",
   components: componentsList,
-  data() {
-    return {
-      isChecked: this.checked
-    };
-  },
   props: {
     name: {
       type: String,
@@ -42,6 +37,16 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      isChecked: this.checked
+    };
+  },
+  watch: {
+    model() {
+      this.checkModel();
+    }
+  },
   watch: {
     model() {
       this.checkModel();
@@ -49,11 +54,6 @@ export default {
   },
   mounted() {
     this.checkModel();
-  },
-  watch: {
-    model() {
-      this.checkModel();
-    }
   },
   methods: {
     checkModel() {

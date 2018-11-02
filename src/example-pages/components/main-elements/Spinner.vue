@@ -7,12 +7,12 @@
       <div class="app-body">
 
         <div class="app-row row">
-          <pre-code text='<rt-spinner />'></pre-code>
-          <pre-code text='<rt-spinner :is-small="true" />'></pre-code>
-          <pre-code text='<rt-spinner :scale="true" />'></pre-code>
+          <pre-code text="<rt-spinner />" />
+          <pre-code text="<rt-spinner :is-small=&quot;true&quot; />" />
+          <pre-code text="<rt-spinner :scale=&quot;true&quot; />" />
         </div>
         <div class="app-row row">
-          <pre-code text='<rt-button class="rt-button-white" :isFetched="true"></rt-button>'></pre-code>
+          <pre-code text="<rt-button class=&quot;rt-button-white&quot; :isFetched=&quot;true&quot;></rt-button>" />
 
         </div>
 

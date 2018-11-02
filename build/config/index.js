@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const path = require('path')
+const path = require('path');
 module.exports = {
   build: {
     env: require('./prod.env'),
@@ -20,4 +20,4 @@ module.exports = {
     proxyTable: {},
     cssSourceMap: true
   }
-}
+};

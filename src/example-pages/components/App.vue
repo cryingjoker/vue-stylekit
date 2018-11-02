@@ -1,5 +1,5 @@
 <template>
-  <div class="app" :class="{'app--hide-scroll' : showMenu}" v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu">
+  <div v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu" class="app" :class="{'app--hide-scroll' : showMenu}">
     <div class="menu-trigger md-d-block d-none" @click="openMenu">Menu</div>
 
     <div class="grid" :class="{'grid--active': showGrid}">
@@ -173,15 +173,15 @@
           </div>
         </div>
         <!--<div class="aside-menu__item">-->
-          <!--<router-link class="aside-menu__link" active-class="aside-menu__link&#45;&#45;active" to="/icons">Icons-->
-          <!--</router-link>-->
+        <!--<router-link class="aside-menu__link" active-class="aside-menu__link&#45;&#45;active" to="/icons">Icons-->
+        <!--</router-link>-->
         <!--</div>-->
       </div>
 
     </keep-alive>
 
     <router-view />
-    <rt-switch class="dark-theme-switcher" :checked="isDarkTheme" @change="switchTheme" >Dark theme</rt-switch>
+    <rt-switch class="dark-theme-switcher" :checked="isDarkTheme" @change="switchTheme">Dark theme</rt-switch>
 
   </div>
 </template>
@@ -204,6 +204,7 @@ componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
 export default {
   name: "App",
   components: componentsList,
+  directives: componentDirectives,
   data: () => ({
     showMenu: false,
     isPromo: false,
@@ -215,10 +216,18 @@ export default {
       this.showMenu = false;
     }
   },
-  directives: componentDirectives,
   created() {
     if (this.$route.path.search("promo") >= 0) {
       this.isPromo = true;
+    }
+  },
+  mounted() {
+    if (!!+localStorage.getItem("rt-dark")) {
+      const bodyClassList = document.body.classList.value.split(" ");
+      bodyClassList.push("rt-dark-theme");
+      document.body.classList = bodyClassList.join(" ");
+
+      this.isDarkTheme = true;
     }
   },
   methods: {
@@ -246,14 +255,5 @@ export default {
       document.body.classList = bodyClassList.join(" ");
     }
   },
-  mounted() {
-    if (!!+localStorage.getItem("rt-dark")) {
-      const bodyClassList = document.body.classList.value.split(" ");
-      bodyClassList.push("rt-dark-theme");
-      document.body.classList = bodyClassList.join(" ");
-
-      this.isDarkTheme = true;
-    }
-  }
 };
 </script>

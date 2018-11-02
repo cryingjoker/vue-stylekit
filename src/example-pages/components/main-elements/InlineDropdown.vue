@@ -8,22 +8,23 @@
       <div class="app-body">
         <div class="app-row row">
 
-            <pre-code
-              class="rt-container"
-              text='<rt-inline-dropdown :resizeSteps="[868]" :dropdown-min-width="300">
+          <pre-code
+            class="rt-container"
+            text="<rt-inline-dropdown :resizeSteps=&quot;[868]&quot; :dropdown-min-width=&quot;300&quot;>
               <rt-inline-dropdown-item>Price</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>RadioButton</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Ripple</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>RowList</rt-inline-dropdown-item>
-              <rt-inline-dropdown-item :is-active="true">ScrollTabs</rt-inline-dropdown-item>
+              <rt-inline-dropdown-item :is-active=&quot;true&quot;>ScrollTabs</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Select</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Spinner</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Switch</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Table</rt-inline-dropdown-item>
               <rt-inline-dropdown-item>Textarea</rt-inline-dropdown-item>
-            </rt-inline-dropdown>'></pre-code>
-          </div>
-        <documentation-builder type="components" :json="documentation"></documentation-builder>
+            </rt-inline-dropdown>"
+          />
+        </div>
+        <documentation-builder type="components" :json="documentation" />
       </div>
     </div>
   </div>
@@ -34,10 +35,10 @@
 import documentation from "../../../lib/components/InlineDropdown/docs/index.json";
 export default {
   name: "AppInlineDropdown",
+  components: {},
   data: () => ({
     documentation: {}
   }),
-  components: {},
   mounted() {
     this.documentation = documentation;
   }

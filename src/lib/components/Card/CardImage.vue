@@ -1,11 +1,11 @@
 <template>
   <div class="rt-card rt-card-image">
-    <div class="rt-card-image__figure" :style="figureImageStyle"></div>
+    <div class="rt-card-image__figure" :style="figureImageStyle" />
     <div class="rt-card-image__content">
       <div class="rt-card__body">
-        <slot name="body"/>
+        <slot name="body" />
       </div>
-      <slot name="list"/>
+      <slot name="list" />
     </div>
   </div>
 </template>

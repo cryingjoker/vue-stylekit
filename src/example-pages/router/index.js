@@ -21,13 +21,13 @@ import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
-import Homeinternet from '../components/promo/homeinternet.vue'
-import RowList from '../components/main-elements/RowList.vue'
+import Homeinternet from '../components/promo/homeinternet.vue';
+import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
-import Table from '../components/main-elements/Table.vue'
-import DownloadContent from '../components/main-elements/DownloadContent.vue'
-import InlineDropdown from '../components/main-elements/InlineDropdown.vue'
-import Annotation from '../components/main-elements/Annotation.vue'
+import Table from '../components/main-elements/Table.vue';
+import DownloadContent from '../components/main-elements/DownloadContent.vue';
+import InlineDropdown from '../components/main-elements/InlineDropdown.vue';
+import Annotation from '../components/main-elements/Annotation.vue';
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },

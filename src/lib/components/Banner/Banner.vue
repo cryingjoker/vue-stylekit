@@ -1,47 +1,50 @@
 <template>
   <div class="rt-banner" :class="banerClass" :style="bannerStyle">
     <div class="rt-container">
-      <a v-if="RtBanners && RtBanners.items && RtBanners.items[RtBanners.activeIndex] && RtBanners.items[RtBanners.activeIndex].link" class="rt-banner-content__link" :href="RtBanners.items[RtBanners.activeIndex].link" :target="RtBanners.items[RtBanners.activeIndex].linkTarget"></a>
+      <a v-if="RtBanners && RtBanners.items && RtBanners.items[RtBanners.activeIndex] && RtBanners.items[RtBanners.activeIndex].link" class="rt-banner-content__link" :href="RtBanners.items[RtBanners.activeIndex].link" :target="RtBanners.items[RtBanners.activeIndex].linkTarget" />
       <div class="rt-col-12">
         <div class="row">
-          <div class="rt-col-1 md-d-none"/>
+          <div class="rt-col-1 md-d-none" />
           <div class="rt-col-4 rt-col-md-3">
             <div class="rt-space-right">
-              <slot/>
+              <slot />
             </div>
           </div>
-          <div class="rt-col-1 md-d-none"/>
+          <div class="rt-col-1 md-d-none" />
         </div>
       </div>
     </div>
     <div class="circle-switcher">
       <div v-if="RtBanners.items && RtBanners.items.length > 1 " class="circle-switcher-container">
-        <rt-banner-paginator-item :sleep-time="option['slideTime'] || sleepTime"
-                                  v-for="(option, index) in RtBanners.items"
-                                  :is-pause="isPause"
-                                  :key="'paginator-index'+Math.random().toString(5).slice(4)" :index="index"/>
+        <rt-banner-paginator-item v-for="(option, index) in RtBanners.items"
+                                  :key="'paginator-index'+Math.random().toString(5).slice(4)"
+                                  :sleep-time="option['slideTime'] || sleepTime"
+                                  :is-pause="isPause" :index="index"
+        />
       </div>
     </div>
     <div class="rt-banner-image" :style="imageStyle">
       <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500"
-           style='transform: translate(-50% 0)'>
-        <polygon points="0 0,0 500,185 0 "/>
+           style="transform: translate(-50% 0)"
+      >
+        <polygon points="0 0,0 500,185 0 " />
       </svg>
 
 
       <video v-if="backgroundVideo"
+             ref="video"
              autoplay
              muted
              class="rt-banner-video__content"
-             ref="video"
-             :src="backgroundVideo">
-      </video>
+             :src="backgroundVideo"
+      />
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 185 500">
-        <polygon points="0 500,185 0,0 0"/>
+           viewBox="0 0 185 500"
+      >
+        <polygon points="0 500,185 0,0 0" />
       </svg>
     </div>
-    <div class="rt-banner-logo rt-container" v-if="bannerLogo">
+    <div v-if="bannerLogo" class="rt-banner-logo rt-container">
       <div class="rt-col-12">
         <img class="rt-banner-logo__image" :src="bannerLogo" alt="">
       </div>

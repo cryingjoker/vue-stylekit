@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-const config = require('../../build/config/index')
+const config = require('../../build/config/index');
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'develop';
 }
@@ -18,7 +18,7 @@ const port = process.env.PORT || config.dev.port;
 
 const proxyTable = config.dev.proxyTable;
 
-const app = express()
+const app = express();
 const compiler = webpack(webpackConfig);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
@@ -44,66 +44,66 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
     aggregateTimeout: 300,
     poll: 1000
   }
-})
+});
 let spinner;
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: function(text){
     spinner.succeed();
     spinner = new Ora({
       text: 'webpack-hot-middleware : '+text+'\n'
-    }).start()
+    }).start();
   }
-})
-webpackConfig.entry.app.unshift('webpack-hot-middleware/client')
+});
+webpackConfig.entry.app.unshift('webpack-hot-middleware/client');
 webpackConfig.plugins.push(
   new webpack.HotModuleReplacementPlugin()
-)
+);
 
-app.use(hotMiddleware)
+app.use(hotMiddleware);
 
 
 Object.keys(proxyTable).forEach(function (context) {
-  let options = proxyTable[context]
+  let options = proxyTable[context];
   if (typeof options === 'string') {
-    options = { target: options }
+    options = { target: options };
   }
-  app.use(proxyMiddleware(options.filter || context, options))
-})
+  app.use(proxyMiddleware(options.filter || context, options));
+});
 
-app.use(require('connect-history-api-fallback')())
+app.use(require('connect-history-api-fallback')());
 
-app.use(devMiddleware)
+app.use(devMiddleware);
 
-const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
 
 
-app.use('/static/', express.static(local_dirname+'/static'))
+app.use('/static/', express.static(local_dirname+'/static'));
 
-const url = 'http://localhost:' + port
+const url = 'http://localhost:' + port;
 spinner = new Ora({
   text: 'Starting dev server on port '+port+'\n'
 }).start();
 spinner.succeed();
-let _resolve
+let _resolve;
 const readyPromise = new Promise(resolve => {
-  _resolve = resolve
-})
+  _resolve = resolve;
+});
 
 devMiddleware.waitUntilValid(() => {
   spinner.succeed();
   spinner = new Ora({
     text: 'webpack-hot-middleware : start'
-  }).start()
+  }).start();
 
-  opn(url)
-  _resolve()
-})
+  opn(url);
+  _resolve();
+});
 
-const server = app.listen(port)
+const server = app.listen(port);
 
 module.exports = {
   ready: readyPromise,
   close: () => {
-    server.close()
+    server.close();
   }
-}
+};

@@ -21,7 +21,7 @@
  export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.vue';
  export { default as TabsContentItem } from './Tabs/TabsContentItem.vue';
  export { default as Annotation } from './Annotation/Annotation.vue';
- export { default as ColorLineText } from './ColorLineText/ColorLineText.vue'
+ export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
  export { default as CardImage} from './Card/CardImage.vue';
  export { default as CardImageList} from './Card/CardImageList.vue';

@@ -20,7 +20,7 @@ import componentsList from "../../../componentsList";
 // const componentsList = {};
 
 export default {
-  name: "homeintehrnetPart4",
+  name: "HomeintehrnetPart4",
   components: componentsList,
   mounted() {},
   created() {},

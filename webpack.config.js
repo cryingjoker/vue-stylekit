@@ -4,7 +4,7 @@ const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const webpack = require('webpack');
-const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
+const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 
 const env = process.env.NODE_ENV;
 const minify = env === `production`;
@@ -116,10 +116,10 @@ const config = {
 if (env !== `development`) {
   config.plugins.push(new MiniCssExtractPlugin());
 }else{
-  config.entry.app.unshift('webpack-hot-middleware/client')
+  config.entry.app.unshift('webpack-hot-middleware/client');
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin()
-  )
+  );
 }
 
 module.exports = config;

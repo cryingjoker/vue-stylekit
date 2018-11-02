@@ -1,6 +1,6 @@
 <template>
   <div class="rt-row-list row">
-    <slot/>
+    <slot />
   </div>
 </template>
 <script>

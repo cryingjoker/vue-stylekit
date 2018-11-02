@@ -2,7 +2,7 @@
   <div>
     <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
       <div class="rt-banner-content__inner">
-        <slot/>
+        <slot />
       </div>
     </div>
   </div>
@@ -130,14 +130,6 @@ export default {
       return classArray;
     }
   },
-  methods: {
-    normalizeVariable(variable) {
-      if (typeof variable === "number") {
-        variable += "px";
-      }
-      return variable;
-    }
-  },
   beforeMount: function() {
     if (this.RtBanners) {
       this.index = this.RtBanners.items.length;
@@ -185,6 +177,14 @@ export default {
       const preloadImage = new Image();
       preloadImage.src = this.backgroundImage;
     }
-  }
+  },
+  methods: {
+    normalizeVariable(variable) {
+      if (typeof variable === "number") {
+        variable += "px";
+      }
+      return variable;
+    }
+  },
 };
 </script>
