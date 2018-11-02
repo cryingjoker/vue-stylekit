@@ -11,15 +11,15 @@
         <div class="app-row row">
           <div class="rt-col-3 rt-col-md-3">
             <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
-            <pre-code text='<rt-input-without-js value="" error-message="ошибка: не является почтой" placeholder="Электронная почта"/>'></pre-code>
+            <pre-code text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; placeholder=&quot;Электронная почта&quot;/>" />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
-            <pre-code text='<rt-input-without-js value="" error-message="ошибка: не является почтой" placeholder="Электронная почта" :has-error="true"/>'></pre-code>
+            <pre-code text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; placeholder=&quot;Электронная почта&quot; :has-error=&quot;true&quot;/>" />
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">disabled input</span>
-            <pre-code text='<rt-input-without-js value="" error-message="ошибка: не является почтой" :disabled="true" placeholder="Электронная почта"/>'></pre-code>
+            <pre-code text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; :disabled=&quot;true&quot; placeholder=&quot;Электронная почта&quot;/>" />
           </div>
         </div>
         <div class="app-row row">
@@ -28,29 +28,29 @@
         <div class="app-row row">
           <div class="rt-col-4 rt-col-md-2">
             <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
-            <pre-code text='<rt-input value="" placeholder="Электронная почта" />'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />" />
           </div>
           <div class="rt-col-4 rt-col-md-2 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
-            <pre-code text='<rt-input value="" placeholder="Электронная почта" value="inputModelValue" error-message="ошибка: не является почтой" :has-error="true" />'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot; :has-error=&quot;true&quot; />" />
           </div>
           <div class="rt-col-4 rt-col-md-1 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">disabled input</span>
-            <pre-code text='<rt-input value="" placeholder="Электронная почта" :disabled="true" value="inputModelValue" error-message="ошибка: не является почтой"/>'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; :disabled=&quot;true&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot;/>" />
           </div>
         </div>
         <div class="app-row row">
           <div class="rt-col-3 rt-col-md-3">
             <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
-            <pre-code text='<rt-input value="" placeholder="Электронная почта" />'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />" />
           </div>
           <div class="rt-col-2 rt-col-md-2 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05  rt-font-no-wrpa">input in 2 col</span>
-            <pre-code text='<rt-input value="" placeholder="Улица" />'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Улица&quot; />" />
           </div>
           <div class="rt-col-1 rt-col-md-1 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05  rt-font-no-wrpa">input in 1 c</span>
-            <pre-code text='<rt-input value="" placeholder="Дом" />'></pre-code>
+            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Дом&quot; />" />
           </div>
         </div>
       </div>

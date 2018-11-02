@@ -47,7 +47,7 @@ export default {
               { name: "version", label: "release version" },
               { name: "description", label: "description" },
             ]
-          }
+          };
           break;
         default:
           return {
@@ -59,12 +59,12 @@ export default {
             { name: "description", label: "description" },
             { name: "value", label: "default value" }
           ]
-        }
+        };
       }
     } else {
       return {
         labels: this.this.labelsJson
-      }
+      };
     }
   },
 

@@ -9,16 +9,16 @@
         <div class="app-row row">
           <div class="rt-col rt-font-hypnens-off">
             <pre-code
-              text='
+              text="
               <rt-table>
-              <template slot="label">
+              <template slot=&quot;label&quot;>
                 Тарифы на добровольную блокировку
               </template>
-              <template slot="columns">
-                <rt-table-col width="280px"></rt-table-col>
-                <rt-table-col width="180px"></rt-table-col>
+              <template slot=&quot;columns&quot;>
+                <rt-table-col width=&quot;280px&quot;></rt-table-col>
+                <rt-table-col width=&quot;180px&quot;></rt-table-col>
               </template>
-              <template slot="header">
+              <template slot=&quot;header&quot;>
                 <rt-table-head-item>Территория</rt-table-head-item>
                 <rt-table-head-item>Наименование услуги</rt-table-head-item>
                 <rt-table-head-item>Бесплатный период(дней)</rt-table-head-item>
@@ -26,7 +26,7 @@
                 <rt-table-head-item>Минимальный период блокировки (дней)</rt-table-head-item>
                 <rt-table-head-item>Стоимость добровольной блокировки в базовый период (руб./в день)</rt-table-head-item>
               </template>
-              <template slot="body">
+              <template slot=&quot;body&quot;>
                 <rt-table-row>
                   <rt-table-item>Архангельская и Мурманская
                     область Республика Корея</rt-table-item>
@@ -50,53 +50,54 @@
                 </rt-table-row>
               </template>
             </rt-table>
-            '></pre-code>
+            "
+            />
             <pre-code
-              text='<rt-table>
-              <template slot="label">
+              text="<rt-table>
+              <template slot=&quot;label&quot;>
                 Описание тарифа
               </template>
-              <template slot="columns">
+              <template slot=&quot;columns&quot;>
                 <rt-table-col></rt-table-col>
-                <rt-table-col width="280px"></rt-table-col>
-                <rt-table-col width="280px"></rt-table-col>
+                <rt-table-col width=&quot;280px&quot;></rt-table-col>
+                <rt-table-col width=&quot;280px&quot;></rt-table-col>
               </template>
-              <template slot="header">
+              <template slot=&quot;header&quot;>
                 <rt-table-head-item>Звонки</rt-table-head-item>
                 <rt-table-head-item>С опцией</rt-table-head-item>
                 <rt-table-head-item>Без опции</rt-table-head-item>
               </template>
-              <template slot="body">
+              <template slot=&quot;body&quot;>
                 <rt-table-row>
                   <rt-table-item>Все входящие звонки по России</rt-table-item>
-                  <rt-table-item mobile-width="50%">0 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width="50%">5 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>0 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>5 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в СНГ</rt-table-item>
-                  <rt-table-item mobile-width="50%">30 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width="50%">30 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>30 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>30 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в Европу</rt-table-item>
-                  <rt-table-item mobile-width="50%">49 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width="50%">49 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>49 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>49 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в остальные страны</rt-table-item>
-                  <rt-table-item mobile-width="50%">69 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width="50%">69 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>69 руб./мин.</rt-table-item>
+                  <rt-table-item mobile-width=&quot;50%&quot;>69 руб./мин.</rt-table-item>
                 </rt-table-row>
               </template>
-            </rt-table>'>
-            </pre-code>
+            </rt-table>"
+            />
 
-            </div>
           </div>
         </div>
-
       </div>
+
     </div>
+  </div>
   </div>
 </template>
 

@@ -6,6 +6,17 @@ const componentsList = {};
 componentsList[Select.name] = Select;
 export default {
   name: "RtInlineDropdown",
+  components: {},
+
+  props: {
+    resizeSteps: {
+      type: Array,
+      default: []
+    },
+    dropdownMinWidth: {
+      type: [Number, String]
+    }
+  },
   data: () => ({
     resizeTypeEnum: 0,
     RtInlineDropdown: {
@@ -24,19 +35,15 @@ export default {
     const RtInlineDropdown = this.RtInlineDropdown;
     return { RtInlineDropdown };
   },
-  components: {},
-
-  props: {
-    resizeSteps: {
-      type: Array,
-      default: []
-    },
-    dropdownMinWidth: {
-      type: [Number, String]
-    }
-  },
   mounted() {
     this.stepCheck();
+  },
+  beforeDestroy() {
+    this.unbindResize();
+  },
+  updated() {
+    this.unbindResize();
+    this.bindResize();
   },
   methods: {
     stepCheck(step) {
@@ -102,13 +109,6 @@ export default {
     unbindResize() {
       window.removeEventListener("resize", this.checkWidth);
     }
-  },
-  beforeDestroy() {
-    this.unbindResize();
-  },
-  updated() {
-    this.unbindResize();
-    this.bindResize();
   },
   render() {
     return (

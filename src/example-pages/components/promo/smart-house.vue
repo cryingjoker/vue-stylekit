@@ -50,24 +50,24 @@
       <div class="rt-container">
         <div class="rt-col-12 rt-space-top3">
           <div class="row">
-            <div class="rt-col-1 md-d-none"/>
+            <div class="rt-col-1 md-d-none" />
             <div class="rt-col-5 flex-center-center rt-md-space-bottom2 rt-col-md-3">
               <div>
                 <p class="rt-font-promo-title color-main07">О системе</p>
                 <p class="rt-font-paragraph rt-space-top color-main05">«Умный дом» — это безопасный и
-                  комфортный дом. Вы будете знать обо всём, что в нём происходит, даже находясь в
-                  другом городе. Система датчиков и устройств моментО системеально уведомит вас о
-                  любых
-                  происшествиях. А ещё вы сможете управлять бытовыми приборами удалённо: например, с
-                  помощью смартфона выключить утюг, даже если вы уже ушли из дома.</p>
+                комфортный дом. Вы будете знать обо всём, что в нём происходит, даже находясь в
+                другом городе. Система датчиков и устройств моментО системеально уведомит вас о
+                любых
+                происшествиях. А ещё вы сможете управлять бытовыми приборами удалённо: например, с
+                помощью смартфона выключить утюг, даже если вы уже ушли из дома.</p>
               </div>
             </div>
-            <div class="rt-col-2"/>
+            <div class="rt-col-2" />
             <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone">
-                  <div class="phone__container"/>
-                  <img src="/static/images/smartHouse/app.jpg" class="phone__image"/>
+                  <div class="phone__container" />
+                  <img src="/static/images/smartHouse/app.jpg" class="phone__image">
                 </div>
               </div>
 
@@ -142,13 +142,13 @@
                     <rt-card :static-body-height="true">
                       <template slot="content">
                         <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Базовый
-                          комплект</p>
+                        комплект</p>
                         <p class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2">
                           умный дом</p>
                         <img src="/static/images/smartHouse/smart1.png" class="rt-card-img" alt="">
                         <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                          самых необходимых датчиков для ознакомления с системой «Умный
-                          дом».</p>
+                        самых необходимых датчиков для ознакомления с системой «Умный
+                        дом».</p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
@@ -179,7 +179,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -208,7 +208,7 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  открытия дверей и окон </p>
+                                открытия дверей и окон </p>
                               </div>
                             </div>
                           </div>
@@ -237,9 +237,9 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  движения</p>
+                                движения</p>
                                 <p class="rt-font-label color-main05">движение,
-                                  температуру и освещенность</p>
+                                температуру и освещенность</p>
                               </div>
                             </div>
                           </div>
@@ -265,7 +265,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
 
@@ -289,7 +289,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
 
@@ -313,7 +313,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                         </div>
                       </template>
@@ -323,13 +323,13 @@
                     <rt-card :static-body-height="true">
                       <template slot="content">
                         <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Расширенный
-                          комплект</p>
+                        комплект</p>
                         <p class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2">
                           умный дом</p>
                         <img src="/static/images/smartHouse/smart2.png" class="rt-card-img" alt="">
                         <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                          самых необходимых датчиков для ознакомления с системой «Умный
-                          дом».</p>
+                        самых необходимых датчиков для ознакомления с системой «Умный
+                        дом».</p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
@@ -360,7 +360,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -389,7 +389,7 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  открытия дверей и окон </p>
+                                открытия дверей и окон </p>
                               </div>
                             </div>
                           </div>
@@ -418,9 +418,9 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  движения</p>
+                                движения</p>
                                 <p class="rt-font-label color-main05">движение,
-                                  температуру и освещенность</p>
+                                температуру и освещенность</p>
                               </div>
                             </div>
                           </div>
@@ -446,7 +446,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
 
@@ -470,7 +470,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
 
@@ -494,7 +494,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
                         </div>
                       </template>
@@ -508,8 +508,8 @@
                           умный дом</p>
                         <img src="/static/images/smartHouse/smart3.png" class="rt-card-img" alt="">
                         <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                          самых необходимых датчиков для ознакомления с системой «Умный
-                          дом».</p>
+                        самых необходимых датчиков для ознакомления с системой «Умный
+                        дом».</p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
@@ -540,7 +540,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -569,7 +569,7 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  открытия дверей и окон </p>
+                                открытия дверей и окон </p>
                               </div>
                             </div>
                           </div>
@@ -598,9 +598,9 @@
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">Датчик
-                                  движения</p>
+                                движения</p>
                                 <p class="rt-font-label color-main05">движение,
-                                  температуру и освещенность</p>
+                                температуру и освещенность</p>
                               </div>
                             </div>
                           </div>
@@ -626,7 +626,7 @@
 
                               </svg>
                             </div>
-                            <div class="rt-card-list__name"/>
+                            <div class="rt-card-list__name" />
                           </div>
 
                         </div>
@@ -675,7 +675,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -722,7 +722,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -773,7 +773,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -824,7 +824,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -871,7 +871,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -922,7 +922,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -969,7 +969,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1016,7 +1016,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1062,7 +1062,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1108,7 +1108,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1154,7 +1154,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1205,7 +1205,7 @@
                                 <p class="rt-font-small-paragraph color-main07">
                                   Контроллер </p>
                                 <p class="rt-font-label color-main05">Необходим для
-                                  управления и настройки устройств,</p>
+                                управления и настройки устройств,</p>
                               </div>
                             </div>
                           </div>
@@ -1225,14 +1225,14 @@
       <div class="rt-container">
         <div class="rt-col-12 rt-space-top3">
           <div class="row">
-            <div class="rt-col-1 md-d-none"/>
+            <div class="rt-col-1 md-d-none" />
             <div class="rt-col-5 flex-center-center rt-col-md-3">
               <div id="connect">
                 <p class="rt-font-promo-title color-main07">Подключение и управление</p>
                 <p class="rt-font-paragraph rt-space-top color-main05">Установить и настроить «Умный
-                  дом» несложно, в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас
-                  возникнут сложности, мы всё сделаем за вас: просто скажите о своем желании оператору
-                  при звонке. Услуга платная, о стоимости вам расскажет оператор.
+                дом» несложно, в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас
+                возникнут сложности, мы всё сделаем за вас: просто скажите о своем желании оператору
+                при звонке. Услуга платная, о стоимости вам расскажет оператор.
                   <br><br>Управлять устройствами можно с компьютера, планшета или смартфона — через
                   личный кабинет и мобильное приложение.</p>
                 <div class="rt-space-top15 rt-font-md-center">
@@ -1247,12 +1247,12 @@
                 </div>
               </div>
             </div>
-            <div class="rt-col-2 md-d-none"/>
+            <div class="rt-col-2 md-d-none" />
             <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone phone--is-big">
-                  <div class="phone__container"/>
-                  <img src="/static/images/smartHouse/app.jpg" class="phone__image"/>
+                  <div class="phone__container" />
+                  <img src="/static/images/smartHouse/app.jpg" class="phone__image">
                 </div>
               </div>
 
@@ -1322,46 +1322,46 @@
 
             <template slot="content">
               <p class="rt-annotation-item"> 1. Услуги Высокоскоростного интернета предоставляются при наличии
-                технической возможности.</p>
+              технической возможности.</p>
               <p class="rt-annotation-item"> 2. Цены указаны в рублях с учетом НДС.</p>
               <p class="rt-annotation-item"> «По оптической линии» — предоставление доступа к сети Интернет
-                осуществляется по технологии FTTx (англ., fiber to the x — оптическое волокно до точки X)
-                или по технологии PON (англ. Passive Optical Networks — пассивная оптическая сеть до
-                абонента).</p>
+              осуществляется по технологии FTTx (англ., fiber to the x — оптическое волокно до точки X)
+              или по технологии PON (англ. Passive Optical Networks — пассивная оптическая сеть до
+              абонента).</p>
               <p class="rt-annotation-item"> «По телефонной линии» — предоставление доступа к сети Интернет
-                осуществляется по технологии xDSL (англ., digital subscriber line, цифровая абонентская
-                линия).</p>
+              осуществляется по технологии xDSL (англ., digital subscriber line, цифровая абонентская
+              линия).</p>
               <p class="rt-annotation-item"> 3. Предоставление доступа к сети Интернет осуществляется по технологии
-                xDSL (англ., digital subscriber line, цифровая абонентская линия).</p>
+              xDSL (англ., digital subscriber line, цифровая абонентская линия).</p>
               <p class="rt-annotation-item"> 4. Скорость доступа к сети Интернет зависит не только от технических
-                особенностей Услуги, но и от действий третьих сил, организаций и лиц, управляющих сегментами
-                сети Интернет (или оказывающих на них влияние), не принадлежащих ПАО «Ростелеком». Скорость
-                доступа к сети Интернет является величиной неопределенной и зависит от ряда параметров, в
-                том числе, технических характеристик подключения, маршрута и текущей загрузки каналов,
-                характеристиками установленного абонентского оборудования (ПК, смартфон, WiFi-роутер),
-                версией программного обеспечения или используемого стандарта, месторасположением
-                запрашиваемого контента. Все параметры являются переменными и не гарантируются ПАО
-                «Ростелеком» за пределами своей сети. Указанная в тарифном плане скорость является
-                максимально возможной.</p>
+              особенностей Услуги, но и от действий третьих сил, организаций и лиц, управляющих сегментами
+              сети Интернет (или оказывающих на них влияние), не принадлежащих ПАО «Ростелеком». Скорость
+              доступа к сети Интернет является величиной неопределенной и зависит от ряда параметров, в
+              том числе, технических характеристик подключения, маршрута и текущей загрузки каналов,
+              характеристиками установленного абонентского оборудования (ПК, смартфон, WiFi-роутер),
+              версией программного обеспечения или используемого стандарта, месторасположением
+              запрашиваемого контента. Все параметры являются переменными и не гарантируются ПАО
+              «Ростелеком» за пределами своей сети. Указанная в тарифном плане скорость является
+              максимально возможной.</p>
               <p class="rt-annotation-item"> 5. Абонентselect-arrow__iconская плата за услугу Интернет списывается с
-                лицевого счета
-                абонента один раз в месяц. В первый месяц пользования услугой Интернет с лицевого счета
-                абонента списывается абонентская плата, рассчитанная пропорционально количеству дней от даты
-                начала оказания услуги до конца месяца.</p>
+              лицевого счета
+              абонента один раз в месяц. В первый месяц пользования услугой Интернет с лицевого счета
+              абонента списывается абонентская плата, рассчитанная пропорционально количеству дней от даты
+              начала оказания услуги до конца месяца.</p>
               <p class="rt-annotation-item"> 6. Оборудование (маршрутизатор или абонентский модем в зависимости от
-                технологии предоставления услуги), необходимое для получения услуг, может быть приобретено
-                отдельно по действующим тарифам. Стоимость оборудования уточняйте по телефону
-                8-800-100-0-800.</p>
+              технологии предоставления услуги), необходимое для получения услуг, может быть приобретено
+              отдельно по действующим тарифам. Стоимость оборудования уточняйте по телефону
+              8-800-100-0-800.</p>
               <p class="rt-annotation-item"> 7. Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети). Услуга
-                предоставляется на территории Российской Федерации для абонентов-физических лиц при наличии
-                технической возможности. При первом подключении услуги на условиях ежемесячной подписки
-                первые 30 календарных дней с момента активации услуги предоставляются без взимания
-                абонентской платы, далее согласно Базовым тарифам. При первом подключении услуги на условиях
-                годовой подписки абонент пользуется услугой 14 месяцев (420 календарных дней) с момента
-                активации, два последних месяца предоставляются без взимания абонентской платы. При
-                прологнации услуги или повторных подключениях на условиях годовой подписки период
-                пользования составляет 360 календарных дней. Подробности об услуге, ПАО «Ростелеком»
-                узнавайте по бесплатному номеру 8-800-100-0-800, а также на сайте www.rt.ru.</p>
+              предоставляется на территории Российской Федерации для абонентов-физических лиц при наличии
+              технической возможности. При первом подключении услуги на условиях ежемесячной подписки
+              первые 30 календарных дней с момента активации услуги предоставляются без взимания
+              абонентской платы, далее согласно Базовым тарифам. При первом подключении услуги на условиях
+              годовой подписки абонент пользуется услугой 14 месяцев (420 календарных дней) с момента
+              активации, два последних месяца предоставляются без взимания абонентской платы. При
+              прологнации услуги или повторных подключениях на условиях годовой подписки период
+              пользования составляет 360 календарных дней. Подробности об услуге, ПАО «Ростелеком»
+              узнавайте по бесплатному номеру 8-800-100-0-800, а также на сайте www.rt.ru.</p>
             </template>
           </rt-annotation>
         </div>

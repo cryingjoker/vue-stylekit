@@ -122,17 +122,6 @@ export default {
       default: null
     }
   },
-  methods: {
-    normalizeSize(size) {
-      if (typeof size === "number") {
-        return size + "px";
-      }
-      if (typeof size === "string") {
-        return size;
-      }
-      return size;
-    }
-  },
   computed: {
     cardClass() {
       const classArray = {};
@@ -336,6 +325,17 @@ export default {
     }
   },
 
-  mounted: function() {}
+  mounted: function() {},
+  methods: {
+    normalizeSize(size) {
+      if (typeof size === "number") {
+        return size + "px";
+      }
+      if (typeof size === "string") {
+        return size;
+      }
+      return size;
+    }
+  },
 };
 </script>

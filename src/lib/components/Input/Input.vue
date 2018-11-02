@@ -1,6 +1,6 @@
 <template>
   <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':isWhite}">
-    <input autocomplete="off" autocapitalize="off" type="text" ref="input" class="input-element" @input="inputHandler">
+    <input ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element" @input="inputHandler">
     <div class="text-field__line" />
     <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
       {{ placeholder }}

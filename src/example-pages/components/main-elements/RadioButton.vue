@@ -8,9 +8,9 @@
         <div class="app-row">
           <p class="rt-font-h3">radiobutton</p>
         </div>
-        <div class="rt-space-bottom2">testModel = {{testModel}}</div>
+        <div class="rt-space-bottom2">testModel = {{ testModel }}</div>
 
-        <pre-code text='<div class="app-row row rt-space-top2"><div class="rt-col"><rt-radio-button name="type" @change="setTestModel" value="0" :model="testModel">Огонь</rt-radio-button><div class="rt-space-vertical"><rt-radio-button name="type" @change="setTestModel" value="1" :model="testModel">Вода</rt-radio-button></div><rt-radio-button name="type" @change="setTestModel" value="2" :model="testModel">Медные трубы</rt-radio-button></div></div>'></pre-code>
+        <pre-code text="<div class=&quot;app-row row rt-space-top2&quot;><div class=&quot;rt-col&quot;><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;0&quot; :model=&quot;testModel&quot;>Огонь</rt-radio-button><div class=&quot;rt-space-vertical&quot;><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;1&quot; :model=&quot;testModel&quot;>Вода</rt-radio-button></div><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;2&quot; :model=&quot;testModel&quot;>Медные трубы</rt-radio-button></div></div>" />
         <div class="app-row row">
           <div class="rt-col">
             <rt-radio-button name="type" :is-disabled="true">Огонь</rt-radio-button>
@@ -29,12 +29,12 @@ import componentsList from "../../componentsList";
 // const componentsList = {};
 export default {
   name: "AppRadioButton",
+  components: componentsList,
   data() {
     return {
       testModel: 0
     };
   },
-  components: componentsList,
   mounted() {},
   created() {},
   methods: {

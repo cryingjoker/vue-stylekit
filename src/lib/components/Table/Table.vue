@@ -2,6 +2,7 @@
 export default {
   name: "RtTable",
   components: {},
+  props: {},
   data: () => ({
     tableLabels: [],
     slotVNode: "test"
@@ -10,7 +11,10 @@ export default {
     const tableLabels = this["tableLabels"];
     return { tableLabels };
   },
-  props: {},
+
+  mounted: function() {
+    this.getLabelHtml();
+  },
 
   methods: {
     getLabelHtml() {
@@ -20,10 +24,6 @@ export default {
       //   })
       // }
     }
-  },
-
-  mounted: function() {
-    this.getLabelHtml();
   },
   render: function(h) {
     const columns = () => {

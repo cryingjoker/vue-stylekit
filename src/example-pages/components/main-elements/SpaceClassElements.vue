@@ -16,13 +16,13 @@
             </template>
             <template slot="content">
               <rt-tabs-content-item name="all">
-                <documentation-builder type="classStyle" label="all width" :json="json"></documentation-builder>
+                <documentation-builder type="classStyle" label="all width" :json="json" />
               </rt-tabs-content-item>
               <rt-tabs-content-item name="tablet">
-                <documentation-builder type="classStyle" :label="'max-width: '+variables['tablet-step-size']" :json="tabletJson"></documentation-builder>
+                <documentation-builder type="classStyle" :label="'max-width: '+variables['tablet-step-size']" :json="tabletJson" />
               </rt-tabs-content-item>
               <rt-tabs-content-item name="mobile">
-                <documentation-builder type="classStyle" :label="'max-width: '+variables['mobile-step-size']" :json="mobileJson"></documentation-builder>
+                <documentation-builder type="classStyle" :label="'max-width: '+variables['mobile-step-size']" :json="mobileJson" />
               </rt-tabs-content-item>
             </template>
           </rt-tabs>
@@ -34,14 +34,10 @@
 
 <script>
   const componentsList = {};
-  import variables from '../../../lib/variables.json'
+  import variables from '../../../lib/variables.json';
   export default {
     name: "AppGridElements",
     components: componentsList,
-    mounted() {
-    },
-    created() {
-    },
     data() {
       return {
         "variables": variables,
@@ -1513,6 +1509,10 @@
           ]
         }
       };
+    },
+    mounted() {
+    },
+    created() {
     },
     methods: {}
   };

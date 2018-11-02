@@ -3,7 +3,7 @@
 <!--@touchstart.passive-->
 <template>
   <div class="ripple" @mousedown="renderRipple">
-    <slot/>
+    <slot />
   </div>
 </template>
 

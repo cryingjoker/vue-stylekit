@@ -2,6 +2,7 @@
 <script type="text/jsx">
 export default {
   name: "RtInlineDropdownItem",
+  components: {},
   props: {
     isActive: {
       type: Boolean,
@@ -16,7 +17,6 @@ export default {
       this.RtInlineDropdown.activeItem = this.$el.innerText;
     }
   },
-  components: {},
   methods: {},
   render() {
     if (this.RtInlineDropdown.isDropdownMode) {

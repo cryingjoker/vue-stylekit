@@ -1,6 +1,6 @@
 <template>
   <!--{{this.code}}-->
-  <div class="code-editor__container" ref="editor" ></div>
+  <div ref="editor" class="code-editor__container" />
 </template>
 
 <script>

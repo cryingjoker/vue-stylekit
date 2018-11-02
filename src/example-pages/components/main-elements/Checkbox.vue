@@ -11,14 +11,16 @@
         </div>
         <div class="app-row row">
           <pre-code
-            text='<div class="rt-col"><rt-checkbox name="internet">Интернет</rt-checkbox><div class="rt-space-vertical"><rt-checkbox name="sms">Смс</rt-checkbox></div><rt-checkbox name="voiseMessage">Голосовая почта</rt-checkbox><div class="rt-space-vertical"><rt-checkbox name="calls" :checked="true">Звонки</rt-checkbox></div></div>'></pre-code>
+            text="<div class=&quot;rt-col&quot;><rt-checkbox name=&quot;internet&quot;>Интернет</rt-checkbox><div class=&quot;rt-space-vertical&quot;><rt-checkbox name=&quot;sms&quot;>Смс</rt-checkbox></div><rt-checkbox name=&quot;voiseMessage&quot;>Голосовая почта</rt-checkbox><div class=&quot;rt-space-vertical&quot;><rt-checkbox name=&quot;calls&quot; :checked=&quot;true&quot;>Звонки</rt-checkbox></div></div>"
+          />
         </div>
         <div class="app-row row">
           <p class="rt-font-h3 rt-col">disabled checkbox</p>
         </div>
         <div class="app-row row">
           <pre-code
-            text='<div class="rt-col"><div class="rt-space-vertical"><rt-checkbox :is-disabled="true">Интернет</rt-checkbox></div><rt-checkbox :is-disabled="true" :checked="true">Интернет</rt-checkbox></div>'></pre-code>
+            text="<div class=&quot;rt-col&quot;><div class=&quot;rt-space-vertical&quot;><rt-checkbox :is-disabled=&quot;true&quot;>Интернет</rt-checkbox></div><rt-checkbox :is-disabled=&quot;true&quot; :checked=&quot;true&quot;>Интернет</rt-checkbox></div>"
+          />
         </div>
       </div>
     </div>
