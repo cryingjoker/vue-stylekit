@@ -5,6 +5,15 @@
     <input type="checkbox" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
 
     <div class="checkbox-container">
+
+      <svg class="checkbox-container__angle" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="controls/checkbox/active/mark/violet" stroke-width="3">
+            <polyline id="Stroke-4" points="1 4 4.44815083 7 7.5882241 4.12440883 11 1"></polyline>
+          </g>
+        </g>
+      </svg>
+
       <slot />
     </div>
   </label>

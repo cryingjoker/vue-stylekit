@@ -63,7 +63,7 @@ export default {
             el.style[i] = style[i];
           }
           setTimeout(() => {
-            // el.remove()
+            el.remove()
           }, 400);
         }, 10);
       }
