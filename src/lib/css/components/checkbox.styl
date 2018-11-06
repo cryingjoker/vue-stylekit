@@ -5,15 +5,12 @@
     position: relative;
     user-select: none;
     position: relative
-
     &-element {
       position: absolute
       width: 0
       height: 0
       border-width 0
       outline none
-
-
     }
     &-container {
         position: relative;
@@ -22,6 +19,7 @@
         &__angle{
             position: absolute;
             left: 4.5px;
+            z-index 3
             top: 5.5px;
             width: 12px;
             height: 10px;
@@ -43,6 +41,8 @@
             position: absolute;
             left: 0;
             top: 0;
+            background-color: b2b-white
+            z-index 2
             transition-timing-function: cubic-bezier(.11, .34, .97, .33);
             transition-property: background, border;
             transition-duration: 0.3s;
