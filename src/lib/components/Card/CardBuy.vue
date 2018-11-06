@@ -16,7 +16,6 @@
     },
     methods: {
       toggleShow(){
-        console.info('fuck')
         this.showForm = !this.showForm;
 
       }
