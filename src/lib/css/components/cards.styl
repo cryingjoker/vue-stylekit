@@ -1,6 +1,7 @@
 .{newAppName}-card
   border-radius: 10px
   display: flex
+  flex-direction column
   width: 100%
   box-shadow: card-shadow
   background-position-x: center
@@ -12,6 +13,11 @@
   align-self: stretch
   flex: 1
   min-height: min-content
+  &__border-content
+    border-top: 1px solid b2c-dark01
+    padding-top: vertical-space*0.5
+    padding-left: horizontal-space
+    padding-right: horizontal-space
   &--has-bg-cover
     background-color: transparent
 
@@ -283,3 +289,16 @@
 
   .{newAppName}-card-image-list:last-child
     border-bottom-width: 0
+
+.{newAppName}-card-buy
+    background-color: b2b-white
+    &__image
+      width: 100%
+      height: 100%
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      @media (max-width: mobile-step-size)
+        height: 30vh
+
+

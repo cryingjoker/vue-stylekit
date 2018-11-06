@@ -13,7 +13,7 @@ export default {
       return (
         <div class="rt-card-image-list rt-card-image-list--has-icon rt-font-small-paragraph">
           <div class="rt-card-image-list__icon">{this.$slots.icon}</div>
-          <div className="rt-card-image-list__content">
+          <div class="rt-card-image-list__content rt-space-left05">
             {this.$slots.default}
           </div>
         </div>

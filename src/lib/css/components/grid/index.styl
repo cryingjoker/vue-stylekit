@@ -66,7 +66,10 @@ spaceRender(prefix, needMedia, value, mediaWidth)
 
 steps = (desctop-step-grid 12),
   (tablet-step-grid 6 "td" tablet-step-size),
-  (mobile-step-grid 3 "md" mobile-step-size)
+  (mobile-step-grid 3 "md" mobile-step-size),
+  (10% 10 "persent"),
+  (10% 10 "td-persent" tablet-step-size),
+  (10% 10 "md-persent" mobile-step-size)
 
 
 for devideStep in steps
@@ -76,9 +79,11 @@ for devideStep in steps
   if devideStep[1] < 12
     media = devideStep[3]
     devicePrefix = '-'+devideStep[2]
-    needMedia = true
+    if media
+      needMedia = true
   for $i in 1..devideStep[1]
-    .{newAppName}-col{devicePrefix}-{$i}
+    className = newAppName+'-col'+devicePrefix+'-'+$i
+    .{className}
       +cache('mobile-column')
         position relative
         width 100%
@@ -175,7 +180,9 @@ for devideStep in steps
   display -ms-inline-flexbox
   display inline-flex
 }
-
+.d-space-between {
+  justify-content: space-between;
+}
 .d-stretch {
   display flex
   display -ms-flexbox

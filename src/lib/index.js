@@ -30,6 +30,7 @@ import {
   BannerItem,
   BannerPaginatorItem,
   Card,
+  CardBuy,
   CardImage,
   CardImageList,
   FullscreenImage,
@@ -74,6 +75,7 @@ const VueRtStyle = {
       Vue.component(Annotation.name, Annotation);
       Vue.component(ColorLineText.name, ColorLineText);
       Vue.component(Card.name, Card);
+      Vue.component(CardBuy.name, CardBuy);
       Vue.component(CardImage.name, CardImage);
       Vue.component(CardImageList.name, CardImageList);
       Vue.component(Banner.name, Banner);
