@@ -4,25 +4,35 @@
     user-select: none;
     position: relative;
     user-select: none;
+    position: relative
+
     &-element {
-        display: none;
+      position: absolute
+      width: 0
+      height: 0
+      border-width 0
+      outline none
+
+
     }
     &-container {
         position: relative;
         padding-left: 29px;
         user-select: none;
-        &:after {
-            content: '';
+        &__angle{
             position: absolute;
             left: 4.5px;
             top: 5.5px;
             width: 12px;
-            height: 10px; //opacity: 0;
-            //visibility: hidden;
+            height: 10px;
+            opacity: 0;
+            visibility: hidden;
             transition-timing-function: ease-in-out;
-            transition-property: stroke, opacity, visibility, background-image;
+            transition-property: stroke, opacity, visibility, stroke-dashoffset, stroke-dasharray;
             transition-duration: 0.3s;
-            background-image: url("data:image/svg+xml;utf8,<svg width='12' height='10' xmlns='http://www.w3.org/2000/svg'> <path d='M1 4.17l3.30782609 3.17L10.5930435 1' stroke='transparent' stroke-width='3' fill='none' fill-rule='evenodd'/> </svg>");
+            stroke: b2c-purple-low;
+            stroke-dashoffset: 100px;
+            stroke-dasharray: 20px;
         }
         &:before {
             content: '';
@@ -34,21 +44,25 @@
             left: 0;
             top: 0;
             transition-timing-function: cubic-bezier(.11, .34, .97, .33);
-            transition-property: background;
+            transition-property: background, border;
             transition-duration: 0.3s;
             .{newAppName}-dark-theme & {
                 background-color: #fff;
             }
         }
+        .checkbox-element:focus+&:before,
+        .checkbox:hover &:before{
+          border-color b2c-purple-low
+        }
         .checkbox-element:checked+& {
-            &:after {
+            .checkbox-container__angle {
                 opacity: 1;
                 visibility: visible;
-                background-image: url("data:image/svg+xml;utf8,<svg width='12' height='10' xmlns='http://www.w3.org/2000/svg'> <path d='M1 4.17l3.30782609 3.17L10.5930435 1' stroke='"+b2c-purple-low+"' stroke-width='3' fill='none' fill-rule='evenodd'/> </svg>");
+                stroke-dashoffset: 80px;
             }
         }
       .checkbox-element[disabled]:checked+&{
-        &:after {
+        .checkbox-container__angle {
           opacity: 0.4;
         }
       }
@@ -66,16 +80,16 @@
                 visibility: visible;
             }
 
-            &:after {
+            .checkbox-container__angle {
                 opacity: 0;
                 visibility: visible;
-                background-image: url("data:image/svg+xml;utf8,<svg width='12' height='10' xmlns='http://www.w3.org/2000/svg'> <path d='M1 4.17l3.30782609 3.17L10.5930435 1' stroke='"+dark-theme-background+"' stroke-width='3' fill='none' fill-rule='evenodd'/> </svg>");
+                stroke dark-theme-background
             }
             .{newAppName}-dark-theme & {
-                &:after {
+              .checkbox-container__angle {
                     opacity: 0.4;
                     visibility: visible;
-                    background-image: url("data:image/svg+xml;utf8,<svg width='12' height='10' xmlns='http://www.w3.org/2000/svg'> <path d='M1 4.17l3.30782609 3.17L10.5930435 1' stroke='"+dark-theme-background+"' stroke-width='3' fill='none' fill-rule='evenodd'/> </svg>");
+                    stroke dark-theme-background
                 }
             }
         }

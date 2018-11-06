@@ -292,9 +292,27 @@
 
 .{newAppName}-card-buy
     background-color: b2b-white
+    position: relative
+    &__form
+      position: absolute
+      top: -50%
+      background-color: b2b-white
+      min-height: calc(100% - 170px)
+      z-index: 2
+      left: 0
+      right: 0
+      opacity: 0
+      visibility: hidden
+      transition-timing-function: ease-in-out;
+      transition-property: top, opacity, visibility;
+      transition-duration: 0.2s;
+      .{newAppName}-card-buy--show-form & {
+        opacity: 1
+        visibility: visible
+        top: 0
+      }
     &__image
       width: 100%
-      height: 100%
       background-size: contain
       background-repeat: no-repeat
       background-position: center
