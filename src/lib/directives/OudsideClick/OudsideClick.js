@@ -1,3 +1,4 @@
+import variables from "../../variables.json";
 class OutsideClick {
   constructor(element, action, vnode){
     this.$el = element;
@@ -30,7 +31,10 @@ class OutsideClick {
     this.hover = true
   }
   triggerAction = ()=>{
-    if(!this.hover){
+
+    const isMobile =
+      window.innerWidth <= parseInt(variables["tablet-step-size"]);
+    if(!this.hover && !isTablet){
       this.action.value();
     }
   }

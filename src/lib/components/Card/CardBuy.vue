@@ -32,9 +32,16 @@
       return <div class="rt-col-6 rt-col-td-3 rt-col-md-3" v-rt-out-side-click={this.hideShow}>
         <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '')}>
           <div class="row rt-card-buy__form rt-space-vertical">
+            <div class="rt-close" onClick={this.hideShow}>
+              <svg class="rt-close__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
+                      fill-rule="evenodd"/>
+              </svg>
+            </div>
             <div class="rt-col-12">
               <div class="rt-space-horizontal">
                 <p class="rt-font-paragraph rt-font-bold">Заявка на подключение</p>
+
                 <div class="rt-space-top">
                   <rt-input value="" placeholder="Как вас зовут?"/>
                 </div>
@@ -51,7 +58,7 @@
             </div>
           </div>
           <div class="row rt-card-buy__info">
-            <div class="rt-col-4 rt-col-md-3 flex-column d-flex">
+            <div class="rt-col-4 rt-col-md-3 flex-column d-flex d-md-block">
               <div class="rt-space-left rt-md-space-horizontal rt-md-space-top flex-fill d-flex">
                 <div class="rt-card-buy__image flex-fill"
                      style="background-image: url(/static/example-images/camera.png)"></div>
