@@ -32,7 +32,7 @@ class OutsideClick {
   }
   triggerAction = ()=>{
 
-    const isMobile =
+    const isTablet =
       window.innerWidth <= parseInt(variables["tablet-step-size"]);
     if(!this.hover && !isTablet){
       this.action.value();
