@@ -35,8 +35,8 @@
         z-index: 2;
         opacity: 0.7;
         transition-timing-function: ease-in-out;
-        transition-property: opacity;
-        transition-duration: 0.2s;
+        transition-property: opacity, transform ;
+        transition-duration: 0.4s;
         animation: 0.3s showClearInput ease-in-out;
         &__icon {
             fill: b2b-black;
@@ -53,6 +53,8 @@
         }
         &:hover {
             opacity: 1;
+            transform: rotate(180deg)
+
         }
     }
 }

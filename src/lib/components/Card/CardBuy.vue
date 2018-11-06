@@ -113,7 +113,7 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="color-main07">Видеокамера</p>
+                      <p>Видеокамера</p>
                       <p class="color-main05">Камера внутреннего видеонаблюдения</p>
                     </div>
                   </li>
@@ -156,7 +156,7 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="color-main07">Облако</p>
+                      <p>Облако</p>
                       <p class="color-main05">Услуга «Видеонаблюдение» включает 7 дней хранения видеозаписей в
                         облаке.</p>
                     </div>
