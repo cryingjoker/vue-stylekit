@@ -46,6 +46,7 @@ import {
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
+import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -94,13 +95,14 @@ const VueRtStyle = {
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
+      Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
     }
   }
 };
-VueRtStyle.directives = { SwipeLeft, SwipeRight };
+VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
 const version = "0.0.16";
 VueRtStyle.version = version;

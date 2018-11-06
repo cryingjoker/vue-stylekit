@@ -200,6 +200,8 @@ componentDirectives[VueRtStyle.directives.SwipeRight.name] =
   VueRtStyle.directives.SwipeRight;
 componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
   VueRtStyle.directives.SwipeLeft;
+componentDirectives[VueRtStyle.directives.OutsideClickDirective.name] =
+  VueRtStyle.directives.OutsideClickDirective;
 
 export default {
   name: "App",

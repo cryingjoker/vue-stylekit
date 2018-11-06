@@ -1,11 +1,15 @@
 <script type="text/jsx">
-  const componentsList = {};
+  import {OutsideClickDirective} from "../../directives/OudsideClick/OudsideClick";
 
+  const componentsList = {};
+  const directives = {};
+  directives[OutsideClickDirective.name] = OutsideClickDirective;
   export default {
     name: "RtCardBuy",
     components: componentsList,
     props: {},
     computed: {},
+    directives: directives,
     data(){
       return {
         showForm : false
@@ -15,16 +19,20 @@
     mounted: function() {
     },
     methods: {
+      hideShow(){
+        if(this.showForm){
+          this.showForm = false
+        }
+      },
       toggleShow(){
         this.showForm = !this.showForm;
-
       }
     },
     render() {
-      return <div class="rt-col-5 rt-col-td-3 rt-col-md-3">
+      return <div class="rt-col-6 rt-col-td-3 rt-col-md-3" v-rt-out-side-click={this.hideShow}>
         <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '')}>
           <div class="row rt-card-buy__form rt-space-vertical">
-            <div class="rt-col-persent-10">
+            <div class="rt-col-12">
               <div class="rt-space-horizontal">
                 <p class="rt-font-paragraph rt-font-bold">Заявка на подключение</p>
                 <div class="rt-space-top">
@@ -43,13 +51,13 @@
             </div>
           </div>
           <div class="row rt-card-buy__info">
-            <div class="rt-col-persent-4 rt-col-md-persent-10 flex-column d-flex">
+            <div class="rt-col-4 rt-col-md-3 flex-column d-flex">
               <div class="rt-space-left rt-md-space-horizontal rt-md-space-top flex-fill d-flex">
                 <div class="rt-card-buy__image flex-fill"
                      style="background-image: url(/static/example-images/camera.png)"></div>
               </div>
             </div>
-            <div class="rt-col-persent-6 rt-space-vertical rt-col-md-persent-10 rt-md-space-top">
+            <div class="rt-col-8 rt-space-vertical rt-col-md-3 rt-md-space-top">
               <div class="rt-space-right rt-md-space-horizontal">
                 <p class="rt-font-paragraph rt-font-bold"> Видеокамера и услуга «Видеонаблюдение» в рассрочку на 24
                   месяца</p>
