@@ -8,6 +8,9 @@
       </div>
       <div class="app-body">
         <div class="row">
+          <rt-card-buy></rt-card-buy>
+        </div>
+        <div class="row">
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image card-image="/static/images/cardImage3.jpg">
               <template slot="body">

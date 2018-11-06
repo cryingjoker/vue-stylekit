@@ -23,6 +23,7 @@
  export { default as Annotation } from './Annotation/Annotation.vue';
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
+ export { default as CardBuy} from './Card/CardBuy.vue';
  export { default as CardImage} from './Card/CardImage.vue';
  export { default as CardImageList} from './Card/CardImageList.vue';
  export { default as Banner } from './Banner/Banner.vue';

@@ -27,6 +27,7 @@ import {
   BannerItem,
   BannerPaginatorItem,
   Card,
+  CardBuy,
   CardImage,
   CardImageList,
   FullscreenImage,
@@ -69,6 +70,7 @@ componentsList[Banner.name] = Banner;
 componentsList[BannerItem.name] = BannerItem;
 componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 componentsList[Card.name] = Card;
+componentsList[CardBuy.name] = CardBuy;
 componentsList[CardImage.name] = CardImage;
 componentsList[CardImageList.name] = CardImageList;
 componentsList[FullscreenImage.name] = FullscreenImage;
