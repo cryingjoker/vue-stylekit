@@ -55,7 +55,7 @@ export default {
         class={classList}
         label={this.tableLabels[this.slotIndex]}
       >
-        <div class="rt-table-body__content" domPropsInnerHTML={this.html}>{this.$slots.default}</div>
+        {this.html ? <div domPropsInnerHTML={this.html} class="rt-table-body__content"></div> : <div class="rt-table-body__content">{this.$slots.default}</div>}
       </div>
     );
   }

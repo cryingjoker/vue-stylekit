@@ -12,7 +12,7 @@ export default {
     },
   },
   render(){
-    return <div class="rt-tag">
+    return <div class={"rt-tag"+(this.isActive ? " rt-tag--is-active": "")}>
       {this.$slots.default}
     </div>
   }
