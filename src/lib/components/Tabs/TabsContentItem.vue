@@ -22,7 +22,7 @@ export default {
   methods: {},
   render(h) {
     if (this.name === this.RtTabs.activeName) {
-      return <div className="rt-tabs-content__item">{this.$slots.default}</div>;
+      return <div class="rt-tabs-content__item">{this.$slots.default}</div>;
     }
     return null;
   }

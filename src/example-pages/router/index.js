@@ -11,6 +11,7 @@ import ColorLineText from '../components/main-elements/ColorLineText.vue';
 import Spinner from '../components/main-elements/Spinner.vue';
 import Price from '../components/main-elements/Price.vue';
 import Cards from '../components/complex-elements/Card.vue';
+import CardsWithForms from '../components/complex-elements/CardsWithForms.vue';
 import Icons from '../components/icons-elements/Icons.vue';
 import Banners from '../components/experiment-elements/Banners.vue';
 import PromoTv from '../components/promo/tv.vue';
@@ -54,6 +55,7 @@ const index = [
   },
   { path: '/row-list', name: 'app-row-list', component: RowList },
   { path: '/cards', name: 'app-cards', component: Cards },
+  { path: '/cards-with-forms', name: 'app-cards', component: CardsWithForms },
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
