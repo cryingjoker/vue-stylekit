@@ -40,3 +40,4 @@
  export { default as DownloadContent } from './DownloadContent/DownloadContent.vue';
  export { default as InlineDropdown } from './InlineDropdown/InlineDropdown.vue';
  export { default as InlineDropdownItem } from './InlineDropdown/InlineDropdownItem.vue';
+ export { default as Tag } from './Tag/Tag.vue';

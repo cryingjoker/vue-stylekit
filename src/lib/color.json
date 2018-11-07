@@ -18,6 +18,7 @@
   "b2c-dark03": "rgba(16,24,40,0.3)",
   "b2c-dark02": "rgba(16,24,40,0.2)",
   "b2c-dark01": "rgba(16,24,40,0.1)",
+  "b2c-dark005": "rgba(16,24,40,0.05)",
   "b2c-grey": "#979799",
   "b2c-cool-grey": "#E3E8EC",
   "b2c-cool-grey05": "rgba(227,232,236,0.5)",
@@ -62,6 +63,7 @@
   "b2b-white03": "rgba(255,255,255, 0.3)",
   "b2b-white02": "rgba(255,255,255, 0.2)",
   "b2b-white01": "rgba(255,255,255, 0.1)",
+  "b2b-white005": "rgba(255,255,255, 0.05)",
   "b2b-gray": "#979799",
   "b2b-cool-gray": "#E3E8EC",
   "b2b-cool-gray05": "rgba(227,232,236,0.5);",
@@ -90,5 +92,6 @@
   "promo-blue-background": "#273A64",
   "card-shadow": "0 0 15px rgba(0,0,0,0.1)",
   "switcher-color": "#404653",
-  "input-placeholder-color": "#2F302F"
+  "input-placeholder-color": "#2F302F",
+  "b2c-active-tab": "rgba(120,0,255,0.1)"
 }

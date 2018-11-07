@@ -1,0 +1,23 @@
+.{newAppName}-tag {
+  margin-left: 10px
+  margin-right: 10px
+  margin-top: 10px
+  margin-bottom: 10px
+  padding-left: 15px
+  padding-right: 15px
+  padding-top: 6px
+  padding-bottom: 4px
+  background-color: b2c-dark005
+  border-radius 25px
+  cursor: pointer
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  .{newAppName}-dark-theme & {
+    background-color: b2b-white005
+  }
+  &:hover,
+  &--active {
+    background-color: b2c-active-tab
+  }
+}
