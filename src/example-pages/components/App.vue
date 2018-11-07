@@ -140,6 +140,9 @@
               <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/cards">
                 Card
               </router-link>
+              <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/cards-with-forms">
+                Cards with forms
+              </router-link>
             </div>
           </div>
         </div>
