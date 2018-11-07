@@ -1,21 +1,14 @@
-<template>
-  <div class="input text-field" :class="{'text-field--error':hasError,'rt-input--white':isWhite}">
-    <input ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element" @input="inputHandler">
-    <div class="text-field__line" />
-    <div v-if="!!placeholder" class="floating-placeholder" :class="{'floating-placeholder--go-top':hasInputText }">
-      {{ placeholder }}
-    </div>
-    <div v-if="!!hasInputText & !disabled" class="input-clear" @click="clearInput">
-      <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z" fill-rule="evenodd" /></svg>
-    </div>
-    <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
-  </div>
-</template>
 
-<script>
+
+
+<script type="text/jsx">
 export default {
   name: "RtInput",
   props: {
+    insertType: {
+      type: String,
+      defaul: null
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -107,6 +100,46 @@ export default {
       this.localValue = "";
       this.setValue();
     }
+  },
+  render(){
+    let inputClass = 'input text-field';
+    if(this.hasError){
+      inputClass += ' text-field--error';
+    }
+    if(this.isWhite){
+      inputClass += ' rt-input--white';
+    }
+
+    const placehoder = (()=>{
+      if(this.placeholder){
+        return <div class="floating-placeholder" class={this.hasInputText ? 'floating-placeholder--go-top': ''}>
+          {placeholder}
+        </div>
+      }
+      return null
+    });
+
+    const clearButton = (()=>{
+      if(!this.disabled && this.hasInputText){
+        return <div class="input-clear" onClick={this.clearInput}/>
+      }
+      return null
+    });
+
+    const errorMessage = (()=>{
+      if(this.hasError){
+        return <p class="text-field__error-message">{this.errorMessage}</p>
+      }
+    });
+
+    return <div class="input text-field" class={inputClass}>
+      <input ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element" onInput={this.inputHandler}/>
+      <div class="text-field__line" />
+        {placehoder}
+        {clearButton}
+    <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z" fill-rule="evenodd" /></svg>
+        {errorMessage}
+  </div>
   }
 };
 </script>
