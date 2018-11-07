@@ -67,11 +67,3 @@
 
 
 
-
-
-<!--card footer-->
-
-
-
-<!--card form-->
-

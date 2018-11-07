@@ -104,7 +104,7 @@ const VueRtStyle = {
 };
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
-const version = "0.0.16";
+const version = "0.0.17";
 VueRtStyle.version = version;
 
 export default VueRtStyle;

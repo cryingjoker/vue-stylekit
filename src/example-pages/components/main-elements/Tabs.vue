@@ -7,9 +7,9 @@
       </div>
       <div class="app-body">
         <div class="app-row row">
-          <div class="rt-col">
 
             <pre-code
+              full-width="true"
               text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
                 <rt-tabs-nav-item name=&quot;one&quot;>Готов!</rt-tabs-nav-item>
@@ -18,9 +18,7 @@
               </template>
               <template slot=&quot;content&quot;>
                 <rt-tabs-content-item name=&quot;one&quot;>
-                  <ul>
-                    <li v-for=&quot;item in metroList&quot;>/{/{item.name}}</li>
-                  </ul>
+                  <h1>TEST</h1>
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name=&quot;two&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
@@ -60,7 +58,6 @@
             </rt-tabs>"
             />
           </div>
-        </div>
 
       </div>
     </div>
@@ -70,73 +67,8 @@
 
 <script>
 import componentsList from "../../componentsList";
-// const componentsList = {};
 export default {
   name: "AppTabs",
-  components: componentsList,
-  data() {
-    return {
-      metroList: [
-        {
-          type: "gray",
-          name: "Южная",
-          id: "12"
-        },
-        {
-          type: "gray",
-          name: "Пражская",
-          id: "12"
-        },
-        {
-          type: "light-blue",
-          name: "Улица Горчакова",
-          id: "12"
-        }
-      ]
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.metroList = [
-        {
-          type: "light-blue",
-          name: "Бульвар Адмирала Ушакова",
-          id: "12"
-        },
-        {
-          type: "light-blue",
-          name: "Улица Скобелевская",
-          id: "12"
-        },
-        {
-          type: "light-blue",
-          name: "Улица Старокачаловская",
-          id: "12"
-        },
-        {
-          type: "light-blue",
-          name: "Лесопарковая",
-          id: "12"
-        },
-        {
-          type: "light-blue",
-          name: "Битцевский Парк",
-          id: "12"
-        },
-        {
-          type: "pink",
-          name: "Окружная",
-          id: "12"
-        },
-        {
-          type: "pink",
-          name: "Владыкино",
-          id: "12"
-        }
-      ];
-    }, 500);
-
-    // https://itunes.apple.com/search?term=jack+johnson&limit=25
-  }
+  components: componentsList
 };
 </script>
