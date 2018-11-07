@@ -40,8 +40,7 @@ export default {
       return this.$slots.body.map(slotVNode => {
         if (slotVNode.tag && slotVNode.tag.search(/RtTableRow/gi) >= 0) {
           slotVNode.componentOptions = slotVNode.componentOptions || {};
-          slotVNode.componentOptions.propsData =
-            slotVNode.componentOptions.propsData || {};
+          slotVNode.componentOptions.propsData = slotVNode.componentOptions.propsData || {};
           slotVNode.componentOptions.propsData.tableLabels = JSON.stringify(
             this.tableLabels
           );
