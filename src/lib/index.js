@@ -42,7 +42,8 @@ import {
   TableRow,
   DownloadContent,
   InlineDropdown,
-  InlineDropdownItem
+  InlineDropdownItem,
+  Tag
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
