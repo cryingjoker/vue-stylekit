@@ -5,8 +5,12 @@
 export default {
   name: "RtInput",
   props: {
+    insertLang: {
+      type: String,// [ru, en]
+      defaul: null
+    },
     insertType: {
-      type: String,
+      type: String, //[number, string]
       defaul: null
     },
     disabled: {
@@ -99,6 +103,62 @@ export default {
     clearInput() {
       this.localValue = "";
       this.setValue();
+    },
+    getChar(event){
+
+      if (event.which == null) {
+        if (event.keyCode < 32) return null;
+        return String.fromCharCode(event.keyCode)
+      }
+      if (event.which < 32) return null;
+      return String.fromCharCode(event.which);
+    },
+    isSpecialCharacters(chr){
+      return chr.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) !== null
+    },
+    keyPress(event){
+
+      let chr = this.getChar(event);
+      if(this.insertType){
+        switch (this.insertType) {
+          case 'number':
+            if(!chr.match(/[0-9]/)){
+              event.preventDefault();
+              event.stopPropagation();
+              return null
+            }
+            break;
+          case 'string':
+            if(chr.match(/[0-9]/)){
+              event.preventDefault();
+              event.stopPropagation();
+              return null
+            }
+            break;
+        }
+      }
+      if(this.insertLang){
+
+        if(isNaN(parseInt(chr)) && !this.isSpecialCharacters(chr)) {
+          switch (this.insertLang) {
+            case 'en':
+              if(!chr.match(/[a-z]/i)){
+                event.preventDefault();
+                event.stopPropagation();
+                return null
+              }
+              break;
+            case 'ru':
+              if(!chr.match(/[а-я]/i)){
+                event.preventDefault();
+                event.stopPropagation();
+                return null
+              }
+              break;
+          }
+        }
+      }
+
     }
   },
   render(){
@@ -126,7 +186,7 @@ export default {
     const clearButton = (()=>{
       if(!this.disabled && this.hasInputText){
         return <div class="input-clear" onClick={this.clearInput}>
-          <svg className="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+          <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
                   fill-rule="evenodd"/>
           </svg></div>
@@ -141,7 +201,7 @@ export default {
     })();
 
     return <div class="input text-field" class={inputClass}>
-      <input ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element" onInput={this.inputHandler}/>
+      <input onKeypress={this.keyPress} ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element"  onInput={this.inputHandler}/>
       <div class="text-field__line" />
         {placehoder}
         {clearButton}

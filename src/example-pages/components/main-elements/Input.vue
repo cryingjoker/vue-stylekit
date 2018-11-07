@@ -28,7 +28,7 @@
         <div class="app-row row">
           <div class="rt-col-4 rt-col-md-2">
             <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
-            <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />" />
+            <pre-code text="<rt-input type=&quot;string&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />" />
           </div>
           <div class="rt-col-4 rt-col-md-2 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
@@ -53,6 +53,10 @@
             <pre-code text="<rt-input value=&quot;&quot; placeholder=&quot;Дом&quot; />" />
           </div>
         </div>
+        <rt-input insert-type="string" value="" insert-lang="ru" placeholder="Ф.И.О." />
+        <rt-input insert-type="number" value="" placeholder="Ваше любимое число" />
+        <rt-input insert-type="string" value="" insert-lang="en" placeholder="enter your name(English, please)" />
+
       </div>
     </div>
   </div>
