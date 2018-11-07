@@ -112,32 +112,39 @@ export default {
 
     const placehoder = (()=>{
       if(this.placeholder){
-        return <div class="floating-placeholder" class={this.hasInputText ? 'floating-placeholder--go-top': ''}>
-          {placeholder}
+        let placeholderClassNames = 'floating-placeholder';
+        if(this.hasInputText){
+          placeholderClassNames+= ' floating-placeholder--go-top';
+        }
+        return <div  class={placeholderClassNames}>
+          {this.placeholder}
         </div>
       }
       return null
-    });
+    })();
 
     const clearButton = (()=>{
       if(!this.disabled && this.hasInputText){
-        return <div class="input-clear" onClick={this.clearInput}/>
+        return <div class="input-clear" onClick={this.clearInput}>
+          <svg className="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
+                  fill-rule="evenodd"/>
+          </svg></div>
       }
       return null
-    });
+    })();
 
     const errorMessage = (()=>{
       if(this.hasError){
         return <p class="text-field__error-message">{this.errorMessage}</p>
       }
-    });
+    })();
 
     return <div class="input text-field" class={inputClass}>
       <input ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element" onInput={this.inputHandler}/>
       <div class="text-field__line" />
         {placehoder}
         {clearButton}
-    <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z" fill-rule="evenodd" /></svg>
         {errorMessage}
   </div>
   }
