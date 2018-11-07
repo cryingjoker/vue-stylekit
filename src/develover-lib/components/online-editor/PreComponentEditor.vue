@@ -1,5 +1,5 @@
 <template>
-  <!--{{this.code}}-->
+
   <div ref="editor" class="code-editor__container" />
 </template>
 
