@@ -59,19 +59,18 @@ export default {
   },
 
   created() {
-    // Для всех полей ввода задаём атрибут name, даже дефолтный
-    if (!this.name) {
-      this.name = 'input-field__'+this._uid
-    }
-
     Vue.use(VeeValidate)
   },
 
   computed: {
+    fieldName () {
+      // Для всех полей ввода задаём атрибут name, даже дефолтный
+      return this.name || 'input-field__'+this._uid
+    },
     isInvalid () {
       // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
       if (this.validate) {
-        return this.hasError || this.errors.has(this.name)
+        return this.hasError || this.errors.has(this.fieldName)
       }
     }
   },
@@ -234,7 +233,7 @@ export default {
         autocapitalize="off"
         type="text"
         class="input-element"
-        name={this.name}
+        name={this.fieldName}
         onInput={this.inputHandler}
         v-validate={this.validate} />
       <div class="text-field__line" />
