@@ -75,6 +75,7 @@ export default {
   },
 
   mounted() {
+    Vue.use(VeeValidate)
     this.setValue();
     this.setDisabled();
     this.bindEvents();
