@@ -32,19 +32,24 @@ export default {
     value: {
       type: String,
       default: "",
-      required: true
     },
     isWhite: {
       type: Boolean,
       default: false
     },
-    name: {
-      type: String
+    inputName: {
+      type: String,
+      default: null
     },
-    validate: { }
+    validate: { },
+    showNubmersButtons: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
+      name: this.inputName,
       localValue: this.value ? this.value : "",
       hasInputText: this.value ? this.value.length > 0 : false
     };
@@ -104,6 +109,18 @@ export default {
           );
         });
       }
+    },
+    addNumber(){
+      this.localValue = typeof parseInt(this.localValue) === 'number' ? this.localValue - 0 + 1 : 1;
+      this.updateInputValue();
+    },
+    subtractNumber(){
+      this.localValue = typeof parseInt(this.localValue) === 'number' ? this.localValue - 1 : 0;
+      this.localValue = this.localValue >= 0 ? this.localValue : 0;
+      this.updateInputValue();
+    },
+    updateInputValue(){
+      this.$el.querySelector(".input-element").value = this.localValue;
     },
     setValue() {
       this.$el.querySelector(".input-element").value = this.localValue;
@@ -187,6 +204,9 @@ export default {
     if(this.isInvalid){
       inputClass += ' text-field--error';
     }
+    if(this.showNubmersButtons && this.insertType && this.insertType === 'number'){
+      inputClass += ' input--with-button';
+    }
     if(this.isWhite){
       inputClass += ' rt-input--white';
     }
@@ -205,7 +225,7 @@ export default {
     })();
 
     const clearButton = (()=>{
-      if(!this.disabled && this.hasInputText){
+      if(!this.showNubmersButtons && !this.disabled && this.hasInputText){
         return <div class="input-clear" onClick={this.clearInput}>
           <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
@@ -220,6 +240,34 @@ export default {
         return <p class="text-field__error-message">{this.errorMessage}</p>
       }
     })();
+    const arithmeticButtons = (()=>{
+      if(this.showNubmersButtons && this.insertType && this.insertType === 'number'){
+        return <div class="input-arithmetic">
+          <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" class="input-arithmetic__button-icon">
+              <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="inputs/number/icon/minus/black" transform="translate(1.000000, 1.000000)" stroke-width="1.5">
+                  <path d="M0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 C4.5,0 0,4.5 0,10 Z" id="Path-Copy"></path>
+                  <path d="M15,10 L5,10" id="Path-8"></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <button class="input-arithmetic__button input-arithmetic__plus" onClick={this.addNumber}>
+
+            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" class="input-arithmetic__button-icon">
+              <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="inputs/number/icon/plus/black" transform="translate(1.000000, 1.000000)" stroke-width="1.5">
+                  <path d="M0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 C4.5,0 0,4.5 0,10 Z" id="Path-Copy"></path>
+                  <path d="M10,5 L10,15" id="Path-8"></path>
+                  <path d="M15,10 L5,10" id="Path-8"></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      }
+    })();
 
     return <div class="input text-field" class={inputClass}>
       <input
@@ -230,12 +278,13 @@ export default {
         type="text"
         class="input-element"
         name={this.name}
-        onInput={this.inputHandler}
-        v-validate={this.validate} />
+        v-validate={this.validate}
+        onInput={this.inputHandler}/>
       <div class="text-field__line" />
         {placehoder}
         {clearButton}
         {errorMessage}
+        {arithmeticButtons}
   </div>
   }
 };

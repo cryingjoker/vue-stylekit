@@ -36,7 +36,7 @@
   const componentsList = {};
   import variables from '../../../lib/variables.json';
   export default {
-    name: "AppGridElements",
+name: "AppGridElements",
     components: componentsList,
     data() {
       return {

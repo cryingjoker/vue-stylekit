@@ -81,7 +81,6 @@
     "gulp-shell": "^0.6.5",
     "gulp-tinypng-nokey-plus": "^1.0.1",
     "happypack": "^5.0.0",
-    "hard-source-webpack-plugin": "^0.12.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.4.0",
     "koa-connect": "^2.0.1",

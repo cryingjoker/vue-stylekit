@@ -43,6 +43,7 @@ import {
   TagsList
 } from "../lib/components/index";
 
+
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
@@ -86,5 +87,5 @@ componentsList[TableCol.name] = TableCol;
 componentsList[DownloadContent.name] = DownloadContent;
 componentsList[Tag.name] = Tag;
 componentsList[TagsList.name] = TagsList;
-
+console.info(' **  componentsList',componentsList);
 export default { ...componentsList };
