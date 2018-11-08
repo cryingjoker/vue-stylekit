@@ -2,6 +2,8 @@
 
 
 <script type="text/jsx">
+import Vue from 'vue'	
+import VeeValidate from 'vee-validate'
 export default {
   name: "RtInput",
   props: {
@@ -277,7 +279,9 @@ export default {
         type="text"
         class="input-element"
         name={this.fieldName}
-        onInput={this.inputHandler}/>
+        onInput={this.inputHandler}
+        v-validate={this.validate}
+      />
       <div class="text-field__line" />
         {placehoder}
         {clearButton}

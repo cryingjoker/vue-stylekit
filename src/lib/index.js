@@ -49,7 +49,6 @@ import {
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
-import VeeValidate from 'vee-validate';
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -98,7 +97,6 @@ const VueRtStyle = {
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
-      Vue.use(VeeValidate);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
@@ -111,6 +109,7 @@ const version = "0.0.18";
 if(localStorage && localStorage.getItem('dev_mode')){
   localStorage.setItem('dev_mode__version',version);
 }
+window.RTK_STYLE_VER = version;
 VueRtStyle.version = version;
 
 export default VueRtStyle;
