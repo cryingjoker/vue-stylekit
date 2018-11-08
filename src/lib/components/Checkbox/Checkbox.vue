@@ -2,7 +2,7 @@
 
   <label class="checkbox">
     <rt-ripple ref="ripple" :not-render="isDisabled" />
-    <input type="checkbox" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
+    <input type="checkbox" ref="input" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
 
     <div class="checkbox-container">
 
@@ -37,10 +37,41 @@ export default {
       default: false
     }
   },
+  mounted() {
+    this.bindEvents();
+  },
+
+  updated() {
+    this.unbindEvents();
+    this.bindEvents();
+  },
+  beforeDestroy() {
+    this.unbindEvents();
+  },
   methods: {
     changeInput($event) {
       this.$emit("input", $event.target.checked);
       this.showWave();
+    },
+    bindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.addEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
+      }
+    },
+    unbindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.removeEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
+      }
     },
     showWave() {
       this.$refs.ripple.startRipple({
