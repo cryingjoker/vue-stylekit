@@ -2,6 +2,9 @@
 
 
 <script type="text/jsx">
+import Vue from 'vue'
+import VeeValidate from 'vee-validate'
+
 export default {
   name: "RtInput",
   props: {
@@ -60,6 +63,8 @@ export default {
     if (!this.name) {
       this.name = 'input-field__'+this._uid
     }
+
+    Vue.use(VeeValidate)
   },
 
   computed: {
