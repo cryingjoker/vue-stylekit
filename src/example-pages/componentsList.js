@@ -87,5 +87,4 @@ componentsList[TableCol.name] = TableCol;
 componentsList[DownloadContent.name] = DownloadContent;
 componentsList[Tag.name] = Tag;
 componentsList[TagsList.name] = TagsList;
-console.info(' **  componentsList',componentsList);
 export default { ...componentsList };
