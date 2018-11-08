@@ -13,7 +13,6 @@ Vue.use(VueRouter);
 
 Vue.use(VueRtDevStyle);
 Vue.use(VueRtStyle);
-
 const router = new VueRouter({
   mode: "history",
   routes: routes.routes

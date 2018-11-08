@@ -9,7 +9,6 @@
         <div class="app-row row">
 
             <pre-code
-              full-width="true"
               text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
                 <rt-tabs-nav-item name=&quot;one&quot;>Готов!</rt-tabs-nav-item>

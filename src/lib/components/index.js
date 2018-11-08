@@ -41,3 +41,4 @@
  export { default as InlineDropdown } from './InlineDropdown/InlineDropdown.vue';
  export { default as InlineDropdownItem } from './InlineDropdown/InlineDropdownItem.vue';
  export { default as Tag } from './Tag/Tag.vue';
+ export { default as TagsList } from './Tag/TagsList.vue';

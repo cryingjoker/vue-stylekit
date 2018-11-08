@@ -56,7 +56,7 @@
         <rt-input insert-type="string" value="" insert-lang="ru" placeholder="Ф.И.О." />
         <rt-input insert-type="number" value="" placeholder="Ваше любимое число" />
         <rt-input insert-type="string" value="" insert-lang="en" placeholder="enter your name(English, please)" />
-
+        <rt-input :show-nubmers-buttons="true" insert-type="number"/>
       </div>
     </div>
   </div>

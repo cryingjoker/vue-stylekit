@@ -7,14 +7,33 @@
         </div>
       </div>
       <div class="app-body">
+
         <div class="row">
-          <rt-tag :is-active="true">Все</rt-tag>
-          <rt-tag>Для смартфонов Android</rt-tag>
-          <rt-tag>Для Macbook</rt-tag>
-          <rt-tag>Защита для детей</rt-tag>
-          <rt-tag>Esset</rt-tag>
-          <rt-tag>Два устройств Windows и Android</rt-tag>
-          <rt-tag>Акция Kaspersky</rt-tag>
+          <div class="rt-col-12">
+            <h4 class="rt-font-h3  rt-space-top25">Simple tags</h4>
+
+            <pre-code text='
+            <div class="row">
+              <rt-tag value="1" :is-active="true">Все</rt-tag>
+              <rt-tag value="2">Для смартфонов Android</rt-tag>
+              <rt-tag value="3">Для Macbook</rt-tag>
+              <rt-tag value="4">Защита для детей</rt-tag>
+              <rt-tag value="5">Esset</rt-tag>
+              <rt-tag value="6">Два устройств Windows и Android</rt-tag>
+              <rt-tag value="7">Акция Kaspersky</rt-tag>
+            </div>'></pre-code>
+            <h4 class="rt-font-h3 rt-space-top55">Tags with tag-list</h4>
+            <pre-code text='
+            <rt-tag-list class="row">
+            <rt-tag value="1" :is-active="true">Все</rt-tag>
+            <rt-tag value="2">Для смартфонов Android</rt-tag>
+            <rt-tag value="3">Для Macbook</rt-tag>
+            <rt-tag value="4">Защита для детей</rt-tag>
+            <rt-tag value="5">Esset</rt-tag>
+            <rt-tag value="6">Два устройств Windows и Android</rt-tag>
+            <rt-tag value="7">Акция Kaspersky</rt-tag>
+          </rt-tag-list>'></pre-code>
+          </div>
         </div>
       </div>
     </div>
