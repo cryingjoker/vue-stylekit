@@ -4,27 +4,13 @@ export default {
   components: {},
   props: {},
   data: () => ({
-    tableLabels: [],
-    slotVNode: "test"
+    tableLabels: []
   }),
   provide() {
     const tableLabels = this["tableLabels"];
     return { tableLabels };
   },
 
-  mounted: function() {
-    this.getLabelHtml();
-  },
-
-  methods: {
-    getLabelHtml() {
-      // if(this.$refs.head){
-      //   this.$refs.head.querySelectorAll('.rt-table-head__item').forEach((nodeEl, nodeIndex)=>{
-      //     this.$set(this.tableLabels,nodeIndex, nodeEl.innerText.trim())
-      //   })
-      // }
-    }
-  },
   render: function(h) {
     const columns = () => {
       if (!this.$slots.columns) {
@@ -33,7 +19,6 @@ export default {
       return <div class="rt-table-colgroup">{this.$slots.columns}</div>;
     };
     const renderBodyFn = () => {
-      // this.tableLabels
       if (!this.$slots.body) {
         return null;
       }

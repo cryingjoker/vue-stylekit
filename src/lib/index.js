@@ -43,7 +43,8 @@ import {
   DownloadContent,
   InlineDropdown,
   InlineDropdownItem,
-  Tag
+  Tag,
+  TagsList
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
