@@ -44,7 +44,9 @@ import {
   InlineDropdown,
   InlineDropdownItem,
   Tag,
-  TagsList
+  TagsList,
+  Filter,
+  FilterWatcher
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -97,7 +99,12 @@ const VueRtStyle = {
       Vue.component(InlineDropdownItem.name, InlineDropdownItem);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
-      Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
+
+      Vue.directive(Tag.name, Tag);
+      Vue.directive(TagsList.name, TagsList);
+      Vue.directive(Filter.name, Filter);
+      Vue.directive(FilterWatcher.name, FilterWatcher);
+
       Vue.use(VeeValidate);
 
       Vue.RtStyle = true;
@@ -105,6 +112,7 @@ const VueRtStyle = {
     }
   }
 };
+
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
 const version = "0.0.18";

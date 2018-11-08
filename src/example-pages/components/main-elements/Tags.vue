@@ -23,16 +23,34 @@
               <rt-tag value="7">Акция Kaspersky</rt-tag>
             </div>'></pre-code>
             <h4 class="rt-font-h3 rt-space-top55">Tags with tag-list</h4>
-            <pre-code text='
-            <rt-tag-list class="row">
-            <rt-tag value="1" :is-active="true">Все</rt-tag>
-            <rt-tag value="2">Для смартфонов Android</rt-tag>
-            <rt-tag value="3">Для Macbook</rt-tag>
-            <rt-tag value="4">Защита для детей</rt-tag>
-            <rt-tag value="5">Esset</rt-tag>
-            <rt-tag value="6">Два устройств Windows и Android</rt-tag>
-            <rt-tag value="7">Акция Kaspersky</rt-tag>
-          </rt-tag-list>'></pre-code>
+            <!--<pre-code text='-->
+            <rt-filter>
+              <rt-tag-list class="row">
+                <rt-filter-watcher>
+                  <rt-tag value="1" :is-active="true">Все</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="2">Для смартфонов Android</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="3">Для Macbook</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="4">Защита для детей</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="5">Esset</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="6">Два устройств Windows и Android</rt-tag>
+                </rt-filter-watcher>
+                <rt-filter-watcher>
+                  <rt-tag value="7">Акция Kaspersky</rt-tag>
+                </rt-filter-watcher>
+
+              </rt-tag-list>
+            </rt-filter>
+            <!--'></pre-code>-->
           </div>
         </div>
       </div>
@@ -43,6 +61,7 @@
 
 <script>
 import componentsList from "../../componentsList";
+console.info('componentsList',componentsList);
 export default {
   name: "AppTags",
   components: componentsList,
