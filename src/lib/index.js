@@ -114,7 +114,7 @@ const VueRtStyle = {
 
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
-const version = "0.0.18";
+const version = "0.0.19";
 // if(localStorage && localStorage.getItem('dev_mode')){
 //   localStorage.setItem('dev_mode__version',version);
 // }
