@@ -1,6 +1,6 @@
 <template>
   <label class="switch">
-    <input name="test" type="checkbox" :disabled="isDisabled" :checked="checked ? 'checked' : ''" class="switch-element" @change="inputHandler">
+    <input name="test" type="checkbox" ref="input" :disabled="isDisabled" :checked="checked ? 'checked' : ''" class="switch-element" @change="inputHandler">
     <div class="switch-container">
       <div class="switch-container__circle">
         <rt-ripple ref="ripple" :not-bind-click="true" :not-render="isDisabled" />
@@ -30,13 +30,40 @@ export default {
   },
   mounted: function() {
     this.setValue();
+    this.bindEvents();
+  },
+  updated() {
+    this.unbindEvents();
+    this.bindEvents();
+  },
+  beforeDestroy() {
+    this.unbindEvents();
   },
   methods: {
+    bindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.addEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
+      }
+    },
+    unbindEvents() {
+      if (this["_events"]) {
+        Object.keys(this["_events"]).map(eventName => {
+          this.$refs.input.removeEventListener(
+            eventName,
+            this["_events"][eventName]
+          );
+        });
+      }
+    },
     setValue() {
       this.$el.querySelector(".switch-element").checked = Boolean(this.checked);
     },
     inputHandler() {
-      this.$emit("change", this.$el.querySelector(".switch-element").checked);
       this.showWave();
     },
     showWave() {

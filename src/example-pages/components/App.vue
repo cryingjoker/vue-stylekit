@@ -100,15 +100,16 @@
               >Scroll Tabs
               </router-link>
             </div>
-            <div class="aside-menu__item">
-              <router-link class="aside-menu__link" active-class="aside-menu__link--active"
-                           to="/tags"
-              >Tags
-              </router-link>
-            </div>
+
           </div>
         </div>
         <div class="aside-menu__item">
+          <div class="aside-menu__item">
+            <router-link class="aside-menu__link" active-class="aside-menu__link--active"
+                         to="/tags"
+            >Tags
+            </router-link>
+          </div>
           <router-link class="aside-menu__link" active-class="aside-menu__link--active"
                        to="/color-line-text"
           >Color Line Text
