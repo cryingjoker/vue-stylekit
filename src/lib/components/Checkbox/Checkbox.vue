@@ -1,8 +1,26 @@
 <template>
 
-  <label class="checkbox">
+  <label
+    class="checkbox"
+    :class="{
+      focused: focused,
+      active: isChecked,
+      disabled: isDisabled,
+      invalid: required && !isChecked
+    }"
+  >
     <rt-ripple ref="ripple" :not-render="isDisabled" />
-    <input type="checkbox" ref="input" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
+    <input
+      type="checkbox"
+      ref="input"
+      :id="uid"
+      :disabled="isDisabled"
+      :name="name"
+      class="checkbox-element"
+      @change="changeInput"
+      v-model="isChecked"
+      v-validate="'required'"
+    >
 
     <div class="checkbox-container">
 
@@ -20,12 +38,20 @@
 </template>
 
 <script>
+import Vue from 'vue'	
+import VeeValidate from 'vee-validate'
 import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
 export default {
   name: "RtCheckbox",
   components: componentsList,
+
+  data () {
+    return {
+      isChecked: this.checked
+    }
+  },
 
   props: {
     isDisabled: {
@@ -35,9 +61,18 @@ export default {
     checked: {
       type: Boolean,
       default: false
+    },
+    name: {
+      type: String,
+      default: null
+    },
+    required: Boolean,
+    uid: {
+      type: String
     }
   },
   mounted() {
+    Vue.use(VeeValidate)
     this.bindEvents();
   },
 
@@ -50,7 +85,7 @@ export default {
   },
   methods: {
     changeInput($event) {
-      this.$emit("input", $event.target.checked);
+      this.$emit('update:checked', this.isChecked)
       this.showWave();
     },
     bindEvents() {
@@ -78,6 +113,11 @@ export default {
         offsetX: 10,
         offsetY: 10
       });
+    }
+  },
+  watch: {
+    checked: function (newValue) {
+      this.isChecked = newValue
     }
   }
 };

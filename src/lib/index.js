@@ -51,7 +51,6 @@ import {
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
-import VeeValidate from 'vee-validate';
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -97,15 +96,15 @@ const VueRtStyle = {
       Vue.component(DownloadContent.name, DownloadContent);
       Vue.component(InlineDropdown.name, InlineDropdown);
       Vue.component(InlineDropdownItem.name, InlineDropdownItem);
+      Vue.component(Tag.name, Tag);
+      Vue.component(TagsList.name, TagsList);
+      Vue.component(Filter.name, Filter);
+      Vue.component(FilterWatcher.name, FilterWatcher);
+
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
+      Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
 
-      Vue.directive(Tag.name, Tag);
-      Vue.directive(TagsList.name, TagsList);
-      Vue.directive(Filter.name, Filter);
-      Vue.directive(FilterWatcher.name, FilterWatcher);
-
-      Vue.use(VeeValidate);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
@@ -116,9 +115,10 @@ const VueRtStyle = {
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
 const version = "0.0.18";
-if(localStorage && localStorage.getItem('dev_mode')){
-  localStorage.setItem('dev_mode__version',version);
-}
+// if(localStorage && localStorage.getItem('dev_mode')){
+//   localStorage.setItem('dev_mode__version',version);
+// }
+window.RTK_STYLE_VER = version;
 VueRtStyle.version = version;
 
 export default VueRtStyle;
