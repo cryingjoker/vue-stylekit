@@ -49,6 +49,7 @@ import {
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
+import VeeValidate from 'vee-validate';
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -94,10 +95,10 @@ const VueRtStyle = {
       Vue.component(DownloadContent.name, DownloadContent);
       Vue.component(InlineDropdown.name, InlineDropdown);
       Vue.component(InlineDropdownItem.name, InlineDropdownItem);
-
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
+      Vue.use(VeeValidate);
 
       Vue.RtStyle = true;
       Vue.config.test = true;

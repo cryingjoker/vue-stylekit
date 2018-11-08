@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 const local_dirname = path.join(__dirname,'..');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 var vueLoaderConfig = require('./vue-loader.config');
 const HappyPack = require('happypack');
 
