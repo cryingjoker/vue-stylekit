@@ -105,6 +105,7 @@
     "stylus-loader": "^3.0.2",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
+    "vee-validate": "^2.1.1",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",
     "vue-styleguidist": "^1.8.10",

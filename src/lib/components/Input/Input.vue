@@ -37,7 +37,11 @@ export default {
     isWhite: {
       type: Boolean,
       default: false
-    }
+    },
+    name: {
+      type: String
+    },
+    validate: { }
   },
   data() {
     return {
@@ -50,6 +54,23 @@ export default {
       this.$emit("input", val);
     }
   },
+
+  created() {
+    // Для всех полей ввода задаём атрибут name, даже дефолтный
+    if (!this.name) {
+      this.name = 'input-field__'+this._uid
+    }
+  },
+
+  computed: {
+    isInvalid () {
+      // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
+      if (this.validate) {
+        return this.hasError || this.errors.has(this.name)
+      }
+    }
+  },
+
   mounted() {
     this.setValue();
     this.setDisabled();
@@ -163,7 +184,7 @@ export default {
   },
   render(){
     let inputClass = 'input text-field';
-    if(this.hasError){
+    if(this.isInvalid){
       inputClass += ' text-field--error';
     }
     if(this.isWhite){
@@ -195,13 +216,22 @@ export default {
     })();
 
     const errorMessage = (()=>{
-      if(this.hasError){
+      if(this.isInvalid){
         return <p class="text-field__error-message">{this.errorMessage}</p>
       }
     })();
 
     return <div class="input text-field" class={inputClass}>
-      <input onKeypress={this.keyPress} ref="input" autocomplete="off" autocapitalize="off" type="text" class="input-element"  onInput={this.inputHandler}/>
+      <input
+        onKeypress={this.keyPress}
+        ref="input"
+        autocomplete="off"
+        autocapitalize="off"
+        type="text"
+        class="input-element"
+        name={this.name}
+        onInput={this.inputHandler}
+        v-validate={this.validate} />
       <div class="text-field__line" />
         {placehoder}
         {clearButton}
