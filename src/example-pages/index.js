@@ -4,7 +4,6 @@ import VueRtStyle from "../lib/index";
 import VueRtDevStyle from "../develover-lib/index";
 import routes from "./router";
 import RootPage from "./components/App.vue";
-import VeeValidate from 'vee-validate';
 import styles from "./css/index.styl";
 // import Rx from 'rxjs';
 // import VueRx from 'vue-rx';
@@ -14,7 +13,6 @@ Vue.use(VueRouter);
 
 Vue.use(VueRtDevStyle);
 Vue.use(VueRtStyle);
-Vue.use(VeeValidate);
 const router = new VueRouter({
   mode: "history",
   routes: routes.routes

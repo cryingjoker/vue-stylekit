@@ -133,6 +133,10 @@ export default {
     },
     setValueLength() {
       this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
+      this.$emit('input',{
+        type: "input",
+        data: this.hasInputText
+      });
     },
     inputHandler($event) {
       this.localValue = this.$el.querySelector(".input-element").value;
@@ -143,7 +147,6 @@ export default {
       this.setValue();
     },
     getChar(event){
-
       if (event.which == null) {
         if (event.keyCode < 32) return null;
         return String.fromCharCode(event.keyCode)
