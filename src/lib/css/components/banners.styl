@@ -1,443 +1,428 @@
-.grid-center {
-    display: none;
-    background-color: red;
-    z-index: 1000;
-    position: fixed;
-    width: 1px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-}
+.grid-center
+  display none
+  width 1px
+  height 100vh
+  background-color red
+  margin-left auto
+  margin-right auto
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 1000
 
-.{newAppName}-banner {
-    height: 500px;
-    position: relative;
-    z-index: 3;
-    transition-duration: 0.3s;
-    transition-property: background-color, color;
-    transition-timing-function: ease-in-out;
+.{newAppName}-banner
+  height 500px
+  position relative
+  z-index 3
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property background-color, color
 
-    &-video{
-        &__content{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            .rt-banner--full-screen & {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-            }
-        }
-    }
-    &--fill-height {
-        height: 100vh;
-        .rt-banner-content {
-            height: 100vh;
-        }
-    }
-    &--background {
-        &-dark-state {
-            background-color: b2b-dark-state;
-            width: 100%;
-        }
-        &-yellow {
-            background-color: b2c-yellow-low;
-            width: 100%;
-        }
-        &-red {
-            background: b2c-red-low;
-            width: 100%;
-        }
-        &-dark-blue {
-            background: b2c-dark-blue-low;
-            width: 100%;
-        }
-        &-light-blue {
-            background: b2c-light-blue-low;
-            width: 100%;
-        }
-        &-orange {
-            background: b2c-orange-low;
-            width: 100%;
-        }
-        &-pink {
-            background: b2c-pink-low;
-            width: 100%;
-        }
-        &-green {
-            background: b2c-green-low;
-            width: 100%;
-        }
-    }
-    &-triangle {
-        position: absolute;
-        width: 185px;
-        height: 100%;
-        left: -1px;
-        top: 0;
-        z-index: 10;
-        margin-left: 0px;
-        fill: transparent;
-        transition-duration: 0.3s;
-        transition-property: fill;
-        transition-timing-function: ease-in-out;
-        .{newAppName}-banner--background-dark-state & {
-            fill: b2b-dark-state;
-        }
-        .{newAppName}-banner--background-yellow & {
-            fill: b2c-yellow-low;
-        }
-        .{newAppName}-banner--background-red & {
-            fill: b2c-red-low;
-        }
-        .{newAppName}-banner--background-dark-blue & {
-            fill: b2c-dark-blue-low;
-        }
-        .{newAppName}-banner--background-light-blue & {
-            fill: b2c-light-blue-low;
-        }
-        .{newAppName}-banner--background-orange & {
-            fill: b2c-orange-low;
-        }
-        .{newAppName}-banner--background-pink & {
-            fill: b2c-pink-low;
-        }
-        .{newAppName}-banner--background-green & {
-            fill: b2c-green-low;
-        }
-    }
-    &-right-triangle {
-        display: none;
-        position: absolute;
-        width: 185px;
-        height: 100%;
-        right: -1px;
-        top: 0;
-        z-index: 10;
-        fill: transparent;
-        transition-duration: 0.3s;
-        transition-property: fill;
-        transition-timing-function: ease-in-out;
+  &-video
+    &__content
+      width 100%
+      height 100%
+      object-fit cover
 
-        .{newAppName}-banner--background-red & {
-            fill: b2c-red-low;
-        }
-        .{newAppName}-banner--background-dark-blue & {
-            fill: b2c-dark-blue-low;
-        }
-        .{newAppName}-banner--background-light-blue & {
-            fill: b2c-light-blue-low;
-        }
-        .{newAppName}-banner--background-yellow & {
-            fill: b2c-yellow-low;
-        }
-        .{newAppName}-banner--background-orange & {
-            fill: b2c-orange-low;
-        }
-        .{newAppName}-banner--background-pink & {
-            fill: b2c-pink-low;
-        }
-        .{newAppName}-banner--background-green & {
-            fill: b2c-green-low;
-        }
-        .{newAppName}-banner--background-dark-state & {
+      .rt-banner--full-screen &
+        width 100%
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
 
-            fill: b2b-dark-state;
-        }
-        .{newAppName}-banner--background-yellow & {
-            fill: b2c-yellow-low;
-        }
-        .{newAppName}-banner--orange & {
-            fill: b2c-orange-low;
-        }
-        .{newAppName}-banner--dark-blue & {
-            fill: b2c-dark-blue-low;
-        }
-        .{newAppName}-banner--light-blue & {
-            fill: b2c-light-blue-low;
-        }
-        .{newAppName}-banner--light-blue & {
-            fill: b2c-light-blue-low;
-        }
+  &--fill-height
+    height 100vh
 
-        transform: rotate(180deg);
-        @media (min-width: 1550px) and (max-width: 1920px) {
-            right: calc(80vw - 1550px);
-            display: block;
-        }
-        @media (min-width: 1920px) {
-            right: -2px;
-            display: block;
-        }
-    }
-    &--color-white {
-        color: white;
-    }
-    &-content {
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        height: 500px;
-        line-height: 1.5;
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        transition-duration: 0.3s;
-        transition-property: opacity, visibility;
-        transition-timing-function: ease-in-out;
-        z-index: 3;
-        &__link {
-            position: absolute;
-            left: 0;
-            right: 0
-            bottom: 0;
-            z-index: 15;
-            top: 0;
-            width: 100%;
-        }
-        .rt-col-4 & {
-            min-width: 430px;
-            max-width: 500px;
-            @media (max-width: mobile-step-size) {
-                min-width: initial;
-                max-width: initial;
-            }
-        }
-        @media (max-width: mobile-step-size) {
-            width: 100%;
-            .{newAppName}-banner--full-screen & {
-                justify-content: center;
-            }
-            .{newAppName}-banner--full-screen.justify-left & {
-                justify-content: left;
-            }
-        }
-        &--active {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-    &-logo{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 30px;
-        text-align: right;
-        z-index: 2;
-        @media (max-width: mobile-step-size) {
-            display: none;
-        }
-    }
-    &-image {
-        position: relative;
-        height: 100%;
-        width: 55vw;
-        overflow: hidden;
-        position: absolute;
-        left: 45vw;
-        z-index: 1;
-        top: 0;
-        bottom: 0;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center center;
-        transition-duration: 0.3s;
-        transition-property: background-image;
-        transition-timing-function: ease-in-out;
-        &:before{
-            content: '';
-            width: 4px;
-            height: 100%;
-            position: absolute;
-            left: -4px;
-            display: block;
-        }
-        &:after{
-            content: '';
-            width: 4px;
-            height: 100%;
-            position: absolute;
-            right: -4px;
-            display: block;
-        }
-        &:before,
-        &:after{
-            .{newAppName}-banner--background-dark-state & {
-                background-color: b2b-dark-state;
+    .rt-banner-content
+      height 100vh
 
-            }
-            .{newAppName}-banner--background-yellow & {
-                background-color: b2c-yellow-low;
-            }
-            .{newAppName}-banner--background-red & {
-                background-color: b2c-red-low;
-            }
-            .{newAppName}-banner--background-dark-blue & {
-                background-color: b2c-dark-blue-low;
-            }
-            .{newAppName}-banner--background-light-blue & {
-                background-color: b2c-light-blue-low;
-            }
-            .{newAppName}-banner--background-orange & {
-                background-color: b2c-orange-low;
-            }
-            .{newAppName}-banner--background-pink & {
-                background-color: b2c-pink-low;
-            }
-            .{newAppName}-banner--background-green & {
-                background-color: b2c-green-low;
-            }
-        }
-        .{newAppName}-banner--full-screen & {
-            width: 100vw;
-            left: 0;
-            right: 0;
-            overflow-y: hidden;
-            &:before,
-            &:after{
-                display: none;
-            }
-        }
-        @media (max-width: mobile-step-size) {
-            display: none;
-            .{newAppName}-banner--full-screen & {
-                display: block;
-            }
-        }
-        @media (min-width: 1500px) {
-            max-width: 1024px;
-            .{newAppName}-banner--full-screen & {
-                max-width: 100vw;
-            }
-        }
-    }
-}
+  &--background
+    &-dark-state
+      width 100%
+      background-color b2b-dark-state
 
-.circle-switcher {
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index 20
-    &-container {
-        display: inline-block;
-    }
-    &__item {
-        animation-duration: 5s;
-        cursor: pointer;
-        position: relative;
-        z-index: 3;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        box-sizing: border-box;
-        animation-play-state: running;
+    &-yellow
+      width 100%
+      background-color b2c-yellow-low
 
-        &:before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            position: absolute;
-            box-sizing: border-box;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            animation-play-state: paused
-            transition-duration: 0.3s;
-            transition-property: background-color, width, height, border, margin, left, right;
-            transition-timing-function: ease-in-out;
-        }
-        & + & {
-            margin-left: horizontal-space;
-        }
-    }
-    &__icon {
-        width: inherit;
-        height: inherit;
-        stroke: #fff;
-        stroke-dasharray: 0;
-        stroke-width: 0;
-        transition-duration: 0.3s;
-        transition-property: stroke-dasharray, stroke-width;
-        transition-timing-function: ease-in-out;
-        transform: rotate(-90deg);
-        .circle-switcher__item:hover & {
-            stroke-dasharray: 60;
-            stroke-width: 0.5px;
-        }
-        .{newAppName}-banner--run-timer & {
-            stroke-dasharray: 60;
-            stroke-width: 0.5px;
-            animation-duration: inherit;
-            animation-timing-function: linear;
-            animation-name: switcherRound;
+    &-red
+      width 100%
+      background b2c-red-low
 
-        }
-        .{newAppName}-banner--pause & {
-            animation-play-state: paused;
-            stroke-dashoffset: 120!important;
-            animation: none;
-            &.{newAppName}-banner--run-timer {
-                stroke-width: 0.5px;
-                cursor: default
-            }
-        }
-    }
-}
-.circle-switcher__item.{newAppName}-banner--run-timer.{newAppName}-banner--pause {
-    cursor: default
-    &:before {
-        content: '';
-        border-width 0
-        top: 0;
-        left: inherit
-        right inherit
-        bottom: 0;
-        margin-top: auto
-        margin-bottom: auto
-        width: 2px
-        height: 8px
-        position: absolute
-        left: 7px
-        background-color: #fff
-        border-radius 0
-    }
+    &-dark-blue
+      width 100%
+      background b2c-dark-blue-low
 
-    &:after {
-        content: '';
-        top: 0;
-        bottom: 0;
-        margin-top: auto
-        margin-bottom: auto
-        width: 2px
-        height: 8px
-        position: absolute
-        right: 7px
-        background-color: #fff
-        border-radius 0
-    }
-}
+    &-light-blue
+      width 100%
+      background b2c-light-blue-low
 
-@keyframes switcherRound {
-    0% {
-        stroke-dashoffset: 180
-    }
-    100% {
-        stroke-dashoffset: 120
-    }
-}
+    &-orange
+      width 100%
+      background b2c-orange-low
+
+    &-pink
+      width 100%
+      background b2c-pink-low
+
+    &-green
+      width 100%
+      background b2c-green-low
+
+  &-triangle
+    width 185px
+    height 100%
+    margin-left 0
+    position absolute
+    top 0
+    left -1px
+    z-index 10
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property fill
+    fill transparent
+
+    .{newAppName}-banner--background-dark-state &
+      fill b2b-dark-state
+
+    .{newAppName}-banner--background-yellow &
+      fill b2c-yellow-low
+
+    .{newAppName}-banner--background-red &
+      fill b2c-red-low
+
+    .{newAppName}-banner--background-dark-blue &
+      fill b2c-dark-blue-low
+
+    .{newAppName}-banner--background-light-blue &
+      fill b2c-light-blue-low
+
+    .{newAppName}-banner--background-orange &
+      fill b2c-orange-low
+
+    .{newAppName}-banner--background-pink &
+      fill b2c-pink-low
+
+    .{newAppName}-banner--background-green &
+      fill b2c-green-low
+
+  &-right-triangle
+    display none
+    width 185px
+    height 100%
+    position absolute
+    top 0
+    right -1px
+    z-index 10
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property fill
+    fill transparent
+
+    .{newAppName}-banner--background-red &
+      fill b2c-red-low
+
+    .{newAppName}-banner--background-dark-blue &
+      fill b2c-dark-blue-low
+
+    .{newAppName}-banner--background-light-blue &
+      fill b2c-light-blue-low
+
+    .{newAppName}-banner--background-yellow &
+      fill b2c-yellow-low
+
+    .{newAppName}-banner--background-orange &
+      fill b2c-orange-low
+
+    .{newAppName}-banner--background-pink &
+      fill b2c-pink-low
+
+    .{newAppName}-banner--background-green &
+      fill b2c-green-low
+
+    .{newAppName}-banner--background-dark-state &
+      fill b2b-dark-state
+
+    .{newAppName}-banner--background-yellow &
+      fill b2c-yellow-low
+
+    .{newAppName}-banner--orange &
+      fill b2c-orange-low
+
+    .{newAppName}-banner--dark-blue &
+      fill b2c-dark-blue-low
+
+    .{newAppName}-banner--light-blue &
+      fill b2c-light-blue-low
+
+    .{newAppName}-banner--light-blue &
+      fill b2c-light-blue-low
+
+    transform rotate(180deg)
+
+    @media (min-width: 1550px) and (max-width: 1920px)
+      display block
+      right calc(80vw - 1550px)
+
+    @media (min-width: 1920px)
+      display block
+      right -2px
+
+  &--color-white
+    color white
+
+  &-content
+    display flex
+    align-items center
+    height 500px
+    line-height 1.5
+    opacity 0
+    visibility hidden
+    position absolute
+    top 0
+    bottom 0
+    z-index 3
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property opacity, visibility
+    justify-items center
+
+    &__link
+      width 100%
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 15
+
+    .rt-col-4 &
+      min-width 430px
+      max-width 500px
+
+      @media (max-width: mobile-step-size)
+        min-width initial
+        max-width initial
+
+    @media (max-width: mobile-step-size)
+      width 100%
+
+      .{newAppName}-banner--full-screen &
+        justify-content center
+
+      .{newAppName}-banner--full-screen.justify-left &
+        justify-content left
+
+    &--active
+      opacity 1
+      visibility visible
+
+  &-logo
+    text-align right
+    position absolute
+    bottom 30px
+    left 0
+    right 0
+    z-index 2
+
+    @media (max-width: mobile-step-size)
+      display none
+
+  &-image
+    width 55vw
+    height 100%
+    overflow hidden
+    background-position center center
+    background-size cover
+    position relative
+    position absolute
+    top 0
+    bottom 0
+    left 45vw
+    z-index 1
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property background-image
+    -webkit-background-size cover
+
+    &:before
+      content ""
+      display block
+      width 4px
+      height 100%
+      position absolute
+      left -4px
+
+    &:after
+      content ""
+      display block
+      width 4px
+      height 100%
+      position absolute
+      right -4px
+
+    &:before,
+    &:after
+      .{newAppName}-banner--background-dark-state &
+        background-color b2b-dark-state
+
+      .{newAppName}-banner--background-yellow &
+        background-color b2c-yellow-low
+
+      .{newAppName}-banner--background-red &
+        background-color b2c-red-low
+
+      .{newAppName}-banner--background-dark-blue &
+        background-color b2c-dark-blue-low
+
+      .{newAppName}-banner--background-light-blue &
+        background-color b2c-light-blue-low
+
+      .{newAppName}-banner--background-orange &
+        background-color b2c-orange-low
+
+      .{newAppName}-banner--background-pink &
+        background-color b2c-pink-low
+
+      .{newAppName}-banner--background-green &
+        background-color b2c-green-low
+
+    .{newAppName}-banner--full-screen &
+      width 100vw
+      overflow-y hidden
+      left 0
+      right 0
+
+      &:before,
+      &:after
+        display none
+
+    @media (max-width: mobile-step-size)
+      display none
+
+      .{newAppName}-banner--full-screen &
+        display block
+
+    @media (min-width: 1500px)
+      max-width 1024px
+
+      .{newAppName}-banner--full-screen &
+        max-width 100vw
+
+.circle-switcher
+  text-align center
+  text-align center
+  position absolute
+  bottom 30px
+  left 0
+  right 0
+  z-index 20
+
+  &-container
+    display inline-block
+
+  &__item
+    display inline-block
+    width 20px
+    height 20px
+    box-sizing border-box
+    position relative
+    z-index 3
+    cursor pointer
+    animation-duration 5s
+    animation-play-state running
+
+    &:before
+      content ""
+      width 10px
+      height 10px
+      box-sizing border-box
+      border 1px solid #fff
+      border-radius 50%
+      margin auto
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      transition-timing-function ease-in-out
+      transition-duration .3s
+      transition-property background-color, width, height, border, margin, left, right
+      animation-play-state paused
+
+    & + &
+      margin-left horizontal-space
+
+  &__icon
+    width inherit
+    height inherit
+    transform rotate(-90deg)
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property stroke-dasharray, stroke-width
+    stroke #fff
+    stroke-dasharray 0
+    stroke-width 0
+
+    .circle-switcher__item:hover &
+      stroke-dasharray 60
+      stroke-width .5px
+
+    .{newAppName}-banner--run-timer &
+      animation-name switcherRound
+      animation-duration inherit
+      animation-timing-function linear
+      stroke-dasharray 60
+      stroke-width .5px
+
+    .{newAppName}-banner--pause &
+      animation none
+      animation-play-state paused
+      stroke-dashoffset 120 !important
+
+      &.{newAppName}-banner--run-timer
+        cursor default
+        stroke-width .5px
+
+.circle-switcher__item.{newAppName}-banner--run-timer.{newAppName}-banner--pause
+  cursor default
+
+  &:before
+    content ""
+    width 2px
+    height 8px
+    background-color #fff
+    border-width 0
+    border-radius 0
+    margin-top auto
+    margin-bottom auto
+    position absolute
+    top 0
+    bottom 0
+    left inherit
+    left 7px
+    right inherit
+
+  &:after
+    content ""
+    width 2px
+    height 8px
+    background-color #fff
+    border-radius 0
+    margin-top auto
+    margin-bottom auto
+    position absolute
+    top 0
+    bottom 0
+    right 7px
+
+@keyframes switcherRound
+  0%
+    stroke-dashoffset 180
+
+  100%
+    stroke-dashoffset 120

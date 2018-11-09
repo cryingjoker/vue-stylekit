@@ -1,97 +1,93 @@
-.checkbox {
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    user-select: none;
-    position: relative
-    &-element {
-      position: absolute
-      width: 0
-      height: 0
-      border-width 0
-      outline none
-    }
-    &-container {
-        position: relative;
-        padding-left: 29px;
-        user-select: none;
-        &__angle{
-            position: absolute;
-            left: 4.5px;
-            z-index 3
-            top: 5.5px;
-            width: 12px;
-            height: 10px;
-            opacity: 0;
-            visibility: hidden;
-            transition-timing-function: ease-in-out;
-            transition-property: stroke, opacity, visibility, stroke-dashoffset, stroke-dasharray;
-            transition-duration: 0.3s;
-            stroke: b2c-purple-low;
-            stroke-dashoffset: 100px;
-            stroke-dasharray: 20px;
-        }
-        &:before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            box-sizing: border-box;
-            border: 2px solid b2b-cool-gray;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: b2b-white
-            z-index 2
-            transition-timing-function: cubic-bezier(.11, .34, .97, .33);
-            transition-property: background, border;
-            transition-duration: 0.3s;
-            .{newAppName}-dark-theme & {
-                background-color: #fff;
-            }
-        }
-        .checkbox-element:focus+&:before,
-        .checkbox:hover &:before{
-          border-color b2c-purple-low
-        }
-        .checkbox-element:checked+& {
-            .checkbox-container__angle {
-                opacity: 1;
-                visibility: visible;
-                stroke-dashoffset: 80px;
-            }
-        }
-      .checkbox-element[disabled]:checked+&{
-        .checkbox-container__angle {
-          opacity: 0.4;
-        }
-      }
-        .checkbox-element[disabled]+& {
-            cursor: default;
-            .{newAppName}-dark-theme & {
-                opacity: 0.4;
-            }
-            &:before {
-                border-color: b2b-cool-gray05;
-            }
-            color: b2b-cool-gray;
-            &:before {
-                opacity: 1;
-                visibility: visible;
-            }
+.checkbox
+  display inline-block
+  position relative
+  position relative
+  cursor pointer
+  user-select none
+  user-select none
 
-            .checkbox-container__angle {
-                opacity: 0;
-                visibility: visible;
-                stroke dark-theme-background
-            }
-            .{newAppName}-dark-theme & {
-              .checkbox-container__angle {
-                    opacity: 0.4;
-                    visibility: visible;
-                    stroke dark-theme-background
-                }
-            }
-        }
-    }
-}
+  &-element
+    width 0
+    height 0
+    border-width 0
+    outline none
+    position absolute
+
+  &-container
+    padding-left 29px
+    position relative
+    user-select none
+
+    &__angle
+      width 12px
+      height 10px
+      opacity 0
+      visibility hidden
+      position absolute
+      top 5.5px
+      left 4.5px
+      z-index 3
+      transition-timing-function ease-in-out
+      transition-duration .3s
+      transition-property stroke, opacity, visibility, stroke-dashoffset, stroke-dasharray
+      stroke b2c-purple-low
+      stroke-dashoffset 100px
+      stroke-dasharray 20px
+
+    &:before
+      content ""
+      width 20px
+      height 20px
+      box-sizing border-box
+      background-color b2b-white
+      border 2px solid b2b-cool-gray
+      position absolute
+      top 0
+      left 0
+      z-index 2
+      transition-timing-function cubic-bezier(.11, .34, .97, .33)
+      transition-duration .3s
+      transition-property background, border
+
+      .{newAppName}-dark-theme &
+        background-color #fff
+
+    .checkbox-element:focus+&:before,
+    .checkbox:hover &:before
+      border-color b2c-purple-low
+
+    .checkbox-element:checked+&
+      .checkbox-container__angle
+        opacity 1
+        visibility visible
+        stroke-dashoffset 80px
+
+    .checkbox-element[disabled]:checked+&
+      .checkbox-container__angle
+        opacity .4
+
+    .checkbox-element[disabled]+&
+      cursor default
+
+      .{newAppName}-dark-theme &
+        opacity .4
+
+      &:before
+        border-color b2b-cool-gray05
+
+      color b2b-cool-gray
+
+      &:before
+        opacity 1
+        visibility visible
+
+      .checkbox-container__angle
+        opacity 0
+        visibility visible
+        stroke dark-theme-background
+
+      .{newAppName}-dark-theme &
+        .checkbox-container__angle
+          opacity .4
+          visibility visible
+          stroke dark-theme-background

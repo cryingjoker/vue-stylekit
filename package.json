@@ -11,9 +11,7 @@
     "serve:production": "cross-env NODE_ENV=production node bin/spa-server.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "lint:styles": "stylelint --syntax scss 'src/**/*.+(scss|vue)'",
-    "styleguide": "vue-styleguidist server",
-    "styleguide:build": "vue-styleguidist build"
+    "lint-stylelint": "stylus-supremacy format src/**/*.styl --replace --options stylus-supremacy.config.json"
   },
   "repository": {
     "type": "git",
@@ -43,12 +41,10 @@
   },
   "devDependencies": {
     "@avalanche/eslint-config": "^3.0.0",
-    "@avalanche/stylelint-config": "^1.0.0",
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
-    "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
     "babel-eslint": "^10.0.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^8.0.4",
@@ -100,9 +96,9 @@
     "push-dir": "^0.4.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "stylelint": "^9.7.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "stylus-supremacy": "^2.12.7",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "vee-validate": "^2.1.1",

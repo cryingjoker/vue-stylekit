@@ -1,11 +1,9 @@
-body {
-    transition: cubic-bezier(.11, .34, .97, .33);
-    transition-property: background-color, color;
-    transition-duration: 0.3s;
-    color: @main-color;
-}
+body
+  color @main-color
+  transition cubic-bezier(.11, .34, .97, .33)
+  transition-duration .3s
+  transition-property background-color, color
 
-.{newAppName}-dark-theme {
-    background-color: dark-theme-background;
-    color: white;
-}
+.{newAppName}-dark-theme
+  color white
+  background-color dark-theme-background
