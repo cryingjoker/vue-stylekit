@@ -55,7 +55,7 @@ export default {
                           class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
       }
     };
-    return <div ref="card" class="rt-col-6 rt-col-td-3 rt-col-md-3" v-rt-out-side-click={this.hideShow}>
+    return <div ref="card" v-rt-out-side-click={this.hideShow}>
       <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '')}>
 
         <div class="row rt-card-buy__info">
