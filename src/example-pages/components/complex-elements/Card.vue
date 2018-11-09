@@ -18,7 +18,7 @@
               <template slot="list">
                 <rt-card-image-list :has-icon="true">
                   <template slot="icon">
-                    <img src="/static/example-images/iconCard.png" width="55px" alt=""/>
+                    <img src="/static/example-images/iconCard.png" width="55px" alt="">
                   </template>
                   <template>
                     <div>
@@ -41,7 +41,7 @@
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -54,7 +54,7 @@
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -69,7 +69,7 @@
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage1.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage1.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -82,7 +82,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage2.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage2.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -95,7 +95,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage3.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -106,7 +106,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image :is-white-color="true"
-                           background-color-type="light-blue" :col-size="2" card-image="/static/images/cardImage1.jpg"
+                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage1.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
@@ -121,7 +121,7 @@
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
             <rt-card :background-cover="true" :is-white-color="true"
-                     background-color-type="light-blue" :col-size="2"
+                     :col-size="2" background-color-type="light-blue"
             >
               <template slot="header"><div class="rt-font-center"><svg width="97" height="79"
                                                                        xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
             <rt-card :background-cover="true" :is-white-color="true" :background-smoke="0.5"
-                     background-color-type="green" :col-size="6"
+                     :col-size="6" background-color-type="green"
             >
               <template slot="header"><div class="rt-font-center"><img src="/sites/default/files/img/icon/news-icon.svg" height="79"></div></template>
               <template slot="content">
@@ -165,9 +165,9 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card background-image="/sites/default/files/2018-07/games_0.png" :background-opacity="0.9"
-                     :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="black"
-                     :col-size="2" :offset-top="true"
+            <rt-card :background-opacity="0.9" :background-cover="true"
+                     :is-white-color="true" :background-smoke="0.5" :col-size="2" :offset-top="true"
+                     background-image="/sites/default/files/2018-07/games_0.png" background-color-type="black"
             >
               <template slot="content">
 
@@ -187,9 +187,9 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card background-image="/sites/default/files/img/licey.jpg" :background-opacity="0.9"
-                     :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="black"
-                     :col-size="2" :offset-top="true"
+            <rt-card :background-opacity="0.9" :background-cover="true"
+                     :is-white-color="true" :background-smoke="0.5" :col-size="2" :offset-top="true"
+                     background-image="/sites/default/files/img/licey.jpg" background-color-type="black"
             >
               <template slot="content">
                 <p class="rt-font-paragraph rt-font-bold">Ростелеком Лицей</p>
@@ -205,8 +205,8 @@
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
             <rt-card :background-opacity="0.9"
-                     :background-cover="true" :is-white-color="true" :background-smoke="0.5" background-color-type="dark-blue"
-                     :col-size="2"
+                     :background-cover="true" :is-white-color="true" :background-smoke="0.5" :col-size="2"
+                     background-color-type="dark-blue"
             >
               <template slot="content">
                 <div class="rt-font-center rt-space-top15 rt-space-bottom">

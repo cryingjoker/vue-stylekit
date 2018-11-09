@@ -22,7 +22,7 @@
 
           <div class="rt-col-6 rt-col-md-1 flex-column d-flex">
             <span class="rt-font-label flex-fill rt-space-bottom05">simple disabled select</span>
-            <rt-select-without-js label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
+            <rt-select-without-js :disabled="true" label="Оборудование" value="0" text="Новгородская обл">
               <option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"
                       :value="String(index)"
               >{{ option }}
@@ -33,8 +33,8 @@
         <div class="app-row row">
           <div class="col rt-col-md-3 flex-column d-flex">
             <span class="rt-font-label flex-fill rt-space-bottom05">simple select with error</span>
-            <rt-select-without-js label="Оборудование" value="0" :error-message="'ошибка: не выбран город'"
-                                  text="Новгородская обл" :has-error="true"
+            <rt-select-without-js :error-message="'ошибка: не выбран город'" :has-error="true" label="Оборудование"
+                                  value="0" text="Новгородская обл"
             >
               <option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"
                       :value="String(index)"
@@ -63,8 +63,8 @@
         <div class="app-row row">
           <div class="rt-col-6 rt-col-md-2 rt-md-space-top d-flex flex-column">
             <span class="rt-font-label flex-fill rt-space-bottom05">select with error</span>
-            <rt-select label="Оборудование" value="0" text="Новгородская обл"
-                       :error-message="'ошибка: не выбран город'" :has-error="true"
+            <rt-select :error-message="'ошибка: не выбран город'" :has-error="true" label="Оборудование"
+                       value="0" text="Новгородская обл"
             >
               <rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"
                                 :value="String(index)"
@@ -74,7 +74,7 @@
           </div>
           <div class="rt-col-6 rt-col-md-1 rt-md-space-top d-flex flex-column">
             <span class="rt-font-label flex-fill rt-space-bottom05">disabled select</span>
-            <rt-select label="Оборудование" value="0" text="Новгородская обл" :disabled="true">
+            <rt-select :disabled="true" label="Оборудование" value="0" text="Новгородская обл">
               <rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"
                                 :value="String(index)"
               >{{ option }}

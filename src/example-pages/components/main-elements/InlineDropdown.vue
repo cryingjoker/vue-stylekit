@@ -24,7 +24,7 @@
             </rt-inline-dropdown>"
           />
         </div>
-        <documentation-builder type="components" :json="documentation" />
+        <documentation-builder :json="documentation" type="components" />
       </div>
     </div>
   </div>

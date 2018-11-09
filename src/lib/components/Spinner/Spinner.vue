@@ -1,5 +1,5 @@
 <template>
-  <div class="spinner" :class="spinnerClasses">
+  <div :class="spinnerClasses" class="spinner">
     <div class="spinner__big-circle">
       <svg class="spinner__icon" viewBox="0 0 82 82" xmlns="http://www.w3.org/2000/svg">
         <path d="M41 81c22.09139 0 40-17.90861 40-40S63.09139 1 41 1 1 18.90861 1 41" stroke="#70F" stroke-width="2" fill="none" fill-rule="evenodd" />

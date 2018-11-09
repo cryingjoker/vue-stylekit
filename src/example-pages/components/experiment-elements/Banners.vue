@@ -75,7 +75,7 @@
     />
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder type="components" :json="documentation" />
+      <documentation-builder :json="documentation" type="components" />
     </div>
   </div>
 </template>

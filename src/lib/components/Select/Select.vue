@@ -1,6 +1,6 @@
 <template>
-  <div class="select text-field" :class="selectClasses">
-    <button class="select__inner" :disabled="disabled" @click="toggleOpen">
+  <div :class="selectClasses" class="select text-field">
+    <button :disabled="disabled" class="select__inner" @click="toggleOpen">
       <label class="floating-placeholder floating-placeholder--go-top">{{ label }}</label>
       <div class="select-value">
         <p class="select-input">{{ localValue }}</p>
@@ -12,7 +12,7 @@
       </div>
     </button>
     <div class="text-field__line" />
-    <div v-if="!disabled" class="select-list" :style="selectListStyle">
+    <div v-if="!disabled" :style="selectListStyle" class="select-list">
       <slot />
     </div>
     <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>

@@ -1,11 +1,14 @@
 <script type="text/jsx">
-  import { Fragment } from 'vue-fragment'
+  import { Fragment } from 'vue-fragment';
 export default {
   name: "RtFilterWatcher",
   data: () => ({
     selectedProps: []
   }),
   inject: ["RtFilter"],
+  mounted(){
+    this.bindChilds();
+  },
   methods:{
     bindChilds(){
       this.$children.forEach((vNode)=>{
@@ -13,14 +16,11 @@ export default {
         vNode.$on('change',(value)=>{
           // console.info('value -->>',value,vNode)
         });
-      })
+      });
     },
   },
-  mounted(){
-    this.bindChilds();
-  },
   render(){
-    return <Fragment>{this.$slots.default}</Fragment>
+    return <Fragment>{this.$slots.default}</Fragment>;
   }
 };
 </script>

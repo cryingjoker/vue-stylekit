@@ -1,5 +1,5 @@
 <template>
-  <div class="select-option" :class="optionClasses" @click="setSelection">
+  <div :class="optionClasses" class="select-option" @click="setSelection">
     <button class="select-option__inner">
       <slot />
     </button>

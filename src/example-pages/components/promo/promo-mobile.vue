@@ -298,14 +298,14 @@
       <div class="rt-col-12 rt-space-top25">
         <div class="row rt-space-top25 rt-font-light">
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-1.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-1.jpg"
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Звонки на мобильные</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom15">Безлимитные звонки с домашнего телефона на мобильные номера Ростелеком по всей России</p>
@@ -316,14 +316,14 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-2.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-2.jpg"
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Любимый межгород</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom15">Выгодные тарифы для звонков в любую точку России</p>
@@ -334,14 +334,14 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-3.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-3.jpg"
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Звонки в другие страны</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom15">Выгодные тарифы для международных звонков</p>
@@ -352,14 +352,14 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-4.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-4.jpg"
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Безлимитный Казахстан</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom15">Звонки на домашние телефоны Казахстана — 0 рублей</p>
@@ -370,14 +370,14 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-5.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-5.jpg"
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Ноль внутри сети</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom15">Звонки между абонентами домашних телефонов Ростелеком — 0 рублей</p>
@@ -388,15 +388,15 @@
             </rt-card>
           </div>
           <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off rt-font-light d-stretch">
-            <rt-card background-image="/sites/default/files/img/mobile-baner-6.jpg"
-                     :background-opacity="0.85"
+            <rt-card :background-opacity="0.85"
                      :offset-top="true"
                      :background-cover="true"
                      :is-white-color="true"
                      :background-smoke="0.5"
-                     background-color-type="black"
-
                      :col-size="2"
+                     background-image="/sites/default/files/img/mobile-baner-6.jpg"
+
+                     background-color-type="black"
             >
               <template slot="content"><p class="rt-font-paragraph rt-font-bold">Сохранение номера  при переезде</p>
                 <p class="rt-font-small-paragraph rt-space-top05 rt-space-bottom05">Можно переехать в новую квартиру со старым номером домашнего телефона</p>

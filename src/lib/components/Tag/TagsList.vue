@@ -15,6 +15,12 @@ export default {
     indexOfActive : 0,
     value : 0
   }),
+  mounted(){
+    this.bindChilds();
+  },
+  updated(){
+    this.bindChilds();
+  },
   methods:{
     bindChilds(){
       this.$children.forEach((vNode)=>{
@@ -26,7 +32,7 @@ export default {
           this.indexOfActive = vNode.tagIndex;
           this.value = vNode.value;
         }
-      })
+      });
     },
     setActiveTag(index){
       this.$children[this.indexOfActive].toggleActiveState();
@@ -37,19 +43,13 @@ export default {
       this.value = newValue;
     }
   },
-  mounted(){
-    this.bindChilds();
-  },
-  updated(){
-    this.bindChilds();
-  },
   render(h){
 
     this.$slots.default.filter((vNode)=>{
       if(vNode.tag && vNode.tag.search(/RtTag/gi)>=0){
-        return true
+        return true;
       }
-      return false
+      return false;
     }).forEach((vNode, index)=>{
       vNode.componentOptions = vNode.componentOptions || {};
       vNode.componentOptions.propsData = vNode.componentOptions.propsData || {};
@@ -58,7 +58,7 @@ export default {
 
     return<div class={"rt-tag-list"}>
         {this.$slots.default}
-      </div>
+      </div>;
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div :class="'pre-component'  + (fullWidth ? ' pre-component--full-width' : '')">
-    <div class="pre-component__trigger" :class="toggleClassObjects" @click="toggleShow">
+  <div :class="'pre-component' + (fullWidth ? ' pre-component--full-width' : '')">
+    <div :class="toggleClassObjects" class="pre-component__trigger" @click="toggleShow">
       <svg viewBox="0 0 1024 768" class="pre-component__trigger-icon">
         <path d="M288 384L128 544l160 160 64-64-96-96 96-96-64-64zm128 64l96 96-96 96 64 64 160-160-160-160-64 64zM576 64H0v896h768V256L576 64zm128 832H64V128h448l192 192v576z" />
       </svg>
@@ -62,6 +62,7 @@ export default {
       if (this.showCodeEditor) {
         classObject["pre-component__trigger--is-active"] = true;
       }
+      return classObject;
     }
   },
 

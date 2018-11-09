@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="rt-banner-content" :class="banerClass" :style="banerStyle">
+    <div :class="banerClass" :style="banerStyle" class="rt-banner-content">
       <div class="rt-banner-content__inner">
         <slot />
       </div>

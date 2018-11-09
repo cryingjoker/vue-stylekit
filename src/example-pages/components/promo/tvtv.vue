@@ -27,9 +27,9 @@
     </div>
 
     <rt-banner id="tv" :is-fullscreen-image="true" class="rt-banner--fill-height" content-min-height="100vh">
-      <rt-banner-item background-image="/static/images/tvtv/bg.jpg"
+      <rt-banner-item :content-min-height="631"
+                      background-image="/static/images/tvtv/bg.jpg"
                       background-color="none"
-                      :content-min-height="631"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>

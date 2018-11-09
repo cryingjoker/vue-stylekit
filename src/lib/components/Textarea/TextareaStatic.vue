@@ -1,7 +1,7 @@
 <template>
-  <div class="text-field textarea textarea--static" :class="textareaClasses">
+  <div :class="textareaClasses" class="text-field textarea textarea--static">
     <textarea class="textarea-element" @change="inputHandler" />
-    <div v-if="!!placeholder" class="floating-placeholder" :class="placeholderClasses">
+    <div v-if="!!placeholder" :class="placeholderClasses" class="floating-placeholder">
       {{ placeholder }}
     </div>
     <div class="textarea-border" />

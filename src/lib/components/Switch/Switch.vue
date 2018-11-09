@@ -1,6 +1,6 @@
 <template>
   <label class="switch">
-    <input name="test" type="checkbox" ref="input" :disabled="isDisabled" :checked="checked ? 'checked' : ''" class="switch-element" @change="inputHandler">
+    <input ref="input" :disabled="isDisabled" :checked="checked ? 'checked' : ''" name="test" type="checkbox" class="switch-element" @change="inputHandler">
     <div class="switch-container">
       <div class="switch-container__circle">
         <rt-ripple ref="ripple" :not-bind-click="true" :not-render="isDisabled" />

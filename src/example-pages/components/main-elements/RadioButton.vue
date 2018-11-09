@@ -13,9 +13,9 @@
         <pre-code text="<div class=&quot;app-row row rt-space-top2&quot;><div class=&quot;rt-col&quot;><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;0&quot; :model=&quot;testModel&quot;>Огонь</rt-radio-button><div class=&quot;rt-space-vertical&quot;><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;1&quot; :model=&quot;testModel&quot;>Вода</rt-radio-button></div><rt-radio-button name=&quot;type&quot; @change=&quot;setTestModel&quot; value=&quot;2&quot; :model=&quot;testModel&quot;>Медные трубы</rt-radio-button></div></div>" />
         <div class="app-row row">
           <div class="rt-col">
-            <rt-radio-button name="type" :is-disabled="true">Огонь</rt-radio-button>
-            <rt-radio-button name="type" :is-disabled="true">Вода</rt-radio-button>
-            <rt-radio-button name="type" :is-disabled="true">Медные трубы</rt-radio-button>
+            <rt-radio-button :is-disabled="true" name="type">Огонь</rt-radio-button>
+            <rt-radio-button :is-disabled="true" name="type">Вода</rt-radio-button>
+            <rt-radio-button :is-disabled="true" name="type">Медные трубы</rt-radio-button>
           </div>
         </div>
       </div>

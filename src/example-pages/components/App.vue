@@ -1,8 +1,8 @@
 <template>
-  <div v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu" class="app" :class="{'app--hide-scroll' : showMenu}">
+  <div v-rt-swipe-left="closeMenu" v-rt-swipe-right="openMenu" :class="{'app--hide-scroll' : showMenu}" class="app">
     <div class="menu-trigger md-d-block d-none" @click="openMenu">Menu</div>
 
-    <div class="grid" :class="{'grid--active': showGrid}">
+    <div :class="{'grid--active': showGrid}" class="grid">
       <div class="row">
         <div class="rt-col-1 rt-col-md-1 demo-col" />
         <div class="rt-col-1 rt-col-md-1 demo-col" />
@@ -20,8 +20,8 @@
     </div>
     <keep-alive>
 
-      <div class="aside-menu" :class="{'aside-menu--active' : showMenu}">
-        <rt-switch class="grid-switcher" :checked="showGrid" @change="gridToggle">Grid</rt-switch>
+      <div :class="{'aside-menu--active' : showMenu}" class="aside-menu">
+        <rt-switch :checked="showGrid" class="grid-switcher" @change="gridToggle">Grid</rt-switch>
         <div class="aside-menu__item">
           <router-link class="aside-menu__link" active-class="aside-menu__link--active" to="/buttons">
             Buttons
@@ -191,7 +191,7 @@
     </keep-alive>
 
     <router-view />
-    <rt-switch class="dark-theme-switcher" :checked="isDarkTheme" @change="switchTheme">Dark theme</rt-switch>
+    <rt-switch :checked="isDarkTheme" class="dark-theme-switcher" @change="switchTheme">Dark theme</rt-switch>
 
   </div>
 </template>

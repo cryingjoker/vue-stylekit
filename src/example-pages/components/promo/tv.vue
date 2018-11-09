@@ -272,8 +272,8 @@
           <div class="row">
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
-                       background-image="/static/images/logoBig1.png" :is-white-color="true" :card-height="459"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" :is-white-color="true"
+                       :card-height="459" class="rt-font-light" background-image="/static/images/logoBig1.png"
               >
                 <template slot="header">
                   <p class="rt-font-card-title">Волшебный мир Disney</p>
@@ -309,8 +309,8 @@
             </div>
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
-                       background-image="/static/images/logoBig2.png" :is-white-color="true" :card-height="459"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" :is-white-color="true"
+                       :card-height="459" class="rt-font-light" background-image="/static/images/logoBig2.png"
               >
                 <template slot="header">
                   <p class="rt-font-card-title">ABC Studios</p>
@@ -354,8 +354,8 @@
             </div>
 
             <div class="col-4 rt-col-4 rt-col-md-3 rt-md-space-vertical">
-              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" class="rt-font-light"
-                       background-image="/static/images/logoBig3.png" :is-white-color="true" :card-height="459"
+              <rt-card :is-transparent-card="true" :card-header-height="120" :background-cover="true" :is-white-color="true"
+                       :card-height="459" class="rt-font-light" background-image="/static/images/logoBig3.png"
               >
                 <template slot="header">
 

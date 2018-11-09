@@ -7,37 +7,55 @@
   export default {
     name: "RtCardBuy",
     components: componentsList,
-    props: {},
-    computed: {},
     directives: directives,
+    props: {
+    },
     data(){
       return {
         showForm : false
-      }
+      };
     },
+    computed: {},
 
     mounted: function() {
     },
     methods: {
       hideShow(){
         if(this.showForm){
-          this.showForm = false
+          this.showForm = false;
         }
       },
       toggleShow(){
         this.showForm = !this.showForm;
-      }
+      },
+      submitForm(){
+        let form = this.$refs.card.querySelector('form');
+        if(!form){
+          form = this.$refs.card.querySelector('.form');
+        }
+        if(form && form.submit && typeof form.submit === 'function'){
+          form.submit();
+        }
+
+      },
     },
-    render() {
+
+    render(h) {
       const button = ()=>{
         if(this.showForm){
-          return <rt-button class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>
+          if(this.submitForm) {
+            return <rt-button onClick={this.submitForm}
+                              class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
+          }
+          else{
+            return <rt-button class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
+          }
         }else{
           return <rt-button onClick={this.toggleShow}
-                            class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>
+                            class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
         }
-      }
-      return <div class="rt-col-6 rt-col-td-3 rt-col-md-3" v-rt-out-side-click={this.hideShow}>
+      };
+      return <div ref="card" class="rt-col-6 rt-col-td-3 rt-col-md-3" v-rt-out-side-click={this.hideShow}>
         <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '')}>
 
           <div class="row rt-card-buy__info">

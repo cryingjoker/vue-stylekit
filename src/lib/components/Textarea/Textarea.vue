@@ -1,10 +1,10 @@
 <template>
-  <div class="text-field textarea" :class="textareaClasses">
+  <div :class="textareaClasses" class="text-field textarea">
     <textarea class="textarea-element" rows="1" @change="inputHandler" @keyup="calculateHelght"
               @input="calculateHelght"
     />
     <div class="text-field__line" />
-    <div v-if="!!placeholder" class="floating-placeholder" :class="placeholderClasses">
+    <div v-if="!!placeholder" :class="placeholderClasses" class="floating-placeholder">
       {{ placeholder }}
     </div>
     <p class="text-field__error-message">{{ errorMessage }}</p>

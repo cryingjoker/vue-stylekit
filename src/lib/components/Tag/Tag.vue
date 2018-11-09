@@ -22,7 +22,7 @@ export default {
   data(){
     return {
       isNowActive: this.isActive
-    }
+    };
   },
   methods:{
     toggleActiveState(){
@@ -35,7 +35,7 @@ export default {
   render(){
     return <div onClick={this.setActive} class={"rt-tag"+(this.isNowActive ? " rt-tag--is-active": "")}>
       {this.$slots.default}
-    </div>
+    </div>;
   }
 };
 </script>

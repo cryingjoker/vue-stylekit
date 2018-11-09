@@ -1,5 +1,5 @@
 <template>
-  <div class="rt-annotation" :class="annotationClasses">
+  <div :class="annotationClasses" class="rt-annotation">
     <p class="rt-annotation__title rt-font-paragraph" @click="toggleOpen()">{{ label }}
 
       <svg class="rt-annotation__arrow" width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg">

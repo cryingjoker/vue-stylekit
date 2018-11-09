@@ -2,8 +2,8 @@
 
 
 <script type="text/jsx">
-import Vue from 'vue'	
-import VeeValidate from 'vee-validate'
+import Vue from 'vue';	
+import VeeValidate from 'vee-validate';
 export default {
   name: "RtInput",
   props: {
@@ -55,27 +55,27 @@ export default {
       hasInputText: this.value ? this.value.length > 0 : false
     };
   },
+
+  computed: {
+    fieldName () {
+      // Для всех полей ввода задаём атрибут name, даже дефолтный
+      return this.name || 'input-field__'+this._uid;
+    },
+    isInvalid () {
+      // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
+      if (this.validate) {
+        return this.hasError || this.errors.has(this.fieldName);
+      }
+    }
+  },
   watch: {
     localValue(val) {
       this.$emit("input", val);
     }
   },
 
-  computed: {
-    fieldName () {
-      // Для всех полей ввода задаём атрибут name, даже дефолтный
-      return this.name || 'input-field__'+this._uid
-    },
-    isInvalid () {
-      // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
-      if (this.validate) {
-        return this.hasError || this.errors.has(this.fieldName)
-      }
-    }
-  },
-
   mounted() {
-    Vue.use(VeeValidate)
+    Vue.use(VeeValidate);
     this.setValue();
     this.setDisabled();
     this.bindEvents();
@@ -148,13 +148,13 @@ export default {
     getChar(event){
       if (event.which == null) {
         if (event.keyCode < 32) return null;
-        return String.fromCharCode(event.keyCode)
+        return String.fromCharCode(event.keyCode);
       }
       if (event.which < 32) return null;
       return String.fromCharCode(event.which);
     },
     isSpecialCharacters(chr){
-      return chr.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) !== null
+      return chr.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) !== null;
     },
     keyPress(event){
 
@@ -165,14 +165,14 @@ export default {
             if(!chr.match(/[0-9]/)){
               event.preventDefault();
               event.stopPropagation();
-              return null
+              return null;
             }
             break;
           case 'string':
             if(chr.match(/[0-9]/)){
               event.preventDefault();
               event.stopPropagation();
-              return null
+              return null;
             }
             break;
         }
@@ -185,14 +185,14 @@ export default {
               if(!chr.match(/[a-z]/i)){
                 event.preventDefault();
                 event.stopPropagation();
-                return null
+                return null;
               }
               break;
             case 'ru':
               if(!chr.match(/[а-я]/i)){
                 event.preventDefault();
                 event.stopPropagation();
-                return null
+                return null;
               }
               break;
           }
@@ -221,9 +221,9 @@ export default {
         }
         return <div  class={placeholderClassNames}>
           {this.placeholder}
-        </div>
+        </div>;
       }
-      return null
+      return null;
     })();
 
     const clearButton = (()=>{
@@ -232,14 +232,14 @@ export default {
           <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
                   fill-rule="evenodd"/>
-          </svg></div>
+          </svg></div>;
       }
-      return null
+      return null;
     })();
 
     const errorMessage = (()=>{
       if(this.isInvalid){
-        return <p class="text-field__error-message">{this.errorMessage}</p>
+        return <p class="text-field__error-message">{this.errorMessage}</p>;
       }
     })();
     const arithmeticButtons = (()=>{
@@ -267,7 +267,7 @@ export default {
               </g>
             </svg>
           </button>
-        </div>
+        </div>;
       }
     })();
 
@@ -288,7 +288,7 @@ export default {
         {clearButton}
         {errorMessage}
         {arithmeticButtons}
-  </div>
+  </div>;
   }
 };
 </script>

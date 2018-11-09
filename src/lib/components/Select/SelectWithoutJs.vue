@@ -1,10 +1,10 @@
 <template>
-  <div class="select text-field" :class="selectClasses">
+  <div :class="selectClasses" class="select text-field">
     <label>
       <p class="floating-placeholder floating-placeholder--go-top">{{ label }}</p>
 
       <div class="select-value">
-        <select class="select-list-native" :disabled="disabled">
+        <select :disabled="disabled" class="select-list-native">
           <slot />
         </select>
         <div class="select-arrow">

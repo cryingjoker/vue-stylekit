@@ -26,9 +26,9 @@
     </div>
 
     <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
-      <rt-banner-item background-image="/static/images/smartHouse/bg.jpg"
+      <rt-banner-item :content-min-height="631"
+                      background-image="/static/images/smartHouse/bg.jpg"
                       background-color="none"
-                      :content-min-height="631"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
@@ -1269,12 +1269,12 @@
               <rt-card :background-image="'/images/smartHouse/smart-house.png'"
                        :background-position="'right'"
                        :background-image-stand-alone="true"
+                       :col-size="2"
                        background-size-width="33%"
                        backgroun-size-height="60%"
                        background-position-right="-5%"
-                       background-position-top="20%"
 
-                       :col-size="2"
+                       background-position-top="20%"
               >
                 <template slot="footer">
                   <div class="rt-space-bottom  color-main07">
@@ -1293,9 +1293,9 @@
               <rt-card :background-image="'/static/example-images/cardBackground9.png'"
                        :background-image-stand-alone="true"
                        :background-position="'bottom-right'"
+                       :col-size="2"
                        background-size-width="40%"
                        backgroun-size-height="100%"
-                       :col-size="2"
               >
 
                 <template slot="footer">
@@ -1318,7 +1318,7 @@
     <div class="color-block--rule-color">
       <div class="rt-container rt-space-top2 rt-space-bottom">
         <div class="rt-col-12">
-          <rt-annotation label="Примечание" :has-white-color="true">
+          <rt-annotation :has-white-color="true" label="Примечание">
 
             <template slot="content">
               <p class="rt-annotation-item"> 1. Услуги Высокоскоростного интернета предоставляются при наличии

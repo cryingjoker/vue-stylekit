@@ -1,7 +1,7 @@
 <template>
-  <div class="rt-banner" :class="banerClass" :style="bannerStyle">
+  <div :class="banerClass" :style="bannerStyle" class="rt-banner">
     <div class="rt-container">
-      <a v-if="RtBanners && RtBanners.items && RtBanners.items[RtBanners.activeIndex] && RtBanners.items[RtBanners.activeIndex].link" class="rt-banner-content__link" :href="RtBanners.items[RtBanners.activeIndex].link" :target="RtBanners.items[RtBanners.activeIndex].linkTarget" />
+      <a v-if="RtBanners && RtBanners.items && RtBanners.items[RtBanners.activeIndex] && RtBanners.items[RtBanners.activeIndex].link" :href="RtBanners.items[RtBanners.activeIndex].link" :target="RtBanners.items[RtBanners.activeIndex].linkTarget" class="rt-banner-content__link" />
       <div class="rt-col-12">
         <div class="row">
           <div class="rt-col-1 md-d-none" />
@@ -23,7 +23,7 @@
         />
       </div>
     </div>
-    <div class="rt-banner-image" :style="imageStyle">
+    <div :style="imageStyle" class="rt-banner-image">
       <svg v-if="!isFullscreenImage" class="rt-banner-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 500"
            style="transform: translate(-50% 0)"
       >
@@ -33,10 +33,10 @@
 
       <video v-if="backgroundVideo"
              ref="video"
+             :src="backgroundVideo"
              autoplay
              muted
              class="rt-banner-video__content"
-             :src="backgroundVideo"
       />
       <svg v-if="!isFullscreenImage" class="rt-banner-right-triangle" xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 185 500"
@@ -46,7 +46,7 @@
     </div>
     <div v-if="bannerLogo" class="rt-banner-logo rt-container">
       <div class="rt-col-12">
-        <img class="rt-banner-logo__image" :src="bannerLogo" alt="">
+        <img :src="bannerLogo" class="rt-banner-logo__image" alt="">
       </div>
     </div>
   </div>

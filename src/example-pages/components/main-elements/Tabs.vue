@@ -8,8 +8,8 @@
       <div class="app-body">
         <div class="app-row row">
 
-            <pre-code
-              text="<rt-tabs>
+          <pre-code
+            text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
                 <rt-tabs-nav-item name=&quot;one&quot;>Готов!</rt-tabs-nav-item>
                 <rt-tabs-nav-item name=&quot;two&quot;>Смысл сайта</rt-tabs-nav-item>
@@ -55,8 +55,8 @@
                     форм развития.</p></rt-tabs-content-item>
               </template>
             </rt-tabs>"
-            />
-          </div>
+          />
+        </div>
 
       </div>
     </div>

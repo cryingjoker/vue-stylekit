@@ -107,7 +107,7 @@
         </rt-annotation>"
         />
 
-        <documentation-builder type="components" :json="documentation" />
+        <documentation-builder :json="documentation" type="components" />
       </div>
     </div>
 

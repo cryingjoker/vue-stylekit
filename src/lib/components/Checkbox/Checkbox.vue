@@ -1,25 +1,24 @@
 <template>
 
   <label
-    class="checkbox"
     :class="{
-      focused: focused,
       active: isChecked,
       disabled: isDisabled,
       invalid: required && !isChecked
     }"
+    class="checkbox"
   >
     <rt-ripple ref="ripple" :not-render="isDisabled" />
     <input
-      type="checkbox"
+      v-validate="'required'"
       ref="input"
       :id="uid"
       :disabled="isDisabled"
       :name="name"
+      v-model="isChecked"
+      type="checkbox"
       class="checkbox-element"
       @change="changeInput"
-      v-model="isChecked"
-      v-validate="'required'"
     >
 
     <div class="checkbox-container">
@@ -27,7 +26,7 @@
       <svg class="checkbox-container__angle" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="controls/checkbox/active/mark/violet" stroke-width="3">
-            <polyline id="Stroke-4" points="1 4 4.44815083 7 7.5882241 4.12440883 11 1"></polyline>
+            <polyline id="Stroke-4" points="1 4 4.44815083 7 7.5882241 4.12440883 11 1"/>
           </g>
         </g>
       </svg>
@@ -38,20 +37,14 @@
 </template>
 
 <script>
-import Vue from 'vue'	
-import VeeValidate from 'vee-validate'
+import Vue from 'vue';
+import VeeValidate from 'vee-validate';
 import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
 export default {
   name: "RtCheckbox",
   components: componentsList,
-
-  data () {
-    return {
-      isChecked: this.checked
-    }
-  },
 
   props: {
     isDisabled: {
@@ -71,8 +64,19 @@ export default {
       type: String
     }
   },
+
+  data () {
+    return {
+      isChecked: this.checked
+    };
+  },
+  watch: {
+    checked: function (newValue) {
+      this.isChecked = newValue;
+    }
+  },
   mounted() {
-    Vue.use(VeeValidate)
+    Vue.use(VeeValidate);
     this.bindEvents();
   },
 
@@ -85,7 +89,7 @@ export default {
   },
   methods: {
     changeInput($event) {
-      this.$emit('update:checked', this.isChecked)
+      this.$emit('update:checked', this.isChecked);
       this.showWave();
     },
     bindEvents() {
@@ -115,10 +119,5 @@ export default {
       });
     }
   },
-  watch: {
-    checked: function (newValue) {
-      this.isChecked = newValue
-    }
-  }
 };
 </script>

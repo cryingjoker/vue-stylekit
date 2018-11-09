@@ -1,5 +1,5 @@
 <template>
-  <button class="rt-button rt-button-with-ripple" :class="{'rt-button--is-block' : isBlock}" @click="triggerClick($event)">
+  <button :class="{'rt-button--is-block' : isBlock}" class="rt-button rt-button-with-ripple" @click="triggerClick($event)">
     <rt-ripple-without-js>
       <slot />
     </rt-ripple-without-js>

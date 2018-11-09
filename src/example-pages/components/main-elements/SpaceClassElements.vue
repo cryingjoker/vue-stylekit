@@ -16,13 +16,13 @@
             </template>
             <template slot="content">
               <rt-tabs-content-item name="all">
-                <documentation-builder type="classStyle" label="all width" :json="json" />
+                <documentation-builder :json="json" type="classStyle" label="all width" />
               </rt-tabs-content-item>
               <rt-tabs-content-item name="tablet">
-                <documentation-builder type="classStyle" :label="'max-width: '+variables['tablet-step-size']" :json="tabletJson" />
+                <documentation-builder :label="'max-width: '+variables['tablet-step-size']" :json="tabletJson" type="classStyle" />
               </rt-tabs-content-item>
               <rt-tabs-content-item name="mobile">
-                <documentation-builder type="classStyle" :label="'max-width: '+variables['mobile-step-size']" :json="mobileJson" />
+                <documentation-builder :label="'max-width: '+variables['mobile-step-size']" :json="mobileJson" type="classStyle" />
               </rt-tabs-content-item>
             </template>
           </rt-tabs>
