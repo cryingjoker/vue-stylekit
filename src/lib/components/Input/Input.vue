@@ -58,7 +58,6 @@ export default {
   watch: {
     localValue(val) {
       this.$emit("input", val);
-      this.$emit('valid', this.errors)
     }
   },
 
