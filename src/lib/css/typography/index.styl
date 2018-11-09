@@ -1,170 +1,161 @@
-body {
-    font-family: 'RT Fonts';
-    font-weight: 400;
-    font-size: 16px ;
-    line-height: 1.5;
-}
+body
+  font-family "RT Fonts"
+  font-size 16px
+  line-height 1.5
+  font-weight 400
 
-.{newAppName}-font {
-    &-hero {
-        font-size: 66px;
-        font-weight: 200;
-    }
-    h1,
-    &-h1 {
-        font-size: 50px;
-        font-weight: 200;
-        @media (max-width: mobile-step-size) {
-            font-size: 37px;
-        }
-    }
-    &-banner-label {
-        font-size: 48px;
-        font-weight: 600;
-    }
-    &-banner-label-bold {
-        font-size: 48px;
-        font-weight: 800;
-        @media (max-width: mobile-step-size) {
-            font-size: 31px;
-            line-height: 1.3;
-        }
-    }
-  &-banner-label-thin {
-        font-size: 48px;
-        font-weight: 200;
-        line-height: 63px;
-        @media (max-width: mobile-step-size) {
-            font-size: 38px;
-        }
-    }
-    h2,
-    &-h2 {
-        font-size: 37px;
-        font-weight: 200;
-        @media (max-width: mobile-step-size) {
-            font-size: 28px;
-        }
-    }
-    &-promo-title {
-        font-size: 36px;
-    }
-    h3,
-    &-h3 {
-        font-size: 28px;
-        font-weight: 200;
-        @media (max-width: mobile-step-size) {
-            font-size: 21px;
-        }
-    }
-    &-promo {
-        font-size: 24px;
-        font-weight: 200;
-        letter-spacing: 0.28px;
-    }
-    h4,
-    &-h4 {
-        font-size: 21px;
-        font-weight: 200;
-    }
-    strong,
-    b,
-    &-bold {
-        font-weight: 800;
-    }
-    &-medium {
-        font-weight: 600;
-    }
-    &-paragraph {
-        font-size: 18px;
-    }
-    &-small-paragraph {
-        font-size: 14px;
-    }
-    &-label {
-        font-size: 12px;
-    }
-    &-label-uppercase {
-        font-size: 12px;
-        color: main-color03;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    &-sup{
-        position: relative;
-        top: -5px;
-    }
-    &-no-wrpa,
-    &-no-wrap {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    &-right {
-        text-align: right;
-    }
-    &-md {
-        &-center {
-            @media (max-width: mobile-step-size) {
-                text-align: center;
-            }
-        }
-    }
-    &-center {
-        text-align: center;
-    }
-    &-card-title {
-        font-size: 30px;
-    }
-    &-light {
-        font-weight: 200;
-    }
-    &-link {
-        color: inherit;
-        &:hover {
-            color: inherit;
-        }
-        text-decoration: underline;
-    }
-    &-small-upper {
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    &-spacing2 {
-        letter-spacing: 2px;
-    }
-    &-spacing018 {
-        letter-spacing: 0.18px;
-    }
-    &-hypnens-off{
-      -webkit-hyphens: none;
-      -ms-hyphens: none;
-      -moz-hyphens: none;
-      hyphens: none;
-      word-wrap: normal;
-    }
-}
+.{newAppName}-font
+  &-hero
+    font-size 66px
+    font-weight 200
 
-.{newAppName}-wrapper {
-    font-size: 16px;
-}
+  h1,
+  &-h1
+    font-size 50px
+    font-weight 200
 
-a {
-    color: inherit;
-}
+    @media (max-width: mobile-step-size)
+      font-size 37px
 
-.rt-numeric-list {
-    counter-reset: step-counter;
-    list-style-type: none;
-    &__item {
-        counter-increment: step-counter;
-        padding-left horizontal-space
-        position: relative
-        &:before {
-            content: counter(step-counter)'.';
-            position: absolute
-            left: 0
-        }
-    }
-}
+  &-banner-label
+    font-size 48px
+    font-weight 600
 
+  &-banner-label-bold
+    font-size 48px
+    font-weight 800
 
+    @media (max-width: mobile-step-size)
+      font-size 31px
+      line-height 1.3
+
+  &-banner-label-thin
+    font-size 48px
+    line-height 63px
+    font-weight 200
+
+    @media (max-width: mobile-step-size)
+      font-size 38px
+
+  h2,
+  &-h2
+    font-size 37px
+    font-weight 200
+
+    @media (max-width: mobile-step-size)
+      font-size 28px
+
+  &-promo-title
+    font-size 36px
+
+  h3,
+  &-h3
+    font-size 28px
+    font-weight 200
+
+    @media (max-width: mobile-step-size)
+      font-size 21px
+
+  &-promo
+    font-size 24px
+    font-weight 200
+    letter-spacing .28px
+
+  h4,
+  &-h4
+    font-size 21px
+    font-weight 200
+
+  strong,
+  b,
+  &-bold
+    font-weight 800
+
+  &-medium
+    font-weight 600
+
+  &-paragraph
+    font-size 18px
+
+  &-small-paragraph
+    font-size 14px
+
+  &-label
+    font-size 12px
+
+  &-label-uppercase
+    color main-color03
+    font-size 12px
+    text-transform uppercase
+    letter-spacing 2px
+
+  &-sup
+    position relative
+    top -5px
+
+  &-no-wrpa,
+  &-no-wrap
+    text-overflow ellipsis
+    white-space nowrap
+
+  &-right
+    text-align right
+
+  &-md
+    &-center
+      @media (max-width: mobile-step-size)
+        text-align center
+
+  &-center
+    text-align center
+
+  &-card-title
+    font-size 30px
+
+  &-light
+    font-weight 200
+
+  &-link
+    color inherit
+
+    &:hover
+      color inherit
+
+    text-decoration underline
+
+  &-small-upper
+    font-size 14px
+    text-transform uppercase
+
+  &-spacing2
+    letter-spacing 2px
+
+  &-spacing018
+    letter-spacing .18px
+
+  &-hypnens-off
+    word-wrap normal
+    hyphens none
+    -webkit-hyphens none
+    -ms-hyphens none
+    -moz-hyphens none
+
+.{newAppName}-wrapper
+  font-size 16px
+
+a
+  color inherit
+
+.rt-numeric-list
+  list-style-type none
+  counter-reset step-counter
+
+  &__item
+    padding-left horizontal-space
+    position relative
+    counter-increment step-counter
+
+    &:before
+      content counter(step-counter) "."
+      position absolute
+      left 0

@@ -1,14 +1,12 @@
-.{newAppName}-fullscreen-image {
-    &__element{
-        padding-top: horizontal-space;
-        padding-bottom: horizontal-space;
-        background-position: center center;
-        background-attachment: scroll;
-        background-attachment: fixed;
-        -webkit-background-size: cover;
-        background-size: cover;
-        @media (max-width: mobile-step-size) {
-            background-attachment: scroll;
-        }
-    }
-}
+.{newAppName}-fullscreen-image
+  &__element
+    background-attachment scroll
+    background-attachment fixed
+    background-position center center
+    background-size cover
+    padding-top horizontal-space
+    padding-bottom horizontal-space
+    -webkit-background-size cover
+
+    @media (max-width: mobile-step-size)
+      background-attachment scroll

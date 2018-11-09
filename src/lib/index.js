@@ -44,7 +44,9 @@ import {
   InlineDropdown,
   InlineDropdownItem,
   Tag,
-  TagsList
+  TagsList,
+  Filter,
+  FilterWatcher
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -94,21 +96,28 @@ const VueRtStyle = {
       Vue.component(DownloadContent.name, DownloadContent);
       Vue.component(InlineDropdown.name, InlineDropdown);
       Vue.component(InlineDropdownItem.name, InlineDropdownItem);
+      Vue.component(Tag.name, Tag);
+      Vue.component(TagsList.name, TagsList);
+      Vue.component(Filter.name, Filter);
+      Vue.component(FilterWatcher.name, FilterWatcher);
+
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
+
 
       Vue.RtStyle = true;
       Vue.config.test = true;
     }
   }
 };
+
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
-const version = "0.0.18";
-if(localStorage && localStorage.getItem('dev_mode')){
-  localStorage.setItem('dev_mode__version',version);
-}
+const version = "0.0.19";
+// if(localStorage && localStorage.getItem('dev_mode')){
+//   localStorage.setItem('dev_mode__version',version);
+// }
 window.RTK_STYLE_VER = version;
 VueRtStyle.version = version;
 

@@ -1,324 +1,332 @@
 .{newAppName}-card
-  border-radius: 10px
-  display: flex
+  display flex
+  flex 1
   flex-direction column
-  width: 100%
-  box-shadow: card-shadow
-  background-position-x: center
-  background-position-y: center
-  background-repeat: no-repeat
-  position: relative
-  overflow: hidden
-  color: main-color
-  align-self: stretch
-  flex: 1
-  min-height: min-content
+  align-self stretch
+  width 100%
+  min-height min-content
+  overflow hidden
+  color main-color
+  background-position-x center
+  background-position-y center
+  background-repeat no-repeat
+  border-radius 10px
+  box-shadow card-shadow
+  position relative
+
   &__border-content
-    border-top: 1px solid b2c-dark01
-    padding-top: vertical-space*0.5
-    padding-left: horizontal-space
-    padding-right: horizontal-space
+    border-top 1px solid b2c-dark01
+    padding-top vertical-space * .5
+    padding-left horizontal-space
+    padding-right horizontal-space
+
   &--has-bg-cover
-    background-color: transparent
+    background-color transparent
 
   &--transparent
-    background-color: transparent
+    background-color transparent
 
   @media (max-width: mobile-step-size)
-    flex-direction: column
+    flex-direction column
 
   @media (min-width: mobile-step-size)
-    min-height: 364px
+    min-height 364px
 
   &--has-white-color
-    color: #fff
+    color #fff
 
   &--has-smoke
     &:before
-      content: ''
-      position: absolute
-      z-index: 2
-      background-color: rgba(0, 0, 0, 0.5)
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
-      border-radius: 10px
+      content ""
+      background-color rgba(0, 0, 0, .5)
+      border-radius 10px
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
 
   &--has-smoke03
     &:before
-      content: ''
-      position: absolute
-      z-index: 2
-      background-color: rgba(0, 0, 0, 0.3)
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
-      border-radius: 10px
+      content ""
+      background-color rgba(0, 0, 0, .3)
+      border-radius 10px
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
 
   &--has-smoke02
     &:before
-      content: ''
-      position: absolute
-      z-index: 2
-      background-color: rgba(0, 0, 0, 0.2)
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
-      border-radius: 10px
+      content ""
+      background-color rgba(0, 0, 0, .2)
+      border-radius 10px
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      z-index 2
 
   &__background
-    background-color: white
-    position: absolute
-    top: -20px
-    border-radius: 10px
-    bottom: -20px
-    left: -20px
-    right: -20px
-    z-index: 1
-    background-position-x: center
-    background-position-y: center
-    background-repeat: no-repeat
+    background-color white
+    background-position-x center
+    background-position-y center
+    background-repeat no-repeat
+    border-radius 10px
+    position absolute
+    top -20px
+    bottom -20px
+    left -20px
+    right -20px
+    z-index 1
 
     .{newAppName}-card-black &
-      background-color: dark-card-background
+      background-color dark-card-background
 
     .{newAppName}-card-purple &
-      background-color: b2b-purple-low
+      background-color b2b-purple-low
 
     .{newAppName}-card-red &
-      background-color: b2b-red-low
+      background-color b2b-red-low
 
     .{newAppName}-card-dark-blue &
-      background-color: b2b-dark-blue-low
+      background-color b2b-dark-blue-low
 
     .{newAppName}-card-light-blue &
-      background-color: b2b-light-blue-low
+      background-color b2b-light-blue-low
 
     .{newAppName}-card-yellow &
-      background-color: b2b-yellow-low
+      background-color b2b-yellow-low
 
     .{newAppName}-card-orange &
-      background-color: b2b-orange-low
+      background-color b2b-orange-low
 
     .{newAppName}-card-pink &
-      background-color: b2b-pink-low
+      background-color b2b-pink-low
 
     .{newAppName}-card-green &
-      background-color: b2b-green-low
+      background-color b2b-green-low
 
     &--position-background-top
-      background-position-x: center
-      background-position-y: top
+      background-position-x center
+      background-position-y top
 
     &--position-background-right
-      background-position-x: calc(100% - 40px)
-      background-position-y: center
+      background-position-x calc(100% - 40px)
+      background-position-y center
 
     &--position-background-bottom
-      background-position-x: center
-      background-position-y: bottom
+      background-position-x center
+      background-position-y bottom
 
     &--position-background-left
-      background-position-x: 40px
-      background-position-y: center
+      background-position-x 40px
+      background-position-y center
 
     &--position-background-top-right
-      background-position-x: calc(100% - 40px)
-      background-position-y: top
+      background-position-x calc(100% - 40px)
+      background-position-y top
 
     &--position-background-bottom-right
-      background-position-x: calc(100% - 40px)
-      background-position-y: bottom
+      background-position-x calc(100% - 40px)
+      background-position-y bottom
 
     &--position-background-bottom-left
-      background-position-x: 40px
-      background-position-y: bottom
+      background-position-x 40px
+      background-position-y bottom
 
     &--position-background-top-left
-      background-position-x: 40px
-      background-position-y: top
+      background-position-x 40px
+      background-position-y top
 
     .{newAppName}-card--has-bg-repeat &
-      background-repeat: repeat
+      background-repeat repeat
 
     .{newAppName}-card--has-bg-cover &
-      background-size: cover
+      background-size cover
 
     @media (max-width: mobile-step-size)
       .rt-card--hide-background-on-mobile &
-        background-image: inherit !important
+        background-image inherit !important
 
   &__stand-alone-background
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    z-index: 2
-    background-size: cover
-    background-repeat: no-repeat
+    background-size cover
+    background-repeat no-repeat
+    position absolute
+    top 0
+    bottom 0
+    right 0
+    z-index 2
+
     @media (max-width: mobile-step-size)
-      position: relative
-      margin-top: vertical-space
-      width: 100% !important
-      height: 100% !important
-      top: 0 !important
-      bottom: 0 !important
-      left: 0 !important
-      right: 0 !important
-      max-height: 40vw !important
-      background-size: contain
-      background-position: center center
+      width 100% !important
+      height 100% !important
+      max-height 40vw !important
+      background-position center center
+      background-size contain
+      margin-top vertical-space
+      position relative
+      top 0 !important
+      bottom 0 !important
+      left 0 !important
+      right 0 !important
 
   &__content
-    position: relative
-    z-index: 3
-    width: 100%
-    min-width: 100%
-    padding-top: vertical-space * 1.5
-    padding-bottom: vertical-space
-    display: flex
-    flex-direction: column
-    min-height: auto
+    display flex
+    flex-direction column
+    width 100%
+    min-width 100%
+    min-height auto
+    padding-top vertical-space * 1.5
+    padding-bottom vertical-space
+    position relative
+    z-index 3
+
     @media (min-width: mobile-step-size)
-      min-height: 364px
+      min-height 364px
 
     &--has-custom-height
       @media (max-width: mobile-step-size)
-        display: flex
+        display flex
 
     .rt-col-6 &
-      min-width: 50%
+      min-width 50%
 
     &--has-offset-top
-      padding-top: vertical-space * 9
+      padding-top vertical-space * 9
 
   &__body
-    flex: 1 0 auto
-    padding-left: horizontal-space
-    padding-right: horizontal-space
+    flex 1 0 auto
+    padding-left horizontal-space
+    padding-right horizontal-space
+
     &--is-empty
       @media (max-width: mobile-step-size)
-        display: none
+        display none
 
     &--is-static
-      flex: 0
-      flex-grow: 0!important
+      flex 0
+      flex-grow 0 !important
 
   &__footer
-    padding-left: horizontal-space
-    padding-right: horizontal-space
+    padding-left horizontal-space
+    padding-right horizontal-space
 
   &__header
-    flex: 1 0 auto
-    padding-left: horizontal-space
-    padding-right: horizontal-space
+    flex 1 0 auto
+    padding-left horizontal-space
+    padding-right horizontal-space
 
   &__bottom-list
-    margin-top: vertical-space * 1.5
-    padding-top: vertical-space
-    padding-left: horizontal-space
-    padding-right: horizontal-space
-    border-top: 1px solid b2c-dark01
+    border-top 1px solid b2c-dark01
+    margin-top vertical-space * 1.5
+    padding-top vertical-space
+    padding-left horizontal-space
+    padding-right horizontal-space
 
   &-img
-    max-width: 100%
+    max-width 100%
 
   &-text
-    letter-spacing: 0.18px
+    letter-spacing .18px
 
   &-list
     &__item
-      display: flex
-      flex-direction: row
+      display flex
+      flex-direction row
+
       & + &
-        padding-top: vertical-space
+        padding-top vertical-space
 
     &__icon
-      width: 56px
+      width 56px
 
     &__name
-      flex: 1 0 auto
-      padding-left: horizontal-space * 0.5
-      display: flex
-      flex-direction: row
-      align-items: center
-      width: calc(100% - 56px)
+      display flex
+      flex 1 0 auto
+      flex-direction row
+      align-items center
+      width calc(100% - 56px)
+      padding-left horizontal-space * .5
 
 .{newAppName}-card-image
-  background-color: transparent
-  flex-direction: column
+  flex-direction column
+  background-color transparent
+
   &__content
-    padding-top: vertical-space
-    background-color: white
-    flex: 1
+    flex 1
+    background-color white
+    padding-top vertical-space
 
   .rt-card__body
-    padding-bottom: vertical-space
+    padding-bottom vertical-space
 
   &__figure
-    height: 364px
-    min-height: 364px
-    width: 100%
-    flex: 0
-    background-size: cover
-    background-position: center
+    flex 0
+    width 100%
+    height 364px
+    min-height 364px
+    background-position center
+    background-size cover
 
   &-list
-    padding-top: vertical-space * 0.5
-    padding-bottom: vertical-space * 0.5
-    padding-left: horizontal-space
-    padding-right: horizontal-space
-    border-top: 1px solid card-list-border
-    border-bottom: 1px solid card-list-border
+    border-top 1px solid card-list-border
+    border-bottom 1px solid card-list-border
+    padding-top vertical-space * .5
+    padding-bottom vertical-space * .5
+    padding-left horizontal-space
+    padding-right horizontal-space
 
     & + &
-      margin-top: -1px
+      margin-top -1px
 
     &--has-icon
-      display: flex
-      flex-direction: row
-      align-items: center
+      display flex
+      flex-direction row
+      align-items center
 
       &__icon
-        width: 55px + horizontal-space * 0.5
-        padding-right: horizontal-space * 0.5
-        box-sizing: border-box
+        width 55px + horizontal-space * .5
+        box-sizing border-box
+        padding-right horizontal-space * .5
 
   .{newAppName}-card-image-list:last-child
-    border-bottom-width: 0
+    border-bottom-width 0
 
 .{newAppName}-card-buy
-    background-color: b2b-white
-    position: relative
-    &__form
-      position: absolute
-      top: -50%
-      left: 0
-      right: 0
-      background-color: b2b-white
-      height: 100%
-      z-index: 2
-      left: 0
-      right: 0
-      opacity: 0
-      visibility: hidden
-      transition-timing-function: ease-in-out;
-      transition-property: top, opacity, visibility;
-      transition-duration: 0.2s;
-      .{newAppName}-card-buy--show-form & {
-        opacity: 1
-        visibility: visible
-        top: 0
-      }
-    &__image
-      width: 100%
-      background-size: contain
-      background-repeat: no-repeat
-      background-position: center
-      @media (max-width: mobile-step-size)
-        height: 220px
+  background-color b2b-white
+  position relative
 
+  &__form
+    height 100%
+    background-color b2b-white
+    opacity 0
+    visibility hidden
+    position absolute
+    top -50%
+    left 0
+    left 0
+    right 0
+    right 0
+    z-index 2
+    transition-timing-function ease-in-out
+    transition-duration .2s
+    transition-property top, opacity, visibility
 
+    .{newAppName}-card-buy--show-form &
+      opacity 1
+      visibility visible
+      top 0
+
+  &__image
+    width 100%
+    background-position center
+    background-size contain
+    background-repeat no-repeat
+
+    @media (max-width: mobile-step-size)
+      height 220px

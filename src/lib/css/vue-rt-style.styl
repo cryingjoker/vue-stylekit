@@ -1,16 +1,11 @@
-json('../../lib/variables.json')
-json('../../lib/color.json')
-
-
+json("../../lib/variables.json")
+json("../../lib/color.json")
 support-for-ie = false
 
 @require "reset.styl"
+@require "typography/index"
+@require "components/index"
+@require "promo"
 
-@require "typography/index";
-@require "components/index";
-
-@require "promo";
-
-.sticked-block {
-  z-index: 10;
-}
+.sticked-block
+  z-index 10
