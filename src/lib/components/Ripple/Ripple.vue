@@ -1,10 +1,8 @@
-<!--@touchmove.passive-->
-<!--@mousedown.passive-->
-<!--@touchstart.passive-->
+<!-- @touchmove.passive -->
+<!-- @mousedown.passive -->
+<!-- @touchstart.passive -->
 <template>
-  <div class="ripple" @mousedown="renderRipple">
-    <slot />
-  </div>
+  <div class="ripple" @mousedown="renderRipple"><slot /></div>
 </template>
 
 <script>

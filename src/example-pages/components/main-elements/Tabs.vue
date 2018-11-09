@@ -1,13 +1,9 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-
-      <div class="app-title">
-        <h1 class="rt-font-hero">Tabs</h1>
-      </div>
+      <div class="app-title"><h1 class="rt-font-hero">Tabs</h1></div>
       <div class="app-body">
         <div class="app-row row">
-
           <pre-code
             text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
@@ -57,12 +53,10 @@
             </rt-tabs>"
           />
         </div>
-
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 import componentsList from "../../componentsList";

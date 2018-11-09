@@ -1,14 +1,17 @@
 <template>
   <div :class="textareaClasses" class="text-field textarea textarea--static">
     <textarea class="textarea-element" @change="inputHandler" />
-    <div v-if="!!placeholder" :class="placeholderClasses" class="floating-placeholder">
+    <div
+      v-if="!!placeholder"
+      :class="placeholderClasses"
+      class="floating-placeholder"
+    >
       {{ placeholder }}
     </div>
     <div class="textarea-border" />
 
     <p class="text-field__error-message">{{ errorMessage }}</p>
   </div>
-
 </template>
 
 <script>

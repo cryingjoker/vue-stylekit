@@ -45,7 +45,6 @@ import {
   FilterWatcher
 } from "../lib/components/index";
 
-
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;

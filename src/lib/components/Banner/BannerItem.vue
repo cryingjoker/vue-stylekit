@@ -1,9 +1,7 @@
 <template>
   <div>
     <div :class="banerClass" :style="banerStyle" class="rt-banner-content">
-      <div class="rt-banner-content__inner">
-        <slot />
-      </div>
+      <div class="rt-banner-content__inner"><slot /></div>
     </div>
   </div>
 </template>
@@ -185,6 +183,6 @@ export default {
       }
       return variable;
     }
-  },
+  }
 };
 </script>

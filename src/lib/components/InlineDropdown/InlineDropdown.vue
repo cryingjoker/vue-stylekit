@@ -1,5 +1,6 @@
-
-<!--<rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"-->
+<!--
+  <rt-select-option v-for="(option, index) in optionsList" :key="'index'+Math.random().toString(5).slice(4)"
+-->
 <script type="text/jsx">
 import { Select } from "../index";
 const componentsList = {};

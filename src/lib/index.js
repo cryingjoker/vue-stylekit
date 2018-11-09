@@ -105,7 +105,6 @@ const VueRtStyle = {
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
 
-
       Vue.RtStyle = true;
       Vue.config.test = true;
     }

@@ -1,8 +1,5 @@
-
-
-
 <script type="text/jsx">
-import Vue from 'vue';	
+import Vue from 'vue';
 import VeeValidate from 'vee-validate';
 export default {
   name: "RtInput",

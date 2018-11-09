@@ -3,9 +3,7 @@
     <div :style="navigationStyle" class="rt-tabs-navigation">
       <slot name="navigation" />
     </div>
-    <div class="rt-tabs-content">
-      <slot name="content" />
-    </div>
+    <div class="rt-tabs-content"><slot name="content" /></div>
   </div>
 </template>
 

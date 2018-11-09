@@ -1,5 +1,4 @@
-
-<!--inline-template-->
+<!-- inline-template -->
 <script type="text/jsx">
   import { Fragment } from 'vue-fragment';
 export default {

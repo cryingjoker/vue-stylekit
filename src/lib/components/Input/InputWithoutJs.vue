@@ -1,10 +1,14 @@
 <template>
-  <div :class="{'text-field--error':hasError,'rt-input--white':isWhite}" class="input text-field">
-    <input :placeholder="placeholder" type="text" class="input-element">
+  <div
+    :class="{ 'text-field--error': hasError, 'rt-input--white': isWhite }"
+    class="input text-field"
+  >
+    <input :placeholder="placeholder" type="text" class="input-element" />
     <div class="text-field__line" />
-    <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
+    <p v-if="!!hasError" class="text-field__error-message">
+      {{ errorMessage }}
+    </p>
   </div>
-
 </template>
 
 <script>

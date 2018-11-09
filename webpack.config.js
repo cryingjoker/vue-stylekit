@@ -3,7 +3,7 @@ const path = require(`path`);
 
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
-const webpack = require('webpack');
+const webpack = require("webpack");
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 
 const env = process.env.NODE_ENV;
@@ -15,21 +15,21 @@ function resolve(dir) {
 
 const config = {
   entry: {
-    app:[path.join(__dirname, `src`, `index.js`)],
+    app: [path.join(__dirname, `src`, `index.js`)]
   },
   mode: env,
   output: {
-    publicPath: `/`,
+    publicPath: `/`
   },
   resolve: {
     alias: {
-      '@': resolve('src/app/dist/components'),
-    },
+      "@": resolve("src/app/dist/components")
+    }
   },
   optimization: {
     splitChunks: {
       chunks: `all`
-    },
+    }
   },
   devtool: sourceMap ? `cheap-module-eval-source-map` : undefined,
   module: {
@@ -41,61 +41,59 @@ const config = {
             loader: `vue-loader`,
             options: {
               transformAssetUrls: {
-                source: './src/',
-              },
-            },
-          },
-        ],
+                source: "./src/"
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
-        use: [
-      {loader:`css-loader`},
-        ],
+        use: [{ loader: `css-loader` }]
       },
       {
         test: /\.js$/,
         loader: `babel-loader`,
-        include: [path.join(__dirname, `src`)],
+        include: [path.join(__dirname, `src`)]
       },
       {
         test: /\.less$/,
         use: [
           {
-            loader: `style-loader`,
+            loader: `style-loader`
           },
-        {loader:`css-loader`},
+          { loader: `css-loader` },
           {
-            loader: `less-loader`,
-          },
-        ],
+            loader: `less-loader`
+          }
+        ]
       },
       {
         test: /\.styl/,
         use: [
           {
-            loader: `style-loader`,
+            loader: `style-loader`
           },
-        {loader:`css-loader`},
+          { loader: `css-loader` },
           {
-            loader: `stylus-loader`,
-          },
-        ],
+            loader: `stylus-loader`
+          }
+        ]
       },
       {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
           name: `[name].[hash:20].[ext]`,
-          limit: 10000,
-        },
-      },
-    ],
+          limit: 10000
+        }
+      }
+    ]
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MonacoWebpackPlugin(webpack,{
-      languages: ['html'],
+    new MonacoWebpackPlugin(webpack, {
+      languages: ["html"]
     }),
     new HtmlWebpackPlugin({
       filename: path.join(__dirname, `dist`, `index.html`),
@@ -105,21 +103,18 @@ const config = {
         ? {
             removeComments: true,
             collapseWhitespace: true,
-            removeAttributeQuotes: true,
+            removeAttributeQuotes: true
           }
-        : false,
-    }),
+        : false
+    })
   ]
 };
 
-
 if (env !== `development`) {
   config.plugins.push(new MiniCssExtractPlugin());
-}else{
-  config.entry.app.unshift('webpack-hot-middleware/client');
-  config.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  );
+} else {
+  config.entry.app.unshift("webpack-hot-middleware/client");
+  config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
 module.exports = config;

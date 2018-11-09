@@ -2,9 +2,7 @@
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
-        <div class="row">
-          <h1 class="rt-font-hero rt-col">Cards</h1>
-        </div>
+        <div class="row"><h1 class="rt-font-hero rt-col">Cards</h1></div>
       </div>
       <div class="app-body">
         <div class="row">
@@ -12,212 +10,317 @@
             <rt-card-image card-image="/static/images/cardImage3.jpg">
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
                 <p>Получай подарки в лучших играх Headstone!</p>
               </template>
               <template slot="list">
                 <rt-card-image-list :has-icon="true">
                   <template slot="icon">
-                    <img src="/static/example-images/iconCard.png" width="55px" alt="">
+                    <img
+                      src="/static/example-images/iconCard.png"
+                      width="55px"
+                      alt=""
+                    />
                   </template>
                   <template>
                     <div>
                       <p class="color-main07">Премиум аккаунт</p>
-                      <p class="color-main05">Доступна любая из четырёх крутых пушек. Тип оружия можно изменять каждые 24 часа</p>
+                      <p class="color-main05">
+                        Доступна любая из четырёх крутых пушек. Тип оружия можно
+                        изменять каждые 24 часа
+                      </p>
                     </div>
                   </template>
-
-
-
                 </rt-card-image-list>
                 <rt-card-image-list>
-                  Доступна любая из четырёх крутых пушек. Тип оружия можно изменять каждые 24 часа
+                  Доступна любая из четырёх крутых пушек. Тип оружия можно
+                  изменять каждые 24 часа
                 </rt-card-image-list>
                 <rt-card-image-list>
-                  Доступна любая из четырёх крутых пушек. Тип оружия можно изменять каждые 24 часа
+                  Доступна любая из четырёх крутых пушек. Тип оружия можно
+                  изменять каждые 24 часа
                 </rt-card-image-list>
               </template>
             </rt-card-image>
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage3.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
                 <p>Получай подарки в лучших играх Headstone!</p>
-
-
               </template>
             </rt-card-image>
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage3.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
                 <p>Получай подарки в лучших играх Headstone!</p>
-
-
               </template>
             </rt-card-image>
           </div>
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage1.jpg"
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage1.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
-                <p>Получай подарки в лучших играх Headstone!</p>
-
-
-              </template>
-            </rt-card-image>
-          </div>
-          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage2.jpg"
-            >
-              <template slot="body">
-                <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
-                <p>Получай подарки в лучших играх Headstone!</p>
-
-
-              </template>
-            </rt-card-image>
-          </div>
-          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage3.jpg"
-            >
-              <template slot="body">
-                <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
                 <p>Получай подарки в лучших играх Headstone!</p>
               </template>
             </rt-card-image>
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
-            <rt-card-image :is-white-color="true"
-                           :col-size="2" background-color-type="light-blue" card-image="/static/images/cardImage1.jpg"
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage2.jpg"
             >
               <template slot="body">
                 <p class="rt-font-paragraph rt-font-bold">Headstone</p>
-                <p class="rt-font-label-uppercase rt-space-vertical05">игровой интернет</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
                 <p>Получай подарки в лучших играх Headstone!</p>
-
-
+              </template>
+            </rt-card-image>
+          </div>
+          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage3.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">Headstone</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </div>
+          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off">
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage1.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">Headstone</p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
               </template>
             </rt-card-image>
           </div>
         </div>
         <div class="row">
-          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card :background-cover="true" :is-white-color="true"
-                     :col-size="2" background-color-type="light-blue"
+          <div
+            class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch"
+          >
+            <rt-card
+              :background-cover="true"
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
             >
-              <template slot="header"><div class="rt-font-center"><svg width="97" height="79"
-                                                                       xmlns="http://www.w3.org/2000/svg"
-              >
-                <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"
-                   stroke-linejoin="round"
-                >
-                  <path d="M37.0208333 1l-8.3125 15.0051282 19.59375 61.6 46.90625-61.6" />
-                  <path d="M59.1875 1L67.5 16.0051282l-19.59375 61.6L1 16.0051282" />
-                  <path d="M1 16.0051282L23.5625 1H72.25l22.5625 15.0051282z" />
-                </g>
-              </svg></div></template>
+              <template slot="header"
+                ><div class="rt-font-center">
+                  <svg
+                    width="97"
+                    height="79"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      stroke="#FFF"
+                      stroke-width="2"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M37.0208333 1l-8.3125 15.0051282 19.59375 61.6 46.90625-61.6"
+                      />
+                      <path
+                        d="M59.1875 1L67.5 16.0051282l-19.59375 61.6L1 16.0051282"
+                      />
+                      <path
+                        d="M1 16.0051282L23.5625 1H72.25l22.5625 15.0051282z"
+                      />
+                    </g>
+                  </svg></div
+              ></template>
               <template slot="content">
-
-                <p class="rt-font-paragraph rt-font-bold rt-space-top05">Бонусная программа</p>
-                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Подключайте друзей и
-                зарабатывайте бонусы</p>
+                <p class="rt-font-paragraph rt-font-bold rt-space-top05">
+                  Бонусная программа
+                </p>
+                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">
+                  Подключайте друзей и зарабатывайте бонусы
+                </p>
               </template>
               <template slot="footer">
                 <a href="/bonus">
-                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                  <rt-button
+                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    >Подробнее</rt-button
+                  >
                 </a>
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card :background-cover="true" :is-white-color="true" :background-smoke="0.5"
-                     :col-size="6" background-color-type="green"
+          <div
+            class="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch"
+          >
+            <rt-card
+              :background-cover="true"
+              :is-white-color="true"
+              :background-smoke="0.5"
+              :col-size="6"
+              background-color-type="green"
             >
-              <template slot="header"><div class="rt-font-center"><img src="/sites/default/files/img/icon/news-icon.svg" height="79"></div></template>
+              <template slot="header"
+                ><div class="rt-font-center">
+                  <img
+                    src="/sites/default/files/img/icon/news-icon.svg"
+                    height="79"
+                  /></div
+              ></template>
               <template slot="content">
-
-                <p class="rt-font-paragraph rt-font-bold rt-space-top2">Новости</p>
-                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Анонсы акций, изменения в тарифах и новости Ростелеком</p>
+                <p class="rt-font-paragraph rt-font-bold rt-space-top2">
+                  Новости
+                </p>
+                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">
+                  Анонсы акций, изменения в тарифах и новости Ростелеком
+                </p>
               </template>
               <template slot="footer">
                 <a href="https://www.old.rt.ru/press" target="_blank">
-                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Все новости</rt-button>
+                  <rt-button
+                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    >Все новости</rt-button
+                  >
                 </a>
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card :background-opacity="0.9" :background-cover="true"
-                     :is-white-color="true" :background-smoke="0.5" :col-size="2" :offset-top="true"
-                     background-image="/sites/default/files/2018-07/games_0.png" background-color-type="black"
+          <div
+            class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch"
+          >
+            <rt-card
+              :background-opacity="0.9"
+              :background-cover="true"
+              :is-white-color="true"
+              :background-smoke="0.5"
+              :col-size="2"
+              :offset-top="true"
+              background-image="/sites/default/files/2018-07/games_0.png"
+              background-color-type="black"
             >
               <template slot="content">
-
                 <p class="rt-font-paragraph rt-font-bold">Игровой</p>
-                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Высокоскоростной интернет и
-                игровые
-                бонусы
-                для увлеченных геймеров</p>
+                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">
+                  Высокоскоростной интернет и игровые бонусы для увлеченных
+                  геймеров
+                </p>
               </template>
               <template slot="footer">
-                <a href="/internet/constructor?offer=369771569758&lcs=active&tv-package=285383c0">
-                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Выберите свою
-                  игровую
-                  опцию</rt-button>
+                <a
+                  href="/internet/constructor?offer=369771569758&lcs=active&tv-package=285383c0"
+                >
+                  <rt-button
+                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    >Выберите свою игровую опцию</rt-button
+                  >
                 </a>
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card :background-opacity="0.9" :background-cover="true"
-                     :is-white-color="true" :background-smoke="0.5" :col-size="2" :offset-top="true"
-                     background-image="/sites/default/files/img/licey.jpg" background-color-type="black"
+          <div
+            class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch"
+          >
+            <rt-card
+              :background-opacity="0.9"
+              :background-cover="true"
+              :is-white-color="true"
+              :background-smoke="0.5"
+              :col-size="2"
+              :offset-top="true"
+              background-image="/sites/default/files/img/licey.jpg"
+              background-color-type="black"
             >
               <template slot="content">
                 <p class="rt-font-paragraph rt-font-bold">Ростелеком Лицей</p>
-                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Поможем усвоить школьную
-                программу онлайн</p>
+                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">
+                  Поможем усвоить школьную программу онлайн
+                </p>
               </template>
               <template slot="footer">
                 <a href="https://lc.rt.ru" target="_blank">
-                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                  <rt-button
+                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    >Подробнее</rt-button
+                  >
                 </a>
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch">
-            <rt-card :background-opacity="0.9"
-                     :background-cover="true" :is-white-color="true" :background-smoke="0.5" :col-size="2"
-                     background-color-type="dark-blue"
+          <div
+            class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch"
+          >
+            <rt-card
+              :background-opacity="0.9"
+              :background-cover="true"
+              :is-white-color="true"
+              :background-smoke="0.5"
+              :col-size="2"
+              background-color-type="dark-blue"
             >
               <template slot="content">
                 <div class="rt-font-center rt-space-top15 rt-space-bottom">
-                  <img src="/sites/default/files/img/icon/wink_80x80.svg">
+                  <img src="/sites/default/files/img/icon/wink_80x80.svg" />
                 </div>
                 <p class="rt-font-paragraph rt-font-bold">Wink</p>
-                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Лучшие ТВ‑каналы, сериалы и фильмы в одном приложении</p>
+                <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">
+                  Лучшие ТВ‑каналы, сериалы и фильмы в одном приложении
+                </p>
               </template>
               <template slot="footer">
                 <a href="/wink">
-                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Перейти</rt-button>
+                  <rt-button
+                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    >Перейти</rt-button
+                  >
                 </a>
               </template>
             </rt-card>
@@ -259,8 +362,6 @@
           </div>
         </div>
         <div class="row">
-
-
           <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
             <pre-code
               text="<rt-card background-image=&quot;/static/example-images/cardBackground10.png&quot; :background-cover=&quot;true&quot; :background-opacity=&quot;0.7&quot; :background-smoke=&quot;0.3&quot; :is-white-color=&quot;true&quot; :offset-top=&quot;true&quot; background-color-type=&quot;black&quot; :col-size=&quot;2&quot;><template slot=&quot;content&quot;><p class=&quot;rt-font-paragraph rt-font-bold&quot;>Игровой</p><p class=&quot;rt-space-top05&quot;>Высокоскоростной <br> интернет и игровые бонусы <br>для увлеченных геймеров</p></template><template slot=&quot;footer&quot;><p>Выберите свою игровую опцию</p></template></rt-card>"
@@ -286,7 +387,8 @@
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-            <pre-code text="<rt-card background-image=&quot;/static/example-images/cardBackground7.png&quot; :background-cover=&quot;true&quot; :background-opacity=&quot;0.7&quot; :background-smoke=&quot;0.2&quot; :is-white-color=&quot;true&quot; :offset-top=&quot;true&quot; background-color-type=&quot;black&quot;
+            <pre-code
+              text="<rt-card background-image=&quot;/static/example-images/cardBackground7.png&quot; :background-cover=&quot;true&quot; :background-opacity=&quot;0.7&quot; :background-smoke=&quot;0.2&quot; :is-white-color=&quot;true&quot; :offset-top=&quot;true&quot; background-color-type=&quot;black&quot;
             ><template slot=&quot;content&quot;><p class=&quot;rt-font-paragraph rt-font-bold&quot;>Мобильное ТВ</p><p class=&quot;rt-space-top05&quot;>101 тв-канал с контентом на любой вкус в подарок </p></template><template slot=&quot;footer&quot;><p>Подробнее</p></template></rt-card>"
             />
           </div>
@@ -322,7 +424,6 @@
               text="<rt-card background-image=&quot;/static/example-images/cardBackground1.png&quot; :background-cover=&quot;true&quot;/>"
             />
           </div>
-
         </div>
         <div class="row">
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
@@ -351,7 +452,6 @@
             <pre-code
               text="<rt-card background-image=&quot;/static/example-images/cardBackground1.png&quot; :background-cover=&quot;true&quot;/>"
             />
-
           </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
             <pre-code
@@ -359,237 +459,341 @@
             />
           </div>
         </div>
-
       </div>
     </div>
-
 
     <div class="rt-space-top25">
       <div class="rt-col-12">
         <div class="app-documentation">
-          <div class="app-documentation__label rt-font-h4 rt-space-left05 rt-space-bottom2">Possible options</div>
+          <div
+            class="app-documentation__label rt-font-h4 rt-space-left05 rt-space-bottom2"
+          >
+            Possible options
+          </div>
           <div class="app-documentation__row rt-font-bold rt-space-bottom05">
             <div class="app-documentation__name rt-col-2">component name</div>
-            <div class="app-documentation__name rt-col-3">component proporty</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3">proporty type</div>
+            <div class="app-documentation__name rt-col-3">
+              component proporty
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                proporty type
+              </div>
               <div class="app-documentation__value-item rt-col-6">about</div>
-              <div class="app-documentation__value-item rt-col-3">default value</div>
-            </div>
-          </div>
-          <div class="app-documentation__row rt-space-vertical">
-            <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:static-body-height</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает flex: 0 для card - необходимо для
-              случаев сброса авто ширины и высоты
-              </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              <div class="app-documentation__value-item rt-col-3">
+                default value
               </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:hide-background-on-mobile</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Скрывает картинку карточки при мобильном разрешении
+            <div class="app-documentation__name rt-col-3">
+              :static-body-height
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает flex: 0 для card - необходимо для случаев сброса
+                авто ширины и высоты
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
               </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-size-width</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Задает ширину картинки карточки <br> number - любое
-              число становится px
-                <br>string - любые значения
-              </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+            <div class="app-documentation__name rt-col-3">
+              :hide-background-on-mobile
             </div>
-          </div>
-          <div class="app-documentation__row rt-space-vertical">
-            <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-size-height</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Задает высоту картинки карточки <br> number - любое
-              число становится px
-                <br>string - любые значения
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
-            </div>
-          </div>
-          <div class="app-documentation__row rt-space-vertical">
-            <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:background-image-stand-alone</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Картинка карточки будет создана как отдельный блок
+              <div class="app-documentation__value-item rt-col-6">
+                Скрывает картинку карточки при мобильном разрешении
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
               </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-color-type</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает цвет фона карточки <br> возможные
-              значения
-                <br>
+            <div class="app-documentation__name rt-col-3">
+              (:)background-size-width
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Задает ширину картинки карточки <br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-card</div>
+            <div class="app-documentation__name rt-col-3">
+              (:)background-size-height
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Задает высоту картинки карточки <br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-card</div>
+            <div class="app-documentation__name rt-col-3">
+              :background-image-stand-alone
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Картинка карточки будет создана как отдельный блок
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">rt-card</div>
+            <div class="app-documentation__name rt-col-3">
+              background-color-type
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает цвет фона карточки <br />
+                возможные значения <br />
                 <span class="rt-font-label">
                   <span class="rt-code rt-code--fill">dark-state</span>
-                  <span class="rt-code rt-code--fill">yellow</span> <span class="rt-code rt-code--fill">red</span> <span
-                    class="rt-code rt-code--fill"
-                  >dark-blue</span>
-                  <span class="rt-code rt-code--fill">light-blue</span> <span class="rt-code rt-code--fill">orange</span> <span
-                    class="rt-code rt-code--fill"
-                  >pink</span> <span class="rt-code rt-code--fill">green</span>
+                  <span class="rt-code rt-code--fill">yellow</span>
+                  <span class="rt-code rt-code--fill">red</span>
+                  <span class="rt-code rt-code--fill">dark-blue</span>
+                  <span class="rt-code rt-code--fill">light-blue</span>
+                  <span class="rt-code rt-code--fill">orange</span>
+                  <span class="rt-code rt-code--fill">pink</span>
+                  <span class="rt-code rt-code--fill">green</span>
                 </span>
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">background-image</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6">url адрек картинки карточки</div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                url адрек картинки карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">background-cover</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает cover значение для картинки карточки
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает cover значение для картинки карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
               </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:background-repeat</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавить background-repeat опцию на картинке фона
+            <div class="app-documentation__name rt-col-3">
+              :background-repeat
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span class="rt-code rt-font-label rt-code--fill">false</span>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавить background-repeat опцию на картинке фона
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
               </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:background-blur</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Размытие картинки <br>
-                значение от <span class="rt-code rt-code--fill">0.0</span> до <span
-                  class="rt-code rt-code--fill"
-                >1.0</span>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Размытие картинки <br />
+                значение от <span class="rt-code rt-code--fill">0.0</span> до
+                <span class="rt-code rt-code--fill">1.0</span>
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:background-smoke</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Размытие заднего фона <br>
-                значение от <span class="rt-code rt-code--fill">0.2</span> <span
-                  class="rt-code rt-code--fill"
-                >0.3</span> <span class="rt-code rt-code--fill">0.5</span>
+            <div class="app-documentation__name rt-col-3">
+              :background-smoke
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Размытие заднего фона <br />
+                значение от <span class="rt-code rt-code--fill">0.2</span>
+                <span class="rt-code rt-code--fill">0.3</span>
+                <span class="rt-code rt-code--fill">0.5</span>
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:background-opacity</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Прозрачность заднего фона <br>
-                значение от <span class="rt-code rt-code--fill">0.0</span> до <span
-                  class="rt-code rt-code--fill"
-                >1.0</span>
+            <div class="app-documentation__name rt-col-3">
+              :background-opacity
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Прозрачность заднего фона <br />
+                значение от <span class="rt-code rt-code--fill">0.0</span> до
+                <span class="rt-code rt-code--fill">1.0</span>
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:is-white-color</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
-              <div class="app-documentation__value-item rt-col-6">Установить белый цвет текста</div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >false</span></div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Установить белый цвет текста
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">background-position</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6"> Задает расположение фона карточки
-              возможные значения : <br>
+            <div class="app-documentation__name rt-col-3">
+              background-position
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Задает расположение фона карточки возможные значения : <br />
                 <span class="rt-code rt-code--fill">top</span>
                 <span class="rt-code rt-code--fill">left</span>
                 <span class="rt-code rt-code--fill">bottom</span>
@@ -599,161 +803,235 @@
                 <span class="rt-code rt-code--fill">bottom-left</span>
                 <span class="rt-code rt-code--fill">bottom-right</span>
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-position-top</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
-                Устанавливает отступ картинки сверху<br> number - любое число становится px
-                <br>string - любые значения
+            <div class="app-documentation__name rt-col-3">
+              (:)background-position-top
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                <span class="app-documentation__warning"
+                  >работает только при background-image-stand-alone и
+                  background-image</span
+                ><br />
+                Устанавливает отступ картинки сверху<br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-position-left</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
-                Устанавливает отступ картинки слева<br> number - любое число становится px
-                <br>string - любые значения
+            <div class="app-documentation__name rt-col-3">
+              (:)background-position-left
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                <span class="app-documentation__warning"
+                  >работает только при background-image-stand-alone и
+                  background-image</span
+                ><br />
+                Устанавливает отступ картинки слева<br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-position-right</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
-                Устанавливает отступ картинки справа<br> number - любое число становится px
-                <br>string - любые значения
+            <div class="app-documentation__name rt-col-3">
+              (:)background-position-right
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                <span class="app-documentation__warning"
+                  >работает только при background-image-stand-alone и
+                  background-image</span
+                ><br />
+                Устанавливает отступ картинки справа<br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">(:)background-position-bottom</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span> <span
-                class="rt-code rt-font-label rt-code--component"
-              >String</span></div>
-              <div class="app-documentation__value-item rt-col-6"><span class="app-documentation__warning">работает только при background-image-stand-alone и background-image</span><br>
-                Устанавливает отступ картинки снизу<br> number - любое число становится px
-                <br>string - любые значения
+            <div class="app-documentation__name rt-col-3">
+              (:)background-position-bottom
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                <span class="app-documentation__warning"
+                  >работает только при background-image-stand-alone и
+                  background-image</span
+                ><br />
+                Устанавливает отступ картинки снизу<br />
+                number - любое число становится px <br />string - любые значения
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:offset-top</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Boolean</span></div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Boolean</span
+                >
+              </div>
               <div class="app-documentation__value-item rt-col-6">
                 Флаг указывающий отступ сверху карточки
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >false</span></div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">false</span>
+              </div>
             </div>
           </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:col-size</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Поджимает контент карточки / было создано для создания
-              6 колоночной карточки, где 3 колонки - текст, остальное - картинка.
-                <span class="app-documentation__warning">Доступно только значение <span
-                  class="rt-code rt-code--fill"
-                >2</span></span>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Поджимает контент карточки / было создано для создания 6
+                колоночной карточки, где 3 колонки - текст, остальное -
+                картинка.
+                <span class="app-documentation__warning"
+                  >Доступно только значение
+                  <span class="rt-code rt-code--fill">2</span></span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
             <div class="app-documentation__name rt-col-3">:card-height</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту карточки
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает высоту карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
 
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:card-header-height</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту заголовка карточки
+            <div class="app-documentation__name rt-col-3">
+              :card-header-height
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает высоту заголовка карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
           <div class="app-documentation__row rt-space-vertical">
             <div class="app-documentation__name rt-col-2">rt-card</div>
-            <div class="app-documentation__name rt-col-3">:card-body-height</div>
-            <div class="app-documentation__value app-documentation__row rt-col-7">
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--component"
-              >Number</span></div>
-              <div class="app-documentation__value-item rt-col-6">Устанавливает высоту контейнера для контента карточки
+            <div class="app-documentation__name rt-col-3">
+              :card-body-height
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Number</span
+                >
               </div>
-              <div class="app-documentation__value-item rt-col-3"><span
-                class="rt-code rt-font-label rt-code--fill"
-              >null</span></div>
+              <div class="app-documentation__value-item rt-col-6">
+                Устанавливает высоту контейнера для контента карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
             </div>
           </div>
         </div>

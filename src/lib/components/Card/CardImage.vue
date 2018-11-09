@@ -2,9 +2,7 @@
   <div class="rt-card rt-card-image">
     <div :style="figureImageStyle" class="rt-card-image__figure" />
     <div class="rt-card-image__content">
-      <div class="rt-card__body">
-        <slot name="body" />
-      </div>
+      <div class="rt-card__body"><slot name="body" /></div>
       <slot name="list" />
     </div>
   </div>

@@ -1,7 +1,9 @@
 <template>
   <div class="color-block--rule-color sticked sticked-block" style="top: 0;">
-    <rt-scroll-tabs class="rt-scroll-tab-header " active-tabs-classname="rt-scroll-tab-header__item--active"
-                    tabs-classname="rt-scroll-tab-header__item"
+    <rt-scroll-tabs
+      class="rt-scroll-tab-header "
+      active-tabs-classname="rt-scroll-tab-header__item--active"
+      tabs-classname="rt-scroll-tab-header__item"
     >
       <div class="rt-container color-white">
         <div class="rt-col-12">
@@ -15,7 +17,9 @@
             <a class="rt-scroll-tab-header__item" href="#about">Тарифы</a>
             <a class="rt-scroll-tab-header__item" href="#connect">Подключить</a>
             <div class="rt-scroll-tab-header__item">
-              <rt-button class="rt-button-small rt-button-orange rt-space-horizontal">Купить
+              <rt-button
+                class="rt-button-small rt-button-orange rt-space-horizontal"
+                >Купить
               </rt-button>
             </div>
           </div>

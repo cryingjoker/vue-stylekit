@@ -1,22 +1,31 @@
 <template>
-
   <div>
     <div class="color-block--rule-color sticked sticked-block" style="top: 0;">
-      <rt-scroll-tabs class="rt-scroll-tab-header " active-tabs-classname="rt-scroll-tab-header__item--active"
-                      tabs-classname="rt-scroll-tab-header__item"
+      <rt-scroll-tabs
+        class="rt-scroll-tab-header "
+        active-tabs-classname="rt-scroll-tab-header__item--active"
+        tabs-classname="rt-scroll-tab-header__item"
       >
         <div class="rt-container color-white">
           <div class="rt-col-12">
             <div class="row">
               <div class="rt-col-8">
                 <div class="rt-scroll-tab-nav">
-                  <a class="rt-scroll-tab-header__item" href="#about">О системе</a>
-                  <a class="rt-scroll-tab-header__item" href="#device">Устройства</a>
-                  <a class="rt-scroll-tab-header__item" href="#connect">Подключение и управление</a>
+                  <a class="rt-scroll-tab-header__item" href="#about"
+                    >О системе</a
+                  >
+                  <a class="rt-scroll-tab-header__item" href="#device"
+                    >Устройства</a
+                  >
+                  <a class="rt-scroll-tab-header__item" href="#connect"
+                    >Подключение и управление</a
+                  >
                 </div>
               </div>
               <div class="rt-col-4 flex-end-center">
-                <rt-button class="rt-button-small rt-button-orange rt-space-horizontal">Купить
+                <rt-button
+                  class="rt-button-small rt-button-orange rt-space-horizontal"
+                  >Купить
                 </rt-button>
               </div>
             </div>
@@ -25,22 +34,41 @@
       </rt-scroll-tabs>
     </div>
 
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
-      <rt-banner-item :content-min-height="631"
-                      background-image="/static/images/smartHouse/bg.jpg"
-                      background-color="none"
+    <rt-banner
+      :is-fullscreen-image="true"
+      class="rt-banner--fill-height"
+      content-height="700px"
+      content-min-height="100vh"
+    >
+      <rt-banner-item
+        :content-min-height="631"
+        background-image="/static/images/smartHouse/bg.jpg"
+        background-color="none"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Умный дом</template>
-            <template slot="content">Ваш дом всегда под контролем,<br>даже когда вы далеко.</template>
+            <template slot="label"
+              >Умный дом</template
+            >
+            <template slot="content"
+              >Ваш дом всегда под контролем,<br />даже когда вы
+              далеко.</template
+            >
           </rt-color-line-text>
           <div class="rt-space-top2">
-            <div class="rt-md-space-top05 rt-md-space-horizontal05 d-inline-block">
-              <rt-button class="rt-button-orange rt-space-horizontal05">Подключить</rt-button>
+            <div
+              class="rt-md-space-top05 rt-md-space-horizontal05 d-inline-block"
+            >
+              <rt-button class="rt-button-orange rt-space-horizontal05"
+                >Подключить</rt-button
+              >
             </div>
-            <div class="rt-md-space-top05 rt-space-left rt-md-space-horizontal05  d-inline-block">
-              <rt-button class="rt-button-orange rt-space-horizontal">Войти</rt-button>
+            <div
+              class="rt-md-space-top05 rt-space-left rt-md-space-horizontal05  d-inline-block"
+            >
+              <rt-button class="rt-button-orange rt-space-horizontal"
+                >Войти</rt-button
+              >
             </div>
           </div>
         </div>
@@ -51,69 +79,105 @@
         <div class="rt-col-12 rt-space-top3">
           <div class="row">
             <div class="rt-col-1 md-d-none" />
-            <div class="rt-col-5 flex-center-center rt-md-space-bottom2 rt-col-md-3">
+            <div
+              class="rt-col-5 flex-center-center rt-md-space-bottom2 rt-col-md-3"
+            >
               <div>
                 <p class="rt-font-promo-title color-main07">О системе</p>
-                <p class="rt-font-paragraph rt-space-top color-main05">«Умный дом» — это безопасный и
-                комфортный дом. Вы будете знать обо всём, что в нём происходит, даже находясь в
-                другом городе. Система датчиков и устройств моментО системеально уведомит вас о
-                любых
-                происшествиях. А ещё вы сможете управлять бытовыми приборами удалённо: например, с
-                помощью смартфона выключить утюг, даже если вы уже ушли из дома.</p>
+                <p class="rt-font-paragraph rt-space-top color-main05">
+                  «Умный дом» — это безопасный и комфортный дом. Вы будете знать
+                  обо всём, что в нём происходит, даже находясь в другом городе.
+                  Система датчиков и устройств моментО системеально уведомит вас
+                  о любых происшествиях. А ещё вы сможете управлять бытовыми
+                  приборами удалённо: например, с помощью смартфона выключить
+                  утюг, даже если вы уже ушли из дома.
+                </p>
               </div>
             </div>
             <div class="rt-col-2" />
-            <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
+            <div
+              class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top"
+            >
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone">
                   <div class="phone__container" />
-                  <img src="/static/images/smartHouse/app.jpg" class="phone__image">
+                  <img
+                    src="/static/images/smartHouse/app.jpg"
+                    class="phone__image"
+                  />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-    <rt-banner :is-fullscreen-image="true" class="rt-banner--fill-height" content-height="700px" content-min-height="100vh">
-      <rt-banner-item background-image="/static/images/smartHouse/bg2.jpg"
-                      background-color="none"
-                      content-height="700px" content-min-height="100vh"
+    <rt-banner
+      :is-fullscreen-image="true"
+      class="rt-banner--fill-height"
+      content-height="700px"
+      content-min-height="100vh"
+    >
+      <rt-banner-item
+        background-image="/static/images/smartHouse/bg2.jpg"
+        background-color="none"
+        content-height="700px"
+        content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят<br>мой ребёнок?</template>
-            <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
+            <template slot="label"
+              >Чем занят<br />мой ребёнок?</template
+            >
+            <template slot="content"
+              >Спокойно оставляйте детей одних или с няней — благодаря камере
+              внутреннего видеонаблюдения вы всегда сможете узнать, что
+              происходит дома.</template
+            >
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
             <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
           </div>
         </div>
       </rt-banner-item>
-      <rt-banner-item background-image="/static/images/smartHouse/bg.jpg"
-                      background-color="none"
-                      content-height="700px" content-min-height="100vh"
+      <rt-banner-item
+        background-image="/static/images/smartHouse/bg.jpg"
+        background-color="none"
+        content-height="700px"
+        content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
-
           <rt-color-line-text>
-            <template slot="label">Чем занят<br>мой ребёнок?</template>
-            <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
+            <template slot="label"
+              >Чем занят<br />мой ребёнок?</template
+            >
+            <template slot="content"
+              >Спокойно оставляйте детей одних или с няней — благодаря камере
+              внутреннего видеонаблюдения вы всегда сможете узнать, что
+              происходит дома.</template
+            >
           </rt-color-line-text>
           <div class="rt-space-top2">
             <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
           </div>
         </div>
       </rt-banner-item>
-      <rt-banner-item background-image="/static/example-images/banerBackground1.jpg"
-                      background-color="none"
-                      content-height="700px" content-min-height="100vh"
+      <rt-banner-item
+        background-image="/static/example-images/banerBackground1.jpg"
+        background-color="none"
+        content-height="700px"
+        content-min-height="100vh"
       >
         <div class="rt-md-space-right2">
           <rt-color-line-text>
-            <template slot="label">Чем занят<br>мой ребёнок?</template>
-            <template slot="content">Спокойно оставляйте детей одних или с няней — благодаря камере внутреннего видеонаблюдения  вы всегда сможете узнать, что происходит дома.</template>
+            <template slot="label"
+              >Чем занят<br />мой ребёнок?</template
+            >
+            <template slot="content"
+              >Спокойно оставляйте детей одних или с няней — благодаря камере
+              внутреннего видеонаблюдения вы всегда сможете узнать, что
+              происходит дома.</template
+            >
           </rt-color-line-text>
           <div class="rt-space-top2 rt-md-space-top">
             <rt-button class="rt-button-orange">Подобрать комплект</rt-button>
@@ -141,19 +205,31 @@
                   <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :static-body-height="true">
                       <template slot="content">
-                        <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Базовый
-                        комплект</p>
-                        <p class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2">
-                          умный дом</p>
-                        <img src="/static/images/smartHouse/smart1.png" class="rt-card-img" alt="">
-                        <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                        самых необходимых датчиков для ознакомления с системой «Умный
-                        дом».</p>
+                        <p
+                          class="rt-font-paragraph rt-space-bottom rt-font-bold"
+                        >
+                          Базовый комплект
+                        </p>
+                        <p
+                          class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2"
+                        >
+                          умный дом
+                        </p>
+                        <img
+                          src="/static/images/smartHouse/smart1.png"
+                          class="rt-card-img"
+                          alt=""
+                        />
+                        <p
+                          class="rt-font-small-paragraph color-main07 rt-space-top"
+                        >
+                          Комплект самых необходимых датчиков для ознакомления с
+                          системой «Умный дом».
+                        </p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -161,30 +237,34 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -192,28 +272,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                открытия дверей и окон </p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик открытия дверей и окон
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -221,30 +303,33 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                движения</p>
-                                <p class="rt-font-label color-main05">движение,
-                                температуру и освещенность</p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик движения
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  движение, температуру и освещенность
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -252,23 +337,24 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -276,23 +362,24 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -300,17 +387,19 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
@@ -322,19 +411,31 @@
                   <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :static-body-height="true">
                       <template slot="content">
-                        <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Расширенный
-                        комплект</p>
-                        <p class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2">
-                          умный дом</p>
-                        <img src="/static/images/smartHouse/smart2.png" class="rt-card-img" alt="">
-                        <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                        самых необходимых датчиков для ознакомления с системой «Умный
-                        дом».</p>
+                        <p
+                          class="rt-font-paragraph rt-space-bottom rt-font-bold"
+                        >
+                          Расширенный комплект
+                        </p>
+                        <p
+                          class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2"
+                        >
+                          умный дом
+                        </p>
+                        <img
+                          src="/static/images/smartHouse/smart2.png"
+                          class="rt-card-img"
+                          alt=""
+                        />
+                        <p
+                          class="rt-font-small-paragraph color-main07 rt-space-top"
+                        >
+                          Комплект самых необходимых датчиков для ознакомления с
+                          системой «Умный дом».
+                        </p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -342,30 +443,34 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -373,28 +478,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                открытия дверей и окон </p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик открытия дверей и окон
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -402,30 +509,33 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                движения</p>
-                                <p class="rt-font-label color-main05">движение,
-                                температуру и освещенность</p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик движения
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  движение, температуру и освещенность
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -433,23 +543,24 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -457,23 +568,24 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -481,17 +593,19 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
@@ -503,18 +617,31 @@
                   <div class="rt-col-4 rt-col-md-3 rt-space-top d-stretch">
                     <rt-card :static-body-height="true">
                       <template slot="content">
-                        <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Управление</p>
-                        <p class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2">
-                          умный дом</p>
-                        <img src="/static/images/smartHouse/smart3.png" class="rt-card-img" alt="">
-                        <p class="rt-font-small-paragraph color-main07 rt-space-top">Комплект
-                        самых необходимых датчиков для ознакомления с системой «Умный
-                        дом».</p>
+                        <p
+                          class="rt-font-paragraph rt-space-bottom rt-font-bold"
+                        >
+                          Управление
+                        </p>
+                        <p
+                          class="rt-font-label-uppercase rt-font-spacing2 rt-space-bottom2"
+                        >
+                          умный дом
+                        </p>
+                        <img
+                          src="/static/images/smartHouse/smart3.png"
+                          class="rt-card-img"
+                          alt=""
+                        />
+                        <p
+                          class="rt-font-small-paragraph color-main07 rt-space-top"
+                        >
+                          Комплект самых необходимых датчиков для ознакомления с
+                          системой «Умный дом».
+                        </p>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -522,30 +649,34 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -553,28 +684,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                открытия дверей и окон </p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик открытия дверей и окон
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -582,30 +715,33 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
-                                <p class="rt-font-small-paragraph color-main07">Датчик
-                                движения</p>
-                                <p class="rt-font-label color-main05">движение,
-                                температуру и освещенность</p>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Датчик движения
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  движение, температуру и освещенность
+                                </p>
                               </div>
                             </div>
                           </div>
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -613,22 +749,23 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name" />
                           </div>
-
                         </div>
                       </template>
                     </rt-card>
@@ -641,15 +778,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="132" src="/static/images/smartHouse/contr1.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="132"
+                            src="/static/images/smartHouse/contr1.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -657,29 +796,33 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </template>
                     </rt-card>
@@ -688,15 +831,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr2.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr2.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -704,34 +849,41 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </template>
                       <template slot="footer">
-                        <p class="color-main03 rt-font-label rt-font-center rt-space-top15">
-                          Необходим контроллер</p>
+                        <p
+                          class="color-main03 rt-font-label rt-font-center rt-space-top15"
+                        >
+                          Необходим контроллер
+                        </p>
                       </template>
                     </rt-card>
                   </div>
@@ -739,15 +891,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="151" src="/static/images/smartHouse/contr3.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="151"
+                            src="/static/images/smartHouse/contr3.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -755,34 +909,41 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </template>
                       <template slot="footer">
-                        <p class="color-main03 rt-font-label rt-font-center rt-space-top15">
-                          Необходим контроллер</p>
+                        <p
+                          class="color-main03 rt-font-label rt-font-center rt-space-top15"
+                        >
+                          Необходим контроллер
+                        </p>
                       </template>
                     </rt-card>
                   </div>
@@ -790,15 +951,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="144" src="/static/images/smartHouse/contr4.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="144"
+                            src="/static/images/smartHouse/contr4.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -806,29 +969,33 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </template>
                     </rt-card>
@@ -837,15 +1004,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="144" src="/static/images/smartHouse/contr5.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="144"
+                            src="/static/images/smartHouse/contr5.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -853,34 +1022,41 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
-
                         </div>
                       </template>
                       <template slot="footer">
-                        <p class="color-main03 rt-font-label rt-font-center rt-space-top15">
-                          Необходим контроллер</p>
+                        <p
+                          class="color-main03 rt-font-label rt-font-center rt-space-top15"
+                        >
+                          Необходим контроллер
+                        </p>
                       </template>
                     </rt-card>
                   </div>
@@ -888,15 +1064,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr6.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr6.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -904,119 +1082,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </template>
-                    </rt-card>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-                    <rt-card :card-body-height="191" :static-body-height="true">
-                      <template slot="content">
-                        <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr7.png"
-                               class="rt-card-img" alt=""
-                          >
-                        </div>
-                      </template>
-                      <template slot="bottom-list">
-                        <div class="rt-card-list">
-                          <div class="rt-card-list__item">
-
-                            <div class="rt-card-list__icon">
-                              <svg width="56" height="56">
-                                <g fill="none" fill-rule="evenodd">
-                                  <path
-                                    d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
-                                    fill="#B6DE4E"
-                                  />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
-                                  />
-                                  <path
-                                    d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-
-                              </svg>
-                            </div>
-                            <div class="rt-card-list__name">
-                              <div>
-                                <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </template>
-                    </rt-card>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
-                    <rt-card :card-body-height="191" :static-body-height="true">
-                      <template slot="content">
-                        <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr8.png"
-                               class="rt-card-img" alt=""
-                          >
-                        </div>
-                      </template>
-                      <template slot="bottom-list">
-                        <div class="rt-card-list">
-                          <div class="rt-card-list__item">
-
-                            <div class="rt-card-list__icon">
-                              <svg width="56" height="56">
-                                <g fill="none" fill-rule="evenodd">
-                                  <path
-                                    d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
-                                    fill="#B6DE4E"
-                                  />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
-                                  />
-                                  <path
-                                    d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
-                                    stroke-linejoin="round"
-                                  />
-                                </g>
-
-                              </svg>
-                            </div>
-                            <div class="rt-card-list__name">
-                              <div>
-                                <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -1028,15 +1117,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr9.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr7.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -1044,25 +1135,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -1074,15 +1170,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr10.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr8.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -1090,25 +1188,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -1120,15 +1223,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr11.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr9.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -1136,25 +1241,136 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </template>
+                    </rt-card>
+                  </div>
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
+                    <rt-card :card-body-height="191" :static-body-height="true">
+                      <template slot="content">
+                        <div class="rt-font-center">
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr10.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
+                        </div>
+                      </template>
+                      <template slot="bottom-list">
+                        <div class="rt-card-list">
+                          <div class="rt-card-list__item">
+                            <div class="rt-card-list__icon">
+                              <svg width="56" height="56">
+                                <g fill="none" fill-rule="evenodd">
+                                  <path
+                                    d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
+                                    fill="#B6DE4E"
+                                  />
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  />
+                                  <path
+                                    d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="rt-card-list__name">
+                              <div>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </template>
+                    </rt-card>
+                  </div>
+                  <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch">
+                    <rt-card :card-body-height="191" :static-body-height="true">
+                      <template slot="content">
+                        <div class="rt-font-center">
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr11.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
+                        </div>
+                      </template>
+                      <template slot="bottom-list">
+                        <div class="rt-card-list">
+                          <div class="rt-card-list__item">
+                            <div class="rt-card-list__icon">
+                              <svg width="56" height="56">
+                                <g fill="none" fill-rule="evenodd">
+                                  <path
+                                    d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
+                                    fill="#B6DE4E"
+                                  />
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  />
+                                  <path
+                                    d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="rt-card-list__name">
+                              <div>
+                                <p class="rt-font-small-paragraph color-main07">
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -1163,7 +1379,6 @@
                     </rt-card>
                   </div>
                 </div>
-
               </rt-tabs-content-item>
               <rt-tabs-content-item name="Sensors">
                 <div class="row">
@@ -1171,15 +1386,17 @@
                     <rt-card :card-body-height="191" :static-body-height="true">
                       <template slot="content">
                         <div class="rt-font-center">
-                          <img height="154" src="/static/images/smartHouse/contr8.png"
-                               class="rt-card-img" alt=""
-                          >
+                          <img
+                            height="154"
+                            src="/static/images/smartHouse/contr8.png"
+                            class="rt-card-img"
+                            alt=""
+                          />
                         </div>
                       </template>
                       <template slot="bottom-list">
                         <div class="rt-card-list">
                           <div class="rt-card-list__item">
-
                             <div class="rt-card-list__icon">
                               <svg width="56" height="56">
                                 <g fill="none" fill-rule="evenodd">
@@ -1187,25 +1404,30 @@
                                     d="M55.4477 28.3788c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5"
                                     fill="#B6DE4E"
                                   />
-                                  <path stroke="#FFF" stroke-width="1.5"
-                                        stroke-linejoin="round"
-                                        d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
+                                  <path
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                    d="M27.9477 10.3749l-15.455 14.287h3.434v17.721h24.041v-17.721h3.435l-4.602-4.259v-10.028h-5.702v4.739zM27.9819 22.8071v6.457"
                                   />
                                   <path
                                     d="M25.043 25.3168c-2.705 1.523-3.761 4.917-2.395 7.755 1.422 2.954 4.978 4.158 7.933 2.735 2.954-1.422 4.157-4.978 2.735-7.932-.542-1.084-1.35-1.946-2.384-2.546"
-                                    stroke="#FFF" stroke-width="1.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.5"
                                     stroke-linejoin="round"
                                   />
                                 </g>
-
                               </svg>
                             </div>
                             <div class="rt-card-list__name">
                               <div>
                                 <p class="rt-font-small-paragraph color-main07">
-                                  Контроллер </p>
-                                <p class="rt-font-label color-main05">Необходим для
-                                управления и настройки устройств,</p>
+                                  Контроллер
+                                </p>
+                                <p class="rt-font-label color-main05">
+                                  Необходим для управления и настройки
+                                  устройств,
+                                </p>
                               </div>
                             </div>
                           </div>
@@ -1218,7 +1440,6 @@
             </div>
           </template>
         </rt-tabs>
-
       </div>
     </div>
     <div class="color-block--white no-overflow-y">
@@ -1228,34 +1449,44 @@
             <div class="rt-col-1 md-d-none" />
             <div class="rt-col-5 flex-center-center rt-col-md-3">
               <div id="connect">
-                <p class="rt-font-promo-title color-main07">Подключение и управление</p>
-                <p class="rt-font-paragraph rt-space-top color-main05">Установить и настроить «Умный
-                дом» несложно, в комплекте вы найдете подробную инструкцию. Тем не менее, если у вас
-                возникнут сложности, мы всё сделаем за вас: просто скажите о своем желании оператору
-                при звонке. Услуга платная, о стоимости вам расскажет оператор.
-                  <br><br>Управлять устройствами можно с компьютера, планшета или смартфона — через
-                  личный кабинет и мобильное приложение.</p>
+                <p class="rt-font-promo-title color-main07">
+                  Подключение и управление
+                </p>
+                <p class="rt-font-paragraph rt-space-top color-main05">
+                  Установить и настроить «Умный дом» несложно, в комплекте вы
+                  найдете подробную инструкцию. Тем не менее, если у вас
+                  возникнут сложности, мы всё сделаем за вас: просто скажите о
+                  своем желании оператору при звонке. Услуга платная, о
+                  стоимости вам расскажет оператор. <br /><br />Управлять
+                  устройствами можно с компьютера, планшета или смартфона —
+                  через личный кабинет и мобильное приложение.
+                </p>
                 <div class="rt-space-top15 rt-font-md-center">
                   <a href="#" class="d-inline-block ">
-                    <img src="/static/images/applePlay.svg" alt="">
+                    <img src="/static/images/applePlay.svg" alt="" />
                   </a>
-                  <a href="#"
-                     class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-md-space-vertical"
+                  <a
+                    href="#"
+                    class="d-inline-block rt-space-left rt-md-space-horizontal-none rt-md-space-vertical"
                   >
-                    <img src="/static/images/googlePlay.svg" alt="">
+                    <img src="/static/images/googlePlay.svg" alt="" />
                   </a>
                 </div>
               </div>
             </div>
             <div class="rt-col-2 md-d-none" />
-            <div class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top">
+            <div
+              class="rt-col-4 flex-start-bottom rt-space-top25 rt-col-md-3 rt-md-space-top"
+            >
               <div class="rt-space-horizontal flex-md-center">
                 <div class="phone phone--is-big">
                   <div class="phone__container" />
-                  <img src="/static/images/smartHouse/app.jpg" class="phone__image">
+                  <img
+                    src="/static/images/smartHouse/app.jpg"
+                    class="phone__image"
+                  />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -1266,50 +1497,52 @@
         <div class="rt-col-12">
           <div class="row">
             <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-              <rt-card :background-image="'/images/smartHouse/smart-house.png'"
-                       :background-position="'right'"
-                       :background-image-stand-alone="true"
-                       :col-size="2"
-                       background-size-width="33%"
-                       backgroun-size-height="60%"
-                       background-position-right="-5%"
-
-                       background-position-top="20%"
+              <rt-card
+                :background-image="'/images/smartHouse/smart-house.png'"
+                :background-position="'right'"
+                :background-image-stand-alone="true"
+                :col-size="2"
+                background-size-width="33%"
+                backgroun-size-height="60%"
+                background-position-right="-5%"
+                background-position-top="20%"
               >
                 <template slot="footer">
                   <div class="rt-space-bottom  color-main07">
-                    <p class="rt-font-paragraph">Беспроцентная рассрочка на комплекты Умный дом</p>
-                    <p class="rt-space-top rt-space-bottom25">Короткое описание <br> предложения</p>
-
+                    <p class="rt-font-paragraph">
+                      Беспроцентная рассрочка на комплекты Умный дом
+                    </p>
+                    <p class="rt-space-top rt-space-bottom25">
+                      Короткое описание <br />
+                      предложения
+                    </p>
                   </div>
                   <p>Подробнее</p>
                 </template>
-
               </rt-card>
-
-
             </div>
             <div class="rt-col-6 rt-col-md-3 d-stretch rt-space-top">
-              <rt-card :background-image="'/static/example-images/cardBackground9.png'"
-                       :background-image-stand-alone="true"
-                       :background-position="'bottom-right'"
-                       :col-size="2"
-                       background-size-width="40%"
-                       backgroun-size-height="100%"
+              <rt-card
+                :background-image="'/static/example-images/cardBackground9.png'"
+                :background-image-stand-alone="true"
+                :background-position="'bottom-right'"
+                :col-size="2"
+                background-size-width="40%"
+                backgroun-size-height="100%"
               >
-
                 <template slot="footer">
                   <div class="rt-space-bottom  color-main07">
-                    <p class="rt-font-paragraph">Купи камеру и получи год сервиса в подарок</p>
-                    <p class="rt-space-top rt-space-bottom25">Короткое описание <br> предложения</p>
-
+                    <p class="rt-font-paragraph">
+                      Купи камеру и получи год сервиса в подарок
+                    </p>
+                    <p class="rt-space-top rt-space-bottom25">
+                      Короткое описание <br />
+                      предложения
+                    </p>
                   </div>
                   <p>Подробнее</p>
                 </template>
-
               </rt-card>
-
-
             </div>
           </div>
         </div>
@@ -1319,53 +1552,80 @@
       <div class="rt-container rt-space-top2 rt-space-bottom">
         <div class="rt-col-12">
           <rt-annotation :has-white-color="true" label="Примечание">
-
             <template slot="content">
-              <p class="rt-annotation-item"> 1. Услуги Высокоскоростного интернета предоставляются при наличии
-              технической возможности.</p>
-              <p class="rt-annotation-item"> 2. Цены указаны в рублях с учетом НДС.</p>
-              <p class="rt-annotation-item"> «По оптической линии» — предоставление доступа к сети Интернет
-              осуществляется по технологии FTTx (англ., fiber to the x — оптическое волокно до точки X)
-              или по технологии PON (англ. Passive Optical Networks — пассивная оптическая сеть до
-              абонента).</p>
-              <p class="rt-annotation-item"> «По телефонной линии» — предоставление доступа к сети Интернет
-              осуществляется по технологии xDSL (англ., digital subscriber line, цифровая абонентская
-              линия).</p>
-              <p class="rt-annotation-item"> 3. Предоставление доступа к сети Интернет осуществляется по технологии
-              xDSL (англ., digital subscriber line, цифровая абонентская линия).</p>
-              <p class="rt-annotation-item"> 4. Скорость доступа к сети Интернет зависит не только от технических
-              особенностей Услуги, но и от действий третьих сил, организаций и лиц, управляющих сегментами
-              сети Интернет (или оказывающих на них влияние), не принадлежащих ПАО «Ростелеком». Скорость
-              доступа к сети Интернет является величиной неопределенной и зависит от ряда параметров, в
-              том числе, технических характеристик подключения, маршрута и текущей загрузки каналов,
-              характеристиками установленного абонентского оборудования (ПК, смартфон, WiFi-роутер),
-              версией программного обеспечения или используемого стандарта, месторасположением
-              запрашиваемого контента. Все параметры являются переменными и не гарантируются ПАО
-              «Ростелеком» за пределами своей сети. Указанная в тарифном плане скорость является
-              максимально возможной.</p>
-              <p class="rt-annotation-item"> 5. Абонентselect-arrow__iconская плата за услугу Интернет списывается с
-              лицевого счета
-              абонента один раз в месяц. В первый месяц пользования услугой Интернет с лицевого счета
-              абонента списывается абонентская плата, рассчитанная пропорционально количеству дней от даты
-              начала оказания услуги до конца месяца.</p>
-              <p class="rt-annotation-item"> 6. Оборудование (маршрутизатор или абонентский модем в зависимости от
-              технологии предоставления услуги), необходимое для получения услуг, может быть приобретено
-              отдельно по действующим тарифам. Стоимость оборудования уточняйте по телефону
-              8-800-100-0-800.</p>
-              <p class="rt-annotation-item"> 7. Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети). Услуга
-              предоставляется на территории Российской Федерации для абонентов-физических лиц при наличии
-              технической возможности. При первом подключении услуги на условиях ежемесячной подписки
-              первые 30 календарных дней с момента активации услуги предоставляются без взимания
-              абонентской платы, далее согласно Базовым тарифам. При первом подключении услуги на условиях
-              годовой подписки абонент пользуется услугой 14 месяцев (420 календарных дней) с момента
-              активации, два последних месяца предоставляются без взимания абонентской платы. При
-              прологнации услуги или повторных подключениях на условиях годовой подписки период
-              пользования составляет 360 календарных дней. Подробности об услуге, ПАО «Ростелеком»
-              узнавайте по бесплатному номеру 8-800-100-0-800, а также на сайте www.rt.ru.</p>
+              <p class="rt-annotation-item">
+                1. Услуги Высокоскоростного интернета предоставляются при
+                наличии технической возможности.
+              </p>
+              <p class="rt-annotation-item">
+                2. Цены указаны в рублях с учетом НДС.
+              </p>
+              <p class="rt-annotation-item">
+                «По оптической линии» — предоставление доступа к сети Интернет
+                осуществляется по технологии FTTx (англ., fiber to the x —
+                оптическое волокно до точки X) или по технологии PON (англ.
+                Passive Optical Networks — пассивная оптическая сеть до
+                абонента).
+              </p>
+              <p class="rt-annotation-item">
+                «По телефонной линии» — предоставление доступа к сети Интернет
+                осуществляется по технологии xDSL (англ., digital subscriber
+                line, цифровая абонентская линия).
+              </p>
+              <p class="rt-annotation-item">
+                3. Предоставление доступа к сети Интернет осуществляется по
+                технологии xDSL (англ., digital subscriber line, цифровая
+                абонентская линия).
+              </p>
+              <p class="rt-annotation-item">
+                4. Скорость доступа к сети Интернет зависит не только от
+                технических особенностей Услуги, но и от действий третьих сил,
+                организаций и лиц, управляющих сегментами сети Интернет (или
+                оказывающих на них влияние), не принадлежащих ПАО «Ростелеком».
+                Скорость доступа к сети Интернет является величиной
+                неопределенной и зависит от ряда параметров, в том числе,
+                технических характеристик подключения, маршрута и текущей
+                загрузки каналов, характеристиками установленного абонентского
+                оборудования (ПК, смартфон, WiFi-роутер), версией программного
+                обеспечения или используемого стандарта, месторасположением
+                запрашиваемого контента. Все параметры являются переменными и не
+                гарантируются ПАО «Ростелеком» за пределами своей сети.
+                Указанная в тарифном плане скорость является максимально
+                возможной.
+              </p>
+              <p class="rt-annotation-item">
+                5. Абонентselect-arrow__iconская плата за услугу Интернет
+                списывается с лицевого счета абонента один раз в месяц. В первый
+                месяц пользования услугой Интернет с лицевого счета абонента
+                списывается абонентская плата, рассчитанная пропорционально
+                количеству дней от даты начала оказания услуги до конца месяца.
+              </p>
+              <p class="rt-annotation-item">
+                6. Оборудование (маршрутизатор или абонентский модем в
+                зависимости от технологии предоставления услуги), необходимое
+                для получения услуг, может быть приобретено отдельно по
+                действующим тарифам. Стоимость оборудования уточняйте по
+                телефону 8-800-100-0-800.
+              </p>
+              <p class="rt-annotation-item">
+                7. Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети).
+                Услуга предоставляется на территории Российской Федерации для
+                абонентов-физических лиц при наличии технической возможности.
+                При первом подключении услуги на условиях ежемесячной подписки
+                первые 30 календарных дней с момента активации услуги
+                предоставляются без взимания абонентской платы, далее согласно
+                Базовым тарифам. При первом подключении услуги на условиях
+                годовой подписки абонент пользуется услугой 14 месяцев (420
+                календарных дней) с момента активации, два последних месяца
+                предоставляются без взимания абонентской платы. При прологнации
+                услуги или повторных подключениях на условиях годовой подписки
+                период пользования составляет 360 календарных дней. Подробности
+                об услуге, ПАО «Ростелеком» узнавайте по бесплатному номеру
+                8-800-100-0-800, а также на сайте www.rt.ru.
+              </p>
             </template>
           </rt-annotation>
         </div>
-
       </div>
     </div>
   </div>

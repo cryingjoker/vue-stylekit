@@ -1,9 +1,25 @@
 <template>
   <div :class="cardClass" :style="cardStyle" class="rt-card">
-    <div v-if="backgroundImageStandAlone" :style="standAloneBackgroundStyle" class="rt-card__stand-alone-background" />
-    <div :style="cardBackgroundStyle" :class="cardBackgroundClass" class="rt-card__background" />
-    <div :cardContentStyle="cardContentStyle" :class="cardContentClass" class="rt-card__content">
-      <div v-if="$slots.header" :style="cardHeaderStyle" class="rt-card__header">
+    <div
+      v-if="backgroundImageStandAlone"
+      :style="standAloneBackgroundStyle"
+      class="rt-card__stand-alone-background"
+    />
+    <div
+      :style="cardBackgroundStyle"
+      :class="cardBackgroundClass"
+      class="rt-card__background"
+    />
+    <div
+      :cardContentStyle="cardContentStyle"
+      :class="cardContentClass"
+      class="rt-card__content"
+    >
+      <div
+        v-if="$slots.header"
+        :style="cardHeaderStyle"
+        class="rt-card__header"
+      >
         <slot name="header" />
       </div>
       <div :class="cardBodyClass" :style="bodyStyle" class="rt-card__body">
@@ -13,10 +29,7 @@
       <div v-if="$slots['bottom-list']" class="rt-card__bottom-list">
         <slot name="bottom-list" />
       </div>
-      <div class="rt-card__footer">
-        <slot name="footer" />
-      </div>
-
+      <div class="rt-card__footer"><slot name="footer" /></div>
     </div>
   </div>
 </template>
@@ -336,6 +349,6 @@ export default {
       }
       return size;
     }
-  },
+  }
 };
 </script>

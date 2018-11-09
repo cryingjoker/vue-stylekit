@@ -1,4 +1,3 @@
-
 <script type="text/jsx">
 const componentsList = {};
 

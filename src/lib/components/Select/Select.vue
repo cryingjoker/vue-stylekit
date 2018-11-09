@@ -1,11 +1,18 @@
 <template>
   <div :class="selectClasses" class="select text-field">
     <button :disabled="disabled" class="select__inner" @click="toggleOpen">
-      <label class="floating-placeholder floating-placeholder--go-top">{{ label }}</label>
+      <label class="floating-placeholder floating-placeholder--go-top">{{
+        label
+      }}</label>
       <div class="select-value">
         <p class="select-input">{{ localValue }}</p>
         <div class="select-arrow">
-          <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="select-arrow__icon"
+            width="10"
+            height="5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M0 0l5 5 5-5z" fill-rule="evenodd" />
           </svg>
         </div>
@@ -15,7 +22,9 @@
     <div v-if="!disabled" :style="selectListStyle" class="select-list">
       <slot />
     </div>
-    <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
+    <p v-if="!!hasError" class="text-field__error-message">
+      {{ errorMessage }}
+    </p>
   </div>
 </template>
 <script>
