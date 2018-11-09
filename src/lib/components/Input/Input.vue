@@ -58,6 +58,7 @@ export default {
   watch: {
     localValue(val) {
       this.$emit("input", val);
+      this.$emit('valid', this.errors)
     }
   },
 
@@ -132,10 +133,6 @@ export default {
     },
     setValueLength() {
       this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
-      this.$emit('input',{
-        type: "input",
-        data: this.hasInputText
-      });
     },
     inputHandler($event) {
       this.localValue = this.$el.querySelector(".input-element").value;
