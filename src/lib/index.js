@@ -1,5 +1,6 @@
 import Vue from "vue";
 import styles from "./css/vue-rt-style.styl";
+import Project from "../../package.json";
 
 import {
   Button,
@@ -113,7 +114,8 @@ const VueRtStyle = {
 
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
-const version = "0.0.21";
+const version = Project.version;
+
 // if(localStorage && localStorage.getItem('dev_mode')){
 //   localStorage.setItem('dev_mode__version',version);
 // }
