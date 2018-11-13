@@ -42,7 +42,8 @@ import {
   Tag,
   TagsList,
   Filter,
-  FilterWatcher
+  FilterWatcher,
+  Youtube
 } from "../lib/components/index";
 
 const componentsList = {};

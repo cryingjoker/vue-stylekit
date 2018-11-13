@@ -252,12 +252,21 @@
               <router-link
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
-                to="/banners"
+                to="/youtube"
               >
-                Banners
+                Youtube player
               </router-link>
             </div>
           </div>
+        </div>
+        <div class="aside-menu__item">
+          <router-link
+            class="aside-menu__link"
+            active-class="aside-menu__link--active"
+            to="/banners"
+          >
+            Banners
+          </router-link>
         </div>
         <div class="aside-menu__item">
           <p class="aside-menu__submenu-title">Promo pages</p>
@@ -310,7 +319,7 @@ if (window) {
 }
 
 const componentDirectives = {};
-
+console.debug('VueRtStyle',VueRtStyle.directives);
 componentDirectives[VueRtStyle.directives.SwipeRight.name] =
   VueRtStyle.directives.SwipeRight;
 componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
