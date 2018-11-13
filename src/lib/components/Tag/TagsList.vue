@@ -11,11 +11,28 @@ export default {
     },
   },
   data:()=>({
-    indexOfActive : 0,
-    value : 0
+    indexOfActiveTag : 0,
+    value : 0,
+    RtTags : {
+      indexOfActiveTag : 0,
+      setActiveTag : null,
+      setActiveValue: null
+    }
   }),
+  provide() {
+    const RtTags = this.RtTags;
+    return { RtTags };
+  },
   mounted(){
     this.bindChilds();
+    this.RtTags.setActiveTag = this.setActiveTag;
+    this.RtTags.setActiveValue = this.setActiveValue;
+    this.$children.forEach((vComponent,index)=>{
+      vComponent.index = index;
+      if(vComponent.checkIfActive && typeof vComponent.checkIfActive === 'function'){
+        vComponent.checkIfActive();
+      }
+    })
   },
   updated(){
     this.bindChilds();
@@ -27,32 +44,33 @@ export default {
           this.setActiveTag(vNode.tagIndex);
           this.setActiveValue(value);
         });
-        if(vNode.isActive && vNode.tagIndex !== this.indexOfActive){
-          this.indexOfActive = vNode.tagIndex;
+        if(vNode.isActive && vNode.tagIndex !== this.indexOfActiveTag){
+          this.indexOfActiveTag = vNode.tagIndex;
           this.value = vNode.value;
         }
       });
     },
     setActiveTag(index){
-      this.$children[this.indexOfActive].toggleActiveState();
-      this.indexOfActive = index;
-      this.$children[this.indexOfActive].toggleActiveState();
+      this.RtTags.indexOfActiveTag = index;
     },
     setActiveValue(newValue){
       this.value = newValue;
     }
   },
+
   render(h){
 
     this.$slots.default.filter((vNode)=>{
-      if(vNode.tag && vNode.tag.search(/RtTag/gi)>=0){
+      if(vNode.tag){
         return true;
       }
       return false;
     }).forEach((vNode, index)=>{
-      vNode.componentOptions = vNode.componentOptions || {};
-      vNode.componentOptions.propsData = vNode.componentOptions.propsData || {};
-      vNode.componentOptions.propsData.tagIndex = index;
+      if(vNode.componentInstance) {
+        vNode.componentInstance = vNode.componentInstance || {};
+        vNode.componentInstance.$data.index = index;
+        vNode.componentInstance.index = index;
+      }
     });
 
     return<div class={"rt-tag-list"}>

@@ -1,47 +1,42 @@
 <script type="text/jsx">
-  import { Fragment } from 'vue-fragment';
-export default {
-  name: "RtFilterWatcher",
-  data: () => ({
-    selectedProps: []
-  }),
-  inject: ["RtFilter"],
-  mounted(){
-    // console.info('mounted filter')
-    setTimeout(()=>{
-      this.bindChilds();
-    },0)
-  },
-  methods:{
-    bindChilds(){
-      // if(this["_events"]){
-      //   console.info('Object.keys(this["_events"])',Object.keys(this["_events"]),this["_events"],typeof this["_events"], JSON.stringify(this["_events"]))
-      //   Object.keys(this["_events"]).map(eventName => {
-      //     console.info('eventname -->>',eventName,this.$children)
-      //     this.$children.forEach((vNode)=>{
-      //       // console.info('eventName',eventName,this["_events"][eventName]);
-      //       vNode.$on(eventName, (eventData)=>{
-      //         this["_events"][eventName].forEach((fn)=>{
-      //           console.info('fn',fn);
-      //          fn.call();
-      //         })
-      //         this["_events"][eventName](eventData);
-      //       })
-      //     })
-      //   });
-      //
-      //   console.info('this.$children',this.$children);
-      //}
-      // this.$children.forEach((vNode)=>{
-      //   console.info('vNode',vNode);
-      //   vNode.$on('change',(value)=>{
-      //     console.info('value -->>',value,vNode)
-      //   });
-      // });
+  import { Fragment } from "vue-fragment";
+
+  export default {
+    name: "RtFilterWatcher",
+
+    data: () => ({
+      index: null,
+      selectedProps: []
+    }),
+    created() {
+      setTimeout(() => {
+        this.setPropsToChildren();
+      }, 0);
     },
-  },
-  render(){
-    return <Fragment>{this.$slots.default}</Fragment>;
-  }
-};
+    methods: {
+      setPropsToChildren() {
+        // console.info('this',this)
+        this.$children.forEach((vNode) => {
+          if (vNode && vNode.index !== "undefinded") {
+            vNode.$set(vNode,'index',this.index);
+          }
+
+          // console.debug('**',vNode,vNode.$on);
+          this.$on = (...args) => {
+            // custom logic here like pushing to a callback array or something
+            old_on.apply(this, args);
+          };
+
+          // var oldEmit = vNode.compiler.emitter.emit
+          // vNode.compiler.emitter.emit = function () {
+          //   console.log('got event: ' + arguments[0],arguments)
+          //   oldEmit.apply(this, arguments)
+          // }
+        });
+      }
+    },
+    render() {
+      return <Fragment>{this.$slots.default}</Fragment>;
+    }
+  };
 </script>

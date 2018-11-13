@@ -22,7 +22,7 @@ import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
-import Homeinternet from '../components/promo/homeinternet.vue';
+// import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
 import Table from '../components/main-elements/Table.vue';
@@ -66,7 +66,7 @@ const index = [
   { path: '/promo/tvtv', name: 'prcontent-min-heightomoTv', component: PromoTvTV },
   { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
-  { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
+  // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
 

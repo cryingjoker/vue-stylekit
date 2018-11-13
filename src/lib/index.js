@@ -52,6 +52,7 @@ import {
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
+// import { FilterCallerDirective } from "./directives/Filter/FilterCaller";
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -102,6 +103,7 @@ const VueRtStyle = {
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
 
+      // Vue.directive(FilterCallerDirective.name, FilterCallerDirective);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
@@ -111,8 +113,7 @@ const VueRtStyle = {
     }
   }
 };
-
-VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
+// VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 
 const version = Project.version;
 

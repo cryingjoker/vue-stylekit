@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 const local_dirname = path.join(__dirname,'..');
 var vueLoaderConfig = require('./vue-loader.config');
-const HappyPack = require('happypack');
 
 const config = {
   entry: {

@@ -5,10 +5,6 @@ export default {
   name: "RtTag",
   components: componentsList,
   props: {
-    tagIndex: {
-      type: Number,
-      default: null
-    },
     isActive: {
       type: Boolean,
       default: false
@@ -18,21 +14,29 @@ export default {
       default: null
     }
   },
-  data(){
-    return {
-      isNowActive: this.isActive
-    };
+  data:()=>({
+    index: null,
+  }),
+  inject: ['RtTags'],
+  created(){
+
   },
   methods:{
+    checkIfActive(){
+      if(this.isActive && !this.RtTags.indexOfActiveTag !== this.index){
+        this.RtTags.indexOfActiveTag = this.index;
+      }
+    },
     toggleActiveState(){
       this.isNowActive = !this.isNowActive;
     },
     setActive(){
-      this.$emit('change',this.value);
+      this.RtTags.setActiveTag(this.index);
     }
   },
   render(){
-    return <div onClick={this.setActive} class={"rt-tag"+(this.isNowActive ? " rt-tag--is-active": "")}>
+
+    return <div onClick={this.setActive} class={"rt-tag"+(this.RtTags.indexOfActiveTag === this.index ? " rt-tag--is-active": "")}>
       {this.$slots.default}
     </div>;
   }
