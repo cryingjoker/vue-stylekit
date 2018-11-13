@@ -1,10 +1,10 @@
 {
   "newAppName": "rt",
-  "horizontal-space" : "20px",
-  "vertical-space" : "20px",
+  "horizontal-space": "20px",
+  "vertical-space": "20px",
   "mobile-step-size": "768px",
   "tablet-step-size": "1024px",
-  "iphone8" : "415px",
+  "iphone8": "415px",
   "desctop-step-grid": "8.333333%",
   "tablet-step-grid": "16.66666%",
   "mobile-step-grid": "33.333333%"

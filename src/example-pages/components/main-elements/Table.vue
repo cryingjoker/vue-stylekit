@@ -1,10 +1,7 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-
-      <div class="app-title">
-        <h1 class="rt-font-hero">Table</h1>
-      </div>
+      <div class="app-title"><h1 class="rt-font-hero">Table</h1></div>
       <div class="app-body">
         <div class="app-row row">
           <div class="rt-col rt-font-hypnens-off">
@@ -91,16 +88,12 @@
               </template>
             </rt-table>"
             />
-
           </div>
         </div>
       </div>
-
     </div>
   </div>
-  </div>
 </template>
-
 
 <script>
 import componentsList from "../../componentsList";

@@ -1,6 +1,16 @@
 <template>
-  <div class="circle-switcher__item" :class="paginatorItemClass" :style="paginatorItemStyle" @click="setActiveItem">
-    <svg xmlns="http://www.w3.org/2000/svg" class="circle-switcher__icon" :class="paginatorItemIconClass" viewBox="0 0 9 9">
+  <div
+    :class="paginatorItemClass"
+    :style="paginatorItemStyle"
+    class="circle-switcher__item"
+    @click="setActiveItem"
+  >
+    <svg
+      :class="paginatorItemIconClass"
+      xmlns="http://www.w3.org/2000/svg"
+      class="circle-switcher__icon"
+      viewBox="0 0 9 9"
+    >
       <circle r="4" cx="4.5" cy="4.5" fill="transparent" />
     </svg>
   </div>

@@ -1,15 +1,40 @@
 <template>
-
-  <label class="checkbox">
+  <label
+    :class="{
+      active: isChecked,
+      disabled: isDisabled,
+      invalid: required && !isChecked
+    }"
+    class="checkbox"
+  >
     <rt-ripple ref="ripple" :not-render="isDisabled" />
-    <input type="checkbox" ref="input" :disabled="isDisabled" class="checkbox-element" :checked="checked" @change="changeInput">
+    <input
+      v-validate="'required'"
+      ref="input"
+      :id="uid"
+      :disabled="isDisabled"
+      :name="name"
+      v-model="isChecked"
+      type="checkbox"
+      class="checkbox-element"
+      @change="changeInput"
+    />
 
     <div class="checkbox-container">
-
-      <svg class="checkbox-container__angle" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="checkbox-container__angle"
+        width="12px"
+        height="10px"
+        viewBox="0 0 12 10"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="controls/checkbox/active/mark/violet" stroke-width="3">
-            <polyline id="Stroke-4" points="1 4 4.44815083 7 7.5882241 4.12440883 11 1"></polyline>
+            <polyline
+              id="Stroke-4"
+              points="1 4 4.44815083 7 7.5882241 4.12440883 11 1"
+            />
           </g>
         </g>
       </svg>
@@ -20,6 +45,8 @@
 </template>
 
 <script>
+import Vue from "vue";
+import VeeValidate from "vee-validate";
 import { default as RippleComponent } from "../Ripple/Ripple.vue";
 const componentsList = {};
 componentsList[RippleComponent.name] = RippleComponent;
@@ -35,9 +62,29 @@ export default {
     checked: {
       type: Boolean,
       default: false
+    },
+    name: {
+      type: String,
+      default: null
+    },
+    required: Boolean,
+    uid: {
+      type: String
+    }
+  },
+
+  data() {
+    return {
+      isChecked: this.checked
+    };
+  },
+  watch: {
+    checked: function(newValue) {
+      this.isChecked = newValue;
     }
   },
   mounted() {
+    Vue.use(VeeValidate);
     this.bindEvents();
   },
 
@@ -50,7 +97,7 @@ export default {
   },
   methods: {
     changeInput($event) {
-      this.$emit("input", $event.target.checked);
+      this.$emit("update:checked", this.isChecked);
       this.showWave();
     },
     bindEvents() {

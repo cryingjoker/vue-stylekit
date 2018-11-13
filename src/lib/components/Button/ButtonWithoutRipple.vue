@@ -1,6 +1,8 @@
 <template>
-  <button class="rt-button rt-button-no-wive" :class="{'rt-button--is-block' : isBlock}"
-          @click="triggerClick($event)"
+  <button
+    :class="{ 'rt-button--is-block': isBlock }"
+    class="rt-button rt-button-no-wive"
+    @click="triggerClick($event);"
   >
     <slot />
   </button>

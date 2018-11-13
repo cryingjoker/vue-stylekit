@@ -1,5 +1,4 @@
 <template>
-
   <div ref="editor" class="code-editor__container" />
 </template>
 

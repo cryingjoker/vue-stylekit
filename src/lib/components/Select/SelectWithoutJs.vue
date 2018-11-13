@@ -1,22 +1,30 @@
 <template>
-  <div class="select text-field" :class="selectClasses">
+  <div :class="selectClasses" class="select text-field">
     <label>
-      <p class="floating-placeholder floating-placeholder--go-top">{{ label }}</p>
+      <p class="floating-placeholder floating-placeholder--go-top">
+        {{ label }}
+      </p>
 
       <div class="select-value">
-        <select class="select-list-native" :disabled="disabled">
+        <select :disabled="disabled" class="select-list-native">
           <slot />
         </select>
         <div class="select-arrow">
-          <svg class="select-arrow__icon" width="10" height="5" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="select-arrow__icon"
+            width="10"
+            height="5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path d="M0 0l5 5 5-5z" fill-rule="evenodd" />
           </svg>
         </div>
       </div>
       <div class="text-field__line" />
-      <p v-if="!!hasError" class="text-field__error-message">{{ errorMessage }}</p>
+      <p v-if="!!hasError" class="text-field__error-message">
+        {{ errorMessage }}
+      </p>
     </label>
-
   </div>
 </template>
 <script>

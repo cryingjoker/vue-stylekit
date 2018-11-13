@@ -2,10 +2,7 @@
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
-        <div class="row">
-
-          <h1 class="rt-font-hero rt-col">Annotation </h1>
-        </div>
+        <div class="row"><h1 class="rt-font-hero rt-col">Annotation</h1></div>
       </div>
       <div class="app-body">
         <pre-code
@@ -107,10 +104,9 @@
         </rt-annotation>"
         />
 
-        <documentation-builder type="components" :json="documentation" />
+        <documentation-builder :json="documentation" type="components" />
       </div>
     </div>
-
   </div>
 </template>
 

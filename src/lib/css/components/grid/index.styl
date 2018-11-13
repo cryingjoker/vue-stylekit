@@ -1,484 +1,414 @@
-gridRender(steps,prefix,stepGrid,needMedia,mediaWidth)
-  for $i in 1..steps
+gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
+  for $i in 1 .. steps
     .{newAppName}-col{prefix}-{$i}
-      if needMedia
+      if (needMedia)
         @media (max-width: mediaWidth)
-          flex 0 0 ($i*stepGrid)
-          max-width ($i*stepGrid)
+          flex 0 0 ($i * stepGrid)
+          max-width ($i * stepGrid)
       else
-        flex 0 0 ($i*stepGrid)
-        max-width ($i*stepGrid)
-
+        flex 0 0 ($i * stepGrid)
+        max-width ($i * stepGrid)
 
 spaceRender(prefix, needMedia, value, mediaWidth)
   name = step
 
-  if step % 10 == 5
-    if step < 10
-      name = '0'+name
-
+  if (step % 10 == 5)
+    if (step < 10)
+      name = "0" + name
   else
-    if step == 10
-      name = ''
+    if (step == 10)
+      name = ""
     else
-      name = (''+(step/10))
+      name = "" + (step / 10)
+
   .{newAppName}{prefix}-space-top{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-top (value/10)*vertical-space
+        padding-top (value / 10) * vertical-space
     else
-      padding-top (value/10)*vertical-space
+      padding-top (value / 10) * vertical-space
+
   .{newAppName}{prefix}-space-bottom{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-bottom (value/10)*vertical-space
+        padding-bottom (value / 10) * vertical-space
     else
-      padding-bottom (value/10)*vertical-space
+      padding-bottom (value / 10) * vertical-space
+
   .{newAppName}{prefix}-space-vertical{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-top (value/10)*vertical-space
-        padding-bottom (value/10)*vertical-space
+        padding-top (value / 10) * vertical-space
+        padding-bottom (value / 10) * vertical-space
     else
-      padding-top (value/10)*vertical-space
-      padding-bottom (value/10)*vertical-space
+      padding-top (value / 10) * vertical-space
+      padding-bottom (value / 10) * vertical-space
 
   .{newAppName}{prefix}-space-left{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-left (value/10)*horizontal-space
+        padding-left (value / 10) * horizontal-space
     else
-      padding-left (value/10)*horizontal-space
+      padding-left (value / 10) * horizontal-space
+
   .{newAppName}{prefix}-space-right{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-right (value/10)*horizontal-space
+        padding-right (value / 10) * horizontal-space
     else
-      padding-right (value/10)*horizontal-space
+      padding-right (value / 10) * horizontal-space
+
   .{newAppName}{prefix}-space-horizontal{name}
-    if needMedia
+    if (needMedia)
       @media (max-width: mediaWidth)
-        padding-left (value/10)*horizontal-space
-        padding-right (value/10)*horizontal-space
+        padding-left (value / 10) * horizontal-space
+        padding-right (value / 10) * horizontal-space
     else
-      padding-left (value/10)*horizontal-space
-      padding-right (value/10)*horizontal-space
+      padding-left (value / 10) * horizontal-space
+      padding-right (value / 10) * horizontal-space
 
-steps = (desctop-step-grid 12),
-  (tablet-step-grid 6 "td" tablet-step-size),
-  (mobile-step-grid 3 "md" mobile-step-size),
-  (10% 10 "persent"),
-  (10% 10 "td-persent" tablet-step-size),
-  (10% 10 "md-persent" mobile-step-size)
-
+steps = desctop-step-grid 12, tablet-step-grid 6 "td" tablet-step-size, mobile-step-grid 3 "md" mobile-step-size, 10% 10 "persent", 10% 10 "td-persent" tablet-step-size, 10% 10 "md-persent" mobile-step-size
 
 .{newAppName}-col
-  position relative
-  width 100%
-  padding-right (horizontal-space/2)
-  padding-left (horizontal-space/2)
   flex 0 0 1
+  width 100%
+  padding-left (horizontal-space / 2)
+  padding-right (horizontal-space / 2)
+  position relative
 
 for devideStep in steps
   media = 0
   devicePrefix = ""
   needMedia = false
-  if devideStep[1] < 12
-    media = devideStep[3]
-    devicePrefix = '-'+devideStep[2]
-    if media
-      needMedia = true
-  for $i in 1..devideStep[1]
-    className = newAppName+'-col'+devicePrefix+'-'+$i
-    .{className}
-      +cache('mobile-column')
-        position relative
-        width 100%
-        padding-right (horizontal-space/2)
-        padding-left (horizontal-space/2)
-  gridRender(devideStep[1],devicePrefix,devideStep[0],needMedia,media)
 
-  for $i in 1..18
+  if (devideStep[1] < 12)
+    media = devideStep[3]
+    devicePrefix = "-" + devideStep[2]
+
+    if (media)
+      needMedia = true
+
+  for $i in 1 .. devideStep[1]
+    className = newAppName + "-col" + devicePrefix + "-" + $i
+
+    .{className}
+      +cache("mobile-column")
+        width 100%
+        padding-left (horizontal-space / 2)
+        padding-right (horizontal-space / 2)
+        position relative
+
+  gridRender(devideStep[1], devicePrefix, devideStep[0], needMedia, media)
+
+  for $i in 1 .. 18
     step = $i * 5
     spaceRender(devicePrefix, needMedia, step, media)
 
-
-.row {
-  position relative
+.row
   display -ms-flexbox
   display flex
-  -ms-flex-wrap wrap
   flex-wrap wrap
-  margin-right (-1*horizontal-space*0.5)
-  margin-left (-1*horizontal-space*0.5)
-  &--mobile-scroll {
+  margin-left -1 * horizontal-space * .5
+  margin-right -1 * horizontal-space * .5
+  position relative
+  -ms-flex-wrap wrap
+
+  &--mobile-scroll
     flex-flow nowrap
     overflow auto
-    margin-right -1*horizontal-space
-    margin-left -1*horizontal-space
+    margin-left -1 * horizontal-space
+    margin-right -1 * horizontal-space
     padding-bottom vertical-space
-  }
-}
 
-
-
-.d-none {
+.d-none
   display none
-}
 
-.d-inline {
+.d-inline
   display inline
-}
 
-.d-inline-block {
+.d-inline-block
   display inline-block
-}
 
-.d-block {
+.d-block
   display block
-}
 
-
-.d-table {
+.d-table
   display table
-}
 
-.d-table-row {
+.d-table-row
   display table-row
-}
 
-.d-table-cell {
+.d-table-cell
   display table-cell
-}
 
-.d-flex {
+.d-flex
   display -ms-flexbox
   display flex
-}
 
-.flex-end-center {
+.flex-end-center
   display flex
   display -ms-flexbox
   justify-content flex-end
   align-items center
-}
 
-.flex-start-center {
+.flex-start-center
   display flex
   display -ms-flexbox
   justify-content flex-start
   align-items center
-}
 
-.flex-center-center {
+.flex-center-center
   display flex
   display -ms-flexbox
   justify-content center
   align-items center
-}
 
-.flex-end-bottom {
+.flex-end-bottom
   display flex
   display -ms-flexbox
   justify-content flex-end
   align-items flex-end
-}
 
-.d-inline-flex {
+.d-inline-flex
   display -ms-inline-flexbox
   display inline-flex
-}
-.d-space-between {
-  justify-content: space-between;
-}
-.d-stretch {
+
+.d-space-between
+  justify-content space-between
+
+.d-stretch
   display flex
   display -ms-flexbox
   align-items stretch
-}
-.flex-md-start {
-  @media (max-width: mobile-step-size) {
+
+.flex-md-start
+  @media (max-width: mobile-step-size)
     display flex
     display -ms-flexbox
     justify-content flex-start
-  }
-}
 
-.flex-md-center {
-  @media (max-width: mobile-step-size) {
+.flex-md-center
+  @media (max-width: mobile-step-size)
     display flex
     display -ms-flexbox
     justify-content center
-  }
-}
 
-.td{
-  @media (max-width: tablet-step-size) {
-    &-d-none {
-      display none!important
-    }
+.td
+  @media (max-width: tablet-step-size)
+    &-d-none
+      display none !important
 
-    &-d-inline {
-      display inline!important
-    }
+    &-d-inline
+      display inline !important
 
-    &-d-inline-block {
-      display inline-block!important
-    }
+    &-d-inline-block
+      display inline-block !important
 
-    &-d-block {
-      display block!important
-    }
+    &-d-block
+      display block !important
 
-    &-d-table {
-      display table!important
-    }
+    &-d-table
+      display table !important
 
-    &-d-table-row {
-      display table-row!important
-    }
+    &-d-table-row
+      display table-row !important
 
-    &-d-table-cell {
-      display table-cell!important
-    }
+    &-d-table-cell
+      display table-cell !important
 
-    &-d-flex {
-      display flex!important
-    }
+    &-d-flex
+      display flex !important
 
-    &-d-inline-flex {
-      display inline-flex!important
-    }
-  }
-}
-.md{
-  @media (max-width: mobile-step-size) {
-    &-d-none {
-      display none!important
-    }
+    &-d-inline-flex
+      display inline-flex !important
 
-    &-d-inline {
-      display inline!important
-    }
+.md
+  @media (max-width: mobile-step-size)
+    &-d-none
+      display none !important
 
-    &-d-inline-block {
-      display inline-block!important
-    }
+    &-d-inline
+      display inline !important
 
-    &-d-block {
-      display block!important
-    }
+    &-d-inline-block
+      display inline-block !important
 
-    &-d-table {
-      display table!important
-    }
+    &-d-block
+      display block !important
 
-    &-d-table-row {
-      display table-row!important
-    }
+    &-d-table
+      display table !important
 
-    &-d-table-cell {
-      display table-cell!important
-    }
+    &-d-table-row
+      display table-row !important
 
-    &-d-flex {
-      display flex!important
-    }
+    &-d-table-cell
+      display table-cell !important
 
-    &-d-inline-flex {
-      display inline-flex!important
-    }
-  }
-}
+    &-d-flex
+      display flex !important
 
-.{newAppName}-container {
+    &-d-inline-flex
+      display inline-flex !important
+
+.{newAppName}-container
   width 100%
-  padding-right horizontal-space*3.5
-  padding-left horizontal-space*3.5
-  margin-right auto
-  margin-left auto
   max-width 1480px
-  @media (max-width: tablet-step-size) {
-    padding-right horizontal-space*0.5
-    padding-left horizontal-space*0.5
-  }
-}
+  margin-left auto
+  margin-right auto
+  padding-left horizontal-space * 3.5
+  padding-right horizontal-space * 3.5
+
+  @media (max-width: tablet-step-size)
+    padding-left horizontal-space * .5
+    padding-right horizontal-space * .5
 
 // from bootstrap 4
-.row {
-  position relative
+.row
   display flex
   flex-wrap wrap
-  margin-right -1*horizontal-space*0.5
-  margin-left -1*horizontal-space*0.5
-  &--mobile-scroll {
+  margin-left -1 * horizontal-space * .5
+  margin-right -1 * horizontal-space * .5
+  position relative
+
+  &--mobile-scroll
     flex-flow nowrap
     overflow auto
-    margin-right -1*horizontal-space
-    margin-left -1*horizontal-space
+    margin-left -1 * horizontal-space
+    margin-right -1 * horizontal-space
     padding-bottom vertical-space
-  }
-}
 
-.no-gutters {
-  margin-right 0
+.no-gutters
   margin-left 0
-}
+  margin-right 0
 
 .no-gutters > .{newAppName}-col,
-.no-gutters > [class*="col-"] {
-  padding-right 0
+.no-gutters > [class*="col-"]
   padding-left 0
-}
+  padding-right 0
 
-
-
-.d-flex {
+.d-flex
   display flex
-}
 
-.flex-row {
+.flex-row
   flex-direction row
-}
 
-.flex-column {
+.flex-column
   flex-direction column
-}
 
-.flex-fill {
+.flex-fill
   flex 1 0 0
-}
-.d-md-flex-column{
-  .{newAppName}-card{
-    @media (max-width: mobile-step-size) {
+
+.d-md-flex-column
+  .{newAppName}-card
+    @media (max-width: mobile-step-size)
       min-height fit-content
-    }
-  }
-  @media (max-width: mobile-step-size) {
+
+  @media (max-width: mobile-step-size)
     display flex
     flex-direction column
-  }
-}
 
-
-
-.{newAppName}-pseudo-col {
+.{newAppName}-pseudo-col
   position absolute
   transition-timing-function ease-in-out
+  transition-duration .2s
   transition-property opacity, visibility
-  transition-duration 0.2s
-  @media (max-width: mobile-step-size) {
+
+  @media (max-width: mobile-step-size)
     opacity 0
     visibility hidden
-  }
-  &--left {
+
+  &--left
     right 100%
-  }
-  &--right {
+
+  &--right
     left 100%
-  }
-}
-.{newAppName}-space-horizontal-none {
-  padding-left: 0
-  padding-right: 0
-}
-.{newAppName}-td-space-horizontal-none {
-  @media (max-width: tablet-step-size) {
-    padding-left: 0
-    padding-right: 0
-  }
-}
-.{newAppName}-md-space-horizontal-none {
-  @media (max-width: mobile-step-size) {
-    padding-left: 0
-    padding-right: 0
-  }
-}
 
-.{newAppName}-td-space-left-none {
-  padding-left: 0
-}
-.{newAppName}-td-space-left-none {
-  @media (max-width: tablet-step-size) {
-    padding-left: 0
-  }
-}
-.{newAppName}-md-space-left-none {
-  @media (max-width: mobile-step-size) {
-    padding-left: 0
-  }
-}
+.{newAppName}-space-horizontal-none
+  padding-left 0
+  padding-right 0
 
-.{newAppName}-space-right-none {
-  padding-right: 0
-}
-.{newAppName}-td-space-right-none {
-  @media (max-width: tablet-step-size) {
-    padding-right: 0
-  }
-}
-.{newAppName}-md-space-right-none {
-  @media (max-width: mobile-step-size) {
-    padding-right: 0
-  }
-}
+.{newAppName}-td-space-horizontal-none
+  @media (max-width: tablet-step-size)
+    padding-left 0
+    padding-right 0
 
-.{newAppName}-space-top-none {
-  padding-top: 0
-}
-.{newAppName}-td-space-top-none {
-  @media (max-width: tablet-step-size) {
-    padding-top: 0
-  }
-}
-.{newAppName}-md-space-top-none {
-  @media (max-width: mobile-step-size) {
-    padding-top: 0
-  }
-}
-.{newAppName}-space-top-none {
-  padding-top: 0
-}
-.{newAppName}-td-space-bottom-none {
-  @media (max-width: tablet-step-size) {
-    padding-bottom: 0
-  }
-}
-.{newAppName}-md-space-bottom-none {
-  @media (max-width: mobile-step-size) {
-    padding-bottom: 0
-  }
-}
-.{newAppName}-td-space-vertical-none {
-  padding-top: 0
-  padding-bottom: 0
-  padding-left: 0
-  padding-right: 0
-}
-.{newAppName}-td-space-vertical-none {
-  @media (max-width: tablet-step-size) {
-    padding-top: 0
-    padding-bottom: 0
-    padding-left: 0
-    padding-right: 0
-  }
-}
-.{newAppName}-md-space-vertical-none {
-  @media (max-width: mobile-step-size) {
-    padding-top: 0
-    padding-bottom: 0
-    padding-left: 0
-    padding-right: 0
-  }
-}
+.{newAppName}-md-space-horizontal-none
+  @media (max-width: mobile-step-size)
+    padding-left 0
+    padding-right 0
 
-.d-td-block {
-  @media (max-width: tablet-step-size) {
+.{newAppName}-td-space-left-none
+  padding-left 0
+
+.{newAppName}-td-space-left-none
+  @media (max-width: tablet-step-size)
+    padding-left 0
+
+.{newAppName}-md-space-left-none
+  @media (max-width: mobile-step-size)
+    padding-left 0
+
+.{newAppName}-space-right-none
+  padding-right 0
+
+.{newAppName}-td-space-right-none
+  @media (max-width: tablet-step-size)
+    padding-right 0
+
+.{newAppName}-md-space-right-none
+  @media (max-width: mobile-step-size)
+    padding-right 0
+
+.{newAppName}-space-top-none
+  padding-top 0
+
+.{newAppName}-td-space-top-none
+  @media (max-width: tablet-step-size)
+    padding-top 0
+
+.{newAppName}-md-space-top-none
+  @media (max-width: mobile-step-size)
+    padding-top 0
+
+.{newAppName}-space-top-none
+  padding-top 0
+
+.{newAppName}-td-space-bottom-none
+  @media (max-width: tablet-step-size)
+    padding-bottom 0
+
+.{newAppName}-md-space-bottom-none
+  @media (max-width: mobile-step-size)
+    padding-bottom 0
+
+.{newAppName}-td-space-vertical-none
+  padding-top 0
+  padding-bottom 0
+  padding-left 0
+  padding-right 0
+
+.{newAppName}-td-space-vertical-none
+  @media (max-width: tablet-step-size)
+    padding-top 0
+    padding-bottom 0
+    padding-left 0
+    padding-right 0
+
+.{newAppName}-md-space-vertical-none
+  @media (max-width: mobile-step-size)
+    padding-top 0
+    padding-bottom 0
+    padding-left 0
+    padding-right 0
+
+.d-td-block
+  @media (max-width: tablet-step-size)
     display block
-  }
-}
-.d-md-block {
-  @media (max-width: mobile-step-size) {
+
+.d-md-block
+  @media (max-width: mobile-step-size)
     display block
-  }
-}
+
+.height-fill
+  min-height 100%

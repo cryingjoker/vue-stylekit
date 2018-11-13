@@ -1,13 +1,9 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-
-      <div class="app-title">
-        <h1 class="rt-font-hero">InlineDrowdown</h1>
-      </div>
+      <div class="app-title"><h1 class="rt-font-hero">InlineDrowdown</h1></div>
       <div class="app-body">
         <div class="app-row row">
-
           <pre-code
             class="rt-container"
             text="<rt-inline-dropdown :resizeSteps=&quot;[868]&quot; :dropdown-min-width=&quot;300&quot;>
@@ -24,12 +20,11 @@
             </rt-inline-dropdown>"
           />
         </div>
-        <documentation-builder type="components" :json="documentation" />
+        <documentation-builder :json="documentation" type="components" />
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 import documentation from "../../../lib/components/InlineDropdown/docs/index.json";

@@ -22,7 +22,7 @@ import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
-import Homeinternet from '../components/promo/homeinternet.vue';
+// import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
 import Table from '../components/main-elements/Table.vue';
@@ -30,6 +30,7 @@ import DownloadContent from '../components/main-elements/DownloadContent.vue';
 import InlineDropdown from '../components/main-elements/InlineDropdown.vue';
 import Annotation from '../components/main-elements/Annotation.vue';
 import Tags from '../components/main-elements/Tags.vue'
+import Youtube from "../components/main-elements/Youtube.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -50,6 +51,7 @@ const index = [
   { path: '/inline-dropdown', name: 'app-inline-dropdown', component: InlineDropdown },
   { path: '/annotation', name: 'app-annotation', component: Annotation },
   { path: '/tags', name: 'app-tags', component: Tags },
+  { path: '/youtube', name: 'app-youtube', component: Youtube },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
@@ -66,7 +68,7 @@ const index = [
   { path: '/promo/tvtv', name: 'prcontent-min-heightomoTv', component: PromoTvTV },
   { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
-  { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
+  // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
 

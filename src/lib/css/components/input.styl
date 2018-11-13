@@ -1,111 +1,102 @@
-.input-element {
-  border: none;
-  width: 100%;
-  outline: none;
-  padding-bottom: 10px;
-  padding-right: 23px;
-  position: relative;
-  z-index: 2;
-  background-color: transparent;
-  color: main-color;
-  appearance: field;
-  .input--with-button & {
-    padding-right: horizontal-space*3
-  }
-  &[disabled] {
-    color: b2c-cool-grey03; //color: b2c-cool-grey05;
-  }
+.input-element
+  width 100%
+  color main-color
+  background-color transparent
+  border none
+  outline none
+  padding-bottom 10px
+  padding-right 23px
+  position relative
+  z-index 2
+  appearance field
+
+  .input--with-button &
+    padding-right horizontal-space * 3
+
+  &[disabled]
+    color b2c-cool-grey03 // color: b2c-cool-grey05;
+
   .{newAppName}-input--white &,
-  .{newAppName}-card--has-white-color &{
-    color: white;
-    .{newAppName}-dark-theme & {
-      color: white;
-    }
-  }
-  .{newAppName}-dark-theme & {
-    color: #fff;
-  }
-  .{newAppName}-card & {
-    color: main-color;
-  }
-}
+  .{newAppName}-card--has-white-color &
+    color white
 
+    .{newAppName}-dark-theme &
+      color white
 
-.input-clear {
-  position: absolute;
-  right: 0;
-  top: 25px;
-  cursor: pointer;
-  z-index: 2;
-  opacity: 0.7;
-  transition-timing-function: ease-in-out;
-  transition-property: opacity, transform;
-  transition-duration: 0.4s;
-  animation: 0.3s showClearInput ease-in-out;
-  &:hover {
-    opacity: 1;
-    transform: rotate(180deg)
+  .{newAppName}-dark-theme &
+    color #fff
 
-  }
-}
+  .{newAppName}-card &
+    color main-color
 
-.input-clear__icon {
-  fill: b2b-black;
+.input-clear
+  opacity .7
+  position absolute
+  top 25px
+  right 0
+  z-index 2
+  cursor pointer
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity, transform
+  animation .3s showClearInput ease-in-out
+
+  &:hover
+    opacity 1
+    transform rotate(180deg)
+
+.input-clear__icon
+  fill b2b-black
+
   .{newAppName}-dark-theme &,
-  .{newAppName}-input--white & {
-    fill: white;
-  }
-  .{newAppName}-card & {
-    fill: b2b-black;
-  }
-  .{newAppName}-card--has-white-color & {
-    fill: white;
-  }
-}
+  .{newAppName}-input--white &
+    fill white
 
-.input-arithmetic {
-  position: absolute
-  right: 0
-  top: 25px;
-  z-index: 2
-}
+  .{newAppName}-card &
+    fill b2b-black
 
-.input-arithmetic__button {
-  cursor: pointer
-  &+& {
-    margin-left: horizontal-space*0.5
-  }
-}
-.input-arithmetic__button-icon {
+  .{newAppName}-card--has-white-color &
+    fill white
+
+.input-arithmetic
+  position absolute
+  top 25px
+  right 0
+  z-index 2
+
+.input-arithmetic__button
+  cursor pointer
+
+  &+&
+    margin-left horizontal-space * .5
+
+.input-arithmetic__button-icon
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property stroke
   stroke b2c-dark
-  transition-timing-function: ease-in-out;
-  transition-property: stroke;
-  transition-duration: 0.4s;
-  .{newAppName}-dark-theme  & {
+
+  .{newAppName}-dark-theme &
     stroke b2b-white
-  }
+
   .{newAppName}-dark-theme .{newAppName}-dark-theme .input-arithmetic__button:hover,
   .{newAppName}-dark-theme .{newAppName}-dark-theme .input-arithmetic__button:focus,
   .input-arithmetic__button:focus &,
-  .input-arithmetic__button:hover & {
-    stroke: b2b-purple-low
-  }
-}
+  .input-arithmetic__button:hover &
+    stroke b2b-purple-low
 
-@keyframes showClearInput {
-  0% {
-    opacity: 0
-    visibility: hidden
-    transform: rotate(60deg)
-  }
-  50% {
-    opacity: 0.3
-    visibility: visible
-    transform: rotate(60deg)
-  }
-  100% {
-    opacity: 0.7
-    visibility: visible
-    transform: rotate(0deg)
-  }
-}
+@keyframes showClearInput
+  0%
+    opacity 0
+    visibility hidden
+    transform rotate(60deg)
+
+  50%
+    opacity .3
+    visibility visible
+    transform rotate(60deg)
+
+  100%
+    opacity .7
+    visibility visible
+    transform rotate(0)

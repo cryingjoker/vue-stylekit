@@ -42,3 +42,6 @@
  export { default as InlineDropdownItem } from './InlineDropdown/InlineDropdownItem.vue';
  export { default as Tag } from './Tag/Tag.vue';
  export { default as TagsList } from './Tag/TagsList.vue';
+ export { default as Filter } from './Filter/Filter.vue';
+ export { default as FilterWatcher } from './Filter/FilterWatcher.vue';
+ export { default as Youtube } from './Youtube/Youtube.vue';

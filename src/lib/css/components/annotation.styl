@@ -1,111 +1,104 @@
-.{newAppName}-annotation {
-    font-size: 12px;
-    &__arrow {
-        fill b2c-dark
-        transition-timing-function: ease-in-out;
-        transition-property: fill;
-        transition-duration: 0.2s;
-        .{newAppName}-annotation--white-color,
-        .{newAppName}-dark-theme & {
-            fill b2b-white
-        }
-    }
-    &__title {
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        padding-left: 20px
-        &:before {
-            content: ''
-            position: absolute
-            bottom: -2px
-            width: 0
-            height: 1px
-            left: 20px
-            background-color: b2b-black03
-            transition-timing-function: cubic-bezier(1, .2, .9, .65);
-            transition-property: width;
-            transition-duration: 0.2s;
-            .{newAppName}-annotation:hover & {
-                width: calc(100% - 20px)
-            }
-            .{newAppName}-annotation--white-color &,
-            .{newAppName}-dark-theme & {
-                background-color: b2b-white03
-            }
+.{newAppName}-annotation
+  font-size 12px
 
-        }
-        .{newAppName}-annotation--is-open & {
-            text-decoration: none
-        }
-    }
-    &__arrow {
-        position: absolute;
-        left: 0px;
-        top: 0;
-        bottom: 0;
-        margin-top: auto;
-        margin-bottom: auto;
-        transition-timing-function: ease-in-out;
-        transition-property: transform;
-        transition-duration: 0.3s;
-        transform: rotate(-90deg);
-        .{newAppName}-annotation--white-color & {
-            fill: rgba(#ffffff, 0.5);
-        }
-        .{newAppName}-annotation--is-open & {
-            transform: rotate(0deg);
-        }
+  &__arrow
+    transition-timing-function ease-in-out
+    transition-duration .2s
+    transition-property fill
+    fill b2c-dark
 
-    }
-    &__content {
-        max-height: 0px;
-        padding-top: 0;
-        padding-left: horizontal-space;
-        transition-timing-function: cubic-bezier(10, 2, .9, .65);
-        transition-property: max-height, padding;
-        transition-duration: 0.3s;
-        overflow: hidden;
-        color: b2b-black05;
-        position: relative
-        .{newAppName}-dark-theme & {
-            color: b2b-white
-        }
-        &:before {
-            content: ''
-            background-color: b2b-black01
-            width: 1px
-            height: 0
-            transition-timing-function: ease-in-out;
-            transition-property: height;
-            transition-duration: 0.3s;
-            position: absolute
-            left: 6px
-            top: 20px
-            .{newAppName}-annotation--white-color & {
-                background-color: b2b-white03
-            }
-            .{newAppName}-annotation--is-open & {
-                height: calc(100% - 20px)
-            }
-            .{newAppName}-annotation--white-color &,
-            .{newAppName}-dark-theme & {
-                background-color: b2b-white05
-            }
+    .{newAppName}-annotation--white-color,
+    .{newAppName}-dark-theme &
+      fill b2b-white
 
-        }
-        .{newAppName}-annotation--white-color {
-            color: b2b-white05;
-        }
+  &__title
+    display inline-block
+    padding-left 20px
+    position relative
+    cursor pointer
 
-        .{newAppName}-annotation--is-open & {
-            max-height: 300vh;
-            padding-top: 10px;
-        }
-    }
+    &:before
+      content ""
+      width 0
+      height 1px
+      background-color b2b-black03
+      position absolute
+      bottom -2px
+      left 20px
+      transition-timing-function cubic-bezier(1, .2, .9, .65)
+      transition-duration .2s
+      transition-property width
 
-    &-item {
-        padding-top horizontal-space*0.5;
-    }
-}
+      .{newAppName}-annotation:hover &
+        width calc(100% - 20px)
 
+      .{newAppName}-annotation--white-color &,
+      .{newAppName}-dark-theme &
+        background-color b2b-white03
+
+    .{newAppName}-annotation--is-open &
+      text-decoration none
+
+  &__arrow
+    margin-top auto
+    margin-bottom auto
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    transform rotate(-90deg)
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property transform
+
+    .{newAppName}-annotation--white-color &
+      fill rgba(#ffffff, .5)
+
+    .{newAppName}-annotation--is-open &
+      transform rotate(0)
+
+  &__content
+    max-height 0
+    overflow hidden
+    color b2b-black05
+    padding-top 0
+    padding-left horizontal-space
+    position relative
+    transition-timing-function cubic-bezier(10, 2, .9, .65)
+    transition-duration .3s
+    transition-property max-height, padding
+
+    .{newAppName}-dark-theme &
+      color b2b-white
+
+    &:before
+      content ""
+      width 1px
+      height 0
+      background-color b2b-black01
+      position absolute
+      top 20px
+      left 6px
+      transition-timing-function ease-in-out
+      transition-duration .3s
+      transition-property height
+
+      .{newAppName}-annotation--white-color &
+        background-color b2b-white03
+
+      .{newAppName}-annotation--is-open &
+        height calc(100% - 20px)
+
+      .{newAppName}-annotation--white-color &,
+      .{newAppName}-dark-theme &
+        background-color b2b-white05
+
+    .{newAppName}-annotation--white-color
+      color b2b-white05
+
+    .{newAppName}-annotation--is-open &
+      max-height 300vh
+      padding-top 10px
+
+  &-item
+    padding-top horizontal-space * .5

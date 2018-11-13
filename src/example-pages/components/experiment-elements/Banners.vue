@@ -4,9 +4,7 @@
       <div class="grid-center" />
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-          <div class="row">
-            <h1 class="rt-font-hero rt-col">Banners</h1>
-          </div>
+          <div class="row"><h1 class="rt-font-hero rt-col">Banners</h1></div>
         </div>
       </div>
     </div>
@@ -75,13 +73,12 @@
     />
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder type="components" :json="documentation" />
+      <documentation-builder :json="documentation" type="components" />
     </div>
   </div>
 </template>
 
 <script>
-
 // import documentation from "../../../lib/components/Annotation/docs/index.json";
 import documentation from "../../../lib/components/Banner/docs/index.json";
 import componentsList from "../../componentsList";
@@ -90,7 +87,6 @@ export default {
   name: "AppBanners",
   components: componentsList,
   data: () => ({
-
     documentation: {}
   }),
   mounted() {

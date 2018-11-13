@@ -1,22 +1,35 @@
 <template>
-  <div class="rt-card" :class="cardClass" :style="cardStyle">
-    <div v-if="backgroundImageStandAlone" class="rt-card__stand-alone-background" :style="standAloneBackgroundStyle" />
-    <div class="rt-card__background" :style="cardBackgroundStyle" :class="cardBackgroundClass" />
-    <div class="rt-card__content" :cardContentStyle="cardContentStyle" :class="cardContentClass">
-      <div v-if="$slots.header" class="rt-card__header" :style="cardHeaderStyle">
+  <div :class="cardClass" :style="cardStyle" class="rt-card">
+    <div
+      v-if="backgroundImageStandAlone"
+      :style="standAloneBackgroundStyle"
+      class="rt-card__stand-alone-background"
+    />
+    <div
+      :style="cardBackgroundStyle"
+      :class="cardBackgroundClass"
+      class="rt-card__background"
+    />
+    <div
+      :cardContentStyle="cardContentStyle"
+      :class="cardContentClass"
+      class="rt-card__content"
+    >
+      <div
+        v-if="$slots.header"
+        :style="cardHeaderStyle"
+        class="rt-card__header"
+      >
         <slot name="header" />
       </div>
-      <div class="rt-card__body" :class="cardBodyClass" :style="bodyStyle">
+      <div :class="cardBodyClass" :style="bodyStyle" class="rt-card__body">
         <slot name="content" />
       </div>
 
       <div v-if="$slots['bottom-list']" class="rt-card__bottom-list">
         <slot name="bottom-list" />
       </div>
-      <div class="rt-card__footer">
-        <slot name="footer" />
-      </div>
-
+      <div class="rt-card__footer"><slot name="footer" /></div>
     </div>
   </div>
 </template>
@@ -336,6 +349,6 @@ export default {
       }
       return size;
     }
-  },
+  }
 };
 </script>

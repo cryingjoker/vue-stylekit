@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <slot />
-  </div>
+  <div><slot /></div>
 </template>
 <script>
 import debounce from "debounce";

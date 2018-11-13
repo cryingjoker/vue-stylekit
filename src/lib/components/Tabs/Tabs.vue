@@ -1,11 +1,9 @@
 <template>
   <div class="rt-tabs">
-    <div class="rt-tabs-navigation" :style="navigationStyle">
+    <div :style="navigationStyle" class="rt-tabs-navigation">
       <slot name="navigation" />
     </div>
-    <div class="rt-tabs-content">
-      <slot name="content" />
-    </div>
+    <div class="rt-tabs-content"><slot name="content" /></div>
   </div>
 </template>
 

@@ -1,332 +1,316 @@
-@font-face {
-    font-family: "RT Code";
-    src: url("./app-fonts/Menlo-Regular.eot");
-    src: url("./app-fonts/Menlo-Regular.eot?#iefix") format("embedded-opentype"), url("./app-fonts/Menlo-Regular.woff") format("woff"), url("./app-fonts/Menlo-Regular.woff2") format("woff2"), url("./app-fonts/Menlo-Regular.ttf") format("ttf");
-    font-style: normal;
-    font-weight: 200;
-}
+@font-face
+  font-family "RT Code"
+  font-weight 200
+  font-style normal
+  src url("./app-fonts/Menlo-Regular.eot")
+  src url("./app-fonts/Menlo-Regular.eot?#iefix") format("embedded-opentype"), url("./app-fonts/Menlo-Regular.woff") format("woff"), url("./app-fonts/Menlo-Regular.woff2") format("woff2"), url("./app-fonts/Menlo-Regular.ttf") format("ttf")
 
-@import "../../develover-lib/css/editor";
+@import "../../develover-lib/css/editor"
 
+.app
+  &--hide-scroll
+    @media (max-width: mobile-step-size)
+      overflow hidden
 
-.app {
-    &--hide-scroll {
-        @media (max-width: mobile-step-size) {
-            overflow: hidden;
-        }
-    }
-    &-title {
-        margin-bottom: 25px;
-        padding-top: 40px;
-        .{newAppName}-font-hero {
-            text-decoration: underline;
-            text-decoration-color: b2b-red-hight;
-        }
-    }
-    &-row {
-        &+& {
-            margin-top: 40px;
-        }
-    }
-    &-content {
-        flex: 1;
-        padding-top: 50px;
-        padding-bottom: 30px;
-    }
-    &-col-fill{
-        position: relative;
-        min-height: 40px;
-        color: dark-theme-background;
-        font-size: 15px;
-        text-align: center;
-        line-height: 40px;
-        &__text{
-            position: relative;
-            z-index: 2;
-        }
-        &:before{
-            content: '';
-            z-index: 1;
-            position: absolute;
-            left: 10px;
-            height: 100%;
-            right: 10px;
-            background-color: rgba(255,192,203,0.5)
-        }
-    }
-}
+  &-title
+    margin-bottom 25px
+    padding-top 40px
 
-.menu-trigger {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 900;
-    cursor: pointer;
-    color: b2c-red-low;
-    text-decoration: underline;
-}
+    .{newAppName}-font-hero
+      text-decoration underline
+      text-decoration-color b2b-red-hight
 
-.aside {
-    &-menu {
-        overflow: auto;
-        font-size: 14px;
-        box-sizing: border-box;
-        transition-duration: 0.3s;
-        transition-property: left;
-        transition-timing-function: ease-in-out;
-        height: 100vh;
-        top: 0;
-        @media (min-width: mobile-step-size) {
-            left: -370px;
-        }
-        background-color: #fff;
-        z-index: 1000;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 380px;
-        padding-bottom: 60px;
-        .{newAppName}-dark-theme & {
-            background-color: dark-theme-background;
-        }
-        &:hover {
-            @media (min-width: mobile-step-size) {
-                left: 0;
-            }
-        }
-        @media (max-width: mobile-step-size) {
-            overflow-y: auto;
-            padding-top: vertical-space*2;
-            background-color: #fff;
-            z-index: 999;
-            max-width: 100vw;
-            padding-right: 0px;
-            left: -120vw;
-            &--active {
-                @media (max-width: mobile-step-size) {
-                    left: 0px;
-                }
-            }
-        }
-        padding-top: 100px;
-        border-right: 1px solid b2b-cool-gray05;
-        &__submenu-title {
-            margin-left: 25px;
-            margin-right: 15px;
-            border-bottom: 1px solid b2b-cool-gray;
-            margin-top: 16px;
-            padding-bottom: 5px;
-        }
-        &__link {
-            color: b2b-black06;
-            text-decoration: none !important;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            display: block;
-            padding-left: 30px;
-            padding-right: 15px;
-            transition-duration: 0.3s;
-            transition-property: background, color;
-            transition-timing-function: ease-in-out;
-            cursor: pointer;
-            position: relative;
-            .{newAppName}-dark-theme & {
-                color: b2b-cool-gray05
-            }
-            &:before {
-                content: '';
-                width: 10px;
-                height: 1px;
-                position: absolute;
-                left: 10px;
-                top: 0;
-                bottom: 0;
-                opacity: 0;
-                margin-top: auto;
-                background-color: b2b-red-hight;
-                margin-bottom: auto;
-                transition-duration: 0.3s;
-                transition-property: opacity;
-                transition-timing-function: ease-in-out;
-                will-change: opacity;
-            }
-            &:hover,
-            &:focus {
-                color: b2b-black;
-                .{newAppName}-dark-theme & {
-                    color: white;
-                }
-            }
-            &--active {
-                color: b2b-black;
-                &:before {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    &-sub-menu {
-        margin-left: 20px;
-        padding-top: vertical-space;
-        @media (max-width: mobile-step-size) {
-            margin-left: 0;
-        }
-    }
-}
+  &-row
+    &+&
+      margin-top 40px
 
-.dark-theme-switcher {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+  &-content
+    flex 1
+    padding-top 50px
+    padding-bottom 30px
 
-.{newAppName}-code {
-    font-family: "RT Code";
-    display: inline-block;
-    color: b2b-red-hight;
-  &--fill{
-    background-color: rgba(#E2C892,0.3);
-    padding-left: 5px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: -5px;
-    margin-right: 6px;
-    padding-right: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    .app-documentation__warning &{
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-  &--component{
-    background-color: rgba(#aaaaaa,0.3);
-    color: b2b-green-low;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: -5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+  &-col-fill
+    min-height 40px
+    color dark-theme-background
+    font-size 15px
+    line-height 40px
+    text-align center
+    position relative
 
-  }
-}
-.app-documentation {
-  font-size: 12px;
-  font-family: "RT Code";
-  line-height: 1.5;
-  em {
-      font-style italic
-  }
-  code {
-    display: inline-block;
-    border: 1px solid #e4e4e4;
-    background: #f7f7f7;
-    border-radius: 2px;
-    white-space: pre-wrap;
-    padding: 1px 4px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-size: 100%
-    color: #d16464!important;
-  }
-  &__warning{
-    text-decoration: underline;
-    text-decoration-color: #0c8cd1;
-    text-decoration-style: double;
-    margin-bottom: 5px;
-    display: inline-block;
-    &:before{
-      content: '! ';
-      color: #0c8cd1;
-    }
-    &:after{
-      content: ' !';
-      color: #0c8cd1;
-    }
-  }
-  &__row {
-    display: flex;
-    flex-direction: row;
-    &+&{
-      border-top: 1px solid rgba(#aaaaaa,0.3);
-    }
-    &.rt-font-bold{
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-    &.rt-font-bold + &{
-      border-top-width: 0;
-    }
-  }
-}
+    &__text
+      position relative
+      z-index 2
 
-.grid-switcher {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+    &:before
+      content ""
+      height 100%
+      background-color rgba(255, 192, 203, .5)
+      position absolute
+      left 10px
+      right 10px
+      z-index 1
 
-.grid {
-    pointer-events: none;
-    &--active {
-        bottom: 0;
-        height: 100vh;
-    }
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 100vh;
-    height: 0;
-    transition-duration: 0.3s;
-    transition-property: height, bottom;
-    transition-timing-function: ease-in-out;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    left: 80px;
-    right: 80px;
-    z-index: 200;
-    @media (max-width: mobile-step-size) {
-        left: 20px;
-        right: 20px;
-    }
-    .row {
-        height: 100vh;
-    }
-    .demo-col {
-        &:before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            right: 10px;
-            top: 0;
-            bottom: 0;
-            background-color: rgba(#7700FF, 0.02);
-            border-left: 1px solid rgba(b2c-orange-low, 0.3);
-            border-right: 1px solid rgba(b2c-orange-low, 0.3);
-            box-sizing: border-box;
-            .{newAppName}-dark-theme & {
-                background-color: rgba(#fff, 3%);
-            }
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            left: 30px;
-            right: 30px;
-            top: 0;
-            bottom: 0;
-            border-left: 1px solid rgba(b2c-red-low, 0.35);
-            border-right: 1px solid rgba(b2c-red-low, 0.35);
-            box-sizing: border-box;
-        }
-    }
-}
+.menu-trigger
+  color b2c-red-low
+  text-decoration underline
+  position absolute
+  top 20px
+  left 20px
+  z-index 900
+  cursor pointer
 
-.app-sticked {
-    top: 0;
-}
+.aside
+  &-menu
+    height 100vh
+    box-sizing border-box
+    overflow auto
+    font-size 14px
+    top 0
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property left
 
+    @media (min-width: mobile-step-size)
+      left -370px
+
+    width 380px
+    background-color #fff
+    padding-bottom 60px
+    position fixed
+    top 0
+    bottom 0
+    z-index 1000
+
+    .{newAppName}-dark-theme &
+      background-color dark-theme-background
+
+    &:hover
+      @media (min-width: mobile-step-size)
+        left 0
+
+    @media (max-width: mobile-step-size)
+      max-width 100vw
+      overflow-y auto
+      background-color #fff
+      padding-top vertical-space * 2
+      padding-right 0
+      left -120vw
+      z-index 999
+
+      &--active
+        @media (max-width: mobile-step-size)
+          left 0
+
+    border-right 1px solid b2b-cool-gray05
+    padding-top 100px
+
+    &__submenu-title
+      border-bottom 1px solid b2b-cool-gray
+      margin-top 16px
+      margin-left 25px
+      margin-right 15px
+      padding-bottom 5px
+
+    &__link
+      display block
+      color b2b-black06
+      text-decoration none !important
+      padding-top 10px
+      padding-bottom 10px
+      padding-left 30px
+      padding-right 15px
+      position relative
+      cursor pointer
+      transition-timing-function ease-in-out
+      transition-duration .3s
+      transition-property background, color
+
+      .{newAppName}-dark-theme &
+        color b2b-cool-gray05
+
+      &:before
+        content ""
+        width 10px
+        height 1px
+        background-color b2b-red-hight
+        margin-top auto
+        margin-bottom auto
+        opacity 0
+        position absolute
+        top 0
+        bottom 0
+        left 10px
+        transition-timing-function ease-in-out
+        transition-duration .3s
+        transition-property opacity
+        will-change opacity
+
+      &:hover,
+      &:focus
+        color b2b-black
+
+        .{newAppName}-dark-theme &
+          color white
+
+      &--active
+        color b2b-black
+
+        &:before
+          opacity 1
+
+  &-sub-menu
+    margin-left 20px
+    padding-top vertical-space
+
+    @media (max-width: mobile-step-size)
+      margin-left 0
+
+.dark-theme-switcher
+  position absolute
+  top 20px
+  right 20px
+
+.{newAppName}-code
+  display inline-block
+  color b2b-red-hight
+  font-family "RT Code"
+
+  &--fill
+    background-color rgba(#E2C892, .3)
+    border-radius 5px
+    margin-top 3px
+    margin-bottom 3px
+    margin-left -5px
+    margin-right 6px
+    padding-top 3px
+    padding-bottom 3px
+    padding-left 5px
+    padding-right 5px
+
+    .app-documentation__warning &
+      margin-left 0
+      margin-right 0
+
+  &--component
+    color b2b-green-low
+    background-color rgba(#aaaaaa, .3)
+    border-radius 5px
+    margin-bottom 5px
+    margin-left -5px
+    padding-top 3px
+    padding-bottom 3px
+    padding-left 5px
+    padding-right 5px
+
+.app-documentation
+  font-family "RT Code"
+  font-size 12px
+  line-height 1.5
+
+  em
+    font-style italic
+
+  code
+    display inline-block
+    color #d16464 !important
+    font-size 100%
+    white-space pre-wrap
+    background #f7f7f7
+    border 1px solid #e4e4e4
+    border-radius 2px
+    margin-top 2px
+    margin-bottom 2px
+    padding 1px 4px
+
+  &__warning
+    display inline-block
+    text-decoration underline
+    margin-bottom 5px
+    text-decoration-color #0c8cd1
+    text-decoration-style double
+
+    &:before
+      content "! "
+      color #0c8cd1
+
+    &:after
+      content " !"
+      color #0c8cd1
+
+  &__row
+    display flex
+    flex-direction row
+
+    &+&
+      border-top 1px solid rgba(#aaaaaa, .3)
+
+    &.rt-font-bold
+      font-size 14px
+      text-transform uppercase
+
+    &.rt-font-bold + &
+      border-top-width 0
+
+.grid-switcher
+  position absolute
+  top 20px
+  right 20px
+
+.grid
+  pointer-events none
+
+  &--active
+    height 100vh
+    bottom 0
+
+  max-width 1320px
+  height 0
+  overflow hidden
+  margin-left auto
+  margin-right auto
+  position fixed
+  top 0
+  bottom 100vh
+  left 80px
+  right 80px
+  z-index 200
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property height, bottom
+
+  @media (max-width: mobile-step-size)
+    left 20px
+    right 20px
+
+  .row
+    height 100vh
+
+  .demo-col
+    &:before
+      content ""
+      box-sizing border-box
+      background-color rgba(#7700FF, .02)
+      border-left 1px solid rgba(b2c-orange-low, .3)
+      border-right 1px solid rgba(b2c-orange-low, .3)
+      position absolute
+      top 0
+      bottom 0
+      left 10px
+      right 10px
+
+      .{newAppName}-dark-theme &
+        background-color rgba(#fff, 3%)
+
+    &:after
+      content ""
+      box-sizing border-box
+      border-left 1px solid rgba(b2c-red-low, .35)
+      border-right 1px solid rgba(b2c-red-low, .35)
+      position absolute
+      top 0
+      bottom 0
+      left 30px
+      right 30px
+
+.app-sticked
+  top 0
