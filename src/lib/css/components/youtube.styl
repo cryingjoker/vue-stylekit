@@ -1,6 +1,10 @@
 .rt-youtube
   display: inline-block
   position: relative
+  width: 940px
+  height: 400px
+  background-color: #000
+  box-shadow 0 0 10px 0 #000
 
 .rt-youtube__controls
   position: absolute
@@ -9,3 +13,102 @@
   bottom: 0
   left: 0
   right: 0
+
+.rt-youtube__control-icon
+  width: 27px
+  height: 30px
+
+.rt-youtube__play,
+.rt-youtube__pause
+  background-color: b2c-purple-low
+  width: 50px
+  height: 50px
+  cursor: pointer
+  fill #fff
+  border-radius 50%
+  margin auto
+  position: absolute
+  display: flex
+  justify-content  center
+  align-items center
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity, visibility
+  right: 0
+  left: 0
+  bottom: 20px
+.rt-youtube__play
+  .rt-youtube &
+    opacity: 0.5
+    visibility: visible
+    &:hover
+      opacity: 1
+  .rt-youtube--is-active &
+    opacity: 0
+    visibility: hidden
+
+.rt-youtube__pause
+  .rt-youtube &
+    opacity: 0
+    visibility: hidden
+  .rt-youtube--is-active &
+    opacity: 0
+    visibility: visible
+  .rt-youtube--is-active:hover &
+    opacity: 0.5
+
+  .rt-youtube--is-active:hover &:hover
+      opacity: 1
+.rt-youtube___not-ready
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  align-items center
+  justify-content center
+.rt-youtube___pause-image
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-size: cover
+  background-position: center
+  .rt-youtube--is-active &
+    opacity: 0
+    visibility: hidden
+    transition-timing-function ease-in-out
+    transition-duration .4s
+    transition-property opacity, visibility
+
+.rt-youtube__next
+  position: absolute
+  z-index: 1
+  background-color: b2c-purple-low
+  width: 50px
+  height: 50px
+  cursor: pointer
+  fill #fff
+  right: 20px
+  top: 0
+  bottom: 0
+  margin auto
+  opacity: 0
+  visibility: hidden
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity, visibility
+  cursor: pointer
+  border-radius 50%
+  display: flex
+  justify-content  center
+  align-items center
+
+  .rt-youtube--is-active:hover &
+    opacity: 0.5
+    visibility: visible
+    &:hover
+      opacity: 1
+
