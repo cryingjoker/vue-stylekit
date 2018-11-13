@@ -15,17 +15,14 @@
     },
     methods: {
       setPropsToChildren() {
-        // console.info('this',this)
         this.$children.forEach((vNode) => {
           if (vNode && vNode.index !== "undefinded") {
             vNode.$set(vNode,'index',this.index);
           }
 
-          // console.debug('**',vNode,vNode.$on);
-          this.$on = (...args) => {
-            // custom logic here like pushing to a callback array or something
-            old_on.apply(this, args);
-          };
+          // this.$on = (...args) => {
+          //   old_on.apply(this, args);
+          // };
 
           // var oldEmit = vNode.compiler.emitter.emit
           // vNode.compiler.emitter.emit = function () {
