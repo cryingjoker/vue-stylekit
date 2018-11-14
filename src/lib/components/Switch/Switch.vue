@@ -7,7 +7,6 @@
       name="test"
       type="checkbox"
       class="switch-element"
-      @change="inputHandler"
     />
     <div class="switch-container">
       <div class="switch-container__circle">
@@ -53,11 +52,12 @@ export default {
   },
   methods: {
     bindEvents() {
+
       if (this["_events"]) {
-        Object.keys(this["_events"]).map(eventName => {
+        Object.keys(this["$listeners"]).map(eventName => {
           this.$refs.input.addEventListener(
             eventName,
-            this["_events"][eventName]
+            this["$listeners"][eventName]
           );
         });
       }

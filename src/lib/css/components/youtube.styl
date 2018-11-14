@@ -1,10 +1,18 @@
 .rt-youtube
   display: inline-block
   position: relative
-  width: 940px
-  height: 400px
+  height 56.25%
+  width 100%
   background-color: #000
   box-shadow 0 0 10px 0 #000
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 .rt-youtube__controls
   position: absolute
@@ -112,3 +120,37 @@
     &:hover
       opacity: 1
 
+.rt-youtube__volume
+  position: absolute
+  bottom: 20px
+  left: 20px
+
+.rt-youtube__volume__line
+  width: 100px
+  height: 5px
+  border-radius 3px
+  background-color: rgba(255,255,255,0.3);
+  z-index: 2
+  position: absolute
+  box-shadow 1px 1px 1px rgba(0,0,0,0.4)
+  cursor: pointer
+
+.rt-youtube__volume__now-line
+  height: 5px
+  background-color: b2c-purple-low
+  border-radius 3px
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+
+.rt-youtube__volume__point
+  position: absolute
+  width: 15px
+  height: 15px
+  top: -5px
+  margin-left: -5px
+  background-color: #fff
+  border-radius 50%
+  box-shadow 0px 0px 2px rgba(0,0,0,0.8)
+  cursor: pointer

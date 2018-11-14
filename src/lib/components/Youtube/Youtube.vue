@@ -1,6 +1,11 @@
+
 <script type="text/jsx">
+  import YoutubeVolume from './YoutubeVolume.vue'
+  const components = {};
+  components[YoutubeVolume.name] = YoutubeVolume;
   export default {
     name: "RtYoutube",
+    components: components,
     props: {
       videoId : {
         type: Array,
@@ -41,8 +46,8 @@
       createPlayer(){
           const height = 400;
           this.player = new YT.Player("player-"+this._uid, {
-            height: height,
-            width: height*2.35,
+            height: '56.25%',
+            width: '100%',
             videoId: this.videoId[this.activeIndexVideo],
             playerVars: {
               "autoplay" :"0",
@@ -79,10 +84,21 @@
       },
       playVideo(){
         this.player.playVideo();
-         this.isPlaying = true;
+        this.isPlaying = true;
+      },
+      changeVolume(newVolume){
+        this.player.setVolume(newVolume*100);
+      },
+    },
+    computed:{
+      playerVolume(){
+        console.info('this.player.getVolume',this.player.getVolume())
+        setTimeout(()=>{
+          console.info('this.player.getVolume',this.player.getVolume());
+        },1000)
+         return this.player.getVolume();
       }
     },
-
     render(){
       const backgroundImage = (()=>{
         if(this.pauseImage) {
@@ -97,6 +113,7 @@
       const videoControls = (()=>{
         if(this.videoIsReady) {
           return <div class="rt-youtube__play-control">
+            <rt-youtube-volume default-volume={this.playerVolume} onChange={this.changeVolume}></rt-youtube-volume>
             <div class="rt-youtube__play" onClick={this.playVideo}>
               <svg class="rt-youtube__control-icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
                    viewBox="0 0 191.255 191.255">
