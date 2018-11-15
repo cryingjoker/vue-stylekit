@@ -1,5 +1,11 @@
 
 <script type="text/jsx">
+  // YT.PlayerState.ENDED
+  // YT.PlayerState.PLAYING
+  // YT.PlayerState.PAUSED
+  // YT.PlayerState.BUFFERING
+  // YT.PlayerState.CUED
+
   import YoutubeVolume from './YoutubeVolume.vue'
   const components = {};
   components[YoutubeVolume.name] = YoutubeVolume;
@@ -19,6 +25,7 @@
     data: () => ({
       videoIsReady: false,
       player: null,
+      playerState: '-1',
       isPlaying: false,
       activeIndexVideo: 0
     }),
@@ -33,7 +40,7 @@
         if (typeof YT === 'undefined' && apiScript === null) {
           let tag = document.createElement('script');
           tag.src = 'https://www.youtube.com/iframe_api';
-          tag.onload = this.init
+          tag.onload = this.init;
           document.getElementsByTagName('body')[0].appendChild(tag);
         }else{
           if(typeof YT === 'undefined' || !YT.Player) {
@@ -42,6 +49,10 @@
             this.createPlayer();
           }
         }
+      },
+      onStateChange(event){
+        this.playerState = event.data;
+        // console.info('event onStateChange',event,YT.PlayerState.ENDED);
       },
       createPlayer(){
           const height = 400;
@@ -64,6 +75,7 @@
             },
             events: {
               'onReady': this.setVideoReady,
+              'onStateChange': this.onStateChange
             }
           });
       },
@@ -82,21 +94,41 @@
         }
         this.player.loadVideoById(this.videoId[this.activeIndexVideo])
       },
+      volumeFadeIn(){
+        let volume = this.player.getVolume();
+        volume+=1
+        this.changeVolume(volume);
+        if(volume < 100){
+          setTimeout( () => {
+            // console.info('volume',volume);
+            this.volumeFadeIn();
+          },100)
+        }
+      },
       playVideo(){
+
+
         this.player.playVideo();
-        this.isPlaying = true;
+        setTimeout(()=> {
+          this.changeVolume(0);
+        })
+        setTimeout(()=>{
+          this.volumeFadeIn();
+          this.isPlaying = true;
+        },10)
       },
       changeVolume(newVolume){
-        this.player.setVolume(newVolume*100);
+        this.player.setVolume(newVolume/100);
       },
     },
     computed:{
       playerVolume(){
-        console.info('this.player.getVolume',this.player.getVolume())
-        setTimeout(()=>{
-          console.info('this.player.getVolume',this.player.getVolume());
-        },1000)
          return this.player.getVolume();
+      }
+    },
+    watch:{
+      playerState(oldVal,newVal){
+        consoel.info('playerState has been changed ' ,oldVal,newVal);
       }
     },
     render(){

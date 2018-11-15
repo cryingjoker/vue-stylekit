@@ -4,35 +4,6 @@
       <div class="app-title"><h1 class="rt-font-hero rt-col">Input</h1></div>
       <div class="app-body">
         <div class="app-row row">
-          <p class="rt-font-h3 rt-col">Input without js</p>
-        </div>
-        <div class="app-row row">
-          <div class="rt-col-3 rt-col-md-3">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple input</span
-            >
-            <pre-code
-              text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; placeholder=&quot;Электронная почта&quot;/>"
-            />
-          </div>
-          <div class="rt-col-3 rt-col-md-3 rt-md-space-top">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >input with error</span
-            >
-            <pre-code
-              text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; placeholder=&quot;Электронная почта&quot; :has-error=&quot;true&quot;/>"
-            />
-          </div>
-          <div class="rt-col-3 rt-col-md-3 rt-md-space-top">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >disabled input</span
-            >
-            <pre-code
-              text="<rt-input-without-js value=&quot;&quot; error-message=&quot;ошибка: не является почтой&quot; :disabled=&quot;true&quot; placeholder=&quot;Электронная почта&quot;/>"
-            />
-          </div>
-        </div>
-        <div class="app-row row">
           <p class="rt-font-h3 rt-col">Input with js</p>
         </div>
         <div class="app-row row">
@@ -41,7 +12,7 @@
               >simple input</span
             >
             <pre-code
-              text="<rt-input type=&quot;string&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />"
+              text="<rt-input label=&quot;Начните вводить почту&quot; type=&quot;string&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />"
             />
           </div>
           <div class="rt-col-4 rt-col-md-2 rt-md-space-top">
@@ -108,20 +79,28 @@
         />
         <rt-input :show-nubmers-buttons="true" insert-type="number" />
       </div>
+
+    </div>
+    <div class="rt-space-top25">
+      <documentation-builder :json="documentation" type="components" />
     </div>
   </div>
 </template>
 
 <script>
+  import documentation from "../../../lib/components/Input/docs/index.json";
 // const componentsList = {};
 import componentsList from "../../componentsList";
 export default {
   name: "AppInput",
   components: componentsList,
   data: () => ({
-    inputModelValue: "test"
+    inputModelValue: "test",
+    documentation: {}
   }),
-  mounted() {},
+  mounted() {
+    this.documentation = documentation;
+  },
   created() {},
   methods: {}
 };

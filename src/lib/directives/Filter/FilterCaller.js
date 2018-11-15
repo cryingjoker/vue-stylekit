@@ -7,7 +7,7 @@ class FilterCaller {
     this.vnode = vnode;
   }
   bind = ()=>{
-    console.info('!!',this)
+    // console.info('!!',this)
   }
 
   // update = (el) => {
@@ -41,13 +41,13 @@ export const FilterCallerDirective = {
   // isFn: true,
   inject: ['foo'],
   bind (el, bindings, vnode) {
-    console.info('#### vnode',vnode);
+    // console.info('#### vnode',vnode);
   },
   update(el, bindings, vnode){
-    console.info('#### vnode',vnode);
+    // console.info('#### vnode',vnode);
   },
   beforeDestroy(){
-    console.info('#### vnode',vnode);
+    // console.info('#### vnode',vnode);
     // vnode.context.OutsideClick.unbind(el);
   }
 };
