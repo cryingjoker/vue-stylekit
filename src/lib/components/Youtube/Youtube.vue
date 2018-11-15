@@ -7,8 +7,10 @@
   // YT.PlayerState.CUED
 
   import YoutubeVolume from './YoutubeVolume.vue'
+  import YoutubeFraction from './YoutubeFraction.vue'
   const components = {};
   components[YoutubeVolume.name] = YoutubeVolume;
+  components[YoutubeFraction.name] = YoutubeFraction;
   export default {
     name: "RtYoutube",
     components: components,
@@ -27,7 +29,8 @@
       player: null,
       playerState: '-1',
       isPlaying: false,
-      activeIndexVideo: 0
+      activeIndexVideo: 0,
+      loadedFraction: 0
     }),
 
     mounted: function() {
@@ -81,6 +84,8 @@
       },
       setVideoReady(){
         this.videoIsReady = true;
+        this.getLoadedFraction();
+        this.isMute = this.player.isMuted();
       },
       stopVideo(){
         this.player.pauseVideo();
@@ -103,6 +108,25 @@
             // console.info('volume',volume);
             this.volumeFadeIn();
           },100)
+        }
+      },
+      setMuteParams(isMute){
+        if(!isMute){
+          this.player.mute();
+        }else{
+          this.player.unMute();
+        }
+        console.info('getIframe -->> ',this.player.getIframe);
+      },
+      getLoadedFraction(){
+        if(this.loadedFraction !== this.player.getVideoLoadedFraction()) {
+          this.loadedFraction = this.player.getVideoLoadedFraction();
+        }
+
+        if(this.loadedFraction < 1){
+          setTimeout(()=>{
+            this.getLoadedFraction();
+          },500)
         }
       },
       playVideo(){
@@ -128,7 +152,7 @@
     },
     watch:{
       playerState(oldVal,newVal){
-        consoel.info('playerState has been changed ' ,oldVal,newVal);
+        console.info('playerState has been changed ' ,oldVal,newVal);
       }
     },
     render(){
@@ -142,32 +166,45 @@
           return null
         }
       })()
+      const playButton = (()=>{
+        if(!this.isPlaying) {
+          return <div className="rt-youtube__play" onClick={this.playVideo}>
+            <svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="smart-home-copy" transform="translate(-273.000000, -2232.000000)" fill="#FFFFFF"
+                   fill-rule="nonzero">
+                  <polygon id="ic-play"
+                           transform="translate(278.000000, 2238.500000) rotate(-270.000000) translate(-278.000000, -2238.500000) "
+                           points="272 2243 278 2234 284 2243"></polygon>
+                </g>
+              </g>
+            </svg>
+          </div>
+        }else {
+          return <div className="rt-youtube__pause" onClick={this.stopVideo}>
+            <svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="smart-home-copy" transform="translate(-273.000000, -1119.000000)" fill="#FFFFFF"
+                   fill-rule="nonzero">
+                  <g id="Group" transform="translate(273.000000, 1119.000000)">
+                    <rect id="Rectangle-5" x="0" y="0" width="3" height="13"></rect>
+                    <rect id="Rectangle-5-Copy" x="6" y="0" width="3" height="13"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        }
+      })();
+      //getDuration
       const videoControls = (()=>{
         if(this.videoIsReady) {
           return <div class="rt-youtube__play-control">
-            <rt-youtube-volume default-volume={this.playerVolume} onChange={this.changeVolume}></rt-youtube-volume>
-            <div class="rt-youtube__play" onClick={this.playVideo}>
-              <svg class="rt-youtube__control-icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
-                   viewBox="0 0 191.255 191.255">
-                <path
-                  d="M162.929,66.612c-2.814-1.754-6.514-0.896-8.267,1.917s-0.895,6.513,1.917,8.266c6.544,4.081,10.45,11.121,10.45,18.833  s-3.906,14.752-10.45,18.833l-98.417,61.365c-6.943,4.329-15.359,4.542-22.512,0.573c-7.154-3.97-11.425-11.225-11.425-19.406  V34.262c0-8.181,4.271-15.436,11.425-19.406c7.153-3.969,15.569-3.756,22.512,0.573l57.292,35.723  c2.813,1.752,6.513,0.895,8.267-1.917c1.753-2.812,0.895-6.513-1.917-8.266L64.512,5.247c-10.696-6.669-23.661-7-34.685-0.883  C18.806,10.48,12.226,21.657,12.226,34.262v122.73c0,12.605,6.58,23.782,17.602,29.898c5.25,2.913,10.939,4.364,16.616,4.364  c6.241,0,12.467-1.754,18.068-5.247l98.417-61.365c10.082-6.287,16.101-17.133,16.101-29.015S173.011,72.899,162.929,66.612z"/>
-              </svg>
-            </div>
-            <div class="rt-youtube__pause" onClick={this.stopVideo}>
-              <svg class="rt-youtube__control-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 512 512">
-                <path d="M291,166v180c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V166c0-11.046-8.954-20-20-20
-				C299.954,146,291,154.954,291,166z"/>
-                <path d="M437.02,74.98C388.667,26.629,324.38,0,256,0S123.333,26.629,74.98,74.98C26.629,123.333,0,187.62,0,256
-				s26.629,132.667,74.98,181.02C123.333,485.371,187.62,512,256,512c46.812,0,92.616-12.757,132.462-36.893
-				c9.447-5.723,12.467-18.021,6.744-27.468c-5.724-9.449-18.022-12.467-27.469-6.745C334.143,461.244,295.504,472,256,472
-				c-119.103,0-216-96.897-216-216S136.897,40,256,40s216,96.897,216,216c0,42.589-12.665,84.044-36.626,119.885
-				c-6.14,9.183-3.672,21.603,5.51,27.742c9.184,6.141,21.604,3.672,27.742-5.511C497.002,355.674,512,306.531,512,256
-				C512,187.62,485.371,123.333,437.02,74.98z"/>
-                <path
-                  d="M181,166v180c0,11.046,8.954,20,20,20s20-8.954,20-20V166c0-11.046-8.954-20-20-20S181,154.954,181,166z"/>
-              </svg>
 
+            <div class="rt-youtube__menu">
+              <rt-youtube-fraction fraction={this.loadedFraction}></rt-youtube-fraction>
+              {playButton}
+              <rt-youtube-volume default-volume={this.playerVolume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume>
             </div>
           </div>
         }else{
