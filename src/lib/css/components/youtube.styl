@@ -22,9 +22,7 @@
   left: 0
   right: 0
 
-.rt-youtube__control-icon
-  width: 27px
-  height: 30px
+
 
 .rt-youtube__play,
 .rt-youtube__pause
@@ -119,25 +117,39 @@
     visibility: visible
     &:hover
       opacity: 1
-
+.rt-youtube__sound-control
+  cursor: pointer
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property opacity
+  &--mute
+    opacity: 0.3
 .rt-youtube__volume
   position: absolute
   bottom: 20px
-  left: 20px
+  right: 10px
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  width: 110px
+  display: flex
+  align-items center
+
+
 
 .rt-youtube__volume__line
-  width: 100px
-  height: 5px
-  border-radius 3px
+  width: 75px
+  height: 2px
   background-color: rgba(255,255,255,0.3);
   z-index: 2
+  right: 0
   position: absolute
-  box-shadow 1px 1px 1px rgba(0,0,0,0.4)
   cursor: pointer
 
 .rt-youtube__volume__now-line
-  height: 5px
-  background-color: b2c-purple
+  height: 2px
+  background-color: b2c-orange
   border-radius 3px
   position: absolute
   left: 0
@@ -146,11 +158,38 @@
 
 .rt-youtube__volume__point
   position: absolute
-  width: 15px
-  height: 15px
-  top: -5px
+  width: 10px
+  height: 10px
+  top: -4px
   margin-left: -5px
-  background-color: #fff
   border-radius 50%
-  box-shadow 0px 0px 2px rgba(0,0,0,0.8)
+  background-color: b2c-orange
   cursor: pointer
+
+.rt-youtube__menu
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 29px
+  background-color: #000
+  padding-left: 10px
+  padding-right: 10px
+  display: flex
+  align-items center
+
+.rt-youtube-fraction
+  background-color: rgba(218,218,218,0.3)
+  position: absolute
+  top: -2px
+  left: 0px
+  right: 0px
+  height: 2px
+
+.rt-youtube-fraction__ready-line
+  position: absolute
+  left: 0
+  top: 0
+  height: 2px
+  background-color: #fff
+
