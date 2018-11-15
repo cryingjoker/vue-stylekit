@@ -1,20 +1,4 @@
-<template>
-  <div :class="textareaClasses" class="text-field textarea textarea--static">
-    <textarea class="textarea-element" @change="inputHandler" />
-    <div
-      v-if="!!placeholder"
-      :class="placeholderClasses"
-      class="floating-placeholder"
-    >
-      {{ placeholder }}
-    </div>
-    <div class="textarea-border" />
-
-    <p class="text-field__error-message">{{ errorMessage }}</p>
-  </div>
-</template>
-
-<script>
+<script type="text/jsx">
 export default {
   name: "RtTextareaStatic",
   props: {
@@ -22,7 +6,7 @@ export default {
       type: Boolean,
       default: false
     },
-    placeholder: {
+    label: {
       type: String,
       default: null
     },
@@ -44,18 +28,6 @@ export default {
     hasInputText: false
   }),
   computed: {
-    textareaClasses() {
-      return {
-        "textarea--not-empty": this.hasInputText,
-        "textarea--disabled": this.disabled,
-        "text-field--error": this.hasError
-      };
-    },
-    placeholderClasses() {
-      return {
-        "floating-placeholder--go-top": this.hasInputText
-      };
-    }
   },
   watch: {
     localValue(val) {
@@ -68,25 +40,64 @@ export default {
   },
   methods: {
     setValue() {
-      this.$el.querySelector(".textarea-element").value = this.localValue || "";
-      this.setValueLength();
+      if(this.$refs.textarea) {
+        this.$refs.textarea.value = this.localValue || "";
+        this.setValueLength();
+      }
     },
     setDisabled() {
-      this.$el.querySelector(".textarea-element").disabled = Boolean(
-        this.disabled
-      );
+      if(this.$refs.textarea) {
+        this.$refs.textarea.disabled = Boolean(
+          this.disabled
+        );
+      }
     },
     setValueLength() {
       this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
     },
     inputHandler($event) {
-      this.localValue = this.$el.querySelector(".textarea-element").value;
+      this.localValue = this.$refs.textarea.value;
       this.setValueLength();
     },
     clearInput() {
       this.localValue = "";
       this.setValue();
     }
+  },
+  render(h){
+    // <!--<div-->
+    // <!--v-if="!!placeholder"-->
+    // <!--:class="placeholderClasses"-->
+    // <!--class="static-placeholder"-->
+    // <!--&gt;-->
+    // <!--{{ placeholder }}-->
+    // <!--</div>-->
+    let textareaClasses = 'text-field textarea textarea--static';
+    if(this.hasInputText){
+      textareaClasses+=" textarea--not-empty";
+    }
+    if(this.disabled){
+      textareaClasses+=" textarea--disabled";
+    }
+    if(this.hasError){
+      textareaClasses+=" text-field--error";
+    }
+    const label = (()=>{
+      if(this.label) {
+        return <div>{this.label}</div>;
+      }else{
+        return null;
+      }
+    })();
+
+    return <div class={textareaClasses}>
+      <div class="textarea-label">{label}</div>
+    <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} />
+
+    <div class="textarea-border" />
+
+    <p class="text-field__error-message">{this.errorMessage }</p>
+  </div>
   }
 };
 </script>

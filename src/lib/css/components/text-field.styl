@@ -14,7 +14,7 @@
     bottom 0
     left 0
     right 0
-    z-index 1b2c-cool-grey
+    z-index 1
     transition-timing-function ease-in-out
     transition-duration .2s
     transition-property background, height
@@ -35,9 +35,6 @@
       transition-timing-function ease-in-out
       transition-duration .4s
       transition-property background, width
-      -webkit-appearance none
-      appearance none
-      -moz-appearance none
       .{newAppName}-dark-theme &
         background b2c-orange
 
@@ -78,12 +75,13 @@
     opacity 0
     visibility hidden
     position absolute
-    bottom -20px
+    bottom -17px
     left 0
     transition-timing-function ease-in-out
     transition-duration .4s
     transition-property opacity, visibility
-
+    &--has-label
+      bottom: -35px
     .text-field--error &
       opacity 1
       visibility visible
