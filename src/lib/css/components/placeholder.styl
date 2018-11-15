@@ -1,10 +1,10 @@
 .floating-placeholder
   max-width 100%
   overflow hidden
-  color input-placeholder-color
+  color b2c-black07
   text-overflow ellipsis
   white-space nowrap
-  opacity .5
+
   position absolute
   top 22px
   z-index 1
@@ -31,6 +31,10 @@
     font-size 14px
     top 0
 
+  .select--disabled+.text-field__line+ &,
+  .input-element[disabled]+.text-field__line+ &,
+  .textarea--disabled+.text-field__line+ &
+    color b2c-black03
   .textarea--static.textarea--not-empty &,
   .textarea--static .textarea-element &--go-top,
   .textarea--static .textarea-element:focus+&

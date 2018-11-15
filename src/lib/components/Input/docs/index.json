@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "name": "rt-input",
+      "proporty": "insert-lang",
+      "type": [
+        "String"
+      ],
+      "description": "Разрешение на ввод оперделенного языка /n возжмый ввод: 'ru', 'en'",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "insert-type",
+      "type": [
+        "String"
+      ],
+      "description": "Разрешение на ввод только симполов/цифр /n возжмый ввод 'number' и 'string'",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "disabled",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Set 'disabled' input attribute",
+      "value": "false"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "placeholder",
+      "type": [
+        "String"
+      ],
+      "description": "Set 'placeholder' input attribute",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "has-error",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Set error flag",
+      "value": "false"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "error-message",
+      "type": [
+        "String"
+      ],
+      "description": "Set error message if has-error is true",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "value",
+      "type": [
+        "String"
+      ],
+      "description": "Set 'value' input attribute",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "name",
+      "type": [
+        "String"
+      ],
+      "description": "Set 'name' input attribute",
+      "value": "null"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "is-white",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Set white color flag",
+      "value": "false"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "show-nubmers-buttons",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Show add/subtract button flag ",
+      "value": "false"
+    },
+    {
+      "name": "rt-input",
+      "proporty": "label",
+      "version": " >= 0.22",
+      "type": [
+        "String"
+      ],
+      "description": "Set label for input",
+      "value": "null"
+    }
+  ]
+}

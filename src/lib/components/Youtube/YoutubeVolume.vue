@@ -10,7 +10,11 @@
     data: () => ({
       volume: false,
     }),
-
+    watch:{
+      defaultVolume(){
+        // console.info('!!!')
+      }
+    },
     methods:{
       emitValue(nextLeft){
         const lineWidth = this.$refs.line.offsetWidth;

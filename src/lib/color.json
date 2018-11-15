@@ -1,58 +1,69 @@
 {
-  "b2c-purple-low": "#7700ff",
-  "b2c-purple-low02": "rgba(119,0,255,0.2)",
-  "b2c-red-low": "#BC104B",
-  "b2c-dark-blue-low": "#273A64",
-  "b2c-light-blue-low": "#65B8DF",
-  "b2c-yellow-low": "#FFBE08",
-  "b2c-orange-low": "#ff4F12",
-  "b2c-pink-low": "#FFBFC3",
-  "b2c-green-low": "#57d9b7",
-  "b2c-dark": "#101828",
-  "b2c-dark09": "rgba(16,24,40,0.9)",
-  "b2c-dark08": "rgba(16,24,40,0.8)",
-  "b2c-dark07": "rgba(16,24,40,0.7)",
-  "b2c-dark06": "rgba(16,24,40,0.6)",
-  "b2c-dark05": "rgba(16,24,40,0.5)",
-  "b2c-dark04": "rgba(16,24,40,0.4)",
-  "b2c-dark03": "rgba(16,24,40,0.3)",
-  "b2c-dark02": "rgba(16,24,40,0.2)",
-  "b2c-dark01": "rgba(16,24,40,0.1)",
-  "b2c-dark005": "rgba(16,24,40,0.05)",
+  "b2c-purple": "#7700ff",
+  "b2c-purple-low": "#6605c6",
+  "b2c-purple-hight": "#8348fc",
+
+
+  "b2c-red": "#BC104B",
+  "b2c-red-low": "#910046",
+  "b2c-red-hight": "#e22e65",
+
+  "b2c-dark-blue": "#273A64",
+  "b2c-dark-blue-low": "#001c45",
+  "b2c-dark-blue-hight": "#275392",
+
+
+  "b2c-light-blue": "#65B8DF",
+  "b2c-light-blue-low": "#4897df",
+  "b2c-light-blue-hight": "#65deed",
+
+
+  "b2c-yellow": "#FFBE08",
+  "b2c-yellow-low": "#ffa307",
+  "b2c-yellow-hight": "#ffd800",
+
+  "b2c-orange": "#ff4F12",
+  "b2c-orange-low": "#d33706",
+  "b2c-orange-hight": "#ff8218",
+
+  "b2c-pink": "#FFBFC3",
+  "b2c-pink-low": "#ffa0a7",
+  "b2c-pink-hight": "#ffd2dd",
+
+  "b2c-green": "#57d9b7",
+  "b2c-green-low": "#3bbc9e",
+  "b2c-green-hight": "#81ebd6",
+
+
+  "b2c-black": "#101828",
+  "b2c-black09": "rgba(16,24,40,0.9)",
+  "b2c-black08": "rgba(16,24,40,0.8)",
+  "b2c-black07": "rgba(16,24,40,0.7)",
+  "b2c-black06": "rgba(16,24,40,0.6)",
+  "b2c-black05": "rgba(16,24,40,0.5)",
+  "b2c-black04": "rgba(16,24,40,0.4)",
+  "b2c-black03": "rgba(16,24,40,0.3)",
+  "b2c-black02": "rgba(16,24,40,0.2)",
+  "b2c-black01": "rgba(16,24,40,0.1)",
+  "b2c-black005": "rgba(16,24,40,0.05)",
+
   "b2c-grey": "#979799",
   "b2c-cool-grey": "#E3E8EC",
   "b2c-cool-grey05": "rgba(227,232,236,0.5)",
   "b2c-cool-grey03": "rgba(151,151,153,0.8)",
-  "b2b-purple-low": "#6605c6",
-  "b2b-purple-hight": "#8348fc",
+
   "b2b-purple-hight05": "rgba(131,72,252,0.5)",
-  "b2b-red-low": "#910046",
-  "b2b-red-hight": "#e22e65",
-  "b2b-dark-blue-low": "#001c45",
-  "b2b-dark-blue-hight": "#001c45",
-  "b2b-light-blue-low": "#4897df",
-  "b2b-light-blue-hight": "#65deed",
-  "b2b-yellow-low": "#ffa307",
-  "b2b-yellow-hight": "#ffd800",
-  "b2b-orange-low": "#d33706",
-  "b2b-orange-hight": "#ff8218",
-  "b2b-pink-low": "#ffa0a7",
-  "b2b-pink-hight": "#ffd2dd",
-  "b2b-green-low": "#3bbc9e",
-  "b2b-green-hight": "#81ebd6",
+
+
+
+
+
+
+
   "b2b-state": "#7A929B",
   "b2b-dark-state": "#313948",
   "b2b-burgundy": "#431525",
-  "b2b-black": "#101828",
-  "b2b-black09": "rgba(16,24,40,0.9)",
-  "b2b-black08": "rgba(16,24,40,0.8)",
-  "b2b-black07": "rgba(16,24,40,0.7)",
-  "b2b-black06": "rgba(16,24,40,0.6)",
-  "b2b-black05": "rgba(16,24,40,0.5)",
-  "b2b-black04": "rgba(16,24,40,0.4)",
-  "b2b-black03": "rgba(16,24,40,0.3)",
-  "b2b-black02": "rgba(16,24,40,0.2)",
-  "b2b-black01": "rgba(16,24,40,0.1)",
+
   "b2b-white": "#ffffff",
   "b2b-white09": "rgba(255,255,255, 0.9)",
   "b2b-white08": "rgba(255,255,255, 0.8)",

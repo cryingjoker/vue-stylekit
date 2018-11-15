@@ -44,10 +44,15 @@ export default {
     showNubmersButtons: {
       type: Boolean,
       default: false
+    },
+    label:{
+      type: String,
+      default: null
     }
   },
   data() {
     return {
+      localLabel: this.label,
       localValue: this.value ? this.value : "",
       hasInputText: this.value ? this.value.length > 0 : false
     };
@@ -60,7 +65,7 @@ export default {
     },
     isInvalid () {
       // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
-      if (this.validate) {
+      if (this.validate || this.hasError) {
         return this.hasError || this.errors.has(this.fieldName);
       }
     }
@@ -68,7 +73,10 @@ export default {
   watch: {
     localValue(val) {
       this.$emit("input", val);
-    }
+    },
+    label(){
+      this.localLabel = this.label;
+     }
   },
 
   mounted() {
@@ -222,7 +230,7 @@ export default {
     const clearButton = (()=>{
       if(!this.showNubmersButtons && !this.disabled && this.hasInputText){
         return <div class="input-clear" onClick={this.clearInput}>
-          <svg class="input-clear__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+          <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
                   fill-rule="evenodd"/>
           </svg></div>;
@@ -264,7 +272,12 @@ export default {
       }
     })();
 
-    return <div class="input text-field" class={inputClass}>
+    const inputLabel = (()=>{
+      if(this.localLabel)
+      return <div class="input-label">{this.localLabel}</div>
+    })()
+    return <div class="input-wrapper">
+      <div class="input text-field" class={inputClass}>
       <input
         onKeypress={this.keyPress}
         ref="input"
@@ -281,7 +294,9 @@ export default {
         {clearButton}
         {errorMessage}
         {arithmeticButtons}
-  </div>;
+  </div>
+      {inputLabel}
+    </div>;
   }
 };
 </script>

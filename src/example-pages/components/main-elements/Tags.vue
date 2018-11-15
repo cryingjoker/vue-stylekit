@@ -68,7 +68,6 @@
 
 import componentsList from "../../componentsList";
 // Vue.directive(FilterCallerDirective.name, FilterCallerDirective);
-  console.info('componentDirectives',componentDirectives);
 export default {
   name: "AppTags",
   // directives: componentDirectives,

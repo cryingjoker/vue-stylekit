@@ -1,3 +1,4 @@
+@require "~nib/lib/nib/vendor.styl"
 .input-element
   width 100%
   color main-color
@@ -9,12 +10,14 @@
   position relative
   z-index 2
   appearance field
-
+  placeholder(color b2c-black07,)
   .input--with-button &
     padding-right horizontal-space * 3
 
   &[disabled]
-    color b2c-cool-grey03 // color: b2c-cool-grey05;
+    color b2c-cool-grey03
+    placeholder(color b2c-black03,)
+
 
   .{newAppName}-input--white &,
   .{newAppName}-card--has-white-color &
@@ -30,7 +33,6 @@
     color main-color
 
 .input-clear
-  opacity .7
   position absolute
   top 25px
   right 0
@@ -42,18 +44,17 @@
   animation .3s showClearInput ease-in-out
 
   &:hover
-    opacity 1
     transform rotate(180deg)
 
 .input-clear__icon
-  fill b2b-black
+  fill b2c-black
 
   .{newAppName}-dark-theme &,
   .{newAppName}-input--white &
     fill white
 
   .{newAppName}-card &
-    fill b2b-black
+    fill b2c-black
 
   .{newAppName}-card--has-white-color &
     fill white
@@ -74,7 +75,7 @@
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property stroke
-  stroke b2c-dark
+  stroke b2c-black
 
   .{newAppName}-dark-theme &
     stroke b2b-white
@@ -83,8 +84,12 @@
   .{newAppName}-dark-theme .{newAppName}-dark-theme .input-arithmetic__button:focus,
   .input-arithmetic__button:focus &,
   .input-arithmetic__button:hover &
-    stroke b2b-purple-low
-
+    stroke b2c-purple-low
+.input-label
+  font-size: 12px
+  color b2c-black05
+  margin-top: 3px
+  line-height: 16px
 @keyframes showClearInput
   0%
     opacity 0

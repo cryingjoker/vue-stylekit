@@ -369,7 +369,6 @@ export default {
 
     switchTheme(event) {
       const isChecked = event.target.checked;
-      console.info('isChecked',isChecked,event.target)
       const bodyClassList = document.body.classList.value.split(" ");
       if (isChecked) {
         bodyClassList.push("rt-dark-theme");
