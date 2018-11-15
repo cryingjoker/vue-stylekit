@@ -89,6 +89,7 @@ export default {
       this.setValueLength();
     },
     calculateHelght() {
+      console.info('calculateHelght');
       const textarea = this.$el.querySelector(".textarea-element");
       textarea.style.height = "";
       textarea.style.height = textarea.scrollHeight;

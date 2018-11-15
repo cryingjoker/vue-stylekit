@@ -20,7 +20,7 @@
               >input with error</span
             >
             <pre-code
-              text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot; :has-error=&quot;true&quot; />"
+              text="<rt-input label=&quot;Начните вводить почту&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot; :has-error=&quot;true&quot; />"
             />
           </div>
           <div class="rt-col-4 rt-col-md-1 rt-md-space-top">

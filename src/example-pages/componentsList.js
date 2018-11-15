@@ -16,7 +16,6 @@ import {
   Switch,
   Textarea,
   TextareaStatic,
-  TextareaWithoutJs,
   ScrollTabs,
   Tabs,
   TabsNavigationItem,
@@ -64,7 +63,6 @@ componentsList[Spinner.name] = Spinner;
 componentsList[Switch.name] = Switch;
 componentsList[Textarea.name] = Textarea;
 componentsList[TextareaStatic.name] = TextareaStatic;
-componentsList[TextareaWithoutJs.name] = TextareaWithoutJs;
 componentsList[ScrollTabs.name] = ScrollTabs;
 componentsList[Tabs.name] = Tabs;
 componentsList[TabsNavigationItem.name] = TabsNavigationItem;

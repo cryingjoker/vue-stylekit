@@ -20,7 +20,6 @@ import {
   Switch,
   Textarea,
   TextareaStatic,
-  TextareaWithoutJs,
   ScrollTabs,
   Tabs,
   TabsNavigationItem,
@@ -75,7 +74,6 @@ const VueRtStyle = {
       Vue.component(Switch.name, Switch);
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
-      Vue.component(TextareaWithoutJs.name, TextareaWithoutJs);
       Vue.component(ScrollTabs.name, ScrollTabs);
       Vue.component(Tabs.name, Tabs);
       Vue.component(TabsNavigationItem.name, TabsNavigationItem);

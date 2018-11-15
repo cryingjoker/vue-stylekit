@@ -240,7 +240,11 @@ export default {
 
     const errorMessage = (()=>{
       if(this.isInvalid){
-        return <p class="text-field__error-message">{this.errorMessage}</p>;
+        let errorMessageClass = 'text-field__error-message';
+        if(this.label){
+          errorMessageClass+=' text-field__error-message--has-label'
+        }
+        return <p class={errorMessageClass}>{this.errorMessage}</p>;
       }
     })();
     const arithmeticButtons = (()=>{

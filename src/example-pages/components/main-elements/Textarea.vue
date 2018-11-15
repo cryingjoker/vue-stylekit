@@ -4,42 +4,8 @@
       <div class="app-title"><h1 class="rt-font-hero">Textarea</h1></div>
       <div class="app-body">
         <div class="app-row row">
-          <p class="rt-font-h3 rt-col">Textarea without js</p>
-        </div>
-        <div class="app-row row">
-          <div class="rt-col">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple textarea</span
-            >
-            <rt-textarea-without-js placeholder="Textarea" />
-          </div>
-        </div>
-        <div class="app-row row">
-          <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple with error</span
-            >
-            <rt-textarea-without-js
-              :has-error="true"
-              error-message="textarea error message"
-              placeholder="Textarea"
-            />
-          </div>
-          <div class="rt-col-6 rt-col-md-3 rt-md-space-top">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >disabled simple</span
-            >
-            <rt-textarea-without-js
-              :disabled="true"
-              error-message="textarea error message"
-              placeholder="Textarea"
-            />
-          </div>
-        </div>
-
-        <div class="app-row row">
           <div class="col  rt-col-md-3 ">
-            <p class="rt-font-h3">Textarea with js</p>
+            <p class="rt-font-h3">Textarea</p>
           </div>
         </div>
         <div class="app-row row">
@@ -47,7 +13,7 @@
             <span class="rt-font-label flex-fill rt-space-bottom05"
               >simple static textarea</span
             >
-            <rt-textarea-static placeholder="Textarea" />
+            <rt-textarea-static placeholder="Textarea" label="Введите комментарий:" />
           </div>
           <div class="rt-col-6  rt-col-md-3 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"
