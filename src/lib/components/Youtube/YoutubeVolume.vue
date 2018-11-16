@@ -17,7 +17,6 @@
     }),
     watch: {
       defaultVolume(newV,old) {
-        console.info('this.volume',this.volume,newV)
         this.volume = newV;
         this.$refs.volumeLine.style.width = newV+'%';
         this.$refs.point.style.left =  newV+'%';
@@ -27,7 +26,6 @@
       emitValue(nextLeft) {
         const lineWidth = this.$refs.line.offsetWidth;
         const responseValue = nextLeft / lineWidth;
-        console.info("changevolume", responseValue);
         this.$emit("changevolume", responseValue);
       },
       setVolumeByClick(event) {
@@ -39,7 +37,6 @@
       },
       drawVolumeFromParen(volume) {
         const volumeProcent = volume / 100;
-        console.info('volumeProcent -->>  ',volumeProcent)
         const lineLeft = this.$refs.line.clientWidth;
         const nextLeft = volumeProcent * lineLeft;
         this.$refs.point.style.left = nextLeft;
@@ -84,7 +81,6 @@
       },
       muteToggle() {
         this.isMuteLocal = !this.isMuteLocal;
-        console.info('mutetoggle')
         this.$emit("mutetoggle", this.isMuteLocal);
       }
     },
