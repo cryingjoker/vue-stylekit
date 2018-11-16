@@ -25,47 +25,8 @@
 
 
 
-.rt-youtube__play,
-.rt-youtube__pause
-  background-color: b2c-purple
-  width: 50px
-  height: 50px
-  cursor: pointer
-  fill #fff
-  border-radius 50%
-  margin auto
-  position: absolute
-  display: flex
-  justify-content  center
-  align-items center
-  transition-timing-function ease-in-out
-  transition-duration .4s
-  transition-property opacity, visibility
-  right: 0
-  left: 0
-  bottom: 20px
-.rt-youtube__play
-  .rt-youtube &
-    opacity: 0.5
-    visibility: visible
-    &:hover
-      opacity: 1
-  .rt-youtube--is-active &
-    opacity: 0
-    visibility: hidden
 
-.rt-youtube__pause
-  .rt-youtube &
-    opacity: 0
-    visibility: hidden
-  .rt-youtube--is-active &
-    opacity: 0
-    visibility: visible
-  .rt-youtube--is-active:hover &
-    opacity: 0.5
 
-  .rt-youtube--is-active:hover &:hover
-      opacity: 1
 .rt-youtube___not-ready
   position: absolute
   top: 0
@@ -87,7 +48,7 @@
     opacity: 0
     visibility: hidden
     transition-timing-function ease-in-out
-    transition-duration .4s
+    transition-duration .2s
     transition-property opacity, visibility
 
 .rt-youtube__next
@@ -106,7 +67,7 @@
   opacity: 0
   visibility: hidden
   transition-timing-function ease-in-out
-  transition-duration .4s
+  transition-duration .2s
   transition-property opacity, visibility
   cursor: pointer
   border-radius 50%
@@ -126,17 +87,14 @@
   transition-property opacity
   &--mute
     opacity: 0.3
+
 .rt-youtube__volume
-  position: absolute
-  bottom: 20px
-  right: 10px
-  top: 0
-  bottom: 0
-  margin-top: auto
-  margin-bottom: auto
   width: 110px
   display: flex
   align-items center
+
+  position: absolute
+  left: 140px
 
 
 
@@ -146,27 +104,51 @@
   background-color: rgba(255,255,255,0.3);
   z-index: 2
   right: 0
+  top: 0;
+  bottom: 0;
+  margin: auto;
   position: absolute
   cursor: pointer
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property margin, height
+  .rt-youtube__volume:hover &
+    height: 4px
+
 
 .rt-youtube__volume__now-line
   height: 2px
   background-color: b2c-orange
-  border-radius 3px
   position: absolute
   left: 0
   top: 0
   bottom: 0
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property top, height, margin
+  .rt-youtube__volume:hover &
+    height: 4px
+
 
 .rt-youtube__volume__point
   position: absolute
-  width: 10px
-  height: 10px
-  top: -4px
-  margin-left: -5px
   border-radius 50%
   background-color: b2c-orange
   cursor: pointer
+  width: 0
+  height: 0
+  top: 1px
+  margin-left: 0
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property opacity, visibility, top, width, height, margin
+  .rt-youtube__volume:hover &
+
+    width: 10px
+    height: 10px
+    top: -3px
+    margin-left: -5px
+
 
 .rt-youtube__menu
   position: absolute
@@ -175,14 +157,14 @@
   right: 0
   height: 29px
   background-color: #000
-  padding-left: 10px
-  padding-right: 10px
+  padding-left: 20px
+  padding-right: 20px
   display: flex
   align-items center
   margin-bottom: -29px
   opacity: 0
   transition-timing-function ease-in-out
-  transition-duration .4s
+  transition-duration .2s
   transition-property margin, opacity
   .rt-youtube__controls:hover &
     margin-bottom: 0
@@ -195,6 +177,12 @@
   right: 0px
   height: 2px
   cursor: pointer
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property height, top
+  &:hover
+    top: -4px
+    height: 4px
 
 
 .rt-youtube-fraction__ready-line
@@ -203,6 +191,12 @@
   top: 0
   height: 2px
   background-color: #fff
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property height
+  .rt-youtube-fraction:hover &
+    height: 4px
+
 
 .rt-youtube-fraction__played-line {
   position: absolute
@@ -211,28 +205,61 @@
   height: 2px
   background-color: b2c-orange
   z-index: 3
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property height
+  .rt-youtube-fraction:hover &{
+    height: 4px
+  }
 }
 .rt-youtube-fraction__played-point {
   position: absolute
-  width: 10px
-  height: 10px
+  width: 0px
+  height: 0px
   border-radius 50%
   background-color: b2c-orange
   z-index: 4
-  top: -4px
+  top: 0px
+
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property opacity, visibility, top, width, height, margin
+  .rt-youtube-fraction:hover &{
+    width: 10px
+    height: 10px
+    top: -3px
+    margin-left: -5px
+  }
 }
 .rt-youtube__time
   margin-left: horizontal-space*0.5
   font-size: 11px
   margin-top: 3px
   letter-spacing 1px
+  color: #fff
 
 .rt-youtube-fraction__will-be-played
   position: absolute
   background-color: rgba(218,218,218,0.5)
   left: 0
   height: 2px
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property height
+  .rt-youtube-fraction:hover &
+    height: 4px
 
 
-
+.rt-youtube__start-video{
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin auto
+  width: 46px
+  height: 33px
+  position: absolute
+  z-index: 3
+  cursor: pointer
+}
 

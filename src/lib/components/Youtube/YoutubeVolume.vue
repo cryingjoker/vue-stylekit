@@ -16,14 +16,18 @@
       isMuteLocal: false
     }),
     watch: {
-      defaultVolume() {
-        // defaultVolume
+      defaultVolume(newV,old) {
+        console.info('this.volume',this.volume,newV)
+        this.volume = newV;
+        this.$refs.volumeLine.style.width = newV+'%';
+        this.$refs.point.style.left =  newV+'%';
       }
     },
     methods: {
       emitValue(nextLeft) {
         const lineWidth = this.$refs.line.offsetWidth;
         const responseValue = nextLeft / lineWidth;
+        console.info("changevolume", responseValue);
         this.$emit("changevolume", responseValue);
       },
       setVolumeByClick(event) {
@@ -35,6 +39,7 @@
       },
       drawVolumeFromParen(volume) {
         const volumeProcent = volume / 100;
+        console.info('volumeProcent -->>  ',volumeProcent)
         const lineLeft = this.$refs.line.clientWidth;
         const nextLeft = volumeProcent * lineLeft;
         this.$refs.point.style.left = nextLeft;
@@ -79,6 +84,7 @@
       },
       muteToggle() {
         this.isMuteLocal = !this.isMuteLocal;
+        console.info('mutetoggle')
         this.$emit("mutetoggle", this.isMuteLocal);
       }
     },
@@ -101,7 +107,7 @@
           buttonClass += ' rt-youtube__sound-control--mute'
         }
         return <div class={buttonClass} onClick={this.muteToggle}>
-          <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <svg width="18px" height="13px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="smart-home-copy" transform="translate(-908.000000, -2230.000000)" fill="#FFFFFF"
                  fill-rule="nonzero">

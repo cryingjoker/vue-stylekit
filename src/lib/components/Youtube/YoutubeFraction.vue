@@ -12,9 +12,6 @@
       }
 
     },
-    data: {
-      fractionLocal: 0
-    },
     methods: {
       setWillBePlayedLineWidth(event){
         const lineLeft = this.$refs.fraction.getBoundingClientRect().left;
