@@ -1,11 +1,5 @@
 
 <script type="text/jsx">
-  // YT.PlayerState.ENDED
-  // YT.PlayerState.PLAYING
-  // YT.PlayerState.PAUSED
-  // YT.PlayerState.BUFFERING
-  // YT.PlayerState.CUED
-
   import YoutubeVolume from './YoutubeVolume.vue'
   import YoutubeFraction from './YoutubeFraction.vue'
   const components = {};
@@ -25,20 +19,63 @@
       }
     },
     data: () => ({
-      playTime: 0,
-      videoIsReady: false,
-      player: null,
-      playerState: '-1',
-      isPlaying: false,
-      activeIndexVideo: 0,
-      loadedFraction: 0
+        playTime: 0,
+        videoIsReady: false,
+        player: null,
+        playerState: '-1',
+        isPlaying: false,
+        activeIndexVideo: 0,
+        loadedFraction: 0,
+        volume: 0
     }),
 
     mounted: function() {
       this.init();
+      this.bindKeyboardEvents()
     },
-
+    beforeDestroy(){
+      this.unbindKeyboardEvents();
+    },
+    updated(){
+      this.unbindKeyboardEvents();
+      this.bindKeyboardEvents();
+    },
     methods: {
+      keyPressHolder(event){
+        if(this.duration){
+          switch(event.keyCode) {
+            case 32:
+              if (this.isPlaying) {
+                this.stopVideo();
+              } else {
+                this.playVideo();
+              }
+              event.preventDefault();
+            break;
+            case 39:
+              if (this.isPlaying) {
+                this.playTime+=5;
+                this.player.seekTo(this.playTime);
+              }
+              break;
+            case 37:
+              if (this.isPlaying) {
+                this.playTime-=5;
+                if(this.playTime < 0){
+                  this.playTime = 0
+                }
+                this.player.seekTo(this.playTime);
+              }
+              break;
+          }
+        }
+      },
+      unbindKeyboardEvents(){
+        window.removeEventListener("keydown",this.keyPressHolder);
+      },
+      bindKeyboardEvents(){
+        window.addEventListener("keydown",this.keyPressHolder, false);
+      },
       init(){
         let apiScript = document.querySelector('script[src$="https://www.youtube.com/iframe_api"]');
         if (typeof YT === 'undefined' && apiScript === null) {
@@ -59,8 +96,8 @@
         if(this.playerState === YT.PlayerState.PLAYING || this.playerState === YT.PlayerState.CUED || this.playerState === YT.PlayerState.BUFFERING) {
           this.getCurrentTime();
           this.getDuration();
+          this.volume = this.player.getVolume();
         }
-        // console.info('event onStateChange',event,YT.PlayerState.ENDED);
       },
       createPlayer(){
           const height = 400;
@@ -70,13 +107,13 @@
             videoId: this.videoId[this.activeIndexVideo],
             playerVars: {
               "autoplay" :"0",
-              // "loop" :"1",
+              "loop" :"1",
               "autohide" :"1",
               "border" :"0",
               "rel":"0",
               "wmode": "opaque",
               "enablejsapi" :"1",
-              // "modestbranding" :"1",
+              "modestbranding" :"1",
               "controls" :"0",
               "disablekb": "1",
               "showinfo": "0",
@@ -104,24 +141,13 @@
         }
         this.player.loadVideoById(this.videoId[this.activeIndexVideo])
       },
-      volumeFadeIn(){
-        let volume = this.player.getVolume();
-        volume+=1
-        this.changeVolume(volume);
-        if(volume < 100){
-          setTimeout( () => {
-            // console.info('volume',volume);
-            this.volumeFadeIn();
-          },100)
-        }
-      },
+
       setMuteParams(isMute){
-        if(!isMute){
+        if(isMute){
           this.player.mute();
         }else{
           this.player.unMute();
         }
-        console.info('getIframe -->> ',this.player.getIframe);
       },
       getDuration(){
         this.duration = this.player.getDuration()
@@ -151,14 +177,9 @@
         }
       },
       playVideo(){
-
-
         this.player.playVideo();
-        setTimeout(()=> {
-          this.changeVolume(0);
-        })
         setTimeout(()=>{
-          this.volumeFadeIn();
+          this.volume = this.player.getVolume();
           this.isPlaying = true;
         },10)
       },
@@ -166,20 +187,12 @@
         this.player.seekTo(this.duration*procentOfDuration);
       },
       changeVolume(newVolume){
-        this.player.setVolume(newVolume/100);
+        this.volume = newVolume*100;
+        this.player.setVolume(newVolume*100);
       },
     },
-    computed:{
-      playerVolume(){
-         return this.player.getVolume();
-      }
-    },
-    watch:{
-      playerState(oldVal,newVal){
-        console.info('playerState has been changed ' ,oldVal,newVal);
-      }
-    },
     render(){
+
       const backgroundImage = (()=>{
         if(this.pauseImage) {
           const style = {
@@ -192,7 +205,7 @@
       })()
       const playButton = (()=>{
         if(!this.isPlaying) {
-          return <div className="rt-youtube__play" onClick={this.playVideo}>
+          return <div class="rt-youtube__play" onClick={this.playVideo}>
             <svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="smart-home-copy" transform="translate(-273.000000, -2232.000000)" fill="#FFFFFF"
@@ -205,7 +218,7 @@
             </svg>
           </div>
         }else {
-          return <div className="rt-youtube__pause" onClick={this.stopVideo}>
+          return <div class="rt-youtube__pause" onClick={this.stopVideo}>
             <svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="smart-home-copy" transform="translate(-273.000000, -1119.000000)" fill="#FFFFFF"
@@ -220,7 +233,6 @@
           </div>
         }
       })();
-      //getDuration
       const videoControls = (()=>{
         if(this.videoIsReady) {
 
@@ -232,16 +244,42 @@
           }
           if(sec<10){
             sec = '0'+sec
+          }
+
+          let minD = parseInt(this.duration/60);
+          let secD = parseInt(this.duration%60);
+
+          if(minD<10){
+            minD = '0'+minD
+          }
+          if(secD<10){
+            secD = '0'+secD
 
           }
           const procentPlayed = this.playTime/this.duration*100;
+          const time = (()=>{
+            if(this.duration) {
+              return <div class="rt-youtube__time">{min}:{sec} / {minD}:{secD}</div>
+            }else{
+              return null
+            }
+          })()
           return <div class="rt-youtube__play-control">
-            <div class="rt-youtube__menu">
+
+            {this.duration ? <div class="rt-youtube__menu">
               <rt-youtube-fraction onChangetime={this.changeTime} procent-played={procentPlayed} fraction={this.loadedFraction}></rt-youtube-fraction>
               {playButton}
-              <div class="rt-youtube__time">{min}:{sec}</div>
-              <rt-youtube-volume default-volume={this.playerVolume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume>
-            </div>
+              {time}
+              <rt-youtube-volume default-volume={this.volume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume>
+            </div> : <div class="rt-youtube__start-video" onClick={this.playVideo}>
+              <svg width="34px" height="47px" viewBox="0 0 34 47" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="smart-home-copy" transform="translate(-631.000000, -329.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <polygon id="ic-play" transform="translate(648.000000, 352.500000) rotate(-270.000000) translate(-648.000000, -352.500000) " points="625 369 648 336 671 369"></polygon>
+                  </g>
+                </g>
+              </svg>
+            </div>}
           </div>
         }else{
           return <div class="rt-youtube___not-ready"><rt-spinner /></div>
