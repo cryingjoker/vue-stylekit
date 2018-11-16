@@ -25,6 +25,7 @@
       }
     },
     data: () => ({
+      playTime: 0,
       videoIsReady: false,
       player: null,
       playerState: '-1',
@@ -55,6 +56,10 @@
       },
       onStateChange(event){
         this.playerState = event.data;
+        if(this.playerState === YT.PlayerState.PLAYING || this.playerState === YT.PlayerState.CUED || this.playerState === YT.PlayerState.BUFFERING) {
+          this.getCurrentTime();
+          this.getDuration();
+        }
         // console.info('event onStateChange',event,YT.PlayerState.ENDED);
       },
       createPlayer(){
@@ -118,6 +123,22 @@
         }
         console.info('getIframe -->> ',this.player.getIframe);
       },
+      getDuration(){
+        this.duration = this.player.getDuration()
+      },
+      getCurrentTime(){
+        this.playTime = this.player.getCurrentTime();
+        if(this.playerState === YT.PlayerState.PLAYING || this.playerState === YT.PlayerState.BUFFERING) {
+          setTimeout(()=>{
+            const newTime = parseInt(this.player.getCurrentTime());
+            if(this.playTime != newTime) {
+              this.playTime = newTime;
+              this.getCurrentTime();
+            }
+          },800)
+        }
+
+      },
       getLoadedFraction(){
         if(this.loadedFraction !== this.player.getVideoLoadedFraction()) {
           this.loadedFraction = this.player.getVideoLoadedFraction();
@@ -140,6 +161,9 @@
           this.volumeFadeIn();
           this.isPlaying = true;
         },10)
+      },
+      changeTime(procentOfDuration){
+        this.player.seekTo(this.duration*procentOfDuration);
       },
       changeVolume(newVolume){
         this.player.setVolume(newVolume/100);
@@ -199,11 +223,23 @@
       //getDuration
       const videoControls = (()=>{
         if(this.videoIsReady) {
-          return <div class="rt-youtube__play-control">
 
+          let min = parseInt(this.playTime/60);
+          let sec = parseInt(this.playTime%60);
+
+          if(min<10){
+            min = '0'+min
+          }
+          if(sec<10){
+            sec = '0'+sec
+
+          }
+          const procentPlayed = this.playTime/this.duration*100;
+          return <div class="rt-youtube__play-control">
             <div class="rt-youtube__menu">
-              <rt-youtube-fraction fraction={this.loadedFraction}></rt-youtube-fraction>
+              <rt-youtube-fraction onChangetime={this.changeTime} procent-played={procentPlayed} fraction={this.loadedFraction}></rt-youtube-fraction>
               {playButton}
+              <div class="rt-youtube__time">{min}:{sec}</div>
               <rt-youtube-volume default-volume={this.playerVolume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume>
             </div>
           </div>
