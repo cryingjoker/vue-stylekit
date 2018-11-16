@@ -52,34 +52,29 @@
     transition-property opacity, visibility
 
 .rt-youtube__next
-  display: none!important
   position: absolute
   z-index: 1
-  background-color: b2c-purple
-  width: 50px
-  height: 50px
-  cursor: pointer
-  fill #fff
-  right: 20px
+  right: -60px
+  width: 40px
+  height: 20px
   top: 0
   bottom: 0
-  margin auto
-  opacity: 0
-  visibility: hidden
-  transition-timing-function ease-in-out
-  transition-duration .2s
-  transition-property opacity, visibility
+  margin-top: auto
+  margin-bottom: auto
   cursor: pointer
-  border-radius 50%
-  display: flex
-  justify-content  center
-  align-items center
 
-  .rt-youtube--is-active:hover &
-    opacity: 0.5
-    visibility: visible
-    &:hover
-      opacity: 1
+.rt-youtube__previous
+  position: absolute
+  z-index: 1
+  left: -40px
+  width: 40px
+  height: 20px
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  cursor: pointer
+
 .rt-youtube__sound-control
   cursor: pointer
   transition-timing-function ease-in-out
@@ -263,3 +258,12 @@
   cursor: pointer
 }
 
+.rt-youtube__change-icon{
+  fill: b2c-cool-grey
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property fill
+  .rt-youtube__change-video:hover &{
+    fill: b2c-orange
+  }
+}
