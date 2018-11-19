@@ -47,7 +47,8 @@ import {
   TagsList,
   Filter,
   FilterWatcher,
-  Youtube
+  Youtube,
+  FilterCaller
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -101,6 +102,7 @@ const VueRtStyle = {
       Vue.component(TagsList.name, TagsList);
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
+      Vue.component(FilterCaller.name, FilterCaller);
 
       // Vue.directive(FilterCallerDirective.name, FilterCallerDirective);
 

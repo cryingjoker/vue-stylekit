@@ -42,6 +42,7 @@ import {
   TagsList,
   Filter,
   FilterWatcher,
+  FilterCaller,
   Youtube
 } from "../lib/components/index";
 
@@ -89,4 +90,6 @@ componentsList[Tag.name] = Tag;
 componentsList[TagsList.name] = TagsList;
 componentsList[Filter.name] = Filter;
 componentsList[FilterWatcher.name] = FilterWatcher;
+componentsList[FilterCaller.name] = FilterCaller;
+componentsList[Youtube.name] = Youtube;
 export default { ...componentsList };

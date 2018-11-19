@@ -1,10 +1,10 @@
-<!-- inline-template -->
 <script type="text/jsx">
   import { Fragment } from 'vue-fragment';
+
 export default {
   name: "RtFilter",
   data: () => ({
-    selectedProps: []
+    selectedProps: {}
   }),
   provide() {
     const RtFilter = {};
@@ -16,12 +16,11 @@ export default {
   },
   mounted: function() {},
   methods: {
-    setProps(value){
-      this.selectedProps.push(value);
+    setProps(option,value){
+      this.selectedProps[option] = value;
     },
     removeProps(value){
-      const index = this.selectedProps.indefOf(value);
-      this.selectedProps.splice(index,1);
+      delete this.selectedProps[option];
     }
   },
   render(){

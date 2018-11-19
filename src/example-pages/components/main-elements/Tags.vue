@@ -27,29 +27,30 @@
             <!--<pre-code text='-->
             <rt-filter>
               <rt-tag-list class="row">
-                <rt-filter-watcher>
-                  <rt-tag  :is-active="true" value="1">Все</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="2">Для смартфонов Android</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="3">Для Macbook</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="4">Защита для детей</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="5">Esset</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="6">Два устройств Windows и Android</rt-tag>
-                </rt-filter-watcher>
-                <rt-filter-watcher>
-                  <rt-tag value="7">Акция Kaspersky</rt-tag>
-                </rt-filter-watcher>
+                <rt-filter-caller  option="device-type" :clear-value="true">
+                  <rt-tag  :is-active="true">Все</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="2">
+                  <rt-tag>Для смартфонов Android</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="3">
+                  <rt-tag>Для Macbook</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="4">
+                  <rt-tag>Защита для детей</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="5">
+                  <rt-tag>Esset</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="6">
+                  <rt-tag>Два устройств Windows и Android</rt-tag>
+                </rt-filter-caller>
+                <rt-filter-caller option="device-type" value="7">
+                  <rt-tag>Акция Kaspersky</rt-tag>
+                </rt-filter-caller>
 
               </rt-tag-list>
+              <rt-filter-watcher></rt-filter-watcher>
             </rt-filter>
             <!--'></pre-code>-->
           </div>

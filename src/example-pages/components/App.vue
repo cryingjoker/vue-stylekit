@@ -256,6 +256,13 @@
               >
                 Youtube player
               </router-link>
+              <router-link
+                class="aside-menu__link"
+                active-class="aside-menu__link--active"
+                to="/youtube"
+              >
+                Youtube player
+              </router-link>
             </div>
           </div>
         </div>
