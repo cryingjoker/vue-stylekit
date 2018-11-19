@@ -26,7 +26,14 @@
 
 
 
-
+.rt-youtube__pause-space
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  cursor: pointer
+  z-index: 1
 .rt-youtube___not-ready
   position: absolute
   top: 0
@@ -36,6 +43,13 @@
   display: flex
   align-items center
   justify-content center
+.rt-youtube___pause-background
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: #484848
 .rt-youtube___pause-image
   position: absolute
   top: 0
@@ -158,6 +172,7 @@
   align-items center
   margin-bottom: -29px
   opacity: 0
+  z-index: 2
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property margin, opacity
