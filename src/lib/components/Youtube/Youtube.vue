@@ -202,6 +202,7 @@
         this.player.stopVideo();
         this.isPlaying = false;
         this.activeIndexVideo = 0;
+        this.playerState = '-1';
       },
       previousVideo() {
 
@@ -386,15 +387,19 @@
               {playButton}
               {time}
               {this.duration ? <rt-youtube-volume default-volume={this.volume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume> : null}
-            </div> : <div class="rt-youtube__start-video" onClick={this.playVideo}>
+            </div> : null}
+            <div class={"rt-youtube__start-video"+ ((!this.isPlaying || this.playerState != '-1') && this.duration ? ' rt-youtube__start-video--not-active' : '')} onClick={this.playVideo}>
               <svg width="34px" height="47px" viewBox="0 0 34 47" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="smart-home-copy" transform="translate(-631.000000, -329.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                    <polygon id="ic-play" transform="translate(648.000000, 352.500000) rotate(-270.000000) translate(-648.000000, -352.500000) " points="625 369 648 336 671 369"></polygon>
+                  <g id="smart-home-copy" transform="translate(-631.000000, -329.000000)" fill="#FFFFFF"
+                     fill-rule="nonzero">
+                    <polygon id="ic-play"
+                             transform="translate(648.000000, 352.500000) rotate(-270.000000) translate(-648.000000, -352.500000) "
+                             points="625 369 648 336 671 369"></polygon>
                   </g>
                 </g>
               </svg>
-            </div>}
+            </div>
           </div>
         }else{
           return <div class="rt-youtube___not-ready"><rt-spinner /></div>
@@ -441,6 +446,7 @@
           youtubeClass+=' rt-youtube--is-hover';
         }
       }
+
       if(this.isPlaying){
         youtubeClass += " rt-youtube--is-active";
       }
