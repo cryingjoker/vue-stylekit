@@ -308,7 +308,7 @@
     height: 4px
 
 
-.rt-youtube__start-video{
+.rt-youtube__start-video
   top: 0
   bottom: 0
   left: 0
@@ -319,7 +319,20 @@
   position: absolute
   z-index: 3
   cursor: pointer
-}
+
+.rt-youtube__start-video--not-active
+  opacity: 0
+  visibility: hidden
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property opacity, visibility
+
+  .rt-youtube--is-active.rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+    opacity: 0
+    visibility: hidden
+  .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+    opacity: 1
+    visibility: visible
 
 .rt-youtube__change-icon{
   fill: b2c-cool-grey
