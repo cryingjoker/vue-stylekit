@@ -8,10 +8,23 @@
   export default {
     name: "RtYoutube",
     components: components,
+
     props: {
       videoId : {
         type: Array,
-        required: true
+        default: null
+      },
+      playlistId : {
+        type: Array,
+        default: null
+      },
+      playlistLength: {
+        type: [Number, Array],
+        default: null
+      },
+      utmSources: {
+        type: Array,
+        default: null
       },
       pauseImage: {
         type: String,
@@ -19,17 +32,49 @@
       }
     },
     data: () => ({
-        playTime: 0,
-        videoIsReady: false,
-        player: null,
-        playerState: '-1',
-        isPlaying: false,
-        activeIndexVideo: 0,
-        loadedFraction: 0,
-        volume: 0
+      playTime: 0,
+      videoIsReady: false,
+      player: null,
+      playerState: '-1',
+      isPlaying: false,
+      activeIndexVideo: 0,
+      activePlaylistIndex: 0,
+      loadedFraction: 0,
+      volume: 0,
+      videoIdsArray: [],
+      videoSize: 0,
     }),
 
     mounted: function() {
+      if(this.utmSources){
+        if(location.search){
+          let utm = location.search.split('utm-source=')[1];
+          if(utm){
+            let utmPrefix = utm.split('_')[0];
+            if(this.utmSources && this.utmSources.length > 0 ){
+              let activePlaylistIndex = this.utmSources.findIndex((utmSourcesItem)=>{
+                if(utmSourcesItem === utmPrefix){
+                  return true
+                }else{
+                  return false
+                }
+              })
+              if(activePlaylistIndex >= 0){
+                this.activePlaylistIndex = activePlaylistIndex;
+              }
+            }
+          }
+        }
+      }
+      if(this.playlistId){
+        if(Array.isArray(this.playlistLength)){
+          this.videoSize = this.playlistLength[this.activePlaylistIndex];
+        }else {
+          this.videoSize = this.playlistLength;
+        }
+      }else{
+        this.videoSize = this.videoId.length;
+      }
       this.init();
       this.bindKeyboardEvents()
     },
@@ -46,12 +91,12 @@
           switch(event.keyCode) {
             case 32:
               if (this.isPlaying) {
-                this.stopVideo();
+                this.pauseVideo();
               } else {
                 this.playVideo();
               }
               event.preventDefault();
-            break;
+              break;
             case 39:
               if (this.isPlaying) {
                 this.playTime+=5;
@@ -98,58 +143,91 @@
           this.getDuration();
           this.volume = this.player.getVolume();
         }
+        if (event.data == YT.PlayerState.ENDED) {
+
+         if(this.activeIndexVideo < this.videoSize - 1){
+           this.nextVideo()
+         }else{
+           this.stopVideo();
+         }
+        }
       },
       createPlayer(){
-          const height = 400;
-          this.player = new YT.Player("player-"+this._uid, {
-            height: '56.25%',
-            width: '100%',
-            videoId: this.videoId[this.activeIndexVideo],
-            playerVars: {
-              "autoplay" :"0",
-              "loop" :"1",
-              "autohide" :"1",
-              "border" :"0",
-              "rel":"0",
-              "wmode": "opaque",
-              "enablejsapi" :"1",
-              "modestbranding" :"1",
-              "controls" :"0",
-              "disablekb": "1",
-              "showinfo": "0",
-            },
-            events: {
-              'onReady': this.setVideoReady,
-              'onStateChange': this.onStateChange
-            }
-          });
+        const height = 400;
+        const settings = {
+          height: '56.25%',
+          width: '100%',
+          playerVars: {
+            "autoplay" :"0",
+            "loop" :"0",
+            "autohide" :"1",
+            "border" :"0",
+            "wmode": "opaque",
+            "enablejsapi" :"1",
+            "modestbranding" :"1",
+            "playsinline":"1",
+            "rel":"0",
+            "showinfo":"0",
+            "controls" :"0",
+            "disablekb": "1",
+            "showinfo": "0",
+            "iv_load_policy": "3"
+          },
+          events: {
+            'onReady': this.setVideoReady,
+            'onStateChange': this.onStateChange
+          }
+        }
+        if(this.videoId){
+          settings.videoId = this.videoId[this.activeIndexVideo]
+        }else{
+
+          if(this.playlistId){
+            settings.playerVars.list = this.playlistId[this.activePlaylistIndex]
+          }
+        }
+        this.player = new YT.Player("player-"+this._uid, settings);
       },
       setVideoReady(){
         this.videoIsReady = true;
         this.getLoadedFraction();
         this.isMute = this.player.isMuted();
       },
-      stopVideo(){
+      pauseVideo(){
         this.player.pauseVideo();
         this.isPlaying = false;
       },
-      previousVideo(){
-        if(this.activeIndexVideo - 1 < 0){
-          this.activeIndexVideo = this.videoId.length - 1;
-        }else{
-          this.activeIndexVideo --;
-        }
-        this.player.loadVideoById(this.videoId[this.activeIndexVideo])
+      stopVideo(){
+        this.player.stopVideo();
+        this.isPlaying = false;
+        this.activeIndexVideo = 0;
       },
-      nextVideo(){
-        if(this.activeIndexVideo + 1 === this.videoId.length){
-          this.activeIndexVideo = 0;
-        }else{
-          this.activeIndexVideo ++;
-        }
-        this.player.loadVideoById(this.videoId[this.activeIndexVideo])
-      },
+      previousVideo() {
 
+          if (this.activeIndexVideo - 1 < 0) {
+            this.activeIndexVideo = this.videoSize - 1;
+          } else {
+            this.activeIndexVideo--;
+          }
+        if (this.playlistId) {
+          this.player.previousVideo();
+        }else {
+          this.player.loadVideoById(this.videoId[this.activeIndexVideo])
+        }
+      },
+      nextVideo() {
+        if (this.activeIndexVideo + 1 === this.videoSize) {
+          this.activeIndexVideo = 0;
+        } else {
+          this.activeIndexVideo++;
+        }
+        if (this.playlistId) {
+          this.player.nextVideo();
+        } else {
+          this.player.loadVideoById(this.videoId[this.activeIndexVideo])
+
+        }
+      },
       setMuteParams(isMute){
         if(isMute){
           this.player.mute();
@@ -171,7 +249,13 @@
             }
           },800)
         }
-
+      },
+      togglePause(){
+        if(this.isPlaying){
+          this.pauseVideo();
+        }else{
+          this.playVideo();
+        }
       },
       getLoadedFraction(){
         if(this.loadedFraction !== this.player.getVideoLoadedFraction()) {
@@ -202,13 +286,16 @@
     render(){
 
       const backgroundImage = (()=>{
+        if(this.isPlaying){
+          return null;
+        }
         if(this.pauseImage) {
           const style = {
             backgroundImage: 'url('+this.pauseImage+')'
           }
-         return <div class="rt-youtube___pause-image" style={style}></div>
+          return <div class="rt-youtube___pause-image" style={style}></div>
         }else{
-          return null
+          return <div class="rt-youtube___pause-background"></div>
         }
       })()
       const playButton = (()=>{
@@ -226,7 +313,7 @@
             </svg>
           </div>
         }else {
-          return <div class="rt-youtube__pause" onClick={this.stopVideo}>
+          return <div class="rt-youtube__pause" onClick={this.pauseVideo}>
             <svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="smart-home-copy" transform="translate(-273.000000, -1119.000000)" fill="#FFFFFF"
@@ -273,12 +360,12 @@
             }
           })()
           return <div class="rt-youtube__play-control">
-
+            <div class="rt-youtube__pause-space" onClick={this.togglePause}></div>
             {this.duration || this.playerState !== '-1'? <div class="rt-youtube__menu">
               <rt-youtube-fraction onChangetime={this.changeTime} procent-played={procentPlayed} fraction={this.loadedFraction}></rt-youtube-fraction>
               {playButton}
               {time}
-              <rt-youtube-volume default-volume={this.volume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume>
+              {this.duration ? <rt-youtube-volume default-volume={this.volume} is-mute={this.isMute} onMutetoggle={this.setMuteParams} onChangevolume={this.changeVolume}></rt-youtube-volume> : null}
             </div> : <div class="rt-youtube__start-video" onClick={this.playVideo}>
               <svg width="34px" height="47px" viewBox="0 0 34 47" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -294,7 +381,7 @@
         }
       })()
       const nextVideoButton = (()=>{
-        if(this.playerState !== '-1' && this.videoId.length > 0 && this.activeIndexVideo+1 < this.videoId.length){
+        if(this.playerState !== '-1' && this.videoSize > 0 && this.activeIndexVideo+1 < this.videoSize){
           return <div class="rt-youtube__next rt-youtube__change-video" onClick={this.nextVideo}>
             <svg width="20px" height="39px" class="rt-youtube__change-icon" viewBox="0 0 20 39" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -311,7 +398,7 @@
         }
       })()
       const previousVideoButton = (()=>{
-        if(this.videoId.length > 0 && this.activeIndexVideo > 0){
+        if(this.playerState !== '-1' && this.videoSize > 0 && this.activeIndexVideo > 0){
           return <div class="rt-youtube__previous rt-youtube__change-video" onClick={this.previousVideo}>
             <svg width="20px" height="39px" class="rt-youtube__change-icon" viewBox="0 0 20 39" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
