@@ -84,10 +84,12 @@
     .rt-youtube:hover &
       opacity: 1
       visibility: visible
-    .rt-youtube--touch-detected &
+    .rt-youtube.rt-youtube--touch-detected,
+    .rt-youtube.rt-youtube--touch-detected:hover &
       opacity: 0
       visibility: hidden
-    .rt-youtube--is-hover &
+    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+    .rt-youtube.rt-youtube--touch-detected:hover.rt-youtube--is-hover &
       opacity: 1
       visibility: visible
 
@@ -108,14 +110,17 @@
   transition-property opacity, visibility
   @media (max-width: mobile-step-size)
     left: 20px
-    .rt-youtube:hover.rt-youtube--touch-detected &
-      opacity: 0
-      visibility: hidden
+    opacity: 0
+    visibility: hidden
     .rt-youtube:hover &
       opacity: 1
       visibility: visible
-    .rt-youtube:hover.rt-youtube--is-hover &,
-    .rt-youtube--is-hover &
+    .rt-youtube.rt-youtube--touch-detected,
+    .rt-youtube.rt-youtube--touch-detected:hover &
+      opacity: 0
+      visibility: hidden
+    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+    .rt-youtube.rt-youtube--touch-detected:hover.rt-youtube--is-hover &
       opacity: 1
       visibility: visible
 

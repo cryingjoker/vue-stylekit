@@ -142,6 +142,9 @@
         if(event.data == YT.PlayerState.PLAYING && !this.isPlaying){
           this.isPlaying = true;
         }
+        if(this.playlistId) {
+          this.activeIndexVideo = this.player.getPlaylistIndex();
+        }
         if (event.data == YT.PlayerState.ENDED) {
 
          if(this.activeIndexVideo < this.videoSize - 1){
