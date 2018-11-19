@@ -18,10 +18,6 @@
         type: Array,
         default: null
       },
-      playlistLength: {
-        type: [Number, Array],
-        default: null
-      },
       utmSources: {
         type: Array,
         default: null
@@ -66,13 +62,7 @@
           }
         }
       }
-      if(this.playlistId){
-        if(Array.isArray(this.playlistLength)){
-          this.videoSize = this.playlistLength[this.activePlaylistIndex];
-        }else {
-          this.videoSize = this.playlistLength;
-        }
-      }else{
+      if(!this.playlistId){
         this.videoSize = this.videoId.length;
       }
       this.init();
@@ -142,6 +132,13 @@
           this.getCurrentTime();
           this.getDuration();
           this.volume = this.player.getVolume();
+          this.videoSize = this.player.getPlaylist().length;
+        }
+        if(event.data == YT.PlayerState.PAUSED && this.isPlaying){
+          this.isPlaying = false;
+        }
+        if(event.data == YT.PlayerState.PLAYING && !this.isPlaying){
+          this.isPlaying = true;
         }
         if (event.data == YT.PlayerState.ENDED) {
 
@@ -153,7 +150,6 @@
         }
       },
       createPlayer(){
-        const height = 400;
         const settings = {
           height: '56.25%',
           width: '100%',
