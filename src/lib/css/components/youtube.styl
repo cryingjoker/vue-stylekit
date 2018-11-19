@@ -43,13 +43,7 @@
   display: flex
   align-items center
   justify-content center
-.rt-youtube___pause-background
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  background-color: #484848
+
 .rt-youtube___pause-image
   position: absolute
   top: 0
@@ -58,12 +52,16 @@
   right: 0
   background-size: cover
   background-position: center
-  .rt-youtube--is-active &
-    opacity: 0
-    visibility: hidden
-    transition-timing-function ease-in-out
-    transition-duration .2s
-    transition-property opacity, visibility
+  background-color: #484848
+  opacity: 0
+  visibility: hidden
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity, visibility
+  &--is-active
+    opacity: 1
+    visibility: visible
+
 
 .rt-youtube__next
   position: absolute

@@ -282,17 +282,11 @@
     render(){
 
       const backgroundImage = (()=>{
-        if(this.isPlaying){
-          return null;
-        }
+        const style = {};
         if(this.pauseImage) {
-          const style = {
-            backgroundImage: 'url('+this.pauseImage+')'
-          }
-          return <div class="rt-youtube___pause-image" style={style}></div>
-        }else{
-          return <div class="rt-youtube___pause-background"></div>
+          style.backgroundImage = 'url('+this.pauseImage+')'
         }
+        return <div class={"rt-youtube___pause-image"+(!this.isPlaying ? ' rt-youtube___pause-image--is-active':'')} style={style}></div>
       })()
       const playButton = (()=>{
         if(!this.isPlaying) {
