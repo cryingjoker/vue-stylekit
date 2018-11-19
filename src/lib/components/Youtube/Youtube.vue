@@ -39,6 +39,8 @@
       volume: 0,
       videoIdsArray: [],
       videoSize: 0,
+      touchCount: 0,
+      isTouchDevice: false
     }),
 
     mounted: function() {
@@ -246,12 +248,17 @@
           },800)
         }
       },
-      togglePause(){
-        if(this.isPlaying){
-          this.pauseVideo();
-        }else{
-          this.playVideo();
-        }
+      togglePause(event){
+        // const windowWidth = window.outerWidth
+        setTimeout(()=> {
+          if(this.touchCount === 0 || this.touchCount === 2) {
+            if (this.isPlaying) {
+              this.pauseVideo();
+            } else {
+              this.playVideo();
+            }
+          }
+        })
       },
       getLoadedFraction(){
         if(this.loadedFraction !== this.player.getVideoLoadedFraction()) {
@@ -278,6 +285,25 @@
         this.volume = newVolume*100;
         this.player.setVolume(newVolume*100);
       },
+      touchTogglePause(){
+        this.touchCount ++;
+        this.isTouchDevice = true;
+        if(this.touchCount > 2){
+          this.touchCount = 2;
+        }
+        if(this.timeout){
+          clearTimeout(this.timeout);
+        }
+        this.timeout = setTimeout(()=>{
+          this.touchCount--;
+          if(this.touchCount > 0){
+            this.timeout = setTimeout(()=>{
+              this.touchCount--;
+            },2000)
+          }
+        },2000)
+
+      }
     },
     render(){
 
@@ -349,8 +375,9 @@
               return null
             }
           })()
-          return <div class="rt-youtube__play-control">
-            <div class="rt-youtube__pause-space" onClick={this.togglePause}></div>
+          let playControlClass = 'rt-youtube__play-control';
+          return <div class={playControlClass} ref="playControl">
+            <div class="rt-youtube__pause-space" onClick={this.togglePause} onTouchstart={this.touchTogglePause}></div>
             {this.duration || this.playerState !== '-1'? <div class="rt-youtube__menu">
               <rt-youtube-fraction onChangetime={this.changeTime} procent-played={procentPlayed} fraction={this.loadedFraction}></rt-youtube-fraction>
               {playButton}
@@ -404,7 +431,17 @@
           return null
         }
       })()
-      return <div class={"rt-youtube"+(this.isPlaying ? " rt-youtube--is-active" : "")}>
+      let youtubeClass = 'rt-youtube';
+      if(this.isTouchDevice){
+        youtubeClass+=' rt-youtube--touch-detected';
+        if(this.touchCount > 0){
+          youtubeClass+=' rt-youtube--is-hover';
+        }
+      }
+      if(this.isPlaying){
+        youtubeClass += " rt-youtube--is-active";
+      }
+      return <div class={youtubeClass}>
         <div id={"player-"+this._uid}></div>
         <div class="rt-youtube__controls">
           {backgroundImage}
