@@ -4,12 +4,13 @@
       <div class="app-title"><h1 class="rt-font-hero">Youtube player</h1></div>
       <div class="app-body">
         <div class="row">
-        <div class="rt-col-2 rt-col-md-3">
+        <div class="rt-col-1 rt-col-md-3 rt-col-td-10">
         </div>
-          <div class="rt-col-8 rt-col-md-3">
-        <rt-youtube :playlist-length="[3,10,10,2]" :utm-sources="['ab','ba','ca','ka']"  :playlist-id="['PLbAFXJC0J5GanbANaPaaWYB6Vdc_JPZ6n','RDUOxkGD8qRB4','RDBqNES_8YLP4','RDMM3mBKjBJX60E','RDAmq-qlqbjYA']"></rt-youtube>
+          <div class="rt-col-10 rt-col-md-3 rt-col-td-10">
+            <pre-code
+              text="<rt-youtube :utm-sources=&quot;['ab','ba','ca','ka']&quot;  :playlist-id=&quot;['PLbAFXJC0J5GanbANaPaaWYB6Vdc_JPZ6n','RDUOxkGD8qRB4','RDBqNES_8YLP4','RDMM3mBKjBJX60E','RDAmq-qlqbjYA']&quot;></rt-youtube>"></pre-code>
           </div>
-          <div class="rt-col-2 rt-col-md-3">
+          <div class="rt-col-1 rt-col-md-3 rt-col-td-10">
           </div>
         </div>
 
