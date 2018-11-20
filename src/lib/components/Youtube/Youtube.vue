@@ -148,7 +148,9 @@
         if (event.data == YT.PlayerState.ENDED) {
 
          if(this.activeIndexVideo < this.videoSize - 1){
-           this.nextVideo()
+           if(!this.playlistId) {
+             this.nextVideo()
+           }
          }else{
            this.stopVideo();
          }

@@ -60,11 +60,9 @@ export default {
 
   computed: {
     fieldName () {
-      // Для всех полей ввода задаём атрибут name, даже дефолтный
       return this.name || 'input-field__'+this._uid;
     },
     isInvalid () {
-      // Если есть внешний валидатор, то при изменении значения проверяем на ошибки
       if (this.validate || this.hasError) {
         return this.hasError || this.errors.has(this.fieldName);
       }

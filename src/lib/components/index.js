@@ -13,6 +13,7 @@
  export { default as SelectWithoutJs } from './Select/SelectWithoutJs.vue';
  export { default as Spinner } from './Spinner/Spinner.vue';
  export { default as Switch } from './Switch/Switch.vue';
+ export { default as SwitchContainer } from './Switch/SwitchContainer.vue';
  export { default as Textarea } from './Textarea/Textarea.vue';
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
  export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.vue';
@@ -43,4 +44,5 @@
  export { default as TagsList } from './Tag/TagsList.vue';
  export { default as Filter } from './Filter/Filter.vue';
  export { default as FilterWatcher } from './Filter/FilterWatcher.vue';
+ export { default as FilterCaller } from './Filter/FilterCaller.vue';
  export { default as Youtube } from './Youtube/Youtube.vue';

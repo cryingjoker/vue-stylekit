@@ -14,6 +14,7 @@ import {
   SelectWithoutJs,
   Spinner,
   Switch,
+  SwitchContainer,
   Textarea,
   TextareaStatic,
   ScrollTabs,
@@ -42,6 +43,7 @@ import {
   TagsList,
   Filter,
   FilterWatcher,
+  FilterCaller,
   Youtube
 } from "../lib/components/index";
 
@@ -61,6 +63,7 @@ componentsList[SelectOption.name] = SelectOption;
 componentsList[SelectWithoutJs.name] = SelectWithoutJs;
 componentsList[Spinner.name] = Spinner;
 componentsList[Switch.name] = Switch;
+componentsList[SwitchContainer.name] = SwitchContainer;
 componentsList[Textarea.name] = Textarea;
 componentsList[TextareaStatic.name] = TextareaStatic;
 componentsList[ScrollTabs.name] = ScrollTabs;
@@ -89,4 +92,6 @@ componentsList[Tag.name] = Tag;
 componentsList[TagsList.name] = TagsList;
 componentsList[Filter.name] = Filter;
 componentsList[FilterWatcher.name] = FilterWatcher;
+componentsList[FilterCaller.name] = FilterCaller;
+componentsList[Youtube.name] = Youtube;
 export default { ...componentsList };

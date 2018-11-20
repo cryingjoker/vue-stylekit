@@ -1,27 +1,39 @@
-<!-- inline-template -->
 <script type="text/jsx">
   import { Fragment } from 'vue-fragment';
+
 export default {
   name: "RtFilter",
   data: () => ({
-    selectedProps: []
+    selectedProps: {},
+    listners: [],
   }),
   provide() {
     const RtFilter = {};
     RtFilter['selectedProps'] = this.selectedProps;
     RtFilter['setProps'] = this.setProps;
     RtFilter['removeProps'] = this.removeProps;
-
+    RtFilter['addListener'] = this.addListener;
     return { RtFilter };
   },
   mounted: function() {},
   methods: {
-    setProps(value){
-      this.selectedProps.push(value);
+    callListeners(){
+      this.listners.forEach((fn)=>{
+        fn.call(null,this.selectedProps);
+      })
     },
-    removeProps(value){
-      const index = this.selectedProps.indefOf(value);
-      this.selectedProps.splice(index,1);
+    addListener(fn){
+      this.listners.push(fn);
+      return this.listners.length - 1;
+    },
+    setProps(option,value){
+      this.selectedProps[option] = value;
+      this.callListeners();
+    },
+    removeProps(option){
+      delete this.selectedProps[option];
+      console.info('this.selectedProps',this.selectedProps);
+      this.callListeners();
     }
   },
   render(){

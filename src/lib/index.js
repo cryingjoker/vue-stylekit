@@ -18,6 +18,7 @@ import {
   SelectWithoutJs,
   Spinner,
   Switch,
+  SwitchContainer,
   Textarea,
   TextareaStatic,
   ScrollTabs,
@@ -47,12 +48,12 @@ import {
   TagsList,
   Filter,
   FilterWatcher,
-  Youtube
+  FilterCaller,
+  Youtube,
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
-// import { FilterCallerDirective } from "./directives/Filter/FilterCaller";
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -72,6 +73,7 @@ const VueRtStyle = {
       Vue.component(SelectWithoutJs.name, SelectWithoutJs);
       Vue.component(Spinner.name, Spinner);
       Vue.component(Switch.name, Switch);
+      Vue.component(SwitchContainer.name, SwitchContainer);
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
       Vue.component(ScrollTabs.name, ScrollTabs);
@@ -101,8 +103,8 @@ const VueRtStyle = {
       Vue.component(TagsList.name, TagsList);
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
+      Vue.component(FilterCaller.name, FilterCaller);
 
-      // Vue.directive(FilterCallerDirective.name, FilterCallerDirective);
 
       Vue.component(Youtube.name, Youtube);
 
