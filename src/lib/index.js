@@ -18,6 +18,7 @@ import {
   SelectWithoutJs,
   Spinner,
   Switch,
+  SwitchContainer,
   Textarea,
   TextareaStatic,
   ScrollTabs,
@@ -72,6 +73,7 @@ const VueRtStyle = {
       Vue.component(SelectWithoutJs.name, SelectWithoutJs);
       Vue.component(Spinner.name, Spinner);
       Vue.component(Switch.name, Switch);
+      Vue.component(SwitchContainer.name, SwitchContainer);
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
       Vue.component(ScrollTabs.name, ScrollTabs);
@@ -103,7 +105,6 @@ const VueRtStyle = {
       Vue.component(FilterWatcher.name, FilterWatcher);
       Vue.component(FilterCaller.name, FilterCaller);
 
-      // Vue.directive(FilterCallerDirective.name, FilterCallerDirective);
 
       Vue.component(Youtube.name, Youtube);
 

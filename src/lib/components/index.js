@@ -13,6 +13,7 @@
  export { default as SelectWithoutJs } from './Select/SelectWithoutJs.vue';
  export { default as Spinner } from './Spinner/Spinner.vue';
  export { default as Switch } from './Switch/Switch.vue';
+ export { default as SwitchContainer } from './Switch/SwitchContainer.vue';
  export { default as Textarea } from './Textarea/Textarea.vue';
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
  export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.vue';

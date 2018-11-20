@@ -14,6 +14,7 @@ import {
   SelectWithoutJs,
   Spinner,
   Switch,
+  SwitchContainer,
   Textarea,
   TextareaStatic,
   ScrollTabs,
@@ -62,6 +63,7 @@ componentsList[SelectOption.name] = SelectOption;
 componentsList[SelectWithoutJs.name] = SelectWithoutJs;
 componentsList[Spinner.name] = Spinner;
 componentsList[Switch.name] = Switch;
+componentsList[SwitchContainer.name] = SwitchContainer;
 componentsList[Textarea.name] = Textarea;
 componentsList[TextareaStatic.name] = TextareaStatic;
 componentsList[ScrollTabs.name] = ScrollTabs;
