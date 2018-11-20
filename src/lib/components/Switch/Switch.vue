@@ -78,8 +78,11 @@ export default {
           );
         });
       }
-      this.$on('test',(res)=>{
-        console.info('teeeest',res)
+      this.$on('emittoswitcher',(data)=>{
+        if (data && data[this._uid]){
+          console.info('!!!',this.$el.querySelector(".switch-element").checked,data[this._uid]['checked'])
+          this.$el.querySelector(".switch-element").checked = data[this._uid]['checked'];
+        }
       })
       this.$refs.input.addEventListener('change',
       ()=>{

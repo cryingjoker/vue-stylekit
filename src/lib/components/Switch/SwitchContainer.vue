@@ -7,7 +7,8 @@ export default {
   props: {
   },
   data:() => ({
-    switcherData: {}
+    switcherData: {},
+    switcherNamesMap: {}
   }),
   mounted: function() {
   },
@@ -20,6 +21,7 @@ export default {
       vNodeArray.forEach((vNode)=> {
         if (vNode && vNode.$vnode && vNode.$vnode.tag.search('-RtSwitch') > 0) {
           vNode.$emit('emittoswitcher',event)
+          console.info('event',event);
         }
         if (vNode.$children) {
           this.emitToAllChildren(vNode.$children,event);
@@ -27,12 +29,29 @@ export default {
       });
     },
     updateSwitcherData(switcherData){
-      console.info('switcherData',switcherData);
       this.$set(this.switcherData,switcherData._uid,{
         name: switcherData.name,
         value: switcherData.value,
         checked: switcherData.checked
-      })
+      });
+      if(switcherData.value === '#allparams' && switcherData.checked){
+        this.switcherNamesMap[switcherData.name].forEach((uid)=>{
+          this.$set(this.switcherData[uid],'checked',true);
+        });
+        this.emitToAllChildren(this.$children,this.switcherData);
+      }else{
+        if(switcherData.value !== '#allparams' && !switcherData.checked){
+          this.switcherNamesMap[switcherData.name].forEach((uid)=>{
+            if(this.switcherData[uid].value === '#allparams'){
+              this.$set(this.switcherData[uid],'checked',false)
+              const req = {}
+              req[uid] = this.switcherData[uid];
+              this.emitToAllChildren(this.$children,req);
+              return false
+            }
+          })
+        }
+      }
     },
     findAllChildren(vNodeArray){
       vNodeArray.forEach((vNode)=>{
@@ -40,12 +59,15 @@ export default {
           vNode.$on('changeswitcher',(res)=>{
             this.updateSwitcherData(res);
             vNode.$emit('test','!!!')
-          })
+          });
           this.$set(this.switcherData,vNode._uid,{
             name: vNode.fieldName,
             value: vNode.value,
             checked: vNode.checked
-          })
+          });
+          const switcherNames = this.switcherNamesMap[vNode.fieldName] || [];
+          switcherNames.push(vNode._uid);
+          this.$set(this.switcherNamesMap,vNode.fieldName,switcherNames);
 
         }
 
