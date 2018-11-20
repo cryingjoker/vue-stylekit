@@ -50,7 +50,21 @@
                 </rt-filter-caller>
 
               </rt-tag-list>
-              <rt-filter-watcher></rt-filter-watcher>
+              <rt-filter-watcher :options="['device-type']" :values="[2]">
+                <p>123</p>
+              </rt-filter-watcher>
+              <rt-filter-watcher :options="['device-type']" :values="[2]">
+                <rt-card><template slot="content">Для смартфонов Android 2</template></rt-card>
+              </rt-filter-watcher>
+              <rt-filter-watcher :options="['device-type']" :values="[3]">
+                <rt-card><template slot="content">Macbook</template></rt-card>
+              </rt-filter-watcher>
+              <rt-filter-watcher :options="['device-type']" :values="[[2,6]]">
+                <rt-card><template slot="content">Для смартфонов Android 2 Windows</template></rt-card>
+              </rt-filter-watcher>
+              <rt-filter-watcher :options="['device-type']" :values="[3]">
+                <rt-card><template slot="content">Macos</template></rt-card>
+              </rt-filter-watcher>
             </rt-filter>
             <!--'></pre-code>-->
           </div>

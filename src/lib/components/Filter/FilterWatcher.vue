@@ -5,18 +5,19 @@
     name: "RtFilterWatcher",
     inject: ["RtFilter"],
     props:{
-      option:{
-        type: String,
+      options:{
+        type: Array,
         default: null
       },
-      value: {
-        type: String,
+      values: {
+        type: Array,
         default: null
-      }
+      },
     },
     data: () => ({
       index: null,
-      selectedProps: {}
+      selectedProps: {},
+      isActive: true
     }),
     created() {
       setTimeout(() => {
@@ -24,9 +25,35 @@
       }, 0);
     },
     mounted(){
-      this.selectedProps = this.RtFilter.selectedProps;
+      console.info(this.RtFilter.addListener(this.onUpdateProps));
     },
     methods: {
+      onUpdateProps(props){
+        let hasFound = false;
+        // Object.keys(props).forEach((key)=>{
+        //
+        // })
+        console.info('props',props);
+        this.options.forEach((optionName,optionIndex)=>{
+          let valueOptions;
+          if(!Array.isArray(this.values[optionIndex])){
+            valueOptions = [this.values[optionIndex]]
+          }else{
+            valueOptions = this.values[optionIndex]
+          }
+          valueOptions.forEach((option)=>{
+            if(option == props[optionName]){
+              hasFound = true;
+              return false
+            }
+          });
+          if(hasFound){
+            return false;
+          }
+        });
+        console.info('hasFound',hasFound);
+        this.isActive = hasFound;
+      },
       checkClick(event){
         console.info('checkClick event -->>  ',event);
       },
@@ -49,7 +76,11 @@
       }
     },
     render() {
-      return <p>{JSON.stringify(this.selectedProps)}</p>;
+      if(this.isActive) {
+        return <div class="d-static">{this.$slots.default}</div>
+      }else{
+        return null
+      }
     }
   };
 </script>

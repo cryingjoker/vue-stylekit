@@ -1,6 +1,4 @@
 <script type="text/jsx">
-  import { Fragment } from "vue-fragment";
-
   export default {
     name: "RtFilterCaller",
     inject: ["RtFilter"],
@@ -58,7 +56,7 @@
       }
     },
     render() {
-      return <Fragment onClick={this.checkClick}>{this.$slots.default}</Fragment>;
+      return <div class="d-static" onClick={this.checkClick}>{this.$slots.default}</div>;
     }
   };
 </script>

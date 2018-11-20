@@ -40,9 +40,9 @@ import {
   DownloadContent,
   Tag,
   TagsList,
-  Filter,
-  FilterWatcher,
-  FilterCaller,
+  // Filter,
+  // FilterWatcher,
+  // FilterCaller,
   Youtube
 } from "../lib/components/index";
 
@@ -88,8 +88,8 @@ componentsList[TableCol.name] = TableCol;
 componentsList[DownloadContent.name] = DownloadContent;
 componentsList[Tag.name] = Tag;
 componentsList[TagsList.name] = TagsList;
-componentsList[Filter.name] = Filter;
-componentsList[FilterWatcher.name] = FilterWatcher;
-componentsList[FilterCaller.name] = FilterCaller;
+// componentsList[Filter.name] = Filter;
+// componentsList[FilterWatcher.name] = FilterWatcher;
+// componentsList[FilterCaller.name] = FilterCaller;
 componentsList[Youtube.name] = Youtube;
 export default { ...componentsList };
