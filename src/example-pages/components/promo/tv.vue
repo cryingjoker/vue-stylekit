@@ -551,7 +551,8 @@
                   </div>
                 </template>
                 <template slot="footer">
-                  <p class="rt-space-bottom rt-font-small-paragraph">
+
+                  <p class="rt-space-bottom rt-font-small-paragraph" style="min-height: 200px;">
                     Волшебный мир Disney Это предложение для истинных
                     поклонников Disney! Коллекция анимационных и художественных
                     фильмов от знаменитой студии в одном разделе вашего
@@ -620,7 +621,7 @@
                   </div>
                 </template>
                 <template slot="footer">
-                  <p class="rt-space-bottom rt-font-small-paragraph">
+                  <p class="rt-space-bottom rt-font-small-paragraph" style="min-height: 200px;">
                     «Отчаянные домохозяйки» или «Анатомия страсти»? Не можете
                     выбрать - смотрите оба! Ведь в подписке от голливудской
                     студии ABC собраны самые известные сериалы!
@@ -690,7 +691,7 @@
                   </div>
                 </template>
                 <template slot="footer">
-                  <p class="rt-space-bottom rt-font-small-paragraph">
+                  <p class="rt-space-bottom rt-font-small-paragraph" style="min-height: 200px;">
                     В пакет каналов Viasat Премиум HD входят фильмовые каналы
                     TV1000 Premium HD, TV1000 Megahit HD, TV1000 Comedy HD,
                     спортивные каналы Viasat Sport HD и Viasat Golf HD;

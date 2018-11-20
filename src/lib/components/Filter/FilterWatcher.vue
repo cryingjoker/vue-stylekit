@@ -1,5 +1,4 @@
 <script type="text/jsx">
-  import { Fragment } from "vue-fragment";
 
   export default {
     name: "RtFilterWatcher",
@@ -25,16 +24,16 @@
       }, 0);
     },
     mounted(){
-      console.info(this.RtFilter.addListener(this.onUpdateProps));
+      this.RtFilter.addListener(this.onUpdateProps)
     },
     methods: {
       onUpdateProps(props){
         let hasFound = false;
-        // Object.keys(props).forEach((key)=>{
-        //
-        // })
-        console.info('props',props);
         this.options.forEach((optionName,optionIndex)=>{
+          if(!props[optionName]){
+            hasFound = true;
+            return false;
+          }
           let valueOptions;
           if(!Array.isArray(this.values[optionIndex])){
             valueOptions = [this.values[optionIndex]]
@@ -51,27 +50,13 @@
             return false;
           }
         });
-        console.info('hasFound',hasFound);
         this.isActive = hasFound;
-      },
-      checkClick(event){
-        console.info('checkClick event -->>  ',event);
       },
       setPropsToChildren() {
         this.$children.forEach((vNode) => {
           if (vNode && vNode.index !== "undefinded") {
             vNode.$set(vNode,'index',this.index);
           }
-
-          // this.$on = (...args) => {
-          //   old_on.apply(this, args);
-          // };
-
-          // var oldEmit = vNode.compiler.emitter.emit
-          // vNode.compiler.emitter.emit = function () {
-          //   console.log('got event: ' + arguments[0],arguments)
-          //   oldEmit.apply(this, arguments)
-          // }
         });
       }
     },

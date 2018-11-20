@@ -259,9 +259,9 @@
               <router-link
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
-                to="/youtube"
+                to="/filter"
               >
-                Youtube player
+                Filters
               </router-link>
             </div>
           </div>

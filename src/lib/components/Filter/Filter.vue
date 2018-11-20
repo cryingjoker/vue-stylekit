@@ -30,8 +30,9 @@ export default {
       this.selectedProps[option] = value;
       this.callListeners();
     },
-    removeProps(value){
+    removeProps(option){
       delete this.selectedProps[option];
+      console.info('this.selectedProps',this.selectedProps);
       this.callListeners();
     }
   },
