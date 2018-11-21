@@ -326,7 +326,6 @@ if (window) {
 }
 
 const componentDirectives = {};
-console.debug('VueRtStyle',VueRtStyle.directives);
 componentDirectives[VueRtStyle.directives.SwipeRight.name] =
   VueRtStyle.directives.SwipeRight;
 componentDirectives[VueRtStyle.directives.SwipeLeft.name] =

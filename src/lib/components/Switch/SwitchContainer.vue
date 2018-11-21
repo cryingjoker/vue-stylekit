@@ -7,6 +7,7 @@ export default {
   props: {
   },
   data:() => ({
+    index: null,
     switcherData: {},
     switcherNamesMap: {}
   }),
@@ -21,12 +22,23 @@ export default {
       vNodeArray.forEach((vNode)=> {
         if (vNode && vNode.$vnode && vNode.$vnode.tag.search('-RtSwitch') > 0) {
           vNode.$emit('emittoswitcher',event)
-          console.info('event',event);
         }
         if (vNode.$children) {
           this.emitToAllChildren(vNode.$children,event);
         }
       });
+    },
+    emitSelectedData(){
+      const responseArray = {};
+      Object.keys(this.switcherData).forEach((switcherDataKey)=>{
+        responseArray[this.switcherData[switcherDataKey].name] = responseArray[this.switcherData[switcherDataKey].name] || [];
+        if(this.switcherData[switcherDataKey].checked){
+          if(this.switcherData[switcherDataKey].value.search('#') === -1) {
+            responseArray[this.switcherData[switcherDataKey].name].push(this.switcherData[switcherDataKey].value)
+          }
+        }
+      })
+      this.$emit('change',responseArray)
     },
     updateSwitcherData(switcherData){
       this.$set(this.switcherData,switcherData._uid,{
@@ -52,13 +64,13 @@ export default {
           })
         }
       }
+      this.emitSelectedData();
     },
     findAllChildren(vNodeArray){
       vNodeArray.forEach((vNode)=>{
         if(vNode && vNode.$vnode && vNode.$vnode.tag.search('-RtSwitch')>0) {
           vNode.$on('changeswitcher',(res)=>{
             this.updateSwitcherData(res);
-            vNode.$emit('test','!!!')
           });
           this.$set(this.switcherData,vNode._uid,{
             name: vNode.fieldName,
