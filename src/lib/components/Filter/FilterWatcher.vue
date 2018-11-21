@@ -41,11 +41,23 @@
             valueOptions = this.values[optionIndex]
           }
           valueOptions.forEach((option)=>{
-            if(option == props[optionName]){
-              hasFound = true;
+            if(Array.isArray(props[optionName])){
+              props[optionName].forEach((propsOption)=>{
+                if(option == propsOption){
+                  hasFound = true;
+                  return false
+                }
+              });
+            }else {
+              if (option == props[optionName]) {
+                hasFound = true;
+              }
+            }
+            if(hasFound){
               return false
             }
           });
+
           if(hasFound){
             return false;
           }
