@@ -36,15 +36,14 @@
   },
   "homepage": "https://github.com/cryingjoker/vue-stylekit",
   "dependencies": {
+    "http-proxy-middleware": "^0.19.0",
     "markdown": "^0.5.0",
     "normalize.css": "^8.0.0",
     "ora": "^3.0.0",
     "pug": "^2.0.3",
     "reset-css": "^4.0.1",
     "vue-fragment": "^1.2.2",
-    "vue-router": "^3.0.1",
-    "webpack-merge": "^4.1.4",
-    "webpack-stats-plugin": "^0.2.1"
+    "vue-router": "^3.0.1"
   },
   "resolutions": {
     "jest/jest-cli/jest-haste-map/sane": "1.2.4",
@@ -91,8 +90,7 @@
     "gulp-shell": "^0.6.5",
     "gulp-tinypng-nokey-plus": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^4.4.0",
-    "koa-connect": "^2.0.1",
+    "image-webpack-loader": "^4.5.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.4",
@@ -114,12 +112,13 @@
     "vee-validate": "^2.1.1",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",
-    "vue-styleguidist": "^2.0.0",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-serve": "^2.0.2"
+    "webpack-merge": "^4.1.4",
+    "webpack-serve": "^2.0.2",
+    "webpack-stats-plugin": "^0.2.1"
   }
 }
