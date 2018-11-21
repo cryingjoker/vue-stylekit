@@ -55,6 +55,13 @@ export default {
                           class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
       }
     };
+    const borderContent = (()=>{
+      if(this.$slots['border-content']){
+        return this.$slots['border-content'].map((slot)=>{
+          return <div class="rt-card__border-content">{slot}</div>
+        })
+      }
+    })();
     return <div ref="card" v-rt-out-side-click={this.hideShow}>
       <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '')}>
 
@@ -68,10 +75,12 @@ export default {
             </div>
             {this.$slots['form']}
           </div>
-          <div class="rt-col-12">
+
+          <div class="rt-col-12 rt-card-buy__content">
           {this.$slots['content']}
           </div>
         </div>
+        {borderContent}
         <div class="rt-card__border-content rt-space-bottom">
           {this.$slots['card-footer']}
           {button()}
