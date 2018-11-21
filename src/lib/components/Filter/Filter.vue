@@ -27,17 +27,19 @@ export default {
       return this.listners.length - 1;
     },
     setProps(option,value){
-      this.selectedProps[option] = value;
+      this.$set(this.selectedProps,option,value)
       this.callListeners();
     },
     removeProps(option){
       delete this.selectedProps[option];
-      console.info('this.selectedProps',this.selectedProps);
       this.callListeners();
     }
   },
   render(){
-    return <Fragment>{this.$slots.default}</Fragment>;
+    return <Fragment>
+      {JSON.stringify(this.selectedProps)}
+      {this.$slots.default}
+      </Fragment>;
   }
 };
 </script>

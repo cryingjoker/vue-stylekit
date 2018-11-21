@@ -80,10 +80,9 @@ export default {
       }
       this.$on('emittoswitcher',(data)=>{
         if (data && data[this._uid]){
-          console.info('!!!',this.$el.querySelector(".switch-element").checked,data[this._uid]['checked'])
           this.$el.querySelector(".switch-element").checked = data[this._uid]['checked'];
         }
-      })
+      });
       this.$refs.input.addEventListener('change',
       ()=>{
         setTimeout(()=>{

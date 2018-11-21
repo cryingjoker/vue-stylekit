@@ -4,13 +4,17 @@ import VeeValidate from 'vee-validate';
 export default {
   name: "RtInput",
   props: {
+    defaultValue: {
+      type: [String, Number],
+      default: null
+    },
     insertLang: {
       type: String,// [ru, en]
-      defaul: null
+      default: null
     },
     insertType: {
       type: String, //[number, string]
-      defaul: null
+      default: null
     },
     disabled: {
       type: Boolean,
@@ -52,6 +56,7 @@ export default {
   },
   data() {
     return {
+      index: null,
       localLabel: this.label,
       localValue: this.value ? this.value : "",
       hasInputText: this.value ? this.value.length > 0 : false
