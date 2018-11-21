@@ -4,6 +4,9 @@
   export default {
     name: "RtCard",
     components: componentsList,
+    data: () => ({
+      index: null
+    }),
     props: {
       staticBodyHeight: {
         type: Boolean,
@@ -304,7 +307,7 @@
     render(h) {
       const header = (() => {
         if (this.$slots.header) {
-          <div style={this.cardHeaderStyle} class="rt-card__header">
+          return <div style={this.cardHeaderStyle} class="rt-card__header">
             {this.$slots["header"]}
           </div>;
         } else {
@@ -320,11 +323,11 @@
           return null;
         }
       })();
-      const borderContent = (()=>{
-        if(this.$slots['border-content']){
-          return this.$slots['border-content'].map((slot)=>{
-            return <div class="rt-card__border-content">{slot}</div>
-          })
+      const contentWithoutWrapper = (()=>{
+        if(this.$slots['content-without-wrapper']){
+          return this.$slots['content-without-wrapper']
+        }else{
+          return null
         }
       })();
       return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
@@ -332,10 +335,9 @@
           style={this.standAloneBackgroundStyle}
           class="rt-card__stand-alone-background"
         /> : null}
-        <div style={this.cardBackgroundStyle}
+        {Object.keys(this.cardBackgroundStyle).length > 0 || this.cardBackgroundClass ? <div style={this.cardBackgroundStyle}
              class={"rt-card__background" + this.cardBackgroundClass}
-
-        />
+        /> : null}
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
 
@@ -343,7 +345,7 @@
             {this.$slots["content"]}
           </div>
           {bottomList}
-          {borderContent}
+          {contentWithoutWrapper}
           <div class="rt-card__footer">
             {this.$slots["footer"]}
           </div>

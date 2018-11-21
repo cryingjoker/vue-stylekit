@@ -55,11 +55,9 @@ export default {
                           class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
       }
     };
-    const borderContent = (()=>{
-      if(this.$slots['border-content']){
-        return this.$slots['border-content'].map((slot)=>{
-          return <div class="rt-card__border-content">{slot}</div>
-        })
+    const contentWithoutWrapper = (()=>{
+      if(this.$slots['content-without-wrapper']){
+        return this.$slots['content-without-wrapper']
       }
     })();
     return <div ref="card" v-rt-out-side-click={this.hideShow}>
@@ -80,7 +78,7 @@ export default {
           {this.$slots['content']}
           </div>
         </div>
-        {borderContent}
+        {contentWithoutWrapper}
         <div class="rt-card__border-content rt-space-bottom">
           {this.$slots['card-footer']}
           {button()}

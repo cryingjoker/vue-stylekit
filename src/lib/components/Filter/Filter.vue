@@ -27,8 +27,12 @@ export default {
       return this.listners.length - 1;
     },
     setProps(option,value){
-      this.$set(this.selectedProps,option,value)
-      this.callListeners();
+      if(value.length === 0){
+        this.removeProps(option)
+      }else {
+        this.$set(this.selectedProps, option, value)
+        this.callListeners();
+      }
     },
     removeProps(option){
       delete this.selectedProps[option];
