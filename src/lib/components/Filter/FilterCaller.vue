@@ -51,7 +51,7 @@
             if(vNode.$vnode.tag.search('RtInput')>0) {
               vNode.$on('input', (value) => {
               const childDataJson = {};
-                childDataJson[vNode['name']] = [value];
+                childDataJson[vNode['name']] = [value+''];
                 this.fireFilterEventWithDataFromChild(childDataJson)
               })
             }else {
