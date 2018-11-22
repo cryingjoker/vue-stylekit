@@ -4,14 +4,14 @@
       <div class="app-title">
         <div class="row">
           <h1 class="rt-font-hero rt-col">Filter</h1>
-        </div>+
+        </div>
       </div>
       <div class="app-body">
         <rt-filter>
           <div class="row">
             <div class="rt-col-8">
               <div class="row">
-                <rt-filter-watcher :options="['creator']" :values="['kaspersky']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','device-type']" :values="['kaspersky','less than 3']" class="rt-col-6 rt-space-bottom">
 
                   <rt-card>
                     <template slot="header">
@@ -34,13 +34,13 @@
                         <div class="rt-card-list__item">
                           <div class="rt-card-list__icon">
 
-                              <img
-                                src="/static/images/medium-icon.svg"
-                              />
+                            <img
+                              src="/static/images/medium-icon.svg"
+                            />
                           </div>
                           <div class="rt-card-list__name">
                             <p class="rt-font-small-paragraph color-main05">
-                              Защищает 2 устройства  одновременно
+                              Защищает 2 устройства одновременно
                             </p>
                           </div>
                         </div>
@@ -169,13 +169,13 @@
                         <div class="rt-card-list__item">
                           <div class="rt-card-list__icon">
 
-                              <img
-                                src="/static/images/medium-icon.svg"
-                              />
+                            <img
+                              src="/static/images/medium-icon.svg"
+                            />
                           </div>
                           <div class="rt-card-list__name">
                             <p class="rt-font-small-paragraph color-main05">
-                              Защищает 2 устройства  одновременно
+                              Защищает 2 устройства одновременно
                             </p>
                           </div>
                         </div>
@@ -282,7 +282,8 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','archive']" :values="['eset','show']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','archive']" :values="['eset','show']"
+                                   class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
                       <img
@@ -304,13 +305,13 @@
                         <div class="rt-card-list__item">
                           <div class="rt-card-list__icon">
 
-                              <img
-                                src="/static/images/medium-icon.svg"
-                              />
+                            <img
+                              src="/static/images/medium-icon.svg"
+                            />
                           </div>
                           <div class="rt-card-list__name">
                             <p class="rt-font-small-paragraph color-main05">
-                              Защищает 2 устройства  одновременно
+                              Защищает 2 устройства одновременно
                             </p>
                           </div>
                         </div>
@@ -439,13 +440,13 @@
                         <div class="rt-card-list__item">
                           <div class="rt-card-list__icon">
 
-                              <img
-                                src="/static/images/medium-icon.svg"
-                              />
+                            <img
+                              src="/static/images/medium-icon.svg"
+                            />
                           </div>
                           <div class="rt-card-list__name">
                             <p class="rt-font-small-paragraph color-main05">
-                              Защищает 2 устройства  одновременно
+                              Защищает 2 устройства одновременно
                             </p>
                           </div>
                         </div>
@@ -557,47 +558,49 @@
             <div class="rt-col-1">
             </div>
             <div class="rt-col-3">
-              <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Способ покупки</p>
-              <rt-filter-caller>
-                <rt-switch-container>
-                  <rt-switch name="subscription" value="year">Годовая подписка</rt-switch>
-                  <div class="rt-space-left25 color-dark06 rt-space-bottom">два месяца в подарок</div>
-                  <rt-switch name="subscription" value="month">Месячная подписка</rt-switch>
-                  <div class="rt-space-left25 color-dark06 rt-space-bottom">первый месяц 0 рублей</div>
-                </rt-switch-container>
-              </rt-filter-caller>
-              <div class="rt-space-bottom">
+              <rt-sticky>
 
-                <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Количество ПК</p>
+                <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Способ покупки</p>
                 <rt-filter-caller>
-                  <rt-input name="device-type" value="0" :show-nubmers-buttons="true" insert-type="number"/>
+                  <rt-switch-container>
+                    <rt-switch name="subscription" value="year">Годовая подписка</rt-switch>
+                    <div class="rt-space-left25 color-dark06 rt-space-bottom">два месяца в подарок</div>
+                    <rt-switch name="subscription" value="month">Месячная подписка</rt-switch>
+                    <div class="rt-space-left25 color-dark06 rt-space-bottom">первый месяц 0 рублей</div>
+                  </rt-switch-container>
                 </rt-filter-caller>
-              </div>
-              <rt-filter-caller>
-                <rt-switch-container>
-                  <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Производитель</p>
-                  <div class="rt-space-bottom">
-                    <rt-switch name="creator" value="#allparams">Все</rt-switch>
-                  </div>
-                  <div class="rt-space-bottom">
-                    <rt-switch name="creator" value="kaspersky">Kaspersky</rt-switch>
-                  </div>
-                  <div class="rt-space-bottom">
-                    <rt-switch name="creator" value="drweb">Dr.Web</rt-switch>
-                  </div>
-                  <div class="rt-space-bottom">
-                    <rt-switch name="creator" value="eset">Eset</rt-switch>
-                  </div>
-                </rt-switch-container>
-              </rt-filter-caller>
-              <rt-filter-caller>
-                <rt-switch-container>
-                  <div class="rt-space-bottom">
-                    <rt-switch name="archive" value="show">Показать архивные тарифы</rt-switch>
-                  </div>
-                </rt-switch-container>
-              </rt-filter-caller>
+                <div class="rt-space-bottom">
 
+                  <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Количество ПК</p>
+                  <rt-filter-caller>
+                    <rt-input name="device-type" value="0" :show-nubmers-buttons="true" insert-type="number"/>
+                  </rt-filter-caller>
+                </div>
+                <rt-filter-caller>
+                  <rt-switch-container>
+                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Производитель</p>
+                    <div class="rt-space-bottom">
+                      <rt-switch name="creator" value="#allparams">Все</rt-switch>
+                    </div>
+                    <div class="rt-space-bottom">
+                      <rt-switch name="creator" value="kaspersky">Kaspersky</rt-switch>
+                    </div>
+                    <div class="rt-space-bottom">
+                      <rt-switch name="creator" value="drweb">Dr.Web</rt-switch>
+                    </div>
+                    <div class="rt-space-bottom">
+                      <rt-switch name="creator" value="eset">Eset</rt-switch>
+                    </div>
+                  </rt-switch-container>
+                </rt-filter-caller>
+                <rt-filter-caller>
+                  <rt-switch-container set-props-on-not-checked="@none">
+                    <div class="rt-space-bottom">
+                      <rt-switch name="archive" value="show">Показать архивные тарифы</rt-switch>
+                    </div>
+                  </rt-switch-container>
+                </rt-filter-caller>
+              </rt-sticky>
             </div>
 
           </div>

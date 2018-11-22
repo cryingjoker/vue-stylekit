@@ -5,6 +5,10 @@
 export default {
   name: "RtSwitchContainer",
   props: {
+    setPropsOnNotChecked: {
+      type: String,
+      default: null
+    }
   },
   data:() => ({
     index: null,
@@ -30,11 +34,17 @@ export default {
     },
     emitSelectedData(){
       const responseArray = {};
+
       Object.keys(this.switcherData).forEach((switcherDataKey)=>{
         responseArray[this.switcherData[switcherDataKey].name] = responseArray[this.switcherData[switcherDataKey].name] || [];
-        if(this.switcherData[switcherDataKey].checked){
-          if(this.switcherData[switcherDataKey].value.search('#') === -1) {
-            responseArray[this.switcherData[switcherDataKey].name].push(this.switcherData[switcherDataKey].value)
+        const switcherDataItem = this.switcherData[switcherDataKey];
+        if(switcherDataItem.checked || this.setPropsOnNotChecked){
+          if(switcherDataItem.value.search('#') === -1) {
+            if(switcherDataItem.checked) {
+              responseArray[switcherDataItem.name].push(switcherDataItem.value);
+            }else{
+              responseArray[switcherDataItem.name].push(this.setPropsOnNotChecked);
+            }
           }
         }
       })
@@ -72,15 +82,20 @@ export default {
           vNode.$on('changeswitcher',(res)=>{
             this.updateSwitcherData(res);
           });
-          this.$set(this.switcherData,vNode._uid,{
+
+          const swicherDataItem = {
             name: vNode.fieldName,
             value: vNode.value,
             checked: vNode.checked
-          });
+          };
+
+          this.$set(this.switcherData,vNode._uid,swicherDataItem);
           const switcherNames = this.switcherNamesMap[vNode.fieldName] || [];
           switcherNames.push(vNode._uid);
           this.$set(this.switcherNamesMap,vNode.fieldName,switcherNames);
-
+          setTimeout(()=>{
+            this.emitSelectedData();
+          },1000)
         }
 
         if(vNode.$children){

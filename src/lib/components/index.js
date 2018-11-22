@@ -46,3 +46,4 @@
  export { default as FilterWatcher } from './Filter/FilterWatcher.vue';
  export { default as FilterCaller } from './Filter/FilterCaller.vue';
  export { default as Youtube } from './Youtube/Youtube.vue';
+ export { default as Sticky } from './Sticky/Sticky.vue';

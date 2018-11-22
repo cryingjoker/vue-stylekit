@@ -27,6 +27,28 @@
       this.RtFilter.addListener(this.onUpdateProps)
     },
     methods: {
+      checkValue(watcherValue, filterValue){
+        let res = false;
+        let typeOfCheck = 0;
+        if(watcherValue.search('less than') === 0){
+          typeOfCheck = 1;
+        }
+        if(watcherValue.search('more than') === 0){
+          typeOfCheck = 2;
+        }
+        switch (typeOfCheck) {
+          case 1:
+            res = filterValue - 0 < (watcherValue.replace('less than','') - 0);
+            break;
+          case 2:
+            res = filterValue - 0 > (watcherValue.replace('less than','') - 0);
+            break;
+          default:
+            res = filterValue === watcherValue;
+            break;
+        }
+        return res;
+      },
       onUpdateProps(props){
         let hasFound = false;
         this.options.forEach((optionName,optionIndex)=>{
@@ -43,15 +65,10 @@
           valueOptions.forEach((option)=>{
             if(Array.isArray(props[optionName])){
               props[optionName].forEach((propsOption)=>{
-                if(option == propsOption){
-                  hasFound = true;
-                  return false
-                }
+                hasFound = this.checkValue(option, propsOption);
               });
             }else {
-              if (option == props[optionName]) {
-                hasFound = true;
-              }
+              hasFound = this.checkValue(option, props[optionName]);
             }
             if(hasFound){
               return false
@@ -74,7 +91,7 @@
     },
     render() {
       if(this.isActive) {
-        return <div class="d-static">{this.$slots.default}</div>
+        return <div class="d-static">{JSON.stringify(this.options)}<br/>{JSON.stringify(this.values)}<br/>{this.$slots.default}</div>
       }else{
         return null
       }
