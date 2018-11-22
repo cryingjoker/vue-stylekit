@@ -44,7 +44,8 @@ import {
   Filter,
   FilterWatcher,
   FilterCaller,
-  Youtube
+  Youtube,
+  Sticky
 } from "../lib/components/index";
 
 const componentsList = {};
@@ -94,4 +95,5 @@ componentsList[Filter.name] = Filter;
 componentsList[FilterWatcher.name] = FilterWatcher;
 componentsList[FilterCaller.name] = FilterCaller;
 componentsList[Youtube.name] = Youtube;
+componentsList[Sticky.name] = Sticky;
 export default { ...componentsList };

@@ -50,6 +50,7 @@ import {
   FilterWatcher,
   FilterCaller,
   Youtube,
+  Sticky,
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -104,6 +105,7 @@ const VueRtStyle = {
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
       Vue.component(FilterCaller.name, FilterCaller);
+      Vue.component(Sticky.name, Sticky);
 
 
       Vue.component(Youtube.name, Youtube);
