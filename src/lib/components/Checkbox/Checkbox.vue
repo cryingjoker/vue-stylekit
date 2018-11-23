@@ -100,6 +100,25 @@ export default {
     this.unbindEvents();
   },
   methods: {
+    changeFromParent(props){
+      if(props && this.name in props) {
+        const propsForItem = props[this.name];
+        if(this.value && propsForItem.indexOf(this.value)>=0){
+          this.$refs.input.checked = true
+          this.isChecked = true;
+          this.$emit("changecheckbox",  {
+            name: this.name,
+            value: this.value,
+            checked: this.isChecked,
+            _uid: this._uid
+          });
+          this.showWave();
+        }else{
+          this.$refs.input.checked = false
+          this.isChecked = false;
+        }
+      }
+    },
     changeInput($event) {
       this.$emit("update:checked", this.isChecked);
       this.$emit("changecheckbox",  {

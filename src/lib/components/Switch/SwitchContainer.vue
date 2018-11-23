@@ -50,6 +50,13 @@ export default {
       })
       this.$emit('change',responseArray)
     },
+    updateAllChildren(props){
+      this.$children.forEach((vNode)=>{
+        if('changeFromParent' in vNode ){
+          vNode.changeFromParent(props)
+        }
+      })
+    },
     updateSwitcherData(switcherData){
       this.$set(this.switcherData,switcherData._uid,{
         name: switcherData.name,
@@ -111,7 +118,6 @@ export default {
   },
   render(h){
     return <div class="d-static">
-      {JSON.stringify(this.switcherData)}
       {this.$slots.default}
     </div>
   }

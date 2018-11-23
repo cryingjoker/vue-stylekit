@@ -5,6 +5,7 @@ export default {
   data: () => ({
     selectedProps: {},
     listners: [],
+    listnersCaller: [],
   }),
   provide() {
     const RtFilter = {};
@@ -12,6 +13,7 @@ export default {
     RtFilter['setProps'] = this.setProps;
     RtFilter['removeProps'] = this.removeProps;
     RtFilter['addListener'] = this.addListener;
+    RtFilter['addListenerForCaller'] = this.addListenerForCaller;
     return { RtFilter };
   },
   mounted: function() {
@@ -29,8 +31,7 @@ export default {
       if(window.history){
         const history = Window.history;
         let getLine = '';
-
-
+        console.info('this.selectedProps',this.selectedProps);
         Object.keys(this.selectedProps).forEach((key)=>{
           if(this.selectedProps[key] && this.selectedProps[key].length > 0 && this.selectedProps[key][0].search('@') !== 0) {
             if(getLine.length > 1){
@@ -44,11 +45,12 @@ export default {
         if(getLine.length > 0) {
           params.set('filter', getLine);
         }else{
-          params.delete('filter');
         }
-        if(params.toString().length > 0) {
 
-          window.history.replaceState({}, "", decodeURIComponent(`${location.pathname}?${encodeURIComponent(params)}`));
+        if(params.toString().length > 0) {
+          if(location.search !== encodeURIComponent(params)) {
+            window.history.replaceState({}, "", decodeURIComponent(`${location.pathname}?${encodeURIComponent(params)}`));
+          }
         }else{
           window.history.replaceState({}, "", decodeURIComponent(`${location.pathname}`));
         }
@@ -57,16 +59,15 @@ export default {
     },
     getFromHistory(){
       const params = new URLSearchParams(location.search);
-      const filter = params.get('filter')
+      const filter = params.get('filter');
       const json = {}
       if(filter) {
         filter.split(',').map((i) => {
           const item = i.split(':');
           json[item[0]] = item[1].split('+')
         })
-        setTimeout(() => {
-          this.$set(this, 'selectedProps', json)
-        }, 0)
+        this.$set(this, 'selectedProps', json)
+        this.callListenersCallers();
       }
 
 
@@ -76,8 +77,20 @@ export default {
         fn.call(null,this.selectedProps);
       })
     },
+    callListenersCallers(){
+      this.listnersCaller.forEach((fn)=>{
+        console.info('this.selectedProps',this.selectedProps);
+        fn.call(null,this.selectedProps);
+      })
+    },
+
     addListener(fn){
       this.listners.push(fn);
+      return this.listners.length - 1;
+    },
+    addListenerForCaller(fn){
+
+      this.listnersCaller.push(fn);
       return this.listners.length - 1;
     },
     setProps(option,value){

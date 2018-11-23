@@ -20,18 +20,15 @@
       index: null,
       selectedProps: []
     }),
-    created() {
-      setTimeout(() => {
-        this.setPropsToChildren();
-      }, 0);
-    },
-    updated(){
-      setTimeout(() => {
-        this.setPropsToChildren();
-      }, 0);
-    },
 
+    mounted(){
+      this.RtFilter.addListenerForCaller(this.onUpdateFilters)
+      this.setPropsFromChildren();
+    },
     methods: {
+      onUpdateFilters(props){
+        this.setPropsToChildren(props);
+      },
       fireFilterEvent(){
         if(this.clearValue){
           this.RtFilter.removeProps(this.option);
@@ -44,7 +41,21 @@
           this.RtFilter.setProps(optionName, childDataJson[optionName]);
         })
       },
-      setPropsToChildren() {
+      setPropsToChildren(props) {
+        this.$children.forEach((vNode) => {
+          if(vNode.$vnode.tag.search('RtInput')>0) {
+          }else{
+            if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer)/)>0){
+              if('updateAllChildren' in vNode){
+                vNode.updateAllChildren(props)
+              }
+            }else{
+
+            }
+          }
+        })
+      },
+      setPropsFromChildren() {
         this.$children.forEach((vNode) => {
           if (vNode && vNode.index !== "undefinded") {
             vNode.$set(vNode,'index',this.index);
