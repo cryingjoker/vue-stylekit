@@ -31,7 +31,6 @@ export default {
       if(window.history){
         const history = Window.history;
         let getLine = '';
-        console.info('this.selectedProps',this.selectedProps);
         Object.keys(this.selectedProps).forEach((key)=>{
           if(this.selectedProps[key] && this.selectedProps[key].length > 0 && this.selectedProps[key][0].search('@') !== 0) {
             if(getLine.length > 1){
