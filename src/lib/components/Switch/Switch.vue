@@ -3,7 +3,7 @@
     <input
       ref="input"
       :disabled="isDisabled"
-      :checked="checked ? 'checked' : ''"
+      :checked="isChecked"
       :name="fieldName"
       type="checkbox"
       class="switch-element"
@@ -51,6 +51,9 @@ export default {
       default: false
     }
   },
+  data: () => ({
+    isChecked : false
+  }),
   mounted: function() {
     this.setValue();
     this.bindEvents();
@@ -85,16 +88,33 @@ export default {
       });
       this.$refs.input.addEventListener('change',
       ()=>{
-        setTimeout(()=>{
           const isChecked = Boolean(this.$refs.input.checked);
           this.$emit('changeswitcher', {
             name: this.fieldName,
             value: this.value,
             checked: isChecked,
             _uid: this._uid
-          })
-        },0)
+          });
       })
+    },
+    changeFromParent(props){
+      if(props && this.name in props) {
+        const propsForItem = props[this.name];
+        if(this.value && propsForItem.indexOf(this.value)>=0){
+          this.$refs.input.checked = true
+          this.isChecked = true;
+          this.$emit("changeswitcher",  {
+            name: this.name,
+            value: this.value,
+            checked: true,
+            _uid: this._uid
+          });
+          this.showWave();
+        }else{
+          this.$refs.input.checked = false
+          this.isChecked = false;
+        }
+      }
     },
     unbindEvents() {
       if (this["_events"]) {
@@ -107,8 +127,7 @@ export default {
       }
     },
     setValue() {
-      const isChecked = Boolean(this.checked);
-      this.$el.querySelector(".switch-element").checked = isChecked;
+      this.isChecked = Boolean(this.checked);
     },
     inputHandler() {
       this.showWave();

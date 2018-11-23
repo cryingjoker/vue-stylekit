@@ -7,6 +7,7 @@ import {
   ButtonRippleWithoutJs,
   ButtonWithoutRipple,
   Checkbox,
+  CheckboxContainer,
   Input,
   InputWithoutJs,
   Price,
@@ -63,6 +64,7 @@ const VueRtStyle = {
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
       Vue.component(ButtonWithoutRipple.name, ButtonWithoutRipple);
       Vue.component(Checkbox.name, Checkbox);
+      Vue.component(CheckboxContainer.name, CheckboxContainer);
       Vue.component(Input.name, Input);
       Vue.component(InputWithoutJs.name, InputWithoutJs);
       Vue.component(Price.name, Price);

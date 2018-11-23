@@ -3,6 +3,7 @@ import {
   ButtonRippleWithoutJs,
   ButtonWithoutRipple,
   Checkbox,
+  CheckboxContainer,
   Input,
   InputWithoutJs,
   Price,
@@ -53,6 +54,7 @@ componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
 componentsList[ButtonWithoutRipple.name] = ButtonWithoutRipple;
 componentsList[Checkbox.name] = Checkbox;
+componentsList[CheckboxContainer.name] = CheckboxContainer;
 componentsList[Input.name] = Input;
 componentsList[InputWithoutJs.name] = InputWithoutJs;
 componentsList[Price.name] = Price;
