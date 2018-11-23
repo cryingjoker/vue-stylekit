@@ -12,7 +12,6 @@
             <div class="rt-col-8">
               <div class="row">
                 <rt-filter-watcher :options="['creator','device-type']" :values="['kaspersky','less than 3']" class="rt-col-6 rt-space-bottom">
-
                   <rt-card>
                     <template slot="header">
                       <img
@@ -577,21 +576,18 @@
                   </rt-filter-caller>
                 </div>
                 <rt-filter-caller>
-                  <rt-switch-container>
+                  <rt-checkbox-container>
                     <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Производитель</p>
                     <div class="rt-space-bottom">
-                      <rt-switch name="creator" value="#allparams">Все</rt-switch>
+                      <rt-checkbox name="creator" value="kaspersky">Kaspersky</rt-checkbox>
                     </div>
                     <div class="rt-space-bottom">
-                      <rt-switch name="creator" value="kaspersky">Kaspersky</rt-switch>
+                      <rt-checkbox name="creator" value="drweb">Dr.Web</rt-checkbox>
                     </div>
                     <div class="rt-space-bottom">
-                      <rt-switch name="creator" value="drweb">Dr.Web</rt-switch>
+                      <rt-checkbox name="creator" value="eset">Eset</rt-checkbox>
                     </div>
-                    <div class="rt-space-bottom">
-                      <rt-switch name="creator" value="eset">Eset</rt-switch>
-                    </div>
-                  </rt-switch-container>
+                  </rt-checkbox-container>
                 </rt-filter-caller>
                 <rt-filter-caller>
                   <rt-switch-container set-props-on-not-checked="@none">

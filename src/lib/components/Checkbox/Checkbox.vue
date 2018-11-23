@@ -63,6 +63,10 @@ export default {
       type: Boolean,
       default: false
     },
+    value:{
+      type: String,
+      default: null
+    },
     name: {
       type: String,
       default: null
@@ -98,6 +102,13 @@ export default {
   methods: {
     changeInput($event) {
       this.$emit("update:checked", this.isChecked);
+      this.$emit("changecheckbox",  {
+        name: this.name,
+        value: this.value,
+        checked: this.isChecked,
+        _uid: this._uid
+      });
+
       this.showWave();
     },
     bindEvents() {

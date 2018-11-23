@@ -2,6 +2,7 @@
  export { default as ButtonRippleWithoutJs } from './Button/ButtonRippleWithoutJs.vue';
  export { default as ButtonWithoutRipple } from './Button/ButtonWithoutRipple.vue';
  export { default as Checkbox } from './Checkbox/Checkbox.vue';
+ export { default as CheckboxContainer } from './Checkbox/CheckboxContainer.vue';
  export { default as Input } from './Input/Input.vue';
  export { default as InputWithoutJs } from './Input/InputWithoutJs.vue';
  export { default as Price } from './Price/Price.vue';

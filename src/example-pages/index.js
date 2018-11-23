@@ -22,6 +22,5 @@ const App = new Vue({
   el: "#app",
   router,
   name: "App",
-
   render: h => h(RootPage)
 });

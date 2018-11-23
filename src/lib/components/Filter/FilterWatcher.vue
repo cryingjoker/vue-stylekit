@@ -28,6 +28,7 @@
     },
     methods: {
       checkValue(watcherValue, filterValue){
+
         let res = false;
         let typeOfCheck = 0;
         if(watcherValue.search('less than') === 0){
@@ -52,7 +53,8 @@
       onUpdateProps(props){
         let hasFound = false;
         this.options.forEach((optionName,optionIndex)=>{
-          if(!props[optionName]){
+
+          if(!props[optionName] || hasFound){
             hasFound = true;
             return false;
           }
@@ -63,22 +65,28 @@
             valueOptions = this.values[optionIndex]
           }
           valueOptions.forEach((option)=>{
+            if(hasFound){
+              return false
+            }
             if(Array.isArray(props[optionName])){
               props[optionName].forEach((propsOption)=>{
+                if(hasFound){
+                  return false
+                }
                 hasFound = this.checkValue(option, propsOption);
+
               });
             }else {
               hasFound = this.checkValue(option, props[optionName]);
             }
-            if(hasFound){
-              return false
-            }
+
           });
 
           if(hasFound){
             return false;
           }
         });
+
         this.isActive = hasFound;
       },
       setPropsToChildren() {

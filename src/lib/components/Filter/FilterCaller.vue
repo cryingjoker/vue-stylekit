@@ -51,11 +51,15 @@
             if(vNode.$vnode.tag.search('RtInput')>0) {
               vNode.$on('input', (value) => {
               const childDataJson = {};
-                childDataJson[vNode['name']] = [value+''];
+                if(vNode.$vnode.componentOptions && vNode.$vnode.componentOptions.propsData && vNode.$vnode.componentOptions.propsData.insertType === 'number' && value+'' !== '0'){
+                  childDataJson[vNode['name']] = [value + ''];
+                }else {
+                  childDataJson[vNode['name']] = [value + ''];
+                }
                 this.fireFilterEventWithDataFromChild(childDataJson)
               })
             }else {
-              if(vNode.$vnode.tag.search('RtSwitchContainer')>0){
+              if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer)/)>0){
                 vNode.$on('change', (childDataJson) => {
                   this.fireFilterEventWithDataFromChild(childDataJson);
                 })

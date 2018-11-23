@@ -92,7 +92,7 @@ export default {
             value: this.value,
             checked: isChecked,
             _uid: this._uid
-          })
+          });
         },0)
       })
     },
