@@ -202,8 +202,16 @@ export default {
           }
         }
       }
-
-    }
+    },
+    changeFromParent(props){
+      if(props && this.name in props) {
+        const propsForItem = props[this.name];
+        if('0' in propsForItem){
+          this.$refs.input.value = propsForItem[0];
+          this.inputHandler();
+        }
+      }
+    },
   },
   render(){
     let inputClass = 'input text-field';

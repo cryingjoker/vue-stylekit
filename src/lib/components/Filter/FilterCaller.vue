@@ -44,6 +44,9 @@
       setPropsToChildren(props) {
         this.$children.forEach((vNode) => {
           if(vNode.$vnode.tag.search('RtInput')>0) {
+            if('changeFromParent' in vNode){
+              vNode.changeFromParent(props);
+            }
           }else{
             if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer)/)>0){
               if('updateAllChildren' in vNode){

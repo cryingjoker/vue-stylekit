@@ -99,7 +99,7 @@
     },
     render() {
       if(this.isActive) {
-        return <div class="d-static">{JSON.stringify(this.options)}<br/>{JSON.stringify(this.values)}<br/>{this.$slots.default}</div>
+        return <div class="d-static">{this.$slots.default}</div>
       }else{
         return null
       }

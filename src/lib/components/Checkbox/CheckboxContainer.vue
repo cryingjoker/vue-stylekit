@@ -74,17 +74,14 @@ export default {
             this.emitSelectedData();
           },1000)
         }
-
         if(vNode.$children){
           this.findAllChildren(vNode.$children);
         }
       })
     }
-
   },
   mounted(){
     this.findAllChildren(this.$children);
-
   },
   render(h){
     return <div class="d-static">
