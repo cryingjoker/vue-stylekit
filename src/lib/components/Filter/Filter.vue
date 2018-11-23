@@ -79,7 +79,6 @@ export default {
     },
     callListenersCallers(){
       this.listnersCaller.forEach((fn)=>{
-        console.info('this.selectedProps',this.selectedProps);
         fn.call(null,this.selectedProps);
       })
     },
@@ -111,7 +110,6 @@ export default {
   },
   render(){
     return <div class="d-static">
-      {JSON.stringify(this.selectedProps)}
       {this.$slots.default}
       </div>;
   }
