@@ -47,7 +47,8 @@ import {
   FilterWatcher,
   FilterCaller,
   Youtube,
-  Sticky
+  Sticky,
+  ResizeContentHeight
 } from "../lib/components/index";
 
 const componentsList = {};
@@ -100,4 +101,5 @@ componentsList[FilterWatcher.name] = FilterWatcher;
 componentsList[FilterCaller.name] = FilterCaller;
 componentsList[Youtube.name] = Youtube;
 componentsList[Sticky.name] = Sticky;
+componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 export default { ...componentsList };
