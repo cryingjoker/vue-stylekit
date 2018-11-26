@@ -114,11 +114,12 @@ for devideStep in steps
   -ms-flex-wrap wrap
 
   &--mobile-scroll
-    flex-flow nowrap
-    overflow auto
-    margin-left -1 * horizontal-space
-    margin-right -1 * horizontal-space
-    padding-bottom vertical-space
+    @media (max-width: mobile-step-size)
+      flex-flow nowrap
+      overflow auto
+      margin-left -1 * horizontal-space/2
+      margin-right -1 * horizontal-space/2
+      padding-bottom vertical-space
 
 .d-none
   display none
@@ -266,20 +267,6 @@ for devideStep in steps
     padding-left horizontal-space * .5
     padding-right horizontal-space * .5
 
-// from bootstrap 4
-.row
-  display flex
-  flex-wrap wrap
-  margin-left -1 * horizontal-space * .5
-  margin-right -1 * horizontal-space * .5
-  position relative
-
-  &--mobile-scroll
-    flex-flow nowrap
-    overflow auto
-    margin-left -1 * horizontal-space
-    margin-right -1 * horizontal-space
-    padding-bottom vertical-space
 
 .no-gutters
   margin-left 0
