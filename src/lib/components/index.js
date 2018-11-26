@@ -49,3 +49,4 @@
  export { default as FilterCaller } from './Filter/FilterCaller.vue';
  export { default as Youtube } from './Youtube/Youtube.vue';
  export { default as Sticky } from './Sticky/Sticky.vue';
+ export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';

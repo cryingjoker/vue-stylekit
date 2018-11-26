@@ -120,15 +120,16 @@
           if (this.backgroundRepeat) {
             cardClass += " rt-card--has-bg-repeat";
           }
-
-          if (this.backgroundSmoke === 0.5) {
-            cardClass += " rt-card--has-smoke";
-          }
-          if (this.backgroundSmoke === 0.3) {
-            cardClass += " rt-card--has-smoke03";
-          }
-          if (this.backgroundSmoke === 0.2) {
-            cardClass += " rt-card--has-smoke02";
+          if(!this.backgroundColorType) {
+            if (this.backgroundSmoke === 0.5) {
+              cardClass += " rt-card--has-smoke";
+            }
+            if (this.backgroundSmoke === 0.3) {
+              cardClass += " rt-card--has-smoke03";
+            }
+            if (this.backgroundSmoke === 0.2) {
+              cardClass += " rt-card--has-smoke02";
+            }
           }
         }
         if (this.hideBackgroundOnMobile) {

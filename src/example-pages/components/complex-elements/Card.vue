@@ -6,6 +6,371 @@
       </div>
       <div class="app-body">
         <div class="row">
+
+          <rt-resize-content-height :mobile-not-resize="true" :query-selectors-names="['.rt-card__bottom-list','.rt-card__footer','.rt-card__body']">
+            <rt-fullscreen-image background-image="https://rt.ru/sites/default/files/img/widget/DSGN-930_PControl_1920%D1%851080.jpg"
+                                 background-position="top">
+              <div class="rt-md-space-top2 rt-space-top5">
+                <div id="parent_control" class="rt-container">
+                  <div class="row">
+                    <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
+                      <rt-color-line-text>
+                        <template slot="label">Родительский контроль</template>
+                        <template slot="content">Надежные программы, которые помогут оградить детей
+                          от&nbsp;нежелательных сторон интернета</template>
+                      </rt-color-line-text>
+                      <div class="rt-space-top rt-space-left05">
+                        <a href="https://www.old.rt.ru/action/homeinternet/act_int_parental_control">
+                          <rt-button class="rt-button-orange rt-space-horizontal">Подключить</rt-button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row--mobile-scroll rt-space-top4 rt-font-hypnens-off">
+                    <div class="rt-col-4 rt-col-md-3 d-md-flex-column">
+                      <rt-card>
+                        <template slot="header">
+                          <img class="rt-image-max-full-width" src="http://rt.ru/sites/default/files/internet/Kaspersky_color.svg" />
+                        </template>
+                        <template slot="content">
+                          <h3 class="rt-font-h3 color-main07 rt-font-bold rt-space-top2">
+                            Kaspersky Safe Kids
+                          </h3>
+                          <p class="rt-space-top color-main07 rt-space-right2">
+                            Защита ребенка на&nbsp;всех устройствах Windows, Mac, Android,
+                            iPhone, iPad
+                          </p>
+                        </template>
+                        <template slot="bottom-list">
+                          <div class="rt-card-list">
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Первый месяц в&nbsp;подарок
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Гибкое регулирование доступа к&nbsp;сайтам
+                                  и&nbsp;программам
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Ограничение времени использования устройств
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Отслеживание звонков и&nbsp;SMS ребенка на&nbsp;телефоне
+                                  Android
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Контроль местонахождения ребенка и&nbsp;установка
+                                  безопасной зоны
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  SMS-информирование о&nbsp;действиях ребенка
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Советы психолога по&nbsp;поведению детей в&nbsp;сети
+                                  интернет
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template slot="footer">
+                          <div class="rt-col-12 flex-end-center rt-space-top">
+                            <rt-price :value="0" :old-value="99" time-interval="мес."></rt-price>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-4 rt-col-md-3 d-md-flex-column rt-md-space-top">
+                      <rt-card>
+                        <template slot="header">
+                          <img class="rt-image-max-full-width" src="http://rt.ru/sites/default/files/internet/ESET_color.svg" />
+                        </template>
+                        <template slot="content">
+                          <h3 class="rt-font-h3 color-main07 rt-font-bold rt-space-top2">
+                            ESET NOD32 Parental Control
+                          </h3>
+                          <p class="rt-space-top color-main07 rt-space-right2">
+                            Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
+                          </p>
+                        </template>
+                        <template slot="bottom-list">
+                          <div class="rt-card-list">
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Первый месяц в&nbsp;подарок
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Контроль интернет-сайтов
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Игровой формат и&nbsp;простые настройки
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Определение местоположения
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Сообщения ребенку
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Контроль приложений и&nbsp;времени
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05"><br><br><br></p>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template slot="footer">
+                          <div class="rt-col-12 flex-end-center rt-space-top">
+                            <rt-price :value="0" :old-value="99" time-interval="мес."></rt-price>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-4 rt-col-md-3 d-md-flex-column rt-md-space-top">
+                      <rt-card>
+                        <template slot="header">
+                          <img class="rt-image-max-full-width" src="http://rt.ru/sites/default/files/img/logo/my_children.svg" />
+                        </template>
+                        <template slot="content">
+                          <h3 class="rt-font-h3 color-main07 rt-font-bold rt-space-top2">
+                            Сервис «Где мои дети»
+                          </h3>
+                          <p class="rt-space-top color-main07 rt-space-right2">
+                            Отслеживайте местоположение ребёнка онлайн в&nbsp;мобильном
+                            приложении
+                          </p>
+                        </template>
+                        <template slot="bottom-list">
+                          <div class="rt-card-list">
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Бесплатный период 7&nbsp;дней
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Специальная цена для&nbsp;абонентов Ростелекома
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Просмотр местоположения ребёнка на&nbsp;карте
+                                  и&nbsp;истории его&nbsp;перемещений за&nbsp;день
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Установка «зеленых зон» и&nbsp;получение оповещений,
+                                  если ребенок выходит за&nbsp;них
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Звоники с&nbsp;громким сигналом в приложении, даже если
+                                  ребёнок включил бесшумный режим
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Контроль заряда батареи на&nbsp;устройстве ребенка,
+                                  чтобы он&nbsp;не&nbsp;остался без&nbsp;связи вдали
+                                  от&nbsp;дома
+                                </p>
+                              </div>
+                            </div>
+                            <div class="rt-card-list__item">
+                              <div class="rt-card-list__icon">
+                                <div class="rt-space-left15">
+                                  <img src="http://rt.ru/sites/default/files/internet/icon_26%20copy%209.svg" />
+                                </div>
+                              </div>
+                              <div class="rt-card-list__name">
+                                <p class="rt-font-small-paragraph color-main05">
+                                  Детские GPS-часы (Приобретаются отдельно)
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template slot="footer">
+                          <div class="row">
+                            <div class="rt-col-12 rt-space-vertical flex-end-center">
+                              <rt-price :value="99" :old-value="299" time-interval="мес."></rt-price>
+                            </div>
+                            <div class="rt-col-12">
+                              <a href="https://wwww.old.rt.ru/action/homeinternet/act_int_my_children" class="d-block" target="_blank">
+                                <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                              </a>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </rt-fullscreen-image>
+          </rt-resize-content-height>
+
+
+        </div>
+        <div class="row">
           <div class="rt-col-4 rt-col-md-3 rt-space-top rt-font-hypnens-off">
             <rt-card-image card-image="/static/images/cardImage3.jpg">
               <template slot="body">
@@ -212,7 +577,7 @@
               <template slot="header"
                 ><div class="rt-font-center">
                   <img
-                    src="/sites/default/files/img/icon/news-icon.svg"
+                    src="http://rt.ru/sites/default/files/img/icon/news-icon.svg"
                     height="79"
                   /></div
               ></template>
@@ -308,7 +673,7 @@
             >
               <template slot="content">
                 <div class="rt-font-center rt-space-top15 rt-space-bottom">
-                  <img src="/sites/default/files/img/icon/wink_80x80.svg" />
+                  <img src="http://rt.ru/sites/default/files/img/icon/wink_80x80.svg" />
                 </div>
                 <p class="rt-font-paragraph rt-font-bold">Wink</p>
                 <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">

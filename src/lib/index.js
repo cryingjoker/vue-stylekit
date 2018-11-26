@@ -53,6 +53,7 @@ import {
   FilterCaller,
   Youtube,
   Sticky,
+  ResizeContentHeight
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -110,15 +111,11 @@ const VueRtStyle = {
       Vue.component(FilterWatcher.name, FilterWatcher);
       Vue.component(FilterCaller.name, FilterCaller);
       Vue.component(Sticky.name, Sticky);
-
-
+      Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
-
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
-
-
 
       Vue.RtStyle = true;
       Vue.config.test = true;
