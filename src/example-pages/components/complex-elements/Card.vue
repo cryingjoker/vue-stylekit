@@ -7,11 +7,11 @@
       <div class="app-body">
         <div class="row">
 
-          <rt-resize-content-height :mobile-not-resize="true" :query-selectors-names="['.rt-card__bottom-list','.rt-card__footer','.rt-card__body']">
+          <rt-resize-content-height :query-selectors-names="['.rt-card__bottom-list','.rt-card__footer','.rt-card__body']" class="rt-col-12">
             <rt-fullscreen-image background-image="https://rt.ru/sites/default/files/img/widget/DSGN-930_PControl_1920%D1%851080.jpg"
                                  background-position="top">
               <div class="rt-md-space-top2 rt-space-top5">
-                <div id="parent_control" class="rt-container">
+
                   <div class="row">
                     <div class="rt-col-6 rt-col-md-3 d-md-flex-column">
                       <rt-color-line-text>
@@ -364,7 +364,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
             </rt-fullscreen-image>
           </rt-resize-content-height>
 

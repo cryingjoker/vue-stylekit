@@ -33,7 +33,10 @@
           this.bindResize();
           this.calculateMaxHeight();
         }
-      },0)
+      },0);
+      setTimeout(()=>{
+        this.calculateMaxHeight();
+      },500);
     },
     methods: {
       bindResize(){
