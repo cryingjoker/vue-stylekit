@@ -7,11 +7,11 @@
         </div>
       </div>
       <div class="app-body">
-        <rt-filter>
+        <rt-filter :change-url="true">
           <div class="row">
             <div class="rt-col-8">
               <div class="row">
-                <rt-filter-watcher :options="['creator','device-type']" :values="['kaspersky','less than 3']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','device-type','subscription','KasperskyInternetSecurity1',]" :values="['kaspersky','less than 3','only month']" class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
                       <img
@@ -22,7 +22,7 @@
                     </template>
                     <template slot="content">
                       <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
-                        Kaspersky Internet Security
+                        Kaspersky Internet Security 1
                       </p>
                       <p class="rt-space-top color-main07 rt-space-right2">
                         Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
@@ -146,7 +146,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator']" :values="['kaspersky']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','subscription','KasperskyInternetSecurity2']" :values="['kaspersky','only month']" class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
                       <img
@@ -157,7 +157,7 @@
                     </template>
                     <template slot="content">
                       <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
-                        Kaspersky Internet Security
+                        Kaspersky Internet Security 2
                       </p>
                       <p class="rt-space-top color-main07 rt-space-right2">
                         Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
@@ -281,7 +281,8 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','archive']" :values="['eset','show']"
+                <rt-filter-watcher :options="['creator','archive','subscription',
+                'KasperskyInternetSecurity3']" :values="['eset','show','not month']"
                                    class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
@@ -293,7 +294,7 @@
                     </template>
                     <template slot="content">
                       <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
-                        Kaspersky Internet Security
+                        Kaspersky Internet Security 3
                       </p>
                       <p class="rt-space-top color-main07 rt-space-right2">
                         Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
@@ -417,18 +418,18 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator']" :values="['drweb']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','subscription','KasperskyInternetSecurity4']" :values="['drweb','not month']" class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
                       <img
                         width="175px"
-                        class="rt-card__header__image"
+                        class="rt-card__headeremitSelectedData__image"
                         src="/static/images/homeinternet/homeinternet-image18.jpg"
                       />
                     </template>
                     <template slot="content">
                       <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
-                        Kaspersky Internet Security
+                        Kaspersky Internet Security 4
                       </p>
                       <p class="rt-space-top color-main07 rt-space-right2">
                         Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
@@ -561,17 +562,17 @@
 
                 <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Способ покупки</p>
                 <rt-filter-caller>
-                  <rt-switch-container>
-                    <rt-switch name="subscription" value="year">Годовая подписка</rt-switch>
-                    <div class="rt-space-left25 color-dark06 rt-space-bottom">два месяца в подарок</div>
-                    <rt-switch name="subscription" value="month">Месячная подписка</rt-switch>
-                    <div class="rt-space-left25 color-dark06 rt-space-bottom">первый месяц 0 рублей</div>
-                  </rt-switch-container>
+                  <rt-radio-button-container>
+                    <rt-radio-button :checked="true" name="subscription">Годовая подписка</rt-radio-button>
+                    <div class="rt-space-left15 color-dark06 rt-space-bottom">два месяца в подарок</div>
+                    <rt-radio-button name="subscription" value="month">Месячная подписка</rt-radio-button>
+                    <div class="rt-space-left15 color-dark06 rt-space-bottom">первый месяц 0 рублей</div>
+                  </rt-radio-button-container>
                 </rt-filter-caller>
                 <div class="rt-space-bottom">
 
                   <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Количество ПК</p>
-                  <rt-filter-caller>
+                  <rt-filter-caller :clear-zero="true">
                     <rt-input name="device-type" value="0" :show-nubmers-buttons="true" insert-type="number"/>
                   </rt-filter-caller>
                 </div>

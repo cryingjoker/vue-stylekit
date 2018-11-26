@@ -14,6 +14,10 @@
       value: {
         type: String,
         default: null
+      },
+      clearZero:{
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -48,12 +52,10 @@
               vNode.changeFromParent(props);
             }
           }else{
-            if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer)/)>0){
+            if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer|RtRadioButtonContainer)/)>0){
               if('updateAllChildren' in vNode){
                 vNode.updateAllChildren(props)
               }
-            }else{
-
             }
           }
         })
@@ -70,10 +72,13 @@
                 }else {
                   childDataJson[vNode['name']] = [value + ''];
                 }
+                if(this.clearZero && !isNaN(parseInt(value)) && parseInt(value) === 0){
+                  childDataJson[vNode['name']] = [];
+                }
                 this.fireFilterEventWithDataFromChild(childDataJson)
               })
             }else {
-              if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer)/)>0){
+              if(vNode.$vnode.tag.search(/(RtSwitchContainer|RtCheckboxContainer|RtRadioButtonContainer)/)>0){
                 vNode.$on('change', (childDataJson) => {
                   this.fireFilterEventWithDataFromChild(childDataJson);
                 })

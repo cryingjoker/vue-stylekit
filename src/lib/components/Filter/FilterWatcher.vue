@@ -3,15 +3,15 @@
   export default {
     name: "RtFilterWatcher",
     inject: ["RtFilter"],
-    props:{
-      options:{
+    props: {
+      options: {
         type: Array,
         default: null
       },
       values: {
         type: Array,
         default: null
-      },
+      }
     },
     data: () => ({
       index: null,
@@ -23,26 +23,26 @@
         this.setPropsToChildren();
       }, 0);
     },
-    mounted(){
-      this.RtFilter.addListener(this.onUpdateProps)
+    mounted() {
+      this.RtFilter.addListener(this.onUpdateProps);
     },
     methods: {
-      checkValue(watcherValue, filterValue){
-
+      checkValue(watcherValue, filterValue) {
         let res = false;
         let typeOfCheck = 0;
-        if(watcherValue.search('less than') === 0){
+
+        if (watcherValue.search("less than") === 0) {
           typeOfCheck = 1;
         }
-        if(watcherValue.search('more than') === 0){
+        if (watcherValue.search("more than") === 0) {
           typeOfCheck = 2;
         }
         switch (typeOfCheck) {
           case 1:
-            res = filterValue - 0 < (watcherValue.replace('less than','') - 0);
+            res = filterValue - 0 < (watcherValue.replace("less than", "") - 0);
             break;
           case 2:
-            res = filterValue - 0 > (watcherValue.replace('less than','') - 0);
+            res = filterValue - 0 > (watcherValue.replace("less than", "") - 0);
             break;
           default:
             res = filterValue === watcherValue;
@@ -50,57 +50,104 @@
         }
         return res;
       },
-      onUpdateProps(props){
-        let hasFound = false;
-        this.options.forEach((optionName,optionIndex)=>{
-
-          if(!props[optionName] || hasFound){
-            hasFound = true;
-            return false;
-          }
-          let valueOptions;
-          if(!Array.isArray(this.values[optionIndex])){
-            valueOptions = [this.values[optionIndex]]
-          }else{
-            valueOptions = this.values[optionIndex]
-          }
-          valueOptions.forEach((option)=>{
-            if(hasFound){
-              return false
+      onUpdateProps(props) {
+        const importantOptionsMap = {};
+        const simpleOptionsMap = {};
+        let hasOnlyOption = false;
+        this.options.forEach((optionName, optionIndex) => {
+          if (this.values[optionIndex]) {
+            if (this.values[optionIndex].search(/(only )|(not )/) === 0) {
+              importantOptionsMap[optionName] = this.values[optionIndex];
+              if (this.values[optionIndex].search(/(only )/) === 0) {
+                hasOnlyOption = true;
+              }
+            } else {
+              simpleOptionsMap[optionName] = this.values[optionIndex];
+              if (!Array.isArray(simpleOptionsMap[optionName])) {
+                simpleOptionsMap[optionName] = [simpleOptionsMap[optionName]];
+              }
             }
-            if(Array.isArray(props[optionName])){
-              props[optionName].forEach((propsOption)=>{
-                if(hasFound){
-                  return false
-                }
-                hasFound = this.checkValue(option, propsOption);
-
-              });
-            }else {
-              hasFound = this.checkValue(option, props[optionName]);
-            }
-
-          });
-
-          if(hasFound){
-            return false;
           }
         });
+        let sendedProps = { ...props };
 
-        this.isActive = hasFound;
+        let needToBreakFilter = false;
+        if (Object.keys(importantOptionsMap).length > 0) {
+          this.isActive = true;
+
+          Object.keys(importantOptionsMap).forEach((key) => {
+            if (importantOptionsMap[key].search("only ") === 0) {
+              if (!sendedProps[key]) {
+                needToBreakFilter = true;
+                this.isActive = false;
+                return false;
+              } else {
+                const onlyOption = importantOptionsMap[key].replace("only ", "");
+                if (sendedProps[key].findIndex((i) => {
+                  return i === onlyOption;
+                }) < 0) {
+                  needToBreakFilter = true;
+                  this.isActive = false;
+                  return false;
+                }
+              }
+            } else {
+              if (importantOptionsMap[key].search("not ") === 0) {
+                if (sendedProps[key]) {
+                  const notOption = importantOptionsMap[key].replace("not ", "");
+                  if (sendedProps[key].findIndex((i) => {
+                    return i === notOption;
+                  }) >= 0) {
+                    needToBreakFilter = true;
+                    this.isActive = false;
+                    return false;
+                  }
+                }
+              }
+            }
+            if (needToBreakFilter) {
+              return false;
+            }
+          });
+          if (needToBreakFilter) {
+            return false;
+          }
+        }
+        if (Object.keys(simpleOptionsMap).length > 0 && this.isActive) {
+
+          Object.keys(simpleOptionsMap).forEach((key) => {
+            let hasFound = false;
+            if (sendedProps[key]) {
+              const sendedPropsValues = Array.isArray(sendedProps[key]) ? sendedProps[key] : [sendedProps[key]];
+              hasFound = sendedPropsValues.findIndex((sendedPropsValuesItem)=>{
+                return simpleOptionsMap[key].findIndex((simpleOptionsMapItem)=>{
+                  return this.checkValue(simpleOptionsMapItem, sendedPropsValuesItem)
+                }) >= 0
+              }) >= 0;
+
+              if(!hasFound){
+                this.isActive = false
+                return false
+              }
+            }
+            if (needToBreakFilter) {
+              return false;
+            }
+          });
+        }
       },
       setPropsToChildren() {
         this.$children.forEach((vNode) => {
           if (vNode && vNode.index !== "undefinded") {
-            vNode.$set(vNode,'index',this.index);
+            vNode.$set(vNode, "index", this.index);
           }
         });
       }
     },
     render() {
-      if(this.isActive) {
+      if (this.isActive) {
         return <div class="d-static">{this.$slots.default}</div>
-      }else{
+      } else {
         return null
       }
     }

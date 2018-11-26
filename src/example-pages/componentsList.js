@@ -8,6 +8,7 @@ import {
   InputWithoutJs,
   Price,
   RadioButton,
+  RadioButtonContainer,
   Ripple,
   RippleWihoutJs,
   Select,
@@ -59,6 +60,7 @@ componentsList[Input.name] = Input;
 componentsList[InputWithoutJs.name] = InputWithoutJs;
 componentsList[Price.name] = Price;
 componentsList[RadioButton.name] = RadioButton;
+componentsList[RadioButtonContainer.name] = RadioButtonContainer;
 componentsList[Ripple.name] = Ripple;
 componentsList[RippleWihoutJs.name] = RippleWihoutJs;
 componentsList[Select.name] = Select;
