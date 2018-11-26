@@ -16,126 +16,135 @@
           :not-render="isDisabled"
         />
       </div>
-      <slot />
+      <slot/>
     </div>
   </label>
 </template>
 
 <script>
-import { default as RippleComponent } from "../Ripple/Ripple.vue";
-const componentsList = {};
-componentsList[RippleComponent.name] = RippleComponent;
+  import { default as RippleComponent } from "../Ripple/Ripple.vue";
 
-export default {
-  name: "RtSwitch",
-  components: componentsList,
-  props: {
-    isDisabled: {
-      type: Boolean,
-      default: false
-    },
-    checkIdAllChecked:{
-      type:Boolean,
-      default: false
-    },
-    value:{
-      type: String,
-      default: null
-    },
-    name: {
-      type: String,
-      default: null
-    },
-    checked: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data: () => ({
-    isChecked : false
-  }),
-  mounted: function() {
-    setTimeout(()=>{
-      this.setValue();
-    },0)
-    this.bindEvents();
-  },
-  updated() {
-    this.unbindEvents();
-    this.bindEvents();
-  },
-  beforeDestroy() {
-    this.unbindEvents();
-  },
-  computed:{
-    fieldName () {
-      return this.name || 'input-field__'+this._uid;
-    },
-  },
-  methods: {
-    eventChangeListener(event){
-        setTimeout(()=> {
-          this.$emit('change', event)
-        },0)
-    },
-    bindEvents() {
-      if (this["$listeners"]) {
-        Object.keys(this["$listeners"]).map(eventName => {
-          this.$refs.input.addEventListener(
-            eventName,
-            this["$listeners"][eventName]
-          );
-        });
+  const componentsList = {};
+  componentsList[RippleComponent.name] = RippleComponent;
+
+  export default {
+    name: "RtSwitch",
+    components: componentsList,
+    props: {
+      isDisabled: {
+        type: Boolean,
+        default: false
+      },
+      checkIdAllChecked: {
+        type: Boolean,
+        default: false
+      },
+      value: {
+        type: String,
+        default: null
+      },
+      name: {
+        type: String,
+        default: null
+      },
+      checked: {
+        type: Boolean,
+        default: false
       }
-      this.$on('emittoswitcher',(data)=>{
-        if (data && data[this._uid]){
-          this.$el.querySelector(".switch-element").checked = data[this._uid]['checked'];
-        }
-      });
-
     },
-    changeFromParent(props){
-      if(props && this.name in props) {
-        const propsForItem = props[this.name];
-        if(this.value && propsForItem.indexOf(this.value)>=0){
-          this.$refs.input.checked = true
-          this.isChecked = true;
-          this.$emit("changeswitcher",  {
-            name: this.name,
-            value: this.value,
-            checked: true,
-            _uid: this._uid
+    data: () => ({
+      isChecked: false
+    }),
+    mounted: function() {
+      setTimeout(() => {
+        this.setValue();
+      }, 0);
+      this.bindEvents();
+    },
+    updated() {
+      this.unbindEvents();
+      this.bindEvents();
+    },
+    beforeDestroy() {
+      this.unbindEvents();
+    },
+    computed: {
+      fieldName() {
+        return this.name || "input-field__" + this._uid;
+      }
+    },
+    methods: {
+      eventChangeListener(event) {
+        setTimeout(() => {
+          this.$emit("change", event);
+        }, 0);
+      },
+      bindEvents() {
+        if (this["$listeners"]) {
+          Object.keys(this["$listeners"]).map(eventName => {
+            this.$refs.input.addEventListener(
+              eventName,
+              this["$listeners"][eventName]
+            );
           });
-          this.showWave();
-        }else{
-          this.$refs.input.checked = false;
-          this.isChecked = false;
         }
-      }
-    },
-    unbindEvents() {
-      if (this["_events"]) {
-        Object.keys(this["_events"]).map(eventName => {
-          this.$refs.input.removeEventListener(
-            eventName,
-            this["_events"][eventName]
-          );
+        this.$on("emittoswitcher", (data) => {
+          if (data && data[this._uid]) {
+            this.$el.querySelector(".switch-element").checked = data[this._uid]["checked"];
+          }
+        });
+
+      },
+      changeFromParent(props) {
+        if (props && this.name in props) {
+          const propsForItem = props[this.name];
+          if (this.value && propsForItem.indexOf(this.value) >= 0) {
+            this.$refs.input.checked = true;
+            this.isChecked = true;
+            this.$emit("changeswitcher", {
+              name: this.name,
+              value: this.value,
+              checked: true,
+              _uid: this._uid
+            });
+            this.showWave();
+          } else {
+            this.$refs.input.checked = false;
+            this.isChecked = false;
+          }
+        }
+      },
+      unbindEvents() {
+        if (this["_events"]) {
+          Object.keys(this["_events"]).map(eventName => {
+            this.$refs.input.removeEventListener(
+              eventName,
+              this["_events"][eventName]
+            );
+          });
+        }
+        this.$refs.input.removeEventListener("change", this.eventChangeListener);
+      },
+      setValue() {
+        this.$refs.input.checked = Boolean(this.checked);
+      },
+      inputHandler() {
+        this.showWave();
+
+        const isChecked = Boolean(this.$refs.input.checked);
+        this.$emit("changeswitcher", {
+          name: this.fieldName,
+          value: this.value,
+          checked: isChecked,
+          _uid: this._uid
+        });
+      },
+      showWave() {
+        this.$refs.ripple.startRipple({
+          offsetX: 10,
+          offsetY: 10
         });
       }
-      this.$refs.input.removeEventListener('change',this.eventChangeListener)
-    },
-    setValue() {
-      this.$refs.input.checked = Boolean(this.checked)
-    },
-    inputHandler() {
-      this.showWave();
-    },
-    showWave() {
-      this.$refs.ripple.startRipple({
-        offsetX: 10,
-        offsetY: 10
-      });
     }
-  }
-};
+  };
 </script>

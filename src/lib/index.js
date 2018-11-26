@@ -12,6 +12,7 @@ import {
   InputWithoutJs,
   Price,
   RadioButton,
+  RadioButtonContainer,
   Ripple,
   RippleWihoutJs,
   Select,
@@ -69,6 +70,7 @@ const VueRtStyle = {
       Vue.component(InputWithoutJs.name, InputWithoutJs);
       Vue.component(Price.name, Price);
       Vue.component(RadioButton.name, RadioButton);
+      Vue.component(RadioButtonContainer.name, RadioButtonContainer);
       Vue.component(Ripple.name, Ripple);
       Vue.component(RippleWihoutJs.name, RippleWihoutJs);
       Vue.component(Select.name, Select);

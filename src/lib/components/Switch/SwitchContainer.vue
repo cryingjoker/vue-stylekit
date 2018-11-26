@@ -15,8 +15,6 @@ export default {
     switcherData: {},
     switcherNamesMap: {}
   }),
-  mounted: function() {
-  },
   updated() {
   },
   beforeDestroy() {

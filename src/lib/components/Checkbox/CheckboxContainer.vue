@@ -15,8 +15,6 @@ export default {
     checkboxData: {},
     checkboxNamesMap: {}
   }),
-  mounted: function() {
-  },
 
   beforeDestroy() {
   },

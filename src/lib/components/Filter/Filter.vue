@@ -7,6 +7,12 @@ export default {
     listners: [],
     listnersCaller: [],
   }),
+  props:{
+    changeUrl : {
+      type: Boolean,
+      default: false
+    }
+  },
   provide() {
     const RtFilter = {};
     RtFilter['selectedProps'] = this.selectedProps;
@@ -17,11 +23,13 @@ export default {
     return { RtFilter };
   },
   mounted: function() {
-    this.getFromHistory()
+    if(this.changeUrl) {
+      this.getFromHistory()
+    }
   },
   watch: {
     selectedProps(newProps, oldProps){
-      if(JSON.stringify(newProps) !== JSON.stringify(oldProps)) {
+      if(this.changeUrl && JSON.stringify(newProps) !== JSON.stringify(oldProps)) {
         this.setHistory();
       }
     }
@@ -29,7 +37,7 @@ export default {
   methods: {
     setHistory(){
       if(window.history){
-        const history = Window.history;
+        const history = window.history;
         let getLine = '';
         Object.keys(this.selectedProps).forEach((key)=>{
           if(this.selectedProps[key] && this.selectedProps[key].length > 0 && this.selectedProps[key][0].search('@') !== 0) {
@@ -44,14 +52,16 @@ export default {
         if(getLine.length > 0) {
           params.set('filter', getLine);
         }else{
+          if(params.get('filter') && params.get('filter').toString().length > 0){
+            params.delete('filter');
+          }
         }
-
         if(params.toString().length > 0) {
           if(location.search !== encodeURIComponent(params)) {
-            window.history.replaceState({}, "", decodeURIComponent(`${location.pathname}?${encodeURIComponent(params)}`));
+            history.replaceState({}, "", decodeURIComponent(`${location.pathname}?${encodeURIComponent(params)}`));
           }
         }else{
-          window.history.replaceState({}, "", decodeURIComponent(`${location.pathname}`));
+          history.replaceState({}, "", decodeURIComponent(`${location.pathname}`));
         }
 
       }
