@@ -53,9 +53,12 @@ export default {
   },
   mounted: function() {},
   methods: {
-    setActiveTabName(name) {
+    setActiveTabName(name,hashAnchor) {
       this.RtTabs.activeName = name;
       window.dispatchEvent(new Event("resize"));
+      if(hashAnchor) {
+        window.history.replaceState(undefined, undefined, "#" + hashAnchor);
+      }
     },
     addTabName(name) {
       if (this.RtTabs.namesArray.length === 0) {
