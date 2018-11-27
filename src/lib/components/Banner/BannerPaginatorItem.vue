@@ -31,6 +31,10 @@ export default {
     isPause: {
       type: Boolean,
       default: false
+    },
+    isStopped:{
+      type: Boolean,
+      default: false
     }
   },
   inject: {
@@ -49,13 +53,16 @@ export default {
       if (this.RtBanners.activeIndex === this.index) {
         classArray["rt-banner--run-timer"] = true;
       }
-      if (this.isPause) {
+      if (this.isPause && !this.isStopped) {
         classArray["rt-banner--pause"] = true;
+      }
+      if (this.isStopped) {
+        classArray["rt-banner--is-stopped"] = true;
       }
       return classArray;
     },
     paginatorItemStyle() {
-      if (this.sleepTime) {
+      if (this.sleepTime && !this.isStopped) {
         return {
           animationDuration: this.sleepTime / 1000 + "s"
         };

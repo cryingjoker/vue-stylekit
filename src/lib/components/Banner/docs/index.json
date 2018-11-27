@@ -92,6 +92,16 @@
       "value": "null"
     },
     {
+      "name": "rt-banner",
+      "proporty": "set-stop-on-click",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Остановка автоперехода на следующий слайд после первого клика по банеру",
+      "value": "false",
+      "version": " >= 0.0.25"
+    },
+    {
       "name": "rt-banner-item",
       "proporty": "background-position",
       "type": [

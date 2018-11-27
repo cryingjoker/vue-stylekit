@@ -378,7 +378,8 @@
     stroke #fff
     stroke-dasharray 0
     stroke-width 0
-
+    .rt-banner--is-stopped &
+      animation none!important
     .circle-switcher__item:hover &
       stroke-dasharray 60
       stroke-width .5px
@@ -389,7 +390,6 @@
       animation-timing-function linear
       stroke-dasharray 60
       stroke-width .5px
-
     .{newAppName}-banner--pause &
       animation none
       animation-play-state paused
