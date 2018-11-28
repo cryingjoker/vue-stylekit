@@ -1,0 +1,28 @@
+{
+  "displayName": "frontend tests",
+  "verbose": true,
+  "moduleDirectories": [
+    "node_modules"
+  ],
+  "testMatch": [
+    "**/__tests__/*.js"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "jsx",
+    "node"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/jest-setup.js",
+  "transform": {
+    ".*\\.js$": "babel-jest"
+  },
+  "rootDir": "./",
+  "setupFiles": [
+    "<rootDir>/node_modules/regenerator-runtime/runtime.js"
+  ],
+  "reporters": [
+    "default",
+    "jest-screenshot/reporter"
+  ]
+}
