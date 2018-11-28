@@ -420,138 +420,138 @@
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','subscription','KasperskyInternetSecurity4']" :values="['drweb','not month']" class="rt-col-6 rt-space-bottom">
                   <rt-card>
-                    <template slot="header">
-                      <img
-                        width="175px"
-                        class="rt-card__headeremitSelectedData__image"
-                        src="/static/images/homeinternet/homeinternet-image18.jpg"
-                      />
-                    </template>
-                    <template slot="content">
-                      <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
-                        Kaspersky Internet Security 4
-                      </p>
-                      <p class="rt-space-top color-main07 rt-space-right2">
-                        Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
-                      </p>
-                    </template>
-                    <template slot="bottom-list">
-                      <div class="rt-card-list rt-space-bottom2">
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
+                  <template slot="header">
+                    <img
+                      width="175px"
+                      class="rt-card__headeremitSelectedData__image"
+                      src="/static/images/homeinternet/homeinternet-image18.jpg"
+                    />
+                  </template>
+                  <template slot="content">
+                    <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                      Kaspersky Internet Security 4
+                    </p>
+                    <p class="rt-space-top color-main07 rt-space-right2">
+                      Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства
+                    </p>
+                  </template>
+                  <template slot="bottom-list">
+                    <div class="rt-card-list rt-space-bottom2">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
 
+                          <img
+                            src="/static/images/medium-icon.svg"
+                          />
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Защищает 2 устройства одновременно
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
                             <img
-                              src="/static/images/medium-icon.svg"
+                              src="/static/images/small-icon.svg"
                             />
                           </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Защищает 2 устройства одновременно
-                            </p>
-                          </div>
                         </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Первый месяц в&nbsp;подарок
-                            </p>
-                          </div>
-                        </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Контроль интернет-сайтов
-                            </p>
-                          </div>
-                        </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Игровой формат и&nbsp;простые настройки
-                            </p>
-                          </div>
-                        </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Определение местоположения
-                            </p>
-                          </div>
-                        </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Сообщения ребенку
-                            </p>
-                          </div>
-                        </div>
-                        <div class="rt-card-list__item">
-                          <div class="rt-card-list__icon">
-                            <div class="rt-space-left15">
-                              <img
-                                src="/static/images/small-icon.svg"
-                              />
-                            </div>
-                          </div>
-                          <div class="rt-card-list__name">
-                            <p class="rt-font-small-paragraph color-main05">
-                              Контроль приложений и&nbsp;времени
-                            </p>
-                          </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Первый месяц в&nbsp;подарок
+                          </p>
                         </div>
                       </div>
-                    </template>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
+                            <img
+                              src="/static/images/small-icon.svg"
+                            />
+                          </div>
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Контроль интернет-сайтов
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
+                            <img
+                              src="/static/images/small-icon.svg"
+                            />
+                          </div>
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Игровой формат и&nbsp;простые настройки
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
+                            <img
+                              src="/static/images/small-icon.svg"
+                            />
+                          </div>
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Определение местоположения
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
+                            <img
+                              src="/static/images/small-icon.svg"
+                            />
+                          </div>
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Сообщения ребенку
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon">
+                          <div class="rt-space-left15">
+                            <img
+                              src="/static/images/small-icon.svg"
+                            />
+                          </div>
+                        </div>
+                        <div class="rt-card-list__name">
+                          <p class="rt-font-small-paragraph color-main05">
+                            Контроль приложений и&nbsp;времени
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
 
-                    <template slot="content-without-wrapper">
-                      <div class="rt-card__border-content">
-                        <div class="rt-col-12 flex-end-center rt-space-top">
-                          <rt-price
-                            :value="1600"
-                            :old-value="1800"
-                            time-interval="год."
-                          ></rt-price>
-                        </div>
-                        <div class="rt-space-top05">
-                          <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
-                        </div>
+                  <template slot="content-without-wrapper">
+                    <div class="rt-card__border-content">
+                      <div class="rt-col-12 flex-end-center rt-space-top">
+                        <rt-price
+                          :value="1600"
+                          :old-value="1800"
+                          time-interval="год."
+                        ></rt-price>
                       </div>
-                    </template>
-                  </rt-card>
+                      <div class="rt-space-top05">
+                        <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                      </div>
+                    </div>
+                  </template>
+                </rt-card>
                 </rt-filter-watcher>
               </div>
             </div>
