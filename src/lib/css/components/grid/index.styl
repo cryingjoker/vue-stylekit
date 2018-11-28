@@ -105,7 +105,6 @@ for devideStep in steps
     spaceRender(devicePrefix, needMedia, step, media)
 
 .row
-  display -ms-flexbox
   display flex
   flex-wrap wrap
   margin-left -1 * horizontal-space * .5
@@ -143,32 +142,42 @@ for devideStep in steps
   display table-cell
 
 .d-flex
-  display -ms-flexbox
   display flex
 
 .flex-end-center
   display flex
-  display -ms-flexbox
   justify-content flex-end
   align-items center
 
 .flex-start-center
   display flex
-  display -ms-flexbox
   justify-content flex-start
   align-items center
 
 .flex-center-center
   display flex
-  display -ms-flexbox
   justify-content center
   align-items center
 
 .flex-end-bottom
   display flex
-  display -ms-flexbox
   justify-content flex-end
   align-items flex-end
+
+.flex-center-bottom
+  display flex
+  justify-content center
+  align-items flex-end
+
+.flex-start-bottom
+  display flex
+  justify-content left
+  align-items flex-end
+
+.flex-start-center
+  display flex
+  justify-content left
+  align-items center
 
 .d-inline-flex
   display -ms-inline-flexbox
@@ -182,19 +191,16 @@ for devideStep in steps
 
 .d-stretch
   display flex
-  display -ms-flexbox
   align-items stretch
 
 .flex-md-start
   @media (max-width: mobile-step-size)
     display flex
-    display -ms-flexbox
     justify-content flex-start
 
 .flex-md-center
   @media (max-width: mobile-step-size)
     display flex
-    display -ms-flexbox
     justify-content center
 
 .td

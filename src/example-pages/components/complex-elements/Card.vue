@@ -8,34 +8,69 @@
         <div class="row">
           <div class="rt-col-12">
             <rt-card>
-              <div class="rt-row">
-                <div class="rt-col-3">
-
-                </div>
-                <div class="rt-col-4">
-                  <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
-                  <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
-                    двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и охранными
-                    сценариями</p>
-                  <div class="d-flex">
+              <template slot="content">
+                <div class="row rt-space-bottom05">
+                  <div class="rt-col-3 d-flex flex-column">
+                    <div class="rt-font-center">
+                      <img src="/static/images/smartHouse/smartHouse-contr10.png" class="card-long__image" alt="">
+                    </div>
+                    <div class="flex-center-bottom flex-fill">
+                      <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
+                    </div>
+                  </div>
+                  <div class="rt-col-5">
+                    <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
+                    <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
+                      двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и охранными
+                      сценариями</p>
+                    <div class="d-flex rt-space-top">
+                      <div class="d-flex">
+                        <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"></div>
+                        <div class="rt-space-left05">
+                          <p>Видеокамера</p>
+                          <p class="rt-font-small-paragraph color-main05">Камера внутреннего <br> видеонаблюдения</p>
+                        </div>
+                      </div>
+                      <div class="d-flex rt-space-left">
+                        <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"></div>
+                        <div class="rt-space-left05">
+                          <p>Видеокамера</p>
+                          <p class="rt-font-small-paragraph color-main05">Облачное хранение <br> видеозаписей в подарок</p>
+                        </div>
+                      </div>
+                    </div>
 
                   </div>
+                  <div class="rt-col-1">
 
+                  </div>
+                  <div class="rt-col-3 flex-center-bottom">
+                    <rt-price :value="750.231" :only-price="true"/>
+                  </div>
                 </div>
-                <div class="rt-col-1">
-
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-space-top05">
+                  <div class="rt-card__border-content">
+                    <div class="row rt-space-top05">
+                      <div class="rt-col-3 flex-center-center">
+                        <p>Характеристики</p>
+                      </div>
+                      <div class="rt-col-6"></div>
+                      <div class="rt-col-3">
+                        <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="rt-col-3">
-
-                </div>
-              </div>
+              </template>
             </rt-card>
           </div>
         </div>
         <div class="row rt-space-top">
-          <div class="rt-col-3">
-          <pre-code
-            text="<rt-card>
+          <div class="rt-col-4">
+            <pre-code
+              text="<rt-card>
     <template slot=&quot;header&quot;>
         <img
                 width=&quot;175px&quot;
