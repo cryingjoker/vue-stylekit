@@ -4,10 +4,12 @@
   export default {
     name: "AppCardWithForm",
     components: componentsList,
-    mounted() {},
-    created() {},
+    mounted() {
+    },
+    created() {
+    },
     methods: {},
-    render(h){
+    render(h) {
       return <div class="rt-container">
         <div class="app-content rt-col-12 rt-col-md-3">
           <div class="app-title">
@@ -17,6 +19,147 @@
           </div>
           <div class="app-body">
             <div class="row">
+              <div class="rt-col-12">
+                <rt-card-buy static-body-height={true}
+                             has-custom-button={true}
+                             is-horizontal-card={true}
+                             custom-button-class="rt-button-submit"
+                             v-rt-slide-content-vertical={{
+                               "triggerClassName": "rt-link",
+                               "containerClassName": "rt-slide-content-vertical-content",
+                               "activeContainerClassName": "rt-slide-content-vertical-content--is-active"
+                             }}>
+                  <template slot="content">
+                    <div class="rt-space-top">
+                      <div class="row rt-space-bottom05">
+                        <div class="rt-col-3 d-flex flex-column rt-col-md-3">
+                          <div class="rt-font-center">
+                            <img src="/static/images/smartHouse/smartHouse-contr10.png" class="card-long__image"
+                                 alt=""/>
+                          </div>
+                          <div class="flex-center-bottom flex-fill">
+                            <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
+                          </div>
+                        </div>
+                        <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left">
+                          <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
+                          <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
+                            двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и
+                            охранными
+                            сценариями</p>
+                          <div class="d-flex rt-space-top">
+                            <div class="d-flex">
+                              <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"/></div>
+                              <div class="rt-space-left05">
+                                <p>Видеокамера</p>
+                                <p class="rt-font-small-paragraph color-main05">Камера внутреннего <br/> видеонаблюдения
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex rt-space-left">
+                              <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"/></div>
+                              <div class="rt-space-left05">
+                                <p>Видеокамера</p>
+                                <p class="rt-font-small-paragraph color-main05">Облачное хранение <br/> видеозаписей в
+                                  подарок
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="rt-col-3 rt-col-md-3 rt-md-space-top rt-md-space-left flex-end-bottom flex-md-start">
+                          <div class="rt-space-right">
+                            <rt-price value={"750.231"} only-price={true}/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <template slot="content-without-wrapper">
+                    <div class="rt-space-top05 rt-space-bottom">
+                      <div class="rt-card__border-content">
+                        <div class="row rt-space-top05">
+                          <div class="rt-col-3 flex-center-center rt-col-md-3">
+                            <p class="rt-link">Характеристики</p>
+                          </div>
+                          <div class="rt-col-6 md-d-none"></div>
+                          <div class="rt-col-3 rt-col-md-3 rt-space-top">
+                            <div class="rt-space-right">
+                              <rt-button class="rt-button-orange rt-button--is-block rt-button-submit">Подключить
+                              </rt-button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rt-slide-content-vertical-content">
+                      <div class="rt-space-top2">
+                        <div class="rt-card-image-list rt-card-image-list--without-top-border">
+                          <div class="rt-card-image-list__content d-flex">
+                            <p class="color-main07 flex-fill">Назначение</p>
+                            <p>помещение</p>
+                          </div>
+                        </div>
+                        <div class="rt-card-image-list">
+                          <div class="rt-card-image-list__content d-flex">
+                            <p class="color-main07 flex-fill">Назначение</p>
+                            <p>помещение</p>
+                          </div>
+                        </div>
+                        <div class="rt-card-image-list">
+                          <div class="rt-card-image-list__content d-flex">
+                            <p class="color-main07 flex-fill">Назначение</p>
+                            <p>92<span class="rt-font-sup rt-font-label">o</span></p>
+                          </div>
+                        </div>
+                        <div class="rt-card-image-list">
+                          <div class="rt-card-image-list__content d-flex">
+                            <p class="color-main07 flex-fill">Назначение</p>
+                            <p>помещение</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <template slot="form">
+                    <div class="rt-space-horizontal">
+                      <form class="rt-col-12">
+                        <div class="row">
+                          <div class="rt-col-9">
+                            <div class="rt-space-horizontal">
+                              <p class="rt-font-paragraph rt-font-bold">Заявка
+                                на
+                                подключение</p>
+                              <div
+                                class="rt-space-top">
+                                <rt-input
+                                  value=""
+                                  placeholder="Как вас зовут?"
+                                />
+                              </div>
+                              <div
+                                class="rt-space-top">
+                                <rt-input
+                                  value=""
+                                  placeholder="Как вас зовут?"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rt-col-3 flex-end-bottom">
+                            <div class="rt-space-right">
+                              <rt-price value={"750.231"} only-price={true}/>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </template>
+                </rt-card-buy>
+              </div>
+            </div>
+            <div class="row rt-space-top">
               <div class="rt-col-6">
                 <pre-code
                   text='<rt-card-buy>
@@ -188,7 +331,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     }
   };
 </script>

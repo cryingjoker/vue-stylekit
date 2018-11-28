@@ -326,12 +326,13 @@
 .{newAppName}-card-buy
   background-color b2c-white
   position relative
+  min-height:inherit
+
 
 .{newAppName}-card-buy__info
   position: relative
 
 .{newAppName}-card-buy__form
-  min-height 100%
   background-color b2c-white
   opacity 0
   visibility hidden
@@ -339,28 +340,58 @@
   top -50%
   left 0
   right 0
-  right 0
   z-index 2
   transition-timing-function ease-in-out
   transition-duration .2s
-  transition-property top, opacity, visibility
+  transition-property top, opacity, visibility, max-height
   width: 100%
+  .rt-card-buy__form-horizontal &
+    max-height 0
+    background-color: transparent
+    top: 0
+    max-height 0
+    overflow: hidden
+    transition-property  opacity, visibility, max-height
+    animation none
+  .rt-card-buy__form-horizontal.{newAppName}-card-buy--show-form &
+    max-height 2000px
+    position: relative
   .{newAppName}-card-buy--show-form &
     opacity 1
     visibility visible
     top 0
     position: relative
     animation .4s showCardForm linear
+  .{newAppName}-card-buy--show-form.rt-card-buy--is-horizontal &
+    animation none
+    max-height 3000px
 
 .{newAppName}-card-buy__content
   position: relative
   left: 0
   right: 0
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property top, opacity, max-height
   .{newAppName}-card-buy--show-form &
     position: absolute
     opacity: 0
     top: -50%
     animation .4s hideCardContent linear
+  .rt-card-buy--is-horizontal &
+    overflow: hidden
+    animation none
+    top: 0
+    max-height 2000px
+
+
+  .{newAppName}-card-buy--show-form.rt-card-buy--is-horizontal &
+    max-height 0
+    animation none
+    opacity: 0
+    top: 0
+
+
 
 @keyframes showCardForm
   0%
