@@ -193,15 +193,6 @@ for devideStep in steps
   display flex
   align-items stretch
 
-.flex-md-start
-  @media (max-width: mobile-step-size)
-    display flex
-    justify-content flex-start
-
-.flex-md-center
-  @media (max-width: mobile-step-size)
-    display flex
-    justify-content center
 
 .td
   @media (max-width: tablet-step-size)
@@ -420,3 +411,23 @@ for devideStep in steps
 
 .height-fill
   min-height 100%
+
+.flex-md-start
+  @media (max-width: mobile-step-size)
+    display flex
+    justify-content flex-start
+
+.flex-md-center
+  @media (max-width: mobile-step-size)
+    display flex
+    justify-content center
+
+.flex-td-start
+  @media (max-width: tablet-step-size)
+    display flex
+    justify-content flex-start
+
+.flex-td-center
+  @media (max-width: tablet-step-size)
+    display flex
+    justify-content center

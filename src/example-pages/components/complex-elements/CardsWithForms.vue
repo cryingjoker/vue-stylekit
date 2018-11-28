@@ -33,7 +33,7 @@
                     <div class="rt-space-top">
                       <div class="row rt-space-bottom05">
                         <div class="rt-col-3 d-flex flex-column rt-col-md-3">
-                          <div class="rt-font-center">
+                          <div class="rt-font-center rt-space-horizontal">
                             <img src="/static/images/smartHouse/smartHouse-contr10.png" class="card-long__image"
                                  alt=""/>
                           </div>
@@ -41,13 +41,13 @@
                             <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
                           </div>
                         </div>
-                        <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left">
+                        <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left15">
                           <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
                           <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
                             двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и
                             охранными
                             сценариями</p>
-                          <div class="d-flex rt-space-top">
+                          <div class="d-flex rt-space-top d-td-block">
                             <div class="d-flex">
                               <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"/></div>
                               <div class="rt-space-left05">
@@ -56,7 +56,7 @@
                                 </p>
                               </div>
                             </div>
-                            <div class="d-flex rt-space-left">
+                            <div class="d-flex rt-space-left rt-td-space-left-none rt-td-space-top">
                               <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"/></div>
                               <div class="rt-space-left05">
                                 <p>Видеокамера</p>
@@ -68,7 +68,8 @@
                           </div>
 
                         </div>
-                        <div class="rt-col-3 rt-col-md-3 rt-md-space-top rt-md-space-left flex-end-bottom flex-md-start">
+                        <div
+                          class="rt-col-3 rt-col-md-3 rt-md-space-top rt-md-space-left15 flex-end-bottom flex-md-start">
                           <div class="rt-space-right">
                             <rt-price value={"750.231"} only-price={true}/>
                           </div>
@@ -127,27 +128,26 @@
                       <form class="rt-col-12">
                         <div class="row">
                           <div class="rt-col-9">
-                            <div class="rt-space-horizontal">
-                              <p class="rt-font-paragraph rt-font-bold">Заявка
-                                на
-                                подключение</p>
-                              <div
-                                class="rt-space-top">
-                                <rt-input
-                                  value=""
-                                  placeholder="Как вас зовут?"
-                                />
-                              </div>
-                              <div
-                                class="rt-space-top">
-                                <rt-input
-                                  value=""
-                                  placeholder="Как вас зовут?"
-                                />
-                              </div>
+                            <p class="rt-font-paragraph rt-font-bold">Заявка
+                              на
+                              подключение</p>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
+                            </div>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
                             </div>
                           </div>
-                          <div class="rt-col-3 flex-end-bottom">
+
+                          <div class="rt-col-3 flex-end-bottom rt-col-md-3 rt-space-top2 flex-md-start">
                             <div class="rt-space-right">
                               <rt-price value={"750.231"} only-price={true}/>
                             </div>
