@@ -1,0 +1,18 @@
+.rt-slide-content-vertical-content
+  opacity: 0
+  visibility: hidden
+  max-height: 0
+  position: relative
+  top -20px
+  overflow: hidden
+  pointer-events none
+  transition-timing-function ease-in-out
+
+  transition-duration 0.5s
+  transition-property max-height, opacity, visibility, top, height
+  &--is-active
+    opacity: 1
+    max-height: 2000 px
+    visibility: visible
+    pointer-events all
+    top: 0

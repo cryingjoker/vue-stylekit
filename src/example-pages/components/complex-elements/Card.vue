@@ -7,8 +7,15 @@
       <div class="app-body">
         <div class="row">
           <div class="rt-col-12">
-            <rt-card>
+            <rt-card
+              :static-body-height="true"
+              v-rt-slide-content-vertical="{
+              'triggerClassName':'rt-link',
+              'containerClassName':'rt-slide-content-vertical-content',
+              'activeContainerClassName' : 'rt-slide-content-vertical-content--is-active'
+              }">
               <template slot="content">
+                <div class="rt-reverse-horizontal">
                 <div class="row rt-space-bottom05">
                   <div class="rt-col-3 d-flex flex-column">
                     <div class="rt-font-center">
@@ -18,7 +25,7 @@
                       <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
                     </div>
                   </div>
-                  <div class="rt-col-5">
+                  <div class="rt-col-6">
                     <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
                     <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
                       двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и охранными
@@ -35,30 +42,61 @@
                         <div class="rt-card-list__icon"><img src="/static/images/medium-icon.svg"></div>
                         <div class="rt-space-left05">
                           <p>Видеокамера</p>
-                          <p class="rt-font-small-paragraph color-main05">Облачное хранение <br> видеозаписей в подарок</p>
+                          <p class="rt-font-small-paragraph color-main05">Облачное хранение <br> видеозаписей в подарок
+                          </p>
                         </div>
                       </div>
                     </div>
 
                   </div>
-                  <div class="rt-col-1">
-
-                  </div>
-                  <div class="rt-col-3 flex-center-bottom">
+                  <div class="rt-col-3 flex-end-bottom">
+                    <div class="rt-space-right">
                     <rt-price :value="750.231" :only-price="true"/>
+                    </div>
                   </div>
+                </div>
                 </div>
               </template>
               <template slot="content-without-wrapper">
-                <div class="rt-space-top05">
+                <div class="rt-space-top05 rt-reverse-horizontal">
                   <div class="rt-card__border-content">
                     <div class="row rt-space-top05">
                       <div class="rt-col-3 flex-center-center">
-                        <p>Характеристики</p>
+                        <p class="rt-link">Характеристики</p>
                       </div>
                       <div class="rt-col-6"></div>
                       <div class="rt-col-3">
-                        <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                        <div class="rt-space-right">
+                          <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rt-slide-content-vertical-content">
+                  <div class="rt-space-top2">
+                    <div class="rt-card-image-list rt-card-image-list--without-top-border">
+                      <div class="rt-card-image-list__content d-flex">
+                        <p class="color-main07 flex-fill">Назначение</p>
+                        <p>помещение</p>
+                      </div>
+                    </div>
+                    <div class="rt-card-image-list">
+                      <div class="rt-card-image-list__content d-flex">
+                        <p class="color-main07 flex-fill">Назначение</p>
+                        <p>помещение</p>
+                      </div>
+                    </div>
+                    <div class="rt-card-image-list">
+                      <div class="rt-card-image-list__content d-flex">
+                        <p class="color-main07 flex-fill">Назначение</p>
+                        <p>92<span class="rt-font-sup rt-font-label">o</span></p>
+                      </div>
+                    </div>
+                    <div class="rt-card-image-list">
+                      <div class="rt-card-image-list__content d-flex">
+                        <p class="color-main07 flex-fill">Назначение</p>
+                        <p>помещение</p>
                       </div>
                     </div>
                   </div>

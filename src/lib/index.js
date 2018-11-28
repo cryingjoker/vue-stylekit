@@ -58,6 +58,7 @@ import {
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
+import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
 
 const VueRtStyle = {
   install(Vue, config) {
@@ -116,6 +117,7 @@ const VueRtStyle = {
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
+      Vue.directive(SlideContentVerticalDirective.name, SlideContentVerticalDirective);
 
       Vue.RtStyle = true;
       Vue.config.test = true;
