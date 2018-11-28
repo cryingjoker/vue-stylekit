@@ -69,8 +69,6 @@ const config = {
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
         sourceMap: false
       }),
       new OptimizeCSSAssetsPlugin({})
