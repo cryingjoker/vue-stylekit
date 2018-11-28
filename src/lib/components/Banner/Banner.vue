@@ -35,6 +35,7 @@
                 .toString(5)
                 .slice(4)
           "
+          :is-stopped="isStopped"
           :sleep-time="option['slideTime'] || sleepTime"
           :is-pause="isPause"
           :index="index"
@@ -129,6 +130,10 @@ export default {
     bannerLogo: {
       type: String,
       default: null
+    },
+    setStopOnClick:{
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -144,7 +149,9 @@ export default {
       setActiveItem: null,
       setStartTimer: null
     },
-    isOpenListOnTop: false
+    isOpenListOnTop: false,
+    isStopped: false
+
   }),
 
   provide() {
@@ -283,6 +290,9 @@ export default {
       window.addEventListener("resize", this.debounceCalculateResize, {
         passive: false
       });
+      if(this.setStopOnClick) {
+        this.$el.addEventListener("mousedown", this.stopPlaying, { passive: true });
+      }
     },
     removeListener() {
       this.$el.removeEventListener("touchstart", this.setTouchStart);
@@ -291,6 +301,9 @@ export default {
       window.removeEventListener("resize", this.debounceCalculateResize);
       this.$el.removeEventListener("mouseenter", this.setStopAnimation);
       this.$el.removeEventListener("mouseleave", this.removeStopAnimation);
+      if(this.setStopOnClick) {
+        this.$el.removeEventListener("mousedown", this.stopPlaying);
+      }
     },
     stopVideo() {
       if (this.$refs.video) {
@@ -352,6 +365,11 @@ export default {
       }
       this.playVideo();
     },
+    stopPlaying(){
+      if(this.setStopOnClick) {
+        this.isStopped = true;
+      }
+    },
     setTouchStart(e) {
       this.touchstartX = e.changedTouches[0].screenX;
     },
@@ -380,7 +398,7 @@ export default {
     },
     setStartTimer() {
       const RtBanners = this.RtBanners;
-      if (RtBanners) {
+      if (RtBanners && !this.isStopped) {
         if (RtBanners.timer) {
           clearTimeout(RtBanners.timer);
         }

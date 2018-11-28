@@ -9,7 +9,7 @@
       </div>
     </div>
     <pre-code
-      text="<rt-banner :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
+      text="<rt-banner :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
       <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;
                       content-mobile-min-height=&quot;80vh&quot;
                       content-mobile-height=&quot;200px&quot;
