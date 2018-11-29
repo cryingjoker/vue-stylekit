@@ -1,6 +1,7 @@
 <script type="text/jsx">
 import {OutsideClickDirective} from "../../directives/OudsideClick/OudsideClick";
-
+import {scrollIt} from "../../utils";
+import debounce from "debounce";
 const componentsList = {};
 const directives = {};
 directives[OutsideClickDirective.name] = OutsideClickDirective;
@@ -24,6 +25,7 @@ export default {
   },
   data(){
     return {
+      cardHeight: null,
       showForm : false
     };
   },
@@ -33,17 +35,22 @@ export default {
     if(this.hasCustomButton && this.customButtonClass){
       this.bindCustomButton()
     }
+    this.checkCardHeight();
+    this.bindResize();
   },
   beforeDestroy(){
     if(this.hasCustomButton && this.customButtonClass) {
-      this.unbindCustomButton()
+      this.unbindCustomButton();
     }
+    this.unbindResize();
   },
   updated(){
     if(this.hasCustomButton && this.customButtonClass) {
       this.unbindCustomButton()
       this.bindCustomButton()
     }
+    this.unbindResize();
+    this.bindResize();
   },
   methods: {
     customButtonClick(){
@@ -54,6 +61,7 @@ export default {
            }
          }else{
            this.toggleShow()
+
          }
     },
     bindCustomButton(){
@@ -66,10 +74,42 @@ export default {
     hideShow(){
       if(this.showForm){
         this.showForm = false;
+        this.checkCardHeight();
       }
+    },
+    checkCardHeight(step = 0){
+      setTimeout(()=>{
+        let height = this.$el.clientHeight;
+        if(!this.cardHeight){
+          this.cardHeight = height;
+        }else{
+          if(this.cardHeight != height){
+            let delta = this.cardHeight - height;
+            this.cardHeight = height;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollIt(scrollTop-delta,50);
+            if(step < 40){
+              setTimeout(()=>{
+                this.checkCardHeight(++step);
+              },10)
+            }
+          }
+        }
+      },10)
+    },
+    setCardHeight(){
+      const height = this.$el.clientHeight;
+      this.cardHeight = height;
+    },
+    bindResize(){
+      window.addEventListener('resize',debounce(this.setCardHeight,100))
+    },
+    unbindResize(){
+      window.removeEventListener('resize',debounce(this.setCardHeight,100))
     },
     toggleShow(){
       this.showForm = !this.showForm;
+      this.checkCardHeight();
     },
     submitForm(){
       let form = this.$refs.card.querySelector('form');

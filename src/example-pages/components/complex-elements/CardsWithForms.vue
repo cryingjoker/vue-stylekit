@@ -37,7 +37,7 @@
                             <img src="/static/images/smartHouse/smartHouse-contr10.png" class="card-long__image"
                                  alt=""/>
                           </div>
-                          <div class="flex-center-bottom flex-fill">
+                          <div class="flex-center-bottom flex-fill md-d-block rt-font-center">
                             <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
                           </div>
                         </div>
@@ -159,8 +159,8 @@
                 </rt-card-buy>
               </div>
             </div>
-            <div class="row rt-space-top">
-              <div class="rt-col-6">
+            <div class="rt-space-top">
+
                 <pre-code
                   text='<rt-card-buy>
             <template slot="content">
@@ -327,7 +327,6 @@
             <template slot="button">Подключить</template>
           </rt-card-buy>
             '/>
-              </div>
             </div>
           </div>
         </div>
