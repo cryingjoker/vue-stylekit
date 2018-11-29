@@ -39,7 +39,7 @@
                                  alt=""/>
                           </div>
                           <div class="flex-center-bottom flex-fill md-d-block rt-font-center">
-                            <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
+                            <p class="rt-font-center color-main03 rt-font-label rt-space-top05">Необходим контроллер</p>
                           </div>
                         </div>
                         <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left15 rt-md-space-right15">

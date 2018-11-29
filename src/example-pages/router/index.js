@@ -32,6 +32,8 @@ import InlineDropdown from '../components/main-elements/InlineDropdown.vue';
 import Annotation from '../components/main-elements/Annotation.vue';
 import Tags from '../components/main-elements/Tags.vue'
 import Youtube from "../components/main-elements/Youtube.vue";
+import Colors from "../components/main-elements/Colors.vue";
+
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -54,6 +56,7 @@ const index = [
   { path: '/tags', name: 'app-tags', component: Tags },
   { path: '/youtube', name: 'app-youtube', component: Youtube },
   { path: '/filter', name: 'app-filter', component: FilterElements },
+  { path: '/colors', name: 'app-colors', component: Colors },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
