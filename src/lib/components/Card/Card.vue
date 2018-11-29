@@ -336,7 +336,7 @@
           style={this.standAloneBackgroundStyle}
           class="rt-card__stand-alone-background"
         /> : null}
-        {Object.keys(this.cardBackgroundStyle).length > 0 || this.cardBackgroundClass ? <div style={this.cardBackgroundStyle}
+        {Object.keys(this.cardBackgroundStyle).length > 0 || this.cardBackgroundClass || this.backgroundColorType ? <div style={this.cardBackgroundStyle}
              class={"rt-card__background" + this.cardBackgroundClass}
         /> : null}
         <div class={"rt-card__content" + this.cardContentClass}>
