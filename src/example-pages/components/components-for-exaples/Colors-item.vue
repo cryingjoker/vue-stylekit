@@ -20,7 +20,7 @@ export default {
   methods:{
     copyName(){
       const el = document.createElement('textarea');
-      el.value = this.colorName;
+      el.value = this.colorName.replace('b2c-','');
       document.body.appendChild(el);
       el.select();
       document.execCommand('copy');
