@@ -77,22 +77,24 @@ export default {
         this.checkCardHeight();
       }
     },
-    checkCardHeight(step = 0){
+    checkCardHeight(){
       setTimeout(()=>{
         let height = this.$el.clientHeight;
         if(!this.cardHeight){
           this.cardHeight = height;
         }else{
           if(this.cardHeight != height){
-            let delta = this.cardHeight - height;
-            this.cardHeight = height;
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollIt(scrollTop-delta,50);
-            if(step < 40){
-              setTimeout(()=>{
-                this.checkCardHeight(++step);
-              },10)
-            }
+            const contentContainer = this.$el.querySelector('.rt-card-buy__content');
+            const formContainer = this.$el.querySelector('.rt-card-buy__form');
+            formContainer.style['max-height'] = '2000px';
+            contentContainer.style['max-height'] = '2000px';
+            const formHeight = formContainer.clientHeight;
+            const contentHeight = contentContainer.clientHeight;
+            formContainer.style['max-height'] = null;
+            contentContainer.style['max-height'] = null;
+            const delta = formHeight - contentHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollIt(scrollTop+delta,400);
           }
         }
       },10)
