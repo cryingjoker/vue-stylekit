@@ -15,7 +15,7 @@
       <div class="rt-col-12">
         <div class="row">
           <div class="rt-col-1 md-d-none td-d-none"/>
-          <div class="rt-col-4 rt-col-md-3 height-fill rt-col-td-3">
+          <div class="rt-col-4 rt-col-md-3 height-fill rt-col-td-3 rt-td-space-left2">
             <slot />
           </div>
           <div class="rt-col-1 rt-col-td-3 md-d-none" />
