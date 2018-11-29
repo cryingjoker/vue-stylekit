@@ -12,7 +12,7 @@ gulp.task(
     "git merge master -m'update branch'",
     "npm run build:docs",
     "cp -R ./dist/* ./docs",
-    "cp docs/BasisGrotesquePro*.* docs/promo/",
+    "cp docs/RostelecomBasis*.* docs/promo/",
     "cp ./static/fonts.css ./docs/",
     "ls",
     "perl -pi -w -e 's/src=\\//src=/g' ./docs/index.html",
