@@ -42,7 +42,7 @@
                             <p class="rt-font-center color-main03 rt-font-label">Необходим контроллер</p>
                           </div>
                         </div>
-                        <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left15">
+                        <div class="rt-col-6 rt-col-md-3 rt-md-space-top rt-md-space-left15 rt-md-space-right15">
                           <p class="rt-font-paragraph rt-font-bold">Wi-Fi HD-видеокамера DS-2CD-VC1 </p>
                           <p class="rt-font-paragraph rt-space-top">Датчик открытия 3 в 1 PST02-5C детектирует открытие
                             двери/окна, фиксирует температуру и освещенность. Идеален для управления световыми и
