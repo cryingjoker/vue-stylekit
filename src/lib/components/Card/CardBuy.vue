@@ -35,26 +35,20 @@ export default {
     if(this.hasCustomButton && this.customButtonClass){
       this.bindCustomButton()
     }
-    this.checkCardHeight();
-    this.bindResize();
   },
   beforeDestroy(){
     if(this.hasCustomButton && this.customButtonClass) {
       this.unbindCustomButton();
     }
-    this.unbindResize();
   },
   updated(){
     if(this.hasCustomButton && this.customButtonClass) {
       this.unbindCustomButton()
       this.bindCustomButton()
     }
-    this.unbindResize();
-    this.bindResize();
   },
   methods: {
     customButtonClick(){
-
          if(this.showForm){
            if(this.submitForm){
              this.submitForm()
@@ -74,44 +68,15 @@ export default {
     hideShow(){
       if(this.showForm){
         this.showForm = false;
-        this.checkCardHeight();
       }
     },
-    checkCardHeight(){
-      setTimeout(()=>{
-        let height = this.$el.clientHeight;
-        if(!this.cardHeight){
-          this.cardHeight = height;
-        }else{
-          if(this.cardHeight != height){
-            const contentContainer = this.$el.querySelector('.rt-card-buy__content');
-            const formContainer = this.$el.querySelector('.rt-card-buy__form');
-            formContainer.style['max-height'] = '2000px';
-            contentContainer.style['max-height'] = '2000px';
-            const formHeight = formContainer.clientHeight;
-            const contentHeight = contentContainer.clientHeight;
-            formContainer.style['max-height'] = null;
-            contentContainer.style['max-height'] = null;
-            const delta = formHeight - contentHeight;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            scrollIt(scrollTop+delta,400);
-          }
-        }
-      },10)
+    scrollToStart(){
+      scrollIt(this.$el.offsetTop + 40, 400);
     },
-    setCardHeight(){
-      const height = this.$el.clientHeight;
-      this.cardHeight = height;
-    },
-    bindResize(){
-      window.addEventListener('resize',debounce(this.setCardHeight,100))
-    },
-    unbindResize(){
-      window.removeEventListener('resize',debounce(this.setCardHeight,100))
-    },
+
     toggleShow(){
       this.showForm = !this.showForm;
-      this.checkCardHeight();
+      this.scrollToStart();
     },
     submitForm(){
       let form = this.$refs.card.querySelector('form');
