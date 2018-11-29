@@ -280,8 +280,14 @@ for devideStep in steps
 .flex-row
   flex-direction row
 
+.flex-row-reverse
+  flex-direction row-reverse
+
 .flex-column
   flex-direction column
+
+.flex-column-reverse
+  flex-direction column-reverse
 
 .flex-fill
   flex 1 0 0
@@ -326,7 +332,9 @@ for devideStep in steps
     padding-right 0
 
 .{newAppName}-td-space-left-none
-  padding-left 0
+  @media (max-width: tablet-step-size)
+    padding-left 0
+
 
 .{newAppName}-td-space-left-none
   @media (max-width: tablet-step-size)
