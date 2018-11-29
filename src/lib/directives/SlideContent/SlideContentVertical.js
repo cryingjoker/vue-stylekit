@@ -50,19 +50,14 @@ class SlideContentVertical {
           trigger.classList.remove(className);
         });
         this.activeContainerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
-          console.info('content.classList',content.classList,className);
           content.classList.remove(className);
         });
       } else {
         this.activeTriggerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
-          console.info('trigger.classList',className);
           trigger.classList.add(className);
-          console.info('!!')
         });
         this.activeContainerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
-          console.info('trigger.classList',className);
           content.classList.add(className);
-          console.info('!!')
         });
       }
       this.isActive = !this.isActive;
@@ -85,7 +80,6 @@ class SlideContentVertical {
 export const SlideContentVerticalDirective = {
   name: "RtSlideContentVertical",
   bind(el, bindings, vnode) {
-    console.info('el',el);
     vnode.context.SlideContentVertical = new SlideContentVertical(vnode.elm, bindings, vnode);
   },
   update(el, bindings, vnode) {
