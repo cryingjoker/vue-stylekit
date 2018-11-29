@@ -25,6 +25,7 @@
                              is-horizontal-card={true}
                              custom-button-class="rt-button-submit"
                              v-rt-slide-content-vertical={{
+                               "scrollWhenActive": true,
                                "triggerClassName": "rt-link",
                                "containerClassName": "rt-slide-content-vertical-content",
                                "activeContainerClassName": "rt-slide-content-vertical-content--is-active"
@@ -82,11 +83,13 @@
                       <div class="rt-card__border-content">
                         <div class="row rt-space-top05">
                           <div class="rt-col-3 flex-center-center rt-col-md-3">
-                            <p class="rt-link">Характеристики</p>
+                            <div class="rt-space-right15">
+                              <p class="rt-link">Характеристики</p>
+                            </div>
                           </div>
                           <div class="rt-col-6 md-d-none"></div>
                           <div class="rt-col-3 rt-col-md-3 rt-space-top">
-                            <div class="rt-space-right">
+                            <div class="">
                               <rt-button class="rt-button-orange rt-button--is-block rt-button-submit">Подключить
                               </rt-button>
                             </div>
@@ -131,6 +134,34 @@
                             <p class="rt-font-paragraph rt-font-bold">Заявка
                               на
                               подключение</p>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
+                            </div>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
+                            </div>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
+                            </div>
+                            <div
+                              class="rt-space-top">
+                              <rt-input
+                                value=""
+                                placeholder="Как вас зовут?"
+                              />
+                            </div>
                             <div
                               class="rt-space-top">
                               <rt-input

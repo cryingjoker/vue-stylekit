@@ -1,4 +1,5 @@
 import variables from "../../variables.json";
+import {scrollIt} from "../../utils";
 
 class SlideContentVertical {
   constructor(element, data, vnode) {
@@ -10,6 +11,7 @@ class SlideContentVertical {
     this.triggerClassName = this.value.triggerClassName || "rt-slide-content-vertical-trigger";
     this.containerClassName = this.value.containerClassName || "rt-slide-content-vertical-content";
     this.isActive = this.value.isActive ? this.value.isActive : false;
+    this.scrollWhenActive = this.value.scrollWhenActive ? this.value.scrollWhenActive : false;
     this.activeTriggerClassName = this.value.activeTriggerClassName || "rt-slide-content-vertical-trigger--is-active";
     this.activeContainerClassName = this.value.activeContainerClassName || "rt-slide-content-vertical-content--is-active";
     this.activeTriggerClassName = this.activeTriggerClassName.split(' ');
@@ -61,6 +63,9 @@ class SlideContentVertical {
         });
       }
       this.isActive = !this.isActive;
+      if(this.isActive && this.scrollWhenActive){
+        scrollIt(content.offsetTop,400)
+      }
     }
   };
   update = (el) => {
