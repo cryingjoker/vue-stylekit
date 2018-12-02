@@ -1,12 +1,4 @@
-<template>
-  <div>
-    <div :class="banerClass" :style="banerStyle" class="rt-banner-content">
-      <div class="rt-banner-content__inner"><slot /></div>
-    </div>
-  </div>
-</template>
-
-<script>
+<script type="text/jsx">
 const componentsList = {};
 
 export default {
@@ -120,12 +112,13 @@ export default {
       return styles;
     },
     banerClass() {
-      const classArray = {};
+      let className = "";
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
-        classArray["rt-banner-content--active"] = true;
+        className += " rt-banner-content--active";
       }
+      console.info('className',className);
 
-      return classArray;
+      return className;
     }
   },
   beforeMount: function() {
@@ -164,6 +157,7 @@ export default {
           this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
         }
       }
+      console.info('this.RtBanners.items.',this.RtBanners.items);
       if (this.ancorGetParamsLink) {
         let getParams = location.href.split("?");
         if (getParams.length > 1) {
@@ -183,6 +177,13 @@ export default {
       }
       return variable;
     }
+  },
+  render(h){
+    return <div>
+      <div  style={this.banerStyle} class={"rt-banner-content" + this.banerClass}>
+        <div class="rt-banner-content__inner">{this.$slots.default}</div>
+    </div>
+  </div>
   }
 };
 </script>

@@ -370,13 +370,18 @@
   position: relative
   left: 0
   right: 0
+  top: 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property top, opacity, max-height
+  min-height: 300px
   .{newAppName}-card-buy--show-form &
     position: absolute
     opacity: 0
-    top: -50%
+    overflow: hidden
+    top: -100%
+    max-height 0
+    display: none
     animation .4s hideCardContent linear
   .rt-card-buy--is-horizontal &
     overflow: hidden

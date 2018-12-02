@@ -103,7 +103,8 @@ for devideStep in steps
   for $i in 1 .. 18
     step = $i * 5
     spaceRender(devicePrefix, needMedia, step, media)
-
+.relative
+  position: relative
 .row
   display flex
   flex-wrap wrap
@@ -316,6 +317,15 @@ for devideStep in steps
 
   &--right
     left 100%
+.{newAppName}-fill-viewport
+  min-height: 100vh
+  min-width: 100vw
+
+.{newAppName}-fill-viewport-width
+  min-width: 100vw
+
+.{newAppName}-fill-viewport-height
+  min-height: 100vh
 
 .{newAppName}-space-horizontal-none
   padding-left 0
