@@ -146,7 +146,7 @@
       </div>
     </div>
     <div class="rt-fill-viewport relative">
-      <rt-banner :is-fullscreen-image="true" content-height="100vh" paginator-position="top" :show-navigation-array="true" :without-empty-column="true" :dont-pause-on-hover="true">
+      <rt-banner :is-fullscreen-image="true" :has-custom-content="true" content-height="100vh" paginator-position="top" :show-navigation-array="true" :without-empty-column="true" :dont-pause-on-hover="true">
         <rt-banner-item
           content-height="100vh"
           background-image="/static/images/game/slide1.jpg"
@@ -157,16 +157,19 @@
 
             color-icon="orange"
             fill-color="white">
-            <templacate slot="label">Сражайся
+            <template slot="label">Сражайся
               по всем фронтам
-            </templacate>
+            </template>
             <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of Warplanes</template>
+            <template slot="bottom-content">
+              <div class="color-block--dark-blue">11!!!!!!</div>
+            </template>
+
           </rt-color-line-text><rt-button class="rt-button-orange">Подробнее</rt-button></rt-banner-item>
         <rt-banner-item
           content-height="100vh"
           background-image="/static/images/game/slide2.jpg"
           :is-white-color="true"
-
           background-color="dark-state">
           <rt-color-line-text
             class="rt-l-game-main-text"

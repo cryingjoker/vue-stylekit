@@ -11,6 +11,10 @@
     name: "RtBanner",
     components: componentsList,
     props: {
+      hasCustomContent: {
+       type: Boolean,
+       default: false
+      },
       withoutEmptyColumn: {
         type: Boolean,
         default: false
@@ -352,7 +356,6 @@
         this.setStartTimer();
       },
       setStartTimer() {
-        console.info('RtBanners.items[RtBanners.activeIndex]',this.RtBanners.items[this.RtBanners.activeIndex],this.RtBanners.activeIndex)
         const RtBanners = this.RtBanners;
         if (RtBanners && !this.isStopped && RtBanners.activeIndex >= 0) {
           if (RtBanners.timer) {
@@ -377,8 +380,8 @@
           this.RtBanners.items[this.RtBanners.activeIndex] &&
           this.RtBanners.items[this.RtBanners.activeIndex].link) {
           return <a
-            href={this.RtBanners.items[RtBanners.activeIndex].link}
-            target={this.RtBanners.items[RtBanners.activeIndex].linkTarget}
+            href={this.RtBanners.items[this.RtBanners.activeIndex].link}
+            target={this.RtBanners.items[this.RtBanners.activeIndex].linkTarget}
             class="rt-banner-content__link"
           />;
         } else {
@@ -430,7 +433,6 @@
       };
       const paginatorItem = () => {
         return this.RtBanners.items.map((option, index) => {
-          console.info('option',option);
           return <rt-banner-paginator-item
             key={"paginator-index" + Math.random().toString(5).slice(4)}
             is-stopped={this.isStopped}
@@ -442,7 +444,7 @@
       };
       const paginator = () => {
         if (this.RtBanners.items && this.RtBanners.items.length > 1) {
-          <div class={this.switcherClass}>
+         return <div class={this.switcherClass}>
             <div
               class="circle-switcher-container"
             >
@@ -513,13 +515,15 @@
           return null
         }
       }
-      return <div class={this.banerClass} style={this.bannerStyle}>
-        <div class="rt-container">
-
-          {arrayLeft()}
-          {arrayRigth()}
-          {link()}
-          <div class="rt-col-12">
+      const bannerContent = ()=>{
+        if(this.hasCustomContent){
+          return <div class="rt-col-12">
+            <div class="row">
+          {this.$slots.default}
+            </div>
+          </div>
+        }else{
+          return <div class="rt-col-12">
             <div class="row">
               {emptyColumn()}
               <div class="rt-col-4 rt-col-md-3 height-fill rt-col-td-3 rt-td-space-left2">
@@ -528,11 +532,19 @@
               <div class="rt-col-1 rt-col-td-3 md-d-none"/>
             </div>
           </div>
+        }
+
+      }
+      return <div class={this.banerClass} style={this.bannerStyle}>
+        <div class="rt-container">
+          {arrayLeft()}
+          {arrayRigth()}
+          {link()}
+          {bannerContent()}
         </div>
         {paginator()}
         <div style={this.imageStyle} class="rt-banner-image">
           {leftTriangle()}
-
           {video()}
           {rightTriangle()}
         </div>

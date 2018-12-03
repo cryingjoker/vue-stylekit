@@ -157,6 +157,7 @@ export default {
           this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
         }
       }
+
       console.info('this.RtBanners.items.',this.RtBanners.items);
       if (this.ancorGetParamsLink) {
         let getParams = location.href.split("?");
