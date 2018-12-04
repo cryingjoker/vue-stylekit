@@ -51,6 +51,16 @@
       "version": "0.0.29"
     },
     {
+      "name": "rt-banner",
+      "proporty": "mobile-image-height",
+      "type": [
+        "String"
+      ],
+      "description": "Устанавливает высоту background для мобильного разрешения",
+      "value": "null",
+      "version": "0.0.29"
+    },
+    {
       "value": "null",
       "name": " rt-banner",
       "proporty": "(:)content-mobile-min-height",

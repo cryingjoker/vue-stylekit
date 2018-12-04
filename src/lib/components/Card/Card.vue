@@ -8,6 +8,10 @@
       index: null
     }),
     props: {
+      resetMinHeight:{
+        type: Boolean,
+        default: false
+      },
       staticBodyHeight: {
         type: Boolean,
         default: false
@@ -134,6 +138,9 @@
         }
         if (this.hideBackgroundOnMobile) {
           cardClass += " rt-card--hide-background-on-mobile";
+        }
+        if(this.resetMinHeight){
+          cardClass += " rt-card--custom-height"
         }
         return cardClass;
       },

@@ -78,6 +78,10 @@
       banerItemsWithCustomContent: {
         type: Boolean,
         default: false
+      },
+      mobileImageHeight:{
+        type: String,
+        default: null
       }
     },
     data: () => ({
@@ -176,6 +180,10 @@
         } else {
           this.backgroundVideo = null;
         }
+        if(this.mobileImageHeight && this.RtBanners.isMobile){
+          styles.height = this.mobileImageHeight
+        }
+        console.info('mobileImageHeight',this.mobileImageHeight,this.RtBanners.isMobile)
 
         return styles;
       }
@@ -282,12 +290,15 @@
         this.calculateMobileOptions();
       },
       calculateMobileOptions() {
+        console.info('&&&&****  test this.mobileImageHeight ',this.mobileImageHeight )
         if (
           this.contentMobileHeight !== null ||
-          this.contentMobileMinHeight !== null
+          this.contentMobileMinHeight !== null ||
+          this.mobileImageHeight !== null
         ) {
           const isMobile =
             window.innerWidth <= parseInt(variables["mobile-step-size"]);
+          console.info('calcul isMobile =',isMobile);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
           }
@@ -518,9 +529,7 @@
       const bannerContent = ()=>{
         if(this.hasCustomContent){
           return <div class="rt-col-12">
-            <div class="row">
           {this.$slots.default}
-            </div>
           </div>
         }else{
           return <div class="rt-col-12">

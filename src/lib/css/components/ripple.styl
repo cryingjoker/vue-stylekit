@@ -60,7 +60,8 @@
     transition-property width, height, margin, transform, opacity, visibility
     animation .4s showRipple linear
     pointer-events none
-
+    .{newAppName}-dark-theme &
+      background-color b2c-orange
     .white-wave &
       background-color #fff
 
@@ -74,6 +75,8 @@
   width 1px
   height 1px
   background-color b2c-purple
+  .{newAppName}-dark-theme &
+    background-color b2c-orange
   top 25px !important
   left 25px !important
   transition-timing-function cubic-bezier(.11, .34, .97, .33)

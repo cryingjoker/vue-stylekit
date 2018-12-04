@@ -33,6 +33,8 @@
       stroke b2c-purple
       stroke-dashoffset 100px
       stroke-dasharray 20px
+      .{newAppName}-dark-theme &
+        stroke b2c-orange
 
     &:before
       content ""
@@ -55,6 +57,9 @@
     .checkbox-element:focus+&:before,
     .checkbox:hover &:before
       border-color b2c-purple
+      .{newAppName}-dark-theme &
+        border-color b2c-orange
+
 
     .checkbox-element:checked+&
       .checkbox-container__angle

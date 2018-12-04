@@ -5,6 +5,10 @@ export default {
   name: "RtBannerItem",
   components: componentsList,
   props: {
+    hasCustomContent: {
+      type: Boolean,
+      default: false
+    },
     link: {
       type: String,
       default: null
@@ -111,7 +115,7 @@ export default {
 
       return styles;
     },
-    banerClass() {
+    bannerClass() {
       let className = "";
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
         className += " rt-banner-content--active";
@@ -157,8 +161,6 @@ export default {
           this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
         }
       }
-
-      console.info('this.RtBanners.items.',this.RtBanners.items);
       if (this.ancorGetParamsLink) {
         let getParams = location.href.split("?");
         if (getParams.length > 1) {
@@ -180,11 +182,15 @@ export default {
     }
   },
   render(h){
-    return <div>
-      <div  style={this.banerStyle} class={"rt-banner-content" + this.banerClass}>
-        <div class="rt-banner-content__inner">{this.$slots.default}</div>
-    </div>
-  </div>
+    if(this.hasCustomContent){
+      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+    }else {
+      return <div>
+        <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
+          <div class="rt-banner-content__inner">{this.$slots.default}</div>
+        </div>
+      </div>
+    }
   }
 };
 </script>

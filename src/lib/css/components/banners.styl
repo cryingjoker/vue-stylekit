@@ -19,7 +19,8 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
-
+  &--full-screen
+    height: auto
   &-video
     &__content
       width 100%
@@ -528,6 +529,8 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property opacity
+  @media (max-width: tablet-step-size)
+    display: none
   &--next
     right: 30px
   &--preview
@@ -572,3 +575,24 @@
 
   100%
     stroke-dashoffset 120
+.rt-banner__item
+  position: absolute
+  top: 0
+  bottom: 0
+  min-height: 100%
+  width: 100%
+  display: flex
+  flex-flow column
+  flex-wrap wrap
+  opacity: 0
+  z-index: 2
+  left: 20px
+  right: 20px
+  overflow-x hidden
+.rt-banner__item--is-active
+  position: relative
+  min-height: 100%
+  display: flex
+  opacity: 1
+  z-index: 3
+
