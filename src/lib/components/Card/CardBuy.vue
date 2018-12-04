@@ -76,7 +76,7 @@ export default {
 
     toggleShow(){
       this.showForm = !this.showForm;
-      this.scrollToStart();
+      // this.scrollToStart();
     },
     submitForm(){
       let form = this.$refs.card.querySelector('form');
@@ -116,7 +116,7 @@ export default {
     })();
     const bottomContent = ()=>{
       if(!this.hasCustomButton || !this.customButtonClass) {
-        return <div className="rt-card__border-content rt-space-bottom">
+        return <div class="rt-card__border-content rt-space-bottom">
           {this.$slots['card-footer']}
           {button()}
         </div>

@@ -1,18 +1,14 @@
-<template>
-  <div>
-    <div :class="banerClass" :style="banerStyle" class="rt-banner-content">
-      <div class="rt-banner-content__inner"><slot /></div>
-    </div>
-  </div>
-</template>
-
-<script>
+<script type="text/jsx">
 const componentsList = {};
 
 export default {
   name: "RtBannerItem",
   components: componentsList,
   props: {
+    hasCustomContent: {
+      type: Boolean,
+      default: false
+    },
     link: {
       type: String,
       default: null
@@ -119,13 +115,14 @@ export default {
 
       return styles;
     },
-    banerClass() {
-      const classArray = {};
+    bannerClass() {
+      let className = "";
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
-        classArray["rt-banner-content--active"] = true;
+        className += " rt-banner-content--active";
       }
+      console.info('className',className);
 
-      return classArray;
+      return className;
     }
   },
   beforeMount: function() {
@@ -182,6 +179,17 @@ export default {
         variable += "px";
       }
       return variable;
+    }
+  },
+  render(h){
+    if(this.hasCustomContent){
+      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+    }else {
+      return <div>
+        <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
+          <div class="rt-banner-content__inner">{this.$slots.default}</div>
+        </div>
+      </div>
     }
   }
 };

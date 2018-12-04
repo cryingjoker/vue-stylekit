@@ -8,6 +8,10 @@
       index: null
     }),
     props: {
+      resetMinHeight:{
+        type: Boolean,
+        default: false
+      },
       staticBodyHeight: {
         type: Boolean,
         default: false
@@ -134,6 +138,9 @@
         }
         if (this.hideBackgroundOnMobile) {
           cardClass += " rt-card--hide-background-on-mobile";
+        }
+        if(this.resetMinHeight){
+          cardClass += " rt-card--custom-height"
         }
         return cardClass;
       },
@@ -336,9 +343,9 @@
           style={this.standAloneBackgroundStyle}
           class="rt-card__stand-alone-background"
         /> : null}
-        {Object.keys(this.cardBackgroundStyle).length > 0 || this.cardBackgroundClass || this.backgroundColorType ? <div style={this.cardBackgroundStyle}
+         <div style={this.cardBackgroundStyle}
              class={"rt-card__background" + this.cardBackgroundClass}
-        /> : null}
+        />
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
 

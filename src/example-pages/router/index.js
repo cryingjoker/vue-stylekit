@@ -18,6 +18,7 @@ import PromoTv from '../components/promo/tv.vue';
 import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
+import PromoGame from '../components/promo/game.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
@@ -69,6 +70,7 @@ const index = [
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
   { path: '/tabs', name: 'app-banners', component: Tabs },
+  { path: '/promo/game', name: 'promoGame', component: PromoGame },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },
   { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
   { path: '/promo/mobile', name: 'promoMobrt-font-md-centerile', component: PromoMobile },

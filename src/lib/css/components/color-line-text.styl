@@ -7,6 +7,8 @@
 
   &-wrapper
     max-width calc(100vw - 70px)
+    padding-bottom: 37px;
+    padding-right: 29px;
 
   &--is-paragraph
     display flex
@@ -33,8 +35,6 @@
     bottom -23px
     right -14px
     fill b2c-orange
-
-
 
     &--fill-dark-state
       .color-line-paragraph-icon__background
@@ -166,16 +166,12 @@
         fill b2c-black
     &--black
       fill b2c-black
+    &--white
+      fill b2c-white
 
 
 
   &-text
-    word-wrap normal
-    hyphens none
-    -webkit-hyphens none
-    -ms-hyphens none
-    -moz-hyphens none
-
     br
       @media (max-width: mobile-step-size)
         display none

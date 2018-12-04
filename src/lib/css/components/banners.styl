@@ -19,7 +19,8 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
-
+  &--full-screen
+    height: auto
   &-video
     &__content
       width 100%
@@ -446,6 +447,9 @@
   left 0
   right 0
   z-index 20
+  &--top
+    bottom: inherit
+    top: 30px
 
   &-container
     display inline-block
@@ -512,7 +516,27 @@
       &.{newAppName}-banner--run-timer
         cursor default
         stroke-width .5px
-
+.rt-banner-arrow
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  z-index: 10
+  height: 63px
+  cursor: pointer
+  opacity: .7
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property opacity
+  @media (max-width: tablet-step-size)
+    display: none
+  &--next
+    right: 30px
+  &--preview
+    left: 30px
+  &:hover
+    opacity: 1
 .circle-switcher__item.{newAppName}-banner--run-timer.{newAppName}-banner--pause
   cursor default
 
@@ -551,3 +575,25 @@
 
   100%
     stroke-dashoffset 120
+.rt-banner__item
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0px
+  right: 0px
+  min-height: 100%
+  width: 100%
+  display: flex
+  flex-flow column
+  flex-wrap wrap
+  opacity: 0
+  z-index: 2
+  overflow-x hidden
+
+.rt-banner__item--is-active
+  position: relative
+  min-height: 100%
+  display: flex
+  opacity: 1
+  z-index: 3
+

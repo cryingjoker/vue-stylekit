@@ -305,6 +305,15 @@
                 Home Internet
               </router-link>
             </div>
+            <div class="aside-menu__item">
+              <router-link
+                class="aside-menu__link"
+                active-class="aside-menu__link--active"
+                to="/promo/game"
+              >
+                Game
+              </router-link>
+            </div>
           </div>
         </div>
         <!-- <div class="aside-menu__item"> -->
