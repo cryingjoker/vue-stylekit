@@ -14,6 +14,10 @@
         type: Array,
         default: null
       },
+      startIndex: {
+        type: Array,
+        default: []
+      },
       playlistId : {
         type: Array,
         default: null
@@ -186,7 +190,10 @@
         }else{
 
           if(this.playlistId){
-            settings.playerVars.list = this.playlistId[this.activePlaylistIndex]
+            settings.playerVars.list = this.playlistId[this.activePlaylistIndex];
+            if(this.startIndex[this.activePlaylistIndex] !== undefined) {
+              settings.playerVars.index = this.startIndex[this.activePlaylistIndex];
+            }
           }
         }
         this.player = new YT.Player("player-"+this._uid, settings);
