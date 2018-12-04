@@ -12,8 +12,8 @@
     components: componentsList,
     props: {
       hasCustomContent: {
-       type: Boolean,
-       default: false
+        type: Boolean,
+        default: false
       },
       withoutEmptyColumn: {
         type: Boolean,
@@ -79,7 +79,7 @@
         type: Boolean,
         default: false
       },
-      mobileImageHeight:{
+      mobileImageHeight: {
         type: String,
         default: null
       }
@@ -180,10 +180,10 @@
         } else {
           this.backgroundVideo = null;
         }
-        if(this.mobileImageHeight && this.RtBanners.isMobile){
-          styles.height = this.mobileImageHeight
+        if (this.mobileImageHeight && this.RtBanners.isMobile) {
+          styles.height = this.mobileImageHeight;
         }
-        console.info('mobileImageHeight',this.mobileImageHeight,this.RtBanners.isMobile)
+        console.info("mobileImageHeight", this.mobileImageHeight, this.RtBanners.isMobile);
 
         return styles;
       }
@@ -290,7 +290,7 @@
         this.calculateMobileOptions();
       },
       calculateMobileOptions() {
-        console.info('&&&&****  test this.mobileImageHeight ',this.mobileImageHeight )
+        console.info("&&&&****  test this.mobileImageHeight ", this.mobileImageHeight);
         if (
           this.contentMobileHeight !== null ||
           this.contentMobileMinHeight !== null ||
@@ -298,7 +298,7 @@
         ) {
           const isMobile =
             window.innerWidth <= parseInt(variables["mobile-step-size"]);
-          console.info('calcul isMobile =',isMobile);
+          console.info("calcul isMobile =", isMobile);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
           }
@@ -416,7 +416,7 @@
                 </g>
               </g>
             </svg>
-          </div>
+          </div>;
         } else {
           return null;
         }
@@ -455,7 +455,7 @@
       };
       const paginator = () => {
         if (this.RtBanners.items && this.RtBanners.items.length > 1) {
-         return <div class={this.switcherClass}>
+          return <div class={this.switcherClass}>
             <div
               class="circle-switcher-container"
             >
@@ -508,30 +508,32 @@
           return null;
         }
       };
-      const logo = ()=>{
-        if(this.bannerLogo){
+      const logo = () => {
+        if (this.bannerLogo) {
           return <div class="rt-banner-logo rt-container">
             <div class="rt-col-12">
               <img src={this.bannerLogo} class="rt-banner-logo__image" alt=""/>
-          </div>
-          </div>
-        }else{
-            return null
+            </div>
+          </div>;
+        } else {
+          return null;
         }
-      }
-      const emptyColumn = ()=>{
-        if(!this.withoutEmptyColumn) {
-          <div class="rt-col-1 md-d-none td-d-none"/>
-        }else{
-          return null
+      };
+      const emptyColumn = () => {
+        if (!this.withoutEmptyColumn) {
+          <div class="rt-col-1 md-d-none td-d-none"/>;
+        } else {
+          return null;
         }
-      }
-      const bannerContent = ()=>{
-        if(this.hasCustomContent){
-          return <div class="rt-col-12">
-          {this.$slots.default}
-          </div>
-        }else{
+      };
+      const bannerContent = () => {
+        if (this.hasCustomContent) {
+          return <div className="row">
+            <div class="rt-col-12">
+              {this.$slots.default}
+            </div>
+          </div>;
+        } else {
           return <div class="rt-col-12">
             <div class="row">
               {emptyColumn()}
@@ -540,10 +542,10 @@
               </div>
               <div class="rt-col-1 rt-col-td-3 md-d-none"/>
             </div>
-          </div>
+          </div>;
         }
 
-      }
+      };
       return <div class={this.banerClass} style={this.bannerStyle}>
         <div class="rt-container">
           {arrayLeft()}
@@ -558,7 +560,7 @@
           {rightTriangle()}
         </div>
         {logo()}
-    </div>
+      </div>;
     }
   };
 </script>

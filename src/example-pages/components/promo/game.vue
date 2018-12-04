@@ -155,7 +155,8 @@
           </div>
         </div>
         <div class="rt-fill-viewport relative">
-          <rt-banner is-fullscreen-image={true} has-custom-content={true} content-min-height="100vh" content-height="inherit"
+          <rt-banner is-fullscreen-image={true} has-custom-content={true} content-min-height="100vh"
+                     content-height="inherit"
                      paginator-position="top"
                      mobile-image-height="100vh"
                      show-navigation-array={true} without-empty-column={true} dont-pause-on-hover={true}>
@@ -165,22 +166,24 @@
               background-image="/static/images/game/slide1.jpg"
               background-color="dark-state">
               <div class="flex-fill md-flex-fill-none flex-start-center  md-flex-start-top">
-                <div class="rt-col-12">
-                  <div class="row">
-                    <div class="rt-col-5 rt-col-td-6 md-height-fill flex-start-center md-flex-start-top">
-                      <div class="rt-md-space-top6">
-                        <rt-color-line-text
-                          class="rt-l-game-main-text"
-                          color-icon="orange"
-                          fill-color="white">
-                          <template slot="label">Сражайся
-                            по всем фронтам
-                          </template>
-                          <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
-                            Warplanes
-                          </template>
-                        </rt-color-line-text>
-                        <rt-button class="rt-button-orange">Подробнее</rt-button>
+                <div class="row">
+                  <div class="rt-col-12">
+                    <div class="row">
+                      <div class="rt-col-5 rt-col-td-6 md-height-fill flex-start-center md-flex-start-top">
+                        <div class="rt-md-space-top6">
+                          <rt-color-line-text
+                            class="rt-l-game-main-text"
+                            color-icon="orange"
+                            fill-color="white">
+                            <template slot="label">Сражайся
+                              по всем фронтам
+                            </template>
+                            <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
+                              Warplanes
+                            </template>
+                          </rt-color-line-text>
+                          <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -189,34 +192,36 @@
                 </div>
               </div>
               <div>
-                <div class="rt-col-12 align-end">
-                  <div class="row row--tablet-only-scroll">
-                    <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
-                      <img src="/static/images/game/game-icon1.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Премиум аккаунт</p>
-                      <p class="color-white05 rt-font-small-paragraph">Предоставляется на весь срок <br/> пользования
-                        опцией
-                      </p>
-                    </div>
-                    <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
-                      <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100 (Р)
-                      </p>
-                      <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре</p>
-                    </div>
-                    <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
-                      <img src="/static/images/game/game-icon3.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер «Адмирал
-                        Макаров»</p>
-                      <p class="color-white05 rt-font-small-paragraph">Крейсер VI уровня и слот в порту</p>
-                    </div>
-                    <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
-                      <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Полная боевая готовность</p>
-                      <p class="color-white05 rt-font-small-paragraph">На 100% обученный танковый экипаж <br/> с
-                        прокачанным
-                        «Боевым братством»
-                        <br/> и командир корабля с тремя навыками</p>
+                <div className="row">
+                  <div class="rt-col-12 align-end">
+                    <div class="row row--tablet-only-scroll">
+                      <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
+                        <img src="/static/images/game/game-icon1.png" alt="" width="100"/>
+                        <p class="color-white rt-space-bottom rt-space-top">Премиум аккаунт</p>
+                        <p class="color-white05 rt-font-small-paragraph">Предоставляется на весь срок <br/> пользования
+                          опцией
+                        </p>
+                      </div>
+                      <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
+                        <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
+                        <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100 (Р)
+                        </p>
+                        <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре</p>
+                      </div>
+                      <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
+                        <img src="/static/images/game/game-icon3.png" alt="" width="100"/>
+                        <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер «Адмирал
+                          Макаров»</p>
+                        <p class="color-white05 rt-font-small-paragraph">Крейсер VI уровня и слот в порту</p>
+                      </div>
+                      <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3">
+                        <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
+                        <p class="color-white rt-space-bottom rt-space-top">Полная боевая готовность</p>
+                        <p class="color-white05 rt-font-small-paragraph">На 100% обученный танковый экипаж <br/> с
+                          прокачанным
+                          «Боевым братством»
+                          <br/> и командир корабля с тремя навыками</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -227,22 +232,24 @@
               background-image="/static/images/game/slide2.jpg"
               background-color="dark-state">
               <div class="flex-fill md-flex-fill-none flex-start-center  md-flex-start-top">
-                <div class="rt-col-12 ">
-                  <div class="row ">
-                    <div class="rt-col-5  rt-col-td-6 flex-start-center md-height-fill md-flex-start-top">
-                      <div class="rt-md-space-top6">
-                        <rt-color-line-text
-                          class="rt-l-game-main-text"
-                          color-icon="orange"
-                          fill-color="white">
-                          <template slot="label">Сражайся
-                            по всем фронтам
-                          </template>
-                          <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
-                            Warplanes
-                          </template>
-                        </rt-color-line-text>
-                        <rt-button class="rt-button-orange">Подробнее</rt-button>
+                <div class="row">
+                  <div class="rt-col-12 ">
+                    <div class="row ">
+                      <div class="rt-col-5  rt-col-td-6 flex-start-center md-height-fill md-flex-start-top">
+                        <div class="rt-md-space-top6">
+                          <rt-color-line-text
+                            class="rt-l-game-main-text"
+                            color-icon="orange"
+                            fill-color="white">
+                            <template slot="label">Сражайся
+                              по всем фронтам
+                            </template>
+                            <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
+                              Warplanes
+                            </template>
+                          </rt-color-line-text>
+                          <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -289,23 +296,25 @@
               background-image="/static/images/game/slide1.jpg"
               background-color="dark-state">
               <div class="flex-fill md-flex-fill-none flex-start-center  md-flex-start-top">
-                <div class="rt-col-12">
-                  <div class="row ">
-                    <div class="rt-col-5 flex-start-center md-flex-start-top rt-col-td-6 md-height-fill">
-                      <div class="rt-md-space-top6">
-                        <rt-color-line-text
-                          class="rt-l-game-main-text"
+                <div class="row">
+                  <div class="rt-col-12">
+                    <div class="row ">
+                      <div class="rt-col-5 flex-start-center md-flex-start-top rt-col-td-6 md-height-fill">
+                        <div class="rt-md-space-top6">
+                          <rt-color-line-text
+                            class="rt-l-game-main-text"
 
-                          color-icon="orange"
-                          fill-color="white">
-                          <template slot="label">Сражайся
-                            по всем фронтам
-                          </template>
-                          <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
-                            Warplanes
-                          </template>
-                        </rt-color-line-text>
-                        <rt-button class="rt-button-orange">Подробнее</rt-button>
+                            color-icon="orange"
+                            fill-color="white">
+                            <template slot="label">Сражайся
+                              по всем фронтам
+                            </template>
+                            <template slot="content">и получай бонусы в играх World of tanks, Word of ships, World of
+                              Warplanes
+                            </template>
+                          </rt-color-line-text>
+                          <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        </div>
                       </div>
                     </div>
                   </div>
