@@ -11,6 +11,9 @@
       mobileNotResize:{
          type: Boolean,
         default: false
+      },
+      reactive: {
+        type: Boolean
       }
     },
     data: () => ({
@@ -28,15 +31,19 @@
       }
     },
     mounted(){
-      setTimeout(()=>{
-        if(this.querySelectorsNames.length > 0) {
-          this.bindResize();
+      if (this.reactive) {
+        this.initReactiveWaiter()
+      } else {
+        setTimeout(()=>{
+          if(this.querySelectorsNames.length > 0) {
+            this.bindResize();
+            this.calculateMaxHeight();
+          }
+        },0);
+        setTimeout(()=>{
           this.calculateMaxHeight();
-        }
-      },0);
-      setTimeout(()=>{
-        this.calculateMaxHeight();
-      },500);
+        },500);
+      }
     },
     methods: {
       bindResize(){
@@ -70,6 +77,19 @@
             })
           })
         }
+      },
+      initReactiveWaiter(){
+        let count = 0
+        let maxCount = this.$children.length
+        let wait = setInterval(() => {
+          this.$children.forEach(cmp => {
+            if (cmp.loaded) count++
+            if (count === maxCount) {
+              clearInterval(wait)
+              this.calculateMaxHeight()
+            }
+          })
+        }, 50)
       }
     },
     render(h) {
