@@ -183,7 +183,6 @@
         if (this.mobileImageHeight && this.RtBanners.isMobile) {
           styles.height = this.mobileImageHeight;
         }
-        console.info("mobileImageHeight", this.mobileImageHeight, this.RtBanners.isMobile);
 
         return styles;
       }
@@ -290,7 +289,6 @@
         this.calculateMobileOptions();
       },
       calculateMobileOptions() {
-        console.info("&&&&****  test this.mobileImageHeight ", this.mobileImageHeight);
         if (
           this.contentMobileHeight !== null ||
           this.contentMobileMinHeight !== null ||
@@ -298,7 +296,6 @@
         ) {
           const isMobile =
             window.innerWidth <= parseInt(variables["mobile-step-size"]);
-          console.info("calcul isMobile =", isMobile);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
           }
