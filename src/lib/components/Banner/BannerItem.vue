@@ -120,7 +120,6 @@ export default {
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
         className += " rt-banner-content--active";
       }
-      console.info('className',className);
 
       return className;
     }

@@ -40,7 +40,6 @@ export default {
   },
   render(h){
     const icon = ()=>{
-      console.info('icccoooonnn')
       return <svg
           class={"color-line-paragraph-icon " + this.colorLineIconClass}
           width="38"
@@ -61,14 +60,12 @@ export default {
       </svg>
     }
     const label = ()=>{
-      console.info('this.$slots.content',this.$slots.content);
       if(this.$slots.content) {
         return <p class="rt-font-banner-label-bold color-line">
         <span class={'color-line-text ' + this.fillColorClass}
         >{this.$slots.label}</span>
         </p>
       }else{
-        console.info('!!!!  ',icon())
         return <p class="rt-font-banner-label-bold color-line">
         <span class={'color-line-text ' + this.fillColorClass}
         >{this.$slots.label} {icon()}</span>
