@@ -11,16 +11,23 @@
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property background, font-size, top, color
+  .{newAppName}-dark-theme
+    &
+      color b2c-white07
+    .{newAppName}-card &
+      color b2c-black07
 
-  .{newAppName}-dark-theme &,
-  .{newAppName}-input--white &
-    color b2c-white07
+  .{newAppName}-input--white
+    &
+      color b2c-white07
+    .{newAppName}-card &
+      color b2c-black07
 
-  .{newAppName}-card &
-    color main-color
+
+
 
   .{newAppName}-card--has-white-color &
-    color #FFFFFF
+    color b2c-white07
 
   .textarea--static &
     left 20px

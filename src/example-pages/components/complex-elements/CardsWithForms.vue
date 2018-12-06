@@ -13,7 +13,7 @@
                          :has-custom-button="true"
                          :is-horizontal-card="true"
                          custom-button-class="rt-button-submit"
-                         :v-rt-slide-content-vertical='{
+                         v-rt-slide-content-vertical='{
             "scrollWhenActive": true,
             "triggerClassName": "rt-link",
             "containerClassName": "rt-slide-content-vertical-content",
