@@ -61,6 +61,10 @@ export default {
       type: String,
       default: null
     },
+    lazyImage: {
+      type: String,
+      default: null
+    },
     isWhiteColor: {
       type: Boolean,
       default: false
@@ -133,7 +137,12 @@ export default {
         id: this.id
       };
       if (this.backgroundImage) {
-        bannerItemData.backgroundImage = this.backgroundImage;
+        bannerItemData.backgroundImage = this.lazyImage || this.backgroundImage;
+        if (this.lazyImage) {
+          this.loadImageAsync(this.backgroundImage, img => {
+            bannerItemData.backgroundImage = this.backgroundImage
+          })
+        }
       }
       if (this.backgroundVideo) {
         bannerItemData.backgroundVideo = this.backgroundVideo;
@@ -178,6 +187,20 @@ export default {
         variable += "px";
       }
       return variable;
+    },
+    loadImageAsync (src, resolve, reject) {
+      let image = new Image()
+      image.src = src
+      image.onload = function () {
+        resolve({
+          naturalHeight: image.naturalHeight,
+          naturalWidth: image.naturalWidth,
+          src: image.src
+        })
+      }
+      image.onerror = function (e) {
+        reject(e)
+      }
     }
   },
   render(h){
