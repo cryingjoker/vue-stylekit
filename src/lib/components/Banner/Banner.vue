@@ -525,7 +525,7 @@
       };
       const bannerContent = () => {
         if (this.hasCustomContent) {
-          return <div className="row">
+          return <div class="row">
             <div class="rt-col-12">
               {this.$slots.default}
             </div>

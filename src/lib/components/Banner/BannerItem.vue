@@ -182,10 +182,10 @@ export default {
   },
   render(h){
     if(this.hasCustomContent){
-      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+      return <div style={this.banerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
     }else {
       return <div>
-        <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
+        <div class={"rt-banner-content" + this.bannerClass}>
           <div class="rt-banner-content__inner">{this.$slots.default}</div>
         </div>
       </div>
