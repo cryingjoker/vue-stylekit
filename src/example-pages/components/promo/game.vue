@@ -16,7 +16,7 @@
           <div class="rt-container">
             <div class="row">
               <div class="rt-col-12">
-                <div class="flex-column d-space-between rt-fill-viewport-height md-d-flex">
+                <div class="flex-column d-space-between rt-fill-viewport-height d-flex">
                   <div class="flex-fill rt-l-game-space"></div>
                   <div class="flex-fill flex-start-center">
                     <div class="flex-column">
