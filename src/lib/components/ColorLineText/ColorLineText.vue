@@ -44,7 +44,7 @@ export default {
           class={"color-line-paragraph-icon " + this.colorLineIconClass}
           width="38"
           height="23"
-          viewBox="0 0 38px 23px"
+          viewBox="0 0 38 23"
         >
       <defs>
         <path
