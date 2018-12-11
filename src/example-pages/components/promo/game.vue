@@ -113,7 +113,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="rt-font-center rt-l-internet-speed-container color-white rt-space-bottom6 rt-md-space-bottom">
+                  <div class="rt-font-center  color-white rt-space-bottom6 rt-md-space-bottom">
                     <div class="rt-l-internet-speed d-inline-block">
                       <p class="rt-l-internet-speed__value">250</p>
                       <span class="rt-l-internet-speed__text">Мбит/сек</span>
@@ -164,10 +164,9 @@
               content-mobile-min-height="0"
               has-custom-content={true}
               content-min-height="100vh"
-              class="flex-column"
+              class="flex-column row flex-fill flex-column d-space-between  max-full-width"
               background-image="/static/images/game/slide1.jpg"
               background-color="main-color">
-              <div class="row flex-fill flex-column d-space-between  max-full-width">
                 <div class="rt-col-12 flex-fill rt-md-fill-viewport-height flex-center-center">
                   <div class="row flex-fill max-full-width">
                     <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
@@ -224,17 +223,15 @@
                         «Боевым братством» <br/> корабля с тремя глазами</p>
                     </div>
                   </div>
-                </div>
               </div>
             </rt-banner-item>
             <rt-banner-item
               content-mobile-min-height="0"
               has-custom-content={true}
               content-min-height="100vh"
-              class="flex-column"
+              class="flex-column row flex-fill max-full-width flex-column d-space-between"
               background-image="/static/images/game/slide2.jpg"
               background-color="main-color">
-              <div class="row flex-fill max-full-width flex-column d-space-between">
                 <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
                   <div class="row flex-fill max-full-width">
                     <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
@@ -289,7 +286,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
             </rt-banner-item>
 
           </rt-banner>
@@ -363,7 +359,7 @@
                   </div>
                 </div>
                 <div class="rt-col-1 md-d-none"></div>
-                <div class="rt-col-6 rt-col-md-3">
+                <div class="rt-col-6 rt-col-md-3 md-d-none">
                   <div class="row">
                     <div class="rt-col-4 rt-font-center rt-col-md-3">
                       <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
@@ -504,7 +500,8 @@
                       <p class="rt-space-top05 color-white05 rt-font-label">Любимые каналы, фильмы <br/> и сериалы</p>
                     </div>
                   </div>
-                  <div class="rt-l-internet-speed-container rt-space-bottom6 rt-space-left15 rt-space-top2 rt-col-md-3">
+                  <div class="row">
+                  <div class="rt-space-bottom6 rt-space-left15 rt-md-space-left-none rt-space-top2 rt-col-md-3 rt-col-md-3 rt-font-center">
                     <div class="rt-l-internet-speed d-inline-block">
                       <p class="rt-l-internet-speed__value color-orange">250</p>
                       <span class="rt-l-internet-speed__text">Мбит/сек</span>
@@ -528,12 +525,12 @@
                       <span class="rt-l-internet-speed__text">Мбит/сек</span>
                     </div>
                   </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="rt-space-top">
-              <div class="row">
-                <div class="rt-col-5">
+              <div class="row rt-space-top">
+                <div class="rt-col-5 rt-col-md-3">
                   <rt-annotation has-white-color={true} label="Примечание">
                     <template slot="content">
                       <p class="rt-annotation-item">Если у Вас уже подключена услуга «Домашний Интернет» и имеется
@@ -545,7 +542,6 @@
                   </rt-annotation>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>;
