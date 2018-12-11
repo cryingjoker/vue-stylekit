@@ -113,7 +113,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="rt-font-center rt-l-internet-speed-container color-white">
+                  <div class="rt-font-center rt-l-internet-speed-container color-white rt-space-bottom6 rt-md-space-bottom">
                     <div class="rt-l-internet-speed d-inline-block">
                       <p class="rt-l-internet-speed__value">250</p>
                       <span class="rt-l-internet-speed__text">Мбит/сек</span>
@@ -167,9 +167,9 @@
               class="flex-column"
               background-image="/static/images/game/slide1.jpg"
               background-color="main-color">
-              <div class="row flex-fill flex-column d-space-between">
+              <div class="row flex-fill flex-column d-space-between  max-full-width">
                 <div class="rt-col-12 flex-fill rt-md-fill-viewport-height flex-center-center">
-                  <div class="row flex-fill">
+                  <div class="row flex-fill max-full-width">
                     <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
                       <div class="flex-column rt-space-vertical2 rt-td-space-top4 rt-td-space-left3 rt-md-space-horizontal-none">
                         <rt-color-line-text
@@ -234,9 +234,9 @@
               class="flex-column"
               background-image="/static/images/game/slide2.jpg"
               background-color="main-color">
-              <div class="row flex-fill flex-column d-space-between">
-                <div class="rt-col-12 flex-fill rt-md-fill-viewport-height flex-center-center">
-                  <div class="row flex-fill">
+              <div class="row flex-fill max-full-width flex-column d-space-between">
+                <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
+                  <div class="row flex-fill max-full-width">
                     <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
                       <div class="flex-column rt-space-vertical2 rt-td-space-top4 rt-td-space-left3 rt-md-space-horizontal-none">
                         <rt-color-line-text
@@ -261,7 +261,7 @@
                   </div>
                 </div>
 
-                <div class="flex-fill-none rt-space-bottom3">
+                <div class="flex-fill-none rt-space-bottom3 max-full-width">
                   <div class="row row--tablet-only-scroll">
                     <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-persent-space-bottom">
                       <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
@@ -504,7 +504,7 @@
                       <p class="rt-space-top05 color-white05 rt-font-label">Любимые каналы, фильмы <br/> и сериалы</p>
                     </div>
                   </div>
-                  <div class="rt-l-internet-speed-container rt-space-left15 rt-space-top2 rt-col-md-3">
+                  <div class="rt-l-internet-speed-container rt-space-bottom6 rt-space-left15 rt-space-top2 rt-col-md-3">
                     <div class="rt-l-internet-speed d-inline-block">
                       <p class="rt-l-internet-speed__value color-orange">250</p>
                       <span class="rt-l-internet-speed__text">Мбит/сек</span>
