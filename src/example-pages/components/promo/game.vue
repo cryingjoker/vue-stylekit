@@ -186,33 +186,42 @@
                     </div>
                     <div class="rt-col-3 td-d-none"></div>
                     <div class="rt-col-4 flex-center-bottom rt-space-vertical2 rt-col-md-3 flex-md-center">
-                      <div class="rt-space-bottom"><img src="/static/images/game/game-icon5.png" alt="" width="100"/></div>
-                      <div class="rt-space-left2 rt-md-space-right-none rt-td-space-right3 "><img src="/static/images/game/game-icon6.png" alt="" width="100"/></div>
+                      <div class="rt-space-bottom"><img src="/static/images/game/game-icon5.png" alt=""
+                                                        width="100"/></div>
+                      <div class="rt-space-left2 rt-md-space-right-none rt-td-space-right3 "><img
+                        src="/static/images/game/game-icon6.png" alt="" width="100"/></div>
                     </div>
                   </div>
                 </div>
 
-                <div class="flex-fill-none rt-space-bottom3 ">
+
+                <div class="flex-fill-none rt-space-bottom3">
                   <div class="row row--tablet-only-scroll">
                     <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-persent-space-bottom">
                       <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100 (Р)</p>
-                      <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре</p>
+                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100
+                        (Р)
+                      </p>
+                      <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в <br/>ангаре
+                      </p>
                     </div>
                     <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
                       <img src="/static/images/game/game-icon3.png" alt="" width="100"/>
-                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер «Адмирал Макаров»</p>
+                      <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер
+                        «Адмирал Макаров»</p>
                       <p class="color-white05 rt-font-small-paragraph">Крейсер VI уровня и слот в порту</p>
                     </div>
                     <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
                       <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
                       <p class="color-white rt-space-bottom rt-space-top">Бородатая команда</p>
-                      <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным «Боевым братством»<br/> корабля с тремя глазами</p>
+                      <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным
+                        «Боевым братством» <br/> корабля с тремя глазами</p>
                     </div>
                     <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
                       <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
                       <p class="color-white rt-space-bottom rt-space-top">Бородатая команда</p>
-                      <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным «Боевым братством»<br/> корабля с тремя глазами</p>
+                      <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным
+                        «Боевым братством» <br/> корабля с тремя глазами</p>
                     </div>
                   </div>
                 </div>

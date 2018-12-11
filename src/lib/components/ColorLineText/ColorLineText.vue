@@ -44,6 +44,7 @@ export default {
           class={"color-line-paragraph-icon " + this.colorLineIconClass}
           width="38"
           height="23"
+          viewBox="0 0 38px 23px"
         >
       <defs>
         <path
@@ -56,7 +57,7 @@ export default {
         d="M33-1.0172375h-45V.04327594l43.7946512.04908113v7.93806336l1.4849033-.08350525c2.6481474-.14892161 4.7192255-2.33971054 4.7192629-4.99204202L38-0.0172375c.0000389-2.7614238-2.2385058-5.0000315-4.9999296-5.0000704H33z"
         fill="#FFF"
       />
-        <use href="#a" />
+        <use xlinkHref="#a" />
       </svg>
     }
     const label = ()=>{
