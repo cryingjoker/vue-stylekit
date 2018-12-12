@@ -16,7 +16,8 @@
     data: () => ({
       index: null,
       selectedProps: {},
-      isActive: true
+      isActive: true,
+      valuesList: []
     }),
     created() {
       setTimeout(() => {
@@ -24,9 +25,19 @@
       }, 0);
     },
     mounted() {
+      this.setValuesList();
       this.RtFilter.addListener(this.onUpdateProps);
     },
     methods: {
+      setValuesList() {
+        this.values.forEach((value_item, index) => {
+          if (Array.isArray(value_item)) {
+            this.valuesList[index] = value_item;
+          } else {
+            this.valuesList[index] = [value_item];
+          }
+        });
+      },
       checkValue(watcherValue, filterValue) {
         let res = false;
         let typeOfCheck = 0;
@@ -55,23 +66,28 @@
         const simpleOptionsMap = {};
         let hasOnlyOption = false;
         this.options.forEach((optionName, optionIndex) => {
-          if (this.values[optionIndex]) {
-            if (this.values[optionIndex].search(/(only )|(not )/) === 0) {
-              importantOptionsMap[optionName] = this.values[optionIndex];
-              if (this.values[optionIndex].search(/(only )/) === 0) {
-                hasOnlyOption = true;
+          if (this.valuesList[optionIndex]) {
+            this.valuesList[optionIndex].forEach((value, valueIndex) => {
+
+              if (value.search(/(only )|(not )/) === 0) {
+
+                importantOptionsMap[optionName] = value;
+                if (this.valuesList[optionIndex][valueIndex].search(/(only )/) === 0) {
+                  hasOnlyOption = true;
+                }
+              } else {
+                simpleOptionsMap[optionName] = value;
+                if (!Array.isArray(simpleOptionsMap[optionName])) {
+                  simpleOptionsMap[optionName] = [simpleOptionsMap[optionName]];
+                }
               }
-            } else {
-              simpleOptionsMap[optionName] = this.values[optionIndex];
-              if (!Array.isArray(simpleOptionsMap[optionName])) {
-                simpleOptionsMap[optionName] = [simpleOptionsMap[optionName]];
-              }
-            }
+            });
           }
         });
-        let sendedProps = { ...props };
 
+        let sendedProps = { ...props };
         let needToBreakFilter = false;
+
         if (Object.keys(importantOptionsMap).length > 0) {
           this.isActive = true;
 
@@ -119,15 +135,15 @@
             let hasFound = false;
             if (sendedProps[key]) {
               const sendedPropsValues = Array.isArray(sendedProps[key]) ? sendedProps[key] : [sendedProps[key]];
-              hasFound = sendedPropsValues.findIndex((sendedPropsValuesItem)=>{
-                return simpleOptionsMap[key].findIndex((simpleOptionsMapItem)=>{
-                  return this.checkValue(simpleOptionsMapItem, sendedPropsValuesItem)
-                }) >= 0
+              hasFound = sendedPropsValues.findIndex((sendedPropsValuesItem) => {
+                return simpleOptionsMap[key].findIndex((simpleOptionsMapItem) => {
+                  return this.checkValue(simpleOptionsMapItem, sendedPropsValuesItem);
+                }) >= 0;
               }) >= 0;
 
-              if(!hasFound){
-                this.isActive = false
-                return false
+              if (!hasFound) {
+                this.isActive = false;
+                return false;
               }
             }
             if (needToBreakFilter) {
@@ -146,9 +162,9 @@
     },
     render() {
       if (this.isActive) {
-        return <div class="d-static">{this.$slots.default}</div>
+        return <div class="d-static">{this.$slots.default}</div>;
       } else {
-        return null
+        return null;
       }
     }
   };
