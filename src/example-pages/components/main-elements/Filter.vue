@@ -11,7 +11,7 @@
           <div class="row">
             <div class="rt-col-8">
               <div class="row">
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'1','only month']" class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -98,7 +98,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','less than 3','only month']"
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'less than 3','only month']"
                                    class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
@@ -199,7 +199,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','less than 3','not month']"
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'less than 3','not month']"
                                    class="rt-col-6 rt-space-bottom">
                   <rt-card>
                     <template slot="header">
@@ -1702,7 +1702,7 @@
                 <div class="rt-space-bottom">
                   <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Количество устройств</p>
                   <rt-filter-caller :clear-zero="true">
-                    <rt-input name="count" value="1" :show-nubmers-buttons="true" insert-type="number" />
+                    <rt-input name="count" value="1" :show-nubmers-buttons="true" insert-type="number" :min-number="1" :max-number="10"/>
                   </rt-filter-caller>
                 </div>
                 <rt-filter-caller>

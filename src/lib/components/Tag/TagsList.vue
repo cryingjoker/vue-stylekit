@@ -9,6 +9,10 @@ export default {
       type: Boolean,
       default: false
     },
+    color:{
+      type: String,
+      default: null
+    }
   },
   data:()=>({
     indexOfActiveTag : 0,
@@ -73,7 +77,7 @@ export default {
       }
     });
 
-    return<div class={"rt-tag-list"}>
+    return <div class={"rt-tag-list" + (this.color ? " rt-tag-list--color-"+this.color : "")}>
         {this.$slots.default}
       </div>;
   }

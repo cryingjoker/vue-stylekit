@@ -72,8 +72,8 @@ steps = desctop-step-grid 12, tablet-step-grid 6 "td" tablet-step-size, mobile-s
 .{newAppName}-col
   flex 0 0 1
   width 100%
-  padding-left (horizontal-space / 2)
-  padding-right (horizontal-space / 2)
+  padding-left (horizontal-space * 0.5)
+  padding-right (horizontal-space * 0.5)
   position relative
 
 for devideStep in steps
@@ -94,8 +94,8 @@ for devideStep in steps
     .{className}
       +cache("mobile-column")
         width 100%
-        padding-left (horizontal-space / 2)
-        padding-right (horizontal-space / 2)
+        padding-left (horizontal-space * 0.5)
+        padding-right (horizontal-space * 0.5)
         position relative
 
   gridRender(devideStep[1], devicePrefix, devideStep[0], needMedia, media)
@@ -117,24 +117,24 @@ for devideStep in steps
     @media (max-width: mobile-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space/2
-      margin-right -1 * horizontal-space/2
+      margin-left -1 * horizontal-space*0.5
+      margin-right -1 * horizontal-space*0.5
       padding-bottom vertical-space
 
   &--tablet-scroll
     @media (max-width: tablet-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space/2
-      margin-right -1 * horizontal-space/2
+      margin-left -1 * horizontal-space*0.5
+      margin-right -1 * horizontal-space*0.5
       padding-bottom vertical-space
 
   &--tablet-only-scroll
     @media (max-width: tablet-step-size) and (min-width: mobile-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space/2
-      margin-right -1 * horizontal-space/2
+      margin-left -1 * horizontal-space*0.5
+      margin-right -1 * horizontal-space*0.5
       padding-bottom vertical-space
 .desctop-hide-scroll
   @media (min-width: tablet-step-size)
