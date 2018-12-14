@@ -4,7 +4,7 @@ const config = require('../../build/config/index');
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'develop';
 }
-
+require("@babel/polyfill");
 const opn = require('opn');
 const path = require('path');
 const express = require('express');
@@ -19,6 +19,7 @@ const port = process.env.PORT || config.dev.port;
 const proxyTable = config.dev.proxyTable;
 
 const app = express();
+console.log('webpackConfig',webpackConfig)
 const compiler = webpack(webpackConfig);
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {

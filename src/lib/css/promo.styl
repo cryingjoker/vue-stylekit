@@ -176,3 +176,18 @@
   display flex
   flex-direction column
   justify-content center
+
+.rt-sticky--tariff
+  top: 400px
+  position: sticky
+.scroll-step-text
+  outline 5px solid #fff
+  line-height: 23px
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .4s
+  transition-property outline, color,background-color
+.scroll-step--is-active .scroll-step-text
+  background-color: #65B8DF
+  color: white
+
+  outline 5px solid #65B8DF
