@@ -11,6 +11,10 @@
     name: "RtBanner",
     components: componentsList,
     props: {
+      scrollToNextImage: {
+        type: Boolean,
+        default: false
+      },
       hasCustomContent: {
         type: Boolean,
         default: false
@@ -90,6 +94,7 @@
       touchstartX: null,
       touchendX: null,
       stopAnimation: false,
+      pauseTransition: false,
       RtBanners: {
         isMobile: false,
         items: [],
@@ -302,8 +307,7 @@
         }
       },
       calculateScroll() {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const el = this.$el;
         const deltaY = Math.max(window.innerHeight, el.offsetHeight);
 
@@ -319,7 +323,13 @@
           if (this.stopAnimation) {
             const index =
               (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
-            this.RtBanners.activeIndex = index;
+            if (this.scrollToNextImage) {
+              this.$set(this.RtBanners, "nextImageIndex", index);
+              setTimeout(() => {
+                this.RtBanners.activeIndex = index;
+                this.$set(this.RtBanners, "nextImageIndex", null);
+              }, 500);
+            }
           }
 
           this.stopAnimation = false;
@@ -348,37 +358,208 @@
         }
       },
       getNextSlide() {
-        this.RtBanners.activeIndex++;
-        if (this.RtBanners.activeIndex >= this.RtBanners.items.length) {
-          this.RtBanners.activeIndex = 0;
+        if (!this.RtBanners.animation) {
+          let index = this.RtBanners.activeIndex;
+          index++;
+          if (index >= this.RtBanners.items.length) {
+            index = 0;
+          }
+
+          this.$set(this.RtBanners, "orientation", "next");
+          if (this.scrollToNextImage) {
+
+            this.createNewBannerImage().then(() => {
+              this.moveBannerImages().then(()=>{
+                this.setNextActiveIndex(index);
+              });
+            });
+          } else {
+            this.setActiveIndex(index);
+          }
         }
       },
       getPreviousSlide() {
-        this.RtBanners.activeIndex--;
-        if (this.RtBanners.activeIndex < 0) {
-          this.RtBanners.activeIndex = this.RtBanners.items.length - 1;
+        let index = this.RtBanners.activeIndex;
+        index--;
+        this.$set(this.RtBanners, "orientation", "previous");
+        if (index < 0) {
+          index = this.RtBanners.items.length - 1;
+        }
+        this.$set(this.RtBanners, "nextImageIndex", index);
+        if (this.scrollToNextImage) {
+          this.setNextActiveIndex(index);
+          this.createNewBannerImage().then(() => {
+            this.moveBannerImages().then();
+          });
+        } else {
+          this.setActiveIndex(index);
         }
       },
+      setActiveIndex(index) {
+        console.info('setActiveIndex',index);
+        this.$set(this.RtBanners, "activeIndex", index);
+      },
+      setNextActiveIndex(index) {
+        this.$set(this.RtBanners, "nextImageIndex", index);
+        setTimeout(() => {
+          this.setActiveIndex(index);
+          this.$set(this.RtBanners, "nextImageIndex", null);
+        }, 800);
+      },
+
       setActiveItem(index) {
-        this.RtBanners.activeIndex = index;
-        this.setStartTimer();
+        if (this.scrollToNextImage) {
+          this.$set(this.RtBanners, "nextImageIndex", index);
+
+          setTimeout(() => {
+            this.$set(this.RtBanners, "activeIndex", index);
+            this.$set(this.RtBanners, "nextImageIndex", null);
+            this.setStartTimer();
+          }, 500);
+        } else {
+          this.$set(this.RtBanners, "activeIndex", index);
+          this.setStartTimer();
+        }
+
       },
       setStartTimer() {
+        console.info("setStartTimer");
+
         const RtBanners = this.RtBanners;
         if (RtBanners && !this.isStopped && RtBanners.activeIndex >= 0) {
           if (RtBanners.timer) {
             clearTimeout(RtBanners.timer);
           }
+          let sleepTime = RtBanners.items[RtBanners.activeIndex].slideTime || this.sleepTime;
+          if (this.scrollToNextImage) {
+            sleepTime += 400;
+          }
           RtBanners.timer = setTimeout(() => {
             if (!this.stopAnimation && !this.isPause) {
               const index = (RtBanners.activeIndex + 1) % RtBanners.items.length;
-              RtBanners.activeIndex = index;
+              if (this.scrollToNextImage) {
+                this.setNextActiveIndex(index);
+                this.createNewBannerImage().then(() => {
+                  this.moveBannerImages().then();
+                });
+              } else {
+                this.setActiveIndex(index);
+              }
             }
             if (RtBanners.items.length > 1) {
               this.setStartTimer();
             }
-          }, RtBanners.items[RtBanners.activeIndex].slideTime || this.sleepTime);
+          }, sleepTime);
         }
+      },
+      createNewBannerImage() {
+        return new Promise((resolve, reject) => {
+
+          let nextBannerImage = document.createElement("div");
+          nextBannerImage.classList.add("rt-banner-image", "rt-banner-image--next");
+          const nextImageIndex = this.RtBanners.nextImageIndex;
+
+          if (nextImageIndex > this.RtBanners.activeIndex || this.RtBanners.orientation === "next") {
+            nextBannerImage.style.left = "100vw";
+          } else {
+            nextBannerImage.style.left = "-100vw";
+          }
+          nextBannerImage.style.backgroundImage = "url(" + this.RtBanners.items[nextImageIndex].backgroundImage + ")";
+          this.$el.appendChild(nextBannerImage);
+          setTimeout(() => {
+            resolve();
+          }, 20);
+        });
+      },
+      stopAnimationStart() {
+        return new Promise((resolve, reject) => {
+          const nextImage = this.$el.querySelector(".rt-banner-image--next");
+          const mainImage = this.$el.querySelector(".rt-banner-image--main");
+
+          nextImage.classList.add("rt-banner-image--stop-transition");
+          mainImage.classList.add("rt-banner-image--stop-transition");
+          this.pauseTransition = true;
+          setTimeout(() => {
+            resolve();
+          }, 500);
+        });
+
+
+      },
+
+      stopAnimationEnd() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            this.pauseTransition = false;
+            const nextImage = this.$el.querySelector(".rt-banner-image--next");
+            const mainImage = this.$el.querySelector(".rt-banner-image--main");
+            if (nextImage) {
+              nextImage.classList.remove("rt-banner-image--stop-transition");
+            }
+            mainImage.classList.remove("rt-banner-image--stop-transition");
+
+            setTimeout(() => {
+              resolve();
+            }, 100);
+            // });
+          }, 10);
+        })
+      },
+      moveBannerImages() {
+        return new Promise((resolve, reject) => {
+          const nextBannerImage = document.querySelector(".rt-banner-image--next");
+          const mainBannerImage = document.querySelector(".rt-banner-image--main");
+
+          const nextImageIndex = this.RtBanners.nextImageIndex;
+          const activeImageIndex = this.RtBanners.activeIndex;
+          nextBannerImage.style.left = 0;
+          if (activeImageIndex < nextImageIndex || this.RtBanners.orientation === "next") {
+            mainBannerImage.style.left = "-100vw";
+            nextBannerImage.style.left = "0";
+          } else {
+            mainBannerImage.style.left = "100vw";
+            nextBannerImage.style.left = "0";
+          }
+          setTimeout(() => {
+            this.stopAnimationStart().then(() => {
+              this.clearMovedBannerImages().then(() => {
+                resolve();
+              });
+            });
+          }, 50);
+
+
+        });
+      },
+      clearStyleMainBanner() {
+        return new Promise((resolve, reject) => {
+          const mainBannerImage = document.querySelector(".rt-banner-image--main");
+          this.$set(this.RtBanners, "orientation", null);
+          mainBannerImage.style.left = "0";
+          resolve();
+        });
+      },
+      clearMovedBannerImages() {
+        return new Promise((resolve) => {
+          this.stopAnimationStart().then(() => {
+            this.clearStyleMainBanner().then(() => {
+              this.removeNewBannerImage().then();
+              this.stopAnimationEnd().then(() => {
+                this.removeNewBannerImage().then();
+                resolve();
+              });
+            });
+          });
+        });
+      },
+      removeNewBannerImage() {
+        return new Promise((resolve, reject) => {
+          const nextBannerImage = document.querySelector(".rt-banner-image--next");
+          if(nextBannerImage) {
+            nextBannerImage.parentNode.removeChild(nextBannerImage);
+          }
+          resolve();
+        });
       }
     },
     render(h) {
@@ -453,12 +634,9 @@
       const paginator = () => {
         if (this.RtBanners.items && this.RtBanners.items.length > 1) {
           return <div class={this.switcherClass}>
-            <div
-              class="circle-switcher-container"
-            >
+            <div class="circle-switcher-container">
               {paginatorItem()}
             </div>
-
           </div>;
         } else {
           return null;
@@ -470,8 +648,7 @@
             class="rt-banner-triangle"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 185 500"
-            style="transform: translate(-50% 0)"
-          >
+            style="transform: translate(-50% 0)">
             <polygon points="0 0,0 500,185 0 "/>
           </svg>;
         } else {
@@ -541,8 +718,8 @@
             </div>
           </div>;
         }
-
       };
+
       return <div class={this.banerClass} style={this.bannerStyle}>
         <div class="rt-container">
           {arrayLeft()}
@@ -551,7 +728,7 @@
           {bannerContent()}
         </div>
         {paginator()}
-        <div style={this.imageStyle} class="rt-banner-image">
+        <div style={this.imageStyle} class={"rt-banner-image rt-banner-image--main" + (this.pauseTransition ? ' rt-banner-image--stop-transition': '')}>
           {leftTriangle()}
           {video()}
           {rightTriangle()}

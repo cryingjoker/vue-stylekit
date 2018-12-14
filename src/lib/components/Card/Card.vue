@@ -176,6 +176,7 @@
         const styles = {};
         if (this.cardHeight !== null) {
           styles.height = this.normalizeSize(this.cardHeight);
+          styles.minHeight = "auto";
         }
         return styles;
       },
@@ -183,6 +184,7 @@
         const styles = {};
         if (this.cardHeight !== null) {
           styles.height = this.normalizeSize(this.cardHeight);
+          styles.minHeight = "auto";
         }
         return styles;
       },

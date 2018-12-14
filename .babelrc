@@ -1,13 +1,11 @@
 {
   "presets": [
     [
-      "@babel/preset-env",
-      {
-        "modules": false
-      }
+      "@babel/preset-env"
     ]
   ],
   "plugins": [
+    "@babel/plugin-transform-regenerator",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-dynamic-import",
     "transform-vue-jsx"

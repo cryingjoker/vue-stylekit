@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
 const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
 const local_dirname = path.join(__dirname,'..');
-var vueLoaderConfig = require('./vue-loader.config');
+const vueLoaderConfig = require('./vue-loader.config');
 
 const config = {
   entry: {

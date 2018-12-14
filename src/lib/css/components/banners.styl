@@ -337,7 +337,6 @@
     overflow hidden
     background-position center center
     background-size cover
-    position relative
     position absolute
     top 0
     bottom 0
@@ -345,8 +344,16 @@
     z-index 1
     transition-timing-function ease-in-out
     transition-duration .3s
-    transition-property background-image
+    transition-property background-image, left
     -webkit-background-size cover
+
+    &--next
+      z-index: 2
+      position: absolute
+
+    &--stop-transition
+      transition none!important
+      transition-duration 0!important
 
     &:before
       content ""

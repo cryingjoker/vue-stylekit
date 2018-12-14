@@ -159,6 +159,7 @@
                      content-height="inherit"
                      paginator-position="top"
                      mobile-image-height="100vh"
+
                      show-navigation-array={true} without-empty-column={true} dont-pause-on-hover={true}>
             <rt-banner-item
               content-mobile-min-height="0"
