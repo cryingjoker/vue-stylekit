@@ -88,12 +88,6 @@
         default: null
       }
     },
-    beforeUpdate(){
-      console.info('\n----\nfuck!!!  \n----\n ')
-    },
-    updated() {
-      console.info('\n----\nfuck***  \n----\n ')
-    },
     data: () => ({
       isMobile: false,
       isPause: false,
@@ -449,7 +443,6 @@
           let nextBannerImage = document.createElement("div");
           nextBannerImage.classList.add("rt-banner-image", "rt-banner-image--next");
           const nextImageIndex = this.$options.nextImageIndex;
-          console.info('nextImageIndex', nextImageIndex);
 
           if(nextBannerImage) {
             if (this.$options.drawOrientation === "next") {
@@ -468,8 +461,6 @@
         });
       },
       setStartTimer() {
-        console.info("setStartTimer");
-
         const RtBanners = this.RtBanners;
         if (RtBanners && !this.isStopped && RtBanners.activeIndex >= 0) {
           if (RtBanners.timer) {

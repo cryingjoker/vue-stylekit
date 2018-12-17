@@ -1699,7 +1699,7 @@
                         fill-rule="evenodd"/>
                 </svg>
               </div>
-              <rt-sticky>
+              <rt-sticky class="rt-popup-content">
                 <p class="rt-font-paragraph rt-font-bold rt-space-bottom">Способ покупки</p>
                 <rt-filter-caller>
                   <rt-radio-button-container>
@@ -1751,7 +1751,6 @@
     components: componentsList,
     mounted() {
       document.querySelector('.filterButton').addEventListener('click',()=>{
-        console.info('!!!---L>>><><><>><   open-popup-filter')
         window.dispatchEvent(new Event('open-popup-filter'));
       })
     },

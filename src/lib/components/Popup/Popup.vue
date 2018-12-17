@@ -14,6 +14,10 @@ export default {
     popupClasses: {
       type: String,
       default: ""
+    },
+    preventDefaultScrollOnActive:{
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -35,11 +39,13 @@ export default {
     setActive(){
       this.isActive = true;
       this.addKeyBindind();
+      this.bindPageScroll()
 
     },
     removeActive(){
       this.isActive = false;
       this.removeKeyBindind();
+      this.unbindPageScroll();
     },
     keyPress(e){
       if(e.keyCode === 27){
@@ -50,6 +56,16 @@ export default {
       if(!this.$options.isHover){
         this.removeActive();
       }
+    },
+    stopScroll(e){
+      e.preventDefault();
+      return false;
+    },
+    bindPageScroll(){
+      document.body.style.overflow = 'hidden';
+    },
+    unbindPageScroll(){
+      document.body.style.overflow = null;
     },
     addKeyBindind(){
       window.addEventListener('keydown', this.keyPress, {passive: false});
