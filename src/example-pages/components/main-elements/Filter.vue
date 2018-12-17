@@ -7,12 +7,16 @@
         </div>
       </div>
       <div class="app-body">
+        <div class="rt-font-center rt-space-bottom15">
+          <rt-button class="rt-button-small filterButton rt-button-purple-border d-none td-d-inline">Показать все фильтры</rt-button>
+        </div>
+
         <rt-filter :change-url="true">
           <div class="row">
-            <div class="rt-col-8">
+            <div class="rt-col-8 rt-col-td-6 rt-col-md-3">
               <div class="row">
-              <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'1','only month']" class="rt-col-6 rt-space-bottom">
-                  <rt-card>
+              <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'1','only month']" class="rt-col-6 rt-col-md-3 rt-space-bottom">
+                  <rt-card >
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
                     </template>
@@ -99,7 +103,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'less than 3','only month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -200,7 +204,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="[['kaspersky','drweb'],'less than 3','not month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -301,7 +305,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','less than 4','only month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -401,7 +405,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','1','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -513,7 +517,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','1','not month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['kaspersky','1','not month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg" />
@@ -625,7 +629,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png" />
@@ -688,7 +692,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','not month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','not month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png" />
@@ -751,7 +755,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png" />
@@ -862,7 +866,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','not month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['drweb','1','not month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png" />
@@ -973,7 +977,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1049,7 +1053,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','not month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1124,7 +1128,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1224,7 +1228,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 4','not month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1323,7 +1327,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 6','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 6','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1423,7 +1427,7 @@
                   </rt-card>
                 </rt-filter-watcher>
                 <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','less than 6','not month']"
-                                   class="rt-col-6 rt-space-bottom">
+                                   class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1522,7 +1526,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','1','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1585,7 +1589,7 @@
                     </template>
                   </rt-card>
                 </rt-filter-watcher>
-                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','1','only month']" class="rt-col-6 rt-space-bottom">
+                <rt-filter-watcher :options="['creator','count','subscription']" :values="['eset','1','only month']" class="rt-col-6 rt-space-bottom rt-col-md-3">
                   <rt-card>
                     <template slot="header">
                       <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg" />
@@ -1686,10 +1690,9 @@
                 </rt-filter-watcher>
               </div>
             </div>
-            <div class="rt-col-1">
+            <div class="rt-col-1 td-d-none">
             </div>
-            <div class="rt-popup-wrapper">
-            <div class="rt-col-3 rt-popup">
+            <rt-popup popup-wrapper-classes="rt-col-3" popup-classes="rt-col-td-3 rt-col-md-3" name="filter">
               <div class="rt-close">
                 <svg class="rt-close__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
@@ -1727,8 +1730,8 @@
                   </rt-checkbox-container>
                 </rt-filter-caller>
               </rt-sticky>
-            </div>
-            </div>
+            </rt-popup>
+
           </div>
         </rt-filter>
     </div>
@@ -1747,6 +1750,10 @@
     // directives: componentDirectives,
     components: componentsList,
     mounted() {
+      document.querySelector('.filterButton').addEventListener('click',()=>{
+        console.info('!!!---L>>><><><>><   open-popup-filter')
+        window.dispatchEvent(new Event('open-popup-filter'));
+      })
     },
     created() {
     },

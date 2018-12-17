@@ -48,7 +48,8 @@ import {
   FilterCaller,
   Youtube,
   Sticky,
-  ResizeContentHeight
+  ResizeContentHeight,
+  Popup
 } from "../lib/components/index";
 
 const componentsList = {};
@@ -102,4 +103,5 @@ componentsList[FilterCaller.name] = FilterCaller;
 componentsList[Youtube.name] = Youtube;
 componentsList[Sticky.name] = Sticky;
 componentsList[ResizeContentHeight.name] = ResizeContentHeight;
+componentsList[Popup.name] = Popup;
 export default { ...componentsList };
