@@ -19,6 +19,19 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
+  & .rt-banner__item--is-active
+    //opacity: 0
+    //visibility hidden
+    animation-name hideShowContent
+    z-index: 100
+    animation-duration 0.8s
+    animation-timing-function ease-in-out
+
+
+  &--hide-content .rt-banner__item--is-active
+    opacity: 0
+
+
   &--full-screen
     height: auto
   &-video
@@ -346,11 +359,13 @@
     transition-duration .3s
     transition-property background-image, left
     -webkit-background-size cover
-
+    animation-name showImage
+    animation-duration 2s
+    animation-timing-function linear
     &--next
       z-index: 2
       position: absolute
-
+      animation-duration 0
     &--stop-transition
       transition none!important
       transition-duration 0!important
@@ -583,12 +598,88 @@
     bottom 0
     right 7px
 
+
 @keyframes switcherRound
   0%
     stroke-dashoffset 180
 
   100%
     stroke-dashoffset 120
+
+@keyframes hideShowContent
+  0%
+    opacity  0
+    z-index 1000
+    max-height 0
+    visibility: hidden
+    overflow: hidden
+    line-height: 0
+  80%
+    opacity  0
+    visibility: hidden
+    line-height: 1.5
+  100%
+    visibility: visible
+    opacity  1
+    z-index 1000
+    max-height 400vh
+    overflow: hidden
+    line-height: 1.5
+@keyframes hideShowContentBottomContent
+  0%
+    opacity  0
+    z-index 1000
+    max-height 0
+    visibility: hidden
+    overflow: hidden
+    font-size: 0
+    line-height: 0
+
+  100%
+    visibility: visible
+    opacity  1
+    z-index 1000
+    max-height 400vh
+    overflow: hidden
+    line-height: 1.5
+
+.rt-banner__top-content
+  animation-name hideShowContent
+  animation-duration 0.8s
+  animation-timing-function ease-in-out
+.rt-banner__bottom-content
+  animation-name hideShowContentBottomContent
+  animation-duration 1s
+  animation-timing-function ease-in-out
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property max-height
+@keyframes showContent
+  0%
+    //opacity  0
+    //z-index 1000
+    //visibility: hidden
+    //overflow: hidden
+    max-height: 0
+    line-height: 0
+    opacity: 0
+  40%
+    max-height: 0
+    line-height: 0
+    opacity: 0
+  99%
+    opacity  1
+    z-index 1000
+    max-height: 45%
+    visibility: visible
+    overflow: hidden
+  100%
+    opacity  1
+    z-index 1000
+    visibility: visible
+    overflow: visible
+    max-height: 45%
+
 .rt-banner__item
   position: absolute
   top: 0
@@ -603,6 +694,9 @@
   opacity: 0
   z-index: 2
   overflow-x hidden
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property opacity
 
 .rt-banner__item--is-active
   position: relative
