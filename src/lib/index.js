@@ -53,7 +53,8 @@ import {
   FilterCaller,
   Youtube,
   Sticky,
-  ResizeContentHeight
+  ResizeContentHeight,
+  Popup
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
