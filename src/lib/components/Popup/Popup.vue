@@ -14,6 +14,14 @@ export default {
     popupClasses: {
       type: String,
       default: ""
+    },
+    preventDefaultScrollOnActive:{
+      type: Boolean,
+      default: false
+    },
+    showOnDesctop:{
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -35,11 +43,23 @@ export default {
     setActive(){
       this.isActive = true;
       this.addKeyBindind();
+      this.bindPageScroll()
 
     },
     removeActive(){
-      this.isActive = false;
-      this.removeKeyBindind();
+
+      this.$el.classList.add('rt-popup-wrapper-td--is-closing');
+      setTimeout(()=>{
+        this.$el.classList.remove('rt-popup-wrapper-td--is-active');
+
+          setTimeout(()=> {
+            this.isActive = false;
+            this.$el.classList.remove('rt-popup-wrapper-td--is-closing');
+
+            this.removeKeyBindind();
+            this.unbindPageScroll();
+          },50);
+      },300)
     },
     keyPress(e){
       if(e.keyCode === 27){
@@ -50,6 +70,16 @@ export default {
       if(!this.$options.isHover){
         this.removeActive();
       }
+    },
+    stopScroll(e){
+      e.preventDefault();
+      return false;
+    },
+    bindPageScroll(){
+      document.body.style.overflow = 'hidden';
+    },
+    unbindPageScroll(){
+      document.body.style.overflow = null;
     },
     addKeyBindind(){
       window.addEventListener('keydown', this.keyPress, {passive: false});
@@ -92,16 +122,27 @@ export default {
     this.removeEventListener();
   },
   render: function(h) {
-    let wrapperClasses = "rt-popup-wrapper-td";
+
+    let wrapperClasses;
+    let popupClasses;
+    if(this.showOnDesctop){
+      wrapperClasses = "rt-popup-wrapper"
+      popupClasses = "rt-popup"
+    }else{
+      wrapperClasses = "rt-popup-wrapper-td"
+      popupClasses = "rt-popup-td"
+    }
     if(this.popupWrapperClasses){
       wrapperClasses += " "+this.popupWrapperClasses.trim();
+      popupClasses += " "+this.popupClasses.trim();
     }
     if(this.isActive){
       wrapperClasses += " rt-popup-wrapper-td--is-active";
     }
 
+
     return <div class={wrapperClasses} onClick={this.clickOutside}>
-      <div class={"rt-popup--td"+(this.popupClasses ? " "+this.popupClasses.trim() : "")} onMouseenter={this.setHover} onMouseleave={this.removeHover} onMousemove={this.setHover}>
+      <div class={popupClasses} onMouseenter={this.setHover} onMouseleave={this.removeHover} onMousemove={this.setHover}>
         {this.$slots.default}
       </div>
     </div>

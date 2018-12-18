@@ -541,16 +541,11 @@
     mounted() {
       var activeTab = 0;
       const setActiveItem = function() {
-        console.info("activeTab", activeTab);
         const parentPositon = document.querySelector("#how-it-works").parentNode.parentNode.parentNode.getBoundingClientRect();
         const tariffsContent = document.querySelector("#tariff").parentNode.parentNode.getBoundingClientRect();
         const stepSize = parseInt((parentPositon.height - tariffsContent.height) / 3);
-        console.info("parentPositon.top < 0 && Math.abs(parentPositon.top - window.innerHeight*1.33) < parentPositon.height", parentPositon.top < 0 && Math.abs(parentPositon.top - window.innerHeight * 1.33), parentPositon.height);
-        console.info("Math.abs(parentPositon.top - window.innerHeight * 0.66) < parentPositon.height", Math.abs(parentPositon.top - window.innerHeight * 0.66) < parentPositon.height);
         if (parentPositon.top < window.innerHeight * 0.33 && Math.abs(parentPositon.top - window.innerHeight * 0.66) < parentPositon.height) {
-          console.info("___");
           let activeIndex = parseInt(Math.abs(parentPositon.top - window.innerHeight) / stepSize);
-          console.info("activeIndex", activeIndex);
           activeIndex = activeIndex > 3 ? 3 : activeIndex;
           document.querySelectorAll(".scroll-step--is-active").forEach(function(item) {
             item.classList.remove("scroll-step--is-active");

@@ -8,6 +8,18 @@
          type: Array,
          default: []
        },
+      desctopItem:{
+        type: Number,
+        default: null
+      },
+      tabletItem:{
+        type: Number,
+        default: null
+      },
+      mobileItem:{
+        type: Number,
+        default: null
+      },
       mobileNotResize:{
          type: Boolean,
         default: false
@@ -17,7 +29,9 @@
       }
     },
     data: () => ({
-      debounce: null
+      debounce: null,
+      isMobile : false,
+      isTablet: false
     }),
     updated(){
       if(this.querySelectorsNames.length > 0) {
@@ -55,9 +69,13 @@
       calculateMaxHeight(){
         const isMobile =
           window.innerWidth <= parseInt(variables["mobile-step-size"]);
+        const isTablet =
+          window.innerWidth <= parseInt(variables["mobile-step-size"]);
+        this.isMobile = isMobile;
+        this.isTablet = isMobile;
         if(isMobile && this.mobileNotResize){
           this.querySelectorsNames.forEach((selectorName)=>{
-          this.$el.querySelectorAll(`${selectorName}`).forEach((node)=> {
+          this.$el.querySelectorAll(`${selectorName}`).forEach((node,index)=> {
             if (node.style.height) {
               node.style.height = null;
             }

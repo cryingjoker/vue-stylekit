@@ -22,10 +22,11 @@
   & .rt-banner__item--is-active
     //opacity: 0
     //visibility hidden
-    animation-name hideShowContent
-    z-index: 100
-    animation-duration 0.8s
-    animation-timing-function ease-in-out
+    @media (min-width: tablet-step-size)
+      animation-name hideShowContent
+      z-index: 100
+      animation-duration 0.8s
+      animation-timing-function ease-in-out
 
 
   &--hide-content .rt-banner__item--is-active
@@ -644,16 +645,18 @@
     line-height: 1.5
 
 .rt-banner__top-content
-  animation-name hideShowContent
-  animation-duration 0.8s
-  animation-timing-function ease-in-out
+  @media (min-width: tablet-step-size)
+    animation-name hideShowContent
+    animation-duration 0.8s
+    animation-timing-function ease-in-out
 .rt-banner__bottom-content
-  animation-name hideShowContentBottomContent
-  animation-duration 1s
-  animation-timing-function ease-in-out
-  transition-timing-function ease-in-out
-  transition-duration .3s
-  transition-property max-height
+  @media (min-width: tablet-step-size)
+    animation-name hideShowContentBottomContent
+    animation-duration 1s
+    animation-timing-function ease-in-out
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property max-height
 @keyframes showContent
   0%
     //opacity  0
