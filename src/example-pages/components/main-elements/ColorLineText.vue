@@ -48,7 +48,7 @@
           text="<div class=&quot;app-row row&quot;><div class=&quot;rt-space-horizontal rt-space-vertical&quot;><rt-color-line-text :is-white-color=&quot;true&quot; color-icon=&quot;green&quot; fill-color=&quot;pink&quot;><template slot=&quot;label&quot;>Мама мыла раму!</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем, <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"
         />
         <pre-code
-          text="<div class=&quot;app-row row&quot;><div class=&quot;rt-space-horizontal rt-space-vertical&quot;><rt-color-line-text :is-white-color=&quot;true&quot; color-icon=&quot;red&quot; fill-color=&quot;green&quot;><template slot=&quot;label&quot;>Мама мыла раму!</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем, <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"
+          text="<div class=&quot;app-row row&quot;><div class=&quot;rt-space-horizontal rt-space-vertical&quot;><rt-color-line-text :is-white-color=&quot;true&quot; color-icon=&quot;red&quot; fill-color=&quot;green&quot;><template slot=&quot;label&quot;>Смотри кино <br/>  и получай бонусы  <br/> от Сбербанка</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем, <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"
         />
       </div>
     </div>
