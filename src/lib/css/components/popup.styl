@@ -1,7 +1,6 @@
 
 .{newAppName}-popup-wrapper
   position: fixed
-  display: flex
   left: 0
   right: 0
   top: 0
@@ -15,7 +14,7 @@
   max-width: 100%
   opacity: 0
   visibility: hidden
-  z-index: -1
+  display: none
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property opacity, visibility
@@ -29,7 +28,7 @@
 .{newAppName}-popup-wrapper-td
   @media (max-width: tablet-step-size)
     position: fixed
-    display: flex
+    display: none
     left: 0
     right: 0
     top: 0
@@ -46,13 +45,22 @@
     transition-timing-function ease-in-out
     transition-duration .4s
     transition-property opacity, visibility
-    z-index: 100
 
 .{newAppName}-popup-wrapper--is-active
 .{newAppName}-popup-wrapper-td--is-active
-
+  animation .3s showPopupWrapper ease-in-out
   opacity: 1
   visibility: visible
+  display: flex
+  .{newAppName}-popup,
+  .{newAppName}-popup-td
+    animation .3s showPopup ease-in-out .1s
+
+
+.{newAppName}-popup-wrapper--is-closing
+.{newAppName}-popup-wrapper-td--is-closing
+  animation .3s hidePopupWrapper ease-in-out
+
 
 .{newAppName}-popup
   background-color: white
@@ -61,8 +69,7 @@
   padding-top: vertical-space*2
   padding-bottom: vertical-space*2
   box-shadow 0 20px 25px 0 main-color05
-
-.{newAppName}-popup--td
+.{newAppName}-popup-td
   @media (max-width: tablet-step-size)
     background-color: white
     padding-left: horizontal-space
@@ -71,5 +78,39 @@
     padding-bottom: vertical-space*2
     box-shadow 0 20px 25px 0 main-color05
 
+
 .{newAppName}-popup--filter
   width: 300px
+
+
+
+@keyframes showPopup
+
+  0%
+    box-shadow 0 0px 0px 0 main-color05
+  100%
+    box-shadow 0 20px 25px 0 main-color05
+
+@keyframes showPopupWrapper
+
+  0%
+    display: flex
+    visibility: hidden
+    opacity 0
+  100%
+    display: flex
+    visibility: visible
+    opacity 1
+
+@keyframes hidePopupWrapper
+
+  0%
+    display: flex
+    visibility: visible
+    opacity 1
+
+  100%
+    display: flex
+    visibility: hidden
+    opacity 0
+
