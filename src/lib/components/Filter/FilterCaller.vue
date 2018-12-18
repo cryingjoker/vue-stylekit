@@ -44,6 +44,9 @@
         Object.keys(childDataJson).forEach((optionName)=>{
           this.RtFilter.setProps(optionName, childDataJson[optionName]);
         })
+        setTimeout(()=>{
+          window.dispatchEvent(new Event("resize"));
+        },0)
       },
       setPropsToChildren(props) {
         this.$children.forEach((vNode) => {
