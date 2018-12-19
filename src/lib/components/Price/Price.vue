@@ -7,6 +7,10 @@ export default {
       default: 0,
       required: true
     },
+    optionLabel: {
+      type: String,
+      default: null
+    },
     oldValue: {
       type: Number,
       default: null
@@ -97,7 +101,7 @@ export default {
       case "option-price":
         return (
           <div class="rt-price rt-price-without-space">
-            <div class="rt-price__opinion">от</div>
+            <div class="rt-price__opinion">{this.optionLabel ? this.optionLabel : 'от'} </div>
             <div class="rt-price__value">{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>

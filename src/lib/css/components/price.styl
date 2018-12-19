@@ -21,6 +21,8 @@
     font-size 24px
     line-height 31px
     vertical-align baseline
+    @media (max-width: mobile-step-size)
+      font-size: 16px
 
   &__old-value
     display inline-block
@@ -30,6 +32,8 @@
     vertical-align baseline
     opacity: 0.7
     margin-right: 10px
+    @media (max-width: mobile-step-size)
+      font-size: 16px
     &:before
       content ""
       display inline-block
@@ -61,6 +65,10 @@
     padding-left 5px
     padding-right 5px
     vertical-align baseline
+    color main-color09
+    @media (max-width: mobile-step-size)
+      font-size: 42px
+
 
   &__value
     display inline-block
@@ -75,6 +83,8 @@
     transition-timing-function ease-in-out
     transition-duration .3s
     transition-property color
+    @media (max-width: mobile-step-size)
+      font-size: 42px
 
     .{newAppName}-price-without-space &
       margin-top 0
@@ -93,7 +103,8 @@
     font-size 14px
     text-align center
     vertical-align baseline
-
+    @media (max-width: mobile-step-size)
+      line-height 19px
     &-item
       & + &
         border-top 1px solid b2c-black07

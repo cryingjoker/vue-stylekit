@@ -5,6 +5,9 @@
   left 15px
   &-label
     line-height: 60px
+    @media (max-width: mobile-step-size)
+      line-height: 35px
+
   &-wrapper
     max-width calc(100vw - 70px)
     padding-bottom: 37px;
@@ -293,3 +296,34 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-black, -1 * horizontal-space * .75 0 0 b2c-black
 
+.banner-page__content .banner-page__before-title{
+  display: none;
+}
+.banner-page__content .promo__title .wrap{
+  font-size: 48px!important;
+  line-height: 60px!important;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-page__content .wrap{
+  box-shadow: -15px 0 0 #fff;
+  border: none!important;
+}
+.banner-page__content .text{
+  box-shadow: 15px 0 0 #fff;
+  margin: 0;
+  padding: 0;
+}
+.banner-page__content .promo__desc{
+  padding-top: 0px!important;
+  padding-bottom: 5px!important;
+}
+.banner-page__content .promo__desc .text{
+  border-radius: 0 5px 0 0!important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+}
+.banner-page__content .banner-promo__tonque{
+  right: -15px!important;
+}
