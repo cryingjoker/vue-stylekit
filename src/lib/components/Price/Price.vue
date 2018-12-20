@@ -11,6 +11,10 @@ export default {
       type: String,
       default: null
     },
+    colorValue: {
+      type: String,
+      default: null
+    },
     oldValue: {
       type: Number,
       default: null
@@ -78,7 +82,7 @@ export default {
       case "only-price":
         return (
           <div class="rt-price rt-price-without-space">
-            <div class="rt-price__value">{this.normalizeValue}</div>
+            <div class={"rt-price__value"+ (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
             </div>
@@ -89,7 +93,7 @@ export default {
         return (
           <div class="rt-price rt-price-without-space">
             <div class="rt-price__old-value">{this.normalizeOldValue}</div>
-            <div class="rt-price__value">{this.normalizeValue}</div>
+            <div class={"rt-price__value"+ (this.colorValue ? ' color-'+this.colorValue : '')}>{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
               <div class="rt-price__info-item">
@@ -102,7 +106,7 @@ export default {
         return (
           <div class="rt-price rt-price-without-space">
             <div class="rt-price__opinion">{this.optionLabel ? this.optionLabel : 'от'} </div>
-            <div class="rt-price__value">{this.normalizeValue}</div>
+            <div class={"rt-price__value"+ (this.colorValue ? ' color-'+this.colorValue : '')}>{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
               <div class="rt-price__info-item">
@@ -114,7 +118,7 @@ export default {
       default:
         return (
           <div class="rt-price rt-price-without-space">
-            <div class="rt-price__option-value">{this.normalizeValue}</div>
+            <div class={"rt-price__option-value" + (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
             <div class="rt-price__info">
               <div class="rt-price__info-item">{this.normalizeCurrency}</div>
               <div class="rt-price__info-item">

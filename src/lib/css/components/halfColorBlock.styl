@@ -1,0 +1,20 @@
+.half-color-block
+  position: relative
+  width: 100vw
+.half-color-block--full-height
+  min-height: 100vh
+.half-color-block--black-white
+  background-color: b2c-black
+  &:before
+    content ''
+    background-color: #fff
+    position: absolute
+    width: 50%
+    right: 0
+    top: 0
+    height: 100%
+    z-index: 1
+
+.half-color-block__content
+  z-index: 2
+  position: relative

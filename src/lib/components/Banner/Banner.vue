@@ -727,7 +727,7 @@
       };
       const emptyColumn = () => {
         if (!this.withoutEmptyColumn) {
-          <div class="rt-col-1 md-d-none td-d-none"/>;
+          return <div class="rt-col-1 md-d-none td-d-none"/>;
         } else {
           return null;
         }
