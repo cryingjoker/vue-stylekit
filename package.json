@@ -1,6 +1,6 @@
 {
   "name": "vue-rt-style",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -46,8 +46,7 @@
     "pug": "^2.0.3",
     "reset-css": "^4.0.1",
     "vue-fragment": "^1.2.2",
-    "vue-router": "^3.0.2",
-    "vue_rt_style": "0.0.32"
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@avalanche/eslint-config": "^3.0.0",
