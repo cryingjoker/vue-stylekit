@@ -1,116 +1,114 @@
 
 .{newAppName}-popup-wrapper
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  bottom: 0
-  justify-content: center;
+  display none
+  flex 1
+  justify-content center
   align-items center
-  z-index: 100
-  width: 100%
-  height: 100%
-  flex: 1
-  max-width: 100%
-  opacity: 0
-  visibility: hidden
-  display: none
+  width 100%
+  max-width 100%
+  height 100%
+  opacity 0
+  visibility hidden
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 100
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property opacity, visibility
   pointer-events none
+
 .{newAppName}-popup-content
-  max-height: 80vh
-  overflow: auto
+  max-height 80vh
+  overflow auto
+
 .{newAppName}-popup-content-td
-  max-height: 80vh
-  overflow: auto
+  max-height 80vh
+  overflow auto
+
 .{newAppName}-popup-wrapper-td
   @media (max-width: tablet-step-size)
-    position: fixed
-    display: none
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    justify-content: center;
+    display none
+    flex 1
+    justify-content center
     align-items center
-    z-index: 100
-    width: 100%
-    height: 100%
-    flex: 1
-    max-width: 100%
-    opacity: 0
-    visibility: hidden
+    width 100%
+    max-width 100%
+    height 100%
+    opacity 0
+    visibility hidden
+    position fixed
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 100
     transition-timing-function ease-in-out
     transition-duration .4s
     transition-property opacity, visibility
 
-.{newAppName}-popup-wrapper--is-active
+.{newAppName}-popup-wrapper--is-active,
 .{newAppName}-popup-wrapper-td--is-active
+  display flex
+  opacity 1
+  visibility visible
   animation .3s showPopupWrapper ease-in-out
-  opacity: 1
-  visibility: visible
-  display: flex
+
   .{newAppName}-popup,
   .{newAppName}-popup-td
     animation .3s showPopup ease-in-out .1s
 
-
-.{newAppName}-popup-wrapper--is-closing
+.{newAppName}-popup-wrapper--is-closing,
 .{newAppName}-popup-wrapper-td--is-closing
   animation .3s hidePopupWrapper ease-in-out
 
-
 .{newAppName}-popup
-  background-color: white
-  padding-left: horizontal-space
-  padding-right: horizontal-space
-  padding-top: vertical-space*2
-  padding-bottom: vertical-space*2
+  background-color white
   box-shadow 0 20px 25px 0 main-color05
+  padding-top vertical-space * 2
+  padding-bottom vertical-space * 2
+  padding-left horizontal-space
+  padding-right horizontal-space
+
 .{newAppName}-popup-td
   @media (max-width: tablet-step-size)
-    background-color: white
-    padding-left: horizontal-space
-    padding-right: horizontal-space
-    padding-top: vertical-space*2
-    padding-bottom: vertical-space*2
+    background-color white
     box-shadow 0 20px 25px 0 main-color05
-
+    padding-top vertical-space * 2
+    padding-bottom vertical-space * 2
+    padding-left horizontal-space
+    padding-right horizontal-space
 
 .{newAppName}-popup--filter
-  width: 300px
-
-
+  width 300px
 
 @keyframes showPopup
-
   0%
-    box-shadow 0 0px 0px 0 main-color05
+    box-shadow 0 0 0 0 main-color05
+
   100%
     box-shadow 0 20px 25px 0 main-color05
 
 @keyframes showPopupWrapper
-
   0%
-    display: flex
-    visibility: hidden
+    display flex
     opacity 0
+    visibility hidden
+
   100%
-    display: flex
-    visibility: visible
+    display flex
     opacity 1
+    visibility visible
 
 @keyframes hidePopupWrapper
-
   0%
-    display: flex
-    visibility: visible
+    display flex
     opacity 1
+    visibility visible
 
   100%
-    display: flex
-    visibility: hidden
+    display flex
     opacity 0
-
+    visibility hidden

@@ -1,4 +1,3 @@
-
 <script type="text/jsx">
 import colors from "../../../lib/color.json";
 import ColorItem from '../components-for-exaples/Colors-item.vue'

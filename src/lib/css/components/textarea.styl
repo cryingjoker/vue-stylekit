@@ -21,36 +21,41 @@
     transition-timing-function ease-in-out
     transition-duration .2s
     transition-property margin, padding
+
     &[disabled]
       color b2c-cool-grey
 
 .textarea-label
-  font-size: 14px
-  line-height: 18px
   color b2c-black05
-  margin-bottom: 5px
+  font-size 14px
+  line-height 18px
+  margin-bottom 5px
+
   .{newAppName}-dark-theme &
     color b2c-white05
 
 .textarea--static .textarea-element
   height 200px
-  padding-left 10px
-  padding-right 10px
+  box-sizing border-box
   box-sizing border-box
   box-shadow 0 0 0 2px b2c-cool-grey inset
+  padding-top vertical-space * .5
+  padding-bottom vertical-space * .5
+  padding-left 10px
+  padding-left horizontal-space * .5
+  padding-right 10px
+  padding-right horizontal-space * .5
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property box-shadow
-  padding-top vertical-space*0.5
-  padding-bottom vertical-space*0.5
-  padding-left: horizontal-space*0.5
-  padding-right: horizontal-space*0.5
-  box-sizing border-box
+
   &:focus,
   &:hover
     box-shadow 0 0 0 2px b2c-purple inset
+
   .text-field--error &
     box-shadow 0 0 0 2px error-color inset !important
+
   &[disabled]
     border 2px dashed b2b-gray !important
     box-shadow none !important

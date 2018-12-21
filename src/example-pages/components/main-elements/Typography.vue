@@ -102,9 +102,7 @@
         </div>
         <div class="rt-space-top3">
           <div class="rt-font-h1">Лабораторная работа</div>
-          <div class="rt-font-h3 rt-space-top2">
-            Знак рубля &#8381;
-          </div>
+          <div class="rt-font-h3 rt-space-top2">Знак рубля &#8381;</div>
           <div class="rt-font-h3 rt-space-top2">
             Тема:
             <span class="rt-font-label-uppercase">

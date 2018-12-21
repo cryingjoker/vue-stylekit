@@ -15,7 +15,7 @@
             />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
-            <pre-code text="<rt-price :value=&quot;750.231&quot; />"/>
+            <pre-code text="<rt-price :value=&quot;750.231&quot; />" />
           </div>
         </div>
 
@@ -54,19 +54,18 @@
 </template>
 
 <script>
-  import documentation from "../../../lib/components/Price/docs/index.json";
-  const componentsList = {};
-  export default {
-    name: "AppPrice",
-    components: componentsList,
-    data: () => ({
-      documentation: {}
-    }),
-    mounted() {
-      this.documentation = documentation;
-    },
-    created() {
-    },
-    methods: {}
-  };
+import documentation from "../../../lib/components/Price/docs/index.json";
+const componentsList = {};
+export default {
+  name: "AppPrice",
+  components: componentsList,
+  data: () => ({
+    documentation: {}
+  }),
+  mounted() {
+    this.documentation = documentation;
+  },
+  created() {},
+  methods: {}
+};
 </script>

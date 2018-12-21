@@ -79,7 +79,6 @@
         />
         <rt-input :show-nubmers-buttons="true" insert-type="number" />
       </div>
-
     </div>
     <div class="rt-space-top25">
       <documentation-builder :json="documentation" type="components" />
@@ -88,7 +87,7 @@
 </template>
 
 <script>
-  import documentation from "../../../lib/components/Input/docs/index.json";
+import documentation from "../../../lib/components/Input/docs/index.json";
 // const componentsList = {};
 import componentsList from "../../componentsList";
 export default {

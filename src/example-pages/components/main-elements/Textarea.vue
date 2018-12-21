@@ -13,7 +13,10 @@
             <span class="rt-font-label flex-fill rt-space-bottom05"
               >simple static textarea</span
             >
-            <rt-textarea-static placeholder="Textarea" label="Введите комментарий:" />
+            <rt-textarea-static
+              placeholder="Textarea"
+              label="Введите комментарий:"
+            />
           </div>
           <div class="rt-col-6  rt-col-md-3 rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"

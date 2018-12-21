@@ -9,6 +9,10 @@ export default {
       type: Boolean,
       default: false
     },
+    setToFilter:{
+      type: Boolean,
+      default: false
+    },
     value:{
       type: String,
       default: null
@@ -32,6 +36,7 @@ export default {
     },
     setActive(){
       this.RtTags.setActiveTag(this.index);
+      this.RtTags.setActiveValue(this.value);
     }
   },
   render(){

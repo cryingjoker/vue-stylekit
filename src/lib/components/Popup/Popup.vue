@@ -100,9 +100,28 @@ export default {
       }
     },
     addEventListener(){
+      var setActive = function(){
+        var keyPress = function(e){
+          if(e.keyCode === 27){
+            this.removeActive();
+          }
+        }
+        window.addEventListener('keydown', keyPress, {passive: false});
+        document.body.style.overflow = 'hidden';
+      };
+      var removeActive = function(){
+        document.querySelector('.rt-popup-wrapper').classList.add('rt-popup-wrapper-td--is-closing');
+        setTimeout(function(){
+          document.querySelector('.rt-popup-wrapper').classList.remove('rt-popup-wrapper-td--is-active');
+          setTimeout(function(){
+            document.querySelector('.rt-popup-wrapper').classList.remove('rt-popup-wrapper-td--is-closing');
+            document.body.style.overflow = null;
+          },50);
+        },300)
+      }
+      window.addEventListener('open-popup-filter', setActive, {passive: false});
+      window.addEventListener('close-popup-filter', removeActive, {passive: false});
 
-      window.addEventListener('open-popup-'+this.name, this.setActive, {passive: false});
-      window.addEventListener('close-popup-'+this.name, this.removeActive, {passive: false});
     },
     removeEventListener(){
       window.removeEventListener('open-popup-'+this.name, this.setActive);

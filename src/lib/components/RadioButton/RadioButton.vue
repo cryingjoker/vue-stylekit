@@ -62,12 +62,11 @@ export default {
     this.checkModel();
   },
   methods: {
-
     changeFromParent(props) {
       if (props && this.name in props) {
         const propsForItem = props[this.name];
         if (this.value && propsForItem.indexOf(this.value) >= 0) {
-          this.$refs.input.checked = true
+          this.$refs.input.checked = true;
           this.isChecked = true;
           this.$emit("change-radiobutton", {
             name: this.name,
@@ -77,7 +76,8 @@ export default {
           });
           this.showWave();
         } else {
-          this.$refs.input.checked = false
+          console.info("this.$refs.input !", this.$refs.input);
+          this.$refs.input.checked = false;
           this.isChecked = false;
         }
       }
@@ -98,7 +98,7 @@ export default {
 
       this.$emit("input", this.value);
       this.$emit("change", this.value);
-      this.$emit("change-radiobutton",  {
+      this.$emit("change-radiobutton", {
         name: this.name,
         value: this.value,
         checked: this.isChecked,
