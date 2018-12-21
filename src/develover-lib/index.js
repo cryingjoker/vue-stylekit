@@ -18,7 +18,7 @@ const VueRtDevStyle = {
   }
 };
 
-const version = "0.0.32";
+const version = "0.0.33";
 VueRtDevStyle.version = version;
 
 export default VueRtDevStyle;
