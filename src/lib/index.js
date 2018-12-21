@@ -117,6 +117,7 @@ const VueRtStyle = {
       Vue.component(Youtube.name, Youtube);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
+      Vue.directive(Popup.name, Popup);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
       Vue.directive(SlideContentVerticalDirective.name, SlideContentVerticalDirective);
 

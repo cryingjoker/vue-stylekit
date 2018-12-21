@@ -235,11 +235,12 @@
                     <div class="rt-space-horizontal flex-md-center">
                       <div class="phone" style="margin-top: -120px">
                         <div class="phone__container"></div>
-                        <img src="https://moscow.rt.ru/sites/default/files/img/mobile_application.jpg"
+                        <div class="phone__black-window">
+                        <img src="/static/images/doctor/doctor-1-1.jpg"
                              class="phone__image phone__image-hide phone__image-0-1"/>
-                        <img src="/static/images/doctor/iphone1.png"
+                        <img src="/static/images/doctor/doctor-1-2.jpg"
                              class="phone__image phone__image-hide phone__image-0-2"/>
-                        <img src="/static/images/doctor/iphone2.png"
+                        <img src="/static/images/doctor/doctor-1-3.jpg"
                              class="phone__image phone__image-hide phone__image-0-3"/>
 
                         <img src="http://media.148apps.com/screenshots/625257520/us-iphone-3-hearthstone.jpeg"
@@ -249,6 +250,7 @@
                           class="phone__image phone__image-hide phone__image-1-2"/>
                         <img src="http://media.148apps.com/screenshots/625257520/us-iphone-2-hearthstone.jpeg"
                              class="phone__image phone__image-hide phone__image-1-3"/>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -559,6 +561,13 @@
 
           document.querySelector(".phone__image-" + activeTab + "-" + activeIndex).classList.add("phone__image--is-active");
         }
+        let imageScrollPosition = 0
+        console.info(stepSize,parentPositon.top)
+        if(parentPositon.top < stepSize/4*3){
+          imageScrollPosition = '-'+(Math.abs(parentPositon.top - window.innerHeight)  % stepSize / stepSize * 50)%50+'%';
+        }
+        document.querySelector(".phone__image--is-active").style.top = imageScrollPosition;
+
       };
       window.addEventListener("scroll", function(e) {
         setActiveItem();
