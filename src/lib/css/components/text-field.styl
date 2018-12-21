@@ -35,9 +35,9 @@
       transition-timing-function ease-in-out
       transition-duration .4s
       transition-property background, width
+
       .{newAppName}-dark-theme &
         background b2c-orange
-
 
     .select__inner:focus+&,
     .select:hover &,
@@ -55,8 +55,10 @@
       height 2px
       background-color transparent
       border-bottom 2px b2c-black03 dashed
+
       .{newAppName}-dark-theme &
         border-bottom 2px b2c-white03 dashed
+
       &:before
         width 0
         height 0
@@ -71,7 +73,7 @@
   &__error-message
     color error-color-text
     font-size 12px
-    line-height: 16px
+    line-height 16px
     opacity 0
     visibility hidden
     position absolute
@@ -80,9 +82,10 @@
     transition-timing-function ease-in-out
     transition-duration .4s
     transition-property opacity, visibility
+
     &--has-label
-      bottom: -35px
+      bottom -35px
+
     .text-field--error &
       opacity 1
       visibility visible
-

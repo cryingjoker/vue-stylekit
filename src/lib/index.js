@@ -119,7 +119,10 @@ const VueRtStyle = {
       Vue.directive(SwipeRight.name, SwipeRight);
       Vue.directive(Popup.name, Popup);
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
-      Vue.directive(SlideContentVerticalDirective.name, SlideContentVerticalDirective);
+      Vue.directive(
+        SlideContentVerticalDirective.name,
+        SlideContentVerticalDirective
+      );
 
       Vue.RtStyle = true;
       Vue.config.test = true;
@@ -127,7 +130,7 @@ const VueRtStyle = {
   }
 };
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
-VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective};
+VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
 const version = Project.version;
 

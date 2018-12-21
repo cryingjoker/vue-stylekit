@@ -8,13 +8,28 @@
         </div>
       </div>
     </div>
-    <rt-banner :set-stop-on-click="true" :sleep-time="20000" bannerLogo="/static/example-images/Logo.svg" content-mobile-min-height="80vh" content-mobile-height="300px">
-      <rt-banner-item background-image="/static/example-images/banerBackground1.jpg" :is-white-color="true"
-                      content-mobile-min-height="80vh"
-                      content-mobile-height="200px"
-                      background-color="purple-hight"><p class="rt-font-banner-label">Виртуальная <br> телефония</p>
-        <p class="rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br>
-          возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+    <rt-banner
+      :set-stop-on-click="true"
+      :sleep-time="20000"
+      bannerLogo="/static/example-images/Logo.svg"
+      content-mobile-min-height="80vh"
+      content-mobile-height="300px"
+    >
+      <rt-banner-item
+        background-image="/static/example-images/banerBackground1.jpg"
+        :is-white-color="true"
+        content-mobile-min-height="80vh"
+        content-mobile-height="200px"
+        background-color="purple-hight"
+        ><p class="rt-font-banner-label">
+          Виртуальная <br />
+          телефония
+        </p>
+        <p class="rt-space-top rt-space-bottom15">
+          Быстрое подключение без трат на оборудование,<br />
+          возможностьпользоваться из любой точки мира <br />
+          и ни одного пропущенного звонка клиента
+        </p>
         <rt-button class="rt-button-orange">Подробнее</rt-button>
       </rt-banner-item>
     </rt-banner>

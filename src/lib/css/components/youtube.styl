@@ -1,345 +1,348 @@
 .rt-youtube
-  display: inline-block
-  position: relative
-  height 56.25%
+  display inline-block
   width 100%
-  background-color: #000
+  height 56.25%
+  background-color #000
   box-shadow 0 0 10px 0 #000
-  padding-bottom: 56.25%;
-  padding-top: 25px;
+  padding-top 25px
+  padding-bottom 56.25%
+  position relative
+
   iframe
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
 
 .rt-youtube__controls
-  position: absolute
-  z-index: 1
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  overflow-y: hidden
-
-
-
+  overflow-y hidden
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 1
 
 .rt-youtube__pause-space
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  cursor: pointer
-  z-index: 1
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 1
+  cursor pointer
+
 .rt-youtube___not-ready
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  display: flex
-  align-items center
+  display flex
   justify-content center
+  align-items center
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
 
 .rt-youtube___pause-image
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  background-size: cover
-  background-position: center
-  background-color: #484848
-  opacity: 0
-  visibility: hidden
+  background-color #484848
+  background-position center
+  background-size cover
+  opacity 0
+  visibility hidden
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility
-  &--is-active
-    opacity: 1
-    visibility: visible
 
+  &--is-active
+    opacity 1
+    visibility visible
 
 .rt-youtube__next
-  position: absolute
-  z-index: 1
-  right: -60px
-  width: 40px
-  height: 20px
-  top: 0
-  bottom: 0
-  margin-top: auto
-  margin-bottom: auto
-  cursor: pointer
+  width 40px
+  height 20px
+  margin-top auto
+  margin-bottom auto
+  position absolute
+  top 0
+  bottom 0
+  right -60px
+  z-index 1
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility
+
   @media (max-width: mobile-step-size)
-    right: 0px
-    opacity: 0
-    visibility: hidden
+    opacity 0
+    visibility hidden
+    right 0
+
     .rt-youtube:hover &
-      opacity: 1
-      visibility: visible
+      opacity 1
+      visibility visible
+
     .rt-youtube.rt-youtube--touch-detected,
     .rt-youtube.rt-youtube--touch-detected:hover &
-      opacity: 0
-      visibility: hidden
-    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
-    .rt-youtube.rt-youtube--touch-detected:hover.rt-youtube--is-hover &
-      opacity: 1
-      visibility: visible
+      opacity 0
+      visibility hidden
 
+    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &,
+    .rt-youtube.rt-youtube--touch-detected:hover.rt-youtube--is-hover &
+      opacity 1
+      visibility visible
 
 .rt-youtube__previous
-  position: absolute
-  z-index: 1
-  left: -40px
-  width: 40px
-  height: 20px
-  top: 0
-  bottom: 0
-  margin-top: auto
-  margin-bottom: auto
-  cursor: pointer
+  width 40px
+  height 20px
+  margin-top auto
+  margin-bottom auto
+  position absolute
+  top 0
+  bottom 0
+  left -40px
+  z-index 1
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility
+
   @media (max-width: mobile-step-size)
-    left: 20px
-    opacity: 0
-    visibility: hidden
+    opacity 0
+    visibility hidden
+    left 20px
+
     .rt-youtube:hover &
-      opacity: 1
-      visibility: visible
+      opacity 1
+      visibility visible
+
     .rt-youtube.rt-youtube--touch-detected,
     .rt-youtube.rt-youtube--touch-detected:hover &
-      opacity: 0
-      visibility: hidden
-    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+      opacity 0
+      visibility hidden
+
+    .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &,
     .rt-youtube.rt-youtube--touch-detected:hover.rt-youtube--is-hover &
-      opacity: 1
-      visibility: visible
+      opacity 1
+      visibility visible
 
 .rt-youtube__sound-control
-  cursor: pointer
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity
+
   &--mute
-    opacity: 0.3
+    opacity .3
 
 .rt-youtube__volume
-  width: 110px
-  display: flex
+  display flex
   align-items center
-  position: absolute
-  left: 140px
-
-
+  width 110px
+  position absolute
+  left 140px
 
 .rt-youtube__volume__line
-  width: 75px
-  height: 2px
-  background-color: rgba(255,255,255,0.3);
-  z-index: 2
-  right: 0
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  position: absolute
-  cursor: pointer
+  width 75px
+  height 2px
+  background-color rgba(255, 255, 255, .3)
+  margin auto
+  position absolute
+  top 0
+  bottom 0
+  right 0
+  z-index 2
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property margin, height
+
   .rt-youtube__volume:hover &,
   .rt-youtube--touch-detected &
-    height: 4px
-
+    height 4px
 
 .rt-youtube__volume__now-line
-  height: 2px
-  background-color: b2c-orange
-  position: absolute
-  left: 0
-  top: 0
-  bottom: 0
+  height 2px
+  background-color b2c-orange
+  position absolute
+  top 0
+  bottom 0
+  left 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property top, height, margin
+
   .rt-youtube__volume:hover &,
   .rt-youtube--touch-detected &
-    height: 4px
-
-
+    height 4px
 
 .rt-youtube__volume__point
-  position: absolute
+  width 0
+  height 0
+  background-color b2c-orange
   border-radius 50%
-  background-color: b2c-orange
-  cursor: pointer
-  width: 0
-  height: 0
-  top: 1px
-  margin-left: 0
+  margin-left 0
+  position absolute
+  top 1px
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility, top, width, height, margin
+
   .rt-youtube__volume:hover &,
   .rt-youtube--touch-detected &
-
-    width: 10px
-    height: 10px
-    top: -3px
-    margin-left: -5px
-
+    width 10px
+    height 10px
+    margin-left -5px
+    top -3px
 
 .rt-youtube__menu
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  height: 29px
-  background-color: #000
-  padding-left: 20px
-  padding-right: 20px
-  display: flex
+  display flex
   align-items center
-  margin-bottom: -29px
-  opacity: 0
-  z-index: 2
+  height 29px
+  background-color #000
+  margin-bottom -29px
+  padding-left 20px
+  padding-right 20px
+  opacity 0
+  position absolute
+  bottom 0
+  left 0
+  right 0
+  z-index 2
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property margin, opacity
+
   .rt-youtube__controls:hover &
-    margin-bottom: 0
-    opacity: 1
+    margin-bottom 0
+    opacity 1
+
   .rt-youtube--touch-detected:hover &
-    margin-bottom: -29px
-    opacity: 0
+    margin-bottom -29px
+    opacity 0
+
   .rt-youtube--touch-detected.rt-youtube--is-hover &,
   .rt-youtube--touch-detected.rt-youtube--is-hover:hover &
-    margin-bottom: 0
-    opacity: 1
-
-
+    margin-bottom 0
+    opacity 1
 
 .rt-youtube-fraction
-  background-color: rgba(218,218,218,0.3)
-  position: absolute
-  top: -2px
-  left: 0px
-  right: 0px
-  height: 2px
-  cursor: pointer
+  height 2px
+  background-color rgba(218, 218, 218, .3)
+  position absolute
+  top -2px
+  left 0
+  right 0
+  cursor pointer
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property height, top
-  &:hover
-    top: -4px
-    height: 4px
 
+  &:hover
+    height 4px
+    top -4px
 
 .rt-youtube-fraction__ready-line
-  position: absolute
-  left: 0
-  top: 0
-  height: 2px
-  background-color: #fff
+  height 2px
+  background-color #fff
+  position absolute
+  top 0
+  left 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property height
+
   .rt-youtube-fraction:hover &
-    height: 4px
+    height 4px
 
-
-.rt-youtube-fraction__played-line {
-  position: absolute
-  left: 0
-  top: 0
-  height: 2px
-  background-color: b2c-orange
-  z-index: 3
+.rt-youtube-fraction__played-line
+  height 2px
+  background-color b2c-orange
+  position absolute
+  top 0
+  left 0
+  z-index 3
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property height
-  .rt-youtube-fraction:hover &{
-    height: 4px
-  }
-}
-.rt-youtube-fraction__played-point {
-  position: absolute
-  width: 0px
-  height: 0px
-  border-radius 50%
-  background-color: b2c-orange
-  z-index: 4
-  top: 0px
 
+  .rt-youtube-fraction:hover &
+    height 4px
+
+.rt-youtube-fraction__played-point
+  width 0
+  height 0
+  background-color b2c-orange
+  border-radius 50%
+  position absolute
+  top 0
+  z-index 4
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility, top, width, height, margin
-  .rt-youtube-fraction:hover &{
-    width: 10px
-    height: 10px
-    top: -3px
-    margin-left: -5px
-  }
-}
+
+  .rt-youtube-fraction:hover &
+    width 10px
+    height 10px
+    margin-left -5px
+    top -3px
+
 .rt-youtube__time
-  margin-left: horizontal-space*0.5
-  font-size: 11px
-  margin-top: 3px
+  color #fff
+  font-size 11px
+  margin-top 3px
+  margin-left horizontal-space * .5
   letter-spacing 1px
-  color: #fff
 
 .rt-youtube-fraction__will-be-played
-  position: absolute
-  background-color: rgba(218,218,218,0.5)
-  left: 0
-  height: 2px
+  height 2px
+  background-color rgba(218, 218, 218, .5)
+  position absolute
+  left 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property height
-  .rt-youtube-fraction:hover &
-    height: 4px
 
+  .rt-youtube-fraction:hover &
+    height 4px
 
 .rt-youtube__start-video
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
+  width 46px
+  height 33px
   margin auto
-  width: 46px
-  height: 33px
-  position: absolute
-  z-index: 3
-  cursor: pointer
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 3
+  cursor pointer
 
 .rt-youtube__start-video--not-active
-  opacity: 0
-  visibility: hidden
+  opacity 0
+  visibility hidden
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility
 
   .rt-youtube--is-active.rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
-    opacity: 0
-    visibility: hidden
-  .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
-    opacity: 1
-    visibility: visible
+    opacity 0
+    visibility hidden
 
-.rt-youtube__change-icon{
-  fill: b2c-cool-grey
+  .rt-youtube.rt-youtube--touch-detected.rt-youtube--is-hover &
+    opacity 1
+    visibility visible
+
+.rt-youtube__change-icon
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property fill
-  .rt-youtube__change-video:hover &{
-    fill: b2c-orange
-  }
-}
+  fill b2c-cool-grey
+
+  .rt-youtube__change-video:hover &
+    fill b2c-orange

@@ -30,20 +30,23 @@
     bottom 0
     left 0
     right 0
+
   &__black-window
-    position: relative
-    overflow: hidden
     width 86%
     height 75.78%
+    overflow hidden
     background-color black
     margin auto
+    position relative
     position absolute
     top 0
     bottom 0
     left 0
     right 0
+
     .phone__image
-      width: 100%
+      width 100%
+
   &__image
     width 86%
     margin-left auto
@@ -56,10 +59,12 @@
 
     @media (max-width: mobile-step-size)
       top 10vw
+
 .phone__image-hide
-  opacity: 0
+  opacity 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity
+
 .phone__image--is-active
-  opacity: 1
+  opacity 1

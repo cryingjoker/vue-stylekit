@@ -11,11 +11,11 @@ export default {
   name: "RtTabsNavItem",
   components: componentsList,
   props: {
-    anchor:{
-     type: String,
-     default: null
+    anchor: {
+      type: String,
+      default: null
     },
-    removeBaseTag:{
+    removeBaseTag: {
       type: Boolean,
       default: false
     },
@@ -37,7 +37,7 @@ export default {
     this.RtTabs.addTabName(this.name);
     if (this.removeBaseTag) {
       let baseNode = document.querySelector("base");
-      if(baseNode) {
+      if (baseNode) {
         baseNode.parentNode.removeChild(baseNode);
         let newBase = document.createElement("base");
         let url = location.href;
@@ -46,8 +46,8 @@ export default {
         document.getElementsByTagName("head")[0].appendChild(newBase);
       }
     }
-    if(this.anchor && document.location.hash){
-      if(document.location.hash.replace(/^\#/,'') === this.anchor){
+    if (this.anchor && document.location.hash) {
+      if (document.location.hash.replace(/^\#/, "") === this.anchor) {
         this.RtTabs.setActiveTabName(this.name);
       }
     }
@@ -59,7 +59,6 @@ export default {
     setActiveTabName() {
       this.RtTabs.setActiveTabName(this.name, this.anchor);
     }
-
   }
 };
 </script>

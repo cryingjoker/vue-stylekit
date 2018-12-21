@@ -3,7 +3,6 @@
   "b2c-purple-low": "#6605c6",
   "b2c-purple-hight": "#8348fc",
 
-
   "b2c-red": "#BC104B",
   "b2c-red-low": "#910046",
   "b2c-red-hight": "#e22e65",
@@ -12,11 +11,9 @@
   "b2c-dark-blue-low": "#001c45",
   "b2c-dark-blue-hight": "#275392",
 
-
   "b2c-light-blue": "#65B8DF",
   "b2c-light-blue-low": "#4897df",
   "b2c-light-blue-hight": "#65deed",
-
 
   "b2c-yellow": "#FFBE08",
   "b2c-yellow-low": "#ffa307",
@@ -33,7 +30,6 @@
   "b2c-green": "#57d9b7",
   "b2c-green-low": "#3bbc9e",
   "b2c-green-hight": "#81ebd6",
-
 
   "b2c-black": "#101828",
   "b2c-black09": "rgba(16,24,40,0.9)",
@@ -54,11 +50,7 @@
 
   "b2c-purple-hight05": "rgba(131,72,252,0.5)",
 
-
-
-
-
-  "b2c-promo-game":"#0c032f",
+  "b2c-promo-game": "#0c032f",
 
   "b2b-state": "#7A929B",
   "b2b-dark-state": "#313948",

@@ -32,7 +32,7 @@ export default {
       type: Boolean,
       default: false
     },
-    isStopped:{
+    isStopped: {
       type: Boolean,
       default: false
     }

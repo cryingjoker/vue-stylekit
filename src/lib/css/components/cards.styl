@@ -13,8 +13,10 @@
   border-radius 10px
   box-shadow card-shadow
   position relative
+
   &--custom-height
-    min-height: initial
+    min-height initial
+
   &__border-content
     border-top 1px solid b2c-black01
     padding-top vertical-space * .5
@@ -84,54 +86,79 @@
     left -20px
     right -20px
     z-index 1
+
     .{newAppName}-card-purple &
-      background-color: b2c-purple
+      background-color b2c-purple
+
     .{newAppName}-card-purple-low &
-      background-color: b2c-purple-low
+      background-color b2c-purple-low
+
     .{newAppName}-card-purple-hight &
-      background-color: b2c-purple-hight
+      background-color b2c-purple-hight
+
     .{newAppName}-card-red &
-      background-color: b2c-red
+      background-color b2c-red
+
     .{newAppName}-card-red-low &
-      background-color: b2c-red-low
+      background-color b2c-red-low
+
     .{newAppName}-card-red-hight &
-      background-color: b2c-red-hight
+      background-color b2c-red-hight
+
     .{newAppName}-card-dark-blue &
-      background-color: b2c-dark-blue
+      background-color b2c-dark-blue
+
     .{newAppName}-card-dark-blue-low &
-      background-color: b2c-dark-blue-low
+      background-color b2c-dark-blue-low
+
     .{newAppName}-card-dark-blue-hight &
-      background-color: b2c-dark-blue-hight
+      background-color b2c-dark-blue-hight
+
     .{newAppName}-card-light-blue &
-      background-color: b2c-light-blue
+      background-color b2c-light-blue
+
     .{newAppName}-card-light-blue-low &
-      background-color: b2c-light-blue-low
+      background-color b2c-light-blue-low
+
     .{newAppName}-card-light-blue-hight &
-      background-color: b2c-light-blue-hight
+      background-color b2c-light-blue-hight
+
     .{newAppName}-card-yellow &
-      background-color: b2c-yellow
+      background-color b2c-yellow
+
     .{newAppName}-card-yellow-low &
-      background-color: b2c-yellow-low
+      background-color b2c-yellow-low
+
     .{newAppName}-card-yellow-hight &
-      background-color: b2c-yellow-hight
+      background-color b2c-yellow-hight
+
     .{newAppName}-card-orange &
-      background-color: b2c-orange
+      background-color b2c-orange
+
     .{newAppName}-card-orange-low &
-      background-color: b2c-orange-low
+      background-color b2c-orange-low
+
     .{newAppName}-card-orange-hight &
-      background-color: b2c-orange-hight
+      background-color b2c-orange-hight
+
     .{newAppName}-card-pink &
-      background-color: b2c-pink
+      background-color b2c-pink
+
     .{newAppName}-card-pink-low &
-      background-color: b2c-pink-low
+      background-color b2c-pink-low
+
     .{newAppName}-card-pink-hight &
-      background-color: b2c-pink-hight
+      background-color b2c-pink-hight
+
     .{newAppName}-card-green &
-      background-color: b2c-green
+      background-color b2c-green
+
     .{newAppName}-card-green-low &
-      background-color: b2c-green-low
+      background-color b2c-green-low
+
     .{newAppName}-card-green-hight &
-      background-color: b2c-green-hight
+      background-color b2c-green-hight
+
     .{newAppName}-card-black &
       background-color dark-card-background
 
@@ -216,7 +243,7 @@
     &--has-custom-height
       @media (max-width: mobile-step-size)
         display flex
-        min-height:auto
+        min-height auto
 
     .rt-col-6 &
       min-width 50%
@@ -245,8 +272,9 @@
     flex 1 0 auto
     padding-left horizontal-space
     padding-right horizontal-space
+
     &__image
-      max-width: 100%
+      max-width 100%
 
   &__bottom-list
     border-top 1px solid b2c-black01
@@ -307,8 +335,10 @@
     padding-bottom vertical-space * .5
     padding-left horizontal-space
     padding-right horizontal-space
+
     &--without-top-border
       border-top-width 0
+
     & + &
       margin-top -1px
 
@@ -326,15 +356,15 @@
     border-bottom-width 0
 
 .{newAppName}-card-buy
+  min-height inherit
   background-color b2c-white
   position relative
-  min-height:inherit
-
 
 .{newAppName}-card-buy__info
-  position: relative
+  position relative
 
 .{newAppName}-card-buy__form
+  width 100%
   background-color b2c-white
   opacity 0
   visibility hidden
@@ -346,96 +376,102 @@
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property top, opacity, visibility, max-height
-  width: 100%
+
   .rt-card-buy__form-horizontal &
     max-height 0
-    background-color: transparent
-    top: 0
     max-height 0
-    overflow: hidden
-    transition-property  opacity, visibility, max-height
+    overflow hidden
+    background-color transparent
+    top 0
+    transition-property opacity, visibility, max-height
     animation none
+
   .rt-card-buy__form-horizontal.{newAppName}-card-buy--show-form &
     max-height 2000px
-    position: relative
+    position relative
+
   .{newAppName}-card-buy--show-form &
     opacity 1
     visibility visible
+    position relative
     top 0
-    position: relative
     animation .4s showCardForm linear
+
   .{newAppName}-card-buy--show-form.rt-card-buy--is-horizontal &
-    animation none
     max-height 3000px
+    animation none
 
 .{newAppName}-card-buy__content
-  position: relative
-  left: 0
-  right: 0
-  top: 0
+  min-height 300px
+  position relative
+  top 0
+  left 0
+  right 0
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property top, opacity, max-height
-  min-height: 300px
-  .{newAppName}-card-buy--show-form &
-    position: absolute
-    opacity: 0
-    overflow: hidden
-    top: -100%
-    max-height 0
-    display: none
-    animation .4s hideCardContent linear
-  .rt-card-buy--is-horizontal &
-    overflow: hidden
-    animation none
-    top: 0
-    max-height 2000px
 
+  .{newAppName}-card-buy--show-form &
+    display none
+    max-height 0
+    overflow hidden
+    opacity 0
+    position absolute
+    top -100%
+    animation .4s hideCardContent linear
+
+  .rt-card-buy--is-horizontal &
+    max-height 2000px
+    overflow hidden
+    top 0
+    animation none
 
   .{newAppName}-card-buy--show-form.rt-card-buy--is-horizontal &
     max-height 0
+    opacity 0
+    top 0
     animation none
-    opacity: 0
-    top: 0
-
-
 
 @keyframes showCardForm
   0%
     opacity 0
-    top: -50%
-    position: absolute
+    position absolute
+    top -50%
+
   50%
-    position: relative
-    opacity: 0.5
-    top: -25%
+    opacity .5
+    position relative
+    top -25%
+
   99%
-    position: relative
     opacity 1
-    top: 0
+    position relative
+    top 0
 
   100%
     opacity 1
-    top: 0
+    top 0
 
 @keyframes hideCardContent
   0%
     opacity 1
-    position: relative
-    top: 0
+    position relative
+    top 0
+
   50%
-    opacity 0.5
-    position: relative
-    top: 0
+    opacity .5
+    position relative
+    top 0
+
   99%
     opacity 0
-    position: relative
-    top: -50%
+    position relative
+    top -50%
+
   100%
     opacity 0
-    position: absolute
-    top: -50%
-
+    position absolute
+    top -50%
 
 .{newAppName}-card-buy__image
   width 100%
@@ -444,5 +480,5 @@
   background-repeat no-repeat
 
 .card-long__image
-  max-height: 160px
-  max-width: 100%
+  max-width 100%
+  max-height 160px

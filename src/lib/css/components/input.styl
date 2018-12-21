@@ -1,4 +1,5 @@
 @require "~nib/lib/nib/vendor.styl"
+
 .input-element
   width 100%
   color main-color
@@ -10,14 +11,14 @@
   position relative
   z-index 2
   appearance field
-  placeholder(color b2c-black07,)
+  placeholder(color b2c-black07, )
+
   .input--with-button &
     padding-right horizontal-space * 3
 
   &[disabled]
     color b2c-cool-grey03
-    placeholder(color b2c-black03,)
-
+    placeholder(color b2c-black03, )
 
   .{newAppName}-input--white &,
   .{newAppName}-card--has-white-color &
@@ -81,13 +82,15 @@
     stroke b2c-white
 
 .input-label
-  font-size: 12px
   color b2c-black05
-  margin-top: 3px
-  line-height: 16px
+  font-size 12px
+  line-height 16px
+  margin-top 3px
+
   .{newAppName}-dark-theme
     &
       color b2c-white05
+
     .{newAppName}-card &
       color b2c-black05
 

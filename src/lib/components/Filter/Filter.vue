@@ -11,6 +11,10 @@ export default {
     changeUrl : {
       type: Boolean,
       default: false
+    },
+    dontClearProps:{
+      type: Array,
+      default: []
     }
   },
   provide() {
@@ -18,14 +22,16 @@ export default {
     RtFilter['selectedProps'] = this.selectedProps;
     RtFilter['setProps'] = this.setProps;
     RtFilter['removeProps'] = this.removeProps;
+    RtFilter['removeAllProps'] = this.removeAllProps;
     RtFilter['addListener'] = this.addListener;
     RtFilter['addListenerForCaller'] = this.addListenerForCaller;
+    RtFilter['getFromHistory'] = this.getFromHistory;
     return { RtFilter };
   },
   mounted: function() {
-    if(this.changeUrl) {
-      this.getFromHistory()
-    }
+
+    this.getFromHistory()
+
   },
   watch: {
     selectedProps(newProps, oldProps){
@@ -67,18 +73,19 @@ export default {
       }
     },
     getFromHistory(){
-      const params = new URLSearchParams(location.search);
-      const filter = params.get('filter');
-      const json = {}
-      if(filter) {
-        filter.split(',').map((i) => {
-          const item = i.split(':');
-          json[item[0]] = item[1].split('+')
-        })
-        this.$set(this, 'selectedProps', json)
-        this.callListenersCallers();
+      if(this.changeUrl) {
+        const params = new URLSearchParams(location.search);
+        const filter = params.get('filter');
+        const json = {}
+        if (filter) {
+          filter.split(',').map((i) => {
+            const item = i.split(':');
+            json[item[0]] = item[1].split('+')
+          })
+          this.$set(this, 'selectedProps', json);
+          this.callListenersCallers();
+        }
       }
-
 
     },
     callListeners(){
@@ -109,6 +116,15 @@ export default {
         this.$set(this.selectedProps, option, value)
         this.callListeners();
       }
+    },
+    removeAllProps(){
+
+      const json = {};
+      this.dontClearProps.forEach((key)=>{
+        json[key] = this.selectedProps[key];
+      });
+      this.$set(this, 'selectedProps', json);
+      this.callListeners();
     },
     removeProps(option){
       this.selectedProps = {...this.selectedProps};

@@ -27,14 +27,16 @@
       display table-cell
       color b2c-black06
       padding-bottom 10px
-      vertical-align top
       padding-left horizontal-space * .5
       padding-right horizontal-space * .5
+      vertical-align top
+
       .rt-dark-theme &
         color b2c-white06
 
       &:first-child
-        padding-left: 0
+        padding-left 0
+
         @media (max-width: tablet-step-size)
           display none
 
@@ -44,8 +46,6 @@
         text-align left !important
         padding-left 0
         padding-right 0
-
-
 
       & + &
         @media (max-width: tablet-step-size)
@@ -97,9 +97,9 @@
       display table-cell
       padding-top 15px
       padding-bottom 25px
-      vertical-align top
       padding-left horizontal-space * .5
       padding-right horizontal-space * .5
+      vertical-align top
 
       @media (max-width: tablet-step-size)
         display flex
@@ -124,7 +124,8 @@
         padding-right 0
 
       &:first-child
-        padding-left: 0
+        padding-left 0
+
         .rt-table-body__content
           @media (max-width: tablet-step-size)
             flex 0 1 100%
@@ -132,13 +133,12 @@
             max-width 100%
             color b2c-black
             font-size 28px
+            font-weight 200
             padding-left 0
             padding-right 0
-            font-weight 200
+
             .rt-dark-theme &
               color b2c-white
-
-
 
         @media (max-width: tablet-step-size)
           display block

@@ -3,7 +3,7 @@
 </template>
 <script>
 import debounce from "debounce";
-import {scrollIt} from '../../utils'
+import { scrollIt } from "../../utils";
 const componentsList = {};
 
 export default {

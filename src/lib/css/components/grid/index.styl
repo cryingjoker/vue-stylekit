@@ -72,8 +72,8 @@ steps = desctop-step-grid 12, tablet-step-grid 6 "td" tablet-step-size, mobile-s
 .{newAppName}-col
   flex 0 0 1
   width 100%
-  padding-left (horizontal-space * 0.5)
-  padding-right (horizontal-space * 0.5)
+  padding-left (horizontal-space * .5)
+  padding-right (horizontal-space * .5)
   position relative
 
 for devideStep in steps
@@ -94,8 +94,8 @@ for devideStep in steps
     .{className}
       +cache("mobile-column")
         width 100%
-        padding-left (horizontal-space * 0.5)
-        padding-right (horizontal-space * 0.5)
+        padding-left (horizontal-space * .5)
+        padding-right (horizontal-space * .5)
         position relative
 
   gridRender(devideStep[1], devicePrefix, devideStep[0], needMedia, media)
@@ -103,8 +103,10 @@ for devideStep in steps
   for $i in 1 .. 18
     step = $i * 5
     spaceRender(devicePrefix, needMedia, step, media)
+
 .relative
-  position: relative
+  position relative
+
 .row
   display flex
   flex-wrap wrap
@@ -117,31 +119,34 @@ for devideStep in steps
     @media (max-width: mobile-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space*0.5
-      margin-right -1 * horizontal-space*0.5
+      margin-left -1 * horizontal-space * .5
+      margin-right -1 * horizontal-space * .5
       padding-bottom vertical-space
 
   &--tablet-scroll
     @media (max-width: tablet-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space*0.5
-      margin-right -1 * horizontal-space*0.5
+      margin-left -1 * horizontal-space * .5
+      margin-right -1 * horizontal-space * .5
       padding-bottom vertical-space
 
   &--tablet-only-scroll
     @media (max-width: tablet-step-size) and (min-width: mobile-step-size)
       flex-flow nowrap
       overflow auto
-      margin-left -1 * horizontal-space*0.5
-      margin-right -1 * horizontal-space*0.5
+      margin-left -1 * horizontal-space * .5
+      margin-right -1 * horizontal-space * .5
       padding-bottom vertical-space
+
 .desctop-hide-scroll
   @media (min-width: tablet-step-size)
-    overflow-y: hidden
+    overflow-y hidden
+
 .td-hide-scroll
   @media (min-width: mobile-step-size) and (max-width: tablet-step-size)
-    overflow-y: hidden
+    overflow-y hidden
+
 .d-none
   display none
 
@@ -207,7 +212,7 @@ for devideStep in steps
   justify-content space-between
 
 .d-static
-  display: static
+  display static
 
 .d-stretch
   display flex
@@ -224,13 +229,12 @@ for devideStep in steps
 
 .md-static
   @media (max-width: mobile-step-size)
-    display: static
+    display static
 
 .md-stretch
   @media (max-width: mobile-step-size)
     display flex
     align-items stretch
-
 
 .td
   @media (max-width: tablet-step-size)
@@ -299,6 +303,7 @@ for devideStep in steps
       display flex
       justify-content flex-start
       align-items center
+
     &-flex-start-top
       display flex
       justify-content flex-start
@@ -339,7 +344,6 @@ for devideStep in steps
     padding-left horizontal-space * .5
     padding-right horizontal-space * .5
 
-
 .no-gutters
   margin-left 0
   margin-right 0
@@ -348,7 +352,6 @@ for devideStep in steps
 .no-gutters > [class*="col-"]
   padding-left 0
   padding-right 0
-
 
 .d-md-flex-column
   .{newAppName}-card
@@ -374,15 +377,16 @@ for devideStep in steps
 
   &--right
     left 100%
+
 .{newAppName}-fill-viewport
-  min-height: 100vh
-  min-width: 100vw
+  min-width 100vw
+  min-height 100vh
 
 .{newAppName}-fill-viewport-width
-  min-width: 100vw
+  min-width 100vw
 
 .{newAppName}-fill-viewport-height
-  min-height: 100vh
+  min-height 100vh
 
 .{newAppName}-space-horizontal-none
   padding-left 0
@@ -390,16 +394,16 @@ for devideStep in steps
 
 .{newAppName}-td-fill-viewport
   @media (max-width: tablet-step-size)
-    min-height: 100vh
-    min-width: 100vw
+    min-width 100vw
+    min-height 100vh
 
 .{newAppName}-td-fill-viewport-width
   @media (max-width: tablet-step-size)
-    min-width: 100vw
+    min-width 100vw
 
 .{newAppName}-td-fill-viewport-height
   @media (max-width: tablet-step-size)
-    min-height: 100vh
+    min-height 100vh
 
 .{newAppName}-td-space-horizontal-none
   @media (max-width: tablet-step-size)
@@ -408,16 +412,16 @@ for devideStep in steps
 
 .{newAppName}-md-fill-viewport
   @media (max-width: mobile-step-size)
-    min-height: 100vh
-    min-width: 100vw
+    min-width 100vw
+    min-height 100vh
 
 .{newAppName}-md-fill-viewport-width
   @media (max-width: mobile-step-size)
-    min-width: 100vw
+    min-width 100vw
 
 .{newAppName}-md-fill-viewport-height
   @media (max-width: mobile-step-size)
-    min-height: 100vh
+    min-height 100vh
 
 .{newAppName}-md-space-horizontal-none
   @media (max-width: mobile-step-size)
@@ -427,7 +431,6 @@ for devideStep in steps
 .{newAppName}-td-space-left-none
   @media (max-width: tablet-step-size)
     padding-left 0
-
 
 .{newAppName}-td-space-left-none
   @media (max-width: tablet-step-size)
@@ -449,16 +452,16 @@ for devideStep in steps
     padding-right 0
 
 .{newAppName}-reverse-horizontal2
-  margin-left: -2 * horizontal-space
-  margin-right: -2 * horizontal-space
+  margin-left -2 * horizontal-space
+  margin-right -2 * horizontal-space
 
 .{newAppName}-reverse-horizontal
-  margin-left: -1 * horizontal-space
-  margin-right: -1 * horizontal-space
+  margin-left -1 * horizontal-space
+  margin-right -1 * horizontal-space
 
 .{newAppName}-reverse-horizontal05
-  margin-left: -1 * horizontal-space*0.5
-  margin-right: -1 * horizontal-space*0.5
+  margin-left -1 * horizontal-space * .5
+  margin-right -1 * horizontal-space * .5
 
 .{newAppName}-space-top-none
   padding-top 0
@@ -520,7 +523,7 @@ for devideStep in steps
 
 .md-height-fill
   @media (max-width: mobile-step-size)
-    min-height: 100%
+    min-height 100%
 
 .flex-md-center
   @media (max-width: mobile-step-size)
@@ -558,8 +561,10 @@ for devideStep in steps
 
 .flex-fill-none
   flex 0 0 0
+
 .md-flex-fill-none
   @media (max-width: mobile-step-size)
     flex 0 0 0
+
 .max-full-width
-  max-width: 100%
+  max-width 100%

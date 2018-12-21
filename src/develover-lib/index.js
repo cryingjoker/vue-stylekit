@@ -14,7 +14,7 @@ const VueRtDevStyle = {
     Vue.component(PreComponent.name, PreComponent);
     Vue.component(PreComponentEditor.name, PreComponentEditor);
     Vue.component(DocumentationBuilder.name, DocumentationBuilder);
-    Vue.directive('validate', DocumentationBuilder);
+    Vue.directive("validate", DocumentationBuilder);
   }
 };
 
