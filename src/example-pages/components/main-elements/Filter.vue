@@ -2704,10 +2704,12 @@
                     </div>
                   </div>
                   <div class="rt-col-1"></div>
-                  <div
-                    class="rt-popup-wrapper-td rt-col-td-3 rt-col-md-3 rt-col-3"
+                  <rt-popup
+                    popup-wrapper-classes="rt-col-3"
+                    popup-classes="rt-col-td-3 rt-col-md-3"
+                    :show-on-desctop="false"
+                    name="filter"
                   >
-                    <div class="rt-popup-td">
                       <div class="rt-close d-none td-d-block">
                         <svg
                           class="rt-close__icon"
@@ -2823,8 +2825,7 @@
                           </rt-checkbox-container>
                         </rt-filter-caller>
                       </rt-sticky>
-                    </div>
-                  </div>
+                  </rt-popup>
                 </div>
               </rt-filter>
             </rt-resize-content-height>
