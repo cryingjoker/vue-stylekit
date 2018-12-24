@@ -31,7 +31,6 @@ export default {
   },
   methods: {
     onUpdateFilters(props){
-      console.info('props',props);
       this.setPropsToChildren(props);
     },
     fireFilterEvent(){
@@ -50,9 +49,7 @@ export default {
       },0)
     },
     setPropsToChildren(props) {
-      console.info('setPropsToChildren');
       this.$children.forEach((vNode) => {
-        console.info('vNode.$vnode.tag  -->>  ',vNode.$vnode.tag);
         if(vNode.$vnode.tag.search('RtInput')>0) {
           if('changeFromParent' in vNode){
             vNode.changeFromParent(props);
@@ -67,10 +64,8 @@ export default {
       })
     },
     setPropsFromChildren() {
-      console.info('this.$children',this.$children);
       this.$children.forEach((vNode) => {
         if (vNode && vNode.index !== "undefinded") {
-          console.info('vNode.$vnode.tag',vNode.$vnode.tag);
           vNode.$set(vNode,'index',this.index);
           if(vNode.$vnode.tag.search('RtTagList') > 0){
 
@@ -83,7 +78,6 @@ export default {
               const keys = Object.keys(json);
               this.RtFilter.removeAllProps();
               keys.forEach((key)=>{
-                console.info('key, json[key]',key, json[key]);
                 this.RtFilter.setProps(key, [].concat(json[key]));
                 setTimeout(()=>{
                   this.RtFilter.getFromHistory();
@@ -103,7 +97,6 @@ export default {
                 if (this.clearZero && !isNaN(parseInt(value)) && parseInt(value) === 0) {
                   childDataJson[vNode['name']] = [];
                 }
-                console.info('json!!',childDataJson[vNode['name']] = [value + '']);
                 this.fireFilterEventWithDataFromChild(childDataJson)
               })
             } else {

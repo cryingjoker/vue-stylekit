@@ -114,7 +114,6 @@ export default {
           });
           this.showWave();
         } else {
-          console.info("this.$refs.input !!", this.$refs.input);
           this.$refs.input.checked = false;
           this.isChecked = false;
         }

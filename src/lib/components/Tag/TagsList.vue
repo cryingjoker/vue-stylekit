@@ -56,7 +56,6 @@ export default {
     },
     setActiveTag(index){
       this.RtTags.indexOfActiveTag = index;
-      console.info('setActiveTag');
     },
     setActiveValue(newValue){
       this.value = newValue;

@@ -23,10 +23,7 @@ export default {
       type: Boolean,
       default: false
     },
-    showNavigationArray: {
-      type: Boolean,
-      default: false
-    },
+
     contentMobileHeight: {
       type: [Number, String],
       default: null
@@ -86,7 +83,11 @@ export default {
     mobileImageHeight: {
       type: String,
       default: null
-    }
+    },
+    mobileImageMaxHeight: {
+      type: String,
+      default: null
+    },
   },
   data: () => ({
     isMobile: false,
@@ -187,6 +188,9 @@ export default {
       }
       if (this.mobileImageHeight && this.RtBanners.isMobile) {
         styles.height = this.mobileImageHeight;
+      }
+      if (this.mobileImageMaxHeight && this.RtBanners.isMobile) {
+        styles.maxHeight = this.mobileImageMaxHeight;
       }
 
       return styles;
@@ -308,12 +312,16 @@ export default {
       if (
         this.contentMobileHeight !== null ||
         this.contentMobileMinHeight !== null ||
-        this.mobileImageHeight !== null
+        this.mobileImageHeight !== null,
+        this.mobileImageMaxHeight !== null
       ) {
+
         const isMobile =
           window.innerWidth <= parseInt(variables["mobile-step-size"]);
+        console.info('window.innerWidth <= parseInt(variables["mobile-step-size"]);',window.innerWidth <= parseInt(variables["mobile-step-size"]),this.RtBanners.isMobile !== isMobile,isMobile);
         if (this.RtBanners.isMobile !== isMobile) {
           this.RtBanners.isMobile = isMobile;
+          this.isMobile = isMobile;
         }
       }
     },
@@ -442,6 +450,13 @@ export default {
 
         let nextBannerImage = document.createElement("div");
         nextBannerImage.classList.add("rt-banner-image", "rt-banner-image--next");
+        console.info('this.isMobile && this.mobileImageMaxHeight',this.isMobile , this.mobileImageMaxHeight);
+        if(this.isMobile && this.mobileImageMaxHeight) {
+
+          nextBannerImage.style.height = this.mobileImageMaxHeight;
+          nextBannerImage.style.maxHeight = this.mobileImageMaxHeight;
+        }
+
         const nextImageIndex = this.$options.nextImageIndex;
 
         if(nextBannerImage) {
@@ -602,49 +617,7 @@ export default {
         return null;
       }
     };
-    const arrayLeft = () => {
-      if (this.showNavigationArray) {
-        return <div class="rt-banner-arrow rt-banner-arrow--preview"
-                    onClick={this.getPreviousSlide}>
-          <svg width="32px" height="63px" viewBox="0 0 32 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="553-LP_Igrovoi_arrow" transform="translate(-56.000000, -1242.000000)" fill="#D8D8D8"
-                 fill-rule="nonzero">
-                <g id="Group-13" transform="translate(56.000000, 1060.000000)">
-                  <g id="Group-3">
-                    <polygon id="Path-2"
-                             points="31.9599323 244.245909 31.9599323 241.51021 3.51635189 213 31.9599323 184.789828 31.9599323 182 0.854635865 213.122955"></polygon>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>;
-      } else {
-        return null;
-      }
-    };
-    const arrayRigth = () => {
-      if (this.showNavigationArray) {
-        return <div class="rt-banner-arrow rt-banner-arrow--next" onClick={this.getNextSlide}>
-          <svg width="32px" height="63px" viewBox="0 0 32 63" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="553-LP_Igrovoi_arrow" transform="translate(-1370.000000, -1242.000000)" fill="#D8D8D8"
-                 fill-rule="nonzero">
-                <g id="Group-13" transform="translate(56.000000, 1060.000000)">
-                  <g id="Group-3">
-                    <polygon id="Path-3"
-                             points="1314.01741 241.442115 1314.01741 244.267161 1345.18352 213.139107 1314.21342 182 1314.21342 185.004306 1342.39241 213.13358"></polygon>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>;
-      } else {
-        return null;
-      }
-    };
+
     const paginatorItem = () => {
       return this.RtBanners.items.map((option, index) => {
         let sleepTime = this.localSleepTime;
@@ -753,9 +726,7 @@ export default {
     };
 
     return <div class={this.banerClass} style={this.bannerStyle}>
-      <div class="rt-container">
-        {arrayLeft()}
-        {arrayRigth()}
+      <div class="rt-container rt-banner-container">
         {link()}
         {bannerContent()}
       </div>

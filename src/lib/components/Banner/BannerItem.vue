@@ -13,6 +13,10 @@ export default {
       type: String,
       default: null
     },
+    mobileImageMaxHeight:{
+      type: String,
+      default: null
+    },
     linkTarget: {
       type: String,
       default: null
@@ -61,6 +65,10 @@ export default {
       type: String,
       default: null
     },
+    lazyImage: {
+      type: String,
+      default: null
+    },
     isWhiteColor: {
       type: Boolean,
       default: false
@@ -102,6 +110,9 @@ export default {
         if (this.contentHeight) {
           styles.height = this.normalizeVariable(this.contentHeight);
         }
+        if (this.mobileImageMaxHeight) {
+          styles.maxHeight = this.mobileImageMaxHeight;
+        }
       } else {
         if (this.contentMobileMinHeight !== null) {
           styles.minHeight = this.normalizeVariable(
@@ -133,7 +144,12 @@ export default {
         id: this.id
       };
       if (this.backgroundImage) {
-        bannerItemData.backgroundImage = this.backgroundImage;
+        bannerItemData.backgroundImage = this.lazyImage || this.backgroundImage;
+        if (this.lazyImage) {
+          this.loadImageAsync(this.backgroundImage, img => {
+            bannerItemData.backgroundImage = this.backgroundImage
+          })
+        }
       }
       if (this.backgroundVideo) {
         bannerItemData.backgroundVideo = this.backgroundVideo;
@@ -178,6 +194,20 @@ export default {
         variable += "px";
       }
       return variable;
+    },
+    loadImageAsync (src, resolve, reject) {
+      let image = new Image()
+      image.src = src
+      image.onload = function () {
+        resolve({
+          naturalHeight: image.naturalHeight,
+          naturalWidth: image.naturalWidth,
+          src: image.src
+        })
+      }
+      image.onerror = function (e) {
+        reject(e)
+      }
     }
   },
   render(h){

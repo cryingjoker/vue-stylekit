@@ -862,7 +862,6 @@ export default {
           .classList.add("phone__image--is-active");
       }
       let imageScrollPosition = 0;
-      console.info(stepSize, parentPositon.top);
       if (parentPositon.top < (stepSize / 4) * 3) {
         imageScrollPosition =
           "-" +
