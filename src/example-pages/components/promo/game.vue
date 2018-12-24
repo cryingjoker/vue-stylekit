@@ -28,7 +28,7 @@
     render(h) {
       return <div class="rt-l-game">
         <div class="color-block--game-promo-color rt-fill-viewport"
-             style={{ backgroundImage: "url(/static/images/game/rostelecom_game.jpg)" }}>
+             style={{ backgroundImage: "url(/static/images/game/rostelecom_game.jpg)", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
           <div class="rt-container">
             <div class="row">
               <div class="rt-col-12">
