@@ -13,6 +13,10 @@ export default {
       type: String,
       default: null
     },
+    mobileImageMaxHeight:{
+      type: String,
+      default: null
+    },
     linkTarget: {
       type: String,
       default: null
@@ -101,6 +105,9 @@ export default {
         }
         if (this.contentHeight) {
           styles.height = this.normalizeVariable(this.contentHeight);
+        }
+        if (this.mobileImageMaxHeight) {
+          styles.maxHeight = this.mobileImageMaxHeight;
         }
       } else {
         if (this.contentMobileMinHeight !== null) {

@@ -97,5 +97,6 @@
   "card-shadow": "0 0 15px rgba(0,0,0,0.1)",
   "switcher-color": "#404653",
   "input-placeholder-color": "#2F302F",
-  "b2c-active-tab": "rgba(120,0,255,0.1)"
+  "b2c-active-tab": "rgba(120,0,255,0.1)",
+  "game-promo-color": "#0C1424"
 }

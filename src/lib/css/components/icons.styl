@@ -1,14 +1,8 @@
-.{newAppName}-close
-  opacity .7
-  position absolute
-  top vertical-space
-  right horizontal-space * 1.5
-  z-index 2
-  cursor pointer
+.rt-icon
+  opacity: 1
+  visibility: visible
   transition-timing-function ease-in-out
   transition-duration .4s
-  transition-property transform
-
-  &:hover
-    opacity 1
-    transform rotate(180deg)
+  transition-property opacity, visibility
+  &--not-active
+    opacity: 0.3
