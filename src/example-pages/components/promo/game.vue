@@ -596,7 +596,7 @@
                     <div
                       class="rt-space-bottom6 rt-space-left15 rt-md-space-left-none rt-space-top2 rt-col-md-3 rt-col-md-3">
                       <div class="rt-l-internet-speed d-inline-block">
-                        <p class="rt-l-internet-speed__value color-orange">250</p>
+                        <p class="rt-l-internet-speed__value">250</p>
                         <span class="rt-l-internet-speed__text">Мбит/сек</span>
                       </div>
                       <div class="rt-l-internet-speed-separator  d-inline-block">
