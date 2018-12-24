@@ -594,8 +594,8 @@
                   </div>
                   <div class="row">
                     <div
-                      class="rt-space-bottom6 rt-space-left15 rt-md-space-left-none rt-space-top2 rt-col-md-3 rt-col-md-3">
-                      <div class="rt-l-internet-speed d-inline-block">
+                      class="rt-space-bottom6 rt-space-left15 rt-md-space-left-none rt-space-top2 rt-col-md-3">
+                      <div class="rt-l-internet-speed d-inline-block rt-space-left rt-md-space-left-none">
                         <p class="rt-l-internet-speed__value">250</p>
                         <span class="rt-l-internet-speed__text">Мбит/сек</span>
                       </div>
