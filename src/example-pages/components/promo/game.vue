@@ -324,6 +324,10 @@
                           <div class="rt-space-left15 rt-md-space-right-none rt-td-space-right3 "><img
                             src="/static/images/game/game-icon6.png" alt="" width="100"/></div>
                         </div>
+                        <div class="col flex-start-center">
+                          <div class="rt-space-left15 rt-md-space-right-none rt-td-space-right3 "><img
+                            src="/static/images/game/game-icon8.png" alt="" width="100"/></div>
+                        </div>
                       </div>
                       <rt-color-line-text
                         class="rt-l-game-main-text"
