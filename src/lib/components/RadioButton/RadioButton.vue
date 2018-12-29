@@ -53,11 +53,6 @@ export default {
       this.checkModel();
     }
   },
-  watch: {
-    model() {
-      this.checkModel();
-    }
-  },
   mounted() {
     this.checkModel();
   },
