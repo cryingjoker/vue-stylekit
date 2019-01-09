@@ -12,7 +12,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">medium</h4>
           </div>
-          <div class="rt-col-3  rt-col-td-3 rt-td-space-top2">
+          <div class="rt-col-3  rt-col-td-3 rt-td-space-top2 rt-col-md-3">
             <p class="rt-font-hero">Смотрите, <br/>как нравится</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-hero</span>
