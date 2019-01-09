@@ -14,7 +14,7 @@ export default {
     },
     dontClearProps:{
       type: Array,
-      default: []
+      default: () => []
     }
   },
   provide() {
