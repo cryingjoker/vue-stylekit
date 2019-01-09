@@ -12,7 +12,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">medium</h4>
           </div>
-          <div class="rt-col-3  rt-col-td-3 rt-td-space-top2">
+          <div class="rt-col-3  rt-col-td-3 rt-td-space-top2 rt-col-md-3">
             <p class="rt-font-hero">Смотрите, <br/>как нравится</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-hero</span>
@@ -127,7 +127,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">bold 100%</h4>
           </div>
-          <div class="rt-col-5">
+          <div class="rt-col-5 rt-col-md-3">
             <p class="rt-font-paragraph rt-td-space-top2 rt-font-bold rt-md-space-vertical-none">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-paragraph.rt-font-bold</span>
@@ -140,7 +140,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 100%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-paragraph">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-paragraph</span>
@@ -153,7 +153,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 70%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-paragraph color-main07">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-paragraph.color-main07</span>
@@ -167,7 +167,7 @@
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular Purple </h4>
 
           </div>
-          <div class="rt-col-5 rt-td-col-5">
+          <div class="rt-col-5 rt-td-col-5 rt-col-md-3">
             <p class="rt-font-paragraph rt-link rt-link--purple">Ссылка на что-либо.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-paragraph.rt-link.rt-link--purple</span>
@@ -183,7 +183,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">bold 100%</h4>
           </div>
-          <div class="rt-col-5">
+          <div class="rt-col-5 rt-col-md-3">
             <p class="rt-font-smal rt-td-space-top2l-paragraph rt-font-bold">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-small-paragraph.rt-font-bold</span>
@@ -196,7 +196,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 100%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-small-paragraph">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-small-paragraph</span>
@@ -209,7 +209,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 70%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-small-paragraph color-main07">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-small-paragraph.color-main07</span>
@@ -222,7 +222,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 50%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-small-paragraph color-main05">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-small-paragraph.color-main05</span>
@@ -235,7 +235,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular Purple </h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-small-paragraph rt-link rt-link--purple">Ссылка на что-либо.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-small-paragraph.rt-link.rt-link--purple</span>
@@ -251,7 +251,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">bold 100%</h4>
           </div>
-          <div class="rt-col-5">
+          <div class="rt-col-5 rt-col-md-3">
             <p class="rt-font-control rt-td-space-top2 rt-font-bold">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control.rt-font-bold</span>
@@ -264,7 +264,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control rt-space-right05">regular 100%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-control">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control</span>
@@ -277,7 +277,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 70%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-control color-main07">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control.color-main07</span>
@@ -290,7 +290,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 50%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-control color-main05">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control.color-main05</span>
@@ -303,7 +303,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular Purple </h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-control rt-link rt-link--purple">Ссылка на что-либо.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control.rt-link.rt-link--purple</span>
@@ -319,8 +319,8 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">bold 100%</h4>
           </div>
-          <div class="rt-col-5">
-            <p class="rt-font-label rt-td-space-top2 rt-font-bold">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
+          <div class="rt-col-5 rt-col-md-3">
+            <p class="rt-font-label rt-td-space-top2 rt-md-space-top05 rt-font-bold">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label.rt-font-bold</span>
             </div>
@@ -332,7 +332,7 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 100%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
             <p class="rt-font-labe rt-td-space-top2l">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label</span>
@@ -345,8 +345,8 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 70%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
-            <p class="rt-font-label rt-td-space-top2 color-main07">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
+            <p class="rt-font-label rt-td-space-top2 rt-md-space-top05 color-main07">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label.color-main07</span>
             </div>
@@ -358,8 +358,8 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular 50%</h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
-            <p class="rt-font-label rt-td-space-top2 color-main05">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
+            <p class="rt-font-label rt-td-space-top2 color-main05 rt-md-space-top05">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label.color-main05</span>
             </div>
@@ -371,8 +371,8 @@
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3">
             <h4 class="rt-font-control color-main03 rt-space-right05 rt-md-space-bottom">regular Purple </h4>
           </div>
-          <div class="rt-col-5 rt-col-td-5">
-            <p class="rt-font-label rt-td-space-top2 rt-link rt-link--purple">Ссылка на что-либо.</p>
+          <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
+            <p class="rt-font-label rt-md-space-top05 rt-td-space-top2 rt-link rt-link--purple">Ссылка на что-либо.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label.rt-link.rt-link--purple</span>
             </div>
