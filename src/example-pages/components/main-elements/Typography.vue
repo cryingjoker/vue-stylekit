@@ -180,7 +180,7 @@
           <div class="rt-col-2 rt-col-td-6">
               <h4 class="rt-font-bold flex-fill">Paragraph  <br/>16px/24</h4>
           </div>
-          <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-col-md-3 rt-md-space-horizontal-none">
+          <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-col-md-3 rt-md-space-horizontal-none rt-md-space-top3">
             <h4 class="rt-font-control color-main03 dark-theme-color-white03 rt-space-right05 rt-md-space-left05">bold 100%</h4>
           </div>
           <div class="rt-col-5 rt-col-md-3">
@@ -190,7 +190,7 @@
             </div>
           </div>
         </div>
-        <div class="row rt-space-top15">
+        <div class="row rt-space-top15 rt-md-space-top-none">
           <div class="rt-col-2 td-d-none">
           </div>
           <div class="rt-col-2 rt-font-right rt-col-td-1 rt-font-td-left rt-td-space-top2 rt-col-md-3 rt-md-space-horizontal-none">
@@ -252,7 +252,7 @@
             <h4 class="rt-font-control color-main03 dark-theme-color-white03 rt-space-right05 rt-md-space-left05">bold 100%</h4>
           </div>
           <div class="rt-col-5 rt-col-md-3">
-            <p class="rt-font-control rt-td-space-top2 rt-font-bold rt-md-space-vertical-none">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
+            <p class="rt-font-control rt-td-space-top2 rt-font-bold">Логотип и знак ПАО «Ростелеком» <br/> –  основа фирменного стиля. </p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-control.rt-font-bold</span>
             </div>
@@ -372,7 +372,7 @@
             <h4 class="rt-font-control color-main03 dark-theme-color-white03 rt-space-right05 rt-md-space-left05">regular Purple </h4>
           </div>
           <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
-            <p class="rt-font-label  rt-md-space-vertical-none rt-link rt-link--purple">Ссылка на что-либо.</p>
+            <p class="rt-font-label  rt-md-space-vertical-none rt-link">Ссылка на что-либо.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label.rt-link.rt-link--purple</span>
             </div>
