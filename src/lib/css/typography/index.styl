@@ -13,12 +13,23 @@ body
   font-size 48px
   line-height: 60px
   font-weight 600
+  @media (max-width: tablet-step-size)
+    font-weight 200
+    font-size 36px
+    line-height: 46px
+  @media (max-width: mobile-step-size)
+    font-weight 200
+    font-size 28px
+    line-height: 36px
 
 h1,
 .{newAppName}-font-h1
   font-size 50px
   line-height: 64px
   font-weight 200
+  @media (max-width: tablet-step-size)
+    font-size 36px
+    line-height: 46px
   @media (max-width: mobile-step-size)
     font-size 37px
 
@@ -50,8 +61,12 @@ h2,
   line-height: 46px
   font-weight 200
 
-  @media (max-width: mobile-step-size)
+  @media (max-width: tablet-step-size)
     font-size 28px
+    line-height: 36px
+  @media (max-width: mobile-step-size)
+    font-size 22px
+    line-height: 28px
 
 .{newAppName}-font-promo-title
     font-size 36px
@@ -61,9 +76,9 @@ h3,
   font-size 28px
   line-height: 36px
   font-weight 200
-
   @media (max-width: mobile-step-size)
-    font-size 21px
+    font-size 22px
+    line-height: 28px
 
 .{newAppName}-font-promo
     font-size 24px
@@ -87,6 +102,9 @@ b,
 .{newAppName}-font-paragraph
   font-size 18px
   line-height: 26px
+  @media (max-width: tablet-step-size)
+    font-size 16px
+    line-height: 24px
 
 .{newAppName}-font-small-paragraph
   font-size 16px
