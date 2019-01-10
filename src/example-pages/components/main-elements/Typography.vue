@@ -333,7 +333,7 @@
             <h4 class="rt-font-control color-main03 dark-theme-color-white03 rt-space-right05 rt-md-space-left05">regular 100%</h4>
           </div>
           <div class="rt-col-5 rt-col-td-5 rt-col-md-3">
-            <p class="rt-font-labe rt-td-space-top2l">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
+            <p class="rt-font-label rt-td-space-top2l">Логотип, знак и фирменный блок имеют установленные размеры и пропорции. Эти элементы фирменного стиля должны воспроизводиться только с оригинальных файлов.</p>
             <div class="rt-font-label">
               <span class="rt-code">.rt-font-label</span>
             </div>
