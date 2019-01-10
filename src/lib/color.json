@@ -89,7 +89,6 @@
   "error-color": "#ff0000",
   "error-color-text": "rgba(255,12,12,0.58)",
   "box-shadow-background": "rgba(0,0,0,0.1)",
-  "dark-theme-background": "#0e1624",
   "dark-theme-dropdown-background": "#202432",
   "light-grey": "#fafafa",
   "rule-color": "#272F3D",
