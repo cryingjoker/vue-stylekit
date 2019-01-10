@@ -1,7 +1,7 @@
 .{newAppName}-annotation
   font-size 12px
 
-  &__arrow
+.{newAppName}-annotation__arrow
     transition-timing-function ease-in-out
     transition-duration .2s
     transition-property fill
@@ -11,7 +11,7 @@
     .{newAppName}-dark-theme &
       fill b2c-white
 
-  &__title
+.{newAppName}-annotation__title
     display inline-block
     padding-left 20px
     position relative
@@ -39,7 +39,7 @@
     .{newAppName}-annotation--is-open &
       text-decoration none
 
-  &__arrow
+.{newAppName}-annotation__arrow
     margin-top auto
     margin-bottom auto
     position absolute
@@ -57,7 +57,7 @@
     .{newAppName}-annotation--is-open &
       transform rotate(0)
 
-  &__content
+.{newAppName}-annotation__content
     max-height 0
     overflow hidden
     color b2c-black05
@@ -100,5 +100,5 @@
       max-height 300vh
       padding-top 10px
 
-  &-item
+.{newAppName}-annotation-item
     padding-top horizontal-space * .5
