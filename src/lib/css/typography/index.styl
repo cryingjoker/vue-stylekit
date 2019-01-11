@@ -192,10 +192,14 @@ a
   list-style-type none
   counter-reset step-counter
   color b2c-black05
+  .{newAppName}-dark-theme &
+    color b2c-white05
 
 .{newAppName}-ordered-list__item
   position: relative
   color b2c-black05
+  .{newAppName}-dark-theme &
+    color b2c-white05
   &:before
     content: ''
     background-color: b2c-black05
@@ -206,6 +210,8 @@ a
     margin-right: 12px
     margin-left: 2px
     left: 0
+    .{newAppName}-dark-theme &
+      background-color:  b2c-white05
 
 .{newAppName}-numeric-list__item
   padding-left horizontal-space
@@ -217,3 +223,5 @@ a
     position absolute
     color b2c-black05
     left 0
+    .{newAppName}-dark-theme &
+      color b2c-white05
