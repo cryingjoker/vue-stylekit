@@ -1,7 +1,7 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title row"><h1 class="col rt-font-hero">List elememnts</h1></div>
+      <div class="app-title row"><h1 class="col rt-font-hero">List elements</h1></div>
       <div class="app-body">
         <pre-code
           text="
