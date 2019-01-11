@@ -191,6 +191,21 @@ a
 .{newAppName}-numeric-list
   list-style-type none
   counter-reset step-counter
+  color b2c-black05
+
+.{newAppName}-ordered-list__item
+  position: relative
+  color b2c-black05
+  &:before
+    content: ''
+    background-color: b2c-black05
+    height: 6px
+    width: 6px
+    border-radius 50%
+    display: inline-block
+    margin-right: 12px
+    margin-left: 2px
+    left: 0
 
 .{newAppName}-numeric-list__item
   padding-left horizontal-space
@@ -200,4 +215,5 @@ a
   &:before
     content counter(step-counter) "."
     position absolute
+    color b2c-black05
     left 0

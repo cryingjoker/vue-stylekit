@@ -16,6 +16,7 @@
 
   &[disabled]
     box-shadow none !important
+    cursor: default
 
   &--is-fitched
     color transparent !important
@@ -72,13 +73,16 @@
 
     &:hover,
     &:focus
-      box-shadow 0 2px 5px rgba(0, 0, 0, .2), inset 0 2px 100px rgba(0, 0, 0, .1)
+      box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      background-color: b2c-orange-hight
 
     &[disabled]
-      background-color disable-button-color
-
+      background-color b2c-black01
       .{newAppName}-dark-theme &
-        background-color disable-button-color-dark-theme
+        background-color: b2c-white01
+        border-color b2c-white
+        color b2c-white03
+
 
     .ripple-wave
       background-color color-button-wive-color
@@ -91,24 +95,43 @@
     &.{newAppName}-button-no-wive &:active
       background-color transparent !important
 
-    &[disabled]
-      color disable-button-color !important
-      border-color disable-button-color !important
-
     &:hover,
     &:focus
       color b2c-orange-low
       border-color b2c-orange-low
+      background-color: rgba(b2c-orange, .1)
+
+    &[disabled]
+      border-color b2c-black01
+      color b2c-black01
+      &:focus,
+      &:hover
+        background-color: transparent
+
+      .{newAppName}-dark-theme &
+        border-color b2c-white03
+        color b2c-white03
 
     .ripple-wave
       background-color b2c-orange-low
 
   &-white
     border 2px solid white
-
     &:focus,
     &:hover
       opacity .7
+      background-color: b2c-cool-grey05
+
+    &:active
+      background-color: transparent
+    &[disabled]
+      color b2c-black01
+      &:hover
+        background-color: transparent
+      .{newAppName}-dark-theme &
+        color b2c-white03!important
+        opacity: 1
+        border-color transparent
 
   &-purple
     color #fff
@@ -119,13 +142,15 @@
 
     &:hover,
     &:focus
-      box-shadow 0 2px 5px rgba(0, 0, 0, .2), inset 0 2px 100px rgba(0, 0, 0, .1)
+      box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      background-color: b2c-purple-hight
 
     &[disabled]
-      background-color disable-button-color
-
+      color b2c-black01
+      background-color b2c-black01
       .{newAppName}-dark-theme &
-        background-color disable-button-color-dark-theme
+        background-color b2c-white01
+        color b2c-white03
 
     .ripple-wave
       background-color color-button-wive-color
@@ -139,24 +164,24 @@
       box-shadow none
 
     &[disabled]
-      border-color disable-button-color
-
+      border-color b2c-black01
+      color b2c-black01
+      .{newAppName}-dark-theme &
+        border-color b2c-white03
+        color b2c-white03
+      &:focus,
+      &:hover
+        background-color: transparent
     &:hover,
     &:focus
       color b2c-purple-low
       border-color b2c-purple-low
+      background-color: hsl(rgba(b2c-purple, .1))
 
     .ripple-wave
       background-color b2c-purple-low
 
     &[disabled]
-      color disable-button-color
-      border-color disable-button-color
+      color b2c-black01
+      border-color b2c-black01
 
-  &-transparent
-    &[disabled]
-      color disable-button-color
-
-    &:hover,
-    &:focus
-      opacity .7

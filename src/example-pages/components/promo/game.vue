@@ -359,7 +359,7 @@
                     <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100
                       (Р)
                     </p>
-                    <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в <br/>ангаре
+                    <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре
                     </p>
                   </div>
                   <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">

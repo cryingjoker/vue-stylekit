@@ -34,6 +34,7 @@ import Annotation from '../components/main-elements/Annotation.vue';
 import Tags from '../components/main-elements/Tags.vue'
 import Youtube from "../components/main-elements/Youtube.vue";
 import Colors from "../components/main-elements/Colors.vue";
+import List from "../components/main-elements/List.vue";
 
 
 const index = [
@@ -58,6 +59,7 @@ const index = [
   { path: '/youtube', name: 'app-youtube', component: Youtube },
   { path: '/filter', name: 'app-filter', component: FilterElements },
   { path: '/colors', name: 'app-colors', component: Colors },
+  { path: '/list', name: 'app-list', component: List },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
