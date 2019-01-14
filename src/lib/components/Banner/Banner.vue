@@ -318,7 +318,6 @@ export default {
 
         const isMobile =
           window.innerWidth <= parseInt(variables["mobile-step-size"]);
-        console.info('window.innerWidth <= parseInt(variables["mobile-step-size"]);',window.innerWidth <= parseInt(variables["mobile-step-size"]),this.RtBanners.isMobile !== isMobile,isMobile);
         if (this.RtBanners.isMobile !== isMobile) {
           this.RtBanners.isMobile = isMobile;
           this.isMobile = isMobile;
@@ -344,10 +343,11 @@ export default {
             (this.RtBanners.activeIndex + 1) % this.RtBanners.items.length;
           if (this.scrollToNextImage) {
             this.$options.nextImageIndex = index
+
             setTimeout(() => {
               this.RtBanners.activeIndex = index;
               this.$options.nextImageIndex = null
-            }, 700);
+            }, 400);
           }
         }
 
@@ -450,7 +450,6 @@ export default {
 
         let nextBannerImage = document.createElement("div");
         nextBannerImage.classList.add("rt-banner-image", "rt-banner-image--next");
-        console.info('this.isMobile && this.mobileImageMaxHeight',this.isMobile , this.mobileImageMaxHeight);
         if(this.isMobile && this.mobileImageMaxHeight) {
 
           nextBannerImage.style.height = this.mobileImageMaxHeight;
@@ -708,7 +707,7 @@ export default {
     const bannerContent = () => {
       if (this.hasCustomContent) {
         return <div class="row">
-          <div class="rt-col-12">
+          <div class="rt-col-12 d-flex">
             {this.$slots.default}
           </div>
         </div>;

@@ -190,7 +190,7 @@
                 <div class="row flex-fill max-full-width rt-banner__top-content">
                   <div class="rt-col-5 rt-col-td-4 rt-col-md-3 flex-start-center flex-fill">
                     <div
-                      class="flex-column rt-space-vertical2 rt-td-space-top4 rt-td-space-left3 rt-md-space-horizontal-none">
+                      class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
                       <div class="row rt-space-bottom15">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/WF-Standard-Logo_White.png" alt=""
@@ -254,7 +254,7 @@
               <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
                 <div class="row flex-fill max-full-width rt-banner__top-content">
                   <div class="rt-col-5 rt-col-td-4 rt-col-md-3 flex-start-center flex-fill">
-                    <div class="flex-column rt-space-vertical2 rt-td-space-top4 rt-td-space-left3 rt-md-space-horizontal-none">
+                    <div class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
                       <div class="row rt-space-bottom2">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/forgame_logo.png" alt=""
@@ -314,7 +314,7 @@
                   <div class="rt-col-5 rt-col-td-4 rt-col-md-3 flex-start-center flex-fill">
 
                     <div
-                      class="flex-column rt-space-vertical2 rt-td-space-top4 rt-td-space-left3 rt-md-space-horizontal-none">
+                      class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
                       <div class="row rt-space-bottom2">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/game-icon5.png" alt=""
