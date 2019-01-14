@@ -40,7 +40,8 @@
   animation-duration 4s
   animation-timing-function linear
   animation-iteration-count infinite
-
+.rt-banner__item--is-active
+  position: relative
 @keyframes bottomArrow
   0%
     bottom 35px
@@ -60,3 +61,7 @@
 .rt-l-game-space
   min-height 150px
   max-height 180px
+.rt-l-game
+  .rt-banner__item flex
+    @media (max-width: mobile-step-size)
+      display: block
