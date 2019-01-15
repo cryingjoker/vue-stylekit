@@ -194,7 +194,7 @@
                       <div class="row rt-space-bottom15">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/WF-Standard-Logo_White.png" alt=""
-                                                            width="100"/></div>
+                                                            width="130"/></div>
                         </div>
                       </div>
                         <rt-color-line-text
@@ -258,7 +258,7 @@
                       <div class="row rt-space-bottom2">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/forgame_logo.png" alt=""
-                                                                width="100"/></div>
+                                                                width="130"/></div>
                         </div>
                       </div>
                       <rt-color-line-text
