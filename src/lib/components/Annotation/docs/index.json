@@ -2,14 +2,14 @@
   "items" : [
     {
       "name" : "rt-annotation",
-      "proporty" : "label",
+      "property" : "label",
       "type" : ["String"],
       "description" : "Верхний текст примечания",
       "value" : "null"
     },
     {
       "name" : "rt-annotation",
-      "proporty" : "has-white-color",
+      "property" : "has-white-color",
       "type" : ["String"],
       "description" : "flag белого цвета",
       "value" : "null"

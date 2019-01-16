@@ -63,13 +63,13 @@
           <div class="app-documentation__row rt-font-bold rt-space-bottom05">
             <div class="app-documentation__name rt-col-2">component name</div>
             <div class="app-documentation__name rt-col-3">
-              component proporty
+              component property
             </div>
             <div
               class="app-documentation__value app-documentation__row rt-col-7"
             >
               <div class="app-documentation__value-item rt-col-3">
-                proporty type
+                property type
               </div>
               <div class="app-documentation__value-item rt-col-6">about</div>
               <div class="app-documentation__value-item rt-col-3">

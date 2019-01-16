@@ -2,35 +2,35 @@
   "items": [
     {
       "name": "rt-price",
-      "proporty":":value",
+      "property":":value",
       "type": ["Number"],
       "description":"Обязательное поле \n Значение ценника",
       "value" :"0"
     },
     {
       "name": "rt-price",
-      "proporty":":old-value",
+      "property":":old-value",
       "type": ["Number"],
       "description":"Значение ценника до",
       "value" :"null"
     },
     {
       "name": "rt-price",
-      "proporty":"time-interval",
+      "property":"time-interval",
       "type": ["String"],
       "description":"Значение временного интервала 'мес' 'день' и т.п.",
       "value" :"null"
     },
     {
       "name": "rt-price",
-      "proporty":":is-option",
+      "property":":is-option",
       "type": ["Boolean"],
       "description":"Отображение 'от'",
       "value" :"false"
     },
     {
       "name": "rt-price",
-      "proporty":":option-label",
+      "property":":option-label",
       "type": ["String"],
       "description":"Текст лейбл вместо 'от'",
       "value" :"null",
@@ -38,7 +38,7 @@
     },
     {
       "name": "rt-price",
-      "proporty":":only-price",
+      "property":":only-price",
       "type": ["Boolean"],
       "description":"Отображение только ценника в валюте",
       "value" :"false"

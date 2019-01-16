@@ -2,7 +2,7 @@
   "items": [
     {
       "name": "rt-input",
-      "proporty": "insert-lang",
+      "property": "insert-lang",
       "type": [
         "String"
       ],
@@ -11,7 +11,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "insert-type",
+      "property": "insert-type",
       "type": [
         "String"
       ],
@@ -20,7 +20,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "disabled",
+      "property": "disabled",
       "type": [
         "Boolean"
       ],
@@ -29,7 +29,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "placeholder",
+      "property": "placeholder",
       "type": [
         "String"
       ],
@@ -38,7 +38,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "has-error",
+      "property": "has-error",
       "type": [
         "Boolean"
       ],
@@ -47,7 +47,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "error-message",
+      "property": "error-message",
       "type": [
         "String"
       ],
@@ -56,7 +56,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "value",
+      "property": "value",
       "type": [
         "String"
       ],
@@ -65,7 +65,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "name",
+      "property": "name",
       "type": [
         "String"
       ],
@@ -74,7 +74,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "is-white",
+      "property": "is-white",
       "type": [
         "Boolean"
       ],
@@ -83,7 +83,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "show-nubmers-buttons",
+      "property": "show-nubmers-buttons",
       "type": [
         "Boolean"
       ],
@@ -92,7 +92,7 @@
     },
     {
       "name": "rt-input",
-      "proporty": "label",
+      "property": "label",
       "version": " >= 0.22",
       "type": [
         "String"
