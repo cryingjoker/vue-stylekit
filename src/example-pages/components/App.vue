@@ -426,7 +426,7 @@
       gridToggle() {
         this.showGrid = !this.showGrid;
       },
-      codeViewerToggle() {
+      codeViewerToggle(event) {
         const isChecked = event.target.checked;
 
         if(isChecked){
