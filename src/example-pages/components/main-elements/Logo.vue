@@ -66,6 +66,7 @@
         </div>
         <div class="rt-row rt-space-top">
           <div class="d-inline-block rt-space-right">
+            <pre-code
               text="<rt-logo></rt-logo>">
             </pre-code>
           </div>

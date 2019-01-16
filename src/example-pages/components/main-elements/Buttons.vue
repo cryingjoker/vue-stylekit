@@ -35,6 +35,11 @@
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <pre-code
+              text="<rt-button class=&quot;rt-button-transparent&quot;>Подключить</rt-button>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code
               text="<rt-button class=&quot;rt-button-white&quot;>Подключить</rt-button>"
             />
           </div>
@@ -59,6 +64,11 @@
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <pre-code
               text="<rt-button class=&quot;rt-button-small rt-button-orange-border&quot;>Подключить</rt-button>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code
+              text="<rt-button class=&quot;rt-button-small rt-button-transparent&quot;>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
@@ -112,6 +122,14 @@
 
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"
+              >White button <span class="rt-code"> .rt-button-transparent</span></span
+            >
+            <pre-code
+              text="<rt-button-without-ripple class=&quot;rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05"
               >White button <span class="rt-code"> .rt-button-white</span></span
             >
             <pre-code
@@ -155,8 +173,15 @@
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"
-              >Disabled white button</span
+              >Disabled transparent button</span
             >
+            <pre-code
+              text="<rt-button-without-ripple disabled class=&quot;rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05"
+              >Disabled white button</span>
             <pre-code
               text="<rt-button-without-ripple disabled class=&quot;rt-button-white&quot;>Подключить</rt-button-without-ripple>"
             />
@@ -210,6 +235,17 @@
 
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"
+              >Transparent small button
+              <span class="rt-code">
+                .rt-button-transparent.rt-button-small</span
+              ></span
+            >
+            <pre-code
+              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05"
               >White small button
               <span class="rt-code">
                 .rt-button-white.rt-button-small</span
@@ -251,6 +287,14 @@
             >
             <pre-code
               text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-orange-border&quot; disabled>Подключить</rt-button-without-ripple>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05"
+              >Disabled transparent small border button</span
+            >
+            <pre-code
+              text=" <rt-button-without-ripple class=&quot;rt-button-small rt-button-transparent&quot; disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
