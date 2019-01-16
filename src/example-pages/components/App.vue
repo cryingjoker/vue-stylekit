@@ -44,6 +44,15 @@
           <router-link
             class="aside-menu__link"
             active-class="aside-menu__link--active"
+            to="/logo"
+          >
+            Logo
+          </router-link>
+        </div>
+        <div class="aside-menu__item">
+          <router-link
+            class="aside-menu__link"
+            active-class="aside-menu__link--active"
             to="/buttons"
           >
             Buttons

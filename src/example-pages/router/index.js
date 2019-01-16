@@ -35,6 +35,8 @@ import Tags from '../components/main-elements/Tags.vue'
 import Youtube from "../components/main-elements/Youtube.vue";
 import Colors from "../components/main-elements/Colors.vue";
 import List from "../components/main-elements/List.vue";
+import Logo from "../components/main-elements/Logo.vue";
+import WarFace from "../components/promo/game-warface.vue";
 
 
 const index = [
@@ -60,6 +62,7 @@ const index = [
   { path: '/filter', name: 'app-filter', component: FilterElements },
   { path: '/colors', name: 'app-colors', component: Colors },
   { path: '/list', name: 'app-list', component: List },
+  { path: '/logo', name: 'app-logo', component: Logo },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',
@@ -77,6 +80,7 @@ const index = [
   { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
   { path: '/promo/mobile', name: 'promoMobrt-font-md-centerile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
+  { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
