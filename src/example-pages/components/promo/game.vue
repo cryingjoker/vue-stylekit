@@ -208,10 +208,10 @@
                           </template>
                         </rt-color-line-text>
                       <div class="row">
-                        <div class="col rt-space-left05">
-                          <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        <div class="col rt-space-left05 md-d-none">
+                          <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
-                        <div class="col flex-start-center rt-space-left2">
+                        <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
                         <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
                       </div>
@@ -271,10 +271,10 @@
                         </template>
                       </rt-color-line-text>
                       <div class="row">
-                        <div class="col rt-space-left05">
-                        <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        <div class="col rt-space-left05 md-d-none">
+                        <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
-                        <div class="col flex-start-center rt-space-left2">
+                        <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
                         <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
                       </div>
@@ -339,10 +339,10 @@
                         </template>
                       </rt-color-line-text>
                       <div class="row">
-                        <div class="col rt-space-left05">
-                        <rt-button class="rt-button-orange">Подробнее</rt-button>
+                        <div class="col rt-space-left05 md-d-none">
+                        <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
-                        <div class="col flex-start-center rt-space-left2">
+                        <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
                         <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
                       </div>
