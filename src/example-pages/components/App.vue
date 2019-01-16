@@ -9,29 +9,42 @@
 
     <div :class="{ 'grid--active': showGrid }" class="grid">
       <div class="row">
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
-        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
       </div>
     </div>
     <keep-alive>
       <div :class="{ 'aside-menu--active': showMenu }" class="aside-menu">
-        <rt-switch
-          :checked="showGrid"
-          class="grid-switcher"
-          @change="gridToggle"
-          >Grid</rt-switch
-        >
-        <div class="aside-menu__item">
+
+        <div class="row">
+          <div class="d-flex">
+            <rt-switch
+              :checked="codeViewer"
+              class="code-switcher"
+              @change="codeViewerToggle"
+            >Show code viewer
+            </rt-switch>
+          </div>
+          <div class="d-flex">
+            <rt-switch
+              :checked="showGrid"
+              class="grid-switcher"
+              @change="gridToggle"
+            >Grid
+            </rt-switch>
+          </div>
+        </div>
+        <div class="aside-menu__item rt-space-top3">
           <router-link
             class="aside-menu__link"
             active-class="aside-menu__link--active"
@@ -121,7 +134,7 @@
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/checkbox"
-                >Checkbox
+              >Checkbox
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -129,7 +142,7 @@
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/radiobutton"
-                >Radiobutton
+              >Radiobutton
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -155,7 +168,7 @@
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/textarea"
-                >Textarea
+              >Textarea
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -192,14 +205,14 @@
               class="aside-menu__link"
               active-class="aside-menu__link--active"
               to="/tags"
-              >Tags
+            >Tags
             </router-link>
           </div>
           <router-link
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/color-line-text"
-            >Color Line Text
+          >Color Line Text
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -216,7 +229,7 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/price"
-            >Price
+          >Price
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -224,7 +237,7 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/tabs"
-            >Tabs
+          >Tabs
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -232,7 +245,7 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/table"
-            >Table
+          >Table
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -240,7 +253,7 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/fullscreen"
-            >Fullscreen Image
+          >Fullscreen Image
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -248,7 +261,7 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/download-content"
-            >Download content
+          >Download content
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -343,86 +356,103 @@
       </div>
     </keep-alive>
 
-    <router-view />
+    <router-view/>
     <rt-switch
       :checked="isDarkTheme"
       class="dark-theme-switcher"
       @change="switchTheme"
-      >Dark theme</rt-switch
+    >Dark theme
+    </rt-switch
     >
   </div>
 </template>
 
 <script>
-import VueRtStyle from "../../lib/index";
-import componentsList from "../componentsList";
-if (window) {
-  window.VueRtStyle = {};
-  window.VueRtStyle.version = VueRtStyle.version;
-}
+  import VueRtStyle from "../../lib/index";
+  import componentsList from "../componentsList";
 
-const componentDirectives = {};
-componentDirectives[VueRtStyle.directives.SwipeRight.name] =
-  VueRtStyle.directives.SwipeRight;
-componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
-  VueRtStyle.directives.SwipeLeft;
-componentDirectives[VueRtStyle.directives.OutsideClickDirective.name] =
-  VueRtStyle.directives.OutsideClickDirective;
-
-export default {
-  name: "App",
-  components: componentsList,
-  directives: componentDirectives,
-  data: () => ({
-    showMenu: false,
-    isPromo: false,
-    showGrid: false,
-    isDarkTheme: false
-  }),
-  watch: {
-    $route(to, from) {
-      this.showMenu = false;
-    }
-  },
-  created() {
-    if (this.$route.path.search("promo") >= 0) {
-      this.isPromo = true;
-    }
-  },
-  mounted() {
-    if (!!+localStorage.getItem("rt-dark")) {
-      const bodyClassList = document.body.classList.value.split(" ");
-      bodyClassList.push("rt-dark-theme");
-      document.body.classList = bodyClassList.join(" ");
-
-      this.isDarkTheme = true;
-    }
-  },
-  methods: {
-    openMenu() {
-      this.showMenu = true;
-    },
-    closeMenu() {
-      this.showMenu = false;
-    },
-    gridToggle() {
-      this.showGrid = !this.showGrid;
-    },
-
-    switchTheme(event) {
-      const isChecked = event.target.checked;
-      const bodyClassList = document.body.classList.value.split(" ");
-      if (isChecked) {
-        bodyClassList.push("rt-dark-theme");
-        localStorage.setItem("rt-dark", 1);
-        this.isDarkTheme = true;
-      } else {
-        bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1);
-        localStorage.setItem("rt-dark", 0);
-        this.isDarkTheme = false;
-      }
-      document.body.classList = bodyClassList.join(" ");
-    }
+  if (window) {
+    window.VueRtStyle = {};
+    window.VueRtStyle.version = VueRtStyle.version;
   }
-};
+
+  const componentDirectives = {};
+  componentDirectives[VueRtStyle.directives.SwipeRight.name] =
+    VueRtStyle.directives.SwipeRight;
+  componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
+    VueRtStyle.directives.SwipeLeft;
+  componentDirectives[VueRtStyle.directives.OutsideClickDirective.name] =
+    VueRtStyle.directives.OutsideClickDirective;
+
+  export default {
+    name: "App",
+    components: componentsList,
+    directives: componentDirectives,
+    data: () => ({
+      showMenu: false,
+      isPromo: false,
+      showGrid: false,
+      isDarkTheme: false,
+      codeViewer: false
+    }),
+    watch: {
+      $route(to, from) {
+        this.showMenu = false;
+      }
+    },
+    created() {
+      if (this.$route.path.search("promo") >= 0) {
+        this.isPromo = true;
+      }
+    },
+    mounted() {
+      if (!!+localStorage.getItem("rt-dark")) {
+        document.body.classList.add("rt-dark-theme");
+
+        this.isDarkTheme = true;
+      }
+      if (!!+localStorage.getItem("rt-code-viewer")) {
+        document.body.classList.add("rt-code-viewer");
+        this.codeViewer = true;
+      }
+    },
+    methods: {
+      openMenu() {
+        this.showMenu = true;
+      },
+      closeMenu() {
+        this.showMenu = false;
+      },
+      gridToggle() {
+        this.showGrid = !this.showGrid;
+      },
+      codeViewerToggle() {
+        const isChecked = event.target.checked;
+
+        if(isChecked){
+          localStorage.setItem("rt-code-viewer", 1);
+          document.body.classList.add("rt-code-viewer");
+        }else{
+          localStorage.setItem("rt-code-viewer", 0);
+          document.body.classList.remove("rt-code-viewer");
+        }
+        this.codeViewer = isChecked;
+      },
+
+      switchTheme(event) {
+        const isChecked = event.target.checked;
+        const bodyClassList = document.body.classList.value.split(" ");
+        if (isChecked) {
+          bodyClassList.push("rt-dark-theme");
+          localStorage.setItem("rt-dark", 1);
+          this.isDarkTheme = true;
+        } else {
+          bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1);
+          localStorage.setItem("rt-dark", 0);
+          this.isDarkTheme = false;
+        }
+        document.body.classList = bodyClassList.join(" ");
+      }
+    }
+  };
 </script>
