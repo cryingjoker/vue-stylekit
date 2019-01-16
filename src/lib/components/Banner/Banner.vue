@@ -438,7 +438,7 @@ export default {
           this.$set(this.RtBanners, "activeIndex", index);
           this.$options.nextImageIndex = null
           this.setStartTimer();
-        }, 500);
+        }, 400);
       } else {
         this.$set(this.RtBanners, "activeIndex", index);
         this.setStartTimer();
