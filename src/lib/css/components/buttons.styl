@@ -78,7 +78,7 @@
 
     &[disabled]
       background-color b2c-black01
-      color b2c-black01
+      color white
       .{newAppName}-dark-theme &
         background-color: b2c-white01
         border-color b2c-white
@@ -117,7 +117,7 @@
       background-color b2c-orange-low
 
   &-white
-    border 2px solid transparent
+    border 2px solid white
     &:focus,
     &:hover
       opacity .7
@@ -134,7 +134,7 @@
       .{newAppName}-dark-theme &
         color b2c-white03!important
         opacity: 1
-        border-color transparent
+        border-color white
       .ripple-wave
         background-color b2c-cool-grey
 
@@ -151,7 +151,7 @@
       background-color: b2c-purple-hight
 
     &[disabled]
-      color b2c-black01
+      color white
       background-color b2c-black01
       .{newAppName}-dark-theme &
         background-color b2c-white01
@@ -189,4 +189,26 @@
     &[disabled]
       color b2c-black01
       border-color b2c-black01
+  &-transparent
+    border 2px solid transparent
+    &:focus,
+    &:hover
+      opacity .7
+      background-color: b2c-cool-grey05
+      .{newAppName}-dark-theme &
+        background-color: b2c-white01
+
+    &:active
+      background-color: transparent
+    &[disabled]
+      color b2c-black01
+      &:hover
+        background-color: transparent
+      .{newAppName}-dark-theme &
+        color b2c-white03!important
+        opacity: 1
+        border-color transparent
+      .ripple-wave
+        background-color b2c-cool-grey
+
 
