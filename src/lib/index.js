@@ -54,7 +54,9 @@ import {
   Youtube,
   Sticky,
   ResizeContentHeight,
-  Popup
+  Popup,
+  Logo
+
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -116,6 +118,7 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
+      Vue.component(Logo.name, Logo);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 

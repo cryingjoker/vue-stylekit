@@ -1,0 +1,99 @@
+<template>
+  <div class="rt-container">
+    <div class="app-content rt-col-12 rt-col-md-3">
+      <div class="app-title">
+        <div class="row"><h1 class="rt-font-hero rt-col">Logo</h1></div>
+      </div>
+      <div class="app-body">
+        <div class="rt-row">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="14px" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="19px" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="24px" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="30px" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="36px" height="60px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="38px" height="64px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="60px" height="100px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="121px" height="200px"></rt-logo>
+          </div>
+        </div>
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2c-purple-hight" width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2c-pink" width="14px" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2c-pink" bottom-fill-color="b2c-purple-low" bottom-fill-colo="b2c-green"
+                     width="19px" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-colo="b2c-green" width="24px" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-colo="b2c-green" width="30px" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2b-gray" bottom-fill-colo="b2c-green" width="36px" height="60px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2b-gray" bottom-fill-colo="b2c-green" width="38px" height="64px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2b-gray" bottom-fill-colo="b2c-green" width="60px" height="100px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo top-fill-color="b2b-gray" bottom-fill-colo="b2c-green" width="121px" height="200px"></rt-logo>
+          </div>
+        </div>
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+              text="<rt-logo></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo  top-fill-color=&quot;b2b-gray&quot;  bottom-fill-colo=&quot;b2c-green&quot;  width=&quot;121px&quot; height=&quot;200px&quot;></rt-logo>">
+            </pre-code>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</template>
+
+<script>
+  const componentDirectives = {};
+
+  import componentsList from "../../componentsList";
+
+  export default {
+    name: "AppLogo",
+    components: componentsList,
+    mounted() {
+    },
+    created() {
+    },
+    methods: {}
+  };
+</script>

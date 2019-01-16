@@ -97,5 +97,6 @@
   "switcher-color": "#404653",
   "input-placeholder-color": "#2F302F",
   "b2c-active-tab": "rgba(120,0,255,0.1)",
-  "game-promo-color": "#0C1424"
+  "game-promo-color": "#0C1424",
+  "b2b-gray": "#7b929b"
 }
