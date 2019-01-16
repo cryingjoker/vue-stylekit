@@ -8,7 +8,8 @@
   transition-property box-shadow
 
   &:hover
-    box-shadow 0 0 0 1px rgba(b2c-purple-low, .2)
+    .rt-code-viewer &
+      box-shadow 0 0 0 1px rgba(b2c-purple-low, .2)
 
   &__trigger
     border-radius 0
@@ -26,6 +27,9 @@
       width 30px
       height 40px
       fill b2c-purple-hight
+      display: none
+      .rt-code-viewer &
+        display: block
 
     &:hover
       opacity 1
