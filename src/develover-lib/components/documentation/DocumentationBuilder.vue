@@ -54,8 +54,8 @@ export default {
           labels: [
             { name: "name", label: "component name" },
             { name: "version", label: "release version" },
-            { name: "proporty", label: "component proporty" },
-            { name: "type", label: "proporty type" },
+            { name: "property", label: "component property" },
+            { name: "type", label: "property type" },
             { name: "description", label: "description" },
             { name: "value", label: "default value" }
           ]

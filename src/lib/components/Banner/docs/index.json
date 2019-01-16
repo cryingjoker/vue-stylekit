@@ -2,7 +2,7 @@
   "items": [
     {
       "name": "rt-banner",
-      "proporty": "(:)content-min-height",
+      "property": "(:)content-min-height",
       "type": [
         "Number",
         "String"
@@ -12,7 +12,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "(:)content-height",
+      "property": "(:)content-height",
       "type": [
         "Number",
         "String"
@@ -22,7 +22,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": ":dont-pause-on-hover",
+      "property": ":dont-pause-on-hover",
       "type": [
         "Boolean"
       ],
@@ -32,7 +32,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": ":has-custom-content",
+      "property": ":has-custom-content",
       "type": [
         "Boolean"
       ],
@@ -42,7 +42,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": ":without-empty-column",
+      "property": ":without-empty-column",
       "type": [
         "Boolean"
       ],
@@ -52,7 +52,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "mobile-image-height",
+      "property": "mobile-image-height",
       "type": [
         "String"
       ],
@@ -63,7 +63,7 @@
     {
       "value": "null",
       "name": " rt-banner",
-      "proporty": "(:)content-mobile-min-height",
+      "property": "(:)content-mobile-min-height",
       "type": [
         "Number",
         "String"
@@ -73,7 +73,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "(:)content-mobile-height",
+      "property": "(:)content-mobile-height",
       "type": [
         "Number",
         "String"
@@ -83,7 +83,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": ":is-fullscreen-image",
+      "property": ":is-fullscreen-image",
       "type": [
         "Boolean"
       ],
@@ -92,21 +92,21 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "justify",
+      "property": "justify",
       "type": "String",
       "description": "Сейчас принимает left - указывает на направление контанта слева",
       "value": "null"
     },
     {
       "name": "rt-banner",
-      "proporty": "background-color",
+      "property": "background-color",
       "type": "String",
       "description": "Устанавливает цвет фона банера \n возможные значения \n `dark-state` `yellow` `red` `dark-blue` `light-blue` `orange` `pink` `green`",
       "value": "null"
     },
     {
       "name": "rt-banner",
-      "proporty": ":background-repeat",
+      "property": ":background-repeat",
       "type": [
         "Boolean"
       ],
@@ -115,7 +115,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": ":sleep-time",
+      "property": ":sleep-time",
       "type": [
         "Number"
       ],
@@ -124,7 +124,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "banner-logo",
+      "property": "banner-logo",
       "type": [
         "String"
       ],
@@ -133,7 +133,7 @@
     },
     {
       "name": "rt-banner",
-      "proporty": "set-stop-on-click",
+      "property": "set-stop-on-click",
       "type": [
         "Boolean"
       ],
@@ -143,7 +143,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "background-position",
+      "property": "background-position",
       "type": [
         "String"
       ],
@@ -152,7 +152,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "(:)content-min-height",
+      "property": "(:)content-min-height",
       "type": [
         "Number",
         "String"
@@ -162,7 +162,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "(:)content-height",
+      "property": "(:)content-height",
       "type": [
         "Number",
         "String"
@@ -172,7 +172,7 @@
     },
     {
       "name": " rt-banner-item",
-      "proporty": "(:)content-mobile-min-height",
+      "property": "(:)content-mobile-min-height",
       "type": [
         "Number",
         "String"
@@ -182,7 +182,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "(:)content-mobile-height",
+      "property": "(:)content-mobile-height",
       "type": [
         "Number",
         "String"
@@ -192,7 +192,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "(:)content-min-width",
+      "property": "(:)content-min-width",
       "type": [
         "Number",
         "String"
@@ -202,7 +202,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "(:)content-max-width",
+      "property": "(:)content-max-width",
       "type": [
         "Number",
         "String"
@@ -212,7 +212,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": "background-сolor",
+      "property": "background-сolor",
       "type": [
         "String"
       ],
@@ -221,7 +221,7 @@
     },
     {
       "name": "rt-banner-item",
-      "proporty": ":is-white-color",
+      "property": ":is-white-color",
       "type": ["Boolean"],
       "description": "Устанавливает белый цвет текста слайда",
       "value": "false"
