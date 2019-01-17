@@ -80,6 +80,10 @@ export default {
     slideTime: {
       type: [String, Number],
       default: null
+    },
+    ga: {
+      type: Object,
+      default: null
     }
   },
   inject: {
@@ -188,12 +192,42 @@ export default {
       preloadImage.src = this.backgroundImage;
     }
   },
+  mounted () {
+    if (this.ga) {
+      this.activateEventToLink();
+    }
+  },
   methods: {
     normalizeVariable(variable) {
       if (typeof variable === "number") {
         variable += "px";
       }
       return variable;
+    },
+    activateEventToLink () {
+      if (this.$el.querySelector('a')) {
+        let ga = this.ga;
+        let parentId = this.RtBanners.id;
+        let currentKey = this.index;
+        this.$el.querySelector('a').addEventListener('click', function(e){
+          if (!this.getAttribute('data-ga-pushed')) {
+            e.preventDefault();
+            if (!window.dataLayer) {
+              window.dataLayer = [];
+            }
+            window.dataLayer.push({
+              event: 'b2c',
+              type: 'banner_click',
+              banner_name: ga.name,
+              banner_id: parentId,
+              banner_place: currentKey + 1,
+              banner_section: ga.section || window.location.pathname
+            })
+            this.setAttribute('data-ga-pushed', 'true');
+            this.click();
+          }
+        }, false);
+      }
     },
     loadImageAsync (src, resolve, reject) {
       let image = new Image()
