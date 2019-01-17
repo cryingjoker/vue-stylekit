@@ -96,6 +96,7 @@ export default {
     touchendX: null,
     stopAnimation: false,
     RtBanners: {
+      id: null,
       isMobile: false,
       items: [],
       activeIndex: -1,
@@ -121,7 +122,7 @@ export default {
       return className;
     },
     banerClass() {
-      let className = "rt-banner";
+      let className = "rt-banner rt-banner-id__" + this.RtBanners.id || this._uid;
       const activeIndex = this.RtBanners.activeIndex;
       if (this.RtBanners.items[activeIndex]) {
         if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
@@ -210,6 +211,7 @@ export default {
     this.calculateMobileOptions();
   },
   beforeMount() {
+    this.RtBanners.id = this._uid || Math.random(Date.now() + 1)
     this.RtBanners.setActiveItem = this.setActiveItem;
     this.RtBanners.setStartTimer = this.setStartTimer;
   },
