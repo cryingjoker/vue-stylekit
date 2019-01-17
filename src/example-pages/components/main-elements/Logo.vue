@@ -128,7 +128,7 @@
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo background=&quot;none&quot; color=&quot;#020303&quot; type=&quot;eset&quot;></rt-logo>">
+              text="<rt-logo background=&quot;none&quot; color=&quot;#0096A1&quot; center-color=&quot;#006C7A&quot; bottom-color=&quot;#fff000&quot; type=&quot;eset&quot;></rt-logo>">
             </pre-code>
           </div>
         </div>
