@@ -76,6 +76,63 @@
             </pre-code>
           </div>
         </div>
+
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;dr-web&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;#ffffff&quot; color=&quot;#69B548&quot; type=&quot;dr-web&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;#69B548&quot; color=&quot;#ffffff&quot; type=&quot;dr-web&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;#020303&quot; color=&quot;#ffffff&quot; type=&quot;dr-web&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;none&quot; color=&quot;#020303&quot; type=&quot;dr-web&quot;></rt-logo>">
+            </pre-code>
+          </div>
+        </div>
+
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;eset&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;#ffffff&quot; color=&quot;#69B548&quot; type=&quot;eset&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;none&quot; color=&quot;#00717F&quot; type=&quot;eset&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;none&quot; color=&quot;#020303&quot; type=&quot;eset&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo background=&quot;none&quot; color=&quot;#0096A1&quot; center-color=&quot;#006C7A&quot; bottom-color=&quot;#fff000&quot; type=&quot;eset&quot;></rt-logo>">
+            </pre-code>
+          </div>
+        </div>
+
       </div>
 
 

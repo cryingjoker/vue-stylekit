@@ -225,6 +225,14 @@
       "type": ["Boolean"],
       "description": "Устанавливает белый цвет текста слайда",
       "value": "false"
+    },
+    {
+      "name": "rt-banner-item",
+      "property": "lazy-image",
+      "type": ["String"],
+      "description": "Устанавливает для слайда фон в виде прелоадера, пока не загрузится основное изображение \n string - ссылка на внутренний или внешний файл",
+      "value": "null",
+      "version": " >= 0.0.30"
     }
   ]
 }

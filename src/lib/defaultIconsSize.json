@@ -5,11 +5,15 @@
   },
   "dr-web": {
     "width": "150px",
-    "height": "50px"
+    "height": "50px",
+    "background": "none",
+    "color" : "#69B548"
   },
   "eset": {
     "width": "90px",
-    "height": "50px"
+    "height": "50px",
+    "background": "#00717F",
+    "color": "#ffffff"
   },
   "kaspersky": {
     "width": "179px",
