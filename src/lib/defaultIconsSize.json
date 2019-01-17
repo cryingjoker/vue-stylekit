@@ -11,7 +11,9 @@
   },
   "eset": {
     "width": "90px",
-    "height": "50px"
+    "height": "50px",
+    "background": "#00717F",
+    "color": "#ffffff"
   },
   "kaspersky": {
     "width": "179px",
