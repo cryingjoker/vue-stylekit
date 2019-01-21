@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title"><h1 class="rt-font-hero">Youtube player</h1></div>
@@ -12,9 +13,13 @@
           </div>
           <div class="rt-col-1 rt-col-md-3 rt-col-td-10"></div>
         </div>
+
       </div>
     </div>
   </div>
+    <rt-youtube height="" :playlist-id="['PLbAFXJC0J5GanbANaPaaWYB6Vdc_JPZ6n']"></rt-youtube>
+  </div>
+
 </template>
 
 <script>
