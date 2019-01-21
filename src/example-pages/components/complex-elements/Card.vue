@@ -1041,6 +1041,42 @@
               text="<rt-card background-color-type=&quot;dark-blue&quot; :background-blur=&quot;5&quot;><p>Оплата услуг</p></rt-card>"
             />
           </div>
+          <div class="rt-col-3 rt-col-md-3 rt-space-top">
+            <div class="rtb-card">
+              <div class="rtb-card__title">Стандарт</div>
+              <div class="rtb-card__description">
+                <div class="rtb-card__description__item">
+                  <span class="rtb-card__description-text">3 дня</span>
+                  <div class="rtb-card__hint">
+                    <div class="rtb-card__hint-text">Это всё что угодно,  но не адрес электронной  почты</div>
+                  </div>
+                </div>
+                <div class="rtb-card__description__item__footnote">хранения записей</div>
+                <div class="rtb-card__description__item--purple">32 канала</div>
+                <div class="rtb-card__description__item--disabled">32 канала</div>
+                <div class="rtb-card__links-block">
+                  <div class="rtb-card__social-link"><img src="/static/B2C/youtube.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/whatsapp.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/viber.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/facebook.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/vk.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/odnoklassniki.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/tamtam.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_map.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_navigator.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_transport.svg"></div>
+                  <span class="rtb-card__expand-button">ещё 4</span>
+                  <div class="rtb-card__description__item__footnote">безлимитные сервисы</div>
+                </div>
+              </div>
+              <div class="rtb-card__cost">
+                <div class="rtb-card__cost__digit">400</div>
+                <div class="rtb-card__cost__currency"></div>
+                <div class="rtb-card__cost__period">в месяц</div>
+              </div>
+              <button class="rt-button rt-button-small rt-button-purple-border">Выбрать</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

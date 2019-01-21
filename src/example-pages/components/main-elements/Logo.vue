@@ -133,12 +133,104 @@
           </div>
         </div>
 
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;wargaming&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;wargaming&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;wargaming&quot;></rt-logo>">
+            </pre-code>
+          </div>
+
+        </div>
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;world-of-tanks&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-tanks&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-tanks&quot;></rt-logo>">
+            </pre-code>
+          </div>
+
+        </div>
+
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;world-of-warship&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warship&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warship&quot;></rt-logo>">
+            </pre-code>
+          </div>
+
+        </div>
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;world-of-warplanes&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warplanes&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warplanes&quot;></rt-logo>">
+            </pre-code>
+          </div>
+
+        </div>
+        <div class="rt-row rt-space-top">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo type=&quot;4-game-main&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;4-game-main&quot;></rt-logo>">
+            </pre-code>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;4-game-main&quot;></rt-logo>">
+            </pre-code>
+          </div>
+
+        </div>
+
       </div>
 
 
     </div>
   </div>
-</template>
+</template>я
 
 <script>
   const componentDirectives = {};

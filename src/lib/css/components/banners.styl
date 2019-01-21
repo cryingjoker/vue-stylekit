@@ -164,6 +164,10 @@
       width 100%
       background-color main-color
 
+    &-b2b-dark-state
+      width 100%
+      background-color b2b-dark-state
+
   &-triangle
     width 185px
     height 100%
@@ -404,8 +408,8 @@
         min-width 100%
 
       @media (max-width: mobile-step-size)
-        min-width initial
-        max-width initial
+        min-width initial                   //calc(100% - 50px)?
+        max-width initial                   //calc(100% - 50px)?
 
     @media (max-width: mobile-step-size)
       width 100%
