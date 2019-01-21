@@ -23,7 +23,6 @@ export default {
       type: Boolean,
       default: false
     },
-
     contentMobileHeight: {
       type: [Number, String],
       default: null
@@ -49,6 +48,14 @@ export default {
       default: null
     },
     isFullscreenImage: {
+      type: Boolean,
+      default: false
+    },
+    noTriangle: {
+      type: Boolean,
+      default: false
+    },
+    roundAngles: {
       type: Boolean,
       default: false
     },
@@ -87,7 +94,7 @@ export default {
     mobileImageMaxHeight: {
       type: String,
       default: null
-    },
+    }
   },
   data: () => ({
     isMobile: false,
@@ -138,6 +145,10 @@ export default {
 
         if (this.RtBanners.items[activeIndex].isWhiteColor) {
           className += " rt-banner--color-white";
+        }
+
+        if(this.roundAngles){
+          className += " rtb-banner"
         }
       }
       return className;
@@ -325,6 +336,7 @@ export default {
           this.isMobile = isMobile;
         }
       }
+      console.log('--> ', this.contentMobileHeight);
     },
     calculateScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -557,9 +569,6 @@ export default {
               this.clearMovedBannerImages().then()
             })
           },450)
-
-
-
       });
     },
     clearStyleMainBanner() {
@@ -649,7 +658,7 @@ export default {
       }
     };
     const leftTriangle = () => {
-      if (!this.isFullscreenImage) {
+      if (!this.isFullscreenImage && !this.noTriangle) {
         return <svg
           class="rt-banner-triangle"
           xmlns="http://www.w3.org/2000/svg"
@@ -662,7 +671,7 @@ export default {
       }
     };
     const rightTriangle = () => {
-      if (!this.isFullscreenImage) {
+      if (!this.isFullscreenImage && !this.noTriangle) {
         return <svg
           class="rt-banner-right-triangle"
           xmlns="http://www.w3.org/2000/svg"

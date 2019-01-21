@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ya_navigator</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0.00041159537%" y1="99.9980853%" x2="100.004639%" y2="-0.00614220433%" id="linearGradient-1">
+            <stop stop-color="#FFCC00" offset="0%"></stop>
+            <stop stop-color="#FFE992" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Plans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-product-plans" transform="translate(-188.000000, -803.000000)" fill-rule="nonzero">
+            <g id="soc" transform="translate(123.000000, 768.000000)">
+                <g id="social_2" transform="translate(1.000000, 0.000000)">
+                    <g id="ya_navigator" transform="translate(64.000000, 35.000000)">
+                        <circle id="Oval-7-Copy" fill="#F5F5F5" cx="13" cy="13" r="13"></circle>
+                        <g id="Group-26" transform="translate(4.898551, 5.275362)">
+                            <polygon id="Fill-1" fill="url(#linearGradient-1)" points="14.6956522 0 0 6.58472098 6.43073456 9.1166787 8.72716133 16.2028986"></polygon>
+                            <polygon id="Fill-3" fill="#FFCC00" points="14.3188406 0 6.02898551 9.36946675 8.49392718 16.2028986"></polygon>
+                            <polygon id="Fill-4" fill="#ECA704" points="5.93079096 9.49983719 8.66666667 16.2028986 7.75225989 7.43575944 0 6.4057971"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

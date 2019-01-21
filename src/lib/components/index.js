@@ -52,3 +52,4 @@
  export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';
  export { default as Popup } from './Popup/Popup.vue';
  export { default as Logo } from './Logo/Logo.vue';
+ export { default as CardFee } from './Card/CardFee.vue';

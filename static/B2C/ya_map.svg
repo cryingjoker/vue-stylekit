@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ya_map</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Plans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-product-plans" transform="translate(-156.000000, -803.000000)" fill-rule="nonzero">
+            <g id="soc" transform="translate(123.000000, 768.000000)">
+                <g id="social_2" transform="translate(1.000000, 0.000000)">
+                    <g id="ya_map" transform="translate(32.000000, 35.000000)">
+                        <circle id="Oval-7" fill="#F5F5F5" cx="13" cy="13" r="13"></circle>
+                        <g id="Group-13" transform="translate(6.782609, 3.391304)">
+                            <path d="M8.8209774,7.72400896 L12.4347826,6.02898551 C12.4347826,8.99150425 10.4445002,12.0546179 8.67916366,14.9718689 L5.65217391,19.5942029 L6.9725087,11.1593236 L8.8209774,7.72400896 Z" id="Fill-1" fill="#E00000"></path>
+                            <circle id="Oval" fill="#FF3333" cx="6.2173913" cy="6.2173913" r="6.2173913"></circle>
+                            <circle id="Oval_1_" fill="#FFFFFF" cx="6.2173913" cy="6.2173913" r="2.44927536"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

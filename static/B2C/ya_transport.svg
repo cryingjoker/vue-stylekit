@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ya_transport</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Plans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-product-plans" transform="translate(-220.000000, -803.000000)">
+            <g id="soc" transform="translate(123.000000, 768.000000)">
+                <g id="social_2" transform="translate(1.000000, 0.000000)">
+                    <g id="ya_transport" transform="translate(96.000000, 35.000000)">
+                        <circle id="Oval-7-Copy-2" fill="#F5F5F5" fill-rule="nonzero" cx="13" cy="13" r="13"></circle>
+                        <g id="iOS" transform="translate(4.521739, 4.521739)">
+                            <g id="iOS_x2F_1024">
+                                <rect id="Rectangle-Copy" fill="#000000" fill-rule="nonzero" x="1.62100082" y="15.2601726" width="3.43396226" height="2.07316071"></rect>
+                                <polygon id="Rectangle-Copy-2" fill="#000000" fill-rule="nonzero" points="11.9015587 15.2601726 15.3355209 15.2601726 15.3355209 17.3333333 11.9015587 17.3333333"></polygon>
+                                <path d="M0.533223954,2.88532676 L1.06644791,2.88532676 L1.06644791,6.41183724 C0.477768663,6.41183724 0,5.92240033 0,5.31755035 L0,3.4324702 C0,3.13111385 0.238884331,2.88532676 0.533223954,2.88532676 Z" id="Rectangle" fill="#0061DC" fill-rule="nonzero"></path>
+                                <path d="M16.4232978,2.88532676 L15.8900738,2.88532676 L15.8900738,6.41183724 C16.4787531,6.41183724 16.9565217,5.92240033 16.9565217,5.31755035 L16.9565217,3.4324702 C16.9565217,3.13111385 16.7176374,2.88532676 16.4232978,2.88532676 Z" id="Rectangle-Copy-3" fill="#0061DC" fill-rule="nonzero"></path>
+                                <g id="Rectangle_1_" transform="translate(1.621001, 0.000000)" fill="#007AFF" fill-rule="nonzero">
+                                    <path d="M0,1.37640773 C0,0.380435676 4.41296144,0 6.85726005,0 C9.26956522,0 13.7145201,0.380435676 13.7145201,1.37640773 L13.7145201,15.3670366 L0,15.3670366 L0,1.37640773 Z" id="path-1_1_"></path>
+                                </g>
+                                <path d="M2.38884331,2.4514591 C3.70484003,2.07102343 5.73748975,1.88080559 8.48892535,1.88080559 C11.240361,1.88080559 13.2730107,2.07102343 14.5890074,2.4514591 C14.7276456,2.49206741 14.8236259,2.62030415 14.8236259,2.76777641 L14.8236259,10.5047267 C14.8236259,10.6863954 14.678589,10.8338677 14.5015587,10.8338677 L2.47629204,10.8338677 C2.29926169,10.8338677 2.15422477,10.6863954 2.15422477,10.5047267 L2.15422477,2.76777641 C2.15422477,2.62244143 2.25020509,2.49206741 2.38884331,2.4514591 Z" id="Rectangle_2_" fill="#FFFFFF" fill-rule="nonzero" opacity="0.9807"></path>
+                                <path d="M6.58424938,14.2556515 L10.3936013,14.2556515 C11.0228056,14.2556515 11.5474979,14.7386765 11.6029532,15.3670366 L5.37489746,15.3670366 C5.42821985,14.7386765 5.95504512,14.2556515 6.58424938,14.2556515 Z" id="Rectangle-17" fill="#0061DC" fill-rule="nonzero"></path>
+                                <g id="Oval" transform="translate(11.986874, 11.947390)">
+                                    <ellipse id="path-3_2_" fill="#000000" fill-rule="nonzero" cx="1.13043478" cy="1.1648171" rx="1.13043478" ry="1.1648171"></ellipse>
+                                    <ellipse id="path-3_1_" fill="#F3F3F3" fill-rule="nonzero" cx="1.13043478" cy="1.1648171" rx="1.13043478" ry="1.1648171"></ellipse>
+                                    <ellipse cx="1.13043478" cy="1.1648171" rx="1.07711239" ry="1.11138512"></ellipse>
+                                </g>
+                                <g id="Oval-Copy-2" transform="translate(2.730107, 11.947390)">
+                                    <ellipse id="path-5_3_" fill="#000000" fill-rule="nonzero" cx="1.13043478" cy="1.1648171" rx="1.13043478" ry="1.1648171"></ellipse>
+                                    <ellipse id="path-5_2_" fill="#F3F3F3" fill-rule="nonzero" cx="1.13043478" cy="1.1648171" rx="1.13043478" ry="1.1648171"></ellipse>
+                                    <ellipse id="Oval" cx="1.13043478" cy="1.1648171" rx="1.07711239" ry="1.11138512"></ellipse>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

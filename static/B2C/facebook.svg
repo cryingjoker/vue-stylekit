@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="12.7767741" cy="13.3233778" r="12.6766222"></circle>
+        <path d="M16.3523411,26 L16.3523411,16.3992485 L19.4551603,16.3992485 L19.9196932,12.6575982 L16.3523411,12.6575982 L16.3523411,10.2687199 C16.3523411,9.18542477 16.6419364,8.44721983 18.1376718,8.44721983 L20.0453515,8.44629092 L20.0453515,5.099799 C19.7153309,5.0542824 18.5829759,4.95238095 17.2655768,4.95238095 C14.5151373,4.95238095 12.6322315,6.6960383 12.6322315,9.89827046 L12.6322315,12.6575982 L9.52154195,12.6575982 L9.52154195,16.3992485 L12.6322315,16.3992485 L12.6322315,26 L16.3523411,26 Z" id="path-3"></path>
+    </defs>
+    <g id="Plans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-product-plans" transform="translate(-219.000000, -768.000000)">
+            <g id="soc" transform="translate(123.000000, 768.000000)">
+                <g id="social">
+                    <g id="Fb" transform="translate(96.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Oval-5" fill="#3C5A99" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Fill-4-Copy" fill="#FEFEFE" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
