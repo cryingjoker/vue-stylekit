@@ -336,7 +336,6 @@ export default {
           this.isMobile = isMobile;
         }
       }
-      console.log('--> ', this.contentMobileHeight);
     },
     calculateScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;

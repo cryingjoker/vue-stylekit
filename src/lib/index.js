@@ -55,8 +55,7 @@ import {
   Sticky,
   ResizeContentHeight,
   Popup,
-  Logo,
-  CardFee
+  Logo
 
 } from "./components";
 
@@ -120,8 +119,6 @@ const VueRtStyle = {
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
       Vue.component(Logo.name, Logo);
-      Vue.component(CardFee.name, CardFee);
-      // Vue.component(b2bBanner.name, b2bBanner);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 
