@@ -28,7 +28,7 @@
             content-mobile-height="200px"
             background-color="b2b-dark-state">
             <div class="rtb-banner__text-content">
-              <h2 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h2>
+              <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
               <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
             </div>
             <div>
