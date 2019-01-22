@@ -15,7 +15,21 @@ export default {
     },
     startIndex: {
       type: Array,
-      default: []
+      default: ()=>{
+        return [0]
+      }
+    },
+    height:{
+      type: String,
+      default: null
+    },
+    isFullscreen:{
+      type: Boolean,
+      default: false
+    },
+    realTimePlay:{
+      type: Boolean,
+      default: false
     },
     playlistId : {
       type: Array,
@@ -188,7 +202,7 @@ export default {
         settings.videoId = this.videoId[this.activeIndexVideo]
       }else{
 
-        if(this.playlistId){
+        if(this.playlistId && this.startIndex){
           settings.playerVars.list = this.playlistId[this.activePlaylistIndex];
           if(this.startIndex[this.activePlaylistIndex] !== undefined) {
             settings.playerVars.index = this.startIndex[this.activePlaylistIndex];
@@ -324,6 +338,9 @@ export default {
       if(this.pauseImage) {
         style.backgroundImage = 'url('+this.pauseImage+')'
       }
+      if(this.height){
+        style.height = this.height;
+      }
       return <div class={"rt-youtube___pause-image"+(!this.isPlaying ? ' rt-youtube___pause-image--is-active':'')} style={style}></div>
     })()
     const playButton = (()=>{
@@ -414,7 +431,7 @@ export default {
       }
     })()
     const nextVideoButton = (()=>{
-      if(this.playerState !== '-1' && this.videoSize > 0 && this.activeIndexVideo+1 < this.videoSize){
+      if(this.playerState !== '-1' && this.videoSize > 1 && this.activeIndexVideo+1 < this.videoSize){
         return <div class="rt-youtube__next rt-youtube__change-video" onClick={this.nextVideo}>
           <svg width="20px" height="39px" class="rt-youtube__change-icon" viewBox="0 0 20 39" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -452,6 +469,12 @@ export default {
       youtubeClass+=' rt-youtube--touch-detected';
       if(this.touchCount > 0){
         youtubeClass+=' rt-youtube--is-hover';
+      }
+      if(this.isFullscreen){
+        youtubeClass+=' rt-youtube--is-fullscreen';
+      }
+      if(this.realTimePlay){
+        youtubeClass+=' rt-youtube--real-time-play';
       }
     }
 

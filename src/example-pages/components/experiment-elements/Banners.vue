@@ -1,56 +1,60 @@
 <template>
   <div>
     <div class="rt-container">
-      <div class="grid-center" />
+      <div class="grid-center"/>
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
           <div class="row"><h1 class="rt-font-hero rt-col">Banners</h1></div>
         </div>
       </div>
     </div>
-    <div class="rt-col-12">
-      <rt-banner
-        :set-stop-on-click="true"
-        :sleep-time="20000"
-        bannerLogo=""
-        content-mobile-min-height="80vh"
-        content-mobile-height="100vh"
-        :noTriangle="true"
-        :roundAngles="true"
-        :hasCustomContent="true"
-      >
-        <rt-banner-item
-          background-image="/static/B2C/banner-img.png"
-          :is-white-color="true"
+    <div class="rt-container">
+      <div class="rt-col-12 rt-space-bottom2">
+        <rt-banner
+          :set-stop-on-click="true"
+          :sleep-time="20000"
+          bannerLogo=""
           content-mobile-min-height="80vh"
-          content-mobile-height="200px"
-          background-color="b2b-dark-state">
-          <div class="rtb-banner__text-content">
-            <h2 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h2>
-            <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
-          </div>
-          <div>
-            <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
-          </div>
+          content-mobile-height="100vh"
+          :noTriangle="true"
+          :roundAngles="true"
+          :hasCustomContent="true"
+        >
 
-        </rt-banner-item>
-      </rt-banner>
+          <rt-banner-item
+            background-image="/static/images/B2C/banner-img.png"
+            :is-white-color="true"
+            content-mobile-min-height="80vh"
+            content-mobile-height="200px"
+            background-color="b2b-dark-state">
+            <div class="rtb-banner__text-content">
+              <h2 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h2>
+              <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
+            </div>
+            <div>
+              <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
+            </div>
+
+          </rt-banner-item>
+        </rt-banner>
+      </div>
     </div>
+
     <!--<div class="rt-col-12">-->
-      <!--<div class="rtb-banner">-->
-        <!--<div class="rtb-banner__body">-->
-          <!--<div class="rtb-banner__content">-->
-            <!--<div class="rtb-banner__text-content">-->
-              <!--<div class="rtb-banner__title">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</div>-->
-              <!--<div class="rtb-banner__description">Пакет «Быть в плюсе»</div>-->
-            <!--</div>-->
-            <!--<div class="rtb-banner__button">-->
-              <!--<rt-button class="rt-button-white">Подробнее</rt-button>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="rtb-banner__image" style="background-image: url('/static/B2C/banner-img.png')"></div>-->
-        <!--</div>-->
-      <!--</div>-->
+    <!--<div class="rtb-banner">-->
+    <!--<div class="rtb-banner__body">-->
+    <!--<div class="rtb-banner__content">-->
+    <!--<div class="rtb-banner__text-content">-->
+    <!--<div class="rtb-banner__title">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</div>-->
+    <!--<div class="rtb-banner__description">Пакет «Быть в плюсе»</div>-->
+    <!--</div>-->
+    <!--<div class="rtb-banner__button">-->
+    <!--<rt-button class="rt-button-white">Подробнее</rt-button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="rtb-banner__image" style="background-image: url('/static/B2C/banner-img.png')"></div>-->
+    <!--</div>-->
+    <!--</div>-->
     <!--</div>-->
     <pre-code
       text="<rt-banner :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
@@ -117,26 +121,27 @@
     />
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder :json="documentation" type="components" />
+      <documentation-builder :json="documentation" type="components"/>
     </div>
   </div>
 </template>
 
 <script>
-// import documentation from "../../../lib/components/Annotation/docs/index.json";
-import documentation from "../../../lib/components/Banner/docs/index.json";
-import componentsList from "../../componentsList";
-// const componentsList = {};
-export default {
-  name: "AppBanners",
-  components: componentsList,
-  data: () => ({
-    documentation: {}
-  }),
-  mounted() {
-    this.documentation = documentation;
-  },
-  created() {},
-  methods: {}
-};
+  // import documentation from "../../../lib/components/Annotation/docs/index.json";
+  import documentation from "../../../lib/components/Banner/docs/index.json";
+  import componentsList from "../../componentsList";
+  // const componentsList = {};
+  export default {
+    name: "AppBanners",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>

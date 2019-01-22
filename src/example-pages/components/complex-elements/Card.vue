@@ -1055,16 +1055,16 @@
                 <div class="rtb-card__description__item--purple">32 канала</div>
                 <div class="rtb-card__description__item--disabled">32 канала</div>
                 <div class="rtb-card__links-block">
-                  <div class="rtb-card__social-link"><img src="/static/B2C/youtube.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/whatsapp.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/viber.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/facebook.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/vk.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/odnoklassniki.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/tamtam.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_map.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_navigator.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/B2C/ya_transport.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/youtube.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/whatsapp.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/viber.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/facebook.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/vk.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/odnoklassniki.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/tamtam.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_map.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_navigator.svg"></div>
+                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_transport.svg"></div>
                   <span class="rtb-card__expand-button">ещё 4</span>
                   <div class="rtb-card__description__item__footnote">безлимитные сервисы</div>
                 </div>
