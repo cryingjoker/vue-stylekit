@@ -1,0 +1,164 @@
+.{b2bAppName}-card
+  display flex
+  flex 1
+  flex-direction column
+  align-self stretch
+  width 100%
+  min-height 184px
+  overflow unset
+  color main-color
+  background-repeat no-repeat
+  border-radius 10px
+  box-shadow card-shadow
+  position relative
+  padding 20px
+  box-sizing border-box
+  background-color b2c-white
+  z-index 1
+  &__description
+    margin-bottom 60px
+    vertical-align: middle
+    &__item
+      vertical-align: middle
+      &+&
+        margin-bottom 12px
+      &__footnote
+        color b2c-black05
+      &--disabled
+        opacity .25
+      &--purple
+        color b2c-purple
+    &__row
+      margin-bottom vertical-space *.5
+  &__cost
+    margin-bottom: vertical-space *.25
+
+  &__links-block
+    overflow: hidden
+    max-height 26px
+    max-width 175px
+    display inline-block
+    vertical-align: middle
+    margin-bottom vertical-space *.25
+    transition: all 0s 9999999s
+    &--expanded
+      max-height none
+      & + .rtb-card__expand-button
+        display none
+      & + .rtb-card__expand-button
+        max-height none
+      .rtb-card__social-link
+        &:nth-child(5+n)
+          display inline-block
+  &__social-link
+    margin-bottom 6px
+    size(26px)
+    display inline-block
+    vertical-align: middle
+    &+&
+      margin-left 6px
+    &:nth-child(6n)
+      margin-left: 0
+    &:nth-child(5+n)
+      display none
+  &__expand-button
+    font-size: 14px
+    line-height 18px
+    color b2c-purple
+    vertical-align: middle
+    cursor: pointer
+    &:active ~ .{b2bAppName}-card__links-block
+      transition all 0s
+      max-height none
+  &__hint
+    width 20px
+    height 20px
+    border-radius 50%
+    background-color b2b-cool-grey05-no-opacity
+    color b2b-state
+    display inline-block
+    position relative
+    vertical-align: middle
+    margin-left: 6px
+    text-align: center
+    font-size 14px
+    line-height 20px
+    cursor pointer
+    z-index 9
+    &__text
+      padding 8px 12px
+      box-sizing border-box
+      background-color b2b-cool-grey05-no-opacity
+      color b2b-state
+      position relative
+      right -25px
+      top -50px
+      width auto
+      height auto
+      min-width 180px
+      min-height 70px
+      z-index 9
+      text-align left
+      border-radius 5px
+      &:before
+        position absolute
+        content ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 5px 5px 5px 0
+        border-color: transparent #f1f3f5 transparent transparent
+        top calc(50% - 5px)
+        left -5px
+  .rt-card__content
+    padding 0
+    min-height auto
+  .rt-card__body
+    padding 0
+    margin-bottom vertical-space
+  //&__discount
+  //  width 100%
+  //  height 10px
+  //  position absolute
+  //  top 0
+  //  left 0
+  //  z-index 2
+  //  &-line
+  //    height 10px
+  //    position absolute
+  //    border-radius 10px 10px 0 0
+  //&__discount-line-1
+  //  background-color: mediumvioletred
+  //  top -10px
+  //  width 90%
+  //  left 5%
+  //  &:after
+  //    position absolute
+  //    content: '1 услуга  со скидкой  50%'
+  //    background-color mediumvioletred
+  //    width 62px
+  //    height 60px
+  //    top 10px
+  //    right 0
+  //    color #fff
+  //    font-size 14px
+  //    line-height 16px
+  //    text-align: center
+  //&__discount-line-2
+  //  background-color: limegreen
+  //  top -20px
+  //  width 81%
+  //  left 9.5%
+  //&__discount-line-3
+  //  background-color: b2c-yellow-hight
+  //  top -30px
+  //  width 72.9%
+  //  left 13.95%
+  .rt-card__background
+    top 0
+    left 0
+    right 0
+    bottom 0
+  .rt-card__header,
+  .rt-card__footer
+    padding 0

@@ -1041,41 +1041,75 @@
               text="<rt-card background-color-type=&quot;dark-blue&quot; :background-blur=&quot;5&quot;><p>Оплата услуг</p></rt-card>"
             />
           </div>
+
+          <div class="rt-col-3 rt-col-md-3 rt-space-top higher-z">
+            <rt-card
+              :equalPadding="true">
+              <template slot="header">
+                <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Вызов 400</p>
+              </template>
+              <template slot="content">
+                <div class="rtb-card__description__row">
+                  <span class="rt-font-paragraph rt-font-bold">300 минут</span>
+                  <hint></hint>
+                  <p class="rt-font-small-paragraph color-main025">на номера домашнего региона</p>
+                </div>
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph rt-font-bold">50 СМС</p>
+                  <p class="rt-font-small-paragraph color-main025">по всей России</p>
+                </div>
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph rt-font-bold">3 Гб</p>
+                  <p class="rt-font-small-paragraph color-main025">интернета по всей России</p>
+                </div>
+                <div class="rtb-card__description__row">
+                  <links-block></links-block>
+                  <p class="rt-font-small-paragraph color-main025">безлимитные сервисы</p>
+                </div>
+              </template>
+              <template slot="footer">
+                <div class="rtb-card__cost">
+                  <span class="rt-font-b2b-card-price">400</span>
+                  <span class="rt-font-b2b-card-price">₽</span>
+                  <span class="rt-font-paragraph rt-font-bold">в месяц</span>
+                </div>
+                <a href="#">
+                  <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
+                </a>
+              </template>
+            </rt-card>
+          </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top">
-            <div class="rtb-card">
-              <div class="rtb-card__title">Стандарт</div>
-              <div class="rtb-card__description">
-                <div class="rtb-card__description__item">
-                  <span class="rtb-card__description-text">3 дня</span>
-                  <div class="rtb-card__hint">
-                    <div class="rtb-card__hint-text">Это всё что угодно,  но не адрес электронной  почты</div>
-                  </div>
+            <rt-card
+              :equalPadding="true">
+              <template slot="header">
+                <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+              </template>
+              <template slot="content">
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph ">до 650 Мбит/с</p>
                 </div>
-                <div class="rtb-card__description__item__footnote">хранения записей</div>
-                <div class="rtb-card__description__item--purple">32 канала</div>
-                <div class="rtb-card__description__item--disabled">32 канала</div>
-                <div class="rtb-card__links-block">
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/youtube.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/whatsapp.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/viber.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/facebook.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/vk.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/odnoklassniki.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/tamtam.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_map.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_navigator.svg"></div>
-                  <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_transport.svg"></div>
-                  <span class="rtb-card__expand-button">ещё 4</span>
-                  <div class="rtb-card__description__item__footnote">безлимитные сервисы</div>
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph ">4 антенны</p>
                 </div>
-              </div>
-              <div class="rtb-card__cost">
-                <div class="rtb-card__cost__digit">400</div>
-                <div class="rtb-card__cost__currency"></div>
-                <div class="rtb-card__cost__period">в месяц</div>
-              </div>
-              <button class="rt-button rt-button-small rt-button-purple-border">Выбрать</button>
-            </div>
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                </div>
+                <div class="rtb-card__description__row">
+                  <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                </div>
+              </template>
+              <template slot="footer">
+                <div class="rtb-card__cost">
+                  <span class="rt-font-b2b-card-price">500</span>
+                  <span class="rt-font-b2b-card-price">₽</span>
+                  <span class="rt-font-paragraph rt-font-bold">в месяц</span>
+                </div>
+                <a href="#">
+                  <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
+                </a>
+              </template>
+            </rt-card>
           </div>
         </div>
       </div>

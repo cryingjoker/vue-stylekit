@@ -52,3 +52,5 @@
  export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';
  export { default as Popup } from './Popup/Popup.vue';
  export { default as Logo } from './Logo/Logo.vue';
+ export { default as LinksBlock } from './Card/LinksBlock.vue';
+ export { default as Hint } from './Card/Hint.vue';
