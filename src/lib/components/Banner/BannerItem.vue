@@ -81,6 +81,10 @@ export default {
       type: [String, Number],
       default: null
     },
+    isGameBannerItem:{
+      type: Boolean,
+      default: false
+    },
     ga: {
       type: Object,
       default: null
@@ -97,6 +101,13 @@ export default {
   },
 
   computed: {
+    bannerItemWrapperClass(){
+      let bannerItemWrapperClass = "";
+      if(this.isGameBannerItem){
+        bannerItemWrapperClass += 'rt-banner__item-wrapper rt-banner__item-wrapper-game'
+      }
+      return bannerItemWrapperClass;
+    },
     banerStyle() {
       const styles = {};
 
@@ -131,7 +142,7 @@ export default {
       return styles;
     },
     bannerClass() {
-      let className = "";
+      let className = " rt-banner__item-wrapper";
       if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
         className += " rt-banner-content--active";
       }
@@ -172,6 +183,9 @@ export default {
       }
       if (this.linkTarget) {
         bannerItemData.linkTarget = this.linkTarget;
+      }
+      if(this.isGameBannerItem) {
+        bannerItemData.isGameBannerItem = this.isGameBannerItem;
       }
 
       this.RtBanners.items.push(bannerItemData);
@@ -245,12 +259,30 @@ export default {
     }
   },
   render(h){
+    const content = ()=>{
+      if(this.isGameBannerItem){
+        return <rt-banner-video-game-contron></rt-banner-video-game-contron>
+      }
+      return null
+    }
     if(this.hasCustomContent){
-      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+      let bannerClass = "rt-banner__item";
+      if(this.RtBanners.activeIndex) {
+        bannerClass += " rt-banner__item--is-active";
+      }
+
+      return <div class={this.bannerClass} >
+        {this.$slots.default}
+        {content()}
+        </div>
     }else {
-      return <div>
+
+      return <div class={this.bannerItemWrapperClass}>
         <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
-          <div class="rt-banner-content__inner">{this.$slots.default}</div>
+          <div class="rt-banner-content__inner">
+            {this.$slots.default}
+            {content()}
+            </div>
         </div>
       </div>
     }

@@ -55,7 +55,8 @@ import {
   Sticky,
   ResizeContentHeight,
   Popup,
-  Logo
+  Logo,
+  BannerVideoGameControl
 
 } from "./components";
 
@@ -99,6 +100,7 @@ const VueRtStyle = {
       Vue.component(Banner.name, Banner);
       Vue.component(BannerItem.name, BannerItem);
       Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);
+      Vue.component(BannerVideoGameControl.name, BannerVideoGameControl);
       Vue.component(FullscreenImage.name, FullscreenImage);
       Vue.component(RowList.name, RowList);
       Vue.component(RowListItem.name, RowListItem);
