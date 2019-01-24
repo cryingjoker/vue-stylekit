@@ -1051,7 +1051,9 @@
               <template slot="content">
                 <div class="rtb-card__description__row">
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
-                  <hint></hint>
+                  <hint>
+                    <slot>Это всё что угодно, <br>но не адрес электронной  почты</slot>
+                  </hint>
                   <p class="rt-font-small-paragraph color-main025">на номера домашнего региона</p>
                 </div>
                 <div class="rtb-card__description__row">
@@ -1063,7 +1065,20 @@
                   <p class="rt-font-small-paragraph color-main025">интернета по всей России</p>
                 </div>
                 <div class="rtb-card__description__row">
-                  <links-block></links-block>
+                  <links-block>
+                    <template slot="content">
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/youtube.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/whatsapp.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/viber.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/facebook.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/vk.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/odnoklassniki.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/tamtam.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_map.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_navigator.svg"></div>
+                      <div class="rtb-card__social-link"><img src="/static/images/B2C/ya_transport.svg"></div>
+                    </template>
+                  </links-block>
                   <p class="rt-font-small-paragraph color-main025">безлимитные сервисы</p>
                 </div>
               </template>
