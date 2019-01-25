@@ -101,6 +101,7 @@ export default {
   },
 
   computed: {
+
     bannerItemWrapperClass(){
       let bannerItemWrapperClass = "";
       if(this.isGameBannerItem){
@@ -265,19 +266,21 @@ export default {
       }
       return null
     }
+    //return <div style={this.banerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
     if(this.hasCustomContent){
       let bannerClass = "rt-banner__item";
       if(this.RtBanners.activeIndex) {
         bannerClass += " rt-banner__item--is-active";
       }
 
-      return <div class={this.bannerClass} >
+      //return <div style={this.banerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} style={this.banerStyle}>
         {this.$slots.default}
         {content()}
         </div>
     }else {
 
-      return <div class={this.bannerItemWrapperClass}>
+      return <div>
         <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
           <div class="rt-banner-content__inner">
             {this.$slots.default}

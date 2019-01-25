@@ -70,7 +70,6 @@
 
     methods: {
       toggleStartStop(){
-
         this.$set(this,'isPlaying', !this.isPlaying);
         if(this.isPlaying){
           this.video.play()
@@ -82,7 +81,7 @@
     },
 
     render(h) {
-      return <div class={"banner__video-controls" + (!this.isPlaying ? " banner__video-controls--is-pause" : "")} onClick={this.toggleStartStop}>
+      return <div class={"banner__video-controls" + (this.isPlaying ? " banner__video-controls--is-pause" : "")} onClick={this.toggleStartStop}>
         <svg class="banner__video-time-line-active" width="131px" height="131px" viewBox="0 0 126 126" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#FF4F12">
           <circle r="60" cx="63" cy="63" fill="transparent" />
         </svg>

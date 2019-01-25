@@ -95,7 +95,7 @@
                       <!--link=&quot;https://www.google.co.uk/search?q=yosemite+national+park&quot;-->
                       <!--:is-white-color=&quot;true&quot; background-color=&quot;dark-state&quot;>-->
         <!--<rt-color-line-text>-->
-          <!--<template slot=&quot;label&quot;>Расширяя границы</template>-->
+          <!--<template sljs-form-calc-profile ot=&quot;label&quot;>Расширяя границы</template>-->
           <!--<template slot=&quot;content&quot;>Высокоскоростной интернет теперь повсюду</template>-->
         <!--</rt-color-line-text>-->
         <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->

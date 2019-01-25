@@ -222,6 +222,16 @@
               text="<rt-logo color=&quot;#020303&quot; type=&quot;4-game-main&quot;></rt-logo>">
             </pre-code>
           </div>
+          <div class="color-block--black rt-space-vertical">
+            <div class="d-inline-block rt-space-right">
+              <pre-code
+                text="<rt-logo color=&quot;#FFFFFF&quot; type=&quot;game-logo&quot;></rt-logo>">
+              </pre-code>
+              <pre-code
+                text="<rt-logo color=&quot;#FFFFFF&quot; type=&quot;warface&quot;></rt-logo>">
+              </pre-code>
+            </div>
+          </div>
 
         </div>
 

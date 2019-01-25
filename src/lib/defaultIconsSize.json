@@ -13,7 +13,7 @@
     "width": "90px",
     "height": "50px",
     "background": "#00717F",
-    "color": "#ffffff"
+    "color": "#FFFFFF"
   },
   "kaspersky": {
     "width": "179px",
@@ -44,12 +44,12 @@
     "height": "30px",
     "color": "#000000"
   },
-  "warface-main": {
+  "warface": {
     "width": "104px",
     "height": "50px",
     "color": "#000000"
   },
-  "warface-main": {
+  "warface-in-line": {
     "width": "136px",
     "height": "30px",
     "color": "#000000"
@@ -102,7 +102,9 @@
     "width": "227px",
     "height": "100px"
   },
-  "game": {
+  "game-logo": {
+
+    "color": "#FFFFFF",
     "width": "433px",
     "height": "125px"
   }

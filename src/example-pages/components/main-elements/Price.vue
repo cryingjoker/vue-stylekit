@@ -45,6 +45,13 @@
             />
           </div>
         </div>
+        <div class="row rt-space-top">
+          <div class="rt-col-16 rt-col-md-3">
+            <pre-code
+              text="<div><rt-price :for-game=&quot;true&quot; class=&quot;color-orange&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><rt-price :bold-option=&quot;true&quot; class=&quot;color-white&quot; :for-game=&quot;true&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><div>"
+            />
+          </div>
+        </div>
       </div>
     </div>
     <div class="rt-container rt-space-top25">

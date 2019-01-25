@@ -61,6 +61,10 @@ export default {
     label: {
       type: String,
       default: null
+    },
+    type:{
+      type: String,
+      default: 'text'
     }
   },
   data() {
@@ -346,7 +350,7 @@ export default {
           ref="input"
           autocomplete="off"
           autocapitalize="off"
-          type="text"
+          type={this.type}
           class="input-element"
           name={this.fieldName}
           onInput={this.inputHandler}
