@@ -19,7 +19,8 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
-
+  &--has-absolute-position
+    position: absolute
   & .rt-banner__item--is-active
     // opacity: 0
     // visibility hidden
@@ -880,6 +881,7 @@
   bottom: 0
   right: 0
   cursor: pointer
+
 .banner__video-time-line,
 .banner__video-time-line-active
   position: absolute
@@ -894,6 +896,7 @@
   width: 132px
   height: 132px
   stroke-width 3px
+
 .banner__video-time-line-active
   z-index: 2
   stroke-dashoffset: 380;

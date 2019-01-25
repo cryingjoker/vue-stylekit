@@ -137,6 +137,9 @@
         let className = "rt-banner rt-banner-id__" + this.RtBanners.id || this._uid;
         const activeIndex = this.RtBanners.activeIndex;
         if (this.RtBanners.items[activeIndex]) {
+          if(this.isBackgroundBanner){
+            className += " rt-banner--has-absolute-position";
+          }
           if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
             className += " rt-banner--background-" + this.RtBanners.items[activeIndex].backgroundColor;
 
@@ -746,9 +749,6 @@
           </div>;
         }
       };
-      if(this.RtBanners.items[this.RtBanners.activeIndex]) {
-        console.info("this.RtBanners.items[activeIndex]", this.RtBanners.items[this.RtBanners.activeIndex].isGameBannerItem);
-      }
       return <div class={this.banerClass} style={this.bannerStyle}>
         <div class="rt-container rt-banner-container">
           {link()}
