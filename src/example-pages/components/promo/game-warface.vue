@@ -23,17 +23,86 @@
       </div>
       <div class="rt-space-top25">
         <div class="d-flex">
-        <div class="rt-col-6">
-          <rt-color-line-text
-          fill-color="orange"
-          color-icon="white"
-          :is-white-color="true"
-        ><template slot="label">Тариф «Игровой»</template><template slot="content">Подарки и интернет для настоящих <br> игроков Warface</template></rt-color-line-text>
-        </div>
           <div class="rt-col-6">
-          <rt-price :for-game="true" class="color-white" :value="800" time-interval="сек" currency="Мбит"/>
-          <rt-price :bold-option="true" class="color-orange" :for-game="true" :value="800" time-interval="мес." currency="руб."/>
+            <rt-color-line-text
+              fill-color="orange"
+              color-icon="white"
+              :is-white-color="true"
+            >
+              <template slot="label">Тариф «Игровой»</template>
+              <template slot="content">Подарки и интернет для настоящих <br> игроков Warface</template>
+            </rt-color-line-text>
           </div>
+          <div class="rt-col-6">
+            <rt-price :for-game="true" class="color-white" :value="800" time-interval="сек" currency="Мбит"/>
+            <rt-price :bold-option="true" class="color-orange" :for-game="true" :value="800" time-interval="мес."
+                      currency="руб."/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="rt-col-5">
+          <rt-tabs>
+            <template slot="navigation">
+              <rt-tabs-nav-item :remove-base-tag="true" class="rt-font-h4 rt-font-left"
+                                name="new">Для новых <br>абонентов
+              </rt-tabs-nav-item>
+              <div class="rt-space-left2">
+                <rt-tabs-nav-item :remove-base-tag="true" class="rt-font-h4 rt-font-left"
+                                  name="old">Для абонентов <br>Ростелеком
+                </rt-tabs-nav-item>
+              </div>
+            </template>
+            <template slot="content">
+              <rt-tabs-content-item
+                name="new">
+
+                <div class="rt-space-top15">
+                  <rt-input placeholder="Как к Вам обращаться"></rt-input>
+                </div>
+                <div class="rt-space-top">
+                  <rt-checkbox name="internet">Я являюсь клиентом Ростелеком</rt-checkbox>
+                </div>
+                <div class="rt-space-top">
+                  <rt-input placeholder="Контактный номер телефона"></rt-input>
+                </div>
+                <div class="rt-space-top">
+                  <rt-input placeholder="Электронная почта"></rt-input>
+                </div>
+                <div class="rt-space-top3">
+                  <p class="rt-font-paragraph color-white07"> Адрес доставки</p>
+                </div>
+                <div class="rt-space-top">
+                  <p class="color-white05 rt-font-small-paragraph">Если у Вас нет аккаунта в Ростелеком, его необходимо
+                    <a href="#" class="rt-link">зарегистрировать</a>
+                  </p>
+                </div>
+              </rt-tabs-content-item>
+              <rt-tabs-content-item
+                name="old">
+                <div class="rt-space-top15">
+                  <rt-input placeholder="Введите логин от личного кабинета"></rt-input>
+                </div>
+                <div class="rt-space-top">
+                  <rt-input placeholder="Введите пароль от личного кабинета" type="password"></rt-input>
+                </div>
+                <div class="rt-space-top2">
+                  <rt-button class="rt-button-orange">Подключить</rt-button>
+                </div>
+                <div class="rt-space-top">
+                  <rt-checkbox name="internet">У меня уже есть интернет Ростелеком</rt-checkbox>
+                </div>
+                <div class="rt-space-top">
+                  <p class="color-white05 rt-font-small-paragraph">Если у Вас нет аккаунта в Ростелеком, его необходимо
+                    <a href="#" class="rt-link">зарегистрировать</a>
+                  </p>
+                </div>
+              </rt-tabs-content-item>
+
+
+
+            </template>
+          </rt-tabs>
         </div>
       </div>
     </div>
@@ -65,7 +134,7 @@
     },
     created() {
     },
-    methods: {},
+    methods: {}
 
   };
 </script>
