@@ -16,3 +16,42 @@
     visibility visible
     top 0
     pointer-events all
+
+.rt-slide
+  padding-bottom: 20px
+  &+&
+    padding-top: 20px
+    border-top: 1px solid b2c-black02
+  &__header
+    position: relative
+    padding-left: 30px
+    padding-top: 10px
+    padding-bottom: 10px
+    cursor: pointer
+  &__arrow
+    position: absolute
+    left: 0
+    transition-timing-function ease-in-out
+    transition-duration .5s
+    transition-property transform
+    height: 13px
+    top: 0
+    bottom: 5px
+    margin-top: auto
+    margin-bottom: auto
+    .rt-slide--is-active &
+      transform rotate(90deg)
+  &__content
+    position: relative
+    max-height: 0
+    overflow: hidden
+    opacity: 0
+    visibility: hidden
+    transition-timing-function ease-in-out
+    transition-duration .5s
+    transition-property max-height, opacity, visibility
+    padding-left: 30px
+    .rt-slide--is-active &
+      max-height: 3000px
+      opacity: 1
+      visibility: visible

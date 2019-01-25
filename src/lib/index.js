@@ -56,7 +56,8 @@ import {
   ResizeContentHeight,
   Popup,
   Logo,
-  BannerVideoGameControl
+  BannerVideoGameControl,
+  SlideContent
 
 } from "./components";
 
@@ -120,6 +121,7 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
+      Vue.component(SlideContent.name, SlideContent);
       Vue.component(Logo.name, Logo);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);

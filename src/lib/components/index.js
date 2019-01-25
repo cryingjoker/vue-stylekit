@@ -51,5 +51,6 @@
  export { default as Youtube } from './Youtube/Youtube.vue';
  export { default as Sticky } from './Sticky/Sticky.vue';
  export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';
+ export { default as SlideContent } from './SlideContent/SlideContent.vue';
  export { default as Popup } from './Popup/Popup.vue';
  export { default as Logo } from './Logo/Logo.vue';

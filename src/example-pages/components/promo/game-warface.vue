@@ -1,5 +1,5 @@
 <template>
-  <div class="rt-l-game color-block--game-promo-color">
+  <div class="rt-l-game color-block--game-promo-color ">
 
     <rt-banner :sleep-time=30000 :is-fullscreen-image="true" content-height="470px" :is-background-banner="true"
                :has-custom-content="true">
@@ -10,7 +10,7 @@
       </rt-banner-item>
     </rt-banner>
 
-    <div class="rt-container rt-space-top2">
+    <div class="rt-container rt-space-top2 rt-dark-theme rt-dark-theme--transparent">
       <div class="flex-start-center">
         <rt-logo class="rt-layer-level-4 relative d-inline-block" width="56px" height="94px"></rt-logo>
         <div class="rt-layer-level-4 rt-logo-line"></div>
@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row rt-space-bottom2">
         <div class="rt-col-5">
           <rt-tabs>
             <template slot="navigation">
@@ -66,16 +66,42 @@
                 <div class="rt-space-top">
                   <rt-input placeholder="Контактный номер телефона"></rt-input>
                 </div>
+
+                <div class="rt-space-top3">
+                  <p class="rt-font-paragraph rt-font-bold color-white07"> Адрес доставки</p>
+                </div>
                 <div class="rt-space-top">
-                  <rt-input placeholder="Электронная почта"></rt-input>
+                  <div class="row">
+                    <div class="rt-col-6">
+                      <rt-input placeholder="Улица"></rt-input>
+                    </div>
+                    <div class="rt-col-3">
+                      <rt-input placeholder="Дом"></rt-input>
+                    </div>
+                    <div class="rt-col-3">
+                      <rt-input placeholder="Квартира"></rt-input>
+                    </div>
+                  </div>
                 </div>
                 <div class="rt-space-top3">
-                  <p class="rt-font-paragraph color-white07"> Адрес доставки</p>
+                  <p class="rt-font-paragraph rt-font-bold color-white07"> А еще я хочу подключить по выгодной цене:</p>
                 </div>
                 <div class="rt-space-top">
-                  <p class="color-white05 rt-font-small-paragraph">Если у Вас нет аккаунта в Ростелеком, его необходимо
-                    <a href="#" class="rt-link">зарегистрировать</a>
-                  </p>
+                  <rt-switch class="switch--orange rt-font-control">Терминал ONT без Wi-Fi <br> +20₽ в месяц</rt-switch>
+                </div>
+                <div class="rt-space-top">
+                  <rt-switch class="switch--orange rt-font-control">Терминал ONT без Wi-Fi <br> +20₽ в месяц</rt-switch>
+                </div>
+                <div class="rt-space-top">
+                  <rt-button class="rt-button-orange">Подключить</rt-button>
+                </div>
+                <div class="rt-space-top">
+                  <rt-checkbox name="internet">Уведомлять о статусе по смс</rt-checkbox>
+                </div>
+                <div class="rt-space-top">
+                  <rt-checkbox name="internet"><span class="color-white07"> Даю согласие на обработку персональных данных <br>в соответствии с</span>
+                    условиями
+                  </rt-checkbox>
                 </div>
               </rt-tabs-content-item>
               <rt-tabs-content-item
@@ -92,17 +118,49 @@
                 <div class="rt-space-top">
                   <rt-checkbox name="internet">У меня уже есть интернет Ростелеком</rt-checkbox>
                 </div>
-                <div class="rt-space-top">
+                <div class="rt-space-top rt-space-bottom2">
                   <p class="color-white05 rt-font-small-paragraph">Если у Вас нет аккаунта в Ростелеком, его необходимо
                     <a href="#" class="rt-link">зарегистрировать</a>
                   </p>
                 </div>
               </rt-tabs-content-item>
-
-
-
             </template>
           </rt-tabs>
+        </div>
+      </div>
+    </div>
+    <div class="color-block--white rt-space-top25 color-dark">
+      <div class="rt-container">
+        <p class="rt-font-h3 rt-font-bold">Примечания</p>
+        <p class="rt-font-control rt-space-top05 b2c-black05 rt-font-light">Warface — игровая опция (Опция) Услуги
+          «Домашний интернет» (Услуга), доступная абонентам при подключении тарифного плана «Игровой» (План). Опция
+          предоставляется партнером — ООО «Мейл.Ру», ответственность за предоставление опции несет партнер.
+          Использование Опции возможно при наличии аккаунта Абонента на wf.mail.ru в рамках пользовательского соглашения
+          между абонентом и партнером. Активация опции осуществляется в Едином личном кабинете Абонента. Стоимость опции
+          включена в стоимость плана.</p>
+        <div class="row">
+          <div class="rt-col-8">
+            <rt-slide-content>
+              <template slot="label">Зачем мне нужна регистрация в личном кабинете?</template>
+              <template slot="content">
+                Услуги предоставляются при наличии технической возможности
+                Цены указаны в рублях с учетом НДС.
+                Предоставление доступа к сети интернет осуществляется по технологии FTTx или по технологии PON.
+                Максимально возможная скорость при подключении по технологии FTTx составляет до 90 Мбит/с. Возможно
+                предоставление доступа к сети интернет по технологии xDSL. Тарифы — в разделе
+              </template>
+            </rt-slide-content>
+            <rt-slide-content>
+              <template slot="label">Зачем мне нужна регистрация в личном кабинете?</template>
+              <template slot="content">
+                Услуги предоставляются при наличии технической возможности
+                Цены указаны в рублях с учетом НДС.
+                Предоставление доступа к сети интернет осуществляется по технологии FTTx или по технологии PON.
+                Максимально возможная скорость при подключении по технологии FTTx составляет до 90 Мбит/с. Возможно
+                предоставление доступа к сети интернет по технологии xDSL. Тарифы — в разделе
+              </template>
+            </rt-slide-content>
+          </div>
         </div>
       </div>
     </div>
