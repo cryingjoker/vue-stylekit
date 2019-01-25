@@ -49,7 +49,8 @@ import {
   Youtube,
   Sticky,
   ResizeContentHeight,
-  Popup
+  Popup,
+  SlideContent
 } from "../lib/components/index";
 
 const componentsList = {};
@@ -104,4 +105,5 @@ componentsList[Youtube.name] = Youtube;
 componentsList[Sticky.name] = Sticky;
 componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 componentsList[Popup.name] = Popup;
+componentsList[SlideContent.name] = SlideContent;
 export default { ...componentsList };
