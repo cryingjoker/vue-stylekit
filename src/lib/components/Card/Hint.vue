@@ -1,6 +1,6 @@
 <template>
   <div class="rtb-card__hint">
-    <div class="rtb-card__hint__icon" @mouseover="showHint" @mouseleave="hideHint">?</div>
+    <div class="rtb-card__hint__icon" @mouseover="this.showHint" @mouseleave="this.hideHint">?</div>
     <div class="rtb-card__hint__text" v-show="active">
       <slot/>
     </div>

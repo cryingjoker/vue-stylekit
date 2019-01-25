@@ -15,6 +15,15 @@
   box-sizing border-box
   background-color b2c-white
   z-index 1
+  &--package
+    padding vertical-space * 1.5
+  &__subtitle
+    height: 18px
+    opacity: 0.25
+    font-size: 14px
+    letter-spacing: 0.9px
+    text-transform: uppercase
+    box-sizing unset
   &__description
     margin-bottom 60px
     vertical-align: middle
@@ -32,24 +41,27 @@
       margin-bottom vertical-space *.5
   &__cost
     margin-bottom: vertical-space *.25
-
+  &__section
+    padding 20px 0
+    &+&
+      border-top 1px solid b2c-black02
+    .rtb-card__description__row:last-child
+      margin-bottom: 0
   &__links-block
     overflow: hidden
     max-height 26px
     max-width 175px
     display inline-block
     vertical-align: middle
-    margin-bottom vertical-space *.25
-    transition: all 0s 9999999s
     &--expanded
       max-height none
       & + .rtb-card__expand-button
         display none
-      & + .rtb-card__expand-button
-        max-height none
       .rtb-card__social-link
         &:nth-child(5+n)
           display inline-block
+    &__footnote
+      margin-top: 5px
   &__social-link
     margin-bottom 6px
     size(26px)
@@ -67,9 +79,7 @@
     color b2c-purple
     vertical-align: middle
     cursor: pointer
-    &:active ~ .{b2bAppName}-card__links-block
-      transition all 0s
-      max-height none
+    margin-left: 5px
   &__hint
     width 20px
     height 20px
@@ -128,30 +138,36 @@
       height 10px
       position absolute
       border-radius 10px 10px 0 0
+      &__flag
+        position absolute
+        width 83px
+        height 80px
+        top 10px
+        right 0
+        &-text
+          color b2c-white
+          position absolute
+          top vertical-space * (3/4)
+          right vertical-space * .25
+          max-width 73px
+          font-size 14px
+          line-height 16px
+          text-align: center
+
   &__discount-line-1
-    background-color: b2c-yellow-hight
+    background-color: b2c-green
     top -10px
     width 90%
     left 5%
-    &:after
-      position absolute
-      content: '1 услуга  со скидкой  50%'
-      background-color  b2c-red
-      width 62px
-      height 60px
-      top 10px
-      right 0
-      color #fff
-      font-size 14px
-      line-height 16px
-      text-align: center
+    &:not(::last-child)
+      background-color: b2c-yellow-hight
   &__discount-line-2
-    background-color: b2c-purple
+    background-color: b2c-red
     top -20px
     width 81%
     left 9.5%
   &__discount-line-3
-    background-color: b2c-yellow-hight
+    background-color: b2c-purple
     top -30px
     width 72.9%
     left 13.95%
@@ -163,3 +179,11 @@
   .rt-card__header,
   .rt-card__footer
     padding 0
+
+.triple
+  .{b2bAppName}-card
+    &__discount-line-1
+      background-color: b2c-light-blue-hight
+    &__discount-line-2
+        background-color b2c-orange
+

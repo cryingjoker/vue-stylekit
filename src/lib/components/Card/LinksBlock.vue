@@ -40,11 +40,19 @@
           return null;
         }
       })();
+      const button = (() => {
+        if(this.quantity > 5){
+          return <button class="rtb-card__expand-button" onClick={this.unwrap}>ещё {this.quantityToShow}</button>
+        } else {
+          return null
+        }
+      })();
       return <div class="links-block">
         <div class="rtb-card__links-block" >
           {content}
         </div>
-        <button class="rtb-card__expand-button" onClick={this.unwrap}>ещё {this.quantityToShow}</button>
+        {button}
+        <p class="rtb-card__links-block__footnote rt-font-small-paragraph color-main025">безлимитные сервисы</p>
       </div>;
     }
   };

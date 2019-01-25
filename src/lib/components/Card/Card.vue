@@ -104,6 +104,22 @@ export default {
     cardBodyHeight: {
       type: Number,
       default: null
+    },
+    equalPadding: {
+      type: Boolean,
+      default: false
+    },
+    hasDiscount: {
+      type: Boolean,
+      default: false
+    },
+    discountLines: {
+      type: Number,
+      default: null
+    },
+    isB2bPackage: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -141,6 +157,12 @@ export default {
       }
       if(this.resetMinHeight){
         cardClass += " rt-card--custom-height"
+      }
+      if(this.equalPadding){
+        cardClass += " rtb-card"
+      }
+      if(this.isB2bPackage){
+        cardClass += " rtb-card--package"
       }
       return cardClass;
     },
@@ -315,6 +337,43 @@ export default {
     }
   },
   render(h) {
+    const discount = (() => {
+      if(this.hasDiscount){
+        if(this.discountLines === 1){
+          return <div class="rtb-card__discount">
+            <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <div class="rtb-card__discount-line__flag">
+                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/></svg></div>
+                <span class="rtb-card__discount-line__flag-text">1 услуга  со скидкой  50%</span>
+            </div>
+          </div>
+        }
+        if(this.discountLines === 2){
+          return <div class="rtb-card__discount">
+            <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <div class="rtb-card__discount-line__flag">
+                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
+                <span class="rtb-card__discount-line__flag-text">2 услуги  со скидкой  50%</span>
+              </div>
+            </div>
+            <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
+          </div>
+        }
+        if(this.discountLines === 3){
+          return <div class="rtb-card__discount triple">
+            <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <div class="rtb-card__discount-line__flag">
+                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#64DDEC" fill-rule="evenodd"/></svg></div>
+                <span class="rtb-card__discount-line__flag-text">3 услуги  со скидкой  50%</span>
+            </div>
+            <div class="rtb-card__discount-line rtb-card__discount-line-2"></div>
+            <div class="rtb-card__discount-line rtb-card__discount-line-3"></div>
+          </div>
+        }
+      } else {
+        return null;
+      }
+    })();
     const header = (() => {
       if (this.$slots.header) {
         return <div style={this.cardHeaderStyle} class="rt-card__header">
@@ -345,7 +404,8 @@ export default {
         style={this.standAloneBackgroundStyle}
         class="rt-card__stand-alone-background"
       /> : null}
-       <div style={this.cardBackgroundStyle}
+      {discount}
+      <div style={this.cardBackgroundStyle}
            class={"rt-card__background" + this.cardBackgroundClass}
       />
       <div class={"rt-card__content" + this.cardContentClass}>
