@@ -51,7 +51,8 @@
 
 
     mounted() {
-      this.preUrl = location.protocol.search('https') >= 0 ? '/vue-stylekit/docs/' : '';
+      this.preUrl = location.protocol.search('https') >= 0 ? '/vue-stylekit/docs' : '';
+      console.info('this.preUrl',this.preUrl);
     },
     methods: {},
     render() {
