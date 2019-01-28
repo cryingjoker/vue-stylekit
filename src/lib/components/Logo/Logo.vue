@@ -54,7 +54,7 @@
 
     render() {
       if(this.type != 'default') {
-        console.info('defaultValues',defaultValues[this.type],defaultValues, this.type, this.width ? this.width : defaultValues[this.type] ? defaultValues[this.type].width : '0');
+        // console.info('defaultValues',defaultValues[this.type],defaultValues, this.type, this.width ? this.width : defaultValues[this.type] ? defaultValues[this.type].width : '0');
       }
       let width = 0;
       let height = 0;

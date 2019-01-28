@@ -24,7 +24,15 @@
       </div>
     </div>
     <keep-alive>
-      <div :class="{ 'aside-menu--active': showMenu }" class="aside-menu">
+      <app-menu :show-menu="showMenu"
+                :code-viewer-toggle="codeViewerToggle"
+                :code-viewer="codeViewer"
+                :show-grid="showGrid"
+                :grid-toggle="gridToggle"
+      >
+
+      </app-menu>
+      <div class="aside-menu">
 
         <div class="row">
           <div class="d-flex">
@@ -44,6 +52,7 @@
             </rt-switch>
           </div>
         </div>
+
         <div class="aside-menu__item rt-space-top3">
           <router-link
             class="aside-menu__link"

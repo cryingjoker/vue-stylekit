@@ -2,19 +2,38 @@
   width 100%
   font-size 18px
 
-  &-navigation
+.{newAppName}-tabs-navigation
     display flex
     flex-direction row
     width 100%
     margin-left -10px
     margin-right -10px
+    .rt-tabs-tablet &,
+    .rt-tabs-mobile &
+      padding-top: 20px
+      top: 20px
+      position: relative
+      display: block
+      overflow: auto
+      white-space nowrap
+      padding-bottom: 20px
 
-    &__item
+.{newAppName}-tabs-navigation-wrapper
+  .rt-tabs-tablet &,
+  .rt-tabs-mobile &
+    display: block
+    overflow: hidden
+    position: relative
+    top: -20px
+
+.{newAppName}-tabs-navigation__item
       padding-left 10px
       padding-right 10px
       cursor pointer
-
-      &-name
+      .rt-tabs-tablet &,
+      .rt-tabs-mobile &
+        display: inline-block
+.{newAppName}-tabs-navigation__item-name
         box-sizing border-box
         border none
         outline none
