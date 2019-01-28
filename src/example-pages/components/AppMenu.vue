@@ -19,8 +19,11 @@
   export default {
     name: "AppMenu",
     data: () => ({
-      showMenu: true
+      showMenu: true,
+      preUrl: ''
+
     }),
+
     props: {
       // showMenu: {
       //   type: Boolean,
@@ -48,7 +51,7 @@
 
 
     mounted() {
-
+      this.preUrl = location.protocol.search('https') >= 0 ? location.host + '/vue-stylekit/docs/' : '';
     },
     methods: {},
     render() {
@@ -69,7 +72,7 @@
                 <router-link
                   class="aside-menu__link"
                   active-class="aside-menu__link--active"
-                  to={item.url}
+                  to={this.preUrl+item.url}
                 >
                   {item.title}
                 </router-link>
