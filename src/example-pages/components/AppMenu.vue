@@ -19,16 +19,16 @@
   export default {
     name: "AppMenu",
     data: () => ({
-      showMenu: true,
+      showMenuLocal: false,
       preUrl: ''
 
     }),
 
     props: {
-      // showMenu: {
-      //   type: Boolean,
-      //   default:false
-      // },
+      showMenu: {
+        type: Boolean,
+        default:false
+      },
       showGrid: {
         type: Boolean,
         default: false
@@ -49,12 +49,31 @@
       }
     },
 
-
+    watch: {
+      showMenu: function(newVal, oldVal) {
+        this.showMenuLocal = newVal;
+      }
+    },
     mounted() {
       this.preUrl = location.protocol.search('https') >= 0 ? '/vue-stylekit/docs' : '';
-      console.info('this.preUrl',this.preUrl);
+      document.querySelector('.aside-menu').addEventListener('mouseenter',(item)=>{
+        this.showMenuLocal = true;
+      })
+      document.querySelector('.aside-menu').addEventListener('mouseleave',(item)=>{
+        this.showMenuLocal = false;
+      })
+      document.querySelectorAll('.aside-menu__link').forEach((item)=>{
+        item.addEventListener('click',() => {
+          this.disableMenu();
+        })
+      })
+
     },
-    methods: {},
+    methods: {
+      disableMenu(){
+        this.showMenuLocal = false;
+      }
+    },
     render() {
 
       const renderList = (itemList) => itemList.map((item) => {
@@ -85,7 +104,7 @@
       });
 
 
-      return <div class={"aside-menu" + (this.showMenu ? " aside-menu--active" : "")}>
+      return <div class={"aside-menu" + (this.showMenuLocal ? " aside-menu--active" : "")}>
         <div class="aside-menu__item">
         <div class="row">
             <div class="d-flex">
