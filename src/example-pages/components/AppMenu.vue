@@ -20,14 +20,15 @@
     name: "AppMenu",
     data: () => ({
       showMenuLocal: false,
-      preUrl: ''
+      preUrl: "",
+      menuIsDisabled: false
 
     }),
 
     props: {
       showMenu: {
         type: Boolean,
-        default:false
+        default: false
       },
       showGrid: {
         type: Boolean,
@@ -51,27 +52,33 @@
 
     watch: {
       showMenu: function(newVal, oldVal) {
-        this.showMenuLocal = newVal;
+        if(!this.menuIsDisabled) {
+          this.showMenuLocal = newVal;
+        }
       }
     },
     mounted() {
-      this.preUrl = location.protocol.search('https') >= 0 ? '/vue-stylekit/docs' : '';
-      document.querySelector('.aside-menu').addEventListener('mouseenter',(item)=>{
+      this.preUrl = location.protocol.search("https") >= 0 ? "/vue-stylekit/docs" : "";
+      document.querySelector(".aside-menu").addEventListener("mouseenter", (item) => {
         this.showMenuLocal = true;
-      })
-      document.querySelector('.aside-menu').addEventListener('mouseleave',(item)=>{
+      });
+      document.querySelector(".aside-menu").addEventListener("mouseleave", (item) => {
         this.showMenuLocal = false;
-      })
-      document.querySelectorAll('.aside-menu__link').forEach((item)=>{
-        item.addEventListener('click',() => {
+      });
+      document.querySelectorAll(".aside-menu__link").forEach((item) => {
+        item.addEventListener("click", () => {
           this.disableMenu();
-        })
-      })
+        });
+      });
 
     },
     methods: {
-      disableMenu(){
+      disableMenu() {
         this.showMenuLocal = false;
+        this.menuIsDisabled = true;
+        setTimeout(() => {
+          this.menuIsDisabled = false;
+        }, 500);
       }
     },
     render() {
@@ -92,7 +99,7 @@
                 <router-link
                   class="aside-menu__link"
                   active-class="aside-menu__link--active"
-                  to={this.preUrl+item.url}
+                  to={this.preUrl + item.url}
                 >
                   {item.title}
                 </router-link>
@@ -105,8 +112,9 @@
 
 
       return <div class={"aside-menu" + (this.showMenuLocal ? " aside-menu--active" : "")}>
+
         <div class="aside-menu__item">
-        <div class="row">
+          <div class="row">
             <div class="d-flex">
               <rt-switch
                 checked={this.codeViewer}
@@ -125,8 +133,9 @@
             </div>
           </div>
         </div>
+
         <div class="rt-space-top3">
-        {renderList(componentsMenu.list)}
+          {renderList(componentsMenu.list)}
         </div>
       </div>;
     }
