@@ -1,0 +1,307 @@
+{
+  "version" : "0.0.01",
+  "list": [
+    {
+      "name" : "colors",
+      "title" : "Colors",
+      "url" : "/colors",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "logo",
+      "title" : "Logo",
+      "url" : "/logo",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "buttons",
+      "title" : "Buttons",
+      "url" : "/buttons",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "typography",
+      "title" : "Typography",
+      "url" : "/typography",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "grid",
+      "title" : "Grid",
+      "url" : "/grid",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "space",
+      "title" : "Space",
+      "url" : "/space",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "row-list",
+      "title" : "Row list",
+      "url" : "/row-list",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "inline-dropdown",
+      "title" : "Inline dropdown",
+      "url" : "/inline-dropdown",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "annotation",
+      "title" : "Annotation",
+      "url" : "/annotation",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Forms",
+      "title" : "Forms",
+      "url" : "",
+      "list_child" : [
+        {
+          "name" : "checkbox",
+          "title" : "Checkbox",
+          "url" : "/checkbox",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "radiobutton",
+          "title" : "Radiobutton",
+          "url" : "/radiobutton",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "switch",
+          "title" : "Switch",
+          "url" : "/switch",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "input",
+          "title" : "Input",
+          "url" : "/input",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "textarea",
+          "title" : "Textarea",
+          "url" : "/textarea",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "select",
+          "title" : "Select",
+          "url" : "/select",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        }
+      ],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "List elements",
+      "title" : "List elements",
+      "url" : "/list",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Scroll Tabs",
+      "title" : "Scroll Tabs",
+      "url" : "/scroll-tabs",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Tags",
+      "title" : "Tags",
+      "url" : "/tags",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Color Line Text",
+      "title" : "Color Line Text",
+      "url" : "/color-line-text",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Spinner",
+      "title" : "Spinner",
+      "url" : "/spinner",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Price",
+      "title" : "Price",
+      "url" : "/price",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Tabs",
+      "title" : "Tabs",
+      "url" : "/tabs",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Table",
+      "title" : "Table",
+      "url" : "/table",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Fullscreen Image",
+      "title" : "Fullscreen Image",
+      "url" : "/fullscreen",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Download content",
+      "title" : "Download content",
+      "url" : "/download-content",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Complex elements",
+      "title" : "Complex elements",
+      "url" : "",
+      "list_child" : [
+        {
+          "name" : "Cards",
+          "title" : "Cards",
+          "url" : "/cards",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Cards with forms",
+          "title" : "Cards with forms",
+          "url" : "/cards-with-forms",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        }
+      ],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Experiment elements",
+      "title" : "Experiment elements",
+      "url" : "",
+      "list_child" : [
+        {
+          "name" : "Youtube Player",
+          "title" : "Youtube Player",
+          "url" : "/youtube",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Filters",
+          "title" : "Filters",
+          "url" : "/filter",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        }
+      ],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Banners",
+      "title" : "Banners",
+      "url" : "/banners",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Promo pages",
+      "title" : "Promo pages",
+      "url" : "",
+      "list_child" : [
+        {
+          "name" : "TV",
+          "title" : "TV",
+          "url" : "/promo/tv",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "homeinternet",
+          "title" : "homeinternet",
+          "url" : "/promo/homeinternet",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "game",
+          "title" : "game",
+          "url" : "/promo/game",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        }
+      ],
+      "for_b2b" : true,
+      "for_b2c" : true
+    }
+  ]
+
+
+}
