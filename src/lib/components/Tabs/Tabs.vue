@@ -55,9 +55,13 @@ export default {
     if(!this.dontUseAdaptive) {
       this.tabletSize = parseInt(variables['tablet-step-size']);
       this.mobileSize = parseInt(variables['mobile-step-size']);
-      window.removeEventListener("resize", this.checkDeviceType);
+      window.addEventListener("resize", this.checkDeviceType);
       this.checkDeviceType();
     }
+  },
+  updated: function(){
+    window.removeEventListener("resize", this.checkDeviceType);
+    window.addEventListener("resize", this.checkDeviceType);
   },
 
   methods: {
