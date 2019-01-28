@@ -62,7 +62,8 @@ export default {
 
   methods: {
     checkDeviceType(){
-      const width = window.innerWidth;
+      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const width = (iOS) ? screen.width : window.innerWidth;
       if(width <= this.mobileSize) {
         this.deviceType = 'mobile';
       }else{
