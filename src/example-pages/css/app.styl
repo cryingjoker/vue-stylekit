@@ -69,10 +69,6 @@
     transition-timing-function ease-in-out
     transition-duration .3s
     transition-property left
-
-    @media (min-width: mobile-step-size)
-      left -370px
-
     width 380px
     background-color #fff
     padding-bottom 60px
@@ -80,13 +76,11 @@
     top 0
     bottom 0
     z-index 1000
-
+    left: -370px
     .{newAppName}-dark-theme &
       background-color b2c-black
 
-    &:hover
-      @media (min-width: mobile-step-size)
-        left 0
+
 
     @media (max-width: mobile-step-size)
       max-width 100vw
@@ -96,10 +90,12 @@
       padding-right 0
       left -120vw
       z-index 999
-
-      &--active
-        @media (max-width: mobile-step-size)
-          left 0
+    &--active
+      left: 0px
+      &:hover
+        left: 0px
+      @media (max-width: mobile-step-size)
+        left 0
 
     border-right 1px solid b2c-cool-grey05
     padding-top 100px

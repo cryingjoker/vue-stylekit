@@ -34,7 +34,16 @@ export default {
     onlyPrice: {
       type: Boolean,
       default: false
+    },
+    forGame:{
+      type: Boolean,
+      default: false
+    },
+    boldOption:{
+      type: Boolean,
+      default: false
     }
+
   },
   data() {
     return {
@@ -78,56 +87,64 @@ export default {
   },
   mounted: function() {},
   render: function(h) {
-    switch (this.priceType) {
-      case "only-price":
-        return (
-          <div class="rt-price rt-price-without-space">
-            <div class={"rt-price__value"+ (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
-            <div class="rt-price__info">
-              <div class="rt-price__info-item">{this.normalizeCurrency}</div>
-            </div>
-          </div>
-        );
-        break;
-      case "oldval-price":
-        return (
-          <div class="rt-price rt-price-without-space">
-            <div class="rt-price__old-value">{this.normalizeOldValue}</div>
-            <div class={"rt-price__value"+ (this.colorValue ? ' color-'+this.colorValue : '')}>{this.normalizeValue}</div>
-            <div class="rt-price__info">
-              <div class="rt-price__info-item">{this.normalizeCurrency}</div>
-              <div class="rt-price__info-item">
-                {this.normalizeTimeInterval}
+      const rtPriceClass = 'rt-price'+(this.forGame ? ' rt-price-game' : '')
+      const rtPriceInfoClass = 'rt-price__info'+(this.boldOption ? ' rt-price__info--bold-font' : '')
+
+
+      switch (this.priceType) {
+        case "only-price":
+          return (
+            <div class={`${rtPriceClass} rt-price-without-space`}>
+              <div
+                class={"rt-price__value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class={rtPriceInfoClass}>
+                <div class="rt-price__info-item">{this.normalizeCurrency}</div>
               </div>
             </div>
-          </div>
-        );
-      case "option-price":
-        return (
-          <div class="rt-price rt-price-without-space">
-            <div class="rt-price__opinion">{this.optionLabel ? this.optionLabel : 'от'} </div>
-            <div class={"rt-price__value"+ (this.colorValue ? ' color-'+this.colorValue : '')}>{this.normalizeValue}</div>
-            <div class="rt-price__info">
-              <div class="rt-price__info-item">{this.normalizeCurrency}</div>
-              <div class="rt-price__info-item">
-                {this.normalizeTimeInterval}
+          );
+          break;
+        case "oldval-price":
+          return (
+            <div class={`${rtPriceClass} rt-price-without-space`}>
+              <div class="rt-price__old-value">{this.normalizeOldValue}</div>
+              <div
+                class={"rt-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class={rtPriceInfoClass}>
+                <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                <div class="rt-price__info-item">
+                  {this.normalizeTimeInterval}
+                </div>
               </div>
             </div>
-          </div>
-        );
-      default:
-        return (
-          <div class="rt-price rt-price-without-space">
-            <div class={"rt-price__option-value" + (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
-            <div class="rt-price__info">
-              <div class="rt-price__info-item">{this.normalizeCurrency}</div>
-              <div class="rt-price__info-item">
-                {this.normalizeTimeInterval}
+          );
+        case "option-price":
+          return (
+            <div class={`${rtPriceClass} rt-price-without-space`}>
+              <div class="rt-price__opinion">{this.optionLabel ? this.optionLabel : 'от'} </div>
+              <div
+                class={"rt-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class={rtPriceInfoClass}>
+                <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                <div class="rt-price__info-item">
+                  {this.normalizeTimeInterval}
+                </div>
               </div>
             </div>
-          </div>
-        );
-    }
+          );
+        default:
+          return (
+            <div class={`${rtPriceClass} rt-price-without-space`}>
+              <div
+                class={"rt-price__option-value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class={rtPriceInfoClass}>
+                <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                <div class="rt-price__info-item">
+                  {this.normalizeTimeInterval}
+                </div>
+              </div>
+            </div>
+          );
+      }
   }
 };
 </script>

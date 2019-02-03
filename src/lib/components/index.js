@@ -30,6 +30,7 @@
  export { default as CardImageList} from './Card/CardImageList.vue';
  export { default as Banner } from './Banner/Banner.vue';
  export { default as BannerItem } from './Banner/BannerItem.vue';
+ export { default as BannerVideoGameControl } from './Banner/BannerVideoGameControl.vue';
  export { default as BannerPaginatorItem } from './Banner/BannerPaginatorItem.vue';
  export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';
  export { default as RowList } from './RowList/RowList.vue';
@@ -50,6 +51,7 @@
  export { default as Youtube } from './Youtube/Youtube.vue';
  export { default as Sticky } from './Sticky/Sticky.vue';
  export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';
+ export { default as SlideContent } from './SlideContent/SlideContent.vue';
  export { default as Popup } from './Popup/Popup.vue';
  export { default as Logo } from './Logo/Logo.vue';
  export { default as LinksBlock } from './Card/LinksBlock.vue';

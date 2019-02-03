@@ -5,6 +5,8 @@
 
   .ripple-wave
     background-color b2c-purple-low
+    .switch--orange &
+      background-color b2c-orange-low
 
   &-element
     display none
@@ -49,13 +51,18 @@
     .switch-element:checked+&
       &:before
         background-color b2c-purple-hight05
-
+        .switch--orange &
+          background-color b2c-orange-hight05
+          .{newAppName}-dark-theme &
+            background-color b2c-orange-hight02
         .{newAppName}-dark-theme &
           background-color b2c-purple02
 
       .switch-container__circle
         background-color b2c-purple
         margin-left 15px
+        .switch--orange &
+          background-color b2c-orange
 
     .switch-element[disabled]+&
       color disable-button-color

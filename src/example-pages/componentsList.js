@@ -49,9 +49,11 @@ import {
   Youtube,
   Sticky,
   ResizeContentHeight,
-  Popup
+  Popup,
+  SlideContent
 } from "../lib/components/index";
 
+import AppManu from './components/AppMenu.vue'
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
@@ -104,4 +106,6 @@ componentsList[Youtube.name] = Youtube;
 componentsList[Sticky.name] = Sticky;
 componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 componentsList[Popup.name] = Popup;
+componentsList[SlideContent.name] = SlideContent;
+componentsList[AppManu.name] = AppManu;
 export default { ...componentsList };

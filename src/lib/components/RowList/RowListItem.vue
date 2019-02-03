@@ -25,7 +25,7 @@ export default {
           }
           onClick={this.toggleShow}
         >
-          <div class="rt-row-list__header row">
+          <div class="rt-row-list__header rt-row-list__header--has-more-content row">
             {this.$slots.icon ? (
               <div class="rt-row-list__icon rt-col-1 rt-col-md-3 rt-md-space-bottom">
                 {this.$slots.icon}

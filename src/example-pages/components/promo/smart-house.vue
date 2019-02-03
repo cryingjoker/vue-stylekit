@@ -913,13 +913,7 @@ export default {
                   }
                 });
             }, 300);
-            // setTimeout(function(){
-            //   setActiveItem();
-            //
-            //   activeTab = getElementIndex((event.srcElement | event.target))
-            //   console.info('activeTab',activeTab);
-            //   setActiveItem();
-            // },200)
+
           });
         });
     }, 100);

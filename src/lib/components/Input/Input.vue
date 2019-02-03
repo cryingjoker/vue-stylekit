@@ -5,6 +5,10 @@ import VeeValidate from "vee-validate";
 export default {
   name: "RtInput",
   props: {
+    customRules: {
+      type: Array,
+      default: () => ([])
+    },
     minNumber: {
       type: Number,
       default: null
@@ -37,6 +41,10 @@ export default {
       type: Boolean,
       default: false
     },
+    errorMessageFunc: {
+      type: Function,
+      default: null
+    },
     errorMessage: {
       type: String,
       default: null
@@ -61,6 +69,10 @@ export default {
     label: {
       type: String,
       default: null
+    },
+    type:{
+      type: String,
+      default: 'text'
     }
   },
   data() {
@@ -92,6 +104,7 @@ export default {
   },
 
   mounted() {
+    this.customRules.forEach(({nameRule, rule}) => VeeValidate.Validator.extend(nameRule, { validate: rule }))
     Vue.use(VeeValidate);
     this.setValue();
     this.setDisabled();
@@ -298,6 +311,11 @@ export default {
         if (this.label) {
           errorMessageClass += " text-field__error-message--has-label";
         }
+
+        if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
+          return <p class={errorMessageClass}>{this.errorMessageFunc(this.localValue)}</p>;
+        }
+
         return <p class={errorMessageClass}>{this.errorMessage}</p>;
       }
     })();
@@ -346,7 +364,7 @@ export default {
           ref="input"
           autocomplete="off"
           autocapitalize="off"
-          type="text"
+          type={this.type}
           class="input-element"
           name={this.fieldName}
           onInput={this.inputHandler}

@@ -57,7 +57,9 @@ import {
   Popup,
   Logo,
   LinksBlock,
-  Hint
+  Hint,
+  BannerVideoGameControl,
+  SlideContent
 
 } from "./components";
 
@@ -101,6 +103,7 @@ const VueRtStyle = {
       Vue.component(Banner.name, Banner);
       Vue.component(BannerItem.name, BannerItem);
       Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);
+      Vue.component(BannerVideoGameControl.name, BannerVideoGameControl);
       Vue.component(FullscreenImage.name, FullscreenImage);
       Vue.component(RowList.name, RowList);
       Vue.component(RowListItem.name, RowListItem);
@@ -120,6 +123,7 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
+      Vue.component(SlideContent.name, SlideContent);
       Vue.component(Logo.name, Logo);
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
