@@ -39,13 +39,25 @@
         color b2c-purple
     &__row
       margin-bottom vertical-space *.5
+  .{b2bAppName}-price
+    display: inline-block
+    &__value,
+    &__info
+      font-size inherit
+      color inherit
   &__cost
     margin-bottom: vertical-space *.25
+    color main-color09
+    .{b2bAppName}-price
+      &__value,
+      &__info
+        font-size 32px
+        line-height 42px
   &__section
     padding 20px 0
     &+&
       border-top 1px solid b2c-black02
-    .rtb-card__description__row:last-child
+    .{b2bAppName}-card__description__row:last-child
       margin-bottom: 0
   &__links-block
     overflow: hidden
@@ -57,7 +69,7 @@
       max-height none
       & + .rtb-card__expand-button
         display none
-      .rtb-card__social-link
+      .{b2bAppName}-card__social-link
         &:nth-child(5+n)
           display inline-block
     &__footnote
@@ -102,15 +114,14 @@
       color b2b-state
       position relative
       right -25px
-      top -50px
-      width auto
-      height auto
+      top -50%
       min-width 180px
       min-height 70px
       z-index 9
       text-align left
       border-radius 5px
       max-width 250px
+      transform translateY(-50%)
       &:before
         position absolute
         content ''
@@ -121,12 +132,11 @@
         border-color: transparent #f1f3f5 transparent transparent
         top calc(50% - 5px)
         left -5px
-  .rt-card__content
+  .{newAppName}-card__content
     padding 0
     min-height auto
-  .rt-card__body
+  .{newAppName}-card__body
     padding 0
-    margin-bottom vertical-space
   &__discount
     width 100%
     height 10px
@@ -159,7 +169,7 @@
     top -10px
     width 90%
     left 5%
-    &:not(::last-child)
+    &:last-child
       background-color: b2c-yellow-hight
   &__discount-line-2
     background-color: b2c-red
@@ -171,14 +181,146 @@
     top -30px
     width 72.9%
     left 13.95%
-  .rt-card__background
+  .{newAppName}-card__background
     top 0
     left 0
     right 0
     bottom 0
-  .rt-card__header,
-  .rt-card__footer
+  .{newAppName}-card__header,
+  .{newAppName}-card__footer
     padding 0
+  &__vertical
+    display flex
+    flex-direction row
+    &__left-column
+      max-width 64px
+      margin-right: 20px
+      text-align: center
+  &__icon
+    max-width 64px
+    max-height 64px
+  &--category
+    height 364px
+    .{newAppName}-card__background--position-background-right
+      background-position-x 100%
+
+  &__label
+    position: absolute
+    top: 20px
+    right: -13px
+    z-index: 3
+    width 80px
+    height 49px
+    background-image: url('/static/images/B2B/sale-label.svg')
+    background-repeat: no-repeat
+    text-align: center
+    color b2c-white
+    padding-top 4px
+    box-sizing border-box
+
+.{b2bAppName}-category
+  &.{newAppName}-card-red
+    .{b2bAppName}-category__text-content
+      background-color b2c-red
+    .{b2bAppName}-category__triangle
+      fill b2c-red
+  &.{newAppName}-card-purple
+    .{b2bAppName}-category__text-content
+      background-color b2c-purple
+    .{b2bAppName}-category__triangle
+      fill b2c-purple
+  &.{newAppName}-card-dark-blue
+    .{b2bAppName}-category__text-content
+      background-color b2c-dark-blue
+    .{b2bAppName}-category__triangle
+      fill b2c-dark-blue
+  &.{newAppName}-card-green-low
+    .{b2bAppName}-category__text-content
+      background-color b2c-green-low
+    .{b2bAppName}-category__triangle
+      fill b2c-green-low
+  &.{newAppName}-card-yellow-low
+    .{b2bAppName}-category__text-content
+      background-color b2c-yellow-low
+    .{b2bAppName}-category__triangle
+      fill b2c-yellow-low
+
+.{b2bAppName}-category
+  box-sizing border-box
+  height 364px
+  @media (max-width: mobile-step-size)
+    height 420px
+  &__content
+    display flex
+    flex-direction row
+    height 100%
+  &__triangle
+    width 76px
+    height 100%
+    position absolute
+    top 0
+    left calc((100% - 76px) /2)
+    bottom 0
+    right calc((100% - 76px) /2)
+    @media (max-width: tablet-step-size)
+      display none
+  &__image
+    width calc((100% + 76px) /2)
+    background-position 50% 50%
+    background-repeat: no-repeat
+    background-size cover
+    @media (max-width: tablet-step-size)
+      display none
+  &__text-content
+    width calc((100% - 76px) /2)
+    padding vertical-space
+    display flex
+    flex-direction column
+    justify-content space-between
+    @media (max-width: tablet-step-size)
+      width 100%
+      padding-top vertical-space * 2
+  &__mobile-header
+    width 60px
+    height 60px
+    background-repeat: no-repeat
+    background-position 50% 50%
+    margin-bottom vertical-space
+    @media (min-width: tablet-step-size)
+      display none
+  &--l
+    @media (max-width: mobile-step-size)
+      height 420px
+    .{b2bAppName}-category__image
+      display block!important
+      @media (max-width: mobile-step-size)
+        height 40%
+        width 100%
+        background-size: cover
+    .{b2bAppName}-category__text-content
+      padding vertical-space * 1.5
+      @media (max-width: tablet-step-size)
+        width calc((100% - 76px) /2)
+      @media (max-width: mobile-step-size)
+        height 60%
+        width 100%
+    .{b2bAppName}-category__content
+      @media (max-width: mobile-step-size)
+        flex-direction column-reverse
+    .{b2bAppName}-category__text-content
+      @media (max-width: tablet-step-size)
+        padding vertical-space
+    .{b2bAppName}-category__triangle
+      @media (min-width: mobile-step-size)
+        display block
+  &--s
+    .{b2bAppName}-category__text-content
+      padding-top vertical-space * 2
+      width 100%
+    .{b2bAppName}-category__mobile-header
+      display block!important
+  .{newAppName}-price
+    opacity 1!important
 
 .triple
   .{b2bAppName}-card
@@ -186,4 +328,7 @@
       background-color: b2c-light-blue-hight
     &__discount-line-2
         background-color b2c-orange
+
+.mb5
+  margin-bottom 5px
 

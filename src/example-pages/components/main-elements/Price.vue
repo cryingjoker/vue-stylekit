@@ -45,6 +45,20 @@
             />
           </div>
         </div>
+        <div class="row rt-space-top">
+          <div class="rt-col-4 rt-col-md-3">
+            <pre-code
+              text="<rt-price oldPriceColor=&quot;red&quot; :old-value=&quot;2500&quot; :value=&quot;400&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;в месяц&quot; class=&quot;color-main09&quot;/>"
+            />
+          </div>
+        </div>
+        <div class="row rt-space-top">
+          <div class="rt-col-4 rt-col-md-3">
+            <pre-code
+              text="<rt-price :value=&quot;500&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;&quot; class=&quot;color-main09&quot;/>"
+            />
+          </div>
+        </div>
       </div>
     </div>
     <div class="rt-container rt-space-top25">
