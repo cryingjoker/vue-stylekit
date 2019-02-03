@@ -84,7 +84,6 @@ export default {
       type: [String, Number],
       default: null
     },
-
     offsetTop: {
       type: Boolean,
       default: false
@@ -118,6 +117,22 @@ export default {
       default: null
     },
     isB2bPackage: {
+      type: Boolean,
+      default: false
+    },
+    isB2bCategory: {
+      type: Boolean,
+      default: false
+    },
+    categoryCardSize: {
+      type: Number,
+      default: 1
+    },
+    categoryIconMobile: {
+      type: String,
+      default: null
+    },
+    hasLabel: {
       type: Boolean,
       default: false
     }
@@ -163,6 +178,18 @@ export default {
       }
       if(this.isB2bPackage){
         cardClass += " rtb-card--package"
+      }
+      if(this.isB2bCategory){
+        if(this.categoryCardSize === 1){
+          cardClass += " rtb-category--s"
+        }
+        if(this.categoryCardSize === 2){
+          cardClass += " rtb-category--m"
+        }
+        if(this.categoryCardSize === 3){
+          cardClass += " rtb-category--l"
+        }
+        cardClass += " rtb-category"
       }
       return cardClass;
     },
@@ -320,10 +347,34 @@ export default {
         return styles;
       }
       return {};
+    },
+    categoryImage() {
+      const styles = {};
+
+      if(this.backgroundImage) {
+        styles.backgroundImage = "url(" + this.backgroundImage + ")";
+      }
+      return styles;
+    },
+    categoryIcon() {
+      const styles = {};
+
+      if(this.categoryIconMobile) {
+        styles.backgroundImage = "url(" + this.categoryIconMobile + ")";
+      }
+      return styles;
+    },
+    categoryBackgroundColor() {
+      const styles = {};
+      if (this.isB2bCategory) {
+        styles.backgroundColor = this.backgroundColorType;
+      }
+      return styles;
     }
   },
 
   mounted: function() {
+
   },
   methods: {
     normalizeSize(size) {
@@ -337,6 +388,69 @@ export default {
     }
   },
   render(h) {
+    const categoryCard = (() => {
+      if(this.isB2bCategory) {
+        if(this.categoryCardSize === 3){
+          return <div class="rtb-category__content" >
+            <div class="rtb-category__text-content">
+              <div class="rtb-category__content-top">
+                {this.$slots.content}
+              </div>
+              <div class="rtb-category__content-bottom">
+                {this.$slots.footer}
+              </div>
+            </div>
+            <div class="rtb-category__triangle">
+              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 420">
+                <polygon points="0 420,76 0,0 0"/>
+              </svg>
+            </div>
+            <div class="rtb-category__image" style={this.categoryImage}></div>
+          </div>
+        }
+        if(this.categoryCardSize === 2){
+          return <div class="rtb-category__content" >
+            <div class="rtb-category__text-content">
+              <div class="rtb-category__content-top">
+                <div class="rtb-category__mobile-header" style={this.categoryIcon}></div>
+                {this.$slots.content}
+              </div>
+              <div class="rtb-category__content-bottom">
+                {this.$slots.footer}
+              </div>
+            </div>
+            <div class="rtb-category__triangle">
+              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 420">
+                <polygon points="0 420,76 0,0 0"/>
+              </svg>
+            </div>
+            <div class="rtb-category__image" style={this.categoryImage}></div>
+          </div>
+        }
+        if(this.categoryCardSize === 1){
+          return <div class="rtb-category__content" >
+            <div class="rtb-category__text-content">
+              <div class="rtb-category__content-top">
+                <div class="rtb-category__mobile-header" style={this.categoryIcon}></div>
+                {this.$slots.content}
+              </div>
+              <div class="rtb-category__content-bottom">
+                {this.$slots.footer}
+              </div>
+            </div>
+          </div>
+        }
+      } else {
+        return null
+      }
+    })();
+    const label =(() => {
+      if (this.hasLabel){
+        return <div class="rtb-card__label">
+          {this.$slots.label}
+        </div>
+      }
+    })();
     const discount = (() => {
       if(this.hasDiscount){
         if(this.discountLines === 1){
@@ -344,7 +458,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">1 услуга  со скидкой  50%</span>
+                <span class="rtb-card__discount-line__flag-text">1 услуга со скидкой 50%</span>
             </div>
           </div>
         }
@@ -353,7 +467,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
-                <span class="rtb-card__discount-line__flag-text">2 услуги  со скидкой  50%</span>
+                <span class="rtb-card__discount-line__flag-text">2 услуги со скидкой 50%</span>
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
@@ -364,7 +478,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#64DDEC" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">3 услуги  со скидкой  50%</span>
+                <span class="rtb-card__discount-line__flag-text">3 услуги со скидкой 50%</span>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2"></div>
             <div class="rtb-card__discount-line rtb-card__discount-line-3"></div>
@@ -399,28 +513,34 @@ export default {
         return null
       }
     })();
-    return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
-      {this.backgroundImageStandAlone ? <div
-        style={this.standAloneBackgroundStyle}
-        class="rt-card__stand-alone-background"
-      /> : null}
-      {discount}
-      <div style={this.cardBackgroundStyle}
-           class={"rt-card__background" + this.cardBackgroundClass}
-      />
-      <div class={"rt-card__content" + this.cardContentClass}>
-        {header}
-
-        <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
-          {this.$slots["content"]}
+    if(!this.isB2bCategory){
+      return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
+        {this.backgroundImageStandAlone ? <div
+          style={this.standAloneBackgroundStyle}
+          class="rt-card__stand-alone-background"
+        /> : null}
+        {discount}
+        {label}
+        <div style={this.cardBackgroundStyle}
+             class={"rt-card__background" + this.cardBackgroundClass}
+        />
+        <div class={"rt-card__content" + this.cardContentClass}>
+          {header}
+          <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
+            {this.$slots["content"]}
+          </div>
+          {bottomList}
+          {contentWithoutWrapper}
+          <div class="rt-card__footer">
+            {this.$slots["footer"]}
+          </div>
         </div>
-        {bottomList}
-        {contentWithoutWrapper}
-        <div class="rt-card__footer">
-          {this.$slots["footer"]}
-        </div>
-      </div>
-    </div>;
+      </div>;
+    } else {
+      return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
+        {categoryCard}
+      </div>;
+    }
   }
 };
 </script>

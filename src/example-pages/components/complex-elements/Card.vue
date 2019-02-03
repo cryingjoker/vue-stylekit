@@ -1042,7 +1042,7 @@
             />
           </div>
 
-          <div class="rt-col-3 rt-col-md-3 rt-space-top higher-z">
+          <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top higher-z">
             <rt-card
               :equalPadding="true">
               <template slot="header">
@@ -1052,7 +1052,7 @@
                 <div class="rtb-card__description__row">
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
                   <hint>
-                    <slot>Это всё что угодно, <br>но не адрес электронной  почты</slot>
+                    <slot>Это всё что угодно,<br>но не адрес электронной почты</slot>
                   </hint>
                   <p class="rt-font-small-paragraph color-main025">на номера домашнего региона</p>
                 </div>
@@ -1082,10 +1082,11 @@
                 </div>
               </template>
               <template slot="footer">
+                <div class="rt-space-bottom"></div>
                 <div class="rtb-card__cost">
-                  <span class="rt-font-b2b-card-price">400</span>
-                  <span class="rt-font-b2b-card-price">₽</span>
-                  <span class="rt-font-paragraph rt-font-bold">в месяц</span>
+                  <rt-price
+                    :value="400" :is-option="false" currency="₽" :b2bPrice="true" timeInterval="">
+                  </rt-price>
                 </div>
                 <a href="#">
                   <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
@@ -1093,11 +1094,15 @@
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-3 rt-col-md-3 rt-space-top">
+          <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
             <rt-card
-              :equalPadding="true">
+              :equalPadding="true"
+              :hasLabel="true">
               <template slot="header">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+              </template>
+              <template slot="label">
+                <h4>- 30%</h4>
               </template>
               <template slot="content">
                 <div class="rtb-card__description__row">
@@ -1114,10 +1119,11 @@
                 </div>
               </template>
               <template slot="footer">
+                <div class="rt-space-bottom"></div>
                 <div class="rtb-card__cost">
-                  <span class="rt-font-b2b-card-price">500</span>
-                  <span class="rt-font-b2b-card-price">₽</span>
-                  <span class="rt-font-paragraph rt-font-bold">в месяц</span>
+                  <rt-price
+                    :value="500" :is-option="false" currency="₽" :b2bPrice="true" timeInterval="в месяц">
+                  </rt-price>
                 </div>
                 <a href="#">
                   <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
@@ -1125,7 +1131,7 @@
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-4 rt-col-md-3 rt-space-top higher-z">
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top higher-z">
             <rt-card
               :equalPadding="true"
               :hasDiscount="true"
@@ -1147,7 +1153,7 @@
                   <div class="rtb-card__description__row">
                     <span class="rt-font-paragraph rt-font-bold">1 сим-карта</span>
                     <hint>
-                      <slot>Это всё что угодно, <br>но не адрес электронной  почты</slot>
+                      <slot>Это всё что угодно,<br>но не адрес электронной почты Это всё что угодно,<br>но не адрес электронной почты Это всё что угодно,<br>но не адрес электронной почты</slot>
                     </hint>
                   </div>
                   <div class="rtb-card__description__row">
@@ -1180,16 +1186,128 @@
                 </div>
               </template>
               <template slot="footer">
+                <div class="rt-space-bottom"></div>
                 <div class="rtb-card__cost">
-                  <span class="rt-font-b2b-card-price">2 500</span>
-                  <span class="rt-font-b2b-card-price">₽</span>
-                  <span class="rt-font-paragraph rt-font-bold">в месяц</span>
+                  <rt-price
+                    :value="2500" :is-option="false" currency="₽" :b2bPrice="true" timeInterval="в месяц">
+                  </rt-price>
                 </div>
                 <div class="rtb-card__description__row">
-                  <p class="rt-font-small-paragraph color-main025">Цена за услуги вне пакета 6 000 ₽</p>
+                  <p class="rt-font-small-paragraph color-main025">Цена за услуги вне пакета
+                    <rt-price
+                      :value="6000" :is-option="false" currency="₽" :b2bPrice="true" timeInterval="">
+                    </rt-price>
+                  </p>
                 </div>
                 <a href="#">
                   <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
+                </a>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top">
+            <rt-card
+              :equal-padding="true">
+              <template slot="content">
+                <div class="rtb-card__vertical">
+                  <div class="rtb-card__vertical__left-column">
+                    <img src="/static/images/B2B/wifi.svg">
+                  </div>
+                  <div class="rtb-card__vertical__right-column">
+                    <p class="rt-font-paragraph rt-font-bold mb5">Управляемый Wi-Fi</p>
+                    <p class="rt-font-small-paragraph">Мощные роутеры в аренду, удобный личный кабинет и рекламная платформа</p>
+                    <div class="rt-space-bottom"></div>
+                    <a href="#">
+                      <button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">Выбрать</button>
+                    </a>
+                  </div>
+                </div>
+              </template>   
+            </rt-card>
+          </div>
+          <div class="rt-col-8 rt-col-td-3 rt-col-md-3 rt-space-top"></div>
+          <div class="rt-col-12 rt-col-td-6 rt-col-md-3 rt-space-top">
+            <rt-card
+              background-image="static/images/B2B/category-img.png"
+              :isB2bCategory="true"
+              :category-card-size="3"
+              background-color-type="green-low"
+              :is-white-color="true"
+              categoryIconMobile="static/images/B2B/shield.svg">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom05">Видеонаблюдение</h3>
+                <div class="rt-font-small-paragraph">Система удаленного видеонаблюдения</div>
+              </template>
+              <template slot="footer">
+                <a href="#">
+                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                </a>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-8 rt-col-td-3 rt-col-md-3 rt-space-top">
+            <rt-card
+              background-image="static/images/B2B/virtual-ATS.png"
+              :isB2bCategory="true"
+              :category-card-size="2"
+              background-color-type="purple"
+              :is-white-color="true"
+              categoryIconMobile="static/images/B2B/shield.svg">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom05">Виртуальная АТС</h3>
+                <div class="rt-font-small-paragraph">Быстрое подключение без трат на оборудование, возможность пользоваться из любой точки мира и ни одного пропущенного звонка клиента</div>
+              </template>
+              <template slot="footer">
+                <rt-price
+                  :is-option="true"
+                  :value="500"
+                  currency="₽"
+                  time-interval="в месяц"
+                  :b2bPrice="true">
+                </rt-price>
+                <a href="#">
+                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                </a>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top">
+            <rt-card
+              :isB2bCategory="true"
+              :category-card-size="1"
+              background-color-type="dark-blue"
+              :is-white-color="true"
+              categoryIconMobile="static/images/B2B/shield.svg">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom05">Сервис по защите от сетевых угроз</h3>
+                <div class="rt-font-small-paragraph">На базе решения класса Unified Threat Management (UTM)</div>
+              </template>
+              <template slot="footer">
+                <a href="#">
+                  <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Подробнее</rt-button>
+                </a>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top">
+            <rt-card
+              :isB2bCategory="true"
+              :category-card-size="1"
+              categoryIconMobile="static/images/B2B/mobile-call.svg">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom05">Сервис по защите от сетевых угроз</h3>
+                <div class="rt-font-small-paragraph">На базе решения класса Unified Threat Management (UTM)</div>
+              </template>
+              <template slot="footer">
+                <rt-price
+                  :is-option="true"
+                  :value="500"
+                  currency="₽"
+                  time-interval="в месяц"
+                  :b2bPrice="true">
+                </rt-price>
+                <a href="#">
+                  <rt-button class="rt-button-purple-border rt-button-small rt-space-horizontal">Подробнее</rt-button>
                 </a>
               </template>
             </rt-card>

@@ -42,6 +42,14 @@ export default {
     boldOption:{
       type: Boolean,
       default: false
+    },
+    b2bPrice: {
+      type: Boolean,
+      default: false
+    },
+    oldPriceColor: {
+      type: String,
+      default: ""
     }
 
   },
@@ -60,14 +68,25 @@ export default {
           )
         : this.oldValue,
       priceType: (() => {
-        if (this.onlyPrice) {
-          return "only-price";
+        if(this.b2bPrice === true) {
+          if(this.isOption) {
+            return "b2b-price--option"
+          }
+          if(this.oldValue) {
+            return "b2b-price--old-value"
+          }
+          return "b2b-price"
         }
-        if (this.oldValue) {
-          return "oldval-price";
-        }
-        if (this.isOption) {
-          return "option-price";
+        if(!this.b2bPrice){
+          if (this.onlyPrice) {
+            return "only-price";
+          }
+          if (this.oldValue) {
+            return "oldval-price";
+          }
+          if (this.isOption) {
+            return "option-price";
+          }
         }
         return "simple-price";
       })(),
@@ -127,6 +146,45 @@ export default {
                 <div class="rt-price__info-item">{this.normalizeCurrency}</div>
                 <div class="rt-price__info-item">
                   {this.normalizeTimeInterval}
+                </div>
+              </div>
+            </div>
+          );
+        case "b2b-price":
+          return (
+            <div class="rt-price rtb-price rt-price-without-space">
+              <div class={"rt-price__value rtb-price__value"+ (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class="rt-price__info rtb-price__info">
+                <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
+                <div class="rtb-price__info-item">{this.normalizeTimeInterval}</div>
+              </div>
+            </div>
+          );
+        case "b2b-price--option":
+          return (
+            <div class="rt-price rtb-price rt-price-without-space">
+              <div class="rt-price__opinion">{this.optionLabel ? this.optionLabel : 'от'} </div>
+              <div class={"rt-price__value rtb-price__value"+ (this.colorValue ? 'color-'+this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class="rt-price__info rtb-price__info">
+                <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
+                <div class="rtb-price__info-item">{this.normalizeTimeInterval}</div>
+              </div>
+            </div>
+          );
+        case "b2b-price--old-value":
+          console.log(this.oldPriceColor);
+          return (
+            <div class="rt-price  rtb-price rt-price-without-space">
+              <div class="rtb-price__old-value">
+                <div class={"rt-price__old-value rtb-price__old-4value" + (this.oldPriceColor ? ' color-'+this.oldPriceColor : '')}>{this.normalizeOldValue}
+                  <div class="rt-price__info rtb-price__info-item">{this.normalizeCurrency}</div>
+                </div>
+              </div>
+              <div class={"rt-price__value rtb-price__value"+ (this.colorValue ? ' color-'+this.colorValue : '')}>{this.normalizeValue}</div>
+              <div class="rt-price__info">
+                <div class="rt-price__info rtb-price__info">
+                  <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
+                  <div class="rtb-price__info-item rtb-price__info-item">{this.normalizeTimeInterval}</div>
                 </div>
               </div>
             </div>

@@ -199,6 +199,30 @@
       .{newAppName}-card--has-white-color &
         border-color b2c-white07
 
+.{b2bAppName}-price
+  &__value,
+  &__info
+    font-size 32px
+    line-height 42px
+    font-weight 600
+    color inherit!important
+    &-item
+      display inline-block
+      &+&
+        font-size 18px
+        line-height 26px
+        margin-left: 10px
+  &__value
+    padding 0 5px
+  &__old-value
+    color b2c-red
+    font-size 18px
+    line-height 26px
+    padding 0 5px
+    .rt-price__old-value
+      opacity 1
+      &:before
+        border-bottom-color b2c-red
 
 .{newAppName}-price-game
   .{newAppName}-price__info-item
