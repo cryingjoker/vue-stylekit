@@ -337,13 +337,14 @@
         this.calculateMobileOptions();
       },
       calculateMobileOptions() {
+
         if (
           this.contentMobileHeight !== null ||
           this.contentMobileMinHeight !== null ||
-          this.mobileImageHeight !== null,
+          this.mobileImageHeight !== null ||
           this.mobileImageMaxHeight !== null
         ) {
-
+          console.info('window.innerWidth <= parseInt(variables["mobile-step-size"])',window.innerWidth , parseInt(variables["mobile-step-size"]),window.innerWidth <= parseInt(variables["mobile-step-size"]))
           const isMobile =
             window.innerWidth <= parseInt(variables["mobile-step-size"]);
           if (this.RtBanners.isMobile !== isMobile) {
@@ -741,7 +742,7 @@
           return <div class="rt-col-12">
             <div class="row">
               {emptyColumn()}
-              <div class="rt-col-4 rt-col-md-3 height-fill rt-col-td-3 rt-td-space-left2">
+              <div class="rt-col-4 rt-col-md-3 height-fill rt-col-td-3">
                 {this.$slots.default}
               </div>
               <div class="rt-col-1 rt-col-td-3 md-d-none"/>
