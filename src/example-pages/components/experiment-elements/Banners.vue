@@ -22,7 +22,7 @@
         >
 
           <rt-banner-item
-            background-image="/static/images/B2C/banner-img.png"
+            background-image="/static/images/B2B/banner-img.png"
             :is-white-color="true"
             content-mobile-min-height="80vh"
             content-mobile-height="200px"
