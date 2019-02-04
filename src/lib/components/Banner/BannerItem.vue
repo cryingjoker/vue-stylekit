@@ -118,7 +118,6 @@ export default {
       if (this.contentMaxWidth !== null) {
         styles.maxWidth = this.normalizeVariable(this.contentMaxWidth);
       }
-
       if (!this.RtBanners.isMobile) {
         if (this.contentMinHeight) {
           styles.minHeight = this.normalizeVariable(this.contentMinHeight);
