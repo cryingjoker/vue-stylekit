@@ -50,11 +50,11 @@
 }
 .d-md-flex-column{
     .{newAppName}-card{
-        @media (max-width: mobile-step-size) {
+        @media (max-width: mobile-upper-limit) {
             min-height: fit-content;
         }
     }
-    @media (max-width: mobile-step-size) {
+    @media (max-width: mobile-upper-limit) {
         display: flex;
         flex-direction: column;
     }
@@ -68,7 +68,7 @@
     transition-timing-function: ease-in-out;
     transition-property: opacity, visibility;
     transition-duration: 0.2s;
-    @media (max-width: mobile-step-size) {
+    @media (max-width: mobile-upper-limit) {
         opacity: 0;
         visibility: hidden;
     }

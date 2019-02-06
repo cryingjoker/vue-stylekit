@@ -346,7 +346,7 @@
         ) {
           console.info('window.innerWidth <= parseInt(variables["mobile-step-size"])',window.innerWidth , parseInt(variables["mobile-step-size"]),window.innerWidth <= parseInt(variables["mobile-step-size"]))
           const isMobile =
-            window.innerWidth <= parseInt(variables["mobile-step-size"]);
+            window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
             this.isMobile = isMobile;
