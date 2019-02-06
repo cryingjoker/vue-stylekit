@@ -3,8 +3,6 @@
   "b2bAppName": "rtb",
   "horizontal-space": "20px",
   "vertical-space": "20px",
-  "mobile-step-size": "768px",
-  "tablet-step-size": "1024px",
   "iphone8": "415px",
   "desktop-step-grid": "8.333333%",
   "tablet-step-grid": "16.66666%",
