@@ -24,7 +24,7 @@
   & .rt-banner__item--is-active
     // opacity: 0
     // visibility hidden
-    @media (min-width: tablet-step-size)
+    @media (min-width: desktop-lower-limit)
       z-index 100
       animation-name hideShowContent
       animation-duration .8s
@@ -405,14 +405,14 @@
       min-width 430px
       max-width 500px
 
-      @media (max-width: tablet-step-size)
+      @media (max-width: tablet-upper-limit)
         min-width 100%
 
-      @media (max-width: mobile-step-size)
+      @media (max-width: mobile-upper-limit)
         min-width initial                   //calc(100% - 50px)?
         max-width initial                   //calc(100% - 50px)?
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       width auto
 
       .{newAppName}-banner--full-screen &
@@ -433,7 +433,7 @@
     right 0
     z-index 2
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       display none
 
   &-image
@@ -573,7 +573,7 @@
       &:after
         display none
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       display none
 
       .{newAppName}-banner--full-screen &
@@ -680,7 +680,7 @@
   transition-duration .3s
   transition-property opacity
 
-  @media (max-width: tablet-step-size)
+  @media (max-width: tablet-upper-limit)
     display none
 
   &--next
@@ -772,13 +772,13 @@
     z-index 1000
 
 .rt-banner__top-content
-  @media (min-width: tablet-step-size)
+  @media (min-width: desktop-lower-limit)
     animation-name hideShowContent
     animation-duration .8s
     animation-timing-function ease-in-out
 
 .rt-banner__bottom-content
-  @media (min-width: tablet-step-size)
+  @media (min-width: desktop-lower-limit)
     transition-timing-function ease-in-out
     transition-duration .3s
     transition-property max-height
