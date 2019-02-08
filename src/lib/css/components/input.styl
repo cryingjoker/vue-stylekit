@@ -11,14 +11,14 @@
   position relative
   z-index 2
   appearance field
-  placeholder(color b2c-black07, )
+  placeholder(color main-color07, )
 
   .input--with-button &
     padding-right horizontal-space * 3
 
   &[disabled]
     color b2c-cool-grey03
-    placeholder(color b2c-black03, )
+    placeholder(color main-color03, )
 
   .{newAppName}-input--white &,
   .{newAppName}-card--has-white-color &
@@ -48,14 +48,14 @@
     transform rotate(180deg)
 
 .input-clear__icon
-  fill b2c-black
+  fill main-color
 
   .{newAppName}-dark-theme &,
   .{newAppName}-input--white &
     fill white
 
   .{newAppName}-card &
-    fill b2c-black
+    fill main-color
 
   .{newAppName}-card--has-white-color &
     fill white
@@ -76,13 +76,13 @@
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property stroke
-  stroke b2c-black
+  stroke main-color
 
   .{newAppName}-dark-theme &
     stroke b2c-white
 
 .input-label
-  color b2c-black05
+  color main-color05
   font-size 12px
   line-height 16px
   margin-top 3px
@@ -92,7 +92,7 @@
       color b2c-white05
 
     .{newAppName}-card &
-      color b2c-black05
+      color main-color05
 
 @keyframes showClearInput
   0%

@@ -205,18 +205,18 @@ a
 .{newAppName}-numeric-list
   list-style-type none
   counter-reset step-counter
-  color b2c-black05
+  color main-color05
   .{newAppName}-dark-theme &
     color b2c-white05
 
 .{newAppName}-ordered-list__item
   position: relative
-  color b2c-black05
+  color main-color05
   .{newAppName}-dark-theme &
     color b2c-white05
   &:before
     content: ''
-    background-color: b2c-black05
+    background-color: main-color05
     height: 6px
     width: 6px
     border-radius 50%
@@ -235,7 +235,7 @@ a
   &:before
     content counter(step-counter) "."
     position absolute
-    color b2c-black05
+    color main-color05
     left 0
     .{newAppName}-dark-theme &
       color b2c-white05
