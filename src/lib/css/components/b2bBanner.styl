@@ -12,7 +12,7 @@
     top auto
     bottom auto
     height auto!important
-  @media (max-width: tablet-step-size)
+  @media (max-width: tablet-upper-limit)
     flex-direction column
     height auto
     max-height none
@@ -21,14 +21,14 @@
     width 50%
     position relative
     left auto
-    @media (max-width: tablet-step-size)
+    @media (max-width: tablet-upper-limit)
       width 100%
       padding 20px
       display block
   .rt-banner-container
     clearfix()
     padding 40px
-    @media (max-width: tablet-step-size)
+    @media (max-width: tablet-upper-limit)
       order 1
       padding 20px
       min-height auto
@@ -36,7 +36,7 @@
     background-size: contain
     background-position 50% 50%
     background-repeat: no-repeat
-    @media (max-width: tablet-step-size)
+    @media (max-width: tablet-upper-limit)
       background-position-y 100%
       height calc((100vw - 20px)/2)
   .rt-banner-content__inner
@@ -46,7 +46,7 @@
     flex-direction column
     justify-content space-between
     height calc(100% - 80px)
-    @media (max-width: tablet-step-size)
+    @media (max-width: tablet-upper-limit)
       order 1
       min-height auto
       height auto

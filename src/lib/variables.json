@@ -3,10 +3,14 @@
   "b2bAppName": "rtb",
   "horizontal-space": "20px",
   "vertical-space": "20px",
-  "mobile-step-size": "768px",
-  "tablet-step-size": "1024px",
   "iphone8": "415px",
-  "desctop-step-grid": "8.333333%",
+  "desktop-step-grid": "8.333333%",
   "tablet-step-grid": "16.66666%",
-  "mobile-step-grid": "33.333333%"
+  "mobile-step-grid": "33.333333%",
+  "mobile-upper-limit": "767px",
+  "tablet-lower-limit": "768px",
+  "tablet-upper-limit": "1023px",
+  "desktop-lower-limit": "1024px",
+  "desktop-upper-limit": "1280px",
+  "large-desktop-lower-limit": "1281px"
 }

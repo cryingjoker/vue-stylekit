@@ -24,14 +24,14 @@
               </rt-tabs-content-item>
               <rt-tabs-content-item name="tablet">
                 <documentation-builder
-                  :label="'max-width: ' + variables['tablet-step-size']"
+                  :label="'max-width: ' + variables['tablet-upper-limit']"
                   :json="tabletJson"
                   type="classStyle"
                 />
               </rt-tabs-content-item>
               <rt-tabs-content-item name="mobile">
                 <documentation-builder
-                  :label="'max-width: ' + variables['mobile-step-size']"
+                  :label="'max-width: ' + variables['mobile-upper-limit']"
                   :json="mobileJson"
                   type="classStyle"
                 />

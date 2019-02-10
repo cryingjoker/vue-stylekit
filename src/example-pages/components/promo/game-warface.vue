@@ -132,7 +132,7 @@
     <div class="color-block--white rt-space-top25 color-dark">
       <div class="rt-container">
         <p class="rt-font-h3 rt-font-bold">Примечания</p>
-        <p class="rt-font-control rt-space-top05 b2c-black05 rt-font-light">Warface — игровая опция (Опция) Услуги
+        <p class="rt-font-control rt-space-top05 main-color05 rt-font-light">Warface — игровая опция (Опция) Услуги
           «Домашний интернет» (Услуга), доступная абонентам при подключении тарифного плана «Игровой» (План). Опция
           предоставляется партнером — ООО «Мейл.Ру», ответственность за предоставление опции несет партнер.
           Использование Опции возможно при наличии аккаунта Абонента на wf.mail.ru в рамках пользовательского соглашения
