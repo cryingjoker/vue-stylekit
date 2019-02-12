@@ -59,7 +59,8 @@ import {
   LinksBlock,
   Hint,
   BannerVideoGameControl,
-  SlideContent
+  SlideContent,
+  Icon
 
 } from "./components";
 
@@ -127,6 +128,7 @@ const VueRtStyle = {
       Vue.component(Logo.name, Logo);
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
+      Vue.component(Icon.name, Icon);
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 

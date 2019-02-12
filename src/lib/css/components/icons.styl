@@ -6,3 +6,14 @@
   transition-property opacity, visibility
   &--not-active
     opacity: 0.3
+
+.{b2bAppName}-icon
+  position absolute
+  top 50%
+  left 20px
+  transform translateY(-50%)
+  &+.ripple
+    text-indent 36px
+  &-image
+    .{newAppName}-dark-theme &
+      fill #637493
