@@ -48,17 +48,17 @@
     font-size 14px
 
     .ripple
-      padding-left 12px
-      padding-right 12px
+      padding-left 10px
+      padding-right 10px
 
   &-md-small
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       height 34px
       font-size 14px
 
       .ripple
-        padding-left 12px
-        padding-right 12px
+        padding-left 10px
+        padding-right 10px
 
   &:before
     display none
@@ -74,10 +74,10 @@
     &:hover,
     &:focus
       box-shadow 0 2px 5px rgba(0, 0, 0, .2)
-      background-color: b2c-orange-hight
+      background-color: b2c-orange-high
 
     &[disabled]
-      background-color b2c-black01
+      background-color main-color01
       color white
       .{newAppName}-dark-theme &
         background-color: b2c-white01
@@ -103,8 +103,8 @@
       background-color: rgba(b2c-orange, .1)
 
     &[disabled]
-      border-color b2c-black01
-      color b2c-black01
+      border-color main-color01
+      color main-color01
       &:focus,
       &:hover
         background-color: transparent
@@ -128,7 +128,7 @@
     &:active
       background-color: transparent
     &[disabled]
-      color b2c-black01
+      color main-color01
       &:hover
         background-color: transparent
       .{newAppName}-dark-theme &
@@ -148,11 +148,11 @@
     &:hover,
     &:focus
       box-shadow 0 2px 5px rgba(0, 0, 0, .2)
-      background-color: b2c-purple-hight
+      background-color: b2c-purple-high
 
     &[disabled]
       color white
-      background-color b2c-black01
+      background-color main-color01
       .{newAppName}-dark-theme &
         background-color b2c-white01
         color b2c-white03
@@ -169,8 +169,8 @@
       box-shadow none
 
     &[disabled]
-      border-color b2c-black01
-      color b2c-black01
+      border-color main-color01
+      color main-color01
       .{newAppName}-dark-theme &
         border-color b2c-white03
         color b2c-white03
@@ -187,8 +187,8 @@
       background-color b2c-purple-low
 
     &[disabled]
-      color b2c-black01
-      border-color b2c-black01
+      color main-color01
+      border-color main-color01
   &-transparent
     border 2px solid transparent
     &:focus,
@@ -200,7 +200,7 @@
     &:active
       background-color: transparent
     &[disabled]
-      color b2c-black01
+      color main-color01
       &:hover
         background-color: transparent
       .{newAppName}-dark-theme &
@@ -209,3 +209,12 @@
         border-color transparent
       .ripple-wave
         background-color b2c-cool-grey
+  &-cool-grey-border
+    border 2px solid b2c-cool-grey
+    &:focus,
+    &:hover
+      opacity .7
+      background-color: b2c-cool-grey05
+      .{newAppName}-dark-theme &
+        background-color: b2c-white01
+

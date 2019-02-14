@@ -82,9 +82,9 @@ export default {
     calculateMaxHeight() {
 
       const isMobile =
-        window.innerWidth <= parseInt(variables["mobile-step-size"]);
+        window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       const isTablet =
-        window.innerWidth <= parseInt(variables["mobile-step-size"]);
+        window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       this.isMobile = isMobile;
       this.isTablet = isMobile;
       if (isMobile && this.mobileNotResize) {

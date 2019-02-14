@@ -7,7 +7,7 @@
   &-label
     line-height 60px
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       line-height 35px
 
   &-wrapper
@@ -27,7 +27,7 @@
       order 1
       width 100%
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       margin-right horizontal-space * 1.5
 
   &-paragraph-icon
@@ -62,12 +62,12 @@
     &--purple-low
       fill b2c-purple-low
 
-    &--fill-purple-hight
+    &--fill-purple-high
       .color-line-paragraph-icon__background
-        fill b2c-purple-hight
+        fill b2c-purple-high
 
-    &--purple-hight
-      fill b2c-purple-hight
+    &--purple-high
+      fill b2c-purple-high
 
     &--fill-red
       .color-line-paragraph-icon__background
@@ -83,12 +83,12 @@
     &--red-low
       fill b2c-red-low
 
-    &--fill-red-hight
+    &--fill-red-high
       .color-line-paragraph-icon__background
-        fill b2c-red-hight
+        fill b2c-red-high
 
-    &--red-hight
-      fill b2c-red-hight
+    &--red-high
+      fill b2c-red-high
 
     &--fill-dark-blue
       .color-line-paragraph-icon__background
@@ -104,12 +104,12 @@
     &--dark-blue-low
       fill b2c-dark-blue-low
 
-    &--fill-dark-blue-hight
+    &--fill-dark-blue-high
       .color-line-paragraph-icon__background
-        fill b2c-dark-blue-hight
+        fill b2c-dark-blue-high
 
-    &--dark-blue-hight
-      fill b2c-dark-blue-hight
+    &--dark-blue-high
+      fill b2c-dark-blue-high
 
     &--fill-light-blue
       .color-line-paragraph-icon__background
@@ -125,12 +125,12 @@
     &--light-blue-low
       fill b2c-light-blue-low
 
-    &--fill-light-blue-hight
+    &--fill-light-blue-high
       .color-line-paragraph-icon__background
-        fill b2c-light-blue-hight
+        fill b2c-light-blue-high
 
-    &--light-blue-hight
-      fill b2c-light-blue-hight
+    &--light-blue-high
+      fill b2c-light-blue-high
 
     &--fill-yellow
       .color-line-paragraph-icon__background
@@ -146,12 +146,12 @@
     &--yellow-low
       fill b2c-yellow-low
 
-    &--fill-yellow-hight
+    &--fill-yellow-high
       .color-line-paragraph-icon__background
-        fill b2c-yellow-hight
+        fill b2c-yellow-high
 
-    &--yellow-hight
-      fill b2c-yellow-hight
+    &--yellow-high
+      fill b2c-yellow-high
 
     &--fill-orange
       .color-line-paragraph-icon__background
@@ -167,12 +167,12 @@
     &--orange-low
       fill b2c-orange-low
 
-    &--fill-orange-hight
+    &--fill-orange-high
       .color-line-paragraph-icon__background
-        fill b2c-orange-hight
+        fill b2c-orange-high
 
-    &--orange-hight
-      fill b2c-orange-hight
+    &--orange-high
+      fill b2c-orange-high
 
     &--fill-pink
       .color-line-paragraph-icon__background
@@ -188,12 +188,12 @@
     &--pink-low
       fill b2c-pink-low
 
-    &--fill-pink-hight
+    &--fill-pink-high
       .color-line-paragraph-icon__background
-        fill b2c-pink-hight
+        fill b2c-pink-high
 
-    &--pink-hight
-      fill b2c-pink-hight
+    &--pink-high
+      fill b2c-pink-high
 
     &--fill-green
       .color-line-paragraph-icon__background
@@ -209,19 +209,19 @@
     &--green-low
       fill b2c-green-low
 
-    &--fill-green-hight
+    &--fill-green-high
       .color-line-paragraph-icon__background
-        fill b2c-green-hight
+        fill b2c-green-high
 
-    &--green-hight
-      fill b2c-green-hight
+    &--green-high
+      fill b2c-green-high
 
     &--fill-black
       .color-line-paragraph-icon__background
-        fill b2c-black
+        fill main-color
 
     &--black
-      fill b2c-black
+      fill main-color
 
     &--white
       fill b2c-white
@@ -231,7 +231,7 @@
     position relative
 
     br
-      @media (max-width: mobile-step-size)
+      @media (max-width: mobile-upper-limit)
         display none
 
     .color-line--is-paragraph &
@@ -264,11 +264,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-purple-low, -1 * horizontal-space * .75 0 0 b2c-purple-low
 
-    &--purple-hight
-      background-color b2c-purple-hight
-      border-right 2px solid b2c-purple-hight
+    &--purple-high
+      background-color b2c-purple-high
+      border-right 2px solid b2c-purple-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-purple-hight, -1 * horizontal-space * .75 0 0 b2c-purple-hight
+      box-shadow horizontal-space * .75 0 0 b2c-purple-high, -1 * horizontal-space * .75 0 0 b2c-purple-high
 
     &--red
       background-color b2c-red
@@ -282,11 +282,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-red-low, -1 * horizontal-space * .75 0 0 b2c-red-low
 
-    &--red-hight
-      background-color b2c-red-hight
-      border-right 2px solid b2c-red-hight
+    &--red-high
+      background-color b2c-red-high
+      border-right 2px solid b2c-red-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-red-hight, -1 * horizontal-space * .75 0 0 b2c-red-hight
+      box-shadow horizontal-space * .75 0 0 b2c-red-high, -1 * horizontal-space * .75 0 0 b2c-red-high
 
     &--dark-blue
       background-color b2c-dark-blue
@@ -300,11 +300,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-dark-blue-low, -1 * horizontal-space * .75 0 0 b2c-dark-blue-low
 
-    &--dark-blue-hight
-      background-color b2c-dark-blue-hight
-      border-right 2px solid b2c-dark-blue-hight
+    &--dark-blue-high
+      background-color b2c-dark-blue-high
+      border-right 2px solid b2c-dark-blue-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-dark-blue-hight, -1 * horizontal-space * .75 0 0 b2c-dark-blue-hight
+      box-shadow horizontal-space * .75 0 0 b2c-dark-blue-high, -1 * horizontal-space * .75 0 0 b2c-dark-blue-high
 
     &--light-blue
       background-color b2c-light-blue
@@ -318,11 +318,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-light-blue-low, -1 * horizontal-space * .75 0 0 b2c-light-blue-low
 
-    &--light-blue-hight
-      background-color b2c-light-blue-hight
-      border-right 2px solid b2c-light-blue-hight
+    &--light-blue-high
+      background-color b2c-light-blue-high
+      border-right 2px solid b2c-light-blue-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-light-blue-hight, -1 * horizontal-space * .75 0 0 b2c-light-blue-hight
+      box-shadow horizontal-space * .75 0 0 b2c-light-blue-high, -1 * horizontal-space * .75 0 0 b2c-light-blue-high
 
     &--yellow
       background-color b2c-yellow
@@ -336,11 +336,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-yellow-low, -1 * horizontal-space * .75 0 0 b2c-yellow-low
 
-    &--yellow-hight
-      background-color b2c-yellow-hight
-      border-right 2px solid b2c-yellow-hight
+    &--yellow-high
+      background-color b2c-yellow-high
+      border-right 2px solid b2c-yellow-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-yellow-hight, -1 * horizontal-space * .75 0 0 b2c-yellow-hight
+      box-shadow horizontal-space * .75 0 0 b2c-yellow-high, -1 * horizontal-space * .75 0 0 b2c-yellow-high
 
     &--orange
       background-color b2c-orange
@@ -354,11 +354,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-orange-low, -1 * horizontal-space * .75 0 0 b2c-orange-low
 
-    &--orange-hight
-      background-color b2c-orange-hight
-      border-right 2px solid b2c-orange-hight
+    &--orange-high
+      background-color b2c-orange-high
+      border-right 2px solid b2c-orange-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-orange-hight, -1 * horizontal-space * .75 0 0 b2c-orange-hight
+      box-shadow horizontal-space * .75 0 0 b2c-orange-high, -1 * horizontal-space * .75 0 0 b2c-orange-high
 
     &--pink
       background-color b2c-pink
@@ -372,11 +372,11 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-pink-low, -1 * horizontal-space * .75 0 0 b2c-pink-low
 
-    &--pink-hight
-      background-color b2c-pink-hight
-      border-right 2px solid b2c-pink-hight
+    &--pink-high
+      background-color b2c-pink-high
+      border-right 2px solid b2c-pink-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-pink-hight, -1 * horizontal-space * .75 0 0 b2c-pink-hight
+      box-shadow horizontal-space * .75 0 0 b2c-pink-high, -1 * horizontal-space * .75 0 0 b2c-pink-high
 
     &--green
       background-color b2c-green
@@ -390,17 +390,17 @@
       box-decoration-break clone
       box-shadow horizontal-space * .75 0 0 b2c-green-low, -1 * horizontal-space * .75 0 0 b2c-green-low
 
-    &--green-hight
-      background-color b2c-green-hight
-      border-right 2px solid b2c-green-hight
+    &--green-high
+      background-color b2c-green-high
+      border-right 2px solid b2c-green-high
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-green-hight, -1 * horizontal-space * .75 0 0 b2c-green-hight
+      box-shadow horizontal-space * .75 0 0 b2c-green-high, -1 * horizontal-space * .75 0 0 b2c-green-high
 
     &--black
-      background-color b2c-black
-      border-right 2px solid b2c-black
+      background-color main-color
+      border-right 2px solid main-color
       box-decoration-break clone
-      box-shadow horizontal-space * .75 0 0 b2c-black, -1 * horizontal-space * .75 0 0 b2c-black
+      box-shadow horizontal-space * .75 0 0 main-color, -1 * horizontal-space * .75 0 0 main-color
 
 .banner-page__content .banner-page__before-title
   display none

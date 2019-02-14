@@ -20,7 +20,7 @@
                 <rt-tag value=&quot;6&quot;>Два устройств Windows и Android</rt-tag>
                 <rt-tag value=&quot;7&quot;>Акция Kaspersky</rt-tag>
               </rt-tag-list>
-              <rt-tag-list color=&quot;red-hight&quot; class=&quot;row&quot;>
+              <rt-tag-list color=&quot;red-high&quot; class=&quot;row&quot;>
                 <rt-tag value=&quot;1&quot; :is-active=&quot;true&quot;>Все</rt-tag>
                 <rt-tag value=&quot;2&quot;>Для смартфонов Android</rt-tag>
                 <rt-tag value=&quot;3&quot;>Для Macbook</rt-tag>

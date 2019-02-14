@@ -9,7 +9,7 @@
 
 .app
   &--hide-scroll
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       overflow hidden
 
   &-title
@@ -18,7 +18,7 @@
 
     .{newAppName}-font-hero
       text-decoration underline
-      text-decoration-color b2c-red-hight
+      text-decoration-color b2c-red-high
 
   &-row
     &+&
@@ -31,7 +31,7 @@
 
   &-col-fill
     min-height 40px
-    color b2c-black
+    color main-color
     font-size 15px
     line-height 40px
     text-align center
@@ -78,11 +78,11 @@
     z-index 1000
     left: -370px
     .{newAppName}-dark-theme &
-      background-color b2c-black
+      background-color main-color
 
 
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       max-width 100vw
       overflow-y auto
       background-color #fff
@@ -94,7 +94,7 @@
       left: 0px
       &:hover
         left: 0px
-      @media (max-width: mobile-step-size)
+      @media (max-width: mobile-upper-limit)
         left 0
 
     border-right 1px solid b2c-cool-grey05
@@ -109,7 +109,7 @@
 
     &__link
       display block
-      color b2c-black06
+      color main-color06
       text-decoration none !important
       padding-top 10px
       padding-bottom 10px
@@ -128,7 +128,7 @@
         content ""
         width 10px
         height 1px
-        background-color b2c-red-hight
+        background-color b2c-red-high
         margin-top auto
         margin-bottom auto
         opacity 0
@@ -143,13 +143,13 @@
 
       &:hover,
       &:focus
-        color b2c-black
+        color main-color
 
         .{newAppName}-dark-theme &
           color white
 
       &--active
-        color b2c-black
+        color main-color
 
         &:before
           opacity 1
@@ -158,7 +158,7 @@
     margin-left 20px
     padding-top vertical-space
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       margin-left 0
 
 .dark-theme-switcher
@@ -168,7 +168,7 @@
 
 .{newAppName}-code
   display inline-block
-  color b2c-red-hight
+  color b2c-red-high
   font-family "RT Code"
 
   &--fill
@@ -279,7 +279,7 @@
   transition-duration .3s
   transition-property height, bottom
 
-  @media (max-width: tablet-step-size)
+  @media (max-width: tablet-upper-limit)
     left 20px
     right 20px
 

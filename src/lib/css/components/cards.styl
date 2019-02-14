@@ -15,12 +15,14 @@
   border-radius 10px
   box-shadow card-shadow
   position relative
+  &:hover
+   box-shadow card-shadow--hovered
 
   &--custom-height
     min-height initial
 
   &__border-content
-    border-top 1px solid b2c-black01
+    border-top 1px solid main-color01
     padding-top vertical-space * .5
     padding-left horizontal-space
     padding-right horizontal-space
@@ -31,10 +33,10 @@
   &--transparent
     background-color transparent
 
-  @media (max-width: mobile-step-size)
+  @media (max-width: mobile-upper-limit)
     flex-direction column
 
-  @media (min-width: mobile-step-size)
+  @media (min-width: tablet-lower-limit)
     min-height 364px
 
   &--has-white-color
@@ -95,8 +97,8 @@
     .{newAppName}-card-purple-low &
       background-color b2c-purple-low
 
-    .{newAppName}-card-purple-hight &
-      background-color b2c-purple-hight
+    .{newAppName}-card-purple-high &
+      background-color b2c-purple-high
 
     .{newAppName}-card-red &
       background-color b2c-red
@@ -104,8 +106,8 @@
     .{newAppName}-card-red-low &
       background-color b2c-red-low
 
-    .{newAppName}-card-red-hight &
-      background-color b2c-red-hight
+    .{newAppName}-card-red-high &
+      background-color b2c-red-high
 
     .{newAppName}-card-dark-blue &
       background-color b2c-dark-blue
@@ -113,8 +115,8 @@
     .{newAppName}-card-dark-blue-low &
       background-color b2c-dark-blue-low
 
-    .{newAppName}-card-dark-blue-hight &
-      background-color b2c-dark-blue-hight
+    .{newAppName}-card-dark-blue-high &
+      background-color b2c-dark-blue-high
 
     .{newAppName}-card-light-blue &
       background-color b2c-light-blue
@@ -122,8 +124,8 @@
     .{newAppName}-card-light-blue-low &
       background-color b2c-light-blue-low
 
-    .{newAppName}-card-light-blue-hight &
-      background-color b2c-light-blue-hight
+    .{newAppName}-card-light-blue-high &
+      background-color b2c-light-blue-high
 
     .{newAppName}-card-yellow &
       background-color b2c-yellow
@@ -131,8 +133,8 @@
     .{newAppName}-card-yellow-low &
       background-color b2c-yellow-low
 
-    .{newAppName}-card-yellow-hight &
-      background-color b2c-yellow-hight
+    .{newAppName}-card-yellow-high &
+      background-color b2c-yellow-high
 
     .{newAppName}-card-orange &
       background-color b2c-orange
@@ -140,8 +142,8 @@
     .{newAppName}-card-orange-low &
       background-color b2c-orange-low
 
-    .{newAppName}-card-orange-hight &
-      background-color b2c-orange-hight
+    .{newAppName}-card-orange-high &
+      background-color b2c-orange-high
 
     .{newAppName}-card-pink &
       background-color b2c-pink
@@ -149,8 +151,8 @@
     .{newAppName}-card-pink-low &
       background-color b2c-pink-low
 
-    .{newAppName}-card-pink-hight &
-      background-color b2c-pink-hight
+    .{newAppName}-card-pink-high &
+      background-color b2c-pink-high
 
     .{newAppName}-card-green &
       background-color b2c-green
@@ -158,8 +160,8 @@
     .{newAppName}-card-green-low &
       background-color b2c-green-low
 
-    .{newAppName}-card-green-hight &
-      background-color b2c-green-hight
+    .{newAppName}-card-green-high &
+      background-color b2c-green-high
 
     .{newAppName}-card-black &
       background-color dark-card-background
@@ -202,7 +204,7 @@
     .{newAppName}-card--has-bg-cover &
       background-size cover
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       .rt-card--hide-background-on-mobile &
         background-image inherit !important
 
@@ -215,7 +217,7 @@
     right 0
     z-index 2
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       width 100% !important
       height 100% !important
       max-height 40vw !important
@@ -239,11 +241,11 @@
     position relative
     z-index 3
 
-    @media (min-width: mobile-step-size)
+    @media (min-width: tablet-lower-limit)
       min-height 364px
 
     &--has-custom-height
-      @media (max-width: mobile-step-size)
+      @media (max-width: mobile-upper-limit)
         display flex
         min-height auto
 
@@ -259,7 +261,7 @@
     padding-right horizontal-space
 
     &--is-empty
-      @media (max-width: mobile-step-size)
+      @media (max-width: mobile-upper-limit)
         display none
 
     &--is-static
@@ -279,7 +281,7 @@
       max-width 100%
 
   &__bottom-list
-    border-top 1px solid b2c-black01
+    border-top 1px solid main-color01
     margin-top vertical-space * 1.5
     padding-top vertical-space
     padding-left horizontal-space

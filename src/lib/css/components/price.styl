@@ -1,5 +1,5 @@
 .{newAppName}-price
-  color b2c-black07
+  color main-color07
   font-weight 400
   white-space nowrap
   transition-timing-function ease-in-out
@@ -44,7 +44,7 @@
     line-height 31px
     vertical-align baseline
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       font-size 16px
 
   &__old-value
@@ -56,7 +56,7 @@
     position relative
     vertical-align baseline
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       font-size 16px
 
     &:before
@@ -64,7 +64,7 @@
       display inline-block
       width 100%
       height 1px
-      border-bottom 1px solid b2c-black
+      border-bottom 1px solid main-color
       margin-top auto
       margin-bottom auto
       position absolute
@@ -79,7 +79,7 @@
         background-color b2c-white07
 
       .{newAppName}-card &
-        background-color b2c-black07
+        background-color main-color07
 
       .{newAppName}-card--has-white-color &
         background-color b2c-white07
@@ -110,7 +110,7 @@
         color b2c-white
 
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       font-size 42px
 
   &__value
@@ -131,7 +131,7 @@
 
 
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       font-size 42px
 
     .{newAppName}-price-without-space &
@@ -163,7 +163,7 @@
     display: block
     padding-top: 3px
     font-size: 16px
-  @media (max-width: mobile-step-size)
+  @media (max-width: mobile-upper-limit)
     line-height 19px
   &--bold-font
     font-weight: 600
@@ -174,13 +174,13 @@
       font-weight: 200
 
 
-    @media (max-width: mobile-step-size)
+    @media (max-width: mobile-upper-limit)
       line-height 19px
 
 
 
     & + &
-      border-top 1px solid b2c-black07
+      border-top 1px solid main-color07
       transition-timing-function ease-in-out
       transition-duration .4s
       transition-property border
@@ -194,7 +194,7 @@
         border-color b2c-white07
 
       .{newAppName}-card &
-        border-color b2c-black07
+        border-color main-color07
 
       .{newAppName}-card--has-white-color &
         border-color b2c-white07
@@ -208,6 +208,7 @@
     color inherit!important
     &-item
       display inline-block
+      font-size inherit
       &+&
         font-size 18px
         line-height 26px
@@ -219,10 +220,12 @@
     font-size 18px
     line-height 26px
     padding 0 5px
-    .rt-price__old-value
+    .{newAppName}-price__old-value
       opacity 1
       &:before
         border-bottom-color b2c-red
+    .{b2bAppName}-price__info-item
+      margin-left 5px
 
 .{newAppName}-price-game
   .{newAppName}-price__info-item
