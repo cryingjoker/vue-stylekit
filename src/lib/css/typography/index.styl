@@ -23,14 +23,17 @@ body
 h1,
 .{newAppName}-font-h1
   font-size 50px
-  line-height: 64px
+  line-height: 60px
   font-weight 200
+  @media (max-width: laptop-upper-limit)
+    font-size 44px
+    line-height 54px
   @media (max-width: tablet-upper-limit)
     font-size 36px
     line-height: 46px
   @media (max-width: mobile-upper-limit)
     font-size 28px
-    line-height: 36px
+    line-height: 34px
 
 .{newAppName}-font-banner-label
     font-size 48px
@@ -59,13 +62,12 @@ h2,
   font-size 36px
   line-height: 46px
   font-weight 200
-
-  @media (max-width: tablet-upper-limit)
-    font-size 28px
-    line-height: 36px
+  @media (max-width: laptop-upper-limit)
+    font-size 32px
+    line-height 40px
   @media (max-width: mobile-upper-limit)
-    font-size 22px
-    line-height: 28px
+    font-size 24px
+    line-height 32px
 
 .{newAppName}-font-promo-title
     font-size 36px
@@ -75,9 +77,12 @@ h3,
   font-size 28px
   line-height: 36px
   font-weight 200
+  @media (max-width: laptop-upper-limit)
+    font-size 24px
+    line-height 32px
   @media (max-width: mobile-upper-limit)
     font-size 22px
-    line-height: 28px
+    line-height 30px
 
 .{newAppName}-font-promo
     font-size 24px
@@ -89,46 +94,65 @@ h4,
   font-size 22px
   line-height: 28px
   font-weight 200
+  @media (max-width: laptop-upper-limit)
+    font-size 20px
+    line-height 26px
+  @media (max-width: mobile-upper-limit)
+    font-size 18px
+    line-height 24px
 
 strong,
 b,
 .{newAppName}-font-bold
-    font-weight 600
+  font-weight 600
 
 .{newAppName}-font-real-bold
   font-weight 800
 
 .{newAppName}-font-medium
-    font-weight 600
+    font-weight 500
 
 .{newAppName}-font-light
   font-weight 200
 
+.p1,
 .{newAppName}-font-paragraph
   font-size 18px
   line-height: 26px
-  @media (max-width: tablet-upper-limit)
+  @media (max-width: laptop-upper-limit)
     font-size 16px
-    line-height: 24px
+    line-height: 22px
 
+.p2,
 .{newAppName}-font-small-paragraph
   font-size 16px
   line-height: 24px
+  @media (max-width: laptop-upper-limit)
+    font-size 16px
+    line-height 22px
+  @media (max-width: mobile-upper-limit)
+    font-size 14px
+    line-height 18px
 
+.p3,
 .{newAppName}-font-control
   font-size 14px
   line-height: 18px
+  @media (max-width: mobile-upper-limit)
+    font-size 12px
+    line-height 16px
 
+.p4,
 .{newAppName}-font-label
   font-size 12px
-  line-height: 16px
+  line-height 16px
 
-
+.tagline,
 .{newAppName}-font-label-uppercase
-    color main-color03
-    font-size 12px
-    text-transform uppercase
-    letter-spacing 2px
+  font-size 12px
+  text-transform uppercase
+  letter-spacing 2px
+  line-height 16px
 
 .{newAppName}-font-sup
     position relative

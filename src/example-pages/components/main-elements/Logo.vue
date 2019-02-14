@@ -173,17 +173,17 @@
         <div class="rt-row rt-space-top">
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo type=&quot;world-of-warship&quot;></rt-logo>">
+              text="<rt-logo type=&quot;world-of-warships&quot;></rt-logo>">
             </pre-code>
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warship&quot;></rt-logo>">
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warships&quot;></rt-logo>">
             </pre-code>
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warship&quot;></rt-logo>">
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warships&quot;></rt-logo>">
             </pre-code>
           </div>
 

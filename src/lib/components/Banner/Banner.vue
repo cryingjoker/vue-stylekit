@@ -344,7 +344,6 @@
           this.mobileImageHeight !== null ||
           this.mobileImageMaxHeight !== null
         ) {
-          console.info('window.innerWidth <= parseInt(variables["mobile-upper-limit"])',window.innerWidth , parseInt(variables["mobile-upper-limit"]),window.innerWidth <= parseInt(variables["mobile-upper-limit"]))
           const isMobile =
             window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
           if (this.RtBanners.isMobile !== isMobile) {

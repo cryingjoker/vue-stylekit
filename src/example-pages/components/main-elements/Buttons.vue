@@ -306,6 +306,21 @@
             />
           </div>
         </div>
+        <div class="app-row row">
+          <div class="d-inline-block rt-space-right">
+            <pre-code
+              text=" <rt-button :has-icon=&quot;true&quot; class=&quot;rt-button rt-button-cool-grey-border&quot;><template slot=&quot;icon&quot;><rt-icon type=&quot;user-silhouette&quot; width=&quot;16&quot; height=&quot;16&quot; color=&quot;101828&quot;></rt-icon></template><template slot=&quot;button-text&quot;>Подключить</template></rt-button>"
+            />
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-button :has-icon="true" class="rt-button rt-button-cool-grey-border">
+              <template slot="icon">
+                <rt-icon type="user-silhouette" width="16" height="16" color="101828"></rt-icon>
+              </template>
+              <template slot="button-text">Подключить</template>
+            </rt-button>
+          </div>
+        </div>
 
         <div class="app-row"><p class="rt-font-h3">Horizontal buttons</p></div>
 

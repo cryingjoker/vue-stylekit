@@ -7,15 +7,35 @@
   display flex
   flex-direction row
   overflow: hidden
+  min-height 300px
+  @media (max-width: tablet-upper-limit)
+    //height auto!important
+    max-height 300px
+    min-height 300px!important
+    .rt-banner-container,
+    .row,
+    .row > div,
+    .rt-banner-content,
+    .rt-banner-content__inner
+      height 100%!important
+  @media (max-width: mobile-upper-limit)
+    height auto!important
+    max-height 500px
+    flex-direction column
+    .rt-banner-content
+      height 100%!important
+    .rt-banner-content__inner
+      height 100%!important
+    div
+      max-height 250px
   .rt-banner-content
     position relative
     top auto
     bottom auto
     height auto!important
-  @media (max-width: tablet-upper-limit)
-    flex-direction column
-    height auto
-    max-height none
+    min-height auto!important
+    @media (max-width: mobile-upper-limit)
+      min-height 250px
   .rt-banner-image,
   .rt-banner-container
     width 50%
@@ -25,20 +45,25 @@
       width 100%
       padding 20px
       display block
+    @media (max-width: mobile-upper-limit)
+      height 50%!important
   .rt-banner-container
     clearfix()
     padding 40px
     @media (max-width: tablet-upper-limit)
-      order 1
       padding 20px
       min-height auto
+    @media (max-width: mobile-upper-limit)
+      order 1
   .rt-banner-image
-    background-size: contain
+    background-size: cover
     background-position 50% 50%
     background-repeat: no-repeat
     @media (max-width: tablet-upper-limit)
       background-position-y 100%
-      height calc((100vw - 20px)/2)
+      height auto
+    @media (max-width: mobile-upper-limit)
+      height calc((100vw - 40px)/2)
   .rt-banner-content__inner
     display flex
     padding 0
@@ -60,4 +85,5 @@
     line-height 24px
     font-weight 400
   &__text-content
-    margin-bottom: 60px
+    @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
+      margin-bottom: 60px

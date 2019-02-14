@@ -50,7 +50,8 @@ import {
   Sticky,
   ResizeContentHeight,
   Popup,
-  SlideContent
+  SlideContent,
+  Icon
 } from "../lib/components/index";
 
 import AppManu from './components/AppMenu.vue'
@@ -108,4 +109,5 @@ componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 componentsList[Popup.name] = Popup;
 componentsList[SlideContent.name] = SlideContent;
 componentsList[AppManu.name] = AppManu;
+componentsList[Icon.name] = Icon;
 export default { ...componentsList };

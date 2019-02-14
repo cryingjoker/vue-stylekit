@@ -10,7 +10,7 @@
   "mobile-upper-limit": "767px",
   "tablet-lower-limit": "768px",
   "tablet-upper-limit": "1023px",
-  "desktop-lower-limit": "1024px",
-  "desktop-upper-limit": "1280px",
-  "large-desktop-lower-limit": "1281px"
+  "laptop-lower-limit": "1024px",
+  "laptop-upper-limit": "1280px",
+  "desktop-lower-limit": "1281px"
 }

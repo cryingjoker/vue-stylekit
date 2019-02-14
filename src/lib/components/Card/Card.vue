@@ -181,13 +181,13 @@ export default {
       }
       if(this.isB2bCategory){
         if(this.categoryCardSize === 1){
-          cardClass += " rtb-category--s"
+          cardClass += " rtb-category--small"
         }
         if(this.categoryCardSize === 2){
-          cardClass += " rtb-category--m"
+          cardClass += " rtb-category--medium"
         }
         if(this.categoryCardSize === 3){
-          cardClass += " rtb-category--l"
+          cardClass += " rtb-category--large"
         }
         cardClass += " rtb-category"
       }

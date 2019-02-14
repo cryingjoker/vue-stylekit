@@ -172,7 +172,6 @@ export default {
             </div>
           );
         case "b2b-price--old-value":
-          console.log(this.oldPriceColor);
           return (
             <div class="rt-price  rtb-price rt-price-without-space">
               <div class="rtb-price__old-value">
