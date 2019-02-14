@@ -366,13 +366,18 @@
     </keep-alive>
 
     <router-view/>
+    <div class="section-switcher">
+      <rt-radio-button name="b-section" value="b2b" @change="changeSection">B2B</rt-radio-button>
+      <div class="rt-space-vertical"><rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button></div>
+      <rt-radio-button name="b-section" value="joint" @change="changeSection">Joint</rt-radio-button>
+    </div>
     <rt-switch
       :checked="isDarkTheme"
       class="dark-theme-switcher"
       @change="switchTheme"
     >Dark theme
-    </rt-switch
-    >
+    </rt-switch>
+
   </div>
 </template>
 
@@ -461,7 +466,28 @@
           this.isDarkTheme = false;
         }
         document.body.classList = bodyClassList.join(" ");
+      },
+
+      changeSection(value) {
+        switch(value) {
+          case 'b2b':
+            document.body.classList.remove('show-b2c');
+            document.body.classList.add('show-b2b');
+            break;
+          case 'b2c':
+            document.body.classList.remove('show-b2b');
+            document.body.classList.add('show-b2c');
+            break;
+          case 'joint':
+            document.body.classList.add('show-b2c','show-b2b');
+            break;
+        }
       }
     }
   };
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.querySelectorAll('.radio-button')[2].click();
+  });
+
 </script>

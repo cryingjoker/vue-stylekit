@@ -540,8 +540,6 @@
             resolve();
           }, 300);
         });
-
-
       },
 
       stopAnimationEnd() {
@@ -557,7 +555,6 @@
             setTimeout(() => {
               resolve();
             }, 100);
-            // });
           }, 10);
         });
       },

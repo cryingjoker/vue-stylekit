@@ -4,62 +4,62 @@
       <div class="app-title row"><h1 class="col rt-font-hero">Price</h1></div>
       <div class="app-body">
         <div class="row">
-          <div class="rt-col-4 rt-col-md-3">
+          <div class="rt-col-4 rt-col-md-3 is-b2c">
             <pre-code
               text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; currency=&quot;$&quot; />"
             />
           </div>
-          <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+          <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code
               text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; />"
             />
           </div>
-          <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+          <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code text="<rt-price :value=&quot;750.231&quot; />" />
           </div>
         </div>
 
         <div class="row rt-space-top">
-          <div class="rt-col-4 rt-col-md-3">
+          <div class="rt-col-4 rt-col-md-3 is-b2c">
             <pre-code
               text="<rt-price :value=&quot;69&quot; option-label=&quot;До&quot; :is-option=&quot;true&quot; currency=&quot;€&quot; />"
             />
           </div>
-          <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+          <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code
               text="<rt-price :value=&quot;750.231&quot; time-interval=&quot;час.&quot; />"
             />
           </div>
         </div>
-        <div class="row rt-space-top">
+        <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
               text="<rt-price :value=&quot;1231223169&quot; :is-option=&quot;true&quot; currency=&quot;€&quot; />"
             />
           </div>
         </div>
-        <div class="row rt-space-top">
+        <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
               text="<rt-price :value=&quot;1231223169&quot; :only-price=&quot;true&quot; currency=&quot;€&quot; />"
             />
           </div>
         </div>
-        <div class="row rt-space-top">
+        <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
-              text="<div><rt-price :for-game=&quot;true&quot; class=&quot;color-orange&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><rt-price :bold-option=&quot;true&quot; class=&quot;color-white&quot; :for-game=&quot;true&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><div>"
+              text="<div><rt-price :for-game=&quot;true&quot; class=&quot;color-orange&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><rt-price :bold-option=&quot;true&quot; class=&quot;color-white&quot; :for-game=&quot;true&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /></div>"
             />
           </div>
         </div>
-        <div class="row rt-space-top">
+        <div class="row rt-space-top is-b2b">
           <div class="rt-col-4 rt-col-md-3">
             <pre-code
               text="<rt-price oldPriceColor=&quot;red&quot; :old-value=&quot;2500&quot; :value=&quot;400&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;в месяц&quot; class=&quot;color-main09&quot;/>"
             />
           </div>
         </div>
-        <div class="row rt-space-top">
+        <div class="row rt-space-top is-b2b">
           <div class="rt-col-4 rt-col-md-3">
             <pre-code
               text="<rt-price :value=&quot;500&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;&quot; class=&quot;color-main09&quot;/>"
