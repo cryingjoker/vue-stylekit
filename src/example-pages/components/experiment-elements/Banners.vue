@@ -9,23 +9,16 @@
       </div>
     </div>
     <div class="rt-container">
-      <div class="rt-col-12 rt-space-bottom2 is-b2b">
+      <div class="rt-col-12 rt-space-bottom2">
         <rt-banner
-          :set-stop-on-click="true"
-          :sleep-time="20000"
-          bannerLogo=""
-          content-mobile-min-height="80vh"
-          content-mobile-height="100vh"
-          :noTriangle="true"
-          :roundAngles="true"
-          :hasCustomContent="true"
+          :no-triangle="true"
+          :round-angles="true"
+          :has-custom-content="true"
         >
 
           <rt-banner-item
             background-image="/static/images/B2B/banner-img.png"
             :is-white-color="true"
-            content-mobile-min-height="80vh"
-            content-mobile-height="200px"
             background-color="b2b-dark-state">
             <div class="rtb-banner__text-content">
               <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
@@ -39,25 +32,23 @@
         </rt-banner>
       </div>
     </div>
+    <rt-banner hasCustomHeight="500px"
+               :is-fullscreen-image="true"
+               :category-banner="true">
+      <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
+                      :is-white-color="true"
+                      content-mobile-min-height="500px"
+                      content-mobile-height="200px"
+                      background-color="yellow-low">
+        <p class="rt-font-banner-label">Телефония</p>
+        <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
+      </rt-banner-item>
 
-    <!--<div class="rt-col-12">-->
-    <!--<div class="rtb-banner">-->
-    <!--<div class="rtb-banner__body">-->
-    <!--<div class="rtb-banner__content">-->
-    <!--<div class="rtb-banner__text-content">-->
-    <!--<div class="rtb-banner__title">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</div>-->
-    <!--<div class="rtb-banner__description">Пакет «Быть в плюсе»</div>-->
-    <!--</div>-->
-    <!--<div class="rtb-banner__button">-->
-    <!--<rt-button class="rt-button-white">Подробнее</rt-button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="rtb-banner__image" style="background-image: url('/static/B2C/banner-img.png')"></div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+      </rt-banner-item>
+    </rt-banner>
+
     <pre-code
-      text="<rt-banner class=&quot;is-b2c&quot; :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
+      text="<rt-banner :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
       <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;
                       content-mobile-min-height=&quot;80vh&quot;
                       content-mobile-height=&quot;200px&quot;
@@ -75,12 +66,12 @@
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner class=&quot;is-b2c&quot; :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
     />
     <pre-code
-      text="<rt-banner class=&quot;is-b2c&quot; :sleep-time=&quot;10000&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item><rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;><p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :sleep-time=&quot;10000&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item><rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;><p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
     />
-    <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true" class="is-b2c">
+    <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true">
       <rt-banner-item is-game-banner-item background-video="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4"
                       :is-white-color="true" background-color="dark-state">
       </rt-banner-item>

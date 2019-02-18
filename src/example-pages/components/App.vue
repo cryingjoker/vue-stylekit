@@ -366,11 +366,11 @@
     </keep-alive>
 
     <router-view/>
-    <div class="section-switcher">
-      <rt-radio-button name="b-section" value="b2b" @change="changeSection">B2B</rt-radio-button>
-      <div class="rt-space-vertical"><rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button></div>
-      <rt-radio-button name="b-section" value="joint" @change="changeSection">Joint</rt-radio-button>
-    </div>
+    <!--<div class="section-switcher">-->
+      <!--<rt-radio-button name="b-section" value="b2b" @click="changeSection">B2B</rt-radio-button>-->
+      <!--<div class="rt-space-vertical"><rt-radio-button name="b-section" value="b2c" @click="changeSection">B2C</rt-radio-button></div>-->
+      <!--<rt-radio-button name="b-section" value="joint" @click="changeSection">Joint</rt-radio-button>-->
+    <!--</div>-->
     <rt-switch
       :checked="isDarkTheme"
       class="dark-theme-switcher"
@@ -486,8 +486,9 @@
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function(event) {
-    document.querySelectorAll('.radio-button')[2].click();
-  });
+  window.onload = function(){
+    console.log('onload');
+  };
+
 
 </script>
