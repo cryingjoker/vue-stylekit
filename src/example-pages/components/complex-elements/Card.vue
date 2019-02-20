@@ -1043,7 +1043,6 @@
           </div>
         </div>
         <div class="row">
-          <div class="rt-col-8 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b"></div>
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 rt-space-top is-b2b">
             <rt-card
               background-image="static/images/B2B/category-img.png"

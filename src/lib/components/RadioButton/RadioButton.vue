@@ -9,6 +9,7 @@
       type="radio"
       class="radio-button-element"
       @change="changeModel"
+      :value="value"
     />
     <div class="radio-button-container"><slot /></div>
   </label>
