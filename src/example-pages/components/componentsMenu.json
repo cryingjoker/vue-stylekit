@@ -296,6 +296,14 @@
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
+        },
+        {
+          "name" : "testAccess",
+          "title" : "test access",
+          "url" : "/promo/test-access",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
         }
       ],
       "for_b2b" : true,

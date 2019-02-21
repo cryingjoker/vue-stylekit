@@ -36,7 +36,16 @@
     font-size 14px
     top 0
 
+  .input-element:focus+.text-field__line+&
+    color b2c-purple
+
   .select--disabled+.text-field__line+ &,
   .input-element[disabled]+.text-field__line+ &,
   .textarea--disabled+.text-field__line+ &
     color main-color03
+
+  .text-field--error &
+    color error-color
+
+  .textarea-element:focus+.text-field__line+&
+    top 0

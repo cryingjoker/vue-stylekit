@@ -12,11 +12,11 @@
         <div class="select-arrow">
           <svg
             class="select-arrow__icon"
-            width="10"
-            height="5"
+            width="13"
+            height="7"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M0 0l5 5 5-5z" fill-rule="evenodd" />
+            <path d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z" fill="#575D68" fill-rule="evenodd"/>
           </svg>
         </div>
       </div>
