@@ -69,7 +69,8 @@
         <rt-input
           insert-type="number"
           value=""
-          placeholder="Ваше любимое число"
+          :max-length="2"
+          placeholder="Ваше любимое число до 99"
         />
         <rt-input
           insert-type="string"

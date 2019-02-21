@@ -20,6 +20,16 @@
     },
     {
       "name": "rt-input",
+      "property": "max-length",
+      "type": [
+        "Number"
+      ],
+      "description": "Ограничение длинны сообщения",
+      "value": "null",
+      "version": " >= 0.0.40"
+    },
+    {
+      "name": "rt-input",
       "property": "disabled",
       "type": [
         "Boolean"
