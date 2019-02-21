@@ -2003,7 +2003,7 @@
                         Количество устройств
                       </p>
                       <rt-filter-caller :clear-zero="true">
-                        <rt-input name="count" value="1" :min-number="1" :show-nubmers-buttons="true"
+                        <rt-input name="count" value="1" :min-number="1" :show-numbers-buttons="true"
                                   insert-type="number"/>
                       </rt-filter-caller>
                     </div>

@@ -13,6 +13,10 @@ export default {
       type: Number,
       default: null
     },
+    maxLength: {
+      type: Number,
+      default: null
+    },
     maxNumber: {
       type: Number,
       default: null
@@ -192,6 +196,11 @@ export default {
     keyPress(event) {
 
       let chr = this.getChar(event);
+      if(this.maxLength && this.maxLength <= event.target.value.length){
+        event.preventDefault();
+        event.stopPropagation();
+        return null;
+      }
       if (this.insertType) {
         switch (this.insertType) {
           case "number":

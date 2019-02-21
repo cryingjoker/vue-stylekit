@@ -26,6 +26,7 @@
     },
     methods: {},
     render(h) {
+      return null
       return <div class="rt-l-game">
         <div class="color-block--game-promo-color rt-fill-viewport"
              style={{ backgroundImage: "url(/static/images/game/rostelecom_game.jpg)", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>

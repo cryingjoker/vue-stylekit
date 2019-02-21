@@ -315,3 +315,51 @@
 
 .app-sticked
   top 0
+
+.section-switcher
+  position fixed
+  top 60px
+  right 20px
+  z-index: 10
+  background-color: white
+  padding: 20px
+  border-radius: 5px
+  box-shadow: 0 0 3px rgba(0,0,0,.3), 0px 0 0px rgba(0,0,0,.1)
+  max-width: 10px
+  max-height: 10px
+  overflow: hidden
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property max-width,max-height
+  overflow: hidden
+  .radio-button
+    display block
+    opacity: 0
+    visibility: hidden
+    max-height: 0
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property max-height, padding, opacity, visibility, box-shadow
+    padding: 0
+  &:hover
+    max-width: 200px
+    max-height: 200px
+    box-shadow: 0 0 3px rgba(0,0,0,.3), 3px 0 5px rgba(0,0,0,.1)
+    .radio-button
+      opacity: 1
+      visibility: visible
+      max-height: 100px
+      margin-top: 10px
+      margin-bottom: 10px
+
+.is-b2b,
+.is-b2c
+  display none
+
+.show-b2b
+  .is-b2b
+    display block
+
+.show-b2c
+  .is-b2c
+    display block

@@ -20,7 +20,7 @@ export default {
     },
     value: {
       type: String,
-      default: false
+      default: null
     }
   },
   data: () => ({
@@ -58,6 +58,7 @@ export default {
     inputHandler($event) {
       this.localValue = this.$refs.textarea.value;
       this.setValueLength();
+      console.log(this.value);
     },
     clearInput() {
       this.localValue = "";
@@ -84,20 +85,18 @@ export default {
     }
     const label = (()=>{
       if(this.label) {
-        return <div>{this.label}</div>;
+        return <div class="textarea-label">{this.label}</div>;
       }else{
         return null;
       }
     })();
 
     return <div class={textareaClasses}>
-      <div class="textarea-label">{label}</div>
-    <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} />
-
-    <div class="textarea-border" />
-
-    <p class="text-field__error-message">{this.errorMessage }</p>
-  </div>
+            {label}
+            <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} />
+            <div class="textarea-border" />
+            <p class="text-field__error-message">{this.errorMessage }</p>
+          </div>
   }
 };
 </script>

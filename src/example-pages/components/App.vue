@@ -366,13 +366,18 @@
     </keep-alive>
 
     <router-view/>
+    <div class="section-switcher">
+      <rt-radio-button name="b-section" value="b2b" @change="changeSection">B2B</rt-radio-button>
+      <rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button>
+      <rt-radio-button name="b-section" value="joint" @change="changeSection">Joint</rt-radio-button>
+    </div>
     <rt-switch
       :checked="isDarkTheme"
       class="dark-theme-switcher"
       @change="switchTheme"
     >Dark theme
-    </rt-switch
-    >
+    </rt-switch>
+
   </div>
 </template>
 
@@ -407,6 +412,9 @@
     watch: {
       $route(to, from) {
         this.showMenu = false;
+        setTimeout(function() {
+          fixSectionChange();
+        },50);
       }
     },
     created() {
@@ -461,7 +469,58 @@
           this.isDarkTheme = false;
         }
         document.body.classList = bodyClassList.join(" ");
+      },
+
+      changeSection(value) {
+        switch(value) {
+          case 'b2b':
+            document.body.classList.remove('show-b2c');
+            document.body.classList.add('show-b2b');
+            break;
+          case 'b2c':
+            document.body.classList.remove('show-b2b');
+            document.body.classList.add('show-b2c');
+            break;
+          case 'joint':
+            document.body.classList.add('show-b2c','show-b2b');
+            break;
+        }
       }
     }
   };
+
+  window.onload = function(){
+    let buttons = document.querySelector('.section-switcher').getElementsByClassName('radio-button-element');
+    for(let i = 0; i < buttons.length; i++) {
+      if(buttons[i].getAttribute('value') === 'joint') {
+        buttons[i].click();
+      }
+    }
+  };
+
+  function fixSectionChange() {
+    let buttons = document.querySelector('.section-switcher').getElementsByClassName('radio-button-element');
+    if(document.body.classList.contains('show-b2b')) {
+      if(document.body.classList.contains('show-b2c')){
+        let searchedValue = 'joint';
+        detectButtons(searchedValue);
+      } else {
+        let searchedValue = 'b2b';
+        detectButtons(searchedValue);
+      }
+    } else if(document.body.classList.contains('show-b2c')) {
+      let searchedValue = 'b2c';
+      detectButtons(searchedValue);
+    }
+
+    function detectButtons(value) {
+      for(let i = 0; i < buttons.length; i++) {
+        if(buttons[i].getAttribute('value') === value) {
+          buttons[i].click();
+        }
+      }
+    }
+  }
+
+
 </script>

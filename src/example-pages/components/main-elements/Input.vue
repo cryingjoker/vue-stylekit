@@ -69,7 +69,8 @@
         <rt-input
           insert-type="number"
           value=""
-          placeholder="Ваше любимое число"
+          :max-length="2"
+          placeholder="Ваше любимое число до 99"
         />
         <rt-input
           insert-type="string"
@@ -77,7 +78,12 @@
           insert-lang="en"
           placeholder="enter your name(English, please)"
         />
-        <rt-input :show-nubmers-buttons="true" insert-type="number" />
+        <rt-input :show-numbers-buttons="true" insert-type="number" />
+        <div class="app-row row">
+          <div class="rt-col-3 rt-col-md-3">
+            <rt-input type="password" placeholder="Введите пароль" />
+          </div>
+        </div>
       </div>
     </div>
     <div class="rt-space-top25">

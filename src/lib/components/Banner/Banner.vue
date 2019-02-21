@@ -98,6 +98,14 @@
       isBackgroundBanner: {
         type: Boolean,
         default: false
+      },
+      hasCustomHeight: {
+        type: String,
+        default: null
+      },
+      categoryBanner: {
+        type: Boolean,
+        default: null
       }
 
     },
@@ -150,17 +158,19 @@
               className += " justify-" + this.justify;
             }
           }
-
           if (this.RtBanners.items[activeIndex].isWhiteColor) {
             className += " rt-banner--color-white";
           }
-
           if (this.roundAngles) {
             className += " rtb-banner";
           }
           if(this.RtBanners.items[this.RtBanners.activeIndex].isGameBannerItem){
             className += " rt-banner--for-game";
           }
+          if(this.categoryBanner) {
+            className += ' rtb-banner--category';
+          }
+
         }
         return className;
       },
@@ -183,6 +193,9 @@
           if (this.contentMobileHeight !== null) {
             styles.height = this.normalizeVariable(this.contentMobileHeight);
           }
+        }
+        if(this.hasCustomHeight) {
+          styles.height = this.normalizeVariable(this.hasCustomHeight);
         }
 
         return styles;
@@ -318,8 +331,8 @@
       playVideo() {
         if (this.backgroundVideo) {
           if (this.$refs.video) {
-            const playPromice = this.$refs.video.play();
-            playPromice.catch(function(error) {
+            const playPromise = this.$refs.video.play();
+            playPromise.catch(function(error) {
               // console.info('error',error)
             });
           } else {
@@ -540,8 +553,6 @@
             resolve();
           }, 300);
         });
-
-
       },
 
       stopAnimationEnd() {
@@ -557,7 +568,6 @@
             setTimeout(() => {
               resolve();
             }, 100);
-            // });
           }, 10);
         });
       },
