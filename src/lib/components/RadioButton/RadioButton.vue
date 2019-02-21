@@ -52,6 +52,9 @@ export default {
   watch: {
     model() {
       this.checkModel();
+    },
+    checked(){
+      this.isChecked = this.checked;
     }
   },
   mounted() {
