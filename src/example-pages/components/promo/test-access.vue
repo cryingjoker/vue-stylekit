@@ -31,16 +31,6 @@
   </div>
 </template>
 
-<!--<style>-->
-  <!--.test-access {-->
-    <!--background-color: red;-->
-    <!--min-height: 670px;-->
-  <!--}-->
-  <!--.download-button&#45;&#45;dashed {-->
-    <!--padding: 15px 20px 15px 40px;-->
-  <!--}-->
-<!--</style>-->
-
 <script>
   const componentsList = {};
 
