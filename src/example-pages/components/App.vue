@@ -368,7 +368,7 @@
     <router-view/>
     <div class="section-switcher">
       <rt-radio-button name="b-section" value="b2b" @change="changeSection">B2B</rt-radio-button>
-      <div class="rt-space-vertical"><rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button></div>
+      <rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button>
       <rt-radio-button name="b-section" value="joint" @change="changeSection">Joint</rt-radio-button>
     </div>
     <rt-switch
