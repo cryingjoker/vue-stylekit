@@ -11,21 +11,14 @@
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
         <rt-banner
-          :set-stop-on-click="true"
-          :sleep-time="20000"
-          bannerLogo=""
-          content-mobile-min-height="80vh"
-          content-mobile-height="100vh"
-          :noTriangle="true"
-          :roundAngles="true"
-          :hasCustomContent="true"
+          :no-triangle="true"
+          :round-angles="true"
+          :has-custom-content="true"
         >
 
           <rt-banner-item
             background-image="/static/images/B2B/banner-img.png"
             :is-white-color="true"
-            content-mobile-min-height="80vh"
-            content-mobile-height="200px"
             background-color="b2b-dark-state">
             <div class="rtb-banner__text-content">
               <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
@@ -39,23 +32,21 @@
         </rt-banner>
       </div>
     </div>
+    <rt-banner hasCustomHeight="500px"
+               :is-fullscreen-image="true"
+               :category-banner="true">
+      <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
+                      :is-white-color="true"
+                      content-mobile-min-height="500px"
+                      content-mobile-height="200px"
+                      background-color="yellow-low">
+        <p class="rt-font-banner-label">Телефония</p>
+        <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
+      </rt-banner-item>
 
-    <!--<div class="rt-col-12">-->
-    <!--<div class="rtb-banner">-->
-    <!--<div class="rtb-banner__body">-->
-    <!--<div class="rtb-banner__content">-->
-    <!--<div class="rtb-banner__text-content">-->
-    <!--<div class="rtb-banner__title">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</div>-->
-    <!--<div class="rtb-banner__description">Пакет «Быть в плюсе»</div>-->
-    <!--</div>-->
-    <!--<div class="rtb-banner__button">-->
-    <!--<rt-button class="rt-button-white">Подробнее</rt-button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="rtb-banner__image" style="background-image: url('/static/B2C/banner-img.png')"></div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
+      </rt-banner-item>
+    </rt-banner>
+
     <pre-code
       text="<rt-banner :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
       <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;
