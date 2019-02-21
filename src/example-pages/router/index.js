@@ -24,6 +24,7 @@ import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
+import TestAccess from '../components/promo/test-access.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -81,6 +82,7 @@ const index = [
   { path: '/promo/mobile', name: 'promoMobrt-font-md-centerile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
+  { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];

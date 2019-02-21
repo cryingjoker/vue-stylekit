@@ -1,8 +1,11 @@
 <template>
-  <div class="rt-container">
-    <div class="app-content rt-col-12 rt-col-md-3">
+
+  <div class="app-content">
+    <div class="rt-container">
       <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
-      <div class="app-body">
+    </div>
+    <div class="app-body">
+      <div class="rt-container">
         <pre-code
           text="
         <rt-row-list>
@@ -203,6 +206,88 @@
         </rt-row-list>
         "
         />
+      </div>
+      <div class="is-b2b">
+        <rt-row-list :is-profit-list="true">
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/mobile-call.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item
+            :more-than-one-column="true"
+            :columns-quantity="3"
+            icon="/static/images/B2B/shield.svg">
+            <template slot="option">
+              <div class="d-flex flex-row">
+                <div class="ovh">
+                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
+                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
+                </div>
+              </div>
+            </template>
+          </rt-row-list-item>
+        </rt-row-list>
       </div>
     </div>
   </div>

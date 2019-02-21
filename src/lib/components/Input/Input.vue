@@ -26,7 +26,7 @@ export default {
       default: null
     },
     insertType: {
-      type: String, //[number, string]
+      type: String, //[number, string, password]
       default: null
     },
     disabled: {
@@ -62,7 +62,7 @@ export default {
       default: null
     },
     validate: {},
-    showNubmersButtons: {
+    showNumbersButtons: {
       type: Boolean,
       default: false
     },
@@ -73,6 +73,10 @@ export default {
     type:{
       type: String,
       default: 'text'
+    },
+    passwordVisibility: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -208,6 +212,7 @@ export default {
               return null;
             }
             break;
+
         }
       }
       if (this.insertLang) {
@@ -265,6 +270,15 @@ export default {
           }
         }
       }
+    },
+    togglePasswordVisibility() {
+      let inputElement = this.$el.getElementsByTagName('input')[0];
+      if (inputElement.getAttribute('type') === 'password'){
+        inputElement.setAttribute('type', 'text');
+      } else if (inputElement.getAttribute('type') === 'text') {
+        inputElement.setAttribute('type', 'password');
+      }
+      this.passwordVisibility = !this.passwordVisibility
     }
   },
   render() {
@@ -272,14 +286,17 @@ export default {
     if (this.isInvalid) {
       inputClass += " text-field--error";
     }
-    if (this.showNubmersButtons && this.insertType && this.insertType === "number") {
+    if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
       inputClass += " input--with-button";
     }
     if (this.isWhite) {
       inputClass += " rt-input--white";
     }
+    if(this.type && this.type === "password") {
+      inputClass += " rt-input--password"
+    }
 
-    const placehoder = (() => {
+    const placeholder = (() => {
       if (this.placeholder) {
         let placeholderClassNames = "floating-placeholder";
         if (this.hasInputText) {
@@ -293,7 +310,7 @@ export default {
     })();
 
     const clearButton = (() => {
-      if (!this.showNubmersButtons && !this.disabled && this.hasInputText) {
+      if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != 'password') {
         return <div class="input-clear" onClick={this.clearInput}>
           <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13"
                xmlns="http://www.w3.org/2000/svg">
@@ -301,6 +318,32 @@ export default {
                   fill-rule="evenodd"/>
           </svg>
         </div>;
+      }
+      return null;
+    })();
+
+    const passwordIcon = (() => {
+      if(this.type === 'password') {
+        if(!this.passwordVisibility){
+          return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
+            <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                <path d="M3.333 1C4.838 3.687 7.06 5.031 10 5.031S15.162 3.687 16.667 1M10 7.667v1.25M14.396 6.833l.572
+              1.031M5.801 6.833L5.23 7.864M17.5 4.333l.833.834M2.5 4.333l-.833.834"/>
+              </g>
+            </svg>
+          </div>;
+        } else {
+          return <div class="password-icon" onClick={this.togglePasswordVisibility}>
+            <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(1 1)" stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd">
+                <path d="M0 5c1.805 3.225 4.472 4.837 8 4.837 3.528 0 6.195-1.612 8-4.837M0 4.837C1.805 1.612 4.472 0
+                8 0c3.528 0 6.195 1.612 8 4.837" stroke-linecap="round"/>
+                <circle cx="8" cy="5" r="2"/>
+              </g>
+            </svg>
+          </div>
+        }
       }
       return null;
     })();
@@ -320,7 +363,7 @@ export default {
       }
     })();
     const arithmeticButtons = (() => {
-      if (this.showNubmersButtons && this.insertType && this.insertType === "number") {
+      if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
         return <div class="input-arithmetic">
           <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
             <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -371,8 +414,9 @@ export default {
           v-validate={this.validate}
         />
         <div class="text-field__line"/>
-        {placehoder}
+        {placeholder}
         {clearButton}
+        {passwordIcon}
         {errorMessage}
         {arithmeticButtons}
       </div>
