@@ -367,9 +367,10 @@
 
     <router-view/>
     <div class="section-switcher">
-      <rt-radio-button name="b-section" value="b2b" @change="changeSection">B2B</rt-radio-button>
-      <div class="rt-space-vertical"><rt-radio-button name="b-section" value="b2c" @change="changeSection">B2C</rt-radio-button></div>
-      <rt-radio-button name="b-section" value="joint" @change="changeSection">Joint</rt-radio-button>
+      <p class="section-switcher__label">show mode: <span class="section-switcher__label-value">{{siteStatus}}</span></p>
+      <rt-radio-button name="b-section" :checked="'b2b' === siteStatus" value="b2b" @change="changeSection">B2B</rt-radio-button>
+      <rt-radio-button name="b-section" :checked="'b2c' === siteStatus" value="b2c" @change="changeSection">B2C</rt-radio-button>
+      <rt-radio-button name="b-section" :checked="'joint' === siteStatus" value="joint" @change="changeSection">Joint</rt-radio-button>
     </div>
     <rt-switch
       :checked="isDarkTheme"
@@ -407,7 +408,8 @@
       isPromo: false,
       showGrid: false,
       isDarkTheme: false,
-      codeViewer: false
+      codeViewer: false,
+      siteStatus: "joint"
     }),
     watch: {
       $route(to, from) {
@@ -472,7 +474,8 @@
       },
 
       changeSection(value) {
-        switch(value) {
+        this.siteStatus = value;
+        switch(this.siteStatus) {
           case 'b2b':
             document.body.classList.remove('show-b2c');
             document.body.classList.add('show-b2b');
