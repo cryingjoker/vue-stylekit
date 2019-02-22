@@ -2,11 +2,14 @@
 
   <div class="app-content">
     <div class="rt-container">
-      <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
+      <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+        <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
+      </div>
     </div>
     <div class="app-body">
       <div class="rt-container">
-        <pre-code
+        <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+          <pre-code
           text="
         <rt-row-list>
           <rt-row-list-item>
@@ -205,89 +208,92 @@
           </rt-row-list-item>
         </rt-row-list>
         "
-        />
+            />
+        </div>
       </div>
-      <div class="is-b2b">
-        <rt-row-list :is-profit-list="true">
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/ATS.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+      <div class="rt-space-top35">
+      <pre-code
+        text="
+      <rt-row-list :is-profit-list=&quot;true&quot;>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/ATS.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/ATS.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/ATS.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/mobile-call.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/mobile-call.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/ATS.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/ATS.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/ATS.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/ATS.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-          <rt-row-list-item
-            :more-than-one-column="true"
-            :columns-quantity="3"
-            icon="/static/images/B2B/shield.svg">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div class="ovh">
-                  <p class="rt-font-paragraph rt-font-bold">Без лишних трат</p>
-                  <p class="rt-font-small-paragraph">Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
-                </div>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item
+          :more-than-one-column=&quot;true&quot;
+          :columns-quantity=&quot;2&quot;
+          icon=&quot;/static/images/B2B/shield.svg&quot;>
+          <template slot=&quot;option&quot;>
+            <div class=&quot;d-flex flex-row&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold&quot;>Без лишних трат</p>
+                <p class=&quot;rt-font-small-paragraph&quot;>Дополнительное оборудование и офис не нужны, звонки внутри сети – бесплатно</p>
               </div>
-            </template>
-          </rt-row-list-item>
-        </rt-row-list>
+            </div>
+          </template>
+        </rt-row-list-item>
+      </rt-row-list>"/>
       </div>
     </div>
   </div>
