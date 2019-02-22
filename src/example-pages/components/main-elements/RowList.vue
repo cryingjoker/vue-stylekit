@@ -217,7 +217,7 @@
       <rt-row-list :is-profit-list=&quot;true&quot;>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -230,7 +230,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -243,7 +243,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/mobile-call.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -256,7 +256,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -269,7 +269,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -282,7 +282,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
+          :columns-quantity=&quot;3&quot;
           icon=&quot;/static/images/B2B/shield.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
