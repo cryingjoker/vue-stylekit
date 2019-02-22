@@ -2,11 +2,14 @@
 
   <div class="app-content">
     <div class="rt-container">
-      <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
+      <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+        <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
+      </div>
     </div>
     <div class="app-body">
       <div class="rt-container">
-        <pre-code
+        <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+          <pre-code
           text="
         <rt-row-list>
           <rt-row-list-item>
@@ -205,7 +208,8 @@
           </rt-row-list-item>
         </rt-row-list>
         "
-        />
+            />
+        </div>
       </div>
       <div class="rt-space-top35">
       <pre-code
@@ -213,7 +217,7 @@
       <rt-row-list :is-profit-list=&quot;true&quot;>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -226,7 +230,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -239,7 +243,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/mobile-call.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -252,7 +256,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -265,7 +269,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -278,7 +282,7 @@
         </rt-row-list-item>
         <rt-row-list-item
           :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;
+          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/shield.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
