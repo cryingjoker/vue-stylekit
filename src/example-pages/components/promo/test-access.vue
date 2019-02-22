@@ -6,7 +6,7 @@
     <div class=&quot;rt-container rt-col-12 rt-col-td-3 rt-col-md-3 rt-space-top25 d-flex rt-space-bottom25&quot;>
       <div class=&quot;rt-col-5 rt-col-td-3 rt-col-md-3 flex-column&quot;>
         <h3 class=&quot;rt-space-bottom rt-font-bold&quot;>Тестовый доступ</h3>
-        <div class=&quot;rt-col-10&quot;>
+        <div class=&quot;rt-col-10 rt-col-td-6 rt-col-md-3&quot;>
           <p class=&quot;rt-font-paragraph rt-space-bottom&quot;>Бесплатный доступ ко всем возможностям сервиса на 7 дней:</p>
         </div>
         <ul class=&quot;rt-numeric-list rt-space-bottom&quot;>
