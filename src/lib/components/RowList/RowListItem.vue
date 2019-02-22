@@ -6,10 +6,6 @@ export default {
       type: Boolean,
       default: false
     },
-    moreThanOneColumn: {
-      type: Boolean,
-      default: false
-    },
     columnsQuantity: {
       type: Number,
       default: 1
@@ -37,7 +33,7 @@ export default {
     }
   },
   render: function(h) {
-    if(!this.moreThanOneColumn){
+    if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
           <div
@@ -106,22 +102,23 @@ export default {
         );
       }
     } else {
-      if(this.columnsQuantity === 2) {
-        return (<div class="rt-row-list__item rtb-profit rtb-profit--col-2 rt-col-6 rt-col-td-3 rt-col-md-3">
-          <div class="rt-row-list__header">
-            <div class="rt-row-list__icon" style={this.iconImage}></div>
-            {this.$slots.option}
-          </div>
-        </div>)
-      }
-      if(this.columnsQuantity === 3) {
-        return (<div class="rt-row-list__item rtb-profit rtb-profit--col-3 rt-col-4 rt-col-td-3 rt-col-md-3">
-          <div class="rt-row-list__header">
-            <div class="rt-row-list__icon" style={this.iconImage}></div>
-            {this.$slots.option}
-          </div>
-        </div>)
-      }
+      const columnClass = (() => {
+        let profitColumn = '';
+        if(this.columnsQuantity === 2) {
+          profitColumn += ' rtb-profit--col-2 rt-col-6 '
+        }
+        if(this.columnsQuantity === 3) {
+          profitColumn += ' rtb-profit--col-3 rt-col-4 '
+        }
+        return profitColumn;
+      })();
+      return (<div class={"rt-row-list__item rtb-profit" + (columnClass) + "rt-col-td-3 rt-col-md-3"}>
+        <div class="rt-row-list__header">
+          <div class="rt-row-list__icon" style={this.iconImage}></div>
+          {this.$slots.option}
+        </div>
+      </div>);
+
     }
   }
 };
