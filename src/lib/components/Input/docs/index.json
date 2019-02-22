@@ -93,7 +93,7 @@
     },
     {
       "name": "rt-input",
-      "property": "show-nubmers-buttons",
+      "property": "show-numbers-buttons",
       "type": [
         "Boolean"
       ],
