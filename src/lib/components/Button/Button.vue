@@ -1,19 +1,3 @@
-<!--<template>-->
-  <!--<button-->
-    <!--:class="{-->
-      <!--'rt-button&#45;&#45;is-block': isBlock,-->
-      <!--'rt-button&#45;&#45;is-fitched': isFetched-->
-    <!--}"-->
-    <!--class="rt-button rt-button-with-ripple"-->
-    <!--@click="triggerClick();"-->
-  <!--&gt;-->
-    <!--<slot class="icon"/>-->
-    <!--<rt-ripple :not-render="isDisabled" :twice-render="true">-->
-      <!--<rt-spinner v-if="isFetched" :fill="true" :is-absolute="true" />-->
-      <!--<slot />-->
-    <!--</rt-ripple>-->
-  <!--</button>-->
-<!--</template>-->
 <script type="text/jsx">
   import { default as Spinner } from "../Spinner/Spinner.vue";
   import { default as RippleComponent } from "../Ripple/Ripple.vue";
@@ -78,7 +62,7 @@
       })();
       if(this.hasIcon) {
         return(
-          <button class={this.buttonClass} onClick="triggerClick()" style="position: relative;">
+          <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
             {icon}
             <rt-ripple notRender={this.isDisabled} twiceRender={true}>
               {spinner}
@@ -88,7 +72,7 @@
         )
       } else {
         return(
-          <button class={this.buttonClass} onClick="triggerClick()">
+          <button class={this.buttonClass} onClick={this.triggerClick}>
             <rt-ripple notRender={this.isDisabled} twiceRender={true}>
               {spinner}
               {this.$slots.default}
