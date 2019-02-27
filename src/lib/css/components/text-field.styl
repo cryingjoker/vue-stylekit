@@ -1,7 +1,7 @@
 .text-field
   display inline-block
   width 100%
-  height 52px
+  height 49px
   box-sizing border-box
   padding-top 22px
   position relative
@@ -22,6 +22,8 @@
     -webkit-appearance none
     appearance none
     -moz-appearance none
+    &--transparent
+      background-color: transparent
 
     .textarea &
       position relative
@@ -68,7 +70,7 @@
 
       &:before
         width 100%
-        background-color error-color
+        background-color error-color!important
 
   &__error-message
     color error-color-text
@@ -99,3 +101,85 @@
 
 .password-hidden
   top 35px
+
+.{b2bAppName}-input
+  .text-field
+    padding 30px 20px 0
+    height 60px
+    @media (max-width: tablet-upper-limit)
+      height auto
+  .{b2bAppName}-text-field__error-message
+    position relative
+    background-color error-color
+    color b2c-white
+    top -30px
+    transform translateY(-50%)
+    width auto
+    min-width 200px
+    padding 10px
+    box-sizing border-box
+    z-index 3
+    //min-height 60px
+    height auto
+    bottom auto
+    &:before
+      position absolute
+      content: ''
+      top 50%
+      width: 0
+      height: 0
+      transform translateY(-50%)
+    &--on-the-left
+      left calc(100% + 35px)
+      &:before
+        left -7px
+        border-style: solid
+        border-width: 7px 7px 7px 0
+        border-color: transparent error-color transparent transparent
+      @media (max-width: tablet-upper-limit)
+        position relative
+        top auto
+        left -21px
+        right -21px
+        bottom 0
+        transform none
+        padding 5px 20px
+        width calc(100% + 42px)
+        min-height auto
+        &:before
+          border none
+    &--on-the-right
+      right calc(100% + 35px)
+      left auto
+      &:before
+        right -7px
+        border-style: solid
+        border-width: 7px 0 7px 7px
+        border-color: transparent transparent transparent error-color
+      @media (max-width: mobile-upper-limit)
+        position relative
+        top auto
+        left -21px
+        right -21px
+        bottom 0
+        transform none
+        padding 5px 20px
+        width calc(100% + 42px)
+        min-height auto
+        &:before
+          border none
+  .input-element[disabled] + .text-field__line
+    border 1px solid rgba(b2c-cool-grey, .5)
+
+.text-field--orange
+  .text-field__line:before
+    background-color b2c-orange
+  .input-element:focus + .text-field__border
+    border-color b2c-orange
+
+
+.text-field--purple
+  .text-field__line:before
+    background-color b2c-purple
+  .input-element:focus + .text-field__border
+    border-color b2c-purple
