@@ -1,0 +1,27 @@
+{
+  "extends": "./tslint.json",
+  "rules": {
+    "deprecation": false,
+    "no-use-before-declare": false,
+    "angular-whitespace": [
+      false,
+      "check-interpolation",
+      "check-semicolon",
+      "check-pipe"
+    ],
+    "max-classes-per-file": false,
+    "no-output-on-prefix": false,
+    "no-input-rename": false,
+    "no-output-rename": false,
+    "directive-selector": false,
+    "component-selector": false,
+    "templates-no-negated-async": false,
+    "no-template-call-expression": false,
+    "trackBy-function": false,
+    "max-inline-declarations": false,
+    "triple-equals": false,
+    "use-host-property-decorator": false,
+    "radix": false,
+    "enforce-component-selector": false
+  }
+}

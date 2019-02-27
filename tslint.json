@@ -1,0 +1,22 @@
+{
+  "extends": ["tslint-angular", "tslint-config-prettier", "rxjs-tslint-rules"],
+  "rules": {
+    "rxjs-no-internal": true,
+    "rxjs-no-add": true,
+    "rxjs-no-deep-operators": true,
+    "rxjs-no-operator": true,
+
+    "no-attribute-parameter-decorator": true,
+    "no-life-cycle-call": true,
+    "no-conflicting-life-cycle-hooks": true,
+    "no-queries-parameter": true,
+    "no-output-named-after-standard-event": true,
+    "pipe-impure": true,
+    "directive-selector": [true, "attribute", "cu", "camelCase"],
+    "component-selector": [true, "element", "cu", "kebab-case"],
+    "max-inline-declarations": true,
+    "enforce-component-selector": true,
+    "angular-whitespace": false,
+    "use-view-encapsulation": false
+  }
+}
