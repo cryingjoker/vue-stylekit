@@ -89,7 +89,7 @@
             <span class="rt-font-label flex-fill rt-space-bottom05"
               >simple select</span
             >
-            <rt-select label="Оборудование" value="0" text="Новгородская обл">
+            <rt-select label="Оборудование" value="0" >
               <rt-select-option
                 v-for="(option, index) in optionsList"
                 :key="
@@ -149,6 +149,127 @@
                 "
                 :value="String(index)"
                 >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+        </div>
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+              :disabled="true"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+        </div>
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+              :hasError="true"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+              :outlined="true"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+        </div>
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+              :outlined="true"
+              :disabled="true"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select
+              :is-b2b-select="true"
+              label="Выберите регион"
+              :outlined="true"
+              :hasError="true"
+            >
+              <rt-select-option
+                v-for="(option, index) in optionsList"
+                :key="
+                  'index' +
+                    Math.random()
+                      .toString(5)
+                      .slice(4)
+                "
+                :value="String(index)"
+              >{{ option }}
               </rt-select-option>
             </rt-select>
           </div>

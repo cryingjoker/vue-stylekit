@@ -44,15 +44,13 @@
         </div>
         <div class="app-row row">
           <div class="rt-col-4  rt-col-md-2 rt-md-space-top">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >dynamic textarea</span
-            >
-            <rt-textarea placeholder="Textarea" />
+            <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea</span>
+            <rt-textarea
+              placeholder="Textarea"
+            />
           </div>
           <div class="rt-col-4  rt-col-md-2 rt-md-space-top d-flex flex-column">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >dynamic textarea with error</span
-            >
+            <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea with error</span>
             <rt-textarea
               :has-error="true"
               placeholder="Textarea"
@@ -61,13 +59,64 @@
           </div>
 
           <div class="rt-col-4  rt-col-md-1 rt-md-space-top d-flex flex-column">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >dynamic disabled textarea</span
-            >
+            <span class="rt-font-label flex-fill rt-space-bottom05">dynamic disabled textarea</span>
             <rt-textarea
               :disabled="true"
               placeholder="Textarea"
               error-message="textarea error message"
+            />
+          </div>
+        </div>
+        <div class="app-row row color-block--light-grey rt-space-bottom rt-space-top">
+          <div class="rt-col-4  rt-col-md-2 rt-md-space-top">
+            <rt-textarea
+              placeholder="Textarea"
+              :isB2bTextarea="true"
+            />
+          </div>
+          <div class="rt-col-4  rt-col-md-2 rt-md-space-top d-flex flex-column">
+            <rt-textarea
+              :has-error="true"
+              :isB2bTextarea="true"
+              placeholder="Textarea"
+              error-message="textarea error message"
+            />
+          </div>
+
+          <div class="rt-col-4  rt-col-md-1 rt-md-space-top d-flex flex-column">
+            <rt-textarea
+              :disabled="true"
+              :isB2bTextarea="true"
+              placeholder="Textarea"
+              error-message="textarea error message"
+            />
+          </div>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-4  rt-col-md-2 rt-md-space-top">
+            <rt-textarea
+              placeholder="Textarea"
+              :isB2bTextarea="true"
+              :outlined="true"
+            />
+          </div>
+          <div class="rt-col-4  rt-col-md-2 rt-md-space-top d-flex flex-column">
+            <rt-textarea
+              :has-error="true"
+              :isB2bTextarea="true"
+              placeholder="Textarea"
+              error-message="textarea error message"
+              :outlined="true"
+            />
+          </div>
+
+          <div class="rt-col-4  rt-col-md-1 rt-md-space-top d-flex flex-column">
+            <rt-textarea
+              :disabled="true"
+              :isB2bTextarea="true"
+              placeholder="Textarea"
+              error-message="textarea error message"
+              :outlined="true"
             />
           </div>
         </div>
