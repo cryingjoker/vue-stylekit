@@ -141,9 +141,9 @@ export default {
     this.setDisabled();
     this.bindEvents();
     if(this.$el.getBoundingClientRect().left > window.innerWidth / 2) {
-      this.hintPosition = 'right';
-    } else {
       this.hintPosition = 'left';
+    } else {
+      this.hintPosition = 'right';
     };
   },
 

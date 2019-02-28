@@ -113,13 +113,13 @@
     background-color error-color
     color b2c-white
     top -30px
-    transform translateY(-50%)
+    //transform translateY(-50%)
     width auto
-    min-width 200px
+    max-width 270px
     padding 10px
     box-sizing border-box
     z-index 3
-    //min-height 60px
+    display: inline-block
     height auto
     bottom auto
     &:before
@@ -129,8 +129,11 @@
       width: 0
       height: 0
       transform translateY(-50%)
-    &--on-the-left
+    @media (max-width: tablet-upper-limit)
+      max-width none
+    &--on-the-right
       left calc(100% + 35px)
+      transform translateY(-50%)
       &:before
         left -7px
         border-style: solid
@@ -148,9 +151,10 @@
         min-height auto
         &:before
           border none
-    &--on-the-right
-      right calc(100% + 35px)
-      left auto
+    &--on-the-left
+      //right calc(100% + 35px)
+      //left auto
+      transform translate(calc(-100% - 35px), -50%)
       &:before
         right -7px
         border-style: solid
