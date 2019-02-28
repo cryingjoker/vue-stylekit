@@ -332,6 +332,32 @@
         <pre-code
           text="<div class=&quot;app-row&quot;><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button></div>"
         />
+        <div class="app-row row rt-space-top">
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code
+              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
+              <span class=&quot;original-text&quot;>Подключить</span>
+              <span class=&quot;checked-text&quot;>Подключено</span>
+              </rt-button>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code
+              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
+              <span class=&quot;original-text&quot;>Подключить</span>
+              <span class=&quot;checked-text&quot;>Подключено</span>
+              </rt-button>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
+            <pre-code
+              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
+              <span class=&quot;original-text&quot;>Подключить</span>
+              <span class=&quot;checked-text&quot;>Подключено</span>
+              </rt-button>"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
