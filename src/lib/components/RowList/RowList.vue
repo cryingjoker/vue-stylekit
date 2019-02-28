@@ -8,6 +8,10 @@ export default {
     isProfitList: {
       type: Boolean,
       default: false
+    },
+    columnsQuantity: {
+      type: Number,
+      default: 1
     }
   }
 };

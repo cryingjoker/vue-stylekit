@@ -6,17 +6,13 @@ export default {
       type: Boolean,
       default: false
     },
-    columnsQuantity: {
-      type: Number,
-      default: 1
-    },
     icon: {
       type: String,
       default: null
     }
   },
   data: () => ({
-    show: false
+    show: false,
   }),
   methods: {
     toggleShow() {
@@ -33,6 +29,7 @@ export default {
     }
   },
   render: function(h) {
+    this.columnsQuantity = this.$parent._props.columnsQuantity;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (

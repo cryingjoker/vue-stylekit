@@ -1,7 +1,7 @@
 <template>
   <div :class="selectClasses" class="select text-field">
     <button :disabled="disabled" class="select__inner" @click="toggleOpen">
-      <label class="floating-placeholder floating-placeholder--go-top">{{
+      <label class="floating-placeholder" :class="placeholderClasses">{{
         label
       }}</label>
       <div class="select-value">
@@ -18,7 +18,8 @@
         </div>
       </div>
     </button>
-    <div class="text-field__line" />
+    <div v-bind:class="{'text-field__border': outlined, 'text-field__line': !outlined, 'text-field__border--error': outlined && hasError}"/>
+    <!--<div v-else class="text-field__line" />-->
     <div v-if="!disabled" :style="selectListStyle" class="select-list">
       <slot />
     </div>
@@ -62,6 +63,14 @@ export default {
     resetWrapperWidth: {
       type: Boolean,
       default: false
+    },
+    isB2bSelect: {
+      type: Boolean,
+      default: false
+    },
+    outlined: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -73,7 +82,8 @@ export default {
       },
       isOpen: false,
       selected: {},
-      isOpenListOnTop: false
+      isOpenListOnTop: false,
+      hasSelected: this.text ? true : false
     };
   },
   computed: {
@@ -83,8 +93,15 @@ export default {
         "select--is-open": this.isOpen,
         "select--is-reset-width": this.resetWrapperWidth,
         "select--disabled": Boolean(this.disabled),
-        "select--invert-open-list": this.isOpenListOnTop
+        "select--invert-open-list": this.isOpenListOnTop,
+        "rtb-select": this.isB2bSelect,
+        "rtb-select--outlined": this.outlined
       };
+    },
+    placeholderClasses() {
+      return {
+        "floating-placeholder--go-top": this.hasSelected
+      }
     },
     selectListStyle() {
       if (this.dropdownMinWidth) {
@@ -138,6 +155,7 @@ export default {
           this.removeBindEvents();
         }
       }
+      this.liftPlaceholder();
     },
     emitSelected(value) {
       this.$emit("rt-selected", value);
@@ -146,6 +164,7 @@ export default {
       if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
+        this.liftPlaceholder();
       }
     },
     bindKeyboardEvents(e) {
@@ -200,6 +219,15 @@ export default {
         const scrollPosition =
           selectElement.offsetTop - selectElement.parentNode.offsetTop;
         selectElement.parentNode.scrollTop = scrollPosition;
+      }
+    },
+    liftPlaceholder() {
+      if(!this.$el.querySelector(".select-input").innerText) {
+        if(!this.$el.querySelector(".floating-placeholder").classList.contains('floating-placeholder--go-top')) {
+          this.$el.querySelector(".floating-placeholder").classList.add('floating-placeholder--go-top')
+        } else {
+          this.$el.querySelector(".floating-placeholder").classList.remove('floating-placeholder--go-top')
+        }
       }
     }
   }

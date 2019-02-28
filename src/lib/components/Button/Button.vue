@@ -24,6 +24,22 @@
       hasIcon: {
         type: Boolean,
         default: false
+      },
+      checkboxBehavior: {
+        type: Boolean,
+        default: false
+      },
+      radioGroupName: {
+        type: String,
+        default: 'radio-group'
+      },
+      buttonClassList: {
+        type: String,
+        default: ''
+      },
+      radioValue: {
+        type: String,
+        default: ''
       }
     },
     mounted: function () {
@@ -38,12 +54,21 @@
         if(this.isFetched) {
           className += ' rt-button--is-fitched'
         }
+        className += ' ' + this.buttonClassList + '';
         return className;
       }
     },
     methods: {
       triggerClick($event) {
-        this.$emit("click", $event);
+        if(this.checkboxBehavior) {
+          if(!this.$el.querySelector('.fake-radiobutton-for-button').checked) {
+            this.$el.querySelector('.fake-radiobutton-for-button').click();
+          } else {
+            this.$el.querySelector('.fake-radiobutton-for-button').checked = false;
+          }
+        } else {
+          this.$emit("click", $event);
+        }
       }
     },
     render: function (h) {
@@ -60,25 +85,39 @@
           return null
         }
       })();
-      if(this.hasIcon) {
-        return(
-          <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
-            {icon}
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
-              {spinner}
-              {buttonTextContent}
-            </rt-ripple>
-          </button>
+      if(this.checkboxBehavior) {
+        return (
+          <label>
+            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
+            <button class={this.buttonClass} onClick={this.triggerClick}>
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </button>
+          </label>
         )
       } else {
-        return(
-          <button class={this.buttonClass} onClick={this.triggerClick}>
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
-              {spinner}
-              {this.$slots.default}
-            </rt-ripple>
-          </button>
-        )
+        if(this.hasIcon) {
+          return(
+            <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
+              {icon}
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {buttonTextContent}
+              </rt-ripple>
+            </button>
+          )
+        } else {
+          return(
+            <button class={this.buttonClass} onClick={this.triggerClick}>
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </button>
+          )
+        }
       }
     }
   };
