@@ -215,7 +215,7 @@
       <pre-code
         text="
       <rt-row-list :is-profit-list=&quot;true&quot;
-          :columns-quantity=&quot;3&quot;>
+          :columns-quantity=&quot;3&quot; class=&quot;color-block--main-color&quot;>
         <rt-row-list-item
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
