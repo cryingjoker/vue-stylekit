@@ -37,14 +37,13 @@
         type: String,
         default: ''
       },
-      checkedButtonText: {
+      radioValue: {
         type: String,
         default: ''
       }
     },
     mounted: function () {
       this.isDisabled = this.$el.disabled;
-      this.originalTextContent = this.$el.querySelector('.ripple').innerText;
     },
     computed: {
       buttonClass() {
@@ -89,7 +88,7 @@
       if(this.checkboxBehavior) {
         return (
           <label>
-            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName}/>
+            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
             <button class={this.buttonClass} onClick={this.triggerClick}>
               <rt-ripple notRender={this.isDisabled} twiceRender={true}>
                 {spinner}
