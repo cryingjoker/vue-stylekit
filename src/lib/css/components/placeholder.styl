@@ -13,7 +13,7 @@
 
   .{newAppName}-dark-theme
     .{newAppName}-card &
-      color main-color07
+      color main-color05
 
   .{newAppName}-dark-theme &
     color b2c-white07
@@ -23,7 +23,7 @@
       color b2c-white07
 
     .{newAppName}-card &
-      color main-color07
+      color main-color05
 
   .{newAppName}-card--has-white-color &
     color b2c-white07
@@ -32,20 +32,59 @@
     left 20px
 
   .input-element:focus+.text-field__line+&,
+  .input-element:focus+&,
   &--go-top
     font-size 14px
     top 0
 
-  .input-element:focus+.text-field__line+&
-    color b2c-purple
-
   .select--disabled+.text-field__line+ &,
   .input-element[disabled]+.text-field__line+ &,
-  .textarea--disabled+.text-field__line+ &
+  .textarea--disabled+.text-field__line+ &,
+  .input-element[disabled] + &
     color main-color03
 
   .text-field--error &
-    color error-color
+    color error-color!important
 
   .textarea-element:focus+.text-field__line+&
     top 0
+
+//.{newAppName}-dark-theme
+//  .{b2bAppName}-input
+//    .floating-placeholder
+//      color main-color07
+
+.text-field--purple
+  .input-element:focus + .text-field__line + .floating-placeholder,
+  .input-element:focus + .text-field__border + .floating-placeholder,
+  .input-element:focus + .floating-placeholder,
+  .textarea-element:focus + .text-field__line + .floating-placeholder,
+  .textarea-element:focus + .text-field__border + .floating-placeholder,
+  .textarea-element:focus + .floating-placeholder
+    color b2c-purple
+  .input-element:focus+.text-field__line:before
+    background-color b2c-purple
+
+.text-field--orange
+  .input-element:focus + .text-field__line + .floating-placeholder,
+  .input-element:focus + .text-field__border + .floating-placeholder,
+  .input-element:focus + .floating-placeholder,
+  .textarea-element:focus + .text-field__line + .floating-placeholder,
+  .textarea-element:focus + .text-field__border + .floating-placeholder,
+  .textarea-element:focus + .floating-placeholder
+    color b2c-orange
+  .input-element:focus+.text-field__line:before
+    background-color b2c-orange
+
+.{b2bAppName}-input,
+.{b2bAppName}-textarea
+  .input-element:focus + .text-field__line + .floating-placeholder,
+  .input-element:focus + .text-field__border + .floating-placeholder,
+  .input-element:focus+.floating-placeholder,
+  .textarea-element:focus + .text-field__line + .floating-placeholder,
+  .textarea-element:focus + .text-field__border + .floating-placeholder,
+  .textarea-element:focus + .floating-placeholder,
+  .floating-placeholder--go-top
+      top 10px!important
+      font-size 14px
+

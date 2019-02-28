@@ -4,10 +4,11 @@
       class="textarea-element"
       rows="1"
       @change="inputHandler"
-      @keyup="calculateHelght"
-      @input="calculateHelght"
+      @keyup="calculateHeight"
+      @input="calculateHeight"
     />
-    <div class="text-field__line" />
+    <div v-if="outlined" class="text-field__border"></div>
+    <div v-else class="text-field__line" />
     <div
       v-if="!!placeholder"
       :class="placeholderClasses"
@@ -42,6 +43,18 @@ export default {
     value: {
       type: String,
       default: null
+    },
+    isB2bTextarea: {
+      type: Boolean,
+      default: false
+    },
+    outlined: {
+      type: Boolean,
+      default: false
+    },
+    color: {
+      type: String,
+      default: 'purple'
     }
   },
   data: () => ({
@@ -53,7 +66,11 @@ export default {
       return {
         "textarea--disabled": this.disabled,
         "textarea--not-empty": this.hasInputText,
-        "text-field--error": this.hasError
+        "text-field--error": this.hasError,
+        "rtb-textarea": this.isB2bTextarea,
+        "rtb-textarea--outlined": this.outlined,
+        "text-field--orange": (this.color === 'orange'),
+        "text-field--purple": (this.color === 'purple')
       };
     },
     placeholderClasses() {
@@ -88,7 +105,7 @@ export default {
       this.localValue = this.$el.querySelector(".textarea-element").value;
       this.setValueLength();
     },
-    calculateHelght() {
+    calculateHeight() {
       const textarea = this.$el.querySelector(".textarea-element");
       textarea.style.height = "";
       textarea.style.height = textarea.scrollHeight;

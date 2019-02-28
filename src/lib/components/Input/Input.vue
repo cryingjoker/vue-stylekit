@@ -81,6 +81,18 @@ export default {
     passwordVisibility: {
       type: Boolean,
       default: false
+    },
+    isB2bInput: {
+      type: Boolean,
+      default: false
+    },
+    outlined: {
+      type: Boolean,
+      default: false
+    },
+    color: {
+      type: String,
+      default: 'purple'
     }
   },
   data() {
@@ -88,7 +100,8 @@ export default {
       index: null,
       localLabel: this.label,
       localValue: this.value ? this.value : "",
-      hasInputText: this.value ? this.value.length > 0 : false
+      hasInputText: this.value ? this.value.length > 0 : false,
+      hintPosition: 'right'
     };
   },
 
@@ -100,6 +113,16 @@ export default {
       if (this.validate || this.hasError) {
         return this.hasError || this.errors.has(this.fieldName);
       }
+    },
+    inputClass() {
+      let className = 'input-wrapper';
+      if(this.outlined) {
+        className += ' input-wrapper--outlined';
+      }
+      if(this.isB2bInput) {
+        className += ' rtb-input color-block--white';
+      }
+      return className;
     }
   },
   watch: {
@@ -112,11 +135,16 @@ export default {
   },
 
   mounted() {
-    this.customRules.forEach(({nameRule, rule}) => VeeValidate.Validator.extend(nameRule, { validate: rule }))
+    this.customRules.forEach(({nameRule, rule}) => VeeValidate.Validator.extend(nameRule, { validate: rule }));
     Vue.use(VeeValidate);
     this.setValue();
     this.setDisabled();
     this.bindEvents();
+    if(this.$el.getBoundingClientRect().left > window.innerWidth / 2) {
+      this.hintPosition = 'left';
+    } else {
+      this.hintPosition = 'right';
+    };
   },
 
   updated() {
@@ -304,6 +332,11 @@ export default {
     if(this.type && this.type === "password") {
       inputClass += " rt-input--password"
     }
+    if(this.color === 'orange') {
+      inputClass += " text-field--orange"
+    } else {
+      inputClass += " text-field--purple"
+    }
 
     const placeholder = (() => {
       if (this.placeholder) {
@@ -319,8 +352,15 @@ export default {
     })();
 
     const clearButton = (() => {
+      const buttonClass = (() => {
+        let clearButtonClassNames = "input-clear";
+        if(this.isB2bInput) {
+          clearButtonClassNames += " rtb-input-clear"
+        }
+        return clearButtonClassNames;
+      })();
       if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != 'password') {
-        return <div class="input-clear" onClick={this.clearInput}>
+        return <div class={buttonClass} onClick={this.clearInput}>
           <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
@@ -363,40 +403,42 @@ export default {
         if (this.label) {
           errorMessageClass += " text-field__error-message--has-label";
         }
-
-        if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
-          return <p class={errorMessageClass}>{this.errorMessageFunc(this.localValue)}</p>;
+        if(this.isB2bInput) {
+          errorMessageClass += " rtb-text-field__error-message rt-col-rt-col-3";
+        }
+        if(this.hintPosition === 'right') {
+          errorMessageClass += " rtb-text-field__error-message--on-the-right";
+        } else if(this.hintPosition === 'left') {
+          errorMessageClass += " rtb-text-field__error-message--on-the-left";
         }
 
-        return <p class={errorMessageClass}>{this.errorMessage}</p>;
+        if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
+          return <div class={errorMessageClass}>
+            <span class="error-message-text-content rt-font-control">{this.errorMessageFunc(this.localValue)}</span>
+          </div>;
+        }
+
+        return <div class={errorMessageClass}>
+          <span class="error-message-text-content rt-font-control">{this.errorMessage}</span>
+        </div>;
       }
     })();
     const arithmeticButtons = (() => {
       if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
         return <div class="input-arithmetic">
           <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
-            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                 class="input-arithmetic__button-icon">
-              <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="inputs/number/icon/minus/black" transform="translate(1.000000, 1.000000)" stroke-width="1.5">
-                  <path d="M0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 C4.5,0 0,4.5 0,10 Z"
-                        id="Path-Copy"></path>
-                  <path d="M15,10 L5,10" id="Path-8"></path>
-                </g>
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill-opacity=".5" fill="#E3E8EC"/>
+                <path d="M15 10H5" stroke="#575D68" stroke-width="2"/>
               </g>
             </svg>
           </button>
           <button class="input-arithmetic__button input-arithmetic__plus" onClick={this.addNumber}>
-
-            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                 class="input-arithmetic__button-icon">
-              <g id="Symbols" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="inputs/number/icon/plus/black" transform="translate(1.000000, 1.000000)" stroke-width="1.5">
-                  <path d="M0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 C4.5,0 0,4.5 0,10 Z"
-                        id="Path-Copy"></path>
-                  <path d="M10,5 L10,15" id="Path-8"></path>
-                  <path d="M15,10 L5,10" id="Path-8"></path>
-                </g>
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill-opacity=".5" fill="#E3E8EC"/>
+                <path d="M10 10V5v5h5-5zm0 0v5-5H5h5z" stroke="#575D68" stroke-width="2"/>
               </g>
             </svg>
           </button>
@@ -408,7 +450,8 @@ export default {
       if (this.localLabel)
         return <div class="input-label">{this.localLabel}</div>;
     })();
-    return <div class="input-wrapper">
+
+    return <div class={this.inputClass} >
       <div class="input text-field" class={inputClass}>
         <input
           onKeypress={this.keyPress}
@@ -422,7 +465,7 @@ export default {
           onInput={this.inputHandler}
           v-validate={this.validate}
         />
-        <div class="text-field__line"/>
+        {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
         {placeholder}
         {clearButton}
         {passwordIcon}

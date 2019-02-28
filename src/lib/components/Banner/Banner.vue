@@ -107,7 +107,6 @@
         type: Boolean,
         default: null
       }
-
     },
     data: () => ({
       isMobile: false,

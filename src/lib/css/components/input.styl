@@ -6,7 +6,7 @@
   background-color transparent
   border none
   outline none
-  padding-bottom 10px
+  padding-bottom 7px
   padding-right 23px
   position relative
   z-index 2
@@ -36,7 +36,7 @@
 .input-clear
   position absolute
   top 25px
-  right 0
+  right 5px
   z-index 2
   cursor pointer
   transition-timing-function ease-in-out
@@ -60,6 +60,25 @@
   .{newAppName}-card--has-white-color &
     fill white
 
+.{b2bAppName}-input-clear
+  top 23px
+  right 20px
+
+.{b2bAppName}-input
+  //@media (min-width: laptop-lower-limit)
+  //  margin-bottom -60px
+  .input-element
+    padding-bottom: 10px
+  .text-field--error
+    .input-clear__icon
+      fill error-color
+
+.text-field--error
+  .{b2bAppName}-input-clear
+    .input-clear__icon
+      display block
+      fill error-color
+
 .input-arithmetic
   position absolute
   top 25px
@@ -70,7 +89,7 @@
   cursor pointer
 
   &+&
-    margin-left horizontal-space * .5
+    margin-left horizontal-space * .25
 
 .input-arithmetic__button-icon
   transition-timing-function ease-in-out
@@ -96,6 +115,52 @@
 
   .text-field--error + &
     display none
+
+.input-wrapper
+  &+&
+    margin-top: 20px
+  &--outlined
+    .text-field
+      position relative
+      &__border
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        border 1px solid rgba(b2c-cool-grey, .9)
+        transition border-color .3s linear
+        max-height 60px
+    &:hover
+      .text-field--orange
+        .text-field__border
+          border-color b2c-orange
+      .text-field--purple
+          .text-field__border
+            border-color b2c-purple
+    //.text-field--error
+    //  border 1px solid error-color
+    //  &:hover,
+    //  &:focus
+    //    border 1px solid error-color
+    .{b2bAppName}-text-field__error-message
+      position relative
+      top auto
+      left -21px
+      right -21px
+      bottom 0
+      transform none
+      padding 5px 20px
+      width calc(100% + 42px)
+      min-height auto
+      &:before
+        border none
+    .input-element[disabled]+.text-field__border
+        border 1px solid rgba(b2c-cool-grey, .9)!important
+
+.rt-col .rt-input+&
+  margin-top 20px
+
 
 @keyframes showClearInput
   0%

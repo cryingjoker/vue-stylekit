@@ -214,10 +214,9 @@
       <div class="rt-space-top35">
       <pre-code
         text="
-      <rt-row-list :is-profit-list=&quot;true&quot;>
+      <rt-row-list :is-profit-list=&quot;true&quot;
+          :columns-quantity=&quot;3&quot; class=&quot;color-block--main-color&quot;>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -229,8 +228,6 @@
           </template>
         </rt-row-list-item>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -242,8 +239,6 @@
           </template>
         </rt-row-list-item>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/mobile-call.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -255,8 +250,6 @@
           </template>
         </rt-row-list-item>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -268,8 +261,6 @@
           </template>
         </rt-row-list-item>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>
@@ -281,8 +272,6 @@
           </template>
         </rt-row-list-item>
         <rt-row-list-item
-          :more-than-one-column=&quot;true&quot;
-          :columns-quantity=&quot;2&quot;
           icon=&quot;/static/images/B2B/shield.svg&quot;>
           <template slot=&quot;option&quot;>
             <div class=&quot;d-flex flex-row&quot;>

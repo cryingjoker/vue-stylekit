@@ -115,6 +115,16 @@
 
     .ripple-wave
       background-color b2c-orange-low
+    .ripple
+      padding 0 18px
+
+    .fake-radiobutton-for-button:checked+&
+      background-color b2c-orange
+      color b2c-white
+      .original-text
+        display none
+      .checked-text
+        display inline
 
   &-white
     border 2px solid white
@@ -189,6 +199,18 @@
     &[disabled]
       color main-color01
       border-color main-color01
+
+    .ripple
+      padding 0 18px
+
+    .fake-radiobutton-for-button:checked+&
+      background-color b2c-purple
+      color b2c-white
+      .original-text
+        display none
+      .checked-text
+        display inline
+
   &-transparent
     border 2px solid transparent
     &:focus,
@@ -217,4 +239,21 @@
       background-color: b2c-cool-grey05
       .{newAppName}-dark-theme &
         background-color: b2c-white01
+    .ripple
+      padding 0 18px
+    .fake-radiobutton-for-button:checked+&
+      background-color b2c-cool-grey
+      color b2c-white
+      .original-text
+        display none
+      .checked-text
+        display inline
+
+.fake-radiobutton-for-button
+  display none
+
+.original-text
+  display inline
+.checked-text
+  display none
 

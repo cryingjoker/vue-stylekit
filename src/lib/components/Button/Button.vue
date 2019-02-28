@@ -1,19 +1,3 @@
-<!--<template>-->
-  <!--<button-->
-    <!--:class="{-->
-      <!--'rt-button&#45;&#45;is-block': isBlock,-->
-      <!--'rt-button&#45;&#45;is-fitched': isFetched-->
-    <!--}"-->
-    <!--class="rt-button rt-button-with-ripple"-->
-    <!--@click="triggerClick();"-->
-  <!--&gt;-->
-    <!--<slot class="icon"/>-->
-    <!--<rt-ripple :not-render="isDisabled" :twice-render="true">-->
-      <!--<rt-spinner v-if="isFetched" :fill="true" :is-absolute="true" />-->
-      <!--<slot />-->
-    <!--</rt-ripple>-->
-  <!--</button>-->
-<!--</template>-->
 <script type="text/jsx">
   import { default as Spinner } from "../Spinner/Spinner.vue";
   import { default as RippleComponent } from "../Ripple/Ripple.vue";
@@ -40,6 +24,22 @@
       hasIcon: {
         type: Boolean,
         default: false
+      },
+      checkboxBehavior: {
+        type: Boolean,
+        default: false
+      },
+      radioGroupName: {
+        type: String,
+        default: 'radio-group'
+      },
+      buttonClassList: {
+        type: String,
+        default: ''
+      },
+      radioValue: {
+        type: String,
+        default: ''
       }
     },
     mounted: function () {
@@ -54,12 +54,21 @@
         if(this.isFetched) {
           className += ' rt-button--is-fitched'
         }
+        className += ' ' + this.buttonClassList + '';
         return className;
       }
     },
     methods: {
       triggerClick($event) {
-        this.$emit("click", $event);
+        if(this.checkboxBehavior) {
+          if(!this.$el.querySelector('.fake-radiobutton-for-button').checked) {
+            this.$el.querySelector('.fake-radiobutton-for-button').click();
+          } else {
+            this.$el.querySelector('.fake-radiobutton-for-button').checked = false;
+          }
+        } else {
+          this.$emit("click", $event);
+        }
       }
     },
     render: function (h) {
@@ -76,25 +85,39 @@
           return null
         }
       })();
-      if(this.hasIcon) {
-        return(
-          <button class={this.buttonClass} onClick="triggerClick()" style="position: relative;">
-            {icon}
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
-              {spinner}
-              {buttonTextContent}
-            </rt-ripple>
-          </button>
+      if(this.checkboxBehavior) {
+        return (
+          <label>
+            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
+            <button class={this.buttonClass} onClick={this.triggerClick}>
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </button>
+          </label>
         )
       } else {
-        return(
-          <button class={this.buttonClass} onClick="triggerClick()">
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
-              {spinner}
-              {this.$slots.default}
-            </rt-ripple>
-          </button>
-        )
+        if(this.hasIcon) {
+          return(
+            <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
+              {icon}
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {buttonTextContent}
+              </rt-ripple>
+            </button>
+          )
+        } else {
+          return(
+            <button class={this.buttonClass} onClick={this.triggerClick}>
+              <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </button>
+          )
+        }
       }
     }
   };
