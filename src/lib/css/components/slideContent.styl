@@ -18,15 +18,15 @@
     pointer-events all
 
 .rt-slide
-  padding-bottom: 20px
+  padding-bottom: 10px
   &+&
     padding-top: 20px
     border-top: 1px solid main-color02
   &__header
     position: relative
     padding-left: 30px
-    padding-top: 10px
-    padding-bottom: 10px
+    padding-top: 20px
+    padding-bottom: 20px
     cursor: pointer
   &__arrow
     position: absolute
@@ -49,9 +49,10 @@
     visibility: hidden
     transition-timing-function ease-in-out
     transition-duration .5s
-    transition-property max-height, opacity, visibility
+    transition-property max-height, opacity, visibility, padding-bottom
     padding-left: 30px
     .rt-slide--is-active &
+      padding-bottom: 10px
       max-height: 3000px
       opacity: 1
       visibility: visible
