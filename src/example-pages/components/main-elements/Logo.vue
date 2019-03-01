@@ -42,26 +42,26 @@
             <rt-logo top-fill-color="b2c-pink" width="14px" height="24px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2c-pink" bottom-fill-color="b2c-purple-low" bottom-fill-colo="b2c-green"
+            <rt-logo top-fill-color="b2c-pink" bottom-fill-color="b2c-purple-low"
                      width="19px" height="32px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-colo="b2c-green" width="24px" height="40px"></rt-logo>
+            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-color="b2c-green" width="24px" height="40px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-colo="b2c-green" width="30px" height="50px"></rt-logo>
+            <rt-logo top-fill-color="b2c-light-blue" bottom-fill-color="b2c-green" width="30px" height="50px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2b-state" bottom-fill-colo="b2c-green" width="36px" height="60px"></rt-logo>
+            <rt-logo top-fill-color="b2b-state" bottom-fill-color="b2c-green" width="36px" height="60px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2b-state" bottom-fill-colo="b2c-green" width="38px" height="64px"></rt-logo>
+            <rt-logo top-fill-color="b2b-state" bottom-fill-color="b2c-green" width="38px" height="64px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2b-state" bottom-fill-colo="b2c-green" width="60px" height="100px"></rt-logo>
+            <rt-logo top-fill-color="b2b-state" bottom-fill-color="b2c-green" width="60px" height="100px"></rt-logo>
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-logo top-fill-color="b2b-state" bottom-fill-colo="b2c-green" width="121px" height="200px"></rt-logo>
+            <rt-logo top-fill-color="b2b-state" bottom-fill-color="b2c-green" width="121px" height="200px"></rt-logo>
           </div>
         </div>
         <div class="rt-row rt-space-top">
@@ -72,13 +72,14 @@
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo  top-fill-color=&quot;b2b-state&quot;  bottom-fill-colo=&quot;b2c-green&quot;  width=&quot;121px&quot; height=&quot;200px&quot;></rt-logo>">
+              text="<rt-logo  top-fill-color=&quot;b2b-state&quot;  bottom-fill-color=&quot;b2c-green&quot;  width=&quot;121px&quot; height=&quot;200px&quot;></rt-logo>">
             </pre-code>
           </div>
         </div>
 
         <div class="rt-row rt-space-top">
           <div class="d-inline-block rt-space-right">
+            <rt-logo type="dr-web"></rt-logo>
             <pre-code
               text="<rt-logo type=&quot;dr-web&quot;></rt-logo>">
             </pre-code>
@@ -191,17 +192,17 @@
         <div class="rt-row rt-space-top">
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo type=&quot;world-of-warplanes&quot;></rt-logo>">
+              text="<rt-logo type=&quot;world-of-warplanets&quot;></rt-logo>">
             </pre-code>
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warplanes&quot;></rt-logo>">
+              text="<rt-logo color=&quot;#00717F&quot; type=&quot;world-of-warplanets&quot;></rt-logo>">
             </pre-code>
           </div>
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warplanes&quot;></rt-logo>">
+              text="<rt-logo color=&quot;#020303&quot; type=&quot;world-of-warplanets&quot;></rt-logo>">
             </pre-code>
           </div>
 

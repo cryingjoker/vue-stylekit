@@ -36,11 +36,23 @@ const config = {
         ],
       },
       {
+        test: /\.html$/,
+        use: 'raw-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {loader:`babel-loader`},
+          {loader:`ts-loader`}]
+      },
+      {
         test: /\.css$/,
         use: [
           {loader:`css-loader`},
         ],
       },
+
       {
         test: /\.js$/,
         loader: `babel-loader`,
