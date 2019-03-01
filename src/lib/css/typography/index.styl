@@ -229,37 +229,74 @@ a
 .{newAppName}-numeric-list
   list-style-type none
   counter-reset step-counter
-  color main-color05
+  color main-color
   .{newAppName}-dark-theme &
-    color b2c-white05
+    color b2c-white
 
 .{newAppName}-ordered-list__item
-  position: relative
-  color main-color05
   .{newAppName}-dark-theme &
-    color b2c-white05
+    color b2c-white
   &:before
+    position absolute
     content: ''
-    background-color: main-color05
+    background-color: main-color
     height: 6px
     width: 6px
     border-radius 50%
+    transform translateY(-50%)
     display: inline-block
-    margin-right: 12px
-    margin-left: 2px
-    left: 0
+    left: 7px
+    top 50%
     .{newAppName}-dark-theme &
       background-color:  b2c-white05
 
 .{newAppName}-numeric-list__item
-  padding-left horizontal-space
-  position relative
   counter-increment step-counter
 
   &:before
     content counter(step-counter) "."
     position absolute
-    color main-color05
+    color main-color
     left 0
+    min-width 20px
     .{newAppName}-dark-theme &
-      color b2c-white05
+      color b2c-white
+
+.{newAppName}-ordered-list__item,
+.{newAppName}-numeric-list__item
+  padding-left horizontal-space *1.5
+  position relative
+  &+&
+    margin-top: 15px
+    @media (max-width: mobile-upper-limit)
+      margin-top: 10px
+  &:before
+    text-align: center
+
+.{newAppName}-ordered-list__item+.{newAppName}-numeric-list__item,
+.{newAppName}-numeric-list__item+.{newAppName}-ordered-list__item
+  margin-top 15px
+
+.{b2bAppName}-faq-unordered-list
+  &__item
+    padding vertical-space 0
+    &+&
+      border-top 1px solid b2b-cool-grey05-no-opacity
+  .{newAppName}-annotation:hover
+    .{newAppName}-annotation__title:before
+      width 0
+  .{newAppName}-annotation__content:before
+    width 0
+  .{newAppName}-numeric-list,
+  .{newAppName}-ordered-list
+    color main-color05
+  .{newAppName}-numeric-list__item:before
+      color main-color05
+  .{newAppName}-ordered-list__item:before
+      background-color main-color05
+  .rt-annotation__title
+    font-size 18px
+    line-height 26px
+    @media (max-width: tablet-upper-limit)
+      font-size 16px
+      line-height 22px
