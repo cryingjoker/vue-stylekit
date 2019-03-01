@@ -11,11 +11,13 @@
     </rt-banner>
 
     <div class="rt-container rt-space-top2 rt-dark-theme rt-dark-theme--transparent rt-space-bottom2">
-      <div class="flex-start-center">
-        <rt-logo class="rt-layer-level-4 relative d-inline-block" width="56px" height="94px"></rt-logo>
-        <div class="rt-layer-level-4 rt-logo-line"></div>
-        <rt-logo class="rt-layer-level-4 relative d-inline-block" width="188px" height="90px"
-                 type="warface"></rt-logo>
+      <div class="flex-start-center rt-td-space-left ">
+        <div class="warface-logo">
+          <rt-logo class="rt-layer-level-4 relative d-inline-block" width="56px" height="94px"></rt-logo>
+          <div class="rt-layer-level-4 rt-logo-line"></div>
+          <rt-logo class="rt-layer-level-4 relative d-inline-block" width="188px" height="90px"
+                   type="warface"></rt-logo>
+        </div>
       </div>
       <div class="rt-space-top135 flex-end-center">
         <rt-logo class="rt-layer-level-4 relative d-inline-block promo-wargame-logo" width="300px" height="93px"
@@ -55,7 +57,7 @@
 
             <rt-tabs>
               <template slot="navigation">
-              <span class="md-d-flex d-space-between">
+              <div class="d-flex md-space-between flex-fill flex-row">
               <rt-tabs-nav-item :remove-base-tag="true" class="rt-font-h4 rt-font-left"
                                 name="new">Для новых <br>абонентов
               </rt-tabs-nav-item>
@@ -64,7 +66,7 @@
                                   name="old">Для абонентов <br>Ростелеком
                 </rt-tabs-nav-item>
               </div>
-              </span>
+              </div>
               </template>
 
               <template slot="content">

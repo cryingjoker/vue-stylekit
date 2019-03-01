@@ -106,7 +106,7 @@
           background = this.background ? this.background : defaultValues[this.type].background;
           bottomColor = this.bottomColor ? this.bottomColor : color;
           centerColor = this.centerColor ? this.centerColor : color;
-          return <div className="rt-logo">
+          return <div class="rt-logo">
 
             <svg width={width} height={height} viewBox="0 0 90 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -137,7 +137,7 @@
         break;
         case "wargaming":
           color = this.color ? this.color : defaultValues[this.type].color;
-          return <div className="rt-logo"> <svg width={width} height={height} viewBox="0 0 109 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          return <div class="rt-logo"> <svg width={width} height={height} viewBox="0 0 109 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <polygon id={`rt${this._uid}-path-1`} points="0 -4.63050322e-15 108.494025 -4.63050322e-15 108.494025 59.9710112 0 59.9710112"></polygon>
             </defs>
@@ -156,7 +156,7 @@
           break
         case "world-of-tanks":
           color = this.color ? this.color : defaultValues[this.type].color;
-          return <div className="rt-logo">
+          return <div class="rt-logo">
             <svg width={width} height={height} viewBox="0 0 95 40" version="1.1" xmlns="http://www.w3.org/2000/svg" >
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Logo-partners" transform="translate(-389.000000, -699.000000)" fill={color}>
@@ -171,7 +171,7 @@
           break
         case "world-of-warships":
           color = this.color ? this.color : defaultValues[this.type].color;
-          return <div className="rt-logo">
+          return <div class="rt-logo">
             <svg width={width} height={height} viewBox="0 0 67 65" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Logo-partners" transform="translate(-708.000000, -687.000000)">
@@ -185,7 +185,7 @@
           break
         case "world-of-warplanes":
           color = this.color ? this.color : defaultValues[this.type].color;
-          return <div className="rt-logo">
+          return <div class="rt-logo">
             <svg width={width} height={height} viewBox="0 0 79 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Logo-partners" transform="translate(-1034.000000, -689.000000)">
@@ -199,7 +199,7 @@
           break
         case "warface":
 
-          return <div className="rt-logo">
+          return <div class="rt-logo">
           <svg width={width} height={height} viewBox="0 0 103 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Logo-partners" transform="translate(-708.000000, -1297.000000)">

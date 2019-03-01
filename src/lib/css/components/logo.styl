@@ -1,3 +1,6 @@
+.rt-logo
+  svg
+    max-width: 100%
 .rt-logo-line
   display: inline-block
   width: 1px
@@ -5,6 +8,12 @@
   padding-right: horizontal-space
   height: 115px
   position: relative
+  @media (max-width: tablet-upper-limit)
+    height: 70px
+    top: -10px
+  @media (max-width: mobile-upper-limit)
+    height: 55px
+    top: -20px
   &:before
     content: ''
     position: absolute
