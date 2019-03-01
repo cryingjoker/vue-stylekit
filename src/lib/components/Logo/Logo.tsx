@@ -72,8 +72,6 @@ class Logo extends Vue {
 
         const topFillColor = this.topFillColor in colors ? colors[this.topFillColor] : colors[this.defaultTopColor];
         const bottomFillColor = this.bottomFillColor in colors ? colors[this.bottomFillColor] : colors[this.defaultBottomColor];
-        console.log('topFillColor',topFillColor)
-        console.log('bottomFillColor',bottomFillColor)
         return <logo-rt width={width} height={height} color={color} background={background} topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>
     }
     return <h1>fuck logo!!</h1>;
