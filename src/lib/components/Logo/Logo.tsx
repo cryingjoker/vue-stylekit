@@ -6,7 +6,6 @@ import {listOfLogos} from "./logoItems/index.ts";
 import colors from "../../color.json";
 
 const componentList = listOfLogos;
-console.info('listOfLogos',listOfLogos);
 
 @Component({
   components: componentList
@@ -33,7 +32,6 @@ class Logo extends Vue {
     let height:string = '0';
 
     color = this.color ? this.color : defaultValues[this.type].color;
-    console.info('this.type',this.type)
     background = this.background ? this.background : defaultValues[this.type].background;
     if (defaultValues[this.type]) {
       width = this.width ? this.width : defaultValues[this.type].width;
