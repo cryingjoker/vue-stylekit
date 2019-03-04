@@ -57,6 +57,20 @@ const config = {
         include: [path.join(__dirname, `src`)]
       },
       {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader']
+
+      },
+      {
+        test: /\.ts?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader']
+
+      },
+      {
         test: /\.less$/,
         use: [
           {
