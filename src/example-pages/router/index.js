@@ -38,7 +38,7 @@ import Colors from "../components/main-elements/Colors.vue";
 import List from "../components/main-elements/List.vue";
 import Logo from "../components/main-elements/Logo.vue";
 import WarFace from "../components/promo/game-warface.vue";
-
+import Swiper from "../components/swiper/Swiper.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -83,6 +83,7 @@ const index = [
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
+  { path: '/swiper', name: 'swiper', component: Swiper },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
