@@ -8,16 +8,14 @@
   flex-direction row
   overflow: hidden
   min-height 300px
+  .rt-banner-container,
+  .row,
+  .rt-col-12 > div,
+  .rt-banner-content,
+  .rt-banner-content__inner
+    height 100%!important
   @media (max-width: tablet-upper-limit)
-    //height auto!important
-    max-height 300px
-    min-height 300px!important
-    .rt-banner-container,
-    .row,
-    .row > div,
-    .rt-banner-content,
-    .rt-banner-content__inner
-      height 100%!important
+    height 300px
   @media (max-width: mobile-upper-limit)
     height auto!important
     max-height 500px
