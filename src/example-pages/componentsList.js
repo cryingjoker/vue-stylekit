@@ -52,7 +52,8 @@ import {
   Popup,
   SlideContent,
   Icon,
-  Logo
+  Logo,
+  Pattern
 } from "../lib/components/index";
 
 import AppManu from './components/AppMenu.vue'
@@ -111,5 +112,6 @@ componentsList[Popup.name] = Popup;
 componentsList[SlideContent.name] = SlideContent;
 componentsList[AppManu.name] = AppManu;
 componentsList[Icon.name] = Icon;
+componentsList[Pattern.name] = Pattern;
 componentsList[Logo.name] = Logo.component;
 export default { ...componentsList };

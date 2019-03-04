@@ -35,6 +35,7 @@
     <rt-banner hasCustomHeight="500px"
                :is-fullscreen-image="true"
                :category-banner="true">
+      <rt-pattern top-color="" left-color="b2c-purple-high" right-color="b2c-pink" />
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
