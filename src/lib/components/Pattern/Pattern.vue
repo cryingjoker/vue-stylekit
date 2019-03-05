@@ -51,7 +51,7 @@
         </svg>
       })();
 
-      return <div class="rt-pattern" style={"background-image:" + patternItem}>
+      return <div class="rt-pattern">
         {patternItem}
         </div>
     }
