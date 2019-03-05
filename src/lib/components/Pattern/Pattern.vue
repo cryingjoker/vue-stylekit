@@ -27,9 +27,9 @@
       svgOffset: null
     }),
     mounted(){
+      this.mainColor = this.topColor;
       if(this.$parent.$el.classList.contains('rt-banner')){
         let sibling = this.$parent.$children[1];
-        this.mainColor = this.topColor;
         if(sibling._props.backgroundColor != null) {
           this.mainColor = sibling._props.backgroundColor;
         }
