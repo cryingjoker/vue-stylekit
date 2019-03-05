@@ -61,3 +61,6 @@
 
  export { default as Logo } from './Logo/Logo.tsx';
  export { default as LogoCoBranding } from './Logo/LogoCoBranding.tsx';
+
+ export { default as Swiper } from './Swiper/Swiper.vue';
+ export { default as Slide } from './Swiper/Slide.vue';
