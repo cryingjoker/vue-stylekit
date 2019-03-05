@@ -10,7 +10,7 @@
       </div>
       <div class="app-body">
         <div class="app-row">
-          <div class="rt-col rt-space-bottom45 rt-space-top135">
+          <div class="rt-col rt-space-bottom rt-space-top">
             <rt-pattern top-color="main-color" left-color="error-color" right-color="b2c-orange"/>
           </div>
         </div>
