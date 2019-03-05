@@ -699,8 +699,7 @@
           return <svg
             class="rt-banner-right-triangle"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 185 500"
-          >
+            viewBox="0 0 185 500">
             <polygon points="0 500,185 0,0 0"/>
           </svg>;
         } else {
