@@ -35,6 +35,10 @@ export default {
   name: "RtAnnotation",
   components: {},
   props: {
+    open:{
+      type: Boolean,
+      default: false
+    },
     label: {
       type: String,
       default: null,
@@ -47,7 +51,7 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: this.open
     };
   },
   computed: {

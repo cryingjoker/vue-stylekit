@@ -5,20 +5,29 @@
     name: "AppPromoGame",
     components: componentsList,
     mounted() {
-      document.querySelector('.mobile-checkbox input').addEventListener('change', function() {
-        const icon = document.querySelector('.mobile-icon');
-        if(document.querySelector('.mobile-checkbox input').checked){
-         icon.classList.remove('rt-icon--not-active')
-        }else{
-          icon.classList.add('rt-icon--not-active')
+      document.querySelector(".mobile-checkbox input").addEventListener("change", function() {
+        const icon = document.querySelector(".mobile-icon");
+        if (document.querySelector(".mobile-checkbox input").checked) {
+          icon.classList.remove("rt-icon--not-active");
+        } else {
+          icon.classList.add("rt-icon--not-active");
         }
       });
-      document.querySelector('.tv-checkbox input').addEventListener('change', function() {
-        const icon = document.querySelector('.tv-icon');
-        if(document.querySelector('.tv-checkbox input').checked){
-          icon.classList.remove('rt-icon--not-active')
+      document.querySelector('.user-checkbox').addEventListener('change',function(){
+        if(document.querySelector('.user-checkbox input').checked){
+          document.querySelector('.not-user-account').classList.add('d-none');
+          document.querySelector('.user-account').classList.remove('d-none');
         }else{
-          icon.classList.add('rt-icon--not-active')
+          document.querySelector('.user-account').classList.add('d-none');
+          document.querySelector('.not-user-account').classList.remove('d-none');
+        }
+      })
+      document.querySelector(".tv-checkbox input").addEventListener("change", function() {
+        const icon = document.querySelector(".tv-icon");
+        if (document.querySelector(".tv-checkbox input").checked) {
+          icon.classList.remove("rt-icon--not-active");
+        } else {
+          icon.classList.add("rt-icon--not-active");
         }
       });
     },
@@ -26,10 +35,14 @@
     },
     methods: {},
     render(h) {
-      return null
       return <div class="rt-l-game">
         <div class="color-block--game-promo-color rt-fill-viewport"
-             style={{ backgroundImage: "url(/static/images/game/rostelecom_game.jpg)", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+             style={{
+               backgroundImage: "url(/static/images/game/rostelecom_game.jpg)",
+               backgroundPosition: "center",
+               backgroundSize: "cover",
+               backgroundRepeat: "no-repeat"
+             }}>
           <div class="rt-container">
             <div class="row">
               <div class="rt-col-12">
@@ -198,27 +211,27 @@
                                                             width="130"/></div>
                         </div>
                       </div>
-                        <rt-color-line-text
-                          class="rt-l-game-main-text"
-                          color-icon="orange"
-                          fill-color="white">
-                          <template slot="label">Подарки и интернет <br/>для настоящих бойцов</template>
-                          <template slot="content">и получай бонусы в играх World of tanks, <br/> Word of ships, World
-                            of
-                            Warplanes
-                          </template>
-                        </rt-color-line-text>
+                      <rt-color-line-text
+                        class="rt-l-game-main-text"
+                        color-icon="orange"
+                        fill-color="white">
+                        <template slot="label">Подарки и интернет <br/>для настоящих бойцов</template>
+                        <template slot="content">и получай бонусы в играх World of tanks, <br/> Word of ships, World
+                          of
+                          Warplanes
+                        </template>
+                      </rt-color-line-text>
                       <div class="row">
                         <div class="col rt-space-left05 md-d-none">
                           <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
                         <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
+                          <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
-                      </div>
                       </div>
                     </div>
                   </div>
+                </div>
               </div>
 
               <div class="flex-fill-none rt-space-bottom3 max-full-width rt-banner__bottom-content">
@@ -228,13 +241,15 @@
                     <img src="/static/images/game/WF-weapon.png" alt="" height="100"/>
                     <p class="color-white rt-space-bottom rt-space-top">Крутые пушки
                     </p>
-                    <p class="color-white05 rt-font-small-paragraph">Пользуйся любой из 4 крутых игровых <br/> пушек, пока подключена игровая опция
+                    <p class="color-white05 rt-font-small-paragraph">Пользуйся любой из 4 крутых игровых <br/> пушек,
+                      пока подключена игровая опция
                     </p>
                   </div>
                   <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
                     <img src="/static/images/game/WF-K.png" alt="" height="100"/>
                     <p class="color-white rt-space-bottom rt-space-top">Кредиты каждый день</p>
-                    <p class="color-white05 rt-font-small-paragraph">Кредиты начисляются ежедневно, <br/>  пока активна игровая опция</p>
+                    <p class="color-white05 rt-font-small-paragraph">Кредиты начисляются ежедневно, <br/> пока активна
+                      игровая опция</p>
                   </div>
                   <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
                     <img src="/static/images/game/WF-weapon-forever.png" alt="" height="100"/>
@@ -255,11 +270,12 @@
               <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
                 <div class="row flex-fill max-full-width rt-banner__top-content">
                   <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
-                    <div class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
+                    <div
+                      class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
                       <div class="row rt-space-bottom2">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/forgame_logo.png" alt=""
-                                                                width="130"/></div>
+                                                            width="130"/></div>
                         </div>
                       </div>
                       <rt-color-line-text
@@ -273,10 +289,10 @@
                       </rt-color-line-text>
                       <div class="row">
                         <div class="col rt-space-left05 md-d-none">
-                        <rt-button class="rt-button-orange">Подключить</rt-button>
+                          <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
                         <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
+                          <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
                       </div>
                     </div>
@@ -319,7 +335,7 @@
                       <div class="row rt-space-bottom2">
                         <div class="col flex-start-center rt-space-left05">
                           <div class="rt-space-bottom"><img src="/static/images/game/game-icon5.png" alt=""
-                                                                width="100"/></div>
+                                                            width="100"/></div>
                         </div>
                         <div class="col flex-start-center">
                           <div class="rt-space-left15 rt-md-space-right-none"><img
@@ -341,10 +357,10 @@
                       </rt-color-line-text>
                       <div class="row">
                         <div class="col rt-space-left05 md-d-none">
-                        <rt-button class="rt-button-orange">Подключить</rt-button>
+                          <rt-button class="rt-button-orange">Подключить</rt-button>
                         </div>
                         <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
+                          <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
                         </div>
                       </div>
                     </div>
@@ -402,7 +418,8 @@
             <div class="rt-col-12">
               <div class="row rt-space-top4 flex-row-reverse">
                 <div class="rt-col-6 rt-col-md-3 md-d-none  rt-col-td-6 rt-td-space-left">
-                  <p class="rt-font-h2 rt-space-bottom rt-space-bottom2 d-none td-d-block md-d-none">Подробнее о тарифе</p>
+                  <p class="rt-font-h2 rt-space-bottom rt-space-bottom2 d-none td-d-block md-d-none">Подробнее о
+                    тарифе</p>
                   <div class="row rt-space-top4">
                     <div class="rt-col-4 rt-font-center rt-col-md-3 rt-td-font-left">
                       <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
@@ -550,7 +567,8 @@
                   <div class="row">
                     <div
                       class="rt-space-bottom6 rt-space-left15 rt-td-space-left-none rt-space-top2 rt-col-md-3">
-                      <div class="rt-l-internet-speed d-inline-block rt-space-left rt-md-space-left-none rt-td-space-left05">
+                      <div
+                        class="rt-l-internet-speed d-inline-block rt-space-left rt-md-space-left-none rt-td-space-left05">
                         <p class="rt-l-internet-speed__value">250</p>
                         <span class="rt-l-internet-speed__text">Мбит/сек</span>
                       </div>
@@ -579,56 +597,65 @@
                 <div class="rt-col-1 md-d-none"></div>
                 <div class="rt-col-5 rt-col-md-3 rt-col-td-6 rt-td-space-left">
                   <p class="rt-font-h2 rt-space-bottom">Заявка на подключение</p>
-                  <div class="row">
-                    <div class="rt-col-8  rt-col-md-3">
-                      <rt-input placeholder="Имя" type="string" value=""/>
-                    </div>
-                  </div>
                   <div class="row rt-space-top">
                     <div class="rt-col-12">
-                      <rt-checkbox>Я являюсь клиентом Ростелекома</rt-checkbox>
+                      <rt-checkbox class="user-checkbox">Я являюсь клиентом Ростелекома</rt-checkbox>
                     </div>
                   </div>
-                  <div class="row rt-space-top2">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-input placeholder="Телефон" value=""/>
+                  <div class="not-user-account">
+                    <div class="row">
+                      <div class="rt-col-8  rt-col-md-3">
+                        <rt-input placeholder="Имя" type="string" value=""/>
+                      </div>
+                    </div>
+
+                    <div class="row rt-space-top2">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-input placeholder="Телефон" value=""/>
+                      </div>
+                    </div>
+                    <div class="row rt-space-top2">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-input placeholder="Электронная почта" value=""/>
+                      </div>
+                    </div>
+                    <p class="rt-font-paragraph rt-space-top2">Адрес доставки</p>
+                    <div class="row rt-space-top">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-input placeholder="Улица" value=""/>
+                      </div>
+                      <div class="rt-col-2 rt-col-md-3">
+                        <rt-input placeholder="Дом" value=""/>
+                      </div>
+                    </div>
+                    <div class="row rt-space-top">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-input placeholder="Удобное время доставки" value=""/>
+                      </div>
+                    </div>
+                    <div class="row rt-space-top2">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-checkbox class="mobile-checkbox">Добавить мобильную связь</rt-checkbox>
+                      </div>
+                    </div>
+                    <div class="row rt-space-top">
+                      <div class="rt-col-8 rt-col-md-3">
+                        <rt-checkbox class="tv-checkbox">Добавить интерактивное ТВ</rt-checkbox>
+                      </div>
+                    </div>
+                    <div class="rt-space-top2">
+                      <rt-button class="rt-button-orange">Подключить</rt-button>
+                    </div>
+                    <div class="rt-space-top">
+                      <rt-checkbox>Даю своё согласие на обработку персональных данных в соответствии с условиями
+                      </rt-checkbox>
                     </div>
                   </div>
-                  <div class="row rt-space-top2">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-input placeholder="Электронная почта" value=""/>
+                  <div class="user-account d-none rt-space-top15">
+                    <p class="rt-font-small-paragraph">Подключите тариф и активируйте игровую опцию в Личном кабинете</p>
+                    <div class="rt-space-top2">
+                      <a href="#"><rt-button class="rt-button-orange">Войти</rt-button></a>
                     </div>
-                  </div>
-                  <p class="rt-font-paragraph rt-space-top2">Адрес доставки</p>
-                  <div class="row rt-space-top">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-input placeholder="Улица" value=""/>
-                    </div>
-                    <div class="rt-col-2 rt-col-md-3">
-                      <rt-input placeholder="Дом" value=""/>
-                    </div>
-                  </div>
-                  <div class="row rt-space-top">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-input placeholder="Удобное время доставки" value=""/>
-                    </div>
-                  </div>
-                  <div class="row rt-space-top2">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-checkbox class="mobile-checkbox">Добавить мобильную связь</rt-checkbox>
-                    </div>
-                  </div>
-                  <div class="row rt-space-top">
-                    <div class="rt-col-8 rt-col-md-3">
-                      <rt-checkbox class="tv-checkbox">Добавить интерактивное ТВ</rt-checkbox>
-                    </div>
-                  </div>
-                  <div class="rt-space-top2">
-                    <rt-button class="rt-button-orange">Подключить</rt-button>
-                  </div>
-                  <div class="rt-space-top">
-                    <rt-checkbox>Даю своё согласие на обработку персональных данных в соответствии с условиями
-                    </rt-checkbox>
                   </div>
                 </div>
 

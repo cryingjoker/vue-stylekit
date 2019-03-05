@@ -5,6 +5,13 @@
         <div class="row"><h1 class="rt-font-hero rt-col">Logo</h1></div>
       </div>
       <div class="app-body">
+        <div class="rt-row rt-space-bottom">
+          <pre-code
+            text="<rt-logo-co-branding>
+              <template slot=&quot;firstLogo&quot;><rt-logo width=&quot;38px&quot; height=&quot;64px&quot; tablet-width=&quot;5vw&quot; mobile-width=&quot;100px&quot;></rt-logo></template>
+              <template slot=&quot;secondLogo&quot;><rt-logo width=&quot;121px&quot; height=&quot;auto&quot; tablet-width=&quot;5vw&quot; type=&quot;dr-web&quot; mobile-width=&quot;100px&quot; color=&quot;#69B548&quot;></rt-logo></template>
+            </rt-logo-co-branding>"></pre-code>
+        </div>
         <div class="rt-row">
           <div class="d-inline-block rt-space-right">
             <rt-logo width="9px" height="16px"></rt-logo>
