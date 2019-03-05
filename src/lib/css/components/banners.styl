@@ -181,6 +181,8 @@
     transition-duration .3s
     transition-property fill
     fill transparent
+    @media(max-width: mobile-upper-limit)
+      display none
 
     .{newAppName}-banner--background-dark-state &
       fill b2b-dark-state
@@ -584,6 +586,11 @@
 
       .{newAppName}-banner--full-screen &
         max-width 100vw
+    &--mobile-visible
+      @media (max-width: mobile-upper-limit)
+        display block
+        width 100vw
+        left 0
 
 .circle-switcher
   text-align center
