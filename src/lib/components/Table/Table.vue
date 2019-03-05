@@ -2,7 +2,12 @@
 export default {
   name: "RtTable",
   components: {},
-  props: {},
+  props: {
+    tabletListType: {
+      type: Boolean,
+      default: false
+    }
+  },
   data: () => ({
     tableLabels: []
   }),
@@ -37,10 +42,10 @@ export default {
     if (this.$slots.label) {
       return (
         <div>
-          <p class="rt-font-h1 rt-space-bottom25 rt-td-space-bottom">
+          <p class="rt-table-title rt-space-bottom rt-td-space-bottom">
             {this.$slots.label}
           </p>
-          <div class="rt-table">
+          <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "")}>
             {columns()}
             <div class="rt-table-head" ref="head">
               {this.$slots.header}
@@ -51,7 +56,7 @@ export default {
       );
     } else {
       return (
-        <div class="rt-table">
+        <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "")}>
           {columns()}
           <div class="rt-table-head" ref="head">
             {this.$slots.header}

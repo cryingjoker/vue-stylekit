@@ -56,13 +56,15 @@ import {
   ResizeContentHeight,
   Popup,
   Logo,
+  LogoCoBranding,
   LinksBlock,
   Hint,
   BannerVideoGameControl,
   SlideContent,
   Icon,
   Slide,
-  Swiper
+  Swiper,
+  Pattern
 
 } from "./components";
 
@@ -131,11 +133,16 @@ const VueRtStyle = {
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.component(Icon.name, Icon);
-      Vue.component(Logo.name,Logo.component);
+      Vue.component(Logo.name, Logo.component);
       Vue.component(Swiper.name, Swiper);
       Vue.component(Slide.name, Slide);
+      Vue.component(Pattern.name, Pattern);
+      Vue.component(Logo.name, Logo.component);
+      Vue.component(LogoCoBranding.name, LogoCoBranding.component);
+
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
+
 
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
       Vue.directive(
@@ -148,6 +155,7 @@ const VueRtStyle = {
     }
   }
 };
+console.info('LogoCoBranding',LogoCoBranding,Logo);
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 

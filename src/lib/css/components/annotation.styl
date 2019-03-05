@@ -1,5 +1,6 @@
 .{newAppName}-annotation
-  font-size 12px
+  &+&
+    border-top 2px solid b2b-cool-grey05-no-opacity
 
 .{newAppName}-annotation__arrow
     transition-timing-function ease-in-out
@@ -17,26 +18,7 @@
     position relative
     cursor pointer
 
-    &:before
-      content ""
-      width 0
-      height 1px
-      background-color main-color03
-      position absolute
-      bottom -2px
-      left 20px
-      transition-timing-function cubic-bezier(1, .2, .9, .65)
-      transition-duration .2s
-      transition-property width
-
-      .{newAppName}-annotation:hover &
-        width calc(100% - 20px)
-
-      .{newAppName}-annotation--white-color &,
-      .{newAppName}-dark-theme &
-        background-color b2c-white03
-
-    .{newAppName}-annotation--is-open &
+    .{newAppName}-annotation--is-open > &
       text-decoration none
 
 .{newAppName}-annotation__arrow
@@ -46,7 +28,6 @@
     top 0
     bottom 0
     left 0
-    transform rotate(-90deg)
     transition-timing-function ease-in-out
     transition-duration .3s
     transition-property transform
@@ -54,8 +35,8 @@
     .{newAppName}-annotation--white-color &
       fill rgba(#ffffff, .5)
 
-    .{newAppName}-annotation--is-open &
-      transform rotate(0)
+    .{newAppName}-annotation--is-open > .{newAppName}-annotation__title &
+        transform rotate(180deg)
 
 .{newAppName}-annotation__content
     max-height 0
@@ -71,32 +52,10 @@
     .{newAppName}-dark-theme &
       color b2c-white
 
-    &:before
-      content ""
-      width 1px
-      height 0
-      background-color main-color01
-      position absolute
-      top 20px
-      left 6px
-      transition-timing-function ease-in-out
-      transition-duration .3s
-      transition-property height
-
-      .{newAppName}-annotation--white-color &
-        background-color b2c-white03
-
-      .{newAppName}-annotation--is-open &
-        height calc(100% - 20px)
-
-      .{newAppName}-annotation--white-color &,
-      .{newAppName}-dark-theme &
-        background-color b2c-white05
-
     .{newAppName}-annotation--white-color
       color b2c-white05
 
-    .{newAppName}-annotation--is-open &
+    .{newAppName}-annotation--is-open > &
       max-height 300vh
       padding-top 10px
 

@@ -13,6 +13,7 @@ import Price from '../components/main-elements/Price.vue';
 import Cards from '../components/complex-elements/Card.vue';
 import CardsWithForms from '../components/complex-elements/CardsWithForms.vue';
 import Icons from '../components/icons-elements/Icons.vue';
+import Pattern from '../components/main-elements/Pattern.vue';
 import Banners from '../components/experiment-elements/Banners.vue';
 import PromoTv from '../components/promo/tv.vue';
 import PromoTvTV from '../components/promo/tvtv.vue';
@@ -84,6 +85,7 @@ const index = [
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
+  { path: '/pattern', name: 'pattern', component: Pattern },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];

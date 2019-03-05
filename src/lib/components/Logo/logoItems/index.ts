@@ -8,6 +8,10 @@ import {warface} from "./LogoWarface.tsx";
 import {logoGame} from "./LogoGame.tsx";
 import {fourGameMain} from "./Logo4GameMain.tsx";
 import {logoRT} from "./LogoRT.tsx";
+import {logoRTWithText} from "./LogoRTWIthText.tsx";
+import {logoRTEnglishWithText} from "./LogoRTEnglishWIthText.tsx";
+import {logoRTOnlyText} from "./LogoRTOnlyText.tsx";
+import {logoRTEnglishOnlyText} from "./LogoRTEnglishOnlyText.tsx";
 
 import { ILogoComponentItemList } from "./logoItems.interface";
 
@@ -27,6 +31,10 @@ listOfLogos[warface.name] = warface.component;
 listOfLogos[logoGame.name] = logoGame.component;
 listOfLogos[fourGameMain.name] = fourGameMain.component;
 listOfLogos[logoRT.name] = logoRT.component;
+listOfLogos[logoRTWithText.name] = logoRTWithText.component;
+listOfLogos[logoRTOnlyText.name] = logoRTOnlyText.component;
+listOfLogos[logoRTEnglishWithText.name] = logoRTEnglishWithText.component;
+listOfLogos[logoRTEnglishOnlyText.name] = logoRTEnglishOnlyText.component;
 
 
 

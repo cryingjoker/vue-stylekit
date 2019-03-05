@@ -29,6 +29,10 @@ export default {
     slotIndex: {
       type: Number,
       default: null
+    },
+    inactive: {
+      type: Boolean,
+      default: false
     }
   },
   render: function(h) {
@@ -45,6 +49,9 @@ export default {
       if (this.mobileWidth === "50%") {
         classList += " rt-table-body__item--half-mobile-width";
       }
+    }
+    if(this.inactive) {
+      classList += " rt-table-body__item--inactive";
     }
 
 

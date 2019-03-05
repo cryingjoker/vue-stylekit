@@ -51,8 +51,8 @@
   "main-color003-no-opacity": "#E7E7E9",
 
   "b2c-cool-grey": "#E3E8EC",
-  "b2c-cool-grey05": "rgba(241,243,245,0.5)",
-  "b2c-cool-grey03": "rgba(151,151,153,0.8)",
+  "b2c-cool-grey05": "rgba(227,232,236,0.5)",
+  "b2c-cool-grey03": "rgba(227,232,236,0.3)",
   "b2b-cool-grey05-no-opacity": "#F1F3F5",
 
   "b2c-purple-high05": "rgba(131,72,252,0.5)",

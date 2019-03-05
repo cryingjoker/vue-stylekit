@@ -140,7 +140,7 @@
         }
         return className;
       },
-      banerClass() {
+      bannerClass() {
         let className = "rt-banner rt-banner-id__" + this.RtBanners.id || this._uid;
         const activeIndex = this.RtBanners.activeIndex;
         if (this.RtBanners.items[activeIndex]) {
@@ -699,8 +699,7 @@
           return <svg
             class="rt-banner-right-triangle"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 185 500"
-          >
+            viewBox="0 0 185 500">
             <polygon points="0 500,185 0,0 0"/>
           </svg>;
         } else {
@@ -758,7 +757,7 @@
           </div>;
         }
       };
-      return <div class={this.banerClass} style={this.bannerStyle}>
+      return <div class={this.bannerClass} style={this.bannerStyle}>
         <div class="rt-container rt-banner-container">
           {link()}
           {bannerContent()}
