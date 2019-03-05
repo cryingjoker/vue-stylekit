@@ -60,3 +60,4 @@
  export { default as Pattern } from './Pattern/Pattern.vue';
 
  export { default as Logo } from './Logo/Logo.tsx';
+ export { default as LogoCoBranding } from './Logo/LogoCoBranding.tsx';
