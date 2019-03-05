@@ -18,7 +18,16 @@
         required: true
       }
     },
-    mounted() {},
+    data: () => ({
+        mainColor: ''
+    }),
+    mounted(){
+      let sibling = this.$parent.$children[1];
+      this.mainColor = this.topColor;
+      if(sibling._props.backgroundColor != null) {
+        this.mainColor = sibling._props.backgroundColor;
+      }
+    },
     updated(){},
     methods:{},
     beforeDestroy(){},
@@ -30,7 +39,7 @@
             <path id="a" d="M.439.569h767v400h-767z"/>
           </defs>
           <g fill="none" fill-rule="evenodd">
-            <path class={"rt-pattern--" + this.topColor} d="M.439.569h767v400h-767z" fill-rule="nonzero"/>
+            <path class={"rt-pattern--" + this.mainColor} d="M.439.569h767v400h-767z" fill-rule="nonzero"/>
             <mask id="b" fill="#fff">
               <use xlinkHref="#a"/>
             </mask>

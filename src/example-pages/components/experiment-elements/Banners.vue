@@ -35,12 +35,12 @@
     <rt-banner hasCustomHeight="500px"
                :is-fullscreen-image="true"
                :category-banner="true">
-      <rt-pattern top-color="" left-color="b2c-purple-high" right-color="b2c-pink" />
+      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" />
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
                       content-mobile-height="200px"
-                      background-color="yellow-low">
+                      background-color="b2b-burgundy">
         <p class="rt-font-banner-label">Телефония</p>
         <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
       </rt-banner-item>
