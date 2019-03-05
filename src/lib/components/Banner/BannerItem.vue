@@ -109,7 +109,7 @@ export default {
       }
       return bannerItemWrapperClass;
     },
-    banerStyle() {
+    bannerStyle() {
       const styles = {};
 
       if (this.contentMinWidth !== null) {
@@ -259,28 +259,28 @@ export default {
     }
   },
   render(h){
-    const content = ()=>{
+    const content = () => {
       if(this.isGameBannerItem){
         return <rt-banner-video-game-contron></rt-banner-video-game-contron>
       }
       return null
     }
-    //return <div style={this.banerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
-    if(this.hasCustomContent){
+    //return <div style={this.bannerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+    if (this.hasCustomContent) {
       let bannerClass = "rt-banner__item";
       if(this.RtBanners.activeIndex) {
         bannerClass += " rt-banner__item--is-active";
       }
 
-      //return <div style={this.banerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
-      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} style={this.banerStyle}>
+      //return <div style={this.bannerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
+      return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} style={this.bannerStyle}>
         {this.$slots.default}
         {content()}
         </div>
-    }else {
+    } else {
 
       return <div>
-        <div style={this.banerStyle} class={"rt-banner-content" + this.bannerClass}>
+        <div style={this.bannerStyle} class={"rt-banner-content" + this.bannerClass}>
           <div class="rt-banner-content__inner">
             {this.$slots.default}
             {content()}
