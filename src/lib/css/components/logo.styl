@@ -1,3 +1,5 @@
+.rt-logo
+  display: inline-block
 .rt-logo-line
   display: inline-block
   width: 1px
@@ -17,3 +19,34 @@
     bottom: 0
     margin-left: auto
     margin-right: auto
+.rt-logo-co-branding
+  position: relative
+  display: table
+  flex-direction row
+  margin-left: -10px
+  margin-right: -10px
+
+.rt-logo-co-branding__item
+  display: table-cell
+  padding-left: 8px
+  padding-right: 8px
+.rt-logo-co-branding__line
+  display: table-cell
+  height: 100%
+  width: 1px
+
+  padding-top: 6px
+  position: relative
+  bottom: -3px
+  margin-left: 10px
+  &:before
+    content: ''
+    position: absolute
+    top: -6px
+    bottom: -3px
+    width: 100%
+
+    background-color: #878C93
+    display: block
+
+
