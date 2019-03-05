@@ -117,27 +117,27 @@ export default {
     }
   },
   props: {
-    autoScrolling: { // Доводчик свайпинга / скроллинга
+    autoScrolling: {
       type: Boolean,
       default: true
     },
-    disabledScrolling: { // Позволяет заблокировать горизонтальный свайпинг и скроллинг карусели
+    disabledScrolling: {
       type: Boolean,
       default: false
     },
-    duration: { // Длительность анимации навигации зоны просмотра и автодоводчика, если он включен
+    duration: {
       type: Number,
       default: 500
     },
-    navsArrows: { // Отображение навигационных стрелочек на PC
+    navsArrows: {
       type: Boolean,
       default: true
     },
-    navsPosStart: { // Позиция стрелочек навигации сверху
+    navsPosStart: {
       type: Number,
       default: 113
     },
-    navsPosEnd: { // Позиция стрелочек навигации снизу
+    navsPosEnd: {
       type: Number,
       default: 200
     },
@@ -149,14 +149,14 @@ export default {
       type: Number,
       default: 20
     },
-    offsetHorizontal: { // Горизонтальный отступ первого и последнего слайда
+    offsetHorizontal: {
       type: Number,
       default: 20
     },
     offsetSlide: {
       type: Number
     },
-    padding: { // @Deprecated - используйте CSS-стили или инлайн свойства
+    padding: {
       type: String,
       default: '0'
     },
@@ -164,15 +164,15 @@ export default {
       type: String,
       default: 'rt-col-3 rt-col-md-3 rt-col-td-3'
     },
-    transitionFunction: { // Эффект перехода анимации при перемещении зоны просмотра
+    transitionFunction: {
       type: String,
       default: 'easeInOutCubic'
     },
-    navsOnlyLackOfWidth: { // Появление кнопок навигации только если карточки не вмещаются
+    navsOnlyLackOfWidth: {
       type: Boolean,
       default: false
     },
-    navigationContainer: { // Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет.
+    navigationContainer: {
       type: String,
       default: ''
     }
