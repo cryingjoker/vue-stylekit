@@ -23,13 +23,20 @@
       }
     },
     data: () => ({
-        mainColor: ''
+      mainColor: '',
+      svgOffset: null
     }),
     mounted(){
-      let sibling = this.$parent.$children[1];
-      this.mainColor = this.topColor;
-      if(sibling._props.backgroundColor != null) {
-        this.mainColor = sibling._props.backgroundColor;
+      if(this.$parent.$el.classList.contains('rt-banner')){
+        let sibling = this.$parent.$children[1];
+        this.mainColor = this.topColor;
+        if(sibling._props.backgroundColor != null) {
+          this.mainColor = sibling._props.backgroundColor;
+        }
+      }
+      if(window.innerWidth <= 767){
+        this.svgOffset = 767 - window.innerWidth;
+        console.log(this.svgOffset)
       }
     },
     render: function(h) {
@@ -53,7 +60,7 @@
           </svg>
         }
         if(this.patternType === 2) {
-          return <svg height="100%" viewBox="0 0 405 258" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+          return <svg height="100%" viewBox={"" + (this.svgOffset / 2) + " 0 405 258"} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
             <defs>
               <path id="a" d="M0 0h395v275H0z" class={"rt-pattern--" + this.mainColor}/>
               <path class={"rt-pattern--" + this.rightColor} d="M1137.455 115.663c-36.356-48.315-65.372-46.867-123.09-55.524L619.454.911c-14.827-2.224-29.202 1.446-40.379 9.44-3.593 2.569-7.828 5.59-7.828 5.59 15.124-10.807 36.376-7.62 47.467 7.12.209.277.379.57.577.851.16.192.345.371.501.567l.005.001.027.034c.03.038 6.678 8.86 16.627 22.118l236.63 314.472 306.258 407.003 292.208-208.653-334.093-443.79z" id="c"/>
