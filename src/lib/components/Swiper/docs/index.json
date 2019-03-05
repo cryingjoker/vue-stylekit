@@ -1,0 +1,132 @@
+{
+  "items" : [
+    {
+      "name" : "rt-swiper",
+      "property" : "auto-scrolling",
+      "type" : ["Boolean"],
+      "description" : "Доводчик свайпинга / скроллинга",
+      "value" : "true",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "disabled-scrolling",
+      "type" : ["Boolean"],
+      "description" : "Позволяет заблокировать горизонтальный свайпинг и скроллинг карусели",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "duration",
+      "type" : ["Number"],
+      "description" : "Длительность анимации навигации зоны просмотра и автодоводчика, если он включен",
+      "value" : "500",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navs-arrows",
+      "type" : ["Boolean"],
+      "description" : "Отображение навигационных стрелочек на PC",
+      "value" : "true",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navs-pos-start",
+      "type" : ["Number"],
+      "description" : "Позиция стрелочек навигации сверху",
+      "value" : "113",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navs-pos-end",
+      "type" : ["Number"],
+      "description" : "Позиция стрелочек навигации снизу",
+      "value" : "200",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "offset-top",
+      "type" : ["Number"],
+      "description" : "Отступ сверху",
+      "value" : "20",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "offset-bottom",
+      "type" : ["Number"],
+      "description" : "Отступ снизу",
+      "value" : "20",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "offset-horizontal",
+      "type" : ["Number"],
+      "description" : "Горизонтальный отступ первого и последнего слайда",
+      "value" : "20",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "offset-slide",
+      "type" : ["Number"],
+      "description" : "Отступ между слайдами",
+      "value" : "null",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "slides-classes",
+      "type" : ["String"],
+      "description" : "Классы слайда",
+      "value" : "rt-col-3 rt-col-md-3 rt-col-td-3",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "transition-function",
+      "type" : ["String"],
+      "description" : "Эффект перехода анимации при перемещении зоны просмотра",
+      "value" : "easeInOutCubic",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navs-only-lack-of-width",
+      "type" : ["Boolean"],
+      "description" : "Появление кнопок навигации только если карточки не вмещаются",
+      "value" : "false",
+      "version": "-"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navigation-сontainer",
+      "type" : ["String"],
+      "description" : "Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет",
+      "value" : "",
+      "version": "-"
+    },
+    {
+      "name" : "rt-slide",
+      "property" : "slide-classes",
+      "type" : ["String"],
+      "description" : "Классы слайда",
+      "value" : "",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-slide",
+      "property" : "loaded",
+      "type" : ["Boolean"],
+      "description" : "",
+      "value" : "false",
+      "version": "0.1.0"
+    }
+  ]
+}
