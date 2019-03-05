@@ -11,6 +11,89 @@
               <template slot=&quot;firstLogo&quot;><rt-logo width=&quot;38px&quot; height=&quot;64px&quot; tablet-width=&quot;5vw&quot; mobile-width=&quot;100px&quot;></rt-logo></template>
               <template slot=&quot;secondLogo&quot;><rt-logo width=&quot;121px&quot; height=&quot;auto&quot; tablet-width=&quot;5vw&quot; type=&quot;dr-web&quot; mobile-width=&quot;100px&quot; color=&quot;#69B548&quot;></rt-logo></template>
             </rt-logo-co-branding>"></pre-code>
+
+        </div>
+
+        <div class="rt-row">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo show-text="true" width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="14px" show-text="true" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="19px" show-text="true" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="24px" show-text="true" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="30px" show-text="true" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="36px" show-text="true" tablet-width="5vw" type="dr-web" mobile-width="100px" height="60px"></rt-logo>
+          </div>
+        </div>
+        <div class="rt-row">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo only-text="true" width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="14px" only-text="true" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="19px" only-text="true" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="24px" only-text="true" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="30px" only-text="true" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="36px" only-text="true" tablet-width="5vw" type="dr-web" mobile-width="100px" height="60px"></rt-logo>
+          </div>
+        </div>
+
+        <div class="rt-row">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo english-theme="true" show-text="true" width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="14px" english-theme="true" show-text="true" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="19px" english-theme="true" show-text="true" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="24px" english-theme="true" show-text="true" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="30px" english-theme="true" show-text="true" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="36px" english-theme="true" show-text="true" tablet-width="5vw" type="dr-web" mobile-width="100px" height="60px"></rt-logo>
+          </div>
+        </div>
+        <div class="rt-row">
+          <div class="d-inline-block rt-space-right">
+            <rt-logo english-theme="true" only-text="true" width="9px" height="16px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="14px" english-theme="true" only-text="true" height="24px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="19px" english-theme="true" only-text="true" height="32px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="24px" english-theme="true" only-text="true" height="40px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="30px" english-theme="true" only-text="true" height="50px"></rt-logo>
+          </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-logo width="36px" english-theme="true" only-text="true" tablet-width="5vw" type="dr-web" mobile-width="100px" height="60px"></rt-logo>
+          </div>
         </div>
         <div class="rt-row">
           <div class="d-inline-block rt-space-right">
