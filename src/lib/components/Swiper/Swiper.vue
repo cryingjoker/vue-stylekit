@@ -17,6 +17,7 @@
     <rt-navigation
       v-if="!isTouch"
       :class="`${cmpName}__navs`"
+      :navigation-container="navigationContainer"
     ></rt-navigation>
     <div
       @scroll.passive="scrollNative"
@@ -166,6 +167,14 @@ export default {
     transitionFunction: { // Эффект перехода анимации при перемещении зоны просмотра
       type: String,
       default: 'easeInOutCubic'
+    },
+    navsOnlyLackOfWidth: { // Появление кнопок навигации только если карточки не вмещаются
+      type: Boolean,
+      default: false
+    },
+    navigationContainer: { // Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет.
+      type: String,
+      default: ''
     }
   },
   mounted () {
@@ -344,6 +353,12 @@ export default {
         return null
       }
     },
+    slidesWidth () {
+      return this.movesArr.reduce((accum, curVal) => ((typeof accum === 'object' && accum.constructor === Object ? accum.width : accum) + curVal.width))
+    },
+    overlayContainerWidth () {
+      return parseFloat(getComputedStyle(this.$refs.overlay).width)
+    },
     move (to = 0) {
       return new Promise(resolve => {
         if (!this.$refs.overlay) {
@@ -353,9 +368,10 @@ export default {
         let from = parseInt(this.$refs.overlay.scrollLeft)
         let updateNavs = () => {
           if (!this.isTouch) {
+            let navsOnlyLackOfWidth = !this.navsOnlyLackOfWidth || this.navsOnlyLackOfWidth && (this.overlayContainerWidth() < this.slidesWidth())
             this.canAdvanceBackward = to > 1
-            this.isFinalSlide = this.$refs.overlay.scrollLeft + parseFloat(getComputedStyle(this.$refs.overlay).width) + 2 >= this.$refs.overlay.scrollWidth
-            this.canAdvanceForward = !this.isFinalSlide
+            this.isFinalSlide = this.$refs.overlay.scrollLeft + this.overlayContainerWidth() + 2 >= this.$refs.overlay.scrollWidth
+            this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
           }
         }
         if (from !== to && from !== to + 1) {

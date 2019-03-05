@@ -97,6 +97,22 @@
       "version": "-"
     },
     {
+      "name" : "rt-swiper",
+      "property" : "navs-only-lack-of-width",
+      "type" : ["Boolean"],
+      "description" : "Появление кнопок навигации только если карточки не вмещаются",
+      "value" : "false",
+      "version": "-"
+    },
+    {
+      "name" : "rt-swiper",
+      "property" : "navigation-сontainer",
+      "type" : ["String"],
+      "description" : "Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет",
+      "value" : "",
+      "version": "-"
+    },
+    {
       "name" : "rt-slide",
       "property" : "slide-classes",
       "type" : ["String"],
