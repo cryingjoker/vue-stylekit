@@ -7,87 +7,104 @@
           <div class="rt-col rt-font-hypnens-off">
             <pre-code
               text="
-              <rt-table>
+              <rt-table class=&quot;rt-space-bottom4&quot; :tablet-list-type=&quot;true&quot;>
               <template slot=&quot;label&quot;>
                 Тарифы на добровольную блокировку
               </template>
-              <template slot=&quot;columns&quot;>
-                <rt-table-col width=&quot;280px&quot;></rt-table-col>
-                <rt-table-col width=&quot;180px&quot;></rt-table-col>
-              </template>
+
               <template slot=&quot;header&quot;>
                 <rt-table-head-item>Территория</rt-table-head-item>
                 <rt-table-head-item>Наименование услуги</rt-table-head-item>
-                <rt-table-head-item>Бесплатный период(дней)</rt-table-head-item>
-                <rt-table-head-item>Мораторий на блокировку(дней)</rt-table-head-item>
-                <rt-table-head-item>Минимальный период блокировки (дней)</rt-table-head-item>
-                <rt-table-head-item>Стоимость добровольной блокировки в базовый период (руб./в день)</rt-table-head-item>
+                <rt-table-head-item>Бесплатный период</rt-table-head-item>
+                <rt-table-head-item>Мораторий на блокировку</rt-table-head-item>
+                <rt-table-head-item>Минимальный период блокировки</rt-table-head-item>
+                <rt-table-head-item>Стоимость добровольной блокировки в базовый период</rt-table-head-item>
               </template>
               <template slot=&quot;body&quot;>
                 <rt-table-row>
                   <rt-table-item>Архангельская и Мурманская
-                    область Республика Корея</rt-table-item>
+                    область Республика Карелия</rt-table-item>
                   <rt-table-item>Домашний интернет,
                     Домашний телефон
                     Интерактивное ТВ</rt-table-item>
-                  <rt-table-item>60</rt-table-item>
-                  <rt-table-item>3</rt-table-item>
-                  <rt-table-item>30</rt-table-item>
-                  <rt-table-item>7</rt-table-item>
+                  <rt-table-item>60 дней</rt-table-item>
+                  <rt-table-item>3 дня</rt-table-item>
+                  <rt-table-item>30 дней</rt-table-item>
+                  <rt-table-item>7 руб./в день</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и Ленинградская области и город Санкт-Петербург</rt-table-item>
                   <rt-table-item>Домашний интернет,
                     Домашний телефон
                     Интерактивное ТВ</rt-table-item>
-                  <rt-table-item>60</rt-table-item>
-                  <rt-table-item>3</rt-table-item>
-                  <rt-table-item>30</rt-table-item>
-                  <rt-table-item>7</rt-table-item>
+                  <rt-table-item>60 дней</rt-table-item>
+                  <rt-table-item>3 дня</rt-table-item>
+                  <rt-table-item>30 дней</rt-table-item>
+                  <rt-table-item>7 руб./в день</rt-table-item>
                 </rt-table-row>
               </template>
             </rt-table>
             "
             />
             <pre-code
-              text="<rt-table>
+              text="<rt-table class=&quot;rt-space-bottom4&quot;>
               <template slot=&quot;label&quot;>
-                Описание тарифа
+                Звонки
               </template>
               <template slot=&quot;columns&quot;>
                 <rt-table-col></rt-table-col>
-                <rt-table-col width=&quot;280px&quot;></rt-table-col>
-                <rt-table-col width=&quot;280px&quot;></rt-table-col>
+                <rt-table-col width=&quot;200px&quot;></rt-table-col>
+                <rt-table-col width=&quot;200px&quot;></rt-table-col>
               </template>
               <template slot=&quot;header&quot;>
-                <rt-table-head-item>Звонки</rt-table-head-item>
+                <rt-table-head-item>Услуга</rt-table-head-item>
                 <rt-table-head-item>С опцией</rt-table-head-item>
                 <rt-table-head-item>Без опции</rt-table-head-item>
               </template>
               <template slot=&quot;body&quot;>
                 <rt-table-row>
                   <rt-table-item>Все входящие звонки по России</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>0 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>5 руб./мин.</rt-table-item>
+                  <rt-table-item>0 руб./мин.</rt-table-item>
+                  <rt-table-item>5 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в СНГ</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>30 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>30 руб./мин.</rt-table-item>
+                  <rt-table-item>30 руб./мин.</rt-table-item>
+                  <rt-table-item>30 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в Европу</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>49 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>49 руб./мин.</rt-table-item>
+                  <rt-table-item :inactive=&quot;true&quot;>49 руб./мин.</rt-table-item>
+                  <rt-table-item>49 руб./мин.</rt-table-item>
                 </rt-table-row>
                 <rt-table-row>
                   <rt-table-item>Исходящие звонки в остальные страны</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>69 руб./мин.</rt-table-item>
-                  <rt-table-item mobile-width=&quot;50%&quot;>69 руб./мин.</rt-table-item>
+                  <rt-table-item :inactive=&quot;true&quot;>69 руб./мин.</rt-table-item>
+                  <rt-table-item>69 руб./мин.</rt-table-item>
                 </rt-table-row>
               </template>
             </rt-table>"
             />
+
+            <rt-table class="rt-space-bottom4">
+              <template slot="label">
+                Интернет
+              </template>
+              <template slot="columns">
+                <rt-table-col></rt-table-col>
+                <rt-table-col width="200px"></rt-table-col>
+              </template>
+              <template slot="header">
+                <rt-table-head-item>Услуга</rt-table-head-item>
+                <rt-table-head-item>Без опции</rt-table-head-item>
+              </template>
+              <template slot="body">
+                <rt-table-row>
+                  <rt-table-item>Все входящие звонки по России</rt-table-item>
+                  <rt-table-item>По тарифу домашней сети</rt-table-item>
+                </rt-table-row>
+              </template>
+            </rt-table>
           </div>
         </div>
       </div>
