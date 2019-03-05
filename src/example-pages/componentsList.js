@@ -53,6 +53,8 @@ import {
   SlideContent,
   Icon,
   Logo,
+  Swiper,
+  Slide,
   Pattern
 } from "../lib/components/index";
 
@@ -114,4 +116,6 @@ componentsList[AppManu.name] = AppManu;
 componentsList[Icon.name] = Icon;
 componentsList[Pattern.name] = Pattern;
 componentsList[Logo.name] = Logo.component;
+componentsList[Swiper.name] = Swiper;
+componentsList[Slide.name] = Slide;
 export default { ...componentsList };
