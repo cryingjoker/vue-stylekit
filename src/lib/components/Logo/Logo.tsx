@@ -27,6 +27,9 @@ class Logo extends Vue {
   @Prop({ default: null }) color: string;
   @Prop({ default: null }) centerColor: string;
   @Prop({ default: null }) bottomColor: string;
+  @Prop({ default: false }) showText: boolean;
+  @Prop({ default: false }) onlyText: boolean;
+  @Prop({ default: false }) englishTheme: boolean;
   @Prop({ default: "b2c-purple" }) topFillColor: string;
   @Prop({ default: "b2c-orange" }) bottomFillColor: string;
   @Prop({ default: "b2c-purple" }) defaultTopColor: string;
@@ -36,8 +39,6 @@ class Logo extends Vue {
     this.localWidth = this.width || defaultValues[this.type].width;
     this.localHeight = this.height || defaultValues[this.type].height;
     if (this.tabletWidth || this.mobileWidth) {
-
-
       window.addEventListener("resize", () => {
         const width = document.body.clientWidth;
         if (width <= parseInt(variables["tablet-upper-limit"])) {
@@ -116,8 +117,35 @@ class Logo extends Vue {
 
         const topFillColor = this.topFillColor in colors ? colors[this.topFillColor] : colors[this.defaultTopColor];
         const bottomFillColor = this.bottomFillColor in colors ? colors[this.bottomFillColor] : colors[this.defaultBottomColor];
-        return <logo-rt width={width} style={{ height: height }} color={color} background={background}
-                        topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+        if(this.englishTheme){
+          if(this.onlyText){
+            return <logo-rt-english-only-text width={width} style={{ height: height }} color={color} background={background}
+                                      topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+          }else {
+            if (this.showText) {
+              return <logo-rt-english-with-text width={width} style={{ height: height }} color={color}
+                                                background={background}
+                                                topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+            } else {
+              return <logo-rt-english width={width} style={{ height: height }} color={color} background={background}
+                                      topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+            }
+          }
+        }else{
+          if(this.onlyText){
+            return <logo-rt-only-text width={width} style={{ height: height }} color={color} background={background}
+                                      topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+          }else {
+            if (this.showText) {
+              return <logo-rt-with-text width={width} style={{ height: height }} color={color} background={background}
+                                        topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+            } else {
+              return <logo-rt width={width} style={{ height: height }} color={color} background={background}
+                              topFillColor={topFillColor} bottomFillColor={bottomFillColor}/>;
+            }
+          }
+        }
+
     }
   }
 }
