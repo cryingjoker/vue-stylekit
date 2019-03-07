@@ -39,15 +39,30 @@
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
-                      content-mobile-height="200px"
-                      background-color="b2b-burgundy">
+                      content-mobile-height="200px">
         <p class="rt-font-banner-label">Телефония</p>
         <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
       </rt-banner-item>
 
       </rt-banner-item>
     </rt-banner>
-
+    <pre-code
+      text="<rt-banner content-mobile-height=&quot;400px&quot;
+                       :has-image-on-mobile=&quot;true&quot;>
+      <rt-banner-item :is-white-color=&quot;true&quot;
+                      content-mobile-height=&quot;400px&quot;
+                      :pattern-background=&quot;true&quot;
+                      :pattern-type=&quot;2&quot;
+                      pattern-top-color=&quot;b2c-yellow&quot;
+                      pattern-left-color=&quot;main-color&quot;
+                      pattern-right-color=&quot;error-color&quot;>
+        <h1 class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</h1>
+        <p class=&quot;p1 rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br>
+          возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+        <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+      </rt-banner-item>
+    </rt-banner>"
+    />
     <pre-code
       text="<rt-banner :set-stop-on-click=&quot;true&quot;
                        :sleep-time=&quot;20000&quot;
@@ -73,10 +88,27 @@
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;>
+        <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
+          <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+          <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+      </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :sleep-time=&quot;10000&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item><rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;><p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :sleep-time=&quot;10000&quot;>
+        <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
+          <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+          <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;>
+        <p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p>
+        <p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p>
+        <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+      </rt-banner>"
     />
     <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true">
       <rt-banner-item is-game-banner-item background-video="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4"

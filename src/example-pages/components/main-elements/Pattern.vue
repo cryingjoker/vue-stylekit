@@ -11,7 +11,7 @@
       <div class="app-body">
         <div class="app-row">
           <div class="rt-col rt-space-bottom rt-space-top">
-            <rt-pattern top-color="main-color" left-color="error-color" right-color="b2c-orange" :pattern-type="1"/>
+            <rt-pattern top-color="main-color" left-color="error-color" right-color="orange" :pattern-type="1"/>
           </div>
         </div>
       </div>
