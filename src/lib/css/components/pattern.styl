@@ -1,113 +1,88 @@
 .rt-pattern
-  height 100%
-  overflow-x hidden
-  position relative
-  top 0
-  bottom 0
+  height: 100%
+  position: relative
+  top: 0
+  bottom: 0
   left -20px
-
+  //overflow-x hidden
   &--main-color
     fill main-color
-
   &--error-color
     fill error-color
-
-  &--b2c-purple
+  &--purple
     fill b2c-purple
-
-  &--b2c-purple-low
+  &--purple-low
     fill b2c-purple-low
-
-  &--b2c-purple-high
+  &--purple-high
     fill b2c-purple-high
-
-  &--b2c-red
+  &--red
     fill b2c-red
-
-  &--b2c-red-low
+  &--red-low
     fill b2c-red-low
-
-  &--b2c-red-high
+  &--red-high
     fill b2c-red-high
-
-  &--b2c-dark-blue
+  &--dark-blue
     fill b2c-dark-blue
-
-  &--b2c-dark-blue-low
+  &--dark-blue-low
     fill b2c-dark-blue-low
-
-  &--b2c-dark-blue-high
+  &--dark-blue-high
     fill b2c-dark-blue-high
-
-  &--b2c-light-blue
+  &--light-blue
     fill b2c-light-blue
-
-  &--b2c-light-blue-low
+  &--light-blue-low
     fill b2c-light-blue-low
-
-  &--b2c-light-blue-high
+  &--light-blue-high
     fill b2c-light-blue-high
-
-  &--b2c-yellow
+  &--yellow
     fill b2c-yellow
-
-  &--b2c-yellow-low
+  &--yellow-low
     fill b2c-yellow-low
-
-  &--b2c-yellow-high
+  &--yellow-high
     fill b2c-yellow-high
-
-  &--b2c-orange
+  &--orange
     fill b2c-orange
-
-  &--b2c-orange-low
+  &--orange-low
     fill b2c-orange-low
-
-  &--b2c-orange-high
+  &--orange-high
     fill b2c-orange-high
-
-  &--b2c-pink
+  &--pink
     fill b2c-pink
-
-  &--b2c-pink-low
+  &--pink-low
     fill b2c-pink-low
-
-  &--b2c-pink-high
+  &--pink-high
     fill b2c-pink-high
-
-  &--b2c-green
+  &--green
     fill b2c-green
-
-  &--b2c-green-low
+  &--green-low
     fill b2c-green-low
-
-  &--b2c-green-high
+  &--green-high
     fill b2c-green-high
-
-  &--b2c-cool-grey
+  &--cool-grey
     fill b2c-cool-grey
-
-  &--b2b-cool-grey05-no-opacity
+  &--cool-grey05-no-opacity
     fill b2b-cool-grey05-no-opacity
-
-  &--b2b-state
+  &--state
     fill b2b-state
-
-  &--b2b-dark-state
+  &--dark-state
     fill b2b-dark-state
-
-  &--b2b-burgundy
+  &--burgundy
     fill b2b-burgundy
-
-  &--b2c-white
+  &--white
     fill b2c-white
-
   &--light-grey
     fill light-grey
-
   .rt-banner &
     @media (min-width: tablet-lower-limit)
       display none
 
   .{newAppName}-banner-container &
-    width 100vw
+    width: 100vw
+  .{newAppName}-banner-image &
+    display block
+    left 0
+    svg
+      right auto
+      left 0
+      @media (max-width: mobile-upper-limit)
+        position absolute
+        right -26px
