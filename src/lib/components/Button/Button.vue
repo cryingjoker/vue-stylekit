@@ -69,6 +69,8 @@
         } else {
           this.$emit("click", $event);
         }
+
+        $event.stopPropagation();
       }
     },
     render: function (h) {
