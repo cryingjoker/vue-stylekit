@@ -77,12 +77,17 @@
 
   .{newAppName}-banner-container &
     width: 100vw
+    @media (max-width: mobile-upper-limit)
+      svg
+        position absolute
+        left calc((-767px + 100vw)/2)
   .{newAppName}-banner-image &
     display block
     left 0
     svg
-      right auto
-      left 0
       @media (max-width: mobile-upper-limit)
+        right auto
         position absolute
-        right -26px
+        left calc((-767px + 100vw)/2)
+  .{newAppName}-banner &
+    overflow-x hidden
