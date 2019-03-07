@@ -128,7 +128,8 @@
       },
       isOpenListOnTop: false,
       isStopped: false,
-      localSleepTime: 5000
+      localSleepTime: 5000,
+      showNoTriangle: false
 
     }),
 
@@ -153,7 +154,11 @@
           }
           if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
             className += " rt-banner--background-" + this.RtBanners.items[activeIndex].backgroundColor;
-
+          }
+          if(this.RtBanners.items[activeIndex].patternBackground) {
+            let bgColor = '';
+            bgColor = this.RtBanners.items[activeIndex].patternLeftColor.replace(/^(b2b\-)|(b2c\-)/i,'');
+            className += " rt-banner--background-" + bgColor;
           }
           if (this.isFullscreenImage) {
             className += " rt-banner--full-screen";
@@ -173,7 +178,6 @@
           if(this.categoryBanner) {
             className += ' rtb-banner--category';
           }
-
         }
         return className;
       },
@@ -203,6 +207,23 @@
 
         return styles;
       },
+      imageClass() {
+        let className = 'rt-banner-image rt-banner-image--main';
+        const activeIndex = this.RtBanners.activeIndex;
+        if (
+          this.RtBanners.items[activeIndex] &&
+          this.RtBanners.items[activeIndex].patternBackground
+        ) {
+          this.backgroundPattern = this.RtBanners.items[
+            activeIndex
+            ].patternBackground;
+          this.showNoTriangle = true;
+          let bgColor = '';
+          bgColor = this.RtBanners.items[activeIndex].patternTopColor.replace(/^(b2b\-)|(b2c\-)/i,'');
+          className += " color-block--" + bgColor + "";
+        }
+        return className;
+      },
       imageStyle() {
         const styles = {};
         const activeIndex = this.RtBanners.activeIndex;
@@ -231,7 +252,6 @@
         if (this.mobileImageMaxHeight && this.RtBanners.isMobile) {
           styles.maxHeight = this.mobileImageMaxHeight;
         }
-
         return styles;
       }
     },
@@ -336,7 +356,7 @@
           if (this.$refs.video) {
             const playPromise = this.$refs.video.play();
             playPromise.catch(function(error) {
-              // console.info('error',error)
+
             });
           } else {
             setTimeout(() => {
@@ -686,7 +706,7 @@
         }
       };
       const leftTriangle = () => {
-        if (!this.isFullscreenImage && !this.noTriangle) {
+        if (!this.isFullscreenImage && !this.noTriangle && !this.showNoTriangle) {
           return <svg
             class="rt-banner-triangle"
             xmlns="http://www.w3.org/2000/svg"
@@ -699,7 +719,7 @@
         }
       };
       const rightTriangle = () => {
-        if (!this.isFullscreenImage && !this.noTriangle) {
+        if (!this.isFullscreenImage && !this.noTriangle && !this.showNoTriangle) {
           return <svg
             class="rt-banner-right-triangle"
             xmlns="http://www.w3.org/2000/svg"
@@ -724,6 +744,16 @@
           return null;
         }
       };
+      const pattern = () => {
+        if (this.backgroundPattern) {
+          return <rt-pattern pattern-type={Number(this.RtBanners.items[this.RtBanners.activeIndex].patternType)}
+                             top-color={this.RtBanners.items[this.RtBanners.activeIndex].patternTopColor}
+                             left-color={this.RtBanners.items[this.RtBanners.activeIndex].patternLeftColor}
+                             right-color={this.RtBanners.items[this.RtBanners.activeIndex].patternRightColor}/>;
+        } else {
+          return null;
+        }
+      };
       const logo = () => {
         if (this.bannerLogo) {
           return <div class="rt-banner-logo rt-container">
@@ -742,6 +772,7 @@
           return null;
         }
       };
+
       const bannerContent = () => {
         if (this.hasCustomContent) {
           return <div class="row">
@@ -761,19 +792,22 @@
           </div>;
         }
       };
+
       return <div class={this.bannerClass} style={this.bannerStyle}>
         <div class="rt-container rt-banner-container">
           {link()}
           {bannerContent()}
         </div>
         {paginator()}
-        <div style={this.imageStyle} class={"rt-banner-image rt-banner-image--main" + (this.hasImageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
+        <div style={this.imageStyle} class={this.imageClass + (this.hasImageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
           {leftTriangle()}
           {video()}
           {rightTriangle()}
+          {pattern()}
         </div>
         {logo()}
       </div>;
+
     }
   };
 </script>

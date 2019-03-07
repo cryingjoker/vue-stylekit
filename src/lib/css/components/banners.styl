@@ -169,6 +169,11 @@
       width 100%
       background-color b2b-dark-state
 
+    &-undefined
+      .rt-banner-image
+        max-width none!important
+        overflow auto
+
   &-triangle
     width 185px
     height 100%
@@ -439,7 +444,7 @@
       display none
 
   &-image
-    width 55vw
+    width 60vw
     height 100%
     overflow hidden
     background-position center center
@@ -447,7 +452,7 @@
     position absolute
     top 0
     bottom 0
-    left 45vw
+    left 40vw
     z-index 1
     transition-timing-function ease-in-out
     transition-duration .2s
@@ -456,6 +461,9 @@
     animation-duration 2s
     animation-timing-function linear
     -webkit-background-size cover
+    @media (max-width: tablet-upper-limit)
+      width 75vw
+      left 25vw
 
     &--next
       position absolute
@@ -591,6 +599,16 @@
         display block
         width 100vw
         left 0
+
+  &--pattern
+    @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
+      height 400px
+      .{newAppName}-banner
+        &-image
+          width 60vw
+          left 40vw
+        &-content
+          height 400px
 
 .circle-switcher
   text-align center
