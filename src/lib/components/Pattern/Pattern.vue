@@ -40,6 +40,7 @@
       const countOffset = () => {
         if(window.innerWidth <= 767 && !this.$el.parentNode.classList.contains('rt-banner-image')){
           this.svgOffset = 767 - window.innerWidth;
+          return this.svgOffset
         }
       };
       window.addEventListener('resize', () => {
@@ -68,7 +69,7 @@
           </svg>
         }
         if(this.patternType === 2) {
-          return <svg height="100%" viewBox={"0 0 804 501"} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+          return <svg height="500px" viewBox="0 0 804 501" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
             <defs>
               <path id="a" d="M.008.673h803v500h-803z"/>
             </defs>
