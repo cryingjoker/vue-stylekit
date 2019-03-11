@@ -2,7 +2,7 @@
   <button
     :class="{ 'rt-button--is-block': isBlock }"
     class="rt-button rt-button-with-ripple"
-    @click="triggerClick($event);"
+    @click="triggerClick($event)"
   >
     <rt-ripple-without-js> <slot /> </rt-ripple-without-js>
   </button>

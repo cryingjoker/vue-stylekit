@@ -52,7 +52,7 @@ const config = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          {loader: `css-loader`},
+          "css-loader",
             ],
       },
       {
@@ -64,7 +64,7 @@ const config = {
         test: /\.styl$/,
         use: [
           MiniCssExtractPlugin.loader,
-          {loader:'css-loader', options: { minimize: true }},
+          'css-loader',
           'stylus-loader'
         ]
       },

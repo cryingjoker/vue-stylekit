@@ -7,7 +7,7 @@
       @keyup="calculateHeight"
       @input="calculateHeight"
     />
-    <div v-if="outlined" class="text-field__border"></div>
+    <div v-if="outlined" class="text-field__border" />
     <div v-else class="text-field__line" />
     <div
       v-if="!!placeholder"
@@ -16,7 +16,9 @@
     >
       {{ placeholder }}
     </div>
-    <p class="text-field__error-message">{{ errorMessage }}</p>
+    <p class="text-field__error-message">
+      {{ errorMessage }}
+    </p>
   </div>
 </template>
 
@@ -54,7 +56,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'purple'
+      default: "purple"
     }
   },
   data: () => ({
@@ -69,8 +71,8 @@ export default {
         "text-field--error": this.hasError,
         "rtb-textarea": this.isB2bTextarea,
         "rtb-textarea--outlined": this.outlined,
-        "text-field--orange": (this.color === 'orange'),
-        "text-field--purple": (this.color === 'purple')
+        "text-field--orange": this.color === "orange",
+        "text-field--purple": this.color === "purple"
       };
     },
     placeholderClasses() {

@@ -1,90 +1,113 @@
 .{b2bAppName}-banner
-  height calc((100vw - 140px)/4)
-  max-height calc(1340px/4)
-  width 100%
-  border-radius 10px
-  color b2c-white
   display flex
   flex-direction row
-  overflow: hidden
+  width 100%
+  height calc(((100vw - 140px) / 4))
   min-height 300px
+  max-height calc((1340px / 4))
+  overflow hidden
+  color b2c-white
+  border-radius 10px
+
   .rt-banner-container,
   .row,
   .row > .rt-col-12,
   .rt-col-12 > div,
   .rt-banner-content,
   .rt-banner-content__inner
-    height 100%!important
+    height 100% !important
+
   @media (max-width: tablet-upper-limit)
     height 300px
+
   @media (max-width: mobile-upper-limit)
-    max-height none
-    height 500px
     flex-direction column
+    height 500px
+    max-height none
+
     .rt-banner-content
-      height 100%!important
+      height 100% !important
+
     .rt-banner-content__inner
-      height 100%!important
+      height 100% !important
+
     div
       max-height 250px
+
   .rt-banner-content
+    min-height auto !important
     position relative
     top auto
     bottom auto
-    min-height auto!important
+
     @media (max-width: mobile-upper-limit)
       min-height 250px
+
   .rt-banner-image,
   .rt-banner-container
     width 50%
     position relative
     left auto
+
     @media (max-width: tablet-upper-limit)
+      display block
       width 100%
       padding 20px
-      display block
+
     @media (max-width: mobile-upper-limit)
-      height 50%!important
+      height 50% !important
+
   .rt-banner-container
     clearfix()
     padding 40px
+
     @media (max-width: tablet-upper-limit)
-      padding 20px
       min-height auto
+      padding 20px
+
     @media (max-width: mobile-upper-limit)
       order 1
+
   .rt-banner-image
-    background-size: cover
     background-position 50% 50%
-    background-repeat: no-repeat
+    background-size cover
+    background-repeat no-repeat
+
     @media (max-width: tablet-upper-limit)
-      background-position-y 100%
       height auto
+      background-position-y 100%
+
     @media (max-width: mobile-upper-limit)
-      height calc((100vw - 40px)/2)
+      height calc(((100vw - 40px) / 2))
+
   .rt-banner-content__inner
     display flex
-    padding 0
-    box-sizing border-box
     flex-direction column
     justify-content space-between
+    box-sizing border-box
+    padding 0
+
     @media (max-width: tablet-upper-limit)
       order 1
-      min-height auto
       height auto
+      min-height auto
+
   &__title
     font-size 32px
     line-height 36px
     font-weight 400
-    margin-bottom: 10px
+    margin-bottom 10px
+
   &__description
     font-size 18px
     line-height 24px
     font-weight 400
+
   &__text-content
     @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
-      margin-bottom: 60px
+      margin-bottom 60px
+
   &--category
     .{newAppName}-banner-image
       @media (max-width: mobile-upper-limit)
-        background-image: none!important
+        background-image none !important

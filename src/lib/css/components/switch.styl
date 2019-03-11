@@ -5,6 +5,7 @@
 
   .ripple-wave
     background-color b2c-purple-low
+
     .switch--orange &
       background-color b2c-orange-low
 
@@ -12,10 +13,11 @@
     display none
 
   &-container
+    padding-top 4px
     padding-left 49px
     position relative
     user-select none
-    padding-top: 4px
+
     &:before
       content ""
       width 40px
@@ -51,16 +53,20 @@
     .switch-element:checked+&
       &:before
         background-color b2c-purple-high05
+
         .switch--orange &
           background-color b2c-orange-high05
+
           .{newAppName}-dark-theme &
             background-color b2c-orange-high02
+
         .{newAppName}-dark-theme &
           background-color b2c-purple02
 
       .switch-container__circle
         background-color b2c-purple
         margin-left 15px
+
         .switch--orange &
           background-color b2c-orange
 

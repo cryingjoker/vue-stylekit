@@ -31,6 +31,7 @@ gulp.task(
       "git checkout master"
     ])
 );
+// todo need to update this tasks for gulp 4
 // gulp.task("start", shell.task(["npm start"]));
 //
 // gulp.task("deploy", ["copy", "start"]);
@@ -53,7 +54,7 @@ gulp.task(
 //     )
 //     .pipe(gulp.dest("tmpImages/"));
 // });
-
+//
 // gulp.task("imageTiny", () => {
 //   gulp
 //     .src("./tmpImages/*")

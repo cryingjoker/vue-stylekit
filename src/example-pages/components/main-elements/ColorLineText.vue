@@ -2,7 +2,9 @@
   <div class="rt-container">
     <div class="app-content  rt-col-12 rt-col-md-3">
       <div class="app-title row">
-        <h1 class="col rt-font-hero">Color Line Text</h1>
+        <h1 class="col rt-font-hero">
+          Color Line Text
+        </h1>
       </div>
       <div class="app-body">
         <pre-code
@@ -61,7 +63,9 @@
             Possible options
           </div>
           <div class="app-documentation__row rt-font-bold rt-space-bottom05">
-            <div class="app-documentation__name rt-col-2">component name</div>
+            <div class="app-documentation__name rt-col-2">
+              component name
+            </div>
             <div class="app-documentation__name rt-col-3">
               component property
             </div>
@@ -71,7 +75,9 @@
               <div class="app-documentation__value-item rt-col-3">
                 property type
               </div>
-              <div class="app-documentation__value-item rt-col-6">about</div>
+              <div class="app-documentation__value-item rt-col-6">
+                about
+              </div>
               <div class="app-documentation__value-item rt-col-3">
                 default value
               </div>
@@ -81,7 +87,9 @@
             <div class="app-documentation__name rt-col-2">
               rt-color-line-text
             </div>
-            <div class="app-documentation__name rt-col-3">:is-white-color</div>
+            <div class="app-documentation__name rt-col-3">
+              :is-white-color
+            </div>
             <div
               class="app-documentation__value app-documentation__row rt-col-7"
             >
@@ -102,7 +110,9 @@
             <div class="app-documentation__name rt-col-2">
               rt-color-line-text
             </div>
-            <div class="app-documentation__name rt-col-3">fill-color</div>
+            <div class="app-documentation__name rt-col-3">
+              fill-color
+            </div>
             <div
               class="app-documentation__value app-documentation__row rt-col-7"
             >
@@ -112,8 +122,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Цвет обводки текста <br />
-                возможные значения : <br />
+                Цвет обводки текста <br>
+                возможные значения : <br>
                 <span class="rt-code rt-code--fill">purple</span>
                 <span class="rt-code rt-code--fill">red</span>
                 <span class="rt-code rt-code--fill">dark-blue</span>
@@ -131,7 +141,9 @@
             <div class="app-documentation__name rt-col-2">
               rt-color-line-text
             </div>
-            <div class="app-documentation__name rt-col-3">color-icon</div>
+            <div class="app-documentation__name rt-col-3">
+              color-icon
+            </div>
             <div
               class="app-documentation__value app-documentation__row rt-col-7"
             >
@@ -141,8 +153,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Цвет заливки корешка <br />
-                возможные значения : <br />
+                Цвет заливки корешка <br>
+                возможные значения : <br>
                 <span class="rt-code rt-code--fill">purple</span>
                 <span class="rt-code rt-code--fill">red</span>
                 <span class="rt-code rt-code--fill">dark-blue</span>

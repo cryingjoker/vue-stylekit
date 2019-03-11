@@ -69,18 +69,6 @@ const config = {
         include: [path.join(local_dirname, `src`)],
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: `style-loader`,
-          },
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
-      },
-      {
         test: /\.styl/,
         use: [
           {

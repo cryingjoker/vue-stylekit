@@ -114,14 +114,14 @@ export default {
 
                 nodeList.reduce((res, item) => {
                   if (!Array.isArray(res)) {
-                    res = [[res]]
+                    res = [[res]];
                   }
                   if (res[res.length - 1].length < gropSize) {
-                    res[res.length - 1].push(item)
+                    res[res.length - 1].push(item);
                   } else {
-                    res.push([item])
+                    res.push([item]);
                   }
-                  return res
+                  return res;
                 }).forEach((nodeGroup) => {
                   let maxHeight = 0;
                   nodeGroup.forEach((node) => {

@@ -3,7 +3,9 @@
     <div class="rt-container">
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-          <h1 class="rt-font-hero">FullscreenImage</h1>
+          <h1 class="rt-font-hero">
+            FullscreenImage
+          </h1>
         </div>
         <div class="app-body">
           <p class="rt-space-top">

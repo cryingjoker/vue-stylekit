@@ -1,49 +1,52 @@
 <script type="text/jsx">
-  export default {
-    name: "RtPopup",
-    props: {
-      name: {
-        type: String,
-        default: null,
-        required: true
-      },
-      popupWrapperClasses: {
-        type: String,
-        default: ""
-      },
-      popupClasses: {
-        type: String,
-        default: ""
-      },
-      preventDefaultScrollOnActive:{
-        type: Boolean,
-        default: false
-      },
-      showOnDesctop:{
-        type: Boolean,
-        default: true
-      }
+export default {
+  name: "RtPopup",
+  props: {
+    name: {
+      type: String,
+      default: null,
+      required: true
     },
-    data() {
-      return {
-        isActive: false
-      };
+    popupWrapperClasses: {
+      type: String,
+      default: ""
     },
-    mounted() {
-      this.addEventListener();
-      this.bindCloseButton();
+    popupClasses: {
+      type: String,
+      default: ""
     },
-    updated(){
+    preventDefaultScrollOnActive:{
+      type: Boolean,
+      default: false
+    },
+    showOnDesctop:{
+      type: Boolean,
+      default: true
+    }
+  },
+  data() {
+    return {
+      isActive: false
+    };
+  },
+  mounted() {
+    this.addEventListener();
+    this.bindCloseButton();
+  },
+  updated(){
+    this.removeEventListener();
+    this.addEventListener();
+    this.unbindCloseButton();
+    this.bindCloseButton();
+  },
+    beforeDestroy(){
       this.removeEventListener();
-      this.addEventListener();
-      this.unbindCloseButton();
-      this.bindCloseButton();
     },
     methods:{
       setActive(){
         this.isActive = true;
         this.addKeyBindind();
-        this.bindPageScroll()
+        this.bindPageScroll();
 
       },
       removeActive(){
@@ -59,7 +62,7 @@
             this.removeKeyBindind();
             this.unbindPageScroll();
           },50);
-        },300)
+        },300);
       },
       keyPress(e){
         if(e.keyCode === 27){
@@ -90,13 +93,13 @@
       bindCloseButton(){
         const close =  this.$el.querySelector('.rt-close');
         if(close){
-          close.addEventListener('click', this.removeActive, {passive: true})
+          close.addEventListener('click', this.removeActive, {passive: true});
         }
       },
       unbindCloseButton(){
         const close =  this.$el.querySelector('.rt-close');
         if(close){
-          close.addEventListener('click', this.removeActive, {passive: true})
+          close.addEventListener('click', this.removeActive, {passive: true});
         }
       },
       addEventListener(){
@@ -118,36 +121,33 @@
         this.$options.isHover = false;
       }
     },
-    beforeDestroy(){
-      this.removeEventListener();
-    },
-    render: function(h) {
+  render: function(h) {
 
-      let wrapperClasses;
-      let popupClasses;
-      if(this.showOnDesctop){
-        wrapperClasses = "rt-popup-wrapper"
-        popupClasses = "rt-popup"
-      }else{
-        wrapperClasses = "rt-popup-wrapper-td"
-        popupClasses = "rt-popup-td"
-      }
-      if(this.popupWrapperClasses){
-        wrapperClasses += " "+this.popupWrapperClasses.trim();
-        popupClasses += " "+this.popupClasses.trim();
-      }
-      if(this.isActive){
-        wrapperClasses += " rt-popup-wrapper-td--is-active";
-      }
-
-
-      return <div class={wrapperClasses} onClick={this.clickOutside}>
-        <div class={popupClasses} onMouseenter={this.setHover} onMouseleave={this.removeHover} onMousemove={this.setHover}>
-          {this.$slots.default}
-        </div>
-      </div>
-
-
+    let wrapperClasses;
+    let popupClasses;
+    if(this.showOnDesctop){
+      wrapperClasses = "rt-popup-wrapper";
+      popupClasses = "rt-popup";
+    }else{
+      wrapperClasses = "rt-popup-wrapper-td";
+      popupClasses = "rt-popup-td";
     }
-  };
+    if(this.popupWrapperClasses){
+      wrapperClasses += " "+this.popupWrapperClasses.trim();
+      popupClasses += " "+this.popupClasses.trim();
+    }
+    if(this.isActive){
+      wrapperClasses += " rt-popup-wrapper-td--is-active";
+    }
+
+
+    return <div class={wrapperClasses} onClick={this.clickOutside}>
+      <div class={popupClasses} onMouseenter={this.setHover} onMouseleave={this.removeHover} onMousemove={this.setHover}>
+        {this.$slots.default}
+      </div>
+    </div>;
+
+
+  }
+};
 </script>

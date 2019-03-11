@@ -2,12 +2,18 @@
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
-        <div class="row"><h1 class="rt-font-hero rt-col">Tags</h1></div>
+        <div class="row">
+          <h1 class="rt-font-hero rt-col">
+            Tags
+          </h1>
+        </div>
       </div>
       <div class="app-body">
         <div class="row">
           <div class="rt-col-12">
-            <h4 class="rt-font-h3  rt-space-top25">Simple tags</h4>
+            <h4 class="rt-font-h3  rt-space-top25">
+              Simple tags
+            </h4>
             <pre-code
               text="
             <div class=&quot;row&quot;>
@@ -31,12 +37,16 @@
               </rt-tag-list>
             </div>"
             />
-            <h4 class="rt-font-h3 rt-space-top55">Tags with tag-list</h4>
+            <h4 class="rt-font-h3 rt-space-top55">
+              Tags with tag-list
+            </h4>
             <!-- <pre-code text=' -->
             <rt-filter>
               <rt-tag-list class="row">
                 <rt-filter-caller option="device-type" :clear-value="true">
-                  <rt-tag :is-active="true">Все</rt-tag>
+                  <rt-tag :is-active="true">
+                    Все
+                  </rt-tag>
                 </rt-filter-caller>
                 <rt-filter-caller option="device-type" value="2">
                   <rt-tag>Для смартфонов Android</rt-tag>
@@ -61,32 +71,32 @@
                 <p>123</p>
               </rt-filter-watcher>
               <rt-filter-watcher :options="['device-type']" :values="[2]">
-                <rt-card
-                  ><template slot="content"
-                    >Для смартфонов Android 2</template
-                  ></rt-card
-                >
+                <rt-card>
+                  <template slot="content">
+                    Для смартфонов Android 2
+                  </template>
+                </rt-card>
               </rt-filter-watcher>
               <rt-filter-watcher :options="['device-type']" :values="[3]">
-                <rt-card
-                  ><template slot="content"
-                    >Macbook</template
-                  ></rt-card
-                >
+                <rt-card>
+                  <template slot="content">
+                    Macbook
+                  </template>
+                </rt-card>
               </rt-filter-watcher>
               <rt-filter-watcher :options="['device-type']" :values="[[2, 6]]">
-                <rt-card
-                  ><template slot="content"
-                    >Для смартфонов Android 2 Windows</template
-                  ></rt-card
-                >
+                <rt-card>
+                  <template slot="content">
+                    Для смартфонов Android 2 Windows
+                  </template>
+                </rt-card>
               </rt-filter-watcher>
               <rt-filter-watcher :options="['device-type']" :values="[3]">
-                <rt-card
-                  ><template slot="content"
-                    >Macos</template
-                  ></rt-card
-                >
+                <rt-card>
+                  <template slot="content">
+                    Macos
+                  </template>
+                </rt-card>
               </rt-filter-watcher>
             </rt-filter>
             <!-- '></pre-code> -->

@@ -33,7 +33,7 @@ export default {
 
   mounted() {
     if(this.hasCustomButton && this.customButtonClass){
-      this.bindCustomButton()
+      this.bindCustomButton();
     }
   },
   beforeDestroy(){
@@ -43,18 +43,18 @@ export default {
   },
   updated(){
     if(this.hasCustomButton && this.customButtonClass) {
-      this.unbindCustomButton()
-      this.bindCustomButton()
+      this.unbindCustomButton();
+      this.bindCustomButton();
     }
   },
   methods: {
     customButtonClick(){
          if(this.showForm){
            if(this.submitForm){
-             this.submitForm()
+             this.submitForm();
            }
          }else{
-           this.toggleShow()
+           this.toggleShow();
 
          }
     },
@@ -106,12 +106,12 @@ export default {
                             class="rt-button--is-block rt-button-orange">{this.$slots.button}</rt-button>;
         }
       }else{
-        return null
+        return null;
       }
     };
     const contentWithoutWrapper = (()=>{
       if(this.$slots['content-without-wrapper']){
-        return this.$slots['content-without-wrapper']
+        return this.$slots['content-without-wrapper'];
       }
     })();
     const bottomContent = ()=>{
@@ -119,15 +119,15 @@ export default {
         return <div class="rt-card__border-content rt-space-bottom">
           {this.$slots['card-footer']}
           {button()}
-        </div>
+        </div>;
       }else{
         if(this.$slots['card-footer']){
-          return <div class="d-static">{this.$slots['card-footer']}</div>
+          return <div class="d-static">{this.$slots['card-footer']}</div>;
         }else{
-          return null
+          return null;
         }
       }
-    }
+    };
     return <div ref="card" v-rt-out-side-click={this.hideShow}>
       <div class={'rt-card rt-card-buy'+(this.showForm ? ' rt-card-buy--show-form' : '') + (this.isHorizontalCard ? ' rt-card-buy--is-horizontal' : '')}>
         <div class="row rt-card-buy__info">

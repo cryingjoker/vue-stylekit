@@ -65,7 +65,6 @@ import {
   Slide,
   Swiper,
   Pattern
-
 } from "./components";
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
@@ -75,7 +74,6 @@ import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideCo
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
-
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
       Vue.component(ButtonWithoutRipple.name, ButtonWithoutRipple);
@@ -143,7 +141,6 @@ const VueRtStyle = {
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 
-
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
       Vue.directive(
         SlideContentVerticalDirective.name,
@@ -155,7 +152,7 @@ const VueRtStyle = {
     }
   }
 };
-console.info('LogoCoBranding',LogoCoBranding,Logo);
+console.info("LogoCoBranding", LogoCoBranding, Logo);
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 

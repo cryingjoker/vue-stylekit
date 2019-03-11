@@ -4,7 +4,7 @@ export default {
   render(h){
     return <div class="rt-sticky">
       {this.$slots.default}
-    </div>
+    </div>;
   }
 };
 </script>

@@ -9,12 +9,12 @@
   >
     <rt-ripple ref="ripple" :not-render="isDisabled" />
     <input
-      v-validate="'required'"
-      ref="input"
       :id="uid"
+      ref="input"
+      v-model="isChecked"
+      v-validate="'required'"
       :disabled="isDisabled"
       :name="name"
-      v-model="isChecked"
       type="checkbox"
       class="checkbox-element"
       @change="changeInput"

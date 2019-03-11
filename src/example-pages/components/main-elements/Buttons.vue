@@ -10,7 +10,9 @@
       </div>
       <div class="app-body">
         <div class="app-row">
-          <p class="rt-font-h3">buttons with js ripple</p>
+          <p class="rt-font-h3">
+            buttons with js ripple
+          </p>
         </div>
         <div class="app-row row">
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
@@ -43,7 +45,6 @@
               text="<rt-button class=&quot;rt-button-white&quot;>Подключить</rt-button>"
             />
           </div>
-
         </div>
         <div class="app-row row">
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
@@ -76,11 +77,14 @@
               text="<rt-button class=&quot;rt-button-small rt-button-white&quot;>Подключить</rt-button>"
             />
           </div>
-
         </div>
 
         <div class="row rt-space-top">
-          <div class="rt-col"><p class="rt-font-h3">simple buttons</p></div>
+          <div class="rt-col">
+            <p class="rt-font-h3">
+              simple buttons
+            </p>
+          </div>
         </div>
         <div class="app-row row rt-space-top">
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex">
@@ -122,7 +126,8 @@
 
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05"
-              >White button <span class="rt-code"> .rt-button-transparent</span></span
+              >White button
+              <span class="rt-code"> .rt-button-transparent</span></span
             >
             <pre-code
               text="<rt-button-without-ripple class=&quot;rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
@@ -313,22 +318,40 @@
             />
           </div>
           <div class="d-inline-block rt-space-right">
-            <rt-button :has-icon="true" class="rt-button rt-button-cool-grey-border">
+            <rt-button
+              :has-icon="true"
+              class="rt-button rt-button-cool-grey-border"
+            >
               <template slot="icon">
-                <rt-icon type="user-silhouette" width="16" height="16" color="101828"></rt-icon>
+                <rt-icon
+                  type="user-silhouette"
+                  width="16"
+                  height="16"
+                  color="101828"
+                />
               </template>
-              <template slot="button-text">Подключить</template>
+              <template slot="button-text">
+                Подключить
+              </template>
             </rt-button>
           </div>
         </div>
 
-        <div class="app-row"><p class="rt-font-h3">Horizontal buttons</p></div>
+        <div class="app-row">
+          <p class="rt-font-h3">
+            Horizontal buttons
+          </p>
+        </div>
 
         <pre-code
           text="<div class=&quot;app-row&quot;><rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button><rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button></div>"
         />
 
-        <div class="app-row"><p class="rt-font-h3">Vertical buttons</p></div>
+        <div class="app-row">
+          <p class="rt-font-h3">
+            Vertical buttons
+          </p>
+        </div>
         <pre-code
           text="<div class=&quot;app-row&quot;><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button></div>"
         />

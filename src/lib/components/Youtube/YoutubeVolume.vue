@@ -22,6 +22,18 @@ export default {
       this.$refs.point.style.left =  newV+'%';
     }
   },
+  mounted() {
+    this.isMuteLocal = this.isMute;
+    this.bindClick();
+    this.drawVolumeFromParen(this.defaultVolume);
+  },
+  updated() {
+    this.unbindClick();
+    this.bindClick();
+  },
+  beforeDestroy() {
+    this.unbindClick();
+  },
   methods: {
     emitValue(nextLeft) {
       const lineWidth = this.$refs.line.offsetWidth;
@@ -84,23 +96,11 @@ export default {
       this.$emit("mutetoggle", this.isMuteLocal);
     }
   },
-  mounted() {
-    this.isMuteLocal = this.isMute;
-    this.bindClick();
-    this.drawVolumeFromParen(this.defaultVolume);
-  },
-  updated() {
-    this.unbindClick();
-    this.bindClick();
-  },
-  beforeDestroy() {
-    this.unbindClick();
-  },
   render(h) {
     const muteButton = (()=>{
       let buttonClass = 'rt-youtube__sound-control';
       if(this.isMuteLocal){
-        buttonClass += ' rt-youtube__sound-control--mute'
+        buttonClass += ' rt-youtube__sound-control--mute';
       }
       return <div class={buttonClass} onClick={this.muteToggle}>
         <svg width="18px" height="13px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -115,8 +115,8 @@ export default {
             </g>
           </g>
         </svg>
-      </div>
-    })()
+      </div>;
+    })();
     return <div class="rt-youtube__volume">
       {muteButton}
       <div ref="line" class="rt-youtube__volume__line">

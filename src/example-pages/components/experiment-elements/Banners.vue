@@ -1,10 +1,14 @@
 <template>
   <div>
     <div class="rt-container">
-      <div class="grid-center"/>
+      <div class="grid-center" />
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-          <div class="row"><h1 class="rt-font-hero rt-col">Banners</h1></div>
+          <div class="row">
+            <h1 class="rt-font-hero rt-col">
+              Banners
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -15,39 +19,60 @@
           :round-angles="true"
           :has-custom-content="true"
         >
-
           <rt-banner-item
             background-image="/static/images/B2B/banner-img.png"
             :is-white-color="true"
-            background-color="b2b-dark-state">
+            background-color="b2b-dark-state"
+          >
             <div class="rtb-banner__text-content">
-              <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
-              <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
+              <h3 class="rt-font-bold rt-space-bottom05">
+                Скидка 50% на Wi-Fi для бизнеса  при подключении интернета
+              </h3>
+              <p class="rt-font-small-paragraph">
+                Пакет «Быть в плюсе»
+              </p>
             </div>
             <div>
-              <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
+              <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">
+                Подробнее
+              </rt-button>
             </div>
-
           </rt-banner-item>
         </rt-banner>
       </div>
     </div>
-    <rt-banner hasCustomHeight="500px"
+    <rt-banner has-custom-height="500px"
                :is-fullscreen-image="true"
-               :category-banner="true">
-      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2"/>
+               :category-banner="true"
+    >
+      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2" />
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
-                      content-mobile-height="200px"
-                      background-color="b2b-burgundy">
+                      content-mobile-height="200px">
         <p class="rt-font-banner-label">Телефония</p>
         <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
       </rt-banner-item>
 
       </rt-banner-item>
     </rt-banner>
-
+    <pre-code
+      text="<rt-banner content-mobile-height=&quot;400px&quot;
+                       :has-image-on-mobile=&quot;true&quot;>
+      <rt-banner-item :is-white-color=&quot;true&quot;
+                      content-mobile-height=&quot;400px&quot;
+                      :pattern-background=&quot;true&quot;
+                      :pattern-type=&quot;2&quot;
+                      pattern-top-color=&quot;b2c-yellow&quot;
+                      pattern-left-color=&quot;main-color&quot;
+                      pattern-right-color=&quot;error-color&quot;>
+        <h1 class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</h1>
+        <p class=&quot;p1 rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br>
+          возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+        <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+      </rt-banner-item>
+    </rt-banner>"
+    />
     <pre-code
       text="<rt-banner :set-stop-on-click=&quot;true&quot;
                        :sleep-time=&quot;20000&quot;
@@ -73,55 +98,71 @@
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;>
+        <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
+          <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+          <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+      </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :sleep-time=&quot;10000&quot;><rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item><rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;><p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p><p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p><rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button></rt-banner-item></rt-banner>"
+      text="<rt-banner :sleep-time=&quot;10000&quot;>
+        <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
+          <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+          <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot;>
+        <p class=&quot;rt-font-banner-label&quot;>Помогаем бизнесу <br> экономить</p>
+        <p class=&quot;rt-space-top rt-space-bottom15&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса </p>
+        <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+      </rt-banner>"
     />
     <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true">
       <rt-banner-item is-game-banner-item background-video="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4"
-                      :is-white-color="true" background-color="dark-state">
-      </rt-banner-item>
-
+                      :is-white-color="true" background-color="dark-state"
+      />
     </rt-banner>
     <!--<pre-code-->
-      <!--text="-->
+    <!--text="-->
     <!--<rt-banner :is-fullscreen-image=&quot;true&quot; :sleep-time=&quot;30000&quot;  content-mobile-min-height=&quot;100vh&quot; content-mobile-height=&quot;400px&quot;>-->
-      <!--<rt-banner-item background-video=&quot;https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4&quot;-->
-                      <!--:slide-time=&quot;50000&quot;-->
-                      <!--link-target=&quot;_blank&quot;-->
-                      <!--link=&quot;https://www.google.co.uk/search?q=yosemite+national+park&quot;-->
-                      <!--:is-white-color=&quot;true&quot; background-color=&quot;dark-state&quot;>-->
-        <!--<rt-color-line-text>-->
-          <!--<template sljs-form-calc-profile ot=&quot;label&quot;>Расширяя границы</template>-->
-          <!--<template slot=&quot;content&quot;>Высокоскоростной интернет теперь повсюду</template>-->
-        <!--</rt-color-line-text>-->
-        <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
-      <!--</rt-banner-item>-->
-      <!--<rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot; :slide-time=&quot;2000&quot;>-->
-        <!--<rt-color-line-text>-->
-          <!--<template slot=&quot;label&quot;>Помогаем бизнесу <br> экономить</template>-->
-          <!--<template slot=&quot;content&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса-->
-          <!--</template>-->
-        <!--</rt-color-line-text>-->
-        <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
-      <!--</rt-banner-item>-->
-      <!--<rt-banner-item-->
-        <!--link=&quot;https://www.google.co.uk/search?q=ElephantsDream&quot;-->
-        <!--background-video=&quot;http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4&quot;-->
-        <!--:is-white-color=&quot;true&quot; background-color=&quot;orange&quot; :slide-time=&quot;30000&quot;>-->
-        <!--<rt-color-line-text color-icon=&quot;purple&quot;>-->
-          <!--<template slot=&quot;label&quot;>Wink</template>-->
-          <!--<template slot=&quot;content&quot;>Более 200 ТВ-каналов, тысячи фильмов и сериалов в одном приложении</template>-->
-        <!--</rt-color-line-text>-->
-        <!--<rt-button class=&quot;rt-button-purple&quot;>Подробнее</rt-button>-->
-      <!--</rt-banner-item>-->
+    <!--<rt-banner-item background-video=&quot;https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4&quot;-->
+    <!--:slide-time=&quot;50000&quot;-->
+    <!--link-target=&quot;_blank&quot;-->
+    <!--link=&quot;https://www.google.co.uk/search?q=yosemite+national+park&quot;-->
+    <!--:is-white-color=&quot;true&quot; background-color=&quot;dark-state&quot;>-->
+    <!--<rt-color-line-text>-->
+    <!--<template sljs-form-calc-profile ot=&quot;label&quot;>Расширяя границы</template>-->
+    <!--<template slot=&quot;content&quot;>Высокоскоростной интернет теперь повсюду</template>-->
+    <!--</rt-color-line-text>-->
+    <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
+    <!--</rt-banner-item>-->
+    <!--<rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot; :slide-time=&quot;2000&quot;>-->
+    <!--<rt-color-line-text>-->
+    <!--<template slot=&quot;label&quot;>Помогаем бизнесу <br> экономить</template>-->
+    <!--<template slot=&quot;content&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса-->
+    <!--</template>-->
+    <!--</rt-color-line-text>-->
+    <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
+    <!--</rt-banner-item>-->
+    <!--<rt-banner-item-->
+    <!--link=&quot;https://www.google.co.uk/search?q=ElephantsDream&quot;-->
+    <!--background-video=&quot;http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4&quot;-->
+    <!--:is-white-color=&quot;true&quot; background-color=&quot;orange&quot; :slide-time=&quot;30000&quot;>-->
+    <!--<rt-color-line-text color-icon=&quot;purple&quot;>-->
+    <!--<template slot=&quot;label&quot;>Wink</template>-->
+    <!--<template slot=&quot;content&quot;>Более 200 ТВ-каналов, тысячи фильмов и сериалов в одном приложении</template>-->
+    <!--</rt-color-line-text>-->
+    <!--<rt-button class=&quot;rt-button-purple&quot;>Подробнее</rt-button>-->
+    <!--</rt-banner-item>-->
     <!--</rt-banner>-->
     <!--"-->
     <!--/>-->
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder :json="documentation" type="components"/>
+      <documentation-builder :json="documentation" type="components" />
     </div>
   </div>
 </template>

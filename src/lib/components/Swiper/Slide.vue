@@ -1,26 +1,19 @@
 <template>
   <div
-    :class="[
-      `${cmpName}-slide`,
-      {'not-shown': !shown},
-      getCustomClass
-    ]"
-    :style="`
+    :class="[`${cmpName}-slide`, { 'not-shown': !shown }, getCustomClass]"
+    :style="
+      `
       padding-right: ${offsetSlide}px;
-    `"
+    `
+    "
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RtSlide',
-  data () {
-    return {
-      shown: true
-    }
-  },
+  name: "RtSlide",
   props: {
     slideClasses: {
       type: String
@@ -30,21 +23,26 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      shown: true
+    };
+  },
   computed: {
-    cmpName () {
-      return this.$parent.cmpName || 'RtSlide'
+    cmpName() {
+      return this.$parent.cmpName || "RtSlide";
     },
-    left () {
-      return this.$el.getBoundingClientRect().left
+    left() {
+      return this.$el.getBoundingClientRect().left;
     },
-    right () {
-      return this.left + this.width
+    right() {
+      return this.left + this.width;
     },
-    offsetSlide () {
-      return this.$parent.offsetSlide
+    offsetSlide() {
+      return this.$parent.offsetSlide;
     },
-    getCustomClass () {
-      return this.slideClasses || this.$parent.slidesClasses
+    getCustomClass() {
+      return this.slideClasses || this.$parent.slidesClasses;
     }
   },
   methods: {
@@ -52,12 +50,12 @@ export default {
      * Делает видимым слайд или скрывает его
      * @param flag - Принудительно назначить статус видимости
      */
-    toggle (flag) {
-      this.shown = flag !== undefined ? flag : !this.shown
+    toggle(flag) {
+      this.shown = flag !== undefined ? flag : !this.shown;
     },
-    width () {
-      return this.$el.clientWidth
+    width() {
+      return this.$el.clientWidth;
     }
   }
-}
+};
 </script>

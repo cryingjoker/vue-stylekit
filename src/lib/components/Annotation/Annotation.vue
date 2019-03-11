@@ -1,6 +1,6 @@
 <template>
   <div :class="annotationClasses" class="rt-annotation">
-    <p class="rt-annotation__title rt-font-paragraph" @click="toggleOpen();">
+    <p class="rt-annotation__title rt-font-paragraph" @click="toggleOpen()">
       {{ label }}
 
       <svg
@@ -26,7 +26,9 @@
         </g>
       </svg>
     </p>
-    <div class="rt-annotation__content"><slot name="content" /></div>
+    <div class="rt-annotation__content">
+      <slot name="content" />
+    </div>
   </div>
 </template>
 
@@ -35,7 +37,7 @@ export default {
   name: "RtAnnotation",
   components: {},
   props: {
-    open:{
+    open: {
       type: Boolean,
       default: false
     },

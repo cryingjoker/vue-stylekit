@@ -8,8 +8,8 @@
       :checked="isChecked"
       type="radio"
       class="radio-button-element"
-      @change="changeModel"
       :value="value"
+      @change="changeModel"
     />
     <div class="radio-button-container"><slot /></div>
   </label>
@@ -53,7 +53,7 @@ export default {
     model() {
       this.checkModel();
     },
-    checked(){
+    checked() {
       this.isChecked = this.checked;
     }
   },

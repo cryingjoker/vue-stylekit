@@ -16,6 +16,9 @@ export default {
 
   beforeDestroy() {
   },
+  mounted(){
+    this.findAllChildren(this.$children);
+  },
   methods: {
     emitSelectedData(){
       const responseArray = {};
@@ -31,8 +34,8 @@ export default {
             }
           }
         }
-      })
-      this.$emit('change',responseArray)
+      });
+      this.$emit('change',responseArray);
     },
     updateCheckboxData(checkboxData){
       this.$set(this.checkboxData,checkboxData._uid,{
@@ -45,9 +48,9 @@ export default {
     updateAllChildren(props){
       this.$children.forEach((vNode)=>{
         if('changeFromParent' in vNode ){
-          vNode.changeFromParent(props)
+          vNode.changeFromParent(props);
         }
-      })
+      });
     },
     findAllChildren(vNodeArray){
       vNodeArray.forEach((vNode)=>{
@@ -68,21 +71,18 @@ export default {
           this.$set(this.checkboxNamesMap,vNode.name,checkboxNames);
           setTimeout(()=>{
             this.emitSelectedData();
-          },1000)
+          },1000);
         }
         if(vNode.$children){
           this.findAllChildren(vNode.$children);
         }
-      })
+      });
     }
-  },
-  mounted(){
-    this.findAllChildren(this.$children);
   },
   render(h){
     return <div class="d-static">
       {this.$slots.default}
-    </div>
+    </div>;
   }
 };
 </script>

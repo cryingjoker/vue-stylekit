@@ -41,11 +41,11 @@
         opacity .3 !important
 
   &-value
+    min-height 100%
     margin-top -5px
     padding-top 5px
     padding-bottom 5px
     cursor pointer
-    min-height 100%
 
     .select--disabled &
       color main-color05
@@ -124,64 +124,82 @@
         transition-duration 0s
 
 .{b2bAppName}-select
-  height 60px!important
+  height 60px !important
   background-color b2c-white
+
   .select-option--select
     .select-option__inner
+      color b2c-white
       font-weight inherit
       background-color b2c-purple
-      color b2c-white
+
   .select-value
-    padding 10px 10px 0
     margin-top 0
+    padding 10px 10px 0
+
   .select-arrow
-    right 10px
     top 25px
+    right 10px
+
   .floating-placeholder
-    left 10px
     top 20px
+    left 10px
+
     &--go-top
-      top 7px
       color main-color05
+      top 7px
+
   .select__inner[disabled]
     &+.text-field__line
       border-color transparent
+
     .floating-placeholder
       color main-color05
+
   &--outlined
     position relative
+
     .text-field__border
+      border 1px solid b2c-cool-grey05
       position absolute
       top 0
+      bottom 0
       left 0
       right 0
-      bottom 0
-      border 1px solid b2c-cool-grey05
       z-index 1
       transition border-color .3s linear
+
       &--error
         border-color error-color
+
     .select__inner
       position relative
       z-index 2
+
     .floating-placeholder
       top 0
+
       &--go-top
-        top -15px
         color main-color05
+        top -15px
+
     .select-arrow
       top 5px
+
     &:hover
       .text-field__border
         border-color b2c-purple
+
       .select__inner[disabled]+.text-field__border
-          border-color b2c-cool-grey05
+        border-color b2c-cool-grey05
+
       .text-field__border--error
         border-color error-color
+
   &:hover
     .floating-placeholder
       color b2c-purple
+
     .select__inner[disabled]
       .floating-placeholder
         color main-color05
-

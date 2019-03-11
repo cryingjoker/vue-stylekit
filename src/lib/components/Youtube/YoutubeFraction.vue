@@ -12,6 +12,28 @@ export default {
     }
 
   },
+  computed: {
+    fractionLocal() {
+      return this.fraction;
+    },
+    playedProcentLocal(){
+      if(isNaN(this.procentPlayed)){
+        return 0;
+      }else{
+        return this.procentPlayed;
+      }
+    }
+  },
+  mounted(){
+    this.bindMouse();
+  },
+  updated(){
+    this.unbindMouse();
+    this.bindMouse();
+  },
+  beforeDestroy(){
+    this.unbindMouse();
+  },
   methods: {
     setWillBePlayedLineWidth(event){
       const lineLeft = this.$refs.fraction.getBoundingClientRect().left;
@@ -30,36 +52,14 @@ export default {
       this.$refs.fraction.querySelector('.rt-youtube-fraction__will-be-played').style.width = 0;
     },
     bindMouse(){
-      this.$refs.fraction.addEventListener('mousemove',this.setWillBePlayedLineWidth)
-      this.$refs.fraction.addEventListener('mouseleave',this.removeWillBePlayedLineWidth)
-      this.$refs.fraction.addEventListener('mousedown',this.setNewTimePlay)
+      this.$refs.fraction.addEventListener('mousemove',this.setWillBePlayedLineWidth);
+      this.$refs.fraction.addEventListener('mouseleave',this.removeWillBePlayedLineWidth);
+      this.$refs.fraction.addEventListener('mousedown',this.setNewTimePlay);
     },
     unbindMouse(){
-      this.$refs.fraction.removeEventListener('mousemove',this.setWillBePlayedLineWidth)
-      this.$refs.fraction.removeEventListener('mouseleave',this.removeWillBePlayedLineWidth)
-      this.$refs.fraction.removeEventListener('mousedown',this.setNewTimePlay)
-    }
-  },
-  mounted(){
-    this.bindMouse();
-  },
-  updated(){
-    this.unbindMouse();
-    this.bindMouse();
-  },
-  beforeDestroy(){
-    this.unbindMouse();
-  },
-  computed: {
-    fractionLocal() {
-      return this.fraction
-    },
-    playedProcentLocal(){
-      if(isNaN(this.procentPlayed)){
-        return 0
-      }else{
-        return this.procentPlayed;
-      }
+      this.$refs.fraction.removeEventListener('mousemove',this.setWillBePlayedLineWidth);
+      this.$refs.fraction.removeEventListener('mouseleave',this.removeWillBePlayedLineWidth);
+      this.$refs.fraction.removeEventListener('mousedown',this.setNewTimePlay);
     }
   },
 
@@ -75,7 +75,7 @@ export default {
       <div style={playedLineStyle} class="rt-youtube-fraction__played-line"></div>
       <div style={readyLineWidth} class="rt-youtube-fraction__ready-line"></div>
       <div class="rt-youtube-fraction__will-be-played"></div>
-    </div>
+    </div>;
   }
 };
 </script>

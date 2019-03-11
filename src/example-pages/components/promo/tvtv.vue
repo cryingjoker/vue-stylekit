@@ -24,10 +24,12 @@
               />
             </div>
             <p class="rt-font-h1 rt-space-top5">
-              Сражайся <br />
+              Сражайся <br>
               по всем фронтам
             </p>
-            <p class="rt-font-paragraph">С тарифом «Игровой»</p>
+            <p class="rt-font-paragraph">
+              С тарифом «Игровой»
+            </p>
             <rt-price
               value-color="orange"
               :value="500"
@@ -41,7 +43,7 @@
               time-interval="мес."
             />
           </div>
-          <div class="rt-col-6"></div>
+          <div class="rt-col-6" />
         </div>
       </div>
     </div>
