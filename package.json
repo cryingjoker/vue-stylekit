@@ -1,5 +1,5 @@
 {
-  "name": "vue_rt_style",
+  "name": "vue-rt-style",
   "version": "0.1.0",
   "description": "",
   "main": "lib/vue-rt-style.js",
@@ -99,8 +99,6 @@
     "jest": "^24.1.0",
     "jest-screenshot": "^0.2.2",
     "js-beautify": "^1.9.0",
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
     "nib": "^1.1.2",
     "opn": "^5.4.0",

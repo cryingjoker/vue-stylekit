@@ -49,16 +49,6 @@ const config = {
         include: [path.join(local_dirname, `src`)],
       },
       {
-        test: /\.less$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
-      },
-      {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,
         loader: `url-loader`,
         options: {
