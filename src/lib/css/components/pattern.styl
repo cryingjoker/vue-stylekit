@@ -1,93 +1,131 @@
 .rt-pattern
-  height: 100%
-  position: relative
-  top: 0
-  bottom: 0
+  height 100%
+  position relative
+  top 0
+  bottom 0
   left -20px
-  //overflow-x hidden
+
+  // overflow-x hidden
   &--main-color
     fill main-color
+
   &--error-color
     fill error-color
+
   &--purple
     fill b2c-purple
+
   &--purple-low
     fill b2c-purple-low
+
   &--purple-high
     fill b2c-purple-high
+
   &--red
     fill b2c-red
+
   &--red-low
     fill b2c-red-low
+
   &--red-high
     fill b2c-red-high
+
   &--dark-blue
     fill b2c-dark-blue
+
   &--dark-blue-low
     fill b2c-dark-blue-low
+
   &--dark-blue-high
     fill b2c-dark-blue-high
+
   &--light-blue
     fill b2c-light-blue
+
   &--light-blue-low
     fill b2c-light-blue-low
+
   &--light-blue-high
     fill b2c-light-blue-high
+
   &--yellow
     fill b2c-yellow
+
   &--yellow-low
     fill b2c-yellow-low
+
   &--yellow-high
     fill b2c-yellow-high
+
   &--orange
     fill b2c-orange
+
   &--orange-low
     fill b2c-orange-low
+
   &--orange-high
     fill b2c-orange-high
+
   &--pink
     fill b2c-pink
+
   &--pink-low
     fill b2c-pink-low
+
   &--pink-high
     fill b2c-pink-high
+
   &--green
     fill b2c-green
+
   &--green-low
     fill b2c-green-low
+
   &--green-high
     fill b2c-green-high
+
   &--cool-grey
     fill b2c-cool-grey
+
   &--cool-grey05-no-opacity
     fill b2b-cool-grey05-no-opacity
+
   &--state
     fill b2b-state
+
   &--dark-state
     fill b2b-dark-state
+
   &--burgundy
     fill b2b-burgundy
+
   &--white
     fill b2c-white
+
   &--light-grey
     fill light-grey
+
   .rt-banner &
     @media (min-width: tablet-lower-limit)
       display none
 
   .{newAppName}-banner-container &
-    width: 100vw
+    width 100vw
+
     @media (max-width: mobile-upper-limit)
       svg
         position absolute
-        left calc((-767px + 100vw)/2)
+        left calc(((-767px + 100vw) / 2))
+
   .{newAppName}-banner-image &
     display block
     left 0
+
     svg
       @media (max-width: mobile-upper-limit)
-        right auto
         position absolute
-        left calc((-767px + 100vw)/2)
+        left calc(((-767px + 100vw) / 2))
+        right auto
+
   .{newAppName}-banner &
     overflow-x hidden
