@@ -19,20 +19,31 @@
     <div
       class="rt-container rt-space-top2 rt-dark-theme rt-dark-theme--transparent rt-space-bottom2"
     >
-      <div class="flex-start-center rt-td-space-left ">
+      <div class="flex-start-center rt-td-space-left rt-dark-theme">
         <div class="warface-logo">
-          <rt-logo
-            class="rt-layer-level-4 relative d-inline-block"
-            width="56px"
-            height="94px"
-          />
-          <div class="rt-layer-level-4 rt-logo-line" />
-          <rt-logo
-            class="rt-layer-level-4 relative d-inline-block"
-            width="188px"
-            height="90px"
-            type="warface"
-          />
+          <rt-logo-co-branding>
+            <template slot="firstLogo">
+              <rt-logo
+                class="rt-layer-level-4 relative d-inline-block"
+                width="56px"
+                height="94px"
+                tablet-width="41.5px"
+                mobile-width="33px"
+              />
+            </template>
+            <template slot="secondLogo">
+              <rt-logo
+                class="rt-layer-level-4 relative d-inline-block"
+                width="188px"
+                height="90px"
+                type="warface"
+                tablet-width="141px" mobile-width="111px"
+              />
+              </template>
+          </rt-logo-co-branding>
+
+
+
         </div>
       </div>
       <div class="rt-space-top135 flex-end-center">

@@ -53,7 +53,9 @@
   padding-top 6px
   position relative
   bottom -3px
-
+  .{newAppName}-dark-theme &
+    &:before
+      background-color: #fff
   &:before
     content ""
     display block
@@ -62,6 +64,7 @@
     position absolute
     top -6px
     bottom -3px
+    z-index: 10
 
 .rt-logo__rt-text
   margin-bottom 5.5%
