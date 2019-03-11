@@ -24,7 +24,7 @@
               />
             </div>
             <p class="rt-font-h1 rt-space-top5">
-              Сражайся <br >
+              Сражайся <br>
               по всем фронтам
             </p>
             <p class="rt-font-paragraph">

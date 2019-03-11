@@ -59,12 +59,12 @@
                       <div class="d-flex rt-space-top d-td-block">
                         <div class="d-flex">
                           <div class="rt-card-list__icon">
-                            <img src="/static/images/medium-icon.svg" >
+                            <img src="/static/images/medium-icon.svg">
                           </div>
                           <div class="rt-space-left05">
                             <p>Видеокамера</p>
                             <p class="rt-font-small-paragraph color-main05">
-                              Камера внутреннего <br >
+                              Камера внутреннего <br>
                               видеонаблюдения
                             </p>
                           </div>
@@ -73,12 +73,12 @@
                           class="d-flex rt-space-left rt-td-space-left-none rt-td-space-top"
                         >
                           <div class="rt-card-list__icon">
-                            <img src="/static/images/medium-icon.svg" >
+                            <img src="/static/images/medium-icon.svg">
                           </div>
                           <div class="rt-space-left05">
                             <p>Видеокамера</p>
                             <p class="rt-font-small-paragraph color-main05">
-                              Облачное хранение <br >
+                              Облачное хранение <br>
                               видеозаписей в подарок
                             </p>
                           </div>
@@ -795,37 +795,37 @@
           </div>
         </div>
         <div class="row">
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
-          <br >
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
         </div>
       </div>
     </div>

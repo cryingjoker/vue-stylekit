@@ -411,7 +411,7 @@
                           <div class="rt-card-list__item">
                             <div class="rt-card-list__name">
                               <p class="rt-font-small-paragraph color-main05">
-                                <br ><br ><br >
+                                <br><br><br>
                               </p>
                             </div>
                           </div>
@@ -1237,9 +1237,9 @@
                     <span class="rt-font-paragraph rt-font-bold">1 сим-карта</span>
                     <hint>
                       <slot>
-                        Это всё что угодно,<br />но не адрес электронной почты
-                        Это всё что угодно,<br />но не адрес электронной почты
-                        Это всё что угодно,<br />но не адрес электронной почты
+                        Это всё что угодно,<br >но не адрес электронной почты
+                        Это всё что угодно,<br >но не адрес электронной почты
+                        Это всё что угодно,<br >но не адрес электронной почты
                       </slot>
                     </hint>
                   </div>
@@ -1664,7 +1664,7 @@
               <template slot="content">
                 <div class="rtb-card__vertical">
                   <div class="rtb-card__vertical__left-column">
-                    <img src="/static/images/B2B/wifi.svg" />
+                    <img src="/static/images/B2B/wifi.svg" >
                   </div>
                   <div class="rtb-card__vertical__right-column">
                     <p class="rt-font-paragraph rt-font-bold mb5">
@@ -1701,7 +1701,7 @@
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
                   <hint>
                     <slot>
-                      Это всё что угодно,<br />но не адрес электронной почты
+                      Это всё что угодно,<br >но не адрес электронной почты
                     </slot>
                   </hint>
                   <p class="rt-font-small-paragraph color-main025">
@@ -2216,8 +2216,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Задает ширину картинки карточки <br >
-                number - любое число становится px <br >string - любые значения
+                Задает ширину картинки карточки <br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
@@ -2243,8 +2243,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Задает высоту картинки карточки <br >
-                number - любое число становится px <br >string - любые значения
+                Задает высоту картинки карточки <br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
@@ -2290,8 +2290,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Устанавливает цвет фона карточки <br >
-                возможные значения <br >
+                Устанавливает цвет фона карточки <br>
+                возможные значения <br>
                 <span class="rt-font-label">
                   <span class="rt-code rt-code--fill">dark-state</span>
                   <span class="rt-code rt-code--fill">yellow</span>
@@ -2393,7 +2393,7 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Размытие картинки <br >
+                Размытие картинки <br>
                 значение от <span class="rt-code rt-code--fill">0.0</span> до
                 <span class="rt-code rt-code--fill">1.0</span>
               </div>
@@ -2418,7 +2418,7 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Размытие заднего фона <br >
+                Размытие заднего фона <br>
                 значение от <span class="rt-code rt-code--fill">0.2</span>
                 <span class="rt-code rt-code--fill">0.3</span>
                 <span class="rt-code rt-code--fill">0.5</span>
@@ -2444,7 +2444,7 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Прозрачность заднего фона <br >
+                Прозрачность заднего фона <br>
                 значение от <span class="rt-code rt-code--fill">0.0</span> до
                 <span class="rt-code rt-code--fill">1.0</span>
               </div>
@@ -2492,7 +2492,7 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Задает расположение фона карточки возможные значения : <br >
+                Задает расположение фона карточки возможные значения : <br>
                 <span class="rt-code rt-code--fill">top</span>
                 <span class="rt-code rt-code--fill">left</span>
                 <span class="rt-code rt-code--fill">bottom</span>
@@ -2531,8 +2531,8 @@
                   >работает только при background-image-stand-alone и
                   background-image</span
                 ><br />
-                Устанавливает отступ картинки сверху<br >
-                number - любое число становится px <br >string - любые значения
+                Устанавливает отступ картинки сверху<br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
@@ -2562,8 +2562,8 @@
                   >работает только при background-image-stand-alone и
                   background-image</span
                 ><br />
-                Устанавливает отступ картинки слева<br >
-                number - любое число становится px <br >string - любые значения
+                Устанавливает отступ картинки слева<br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
@@ -2593,8 +2593,8 @@
                   >работает только при background-image-stand-alone и
                   background-image</span
                 ><br />
-                Устанавливает отступ картинки справа<br >
-                number - любое число становится px <br >string - любые значения
+                Устанавливает отступ картинки справа<br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
@@ -2625,8 +2625,8 @@
                   >работает только при background-image-stand-alone и
                   background-image</span
                 ><br />
-                Устанавливает отступ картинки снизу<br >
-                number - любое число становится px <br >string - любые значения
+                Устанавливает отступ картинки снизу<br>
+                number - любое число становится px <br>string - любые значения
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>

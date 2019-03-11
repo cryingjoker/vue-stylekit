@@ -122,8 +122,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Цвет обводки текста <br >
-                возможные значения : <br >
+                Цвет обводки текста <br>
+                возможные значения : <br>
                 <span class="rt-code rt-code--fill">purple</span>
                 <span class="rt-code rt-code--fill">red</span>
                 <span class="rt-code rt-code--fill">dark-blue</span>
@@ -153,8 +153,8 @@
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
-                Цвет заливки корешка <br >
-                возможные значения : <br >
+                Цвет заливки корешка <br>
+                возможные значения : <br>
                 <span class="rt-code rt-code--fill">purple</span>
                 <span class="rt-code rt-code--fill">red</span>
                 <span class="rt-code rt-code--fill">dark-blue</span>

@@ -55,7 +55,7 @@
                 Тариф «Игровой»
               </template>
               <template slot="content">
-                Подарки и интернет для настоящих <br />
+                Подарки и интернет для настоящих <br >
                 игроков Warface
               </template>
             </rt-color-line-text>
@@ -104,7 +104,7 @@
                     class="rt-font-h4 rt-font-left"
                     name="new"
                   >
-                    Для новых <br >абонентов
+                    Для новых <br>абонентов
                   </rt-tabs-nav-item>
                   <div class="rt-space-left2 td-d-inline-block">
                     <rt-tabs-nav-item
@@ -112,7 +112,7 @@
                       class="rt-font-h4 rt-font-left"
                       name="old"
                     >
-                      Для абонентов <br >Ростелеком
+                      Для абонентов <br>Ростелеком
                     </rt-tabs-nav-item>
                   </div>
                 </div>
@@ -157,13 +157,13 @@
                   </div>
                   <div class="rt-space-top">
                     <rt-switch class="switch--orange rt-font-control">
-                      Терминал ONT без Wi-Fi <br />
+                      Терминал ONT без Wi-Fi <br >
                       +20₽ в месяц
                     </rt-switch>
                   </div>
                   <div class="rt-space-top">
                     <rt-switch class="switch--orange rt-font-control">
-                      Терминал ONT без Wi-Fi <br />
+                      Терминал ONT без Wi-Fi <br >
                       +20₽ в месяц
                     </rt-switch>
                   </div>
@@ -180,7 +180,7 @@
                   <div class="rt-space-top">
                     <rt-checkbox name="internet">
                       <span class="color-white07">
-                        Даю согласие на обработку персональных данных <br />в
+                        Даю согласие на обработку персональных данных <br >в
                         соответствии с</span
                       >
                       условиями
