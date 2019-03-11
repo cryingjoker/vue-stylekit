@@ -182,9 +182,8 @@ export default {
       ];
     },
     getTop(el) {
-      return (
-        el.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop
-      );
+      return  (el.getBoundingClientRect().top + window.pageYOffset) || document.documentElement.scrollTop
+
     }
   }
 };

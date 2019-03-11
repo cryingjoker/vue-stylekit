@@ -17,7 +17,7 @@ class logoWarface extends Vue{
   @Prop({ default: null }) background: string;
 
   render(h: CreateElement): VNode {
-    return <div className="rt-logo">
+    return <div class="rt-logo">
       <svg width={this.width} height={this.height} viewBox="0 0 103 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g id="Logo-partners" transform="translate(-708.000000, -1297.000000)">
