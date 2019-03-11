@@ -183,8 +183,7 @@ export default {
     },
     getTop(el) {
       return (
-        el.getBoundingClientRect().top + window.pageYOffset ||
-        document.documentElement.scrollTop;
+        el.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop;
       );
     }
   }
