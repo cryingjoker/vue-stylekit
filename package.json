@@ -1,6 +1,6 @@
 {
-  "name": "vue-rt-style",
-  "version": "0.0.44",
+  "name": "vue_rt_style",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -102,9 +102,6 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.5.0",
-    "monaco-editor": "^0.16.0",
-    "monaco-editor-webpack-plugin": "^1.7.0",
-    "monaco-html": "^2.5.0",
     "nib": "^1.1.2",
     "opn": "^5.4.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
