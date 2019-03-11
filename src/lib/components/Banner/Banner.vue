@@ -83,7 +83,7 @@
         type: Boolean,
         default: false
       },
-      banerItemsWithCustomContent: {
+      bannerItemsWithCustomContent: {
         type: Boolean,
         default: false
       },
@@ -106,6 +106,10 @@
       categoryBanner: {
         type: Boolean,
         default: null
+      },
+      hasImageOnMobile: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -763,7 +767,7 @@
           {bannerContent()}
         </div>
         {paginator()}
-        <div style={this.imageStyle} class={"rt-banner-image rt-banner-image--main"}>
+        <div style={this.imageStyle} class={"rt-banner-image rt-banner-image--main" + (this.hasImageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
           {leftTriangle()}
           {video()}
           {rightTriangle()}

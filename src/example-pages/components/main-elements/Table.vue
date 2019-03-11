@@ -7,7 +7,7 @@
           <div class="rt-col rt-font-hypnens-off">
             <pre-code
               text="
-              <rt-table class=&quot;rt-space-bottom4&quot; :tablet-list-type=&quot;true&quot;>
+              <rt-table class=&quot;rt-space-bottom2&quot; :tablet-list-type=&quot;true&quot;>
               <template slot=&quot;label&quot;>
                 Тарифы на добровольную блокировку
               </template>
@@ -47,7 +47,7 @@
             "
             />
             <pre-code
-              text="<rt-table class=&quot;rt-space-bottom4&quot;>
+              text="<rt-table class=&quot;rt-space-bottom2&quot;>
               <template slot=&quot;label&quot;>
                 Звонки
               </template>
