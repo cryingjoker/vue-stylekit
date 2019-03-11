@@ -38,10 +38,12 @@
       }
 
       const countOffset = () => {
-        if(window.innerWidth <= 767 && !this.$el.parentNode.classList.contains('rt-banner-image')){
-          this.svgOffset = 767 - window.innerWidth;
-          return this.svgOffset
-        }
+        setTimeout(() => {
+          if(window.innerWidth <= 767 && !this.$el.parentNode.classList.contains('rt-banner-image')){
+            this.svgOffset = 767 - window.innerWidth;
+            return this.svgOffset
+          }
+        },0);
       };
       window.addEventListener('resize', () => {
         countOffset()
@@ -52,7 +54,7 @@
 
       const patternItem = (() => {
         if(this.patternType === 1) {
-          return <svg height="100%" viewBox="50 0 768 401" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+          return <svg height="100%" viewBox={(-this.svgOffset/6) + " 0 768 401"} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
             <defs>
               <path id="a" d="M.439.569h767v400h-767z"/>
             </defs>
