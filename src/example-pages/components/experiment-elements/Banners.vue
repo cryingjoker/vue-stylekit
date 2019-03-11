@@ -32,7 +32,7 @@
     <rt-banner has-custom-height="500px"
                :is-fullscreen-image="true"
                :category-banner="true">
-      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2"/>
+      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="1"/>
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
@@ -46,6 +46,10 @@
     <pre-code
       text="<rt-banner content-mobile-height=&quot;400px&quot;
                        :has-image-on-mobile=&quot;true&quot;>
+      <rt-pattern top-color=&quot;error-color&quot;
+                  left-color=&quot;b2c-purple-high&quot;
+                  right-color=&quot;b2c-pink&quot;
+                  :pattern-type=&quot;1&quot;/>
       <rt-banner-item :is-white-color=&quot;true&quot;
                       content-mobile-height=&quot;400px&quot;
                       :pattern-background=&quot;true&quot;
