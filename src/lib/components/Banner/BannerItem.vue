@@ -88,6 +88,26 @@ export default {
     ga: {
       type: Object,
       default: null
+    },
+    patternBackground: {
+      type: Boolean,
+      default: false
+    },
+    patternTopColor: {
+      type: String,
+      default: ''
+    },
+    patternLeftColor: {
+      type: String,
+      default: ''
+    },
+    patternRightColor: {
+      type: String,
+      default: ''
+    },
+    patternType: {
+      type: Number,
+      default: 1
     }
   },
   inject: {
@@ -154,7 +174,6 @@ export default {
     if (this.RtBanners) {
       this.index = this.RtBanners.items.length;
       const bannerItemData = {
-        backgroundColor: this.backgroundColor,
         isWhiteColor: this.isWhiteColor,
         id: this.id
       };
@@ -165,6 +184,16 @@ export default {
             bannerItemData.backgroundImage = this.backgroundImage;
           });
         }
+      }
+      if(this.backgroundColor){
+        bannerItemData.backgroundColor = this.backgroundColor
+      }
+      if(this.patternBackground) {
+        bannerItemData.patternBackground = this.patternBackground,
+        bannerItemData.patternType = this.patternType,
+        bannerItemData.patternTopColor = this.patternTopColor,
+        bannerItemData.patternLeftColor = this.patternLeftColor,
+        bannerItemData.patternRightColor = this.patternRightColor
       }
       if (this.backgroundVideo) {
         bannerItemData.backgroundVideo = this.backgroundVideo;
