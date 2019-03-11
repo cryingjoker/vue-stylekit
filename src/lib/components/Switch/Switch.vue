@@ -55,6 +55,11 @@ export default {
   data: () => ({
     isChecked: false
   }),
+  computed: {
+    fieldName() {
+      return this.name || "input-field__" + this._uid;
+    }
+  },
   mounted: function() {
     setTimeout(() => {
       this.setValue();
@@ -67,11 +72,6 @@ export default {
   },
   beforeDestroy() {
     this.unbindEvents();
-  },
-  computed: {
-    fieldName() {
-      return this.name || "input-field__" + this._uid;
-    }
   },
   methods: {
     eventChangeListener(event) {

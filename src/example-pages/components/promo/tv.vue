@@ -82,17 +82,19 @@
           <div class="rt-md-space-right2">
             <div class="app-row row">
               <div class="rt-space-vertical">
-                <rt-color-line-text
-                  ><template slot="label"
-                    >Будьте спокойны за своих близких</template
-                  ><template slot="content"
-                    >с услугой видеонаблюдение</template
-                  ></rt-color-line-text
-                >
+                <rt-color-line-text>
+                  <template slot="label">
+                    Будьте спокойны за своих близких
+</template><template slot="content">
+                    с услугой видеонаблюдение
+                  </template>
+                </rt-color-line-text>
               </div>
             </div>
             <div class="rt-space-top2 rt-md-space-top color-white">
-              <rt-button class="rt-button-orange">Купить</rt-button>
+              <rt-button class="rt-button-orange">
+                Купить
+              </rt-button>
             </div>
           </div>
         </rt-banner-item>
@@ -104,17 +106,19 @@
           <div class="rt-md-space-right2">
             <div class="app-row row">
               <div class="rt-space-vertical">
-                <rt-color-line-text
-                  ><template slot="label"
-                    >Будьте спокойны за своих близких</template
-                  ><template slot="content"
-                    >с услугой видеонаблюдение</template
-                  ></rt-color-line-text
-                >
+                <rt-color-line-text>
+                  <template slot="label">
+                    Будьте спокойны за своих близких
+</template><template slot="content">
+                    с услугой видеонаблюдение
+                  </template>
+                </rt-color-line-text>
               </div>
             </div>
             <div class="rt-space-top2 rt-md-space-top color-white">
-              <rt-button class="rt-button-orange">Купить</rt-button>
+              <rt-button class="rt-button-orange">
+                Купить
+              </rt-button>
             </div>
           </div>
         </rt-banner-item>
@@ -126,17 +130,19 @@
           <div class="rt-md-space-right2">
             <div class="app-row row">
               <div class="rt-space-vertical">
-                <rt-color-line-text
-                  ><template slot="label"
-                    >Будьте спокойны за своих близких</template
-                  ><template slot="content"
-                    >с услугой видеонаблюдение</template
-                  ></rt-color-line-text
-                >
+                <rt-color-line-text>
+                  <template slot="label">
+                    Будьте спокойны за своих близких
+</template><template slot="content">
+                    с услугой видеонаблюдение
+                  </template>
+                </rt-color-line-text>
               </div>
             </div>
             <div class="rt-space-top2 rt-md-space-top color-white">
-              <rt-button class="rt-button-orange">Купить</rt-button>
+              <rt-button class="rt-button-orange">
+                Купить
+              </rt-button>
             </div>
           </div>
         </rt-banner-item>
@@ -269,7 +275,10 @@
                           width="170px"
                           height="50px"
                       /></a>
-                      <p class="rt-font-label">Версия iOS 10.0</p>
+
+                      <p class="rt-font-label">
+                        Версия iOS 10.0
+                      </p>
                     </div>
                     <div
                       class="rt-font-center color-main07
@@ -285,7 +294,10 @@
                           width="170px"
                           height="50px"
                       /></a>
-                      <p class="rt-font-label">Версия Android 5.0</p>
+
+                      <p class="rt-font-label">
+                        Версия Android 5.0
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -300,7 +312,7 @@
                 style="overflow: hidden;"
               >
                 <div class="phone">
-                  <div class="phone__container"></div>
+                  <div class="phone__container" />
                   <img
                     src="https://www.moscow.rt.ru/sites/default/files/img/mobile_application.jpg"
                     class="phone__image"
@@ -314,22 +326,28 @@
     </div>
 
     <!-- Витрина -->
-    <div class="rt-container" id="tariff">
+    <div id="tariff" class="rt-container">
       <div class="row rt-space-top25 rt-space-bottom">
         <div class="rt-col-12">
-          <h3 class="rt-font-h3 rt-space-bottom2">Пакетные предложения</h3>
+          <h3 class="rt-font-h3 rt-space-bottom2">
+            Пакетные предложения
+          </h3>
         </div>
       </div>
     </div>
 
-    <div class="area"><div id="All"></div></div>
+    <div class="area">
+      <div id="All" />
+    </div>
 
     <!-- Покупка камер -->
     <div class="color-block--white">
       <div class="rt-container">
         <div class="row rt-space-vertical25">
           <div class="rt-col-12">
-            <h3 class="rt-font-h3">Покупка видеокамеры</h3>
+            <h3 class="rt-font-h3">
+              Покупка видеокамеры
+            </h3>
           </div>
         </div>
         <div class="row rt-space-vertical25">
@@ -371,7 +389,7 @@
                             class="rt-card-buy__image
                                                   flex-fill"
                             style="background-image:url(/sites/default/files/img/videocamera.png)"
-                          ></div>
+                          />
                         </div>
                       </div>
                       <div
@@ -456,8 +474,9 @@
                                                                                           56,27.6113"
                                                 fill="#00C8F9"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-180"
                                                 d="M41.5679855,24.8671
                                                                                           C41.5679855,32.2621
                                                                                           35.4548218,38.1931
@@ -477,12 +496,12 @@
                                                                                           C35.5291491,11.4681
                                                                                           41.5679855,17.4721
                                                                                           41.5679855,24.8671"
-                                                id="Stroke-180"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-181"
                                                 d="M28,38.1928
                                                                                           C35.4928,38.1928
                                                                                           41.5682909,32.2268
@@ -496,12 +515,12 @@
                                                                                           C14.4317091,29.5638
                                                                                           16.9058909,33.6928
                                                                                           20.6436364,36.0668"
-                                                id="Stroke-181"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-182"
                                                 d="M35.6039855,35.8495
                                                                                           L37.5415855,39.8035
                                                                                           C37.8399127,40.3155
@@ -518,12 +537,12 @@
                                                                                           17.8611491,41.1945
                                                                                           18.7561309,39.7295
                                                                                           L20.6194036,36.0695"
-                                                id="Stroke-182"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-183"
                                                 d="M34.0384291,27.2099
                                                                                           C34.0384291,30.5049
                                                                                           31.3545018,33.1409
@@ -537,12 +556,12 @@
                                                                                           C31.3545018,21.2799
                                                                                           34.0384291,23.9159
                                                                                           34.0384291,27.2099"
-                                                id="Stroke-183"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Fill-184"
                                                 d="M28.2236945,17.9115
                                                                                           C27.5527127,17.9115
                                                                                           27.0314036,17.3985
@@ -556,11 +575,11 @@
                                                                                           C29.4159855,17.3255
                                                                                           28.8946764,17.9115
                                                                                           28.2236945,17.9115"
-                                                id="Fill-184"
                                                 fill="#FFFFFF"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-185"
                                                 d="M28,29.0405
                                                                                           C29.0293818,29.0405
                                                                                           29.8642909,28.2215
@@ -575,11 +594,10 @@
                                                                                           26.9706182,29.0405
                                                                                           28,29.0405
                                                                                           Z"
-                                                id="Stroke-185"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                             </g>
                                           </g>
                                         </g>
@@ -613,20 +631,17 @@
                                 >
                                   <defs>
                                     <linearGradient
+                                      id="linearGradient-1"
                                       x1="87.1217447%"
                                       y1="0%"
                                       x2="7.61205979%"
                                       y2="100%"
-                                      id="linearGradient-1"
                                     >
-                                      <stop
-                                        stop-color="#00BFFE"
-                                        offset="0%"
-                                      ></stop>
+                                      <stop stop-color="#00BFFE" offset="0%" />
                                       <stop
                                         stop-color="#4DECFF"
                                         offset="100%"
-                                      ></stop>
+                                      />
                                     </linearGradient>
                                   </defs>
                                   <g
@@ -677,8 +692,9 @@
                                                                                           0,27.644"
                                                 fill="url(#linearGradient-1)"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-314"
                                                 d="M17.1025,36.4804
                                                                                           L15.7765,36.4804
                                                                                           C13.1945,36.4804
@@ -709,30 +725,29 @@
                                                                                           41.8085,36.4104
                                                                                           39.2255,36.4104
                                                                                           L37.6205,36.4104"
-                                                id="Stroke-314"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-316"
                                                 d="M22.9648,36.4101
                                                                                           L31.6188,36.4101"
-                                                id="Stroke-316"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-318"
                                                 d="M27.292,35.7822
                                                                                           L27.292,24.7562"
-                                                id="Stroke-318"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <polyline
                                                 id="Stroke-320"
                                                 stroke="#FFFFFF"
@@ -745,7 +760,7 @@
                                                                                           24.756
                                                                                           31.6188
                                                                                           29.082"
-                                              ></polyline>
+                                              />
                                             </g>
                                           </g>
                                         </g>
@@ -783,7 +798,7 @@
                             Заявка на подключение
                           </p>
                           <div class="rt-space-top">
-                            <full-name></full-name>
+                            <full-name />
                           </div>
 
                           <div class="row">
@@ -791,20 +806,24 @@
                               class="rt-col-6 rt-col-md-3
                                                       rt-col-td-6"
                             >
-                              <div class="rt-space-top"><street></street></div>
-                            </div>
-                            <div
-                              class="rt-col-3 rt-col-md-3
-                                                      rt-col-td-3"
-                            >
-                              <div class="rt-space-top"><house></house></div>
+                              <div class="rt-space-top">
+                                <street />
+                              </div>
                             </div>
                             <div
                               class="rt-col-3 rt-col-md-3
                                                       rt-col-td-3"
                             >
                               <div class="rt-space-top">
-                                <apartment></apartment>
+                                <house />
+                              </div>
+                            </div>
+                            <div
+                              class="rt-col-3 rt-col-md-3
+                                                      rt-col-td-3"
+                            >
+                              <div class="rt-space-top">
+                                <apartment />
                               </div>
                             </div>
                           </div>
@@ -814,17 +833,21 @@
                                                       rt-col-td-6"
                             >
                               <div class="rt-space-top">
-                                <client-phone></client-phone>
+                                <client-phone />
                               </div>
                             </div>
                             <div
                               class="rt-col-6 rt-col-md-3
                                                       rt-col-td-3"
                             >
-                              <div class="rt-space-top"><email></email></div>
+                              <div class="rt-space-top">
+                                <email />
+                              </div>
                             </div>
                           </div>
-                          <div class="rt-space-top"><agree></agree></div>
+                          <div class="rt-space-top">
+                            <agree />
+                          </div>
                         </div>
                       </div>
                     </form>
@@ -835,16 +858,18 @@
                       class="d-flex d-space-between rt-space-top05
                                       rt-space-bottom"
                     >
-                      <div class="flex-end-bottom">Рассрочка</div>
+                      <div class="flex-end-bottom">
+                        Рассрочка
+                      </div>
                       <div class="d-flex">
-                        <rt-price :value="300"></rt-price>
+                        <rt-price :value="300" />
                       </div>
                     </div>
                   </template>
 
-                  <template slot="button"
-                    >Подключить</template
-                  >
+                  <template slot="button">
+                    Подключить
+                  </template>
                 </rt-card-buy>
               </order-form>
             </div>
@@ -888,7 +913,7 @@
                             class="rt-card-buy__image
                                             flex-fill"
                             style="background-image:url(/sites/default/files/img/videocamera.png)"
-                          ></div>
+                          />
                         </div>
                       </div>
                       <div
@@ -967,8 +992,9 @@
                                                                                     56,27.6113"
                                                 fill="#00C8F9"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-180"
                                                 d="M41.5679855,24.8671
                                                                                     C41.5679855,32.2621
                                                                                     35.4548218,38.1931
@@ -988,12 +1014,12 @@
                                                                                     C35.5291491,11.4681
                                                                                     41.5679855,17.4721
                                                                                     41.5679855,24.8671"
-                                                id="Stroke-180"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-181"
                                                 d="M28,38.1928
                                                                                     C35.4928,38.1928
                                                                                     41.5682909,32.2268
@@ -1007,12 +1033,12 @@
                                                                                     C14.4317091,29.5638
                                                                                     16.9058909,33.6928
                                                                                     20.6436364,36.0668"
-                                                id="Stroke-181"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-182"
                                                 d="M35.6039855,35.8495
                                                                                     L37.5415855,39.8035
                                                                                     C37.8399127,40.3155
@@ -1029,12 +1055,12 @@
                                                                                     17.8611491,41.1945
                                                                                     18.7561309,39.7295
                                                                                     L20.6194036,36.0695"
-                                                id="Stroke-182"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-183"
                                                 d="M34.0384291,27.2099
                                                                                     C34.0384291,30.5049
                                                                                     31.3545018,33.1409
@@ -1048,12 +1074,12 @@
                                                                                     C31.3545018,21.2799
                                                                                     34.0384291,23.9159
                                                                                     34.0384291,27.2099"
-                                                id="Stroke-183"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Fill-184"
                                                 d="M28.2236945,17.9115
                                                                                     C27.5527127,17.9115
                                                                                     27.0314036,17.3985
@@ -1067,11 +1093,11 @@
                                                                                     C29.4159855,17.3255
                                                                                     28.8946764,17.9115
                                                                                     28.2236945,17.9115"
-                                                id="Fill-184"
                                                 fill="#FFFFFF"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-185"
                                                 d="M28,29.0405
                                                                                     C29.0293818,29.0405
                                                                                     29.8642909,28.2215
@@ -1086,11 +1112,10 @@
                                                                                     26.9706182,29.0405
                                                                                     28,29.0405
                                                                                     Z"
-                                                id="Stroke-185"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                             </g>
                                           </g>
                                         </g>
@@ -1118,20 +1143,17 @@
                                 >
                                   <defs>
                                     <linearGradient
+                                      id="linearGradient-1"
                                       x1="87.1217447%"
                                       y1="0%"
                                       x2="7.61205979%"
                                       y2="100%"
-                                      id="linearGradient-1"
                                     >
-                                      <stop
-                                        stop-color="#00BFFE"
-                                        offset="0%"
-                                      ></stop>
+                                      <stop stop-color="#00BFFE" offset="0%" />
                                       <stop
                                         stop-color="#4DECFF"
                                         offset="100%"
-                                      ></stop>
+                                      />
                                     </linearGradient>
                                   </defs>
                                   <g
@@ -1182,8 +1204,9 @@
                                                                                     0,27.644"
                                                 fill="url(#linearGradient-1)"
                                                 fill-rule="evenodd"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-314"
                                                 d="M17.1025,36.4804
                                                                                     L15.7765,36.4804
                                                                                     C13.1945,36.4804
@@ -1214,30 +1237,29 @@
                                                                                     41.8085,36.4104
                                                                                     39.2255,36.4104
                                                                                     L37.6205,36.4104"
-                                                id="Stroke-314"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-316"
                                                 d="M22.9648,36.4101
                                                                                     L31.6188,36.4101"
-                                                id="Stroke-316"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <path
+                                                id="Stroke-318"
                                                 d="M27.292,35.7822
                                                                                     L27.292,24.7562"
-                                                id="Stroke-318"
                                                 stroke="#FFFFFF"
                                                 stroke-width="1.5"
                                                 stroke-linecap="round"
                                                 stroke-linejoin="round"
-                                              ></path>
+                                              />
                                               <polyline
                                                 id="Stroke-320"
                                                 stroke="#FFFFFF"
@@ -1250,7 +1272,7 @@
                                                                                     24.756
                                                                                     31.6188
                                                                                     29.082"
-                                              ></polyline>
+                                              />
                                             </g>
                                           </g>
                                         </g>
@@ -1288,7 +1310,7 @@
                             Заявка на подключение
                           </p>
                           <div class="rt-space-top">
-                            <full-name></full-name>
+                            <full-name />
                           </div>
 
                           <div class="row">
@@ -1296,20 +1318,24 @@
                               class="rt-col-6 rt-col-md-3
                                                 rt-col-td-6"
                             >
-                              <div class="rt-space-top"><street></street></div>
-                            </div>
-                            <div
-                              class="rt-col-3 rt-col-md-3
-                                                rt-col-td-3"
-                            >
-                              <div class="rt-space-top"><house></house></div>
+                              <div class="rt-space-top">
+                                <street />
+                              </div>
                             </div>
                             <div
                               class="rt-col-3 rt-col-md-3
                                                 rt-col-td-3"
                             >
                               <div class="rt-space-top">
-                                <apartment></apartment>
+                                <house />
+                              </div>
+                            </div>
+                            <div
+                              class="rt-col-3 rt-col-md-3
+                                                rt-col-td-3"
+                            >
+                              <div class="rt-space-top">
+                                <apartment />
                               </div>
                             </div>
                           </div>
@@ -1319,17 +1345,21 @@
                                                 rt-col-td-6"
                             >
                               <div class="rt-space-top">
-                                <client-phone></client-phone>
+                                <client-phone />
                               </div>
                             </div>
                             <div
                               class="rt-col-6 rt-col-md-3
                                                 rt-col-td-3"
                             >
-                              <div class="rt-space-top"><email></email></div>
+                              <div class="rt-space-top">
+                                <email />
+                              </div>
                             </div>
                           </div>
-                          <div class="rt-space-top"><agree></agree></div>
+                          <div class="rt-space-top">
+                            <agree />
+                          </div>
                         </div>
                       </div>
                     </form>
@@ -1340,16 +1370,18 @@
                       class="d-flex d-space-between rt-space-top05
                                 rt-space-bottom"
                     >
-                      <div class="flex-end-bottom">Покупка</div>
+                      <div class="flex-end-bottom">
+                        Покупка
+                      </div>
                       <div class="d-flex rt-font-light">
-                        <rt-price :only-price="true" :value="4990"></rt-price>
+                        <rt-price :only-price="true" :value="4990" />
                       </div>
                     </div>
                   </template>
 
-                  <template slot="button"
-                    >Подключить</template
-                  >
+                  <template slot="button">
+                    Подключить
+                  </template>
                 </rt-card-buy>
               </order-form>
             </div>

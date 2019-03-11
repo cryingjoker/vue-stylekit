@@ -1,9 +1,17 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title"><h1 class="rt-font-hero">RadioButton</h1></div>
+      <div class="app-title">
+        <h1 class="rt-font-hero">
+          RadioButton
+        </h1>
+      </div>
       <div class="app-body">
-        <div class="app-row"><p class="rt-font-h3">radiobutton</p></div>
+        <div class="app-row">
+          <p class="rt-font-h3">
+            radiobutton
+          </p>
+        </div>
         <div class="rt-space-bottom2">testModel = {{ testModel }}</div>
 
         <pre-code
@@ -11,15 +19,15 @@
         />
         <div class="app-row row">
           <div class="rt-col">
-            <rt-radio-button :is-disabled="true" name="type"
-              >Огонь</rt-radio-button
-            >
-            <rt-radio-button :is-disabled="true" name="type"
-              >Вода</rt-radio-button
-            >
-            <rt-radio-button :is-disabled="true" name="type"
-              >Медные трубы</rt-radio-button
-            >
+            <rt-radio-button :is-disabled="true" name="type">
+              Огонь
+            </rt-radio-button>
+            <rt-radio-button :is-disabled="true" name="type">
+              Вода
+            </rt-radio-button>
+            <rt-radio-button :is-disabled="true" name="type">
+              Медные трубы
+            </rt-radio-button>
           </div>
         </div>
       </div>

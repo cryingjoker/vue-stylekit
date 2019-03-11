@@ -36,7 +36,7 @@ export default {
       if(vComponent.checkIfActive && typeof vComponent.checkIfActive === 'function'){
         vComponent.checkIfActive();
       }
-    })
+    });
   },
   updated(){
     this.bindChilds();

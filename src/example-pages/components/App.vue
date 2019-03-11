@@ -5,42 +5,43 @@
     :class="{ 'app--hide-scroll': showMenu }"
     class="app"
   >
-    <div class="menu-trigger md-d-block d-none" @click="openMenu">Menu</div>
+    <div class="menu-trigger md-d-block d-none" @click="openMenu">
+      Menu
+    </div>
 
     <div :class="{ 'grid--active': showGrid }" class="grid">
       <div class="row">
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
-        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col"/>
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
-        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
-        <div class="rt-col-1 demo-col md-d-none td-d-none"/>
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
+        <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
+        <div class="rt-col-1 rt-col-td-1 demo-col md-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
+        <div class="rt-col-1 demo-col md-d-none td-d-none" />
       </div>
     </div>
     <keep-alive>
-      <app-menu :show-menu="showMenu"
-                :code-viewer-toggle="codeViewerToggle"
-                :code-viewer="codeViewer"
-                :show-grid="showGrid"
-                :grid-toggle="gridToggle"
-      >
-
-      </app-menu>
+      <app-menu
+        :show-menu="showMenu"
+        :code-viewer-toggle="codeViewerToggle"
+        :code-viewer="codeViewer"
+        :show-grid="showGrid"
+        :grid-toggle="gridToggle"
+      />
       <div class="aside-menu">
-
         <div class="row">
           <div class="d-flex">
             <rt-switch
               :checked="codeViewer"
               class="code-switcher"
               @change="codeViewerToggle"
-            >Show code viewer
+            >
+              Show code viewer
             </rt-switch>
           </div>
           <div class="d-flex">
@@ -48,7 +49,8 @@
               :checked="showGrid"
               class="grid-switcher"
               @change="gridToggle"
-            >Grid
+            >
+              Grid
             </rt-switch>
           </div>
         </div>
@@ -145,14 +147,17 @@
         </div>
         <!-- <div class="aside-menu__item" to="/color">Color list</div> -->
         <div class="aside-menu__item">
-          <p class="aside-menu__submenu-title">Forms</p>
+          <p class="aside-menu__submenu-title">
+            Forms
+          </p>
           <div class="aside-sub-menu">
             <div class="aside-menu__item">
               <router-link
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/checkbox"
-              >Checkbox
+              >
+                Checkbox
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -160,7 +165,8 @@
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/radiobutton"
-              >Radiobutton
+              >
+                Radiobutton
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -186,7 +192,8 @@
                 class="aside-menu__link"
                 active-class="aside-menu__link--active"
                 to="/textarea"
-              >Textarea
+              >
+                Textarea
               </router-link>
             </div>
             <div class="aside-menu__item">
@@ -198,14 +205,14 @@
                 Select
               </router-link>
             </div>
-
           </div>
           <div class="aside-menu__item">
             <router-link
               class="aside-menu__link"
               active-class="aside-menu__link--active"
               to="/list"
-            >List elements
+            >
+              List elements
             </router-link>
           </div>
           <div class="aside-menu__item">
@@ -213,7 +220,8 @@
               class="aside-menu__link"
               active-class="aside-menu__link--active"
               to="/scroll-tabs"
-            >Scroll Tabs
+            >
+              Scroll Tabs
             </router-link>
           </div>
         </div>
@@ -223,14 +231,16 @@
               class="aside-menu__link"
               active-class="aside-menu__link--active"
               to="/tags"
-            >Tags
+            >
+              Tags
             </router-link>
           </div>
           <router-link
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/color-line-text"
-          >Color Line Text
+          >
+            Color Line Text
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -247,7 +257,8 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/price"
-          >Price
+          >
+            Price
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -255,7 +266,8 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/tabs"
-          >Tabs
+          >
+            Tabs
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -263,7 +275,8 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/table"
-          >Table
+          >
+            Table
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -271,7 +284,8 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/fullscreen"
-          >Fullscreen Image
+          >
+            Fullscreen Image
           </router-link>
         </div>
         <div class="aside-menu__item">
@@ -279,11 +293,14 @@
             class="aside-menu__link"
             active-class="aside-menu__link--active"
             to="/download-content"
-          >Download content
+          >
+            Download content
           </router-link>
         </div>
         <div class="aside-menu__item">
-          <p class="aside-menu__submenu-title">Complex elements</p>
+          <p class="aside-menu__submenu-title">
+            Complex elements
+          </p>
           <div class="aside-sub-menu">
             <div class="aside-menu__item">
               <router-link
@@ -304,7 +321,9 @@
           </div>
         </div>
         <div class="aside-menu__item">
-          <p class="aside-menu__submenu-title">Experiment elements</p>
+          <p class="aside-menu__submenu-title">
+            Experiment elements
+          </p>
           <div class="aside-sub-menu">
             <div class="aside-menu__item">
               <router-link
@@ -334,7 +353,9 @@
           </router-link>
         </div>
         <div class="aside-menu__item">
-          <p class="aside-menu__submenu-title">Promo pages</p>
+          <p class="aside-menu__submenu-title">
+            Promo pages
+          </p>
           <div class="aside-sub-menu">
             <div class="aside-menu__item">
               <router-link
@@ -374,165 +395,191 @@
       </div>
     </keep-alive>
 
-    <router-view/>
+    <router-view />
     <div class="section-switcher">
-      <p class="section-switcher__label">show mode: <span class="section-switcher__label-value">{{siteStatus}}</span></p>
-      <rt-radio-button name="b-section" :checked="'b2b' === siteStatus" value="b2b" @change="changeSection">B2B</rt-radio-button>
-      <rt-radio-button name="b-section" :checked="'b2c' === siteStatus" value="b2c" @change="changeSection">B2C</rt-radio-button>
-      <rt-radio-button name="b-section" :checked="'joint' === siteStatus" value="joint" @change="changeSection">Joint</rt-radio-button>
+      <p class="section-switcher__label">
+        show mode:
+        <span class="section-switcher__label-value">{{ siteStatus }}</span>
+      </p>
+      <rt-radio-button
+        name="b-section"
+        :checked="'b2b' === siteStatus"
+        value="b2b"
+        @change="changeSection"
+      >
+        B2B
+      </rt-radio-button>
+      <rt-radio-button
+        name="b-section"
+        :checked="'b2c' === siteStatus"
+        value="b2c"
+        @change="changeSection"
+      >
+        B2C
+      </rt-radio-button>
+      <rt-radio-button
+        name="b-section"
+        :checked="'joint' === siteStatus"
+        value="joint"
+        @change="changeSection"
+      >
+        Joint
+      </rt-radio-button>
     </div>
     <rt-switch
       :checked="isDarkTheme"
       class="dark-theme-switcher"
       @change="switchTheme"
-    >Dark theme
+    >
+      Dark theme
     </rt-switch>
-
   </div>
 </template>
 
 <script>
-  import VueRtStyle from "../../lib/index";
-  import componentsList from "../componentsList";
+import VueRtStyle from "../../lib/index";
+import componentsList from "../componentsList";
 
-  if (window) {
-    window.VueRtStyle = {};
-    window.VueRtStyle.version = VueRtStyle.version;
-  }
+if (window) {
+  window.VueRtStyle = {};
+  window.VueRtStyle.version = VueRtStyle.version;
+}
 
-  const componentDirectives = {};
-  componentDirectives[VueRtStyle.directives.SwipeRight.name] =
-    VueRtStyle.directives.SwipeRight;
-  componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
-    VueRtStyle.directives.SwipeLeft;
-  componentDirectives[VueRtStyle.directives.OutsideClickDirective.name] =
-    VueRtStyle.directives.OutsideClickDirective;
+const componentDirectives = {};
+componentDirectives[VueRtStyle.directives.SwipeRight.name] =
+  VueRtStyle.directives.SwipeRight;
+componentDirectives[VueRtStyle.directives.SwipeLeft.name] =
+  VueRtStyle.directives.SwipeLeft;
+componentDirectives[VueRtStyle.directives.OutsideClickDirective.name] =
+  VueRtStyle.directives.OutsideClickDirective;
 
-  export default {
-    name: "App",
-    components: componentsList,
-    directives: componentDirectives,
-    data: () => ({
-      showMenu: false,
-      isPromo: false,
-      showGrid: false,
-      isDarkTheme: false,
-      codeViewer: false,
-      siteStatus: "joint"
-    }),
-    watch: {
-      $route(to, from) {
-        this.showMenu = false;
-        setTimeout(function() {
-          fixSectionChange();
-        },50);
-      }
+export default {
+  name: "App",
+  components: componentsList,
+  directives: componentDirectives,
+  data: () => ({
+    showMenu: false,
+    isPromo: false,
+    showGrid: false,
+    isDarkTheme: false,
+    codeViewer: false,
+    siteStatus: "joint"
+  }),
+  watch: {
+    $route(to, from) {
+      this.showMenu = false;
+      setTimeout(function() {
+        fixSectionChange();
+      }, 50);
+    }
+  },
+  created() {
+    if (this.$route.path.search("promo") >= 0) {
+      this.isPromo = true;
+    }
+  },
+  mounted() {
+    if (!!+localStorage.getItem("rt-dark")) {
+      document.body.classList.add("rt-dark-theme");
+
+      this.isDarkTheme = true;
+    }
+    if (!!+localStorage.getItem("rt-code-viewer")) {
+      document.body.classList.add("rt-code-viewer");
+      this.codeViewer = true;
+    }
+  },
+  methods: {
+    openMenu() {
+      this.showMenu = true;
     },
-    created() {
-      if (this.$route.path.search("promo") >= 0) {
-        this.isPromo = true;
-      }
+    closeMenu() {
+      this.showMenu = false;
     },
-    mounted() {
-      if (!!+localStorage.getItem("rt-dark")) {
-        document.body.classList.add("rt-dark-theme");
+    gridToggle() {
+      this.showGrid = !this.showGrid;
+    },
+    codeViewerToggle(event) {
+      const isChecked = event.target.checked;
 
-        this.isDarkTheme = true;
-      }
-      if (!!+localStorage.getItem("rt-code-viewer")) {
+      if (isChecked) {
+        localStorage.setItem("rt-code-viewer", 1);
         document.body.classList.add("rt-code-viewer");
-        this.codeViewer = true;
+      } else {
+        localStorage.setItem("rt-code-viewer", 0);
+        document.body.classList.remove("rt-code-viewer");
       }
+      this.codeViewer = isChecked;
     },
-    methods: {
-      openMenu() {
-        this.showMenu = true;
-      },
-      closeMenu() {
-        this.showMenu = false;
-      },
-      gridToggle() {
-        this.showGrid = !this.showGrid;
-      },
-      codeViewerToggle(event) {
-        const isChecked = event.target.checked;
 
-        if(isChecked){
-          localStorage.setItem("rt-code-viewer", 1);
-          document.body.classList.add("rt-code-viewer");
-        }else{
-          localStorage.setItem("rt-code-viewer", 0);
-          document.body.classList.remove("rt-code-viewer");
-        }
-        this.codeViewer = isChecked;
-      },
+    switchTheme(event) {
+      const isChecked = event.target.checked;
+      const bodyClassList = document.body.classList.value.split(" ");
+      if (isChecked) {
+        bodyClassList.push("rt-dark-theme");
+        localStorage.setItem("rt-dark", 1);
+        this.isDarkTheme = true;
+      } else {
+        bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1);
+        localStorage.setItem("rt-dark", 0);
+        this.isDarkTheme = false;
+      }
+      document.body.classList = bodyClassList.join(" ");
+    },
 
-      switchTheme(event) {
-        const isChecked = event.target.checked;
-        const bodyClassList = document.body.classList.value.split(" ");
-        if (isChecked) {
-          bodyClassList.push("rt-dark-theme");
-          localStorage.setItem("rt-dark", 1);
-          this.isDarkTheme = true;
-        } else {
-          bodyClassList.splice(bodyClassList.indexOf("rt-dark-theme"), 1);
-          localStorage.setItem("rt-dark", 0);
-          this.isDarkTheme = false;
-        }
-        document.body.classList = bodyClassList.join(" ");
-      },
-
-      changeSection(value) {
-        this.siteStatus = value;
-        switch(this.siteStatus) {
-          case 'b2b':
-            document.body.classList.remove('show-b2c');
-            document.body.classList.add('show-b2b');
-            break;
-          case 'b2c':
-            document.body.classList.remove('show-b2b');
-            document.body.classList.add('show-b2c');
-            break;
-          case 'joint':
-            document.body.classList.add('show-b2c','show-b2b');
-            break;
-        }
+    changeSection(value) {
+      this.siteStatus = value;
+      switch (this.siteStatus) {
+        case "b2b":
+          document.body.classList.remove("show-b2c");
+          document.body.classList.add("show-b2b");
+          break;
+        case "b2c":
+          document.body.classList.remove("show-b2b");
+          document.body.classList.add("show-b2c");
+          break;
+        case "joint":
+          document.body.classList.add("show-b2c", "show-b2b");
+          break;
       }
     }
-  };
+  }
+};
 
-  window.onload = function(){
-    let buttons = document.querySelector('.section-switcher').getElementsByClassName('radio-button-element');
-    for(let i = 0; i < buttons.length; i++) {
-      if(buttons[i].getAttribute('value') === 'joint') {
+window.onload = function() {
+  let buttons = document
+    .querySelector(".section-switcher")
+    .getElementsByClassName("radio-button-element");
+  for (let i = 0; i < buttons.length; i++) {
+    if (buttons[i].getAttribute("value") === "joint") {
+      buttons[i].click();
+    }
+  }
+};
+
+function fixSectionChange() {
+  let buttons = document
+    .querySelector(".section-switcher")
+    .getElementsByClassName("radio-button-element");
+  if (document.body.classList.contains("show-b2b")) {
+    if (document.body.classList.contains("show-b2c")) {
+      let searchedValue = "joint";
+      detectButtons(searchedValue);
+    } else {
+      let searchedValue = "b2b";
+      detectButtons(searchedValue);
+    }
+  } else if (document.body.classList.contains("show-b2c")) {
+    let searchedValue = "b2c";
+    detectButtons(searchedValue);
+  }
+
+  function detectButtons(value) {
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].getAttribute("value") === value) {
         buttons[i].click();
       }
     }
-  };
-
-  function fixSectionChange() {
-    let buttons = document.querySelector('.section-switcher').getElementsByClassName('radio-button-element');
-    if(document.body.classList.contains('show-b2b')) {
-      if(document.body.classList.contains('show-b2c')){
-        let searchedValue = 'joint';
-        detectButtons(searchedValue);
-      } else {
-        let searchedValue = 'b2b';
-        detectButtons(searchedValue);
-      }
-    } else if(document.body.classList.contains('show-b2c')) {
-      let searchedValue = 'b2c';
-      detectButtons(searchedValue);
-    }
-
-    function detectButtons(value) {
-      for(let i = 0; i < buttons.length; i++) {
-        if(buttons[i].getAttribute('value') === value) {
-          buttons[i].click();
-        }
-      }
-    }
   }
-
-
+}
 </script>

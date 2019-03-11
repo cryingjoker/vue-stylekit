@@ -17,11 +17,15 @@ export default {
   },
   beforeDestroy() {
   },
+  mounted(){
+    this.findAllChildren(this.$children);
+
+  },
   methods: {
     emitToAllChildren(vNodeArray,event){
       vNodeArray.forEach((vNode)=> {
         if (vNode && vNode.$vnode && vNode.$vnode.tag.search('-RtSwitch') > 0) {
-          vNode.$emit('emittoswitcher',event)
+          vNode.$emit('emittoswitcher',event);
         }
         if (vNode.$children) {
           this.emitToAllChildren(vNode.$children,event);
@@ -43,15 +47,15 @@ export default {
             }
           }
         }
-      })
-      this.$emit('change',responseArray)
+      });
+      this.$emit('change',responseArray);
     },
     updateAllChildren(props){
       this.$children.forEach((vNode)=>{
         if('changeFromParent' in vNode ){
-          vNode.changeFromParent(props)
+          vNode.changeFromParent(props);
         }
-      })
+      });
     },
     updateSwitcherData(switcherData){
       this.$set(this.switcherData,switcherData._uid,{
@@ -68,13 +72,13 @@ export default {
         if(switcherData.value !== '#allparams' && !switcherData.checked){
           this.switcherNamesMap[switcherData.name].forEach((uid)=>{
             if(this.switcherData[uid].value === '#allparams'){
-              this.$set(this.switcherData[uid],'checked',false)
-              const req = {}
+              this.$set(this.switcherData[uid],'checked',false);
+              const req = {};
               req[uid] = this.switcherData[uid];
               this.emitToAllChildren(this.$children,req);
-              return false
+              return false;
             }
-          })
+          });
         }
       }
       this.emitSelectedData();
@@ -98,24 +102,20 @@ export default {
           this.$set(this.switcherNamesMap,vNode.fieldName,switcherNames);
           setTimeout(()=>{
             this.emitSelectedData();
-          },1000)
+          },1000);
         }
 
         if(vNode.$children){
           this.findAllChildren(vNode.$children);
         }
-      })
+      });
     }
-
-  },
-  mounted(){
-    this.findAllChildren(this.$children);
 
   },
   render(h){
     return <div class="d-static">
       {this.$slots.default}
-    </div>
+    </div>;
   }
 };
 </script>

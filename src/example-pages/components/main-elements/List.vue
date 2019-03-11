@@ -1,7 +1,11 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title row"><h1 class="col rt-font-hero">List elements</h1></div>
+      <div class="app-title row">
+        <h1 class="col rt-font-hero">
+          List elements
+        </h1>
+      </div>
       <div class="app-body d-flex row">
         <div class="rt-col rt-col-4 rt-col-td-3 rt-col-md-3">
           <pre-code
@@ -38,61 +42,127 @@
             <li class=&quot;rt-numeric-list__item rt-font-paragraph&quot;>List item 13</li>
           </ul>
           </div>
-          "/>
+          "
+          />
         </div>
         <div class="rt-col rt-col-8 rt-col-td-3 rt-col-md-3">
-          <h3 class="rt-font-bold rt-space-bottom15">Часто задаваемые вопросы</h3>
+          <h3 class="rt-font-bold rt-space-bottom15">
+            Часто задаваемые вопросы
+          </h3>
           <ul class="rtb-faq-unordered-list">
             <li class="rtb-faq-unordered-list__item">
-              <rt-annotation label="Как расторгнуть договор, если нет возможности пойти в офис?">
+              <rt-annotation
+                label="Как расторгнуть договор, если нет возможности пойти в офис?"
+              >
                 <template slot="content">
-                  <p class="rt-font-small-paragraph">При наличии технической возможности мы организуем предоставление услуг по новому адресу без
-                    расторжения договора. Подробнее об акции «Переезд».</p>
-                  <p class="rt-font-small-paragraph rt-space-top rt-space-bottom">В этом случае действия зависят от вашей ситуации:</p>
+                  <p class="rt-font-small-paragraph">
+                    При наличии технической возможности мы организуем
+                    предоставление услуг по новому адресу без Подробнее об акции
+                    «Переезд».
+                  </p>
+                  <p
+                    class="rt-font-small-paragraph rt-space-top rt-space-bottom"
+                  >
+                    В этом случае действия зависят от вашей ситуации:
+                  </p>
                   <ul class="rt-numeric-list">
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной очень очень очень длинной
-                      строки 16px, слишком длинная строка</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной очень очень очень длинной строки 16px,
+                      слишком длинная строка
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
                   </ul>
                 </template>
               </rt-annotation>
             </li>
             <li class="rtb-faq-unordered-list__item">
-              <rt-annotation label="Как расторгнуть договор, если нет возможности пойти в офис?">
+              <rt-annotation
+                label="Как расторгнуть договор, если нет возможности пойти в офис?"
+              >
                 <template slot="content">
-                  <p class="rt-font-small-paragraph">При наличии технической возможности мы организуем предоставление услуг по новому адресу без
-                    расторжения договора. Подробнее об акции «Переезд».</p>
-                  <p class="rt-font-small-paragraph rt-space-top rt-space-bottom">В этом случае действия зависят от вашей ситуации:</p>
+                  <p class="rt-font-small-paragraph">
+                    При наличии технической возможности мы организуем
+                    предоставление услуг по новому адресу без Подробнее об акции
+                    «Переезд».
+                  </p>
+                  <p
+                    class="rt-font-small-paragraph rt-space-top rt-space-bottom"
+                  >
+                    В этом случае действия зависят от вашей ситуации:
+                  </p>
                   <ul class="rt-numeric-list">
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной очень очень очень длинной
-                      строки 16px, слишком длинная строка</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной очень очень очень длинной строки 16px,
+                      слишком длинная строка
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
                   </ul>
                 </template>
               </rt-annotation>
             </li>
             <li class="rtb-faq-unordered-list__item">
-              <rt-annotation label="Как расторгнуть договор, если нет возможности пойти в офис?">
+              <rt-annotation
+                label="Как расторгнуть договор, если нет возможности пойти в офис?"
+              >
                 <template slot="content">
-                  <p class="rt-font-small-paragraph">При наличии технической возможности мы организуем предоставление услуг по новому адресу без
-                    расторжения договора. Подробнее об акции «Переезд».</p>
-                  <p class="rt-font-small-paragraph rt-space-top rt-space-bottom">В этом случае действия зависят от вашей ситуации:</p>
+                  <p class="rt-font-small-paragraph">
+                    При наличии технической возможности мы организуем
+                    предоставление услуг по новому адресу без расторжения
+                    договора. Подробнее об акции «Переезд».
+                  </p>
+                  <p
+                    class="rt-font-small-paragraph rt-space-top rt-space-bottom"
+                  >
+                    В этом случае действия зависят от вашей ситуации:
+                  </p>
                   <ul class="rt-numeric-list">
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-numeric-list__item rt-font-small-paragraph">Пример обычной очень очень очень длинной
-                      строки 16px, слишком длинная строка</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
-                    <li class="rt-ordered-list__item rt-font-small-paragraph">Пример обычной строки 16px</li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-numeric-list__item rt-font-small-paragraph">
+                      Пример обычной очень очень очень длинной строки 16px,
+                      слишком длинная строка
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
+                    <li class="rt-ordered-list__item rt-font-small-paragraph">
+                      Пример обычной строки 16px
+                    </li>
                   </ul>
                 </template>
               </rt-annotation>
@@ -112,8 +182,7 @@ export default {
   data: () => ({
     documentation: {}
   }),
-  mounted() {
-  },
+  mounted() {},
   created() {},
   methods: {}
 };

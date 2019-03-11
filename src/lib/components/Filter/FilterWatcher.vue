@@ -77,12 +77,12 @@ export default {
               }
             } else {
               if(!simpleOptionsMap[optionName]){
-                simpleOptionsMap[optionName] = []
+                simpleOptionsMap[optionName] = [];
               }
               if(Array.isArray(value)){
                 simpleOptionsMap[optionName] = simpleOptionsMap[optionName].concat(value);
               }else{
-                simpleOptionsMap[optionName].push(value)
+                simpleOptionsMap[optionName].push(value);
               }
             }
           });

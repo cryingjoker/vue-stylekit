@@ -1,7 +1,11 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title row"><h1 class="col rt-font-hero">Price</h1></div>
+      <div class="app-title row">
+        <h1 class="col rt-font-hero">
+          Price
+        </h1>
+      </div>
       <div class="app-body">
         <div class="row">
           <div class="rt-col-4 rt-col-md-3 is-b2c">
@@ -10,9 +14,7 @@
             />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
-            <pre-code
-              text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; />"
-            />
+            <pre-code text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; />" />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code text="<rt-price :value=&quot;750.231&quot; />" />

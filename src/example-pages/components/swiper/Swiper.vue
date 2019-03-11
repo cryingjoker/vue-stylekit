@@ -5,7 +5,9 @@
         <div class="app-title">
           <div class="row">
             <h1 class="rt-font-hero rt-col">
-              Swiper <span class="rt-code rt-font-h3 rt-col"> .rt-swiper .rt-slide</span>
+              Swiper
+              <span class="rt-code rt-font-h3 rt-col">
+                .rt-swiper .rt-slide</span>
             </h1>
           </div>
         </div>
@@ -20,15 +22,23 @@
               <div class="d-flex flex-row">
                 <div>
                   <p>Антивирус</p>
-                  <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                  <p class="color-main05">
+                    Kaspersky Internet Security, месяц в подарок
+                  </p>
                 </div>
               </div>
             </template>
           </rt-row-list-item>
         </rt-row-list>
-        <rt-price class="rt-space-vertical" time-interval="мес" is-option :value="i * 1000">
-        </rt-price>
-        <rt-button class="rt-button-orange">Подключить</rt-button>
+        <rt-price
+          class="rt-space-vertical"
+          time-interval="мес"
+          is-option
+          :value="i * 1000"
+        />
+        <rt-button class="rt-button-orange">
+          Подключить
+        </rt-button>
       </rt-slide>
     </rt-swiper>
     <div class="rt-container">

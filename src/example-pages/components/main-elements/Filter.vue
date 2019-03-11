@@ -2,64 +2,118 @@
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
-        <div class="row"><h1 class="rt-font-hero rt-col">Filter</h1></div>
+        <div class="row">
+          <h1 class="rt-font-hero rt-col">
+            Filter
+          </h1>
+        </div>
       </div>
       <div class="app-body">
         <div class="rt-font-center rt-space-bottom15">
           <rt-button
             class="rt-button-small filterButton rt-button-purple-border d-none td-d-inline"
-          >Показать все фильтры
+          >
+            Показать все фильтры
           </rt-button>
         </div>
 
         <div class="rt-container">
           <div class="rt-col rt-space-vertical2">
-            <h1 class="rt-font-h3">Защита в интернете от&nbsp;Ростелекома</h1>
+            <h1 class="rt-font-h3">
+              Защита в интернете от&nbsp;Ростелекома
+            </h1>
           </div>
           <div class="rt-font-center rt-space-bottom15">
-            <rt-button class="rt-button-small filterButton rt-button-purple-border d-none td-d-inline">Показать все
-              фильтры
+            <rt-button
+              class="rt-button-small filterButton rt-button-purple-border d-none td-d-inline"
+            >
+              Показать все фильтры
             </rt-button>
           </div>
 
-          <rt-resize-content-height class="row" :group-size="2" :tablet-group-size="2" :mobile-group-size="0"
-                                    :mobile-not-resize="true" :query-selectors-names="[
-        '.rt-font-h4',
-        '.rt-card__body',
-        '.rt-card__border-content',
-        '.rt-card-list'
-      ]">
-            <rt-filter :change-url="true" class="rt-col-12" :dont-clear-props="['subscription']">
+          <rt-resize-content-height
+            class="row"
+            :group-size="2"
+            :tablet-group-size="2"
+            :mobile-group-size="0"
+            :mobile-not-resize="true"
+            :query-selectors-names="[
+              '.rt-font-h4',
+              '.rt-card__body',
+              '.rt-card__border-content',
+              '.rt-card-list'
+            ]"
+          >
+            <rt-filter
+              :change-url="true"
+              class="rt-col-12"
+              :dont-clear-props="['subscription']"
+            >
               <div class="row">
                 <div class="rt-col-8 rt-col-td-6">
                   <rt-filter-caller :clear-zero="true">
                     <rt-tag-list class="row">
-                      <rt-tag :set-to-filter="true" value="1">Все</rt-tag>
-                      <rt-tag :set-to-filter="true" value="{'platform':'Android'}"><span value="{'platform':'Android'}">Для смартфонов Android</span></rt-tag>
-                      <rt-tag :set-to-filter="true" value="{'platform':'Mac'}"><span value="{'platform':'Mac'}">Для Macbook</span></rt-tag>
-                      <rt-tag :set-to-filter="true" value="">Защита для детей</rt-tag>
-                      <rt-tag :set-to-filter="true" value="{'creator':'eset'}"><span value="{'creator':'eset'}">Esset</span></rt-tag>
-                      <rt-tag :set-to-filter="true" value="{'platform':['Android','Windows']}"><span value="{'platform':['Android','Windows']}">Два устройств Windows и
-                        Android</span></rt-tag>
-                      <rt-tag :set-to-filter="true" value="{'creator':'kaspersky'}"><span value="{'creator':'kaspersky'}">Акция Kaspersky</span></rt-tag>
+                      <rt-tag :set-to-filter="true" value="1">
+                        Все
+                      </rt-tag>
+                      <rt-tag
+                        :set-to-filter="true"
+                        value="{'platform':'Android'}"
+                      >
+                        <span value="{'platform':'Android'}"
+                          >Для смартфонов Android</span
+                        >
+                      </rt-tag>
+                      <rt-tag :set-to-filter="true" value="{'platform':'Mac'}">
+                        <span value="{'platform':'Mac'}">Для Macbook</span>
+                      </rt-tag>
+                      <rt-tag :set-to-filter="true" value="">
+                        Защита для детей
+                      </rt-tag>
+                      <rt-tag :set-to-filter="true" value="{'creator':'eset'}">
+                        <span value="{'creator':'eset'}">Esset</span>
+                      </rt-tag>
+                      <rt-tag
+                        :set-to-filter="true"
+                        value="{'platform':['Android','Windows']}"
+                      >
+                        <span value="{'platform':['Android','Windows']}"
+                          >Два устройств Windows и Android</span
+                        >
+                      </rt-tag>
+                      <rt-tag
+                        :set-to-filter="true"
+                        value="{'creator':'kaspersky'}"
+                      >
+                        <span value="{'creator':'kaspersky'}"
+                          >Акция Kaspersky</span
+                        >
+                      </rt-tag>
                     </rt-tag-list>
                   </rt-filter-caller>
 
                   <div class="row">
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="['kaspersky', '1', 'only month', ['Windows']]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="['kaspersky', '1', 'only month', ['Windows']]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Anti-Virus
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -71,7 +125,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -82,33 +139,38 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Защита от вирусов, трояских программ и
-                                  червей
+                                  Защита от вирусов, трояских программ и червей
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Защита от шпионского и рекламного
-                                  программного обеспечения
+                                  Защита от шпионского и рекламного программного
+                                  обеспечения
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -121,7 +183,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -135,40 +199,50 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="99" time-interval="мес."></rt-price>
+                              <rt-price :value="99" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'kaspersky',
-                  'less than 3',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux', 'iOS']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'kaspersky',
+                        'less than 3',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux', 'iOS']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Internet Security 2 устройства
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
-                            Надежное и удобное решение для защиты вашей жизни
-                            в интернете, которое включает в себя родительский
+                            Надежное и удобное решение для защиты вашей жизни в
+                            интернете, которое включает в себя родительский
                             контроль, дополнительный уровень защиты финансов,
                             конфендициальность и защиту общения
                           </p>
@@ -177,7 +251,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -188,7 +265,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -201,7 +280,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -213,7 +294,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -225,7 +308,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -237,7 +322,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -251,40 +338,54 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="0" :old-value="139" time-interval="мес."></rt-price>
+                              <rt-price
+                                :value="0"
+                                :old-value="139"
+                                time-interval="мес."
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'kaspersky',
-                  'less than 3',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux', 'iOS']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'kaspersky',
+                        'less than 3',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux', 'iOS']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Internet Security 2 устройства
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
-                            Надежное и удобное решение для защиты вашей жизни
-                            в интернете, которое включает в себя родительский
+                            Надежное и удобное решение для защиты вашей жизни в
+                            интернете, которое включает в себя родительский
                             контроль, дополнительный уровень защиты финансов,
                             конфендициальность и защиту общения
                           </p>
@@ -293,7 +394,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -304,7 +408,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -317,7 +423,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -329,7 +437,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -341,7 +451,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -353,7 +465,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -367,40 +481,54 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="1600" :old-value="1800" time-interval="год"></rt-price>
+                              <rt-price
+                                :value="1600"
+                                :old-value="1800"
+                                time-interval="год"
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'platform',
-                  'count',
-                  'subscription'
-                ]"
-                                       :values="[
-                  'kaspersky',
-                  ['Windows', 'Mac', 'Linux', 'iOS'],
-                  'less than 4,',
-                  'only month'
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'platform',
+                        'count',
+                        'subscription'
+                      ]"
+                      :values="[
+                        'kaspersky',
+                        ['Windows', 'Mac', 'Linux', 'iOS'],
+                        'less than 4,',
+                        'only month'
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Internet Security 3 устройства
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
-                            Надежное и удобное решение для защиты вашей жизни
-                            в интернете, которое включает в себя родительский
+                            Надежное и удобное решение для защиты вашей жизни в
+                            интернете, которое включает в себя родительский
                             контроль, дополнительный уровень защиты финансов,
                             конфендициальность и защиту общения.
                           </p>
@@ -409,7 +537,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -420,7 +551,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -433,7 +566,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -445,7 +580,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -457,7 +594,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -469,7 +608,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -483,40 +624,50 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="159" time-interval="мес."></rt-price>
+                              <rt-price :value="159" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'kaspersky',
-                  '1',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux', 'iOS']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'kaspersky',
+                        '1',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux', 'iOS']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Safe Kids
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
-                            Новое мультиплатформенное решение для защиты детей
-                            в интернете, мобильных сетях, на компьютерах и
+                            Новое мультиплатформенное решение для защиты детей в
+                            интернете, мобильных сетях, на компьютерах и
                             мобильных устройствах.
                           </p>
                         </template>
@@ -524,7 +675,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -535,7 +689,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -548,7 +704,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -560,20 +718,24 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Отслеживание звонков и SMS ребенка на
-                                  телефоне Android
+                                  Отслеживание звонков и SMS ребенка на телефоне
+                                  Android
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -586,7 +748,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -598,7 +762,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -613,40 +779,54 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="0" :old-value="99" time-interval="мес."></rt-price>
+                              <rt-price
+                                :value="0"
+                                :old-value="99"
+                                time-interval="мес."
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'kaspersky',
-                  '1',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux', 'iOS']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'kaspersky',
+                        '1',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux', 'iOS']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/img/logo/Kaspersky_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/img/logo/Kaspersky_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Kaspersky Safe Kids
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
-                            Новое мультиплатформенное решение для защиты детей
-                            в интернете, мобильных сетях, на компьютерах и
+                            Новое мультиплатформенное решение для защиты детей в
+                            интернете, мобильных сетях, на компьютерах и
                             мобильных устройствах.
                           </p>
                         </template>
@@ -654,7 +834,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -665,7 +848,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -678,7 +863,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -690,20 +877,24 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Отслеживание звонков и SMS ребенка на
-                                  телефоне Android
+                                  Отслеживание звонков и SMS ребенка на телефоне
+                                  Android
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -716,7 +907,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -728,7 +921,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -743,35 +938,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="900" time-interval="год"></rt-price>
+                              <rt-price :value="900" time-interval="год" />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'drweb',
-                  '1',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'drweb',
+                        '1',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="https://www.old.rt.ru/data/img/logo-drweb.png"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Dr.Web Классик
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -782,7 +987,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -793,7 +1001,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -805,7 +1015,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -819,35 +1031,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="79" time-interval="мес."></rt-price>
+                              <rt-price :value="79" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'drweb',
-                  '1',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'drweb',
+                        '1',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="https://www.old.rt.ru/data/img/logo-drweb.png"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Dr.Web Классик
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -858,7 +1080,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -869,7 +1094,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -881,7 +1108,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -895,35 +1124,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="828" time-interval="год"></rt-price>
+                              <rt-price :value="828" time-interval="год" />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'drweb',
-                  '1',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux', 'Android']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'drweb',
+                        '1',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux', 'Android']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="https://www.old.rt.ru/data/img/logo-drweb.png"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Dr.Web Премиум
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -935,7 +1174,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -946,7 +1188,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -958,7 +1202,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -971,7 +1217,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -983,7 +1231,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -995,7 +1245,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1007,7 +1259,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1021,35 +1275,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="89" time-interval="мес."></rt-price>
+                              <rt-price :value="89" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'drweb',
-                  '1',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux', 'Android']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'drweb',
+                        '1',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux', 'Android']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="https://www.old.rt.ru/data/img/logo-drweb.png"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="https://www.old.rt.ru/data/img/logo-drweb.png"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             Dr.Web Премиум
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1061,7 +1325,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1072,7 +1339,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1084,7 +1353,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1097,7 +1368,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1109,7 +1382,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1121,7 +1396,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1133,7 +1410,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1147,35 +1426,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="1068" time-interval="год"></rt-price>
+                              <rt-price :value="1068" time-interval="год" />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 4',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 4',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Antivirus
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1187,7 +1476,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1198,7 +1490,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1210,7 +1504,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1222,7 +1518,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1236,35 +1534,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="90" time-interval="мес."></rt-price>
+                              <rt-price :value="90" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 4',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 4',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Antivirus
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1276,7 +1584,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1287,7 +1598,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1299,7 +1612,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1311,7 +1626,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1325,35 +1642,49 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="1080" :old-value="1390" time-interval="год"></rt-price>
+                              <rt-price
+                                :value="1080"
+                                :old-value="1390"
+                                time-interval="год"
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 4',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 4',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Smart Security
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1365,7 +1696,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1376,7 +1710,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1388,7 +1724,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1400,7 +1738,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1412,7 +1752,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1424,7 +1766,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1438,35 +1782,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="140" time-interval="мес."></rt-price>
+                              <rt-price :value="140" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 4',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 4',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Smart Security
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1478,7 +1832,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1489,7 +1846,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1501,7 +1860,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1513,7 +1874,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1525,7 +1888,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1537,7 +1902,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1551,35 +1918,45 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="1750" time-interval="год"></rt-price>
+                              <rt-price :value="1750" time-interval="год" />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 6',
-                  'only month',
-                  ['Windows', 'Mac', 'Linux', 'Android']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 6',
+                        'only month',
+                        ['Windows', 'Mac', 'Linux', 'Android']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Smart Security Family 5 устройств
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1590,7 +1967,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1601,20 +1981,23 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Защита «умных» устройств (система «Умный
-                                  дом»)
+                                  Защита «умных» устройств (система «Умный дом»)
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1626,7 +2009,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1638,7 +2023,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1650,7 +2037,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1664,35 +2053,49 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="139" :old-value="189" time-interval="мес."></rt-price>
+                              <rt-price
+                                :value="139"
+                                :old-value="189"
+                                time-interval="мес."
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="[
-                  'eset',
-                  'less than 6',
-                  'not month',
-                  ['Windows', 'Mac', 'Linux', 'Android']
-                ]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="[
+                        'eset',
+                        'less than 6',
+                        'not month',
+                        ['Windows', 'Mac', 'Linux', 'Android']
+                      ]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Smart Security Family 5 устройств
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1703,7 +2106,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1714,20 +2120,23 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
-                                  Защита «умных» устройств (система «Умный
-                                  дом»)
+                                  Защита «умных» устройств (система «Умный дом»)
                                 </p>
                               </div>
                             </div>
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1739,7 +2148,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1751,7 +2162,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1763,7 +2176,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1777,30 +2192,44 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="1670" :old-value="2250" time-interval="мес."></rt-price>
+                              <rt-price
+                                :value="1670"
+                                :old-value="2250"
+                                time-interval="мес."
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="['eset', '1', 'only month', ['Android']]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="['eset', '1', 'only month', ['Android']]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Mobile Security
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1812,7 +2241,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1823,7 +2255,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1835,7 +2269,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1849,30 +2285,40 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="66" time-interval="мес."></rt-price>
+                              <rt-price :value="66" time-interval="мес." />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
                         </template>
                       </rt-card>
                     </rt-filter-watcher>
-                    <rt-filter-watcher :options="[
-                  'creator',
-                  'count',
-                  'subscription',
-                  'platform'
-                ]"
-                                       :values="['eset', '1', 'only month', ['Android']]"
-                                       class="rt-col-6 rt-space-bottom rt-col-md-3">
+                    <rt-filter-watcher
+                      :options="[
+                        'creator',
+                        'count',
+                        'subscription',
+                        'platform'
+                      ]"
+                      :values="['eset', '1', 'only month', ['Android']]"
+                      class="rt-col-6 rt-space-bottom rt-col-md-3"
+                    >
                       <rt-card>
                         <template slot="header">
-                          <img class="rt-card__header__image" src="/sites/default/files/internet/ESET_color.svg"/>
+                          <img
+                            class="rt-card__header__image"
+                            src="/sites/default/files/internet/ESET_color.svg"
+                          >
                         </template>
                         <template slot="content">
-                          <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">
+                          <p
+                            class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2"
+                          >
                             ESET NOD32 Родительский контроль
                           </p>
                           <p class="rt-space-top color-main07 rt-space-right2">
@@ -1884,7 +2330,10 @@
                           <div class="rt-card-list rt-space-bottom2">
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
-                                <img src="/sites/default/files/img/icon/internet_antivirus_80x80.svg" height="55px"/>
+                                <img
+                                  src="/sites/default/files/img/icon/internet_antivirus_80x80.svg"
+                                  height="55px"
+                                >
                               </div>
                               <div class="rt-card-list__name">
                                 <p class="rt-font-small-paragraph color-main05">
@@ -1895,7 +2344,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1907,7 +2358,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1919,7 +2372,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1931,7 +2386,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1943,7 +2400,9 @@
                             <div class="rt-card-list__item">
                               <div class="rt-card-list__icon">
                                 <div class="rt-space-left15">
-                                  <img src="/sites/default/files/internet/icon_26%20copy%209.svg"/>
+                                  <img
+                                    src="/sites/default/files/internet/icon_26%20copy%209.svg"
+                                  >
                                 </div>
                               </div>
                               <div class="rt-card-list__name">
@@ -1957,10 +2416,17 @@
                         <template slot="content-without-wrapper">
                           <div class="rt-card__border-content">
                             <div class="rt-col-12 flex-end-center rt-space-top">
-                              <rt-price :value="0" :old-value="99" time-interval="мес."></rt-price>
+                              <rt-price
+                                :value="0"
+                                :old-value="99"
+                                time-interval="мес."
+                              />
                             </div>
                             <div class="rt-space-top05">
-                              <rt-button class="rt-button-orange rt-button--is-block">Подключить
+                              <rt-button
+                                class="rt-button-orange rt-button--is-block"
+                              >
+                                Подключить
                               </rt-button>
                             </div>
                           </div>
@@ -1969,14 +2435,24 @@
                     </rt-filter-watcher>
                   </div>
                 </div>
-                <div class="rt-col-1"></div>
-                <rt-popup popup-wrapper-classes="rt-col-3" popup-classes="rt-col-td-3 rt-col-md-3"
-                          :show-on-desctop="false"
-                          name="filter">
+                <div class="rt-col-1" />
+                <rt-popup
+                  popup-wrapper-classes="rt-col-3"
+                  popup-classes="rt-col-td-3 rt-col-md-3"
+                  :show-on-desctop="false"
+                  name="filter"
+                >
                   <div class="rt-close d-none td-d-block">
-                    <svg class="rt-close__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
-                            fill-rule="evenodd"/>
+                    <svg
+                      class="rt-close__icon"
+                      width="14"
+                      height="14"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
+                        fill-rule="evenodd"
+                      />
                     </svg>
                   </div>
 
@@ -1986,14 +2462,20 @@
                     </p>
                     <rt-filter-caller>
                       <rt-radio-button-container>
-                        <rt-radio-button :checked="true" name="subscription">Годовая подписка
+                        <rt-radio-button :checked="true" name="subscription">
+                          > Годовая подписка
                         </rt-radio-button>
-                        <div class="rt-space-left15 color-dark06 rt-space-bottom">
+                        <div
+                          class="rt-space-left15 color-dark06 rt-space-bottom"
+                        >
                           два месяца в подарок
                         </div>
-                        <rt-radio-button name="subscription" value="month">Месячная подписка
+                        <rt-radio-button name="subscription" value="month">
+                          > Месячная подписка
                         </rt-radio-button>
-                        <div class="rt-space-left15 color-dark06 rt-space-bottom">
+                        <div
+                          class="rt-space-left15 color-dark06 rt-space-bottom"
+                        >
                           первый месяц 0 рублей
                         </div>
                       </rt-radio-button-container>
@@ -2003,52 +2485,69 @@
                         Количество устройств
                       </p>
                       <rt-filter-caller :clear-zero="true">
-                        <rt-input name="count" value="1" :min-number="1" :show-numbers-buttons="true"
-                                  insert-type="number"/>
+                        <rt-input
+                          name="count"
+                          value="1"
+                          :min-number="1"
+                          :show-numbers-buttons="true"
+                          insert-type="number"
+                        />
                       </rt-filter-caller>
                     </div>
                     <rt-filter-caller>
                       <rt-checkbox-container>
-                        <p class="rt-font-paragraph rt-font-bold rt-space-bottom">
+                        <p
+                          class="rt-font-paragraph rt-font-bold rt-space-bottom"
+                        >
                           Производитель
                         </p>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="creator" value="kaspersky">Kaspersky Lab
+                          <rt-checkbox name="creator" value="kaspersky">
+                            > Kaspersky Lab
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="creator" value="drweb">Dr.Web
+                          <rt-checkbox name="creator" value="drweb">
+                            > Dr.Web
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="creator" value="eset">ESET NOD32
+                          <rt-checkbox name="creator" value="eset">
+                            > ESET NOD32
                           </rt-checkbox>
                         </div>
                       </rt-checkbox-container>
                     </rt-filter-caller>
                     <rt-filter-caller>
                       <rt-checkbox-container>
-                        <p class="rt-font-paragraph rt-font-bold rt-space-bottom">
+                        <p
+                          class="rt-font-paragraph rt-font-bold rt-space-bottom"
+                        >
                           Производитель
                         </p>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="platform" value="Windows">Windows
+                          <rt-checkbox name="platform" value="Windows">
+                            > Windows
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="platform" value="Mac">Mac
+                          <rt-checkbox name="platform" value="Mac">
+                            > Mac
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="platform" value="Linux">Linux
+                          <rt-checkbox name="platform" value="Linux">
+                            > Linux
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="platform" value="iOS">iOS
+                          <rt-checkbox name="platform" value="iOS">
+                            > iOS
                           </rt-checkbox>
                         </div>
                         <div class="rt-space-bottom">
-                          <rt-checkbox name="platform" value="Android">Android
+                          <rt-checkbox name="platform" value="Android">
+                            > Android
                           </rt-checkbox>
                         </div>
                       </rt-checkbox-container>
@@ -2060,178 +2559,177 @@
           </rt-resize-content-height>
         </div>
       </div>
-
-
     </div>
   </div>
 </template>
 
 <script>
-  const componentDirectives = {};
+const componentDirectives = {};
 
-  import componentsList from "../../componentsList";
+import componentsList from "../../componentsList";
 
-  export default {
-    name: "AppFilter",
-    // directives: componentDirectives,
-    components: componentsList,
-    mounted() {
-      document.querySelector(".filterButton").addEventListener("click", () => {
-        window.dispatchEvent(new Event("open-popup-filter"));
-      });
-      var getParams = function() {
-        var params = new URLSearchParams(location.search);
-        var filter = params.get("filter");
-        var json = {};
-        if (filter) {
-          filter.split(",").map(i => {
-            var item = i.split(":");
-            json[item[0]] = item[1].split("+");
+export default {
+  name: "AppFilter",
+  // directives: componentDirectives,
+  components: componentsList,
+  mounted() {
+    document.querySelector(".filterButton").addEventListener("click", () => {
+      window.dispatchEvent(new Event("open-popup-filter"));
+    });
+    var getParams = function() {
+      var params = new URLSearchParams(location.search);
+      var filter = params.get("filter");
+      var json = {};
+      if (filter) {
+        filter.split(",").map(i => {
+          var item = i.split(":");
+          json[item[0]] = item[1].split("+");
+        });
+        if (json["platform"]) {
+          checkItems(json["platform"]);
+        }
+      }
+    };
+
+    var checkItems = function(params) {
+      document.querySelectorAll(".platform-filter").forEach(function(item) {
+        var hasFound = false;
+        var itemParams = JSON.parse(
+          item.getAttribute("platform-filter").replace(/'/g, '"')
+        );
+        if (params && itemParams) {
+          params.forEach(function(paramsItem) {
+            var paramsIndex = itemParams.indexOf(paramsItem);
+            if (paramsIndex >= 0) {
+              hasFound = true;
+              if (item.classList.contains("d-none")) {
+                item.classList.remove("d-none");
+                return false;
+              }
+            }
           });
-          if (json["platform"]) {
-            checkItems(json["platform"]);
+          if (!hasFound && !item.classList.contains("d-none")) {
+            item.classList.add("d-none");
+          }
+          if (hasFound) {
+            return false;
+          }
+        } else {
+          if (item.classList.contains("d-none")) {
+            item.classList.remove("d-node");
           }
         }
-      };
-
-      var checkItems = function(params) {
-        document.querySelectorAll(".platform-filter").forEach(function(item) {
-          var hasFound = false;
-          var itemParams = JSON.parse(
-            item.getAttribute("platform-filter").replace(/'/g, "\"")
-          );
-          if (params && itemParams) {
-            params.forEach(function(paramsItem) {
-              var paramsIndex = itemParams.indexOf(paramsItem);
-              if (paramsIndex >= 0) {
-                hasFound = true;
-                if (item.classList.contains("d-none")) {
-                  item.classList.remove("d-none");
-                  return false;
-                }
-              }
-            });
-            if (!hasFound && !item.classList.contains("d-none")) {
-              item.classList.add("d-none");
-            }
-            if (hasFound) {
-              return false;
-            }
-          } else {
-            if (item.classList.contains("d-none")) {
-              item.classList.remove("d-node");
-            }
-          }
-          setTimeout(function() {
-            window.dispatchEvent(new Event("resize"));
-          }, 300);
-        });
-      };
-      document.querySelectorAll(".checkbox-element").forEach(function(checkbox) {
-        checkbox.addEventListener("input", function() {
-          setTimeout(function() {
-            getParams();
-          }, 300);
-        });
+        setTimeout(function() {
+          window.dispatchEvent(new Event("resize"));
+        }, 300);
       });
-      getParams();
-      document.querySelectorAll('.radio-button-element, .checkbox-element').forEach(function(item){
-        item.addEventListener("change",function(){
-          setTimeout(function(){
-          var params = new URLSearchParams(location.search);
-          var filter = params.get('filter')
-          var json = {}
-          if(filter){
-            filter.split(',').map((i) => {
-              const item = i.split(':');
-              json[item[0]] = item[1].split('+')
-            })
-            document.querySelectorAll('.rt-tag').forEach(function(el){
-              var span = el.querySelector('span')
+    };
+    document.querySelectorAll(".checkbox-element").forEach(function(checkbox) {
+      checkbox.addEventListener("input", function() {
+        setTimeout(function() {
+          getParams();
+        }, 300);
+      });
+    });
+    getParams();
+    document
+      .querySelectorAll(".radio-button-element, .checkbox-element")
+      .forEach(function(item) {
+        item.addEventListener(
+          "change",
+          function() {
+            setTimeout(function() {
+              var params = new URLSearchParams(location.search);
+              var filter = params.get("filter");
+              var json = {};
+              if (filter) {
+                filter.split(",").map(i => {
+                  const item = i.split(":");
+                  json[item[0]] = item[1].split("+");
+                });
+                document.querySelectorAll(".rt-tag").forEach(function(el) {
+                  var span = el.querySelector("span");
 
-              if(span){
-                  var hasFound = true;
-                  var spanjson = JSON.parse(span.getAttribute('value').replace(/\'/g,'"'));
+                  if (span) {
+                    var hasFound = true;
+                    var spanjson = JSON.parse(
+                      span.getAttribute("value").replace(/\'/g, '"')
+                    );
 
-                Object.keys(spanjson).map(function(spanjsonKey){
-
-                  if(typeof spanjson[spanjsonKey] === 'string'){
-                    spanjson[spanjsonKey] = [spanjson[spanjsonKey]];
-
-                  }
-                })
-
-                  if(Object.keys(spanjson).length === Object.keys(json).length){
-
-                    Object.keys(spanjson).forEach(function(key){
-
-                      if(json[key]){
-
-                        if(typeof json[key] !== 'string'){
-
-                          if(json[key].length === spanjson[key].length){
-                            json[key].forEach(function(jsonItem){
-                              if(spanjson[key].indexOf(jsonItem) < 0){
-                                hasFound = false
-                                return false
-                              }
-                            })
-                            // hasFound = false
-                            // return false
-                          }else{
-                            hasFound = false
-                          }
-                        }
-                      }else{
-                        hasFound = false
+                    Object.keys(spanjson).map(function(spanjsonKey) {
+                      if (typeof spanjson[spanjsonKey] === "string") {
+                        spanjson[spanjsonKey] = [spanjson[spanjsonKey]];
                       }
+                    });
 
-
-                    })
-
-                  }else{
-                    hasFound = false;
+                    if (
+                      Object.keys(spanjson).length === Object.keys(json).length
+                    ) {
+                      Object.keys(spanjson).forEach(function(key) {
+                        if (json[key]) {
+                          if (typeof json[key] !== "string") {
+                            if (json[key].length === spanjson[key].length) {
+                              json[key].forEach(function(jsonItem) {
+                                if (spanjson[key].indexOf(jsonItem) < 0) {
+                                  hasFound = false;
+                                  return false;
+                                }
+                              });
+                              // hasFound = false
+                              // return false
+                            } else {
+                              hasFound = false;
+                            }
+                          }
+                        } else {
+                          hasFound = false;
+                        }
+                      });
+                    } else {
+                      hasFound = false;
+                    }
+                    if (!hasFound) {
+                      el.classList.remove("rt-tag--is-active");
+                      return false;
+                    } else {
+                      el.classList.add("rt-tag--is-active");
+                    }
                   }
-                if(!hasFound){
-                  el.classList.remove('rt-tag--is-active')
-                  return false
-                }else{
-                  el.classList.add('rt-tag--is-active')
-                }
-
+                });
               }
-            })
-
-
-          }
-            document.querySelectorAll('.rt-tag').forEach(function(item){
-              if(item.innerHTML === 'Все'){
-                if(filter && item.classList.contains('rt-tag--is-active')){
-                  item.classList.remove('rt-tag--is-active')
-                }else{
-                  if(!filter && !item.classList.contains('rt-tag--is-active')){
-                    item.classList.add('rt-tag--is-active')
+              document.querySelectorAll(".rt-tag").forEach(function(item) {
+                if (item.innerHTML === "Все") {
+                  if (filter && item.classList.contains("rt-tag--is-active")) {
+                    item.classList.remove("rt-tag--is-active");
+                  } else {
+                    if (
+                      !filter &&
+                      !item.classList.contains("rt-tag--is-active")
+                    ) {
+                      item.classList.add("rt-tag--is-active");
+                    }
                   }
                 }
-              }
-
-            })
-        })
-        },200)
-      })
-
-      document.querySelectorAll(".rt-tag").forEach(function(item) {
-        item.addEventListener("click", () => {
-            if (item.innerHTML === "Все") {
-              document.querySelectorAll(".checkbox-element").forEach(function(checkbox) {
-                checkbox.checked = false;
               });
-            }
-          });
+            });
+          },
+          200
+        );
       });
-    },
-    created() {
-    },
-    methods: {}
-  };
+
+    document.querySelectorAll(".rt-tag").forEach(function(item) {
+      item.addEventListener("click", () => {
+        if (item.innerHTML === "Все") {
+          document
+            .querySelectorAll(".checkbox-element")
+            .forEach(function(checkbox) {
+              checkbox.checked = false;
+            });
+        }
+      });
+    });
+  },
+  created() {},
+  methods: {}
+};
 </script>

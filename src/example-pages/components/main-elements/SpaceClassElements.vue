@@ -3,16 +3,24 @@
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
         <div class="row">
-          <h1 class="rt-font-hero rt-col">Space class elements</h1>
+          <h1 class="rt-font-hero rt-col">
+            Space class elements
+          </h1>
         </div>
       </div>
       <div class="app-body rt-space-top25">
         <div class="rt-col-12">
           <rt-tabs>
             <template slot="navigation">
-              <rt-tabs-nav-item name="all">All devices</rt-tabs-nav-item>
-              <rt-tabs-nav-item name="tablet">Tablet devices</rt-tabs-nav-item>
-              <rt-tabs-nav-item name="mobile">Mobile devices</rt-tabs-nav-item>
+              <rt-tabs-nav-item name="all">
+                All devices
+              </rt-tabs-nav-item>
+              <rt-tabs-nav-item name="tablet">
+                Tablet devices
+              </rt-tabs-nav-item>
+              <rt-tabs-nav-item name="mobile">
+                Mobile devices
+              </rt-tabs-nav-item>
             </template>
             <template slot="content">
               <rt-tabs-content-item name="all">

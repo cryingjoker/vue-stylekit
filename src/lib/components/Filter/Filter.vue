@@ -2,11 +2,6 @@
 
 export default {
   name: "RtFilter",
-  data: () => ({
-    selectedProps: {},
-    listners: [],
-    listnersCaller: [],
-  }),
   props:{
     changeUrl : {
       type: Boolean,
@@ -17,6 +12,11 @@ export default {
       default: () => []
     }
   },
+  data: () => ({
+    selectedProps: {},
+    listners: [],
+    listnersCaller: [],
+  }),
   provide() {
     const RtFilter = {};
     RtFilter['selectedProps'] = this.selectedProps;
@@ -28,17 +28,17 @@ export default {
     RtFilter['getFromHistory'] = this.getFromHistory;
     return { RtFilter };
   },
-  mounted: function() {
-
-    this.getFromHistory()
-
-  },
   watch: {
     selectedProps(newProps, oldProps){
       if(this.changeUrl && JSON.stringify(newProps) !== JSON.stringify(oldProps)) {
         this.setHistory();
       }
     }
+  },
+  mounted: function() {
+
+    this.getFromHistory();
+
   },
   methods: {
     setHistory(){
@@ -48,7 +48,7 @@ export default {
         Object.keys(this.selectedProps).forEach((key)=>{
           if(this.selectedProps[key] && this.selectedProps[key].length > 0 && this.selectedProps[key][0].search('@') !== 0) {
             if(getLine.length > 1){
-              getLine += ','
+              getLine += ',';
             }
             getLine += key + ':';
             getLine += this.selectedProps[key].join('+');
@@ -76,12 +76,12 @@ export default {
       if(this.changeUrl) {
         const params = new URLSearchParams(location.search);
         const filter = params.get('filter');
-        const json = {}
+        const json = {};
         if (filter) {
           filter.split(',').map((i) => {
             const item = i.split(':');
-            json[item[0]] = item[1].split('+')
-          })
+            json[item[0]] = item[1].split('+');
+          });
           this.$set(this, 'selectedProps', json);
           this.callListenersCallers();
         }
@@ -91,12 +91,12 @@ export default {
     callListeners(){
       this.listners.forEach((fn)=>{
         fn.call(null,this.selectedProps);
-      })
+      });
     },
     callListenersCallers(){
       this.listnersCaller.forEach((fn)=>{
         fn.call(null,this.selectedProps);
-      })
+      });
     },
 
     addListener(fn){
@@ -110,10 +110,10 @@ export default {
     },
     setProps(option,value){
       if(value.length === 0){
-        this.removeProps(option)
+        this.removeProps(option);
       }else {
         this.selectedProps = {...this.selectedProps};
-        this.$set(this.selectedProps, option, value)
+        this.$set(this.selectedProps, option, value);
         this.callListeners();
       }
     },
@@ -129,7 +129,7 @@ export default {
     removeProps(option){
       this.selectedProps = {...this.selectedProps};
       delete this.selectedProps[option];
-      this.$set(this, 'selectedProps', this.selectedProps)
+      this.$set(this, 'selectedProps', this.selectedProps);
       this.callListeners();
     }
   },

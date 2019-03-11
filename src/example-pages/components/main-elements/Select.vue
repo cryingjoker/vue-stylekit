@@ -1,10 +1,16 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title"><h1 class="rt-font-hero">Select</h1></div>
+      <div class="app-title">
+        <h1 class="rt-font-hero">
+          Select
+        </h1>
+      </div>
       <div class="app-body">
         <div class="app-row row">
-          <p class="rt-font-h3 rt-col">Select without js</p>
+          <p class="rt-font-h3 rt-col">
+            Select without js
+          </p>
         </div>
         <div class="app-row row">
           <div class="rt-col-6 rt-col-md-2 flex-column d-flex">
@@ -25,7 +31,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </option>
             </rt-select-without-js>
           </div>
@@ -49,7 +56,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </option>
             </rt-select-without-js>
           </div>
@@ -75,21 +83,26 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </option>
             </rt-select-without-js>
           </div>
         </div>
 
         <div class="app-row row">
-          <div class="rt-col"><p class="rt-font-h3">Select with js</p></div>
+          <div class="rt-col">
+            <p class="rt-font-h3">
+              Select with js
+            </p>
+          </div>
         </div>
         <div class="app-row row">
           <div class="col rt-col-md-3">
             <span class="rt-font-label flex-fill rt-space-bottom05"
               >simple select</span
             >
-            <rt-select label="Оборудование" value="0" >
+            <rt-select label="Оборудование" value="0">
               <rt-select-option
                 v-for="(option, index) in optionsList"
                 :key="
@@ -99,7 +112,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
@@ -125,7 +139,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
@@ -148,17 +163,17 @@
                       .slice(4)
                 "
                 :value="String(index)"
-                >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+        <div
+          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
+        >
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-            >
+            <rt-select :is-b2b-select="true" label="Выберите регион">
               <rt-select-option
                 v-for="(option, index) in optionsList"
                 :key="
@@ -168,7 +183,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
@@ -187,17 +203,20 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+        <div
+          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
+        >
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
             <rt-select
               :is-b2b-select="true"
               label="Выберите регион"
-              :hasError="true"
+              :has-error="true"
             >
               <rt-select-option
                 v-for="(option, index) in optionsList"
@@ -208,7 +227,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
@@ -227,12 +247,15 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
+        <div
+          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
+        >
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
             <rt-select
               :is-b2b-select="true"
@@ -249,7 +272,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
@@ -258,7 +282,7 @@
               :is-b2b-select="true"
               label="Выберите регион"
               :outlined="true"
-              :hasError="true"
+              :has-error="true"
             >
               <rt-select-option
                 v-for="(option, index) in optionsList"
@@ -269,7 +293,8 @@
                       .slice(4)
                 "
                 :value="String(index)"
-              >{{ option }}
+              >
+                {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
