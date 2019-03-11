@@ -50,20 +50,6 @@
   </div>
 </template>
 
-<style coped lang="less">
-.phone {
-  margin-bottom: -13vw;
-  @media (max-width: 968px) {
-    margin-bottom: -30vw;
-  }
-  &--is-big {
-    margin-bottom: -11vw;
-    @media (max-width: 968px) {
-      margin-bottom: -26vw;
-    }
-  }
-}
-</style>
 
 <script>
 const componentsList = {};

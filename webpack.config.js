@@ -71,18 +71,6 @@ const config = {
 
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: `style-loader`
-          },
-          { loader: `css-loader` },
-          {
-            loader: `less-loader`
-          }
-        ]
-      },
-      {
         test: /\.styl/,
         use: [
           {
