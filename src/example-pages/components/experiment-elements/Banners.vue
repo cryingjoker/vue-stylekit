@@ -4,11 +4,7 @@
       <div class="grid-center" />
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
-          <div class="row">
-            <h1 class="rt-font-hero rt-col">
-              Banners
-            </h1>
-          </div>
+          <div class="row"><h1 class="rt-font-hero rt-col">Banners</h1></div>
         </div>
       </div>
     </div>
@@ -17,25 +13,17 @@
         <rt-banner
           :no-triangle="true"
           :round-angles="true"
-          :has-custom-content="true"
-        >
+          :has-custom-content="true">
           <rt-banner-item
             background-image="/static/images/B2B/banner-img.png"
             :is-white-color="true"
-            background-color="b2b-dark-state"
-          >
+            background-color="b2b-dark-state">
             <div class="rtb-banner__text-content">
-              <h3 class="rt-font-bold rt-space-bottom05">
-                Скидка 50% на Wi-Fi для бизнеса  при подключении интернета
-              </h3>
-              <p class="rt-font-small-paragraph">
-                Пакет «Быть в плюсе»
-              </p>
+              <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
+              <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
             </div>
             <div>
-              <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">
-                Подробнее
-              </rt-button>
+              <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
             </div>
           </rt-banner-item>
         </rt-banner>
@@ -43,9 +31,8 @@
     </div>
     <rt-banner has-custom-height="500px"
                :is-fullscreen-image="true"
-               :category-banner="true"
-    >
-      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2" />
+               :category-banner="true">
+      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2"/>
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
@@ -74,6 +61,39 @@
     </rt-banner>"
     />
     <pre-code
+      text="<rt-banner :has-image-on-mobile=&quot;true&quot;
+                       :no-triangle=&quot;true&quot;
+                       :without-empty-column=&quot;true&quot;
+                       :without-second-empty-column=&quot;true&quot;
+                       :transparent-background-image=&quot;true&quot;
+                       :mobile-image-on-top=&quot;true&quot;
+                       :switch-off-timer=&quot;true&quot;>
+      <rt-banner-item :is-white-color=&quot;true&quot;
+                      background-color=&quot;green&quot;
+                      background-image=&quot;/static/images/B2B/big-internet-slide-1.svg&quot;>
+        <h2 class=&quot;rt-font-bold&quot;>Легко обмениваться большими объемами информации</h2>
+        <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Отправляйте объемные
+          фото и видео, работайте с облачными сервисами и большими базами данных — скорости интернета хватит на всё</p>
+      </rt-banner-item>
+      <rt-banner-item :is-white-color=&quot;true&quot;
+                      content-mobile-height=&quot;500px&quot;
+                      background-color=&quot;dark-blue-high&quot;
+                      background-image=&quot;/static/images/B2B/big-internet-slide-2.svg&quot;>
+        <h2 class=&quot;rt-font-bold&quot;>Эффективно работать  с онлайн-сервисами</h2>
+        <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Благодаря стабильному высокоскоростному интернету
+            вашим сотрудникам будет удобнее работать с корпоративной почтой и CRM-системой, что позволит повысить уровень продаж</p>
+      </rt-banner-item>
+      <rt-banner-item :is-white-color=&quot;true&quot;
+                      content-mobile-height=&quot;500px&quot;
+                      background-color=&quot;dark-blue&quot;
+                      background-image=&quot;/static/images/B2B/big-internet-slide-3.svg&quot;>
+        <h2 class=&quot;rt-font-bold&quot;>Повысить лояльность клиентов</h2>
+        <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Офисы, кафе, салоны красоты и другие заведения с
+          бесплатным Wi-Fi и телевидением привлекают и удерживают больше посетителей</p>
+      </rt-banner-item>
+    </rt-banner>"
+    />
+    <pre-code
       text="<rt-banner :set-stop-on-click=&quot;true&quot;
                        :sleep-time=&quot;20000&quot;
                        bannerLogo=&quot;/static/example-images/Logo.svg&quot;
@@ -84,7 +104,8 @@
                       :is-white-color=&quot;true&quot;
                       content-mobile-min-height=&quot;80vh&quot;
                       content-mobile-height=&quot;200px&quot;
-                      background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+                      background-color=&quot;dark-state&quot;>
+        <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
         <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br>
           возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
         <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
