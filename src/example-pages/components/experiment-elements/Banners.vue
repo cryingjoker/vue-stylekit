@@ -35,7 +35,7 @@
     <rt-banner hasCustomHeight="500px"
                :is-fullscreen-image="true"
                :category-banner="true">
-      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" />
+      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="2"/>
       <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                       :is-white-color="true"
                       content-mobile-min-height="500px"
@@ -49,8 +49,14 @@
     </rt-banner>
 
     <pre-code
-      text="<rt-banner :set-stop-on-click=&quot;true&quot; :sleep-time=&quot;20000&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot; content-mobile-min-height=&quot;80vh&quot; content-mobile-height=&quot;300px&quot;>
-      <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;
+      text="<rt-banner :set-stop-on-click=&quot;true&quot;
+                       :sleep-time=&quot;20000&quot;
+                       bannerLogo=&quot;/static/example-images/Logo.svg&quot;
+                       content-mobile-min-height=&quot;80vh&quot;
+                       content-mobile-height=&quot;300px&quot;
+                       :has-image-on-mobile=&quot;true&quot;>
+      <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot;
+                      :is-white-color=&quot;true&quot;
                       content-mobile-min-height=&quot;80vh&quot;
                       content-mobile-height=&quot;200px&quot;
                       background-color=&quot;dark-state&quot;><p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>

@@ -4,7 +4,6 @@ const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const webpack = require('webpack');
-const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`)
 const local_dirname = path.join(__dirname,'..');
 const env = process.env.NODE_ENV;
 function resolve(dir) {
@@ -105,9 +104,6 @@ const config = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MonacoWebpackPlugin(webpack,{
-      languages: ['html'],
-    }),
     new HtmlWebpackPlugin({
       filename: path.join(local_dirname, `dist`, `index.html`),
       template: path.join(local_dirname, `static`, `index.html`),

@@ -26,6 +26,7 @@ const config = {
         use: [
           {
             loader: `vue-loader`,
+            exclude: /node_modules/,
             options: {
               transformAssetUrls: {
                 source: './src/',
@@ -44,6 +45,7 @@ const config = {
       {
         test: /\.js$/,
         loader: `babel-loader`,
+        exclude: /node_modules/,
         include: [path.join(local_dirname, `src`)],
       },
       {

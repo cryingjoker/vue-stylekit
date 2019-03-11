@@ -17,6 +17,7 @@
     <rt-navigation
       v-if="!isTouch"
       :class="`${cmpName}__navs`"
+      :navigation-container="navigationContainer"
     ></rt-navigation>
     <div
       @scroll.passive="scrollNative"
@@ -116,27 +117,27 @@ export default {
     }
   },
   props: {
-    autoScrolling: { // Доводчик свайпинга / скроллинга
+    autoScrolling: {
       type: Boolean,
       default: true
     },
-    disabledScrolling: { // Позволяет заблокировать горизонтальный свайпинг и скроллинг карусели
+    disabledScrolling: {
       type: Boolean,
       default: false
     },
-    duration: { // Длительность анимации навигации зоны просмотра и автодоводчика, если он включен
+    duration: {
       type: Number,
       default: 500
     },
-    navsArrows: { // Отображение навигационных стрелочек на PC
+    navsArrows: {
       type: Boolean,
       default: true
     },
-    navsPosStart: { // Позиция стрелочек навигации сверху
+    navsPosStart: {
       type: Number,
       default: 113
     },
-    navsPosEnd: { // Позиция стрелочек навигации снизу
+    navsPosEnd: {
       type: Number,
       default: 200
     },
@@ -148,14 +149,14 @@ export default {
       type: Number,
       default: 20
     },
-    offsetHorizontal: { // Горизонтальный отступ первого и последнего слайда
+    offsetHorizontal: {
       type: Number,
       default: 20
     },
     offsetSlide: {
       type: Number
     },
-    padding: { // @Deprecated - используйте CSS-стили или инлайн свойства
+    padding: {
       type: String,
       default: '0'
     },
@@ -163,9 +164,17 @@ export default {
       type: String,
       default: 'rt-col-3 rt-col-md-3 rt-col-td-3'
     },
-    transitionFunction: { // Эффект перехода анимации при перемещении зоны просмотра
+    transitionFunction: {
       type: String,
       default: 'easeInOutCubic'
+    },
+    navsOnlyLackOfWidth: {
+      type: Boolean,
+      default: false
+    },
+    navigationContainer: {
+      type: String,
+      default: ''
     }
   },
   mounted () {
@@ -344,6 +353,12 @@ export default {
         return null
       }
     },
+    slidesWidth () {
+      return this.movesArr.reduce((accum, curVal) => ((typeof accum === 'object' && accum.constructor === Object ? accum.width : accum) + curVal.width))
+    },
+    overlayContainerWidth () {
+      return parseFloat(getComputedStyle(this.$refs.overlay).width)
+    },
     move (to = 0) {
       return new Promise(resolve => {
         if (!this.$refs.overlay) {
@@ -353,9 +368,10 @@ export default {
         let from = parseInt(this.$refs.overlay.scrollLeft)
         let updateNavs = () => {
           if (!this.isTouch) {
+            let navsOnlyLackOfWidth = !this.navsOnlyLackOfWidth || this.navsOnlyLackOfWidth && (this.overlayContainerWidth() < this.slidesWidth())
             this.canAdvanceBackward = to > 1
-            this.isFinalSlide = this.$refs.overlay.scrollLeft + parseFloat(getComputedStyle(this.$refs.overlay).width) + 2 >= this.$refs.overlay.scrollWidth
-            this.canAdvanceForward = !this.isFinalSlide
+            this.isFinalSlide = this.$refs.overlay.scrollLeft + this.overlayContainerWidth() + 2 >= this.$refs.overlay.scrollWidth
+            this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
           }
         }
         if (from !== to && from !== to + 1) {

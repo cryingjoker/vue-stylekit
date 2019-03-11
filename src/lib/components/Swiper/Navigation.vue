@@ -71,7 +71,14 @@ export default {
       buttonsSize: 53,
       nextCountTip: null, // Количество слайдов доступных к прокрутке
       position: 'absolute',
-      showTipsNext: false
+      showTipsNext: false,
+      navContainerChanged: false
+    }
+  },
+  props: {
+    navigationContainer: { // Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет.
+      type: String,
+      default: ''
     }
   },
   mounted () {
@@ -85,6 +92,15 @@ export default {
       // Если заданная высота отступа выше зоны просмотра, то центрируем стрелочки
       this.topPos = '0px'
       this.bottomPos = '0px'
+    }
+  },
+  updated () {
+    if (!this.navContainerChanged && this.navigationContainer !== '') {
+      let els = document.querySelectorAll(this.navigationContainer)
+      if (els.length) {
+        els[0].insertBefore(this.$el, els[0].firstChild)
+      }
+      this.navContainerChanged = true
     }
   },
   computed: {

@@ -79,6 +79,7 @@ const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.asset
 
 
 app.use('/static/', express.static(local_dirname+'/static'));
+app.use('/mode-html.js', express.static(local_dirname+'/static/mode-html.js'));
 
 const url = 'http://localhost:' + port;
 spinner = new Ora({
