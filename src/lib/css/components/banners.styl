@@ -19,8 +19,10 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
+
   &--has-absolute-position
-    position: absolute
+    position absolute
+
   & .rt-banner__item--is-active
     // opacity: 0
     // visibility hidden
@@ -181,7 +183,8 @@
     transition-duration .3s
     transition-property fill
     fill transparent
-    @media(max-width: mobile-upper-limit)
+
+    @media (max-width: mobile-upper-limit)
       display none
 
     .{newAppName}-banner--background-dark-state &
@@ -411,8 +414,8 @@
         min-width 100%
 
       @media (max-width: mobile-upper-limit)
-        min-width initial                   //calc(100% - 50px)?
-        max-width initial                   //calc(100% - 50px)?
+        min-width initial // calc(100% - 50px)?
+        max-width initial // calc(100% - 50px)?
 
     @media (max-width: mobile-upper-limit)
       width auto
@@ -586,6 +589,7 @@
 
       .{newAppName}-banner--full-screen &
         max-width 100vw
+
     &--mobile-visible
       @media (max-width: mobile-upper-limit)
         display block
@@ -823,9 +827,16 @@
     z-index 1000
 
 .rt-banner__item
+  display flex
+  display flex
+  flex 0 0 auto
   flex-wrap wrap
   flex-flow column
   width 100%
+  width 100%
+  // height: 100% !important;
+  min-height 0
+  box-sizing border-box
   opacity 0
   position absolute
   top 0
@@ -833,14 +844,6 @@
   left 0
   right 0
   z-index 2
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 auto;
-  width: 100%;
-  //height: 100% !important;
-  min-height: 0;
-  display: flex
-
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property opacity
@@ -853,127 +856,121 @@
   z-index 3
 
 .rt-banner-container
-  position: relative
-  z-index: 11
-  min-height: 100%
+  min-height 100%
+  position relative
+  z-index 11
+
 .rt-banner--for-game:before
-  content: ''
-  position: absolute
-  left: 0
-  z-index: 3
-  right: 0
-  top: 0
-  bottom: 0
-  background-color: rgba(0,0,0,0.3)
+  content ""
+  background-color rgba(0, 0, 0, .3)
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 3
+
 .rt-banner--for-game
   .rt-col-12
-    width: 100%
-    height: 100%
+    width 100%
+    height 100%
+
   .rt-banner__item-wrapper-game
-    width: 100%
+    width 100%
+
   .rt-banner-content
-    width: 100%
+    width 100%
     left 0
 
 .banner__video-controls
-  margin-left: auto
-  margin-right: auto
-  margin-top: auto
-  margin-bottom: auto
-  width: 129px
-  height: 129px
-  position: absolute
-  left: 0
-  top: 0
-  bottom: 0
-  right: 0
-  cursor: pointer
+  width 129px
+  height 129px
+  margin-top auto
+  margin-bottom auto
+  margin-left auto
+  margin-right auto
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  cursor pointer
 
 .banner__video-time-line,
 .banner__video-time-line-active
-  position: absolute
-  top: 0
-  left: 0
-  bottom: 0
-  right: 0
-  margin-top: auto
-  margin-bottom: auto
-  margin-right: auto
-  margin-left: auto
-  width: 132px
-  height: 132px
+  width 132px
+  height 132px
+  margin-top auto
+  margin-bottom auto
+  margin-left auto
+  margin-right auto
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
   stroke-width 3px
 
 .banner__video-time-line-active
-  z-index: 2
-  stroke-dashoffset: 380;
-  stroke-dasharray: 380px;
-  transform: rotate(-90deg);
+  z-index 2
+  transform rotate(-90deg)
+  stroke-dashoffset 380
+  stroke-dasharray 380px
 
 .banner__video-button-status
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 29px 0 29px 45px;
-  border-color: transparent transparent transparent #ffffff;
-  position: absolute
-  top: 0
-  left: 20px
-  right: 0
-  bottom: 0
-  margin-top: auto
-  margin-right: auto
-  margin-bottom: auto
-  margin-left: auto
+  width 0
+  height 0
+  border-width 29px 0 29px 45px
+  border-style solid
+  border-color transparent transparent transparent #ffffff
+  margin-top auto
+  margin-bottom auto
+  margin-left auto
+  margin-right auto
+  position absolute
+  top 0
+  bottom 0
+  left 20px
+  right 0
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, border, width, height, left, top
+
   .banner__video-controls:hover &
-    border-color transparent transparent transparent #FF4F12;
+    border-color transparent transparent transparent #FF4F12
+
   &:before
-    content: ''
-    opacity: 0
-    width: 10px
-    height: 50px
-    position: absolute;
-    left: -20px
-    top: -40px
-    background-color: #fff
-    visibility: hidden
+    content ""
+    width 10px
+    height 50px
+    background-color #fff
+    opacity 0
+    visibility hidden
+    position absolute
+    top -40px
+    left -20px
     transition-timing-function ease-in-out
     transition-duration .3s
     transition-property background-color, border-width, width, height, left, top, opacity, visibility
+
     .banner__video-controls:hover &
-      background-color: #FF4F12
+      background-color #FF4F12
+
   .banner__video-controls--is-pause:hover &
-    background-color: #FF4F12
+    background-color #FF4F12
+
   .banner__video-controls--is-pause &
-    border-color transparent
-    width: 10px
-    height: 50px
-    top: 0
+    width 10px
+    height 50px
+    background-color #fff
     border-width 0
-    left: -20px
-    background-color: #fff
+    border-color transparent
+    top 0
+    left -20px
+
     &:before
-      content: ''
-      top: 0
-      left: 20px
-
-
-      opacity: 1
-      visibility: visible
-
-  //.banner__video--pause &
-
-//.banner__video-button-play
-//  position: absolute
-//  top: 0
-//  left: 15px
-//  bottom: 0
-//  right: 0
-//  margin-top: auto
-//  margin-bottom: auto
-//  margin-right: auto
-//  margin-left: auto
-//
+      content ""
+      opacity 1
+      visibility visible
+      top 0
+      left 20px

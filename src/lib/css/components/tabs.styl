@@ -3,67 +3,70 @@
   font-size 18px
 
 .{newAppName}-tabs-navigation
-    display flex
-    flex-direction row
-    width 100%
-    margin-left -15px
-    margin-right -15px
-    .rt-tabs-tablet &,
-    .rt-tabs-mobile &
-      padding-top: 20px
-      top: 20px
-      position: relative
-      display: block
-      overflow: auto
-      white-space nowrap
-      padding-bottom: 20px
+  display flex
+  flex-direction row
+  width 100%
+  margin-left -15px
+  margin-right -15px
+
+  .rt-tabs-tablet &,
+  .rt-tabs-mobile &
+    display block
+    overflow auto
+    white-space nowrap
+    padding-top 20px
+    padding-bottom 20px
+    position relative
+    top 20px
 
 .{newAppName}-tabs-navigation-wrapper
   .rt-tabs-tablet &,
   .rt-tabs-mobile &
-    display: block
-    overflow: hidden
-    position: relative
-    top: -20px
+    display block
+    overflow hidden
+    position relative
+    top -20px
 
 .{newAppName}-tabs-navigation__item
-      padding-left 15px
-      padding-right 15px
-      cursor pointer
-      .rt-tabs-tablet &,
-      .rt-tabs-mobile &
-        display: inline-block
+  padding-left 15px
+  padding-right 15px
+  cursor pointer
+
+  .rt-tabs-tablet &,
+  .rt-tabs-mobile &
+    display inline-block
+
 .{newAppName}-tabs-navigation__item-name
-        box-sizing border-box
-        border none
-        outline none
-        padding-bottom horizontal-space*0.5
-        position relative
-        text-align: inherit
+  box-sizing border-box
+  text-align inherit
+  border none
+  outline none
+  padding-bottom horizontal-space * .5
+  position relative
 
-        &:before
-          content ""
-          width 0
-          width 0
-          height 2px
-          text-shadow 0 0 0
-          border-bottom 2px solid transparent
-          position absolute
-          bottom 0
-          left 0
-          right 0
-          transition-timing-function ease-in-out
-          transition-duration .2s
-          transition-property border, width, text-shadow
+  &:before
+    content ""
+    width 0
+    width 0
+    height 2px
+    text-shadow 0 0 0
+    border-bottom 2px solid transparent
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    transition-timing-function ease-in-out
+    transition-duration .2s
+    transition-property border, width, text-shadow
 
-        &:hover,
-        &:focus,
-        .{newAppName}-tabs-navigation__item--is-active &
-          &:before
-            width 100%
-            border-bottom-color inherit
+  &:hover,
+  &:focus,
+  .{newAppName}-tabs-navigation__item--is-active &
+    &:before
+      width 100%
+      border-bottom-color inherit
 
-        .{newAppName}-tabs-navigation__item--is-active &
-          cursor default
+  .{newAppName}-tabs-navigation__item--is-active &
+    cursor default
 
-        cursor pointer
+  cursor pointer

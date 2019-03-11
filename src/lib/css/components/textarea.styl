@@ -55,41 +55,48 @@
       box-shadow none !important
 
     .text-field--error &
-      box-shadow 0 0 0 2px error-color inset!important
+      box-shadow 0 0 0 2px error-color inset !important
 
 .{b2bAppName}-textarea
   min-height 60px
   background-color b2c-white
   position relative
+
   .textarea-element
     padding 10px
+
   .floating-placeholder
     left 10px
+
   &--outlined
     .text-field__border
       border 1px solid b2c-cool-grey
       position absolute
       top 0
+      bottom 0
       left 0
       right 0
-      bottom 0
+
     &:focus,
     &:hover
       .text-field__border
         border-color b2c-purple
+
       .textarea-element[disabled]+.text-field__border
         border-color b2c-cool-grey
+
   .textarea-element[disabled]
     &+.text-field__border+.floating-placeholder,
     &+.text-field__line+.floating-placeholder
       color b2c-cool-grey
+
     &+.text-field__line
       border-color transparent
 
 .text-field--error
   .text-field__border
-    border-color error-color!important
+    border-color error-color !important
+
   .{b2bAppName}-textarea:hover
     .text-field__border
       border-color error-color
-

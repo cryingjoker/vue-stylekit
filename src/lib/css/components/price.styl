@@ -5,29 +5,36 @@
   transition-timing-function ease-in-out
   transition-duration .4s
   transition-property background-color, color
+
   .color-orange &
     color b2c-orange
+
   .color-white &
     color b2c-white
+
   &.rt-price-game
-    display: inline-block
+    display inline-block
+
     &+&
-      padding-left: 55px
-      position: relative
+      padding-left 55px
+      position relative
+
       &:before
-        content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDJweCIgaGVpZ2h0PSI4MXB4IiB2aWV3Qm94PSIwIDAgNDIgODEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjUgKDY3NDY5KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5MaW5lIDM8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4KICAgICAgICA8ZyBpZD0iYWJvbmVudC1ydGstIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODc1LjAwMDAwMCwgLTU4NC4wMDAwMDApIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIGlkPSJzcGVlZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQyLjAwMDAwMCwgNTE1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEzMy41LDE0OS41IEwxNzQuNSw2OS41IiBpZD0iTGluZS0zIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')
-        display: block
-        position: absolute
-        width: 42px
-        height: 81px
-        left: 0
-        top: -10px
-        bottom: 0
+        content url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDJweCIgaGVpZ2h0PSI4MXB4IiB2aWV3Qm94PSIwIDAgNDIgODEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjUgKDY3NDY5KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5MaW5lIDM8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4KICAgICAgICA8ZyBpZD0iYWJvbmVudC1ydGstIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODc1LjAwMDAwMCwgLTU4NC4wMDAwMDApIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIGlkPSJzcGVlZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQyLjAwMDAwMCwgNTE1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEzMy41LDE0OS41IEwxNzQuNSw2OS41IiBpZD0iTGluZS0zIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==")
+        display block
+        width 42px
+        height 81px
+        position absolute
+        top -10px
+        bottom 0
+        left 0
 
   .{newAppName}-dark-theme &
     color b2c-white07
+
     .color-orange &
       color b2c-orange
+
     .color-white &
       color b2c-white
 
@@ -74,7 +81,6 @@
       transition-duration .4s
       transition-property background
 
-
       .{newAppName}-dark-theme &
         background-color b2c-white07
 
@@ -89,26 +95,32 @@
     color main-color09
     font-size 54px
     line-height 45px
+    font-weight 400
     padding-left 5px
     padding-right 5px
     vertical-align baseline
-    font-weight: 400;
+
     .color-orange &
       color b2c-orange
+
     .color-white &
       color b2c-white
+
     .rt-price-game &
-      padding-left: 0
+      padding-left 0
+
     .{newAppName}-price-game &
-      font-size: 68px
-      font-weight: 100
+      font-size 68px
+      font-weight 100
+
     .{newAppName}-dark-theme &
       color b2c-white06
-    .{newAppName}-dark-theme .color-orange &
-        color b2c-orange
-    .{newAppName}-dark-theme .color-white &
-        color b2c-white
 
+    .{newAppName}-dark-theme .color-orange &
+      color b2c-orange
+
+    .{newAppName}-dark-theme .color-white &
+      color b2c-white
 
     @media (max-width: mobile-upper-limit)
       font-size 42px
@@ -127,10 +139,6 @@
     transition-duration .3s
     transition-property color
 
-
-
-
-
     @media (max-width: mobile-upper-limit)
       font-size 42px
 
@@ -139,8 +147,10 @@
 
     .{newAppName}-dark-theme &
       color b2c-white07
+
       .color-orange &
         color b2c-orange
+
       .color-white &
         color b2c-white
 
@@ -151,89 +161,96 @@
       color b2c-white07
 
 .{newAppName}-price__info
-  display: inline-block
+  display inline-block
   font-size 14px
   text-align center
   vertical-align baseline
+
   .color-orange &
     color b2c-orange
 
   .rt-price-game &
-    text-align: left
-    display: block
-    padding-top: 3px
-    font-size: 16px
+    display block
+    font-size 16px
+    text-align left
+    padding-top 3px
+
   @media (max-width: mobile-upper-limit)
     line-height 19px
+
   &--bold-font
-    font-weight: 600
+    font-weight 600
 
 .{newAppName}-price__info-item
-    .rt-price-game &
-      display: inline-block
-      font-weight: 200
+  .rt-price-game &
+    display inline-block
+    font-weight 200
 
+  @media (max-width: mobile-upper-limit)
+    line-height 19px
 
-    @media (max-width: mobile-upper-limit)
-      line-height 19px
+  & + &
+    border-top 1px solid main-color07
+    transition-timing-function ease-in-out
+    transition-duration .4s
+    transition-property border
 
+    .{newAppName}-card--has-white-color &
+      border-top-color white
 
+    .{newAppName}-dark-theme &
+      border-color b2c-white07
 
-    & + &
-      border-top 1px solid main-color07
-      transition-timing-function ease-in-out
-      transition-duration .4s
-      transition-property border
+    .{newAppName}-card &
+      border-color main-color07
 
-
-
-      .{newAppName}-card--has-white-color &
-        border-top-color white
-
-      .{newAppName}-dark-theme &
-        border-color b2c-white07
-
-      .{newAppName}-card &
-        border-color main-color07
-
-      .{newAppName}-card--has-white-color &
-        border-color b2c-white07
+    .{newAppName}-card--has-white-color &
+      border-color b2c-white07
 
 .{b2bAppName}-price
   &__value,
   &__info
+    color inherit !important
     font-size 32px
     line-height 42px
     font-weight 600
-    color inherit!important
+
     &-item
       display inline-block
       font-size inherit
+
       &+&
         font-size 18px
         line-height 26px
-        margin-left: 10px
+        margin-left 10px
+
   &__value
     padding 0 5px
+
   &__old-value
     color b2c-red
     font-size 18px
     line-height 26px
     padding 0 5px
+
     .{newAppName}-price__old-value
       opacity 1
+
       &:before
         border-bottom-color b2c-red
+
     .{b2bAppName}-price__info-item
       margin-left 5px
+
   .{newAppName}-price__opinion
     font-size 18px
     line-height 26px
 
 .{newAppName}-price-game
   .{newAppName}-price__info-item
-    display: inline-block
-    border-top: 0
+    display inline-block
+    border-top 0
+
   .{newAppName}-price__info-item+.{newAppName}-price__info-item
-      &:before
-        content: '/'
+    &:before
+      content "/"

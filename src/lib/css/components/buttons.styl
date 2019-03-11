@@ -16,7 +16,7 @@
 
   &[disabled]
     box-shadow none !important
-    cursor: default
+    cursor default
 
   &--is-fitched
     color transparent !important
@@ -73,17 +73,17 @@
 
     &:hover,
     &:focus
+      background-color b2c-orange-high
       box-shadow 0 2px 5px rgba(0, 0, 0, .2)
-      background-color: b2c-orange-high
 
     &[disabled]
-      background-color main-color01
       color white
-      .{newAppName}-dark-theme &
-        background-color: b2c-white01
-        border-color b2c-white
-        color b2c-white03
+      background-color main-color01
 
+      .{newAppName}-dark-theme &
+        color b2c-white03
+        background-color b2c-white01
+        border-color b2c-white
 
     .ripple-wave
       background-color b2c-white
@@ -99,52 +99,62 @@
     &:hover,
     &:focus
       color b2c-orange-low
+      background-color rgba(b2c-orange, .1)
       border-color b2c-orange-low
-      background-color: rgba(b2c-orange, .1)
 
     &[disabled]
-      border-color main-color01
       color main-color01
+      border-color main-color01
+
       &:focus,
       &:hover
-        background-color: transparent
+        background-color transparent
 
       .{newAppName}-dark-theme &
-        border-color b2c-white03
         color b2c-white03
+        border-color b2c-white03
 
     .ripple-wave
       background-color b2c-orange-low
+
     .ripple
       padding 0 18px
 
     .fake-radiobutton-for-button:checked+&
-      background-color b2c-orange
       color b2c-white
+      background-color b2c-orange
+
       .original-text
         display none
+
       .checked-text
         display inline
 
   &-white
     border 2px solid white
+
     &:focus,
     &:hover
+      background-color b2c-cool-grey05
       opacity .7
-      background-color: b2c-cool-grey05
+
       .{newAppName}-dark-theme &
-        background-color: b2c-white01
+        background-color b2c-white01
 
     &:active
-      background-color: transparent
+      background-color transparent
+
     &[disabled]
       color main-color01
+
       &:hover
-        background-color: transparent
+        background-color transparent
+
       .{newAppName}-dark-theme &
-        color b2c-white03!important
-        opacity: 1
+        color b2c-white03 !important
         border-color white
+        opacity 1
+
       .ripple-wave
         background-color b2c-cool-grey
 
@@ -157,15 +167,16 @@
 
     &:hover,
     &:focus
+      background-color b2c-purple-high
       box-shadow 0 2px 5px rgba(0, 0, 0, .2)
-      background-color: b2c-purple-high
 
     &[disabled]
       color white
       background-color main-color01
+
       .{newAppName}-dark-theme &
-        background-color b2c-white01
         color b2c-white03
+        background-color b2c-white01
 
     .ripple-wave
       background-color b2c-white
@@ -179,19 +190,22 @@
       box-shadow none
 
     &[disabled]
-      border-color main-color01
       color main-color01
+      border-color main-color01
+
       .{newAppName}-dark-theme &
-        border-color b2c-white03
         color b2c-white03
+        border-color b2c-white03
+
       &:focus,
       &:hover
-        background-color: transparent
+        background-color transparent
+
     &:hover,
     &:focus
       color b2c-purple-low
+      background-color hsl(rgba(b2c-purple, .1))
       border-color b2c-purple-low
-      background-color: hsl(rgba(b2c-purple, .1))
 
     .ripple-wave
       background-color b2c-purple-low
@@ -204,48 +218,64 @@
       padding 0 18px
 
     .fake-radiobutton-for-button:checked+&
-      background-color b2c-purple
       color b2c-white
+      background-color b2c-purple
+
       .original-text
         display none
+
       .checked-text
         display inline
 
   &-transparent
     border 2px solid transparent
+
     &:focus,
     &:hover
+      background-color b2c-cool-grey05
       opacity .7
-      background-color: b2c-cool-grey05
+
       .{newAppName}-dark-theme &
-        background-color: b2c-white01
+        background-color b2c-white01
+
     &:active
-      background-color: transparent
+      background-color transparent
+
     &[disabled]
       color main-color01
+
       &:hover
-        background-color: transparent
+        background-color transparent
+
       .{newAppName}-dark-theme &
-        color b2c-white03!important
-        opacity: 1
+        color b2c-white03 !important
         border-color transparent
+        opacity 1
+
       .ripple-wave
         background-color b2c-cool-grey
+
   &-cool-grey-border
     border 2px solid b2c-cool-grey
+
     &:focus,
     &:hover
+      background-color b2c-cool-grey05
       opacity .7
-      background-color: b2c-cool-grey05
+
       .{newAppName}-dark-theme &
-        background-color: b2c-white01
+        background-color b2c-white01
+
     .ripple
       padding 0 18px
+
     .fake-radiobutton-for-button:checked+&
-      background-color b2c-cool-grey
       color b2c-white
+      background-color b2c-cool-grey
+
       .original-text
         display none
+
       .checked-text
         display inline
 
@@ -254,6 +284,6 @@
 
 .original-text
   display inline
+
 .checked-text
   display none
-

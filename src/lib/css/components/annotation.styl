@@ -3,61 +3,61 @@
     border-top 2px solid b2b-cool-grey05-no-opacity
 
 .{newAppName}-annotation__arrow
-    transition-timing-function ease-in-out
-    transition-duration .2s
-    transition-property fill
-    fill main-color
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property fill
+  fill main-color
 
-    .{newAppName}-annotation--white-color,
-    .{newAppName}-dark-theme &
-      fill b2c-white
+  .{newAppName}-annotation--white-color,
+  .{newAppName}-dark-theme &
+    fill b2c-white
 
 .{newAppName}-annotation__title
-    display inline-block
-    padding-left 20px
-    position relative
-    cursor pointer
+  display inline-block
+  padding-left 20px
+  position relative
+  cursor pointer
 
-    .{newAppName}-annotation--is-open > &
-      text-decoration none
+  .{newAppName}-annotation--is-open > &
+    text-decoration none
 
 .{newAppName}-annotation__arrow
-    margin-top auto
-    margin-bottom auto
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    transition-timing-function ease-in-out
-    transition-duration .3s
-    transition-property transform
+  margin-top auto
+  margin-bottom auto
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property transform
 
-    .{newAppName}-annotation--white-color &
-      fill rgba(#ffffff, .5)
+  .{newAppName}-annotation--white-color &
+    fill rgba(#ffffff, .5)
 
-    .{newAppName}-annotation--is-open > .{newAppName}-annotation__title &
-        transform rotate(180deg)
+  .{newAppName}-annotation--is-open > .{newAppName}-annotation__title &
+    transform rotate(180deg)
 
 .{newAppName}-annotation__content
-    max-height 0
-    overflow hidden
-    color main-color05
-    padding-top 0
-    padding-left horizontal-space
-    position relative
-    transition-timing-function cubic-bezier(10, 2, .9, .65)
-    transition-duration .3s
-    transition-property max-height, padding
+  max-height 0
+  overflow hidden
+  color main-color05
+  padding-top 0
+  padding-left horizontal-space
+  position relative
+  transition-timing-function cubic-bezier(10, 2, .9, .65)
+  transition-duration .3s
+  transition-property max-height, padding
 
-    .{newAppName}-dark-theme &
-      color b2c-white
+  .{newAppName}-dark-theme &
+    color b2c-white
 
-    .{newAppName}-annotation--white-color
-      color b2c-white05
+  .{newAppName}-annotation--white-color
+    color b2c-white05
 
-    .{newAppName}-annotation--is-open > &
-      max-height 300vh
-      padding-top 10px
+  .{newAppName}-annotation--is-open > &
+    max-height 300vh
+    padding-top 10px
 
 .{newAppName}-annotation-item
-    padding-top horizontal-space * .5
+  padding-top horizontal-space * .5
