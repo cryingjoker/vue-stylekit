@@ -24,12 +24,25 @@ export default {
     twiceRender: {
       type: Boolean,
       default: false
+    },
+    waitParentClicked: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     ripplesList: []
   }),
-  mounted: function() {},
+  mounted: function () {
+    if (this.waitParentClicked) {
+      // For SEO-friendly click on buttons
+      let startRipple = this.startRipple
+      this.$el.style.pointerEvents = 'none';
+      this.$parent.$on('click', function($event) {
+        startRipple($event);
+      })
+    }
+  },
   methods: {
     renderRipple($event) {
       if (!this.notBindClick) {

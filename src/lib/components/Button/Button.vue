@@ -110,8 +110,8 @@ export default {
         );
       } else {
         return(
-          <button class={this.buttonClass} onClick={this.triggerClick}>
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+          <button onClick={this.triggerClick} class={this.buttonClass}>
+            <rt-ripple notRender={this.isDisabled} twiceRender={true} waitParentClicked={true}>
               {spinner}
               {this.$slots.default}
             </rt-ripple>
