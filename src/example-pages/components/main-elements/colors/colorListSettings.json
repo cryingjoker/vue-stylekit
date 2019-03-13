@@ -1,0 +1,20 @@
+ {
+  "code_variable_name": {
+    "index":"4",
+    "name":"Название в коде"
+  },
+  "label": {
+    "index": "0",
+    "name":"Название"
+  },
+  "hex" : {
+    "index": "2",
+    "name":"HEX"
+  },
+  "rgba": {
+    "name": "RGBA",
+    "index": "3"
+  }
+ }
+
+
