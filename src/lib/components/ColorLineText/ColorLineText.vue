@@ -57,12 +57,12 @@ export default {
     };
     const label = ()=>{
       if(this.$slots.content) {
-        return <p class="rt-font-banner-label-bold color-line color-line-label">
+        return <p class="rt-font-banner-label color-line color-line-label">
         <span class={'color-line-text ' + this.fillColorClass}
         >{this.$slots.label}</span>
         </p>;
       }else{
-        return <p class="rt-font-banner-label-bold color-line">
+        return <p class="rt-font-banner-label color-line">
         <span class={'color-line-text ' + this.fillColorClass}
         >{this.$slots.label} {icon()}</span>
         </p>;

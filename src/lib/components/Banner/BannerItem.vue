@@ -308,14 +308,12 @@ export default {
         </div>;
     } else {
 
-      return <div>
-        <div style={this.bannerStyle} class={"rt-banner-content" + this.bannerClass}>
+      return <div style={this.bannerStyle} class={"rt-banner-content" + this.bannerClass}>
           <div class="rt-banner-content__inner">
             {this.$slots.default}
             {content()}
             </div>
         </div>
-      </div>;
     }
   }
 };
