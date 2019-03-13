@@ -1086,120 +1086,124 @@
         </div>
         <div class="row">
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 rt-space-top is-b2b">
-            <rt-card
-              background-image="static/images/B2B/category-img.png"
-              :is-b2b-category="true"
-              :category-card-size="3"
-              background-color-type="green-low"
-              :is-white-color="true"
-              category-icon-mobile="static/images/B2B/shield.svg"
+            <pre-code
+              text="<rt-card
+              background-image=&quot;static/images/B2B/category-img.png&quot;
+              :is-b2b-category=&quot;true&quot;
+              :category-card-size=&quot;3&quot;
+              background-color-type=&quot;green-low&quot;
+              :is-white-color=&quot;true&quot;
+              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
             >
-              <template slot="content">
-                <h3 class="rt-font-bold rt-space-bottom05">
+              <template slot=&quot;content&quot;>
+                <h3 class=&quot;rt-font-bold rt-space-bottom05&quot;>
                   Видеонаблюдение
                 </h3>
-                <div class="rt-font-small-paragraph">
+                <div class=&quot;rt-font-small-paragraph&quot;>
                   Система удаленного видеонаблюдения
                 </div>
               </template>
-              <template slot="footer">
-                <a href="#">
+              <template slot=&quot;footer&quot;>
+                <a href=&quot;#&quot;>
                   <rt-button
-                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    class=&quot;rt-button-white rt-button-small rt-space-horizontal&quot;
                   >Подробнее</rt-button>
                 </a>
               </template>
-            </rt-card>
+            </rt-card>"/>
           </div>
           <div class="rt-col-8 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
-            <rt-card
-              background-image="static/images/B2B/virtual-ATS.png"
-              :is-b2b-category="true"
-              :category-card-size="2"
-              background-color-type="purple"
-              :is-white-color="true"
-              category-icon-mobile="static/images/B2B/shield.svg"
+            <pre-code
+              text="<rt-card
+              background-image=&quot;static/images/B2B/virtual-ATS.png&quot;
+              :is-b2b-category=&quot;true&quot;
+              :category-card-size=&quot;2&quot;
+              background-color-type=&quot;purple&quot;
+              :is-white-color=&quot;true&quot;
+              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
             >
-              <template slot="content">
-                <h3 class="rt-font-bold rt-space-bottom05">
+              <template slot=&quot;content&quot;>
+                <h3 class=&quot;rt-font-bold rt-space-bottom05&quot;>
                   Виртуальная АТС
                 </h3>
-                <div class="rt-font-small-paragraph">
+                <div class=&quot;rt-font-small-paragraph&quot;>
                   Быстрое подключение без трат на оборудование, возможность
                   пользоваться из любой точки мира и ни одного пропущенного
                   звонка клиента
                 </div>
               </template>
-              <template slot="footer">
+              <template slot=&quot;footer&quot;>
                 <rt-price
-                  :is-option="true"
-                  :value="500"
-                  currency="₽"
-                  time-interval="в месяц"
-                  :b2b-price="true"
+                  :is-option=&quot;true&quot;
+                  :value=&quot;500&quot;
+                  currency=&quot;₽&quot;
+                  time-interval=&quot;в месяц&quot;
+                  :b2b-price=&quot;true&quot;
                 />
-                <a href="#">
+                <a href=&quot;#&quot;>
                   <rt-button
-                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    class=&quot;rt-button-white rt-button-small rt-space-horizontal&quot;
                   >Подробнее</rt-button>
                 </a>
               </template>
-            </rt-card>
+            </rt-card>"/>
           </div>
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
-            <rt-card
-              :is-b2b-category="true"
-              :category-card-size="1"
-              background-color-type="dark-blue"
-              :is-white-color="true"
-              category-icon-mobile="static/images/B2B/shield.svg"
+            <pre-code
+              text="<rt-card
+              :is-b2b-category=&quot;true&quot;
+              :category-card-size=&quot;1&quot;
+              background-color-type=&quot;dark-blue&quot;
+              :is-white-color=&quot;true&quot;
+              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
             >
-              <template slot="content">
-                <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">
+              <template slot=&quot;content&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
                   Сервис по защите от сетевых угроз
                 </p>
-                <div class="rt-font-small-paragraph">
+                <div class=&quot;rt-font-small-paragraph&quot;>
                   На базе решения класса Unified Threat Management (UTM)
                 </div>
               </template>
-              <template slot="footer">
-                <a href="#">
+              <template slot=&quot;footer&quot;>
+                <a href=&quot;#&quot;>
                   <rt-button
-                    class="rt-button-white rt-button-small rt-space-horizontal"
+                    class=&quot;rt-button-white rt-button-small rt-space-horizontal&quot;
                   >Подробнее</rt-button>
                 </a>
               </template>
-            </rt-card>
+            </rt-card>"/>
           </div>
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
-            <rt-card
-              :is-b2b-category="true"
-              :category-card-size="1"
-              category-icon-mobile="static/images/B2B/mobile-call.svg"
+            <pre-code
+              text="<rt-card
+              :is-b2b-category=&quot;true&quot;
+              :category-card-size=&quot;1&quot;
+              category-icon-mobile=&quot;static/images/B2B/mobile-call.svg&quot;
             >
-              <template slot="content">
-                <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">
+              <template slot=&quot;content&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
                   Сервис по защите от сетевых угроз
                 </p>
-                <div class="rt-font-small-paragraph">
+                <div class=&quot;rt-font-small-paragraph&quot;>
                   На базе решения класса Unified Threat Management (UTM)
                 </div>
               </template>
-              <template slot="footer">
+              <template slot=&quot;footer&quot;>
                 <rt-price
-                  :is-option="true"
-                  :value="500"
-                  currency="₽"
-                  time-interval="в месяц"
-                  :b2b-price="true"
+                  :is-option=&quot;true&quot;
+                  :value=&quot;500&quot;
+                  currency=&quot;₽&quot;
+                  time-interval=&quot;в месяц&quot;
+                  :b2b-price=&quot;true&quot;
                 />
-                <a href="#">
+                <a href=&quot;#&quot;>
                   <rt-button
-                    class="rt-button-purple-border rt-button-small rt-space-horizontal"
+                    class=&quot;rt-button-purple-border rt-button-small rt-space-horizontal&quot;
                   >Подробнее</rt-button>
                 </a>
               </template>
-            </rt-card>
+            </rt-card>"/>
           </div>
           <div
             class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b"
@@ -1235,13 +1239,13 @@
                   </p>
                   <div class="rtb-card__description__row">
                     <span class="rt-font-paragraph rt-font-bold">1 сим-карта</span>
-                    <hint>
+                    <rt-hint :simple-tool-tip="true">
                       <slot>
                         Это всё что угодно,<br >но не адрес электронной почты
                         Это всё что угодно,<br >но не адрес электронной почты
                         Это всё что угодно,<br >но не адрес электронной почты
                       </slot>
-                    </hint>
+                    </rt-hint>
                   </div>
                   <div class="rtb-card__description__row">
                     <p class="rt-font-paragraph rt-font-bold">
@@ -1699,11 +1703,11 @@
               <template slot="content">
                 <div class="rtb-card__description__row">
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
-                  <hint>
+                  <rt-hint :simple-tool-tip="true">
                     <slot>
                       Это всё что угодно,<br >но не адрес электронной почты
                     </slot>
-                  </hint>
+                  </rt-hint>
                   <p class="rt-font-small-paragraph color-main025">
                     на номера домашнего региона
                   </p>
