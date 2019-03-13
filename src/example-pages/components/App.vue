@@ -9,7 +9,7 @@
       Menu
     </div>
 
-    <div :class="{ 'grid--active': showGrid }" class="grid rt-container">
+    <div :class="{ 'grid--active': showGrid }" class="grid app-container">
       <div class="row">
         <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
         <div class="rt-col-1 rt-col-td-1 rt-col-md-1 demo-col" />
