@@ -1,0 +1,401 @@
+[
+  {
+  "code_variable_name":"b2c-purple",
+  "label": "",
+  "value":"#7700FF"
+  },
+  {
+  "code_variable_name":"b2c-purple-low",
+  "label": "",
+  "value":"#6605C6"
+  },
+  {
+  "code_variable_name":"b2c-purple-high",
+  "label": "",
+  "value":"#8348FC"
+  },
+
+  {
+  "code_variable_name":"b2c-red",
+  "label": "",
+  "value":"#BC104B"
+  },
+  {
+  "code_variable_name":"b2c-red-low",
+  "label": "",
+  "value":"#910046"
+  },
+  {
+  "code_variable_name":"b2c-red-high",
+  "label": "",
+  "value":"#E22E65"
+  },
+
+  {
+  "code_variable_name":"b2c-dark-blue",
+  "label": "",
+  "value":"#273A64"
+  },
+  {
+  "code_variable_name":"b2c-dark-blue-low",
+  "label": "",
+  "value":"#001C45"
+  },
+  {
+  "code_variable_name":"b2c-dark-blue-high",
+  "label": "",
+  "value":"#275392"
+  },
+
+  {
+  "code_variable_name":"b2c-light-blue",
+  "label": "",
+  "value":"#65BBDF"
+  },
+  {
+  "code_variable_name":"b2c-light-blue-low",
+  "label": "",
+  "value":"#4897DF"
+  },
+  {
+  "code_variable_name":"b2c-light-blue-high",
+  "label": "",
+  "value":"#65DEED"
+  },
+
+  {
+  "code_variable_name":"b2c-yellow",
+  "label": "",
+  "value":"#FFBE08"
+  },
+  {
+  "code_variable_name":"b2c-yellow-low",
+  "label": "",
+  "value":"#FFA307"
+  },
+  {
+  "code_variable_name":"b2c-yellow-high",
+  "label": "",
+  "value":"#FFD800"
+  },
+
+  {
+  "code_variable_name":"b2c-orange",
+  "label": "",
+  "value":"#FF4F12"
+  },
+  {
+  "code_variable_name":"b2c-orange-low",
+  "label": "",
+  "value":"#D33706"
+  },
+  {
+  "code_variable_name":"b2c-orange-high",
+  "label": "",
+  "value":"#FF8218"
+  },
+
+  {
+  "code_variable_name":"b2c-pink",
+  "label": "",
+  "value":"#FFBFC3"
+  },
+  {
+  "code_variable_name":"b2c-pink-low",
+  "label": "",
+  "value":"#FFA0A7"
+  },
+  {
+  "code_variable_name":"b2c-pink-high",
+  "label": "",
+  "value":"#FFD2DD"
+  },
+
+  {
+  "code_variable_name":"b2c-green",
+  "label": "",
+  "value":"#57D9B7"
+  },
+  {
+  "code_variable_name":"b2c-green-low",
+  "label": "",
+  "value":"#3BBC9E"
+  },
+  {
+  "code_variable_name":"b2c-green-high",
+  "label": "",
+  "value":"#81EBD6"
+  },
+
+  {
+  "code_variable_name":"main-color",
+  "label": "",
+  "value":"#101828"
+  },
+  {
+  "code_variable_name":"main-color09",
+  "label": "",
+  "value":"rgba(16,24,40,0.9)"
+  },
+  {
+  "code_variable_name":"main-color08",
+  "label": "",
+  "value":"rgba(16,24,40,0.8)"
+  },
+  {
+  "code_variable_name":"main-color07",
+  "label": "",
+  "value":"rgba(16,24,40,0.7)"
+  },
+  {
+  "code_variable_name":"main-color06",
+  "label": "",
+  "value":"rgba(16,24,40,0.6)"
+  },
+  {
+  "code_variable_name":"main-color05",
+  "label": "",
+  "value":"rgba(16,24,40,0.5)"
+  },
+  {
+  "code_variable_name":"main-color04",
+  "label": "",
+  "value":"rgba(16,24,40,0.4)"
+  },
+  {
+  "code_variable_name":"main-color03",
+  "label": "",
+  "value":"rgba(16,24,40,0.3)"
+  },
+  {
+  "code_variable_name":"main-color02",
+  "label": "",
+  "value":"rgba(16,24,40,0.2)"
+  },
+  {
+  "code_variable_name":"main-color01",
+  "label": "",
+  "value":"rgba(16,24,40,0.1)"
+  },
+  {
+  "code_variable_name":"main-color003",
+  "label": "",
+  "value":"rgba(16,24,40,0.03)"
+  },
+
+  {
+  "code_variable_name":"main-color09-no-opacity",
+  "label": "",
+  "value":"#272F3D"
+  },
+  {
+  "code_variable_name":"main-color07-no-opacity",
+  "label": "",
+  "value":"#575D68"
+  },
+  {
+  "code_variable_name":"main-color05-no-opacity",
+  "label": "",
+  "value":"#868B95"
+  },
+  {
+  "code_variable_name":"main-color03-no-opacity",
+  "label": "",
+  "value":"#B8B9C0"
+  },
+  {
+  "code_variable_name":"main-color01-no-opacity",
+  "label": "",
+  "value":"#B8B9C0"
+  },
+  {
+  "code_variable_name":"main-color003-no-opacity",
+  "label": "",
+  "value":"#E7E7E9"
+  },
+
+  {
+  "code_variable_name":"b2c-cool-grey",
+  "label": "",
+  "value":"#E3E8EC"
+  },
+  {
+  "code_variable_name":"b2c-cool-grey05",
+  "label": "",
+  "value":"rgba(227,232,236,0.5)"
+  },
+  {
+  "code_variable_name":"b2c-cool-grey03",
+  "label": "",
+  "value":"rgba(227,232,236,0.3)"
+  },
+  {
+  "code_variable_name":"b2b-cool-grey05-no-opacity",
+  "label": "",
+  "value":"#F1F3F5"
+  },
+
+  {
+  "code_variable_name":"b2c-purple-high05",
+  "label": "",
+  "value":"rgba(131,72,252,0.5)"
+  },
+  {
+  "code_variable_name":"b2c-purple-high02",
+  "label": "",
+  "value":"rgba(131,72,252,0.2)"
+  },
+  {
+  "code_variable_name":"b2c-orange-high05",
+  "label": "",
+  "value":"rgba(255,130,24,0.5)"
+  },
+  {
+  "code_variable_name":"b2c-orange-high02",
+  "label": "",
+  "value":"rgba(255,130,24,0.2)"
+  },
+
+  {
+  "code_variable_name":"b2b-state",
+  "label": "",
+  "value":"#7B939B"
+  },
+  {
+  "code_variable_name":"b2b-dark-state",
+  "label": "",
+  "value":"#313A49"
+  },
+  {
+  "code_variable_name":"b2b-burgundy",
+  "label": "",
+  "value":"#431625"
+  },
+
+  {
+  "code_variable_name":"b2c-white",
+  "label": "",
+  "value":"#ffffff"
+  },
+  {
+  "code_variable_name":"b2c-white09",
+  "label": "",
+  "value":"rgba(255,255,255, 0.9)"
+  },
+  {
+  "code_variable_name":"b2c-white08",
+  "label": "",
+  "value":"rgba(255,255,255, 0.8)"
+  },
+  {
+  "code_variable_name":"b2c-white07",
+  "label": "",
+  "value":"rgba(255,255,255, 0.7)"
+  },
+  {
+  "code_variable_name":"b2c-white06",
+  "label": "",
+  "value":"rgba(255,255,255, 0.6)"
+  },
+  {
+  "code_variable_name":"b2c-white05",
+  "label": "",
+  "value":"rgba(255,255,255, 0.5)"
+  },
+  {
+  "code_variable_name":"b2c-white04",
+  "label": "",
+  "value":"rgba(255,255,255, 0.4)"
+  },
+  {
+  "code_variable_name":"b2c-white03",
+  "label": "",
+  "value":"rgba(255,255,255, 0.3)"
+  },
+  {
+  "code_variable_name":"b2c-white02",
+  "label": "",
+  "value":"rgba(255,255,255, 0.2)"
+  },
+  {
+  "code_variable_name":"b2c-white01",
+  "label": "",
+  "value":"rgba(255,255,255, 0.1)"
+  },
+
+  {
+  "code_variable_name":"dark-card-background",
+  "label": "",
+  "value":"rgba(0,0,0,0.8)"
+  },
+  {
+  "code_variable_name":"disable-button-color",
+  "label": "",
+  "value":"#e6e6e6"
+  },
+  {
+  "code_variable_name":"disable-button-color-dark-theme",
+  "label": "",
+  "value":"rgba(255,255,255,0.1)"
+  },
+  {
+  "code_variable_name":"card-list-border",
+  "label": "",
+  "value":"#E5E5E5"
+  },
+  {
+  "code_variable_name":"default-wive-color",
+  "label": "",
+  "value":"#808080"
+  },
+  {
+  "code_variable_name":"error-color",
+  "label": "",
+  "value":"#FF0C0C"
+  },
+  {
+  "code_variable_name":"error-color-text",
+  "label": "",
+  "value":"rgba(255,12,12,0.58)"
+  },
+  {
+  "code_variable_name":"box-shadow-background",
+  "label": "",
+  "value":"rgba(16,24,40,0.1)"
+  },
+  {
+  "code_variable_name":"dark-theme-dropdown-background",
+  "label": "",
+  "value":"#202432"
+  },
+  {
+  "code_variable_name":"light-grey",
+  "label": "",
+  "value":"#fafafa"
+  },
+  {
+  "code_variable_name":"rule-color",
+  "label": "",
+  "value":"#272F3D"
+  },
+  {
+  "code_variable_name":"card-shadow",
+  "label": "",
+  "value":"0 0 5px rgba(16,24,40,0.15)"
+  },
+  {
+  "code_variable_name":"card-shadow--hovered",
+  "label": "",
+  "value":"0 5px 5px rgba(16,24,40,0.15)"
+  },
+  {
+  "code_variable_name":"switcher-color",
+  "label": "",
+  "value":"#404653"
+  },
+  {
+  "code_variable_name":"game-promo-color",
+  "label": "",
+  "value":"#001424"
+  }
+]
