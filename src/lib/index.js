@@ -152,7 +152,6 @@ const VueRtStyle = {
     }
   }
 };
-console.info("LogoCoBranding", LogoCoBranding, Logo);
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
