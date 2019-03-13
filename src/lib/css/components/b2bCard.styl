@@ -112,49 +112,6 @@
     vertical-align middle
     cursor pointer
 
-  &__hint
-    display inline-block
-    width 20px
-    height 20px
-    color b2b-state
-    font-size 14px
-    line-height 20px
-    text-align center
-    background-color b2b-cool-grey05-no-opacity
-    border-radius 50%
-    margin-left 6px
-    position relative
-    z-index 9
-    vertical-align middle
-    cursor pointer
-
-    &__text
-      min-width 180px
-      max-width 250px
-      min-height 70px
-      box-sizing border-box
-      color b2b-state
-      text-align left
-      background-color b2b-cool-grey05-no-opacity
-      border-radius 5px
-      padding 8px 12px
-      position relative
-      top -50%
-      right -25px
-      z-index 9
-      transform translateY(-50%)
-
-      &:before
-        content ""
-        width 0
-        height 0
-        border-width 5px 5px 5px 0
-        border-style solid
-        border-color transparent #f1f3f5 transparent transparent
-        position absolute
-        top calc(50% - 5px)
-        left -5px
-
   .{newAppName}-card__content
     min-height auto
     padding 0
@@ -412,3 +369,112 @@
 
 .mb5
   margin-bottom 5px
+
+.{b2bAppName}-hint
+  display inline-block
+  border-radius 50%
+  margin-left 6px
+  position relative
+  z-index 9
+  vertical-align middle
+  cursor pointer
+  &__icon
+    width 20px
+    height 20px
+    position absolute
+    right 10px
+  &__text
+    box-sizing border-box
+    color b2b-state
+    text-align left
+    padding 10px
+    position relative
+    top -50%
+    right -40px
+    z-index 9
+    transform translateY(-50%)
+    font-size 14px
+    line-height 18px
+  &--tooltip
+    color b2b-state
+    text-align center
+    background-color b2b-cool-grey05-no-opacity
+    .{b2bAppName}-hint__text
+      background-color b2b-cool-grey05-no-opacity
+      min-width 180px
+      max-width 250px
+      min-height 70px
+      border-radius 5px
+      &:before
+        content ""
+        width 0
+        height 0
+        border-width 5px 5px 5px 0
+        border-style solid
+        border-color transparent #f1f3f5 transparent transparent
+        position absolute
+        top calc(50% - 5px)
+        left -5px
+  &--confirmed
+    .{b2bAppName}-hint__text
+      background-color b2c-green
+      height 38px
+      min-width 230px
+      color b2c-white
+      left calc(100% + 15px)
+      transform translateY(-25%)
+      @media (max-width mobile-upper-limit)
+        left auto
+        right 30px
+      &:before
+        content ""
+        width 0
+        height 0
+        border-width 5px 5px 5px 0
+        border-style solid
+        border-color transparent b2c-green transparent transparent
+        position absolute
+        top calc(50% - 5px)
+        left -5px
+        @media (max-width mobile-upper-limit)
+          left auto
+          right -5px
+          border-color transparent transparent transparent b2c-green
+          border-width 5px 0 5px 5px
+  .{b2bAppName}-hint__icon
+      right 0
+  &--denied
+    .{b2bAppName}-hint__text
+      background-color error-color
+      height 38px
+      min-width 230px
+      color b2c-white
+      left calc(100% + 15px)
+      transform translateY(-25%)
+      @media (max-width mobile-upper-limit)
+        left auto
+        right 30px
+      &:before
+        content ""
+        width 0
+        height 0
+        border-width 5px 5px 5px 0
+        border-style solid
+        border-color transparent error-color transparent transparent
+        position absolute
+        top calc(50% - 5px)
+        left -5px
+        @media (max-width mobile-upper-limit)
+          left auto
+          right -5px
+          border-color transparent transparent transparent error-color
+          border-width 5px 0 5px 5px
+  .{b2bAppName}-hint__icon
+      right 0
+
+  .input + &
+    position absolute
+    right -30px
+    top 14px
+    @media (max-width mobile-upper-limit)
+      right 0

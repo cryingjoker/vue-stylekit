@@ -65,14 +65,17 @@
   right 20px
 
 .{b2bAppName}-input
-  // @media (min-width: laptop-lower-limit)
-  // margin-bottom -60px
+  //@media (min-width: laptop-lower-limit)
+  //  margin-bottom -60px
   .input-element
     padding-bottom 10px
 
   .text-field--error
     .input-clear__icon
       fill error-color
+
+  .password-icon
+    right 20px
 
 .text-field--error
   .{b2bAppName}-input-clear
@@ -159,15 +162,22 @@
       left -21px
       right -21px
       transform none
-
+      padding 5px 20px
+      width calc(100% + 42px)
+      min-height auto
       &:before
         border none
-
     .input-element[disabled]+.text-field__border
-      border 1px solid rgba(b2c-cool-grey, .9) !important
+        border 1px solid rgba(b2c-cool-grey, .9)!important
 
 .rt-col .rt-input+&
   margin-top 20px
+
+.input+.{b2bAppName}-card__hint
+  position absolute
+  right -40px
+  top: 50%
+  transform translateY(-50%)
 
 @keyframes showClearInput
   0%
