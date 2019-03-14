@@ -385,12 +385,15 @@ export default {
       }
     },
     slidesWidth() {
-      return this.movesArr.reduce(
-        (accum, curVal) =>
-          (typeof accum === "object" && accum.constructor === Object
-            ? accum.width
-            : accum) + curVal.width
-      );
+      if (this.movesArr.length) {
+        return this.movesArr.reduce(
+          (accum, curVal) =>
+            (typeof accum === "object" && accum.constructor === Object
+              ? accum.width
+              : accum) + curVal.width
+        );
+      }
+      return 0
     },
     overlayContainerWidth() {
       return parseFloat(getComputedStyle(this.$refs.overlay).width);
