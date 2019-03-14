@@ -212,6 +212,7 @@
         </div>
       </div>
       <div class="rt-space-top35">
+        <h2>Почему виртуальная телефония от Ростелекома</h2>
         <pre-code
           text="
       <rt-row-list :is-profit-list=&quot;true&quot;
@@ -283,6 +284,33 @@
           </template>
         </rt-row-list-item>
       </rt-row-list>"/>
+      </div>
+      <div class="rt-space-top35 rt-container">
+        <pre-code
+          text="
+        <rt-row-list :company-profits=&quot;true&quot;>
+          <rt-row-list-item icon=&quot;/static/images/B2B/ATS.svg&quot;>
+            <template slot=&quot;option&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-small-paragraph&quot;>Кредитная форма оплаты  всем новым клиентам</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon=&quot;/static/images/B2B/mobile-call.svg&quot;>
+            <template slot=&quot;option&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-small-paragraph&quot;>Пакеты минут рассчитаны  на основе данных об использовании услуги</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon=&quot;/static/images/B2B/ATS.svg&quot;>
+            <template slot=&quot;option&quot;>
+              <div class=&quot;ovh&quot;>
+                <p class=&quot;rt-font-small-paragraph&quot;>Доверие 700 тысяч компаний  и частных предпринимателей</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+        </rt-row-list>"/>
       </div>
     </div>
   </div>

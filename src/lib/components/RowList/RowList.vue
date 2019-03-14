@@ -14,6 +14,10 @@ export default {
     columnsQuantity: {
       type: Number,
       default: 1
+    },
+    companyProfits: {
+      type: Boolean,
+      default: false
     }
   }
 };
