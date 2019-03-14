@@ -35,7 +35,7 @@ export default {
   },
   methods: {},
   render(h) {
-    return <div class="rt-l-game">
+    return <div class="rt-l-game rt-dark-theme">
       <div class="color-block--game-promo-color rt-fill-viewport"
            style={{
              backgroundImage: "url(/static/images/game/rostelecom_game.jpg)",
@@ -131,13 +131,15 @@ export default {
                     </svg>
                     <rt-color-line-text
                       class="rt-l-game-main-text"
-                      is-white-color={true}
-                      color-icon="white"
-                      fill-color="orange">
-                      <template slot="label">Level up* <br/> для вашего <br/>
-                        интернета&nbsp;&nbsp;
-                      </template>
+                      color-icon="orange"
+                      fill-color="white">
+                      <template slot="label">Level up* <br/> вашего интернета</template>
                     </rt-color-line-text>
+                    <div class="d-flex">
+                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/></div>
+                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="250" currency="Мбит" time-interval="сек."/></div>
+                      <div class="rt-orange-breaker-item"><span class="color-white">быстрый интернет и уникальные <br/>игровые бонусы</span></div>
+                    </div>
                     <div class="rt-space-top2">
                       <rt-button class="rt-button-orange">Подключить</rt-button>
                     </div>

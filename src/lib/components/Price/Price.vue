@@ -192,7 +192,7 @@ export default {
           return (
             <div class={`${rtPriceClass} rt-price-without-space`}>
               <div
-                class={"rt-price__option-value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+                class={"rt-price__option-value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
               <div class={rtPriceInfoClass}>
                 <div class="rt-price__info-item">{this.normalizeCurrency}</div>
                 <div class="rt-price__info-item">

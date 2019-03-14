@@ -93,6 +93,10 @@ export default {
     color: {
       type: String,
       default: 'purple'
+    },
+    technicalPossibilityHint: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -473,6 +477,7 @@ export default {
         {arithmeticButtons}
       </div>
       {inputLabel}
+      {this.$slots.default}
     </div>;
   }
 };
