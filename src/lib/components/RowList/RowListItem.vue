@@ -30,6 +30,7 @@ export default {
   },
   render: function(h) {
     this.columnsQuantity = this.$parent._props.columnsQuantity;
+    this.companyProfits = this.$parent._props.companyProfits;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -73,7 +74,16 @@ export default {
             </div>
           </div>
         );
-      } else {
+      } else if(this.companyProfits){
+        return (
+          <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits">
+            <div class="rt-row-list__header">
+              <div class="rt-row-list__icon" style={this.iconImage}></div>
+              {this.$slots.option}
+            </div>
+          </div>
+        )
+      }else {
         return (
           <div class="rt-row-list__item rt-col-12 rt-col-md-3">
             <div class="rt-row-list__header row">
