@@ -77,12 +77,19 @@
           }
         }
       };
+      const hintText = () => {
+        if(this.active) {
+          return <div class="rtb-hint__text">
+            {this.$slots.default}
+          </div>;
+        } else {
+          return null;
+        }
+      };
 
       return <div class={this.hintClass}>
         <div class="rtb-hint__icon" onMouseover={this.showHint} onMouseleave={this.hideHint}>{toolTipType()}</div>
-        <div v-show={this.active} class="rtb-hint__text">
-          {this.$slots.default}
-        </div>
+        {hintText()}
       </div>;
     }
   };
