@@ -1,107 +1,103 @@
 
-.pc-navs {
-  position absolute
+.pc-navs
   width 100%
   height 100%
+  margin auto
+  position absolute
   left 0
   right 0
-  margin auto
 
-  &__side {
-    cursor pointer
-    position absolute
+  &__side
     height 100%
+    position absolute
     z-index 3
-    &-left {
-      left 0
-    }
-    &-right {
-      right 0
-    }
-  }
+    cursor pointer
 
-  &__arrows {
-    margin-top 0px
+    &-left
+      left 0
+
+    &-right
+      right 0
+
+  &__arrows
+    width 100%
+    margin-top 0
     margin-left auto
     margin-right auto
-    pointer-events none
     position absolute
-    width 100%
-    bottom auto
     top 50%
+    bottom auto
     left 0
     right 0
     z-index 4
-  }
+    pointer-events none
 
-  &__button {
-    background-color #ffffff
-    -webkit-border-radius 50%
-    border-radius 50%
-    -webkit-box-shadow 0 0 30px 0 rgba(0, 0, 0, .1)
-    box-shadow 0 0 30px 0 rgba(0, 0, 0, .1)
+  &__button
     box-sizing border-box
     color transparent
-    cursor pointer
-    padding 15px 20px
-    pointer-events auto
-    position absolute
-    bottom 0
-    top 0
     text-decoration none
+    background-color #ffffff
+    border-radius 50%
+    box-shadow 0 0 30px 0 rgba(0, 0, 0, .1)
+    padding 15px 20px
+    position absolute
+    top 0
+    bottom 0
+    z-index 5
+    cursor pointer
     transform scale(1)
     transition all .25s ease
-    z-index 5
-    &:after {
+    pointer-events auto
+    -webkit-border-radius 50%
+    -webkit-box-shadow 0 0 30px 0 rgba(0, 0, 0, .1)
+
+    &:after
       content ""
-      position absolute
       width 10px
       height 16px
       margin auto
+      position absolute
       top 1px
+      bottom 0
       left 0
       right 0
-      bottom 0
-    }
-    &:hover {
+
+    &:hover
       transform scale(1.1)
-    }
-  }
-  &-prev {
+
+  &-prev
     left 40px
-    &:after {
+
+    &:after
+      background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEwIDE2Ij4gICAgPHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNiAxMikgcm90YXRlKDE4MCAyIDIpIiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjg5MiAwTDAgMS44NjcgNi4yMTYgOCAwIDE0LjEzMyAxLjg5MiAxNiAxMCA4eiIgb3BhY2l0eT0iLjciLz48L3N2Zz4=")
       left -5px
-      background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEwIDE2Ij4gICAgPHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNiAxMikgcm90YXRlKDE4MCAyIDIpIiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xLjg5MiAwTDAgMS44NjcgNi4yMTYgOCAwIDE0LjEzMyAxLjg5MiAxNiAxMCA4eiIgb3BhY2l0eT0iLjciLz48L3N2Zz4=')
-    }
-    @media (max-width: 1024px) {
+
+    @media (max-width: 1024px)
       left 10px
-    }
-  }
-  &-next {
+
+  &-next
     right 40px
-    &:after {
+
+    &:after
+      background-image url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEwIDE2Ij4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS44OTIgMEwwIDEuODY3IDYuMjE2IDggMCAxNC4xMzMgMS44OTIgMTYgMTAgOHoiIG9wYWNpdHk9Ii43Ii8+PC9zdmc+")
       right -5px
-      background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDEwIDE2Ij4gICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS44OTIgMEwwIDEuODY3IDYuMjE2IDggMCAxNC4xMzMgMS44OTIgMTYgMTAgOHoiIG9wYWNpdHk9Ii43Ii8+PC9zdmc+')
-    }
-    @media (max-width: 1024px) {
+
+    @media (max-width: 1024px)
       right 10px
-    }
-  }
-  &-more {
-    color rgba(0,0,0,.7)
-    position absolute
-    right 0
+
+  &-more
+    color rgba(0, 0, 0, .7)
     margin-top 30px
+    position absolute
     top 50%
+    right 0
     z-index 3
-  }
-  &--pending {
+
+  &--pending
     pointer-events none
-  }
-  &--disabled {
-    cursor default
+
+  &--disabled
     opacity 0
-    pointer-events none
+    cursor default
     transform scale(0) !important
-  }
-}
+    pointer-events none

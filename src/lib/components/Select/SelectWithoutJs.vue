@@ -16,7 +16,11 @@
             height="7"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z" fill="#575D68" fill-rule="evenodd"/>
+            <path
+              d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z"
+              fill="#575D68"
+              fill-rule="evenodd"
+            />
           </svg>
         </div>
       </div>

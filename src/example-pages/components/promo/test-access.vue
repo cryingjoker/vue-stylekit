@@ -1,7 +1,7 @@
 <template>
   <div class="rt-space-top35">
-  <pre-code
-    text="<div class=&quot;test-access&quot;>
+    <pre-code
+      text="<div class=&quot;test-access&quot;>
     <div class=&quot;test-access__image mobile-none&quot;></div>
     <div class=&quot;rt-container rt-col-12 rt-col-td-3 rt-col-md-3 rt-space-top25 d-flex rt-space-bottom25&quot;>
       <div class=&quot;rt-col-5 rt-col-td-3 rt-col-md-3 flex-column&quot;>

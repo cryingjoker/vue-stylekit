@@ -2,7 +2,7 @@
   <button
     :class="{ 'rt-button--is-block': isBlock }"
     class="rt-button rt-button-no-wive"
-    @click="triggerClick($event);"
+    @click="triggerClick($event)"
   >
     <slot />
   </button>

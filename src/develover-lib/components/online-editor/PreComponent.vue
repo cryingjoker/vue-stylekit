@@ -14,7 +14,7 @@
       </svg>
     </div>
     <div v-if="showCodeEditor" class="code-editor">
-      <div class="code-editor__close" @click="close();">
+      <div class="code-editor__close" @click="close()">
         <svg
           viewBox="0 0 14 14"
           class="code-editor__icon"
@@ -33,7 +33,7 @@
       </div>
       <pre-code-editor
         :code="normalizeCode.template"
-        @change="changeComponentCode($event);"
+        @change="changeComponentCode($event)"
       />
     </div>
     <div :is="normalizeCode" class="wc-inline-render" />

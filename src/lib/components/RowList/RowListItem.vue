@@ -14,11 +14,6 @@ export default {
   data: () => ({
     show: false,
   }),
-  methods: {
-    toggleShow() {
-      this.show = !this.show;
-    }
-  },
   computed: {
     iconImage() {
       const styles = {};
@@ -26,6 +21,11 @@ export default {
         styles.backgroundImage = "url(" + this.icon + ")";
       }
       return styles;
+    }
+  },
+  methods: {
+    toggleShow() {
+      this.show = !this.show;
     }
   },
   render: function(h) {
@@ -102,10 +102,10 @@ export default {
       const columnClass = (() => {
         let profitColumn = '';
         if(this.columnsQuantity === 2) {
-          profitColumn += ' rtb-profit--col-2 rt-col-6 '
+          profitColumn += ' rtb-profit--col-2 rt-col-6 ';
         }
         if(this.columnsQuantity === 3) {
-          profitColumn += ' rtb-profit--col-3 rt-col-4 '
+          profitColumn += ' rtb-profit--col-3 rt-col-4 ';
         }
         return profitColumn;
       })();

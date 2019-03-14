@@ -1,13 +1,17 @@
 <template>
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
-      <div class="app-title"><h1 class="rt-font-hero">Table</h1></div>
+      <div class="app-title">
+        <h1 class="rt-font-hero">
+          Table
+        </h1>
+      </div>
       <div class="app-body">
         <div class="app-row row">
           <div class="rt-col rt-font-hypnens-off">
             <pre-code
               text="
-              <rt-table class=&quot;rt-space-bottom4&quot; :tablet-list-type=&quot;true&quot;>
+              <rt-table class=&quot;rt-space-bottom2&quot; :tablet-list-type=&quot;true&quot;>
               <template slot=&quot;label&quot;>
                 Тарифы на добровольную блокировку
               </template>
@@ -47,7 +51,7 @@
             "
             />
             <pre-code
-              text="<rt-table class=&quot;rt-space-bottom4&quot;>
+              text="<rt-table class=&quot;rt-space-bottom2&quot;>
               <template slot=&quot;label&quot;>
                 Звонки
               </template>
@@ -91,8 +95,8 @@
                 Интернет
               </template>
               <template slot="columns">
-                <rt-table-col></rt-table-col>
-                <rt-table-col width="200px"></rt-table-col>
+                <rt-table-col />
+                <rt-table-col width="200px" />
               </template>
               <template slot="header">
                 <rt-table-head-item>Услуга</rt-table-head-item>

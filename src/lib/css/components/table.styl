@@ -54,6 +54,7 @@
   &-body
     &__row
       display table-row
+
       @media (max-width: mobile-upper-limit)
         display flex
         flex-direction row
@@ -67,6 +68,7 @@
       & + &
         @media (max-width: tablet-upper-limit)
           border-top 2px solid b2c-cool-grey05
+
           .{newAppName}-dark-theme &
             border-top 2px solid b2c-white05
 
@@ -86,19 +88,20 @@
         padding-right 0
 
       @media (max-width: mobile-upper-limit)
-        padding-left 0
-        padding-right 0
         font-size 14px
         line-height 18px
+        padding-left 0
+        padding-right 0
 
     &__item
       display table-cell
+      border-top 2px solid b2c-cool-grey05
       padding-top 15px
       padding-bottom vertical-space
       padding-left horizontal-space * .5
       padding-right horizontal-space * .5
       vertical-align top
-      border-top 2px solid b2c-cool-grey05
+
       @media (max-width: mobile-upper-limit)
         display flex
         flex 0 0 100%
@@ -110,11 +113,11 @@
         max-width 100%
         min-height fit-content
         text-align left !important
+        border none
         padding-top 10px
         padding-bottom 10px
         padding-left 0
         padding-right 0
-        border none
 
       @media (max-width: mobile-upper-limit)
         padding-bottom 10px
@@ -124,6 +127,9 @@
       &:first-child
         padding-left 0
 
+        @media (max-width: mobile-upper-limit)
+          padding-top 15px
+
         .rt-table-body__content
           @media (max-width: tablet-upper-limit)
             flex 0 1 100%
@@ -131,10 +137,10 @@
             max-width 100%
             color main-color
             font-size 20px
+            line-height 26px
             font-weight 600
             padding-left 0
             padding-right 0
-            line-height 26px
 
             .rt-dark-theme &
               color b2c-white
@@ -154,7 +160,6 @@
 
       &:before
         @media (max-width: tablet-upper-limit)
-
           .rt-dark-theme &
             color b2c-white06
 
@@ -165,10 +170,10 @@
           max-width 50%
           box-sizing border-box
           color main-color06
-          padding-bottom horizontal-space * .25
-          padding-left 0
           font-size 14px
           line-height 18px
+          padding-bottom horizontal-space * .25
+          padding-left 0
 
       &--half-mobile-width
         @media (max-width: mobile-upper-limit)
@@ -184,6 +189,7 @@
       &-head__item
         @media (max-width: tablet-upper-limit)
           display none
+
       &-body
         &__row
           @media (max-width: tablet-upper-limit)
@@ -191,14 +197,16 @@
             flex-direction row
             flex-wrap wrap
             width 100%
+            padding-top 5px
             padding-bottom 10px
-            padding-top: 5px
+
         &__content
           @media (max-width: tablet-upper-limit)
             flex 0 0 50%
             max-width 50%
             padding-left horizontal-space
             padding-right 0
+
         &__item
           @media (max-width: tablet-upper-limit)
             display flex
@@ -211,11 +219,12 @@
             max-width 100%
             min-height fit-content
             text-align left !important
+            border none
             padding-top 10px
             padding-bottom 10px
             padding-left 0
             padding-right 0
-            border none
+
           &:before
             @media (max-width: tablet-upper-limit)
               content attr(label)
@@ -228,17 +237,20 @@
               padding-bottom horizontal-space * .25
               padding-left 0
               padding-right 18px
+
           &:first-child:before
             @media (max-width: tablet-upper-limit)
               display none
 
   &-title
-    font-size: 28px
-    line-height: 36px
+    font-size 28px
+    line-height 36px
     font-weight 600
+
     @media (max-width: laptop-upper-limit)
-      font-size: 24px
-      line-height: 32px
+      font-size 24px
+      line-height 32px
+
     @media (max-width: mobile-upper-limit)
       font-size 18px
       line-height 24px

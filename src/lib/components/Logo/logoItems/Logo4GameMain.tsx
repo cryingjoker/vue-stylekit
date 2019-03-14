@@ -17,7 +17,7 @@ class fourGameMainClass extends Vue{
   @Prop({ default: null }) background: string;
 
   render(h: CreateElement): VNode {
-    return <div className="rt-logo">svg empty</div>
+    return <div class="rt-logo">svg empty</div>
 
   }
 }

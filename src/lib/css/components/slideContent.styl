@@ -18,41 +18,47 @@
     pointer-events all
 
 .rt-slide
-  padding-bottom: 10px
+  padding-bottom 10px
+
   &+&
-    padding-top: 20px
-    border-top: 1px solid main-color02
+    border-top 1px solid main-color02
+    padding-top 20px
+
   &__header
-    position: relative
-    padding-left: 30px
-    padding-top: 20px
-    padding-bottom: 20px
-    cursor: pointer
+    padding-top 20px
+    padding-bottom 20px
+    padding-left 30px
+    position relative
+    cursor pointer
+
   &__arrow
-    position: absolute
-    left: 0
+    height 13px
+    margin-top auto
+    margin-bottom auto
+    position absolute
+    top 0
+    bottom 5px
+    left 0
     transition-timing-function ease-in-out
     transition-duration .5s
     transition-property transform
-    height: 13px
-    top: 0
-    bottom: 5px
-    margin-top: auto
-    margin-bottom: auto
+
     .rt-slide--is-active &
       transform rotate(90deg)
+
   &__content
-    position: relative
-    max-height: 0
-    overflow: hidden
-    opacity: 0
-    visibility: hidden
+    max-height 0
+    overflow hidden
+    padding-left 30px
+    opacity 0
+    visibility hidden
+    position relative
     transition-timing-function ease-in-out
     transition-duration .5s
     transition-property max-height, opacity, visibility, padding-bottom
-    padding-left: 30px
+
     .rt-slide--is-active &
-      padding-bottom: 10px
-      max-height: 3000px
-      opacity: 1
-      visibility: visible
+      max-height 3000px
+      padding-bottom 10px
+      opacity 1
+      visibility visible

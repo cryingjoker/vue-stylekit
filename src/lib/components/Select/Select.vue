@@ -5,7 +5,9 @@
         label
       }}</label>
       <div class="select-value">
-        <p class="select-input">{{ localValue }}</p>
+        <p class="select-input">
+          {{ localValue }}
+        </p>
         <div class="select-arrow">
           <svg
             class="select-arrow__icon"
@@ -13,12 +15,22 @@
             height="7"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z" fill="#575D68" fill-rule="evenodd"/>
+            <path
+              d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z"
+              fill="#575D68"
+              fill-rule="evenodd"
+            />
           </svg>
         </div>
       </div>
     </button>
-    <div v-bind:class="{'text-field__border': outlined, 'text-field__line': !outlined, 'text-field__border--error': outlined && hasError}"/>
+    <div
+      :class="{
+        'text-field__border': outlined,
+        'text-field__line': !outlined,
+        'text-field__border--error': outlined && hasError
+      }"
+    />
     <!--<div v-else class="text-field__line" />-->
     <div v-if="!disabled" :style="selectListStyle" class="select-list">
       <slot />
@@ -101,7 +113,7 @@ export default {
     placeholderClasses() {
       return {
         "floating-placeholder--go-top": this.hasSelected
-      }
+      };
     },
     selectListStyle() {
       if (this.dropdownMinWidth) {
@@ -222,11 +234,19 @@ export default {
       }
     },
     liftPlaceholder() {
-      if(!this.$el.querySelector(".select-input").innerText) {
-        if(!this.$el.querySelector(".floating-placeholder").classList.contains('floating-placeholder--go-top')) {
-          this.$el.querySelector(".floating-placeholder").classList.add('floating-placeholder--go-top')
+      if (!this.$el.querySelector(".select-input").innerText) {
+        if (
+          !this.$el
+            .querySelector(".floating-placeholder")
+            .classList.contains("floating-placeholder--go-top")
+        ) {
+          this.$el
+            .querySelector(".floating-placeholder")
+            .classList.add("floating-placeholder--go-top");
         } else {
-          this.$el.querySelector(".floating-placeholder").classList.remove('floating-placeholder--go-top')
+          this.$el
+            .querySelector(".floating-placeholder")
+            .classList.remove("floating-placeholder--go-top");
         }
       }
     }

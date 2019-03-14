@@ -17,7 +17,7 @@ class logoGameClass extends Vue{
   @Prop({ default: null }) background: string;
 
   render(h: CreateElement): VNode {
-    return <div className="rt-logo">
+    return <div class="rt-logo">
       <svg width={this.width} height={this.height} viewBox="0 0 300 93" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <polygon id={`rt${this._uid}-path-1`}

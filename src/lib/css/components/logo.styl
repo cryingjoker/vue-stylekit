@@ -1,63 +1,71 @@
 .rt-logo
-  display: inline-block
+  display inline-block
+
   svg
-    max-width: 100%
+    max-width 100%
+
 .rt-logo-line
-  display: inline-block
-  width: 1px
-  padding-left: horizontal-space
-  padding-right: horizontal-space
-  height: 115px
-  position: relative
+  display inline-block
+  width 1px
+  height 115px
+  padding-left horizontal-space
+  padding-right horizontal-space
+  position relative
+
   @media (max-width: tablet-upper-limit)
-    height: 70px
-    top: -10px
+    height 70px
+    top -10px
+
   @media (max-width: mobile-upper-limit)
-    height: 55px
-    top: -20px
+    height 55px
+    top -20px
+
   &:before
-    content: ''
-    position: absolute
-    width: 1px
-    height: 100%
-    background-color: #fff
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    margin-left: auto
-    margin-right: auto
+    content ""
+    width 1px
+    height 100%
+    background-color #fff
+    margin-left auto
+    margin-right auto
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+
 .rt-logo-co-branding
-  position: relative
-  display: table
+  display table
   flex-direction row
-  margin-left: -10px
-  margin-right: -10px
+  margin-left -10px
+  margin-right -10px
+  position relative
 
 .rt-logo-co-branding__item
-  display: table-cell
-  padding-left: 8px
-  padding-right: 8px
+  display table-cell
+  padding-left 8px
+  padding-right 8px
+
 .rt-logo-co-branding__line
-  display: table-cell
-  height: 100%
-  width: 1px
-
-  padding-top: 6px
-  position: relative
-  bottom: -3px
-  margin-left: 10px
+  display table-cell
+  width 1px
+  height 100%
+  margin-left 10px
+  padding-top 6px
+  position relative
+  bottom -3px
+  .{newAppName}-dark-theme &
+    &:before
+      background-color: #fff
   &:before
-    content: ''
-    position: absolute
-    top: -6px
-    bottom: -3px
-    width: 100%
-
-    background-color: #878C93
-    display: block
-
+    content ""
+    display block
+    width 100%
+    background-color #878C93
+    position absolute
+    top -6px
+    bottom -3px
+    z-index: 10
 
 .rt-logo__rt-text
-  margin-left: -5%
-  margin-bottom: 5.5%
+  margin-bottom 5.5%
+  margin-left -5%

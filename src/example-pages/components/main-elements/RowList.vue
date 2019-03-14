@@ -1,6 +1,6 @@
 <template>
 
-  <div class="app-content">
+  <div class="app-content rt-col-12 rt-col-md-3">
     <div class="rt-container">
       <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
         <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
@@ -10,7 +10,7 @@
       <div class="rt-container">
         <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
           <pre-code
-          text="
+            text="
         <rt-row-list>
           <rt-row-list-item>
             <template slot=&quot;icon&quot;>
@@ -208,12 +208,12 @@
           </rt-row-list-item>
         </rt-row-list>
         "
-            />
+          />
         </div>
       </div>
       <div class="rt-space-top35">
-      <pre-code
-        text="
+        <pre-code
+          text="
       <rt-row-list :is-profit-list=&quot;true&quot;
           :columns-quantity=&quot;3&quot; class=&quot;color-block--main-color&quot;>
         <rt-row-list-item
@@ -288,10 +288,10 @@
   </div>
 </template>
 <script>
-// const componentsList = {};
-import componentsList from "../../componentsList";
-export default {
-  name: "AppRowList",
-  components: componentsList
-};
+  // const componentsList = {};
+  import componentsList from "../../componentsList";
+  export default {
+    name: "AppRowList",
+    components: componentsList
+  };
 </script>

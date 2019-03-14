@@ -1,8 +1,10 @@
 .{newAppName}-row-list
   &__header
     display flex
+
     &--has-more-content
       cursor pointer
+
     @media (max-width: iphone8)
       flex-direction column
 
@@ -90,35 +92,42 @@
     margin 0 auto
     padding-top 15px
     padding-bottom 15px
+
     @media (max-width: tablet-upper-limit)
       width 90%
+
     @media (max-width: mobile-upper-limit)
-      width: 100%
       flex-direction row
+      width 100%
       max-width none
+
   &+&
-    border-top: none
+    border-top none
+
   .{newAppName}-row-list__icon
-    margin-right 20px
-    flex-basis: 80px
-    flex-shrink: 0
-    text-align: center
+    flex-shrink 0
+    flex-basis 80px
     align-items initial
     width 80px
     height 80px
-    background-repeat: no-repeat
+    text-align center
+    background-position 50% 0
     background-size contain
-    background-position: 50% 0
+    background-repeat no-repeat
+    margin-right 20px
+
   .{newAppName}-font-paragraph
-    margin-bottom: 5px
+    margin-bottom 5px
 
 .ovh
-  overflow: hidden
+  overflow hidden
 
 .{b2bAppName}-profit-list
-  padding 50px 80px
   color b2c-white
+  padding 50px 80px
+
   @media (max-width: tablet-upper-limit)
     padding 30px 20px
+
   @media (max-width: mobile-upper-limit)
     padding 30px 40px

@@ -27,7 +27,7 @@ export default {
       this.hasCopy = true;
       setTimeout(()=>{
         this.hasCopy = false;
-      },600)
+      },600);
     }
   },
   render(){
@@ -40,19 +40,19 @@ export default {
 
     const textStyle = {
       color: this.colorName.search('white') < 0 && this.colorName != 'light-grey' ? '#fff' :  '#000'
-    }
+    };
     const text = (()=>{
       if(this.hasCopy) {
         return <span style={textStyle}
-                     class="rt-font-bold">copy done</span>
+                     class="rt-font-bold">copy done</span>;
       }else{
         return <span style={textStyle}
-                     class="rt-font-bold">{ this.colorName} <br/> {this.colorValue}</span>
+                     class="rt-font-bold">{ this.colorName} <br/> {this.colorValue}</span>;
       }
-    })()
+    })();
     return <div onClick={this.copyName} style={style} class="rt-col-1 rt-col-md-1 rt-col-td-1 d-flex flex-center-center">
       {text}
-      </div>
+      </div>;
   }
 };
 </script>

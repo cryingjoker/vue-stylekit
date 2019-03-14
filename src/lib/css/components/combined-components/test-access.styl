@@ -1,41 +1,50 @@
 .test-access
+  color b2c-white
   background-color b2c-green-low
   position relative
-  color b2c-white
+
   @media (max-width: mobile-upper-limit)
-    text-align: center
+    text-align center
+
   .rt-ordered-list__item
-    padding-left 20px
-    text-align left!important
     color b2c-white
+    text-align left !important
+    padding-left 20px
+
     &+.rt-ordered-list__item
       margin-top 30px
+
     &:before
       background-color b2c-white05
-      left: 2px
-      top: 10px
-      position: absolute
+      position absolute
+      top 10px
+      left 2px
+
       @media (max-width: tablet-upper-limit)
         top 7px
+
   .rt-col-10
-    margin-left: -10px
+    margin-left -10px
+
     @media (max-width: mobile-upper-limit)
-      margin-left: 0
+      margin-left 0
 
 .download-button--dashed
-  padding: 15px 20px 15px 40px
+  display inline-block
   border 2px dashed b2c-white07
   border-radius 5px
+  padding 15px 20px 15px 40px
   position relative
-  display: inline-block
+
   @media (max-width: mobile-upper-limit)
     display block
+
   .rt-font-control
     color b2c-white07
 
 .stretcher
   margin-top 20px
-  margin-bottom: 30px
+  margin-bottom 30px
 
 .mobile-none
   @media (max-width: mobile-upper-limit)
@@ -45,15 +54,15 @@
   border-bottom 1px solid b2c-white05
 
 .test-access__image
+  width 50%
+  height calc(100% - 100px)
+  background-position 100% 50%
+  background-size contain
+  background-repeat no-repeat
   position absolute
-  //background-image: url('/static/images/B2B/test-access-2.png');
+  // background-image: url('/static/images/B2B/test-access-2.png');
   top 50px
   right 0
-  width 50%
-  background-size: contain
-  height calc(100% - 100px)
-  background-repeat: no-repeat
-  background-position: 100% 50%
 
 .list-title
   margin-left -10px

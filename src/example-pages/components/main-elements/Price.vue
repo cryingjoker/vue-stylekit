@@ -75,18 +75,18 @@
 </template>
 
 <script>
-import documentation from "../../../lib/components/Price/docs/index.json";
-const componentsList = {};
-export default {
-  name: "AppPrice",
-  components: componentsList,
-  data: () => ({
-    documentation: {}
-  }),
-  mounted() {
-    this.documentation = documentation;
-  },
-  created() {},
-  methods: {}
-};
+  import documentation from "../../../lib/components/Price/docs/index.json";
+  const componentsList = {};
+  export default {
+    name: "AppPrice",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {},
+    methods: {}
+  };
 </script>

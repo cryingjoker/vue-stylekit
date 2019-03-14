@@ -3,65 +3,68 @@
     <div
       v-if="canAdvanceBackward"
       class="pc-navs__side pc-navs__side-left"
-      @click.prevent="triggerPageAdvance('prev')"
       :style="{
         width: `${$parent.hSpace}px`
       }"
-    ></div>
+      @click.prevent="triggerPageAdvance('prev')"
+    />
     <div
       v-if="$parent.navsArrows"
       class="pc-navs__arrows"
-      :class="[$parent.containerName, {
-        'is-scrolled':isScrolled,
-        'is-overlay': isOverlay
-      }]"
+      :class="[
+        $parent.containerName,
+        {
+          'is-scrolled': isScrolled,
+          'is-overlay': isOverlay
+        }
+      ]"
       :style="navStyles"
     >
-
       <a
         class="pc-navs__button"
-        @click.prevent="triggerPageAdvance('prev')"
         :class="linkClasses('prev')"
+        @click.prevent="triggerPageAdvance('prev')"
         :style="{
           width: `${buttonsSize}px`,
           height: `${buttonsSize}px`
         }"
       >
-        <i class="pc-navs__circle-nav"></i>
+        <i class="pc-navs__circle-nav"/>
       </a>
 
       <a
         class="pc-navs__button"
-        @click.prevent="triggerPageAdvance('next')"
         :class="linkClasses('next')"
+        @click.prevent="triggerPageAdvance('next')"
         :style="{
           width: `${buttonsSize}px`,
           height: `${buttonsSize}px`
         }"
       >
-        <i class="pc-navs__circle-nav"></i>
-        <div
-          v-if="showTipsNext"
-          class="pc-navs-more"
-          v-html="moreText"
-        ></div>
+        <i class="pc-navs__circle-nav"/>
+        <div v-if="showTipsNext" class="pc-navs-more" v-html="moreText"></div>
       </a>
-
     </div>
     <div
       v-if="canAdvanceForward"
       class="pc-navs__side pc-navs__side-right"
-      @click.prevent="triggerPageAdvance('next')"
       :style="{
         width: `${$parent.hSpace}px`
       }"
-    ></div>
+      @click.prevent="triggerPageAdvance('next')"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RtNavigation',
+  name: "RtNavigation",
+  props: {
+    navigationContainer: { // Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет.
+      type: String,
+      default: ''
+    }
+  },
   data () {
     return {
       isScrolled: false,
@@ -75,107 +78,113 @@ export default {
       navContainerChanged: false
     }
   },
-  props: {
-    navigationContainer: { // Контейнер, в который будет помещена навигация карусели. Если пусто, навигация перемещена не будет.
-      type: String,
-      default: ''
-    }
-  },
-  mounted () {
-    if (this.$parent.navsArrows && this.$el.scrollHeight > (this.$parent.navsPosStart + this.$parent.navsPosEnd)) {
+  mounted() {
+    if (
+      this.$parent.navsArrows &&
+      this.$el.scrollHeight >
+        this.$parent.navsPosStart + this.$parent.navsPosEnd
+    ) {
       this.$nextTick(() => {
-        window.addEventListener('scroll', this.stickNavs, { passive: true })
-        window.addEventListener('resize', this.stickNavs, { passive: true })
-      })
-      this.stickNavs()
+        window.addEventListener("scroll", this.stickNavs, { passive: true });
+        window.addEventListener("resize", this.stickNavs, { passive: true });
+      });
+      this.stickNavs();
     } else if (this.$parent.navsArrows) {
       // Если заданная высота отступа выше зоны просмотра, то центрируем стрелочки
-      this.topPos = '0px'
-      this.bottomPos = '0px'
+      this.topPos = "0px";
+      this.bottomPos = "0px";
     }
   },
-  updated () {
-    if (!this.navContainerChanged && this.navigationContainer !== '') {
-      let els = document.querySelectorAll(this.navigationContainer)
+  updated() {
+    if (!this.navContainerChanged && this.navigationContainer !== "") {
+      let els = document.querySelectorAll(this.navigationContainer);
       if (els.length) {
-        els[0].insertBefore(this.$el, els[0].firstChild)
+        els[0].insertBefore(this.$el, els[0].firstChild);
       }
-      this.navContainerChanged = true
+      this.navContainerChanged = true;
     }
   },
   computed: {
-    cmpName () {
-      return this.$parent.cmpName || 'RtNavigation'
+    cmpName() {
+      return this.$parent.cmpName || "RtNavigation";
     },
-    isPending () {
-      return this.$parent.isPending
+    isPending() {
+      return this.$parent.isPending;
     },
-    canAdvanceForward () {
-      return this.$parent.canAdvanceForward
+    canAdvanceForward() {
+      return this.$parent.canAdvanceForward;
     },
-    canAdvanceBackward () {
-      return this.$parent.canAdvanceBackward
+    canAdvanceBackward() {
+      return this.$parent.canAdvanceBackward;
     },
-    moreText () {
-      return `Ещё&nbsp;${this.nextCountTip}`
+    moreText() {
+      return `Ещё&nbsp;${this.nextCountTip}`;
     },
-    navStyles () {
+    navStyles() {
       return {
         height: `${this.buttonsSize}px`,
         position: this.position,
         top: this.topPos,
         bottom: this.bottomPos
-      }
+      };
     }
   },
-  destroyed () {
+  destroyed() {
     if (this.$parent.navsArrows) {
-      window.removeEventListener('scroll', this.stickNavs)
-      window.removeEventListener('resize', this.stickNavs)
+      window.removeEventListener("scroll", this.stickNavs);
+      window.removeEventListener("resize", this.stickNavs);
     }
   },
   methods: {
-    triggerPageAdvance (direction) {
+    triggerPageAdvance(direction) {
       if (direction) {
-        this.$parent.advancePage(direction)
+        this.$parent.advancePage(direction);
       } else {
-        this.$parent.advancePage()
+        this.$parent.advancePage();
       }
     },
-    stickNavs () {
+    stickNavs() {
       if (this.$parent.$refs.overlay) {
-        let posY = window.pageYOffset + window.innerHeight / 2
-        let posStart = this.getTop(this.$parent.$refs.overlay) + this.$parent.navsPosStart
-        let posEnd = this.getTop(this.$parent.$refs.overlay) + this.$parent.$refs.overlay.clientHeight - this.$parent.navsPosEnd - this.buttonsSize
-        if ((posY >= posStart) && posY < posEnd) {
+        let posY = window.pageYOffset + window.innerHeight / 2;
+        let posStart =
+          this.getTop(this.$parent.$refs.overlay) + this.$parent.navsPosStart;
+        let posEnd =
+          this.getTop(this.$parent.$refs.overlay) +
+          this.$parent.$refs.overlay.clientHeight -
+          this.$parent.navsPosEnd -
+          this.buttonsSize;
+        if (posY >= posStart && posY < posEnd) {
           // Scrolled
-          this.position = 'fixed'
-          this.topPos = null
-          this.bottomPos = 'auto'
+          this.position = "fixed";
+          this.topPos = null;
+          this.bottomPos = "auto";
         } else if (posY >= posEnd) {
           // After scrolling zone
-          this.position = 'absolute'
-          this.topPos = 'auto'
-          this.bottomPos = `${this.$parent.navsPosEnd}px`
+          this.position = "absolute";
+          this.topPos = "auto";
+          this.bottomPos = `${this.$parent.navsPosEnd}px`;
         } else {
           // Before scrolling zone
-          this.position = 'absolute'
-          this.topPos = `${this.$parent.navsPosStart}px`
-          this.bottomPos = 'auto'
+          this.position = "absolute";
+          this.topPos = `${this.$parent.navsPosStart}px`;
+          this.bottomPos = "auto";
         }
       }
     },
-    linkClasses (pos) {
+    linkClasses(pos) {
       return [
-        `pc-navs-${pos}`, {
-          'pc-navs--disabled': pos === 'next' ? !this.canAdvanceForward : !this.canAdvanceBackward,
-          'pc-navs--pending': this.isPending
+        `pc-navs-${pos}`,
+        {
+          "pc-navs--disabled":
+            pos === "next" ? !this.canAdvanceForward : !this.canAdvanceBackward,
+          "pc-navs--pending": this.isPending
         }
-      ]
+      ];
     },
-    getTop (el) {
-      return el.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop
+    getTop(el) {
+      return  (el.getBoundingClientRect().top + window.pageYOffset) || document.documentElement.scrollTop
+
     }
   }
-}
+};
 </script>

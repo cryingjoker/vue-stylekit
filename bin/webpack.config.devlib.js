@@ -26,6 +26,7 @@ const config = {
         use: [
           {
             loader: `vue-loader`,
+            exclude: /node_modules/,
             options: {
               transformAssetUrls: {
                 source: './src/',
@@ -44,17 +45,8 @@ const config = {
       {
         test: /\.js$/,
         loader: `babel-loader`,
+        exclude: /node_modules/,
         include: [path.join(local_dirname, `src`)],
-      },
-      {
-        test: /\.less$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
       },
       {
         test: /\.(jpg|png|webp|gif|otf|ttf|woff|woff2|ani|eot|svg)$/,

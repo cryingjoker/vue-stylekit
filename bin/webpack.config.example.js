@@ -2,7 +2,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require(`path`);
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 const webpack = require('webpack');
-const MonacoWebpackPlugin = require(`monaco-editor-webpack-plugin`);
+
 const local_dirname = path.join(__dirname,'..');
 const vueLoaderConfig = require('./vue-loader.config');
 
@@ -56,20 +56,8 @@ const config = {
       {
         test: /\.js$/,
         loader: `babel-loader`,
-
+        exclude: /node_modules/,
         include: [path.join(local_dirname, `src`)],
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: `style-loader`,
-          },
-          {loader:`css-loader`},
-          {
-            loader: `less-loader`,
-          },
-        ],
       },
       {
         test: /\.styl/,
@@ -94,10 +82,6 @@ const config = {
     ],
   },
   plugins: [
-
-    new MonacoWebpackPlugin(webpack,{
-      languages: ['html'],
-    }),
     new HtmlWebpackPlugin({
       filename: `index.html`,
       template: path.join(local_dirname, `static`, `index.html`),

@@ -62,6 +62,7 @@ class Logo extends Vue {
           this.localWidth = this.width || defaultValues[this.type].width;
           this.localHeight = this.height || defaultValues[this.type].height;
         }
+        console.info('--this.localWidth>>>',this.type,this.localWidth)
       });
     }
   }

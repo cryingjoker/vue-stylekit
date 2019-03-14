@@ -1,6 +1,8 @@
 <template>
-  <div :class="tabsItemClass" @click="setActiveTabName();">
-    <button class="rt-tabs-navigation__item-name"><slot /></button>
+  <div :class="tabsItemClass" @click="setActiveTabName()">
+    <button class="rt-tabs-navigation__item-name">
+      <slot />
+    </button>
   </div>
 </template>
 

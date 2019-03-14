@@ -315,7 +315,7 @@ export default {
       } else if (inputElement.getAttribute('type') === 'text') {
         inputElement.setAttribute('type', 'password');
       }
-      this.passwordVisibility = !this.passwordVisibility
+      this.passwordVisibility = !this.passwordVisibility;
     }
   },
   render() {
@@ -330,12 +330,12 @@ export default {
       inputClass += " rt-input--white";
     }
     if(this.type && this.type === "password") {
-      inputClass += " rt-input--password"
+      inputClass += " rt-input--password";
     }
     if(this.color === 'orange') {
-      inputClass += " text-field--orange"
+      inputClass += " text-field--orange";
     } else {
-      inputClass += " text-field--purple"
+      inputClass += " text-field--purple";
     }
 
     const placeholder = (() => {
@@ -355,7 +355,7 @@ export default {
       const buttonClass = (() => {
         let clearButtonClassNames = "input-clear";
         if(this.isB2bInput) {
-          clearButtonClassNames += " rtb-input-clear"
+          clearButtonClassNames += " rtb-input-clear";
         }
         return clearButtonClassNames;
       })();
@@ -391,7 +391,7 @@ export default {
                 <circle cx="8" cy="5" r="2"/>
               </g>
             </svg>
-          </div>
+          </div>;
         }
       }
       return null;

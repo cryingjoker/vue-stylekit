@@ -70,12 +70,12 @@ export default {
       priceType: (() => {
         if(this.b2bPrice === true) {
           if(this.isOption) {
-            return "b2b-price--option"
+            return "b2b-price--option";
           }
           if(this.oldValue) {
-            return "b2b-price--old-value"
+            return "b2b-price--old-value";
           }
-          return "b2b-price"
+          return "b2b-price";
         }
         if(!this.b2bPrice){
           if (this.onlyPrice) {
@@ -106,8 +106,8 @@ export default {
   },
   mounted: function() {},
   render: function(h) {
-      const rtPriceClass = 'rt-price'+(this.forGame ? ' rt-price-game' : '')
-      const rtPriceInfoClass = 'rt-price__info'+(this.boldOption ? ' rt-price__info--bold-font' : '')
+      const rtPriceClass = 'rt-price'+(this.forGame ? ' rt-price-game' : '');
+      const rtPriceInfoClass = 'rt-price__info'+(this.boldOption ? ' rt-price__info--bold-font' : '');
 
 
       switch (this.priceType) {
@@ -192,7 +192,7 @@ export default {
           return (
             <div class={`${rtPriceClass} rt-price-without-space`}>
               <div
-                class={"rt-price__option-value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+                class={"rt-price__option-value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
               <div class={rtPriceInfoClass}>
                 <div class="rt-price__info-item">{this.normalizeCurrency}</div>
                 <div class="rt-price__info-item">

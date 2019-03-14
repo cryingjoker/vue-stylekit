@@ -1,29 +1,12 @@
 <template>
-  <div ref="editor" class="code-editor__container" />
+  <div id="editor" ref="editor" class="code-editor__container" />
 </template>
 
 <script>
-import debounce from "debounce";
-import * as monaco from "monaco-editor";
-if (location.href.search("cryingjoker") > 0) {
-  window.MonacoEnvironment = {
-    getWorkerUrl: function(moduleId, label) {
-      if (label === "json") {
-        return "/vue-stylekit/docs/json.worker.js";
-      }
-      if (label === "css") {
-        return "/vue-stylekit/docs/css.worker.js";
-      }
-      if (label === "html") {
-        return "/vue-stylekit/docs/html.worker.js";
-      }
-      if (label === "typescript" || label === "javascript") {
-        return "/vue-stylekit/docs/ts.worker.js";
-      }
-      return "/vue-stylekit/docs/editor.worker.js";
-    }
-  };
-}
+import beautify from "js-beautify";
+const ace = require("brace");
+require("brace/mode/javascript");
+require("brace/theme/monokai");
 
 export default {
   name: "PreCodeEditor",
@@ -34,50 +17,18 @@ export default {
     }
   },
   mounted() {
-    if (monaco.languages.html.htmlDefaults.options) {
-      monaco.languages.html.htmlDefaults.options.format.wrapLineLength = 20;
-      monaco.languages.html.htmlDefaults.options.format.insertSpaces = true;
-    }
-    monaco.languages.html.htmlDefaults.indentInnerHtml = true;
-
-    this.editor = monaco.editor.create(this.$refs.editor, {
-      value: this.code,
-      cursorStyle: "line",
-      autoIndent: true,
-      minimap: {
-        enabled: false,
-        showSlider: false
-      },
-      scrollbar: true,
-      language: "html",
-      automaticLayout: true,
-      roundedSelection: true,
-      scrollBeyondLastLine: true,
-      parameterHints: true,
-      renderIndentGuides: true,
-      lineNumbersMinChars: 3,
-      theme: "vs-dark",
-      formatOnType: true,
-      scrollBeyondLastLine: false,
-      lineNumbers: function(lineNumber) {
-        return `<span style="padding-right:4px">${lineNumber}</span>`;
-      }
+    const editor = ace.edit("editor", {
+      value: this.code
     });
+    editor.getSession().setMode("ace/mode/html");
+    editor.setTheme("ace/theme/monokai");
 
-    const debouncedModelContentChange = debounce(changes => {
-      this.$emit("change", this.editor.getValue());
-    }, 100);
-    this.editor.onDidChangeModelContent(changes => {
-      debouncedModelContentChange();
+    editor.session.setValue(beautify.html(this.code));
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.getSession().on("change", () => {
+      const val = editor.getSession().getValue();
+      this.$emit("change", val);
     });
-
-    setTimeout(() => {
-      this.editor.getAction("editor.action.formatDocument");
-      this.editor
-        .getAction("editor.action.formatDocument")
-        .run()
-        .then(() => {});
-    }, 300);
   }
 };
 </script>

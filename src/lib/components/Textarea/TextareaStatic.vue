@@ -96,7 +96,7 @@ export default {
             <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} />
             <div class="textarea-border" />
             <p class="text-field__error-message">{this.errorMessage }</p>
-          </div>
+          </div>;
   }
 };
 </script>

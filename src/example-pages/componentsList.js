@@ -58,7 +58,7 @@ import {
   Pattern
 } from "../lib/components/index";
 
-import AppManu from './components/AppMenu.vue'
+import AppManu from "./components/AppMenu.vue";
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;

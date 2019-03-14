@@ -1,6 +1,5 @@
-
 <script type="text/jsx">
-  import variables from '../../variables.json'
+  import variables from '../../variables.json';
   const componentsList = {};
 
 export default {
@@ -103,7 +102,7 @@ export default {
     <div class="rt-tabs-content">
       {this.$slots.content}
     </div>
-  </div>
+  </div>;
   }
 };
 </script>

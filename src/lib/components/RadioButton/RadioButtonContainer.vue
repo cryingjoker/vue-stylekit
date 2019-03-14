@@ -16,6 +16,9 @@ export default {
 
   beforeDestroy() {
   },
+  mounted(){
+    this.findAllChildren(this.$children);
+  },
   methods: {
     emitSelectedData(){
       const responseArray = {};
@@ -31,16 +34,16 @@ export default {
             }
           }
         }
-      })
-      this.$emit('change',responseArray)
+      });
+      this.$emit('change',responseArray);
     },
     updateRadioData(radioData){
       const uidArray = this.radioNamesMap[radioData.name];
       uidArray.forEach((uid)=>{
         if(uid !== radioData['_uid']) {
-          this.radioData[uid].checked = false
+          this.radioData[uid].checked = false;
         }else{
-          this.radioData[uid].checked = true
+          this.radioData[uid].checked = true;
         }
       });
       this.emitSelectedData();
@@ -48,9 +51,9 @@ export default {
     updateAllChildren(props){
       this.$children.forEach((vNode)=>{
         if('changeFromParent' in vNode ){
-          vNode.changeFromParent(props)
+          vNode.changeFromParent(props);
         }
-      })
+      });
     },
     findAllChildren(vNodeArray){
       vNodeArray.forEach((vNode)=>{
@@ -71,21 +74,18 @@ export default {
           this.$set(this.radioNamesMap,vNode.name,radioNames);
           setTimeout(()=>{
             this.emitSelectedData();
-          },1000)
+          },1000);
         }
         if(vNode.$children){
           this.findAllChildren(vNode.$children);
         }
-      })
+      });
     }
-  },
-  mounted(){
-    this.findAllChildren(this.$children);
   },
   render(h){
     return <div class="d-static">
       {this.$slots.default}
-    </div>
+    </div>;
   }
 };
 </script>

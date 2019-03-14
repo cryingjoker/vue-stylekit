@@ -12,7 +12,7 @@ class logoRTEnglishOnlyTextClass extends Vue{
   render(h: CreateElement): VNode {
     const textHeight = '27.5%';
     return <div class="rt-logo">
-      <svg height={textHeight} className="rt-logo__rt-text" viewBox="0 0 160 23" version="1.1"
+      <svg height={textHeight} class="rt-logo__rt-text" viewBox="0 0 160 23" version="1.1"
            xmlns="http://www.w3.org/2000/svg">
         <defs>
           <polygon id="path-1"

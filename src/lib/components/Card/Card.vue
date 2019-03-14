@@ -4,9 +4,6 @@ const componentsList = {};
 export default {
   name: "RtCard",
   components: componentsList,
-  data: () => ({
-    index: null
-  }),
   props: {
     resetMinHeight:{
       type: Boolean,
@@ -137,6 +134,9 @@ export default {
       default: false
     }
   },
+  data: () => ({
+    index: null
+  }),
   computed: {
     cardClass() {
       let cardClass = "";
@@ -171,25 +171,25 @@ export default {
         cardClass += " rt-card--hide-background-on-mobile";
       }
       if(this.resetMinHeight){
-        cardClass += " rt-card--custom-height"
+        cardClass += " rt-card--custom-height";
       }
       if(this.equalPadding){
-        cardClass += " rtb-card"
+        cardClass += " rtb-card";
       }
       if(this.isB2bPackage){
-        cardClass += " rtb-card--package"
+        cardClass += " rtb-card--package";
       }
       if(this.isB2bCategory){
         if(this.categoryCardSize === 1){
-          cardClass += " rtb-category--small"
+          cardClass += " rtb-category--small";
         }
         if(this.categoryCardSize === 2){
-          cardClass += " rtb-category--medium"
+          cardClass += " rtb-category--medium";
         }
         if(this.categoryCardSize === 3){
-          cardClass += " rtb-category--large"
+          cardClass += " rtb-category--large";
         }
-        cardClass += " rtb-category"
+        cardClass += " rtb-category";
       }
       return cardClass;
     },
@@ -406,7 +406,7 @@ export default {
               </svg>
             </div>
             <div class="rtb-category__image" style={this.categoryImage}></div>
-          </div>
+          </div>;
         }
         if(this.categoryCardSize === 2){
           return <div class="rtb-category__content" >
@@ -425,7 +425,7 @@ export default {
               </svg>
             </div>
             <div class="rtb-category__image" style={this.categoryImage}></div>
-          </div>
+          </div>;
         }
         if(this.categoryCardSize === 1){
           return <div class="rtb-category__content" >
@@ -438,17 +438,17 @@ export default {
                 {this.$slots.footer}
               </div>
             </div>
-          </div>
+          </div>;
         }
       } else {
-        return null
+        return null;
       }
     })();
     const label =(() => {
       if (this.hasLabel){
         return <div class="rtb-card__label">
           {this.$slots.label}
-        </div>
+        </div>;
       }
     })();
     const discount = (() => {
@@ -460,7 +460,7 @@ export default {
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/></svg></div>
                 <span class="rtb-card__discount-line__flag-text">1 услуга со скидкой 50%</span>
             </div>
-          </div>
+          </div>;
         }
         if(this.discountLines === 2){
           return <div class="rtb-card__discount">
@@ -471,7 +471,7 @@ export default {
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
-          </div>
+          </div>;
         }
         if(this.discountLines === 3){
           return <div class="rtb-card__discount triple">
@@ -482,7 +482,7 @@ export default {
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2"></div>
             <div class="rtb-card__discount-line rtb-card__discount-line-3"></div>
-          </div>
+          </div>;
         }
       } else {
         return null;
@@ -508,9 +508,9 @@ export default {
     })();
     const contentWithoutWrapper = (()=>{
       if(this.$slots['content-without-wrapper']){
-        return this.$slots['content-without-wrapper']
+        return this.$slots['content-without-wrapper'];
       }else{
-        return null
+        return null;
       }
     })();
     if(!this.isB2bCategory){

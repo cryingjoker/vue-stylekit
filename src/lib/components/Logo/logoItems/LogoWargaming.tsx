@@ -17,7 +17,7 @@ class logoWargaming extends Vue{
   @Prop({ default: null }) background: string;
 
   render(h: CreateElement): VNode {
-    return <div className="rt-logo"> <svg width={this.width} height={this.height} viewBox="0 0 109 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    return <div class="rt-logo"> <svg width={this.width} height={this.height} viewBox="0 0 109 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <polygon id={`rt${this._uid}-path-1`} points="0 -4.63050322e-15 108.494025 -4.63050322e-15 108.494025 59.9710112 0 59.9710112"></polygon>
       </defs>

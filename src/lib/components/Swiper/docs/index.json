@@ -6,7 +6,7 @@
       "type" : ["Boolean"],
       "description" : "Доводчик свайпинга / скроллинга",
       "value" : "true",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -14,7 +14,7 @@
       "type" : ["Boolean"],
       "description" : "Позволяет заблокировать горизонтальный свайпинг и скроллинг карусели",
       "value" : "false",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -22,7 +22,7 @@
       "type" : ["Number"],
       "description" : "Длительность анимации навигации зоны просмотра и автодоводчика, если он включен",
       "value" : "500",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -30,7 +30,7 @@
       "type" : ["Boolean"],
       "description" : "Отображение навигационных стрелочек на PC",
       "value" : "true",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -38,7 +38,7 @@
       "type" : ["Number"],
       "description" : "Позиция стрелочек навигации сверху",
       "value" : "113",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -46,7 +46,7 @@
       "type" : ["Number"],
       "description" : "Позиция стрелочек навигации снизу",
       "value" : "200",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -54,7 +54,7 @@
       "type" : ["Number"],
       "description" : "Отступ сверху",
       "value" : "20",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -62,7 +62,7 @@
       "type" : ["Number"],
       "description" : "Отступ снизу",
       "value" : "20",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -70,7 +70,7 @@
       "type" : ["Number"],
       "description" : "Горизонтальный отступ первого и последнего слайда",
       "value" : "20",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -78,7 +78,7 @@
       "type" : ["Number"],
       "description" : "Отступ между слайдами",
       "value" : "null",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -86,7 +86,7 @@
       "type" : ["String"],
       "description" : "Классы слайда",
       "value" : "rt-col-3 rt-col-md-3 rt-col-td-3",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -94,7 +94,7 @@
       "type" : ["String"],
       "description" : "Эффект перехода анимации при перемещении зоны просмотра",
       "value" : "easeInOutCubic",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-swiper",
@@ -118,7 +118,7 @@
       "type" : ["String"],
       "description" : "Классы слайда",
       "value" : "",
-      "version": "-"
+      "version": "0.1.0"
     },
     {
       "name" : "rt-slide",
@@ -126,7 +126,7 @@
       "type" : ["Boolean"],
       "description" : "",
       "value" : "false",
-      "version": "-"
+      "version": "0.1.0"
     }
   ]
 }

@@ -24,10 +24,12 @@
               />
             </div>
             <p class="rt-font-h1 rt-space-top5">
-              Сражайся <br />
+              Сражайся <br>
               по всем фронтам
             </p>
-            <p class="rt-font-paragraph">С тарифом «Игровой»</p>
+            <p class="rt-font-paragraph">
+              С тарифом «Игровой»
+            </p>
             <rt-price
               value-color="orange"
               :value="500"
@@ -41,27 +43,28 @@
               time-interval="мес."
             />
           </div>
-          <div class="rt-col-6"></div>
+          <div class="rt-col-6" />
         </div>
       </div>
     </div>
   </div>
+  <!--<style coped lang="less">-->
+  <!--.phone {-->
+  <!--margin-bottom: -13vw;-->
+  <!--@media (max-width: 968px) {-->
+  <!--margin-bottom: -30vw;-->
+  <!--}-->
+  <!--&&#45;&#45;is-big {-->
+  <!--margin-bottom: -11vw;-->
+  <!--@media (max-width: 968px) {-->
+  <!--margin-bottom: -26vw;-->
+  <!--}-->
+  <!--}-->
+  <!--}-->
+  <!--</style>-->
 </template>
 
-<style coped lang="less">
-.phone {
-  margin-bottom: -13vw;
-  @media (max-width: 968px) {
-    margin-bottom: -30vw;
-  }
-  &--is-big {
-    margin-bottom: -11vw;
-    @media (max-width: 968px) {
-      margin-bottom: -26vw;
-    }
-  }
-}
-</style>
+
 
 <script>
 const componentsList = {};

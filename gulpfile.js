@@ -30,34 +30,35 @@ gulp.task(
     "git checkout master"
   ])
 );
-gulp.task("start", shell.task(["npm start"]));
-
-gulp.task("deploy", ["copy", "start"]);
-
-gulp.task("image", () => {
-  gulp
-    .src("./newImages/*")
-    .pipe(
-      imagemin([
-        imagemin.jpegtran({
-          progressive: true
-        }),
-        imagemin.optipng({
-          optimizationLevel: 5,
-          progressive: true,
-          interlaced: true,
-          multipass: true
-        })
-      ])
-    )
-    .pipe(gulp.dest("tmpImages/"));
-});
-
-gulp.task("imageTiny", () => {
-  gulp
-    .src("./tmpImages/*")
-    .pipe(tiny())
-    .pipe(gulp.dest("./dist/"));
-});
-
-gulp.task("optimize", ["image", "imageTiny"]);
+// todo need to update this tasks for gulp 4
+// gulp.task("start", shell.task(["npm start"]));
+//
+// gulp.task("deploy", ["copy", "start"]);
+//
+// gulp.task("image", () => {
+//   gulp
+//     .src("./newImages/*")
+//     .pipe(
+//       imagemin([
+//         imagemin.jpegtran({
+//           progressive: true
+//         }),
+//         imagemin.optipng({
+//           optimizationLevel: 5,
+//           progressive: true,
+//           interlaced: true,
+//           multipass: true
+//         })
+//       ])
+//     )
+//     .pipe(gulp.dest("tmpImages/"));
+// });
+//
+// gulp.task("imageTiny", () => {
+//   gulp
+//     .src("./tmpImages/*")
+//     .pipe(tiny())
+//     .pipe(gulp.dest("./dist/"));
+// });
+//
+// gulp.task("optimize", ["image", "imageTiny"]);

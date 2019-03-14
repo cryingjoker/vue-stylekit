@@ -10,8 +10,8 @@
       </div>
       <div class="app-body">
         <div class="app-row">
-          <div class="rt-col rt-space-bottom45 rt-space-top135">
-            <rt-pattern top-color="main-color" left-color="error-color" right-color="b2c-orange"/>
+          <div class="rt-col rt-space-bottom rt-space-top">
+            <rt-pattern top-color="main-color" left-color="error-color" right-color="orange" :pattern-type="1"/>
           </div>
         </div>
       </div>
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import componentsList from "../../componentsList";
-  export default {
-    name: "AppPattern",
-    components: componentsList,
-    mounted() {},
-    created() {},
-    methods: {}
-  };
+import componentsList from "../../componentsList";
+export default {
+  name: "AppPattern",
+  components: componentsList,
+  mounted() {},
+  created() {},
+  methods: {}
+};
 </script>

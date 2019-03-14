@@ -88,6 +88,26 @@ export default {
     ga: {
       type: Object,
       default: null
+    },
+    patternBackground: {
+      type: Boolean,
+      default: false
+    },
+    patternTopColor: {
+      type: String,
+      default: ''
+    },
+    patternLeftColor: {
+      type: String,
+      default: ''
+    },
+    patternRightColor: {
+      type: String,
+      default: ''
+    },
+    patternType: {
+      type: Number,
+      default: 1
     }
   },
   inject: {
@@ -105,7 +125,7 @@ export default {
     bannerItemWrapperClass(){
       let bannerItemWrapperClass = "";
       if(this.isGameBannerItem){
-        bannerItemWrapperClass += 'rt-banner__item-wrapper rt-banner__item-wrapper-game'
+        bannerItemWrapperClass += 'rt-banner__item-wrapper rt-banner__item-wrapper-game';
       }
       return bannerItemWrapperClass;
     },
@@ -154,7 +174,6 @@ export default {
     if (this.RtBanners) {
       this.index = this.RtBanners.items.length;
       const bannerItemData = {
-        backgroundColor: this.backgroundColor,
         isWhiteColor: this.isWhiteColor,
         id: this.id
       };
@@ -162,9 +181,19 @@ export default {
         bannerItemData.backgroundImage = this.lazyImage || this.backgroundImage;
         if (this.lazyImage) {
           this.loadImageAsync(this.backgroundImage, img => {
-            bannerItemData.backgroundImage = this.backgroundImage
-          })
+            bannerItemData.backgroundImage = this.backgroundImage;
+          });
         }
+      }
+      if(this.backgroundColor){
+        bannerItemData.backgroundColor = this.backgroundColor
+      }
+      if(this.patternBackground) {
+        bannerItemData.patternBackground = this.patternBackground,
+        bannerItemData.patternType = this.patternType,
+        bannerItemData.patternTopColor = this.patternTopColor,
+        bannerItemData.patternLeftColor = this.patternLeftColor,
+        bannerItemData.patternRightColor = this.patternRightColor
       }
       if (this.backgroundVideo) {
         bannerItemData.backgroundVideo = this.backgroundVideo;
@@ -236,7 +265,7 @@ export default {
               banner_id: parentId,
               banner_place: currentKey + 1,
               banner_section: ga.section || window.location.pathname
-            })
+            });
             this.setAttribute('data-ga-pushed', 'true');
             this.click();
           }
@@ -244,27 +273,27 @@ export default {
       }
     },
     loadImageAsync (src, resolve, reject) {
-      let image = new Image()
-      image.src = src
+      let image = new Image();
+      image.src = src;
       image.onload = function () {
         resolve({
           naturalHeight: image.naturalHeight,
           naturalWidth: image.naturalWidth,
           src: image.src
-        })
-      }
+        });
+      };
       image.onerror = function (e) {
-        reject(e)
-      }
+        reject(e);
+      };
     }
   },
   render(h){
     const content = () => {
       if(this.isGameBannerItem){
-        return <rt-banner-video-game-contron></rt-banner-video-game-contron>
+        return <rt-banner-video-game-contron></rt-banner-video-game-contron>;
       }
-      return null
-    }
+      return null;
+    };
     //return <div style={this.bannerStyle} class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} >{this.$slots.default}</div>
     if (this.hasCustomContent) {
       let bannerClass = "rt-banner__item";
@@ -276,17 +305,15 @@ export default {
       return <div class={"rt-banner__item" + (this.RtBanners.activeIndex === this.index ? " rt-banner__item--is-active" : "")} style={this.bannerStyle}>
         {this.$slots.default}
         {content()}
-        </div>
+        </div>;
     } else {
 
-      return <div>
-        <div style={this.bannerStyle} class={"rt-banner-content" + this.bannerClass}>
+      return <div style={this.bannerStyle} class={"rt-banner-content" + this.bannerClass}>
           <div class="rt-banner-content__inner">
             {this.$slots.default}
             {content()}
             </div>
         </div>
-      </div>
     }
   }
 };

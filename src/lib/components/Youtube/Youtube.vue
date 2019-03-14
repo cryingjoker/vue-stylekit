@@ -1,6 +1,6 @@
 <script type="text/jsx">
-import YoutubeVolume from './YoutubeVolume.vue'
-import YoutubeFraction from './YoutubeFraction.vue'
+import YoutubeVolume from './YoutubeVolume.vue';
+import YoutubeFraction from './YoutubeFraction.vue';
 const components = {};
 components[YoutubeVolume.name] = YoutubeVolume;
 components[YoutubeFraction.name] = YoutubeFraction;
@@ -16,7 +16,7 @@ export default {
     startIndex: {
       type: Array,
       default: ()=>{
-        return [0]
+        return [0];
       }
     },
     height:{
@@ -69,11 +69,11 @@ export default {
           if(this.utmSources && this.utmSources.length > 0 ){
             let activePlaylistIndex = this.utmSources.findIndex((utmSourcesItem)=>{
               if(utmSourcesItem === utmPrefix){
-                return true
+                return true;
               }else{
-                return false
+                return false;
               }
-            })
+            });
             if(activePlaylistIndex >= 0){
               this.activePlaylistIndex = activePlaylistIndex;
             }
@@ -85,7 +85,7 @@ export default {
       this.videoSize = this.videoId.length;
     }
     this.init();
-    this.bindKeyboardEvents()
+    this.bindKeyboardEvents();
   },
   beforeDestroy(){
     this.unbindKeyboardEvents();
@@ -116,7 +116,7 @@ export default {
             if (this.isPlaying) {
               this.playTime-=5;
               if(this.playTime < 0){
-                this.playTime = 0
+                this.playTime = 0;
               }
               this.player.seekTo(this.playTime);
             }
@@ -139,7 +139,7 @@ export default {
         document.getElementsByTagName('body')[0].appendChild(tag);
       }else{
         if(typeof YT === 'undefined' || !YT.Player) {
-          setTimeout(()=>{this.init()},100)
+          setTimeout(()=>{this.init();},100);
         }else{
           this.createPlayer();
         }
@@ -166,7 +166,7 @@ export default {
 
        if(this.activeIndexVideo < this.videoSize - 1){
          if(!this.playlistId) {
-           this.nextVideo()
+           this.nextVideo();
          }
        }else{
          this.stopVideo();
@@ -197,9 +197,9 @@ export default {
           'onReady': this.setVideoReady,
           'onStateChange': this.onStateChange
         }
-      }
+      };
       if(this.videoId){
-        settings.videoId = this.videoId[this.activeIndexVideo]
+        settings.videoId = this.videoId[this.activeIndexVideo];
       }else{
 
         if(this.playlistId && this.startIndex){
@@ -236,7 +236,7 @@ export default {
       if (this.playlistId) {
         this.player.previousVideo();
       }else {
-        this.player.loadVideoById(this.videoId[this.activeIndexVideo])
+        this.player.loadVideoById(this.videoId[this.activeIndexVideo]);
       }
     },
     nextVideo() {
@@ -248,7 +248,7 @@ export default {
       if (this.playlistId) {
         this.player.nextVideo();
       } else {
-        this.player.loadVideoById(this.videoId[this.activeIndexVideo])
+        this.player.loadVideoById(this.videoId[this.activeIndexVideo]);
 
       }
     },
@@ -260,7 +260,7 @@ export default {
       }
     },
     getDuration(){
-      this.duration = this.player.getDuration()
+      this.duration = this.player.getDuration();
     },
     getCurrentTime(){
       this.playTime = this.player.getCurrentTime();
@@ -271,7 +271,7 @@ export default {
             this.playTime = newTime;
             this.getCurrentTime();
           }
-        },800)
+        },800);
       }
     },
     togglePause(event){
@@ -284,7 +284,7 @@ export default {
             this.playVideo();
           }
         }
-      })
+      });
     },
     getLoadedFraction(){
       if(this.loadedFraction !== this.player.getVideoLoadedFraction()) {
@@ -294,7 +294,7 @@ export default {
       if(this.loadedFraction < 1){
         setTimeout(()=>{
           this.getLoadedFraction();
-        },500)
+        },500);
       }
     },
     playVideo(){
@@ -302,7 +302,7 @@ export default {
       setTimeout(()=>{
         this.volume = this.player.getVolume();
         this.isPlaying = true;
-      },10)
+      },10);
     },
     changeTime(procentOfDuration){
       this.player.seekTo(this.duration*procentOfDuration);
@@ -325,9 +325,9 @@ export default {
         if(this.touchCount > 0){
           this.timeout = setTimeout(()=>{
             this.touchCount--;
-          },2000)
+          },2000);
         }
-      },2000)
+      },2000);
 
     }
   },
@@ -336,13 +336,13 @@ export default {
     const backgroundImage = (()=>{
       const style = {};
       if(this.pauseImage) {
-        style.backgroundImage = 'url('+this.pauseImage+')'
+        style.backgroundImage = 'url('+this.pauseImage+')';
       }
       if(this.height){
         style.height = this.height;
       }
-      return <div class={"rt-youtube___pause-image"+(!this.isPlaying ? ' rt-youtube___pause-image--is-active':'')} style={style}></div>
-    })()
+      return <div class={"rt-youtube___pause-image"+(!this.isPlaying ? ' rt-youtube___pause-image--is-active':'')} style={style}></div>;
+    })();
     const playButton = (()=>{
       if(!this.isPlaying) {
         return <div class="rt-youtube__play" onClick={this.playVideo}>
@@ -356,7 +356,7 @@ export default {
               </g>
             </g>
           </svg>
-        </div>
+        </div>;
       }else {
         return <div class="rt-youtube__pause" onClick={this.pauseVideo}>
           <svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -370,7 +370,7 @@ export default {
               </g>
             </g>
           </svg>
-        </div>
+        </div>;
       }
     })();
     const videoControls = (()=>{
@@ -380,30 +380,30 @@ export default {
         let sec = parseInt(this.playTime%60);
 
         if(min<10){
-          min = '0'+min
+          min = '0'+min;
         }
         if(sec<10){
-          sec = '0'+sec
+          sec = '0'+sec;
         }
 
         let minD = parseInt(this.duration/60);
         let secD = parseInt(this.duration%60);
 
         if(minD<10){
-          minD = '0'+minD
+          minD = '0'+minD;
         }
         if(secD<10){
-          secD = '0'+secD
+          secD = '0'+secD;
 
         }
         const procentPlayed = this.playTime/this.duration*100;
         const time = (()=>{
           if(this.duration) {
-            return <div class="rt-youtube__time">{min}:{sec} / {minD}:{secD}</div>
+            return <div class="rt-youtube__time">{min}:{sec} / {minD}:{secD}</div>;
           }else{
-            return null
+            return null;
           }
-        })()
+        })();
         let playControlClass = 'rt-youtube__play-control';
         return <div class={playControlClass} ref="playControl">
           <div class="rt-youtube__pause-space" onClick={this.togglePause} onTouchstart={this.touchTogglePause}></div>
@@ -425,11 +425,11 @@ export default {
               </g>
             </svg>
           </div>
-        </div>
+        </div>;
       }else{
-        return <div class="rt-youtube___not-ready"><rt-spinner /></div>
+        return <div class="rt-youtube___not-ready"><rt-spinner /></div>;
       }
-    })()
+    })();
     const nextVideoButton = (()=>{
       if(this.playerState !== '-1' && this.videoSize > 1 && this.activeIndexVideo+1 < this.videoSize){
         return <div class="rt-youtube__next rt-youtube__change-video" onClick={this.nextVideo}>
@@ -441,12 +441,12 @@ export default {
             </g>
           </svg>
 
-        </div>
+        </div>;
       }
       else{
-        return null
+        return null;
       }
-    })()
+    })();
     const previousVideoButton = (()=>{
       if(this.playerState !== '-1' && this.videoSize > 0 && this.activeIndexVideo > 0){
         return <div class="rt-youtube__previous rt-youtube__change-video" onClick={this.previousVideo}>
@@ -458,12 +458,12 @@ export default {
             </g>
           </svg>
 
-        </div>
+        </div>;
       }
       else{
-        return null
+        return null;
       }
-    })()
+    })();
     let youtubeClass = 'rt-youtube';
     if(this.isTouchDevice){
       youtubeClass+=' rt-youtube--touch-detected';
@@ -490,7 +490,7 @@ export default {
       </div>
       {nextVideoButton}
       {previousVideoButton}
-    </div>
+    </div>;
   }
 };
 </script>
