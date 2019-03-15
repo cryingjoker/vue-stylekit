@@ -115,18 +115,18 @@ class ColorsList extends Vue {
         <div class="app-content rt-col-12 rt-col-md-3">
           <div class="app-title"><h1 class="rt-font-hero">Colors</h1></div>
           <div class="app-body">
-            <div class="row">
 
-              <rt-table>
-                <template slot="header">
-                  {header}
-                </template>
-                <template slot="body">
-                  {colorMap}
-                </template>
-              </rt-table>
 
-            </div>
+            <rt-table>
+              <template slot="header">
+                {header}
+              </template>
+              <template slot="body">
+                {colorMap}
+              </template>
+            </rt-table>
+
+
           </div>
         </div>
       </div>;

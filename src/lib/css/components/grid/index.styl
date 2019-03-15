@@ -5,9 +5,17 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
         @media (max-width: mediaWidth)
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
+          @supports (display: grid)
+            grid-column $i span;
+            flex none
+            max-width: initial
       else
         flex 0 0 ($i * stepGrid)
         max-width ($i * stepGrid)
+        @supports (display: grid)
+          grid-column $i span;
+          max-width: inherit
+          flex none
 
 spaceRender(prefix, needMedia, value, mediaWidth)
   name = step
@@ -75,6 +83,14 @@ steps = desktop-step-grid 12, tablet-step-grid 6 "td" tablet-upper-limit, mobile
   padding-left (horizontal-space * .5)
   padding-right (horizontal-space * .5)
   position relative
+  @supports (display: grid)
+    grid-column 12 span;
+    max-width: inherit
+    flex none
+    padding-left: 0
+    padding-right: 0
+
+
 
 for devideStep in steps
   media = 0
@@ -92,11 +108,17 @@ for devideStep in steps
     className = newAppName + "-col" + devicePrefix + "-" + $i
 
     .{className}
+
       +cache("mobile-column")
         width 100%
         padding-left (horizontal-space * .5)
         padding-right (horizontal-space * .5)
         position relative
+        @supports (display: grid)
+          padding-right: 0
+          padding-left: 0
+          display: grid
+
 
   gridRender(devideStep[1], devicePrefix, devideStep[0], needMedia, media)
 
@@ -116,6 +138,13 @@ for devideStep in steps
   margin-right -1 * horizontal-space * .5
   position relative
   -ms-flex-wrap wrap
+  @supports (display: grid)
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ."
+    grid-column-gap: horizontal-space
+
+
 
   &--mobile-scroll
     @media (max-width: mobile-upper-limit)
@@ -124,6 +153,7 @@ for devideStep in steps
       margin-left -1 * horizontal-space * .5
       margin-right -1 * horizontal-space * .5
       padding-bottom vertical-space
+
 
   &--tablet-scroll
     @media (max-width: tablet-upper-limit)
@@ -380,6 +410,8 @@ for devideStep in steps
   @media (max-width: tablet-upper-limit)
     padding-left horizontal-space * .5
     padding-right horizontal-space * .5
+
+
 
 .no-gutters
   margin-left 0

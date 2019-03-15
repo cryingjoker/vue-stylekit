@@ -15,7 +15,9 @@ export default {
         <div class="app-title"><h1 class="rt-font-hero">Colors</h1></div>
         <div class="app-body">
           <div class="row">
+            <div class="rt-col-12">
           {colorMap}
+            </div>
           </div>
         </div>
       </div>

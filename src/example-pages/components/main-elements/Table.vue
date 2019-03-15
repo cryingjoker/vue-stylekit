@@ -8,9 +8,10 @@
       </div>
       <div class="app-body">
         <div class="app-row row">
-          <div class="rt-col rt-font-hypnens-off">
-            <pre-code
-              text="
+          <div class="rt-col-12">
+            <div class="rt-col rt-font-hypnens-off">
+              <pre-code
+                text="
               <rt-table class=&quot;rt-space-bottom2&quot; :tablet-list-type=&quot;true&quot;>
               <template slot=&quot;label&quot;>
                 Тарифы на добровольную блокировку
@@ -49,9 +50,9 @@
               </template>
             </rt-table>
             "
-            />
-            <pre-code
-              text="<rt-table class=&quot;rt-space-bottom2&quot;>
+              />
+              <pre-code
+                text="<rt-table class=&quot;rt-space-bottom2&quot;>
               <template slot=&quot;label&quot;>
                 Звонки
               </template>
@@ -88,27 +89,28 @@
                 </rt-table-row>
               </template>
             </rt-table>"
-            />
+              />
 
-            <rt-table class="rt-space-bottom4">
-              <template slot="label">
-                Интернет
-              </template>
-              <template slot="columns">
-                <rt-table-col />
-                <rt-table-col width="200px" />
-              </template>
-              <template slot="header">
-                <rt-table-head-item>Услуга</rt-table-head-item>
-                <rt-table-head-item>Без опции</rt-table-head-item>
-              </template>
-              <template slot="body">
-                <rt-table-row>
-                  <rt-table-item>Все входящие звонки по России</rt-table-item>
-                  <rt-table-item>По тарифу домашней сети</rt-table-item>
-                </rt-table-row>
-              </template>
-            </rt-table>
+              <rt-table class="rt-space-bottom4">
+                <template slot="label">
+                  Интернет
+                </template>
+                <template slot="columns">
+                  <rt-table-col/>
+                  <rt-table-col width="200px"/>
+                </template>
+                <template slot="header">
+                  <rt-table-head-item>Услуга</rt-table-head-item>
+                  <rt-table-head-item>Без опции</rt-table-head-item>
+                </template>
+                <template slot="body">
+                  <rt-table-row>
+                    <rt-table-item>Все входящие звонки по России</rt-table-item>
+                    <rt-table-item>По тарифу домашней сети</rt-table-item>
+                  </rt-table-row>
+                </template>
+              </rt-table>
+            </div>
           </div>
         </div>
       </div>
@@ -117,12 +119,13 @@
 </template>
 
 <script>
-import componentsList from "../../componentsList";
+  import componentsList from "../../componentsList";
 
-// const componentsList = {};
-export default {
-  name: "AppTable",
-  components: componentsList,
-  mounted() {}
-};
+  // const componentsList = {};
+  export default {
+    name: "AppTable",
+    components: componentsList,
+    mounted() {
+    }
+  };
 </script>
