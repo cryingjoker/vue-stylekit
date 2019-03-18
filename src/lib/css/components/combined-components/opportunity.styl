@@ -1,0 +1,53 @@
+.{b2bAppName}-opportunity
+  &-item
+    width 100%
+    .row
+      display flex
+      flex-direction row
+      @media (max-width: tablet-upper-limit)
+        .rt-col-td-6
+          flex 0 0 49.999998%
+      @media (max-width: mobile-upper-limit)
+        flex-direction column
+        .rt-col-md-3
+          flex: 0 0 auto
+    &__image
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      width 500px
+      height 480px
+      margin-right vertical-space * 4
+      @media (max-width: tablet-upper-limit)
+        width 100%
+        height calc((100vw - 60px) / 2 * .96)
+        margin-right: 0
+      @media (max-width: mobile-upper-limit)
+        width 100%
+        height calc((100vw - 60px)* .96)
+        margin-right 0
+        margin-bottom vertical-space
+    &--reverse
+      .row
+        flex-direction row-reverse
+        @media (max-width: mobile-upper-limit)
+          flex-direction column
+      .{b2bAppName}-opportunity-item__image
+        margin-right 0
+        margin-left vertical-space * 4
+        @media (max-width: tablet-upper-limit)
+          margin-left 0
+    &__description
+      .{b2bAppName}-price__value
+        padding 0
+      .d-inline-block+.d-inline-block
+        @media (max-width: mobile-upper-limit)
+          margin-top 10px
+
+    .mobile-title
+      @media (min-width: tablet-lower-limit)
+        display none
+
+    .desktop-title
+      @media (max-width: mobile-upper-limit)
+        display none
