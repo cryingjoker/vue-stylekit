@@ -28,17 +28,6 @@
           reversedItem[i].$el.classList.add('rt-space-top');
         }
       }
-//      window.addEventListener('resize', () => {
-//        fixLayout();
-//      });
-//      const fixLayout = () => {
-//        if(window.innerWidth <= 767) {
-//          this.mobileLayout = true;
-//        } else {
-//          this.mobileLayout = false;
-//        }
-//      };
-//      fixLayout();
     },
     computed: {
       opportunityImage() {

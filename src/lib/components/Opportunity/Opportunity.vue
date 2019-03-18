@@ -9,20 +9,13 @@
     data: () => ({
       childrenQuantity: null
     }),
-
-    provide: function () {
-      return {
-        RtQuantity: this.childrenQuantity
-      }
-    },
-
+    
     mounted(){
       this.childrenQuantity = this.$children.length;
 
     },
     render: function(h) {
       const navigation = this.$children.map((item) => {
-//        console.log(Array.from(item.$parent.$children).indexOf(item));
         return <rt-tabs-nav-item anchor={item._props.anchor} remove-base-tag={true} name={(Array.from(item.$parent.$children).indexOf(item)).toString()}>{item._props.title}</rt-tabs-nav-item>
       });
 
