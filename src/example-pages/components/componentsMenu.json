@@ -230,6 +230,14 @@
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
+        },
+        {
+          "name" : "Opportunity",
+          "title" : "Opportunity",
+          "url" : "/opportunity",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
         }
       ],
       "for_b2b" : true,
