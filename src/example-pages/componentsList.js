@@ -55,10 +55,12 @@ import {
   Logo,
   Swiper,
   Slide,
-  Pattern
+  Pattern,
+  Opportunity,
+  OpportunityItem
 } from "../lib/components/index";
 
-import AppManu from "./components/AppMenu.vue";
+import AppMenu from "./components/AppMenu.vue";
 const componentsList = {};
 componentsList[Button.name] = Button;
 componentsList[ButtonRippleWithoutJs.name] = ButtonRippleWithoutJs;
@@ -112,10 +114,12 @@ componentsList[Sticky.name] = Sticky;
 componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 componentsList[Popup.name] = Popup;
 componentsList[SlideContent.name] = SlideContent;
-componentsList[AppManu.name] = AppManu;
+componentsList[AppMenu.name] = AppMenu;
 componentsList[Icon.name] = Icon;
 componentsList[Pattern.name] = Pattern;
 componentsList[Logo.name] = Logo.component;
 componentsList[Swiper.name] = Swiper;
 componentsList[Slide.name] = Slide;
+componentsList[Opportunity.name] = Opportunity;
+componentsList[OpportunityItem.name] = OpportunityItem;
 export default { ...componentsList };

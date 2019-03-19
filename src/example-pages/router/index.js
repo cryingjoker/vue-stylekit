@@ -26,6 +26,7 @@ import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
 import TestAccess from '../components/promo/test-access.vue';
+import Opportunity from '../components/complex-elements/Opportunity.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -81,12 +82,13 @@ const index = [
   { path: '/promo/game', name: 'promoGame', component: PromoGame },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },
   { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
-  { path: '/promo/mobile', name: 'promoMobrt-font-md-centerile', component: PromoMobile },
+  { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
+  { path: '/opportunity', name: 'opportunity', component: Opportunity },
   { path: '/pattern', name: 'pattern', component: Pattern },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
