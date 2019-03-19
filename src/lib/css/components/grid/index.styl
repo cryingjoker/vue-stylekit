@@ -106,7 +106,8 @@ for devideStep in steps
 
 .relative
   position relative
-
+.d-flex-nowrap
+  flex-wrap nowrap
 .row
   display flex
   flex-wrap wrap
@@ -119,6 +120,8 @@ for devideStep in steps
   &-scroll
     flex-flow nowrap
     overflow auto
+  &-nowrap
+    flex-wrap: nowrap
   &--mobile-scroll
     @media (max-width: mobile-upper-limit)
       flex-flow nowrap
