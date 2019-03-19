@@ -11,9 +11,9 @@
       <div class="app-body">
         <div class="app-row">
           <div class="rt-col rt-space-bottom rt-space-top">
-            <h2 class="rt-font-bold rt-font-center rt-space-bottom15">Дополнительные возможности</h2>
+            <h2 class="rt-font-bold rt-space-bottom15">Дополнительные возможности</h2>
             <rt-opportunity>
-              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png"  title="Виртуальный контактный центр 1" anchor="1">
+              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png"  title="Виртуальный контактный" anchor="1">
                 <template slot="description">
                   <p class="rt-space-bottom">Формирует очереди и распределяет звонки,  умеет работать со списком VIP-абонентов. <br> Установка и
                     настройка за пару дней,  дополнительное оборудование не нужно.</p>
@@ -37,7 +37,7 @@
                   </div>
                 </template>
               </rt-opportunity-item>
-              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный центр 2" anchor="2">
+              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный" anchor="2">
                 <template slot="description">
                   <p class="rt-space-bottom">Формирует очереди и распределяет звонки,  умеет работать со списком VIP-абонентов. <br> Установка и
                     настройка за пару дней,  дополнительное оборудование не нужно.</p>
@@ -61,7 +61,7 @@
                   </div>
                 </template>
               </rt-opportunity-item>
-              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный центр 3" anchor="3">
+              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный" anchor="3">
                 <template slot="description">
                   <p class="rt-space-bottom">Формирует очереди и распределяет звонки,  умеет работать со списком VIP-абонентов. <br> Установка и
                     настройка за пару дней,  дополнительное оборудование не нужно.</p>
@@ -85,7 +85,7 @@
                   </div>
                 </template>
               </rt-opportunity-item>
-              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный центр 4" anchor="4">
+              <rt-opportunity-item image="/static/images/B2B/big-internet-slide-1.png" title="Виртуальный контактный" anchor="4">
                 <template slot="description">
                   <p class="rt-space-bottom">Формирует очереди и распределяет звонки,  умеет работать со списком VIP-абонентов. <br> Установка и
                     настройка за пару дней,  дополнительное оборудование не нужно.</p>

@@ -1,6 +1,10 @@
 .{b2bAppName}-opportunity
   &-item
     width 100%
+    @media (max-width: tablet-upper-limit)
+      &+&
+        padding-top: 0
+        border-top 1px solid main-color01
     .row
       display flex
       flex-direction row
@@ -18,6 +22,7 @@
       width 500px
       height 480px
       margin-right vertical-space * 4
+      max-width 100%
       @media (max-width: tablet-upper-limit)
         width 100%
         height calc((100vw - 60px) / 2 * .96)
@@ -45,9 +50,41 @@
           margin-top 10px
 
     .mobile-title
-      @media (min-width: tablet-lower-limit)
+      @media (min-width: laptop-lower-limit)
         display none
 
     .desktop-title
-      @media (max-width: mobile-upper-limit)
+      @media (max-width: tablet-upper-limit)
         display none
+
+    .opportunity--mobile-dropdown &
+      @media (max-width: tablet-upper-limit)
+        overflow hidden
+        .mobile-title
+          padding 15px 20px 15px 0
+          position relative
+        .row
+          height 0
+          transition height .3s linear
+        &--active
+          height auto
+          margin-bottom vertical-space
+          .rtb-opportunity-item__arrow
+            transform rotate(180deg)
+          .row
+            height auto
+    &__arrow
+      position absolute
+      right 0
+      top vertical-space
+      opacity .5
+      transition transform .3s linear
+  &-block
+    .rt-tabs-navigation-wrapper
+      padding-bottom vertical-space * 1.5
+      @media (max-width: tablet-upper-limit)
+        left -30px
+        right -30px
+        width 100vw
+    .rt-tabs-navigation
+      margin 0 -15px

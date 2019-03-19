@@ -139,8 +139,8 @@ const VueRtStyle = {
       Vue.component(Slide.name, Slide);
       Vue.component(Pattern.name, Pattern);
       Vue.component(Logo.name, Logo.component);
-      Vue.component(Opportunity.name, Opportunity.component);
-      Vue.component(OpportunityItem.name, OpportunityItem.component);
+      Vue.component(Opportunity.name, Opportunity);
+      Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
