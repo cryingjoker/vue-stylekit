@@ -382,7 +382,6 @@
     mounted() {
       var { height } = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect();
       const step = height*0.8 / 4;
-      console.info("step", step);
       var slideIndexBefore = null
       document.addEventListener("scroll", function() {
         var { top, height } = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect();
@@ -396,10 +395,10 @@
 
           if(slideIndexBefore !== slideIndex){
             if(slideIndexBefore != null){
-              document.querySelector('.rt-code-viewer').classList.remove('vip-iphone--step-'+slideIndexBefore);
+              document.querySelector('.vip-iphone-wrapper').classList.remove('vip-iphone--step-'+slideIndexBefore);
             }
             slideIndexBefore = slideIndex
-            document.querySelector('.rt-code-viewer').classList.add('vip-iphone--step-'+slideIndex)
+            document.querySelector('.vip-iphone-wrapper').classList.add('vip-iphone--step-'+slideIndex)
             document.querySelector('.vip-iphone-count__value').innerHTML = slideIndex
           }
 
