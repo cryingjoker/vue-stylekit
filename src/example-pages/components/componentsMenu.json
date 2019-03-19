@@ -298,6 +298,14 @@
           "for_b2c" : true
         },
         {
+          "name" : "vip",
+          "title" : "vip",
+          "url" : "/promo/vip",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
           "name" : "testAccess",
           "title" : "test access",
           "url" : "/promo/test-access",
