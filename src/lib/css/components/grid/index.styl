@@ -116,7 +116,9 @@ for devideStep in steps
   margin-right -1 * horizontal-space * .5
   position relative
   -ms-flex-wrap wrap
-
+  &-scroll
+    flex-flow nowrap
+    overflow auto
   &--mobile-scroll
     @media (max-width: mobile-upper-limit)
       flex-flow nowrap
