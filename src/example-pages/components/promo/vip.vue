@@ -63,6 +63,10 @@
     <section class="rt-dark-theme">
       <div class="rt-container rt-space-vertical25">
         <h2 class="rt-font-h2 rt-font-bold rt-font-center">Тарифы</h2>
+        <div class="rt-card">1</div>
+        <div class="rt-card">2</div>
+        <div class="rt-card">3</div>
+
       </div>
     </section>
 
@@ -70,6 +74,34 @@
     <section class="rt-dark-theme">
       <div class="rt-container rt-space-vertical25">
         <h2 class="rt-font-h2 rt-font-bold rt-font-center">Цифровые сервисы</h2>
+        <div class="rt-scroll-list rt-space-top4">
+          <div class="row row-scroll rt-space-bottom">
+            <div class="rt-col-5">
+              <div class="vip-list-img-container"><img class="vip-list-img-1" src="/static/images/vip/1.png" alt=""></div>
+                <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Защита данных на устройсвах и онлайн с Антивирус Kaspersky Internet Security </p>
+                <p>Обеспечение конфиденциальности личных данных, паролей  и банковских карт. Комплексная защита всех действий в сети. одновременно на 3-х устройствах</p>
+
+            </div>
+            <div class="rt-col-5">
+              <div class="vip-list-img-container"><img class="vip-list-img-2" src="/static/images/vip/2.png" alt=""></div>
+                <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Безопасность детей в ваших руках </p>
+                <p>Программа родительского контроля Kaspersky Safe Kids защитит детей от неподходящей информации в сети, а также определит их точное местоположение на карте.</p>
+
+            </div>
+            <div class="rt-col-5">
+              <div class="vip-list-img-container"><img class="vip-list-img-3" src="/static/images/vip/3.png" alt=""></div>
+                <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Статический IP</p>
+                <p>Постоянный адрес в интернете позволит быстро скачивать файлы в файлообменных сетях, повысить безопасность работы с интернет-банками, свободно играть в сетевые игры.</p>
+
+            </div>
+            <div class="rt-col-5">
+              <div class="vip-list-img-container"><img class="vip-list-img-4" src="/static/images/vip/4.png" alt=""></div>
+                <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Wink</p>
+                <p>101 канал и более 1000 фильмов мировых и Российский студий с любого устройства в приложении Wink</p>
+
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -381,25 +413,25 @@
     components: componentsList,
     mounted() {
       var { height } = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect();
-      const step = height*0.8 / 4;
-      var slideIndexBefore = null
+      const step = height * 0.8 / 4;
+      var slideIndexBefore = null;
       document.addEventListener("scroll", function() {
         var { top, height } = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect();
 
-        if(top < 0 && Math.abs(top) < height){
-          var slideIndex = parseInt(Math.abs(top)/step) + 1;
+        if (top < 0 && Math.abs(top) < height) {
+          var slideIndex = parseInt(Math.abs(top) / step) + 1;
 
-          if(slideIndex > 4){
+          if (slideIndex > 4) {
             slideIndex = 4;
           }
 
-          if(slideIndexBefore !== slideIndex){
-            if(slideIndexBefore != null){
-              document.querySelector('.vip-iphone-wrapper').classList.remove('vip-iphone--step-'+slideIndexBefore);
+          if (slideIndexBefore !== slideIndex) {
+            if (slideIndexBefore != null) {
+              document.querySelector(".vip-iphone-wrapper").classList.remove("vip-iphone--step-" + slideIndexBefore);
             }
-            slideIndexBefore = slideIndex
-            document.querySelector('.vip-iphone-wrapper').classList.add('vip-iphone--step-'+slideIndex)
-            document.querySelector('.vip-iphone-count__value').innerHTML = slideIndex
+            slideIndexBefore = slideIndex;
+            document.querySelector(".vip-iphone-wrapper").classList.add("vip-iphone--step-" + slideIndex);
+            document.querySelector(".vip-iphone-count__value").innerHTML = slideIndex;
           }
 
         }
