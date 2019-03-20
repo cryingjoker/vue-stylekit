@@ -216,6 +216,9 @@
   background-image: url('/static/images/iphone.png')
   background-size: cover
   position: relative
+  @media (max-width: 767px)
+    background-image: none
+    height: auto
 .vip-iphone:before
   width: 55%;
   height: 110px;
@@ -230,6 +233,8 @@
   top: 22px
   z-index: 10
   content: ''
+  @media (max-width: 767px)
+    background-image: none
 
 .vip-iphone__inner
   width: 86.9%;
@@ -242,6 +247,9 @@
   margin-left: auto
   margin-right: auto
   overflow: hidden
+  @media (max-width: 767px)
+    height: auto
+    position: relative
   &:before
     content: ''
     width: 190%;
@@ -258,6 +266,8 @@
     transition-timing-function cubic-bezier(.77,.34,.39,.77)
     transition-duration 1s
     transition-property top, right, transform, width, height
+    @media (max-width: 767px)
+      background-image: none
     .vip-iphone--step-2 &
       transform: rotate(-34deg)
       top: -200%
@@ -303,6 +313,12 @@
   transition-timing-function ease-in-out
   transition-duration .5s
   transition-property opacity
+  @media (max-width: 767px)
+    position: relative
+    opacity: 1
+    visibility: visible
+    &+&
+      padding-top: 40px
 
 
 .vip
@@ -372,19 +388,28 @@
   .vip-iphone--step-3 &,
   .vip-iphone--step-4 &
     opacity: 0
+    @media (max-width: 767px)
+      opacity: 1
+      visibility: visible
 
 .vip-iphone-text-eq2
   opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
   .vip-iphone--step-2 &
     opacity: 1
 
 .vip-iphone-text-eq3
   opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
   .vip-iphone--step-3 &
     opacity: 1
 
 .vip-iphone-text-eq4
   opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
   .vip-iphone--step-4 &
     opacity: 1
 
@@ -392,6 +417,10 @@
   height: calc(50vh*4)
   min-height: calc(587px * 4)
   display: flex
+  @media (max-width: 767px)
+    height: initial
+    display: block
+    min-height auto
 
 .vip-iphone-container
   position: sticky
@@ -400,6 +429,11 @@
   height: 50vh
   min-height: 587px
   align-self: flex-end
+  @media (max-width: 767px)
+    position: relative
+    min-height auto
+    height: auto
+
 .vip-list-img-1
   height: 261px
 .vip-list-img-2

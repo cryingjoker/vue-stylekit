@@ -64,8 +64,8 @@
       <div class="rt-container rt-space-vertical25">
         <h2 class="rt-font-h2 rt-font-bold rt-font-center rt-space-bottom2">Тарифы</h2>
 
-        <div class="row">
-          <div class="rt-col-4">
+        <div class="row row--tablet-scroll row--mobile-wrap">
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3">
             <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для интернета</p>
@@ -175,7 +175,7 @@
             </rt-card>
           </div>
 
-          <div class="rt-col-4">
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top">
             <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для безлимитного общения</p>
@@ -222,7 +222,7 @@
               </template>
             </rt-card>
           </div>
-          <div class="rt-col-4">
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top">
             <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
               <template slot="content">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для интернета и ТВ</p>
@@ -357,7 +357,7 @@
           <div class="horizontal-scroll-container">
             <div class="rt-container">
               <div class="row rt-space-bottom row-nowrap">
-                <div class="rt-col-5">
+                <div class="rt-col-5 rt-col-td3 rt-col-md-2">
                   <div class="vip-list-img-container"><img class="vip-list-img-1" src="/static/images/vip/1.png" alt="">
                   </div>
                   <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Защита данных на устройсвах и онлайн с Антивирус
@@ -366,7 +366,7 @@
                     действий в сети. одновременно на 3-х устройствах</p>
 
                 </div>
-                <div class="rt-col-5">
+                <div class="rt-col-5 rt-col-td3 rt-col-md-2">
                   <div class="vip-list-img-container"><img class="vip-list-img-2" src="/static/images/vip/2.png" alt="">
                   </div>
                   <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Безопасность детей в ваших руках </p>
@@ -374,7 +374,7 @@
                     сети, а также определит их точное местоположение на карте.</p>
 
                 </div>
-                <div class="rt-col-5">
+                <div class="rt-col-5 rt-col-td3 rt-col-md-2">
                   <div class="vip-list-img-container"><img class="vip-list-img-3" src="/static/images/vip/3.png" alt="">
                   </div>
                   <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Статический IP</p>
@@ -382,7 +382,7 @@
                     безопасность работы с интернет-банками, свободно играть в сетевые игры.</p>
 
                 </div>
-                <div class="rt-col-5">
+                <div class="rt-col-5 rt-col-td3 rt-col-md-2">
                   <div class="vip-list-img-container"><img class="vip-list-img-4" src="/static/images/vip/4.png" alt="">
                   </div>
                   <p class="rt-font-h3 rt-space-bottom  rt-space-top15">Wink</p>
