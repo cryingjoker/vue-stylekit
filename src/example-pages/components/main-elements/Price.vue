@@ -6,63 +6,63 @@
         <div class="row">
           <div class="rt-col-4 rt-col-md-3 is-b2c">
             <pre-code
-              text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; currency=&quot;$&quot; />"
+              text="<rt-price :value='750.231' :old-value='123.2' currency='$' />"
             />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code
-              text="<rt-price :value=&quot;750.231&quot; :old-value=&quot;123.2&quot; />"
+              text="<rt-price :value='750.231' :old-value='123.2' />"
             />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
-            <pre-code text="<rt-price :value=&quot;750.231&quot; />" />
+            <pre-code text="<rt-price :value='750.231' />" />
           </div>
         </div>
 
         <div class="row rt-space-top">
           <div class="rt-col-4 rt-col-md-3 is-b2c">
             <pre-code
-              text="<rt-price :value=&quot;69&quot; option-label=&quot;До&quot; :is-option=&quot;true&quot; currency=&quot;€&quot; />"
+              text="<rt-price :value='69' option-label='До' :is-option='true' currency='€' />"
             />
           </div>
           <div class="rt-col-4 rt-col-md-3 rt-md-space-top is-b2c">
             <pre-code
-              text="<rt-price :value=&quot;750.231&quot; time-interval=&quot;час.&quot; />"
+              text="<rt-price :value='750.231' time-interval='час.' />"
             />
           </div>
         </div>
         <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
-              text="<rt-price :value=&quot;1231223169&quot; :is-option=&quot;true&quot; currency=&quot;€&quot; />"
+              text="<rt-price :value='1231223169' :is-option='true' currency='€' />"
             />
           </div>
         </div>
         <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
-              text="<rt-price :value=&quot;1231223169&quot; :only-price=&quot;true&quot; currency=&quot;€&quot; />"
+              text="<rt-price :value='1231223169' :only-price='true' currency='€' />"
             />
           </div>
         </div>
         <div class="row rt-space-top is-b2c">
           <div class="rt-col-16 rt-col-md-3">
             <pre-code
-              text="<div><rt-price :for-game=&quot;true&quot; class=&quot;color-orange&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /><rt-price :bold-option=&quot;true&quot; class=&quot;color-white&quot; :for-game=&quot;true&quot; :value=&quot;800&quot; time-interval=&quot;сек&quot; currency=&quot;Мбит&quot; /></div>"
+              text="<div><rt-price :for-game='true' class='color-orange' :value='800' time-interval='сек' currency='Мбит' /><rt-price :bold-option='true' class='color-white' :for-game='true' :value='800' time-interval='сек' currency='Мбит' /></div>"
             />
           </div>
         </div>
         <div class="row rt-space-top is-b2b">
           <div class="rt-col-4 rt-col-md-3">
             <pre-code
-              text="<rt-price oldPriceColor=&quot;red&quot; :old-value=&quot;2500&quot; :value=&quot;400&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;в месяц&quot; class=&quot;color-main09&quot;/>"
+              text="<rt-price oldPriceColor='red' :old-value='2500' :value='400' :is-option='false' currency='₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;в месяц&quot; class=&quot;color-main09&quot;/>"
             />
           </div>
         </div>
         <div class="row rt-space-top is-b2b">
           <div class="rt-col-4 rt-col-md-3">
             <pre-code
-              text="<rt-price :value=&quot;500&quot; :is-option=&quot;false&quot; currency=&quot;₽&quot; :b2bPrice=&quot;true&quot; timeInterval=&quot;&quot; class=&quot;color-main09&quot;/>"
+              text="<rt-price :value='500' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='' class='color-main09'/>"
             />
           </div>
         </div>
