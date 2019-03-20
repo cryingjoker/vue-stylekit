@@ -65,8 +65,6 @@
   right 20px
 
 .{b2bAppName}-input
-  //@media (min-width: laptop-lower-limit)
-  //  margin-bottom -60px
   .input-element
     padding-bottom 10px
 
@@ -76,6 +74,24 @@
 
   .password-icon
     right 20px
+
+  &--hidden
+    display none
+
+  &--approved
+    position relative
+    &:after
+      position absolute
+      content ''
+      top 20px
+      right 16px
+      width 20px
+      height 20px
+      background-image url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGZpbGw9IiM1N0Q5QjciIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNNSAxMGwzLjc5MyAzTDE2IDciLz48L2c+PC9zdmc+')
+      z-index 10
+
+  .text-field__line
+    background-color transparent
 
 .text-field--error
   .{b2bAppName}-input-clear
@@ -122,7 +138,7 @@
 
 .input-wrapper
   &+&
-    margin-top 20px
+    margin-top 5px
 
   &--outlined
     .text-field

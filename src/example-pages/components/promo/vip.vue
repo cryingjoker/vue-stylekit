@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="vip">
     <section class="rt-dark-theme">
       <div class="wc-inline">
         <rt-banner :is-fullscreen-image="true" background-position="top" content-min-height="500px"
@@ -62,11 +62,290 @@
     <!-- Тарифы -->
     <section class="rt-dark-theme">
       <div class="rt-container rt-space-vertical25">
-        <h2 class="rt-font-h2 rt-font-bold rt-font-center">Тарифы</h2>
-        <div class="rt-card rt-card--has-white-color rt-card-dark-blue">1</div>
-        <div class="rt-card">2</div>
-        <div class="rt-card">3</div>
+        <h2 class="rt-font-h2 rt-font-bold rt-font-center rt-space-bottom2">Тарифы</h2>
 
+        <div class="row">
+          <div class="rt-col-4">
+            <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
+              <template slot="content">
+                <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для интернета</p>
+                <div class="flex-end-bottom rt-space-bottom15">
+                  <rt-price :value='1500' currency='руб'/>
+                </div>
+                <rt-button :is-block="true" class="rt-button-purple white-wave">Подключить</rt-button>
+              </template>
+              <template slot="footer">
+                <rt-annotation label="домашний интернет">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/home-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Домашний интернет</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">от 200 Мбит/сек.</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/kasp-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Антивирус Kaspersky Internet Security </span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">на 3 устройства</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/child-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Родительский контроль</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Kaspersky Safe Kids</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/point-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Статический IP</span>
+                        </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/office-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Офис 365 для дома</span>
+                        </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/cloud-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Облачное хранилище Unlim</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+                <rt-annotation label="интерактивное ТВ">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/screen-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Мультискрин</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Добавление промокода Wink с пакетом «Продвинутый»</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+                <rt-annotation label="мобильная связь" class="rt-annotation--empty">
+                </rt-annotation>
+                <rt-annotation label="оборудование">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/route-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">1 роутер</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Уже включено в тариф</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+
+                <rt-annotation label="обслуживание">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/hand-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Личный менеджер 24/7</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Лучшие технические специалисты, технический аудит жилья</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+              </template>
+            </rt-card>
+          </div>
+
+          <div class="rt-col-4">
+            <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
+              <template slot="content">
+                <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для безлимитного общения</p>
+                <div class="flex-end-bottom rt-space-bottom15">
+                  <rt-price :value='2000' currency='руб'/>
+                </div>
+                <rt-button :is-block="true" class="rt-button-purple white-wave">Подключить</rt-button>
+              </template>
+              <template slot="footer">
+                <rt-annotation label="домашний интернет" class="rt-annotation--empty">
+                </rt-annotation>
+                <rt-annotation label="интерактивное ТВ" class="rt-annotation--empty">
+                </rt-annotation>
+                <rt-annotation label="мобильная связь">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/sim-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">1 сим-карта</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Безлимитные интернет, звонки и СМС по всей стране</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+                <rt-annotation label="оборудование" class="rt-annotation--empty">
+                </rt-annotation>
+                <rt-annotation label="обслуживание">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/hand-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Личный менеджер 24/7</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Лучшие технические специалисты, технический аудит жилья</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4">
+            <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
+              <template slot="content">
+                <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для интернета и ТВ</p>
+                <div class="flex-end-bottom rt-space-bottom15">
+                  <rt-price :value='2700' currency='руб'/>
+                </div>
+                <rt-button :is-block="true" class="rt-button-purple white-wave">Подключить</rt-button>
+              </template>
+              <template slot="footer">
+                <rt-annotation label="домашний интернет">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/home-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Домашний интернет</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">от 200 Мбит/сек.</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/kasp-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Антивирус Kaspersky Internet Security </span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">на 3 устройства</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/child-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Родительский контроль</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Kaspersky Safe Kids</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/point-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Статический IP</span>
+                        </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/office-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Офис 365 для дома</span>
+                        </p>
+                        </div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/cloud-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Облачное хранилище Unlim</span>
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+                <rt-annotation label="интерактивное ТВ">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/tv-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">ТВ–пакет «Максимальный»</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">272 канала</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/play-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Управление просмотром</span>
+                        </p></div>
+                      </div>
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/mroom-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Мультирум</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">До 3 приставок</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+                <rt-annotation label="мобильная связь" class="rt-annotation--empty">
+                </rt-annotation>
+                <rt-annotation label="оборудование">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/route-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">1 роутер</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Уже включено в тариф</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+
+                <rt-annotation label="обслуживание">
+                  <template slot="content">
+                    <div class="rt-card-list">
+                      <div class="rt-card-list__item">
+                        <div class="rt-card-list__icon"><img src="/static/images/vip/hand-i.svg"></div>
+                        <div class="rt-card-list__name"><p class="rt-font-small-paragraph color-white">
+                          <span class="rt-font-control rt-font-bold">Личный менеджер 24/7</span>
+                          <br>
+                          <span class="color-white05 rt-card-list__subname">Лучшие технические специалисты, технический аудит жилья</span>
+                        </p></div>
+                      </div>
+                    </div>
+                  </template>
+                </rt-annotation>
+              </template>
+            </rt-card>
+          </div>
+        </div>
       </div>
     </section>
 
