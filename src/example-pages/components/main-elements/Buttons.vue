@@ -314,7 +314,12 @@
         <div class="app-row row">
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text=" <rt-button :has-icon=&quot;true&quot; class=&quot;rt-button rt-button-cool-grey-border&quot;><template slot=&quot;icon&quot;><rt-icon type=&quot;user-silhouette&quot; width=&quot;16&quot; height=&quot;16&quot; color=&quot;101828&quot;></rt-icon></template><template slot=&quot;button-text&quot;>Подключить</template></rt-button>"
+              text=" <rt-button :has-icon=&quot;true&quot; class=&quot;rt-button rt-button-cool-grey-border&quot;>
+                <template slot=&quot;icon&quot;>
+                  <rt-icon type=&quot;user-silhouette&quot; width=&quot;16&quot; height=&quot;16&quot; color=&quot;101828&quot;/>
+                </template>
+                <template slot=&quot;button-text&quot;>Подключить</template>
+              </rt-button>"
             />
           </div>
           <div class="d-inline-block rt-space-right">
@@ -335,8 +340,10 @@
               </template>
             </rt-button>
           </div>
+          <div class="d-inline-block rt-space-right">
+            <rt-button class="rt-button-transparent-purple">Получить код ещё раз</rt-button>
+          </div>
         </div>
-
         <div class="app-row">
           <p class="rt-font-h3">
             Horizontal buttons
@@ -344,7 +351,10 @@
         </div>
 
         <pre-code
-          text="<div class=&quot;app-row&quot;><rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button><rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button></div>"
+          text="<div class=&quot;app-row&quot;>
+            <rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button>
+            <rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button>
+          </div>"
         />
 
         <div class="app-row">
@@ -353,7 +363,10 @@
           </p>
         </div>
         <pre-code
-          text="<div class=&quot;app-row&quot;><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button><rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button></div>"
+          text="<div class=&quot;app-row&quot;>
+            <rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button>
+            <rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button>
+          </div>"
         />
         <div class="app-row row rt-space-top">
           <div class="rt-col-2 rt-col-md-3 flex-column d-flex rt-md-space-top">

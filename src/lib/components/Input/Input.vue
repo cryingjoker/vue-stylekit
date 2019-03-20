@@ -97,6 +97,14 @@ export default {
     technicalPossibilityHint: {
       type: String,
       default: ''
+    },
+    isHidden: {
+      type: Boolean,
+      default: false
+    },
+    approved: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -125,6 +133,12 @@ export default {
       }
       if(this.isB2bInput) {
         className += ' rtb-input color-block--white';
+      }
+      if(this.isHidden) {
+        className += ' rtb-input--hidden';
+      }
+      if(this.approved) {
+        className += ' rtb-input--approved'
       }
       return className;
     }

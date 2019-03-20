@@ -99,25 +99,66 @@
           </div>
           <div class="rt-col rt-col-4 rt-col-td-3 rt-col-md-3">
             <pre-code
-              text='<rt-input placeholder="Электронная почта" :hasError="true" :is-b2b-input="true" value="kdbaf@dfj.dfd" error-message="ошибка: не является почтой"/>'
+              text='<rt-input
+                placeholder=&quot;Электронная почта&quot;
+                :hasError=&quot;true&quot;
+                :is-b2b-input=&quot;true&quot;
+                value=&quot;kdbaf@dfj.dfd&quot;
+                error-message=&quot;ошибка: не является почтой&quot;/>'
             />
           </div>
         </div>
         <div class="app-row row">
           <div class="rt-col rt-col-6 rt-col-td-3 rt-col-md-3">
             <pre-code
-              text='<rt-input placeholder="Электронная почта" :is-b2b-input="true" :outlined="true"/>'
+              text='<rt-input
+                placeholder=&quot;Электронная почта&quot;
+                :is-b2b-input=&quot;true&quot;
+                :outlined=&quot;true&quot;/>'
             />
             <pre-code
-              text='<rt-input placeholder="Электронная почта" :hasError="true" :is-b2b-input="true" :outlined="true" error-message="ошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтой"/>'
+              text='<rt-input
+                placeholder=&quot;Электронная почта&quot;
+                :hasError=&quot;true&quot;
+                :is-b2b-input=&quot;true&quot;
+                :outlined=&quot;true&quot;
+                error-message=&quot;ошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтойошибка: не является почтой&quot;/>'
             />
             <pre-code
-              text='<rt-input placeholder="Электронная почта" :disabled="true" :is-b2b-input="true" :outlined="true"/>'
+              text='<rt-input
+                placeholder=&quot;Электронная почта&quot;
+                :disabled=&quot;true&quot;
+                :is-b2b-input=&quot;true&quot;
+                :outlined=&quot;true&quot;/>'
             />
             <pre-code
-              text='<rt-input placeholder="Введите пароль" type="password" :is-b2b-input="true" :outlined="true"/>'
+              text='<rt-input
+                placeholder=&quot;Введите пароль&quot;
+                type=&quot;password&quot;
+                :is-b2b-input=&quot;true&quot;
+                :outlined=&quot;true&quot;/>'
             />
           </div>
+        </div>
+        <div class="app-row color-block--light-grey rt-space-top3 rt-space-bottom3 row">
+          <div class="rt-col-12 rt-space-bottom15">
+            <h2 class="rt-font-bold rt-font-center rt-space-bottom05">Оформить заявку на подключение</h2>
+            <p class="rt-font-paragraph rt-font-center">услуга «Виртуальная АТС», тариф М</p>
+          </div>
+          <div class="rt-col-3 rt-col-td-1"></div>
+          <div class="rt-col rt-col-6 rt-col-td-4 rt-col-md-3">
+            <rt-input placeholder="Имя" :is-b2b-input="true" />
+            <rt-input placeholder="Компания" :is-b2b-input="true" />
+            <rt-input placeholder="Электронная почта" :is-b2b-input="true" />
+            <rt-input placeholder="Телефон" :is-b2b-input="true" />
+            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true" />
+            <div class="row flex-center-center rt-space-top">
+                <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a></rt-checkbox>
+            </div>
+            <rt-button class="rt-button-transparent-purple">Получить код</rt-button>
+
+          </div>
+          <div class="rt-col-3 rt-col-td-1"></div>
         </div>
       </div>
     </div>
