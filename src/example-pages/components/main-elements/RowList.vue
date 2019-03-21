@@ -212,7 +212,9 @@
         </div>
       </div>
       <div class="rt-space-top35">
-        <h2>Почему виртуальная телефония от Ростелекома</h2>
+        <div class="rt-container">
+          <h2 class="rt-col-12">Почему виртуальная телефония от Ростелекома</h2>
+        </div>
         <pre-code
           text="
       <rt-row-list :is-profit-list=&quot;true&quot;
@@ -313,7 +315,8 @@
         </rt-row-list>"/>
       </div>
       <div class="rt-space-top35 rt-container">
-        <rt-row-list :columns-quantity="3">
+        <rt-row-list
+          :columns-quantity="3">
         <rt-row-list-item icon="/static/images/B2B/ATS.svg">
           <template slot="option">
             <div class="ovh">
