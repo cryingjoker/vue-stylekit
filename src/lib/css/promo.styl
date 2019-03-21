@@ -219,6 +219,7 @@
   @media (max-width: 767px)
     background-image: none
     height: auto
+    width: auto
 .vip-iphone:before
   width: 55%;
   height: 110px;
@@ -317,11 +318,14 @@
     position: relative
     opacity: 1
     visibility: visible
+    width: auto
+    left: 0
     &+&
       padding-top: 40px
 
 
 .vip
+  .rt-banner-content
   .rt-card__footer
     padding-left: 0
     padding-right: 0
@@ -417,35 +421,90 @@
   height: calc(50vh*4)
   min-height: calc(587px * 4)
   display: flex
+  background-color: #1b2841
+  flex-direction: column
   @media (max-width: 767px)
     height: initial
     display: block
     min-height auto
+    background-color: #101828
 
 .vip-iphone-container
   position: sticky
   bottom: 0
   width: 100%
   height: 50vh
-  min-height: 587px
+  min-height: 492px
   align-self: flex-end
   @media (max-width: 767px)
     position: relative
     min-height auto
     height: auto
 
+.vip-background
+  z-index: 2
+  position: relative
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,#1b2841 5%,#1b2841 100%);
 .vip-list-img-1
   height: 261px
+  @media (max-width: 767px)
+    height: 137px
 .vip-list-img-2
   height: 261px
+  @media (max-width: 767px)
+    height: 137px
 .vip-list-img-3
   height: 191px
+  @media (max-width: 767px)
+    height: 117px
 .vip-list-img-4
   height: 185px
+  @media (max-width: 767px)
+    height: 137px
 .vip-list-img-container
   height: 261px
+  @media (max-width: 767px)
+    height: 137px
 .horizontal-scroll-container
   display: flex;
   flex-direction: row;
   white-space: normal;
   overflow: auto
+
+.vip-scroll-button
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  cursor: pointer
+  z-index: 10
+  opacity: 0.8
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity
+  display: none
+  &:hover
+    opacity: 1
+  &--next
+    right: 0px
+  &--prev
+    left: 0px
+    transform rotate(180deg)
+.tariff-scroller
+  position: relative
+  top: 0
+.tariff-scroller-sticky
+  top: 0
+  position: sticky
+.vip-iphone-title
+  position: sticky
+  top: 50px
+
+.vip-tariff-wrapper
+  transition-timing-function ease
+  transition-duration .1s
+  transition-property transform
+
+
+
