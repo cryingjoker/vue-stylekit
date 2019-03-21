@@ -31,6 +31,8 @@ export default {
   render: function(h) {
     this.columnsQuantity = this.$parent._props.columnsQuantity;
     this.companyProfits = this.$parent._props.companyProfits;
+    this.includedServices = this.$parent._props.includedServices;
+    this.isProfitList = this.$parent._props.isProfitList;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -108,7 +110,7 @@ export default {
           </div>
         );
       }
-    } else {
+    } else if(this.isProfitList){
       const columnClass = (() => {
         let profitColumn = '';
         if(this.columnsQuantity === 2) {
@@ -125,7 +127,23 @@ export default {
           {this.$slots.option}
         </div>
       </div>);
-
+    } else {
+      const columnClass = (() => {
+        let profitColumn = '';
+        if(this.columnsQuantity === 2) {
+          profitColumn += ' rtb-profit--col-2 rt-col-6 ';
+        }
+        if(this.columnsQuantity === 3) {
+          profitColumn += ' rtb-profit--col-3 rt-col-4 ';
+        }
+        return profitColumn;
+      })();
+      return (<div class={"rt-row-list__item rtb-profit rtb-services" + (columnClass) + "rt-col-td-3 rt-col-md-3"}>
+        <div class="rt-row-list__header">
+          <div class="rt-row-list__icon" style={this.iconImage}></div>
+          {this.$slots.option}
+        </div>
+      </div>);
     }
   }
 };

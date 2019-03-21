@@ -18,6 +18,10 @@ export default {
     companyProfits: {
       type: Boolean,
       default: false
+    },
+    includedServices: {
+      type: Boolean,
+      default: false
     }
   }
 };
