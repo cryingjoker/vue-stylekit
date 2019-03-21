@@ -212,7 +212,9 @@
         </div>
       </div>
       <div class="rt-space-top35">
-        <h2>Почему виртуальная телефония от Ростелекома</h2>
+        <div class="rt-container">
+          <h2 class="rt-col-12">Почему виртуальная телефония от Ростелекома</h2>
+        </div>
         <pre-code
           text="
       <rt-row-list :is-profit-list=&quot;true&quot;
@@ -311,6 +313,74 @@
             </template>
           </rt-row-list-item>
         </rt-row-list>"/>
+      </div>
+      <div class="rt-space-top35 rt-container">
+        <rt-row-list
+          :columns-quantity="3">
+        <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+          <template slot="option">
+            <div class="ovh">
+              <p class="rt-font-small-paragraph">Распределение вызовов</p>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+          <template slot="option">
+            <div class="ovh">
+              <p class="rt-font-small-paragraph">Перевод и удержание вызовов</p>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+          <template slot="option">
+            <div class="ovh">
+              <p class="rt-font-small-paragraph">Музыка вместо гудков</p>
+            </div>
+          </template>
+        </rt-row-list-item>
+        <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+          <template slot="option">
+            <div class="ovh">
+              <p class="rt-font-small-paragraph">Статистика всех звонков</p>
+            </div>
+          </template>
+        </rt-row-list-item>
+          <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="ovh">
+                <p class="rt-font-small-paragraph">Голосовая почта</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="ovh">
+                <p class="rt-font-small-paragraph">Переадресация на сотрудников</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="ovh">
+                <p class="rt-font-small-paragraph">Черный и белый список номеров</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="ovh">
+                <p class="rt-font-small-paragraph">Настройка голосового меню</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+          <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+            <template slot="option">
+              <div class="ovh">
+                <p class="rt-font-small-paragraph">Короткие номера внутри сети</p>
+              </div>
+            </template>
+          </rt-row-list-item>
+        </rt-row-list>
       </div>
     </div>
   </div>

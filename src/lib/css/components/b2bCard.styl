@@ -51,8 +51,8 @@
       font-size inherit
 
   &__cost
-    color main-color09
-    margin-bottom vertical-space * .25
+    //color main-color09
+    //margin-bottom vertical-space * .25
 
     .{b2bAppName}-price
       &__value,
@@ -212,6 +212,37 @@
     top 20px
     right -13px
     z-index 3
+
+  &__product-image
+      position: relative
+      height 180px
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background-size cover
+      border-radius 0
+      & + .rt-card__content
+        padding-top: 20px
+        min-height auto
+  &--product
+    height 580px
+    display block
+    @media (max-width: tablet-upper-limit)
+      height 510px
+    .{newAppName}-card__content
+      height 400px
+      @media (max-width: tablet-upper-limit)
+        height 330px
+    .color-block
+      color b2c-white
+
+.{b2bAppName}-product__triangle
+  position absolute
+  top 0
+  left 0
+  right 0
+  transform translateY(-99%)
 
 .{b2bAppName}-category
   &.{newAppName}-card-red
