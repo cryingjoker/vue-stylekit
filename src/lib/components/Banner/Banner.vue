@@ -773,7 +773,6 @@
       };
       const pattern = (() => {
         if (this.backgroundPattern && !!this.RtBanners.items[this.RtBanners.activeIndex].patternTopColor) {
-          console.log(this.$el, '____', this.backgroundPattern);
           return <rt-pattern pattern-type={Number(this.RtBanners.items[this.RtBanners.activeIndex].patternType)}
                              top-color={this.RtBanners.items[this.RtBanners.activeIndex].patternTopColor}
                              left-color={this.RtBanners.items[this.RtBanners.activeIndex].patternLeftColor}
