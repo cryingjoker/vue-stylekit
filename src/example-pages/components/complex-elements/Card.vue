@@ -1088,12 +1088,12 @@
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 rt-space-top is-b2b">
             <pre-code
               text="<rt-card
-              background-image=&quot;static/images/B2B/category-img.png&quot;
+              background-image=&quot;/static/images/B2B/category-img.png&quot;
               :is-b2b-category=&quot;true&quot;
               :category-card-size=&quot;3&quot;
               background-color-type=&quot;green-low&quot;
               :is-white-color=&quot;true&quot;
-              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
+              category-icon-mobile=&quot;/static/images/B2B/shield.svg&quot;
             >
               <template slot=&quot;content&quot;>
                 <h3 class=&quot;rt-font-bold rt-space-bottom05&quot;>
@@ -1115,12 +1115,12 @@
           <div class="rt-col-8 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
             <pre-code
               text="<rt-card
-              background-image=&quot;static/images/B2B/virtual-ATS.png&quot;
+              background-image=&quot;/static/images/B2B/virtual-ATS.png&quot;
               :is-b2b-category=&quot;true&quot;
               :category-card-size=&quot;2&quot;
               background-color-type=&quot;purple&quot;
               :is-white-color=&quot;true&quot;
-              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
+              category-icon-mobile=&quot;/static/images/B2B/shield.svg&quot;
             >
               <template slot=&quot;content&quot;>
                 <h3 class=&quot;rt-font-bold rt-space-bottom05&quot;>
@@ -1155,7 +1155,7 @@
               :category-card-size=&quot;1&quot;
               background-color-type=&quot;dark-blue&quot;
               :is-white-color=&quot;true&quot;
-              category-icon-mobile=&quot;static/images/B2B/shield.svg&quot;
+              category-icon-mobile=&quot;/static/images/B2B/shield.svg&quot;
             >
               <template slot=&quot;content&quot;>
                 <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
@@ -1179,7 +1179,7 @@
               text="<rt-card
               :is-b2b-category=&quot;true&quot;
               :category-card-size=&quot;1&quot;
-              category-icon-mobile=&quot;static/images/B2B/mobile-call.svg&quot;
+              category-icon-mobile=&quot;/static/images/B2B/mobile-call.svg&quot;
             >
               <template slot=&quot;content&quot;>
                 <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
