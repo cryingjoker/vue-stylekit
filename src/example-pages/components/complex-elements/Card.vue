@@ -1205,6 +1205,78 @@
               </template>
             </rt-card>"/>
           </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b color-white">
+            <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="yellow-high">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+              </template>
+              <template slot="footer">
+                <div class="rtb-card__cost">
+                  <rt-price
+                    :value="2.5"
+                    :is-option="true"
+                    currency="₽"
+                    :b2b-price="true"
+                    time-interval="в месяц"
+                  />
+                </div>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
+            <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="purple">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+              </template>
+              <template slot="footer">
+                <div class="rtb-card__cost">
+                  <rt-price
+                    :value="2.5"
+                    :is-option="true"
+                    currency="₽"
+                    :b2b-price="true"
+                    time-interval="в месяц"
+                  />
+                </div>
+              </template>
+            </rt-card>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
+            <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="green">
+              <template slot="content">
+                <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+                <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                  рекламная платформа</p>
+              </template>
+              <template slot="footer">
+                <div class="rtb-card__cost">
+                  <rt-price
+                    :value="2.5"
+                    :is-option="true"
+                    currency="₽"
+                    :b2b-price="true"
+                    time-interval="в месяц"
+                  />
+                </div>
+              </template>
+            </rt-card>
+          </div>
           <div
             class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b"
           >
@@ -1239,13 +1311,13 @@
                   </p>
                   <div class="rtb-card__description__row">
                     <span class="rt-font-paragraph rt-font-bold">1 сим-карта</span>
-                    <rt-hint :simple-tool-tip="true">
-                      <slot>
-                        Это всё что угодно,<br >но не адрес электронной почты
-                        Это всё что угодно,<br >но не адрес электронной почты
-                        Это всё что угодно,<br >но не адрес электронной почты
-                      </slot>
-                    </rt-hint>
+                    <!--<rt-hint :simple-tool-tip="true">-->
+                      <!--<slot>-->
+                        <!--Это всё что угодно,<br >но не адрес электронной почты-->
+                        <!--Это всё что угодно,<br >но не адрес электронной почты-->
+                        <!--Это всё что угодно,<br >но не адрес электронной почты-->
+                      <!--</slot>-->
+                    <!--</rt-hint>-->
                   </div>
                   <div class="rtb-card__description__row">
                     <p class="rt-font-paragraph rt-font-bold">
@@ -1703,11 +1775,11 @@
               <template slot="content">
                 <div class="rtb-card__description__row">
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
-                  <rt-hint :simple-tool-tip="true">
-                    <slot>
-                      Это всё что угодно,<br >но не адрес электронной почты
-                    </slot>
-                  </rt-hint>
+                  <!--<rt-hint :simple-tool-tip="true">-->
+                    <!--<slot>-->
+                      <!--Это всё что угодно,<br >но не адрес электронной почты-->
+                    <!--</slot>-->
+                  <!--</rt-hint>-->
                   <p class="rt-font-small-paragraph color-main025">
                     на номера домашнего региона
                   </p>
