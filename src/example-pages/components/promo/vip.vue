@@ -65,7 +65,7 @@
         <section class="rt-dark-theme">
           <div class="rt-container rt-space-vertical25 vip-tariff">
             <h2 class="rt-font-h2 rt-font-bold rt-font-center rt-font-md-left rt-space-bottom2">Тарифы</h2>
-            <div class="row vip-tariff-wrapper row--mobile-wrap d-flex-nowrap">
+            <div class="row vip-tariff-wrapper d-flex-nowrap">
               <div class="rt-col-4 rt-col-td-3 rt-col-md-3">
                 <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
                   <template slot="content">
@@ -176,7 +176,7 @@
                 </rt-card>
               </div>
 
-              <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-md-space-top">
+              <div class="rt-col-4 rt-col-td-3 rt-col-md-3">
                 <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
                   <template slot="content">
                     <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для безлимитного общения</p>
@@ -223,7 +223,7 @@
                   </template>
                 </rt-card>
               </div>
-              <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-md-space-top">
+              <div class="rt-col-4 rt-col-td-3 rt-col-md-3">
                 <rt-card background-color-type="purple" :background-blur="5" :is-white-color="true">
                   <template slot="content">
                     <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Для интернета и ТВ</p>
@@ -412,11 +412,11 @@
       <h2 class="rt-font-h2 rt-font-bold rt-font-center color-white rt-font-md-left vip-iphone-title">Как подключить
         VIP-тариф</h2>
       <div class="d-flex flex-fill">
-        <div class="vip-iphone-container">
+        <div class="vip-iphone-container  vip-background">
           <div class="rt-container">
             <div class="rt-col">
 
-              <div class="flex-center-center rt-space-top2 vip-background">
+              <div class="flex-center-center rt-space-top2">
                 <div class="vip-iphone">
                   <div class="vip-iphone__inner"></div>
                   <p class="vip-iphone-text-step d-none md-d-block rt-font-h1 rt-font-bold color-purple">1 шаг</p>
@@ -777,21 +777,14 @@
         var tariffWrapperHeight = document.querySelector(".vip-tariff-wrapper").getBoundingClientRect().height;
         var tariffWrapperWidth = document.querySelector(".vip-tariff-wrapper").getBoundingClientRect().width;
         var tariffWrapper = document.querySelector(".vip-tariff-wrapper");
-        if (needToScroll && tariffWrapperTop <= tariffWrapperOffsetTop && Math.abs(tariffWrapperTop) < tariffWrapperHeight) {
-          if (tariffWrapperTop === tariffWrapperOffsetTop) {
-
+        if (needToScroll && tariffWrapperTop - 20 <= tariffWrapperOffsetTop && Math.abs(tariffWrapperTop) - 140 < tariffWrapperHeight) {
+          if (tariffWrapperTop - 40 <= tariffWrapperOffsetTop && tariffWrapperTop + 60 >= tariffWrapperOffsetTop) {
             tariffWrapper.style.transform = "translateX(" + (document.querySelector(".vip-iphone-wrapper").getBoundingClientRect().top - document.querySelector(".tariff-scroller").getBoundingClientRect().height) + "px)";
           }else{
             if(tariffWrapper.style.transform){
               tariffWrapper.style.transform = 0
             }
           }
-          // document.querySelector(".vip-tariff-wrapper").style.marginLeft = (document.querySelector(".vip-iphone-wrapper").getBoundingClientRect().top - document.querySelector(".tariff-scroller").getBoundingClientRect().height)+'px';
-          // console.info("document.querySelector(\".vip-iphone-wrapper\").getBoundingClientRect().top - document.querySelector(\".vip-iphone-wrapper\").getBoundingClientRect().height - document.body.clientHeight");
-          // console.info('document.querySelector(".vip-iphone-wrapper").getBoundingClientRect()',document.querySelector(".vip-iphone-wrapper").getClientRects()[0] ,(window.pageYOffset || document.scrollTop)  - (document.clientTop || 0))
-          // console.info(Math.abs(tariffWrapperTop - 136),document.querySelector(".vip-tariff-wrapper").getClientRects()[0])
-          // console.info("this!!", tariffWrapperTop, (window.pageYOffset || document.scrollTop) - (document.clientTop || 0), document.querySelector(".vip-iphone-wrapper").getBoundingClientRect());
-          // console.info("document.querySelector(\".vip-tariff-wrapper\").getClientRects()[0]", document.querySelector(".vip-tariff-wrapper").getClientRects()[0]);
         } else {
           // console.info("tariffWrapperTop", tariffWrapperTop);
         }
