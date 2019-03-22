@@ -295,6 +295,8 @@
   font-size: 14px
   color white
   text-align: center
+  @media (max-width: 767px)
+    display: none
 
 
 
@@ -442,9 +444,16 @@
     height: auto
 
 .vip-background
-  z-index: 2
-  position: relative
-  background: linear-gradient(to bottom, #1b284100 0%,#1b2841 5%,#1b2841 100%);
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: linear-gradient(to bottom, #1b284100 0%,#1b2841 5%,#1b2841 100%);
+    @media (max-width: 767px)
+      display: none
 .vip-list-img-1
   height: 261px
   @media (max-width: 767px)
@@ -491,21 +500,29 @@
   &--prev
     left: 0px
     transform rotate(180deg)
+
 .tariff-scroller
   position: relative
   top: 0
+
 .tariff-scroller-sticky
   top: 0
   position: sticky
+
 .vip-iphone-title
   position: sticky
   top: 50px
-.vip-tariff
-  overflow: hidden
+  @media (max-width: 767px)
+    position: relative
+    padding-bottom: 30px
+    padding-left: 20px
+    padding-right: 20px
+
 .vip-tariff-wrapper
   transition-timing-function ease
   transition-duration .1s
   transition-property transform
-
-
+.animate-scroller-sticky
+  position: sticky
+  top: 0
 
