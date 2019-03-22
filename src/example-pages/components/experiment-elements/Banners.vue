@@ -40,8 +40,6 @@
         <p class="rt-font-banner-label">Телефония</p>
         <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
       </rt-banner-item>
-
-      </rt-banner-item>
     </rt-banner>
     <pre-code
       text="<rt-banner content-mobile-height=&quot;400px&quot;
@@ -145,6 +143,56 @@
         </rt-banner-item>
       </rt-banner>"
     />
+    <pre-code
+      text="<rt-banner :switch-off-timer='true'
+                       :background-image-left='true'>
+        <rt-banner-item background-image='/static/images/B2B/test-image-half.png'
+                        background-color='green-low'>
+          <rt-color-line-text :is-white-color='true'
+                              color-icon='yellow'
+                              fill-color='pink-low'>
+            <template slot='label'>Мама мыла раму!</template>
+            <template slot='content'>Ваш дом всегда под контролем, <br> даже когда вы далеко.</template>
+          </rt-color-line-text>
+          <rt-button class='rt-button-orange'>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item :is-white-color='true'
+                        :pattern-background='true'
+                        :pattern-type='2'
+                        pattern-top-color='orange'
+                        pattern-left-color='dark-blue'
+                        pattern-right-color='pink'>
+          <p class='tagline rt-space-bottom05'>сервис или продукт</p>
+          <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
+          <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
+            возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class='rt-button-orange'>Подробнее</rt-button>
+        </rt-banner-item>
+    </rt-banner>"
+    />
+    <pre-code
+      text="<rt-banner :is-fullscreen-image='true'
+                       has-custom-height='600px'
+                       :without-empty-column='true'
+                       :without-second-empty-column='true'>
+      <rt-banner-item background-image='/static/images/B2B/test-image.png'
+                         :category-banner='true'
+                         :is-white-color='true'>
+          <p class='tagline rt-space-bottom05'>сервис или продукт</p>
+          <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
+          <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
+            возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class='rt-button-orange'>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item background-image='/static/images/B2B/telephony-banner-bg.png'
+                        :is-white-color='true'
+                        content-mobile-min-height='500px'
+                        content-mobile-height='200px'>
+          <p class='rt-font-banner-label'>Телефония</p>
+          <p class='rt-space-top rt-space-bottom15'>Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
+        </rt-banner-item>
+      </rt-banner>
+    "/>
     <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true">
       <rt-banner-item is-game-banner-item background-video="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4"
                       :is-white-color="true" background-color="dark-state"

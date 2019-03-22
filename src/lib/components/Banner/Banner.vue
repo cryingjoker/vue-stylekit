@@ -126,6 +126,10 @@
       switchOffTimer: {
         type:Boolean,
         default: false
+      },
+      backgroundImageLeft: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -233,7 +237,6 @@
           this.RtBanners.items[activeIndex] &&
           this.RtBanners.items[activeIndex].patternBackground
         ) {
-//          console.log(this.RtBanners.items[activeIndex], '___', this.RtBanners.items[activeIndex].patternBackground);
           this.backgroundPattern = this.RtBanners.items[
             activeIndex
             ].patternBackground;
@@ -246,6 +249,9 @@
         }
         if(this.transparentBackgroundImage){
           className += " rt-banner-image--contain"
+        }
+        if(this.backgroundImageLeft) {
+          className += " rt-banner-image--left"
         }
         return className;
       },
@@ -839,7 +845,7 @@
       return <div class={this.bannerClass} style={this.bannerStyle}>
         <div class="rt-container rt-banner-container">
           {link()}
-          {bannerContent()}
+          <div class="rt-col">{bannerContent()}</div>
         </div>
         {paginator()}
         <div style={this.imageStyle} class={this.imageClass + (this.hasImageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
