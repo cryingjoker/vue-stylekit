@@ -436,7 +436,7 @@
               <rt-row-list-item icon="/static/images/B2B/notebook.svg">
                 <template slot="option">
                   <div class="ovh">
-                    <p class="rt-font-small-paragraph rt-space-left rt-space-right">или <a href="#">специальная программа</a> на компьютере или ноутбуке</p>
+                    <p class="rt-font-small-paragraph rt-space-left rt-space-right">или <a href="#" class="rt-link">специальная программа</a> на компьютере или ноутбуке</p>
                   </div>
                 </template>
               </rt-row-list-item>
