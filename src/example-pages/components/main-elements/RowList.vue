@@ -315,6 +315,8 @@
         </rt-row-list>"/>
       </div>
       <div class="rt-space-top35 rt-container">
+        <pre-code
+          text='
         <rt-row-list
           :columns-quantity="3">
         <rt-row-list-item icon="/static/images/B2B/ATS.svg">
@@ -380,7 +382,7 @@
               </div>
             </template>
           </rt-row-list-item>
-        </rt-row-list>
+        </rt-row-list>'/>
       </div>
     </div>
   </div>

@@ -107,10 +107,10 @@
         type: String,
         default: null
       },
-      categoryBanner: {
-        type: Boolean,
-        default: null
-      },
+//      categoryBanner: {
+//        type: Boolean,
+//        default: null
+//      },
       hasImageOnMobile: {
         type: Boolean,
         default: false
@@ -144,7 +144,9 @@
         items: [],
         activeIndex: -1,
         setActiveItem: null,
-        setStartTimer: null
+        setStartTimer: null,
+        imageOnMobile: false,
+        colorFillOnMobile: false
       },
       isOpenListOnTop: false,
       isStopped: false,
@@ -253,6 +255,13 @@
         if(this.backgroundImageLeft) {
           className += " rt-banner-image--left"
         }
+        if(this.hasImageOnMobile || (!!this.RtBanners.items[activeIndex] && !!this.RtBanners.items[activeIndex].imageOnMobile)) {
+          className += " rt-banner-image--mobile-visible"
+        }
+        if(this.RtBanners.items[activeIndex] &&
+          this.RtBanners.items[activeIndex].colorFillOnMobile) {
+          className += " rt-banner-image--color-fill"
+        }
         return className;
       },
       imageStyle() {
@@ -299,6 +308,8 @@
       this.addListener();
       this.calculateScroll();
       this.calculateMobileOptions();
+      this.changePatternType();
+      this.changePatternTypeOnResize();
     },
     beforeMount() {
       this.RtBanners.id = this._uid || Math.random(Date.now() + 1);
@@ -412,7 +423,7 @@
           this.mobileImageMaxHeight !== null
         ) {
           const isMobile =
-            window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+            window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
             this.isMobile = isMobile;
@@ -691,6 +702,21 @@
           }
           resolve();
         });
+      },
+      changePatternTypeOnResize() {
+        window.addEventListener('resize', () => {
+          this.changePatternType();
+        });
+      },
+      changePatternType() {
+        if(this.RtBanners.items[this.RtBanners.activeIndex] !== undefined &&
+          this.RtBanners.items[this.RtBanners.activeIndex].imageOnMobile !== undefined){
+          if(window.innerWidth <= 767){
+            this.RtBanners.items[this.RtBanners.activeIndex].patternType = 1;
+          } else {
+            this.RtBanners.items[this.RtBanners.activeIndex].patternType = 2;
+          }
+        }
       }
     },
     render(h) {
@@ -706,6 +732,12 @@
           />;
         } else {
           return null;
+        }
+      };
+
+      const gradient = () => {
+        if(!!this.RtBanners.items[this.RtBanners.activeIndex] && !!this.RtBanners.items[this.RtBanners.activeIndex].backgroundImage) {
+          return <div class="rt-banner-image--mobile-gradient"></div>
         }
       };
 
@@ -848,11 +880,12 @@
           <div class="rt-col">{bannerContent()}</div>
         </div>
         {paginator()}
-        <div style={this.imageStyle} class={this.imageClass + (this.hasImageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
+        <div style={this.imageStyle} class={this.imageClass + (this.imageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
           {leftTriangle()}
           {video()}
           {rightTriangle()}
           {pattern}
+          {gradient()}
         </div>
         {logo()}
       </div>;

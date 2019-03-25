@@ -19,6 +19,19 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, color
+  &--mobile-gradient
+    @media (max-width: mobile-upper-limit)
+      &:after
+        content ''
+        position absolute
+        height 60%
+        width 100%
+        top 40%
+        left 0
+        right 0
+        bottom 0
+        background linear-gradient(to bottom, rgba(main-color, 0) 0%,  rgba(main-color, .75) 100%)
+        z-index 2
 
   &--has-absolute-position
     position absolute
@@ -404,8 +417,8 @@
     position absolute
     top 0
     bottom 0
-    left: 0
-    right 0
+    left 10px
+    right 10px
     z-index 3
     transition-timing-function ease-in-out
     transition-duration .3s
@@ -433,7 +446,6 @@
         max-width initial // calc(100% - 50px)?
 
     .{newAppName}-button
-      min-width 210px
       @media (max-width: mobile-upper-limit)
         font-size 14px
         height 34px
@@ -500,6 +512,9 @@
     &--contain
       background-size: contain
       background-repeat: no-repeat
+      @media (max-width: mobile-upper-limit)
+        .rt-banner-image--mobile-gradient
+          display none!important
 
     &:before
       content ""
@@ -605,6 +620,10 @@
       overflow-y hidden
       left 0
       right 0
+      @media (max-width: tablet-upper-limit)
+        background-position-x 55%
+      @media (max-width: mobile-upper-limit)
+        background-position-x 65%
 
       &:before,
       &:after
@@ -627,6 +646,11 @@
         display block
         width 100vw
         left 0
+        background-position-x 25%
+
+    &--color-fill
+      @media (max-width: mobile-upper-limit)
+        display none!important
 
   &--pattern
     @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
@@ -904,13 +928,10 @@
 
 .rt-banner__item
   display flex
-  display flex
   flex 0 0 auto
   flex-wrap wrap
   flex-flow column
   width 100%
-  width 100%
-  // height: 100% !important;
   min-height 0
   box-sizing border-box
   opacity 0
@@ -1050,3 +1071,16 @@
       visibility visible
       top 0
       left 20px
+
+.rt-banner-image--mobile-gradient
+  @media (max-width: mobile-upper-limit)
+    position absolute
+    height 60%
+    width 100%
+    top 40%
+    left 0
+    right 0
+    bottom 0
+    background linear-gradient(to bottom, rgba(main-color, 0) 0%,  rgba(main-color, .75) 100%)
+
+

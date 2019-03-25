@@ -29,18 +29,20 @@
         </rt-banner>
       </div>
     </div>
-    <rt-banner has-custom-height="500px"
-               :is-fullscreen-image="true"
-               :category-banner="true">
-      <rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="1"/>
-      <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
-                      :is-white-color="true"
-                      content-mobile-min-height="500px"
-                      content-mobile-height="200px">
-        <p class="rt-font-banner-label">Телефония</p>
-        <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
-      </rt-banner-item>
-    </rt-banner>
+    <pre-code
+      text='
+        <rt-banner has-custom-height="500px"
+                   :is-fullscreen-image="true">
+          <!--<rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="1"/>-->
+          <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
+                          :is-white-color="true"
+                          content-mobile-min-height="500px"
+                          background-color="yellow-low">
+            <p class="rt-font-banner-label">Телефония</p>
+            <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
+          </rt-banner-item>
+        </rt-banner>
+    '/>
     <pre-code
       text="<rt-banner content-mobile-height=&quot;400px&quot;
                        :has-image-on-mobile=&quot;true&quot;>
@@ -63,13 +65,13 @@
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :has-image-on-mobile=&quot;true&quot;
-                       :no-triangle=&quot;true&quot;
+      text="<rt-banner :no-triangle=&quot;true&quot;
                        :without-empty-column=&quot;true&quot;
                        :without-second-empty-column=&quot;true&quot;
                        :transparent-background-image=&quot;true&quot;
                        :mobile-image-on-top=&quot;true&quot;
-                       :switch-off-timer=&quot;true&quot;>
+                       :switch-off-timer=&quot;true&quot;
+                       :has-image-on-mobile=&quot;true&quot;>
       <rt-banner-item :is-white-color=&quot;true&quot;
                       background-color=&quot;green&quot;
                       background-image=&quot;/static/images/B2B/big-internet-slide-1.svg&quot;>
@@ -100,13 +102,13 @@
                        :sleep-time=&quot;20000&quot;
                        bannerLogo=&quot;/static/example-images/Logo.svg&quot;
                        content-mobile-min-height=&quot;80vh&quot;
-                       content-mobile-height=&quot;300px&quot;
-                       :has-image-on-mobile=&quot;true&quot;>
+                       content-mobile-height=&quot;300px&quot;>
       <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot;
                       :is-white-color=&quot;true&quot;
                       content-mobile-min-height=&quot;80vh&quot;
                       content-mobile-height=&quot;200px&quot;
-                      background-color=&quot;dark-state&quot;>
+                      background-color=&quot;dark-state&quot;
+                      :has-image-on-mobile=&quot;true&quot;>
         <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
         <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br>
           возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
@@ -146,8 +148,22 @@
     <pre-code
       text="<rt-banner :switch-off-timer='true'
                        :background-image-left='true'>
+        <rt-banner-item :is-white-color='true'
+                        :pattern-background='true'
+                        :pattern-type='2'
+                        pattern-top-color='orange'
+                        pattern-left-color='dark-blue'
+                        pattern-right-color='pink'
+                        :has-image-on-mobile='true'>
+          <p class='tagline rt-space-bottom05'>сервис или продукт</p>
+          <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
+          <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
+            возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+          <rt-button class='rt-button-orange'>Подробнее</rt-button>
+        </rt-banner-item>
         <rt-banner-item background-image='/static/images/B2B/test-image-half.png'
-                        background-color='green-low'>
+                        background-color='green-low'
+                        :has-image-on-mobile='true'>
           <rt-color-line-text :is-white-color='true'
                               color-icon='yellow'
                               fill-color='pink-low'>
@@ -156,28 +172,19 @@
           </rt-color-line-text>
           <rt-button class='rt-button-orange'>Подробнее</rt-button>
         </rt-banner-item>
-        <rt-banner-item :is-white-color='true'
-                        :pattern-background='true'
-                        :pattern-type='2'
-                        pattern-top-color='orange'
-                        pattern-left-color='dark-blue'
-                        pattern-right-color='pink'>
-          <p class='tagline rt-space-bottom05'>сервис или продукт</p>
-          <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
-          <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
-            возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
-          <rt-button class='rt-button-orange'>Подробнее</rt-button>
-        </rt-banner-item>
+
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :is-fullscreen-image='true'
-                       has-custom-height='600px'
+      text="<rt-banner :switch-off-timer='true'
+                       :is-fullscreen-image='true'
+                       content-height='600px'
                        :without-empty-column='true'
-                       :without-second-empty-column='true'>
+                       :without-second-empty-column='true'
+                       justify='left'
+                       content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
-                         :category-banner='true'
-                         :is-white-color='true'>
+                      :is-white-color='true'>
           <p class='tagline rt-space-bottom05'>сервис или продукт</p>
           <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
           <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
@@ -186,8 +193,8 @@
         </rt-banner-item>
         <rt-banner-item background-image='/static/images/B2B/telephony-banner-bg.png'
                         :is-white-color='true'
-                        content-mobile-min-height='500px'
-                        content-mobile-height='200px'>
+                        background-color='green'
+                        :color-fill-on-mobile='true'>
           <p class='rt-font-banner-label'>Телефония</p>
           <p class='rt-space-top rt-space-bottom15'>Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
         </rt-banner-item>

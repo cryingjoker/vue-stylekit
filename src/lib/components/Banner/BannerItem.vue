@@ -108,6 +108,14 @@ export default {
     patternType: {
       type: Number,
       default: 1
+    },
+    hasImageOnMobile: {
+      type: Boolean,
+      default: false
+    },
+    colorFillOnMobile: {
+      type: Boolean,
+      default: false
     }
   },
   inject: {
@@ -195,6 +203,9 @@ export default {
         bannerItemData.patternLeftColor = this.patternLeftColor,
         bannerItemData.patternRightColor = this.patternRightColor
       }
+      if(this.hasImageOnMobile){
+        bannerItemData.imageOnMobile = this.hasImageOnMobile;
+      }
       if (this.backgroundVideo) {
         bannerItemData.backgroundVideo = this.backgroundVideo;
       }
@@ -215,6 +226,9 @@ export default {
       }
       if(this.isGameBannerItem) {
         bannerItemData.isGameBannerItem = this.isGameBannerItem;
+      }
+      if(this.colorFillOnMobile) {
+        bannerItemData.colorFillOnMobile = this.colorFillOnMobile
       }
 
       this.RtBanners.items.push(bannerItemData);

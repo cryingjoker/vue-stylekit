@@ -33,7 +33,7 @@
       if(this.$parent.$el.classList.contains('rt-banner')){
         let sibling = this.$parent.$children[1];
         if(sibling._props.backgroundColor != null) {
-          this.mainColor = sibling._props.backgroundColor;
+          this.mainColor = sibling._props.patternTopColor;
         }
       }
 
