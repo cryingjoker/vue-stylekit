@@ -385,11 +385,11 @@
             </rt-row-list>
         '/>
       </div>
-      <div class="rt-space-top35 rt-container rt-space-bottom5">
+      <div class="rt-space-top35 rt-container">
         <h3 class="rt-font-bold rt-space-bottom">Как устроено</h3>
         <pre-code
           text='
-            <rt-row-list :how-it-works="true">
+            <rt-row-list :is-how-it-works-block="true">
               <rt-row-list-item icon="/static/images/B2B/phone12.svg">
                 <template slot="option">
                   <div class="ovh">
@@ -425,7 +425,7 @@
         <h3 class="rt-font-bold rt-space-bottom">Что нужно для подключения</h3>
         <pre-code
           text='
-            <rt-row-list :how-it-works="true" class="rt-font-left">
+            <rt-row-list :is-how-it-works-block="true" class="rt-font-left">
               <rt-row-list-item icon="/static/images/B2B/phone16.svg">
                 <template slot="option">
                   <div class="ovh">

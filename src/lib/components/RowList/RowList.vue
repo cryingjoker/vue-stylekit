@@ -14,11 +14,11 @@ export default {
       type: Boolean,
       default: false
     },
-    includedServices: {
+    isHowItWorksBlock: {
       type: Boolean,
       default: false
     },
-    howItWorks: {
+    isHelpBlock: {
       type: Boolean,
       default: false
     }

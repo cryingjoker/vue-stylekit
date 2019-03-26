@@ -141,7 +141,7 @@
     .{newAppName}-row-list__header
       width 100%
       align-items center
-      max-width auto
+      max-width none
       padding 0
     .{newAppName}-row-list__icon
       flex-basis 50px
@@ -162,6 +162,19 @@
   &-how-it-works
     .{newAppName}-row-list__header
       text-align left
+
+  &-help-block
+    padding-bottom vertical-space * 3
+    .{newAppName}-row-list__header
+      text-align left
+      flex-direction column
+    .{newAppName}-row-list__icon
+      width 80px
+      height 80px
+      background-repeat: no-repeat
+      background-position center
+    &+&
+      border-top none
 
 .ovh
   overflow hidden
