@@ -1,5 +1,8 @@
 <script type="text/jsx">
-export default {
+
+  import variables from "../../variables.json";
+
+  export default {
   name: "RtRowListItem",
   props: {
     arrayIcon: {
@@ -9,10 +12,15 @@ export default {
     icon: {
       type: String,
       default: null
+    },
+    buttonInMobile: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     show: false,
+    componentView: 'desktop'
   }),
   computed: {
     iconImage() {
@@ -22,6 +30,21 @@ export default {
       }
       return styles;
     }
+  },
+  mounted(){
+    const toggleComponentView = () => {
+      if(this.buttonInMobile) {
+        if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])) {
+          this.componentView = 'mobile';
+          console.log(this.componentView);
+        } else {
+          this.componentView = 'desktop';
+          console.log(this.componentView);
+        }
+      }
+    };
+    toggleComponentView();
+    window.addEventListener('resize', toggleComponentView);
   },
   methods: {
     toggleShow() {
@@ -87,16 +110,22 @@ export default {
           </div>
         )
       } else if(this.help) {
-        return (
-          <div class="rt-row-list__item rt-col-4 rt-col-td-3 rt-col-md-3 rtb-help-block">
-            <div class="rt-row-list__header">
-              <div class="rt-space-bottom">
-                <div class="rt-row-list__icon" style={this.iconImage}></div>
+        if(this.buttonInMobile && this.componentView === 'mobile') {
+          return <a href=" tel:88002003000" style="order:2;" class="rt-col-md-3">
+              <rt-button class="rt-button-orange" style="width: 100%; margin-top:20px">Позвонить в службу поддержки</rt-button>
+            </a>
+        } else {
+          return (
+            <div class="rt-row-list__item rt-col-4 rt-col-td-2 rt-col-md-3 rtb-help-block">
+              <div class="rt-row-list__header">
+                <div class="rt-space-bottom">
+                  <div class="rt-row-list__icon" style={this.iconImage}></div>
+                </div>
+                {this.$slots.option}
               </div>
-              {this.$slots.option}
             </div>
-          </div>
-        )
+          )
+        }
       } else if(this.howItWorks){
         return (
           <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
