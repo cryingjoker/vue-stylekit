@@ -140,12 +140,19 @@ for devideStep in steps
   -ms-flex-wrap wrap
   @supports (display: grid)
     display: grid
+    margin-left: 0
+    margin-right: 0
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-    grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ."
+    grid-template-areas: ". . . . . . . . . . . ."
     grid-column-gap: horizontal-space
 
+    @media (max-width: tablet-upper-limit)
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+      grid-template-areas: ". . . . . ."
 
-
+    @media (max-width: mobile-upper-limit)
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-areas: ". . ."
   &--mobile-scroll
     @media (max-width: mobile-upper-limit)
       flex-flow nowrap
@@ -398,14 +405,16 @@ for devideStep in steps
 
 .{newAppName}-container
   width 100%
-  max-width 1480px
+  max-width 1360px
   margin-left auto
   margin-right auto
-  padding-left horizontal-space * 3.5
-  padding-right horizontal-space * 3.5
+  //padding-left horizontal-space * 3.5
+  //padding-right horizontal-space * 3.5
   transition-timing-function ease-in-out
   transition-duration 3s
   transition-property opacity, visibility
+  @media (max-width: desktop-lower-limit)
+    max-width: calc(1420px - 10px)
 
   @media (max-width: tablet-upper-limit)
     padding-left horizontal-space * .5

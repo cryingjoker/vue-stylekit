@@ -5,7 +5,6 @@
   src url("./app-fonts/Menlo-Regular.eot")
   src url("./app-fonts/Menlo-Regular.eot?#iefix") format("embedded-opentype"), url("./app-fonts/Menlo-Regular.woff") format("woff"), url("./app-fonts/Menlo-Regular.woff2") format("woff2"), url("./app-fonts/Menlo-Regular.ttf") format("ttf")
 
-@import "../../develover-lib/css/editor"
 
 .app
   &--hide-scroll
@@ -269,7 +268,6 @@
     height 100vh
     bottom 0
 
-  max-width 1320px
   height 0
   overflow hidden
   margin-left auto
@@ -277,16 +275,12 @@
   position fixed
   top 0
   bottom 100vh
-  left 80px
-  right 80px
+  left 0px
+  right 0px
   z-index 200
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property height, bottom
-
-  @media (max-width: tablet-upper-limit)
-    left 20px
-    right 20px
 
   .row
     height 100vh
@@ -301,8 +295,8 @@
       position absolute
       top 0
       bottom 0
-      left 10px
-      right 10px
+      left 0px
+      right 0px
 
       .{newAppName}-dark-theme &
         background-color rgba(#fff, 3%)
