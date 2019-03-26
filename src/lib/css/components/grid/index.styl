@@ -408,18 +408,20 @@ for devideStep in steps
   max-width 1360px
   margin-left auto
   margin-right auto
-  //padding-left horizontal-space * 3.5
-  //padding-right horizontal-space * 3.5
   transition-timing-function ease-in-out
   transition-duration 3s
   transition-property opacity, visibility
-  @media (max-width: desktop-lower-limit)
-    max-width: calc(1420px - 10px)
-
   @media (max-width: tablet-upper-limit)
-    padding-left horizontal-space * .5
-    padding-right horizontal-space * .5
+    padding-left: 20px
+    padding-right: 20px
+  @media (min-width: tablet-lower-limit)
+    max-width: calc(100vw - 80px - ( 100vw - 1024px ) / 256 * 40)
 
+  @media (min-width: desktop-lower-limit)
+    max-width: calc(100vw - 80px - ( 100vw - 1280px ) / 120 * 40)
+
+  @media (min-width: desktop-upper-limit)
+    max-width: 1360px
 
 
 .no-gutters
