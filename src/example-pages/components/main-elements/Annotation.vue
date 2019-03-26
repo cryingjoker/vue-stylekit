@@ -15,7 +15,7 @@
           <div class=&quot;rt-numeric-list&quot;>
             <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Услуги Высокоскоростного интернета предоставляются при наличии
               технической возможности.</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__itemrt-font-label color-main07&quot;>Цены указаны в рублях с учетом НДС.</p>
+            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Цены указаны в рублях с учетом НДС.</p>
             <p class=&quot;rt-annotation-item rt-font-label color-main07&quot;> «По оптической линии» — предоставление доступа к сети Интернет
               осуществляется по технологии FTTx (англ., fiber to the x — оптическое волокно до точки X)
               или по технологии PON (англ. Passive Optical Networks — пассивная оптическая сеть до

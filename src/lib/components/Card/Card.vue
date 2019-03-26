@@ -480,7 +480,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
-                <span class="rtb-card__discount-line__flag-text">2 услуги со скидкой 50%</span>
+                <span class="rtb-card__discount-line__flag-text rtb-card__discount-line__flag-text-2">2 услуги со скидкой 50%</span>
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>

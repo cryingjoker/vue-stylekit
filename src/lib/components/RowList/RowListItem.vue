@@ -31,8 +31,9 @@ export default {
   render: function(h) {
     this.columnsQuantity = this.$parent._props.columnsQuantity;
     this.companyProfits = this.$parent._props.companyProfits;
-    this.includedServices = this.$parent._props.includedServices;
     this.isProfitList = this.$parent._props.isProfitList;
+    this.howItWorks = this.$parent._props.isHowItWorksBlock;
+    this.help = this.$parent._props.isHelpBlock;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -76,11 +77,31 @@ export default {
             </div>
           </div>
         );
-      } else if(this.companyProfits){
+      } else if(this.companyProfits) {
         return (
           <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits">
             <div class="rt-row-list__header">
               <div class="rt-row-list__icon" style={this.iconImage}></div>
+              {this.$slots.option}
+            </div>
+          </div>
+        )
+      } else if(this.help) {
+        return (
+          <div class="rt-row-list__item rt-col-4 rt-col-td-3 rt-col-md-3 rtb-help-block">
+            <div class="rt-row-list__header">
+              <div class="rt-space-bottom">
+                <div class="rt-row-list__icon" style={this.iconImage}></div>
+              </div>
+              {this.$slots.option}
+            </div>
+          </div>
+        )
+      } else if(this.howItWorks){
+        return (
+          <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
+            <div class="rt-row-list__header">
+              <div class="rt-row-list__image" style={this.iconImage}></div>
               {this.$slots.option}
             </div>
           </div>
