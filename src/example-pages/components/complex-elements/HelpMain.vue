@@ -9,7 +9,7 @@
         </div>
 
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
-            <div class="rt-space-bottom2">
+            <div class="rt-space-bottom2 rt-td-space-bottom">
               <rt-row-list :is-help-block="true" class="rt-font-left">
                 <rt-row-list-item icon="/static/images/B2B/ATS.svg">
                   <template slot="option">
@@ -74,8 +74,8 @@
               </rt-row-list>
             </div>
 
-            <h3 class="rt-font-bold rt-space-bottom2">Все сервисы</h3>
-            <div class="row rt-space-bottom5">
+            <h3 class="rt-font-bold rt-space-bottom2 rt-td-space-bottom">Все сервисы</h3>
+            <div class="row rt-space-bottom5 rt-td-space-bottom25 rt-md-space-bottom-none">
               <div class="rt-col-4 rt-col-td-3 rt-col-md-3">
                 <a href=""><p class="rt-font-small-paragraph rt-font-bold rt-space-bottom05">Он-лайн касса</p></a>
                 <a href=""><p class="rt-font-small-paragraph rt-font-bold rt-space-bottom05">M2M</p></a>
@@ -103,31 +103,36 @@
                 <a href=""><p class="rt-font-small-paragraph rt-font-bold rt-space-bottom05">Телевидение</p></a>
               </div>
             </div>
-
-            <h3 class="rt-font-bold rt-space-bottom2">Не нашли что искали? Свяжитесь с нами</h3>
-            <div class="rt-space-bottom5">
-              <rt-row-list :is-help-block="true" class="rt-font-left">
-                <rt-row-list-item icon="/static/images/B2B/help7.svg">
-                  <template slot="option">
-                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">Заявкой на сайте</p>
-                    <p class="rt-font-paragraph"><a href="#">Заполните форму</a> и в ближайшее время наши специалисты перезвонят</p>
-                  </template>
-                </rt-row-list-item>
-                <rt-row-list-item icon="/static/images/B2B/help8.svg">
-                  <template slot="option">
-                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">По телефону 8 800 200 30 00</p>
-                    <p class="rt-font-paragraph">Наши менеджеры помогут Вам  с решением проблемы</p>
-                  </template>
-                </rt-row-list-item>
-                <rt-row-list-item icon="/static/images/B2B/help9.svg">
-                  <template slot="option">
-                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">В офисе продаж</p>
-                    <p class="rt-font-paragraph">Приходите в <a href="#">наши офисы</a>, узнавайте новости, тестируйте
-                      услуги, задавайте вопросы</p>
-                  </template>
-                </rt-row-list-item>
-              </rt-row-list>
-            </div>
+          </div>
+          <!--<div class="color-block&#45;&#45;light-grey row">-->
+            <!--<div class="rt-col-12 rt-col-td-6 rt-col-md-3">-->
+              <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+                <h3 class="rt-font-bold rt-space-bottom2 rt-td-space-bottom rt-md-space-top25">Не нашли что искали? Свяжитесь с нами</h3>
+                <div class="rt-space-bottom2 rt-td-space-bottom">
+                  <rt-row-list :is-help-block="true" class="rt-font-left">
+                    <rt-row-list-item icon="/static/images/B2B/help7.svg">
+                      <template slot="option">
+                        <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">Заявкой на сайте</p>
+                        <p class="rt-font-paragraph"><a href="#" class="rt-link">Заполните форму</a> и в ближайшее время 
+                          наши специалисты перезвонят</p>
+                      </template>
+                    </rt-row-list-item>
+                    <rt-row-list-item icon="/static/images/B2B/help8.svg" :button-in-mobile="true">
+                      <template slot="option">
+                        <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">По телефону 8 800 200 30 00</p>
+                        <p class="rt-font-paragraph">Наши менеджеры помогут Вам  с решением проблемы</p>
+                      </template>
+                    </rt-row-list-item>
+                    <rt-row-list-item icon="/static/images/B2B/help9.svg">
+                      <template slot="option">
+                        <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">В офисе продаж</p>
+                        <p class="rt-font-paragraph">Приходите в <a href="#" class="rt-link">наши офисы</a>, узнавайте новости, тестируйте услуги, задавайте вопросы</p>
+                      </template>
+                    </rt-row-list-item>
+                  </rt-row-list>
+                </div>
+              <!--</div>-->
+            <!--</div>-->
           </div>
       </div>
     </div>
