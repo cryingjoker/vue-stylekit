@@ -525,4 +525,100 @@
 .animate-scroller-sticky
   position: sticky
   top: 0
+.animate-scroller-sticky__container
+  overflow: hidden
 
+.warface-popup-wrapper
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  align-items center
+  justify-content center
+  background-color: rgba(0,0,0,0.3)
+  z-index: 1000
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity, visibility
+  opacity: 0
+  visibility: hidden
+  z-index: 1
+
+.warface-popup-wrapper--is-active
+  opacity: 1
+  visibility: visible
+  z-index: 2
+
+.warface-popup
+  width: 565px
+  background-color: #242C39
+  box-shadow 0 20px 30px rgba(0,0,0,0.3)
+  color white
+  padding-left: 20px
+  padding-right: 20px
+  padding-bottom: 20px
+  padding-top: 40px
+  position: relative
+  max-width: calc(100vw - 40px)
+
+.warface-popup-close
+  position: absolute
+  top: 20px
+  right: 20px
+  cursor: pointer
+
+.warface-popup-slider
+  max-width: 365px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  height: 180px
+
+.warface-popup-slider__arrow
+  position: absolute
+  top: 0
+  bottom: 30px
+  margin-top: auto
+  margin-bottom: auto
+  height: 16px
+  cursor: pointer
+  z-index: 2
+
+.warface-popup-slider__arrow-prev
+  left: 0
+
+
+.warface-popup-slider__arrow-next
+  right: 0
+
+.warface-popup-slider,
+.warface-popup-slider__count
+  text-align: center
+
+.warface-popup-slider__count
+  user-select: none
+
+.warface-popup-slider__img
+  height: 115px
+  display: flex
+  align-items center
+  justify-content center
+
+.warface-popup-slider__item
+  position: absolute
+  opacity: 0
+  visibility: hidden
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  user-select: none
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity, visibility
+
+.warface-popup-slider__item--is-active
+  opacity: 1
+  visibility: visible
