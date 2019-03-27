@@ -27,6 +27,7 @@ import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
 import TestAccess from '../components/promo/test-access.vue';
 import Opportunity from '../components/complex-elements/Opportunity.vue';
+import HelpMain from '../components/complex-elements/HelpMain.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -90,6 +91,7 @@ const index = [
   { path: '/swiper', name: 'swiper', component: Swiper },
   { path: '/opportunity', name: 'opportunity', component: Opportunity },
   { path: '/pattern', name: 'pattern', component: Pattern },
+  { path: '/help-main', name: 'helpMain', component: HelpMain },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];

@@ -39,7 +39,8 @@
     position relative
     top auto
     bottom auto
-
+    left -10px
+    right -10px
     @media (max-width: mobile-upper-limit)
       min-height 250px
 
@@ -107,7 +108,6 @@
     @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
       margin-bottom 60px
 
-  &--category
-    .{newAppName}-banner-image
-      @media (max-width: mobile-upper-limit)
-        background-image none !important
+  .rt-banner-image--mobile-gradient
+    @media (max-width: mobile-upper-limit)
+      display none!important
