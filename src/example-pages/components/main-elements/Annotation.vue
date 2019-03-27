@@ -13,19 +13,19 @@
           text="<rt-annotation label=&quot;Примечание&quot; class=&quot;rt-space-top rt-space-bottom3&quot;>
           <template slot=&quot;content&quot;>
           <div class=&quot;rt-numeric-list&quot;>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Услуги Высокоскоростного интернета предоставляются при наличии
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Услуги Высокоскоростного интернета предоставляются при наличии
               технической возможности.</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__itemrt-font-label color-main07&quot;>Цены указаны в рублях с учетом НДС.</p>
-            <p class=&quot;rt-annotation-item rt-font-label color-main07&quot;> «По оптической линии» — предоставление доступа к сети Интернет
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Цены указаны в рублях с учетом НДС.</p>
+            <p class=&quot;rt-annotation-item&quot;> «По оптической линии» — предоставление доступа к сети Интернет
               осуществляется по технологии FTTx (англ., fiber to the x — оптическое волокно до точки X)
               или по технологии PON (англ. Passive Optical Networks — пассивная оптическая сеть до
               абонента).</p>
-            <p class=&quot;rt-annotation-item rt-font-label color-main07&quot;> «По телефонной линии» — предоставление доступа к сети Интернет
+            <p class=&quot;rt-annotation-item&quot;> «По телефонной линии» — предоставление доступа к сети Интернет
               осуществляется по технологии xDSL (англ., digital subscriber line, цифровая абонентская
               линия).</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Предоставление доступа к сети Интернет осуществляется по технологии
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Предоставление доступа к сети Интернет осуществляется по технологии
               xDSL (англ., digital subscriber line, цифровая абонентская линия).</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Скорость доступа к сети Интернет зависит не только от технических
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Скорость доступа к сети Интернет зависит не только от технических
               особенностей Услуги, но и от действий третьих сил, организаций и лиц, управляющих сегментами
               сети Интернет (или оказывающих на них влияние), не принадлежащих ПАО «Ростелеком». Скорость
               доступа к сети Интернет является величиной неопределенной и зависит от ряда параметров, в
@@ -35,16 +35,16 @@
               запрашиваемого контента. Все параметры являются переменными и не гарантируются ПАО
               «Ростелеком» за пределами своей сети. Указанная в тарифном плане скорость является
               максимально возможной.</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Абонентская плата за услугу Интернет списывается с
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Абонентская плата за услугу Интернет списывается с
               лицевого счета
               абонента один раз в месяц. В первый месяц пользования услугой Интернет с лицевого счета
               абонента списывается абонентская плата, рассчитанная пропорционально количеству дней от даты
               начала оказания услуги до конца месяца.</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Оборудование (маршрутизатор или абонентский модем в зависимости от
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Оборудование (маршрутизатор или абонентский модем в зависимости от
               технологии предоставления услуги), необходимое для получения услуг, может быть приобретено
               отдельно по действующим тарифам. Стоимость оборудования уточняйте по телефону
               8-800-100-0-800.</p>
-            <p class=&quot;rt-annotation-item rt-numeric-list__item rt-font-label color-main07&quot;>Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети). Услуга
+            <p class=&quot;rt-annotation-item rt-numeric-list__item&quot;>Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети). Услуга
               предоставляется на территории Российской Федерации для абонентов-физических лиц при наличии
               технической возможности. При первом подключении услуги на условиях ежемесячной подписки
               первые 30 календарных дней с момента активации услуги предоставляются без взимания
@@ -62,37 +62,37 @@
           <template slot="content">
             <div class="rt-numeric-list">
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Услуги Высокоскоростного интернета предоставляются при наличии
                 технической возможности.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Цены указаны в рублях с учетом НДС.
               </p>
-              <p class="rt-annotation-item rt-font-label color-main07">
+              <p class="rt-annotation-item">
                 «По оптической линии» — предоставление доступа к сети Интернет
                 осуществляется по технологии FTTx (англ., fiber to the x —
                 оптическое волокно до точки X) или по технологии PON (англ.
                 Passive Optical Networks — пассивная оптическая сеть до
                 абонента).
               </p>
-              <p class="rt-annotation-item rt-font-label color-main07">
+              <p class="rt-annotation-item">
                 «По телефонной линии» — предоставление доступа к сети Интернет
                 осуществляется по технологии xDSL (англ., digital subscriber
                 line, цифровая абонентская линия).
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Предоставление доступа к сети Интернет осуществляется по
                 технологии xDSL (англ., digital subscriber line, цифровая
                 абонентская линия).
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Скорость доступа к сети Интернет зависит не только от
                 технических особенностей Услуги, но и от действий третьих сил,
@@ -110,7 +110,7 @@
                 возможной.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Абонентская плата за услугу Интернет списывается с лицевого
                 счета абонента один раз в месяц. В первый месяц пользования
@@ -119,7 +119,7 @@
                 от даты начала оказания услуги до конца месяца.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Оборудование (маршрутизатор или абонентский модем в зависимости
                 от технологии предоставления услуги), необходимое для получения
@@ -127,7 +127,7 @@
                 Стоимость оборудования уточняйте по телефону 8-800-100-0-800.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети).
                 Услуга предоставляется на территории Российской Федерации для
@@ -151,37 +151,37 @@
           <template slot="content">
             <div class="rt-numeric-list">
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Услуги Высокоскоростного интернета предоставляются при наличии
                 технической возможности.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Цены указаны в рублях с учетом НДС.
               </p>
-              <p class="rt-annotation-item rt-font-label color-main07">
+              <p class="rt-annotation-item">
                 «По оптической линии» — предоставление доступа к сети Интернет
                 осуществляется по технологии FTTx (англ., fiber to the x —
                 оптическое волокно до точки X) или по технологии PON (англ.
                 Passive Optical Networks — пассивная оптическая сеть до
                 абонента).
               </p>
-              <p class="rt-annotation-item rt-font-label color-main07">
+              <p class="rt-annotation-item">
                 «По телефонной линии» — предоставление доступа к сети Интернет
                 осуществляется по технологии xDSL (англ., digital subscriber
                 line, цифровая абонентская линия).
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Предоставление доступа к сети Интернет осуществляется по
                 технологии xDSL (англ., digital subscriber line, цифровая
                 абонентская линия).
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Скорость доступа к сети Интернет зависит не только от
                 технических особенностей Услуги, но и от действий третьих сил,
@@ -199,7 +199,7 @@
                 возможной.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Абонентская плата за услугу Интернет списывается с лицевого
                 счета абонента один раз в месяц. В первый месяц пользования
@@ -208,7 +208,7 @@
                 от даты начала оказания услуги до конца месяца.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Оборудование (маршрутизатор или абонентский модем в зависимости
                 от технологии предоставления услуги), необходимое для получения
@@ -216,7 +216,7 @@
                 Стоимость оборудования уточняйте по телефону 8-800-100-0-800.
               </p>
               <p
-                class="rt-annotation-item rt-numeric-list__item rt-font-label color-main07"
+                class="rt-annotation-item rt-numeric-list__item"
               >
                 Safe Kids — Сэйф кидс (перевод с англ. — Защищенные дети).
                 Услуга предоставляется на территории Российской Федерации для

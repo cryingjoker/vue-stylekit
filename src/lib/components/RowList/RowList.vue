@@ -1,8 +1,3 @@
-<!--<template>-->
-  <!--<div class="rt-row-list row" :class="{ 'rtb-profit-list': isProfitList }">-->
-    <!--<slot />-->
-  <!--</div>-->
-<!--</template>-->
 <script type="text/jsx">
 export default {
   name: "RtRowList",
@@ -19,7 +14,11 @@ export default {
       type: Boolean,
       default: false
     },
-    includedServices: {
+    isHowItWorksBlock: {
+      type: Boolean,
+      default: false
+    },
+    isHelpBlock: {
       type: Boolean,
       default: false
     }
