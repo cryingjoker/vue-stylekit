@@ -56,6 +56,7 @@ import {
   Swiper,
   Slide,
   Pattern,
+  UnWrapper,
   Opportunity,
   OpportunityItem
 } from "../lib/components/index";
@@ -122,4 +123,5 @@ componentsList[Swiper.name] = Swiper;
 componentsList[Slide.name] = Slide;
 componentsList[Opportunity.name] = Opportunity;
 componentsList[OpportunityItem.name] = OpportunityItem;
+componentsList[UnWrapper.name] = UnWrapper;
 export default { ...componentsList };
