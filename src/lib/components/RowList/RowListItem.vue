@@ -16,6 +16,10 @@
     buttonInMobile: {
       type: Boolean,
       default: false
+    },
+    phoneNumber: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
@@ -111,7 +115,7 @@
         )
       } else if(this.help) {
         if(this.buttonInMobile && this.componentView === 'mobile') {
-          return <a href=" tel:88002003000" style="order:2;" class="rt-col-md-3">
+          return <a href={"tel:" + this.phoneNumber} style="order:2;" class="rt-col-md-3">
               <rt-button class="rt-button-orange" style="width: 100%; margin-top:20px">Позвонить в службу поддержки</rt-button>
             </a>
         } else {
