@@ -420,8 +420,6 @@
     opacity: 1
 
 .vip-iphone-wrapper
-  height: calc(50vh*4)
-  min-height: calc(587px * 4)
   display: flex
   background-color: #1b2841
   flex-direction: column
@@ -517,6 +515,25 @@
     padding-bottom: 30px
     padding-left: 20px
     padding-right: 20px
+
+.vip-iphone-count__point
+  width: 8px
+  height: 8px
+  display: inline-block
+  box-sizing border-box
+  border 1.5px solid white
+  cursor: pointer
+  border-radius 50%
+
+.vip-iphone-count__point:hover
+  background-color: #fff
+
+.vip-iphone-count__point+.vip-iphone-count__point
+  margin-left: 12px
+
+.vip-iphone-count__point--is-active
+  background-color: #fff
+  cursor: default
 
 .vip-tariff-wrapper
   transition-timing-function ease

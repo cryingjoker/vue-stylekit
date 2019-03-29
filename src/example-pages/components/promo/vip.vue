@@ -467,7 +467,12 @@
                   <p class="vip-iphone-text vip-iphone-text-eq4">Бригада специалистов установит и настроит оборудование,
                     после чего ваш личный менеджер поможет в подключении дополнительных сервисов
                   </p>
-                  <div class="vip-iphone-count"><span class="vip-iphone-count__value"> 1 </span> / 4</div>
+                  <div class="vip-iphone-count">
+                    <span slide-index="1" class="vip-iphone-count__point vip-iphone-count__point--is-active"></span>
+                    <span slide-index="2" class="vip-iphone-count__point"></span>
+                    <span slide-index="3" class="vip-iphone-count__point"></span>
+                    <span slide-index="4" class="vip-iphone-count__point"></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -734,6 +739,7 @@
   </div>
 </template>
 <style>
+
   .rtk-footer {
     background-color: #101828 !important;
   }
@@ -755,7 +761,7 @@
     name: "AppPromoVip",
     components: componentsList,
     mounted() {
-      var height  = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect().height;
+      var height = document.querySelector(".vip-iphone-wrapper").getBoundingClientRect().height;
       const step = height * 0.8 / 4;
       var slideIndexBefore = null;
       var needToScroll = false;
@@ -849,18 +855,31 @@
             slideIndex = 4;
           }
 
-          if (slideIndexBefore !== slideIndex) {
-            if (slideIndexBefore != null) {
-              document.querySelector(".vip-iphone-wrapper").classList.remove("vip-iphone--step-" + slideIndexBefore);
-            }
-            slideIndexBefore = slideIndex;
-            document.querySelector(".vip-iphone-wrapper").classList.add("vip-iphone--step-" + slideIndex);
-            document.querySelector(".vip-iphone-count__value").innerHTML = slideIndex;
-          }
+          // if (slideIndexBefore !== slideIndex) {
+          //   slideIndexBefore = slideIndex;
+          //   document.querySelector(".vip-iphone-wrapper").classList.add("vip-iphone--step-" + slideIndex);
+          //   document.querySelector(".vip-iphone-count__value").innerHTML = slideIndex;
+          // }
 
         }
 
       });
+      var activeIndex = 0;
+      document.querySelectorAll(".vip-iphone-count__point").forEach(function(item) {
+        item.addEventListener("click", function() {
+          console.info('!!!')
+          if (!item.classList.contains("vip-iphone-count__point--is-active")) {
+            document.querySelector(".vip-iphone-count__point--is-active").classList.remove("vip-iphone-count__point--is-active");
+            item.classList.add("vip-iphone-count__point--is-active");
+            var index = item.getAttribute('slide-index') - 0;
+            document.querySelector(".vip-iphone-wrapper").classList.remove("vip-iphone--step-" + activeIndex);
+            document.querySelector(".vip-iphone-wrapper").classList.add("vip-iphone--step-" + index);
+            activeIndex = index;
+
+          }
+        });
+      });
+      // document.querySelector(".vip-iphone-wrapper").classList.remove("vip-iphone--step-" + slideIndexBefore);
     },
     created() {
     },
