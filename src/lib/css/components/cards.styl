@@ -17,7 +17,10 @@
   border-radius 10px
   box-shadow card-shadow
   position relative
-
+  box-shadow card-shadow--before-hovered
+  transition-timing-function ease-in-out
+  transition-duration .2s
+  transition-property box-shadow
   &:hover
     box-shadow card-shadow--hovered
 

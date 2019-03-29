@@ -66,3 +66,4 @@
  export { default as Slide } from './Swiper/Slide.vue';
  export { default as Opportunity } from './Opportunity/Opportunity.vue';
  export { default as OpportunityItem } from './Opportunity/OpportunityItem.vue';
+ export { default as UnWrapper } from './MobileExpandWrapper/UnWrapper.vue';

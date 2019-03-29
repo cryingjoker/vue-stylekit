@@ -66,7 +66,8 @@ import {
   Swiper,
   Pattern,
   Opportunity,
-  OpportunityItem
+  OpportunityItem,
+  UnWrapper
 } from "./components";
 
 
@@ -141,6 +142,7 @@ const VueRtStyle = {
       Vue.component(Logo.name, Logo.component);
       Vue.component(Opportunity.name, Opportunity);
       Vue.component(OpportunityItem.name, OpportunityItem);
+      Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
 
       Vue.directive(SwipeLeft.name, SwipeLeft);

@@ -1,0 +1,5 @@
+{
+  "card-shadow": "0 0 5px rgba(16,24,40,0.15)",
+  "card-shadow--before-hovered": "0 0px 0px rgba(16,24,40,0.15)",
+  "card-shadow--hovered": "0 5px 5px rgba(16,24,40,0.15)"
+}
