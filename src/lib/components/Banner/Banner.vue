@@ -877,7 +877,7 @@
       return <div class={this.bannerClass} style={this.bannerStyle}>
         <div class="rt-container rt-banner-container">
           {link()}
-          <div class="rt-col">{bannerContent()}</div>
+          {bannerContent()}
         </div>
         {paginator()}
         <div style={this.imageStyle} class={this.imageClass + (this.imageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
