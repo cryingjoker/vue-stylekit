@@ -51,6 +51,13 @@
 
     align-items center
 
+    &--baseline
+      //align-items baseline
+      width 50px
+      height 50px
+      margin-right vertical-space
+      align-items center
+
   &__content
     display flex
 
@@ -61,6 +68,10 @@
       min-height fit-content
 
     align-items center
+
+    &--column
+      flex-direction column
+      align-items unset
 
   &__option
     display flex
@@ -190,3 +201,15 @@
   .rt-container
     @media (max-width: desktop-upper-limit)
       padding 0
+
+.help-soft-and-hard
+  &__title,
+  &__weight
+    transition color .3s linear
+  &__weight
+    color main-color03
+  &:hover
+    .help-soft-and-hard__weight
+      color main-color06
+    .help-soft-and-hard__title
+      color b2c-purple

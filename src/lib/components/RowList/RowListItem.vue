@@ -40,10 +40,8 @@
       if(this.buttonInMobile) {
         if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])) {
           this.componentView = 'mobile';
-          console.log(this.componentView);
         } else {
           this.componentView = 'desktop';
-          console.log(this.componentView);
         }
       }
     };
@@ -61,6 +59,7 @@
     this.isProfitList = this.$parent._props.isProfitList;
     this.howItWorks = this.$parent._props.isHowItWorksBlock;
     this.help = this.$parent._props.isHelpBlock;
+    this.contentBlockType = this.$parent._props.contentBlockType;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -130,15 +129,31 @@
             </div>
           )
         }
-      } else if(this.howItWorks){
+      } else if(this.howItWorks) {
         return (
-          <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
+          <div
+            class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
             <div class="rt-row-list__header">
               <div class="rt-row-list__image" style={this.iconImage}></div>
               {this.$slots.option}
             </div>
           </div>
         )
+      } else if(this.contentBlockType){
+        return <div class="rt-row-list__item rt-col-12 rt-col-md-3">
+          <div class="rt-row-list__header">
+            {this.$slots.icon ? (
+              <div class="rt-row-list__icon rt-md-space-bottom rt-row-list__icon--baseline">
+                {this.$slots.icon}
+              </div>
+            ) : null}
+            <div
+              class="rt-row-list__content rt-row-list__content--column"
+            >
+              {this.$slots.option}
+            </div>
+          </div>
+        </div>;
       }else {
         return (
           <div class="rt-row-list__item rt-col-12 rt-col-md-3">

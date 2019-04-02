@@ -1,23 +1,31 @@
 .{newAppName}-tabs
   width 100%
   font-size 18px
+  &-content
+    border-top 1px solid main-color01
+    .{newAppName}-row-list__item
+      padding-top vertical-space * 2
+      padding-bottom vertical-space * 2
+      @media (max-width: mobile-upper-limit)
+        padding-top vertical-space
+        padding-bottom vertical-space
+        &+.{newAppName}-row-list__item
+          border-top none
+          padding-top: 0
 
 .{newAppName}-tabs-navigation
   display flex
   flex-direction row
-  width 100%
-  margin-left -15px
-  margin-right -15px
+  width calc(100% + 20px)
+  margin-left -(vertical-space)
+  margin-right -(vertical-space)
 
   .rt-tabs-tablet &,
   .rt-tabs-mobile &
     display block
     overflow auto
     white-space nowrap
-    padding-top 20px
-    padding-bottom 20px
     position relative
-    top 20px
 
 .{newAppName}-tabs-navigation-wrapper
   .rt-tabs-tablet &,
@@ -25,11 +33,10 @@
     display block
     overflow hidden
     position relative
-    top -20px
 
 .{newAppName}-tabs-navigation__item
-  padding-left 15px
-  padding-right 15px
+  padding-left vertical-space
+  padding-right vertical-space
   cursor pointer
 
   .rt-tabs-tablet &,
@@ -47,12 +54,11 @@
   &:before
     content ""
     width 0
-    width 0
     height 2px
     text-shadow 0 0 0
     border-bottom 2px solid transparent
     position absolute
-    bottom 0
+    bottom -1px
     left 0
     right 0
     transition-timing-function ease-in-out
@@ -64,7 +70,7 @@
   .{newAppName}-tabs-navigation__item--is-active &
     &:before
       width 100%
-      border-bottom-color inherit
+      border-bottom-color b2c-purple
 
   .{newAppName}-tabs-navigation__item--is-active &
     cursor default

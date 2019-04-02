@@ -21,6 +21,10 @@ export default {
     isHelpBlock: {
       type: Boolean,
       default: false
+    },
+    contentBlockType: {
+      type: Boolean,
+      default: false
     }
   },
   render(h){
