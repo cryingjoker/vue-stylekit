@@ -1,13 +1,40 @@
 .test-access
-  color b2c-white
-  background-color b2c-green-low
   position relative
+  &--reverse
+    .test-access__image
+      right 53%
+      left auto
+      top 0
+      height 100%
+      background-size: cover
+      max-width 662px
+      //background-image: url('/static/images/B2B/LG55LV340C_1.jpeg');
+      &--mobile
+        display none
+        @media (max-width: mobile-upper-limit)
+          display block
+          position: relative
+          left: auto
+          right: auto
+          top: auto
+          bottom: auto
+          width: 60vw
+          height: 42vw
+          margin: 0 auto
+          background-size: contain
+    .rt-row-list__item
+      &+.rt-row-list__item
+        border-top none
+      .rt-row-list__icon
+        align-self center
+    @media (max-width: mobile-upper-limit)
+      .rt-row-list__header
+        flex-direction row
 
   @media (max-width: mobile-upper-limit)
     text-align center
 
   .rt-ordered-list__item
-    color b2c-white
     text-align left !important
     padding-left 20px
 
@@ -60,9 +87,22 @@
   background-size contain
   background-repeat no-repeat
   position absolute
-  // background-image: url('/static/images/B2B/test-access-2.png');
+  //background-image: url('/static/images/B2B/test-access-22.png');
   top 50px
   right 0
+  z-index 2
 
 .list-title
   margin-left -10px
+
+.pl0
+  .rt-annotation__title,
+  .rt-annotation__content
+    padding-left 0
+  .rt-annotation__arrow
+    left -20px
+  @media (max-width: tablet-upper-limit)
+    .rt-annotation__title
+      padding-left 20px
+    .rt-annotation__arrow
+      left 0
