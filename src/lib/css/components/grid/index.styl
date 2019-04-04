@@ -185,7 +185,11 @@ for devideStep in steps
     margin-right -1 * horizontal-space * .5
     position relative
     -ms-flex-wrap wrap
-
+    &-scroll
+      flex-flow nowrap
+      overflow auto
+    &-nowrap
+      flex-wrap: nowrap
   @supports (display: grid)
     display: grid
     grid-auto-flow: row
@@ -222,6 +226,22 @@ for devideStep in steps
     @media (max-width: tablet-upper-limit) and (min-width: tablet-lower-limit)
       flex-flow nowrap
       overflow auto
+      margin-left -1 * horizontal-space * .5
+      margin-right -1 * horizontal-space * .5
+      padding-bottom vertical-space
+
+  &--mobile-scroll
+    @media (max-width: mobile-upper-limit)
+      flex-flow nowrap
+      overflow auto
+      margin-left -1 * horizontal-space * .5
+      margin-right -1 * horizontal-space * .5
+      padding-bottom vertical-space
+
+  &--mobile-wrap
+    @media (max-width: mobile-upper-limit)
+      flex-flow wrap
+      overflow hidden
       margin-left -1 * horizontal-space * .5
       margin-right -1 * horizontal-space * .5
       padding-bottom vertical-space
@@ -705,6 +725,8 @@ for devideStep in steps
 
 .rt-space-top135
   padding-top 270px
+.d-flex-nowrap
+  flex-wrap nowrap
 
 @require "./bootstrap-fix.styl"
 .col

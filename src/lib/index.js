@@ -64,8 +64,12 @@ import {
   Icon,
   Slide,
   Swiper,
-  Pattern
+  Pattern,
+  Opportunity,
+  OpportunityItem,
+  UnWrapper
 } from "./components";
+
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
@@ -136,6 +140,9 @@ const VueRtStyle = {
       Vue.component(Slide.name, Slide);
       Vue.component(Pattern.name, Pattern);
       Vue.component(Logo.name, Logo.component);
+      Vue.component(Opportunity.name, Opportunity);
+      Vue.component(OpportunityItem.name, OpportunityItem);
+      Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
 
       Vue.directive(SwipeLeft.name, SwipeLeft);

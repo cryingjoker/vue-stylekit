@@ -209,3 +209,433 @@
   color white
   background-color #65B8DF
   outline 5px solid #65B8DF
+
+.vip-iphone
+  width: 381px
+  height: 451px
+  background-image: url('/static/images/iphone.png')
+  background-size: cover
+  position: relative
+  @media (max-width: 767px)
+    background-image: none
+    height: auto
+    width: auto
+.vip-iphone:before
+  width: 55%;
+  height: 110px;
+  background-image: url('/static/images/IPhoneeye.png')
+  background-repeat: no-repeat
+  background-size: contain
+  position: absolute
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  top: 22px
+  z-index: 10
+  content: ''
+  @media (max-width: 767px)
+    background-image: none
+
+.vip-iphone__inner
+  width: 86.9%;
+  height: 94.6%;
+  border-radius: 36px 36px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0.5%;
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  @media (max-width: 767px)
+    height: auto
+    position: relative
+  &:before
+    content: ''
+    width: 190%;
+    transform: rotate(17deg);
+    height: 300%;
+    background-image: url(/static/images/iphoneBg.png);
+    position: absolute
+    -webkit-background-size: contain
+    -moz-background-size: contain
+    background-size: contain
+    top: -120%
+    right: -105%
+    background-repeat:no-repeat
+    transition-timing-function cubic-bezier(.77,.34,.39,.77)
+    transition-duration 1s
+    transition-property top, right, transform, width, height
+    @media (max-width: 767px)
+      background-image: none
+    .vip-iphone--step-2 &
+      transform: rotate(-34deg)
+      top: -200%
+      right: -90%
+      width: 220%
+    .vip-iphone--step-3 &
+      transform: rotate(-75deg)
+      top: -203%
+      right: -20%
+      width: 220%
+    .vip-iphone--step-4 &
+      transform: rotate(-165deg);
+      top: -203%;
+      right: 90%;
+      width: 220%;
+
+.vip-iphone-count
+  position: absolute
+  bottom: 4%
+  left: 5%
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  font-size: 14px
+  color white
+  text-align: center
+  @media (max-width: 767px)
+    display: none
+
+
+
+.vip-iphone-text
+  position: absolute
+  top: 45%
+  width: 55%
+  left: 5%
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  font-size: 16px
+  color white
+  line-height: 24px
+  opacity: 1
+  visibility: visible
+  transition-timing-function ease-in-out
+  transition-duration .5s
+  transition-property opacity
+  @media (max-width: 767px)
+    position: relative
+    opacity: 1
+    visibility: visible
+    width: auto
+    left: 0
+    &+&
+      padding-top: 40px
+
+
+.vip
+  .rt-banner-content
+  .rt-card__footer
+    padding-left: 0
+    padding-right: 0
+  .rt-dark-theme
+    .rt-price__option-value
+      color: #fff
+      font-size: 50px
+    .rt-card__background
+      background-color: #1B2841
+    .rt-card__body
+      padding-bottom: 20px
+    .rt-card__footer
+      position: relative
+      padding-top: 20px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 5px
+        right: 5px
+        height: 1px
+        background-color: rgba(255,255,255,0.1)
+  .rt-card-list__name
+    colro: white
+  .rt-card-list__sub-name
+  .rt-annotation--is-open
+    .rt-annotation__content
+      padding-top: 10px
+      padding-bottom: 10px
+  .rt-annotation__content
+    background-color: rgba(16,24,40,0.34)
+  .rt-card__content
+    padding-bottom: 0
+
+  .rt-annotation__arrow
+    position: absolute
+    right: 20px
+    left:initial
+  .rt-annotation--empty
+    .rt-annotation__arrow
+      display: none
+    .rt-annotation__title
+      opacity: 0.3
+      cursor: default
+    .rt-annotation__content
+      display: none
+
+  .rt-annotation__title
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 15px
+    display: block
+    padding-right: 20px
+    padding-top: 20px
+    padding-bottom: 20px
+
+
+  .rt-annotation
+    border-top: 0
+
+
+.vip-iphone-text-eq1
+  .vip-iphone--step-2 &,
+  .vip-iphone--step-3 &,
+  .vip-iphone--step-4 &
+    opacity: 0
+    @media (max-width: 767px)
+      opacity: 1
+      visibility: visible
+
+.vip-iphone-text-eq2
+  opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
+  .vip-iphone--step-2 &
+    opacity: 1
+
+.vip-iphone-text-eq3
+  opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
+  .vip-iphone--step-3 &
+    opacity: 1
+
+.vip-iphone-text-eq4
+  opacity: 0
+  @media (max-width: 767px)
+    opacity: 1
+  .vip-iphone--step-4 &
+    opacity: 1
+
+.vip-iphone-wrapper
+  display: flex
+  background-color: #1b2841
+  flex-direction: column
+  @media (max-width: 767px)
+    height: initial
+    display: block
+    min-height auto
+    background-color: #101828
+
+.vip-iphone-container
+  position: sticky
+  bottom: 0
+  width: 100%
+  height: 50vh
+  min-height: 492px
+  align-self: flex-end
+  @media (max-width: 767px)
+    position: relative
+    min-height auto
+    height: auto
+
+.vip-background
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: linear-gradient(to bottom, #1b284100 0%,#1b2841 5%,#1b2841 100%);
+    @media (max-width: 767px)
+      display: none
+.vip-list-img-1
+  height: 261px
+  @media (max-width: 767px)
+    height: 137px
+.vip-list-img-2
+  height: 261px
+  @media (max-width: 767px)
+    height: 137px
+.vip-list-img-3
+  height: 191px
+  @media (max-width: 767px)
+    height: 117px
+.vip-list-img-4
+  height: 185px
+  @media (max-width: 767px)
+    height: 137px
+.vip-list-img-container
+  height: 261px
+  @media (max-width: 767px)
+    height: 137px
+.horizontal-scroll-container
+  display: flex;
+  flex-direction: row;
+  white-space: normal;
+  overflow: auto
+
+.vip-scroll-button
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  cursor: pointer
+  z-index: 10
+  opacity: 0.8
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity
+  display: none
+  &:hover
+    opacity: 1
+  &--next
+    right: 0px
+  &--prev
+    left: 0px
+    transform rotate(180deg)
+
+.tariff-scroller
+  position: relative
+  top: 0
+
+.tariff-scroller-sticky
+  top: 0
+  position: sticky
+
+.vip-iphone-title
+  position: sticky
+  top: 50px
+  @media (max-width: 767px)
+    position: relative
+    padding-bottom: 30px
+    padding-left: 20px
+    padding-right: 20px
+
+.vip-iphone-count__point
+  width: 8px
+  height: 8px
+  display: inline-block
+  box-sizing border-box
+  border 1.5px solid white
+  cursor: pointer
+  border-radius 50%
+
+.vip-iphone-count__point:hover
+  background-color: #fff
+
+.vip-iphone-count__point+.vip-iphone-count__point
+  margin-left: 12px
+
+.vip-iphone-count__point--is-active
+  background-color: #fff
+  cursor: default
+
+.vip-tariff-wrapper
+  transition-timing-function ease
+  transition-duration .1s
+  transition-property transform
+.animate-scroller-sticky
+  position: sticky
+  top: 0
+.animate-scroller-sticky__container
+  overflow: hidden
+
+.warface-popup-wrapper
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  display: flex
+  align-items center
+  justify-content center
+  background-color: rgba(0,0,0,0.3)
+  z-index: 1000
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity, visibility
+  opacity: 0
+  visibility: hidden
+  z-index: 1
+
+.warface-popup-wrapper--is-active
+  opacity: 1
+  visibility: visible
+  z-index: 2
+
+.warface-popup
+  width: 565px
+  background-color: #242C39
+  box-shadow 0 20px 30px rgba(0,0,0,0.3)
+  color white
+  padding-left: 20px
+  padding-right: 20px
+  padding-bottom: 20px
+  padding-top: 40px
+  position: relative
+  max-width: calc(100vw - 40px)
+
+.warface-popup-close
+  position: absolute
+  top: 20px
+  right: 20px
+  cursor: pointer
+
+.warface-popup-slider
+  max-width: 365px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  height: 180px
+
+.warface-popup-slider__arrow
+  position: absolute
+  top: 0
+  bottom: 30px
+  margin-top: auto
+  margin-bottom: auto
+  height: 16px
+  cursor: pointer
+  z-index: 2
+
+.warface-popup-slider__arrow-prev
+  left: 0
+
+
+.warface-popup-slider__arrow-next
+  right: 0
+
+.warface-popup-slider,
+.warface-popup-slider__count
+  text-align: center
+
+.warface-popup-slider__count
+  user-select: none
+
+.warface-popup-slider__img
+  height: 115px
+  display: flex
+  align-items center
+  justify-content center
+
+.warface-popup-slider__item
+  position: absolute
+  opacity: 0
+  visibility: hidden
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  user-select: none
+  transition-timing-function cubic-bezier(.11, .34, .97, .33)
+  transition-duration .2s
+  transition-property opacity, visibility
+
+.warface-popup-slider__item--is-active
+  opacity: 1
+  visibility: visible

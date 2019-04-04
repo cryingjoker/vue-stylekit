@@ -132,6 +132,10 @@ export default {
     hasLabel: {
       type: Boolean,
       default: false
+    },
+    productCard: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -191,6 +195,9 @@ export default {
         }
         cardClass += " rtb-category";
       }
+      if(this.productCard){
+        cardClass += " rtb-card--product";
+      }
       return cardClass;
     },
     cardContentClass() {
@@ -205,6 +212,9 @@ export default {
         if (this.colSize === 2) {
           cardContentClass += " rt-col-6 rt-col-md-3";
         }
+      }
+      if(this.backgroundColorType && this.productCard) {
+        cardContentClass += " color-block color-block--" + this.backgroundColorType;
       }
       return cardContentClass;
     },
@@ -286,6 +296,9 @@ export default {
               break;
           }
         }
+      }
+      if(this.productCard) {
+        cardBackgroundClass += " rtb-card__product-image"
       }
       return cardBackgroundClass;
     },
@@ -401,8 +414,8 @@ export default {
               </div>
             </div>
             <div class="rtb-category__triangle">
-              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 420">
-                <polygon points="0 420,76 0,0 0"/>
+              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 364">
+                <polygon points="0 364,76 0,0 0"/>
               </svg>
             </div>
             <div class="rtb-category__image" style={this.categoryImage}></div>
@@ -420,8 +433,8 @@ export default {
               </div>
             </div>
             <div class="rtb-category__triangle">
-              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 420">
-                <polygon points="0 420,76 0,0 0"/>
+              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 364">
+                <polygon points="0 364,76 0,0 0"/>
               </svg>
             </div>
             <div class="rtb-category__image" style={this.categoryImage}></div>
@@ -467,7 +480,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
-                <span class="rtb-card__discount-line__flag-text">2 услуги со скидкой 50%</span>
+                <span class="rtb-card__discount-line__flag-text rtb-card__discount-line__flag-text-2">2 услуги со скидкой 50%</span>
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
@@ -513,6 +526,15 @@ export default {
         return null;
       }
     })();
+    const productTriangle = (() => {
+      if(this.productCard) {
+        return <div class="rtb-product__triangle">
+          <svg class="rtb-product-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364 38">
+            <polygon points="0 38,364 38,364 0"/>
+          </svg>
+        </div>
+      }
+    })();
     if(!this.isB2bCategory){
       return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
         {this.backgroundImageStandAlone ? <div
@@ -526,6 +548,7 @@ export default {
         />
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
+          {productTriangle}
           <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
             {this.$slots["content"]}
           </div>

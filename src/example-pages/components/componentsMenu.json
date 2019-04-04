@@ -230,6 +230,30 @@
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
+        },
+        {
+          "name" : "Opportunity",
+          "title" : "Opportunity",
+          "url" : "/opportunity",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Help main",
+          "title" : "Help main",
+          "url" : "/help-main",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        } ,
+        {
+          "name" : "Un-wrapper",
+          "title" : "Un-wrapper",
+          "url" : "/unwrapper",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
         }
       ],
       "for_b2b" : true,
@@ -293,6 +317,14 @@
           "name" : "game",
           "title" : "game",
           "url" : "/promo/game",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "vip",
+          "title" : "vip",
+          "url" : "/promo/vip",
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true

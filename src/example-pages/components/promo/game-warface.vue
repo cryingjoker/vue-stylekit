@@ -39,9 +39,8 @@
                 type="warface"
                 tablet-width="141px" mobile-width="111px"
               />
-              </template>
+            </template>
           </rt-logo-co-branding>
-
 
 
         </div>
@@ -66,12 +65,12 @@
                 Тариф «Игровой»
               </template>
               <template slot="content">
-                Подарки и интернет для настоящих <br >
+                Подарки и интернет для настоящих <br>
                 игроков Warface
               </template>
             </rt-color-line-text>
           </div>
-          <div class="rt-col-1 td-d-none" />
+          <div class="rt-col-1 td-d-none"/>
 
           <div
             class="rt-col-6 rt-col-td-6 rt-td-space-top15 rt-td-space-bottom15 rt-md-space-bottom3"
@@ -132,7 +131,7 @@
               <template slot="content">
                 <rt-tabs-content-item name="new">
                   <div class="rt-space-top15">
-                    <rt-input placeholder="Как к Вам обращаться" />
+                    <rt-input placeholder="Как к Вам обращаться"/>
                   </div>
                   <div class="rt-space-top">
                     <rt-checkbox name="internet">
@@ -140,7 +139,7 @@
                     </rt-checkbox>
                   </div>
                   <div class="rt-space-top">
-                    <rt-input placeholder="Контактный номер телефона" />
+                    <rt-input placeholder="Контактный номер телефона"/>
                   </div>
 
                   <div class="rt-space-top3">
@@ -151,13 +150,13 @@
                   <div class="rt-space-top">
                     <div class="row">
                       <div class="rt-col-6">
-                        <rt-input placeholder="Улица" />
+                        <rt-input placeholder="Улица"/>
                       </div>
                       <div class="rt-col-3">
-                        <rt-input placeholder="Дом" />
+                        <rt-input placeholder="Дом"/>
                       </div>
                       <div class="rt-col-3">
-                        <rt-input placeholder="Квартира" />
+                        <rt-input placeholder="Квартира"/>
                       </div>
                     </div>
                   </div>
@@ -168,13 +167,13 @@
                   </div>
                   <div class="rt-space-top">
                     <rt-switch class="switch--orange rt-font-control">
-                      Терминал ONT без Wi-Fi <br >
+                      Терминал ONT без Wi-Fi <br>
                       +20₽ в месяц
                     </rt-switch>
                   </div>
                   <div class="rt-space-top">
                     <rt-switch class="switch--orange rt-font-control">
-                      Терминал ONT без Wi-Fi <br >
+                      Терминал ONT без Wi-Fi <br>
                       +20₽ в месяц
                     </rt-switch>
                   </div>
@@ -191,7 +190,7 @@
                   <div class="rt-space-top">
                     <rt-checkbox name="internet">
                       <span class="color-white07">
-                        Даю согласие на обработку персональных данных <br >в
+                        Даю согласие на обработку персональных данных <br>в
                         соответствии с</span
                       >
                       условиями
@@ -200,7 +199,7 @@
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name="old">
                   <div class="rt-space-top15">
-                    <rt-input placeholder="Введите логин от личного кабинета" />
+                    <rt-input placeholder="Введите логин от личного кабинета"/>
                   </div>
                   <div class="rt-space-top">
                     <rt-input
@@ -229,7 +228,7 @@
             </rt-tabs>
           </div>
         </div>
-        <div class="rt-col-1 td-d-none" />
+        <div class="rt-col-1 td-d-none"/>
         <div class="rt-col-6 rt-col-td-6">
           <div class="rt-space-top4 rt-td-space-top">
             <p class="rt-font-h2 rt-font-medium">
@@ -251,6 +250,9 @@
                     четырех пушек. Тип оружия можно изменять каждые 24 часа в
                     личном кабинете на wf.mail.ru
                   </p>
+                  <div class="rt-space-top05">
+                    <span class="rt-link open-popup-button" popup-name="warface-popup-today">Подробнее о пушках</span>
+                  </div>
                 </div>
               </div>
               <div
@@ -287,6 +289,9 @@
                     твоем складе? Накопи дни РТК и обменяй их на постоянное
                     оружие!
                   </p>
+                  <div class="rt-space-top05">
+                    <span class="rt-link open-popup-button" popup-name="warface-popup-all">Подробнее о пушках</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -344,35 +349,246 @@
         </div>
       </div>
     </div>
+    <div class="warface-popup-wrapper warface-popup-today">
+      <div class="warface-popup">
+        <div class="warface-popup-close">
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.9">
+              <g id="popup_1" transform="translate(-530.000000, -20.000000)" fill="#FFFFFF">
+                <polygon id="Shape"
+                         points="545 21.5 543.5 20 537.5 26 531.5 20 530 21.5 536 27.5 530 33.5 531.5 35 537.5 29 543.5 35 545 33.5 539 27.5"></polygon>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="rt-font-h3 rt-font-bold">Оружие за дни РТК</p>
+        <p class="rt-font-paragraph rt-space-top05 rt-space-bottom2">Оружие навсегда</p>
+        <div class="warface-popup-slider ">
+          <div class="warface-popup-slider__arrow warface-popup-slider__arrow-prev">
+            <svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="popup_1" transform="translate(-98.000000, -180.000000)" stroke="#FF4F12" stroke-width="2">
+                  <g id="Group-10" transform="translate(100.000000, 163.000000)">
+                    <polyline id="next"
+                              transform="translate(3.500000, 25.000000) scale(-1, 1) translate(-3.500000, -25.000000) "
+                              points="0 18 7 25 0 32"></polyline>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="warface-popup-slider__arrow warface-popup-slider__arrow-next">
+            <svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="popup_1" transform="translate(-457.000000, -180.000000)" stroke="#FF4F12" stroke-width="2">
+                  <g id="Group-10" transform="translate(100.000000, 163.000000)">
+                    <polyline id="next" points="358 18 365 25 358 32"></polyline>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="warface-popup-slider__space">
+            <div class="warface-popup-slider__item warface-popup-slider__item--is-active">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/ACR_CQB.png" alt="">
+              </div>
+              <p class="rt-font-bold">Пистолет-пулемёт ACR CQB</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/DP-12.png" alt="">
+              </div>
+              <p class="rt-font-bold">Дробовик DP-12</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/HCAR.png" alt="">
+              </div>
+              <p class="rt-font-bold">Штурмовая винтовка HCAR</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/Steyr_Scout.png" alt="">
+              </div>
+              <p class="rt-font-bold">Снайперская винтовка Steyr Scout</p>
+            </div>
+          </div>
+        </div>
+        <p class="warface-popup-slider__count"><span class="warface-popup-slider__count-now">1</span> / <span
+          class="warface-popup-slider__count-all">4</span></p>
+        <p class="rt-space-top2 color-white07 rt-font-small-paragraph">Ассортимент пушек будет обновляться раз в полгода</p>
+      </div>
+    </div>
+    <div class="warface-popup-wrapper warface-popup-all">
+      <div class="warface-popup">
+        <div class="warface-popup-close">
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.9">
+              <g id="popup_1" transform="translate(-530.000000, -20.000000)" fill="#FFFFFF">
+                <polygon id="Shape"
+                         points="545 21.5 543.5 20 537.5 26 531.5 20 530 21.5 536 27.5 530 33.5 531.5 35 537.5 29 543.5 35 545 33.5 539 27.5"></polygon>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="rt-font-h3 rt-font-bold">Оружие за дни РТК</p>
+        <p class="rt-font-paragraph rt-space-top05 rt-space-bottom2">Оружие навсегда</p>
+        <div class="warface-popup-slider ">
+          <div class="warface-popup-slider__arrow warface-popup-slider__arrow-prev">
+            <svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="popup_1" transform="translate(-98.000000, -180.000000)" stroke="#FF4F12" stroke-width="2">
+                  <g id="Group-10" transform="translate(100.000000, 163.000000)">
+                    <polyline id="next"
+                              transform="translate(3.500000, 25.000000) scale(-1, 1) translate(-3.500000, -25.000000) "
+                              points="0 18 7 25 0 32"></polyline>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="warface-popup-slider__arrow warface-popup-slider__arrow-next">
+            <svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="popup_1" transform="translate(-457.000000, -180.000000)" stroke="#FF4F12" stroke-width="2">
+                  <g id="Group-10" transform="translate(100.000000, 163.000000)">
+                    <polyline id="next" points="358 18 365 25 358 32"></polyline>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="warface-popup-slider__space">
+            <div class="warface-popup-slider__item warface-popup-slider__item--is-active">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/S&W_M&P_R8.png" alt="">
+              </div>
+              <p class="rt-font-bold">Револьвер S&W M&P R8</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/butterfly_knife.png" alt="">
+              </div>
+              <p class="rt-font-bold">Нож-бабочка</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/Enfield_L85A2_Custom.png" alt="">
+              </div>
+              <p class="rt-font-bold">Винтовка Enfield L85A2 Custom</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/Fabarm_STF_12_Compact.png" alt="">
+              </div>
+              <p class="rt-font-bold">Дробовик Fabarm STF 12 Compact</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/SCAR-L_PDW.png" alt="">
+              </div>
+              <p class="rt-font-bold">Пистолет-пулемёт SCAR-L PDW</p>
+            </div>
+            <div class="warface-popup-slider__item">
+              <div class="warface-popup-slider__img">
+                <img src="/static/images/game/wf/M14_Crazy_Horse.png" alt="">
+              </div>
+              <p class="rt-font-bold">Снайперская винтовка M14 Crazy Horse (класс Снайпер)</p>
+            </div>
+
+          </div>
+        </div>
+        <p class="warface-popup-slider__count color-white07 rt-font-small-paragraph"><span class="warface-popup-slider__count-now">1</span> / <span
+          class="warface-popup-slider__count-all">6</span></p>
+        <p class="rt-space-top2 color-white07 rt-font-small-paragraph">Ассортимент пушек будет обновляться раз в полгода</p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-const componentsList = {};
+  const componentsList = {};
 
-export default {
-  name: "AppPromoGame",
-  components: componentsList,
-  mounted() {
-    // document.querySelector('.mobile-checkbox input').addEventListener('change', function() {
-    //   const icon = document.querySelector('.mobile-icon');
-    //   if(document.querySelector('.mobile-checkbox input').checked){
-    //    icon.classList.remove('rt-icon--not-active')
-    //   }else{
-    //     icon.classList.add('rt-icon--not-active')
-    //   }
-    // });
-    // document.querySelector('.tv-checkbox input').addEventListener('change', function() {
-    //   const icon = document.querySelector('.tv-icon');
-    //   if(document.querySelector('.tv-checkbox input').checked){
-    //     icon.classList.remove('rt-icon--not-active')
-    //   }else{
-    //     icon.classList.add('rt-icon--not-active')
-    //   }
-    // });
-  },
-  created() {},
-  methods: {}
-};
+  export default {
+    name: "AppPromoGame",
+    components: componentsList,
+    mounted() {
+      setTimeout(function(){
+      document.addEventListener('keydown',function(e){
+        if(document.querySelector('.warface-popup-wrapper--is-active')) {
+
+          switch (e.keyCode) {
+            case 37:
+              document.querySelector('.warface-popup-wrapper--is-active').querySelector('.warface-popup-slider__arrow-prev').dispatchEvent(new Event('click'));
+              break
+            case 39:
+              document.querySelector('.warface-popup-wrapper--is-active').querySelector('.warface-popup-slider__arrow-next').dispatchEvent(new Event('click'));
+              break;
+            case 27:
+              document.querySelector('.warface-popup-wrapper--is-active').classList.remove('warface-popup-wrapper--is-active');
+              break;
+            case 32:
+              document.querySelector('.warface-popup-wrapper--is-active').querySelector('.warface-popup-slider__arrow-next').dispatchEvent(new Event('click'));
+              e.preventDefault();
+              break;
+          }
+        }
+      })
+      document.querySelectorAll(".warface-popup-wrapper").forEach(function(wrapper) {
+        wrapper.querySelector('.warface-popup-close').addEventListener('click',function() {
+          wrapper.classList.remove('warface-popup-wrapper--is-active');
+        });
+        var popUpIsHover = false;
+        var popup = wrapper.querySelector('.warface-popup');
+        popup.addEventListener('mouseenter',function(){
+          popUpIsHover = true
+        })
+        popup.addEventListener('mouseleave',function(){
+          popUpIsHover = false
+        })
+        wrapper.addEventListener('click',function(e,a) {
+          if(!popUpIsHover){
+            wrapper.classList.remove('warface-popup-wrapper--is-active');
+          }
+        });
+      })
+      document.querySelectorAll('.open-popup-button').forEach(function(button){
+        button.addEventListener('click',function(){
+          var className = button.getAttribute('popup-name');
+          document.querySelector('.'+className).classList.add('warface-popup-wrapper--is-active');
+        })
+      })
+      document.querySelectorAll(".warface-popup").forEach(function(popup) {
+        popup.querySelectorAll(".warface-popup-slider__arrow").forEach(function(arrow) {
+          arrow.addEventListener("click", function() {
+            var activeItem = popup.querySelector(".warface-popup-slider__item--is-active");
+            var nodes = Array.prototype.slice.call(activeItem.parentNode.children);
+            var activeIndex = nodes.indexOf(activeItem);
+            var size = nodes.length;
+            if (arrow.classList.contains("warface-popup-slider__arrow-prev")) {
+              activeIndex = activeIndex - 1;
+              if (activeIndex < 0) {
+                activeIndex = size - 1;
+              }
+            } else {
+              activeIndex = (activeIndex+1) % size;
+            }
+            activeItem.classList.remove("warface-popup-slider__item--is-active");
+            nodes[activeIndex].classList.add("warface-popup-slider__item--is-active");
+            popup.querySelector('.warface-popup-slider__count-now').innerHTML = (activeIndex+1)
+          });
+        });
+      });
+      },2000)
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>
 <!-- <rt-banner-item -->
 <!-- content-mobile-min-height="0" -->

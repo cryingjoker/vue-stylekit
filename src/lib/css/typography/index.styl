@@ -188,21 +188,10 @@ b,
   text-overflow ellipsis
   white-space nowrap
 
-.{newAppName}-font-right
-  text-align right
-
 .{newAppName}-font-td-left
   @media (max-width: tablet-upper-limit)
     text-align left
 
-.{newAppName}-font-md-left
-  @media (max-width: tablet-upper-limit)
-    text-align left
-
-.{newAppName}-font-md-center
-  &-center
-    @media (max-width: mobile-upper-limit)
-      text-align center
 
 .{newAppName}-font-left
   text-align left
@@ -233,6 +222,14 @@ b,
 .{newAppName}-td-font-left
   @media (max-width: tablet-upper-limit)
     text-align left
+.{newAppName}-font-md-left
+  @media (max-width: mobile-upper-limit)
+    text-align left
+
+.{newAppName}-font-md-center
+  &-center
+    @media (max-width: mobile-upper-limit)
+      text-align center
 
 .{newAppName}-font-small-upper
   font-size 14px
@@ -277,9 +274,8 @@ a
     background-color main-color
     border-radius 50%
     position absolute
-    top 50%
+    top 6px
     left 7px
-    transform translateY(-50%)
 
     .{newAppName}-dark-theme &
       background-color b2c-white05

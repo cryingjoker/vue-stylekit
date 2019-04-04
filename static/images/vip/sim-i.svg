@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="55px" viewBox="0 0 56 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 23</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1396_open" transform="translate(-565.000000, -1645.000000)">
+            <g id="mobile_rtk_app_1-copy-2" transform="translate(565.000000, 1645.000000)">
+                <g id="Group-23" transform="translate(0.247600, 0.000900)">
+                    <g id="Group-22">
+                        <path d="M55,27.5 C55,42.688 42.687,55 27.5,55 C12.312,55 0,42.688 0,27.5 C0,12.312 12.312,0 27.5,0 C42.687,0 55,12.312 55,27.5" id="Fill-379" fill="#8348FC"></path>
+                        <polygon id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="46.2524 38.4991 10.2524 38.4991 10.2524 15.4991 39.8524 15.4991 46.2524 22.6991"></polygon>
+                    </g>
+                    <path d="M35.2524,34.4991 L15.2524,34.4991 C14.6524,34.4991 14.2524,34.0991 14.2524,33.4991 L14.2524,20.8991 C14.2524,20.2991 14.6524,19.8991 15.2524,19.8991 L35.2524,19.8991 C35.8524,19.8991 36.2524,20.2991 36.2524,20.8991 L36.2524,33.4991 C36.2524,33.9991 35.8524,34.4991 35.3524,34.4991 C35.3524,34.4991 35.3524,34.4991 35.3524,34.4991 L35.2524,34.4991 Z" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

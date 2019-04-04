@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="57px" viewBox="0 0 56 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1396_open" transform="translate(-168.000000, -1947.000000)">
+            <g id="1-copy" transform="translate(168.000000, 1571.000000)">
+                <g id="5" transform="translate(0.000000, 376.500000)">
+                    <g id="Group-18">
+                        <path d="M56,28 C56,43.4641455 43.4631273,56 28,56 C12.5358545,56 0,43.4641455 0,28 C0,12.5358545 12.5358545,0 28,0 C43.4631273,0 56,12.5358545 56,28" id="Fill-3" fill="#8348FC"></path>
+                        <g id="Group-30" transform="translate(12.000000, 16.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M6.1025,21.4804 L4.7765,21.4804 C2.1945,21.4804 0.1005,19.1074 0.1005,16.2464 C0.0305,13.9434 1.4965,11.7794 3.7295,11.0824 C3.6605,10.5924 3.6605,10.1044 3.6605,9.6164 C3.6605,4.5214 7.3585,0.4034 11.8945,0.4034 C15.5935,0.4034 18.7345,3.1264 19.7115,6.9634 C20.6185,6.1264 21.8055,5.7084 22.9915,5.7084 C25.7135,5.7084 27.9465,8.0104 28.2255,10.9424 C30.8085,10.9424 32.9015,13.3144 32.9015,16.1754 C32.9015,19.0374 30.8085,21.4104 28.2255,21.4104 L26.6205,21.4104" id="Stroke-314"></path>
+                            <path d="M11.9648,21.4101 L20.6188,21.4101" id="Stroke-316"></path>
+                            <path d="M16.292,20.7822 L16.292,9.7562" id="Stroke-318"></path>
+                            <polyline id="Stroke-320" points="11.9648 14.082 16.2918 9.756 20.6188 14.082"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

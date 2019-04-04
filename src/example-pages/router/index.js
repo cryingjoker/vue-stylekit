@@ -26,6 +26,9 @@ import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
 import TestAccess from '../components/promo/test-access.vue';
+import Opportunity from '../components/complex-elements/Opportunity.vue';
+import HelpMain from '../components/complex-elements/HelpMain.vue';
+import UnWrapper from '../components/main-elements/UnWrapper.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -39,6 +42,8 @@ import Colors from "../components/main-elements/colors/ColorsList.tsx";
 import List from "../components/main-elements/List.vue";
 import Logo from "../components/main-elements/Logo.vue";
 import WarFace from "../components/promo/game-warface.vue";
+import Vip from "../components/promo/vip.vue";
+import Kids from "../components/promo/kids.vue";
 import Swiper from "../components/swiper/Swiper.vue";
 
 const index = [
@@ -80,12 +85,17 @@ const index = [
   { path: '/promo/game', name: 'promoGame', component: PromoGame },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },
   { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
-  { path: '/promo/mobile', name: 'promoMobrt-font-md-centerile', component: PromoMobile },
+  { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
+  { path: '/promo/vip', name: 'vip', component: Vip },
+  { path: '/promo/kids', name: 'kids', component: Kids },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
+  { path: '/opportunity', name: 'opportunity', component: Opportunity },
   { path: '/pattern', name: 'pattern', component: Pattern },
+  { path: '/help-main', name: 'helpMain', component: HelpMain },
+  { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
@@ -93,3 +103,5 @@ const index = [
 export default {
   routes: index,
 };
+
+
