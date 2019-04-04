@@ -14,7 +14,11 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
         @media (max-width: mediaWidth)
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
-          max-width: "calc((100% - (%s - 1) * %s * %s) / %s )"%(steps horizontal-space $i steps)
+
+          if $i != steps
+            max-width: "calc((100% - (%s - 1) * %s * %s) / %s )"%(steps horizontal-space $i steps)
+          else
+            max-width: "calc(100% - 40px)"
           :not(.row) &,
           .row .row &
             flex 0 0 ($i * stepGrid)
