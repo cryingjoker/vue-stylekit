@@ -37,6 +37,8 @@
 
     &+&
       border-top 1px solid card-list-border
+    &--block-type
+      width calc(100% - 20px)
 
   &__icon
     display flex
@@ -121,10 +123,10 @@
       margin 0 auto
       padding-top 15px
       padding-bottom 15px
-
+      @media (max-width: laptop-upper-limit)
+        width 85%
       @media (max-width: tablet-upper-limit)
         width 90%
-
       @media (max-width: mobile-upper-limit)
         flex-direction row
         width 100%
@@ -199,8 +201,8 @@
   @media (max-width: mobile-upper-limit)
     padding 30px 40px
   .rt-container
-    @media (max-width: desktop-upper-limit)
-      padding 0
+    padding 0
+    max-width 1320px
 
 .help-soft-and-hard
   &__title,

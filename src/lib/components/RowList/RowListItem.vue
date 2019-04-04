@@ -24,7 +24,8 @@
   },
   data: () => ({
     show: false,
-    componentView: 'desktop'
+    componentView: 'desktop',
+    componentLayout: ''
   }),
   computed: {
     iconImage() {
@@ -47,6 +48,9 @@
     };
     toggleComponentView();
     window.addEventListener('resize', toggleComponentView);
+    if(this.$parent._props.isHelpBlock){
+      this.componentLayout = this.$el.parentNode.children.length;
+    }
   },
   methods: {
     toggleShow() {
@@ -119,7 +123,7 @@
             </a>
         } else {
           return (
-            <div class="rt-row-list__item rt-col-4 rt-col-td-2 rt-col-md-3 rtb-help-block">
+            <div class={"rt-row-list__item rt-col-td-2 rt-col-md-3 rtb-help-block" + (this.componentLayout === 4 ? ' rt-col-3' : ' rt-col-4')}>
               <div class="rt-row-list__header">
                 <div class="rt-space-bottom">
                   <div class="rt-row-list__icon" style={this.iconImage}></div>
@@ -140,7 +144,7 @@
           </div>
         )
       } else if(this.contentBlockType){
-        return <div class="rt-row-list__item rt-col-12 rt-col-md-3">
+        return <div class="rt-row-list__item rt-row-list__item--block-type rt-col">
           <div class="rt-row-list__header">
             {this.$slots.icon ? (
               <div class="rt-row-list__icon rt-md-space-bottom rt-row-list__icon--baseline">
