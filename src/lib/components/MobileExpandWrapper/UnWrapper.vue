@@ -16,6 +16,14 @@
       includingDesktop: {
         type: Boolean,
         default: false
+      },
+      alwaysVisible:{
+        type: Boolean,
+        default: false
+      },
+      unwrappedButtonText: {
+        type: String,
+        default: ''
       }
     },
     data: () => ({
@@ -36,13 +44,20 @@
       };
       toggleComponentView();
       window.addEventListener('resize', toggleComponentView);
-      console.log(this.includingDesktop);
     },
     created() {},
     methods: {
       toggleOpen($event) {
         this.isClosed = !this.isClosed;
         $event.target.classList.add('rtb-unwrap-button--hidden');
+        if(!this.isClosed) {
+          $event.target.innerText = this.unwrappedButtonText;
+        } else {
+          $event.target.innerText = this.unwrapButtonText;
+        }
+        if(this.alwaysVisible) {
+          $event.target.classList.remove('rtb-unwrap-button--hidden');
+        }
       }
     },
     render(h) {
@@ -53,10 +68,10 @@
       })();
       return <div class="rt-expand-wrapper row">
         {this.$slots['short-content']}
+        {fullContent}
         <div onClick={this.toggleOpen}
              class={"rtb-unwrap-button rt-link rt-col-md-3 rt-font-paragraph" + (this.includingDesktop ? " rtb-unwrap-button--all-resolutions" : "")}
         >{this.unwrapButtonText}</div>
-        {fullContent}
     </div>
     }
   }
