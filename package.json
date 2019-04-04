@@ -1,6 +1,6 @@
 {
   "name": "vue_rt_style",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
