@@ -1,0 +1,34 @@
+
+steps = 11
+for $i in 1 .. steps
+  .{newAppName}-col-{$i}
+    .row
+      display: flex
+      for $j in 1 .. steps
+        .rt-col-{$j}
+          max-width: 100%/$j
+          flex 0 0 100%/$j
+
+      .rt-col-3
+      .rt-col-2
+      .rt-col-1
+      .rt-col-td-5
+      .rt-col-td-4
+      .rt-col-td-3
+      .rt-col-td-2
+      .rt-col-td-1
+      .rt-col-md-3
+      .rt-col-md-3
+      .rt-col-md-2
+      .rt-col-md-1
+        display: block
+.main-navigation__panels-area .row
+  display: flex
+
+@media (min-width: 768px)
+  #mainNavDesc, #mainNavLinks
+    grid-column: 6 span;
+    width: 100%
+
+.rtk-footer__copyright .row
+  display: flex

@@ -4,6 +4,7 @@
       text="<div class=&quot;test-access&quot;>
     <div class=&quot;test-access__image mobile-none&quot;></div>
     <div class=&quot;rt-container rt-col-12 rt-col-td-3 rt-col-md-3 rt-space-top25 d-flex rt-space-bottom25&quot;>
+    <div class=&quot;row&quot;>
       <div class=&quot;rt-col-5 rt-col-td-3 rt-col-md-3 flex-column&quot;>
         <h3 class=&quot;rt-space-bottom rt-font-bold&quot;>Тестовый доступ</h3>
         <div class=&quot;rt-col-10 rt-col-td-6 rt-col-md-3&quot;>
@@ -29,6 +30,7 @@
       </div>
       <div class=&quot;rt-col-1 flex-column mobile-none&quot;></div>
       <div class=&quot;rt-space-top05 flex-column mobile-none&quot;></div>
+    </div>
     </div>
   </div>"/>
   </div>

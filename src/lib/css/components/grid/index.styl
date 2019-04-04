@@ -1,21 +1,57 @@
+@require "migrate.styl"
+@require "migrateb2b.styl"
+
 gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
   for $i in 1 .. steps
     .{newAppName}-col{prefix}-{$i}
       if (needMedia)
+        if $i != steps
+          .row
+            for $j in 1 .. steps
+              @media (max-width: mediaWidth)
+                flex 0 0 ($i * stepGrid)
+                max-width ($i * stepGrid)
         @media (max-width: mediaWidth)
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
+          :not(.row) &
+            flex 0 0 ($i * stepGrid)
+            max-width ($i * stepGrid)
+            margin-left  horizontal-space
+            &:first-child
+              margin-left  0
           @supports (display: grid)
-            grid-column $i span;
-            flex none
-            max-width: initial
+            .row &
+              margin-left: 0
+              margin-right: 0
+              grid-column $i span;
+              flex none
+              max-width: initial
+              &:first-child
+                margin-left  0
+
       else
         flex 0 0 ($i * stepGrid)
         max-width ($i * stepGrid)
+        :not(.row) &
+          flex 0 0 ($i * stepGrid)
+          max-width ($i * stepGrid)
+          margin-left horizontal-space
+          &:first-child
+            margin-left  0
         @supports (display: grid)
-          grid-column $i span;
-          max-width: inherit
-          flex none
+          .row &
+            grid-column $i span;
+            max-width: inherit
+            flex none
+            margin-left  0
+            &:first-child
+              margin-left  0
+        if $i != steps
+          .row
+            for $j in 1 .. steps
+              flex 0 0 ($i * stepGrid)
+              max-width ($i * stepGrid)
 
 spaceRender(prefix, needMedia, value, mediaWidth)
   name = step
@@ -91,7 +127,6 @@ steps = desktop-step-grid 12, tablet-step-grid 6 "td" tablet-upper-limit, mobile
     padding-right: 0
 
 
-
 for devideStep in steps
   media = 0
   devicePrefix = ""
@@ -117,7 +152,9 @@ for devideStep in steps
         @supports (display: grid)
           padding-right: 0
           padding-left: 0
-          display: grid
+          display: block
+          width: inherit
+          grid-area: 1 span;
 
 
   gridRender(devideStep[1], devicePrefix, devideStep[0], needMedia, media)
@@ -138,14 +175,15 @@ for devideStep in steps
   margin-right -1 * horizontal-space * .5
   position relative
   -ms-flex-wrap wrap
+
   @supports (display: grid)
     display: grid
+    grid-auto-flow: row
     margin-left: 0
     margin-right: 0
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
     grid-template-areas: ". . . . . . . . . . . ."
     grid-column-gap: horizontal-space
-
     @media (max-width: tablet-upper-limit)
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
       grid-template-areas: ". . . . . ."
@@ -659,3 +697,10 @@ for devideStep in steps
   padding-top 270px
 
 @require "./bootstrap-fix.styl"
+.col
+  grid-column 12 span;
+.rt-cell-figure
+  width: 100%
+  height: 100%
+  object-fit cover
+  overflow: hidden
