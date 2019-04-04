@@ -146,7 +146,7 @@
                   <p class="rt-font-center">отключение</p>
                 </div>
                 <div class="rt-col">
-                  <rt-un-wrapper unwrap-button-text="показать" :including-desktop="true">
+                  <rt-un-wrapper unwrap-button-text="показать" :including-desktop="true" :always-visible="true" unwrapped-button-text="свернуть">
                     <template slot="short-content">
                       Абонентская плата взимается с момента подключения услуги до момента ее отключения абонентом.
                       Вы можете отключить услугу по возвращению в Россию,
