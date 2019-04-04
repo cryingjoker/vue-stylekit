@@ -255,3 +255,31 @@
       font-size 18px
       line-height 24px
       font-weight 200
+
+  &--no-borders
+    display: flex
+    flex-direction: column
+    .{newAppName}-table
+      &-body
+        &__item
+          border-top none
+          padding-bottom: 0
+          padding-top 30px
+          display flex
+          &:nth-child(1)
+            padding-right: 0
+            min-width 80%
+            border-top none
+            .border-element
+              border-bottom 1px dashed main-color05
+              flex-grow 1
+              margin-bottom 5px
+              margin-left 10px
+          &+.{newAppName}-table-body__item
+            border-top none
+        &__content
+          display inline-block
+        &__row
+          display flex
+          //&+.{newAppName}-table-body__row
+          //  border-top none

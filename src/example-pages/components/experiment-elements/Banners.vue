@@ -33,11 +33,11 @@
       text='
         <rt-banner has-custom-height="500px"
                    :is-fullscreen-image="true">
-          <!--<rt-pattern top-color="error-color" left-color="b2c-purple-high" right-color="b2c-pink" :pattern-type="1"/>-->
+          <rt-pattern top-color="error-color" left-color="b2c-light-blue" right-color="b2c-pink" :pattern-type="1"/>
           <rt-banner-item background-image="/static/images/B2B/telephony-banner-bg.png"
                           :is-white-color="true"
                           content-mobile-min-height="500px"
-                          background-color="yellow-low">
+                          background-color="b2c-dark-blue">
             <p class="rt-font-banner-label">Телефония</p>
             <p class="rt-space-top rt-space-bottom15">Комплексные сервисы защиты цифровых <br>систем вашего бизнеса</p>
           </rt-banner-item>
