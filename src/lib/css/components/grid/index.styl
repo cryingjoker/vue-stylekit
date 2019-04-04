@@ -14,35 +14,43 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
         @media (max-width: mediaWidth)
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
-          :not(.row) &
+          max-width: "calc((100% - (%s - 1) * %s * %s) / %s )"%(steps horizontal-space $i steps)
+          :not(.row) &,
+          .row .row &
             flex 0 0 ($i * stepGrid)
             max-width ($i * stepGrid)
             margin-left  horizontal-space
-            &:first-child
-              margin-left  0
+            &:nth-child(12 / steps)
+              margin-left: 0
+
           @supports (display: grid)
             .row &
               margin-left: 0
               margin-right: 0
-              grid-column $i span;
+              grid-column: $i span
               flex none
-              max-width: initial
+              max-width: 100%
+
               &:first-child
                 margin-left  0
 
       else
         flex 0 0 ($i * stepGrid)
         max-width ($i * stepGrid)
-        :not(.row) &
+        :not(.row) &,
+        .row .row &
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
           margin-left horizontal-space
-          &:first-child
-            margin-left  0
+          if $i != 12 || steps != 12
+            max-width: "calc((100% - (%s - 1) * %s) / %s * %s + %s * (%s - 1))"%(steps horizontal-space steps $i horizontal-space $i)
+
+          &:nth-child( {12 / $i}n +1)
+            margin-left: 0
         @supports (display: grid)
           .row &
             grid-column $i span;
-            max-width: inherit
+            max-width: 100%
             flex none
             margin-left  0
             &:first-child
@@ -121,7 +129,7 @@ steps = desktop-step-grid 12, tablet-step-grid 6 "td" tablet-upper-limit, mobile
   position relative
   @supports (display: grid)
     grid-column 12 span;
-    max-width: inherit
+    max-width: 100%
     flex none
     padding-left: 0
     padding-right: 0
@@ -167,14 +175,16 @@ for devideStep in steps
   position relative
 
 .row
-  display flex
-  flex-wrap wrap
-  min-width 100%
-  box-sizing border-box
-  margin-left -1 * horizontal-space * .5
-  margin-right -1 * horizontal-space * .5
-  position relative
-  -ms-flex-wrap wrap
+  .row &,
+  &
+    display flex
+    flex-wrap wrap
+    min-width 100%
+    box-sizing border-box
+    margin-left -1 * horizontal-space * .5
+    margin-right -1 * horizontal-space * .5
+    position relative
+    -ms-flex-wrap wrap
 
   @supports (display: grid)
     display: grid
