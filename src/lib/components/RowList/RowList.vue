@@ -25,6 +25,10 @@ export default {
     contentBlockType: {
       type: Boolean,
       default: false
+    },
+    iconSize: {
+      type: String,
+      default: ''
     }
   },
   render(h){
