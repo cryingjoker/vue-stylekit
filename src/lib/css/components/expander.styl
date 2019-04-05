@@ -1,13 +1,17 @@
-.{b2bAppName}
+.{newAppName}
   &-expand-wrapper
     height auto
     overflow hidden
     &__content
       overflow hidden
+    .rt-col-md-3
+      padding-left 0
 
 .{b2bAppName}-unwrap-button
   @media (min-width: tablet-lower-limit)
     display none
+  &--all-resolutions
+    display block
   &--hidden
     display none
 

@@ -255,3 +255,53 @@
       font-size 18px
       line-height 24px
       font-weight 200
+
+  &--no-borders
+    display: flex
+    flex-direction: column
+    .{newAppName}-table
+      &-body
+        &__item
+          border-top none
+          padding-bottom: 0
+          padding-top 30px
+          display flex
+          align-items flex-end
+          @media (max-width: tablet-upper-limit)
+            display block
+            padding 10px 0
+          &:nth-child(1)
+            padding-right: 0
+            min-width 80%
+            border-top none
+            @media (max-width: tablet-upper-limit)
+              padding-bottom 0
+            .border-element
+              border-bottom 1px dashed main-color05
+              flex-grow 1
+              margin-bottom 5px
+              margin-left 10px
+              @media (max-width: tablet-upper-limit)
+                display none
+            .rt-table-body__content
+              max-width 50%
+              @media (max-width: tablet-upper-limit)
+                max-width 100%
+                font-weight 400
+                opacity .5
+          &:not(:nth-child(1))
+            @media (max-width: tablet-upper-limit)
+              padding-top: 0
+          &+.{newAppName}-table-body__item
+            border-top none
+        &__content
+          display inline-block
+        &__row
+          display flex
+          @media (max-width: tablet-upper-limit)
+            display block
+          &+.{newAppName}-table-body__row
+            border-top none
+        &-title
+          @media (max-width: tablet-upper-limit)
+            font-weight 600

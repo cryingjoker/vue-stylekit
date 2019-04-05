@@ -57,6 +57,158 @@
             </rt-tabs>"
           />
         </div>
+        <div class="app-row row">
+          <div class="rt-col-8 rt-col-td-6 rt-col-md-3">
+          <h3 class="rt-font-bold rt-space-bottom15">Инструкции по настройке VoIP</h3>
+          <rt-tabs>
+            <template slot="navigation">
+              <rt-tabs-nav-item anchor="one" :remove-base-tag="true" name="apps">Программы</rt-tabs-nav-item>
+              <rt-tabs-nav-item anchor="two" :remove-base-tag="true" name="hardware">Оборудование</rt-tabs-nav-item>
+            </template>
+            <template slot="content">
+              <rt-tabs-content-item name="apps">
+                <rt-row-list :content-block-type="true">
+                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                    <template slot="icon">
+                      <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                          <path d="M16 44.04H2.667V30.707H16V44.04zM5.333 41.373h8v-8h-8v8z" fill="#70F"/>
+                          <path d="M48 44.04V29.373l13.067 7.2L48 44.04zm2.667-10.133v5.333l4.8-2.667-4.8-2.666z" fill="#BC104B"/>
+                          <path fill="#273A64" d="M26.667 30.707h2.667V44.04h-2.667zM34.667 30.707h2.667V44.04h-2.667z"/>
+                          <g fill="#FF4F12">
+                            <path d="M61.067 7.773C53.6 2.707 44 .307 34.4.307h-4.533c-4.126 0-8.243.472-12.2 1.381v2.65A52.073 52.073 0 0 1 29.6 2.977h4.8c9.6 0 18.667 2.667 25.333 6.933 1.6 1.067 1.867 1.6 1.867 2.667v9.067c0 .533-.267.8-.8.8h-16c-.267 0-.533 0-.533-.267 0 0-.267-.267-.267-.533v-8s-5.203-1.6-12-1.6-11.733 1.6-11.733 1.6v7.733c0 .533-.267.8-.8.8H.112c.277 1.619 1.675 2.933 3.355 2.933h16c1.866 0 3.466-1.6 3.466-3.466v-5.6s5.334-1.067 9.067-1.067c4 0 9.067 1.067 9.067 1.067v5.6c0 1.866 1.6 3.466 3.466 3.466h16c1.867 0 3.467-1.6 3.467-3.466v-9.067c0-2.136-1.067-3.736-2.933-4.803z"/>
+                            <path d="M2.667 21.373v-8.8c0-1.066.266-1.6 1.866-2.666 3.771-2.563 8.24-4.419 13.134-5.571v-2.65C12.419 2.89 7.456 4.882 3.2 7.772 1.067 8.84 0 10.44 0 12.573v9.067c0 .187.08.352.112.533h3.355c-.534 0-.8-.266-.8-.8z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </template>
+                    <template slot="option">
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Telephone</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Bria</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">CSip Simple</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Linphone</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Телефон Ростелеком</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                    </template>
+                  </rt-row-list-item>
+                </rt-row-list>
+              </rt-tabs-content-item>
+              <rt-tabs-content-item name="hardware">
+                <rt-row-list :content-block-type="true">
+                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                    <template slot="icon">
+                      <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                          <path d="M16 44.04H2.667V30.707H16V44.04zM5.333 41.373h8v-8h-8v8z" fill="#70F"/>
+                          <path d="M48 44.04V29.373l13.067 7.2L48 44.04zm2.667-10.133v5.333l4.8-2.667-4.8-2.666z" fill="#BC104B"/>
+                          <path fill="#273A64" d="M26.667 30.707h2.667V44.04h-2.667zM34.667 30.707h2.667V44.04h-2.667z"/>
+                          <g fill="#FF4F12">
+                            <path d="M61.067 7.773C53.6 2.707 44 .307 34.4.307h-4.533c-4.126 0-8.243.472-12.2 1.381v2.65A52.073 52.073 0 0 1 29.6 2.977h4.8c9.6 0 18.667 2.667 25.333 6.933 1.6 1.067 1.867 1.6 1.867 2.667v9.067c0 .533-.267.8-.8.8h-16c-.267 0-.533 0-.533-.267 0 0-.267-.267-.267-.533v-8s-5.203-1.6-12-1.6-11.733 1.6-11.733 1.6v7.733c0 .533-.267.8-.8.8H.112c.277 1.619 1.675 2.933 3.355 2.933h16c1.866 0 3.466-1.6 3.466-3.466v-5.6s5.334-1.067 9.067-1.067c4 0 9.067 1.067 9.067 1.067v5.6c0 1.866 1.6 3.466 3.466 3.466h16c1.867 0 3.467-1.6 3.467-3.466v-9.067c0-2.136-1.067-3.736-2.933-4.803z"/>
+                            <path d="M2.667 21.373v-8.8c0-1.066.266-1.6 1.866-2.666 3.771-2.563 8.24-4.419 13.134-5.571v-2.65C12.419 2.89 7.456 4.882 3.2 7.772 1.067 8.84 0 10.44 0 12.573v9.067c0 .187.08.352.112.533h3.355c-.534 0-.8-.266-.8-.8z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </template>
+                    <template slot="option">
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Telephone</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Bria</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">CSip Simple</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                    </template>
+                  </rt-row-list-item>
+                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                    <template slot="icon">
+                      <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                          <path d="M16 44.04H2.667V30.707H16V44.04zM5.333 41.373h8v-8h-8v8z" fill="#70F"/>
+                          <path d="M48 44.04V29.373l13.067 7.2L48 44.04zm2.667-10.133v5.333l4.8-2.667-4.8-2.666z" fill="#BC104B"/>
+                          <path fill="#273A64" d="M26.667 30.707h2.667V44.04h-2.667zM34.667 30.707h2.667V44.04h-2.667z"/>
+                          <g fill="#FF4F12">
+                            <path d="M61.067 7.773C53.6 2.707 44 .307 34.4.307h-4.533c-4.126 0-8.243.472-12.2 1.381v2.65A52.073 52.073 0 0 1 29.6 2.977h4.8c9.6 0 18.667 2.667 25.333 6.933 1.6 1.067 1.867 1.6 1.867 2.667v9.067c0 .533-.267.8-.8.8h-16c-.267 0-.533 0-.533-.267 0 0-.267-.267-.267-.533v-8s-5.203-1.6-12-1.6-11.733 1.6-11.733 1.6v7.733c0 .533-.267.8-.8.8H.112c.277 1.619 1.675 2.933 3.355 2.933h16c1.866 0 3.466-1.6 3.466-3.466v-5.6s5.334-1.067 9.067-1.067c4 0 9.067 1.067 9.067 1.067v5.6c0 1.866 1.6 3.466 3.466 3.466h16c1.867 0 3.467-1.6 3.467-3.466v-9.067c0-2.136-1.067-3.736-2.933-4.803z"/>
+                            <path d="M2.667 21.373v-8.8c0-1.066.266-1.6 1.866-2.666 3.771-2.563 8.24-4.419 13.134-5.571v-2.65C12.419 2.89 7.456 4.882 3.2 7.772 1.067 8.84 0 10.44 0 12.573v9.067c0 .187.08.352.112.533h3.355c-.534 0-.8-.266-.8-.8z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </template>
+                    <template slot="option">
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Linphone</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                      <div class="ovh rt-space-bottom05 rt-space-top05">
+                        <p class="rt-font-small-paragraph help-soft-and-hard">
+                          <a href="#" target="_blank">
+                            <span class="help-soft-and-hard__title rt-space-right05">Телефон Ростелеком</span>
+                            <span class="help-soft-and-hard__weight">pdf, 993 Кб</span>
+                          </a>
+                        </p>
+                      </div>
+                    </template>
+                  </rt-row-list-item>
+                </rt-row-list>
+              </rt-tabs-content-item>
+            </template>
+      </rt-tabs>
+          </div>
+        </div>
       </div>
     </div>
   </div>

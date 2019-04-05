@@ -21,13 +21,21 @@ export default {
     isHelpBlock: {
       type: Boolean,
       default: false
+    },
+    contentBlockType: {
+      type: Boolean,
+      default: false
+    },
+    iconSize: {
+      type: String,
+      default: ''
     }
   },
   render(h){
 
     const listType = (() => {
       if(this.isProfitList) {
-        return <div class={"rt-row-list row" + (this.isProfitList ? " rtb-profit-list" : "")}>
+        return <div class={"rt-row-list" + (this.isProfitList ? " rtb-profit-list" : "")}>
           <div class="rt-container rt-col-12">
             <div class="row">
               {this.$slots.default}

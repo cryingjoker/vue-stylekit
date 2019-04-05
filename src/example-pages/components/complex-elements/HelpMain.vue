@@ -10,6 +10,7 @@
 
         <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
           <div class="rt-space-bottom2 rt-td-space-bottom">
+            <h1 class="rt-font-bold rt-space-bottom5">Помощь и поддержка</h1>
             <rt-row-list :is-help-block="true" class="rt-font-left">
               <rt-row-list-item icon="/static/images/B2B/ATS.svg">
                 <template slot="option">
@@ -113,29 +114,27 @@
         </div>
         <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
           <h3 class="rt-font-bold rt-space-bottom2 rt-td-space-bottom rt-md-space-top25">Не нашли что искали? Свяжитесь с нами</h3>
-          <div class="rt-space-bottom2 rt-td-space-bottom">
-            <rt-row-list :is-help-block="true" class="rt-font-left">
-              <rt-row-list-item icon="/static/images/B2B/help7.svg">
-                <template slot="option">
-                  <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">Заявкой на сайте</p>
-                  <p class="rt-font-paragraph"><a href="#" class="rt-link">Заполните форму</a> и в ближайшее время 
-                    наши специалисты перезвонят</p>
-                </template>
-              </rt-row-list-item>
-              <rt-row-list-item icon="/static/images/B2B/help8.svg" :button-in-mobile="true">
-                <template slot="option">
-                  <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">По телефону 8 800 200 30 00</p>
-                  <p class="rt-font-paragraph">Наши менеджеры помогут Вам  с решением проблемы</p>
-                </template>
-              </rt-row-list-item>
-              <rt-row-list-item icon="/static/images/B2B/help9.svg">
-                <template slot="option">
-                  <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">В офисе продаж</p>
-                  <p class="rt-font-paragraph">Приходите в <a href="#" class="rt-link">наши офисы</a>, узнавайте новости, тестируйте услуги, задавайте вопросы</p>
-                </template>
-              </rt-row-list-item>
-            </rt-row-list>
-          </div>
+          <rt-row-list :is-help-block="true" class="rt-font-left">
+            <rt-row-list-item icon="/static/images/B2B/help7.svg">
+              <template slot="option">
+                <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">Заявкой на сайте</p>
+                <p class="rt-font-paragraph"><a href="#" class="rt-link">Заполните форму</a> и в ближайшее время 
+                  наши специалисты перезвонят</p>
+              </template>
+            </rt-row-list-item>
+            <rt-row-list-item icon="/static/images/B2B/help8.svg" :button-in-mobile="true" phone-number="13451435134">
+              <template slot="option">
+                <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">По телефону 8 800 200 30 00</p>
+                <p class="rt-font-paragraph">Наши менеджеры помогут Вам  с решением проблемы</p>
+              </template>
+            </rt-row-list-item>
+            <rt-row-list-item icon="/static/images/B2B/help9.svg">
+              <template slot="option">
+                <p class="rt-font-paragraph rt-font-bold rt-space-bottom05">В офисе продаж</p>
+                <p class="rt-font-paragraph">Приходите в <a href="#" class="rt-link">наши офисы</a>, узнавайте новости, тестируйте услуги, задавайте вопросы</p>
+              </template>
+            </rt-row-list-item>
+          </rt-row-list>
         </div>
       </div>
     </div>

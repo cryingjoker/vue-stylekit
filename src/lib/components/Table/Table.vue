@@ -6,6 +6,10 @@ export default {
     tabletListType: {
       type: Boolean,
       default: false
+    },
+    noBorders: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -45,7 +49,8 @@ export default {
           <p class="rt-table-title rt-space-bottom rt-td-space-bottom">
             {this.$slots.label}
           </p>
-          <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "")}>
+          {this.$slots.description}
+          <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
             {columns()}
             <div class="rt-table-head" ref="head">
               {this.$slots.header}

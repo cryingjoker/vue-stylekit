@@ -24,7 +24,9 @@
   },
   data: () => ({
     show: false,
-    componentView: 'desktop'
+    componentView: 'desktop',
+    componentLayout: '',
+    iconSize : ''
   }),
   computed: {
     iconImage() {
@@ -32,23 +34,30 @@
       if (this.icon) {
         styles.backgroundImage = "url(" + this.icon + ")";
       }
+      if(this.iconSize) {
+        styles.width = "" + this.iconSize + "px";
+        styles.height = "" + this.iconSize + "px";
+        styles.flexBasis = "" + this.iconSize + "px";
+      }
       return styles;
     }
   },
   mounted(){
+    this.iconSize = this.$parent._props.iconSize;
     const toggleComponentView = () => {
       if(this.buttonInMobile) {
         if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])) {
           this.componentView = 'mobile';
-          console.log(this.componentView);
         } else {
           this.componentView = 'desktop';
-          console.log(this.componentView);
         }
       }
     };
     toggleComponentView();
     window.addEventListener('resize', toggleComponentView);
+    if(this.$parent._props.isHelpBlock){
+      this.componentLayout = this.$el.parentNode.children.length;
+    }
   },
   methods: {
     toggleShow() {
@@ -61,6 +70,7 @@
     this.isProfitList = this.$parent._props.isProfitList;
     this.howItWorks = this.$parent._props.isHowItWorksBlock;
     this.help = this.$parent._props.isHelpBlock;
+    this.contentBlockType = this.$parent._props.contentBlockType;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -120,7 +130,7 @@
             </a>
         } else {
           return (
-            <div class="rt-row-list__item rt-col-4 rt-col-td-2 rt-col-md-3 rtb-help-block">
+            <div class={"rt-row-list__item rt-col-td-2 rt-col-md-3 rtb-help-block" + (this.componentLayout === 4 ? ' rt-col-3' : ' rt-col-4')}>
               <div class="rt-row-list__header">
                 <div class="rt-space-bottom">
                   <div class="rt-row-list__icon" style={this.iconImage}></div>
@@ -130,15 +140,31 @@
             </div>
           )
         }
-      } else if(this.howItWorks){
+      } else if(this.howItWorks) {
         return (
-          <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
+          <div
+            class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits rtb-how-it-works">
             <div class="rt-row-list__header">
               <div class="rt-row-list__image" style={this.iconImage}></div>
               {this.$slots.option}
             </div>
           </div>
         )
+      } else if(this.contentBlockType){
+        return <div class="rt-row-list__item rt-row-list__item--block-type rt-col">
+          <div class="rt-row-list__header">
+            {this.$slots.icon ? (
+              <div class="rt-row-list__icon rt-md-space-bottom rt-row-list__icon--baseline">
+                {this.$slots.icon}
+              </div>
+            ) : null}
+            <div
+              class="rt-row-list__content rt-row-list__content--column"
+            >
+              {this.$slots.option}
+            </div>
+          </div>
+        </div>;
       }else {
         return (
           <div class="rt-row-list__item rt-col-12 rt-col-md-3">

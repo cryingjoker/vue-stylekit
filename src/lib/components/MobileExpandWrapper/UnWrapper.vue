@@ -1,10 +1,3 @@
-<!--<template>-->
-  <!--<div class="rt-expand-wrapper row">-->
-    <!--<slot name="short-content"/>-->
-    <!--<div @click="toggleOpen" class="rtb-unwrap-button rt-link rt-col-md-3 rt-font-paragraph">{{unwrapButtonText}}</div>-->
-    <!--<slot v-if="!isMobileView || !isClosed" name="full-content"/>-->
-  <!--</div>-->
-<!--</template>-->
 <script type="text/jsx">
   import variables from "../../variables.json";
 
@@ -17,6 +10,18 @@
         default: 'inherit'
       },
       unwrapButtonText: {
+        type: String,
+        default: ''
+      },
+      includingDesktop: {
+        type: Boolean,
+        default: false
+      },
+      alwaysVisible:{
+        type: Boolean,
+        default: false
+      },
+      unwrappedButtonText: {
         type: String,
         default: ''
       }
@@ -33,6 +38,9 @@
         } else {
           this.isMobileView = false;
         }
+        if(this.includingDesktop) {
+          this.isMobileView = true;
+        }
       };
       toggleComponentView();
       window.addEventListener('resize', toggleComponentView);
@@ -42,6 +50,14 @@
       toggleOpen($event) {
         this.isClosed = !this.isClosed;
         $event.target.classList.add('rtb-unwrap-button--hidden');
+        if(!this.isClosed) {
+          $event.target.innerText = this.unwrappedButtonText;
+        } else {
+          $event.target.innerText = this.unwrapButtonText;
+        }
+        if(this.alwaysVisible) {
+          $event.target.classList.remove('rtb-unwrap-button--hidden');
+        }
       }
     },
     render(h) {
@@ -52,8 +68,10 @@
       })();
       return <div class="rt-expand-wrapper row">
         {this.$slots['short-content']}
-        <div onClick={this.toggleOpen} class="rtb-unwrap-button rt-link rt-col-md-3 rt-font-paragraph">{this.unwrapButtonText}</div>
         {fullContent}
+        <div onClick={this.toggleOpen}
+             class={"rtb-unwrap-button rt-link rt-col-md-3 rt-font-paragraph" + (this.includingDesktop ? " rtb-unwrap-button--all-resolutions" : "")}
+        >{this.unwrapButtonText}</div>
     </div>
     }
   }

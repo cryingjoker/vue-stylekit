@@ -1,6 +1,6 @@
 <template>
 
-  <div class="app-content rt-col-12 rt-col-md-3">
+  <div class="app-content">
     <div class="rt-container">
       <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
         <div class="app-title"><h1 class="rt-font-hero">Row List</h1></div>
@@ -213,12 +213,15 @@
       </div>
       <div class="rt-space-top35">
         <div class="rt-container">
-          <h2 class="rt-col-12">Почему виртуальная телефония от Ростелекома</h2>
+          <div class="row">
+            <h2 class="rt-col-12">Почему виртуальная телефония от Ростелекома</h2>
+          </div>
         </div>
         <pre-code
           text="
       <rt-row-list :is-profit-list=&quot;true&quot;
-          :columns-quantity=&quot;3&quot; class=&quot;color-block--main-color color-white&quot;>
+                   :columns-quantity=&quot;3&quot;
+                   class=&quot;color-block--main-color color-white&quot;>
         <rt-row-list-item
           icon=&quot;/static/images/B2B/ATS.svg&quot;>
           <template slot=&quot;option&quot;>
