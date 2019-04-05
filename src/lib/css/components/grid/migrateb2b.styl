@@ -5,12 +5,15 @@
 .profit-container__items.row
   display: grid!important
 
+.how-work-container .row,
 .equipment-wrapper .row
   display: grid!important
-
+.rtk-carousel-slide
+  min-width auto!important
 .row.b2b-cards-container .rtk-card-container
   grid-column: 12 span;
   .rtk-carousel__inner.rt-container
+
     @supports (display: grid)
       display: grid
       grid-auto-flow: row
@@ -26,3 +29,5 @@
       @media (max-width: mobile-upper-limit)
         grid-template-columns: 1fr 1fr 1fr
         grid-template-areas: ". . ."
+.displayTabs .tabs-wrapper .row
+  display: flex

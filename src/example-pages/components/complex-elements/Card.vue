@@ -10,6 +10,135 @@
       </div>
       <div class="app-body">
         <div class="row rt-space-top is-b2c">
+          <div class="rt-col-6 rt-col-td-3 rt-col-md-3">
+            <rt-card-buy>
+              <template slot="content">
+                <div class="row">
+                  <div class="rt-col-4 rt-col-md-3 flex-column
+                                                d-flex d-md-block">
+                    <div class="rt-space-left
+                                                    rt-md-space-horizontal rt-md-space-top
+                                                    flex-fill d-flex">
+                      <div class="rt-card-buy__image
+                                                        flex-fill"
+                           style="background-image:url(https://moscow.rt.ru(/sites/default/files/img/videocamera.png)"></div>
+                    </div>
+                  </div>
+                  <div class="rt-col-8 rt-space-vertical rt-col-md-3 rt-md-space-top card-content-block">
+                    <div class="rt-space-right
+                                                    rt-md-space-horizontal">
+                      <p class="rt-font-paragraph
+                                                        rt-font-bold">
+                        Видеокамера в рассрочку и услуга «Видеонаблюдение» в
+                        подарок на 24 месяца
+                      </p>
+                      <p class="rt-space-top
+                                                        color-main05">
+                        При покупке камеры до 28.02.2019
+                      </p>
+                      <div class="rt-space-top">
+                        <div class="d-flex">
+                          <div>
+                            <img src="/sites/default/files/img/icon/smart_home_cloud_1_0.svg"/>
+                          </div>
+                          <div class="rt-space-left05">
+                            <p>Видеокамера</p>
+                            <p class="color-main05">
+                              Камера внутреннего видеонаблюдения
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex rt-space-top">
+                          <div>
+                            <img src="/sites/default/files/img/icon/smart_home_indoor_video_1_0.svg"/>
+                          </div>
+                          <div class="rt-space-left05">
+                            <p>Облачное хранение</p>
+                            <p class="color-main05">
+                              Услуга «Видеонаблюдение» включает 7 дней хранения
+                              видеозаписей в облаке
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="rt-space-top color-main07">
+                        Увеличить срок хранения видеозаписей вы можете в личном
+                        кабинете
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <template slot="form">
+                <form data-vv-scope="form-1">
+                  <div class="rt-col-12">
+                    <div class="rt-space-horizontal">
+                      <p class="rt-font-paragraph
+                                                        rt-font-bold">
+                        Заявка на подключение
+                      </p>
+                      <div class="rt-space-top">
+                        <full-name></full-name>
+                      </div>
+
+                      <div class="row">
+                        <div class="rt-col-6 rt-col-md-3
+                                                            rt-col-td-6">
+                          <div class="rt-space-top">
+                            <street></street>
+                          </div>
+                        </div>
+                        <div class="rt-col-3 rt-col-md-3
+                                                            rt-col-td-3">
+                          <div class="rt-space-top">
+                            <house></house>
+                          </div>
+                        </div>
+                        <div class="rt-col-3 rt-col-md-3
+                                                            rt-col-td-3">
+                          <div class="rt-space-top">
+                            <apartment></apartment>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="rt-col-6 rt-col-md-3
+                                                            rt-col-td-6">
+                          <div class="rt-space-top">
+                            <client-phone></client-phone>
+                          </div>
+                        </div>
+                        <div class="rt-col-6 rt-col-md-3
+                                                            rt-col-td-3">
+                          <div class="rt-space-top">
+                            <email></email>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rt-space-top">
+                        <agree></agree>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </template>
+
+              <template slot="card-footer">
+                <div class="d-flex d-space-between rt-space-top05
+                                            rt-space-bottom">
+                  <div class="flex-end-bottom">Рассрочка</div>
+                  <div class="d-flex">
+                    <rt-price :value="300"></rt-price>
+                  </div>
+                </div>
+              </template>
+
+              <template slot="button">Подключить</template>
+            </rt-card-buy>
+          </div>
+        </div>
+        <div class="row rt-space-top is-b2c">
           <div class="rt-col-4">
             <pre-code
               text="<rt-card>
@@ -575,7 +704,8 @@
                             >
                               <rt-button
                                 class="rt-button-orange rt-button--is-block"
-                                >Подключить</rt-button
+                              >Подключить
+                              </rt-button
                               >
                             </a>
                           </div>
@@ -807,7 +937,7 @@
                 <a href="/bonus">
                   <rt-button
                     class="rt-button-white rt-button-small rt-space-horizontal"
-                    >Подробнее
+                  >Подробнее
                   </rt-button>
                 </a>
               </template>
@@ -843,7 +973,7 @@
                 <a href="https://www.old.rt.ru/press" target="_blank">
                   <rt-button
                     class="rt-button-white rt-button-small rt-space-horizontal"
-                    >Все новости
+                  >Все новости
                   </rt-button>
                 </a>
               </template>
@@ -877,7 +1007,7 @@
                 >
                   <rt-button
                     class="rt-button-white rt-button-small rt-space-horizontal"
-                    >Выберите свою игровую опцию
+                  >Выберите свою игровую опцию
                   </rt-button>
                 </a>
               </template>
@@ -908,7 +1038,7 @@
                 <a href="https://lc.rt.ru" target="_blank">
                   <rt-button
                     class="rt-button-white rt-button-small rt-space-horizontal"
-                    >Подробнее
+                  >Подробнее
                   </rt-button>
                 </a>
               </template>
@@ -942,7 +1072,7 @@
                 <a href="/wink">
                   <rt-button
                     class="rt-button-white rt-button-small rt-space-horizontal"
-                    >Перейти
+                  >Перейти
                   </rt-button>
                 </a>
               </template>
@@ -950,6 +1080,11 @@
           </div>
         </div>
         <div class="row">
+          <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch is-b2c">
+            <pre-code
+              text="<rt-card background-color-type=&quot;purple&quot; :background-blur=&quot;5&quot; :is-white-color=&quot;true&quot;><template slot=&quot;content&quot;><p class=&quot;rt-font-paragraph rt-space-bottom rt-font-bold&quot;>Оплата услуг</p><rt-input value=&quot;&quot; placeholder=&quot;телефон, email или счёт&quot;/><p class=&quot;rt-space-top05 rt-card-text rt-space-right&quot;>Введите номер телефона, email или номер лицевого счёта</p></template><template slot=&quot;footer&quot;><rt-button :is-block=&quot;true&quot; class=&quot;rt-button-small rt-button-white white-wave&quot;>Оплатить</rt-button></template></rt-card>"
+            />
+          </div>
           <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch is-b2c">
             <pre-code
               text="<rt-card background-color-type=&quot;purple&quot; :background-blur=&quot;5&quot; :is-white-color=&quot;true&quot;><template slot=&quot;content&quot;><p class=&quot;rt-font-paragraph rt-space-bottom rt-font-bold&quot;>Оплата услуг</p><rt-input value=&quot;&quot; placeholder=&quot;телефон, email или счёт&quot;/><p class=&quot;rt-space-top05 rt-card-text rt-space-right&quot;>Введите номер телефона, email или номер лицевого счёта</p></template><template slot=&quot;footer&quot;><rt-button :is-block=&quot;true&quot; class=&quot;rt-button-small rt-button-white white-wave&quot;>Оплатить</rt-button></template></rt-card>"
@@ -1699,7 +1834,7 @@
               <template slot="content">
                 <div class="rtb-card__vertical">
                   <div class="rtb-card__vertical__left-column">
-                    <img src="/static/images/B2B/wifi.svg" >
+                    <img src="/static/images/B2B/wifi.svg">
                   </div>
                   <div class="rtb-card__vertical__right-column">
                     <p class="rt-font-paragraph rt-font-bold mb5">
@@ -1709,7 +1844,7 @@
                       Мощные роутеры в аренду, удобный личный кабинет и
                       рекламная платформа
                     </p>
-                    <div class="rt-space-bottom" />
+                    <div class="rt-space-bottom"/>
                     <a href="#">
                       <button
                         class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05"
@@ -1736,7 +1871,7 @@
                   <span class="rt-font-paragraph rt-font-bold">300 минут</span>
                   <rt-hint :simple-tool-tip="true">
                     <slot>
-                      Это всё что угодно,<br >но не адрес электронной почты
+                      Это всё что угодно,<br>но не адрес электронной почты
                     </slot>
                   </rt-hint>
                   <p class="rt-font-small-paragraph color-main025">
@@ -1770,7 +1905,7 @@
                           xmlns:xlink="http://www.w3.org/1999/xlink"
                         >
                           <defs>
-                            <path id="a" d="M17.333 6.067V0H0v12.133h17.333z" />
+                            <path id="a" d="M17.333 6.067V0H0v12.133h17.333z"/>
                           </defs>
                           <g fill="none" fill-rule="evenodd">
                             <circle
@@ -1782,7 +1917,7 @@
                             />
                             <g transform="translate(4.333 6.933)">
                               <mask id="b" fill="#fff">
-                                <use xlink:href="#a" />
+                                <use xlink:href="#a"/>
                               </mask>
                               <path
                                 d="M6.894 8.627V3.506l4.53 2.56-4.53 2.561zM16.97 1.895A2.17 2.17 0 0 0 15.44.362C14.087 0 8.667 0 8.667 0s-5.42 0-6.772.362A2.17 2.17 0 0 0 .362 1.895C0 3.246 0 6.067 0 6.067s0 2.82.362 4.172c.2.745.787 1.333 1.533 1.532 1.351.362 6.772.362 6.772.362s5.42 0 6.772-.362a2.171 2.171 0 0 0 1.532-1.532c.362-1.352.362-4.172.362-4.172s0-2.82-.362-4.172z"
@@ -1852,7 +1987,7 @@
                           xmlns:xlink="http://www.w3.org/1999/xlink"
                         >
                           <defs>
-                            <circle id="a" cx="12.777" cy="13.323" r="12.677" />
+                            <circle id="a" cx="12.777" cy="13.323" r="12.677"/>
                             <path
                               id="b"
                               d="M16.352 26v-9.6h3.103l.465-3.742h-3.568v-2.39c0-1.083.29-1.82 1.786-1.82l1.907-.002V5.1c-.33-.046-1.462-.148-2.78-.148-2.75 0-4.633 1.744-4.633 4.946v2.76h-3.11v3.741h3.11V26h3.72z"
@@ -1864,7 +1999,7 @@
                               fill-rule="nonzero"
                               xlink:href="#a"
                             />
-                            <use fill="#FEFEFE" xlink:href="#b" />
+                            <use fill="#FEFEFE" xlink:href="#b"/>
                           </g>
                         </svg>
                       </div>
@@ -1895,7 +2030,7 @@
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <g fill-rule="nonzero" fill="none">
-                            <circle fill="#FF8400" cx="13" cy="13" r="13" />
+                            <circle fill="#FF8400" cx="13" cy="13" r="13"/>
                             <path
                               d="M14.758 17.274a8.07 8.07 0 0 0 2.522-1.06c.594-.38.774-1.175.4-1.78a1.262 1.262 0 0 0-1.756-.406 5.452 5.452 0 0 1-5.848 0 1.262 1.262 0 0 0-1.755.407c-.375.602-.195 1.4.398 1.78.785.499 1.637.855 2.523 1.059l-2.426 2.461a1.301 1.301 0 0 0 0 1.824c.25.251.574.378.898.378.327 0 .651-.127.901-.378l2.386-2.42 2.386 2.42a1.259 1.259 0 0 0 1.8 0 1.301 1.301 0 0 0 0-1.824l-2.429-2.461zm-1.757-9.817c.993 0 1.799.817 1.799 1.823 0 1.005-.806 1.822-1.799 1.822-.99 0-1.799-.817-1.799-1.822 0-1.006.809-1.823 1.799-1.823zm0 6.224c2.395 0 4.343-1.975 4.343-4.4 0-2.431-1.948-4.406-4.343-4.406S8.658 6.85 8.658 9.278c0 2.429 1.948 4.403 4.343 4.403z"
                               fill="#FFF"
@@ -1910,7 +2045,7 @@
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <g fill-rule="nonzero" fill="none">
-                            <circle fill="#506CFB" cx="13" cy="13" r="13" />
+                            <circle fill="#506CFB" cx="13" cy="13" r="13"/>
                             <path
                               d="M12.76 19.106a6.26 6.26 0 0 1-1.034-.086c-.595.413-1.37.934-2.322 1.563v-2.458A6.309 6.309 0 0 1 6.5 12.803C6.5 9.322 9.302 6.5 12.76 6.5c3.456 0 6.259 2.822 6.259 6.303s-2.803 6.303-6.26 6.303zm0-2.78a2.956 2.956 0 0 0 2.945-2.967c0 .02-5.891 0-5.891 0a2.956 2.956 0 0 0 2.945 2.966z"
                               fill="#FFF"
@@ -1925,7 +2060,7 @@
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <g fill-rule="nonzero" fill="none">
-                            <circle fill="#F5F5F5" cx="13" cy="13" r="13" />
+                            <circle fill="#F5F5F5" cx="13" cy="13" r="13"/>
                             <g transform="translate(6.783 3.391)">
                               <path
                                 d="M8.821 7.724l3.614-1.695c0 2.963-1.99 6.026-3.756 8.943l-3.027 4.622 1.32-8.435 1.849-3.435z"
@@ -1961,12 +2096,12 @@
                               x2="100.005%"
                               y2="-.006%"
                             >
-                              <stop stop-color="#FC0" offset="0%" />
-                              <stop stop-color="#FFE992" offset="100%" />
+                              <stop stop-color="#FC0" offset="0%"/>
+                              <stop stop-color="#FFE992" offset="100%"/>
                             </linearGradient>
                           </defs>
                           <g fill-rule="nonzero" fill="none">
-                            <circle fill="#F5F5F5" cx="13" cy="13" r="13" />
+                            <circle fill="#F5F5F5" cx="13" cy="13" r="13"/>
                             <path
                               fill="url(#a)"
                               d="M14.696 0L0 6.585l6.43 2.532 2.297 7.086z"
@@ -2079,7 +2214,7 @@
                 </div>
               </template>
               <template slot="footer">
-                <div class="rt-space-bottom" />
+                <div class="rt-space-bottom"/>
                 <div class="rtb-card__cost">
                   <rt-price
                     :value="400"
@@ -2132,7 +2267,7 @@
                 </div>
               </template>
               <template slot="footer">
-                <div class="rt-space-bottom" />
+                <div class="rt-space-bottom"/>
                 <div class="rtb-card__cost">
                   <rt-price
                     :value="500"
@@ -2197,7 +2332,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2221,7 +2356,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2244,10 +2379,10 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2271,10 +2406,10 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2298,7 +2433,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2321,7 +2456,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2355,7 +2490,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2378,7 +2513,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2401,7 +2536,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2424,7 +2559,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2449,7 +2584,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2475,7 +2610,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2500,7 +2635,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2523,7 +2658,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2555,17 +2690,17 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
                 <span class="app-documentation__warning"
-                  >работает только при background-image-stand-alone и
+                >работает только при background-image-stand-alone и
                   background-image</span
-                ><br />
+                ><br/>
                 Устанавливает отступ картинки сверху<br>
                 number - любое число становится px <br>string - любые значения
               </div>
@@ -2586,17 +2721,17 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
                 <span class="app-documentation__warning"
-                  >работает только при background-image-stand-alone и
+                >работает только при background-image-stand-alone и
                   background-image</span
-                ><br />
+                ><br/>
                 Устанавливает отступ картинки слева<br>
                 number - любое число становится px <br>string - любые значения
               </div>
@@ -2617,17 +2752,17 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
                 <span class="app-documentation__warning"
-                  >работает только при background-image-stand-alone и
+                >работает только при background-image-stand-alone и
                   background-image</span
-                ><br />
+                ><br/>
                 Устанавливает отступ картинки справа<br>
                 number - любое число становится px <br>string - любые значения
               </div>
@@ -2649,17 +2784,17 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
                 <span class="rt-code rt-font-label rt-code--component"
-                  >String</span
+                >String</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
                 <span class="app-documentation__warning"
-                  >работает только при background-image-stand-alone и
+                >работает только при background-image-stand-alone и
                   background-image</span
-                ><br />
+                ><br/>
                 Устанавливает отступ картинки снизу<br>
                 number - любое число становится px <br>string - любые значения
               </div>
@@ -2680,7 +2815,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Boolean</span
+                >Boolean</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2704,7 +2839,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2712,7 +2847,7 @@
                 колоночной карточки, где 3 колонки - текст, остальное -
                 картинка.
                 <span class="app-documentation__warning"
-                  >Доступно только значение
+                >Доступно только значение
                   <span class="rt-code rt-code--fill">2</span></span
                 >
               </div>
@@ -2734,7 +2869,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2758,7 +2893,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2781,7 +2916,7 @@
             >
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--component"
-                  >Number</span
+                >Number</span
                 >
               </div>
               <div class="app-documentation__value-item rt-col-6">
@@ -2798,13 +2933,15 @@
   </div>
 </template>
 <script>
-import componentsList from "../../componentsList";
+  import componentsList from "../../componentsList";
 
-export default {
-  name: "AppCards",
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {}
-};
+  export default {
+    name: "AppCards",
+    components: componentsList,
+    mounted() {
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>
