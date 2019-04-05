@@ -25,7 +25,8 @@
   data: () => ({
     show: false,
     componentView: 'desktop',
-    componentLayout: ''
+    componentLayout: '',
+    iconSize : ''
   }),
   computed: {
     iconImage() {
@@ -33,10 +34,16 @@
       if (this.icon) {
         styles.backgroundImage = "url(" + this.icon + ")";
       }
+      if(this.iconSize) {
+        styles.width = "" + this.iconSize + "px";
+        styles.height = "" + this.iconSize + "px";
+        styles.flexBasis = "" + this.iconSize + "px";
+      }
       return styles;
     }
   },
   mounted(){
+    this.iconSize = this.$parent._props.iconSize;
     const toggleComponentView = () => {
       if(this.buttonInMobile) {
         if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])) {
