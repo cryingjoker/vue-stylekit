@@ -21,6 +21,7 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
             max-width: "calc(100% - 40px)"
           :not(.row) &,
           .row .row &
+          .row.row-nowrap &
             flex 0 0 ($i * stepGrid)
             max-width ($i * stepGrid)
             margin-left  horizontal-space
@@ -43,6 +44,7 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
         max-width ($i * stepGrid)
         :not(.row) &,
         .row .row &
+        .row.row-nowrap &
           flex 0 0 ($i * stepGrid)
           max-width ($i * stepGrid)
           margin-left horizontal-space
@@ -52,7 +54,8 @@ gridRender(steps, prefix, stepGrid, needMedia, mediaWidth)
           &:nth-child( {12 / $i}n +1)
             margin-left: 0
         @supports (display: grid)
-          .row &
+
+          :not(.row-nowrap).row &
             grid-column $i span;
             max-width: 100%
             flex none
