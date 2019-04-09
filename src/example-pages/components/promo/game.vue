@@ -38,7 +38,7 @@ export default {
     return <div class="rt-l-game rt-dark-theme">
       <div class="color-block--game-promo-color rt-fill-viewport"
            style={{
-             backgroundImage: "url(/static/images/game/rostelecom_game.jpg)",
+             backgroundImage: "url(/static/images/game/wargaming-bg.png)",
              backgroundPosition: "center",
              backgroundSize: "cover",
              backgroundRepeat: "no-repeat"
@@ -129,46 +129,40 @@ export default {
                         </g>
                       </g>
                     </svg>
+                    
+                    <div class="row rt-space-bottom2">
+                      <div class="col flex-start-center rt-space-left05">
+                        <div class=""><img src="/static/images/game/game-icon5.png" alt=""
+                                                              width="74"/></div>
+                      </div>
+                      <div class="col flex-start-center">
+                        <div class="rt-space-left15 rt-md-space-right-none"><img
+                          src="/static/images/game/game-icon6.png" alt="" width="50"/></div>
+                      </div>
+                      <div class="col flex-start-center">
+                        <div class="rt-space-left15 rt-md-space-right-none rt-td-space-right3 "><img
+                          src="/static/images/game/game-icon8.png" alt="" width="61"/></div>
+                      </div>
+                    </div>
                     <rt-color-line-text
                       class="rt-l-game-main-text"
                       color-icon="orange"
                       fill-color="white">
-                      <template slot="label">Level up* <br/> вашего интернета</template>
+                      <template slot="label">Сражайся <br/>по всем фронтам</template>
                     </rt-color-line-text>
+                    <p class="rt-space-bottom" style="margin-top:-15px">быстрый интернет <br/> и уникальные игровые бонусы</p>
                     <div class="d-flex">
                       <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/></div>
                       <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="250" currency="Мбит" time-interval="сек."/></div>
-                      <div class="rt-orange-breaker-item"><span class="color-white">быстрый интернет и уникальные <br/>игровые бонусы</span></div>
                     </div>
-                    <div class="rt-space-top2">
+                    <div class="rt-space-top">
                       <rt-button class="rt-button-orange">Подключить</rt-button>
                     </div>
                   </div>
                 </div>
                 <div class="rt-font-center  color-white rt-space-bottom6 rt-md-space-bottom">
-                  <div class="rt-l-internet-speed d-inline-block">
-                    <p class="rt-l-internet-speed__value">250</p>
-                    <span class="rt-l-internet-speed__text">Мбит/сек</span>
-                  </div>
-                  <div class="rt-l-internet-speed-separator  d-inline-block">
-                    <svg width="42px" height="81px" viewBox="0 0 42 81" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                         stroke-linecap="square">
-                        <g id="553-LP_Igrovoi_v1" transform="translate(-705.000000, -648.000000)" fill-rule="nonzero"
-                           stroke="#FFFFFF">
-                          <g id="Group" transform="translate(572.000000, 642.000000)">
-                            <path d="M133.5,86.5 L174.5,6.5" id="Line-3"></path>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="rt-l-internet-speed  d-inline-block color-white">
-                    <p class="rt-l-internet-speed__value">850</p>
-                    <span class="rt-l-internet-speed__text">Мбит/сек</span>
-                  </div>
-                  <br/>
+
+
                   <svg width="62px" height="32px" viewBox="0 0 62 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
                        class="rt-l-bottom-scroll-arrow md-d-none">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -186,417 +180,51 @@ export default {
           </div>
         </div>
       </div>
-      <div class="rt-fill-viewport relative">
-        <rt-banner is-fullscreen-image={true} has-custom-content={true} content-min-height="100vh"
-                   content-height="inherit"
-                   scroll-to-next-image={true}
-                   paginator-position="top"
-                   mobile-image-height="300px"
-                   mobile-image-max-height="300px"
-
-                   show-navigation-array={true} without-empty-column={true} dont-pause-on-hover={true}>
-          <rt-banner-item
-            content-mobile-min-height="0"
-            has-custom-content={true}
-            content-min-height="100vh"
-            class="flex-column row flex-fill max-full-width flex-column d-space-between"
-            background-image="/static/images/game/slide1.jpg"
-            background-color="main-color">
-            <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
-              <div class="row flex-fill max-full-width rt-banner__top-content">
-                <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
-                  <div
-                    class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
-                    <div class="row rt-space-bottom15">
-                      <div class="col flex-start-center rt-space-left05">
-                        <div class="rt-space-bottom"><img src="/static/images/game/WF-Standard-Logo_White.png" alt=""
-                                                          width="130"/></div>
-                      </div>
-                    </div>
-                    <rt-color-line-text
-                      class="rt-l-game-main-text"
-                      color-icon="orange"
-                      fill-color="white">
-                      <template slot="label">Подарки и интернет <br/>для настоящих бойцов</template>
-                      <template slot="content">и получай бонусы в играх World of tanks, <br/> Word of ships, World
-                        of
-                        Warplanes
-                      </template>
-                    </rt-color-line-text>
-                    <div class="row">
-                      <div class="col rt-space-left05 md-d-none">
-                        <rt-button class="rt-button-orange">Подключить</rt-button>
-                      </div>
-                      <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-fill-none rt-space-bottom3 max-full-width rt-banner__bottom-content">
-              <div class="row row--tablet-only-scroll">
-                <div
-                  class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/WF-weapon.png" alt="" height="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Крутые пушки
-                  </p>
-                  <p class="color-white05 rt-font-small-paragraph">Пользуйся любой из 4 крутых игровых <br/> пушек,
-                    пока подключена игровая опция
-                  </p>
-                </div>
-                <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/WF-K.png" alt="" height="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Кредиты каждый день</p>
-                  <p class="color-white05 rt-font-small-paragraph">Кредиты начисляются ежедневно, <br/> пока активна
-                    игровая опция</p>
-                </div>
-                <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
-                  <img src="/static/images/game/WF-weapon-forever.png" alt="" height="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Оружие навсегда</p>
-                  <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным
-                    «Боевым братством» <br/> корабля с тремя глазами</p>
-                </div>
-              </div>
-            </div>
-          </rt-banner-item>
-          <rt-banner-item
-            content-mobile-min-height="0"
-            has-custom-content={true}
-            content-min-height="100vh"
-            class="flex-column row flex-fill max-full-width flex-column d-space-between"
-            background-image="/static/images/game/slide2.jpg"
-            background-color="main-color">
-            <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
-              <div class="row flex-fill max-full-width rt-banner__top-content">
-                <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
-                  <div
-                    class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
-                    <div class="row rt-space-bottom2">
-                      <div class="col flex-start-center rt-space-left05">
-                        <div class="rt-space-bottom"><img src="/static/images/game/forgame_logo.png" alt=""
-                                                          width="130"/></div>
-                      </div>
-                    </div>
-                    <rt-color-line-text
-                      class="rt-l-game-main-text"
-                      color-icon="orange"
-                      fill-color="white">
-                      <template slot="label">Получай подарки <br/>в лучших играх <br/>Фогейма</template>
-                      <template slot="content">и получай бонусы в играх World of tanks, <br/> Word of ships, World of
-                        Warplanes
-                      </template>
-                    </rt-color-line-text>
-                    <div class="row">
-                      <div class="col rt-space-left05 md-d-none">
-                        <rt-button class="rt-button-orange">Подключить</rt-button>
-                      </div>
-                      <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-fill-none rt-space-bottom3 max-full-width rt-banner__bottom-content">
-              <div class="row row--tablet-only-scroll">
-                <div
-                  class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/4G-bonus.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Бонусы за стаж
-                  </p>
-                </div>
-                <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/4G-gift.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Подарки при подключении</p>
-                </div>
-                <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/4G-baff.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Ежедневные баффы</p>
-                </div>
-              </div>
-            </div>
-          </rt-banner-item>
-          <rt-banner-item
-            content-mobile-min-height="0"
-            has-custom-content={true}
-            content-min-height="100vh"
-            class="flex-column row flex-fill max-full-width flex-column d-space-between"
-            background-image="/static/images/game/slide3.jpg"
-            background-color="main-color">
-            <div class="rt-col-12 max-full-width flex-fill rt-md-fill-viewport-height flex-center-center">
-              <div class="row flex-fill max-full-width rt-banner__top-content">
-                <div class="rt-col-5 rt-col-td-6 rt-col-md-3 flex-start-center flex-fill">
-
-                  <div
-                    class="flex-column rt-space-vertical2 rt-td-space-top4  rt-md-space-top2 rt-td-space-left3 rt-md-space-horizontal-none">
-                    <div class="row rt-space-bottom2">
-                      <div class="col flex-start-center rt-space-left05">
-                        <div class="rt-space-bottom"><img src="/static/images/game/game-icon5.png" alt=""
-                                                          width="100"/></div>
-                      </div>
-                      <div class="col flex-start-center">
-                        <div class="rt-space-left15 rt-md-space-right-none"><img
-                          src="/static/images/game/game-icon6.png" alt="" width="100"/></div>
-                      </div>
-                      <div class="col flex-start-center">
-                        <div class="rt-space-left15 rt-md-space-right-none rt-td-space-right3 "><img
-                          src="/static/images/game/game-icon8.png" alt="" width="100"/></div>
-                      </div>
-                    </div>
-                    <rt-color-line-text
-                      class="rt-l-game-main-text"
-                      color-icon="orange"
-                      fill-color="white">
-                      <template slot="label">Сражайся <br/>по всем фронтам</template>
-                      <template slot="content">и получай бонусы в играх World of tanks, <br/> Word of ships, World of
-                        Warplanes
-                      </template>
-                    </rt-color-line-text>
-                    <div class="row">
-                      <div class="col rt-space-left05 md-d-none">
-                        <rt-button class="rt-button-orange">Подключить</rt-button>
-                      </div>
-                      <div class="col flex-start-center rt-space-left2 rt-md-space-left05">
-                        <a href="#" class="d-inline-block color-white">Подробнее об игре</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex-fill-none rt-space-bottom3 max-full-width rt-banner__bottom-content">
-              <div class="row td-flex-start-center">
-                <div
-                  class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100
-                    (Р)
-                  </p>
-                  <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре
-                  </p>
-                </div>
-                <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/game-icon3.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер
-                    «Адмирал Макаров»</p>
-                  <p class="color-white05 rt-font-small-paragraph">Крейсер VI уровня и слот в порту</p>
-                </div>
-                <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
-                  <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Бородатая команда</p>
-                  <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным
-                    «Боевым братством» <br/> корабля с тремя глазами</p>
-                </div>
-                <div class="rt-col-3 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
-                  <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
-                  <p class="color-white rt-space-bottom rt-space-top">Бородатая команда</p>
-                  <p class="color-white05 rt-font-small-paragraph">На 100% бородатая езда <br/> с прокачанным
-                    «Боевым братством» <br/> корабля с тремя глазами</p>
-                </div>
-              </div>
-            </div>
-          </rt-banner-item>
-
-        </rt-banner>
-        <svg width="62px" height="32px" viewBox="0 0 62 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             class="rt-l-bottom-scroll-arrow td-d-none">
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="553-LP_Igrovoi_v1" transform="translate(-703.000000, -744.000000)" fill="#FFFFFF"
-               fill-rule="nonzero">
-              <polygon id="Path-3"
-                       points="703 744.090964 733.885222 775.112818 764.995496 744 762.183171 744 733.885222 772.305037 705.599095 744"></polygon>
-            </g>
-          </g>
-        </svg>
-      </div>
       <div class="rt-fill-viewport relative color-block--black color-white rt-dark-theme">
         <div class="rt-container">
           <div class="rt-col-12">
-            <div class="row rt-space-top4 flex-row-reverse">
-              <div class="rt-col-6 rt-col-md-3 md-d-none  rt-col-td-6 rt-td-space-left">
-                <p class="rt-font-h2 rt-space-bottom rt-space-bottom2 d-none td-d-block md-d-none">Подробнее о
-                  тарифе</p>
-                <div class="row rt-space-top4">
-                  <div class="rt-col-4 rt-font-center rt-col-md-3 rt-td-font-left">
-                    <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="553-LP_Igrovoi_arrow" transform="translate(-779.000000, -1842.000000)"
-                           stroke="#FFFFFF">
-                          <g id="Group-10" transform="translate(741.000000, 1844.000000)">
-                            <g id="Group-17" transform="translate(40.000000, 0.000000)">
-                              <circle id="Oval-2" stroke-width="3" cx="50" cy="50" r="50"></circle>
-                              <g id="icon_110-(1)" transform="translate(18.000000, 18.000000)" stroke-width="2">
-                                <circle id="Oval" cx="32" cy="32" r="32"></circle>
-                                <ellipse id="Oval" cx="32.2666667" cy="32" rx="17.6" ry="31.8584874"></ellipse>
-                                <path d="M32,0 L32,64" id="Shape"></path>
-                                <path d="M0,32 L64,32" id="Shape"></path>
-                                <path d="M4,16 L59,16" id="Shape"></path>
-                                <path d="M5.33333333,49 L59.009316,49" id="Shape"></path>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <p class="rt-space-top color-white">Высокая скорость</p>
-                    <p class="rt-space-top05 color-white05 rt-font-label">Интернет <br/> для игр</p>
-                  </div>
-                  <div class="rt-col-4 rt-font-center rt-col-md-3 rt-td-font-left">
-                    <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="553-LP_Igrovoi_arrow" transform="translate(-975.000000, -1842.000000)"
-                           stroke="#FFFFFF">
-                          <g id="Group-15" transform="translate(937.000000, 1844.000000)">
-                            <g id="internet_games_2" transform="translate(40.000000, 0.000000)">
-                              <circle id="Oval-2" stroke-width="3" cx="50" cy="50" r="50"></circle>
-                              <path
-                                d="M78.5214059,56.4053763 C77.7602943,47.6048102 75.5839637,38.958794 72.0666268,30.7500839 C69.4208578,24.5768669 60.7500529,23.0313674 55.8002384,27.7978285 C54.8579097,28.7075657 53.8085766,29.511928 52.7057414,30.2390153 C51.0523514,31.3278899 48.5170385,31.5878149 46.4131947,30.3127777 C45.2413244,29.5997405 44.1781843,28.7391782 43.1996122,27.7978285 C38.2515235,23.0313674 29.5807187,24.5768669 26.9349496,30.7500839 C23.4176128,38.958794 21.2412822,47.6048102 20.4801705,56.4053763 L20.0297167,61.6021186 C19.3790612,69.1276476 29.5738152,72.9913965 34.841191,67.2168482 L41.4305885,59.9951503 C42.9044873,58.3794008 45.0739143,57.4468323 47.360701,57.4468323 L49.5007882,57.4468323 L51.6391495,57.4468323 C53.9276621,57.4468323 56.0970892,58.3794008 57.5709879,59.9951503 L64.1586595,67.2168482 C69.4260354,72.9913965 79.6225153,69.1276476 78.9701339,61.6021186 L78.5214059,56.4053763 Z"
-                                id="Stroke-173" stroke-width="2" stroke-linejoin="round"></path>
-                              <path d="M45,44 L29,44" id="Stroke-174" stroke-width="2" stroke-linejoin="round"></path>
-                              <path d="M36,53 L36,37" id="Stroke-175" stroke-width="2" stroke-linejoin="round"></path>
-                              <path
-                                d="M67,43 C67,39.6870144 64.3129856,37 61,37 C57.6853496,37 55,39.6870144 55,43 C55,46.3146504 57.6853496,49 61,49 C64.3129856,49 67,46.3146504 67,43 Z"
-                                id="Stroke-176" stroke-width="2" stroke-linejoin="round"></path>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <p class="rt-space-top color-white">Преимущества</p>
-                    <p class="rt-space-top05 color-white05 rt-font-label">Бонусы и игровые <br/> преимущества </p>
-                  </div>
-                  <div class="rt-col-4 rt-font-center rt-col-md-3 rt-td-font-left">
-                    <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="553-LP_Igrovoi_arrow" transform="translate(-975.000000, -1842.000000)"
-                           stroke="#FFFFFF">
-                          <g id="Group-15" transform="translate(937.000000, 1844.000000)">
-                            <g id="internet_games_2" transform="translate(40.000000, 0.000000)">
-                              <circle id="Oval-2" stroke-width="3" cx="50" cy="50" r="50"></circle>
-                              <path
-                                d="M78.5214059,56.4053763 C77.7602943,47.6048102 75.5839637,38.958794 72.0666268,30.7500839 C69.4208578,24.5768669 60.7500529,23.0313674 55.8002384,27.7978285 C54.8579097,28.7075657 53.8085766,29.511928 52.7057414,30.2390153 C51.0523514,31.3278899 48.5170385,31.5878149 46.4131947,30.3127777 C45.2413244,29.5997405 44.1781843,28.7391782 43.1996122,27.7978285 C38.2515235,23.0313674 29.5807187,24.5768669 26.9349496,30.7500839 C23.4176128,38.958794 21.2412822,47.6048102 20.4801705,56.4053763 L20.0297167,61.6021186 C19.3790612,69.1276476 29.5738152,72.9913965 34.841191,67.2168482 L41.4305885,59.9951503 C42.9044873,58.3794008 45.0739143,57.4468323 47.360701,57.4468323 L49.5007882,57.4468323 L51.6391495,57.4468323 C53.9276621,57.4468323 56.0970892,58.3794008 57.5709879,59.9951503 L64.1586595,67.2168482 C69.4260354,72.9913965 79.6225153,69.1276476 78.9701339,61.6021186 L78.5214059,56.4053763 Z"
-                                id="Stroke-173" stroke-width="2" stroke-linejoin="round"></path>
-                              <path d="M45,44 L29,44" id="Stroke-174" stroke-width="2" stroke-linejoin="round"></path>
-                              <path d="M36,53 L36,37" id="Stroke-175" stroke-width="2" stroke-linejoin="round"></path>
-                              <path
-                                d="M67,43 C67,39.6870144 64.3129856,37 61,37 C57.6853496,37 55,39.6870144 55,43 C55,46.3146504 57.6853496,49 61,49 C64.3129856,49 67,46.3146504 67,43 Z"
-                                id="Stroke-176" stroke-width="2" stroke-linejoin="round"></path>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <p class="rt-space-top color-white">Любимые игры</p>
-                    <p class="rt-space-top05 color-white05 rt-font-label">Возможность менять игру <br/> раз в 24
-                      часа
-                    </p>
-                  </div>
-                  <div
-                    class="rt-col-4 rt-font-center rt-space-top2 rt-col-md-3 mobile-icon rt-icon rt-icon--not-active rt-td-font-left">
-                    <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="553-LP_Igrovoi_arrow" transform="translate(-769.000000, -2059.000000)">
-                          <g id="Group-8-Copy-2" transform="translate(739.000000, 2061.000000)">
-                            <g id="Group-7" transform="translate(32.000000, 0.000000)">
-                              <circle id="Oval-2-Copy" stroke="#FFFFFF" stroke-width="3" cx="50" cy="50"
-                                      r="50"></circle>
-                              <path d="M36.2443678,33 L67.8173612,33" id="Stroke-381" stroke="#FFFFFF"
-                                    stroke-width="2" stroke-linejoin="round"></path>
-                              <path d="M32.3817555,69 L66.7976315,69" id="Stroke-383" stroke="#FFFFFF"
-                                    stroke-width="2" stroke-linejoin="round"></path>
-                              <path
-                                d="M52.4287136,75.7920966 C52.4287136,77.0036377 51.4012587,77.9865166 50.1323905,77.9865166 C48.8615911,77.9865166 47.8322049,77.0036377 47.8322049,75.7920966 C47.8322049,74.5805555 48.8615911,73.5976766 50.1323905,73.5976766 C50.7426833,73.5939885 51.3298004,73.8226507 51.7604816,74.233874 C52.1930942,74.6469413 52.4345075,75.2093767 52.4287136,75.7920966"
-                                id="Fill-385" fill="#FFFFFF"></path>
-                              <path
-                                d="M32.3817555,55.8689318 L32.3817555,75.4988487 C32.3817555,78.5525962 34.977431,81.031 38.175674,81.031 L61.0809652,81.031 C64.2811396,81.031 66.8748837,78.5525962 66.8748837,75.4988487 L66.8748837,27.4226098 C66.832395,24.3983671 64.25217,21.9642205 61.0809652,21.9642205 L38.175674,21.9642205 C34.977431,21.9642205 32.3817555,24.4407802 32.3817555,27.4963718 L32.3817555,31.9036523"
-                                id="Stroke-387" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
-                              <path
-                                d="M49.3537537,43.3957747 L46.9338271,45.4094777 L41.4662993,49.8093821 L42.4029828,53.462446 L43.1851618,56.4442755 L43.9654095,59.4261051 C44.4347169,61.4398082 43.3415976,62.1848045 41.5454829,61.141072 L38.8107533,59.5017112 L36.0779551,57.9361123 L32.6440927,55.9980153 L29.28362,57.9361123 L26.5508218,59.5017112 L23.8180235,61.141072 C21.9446565,62.1848045 20.8496059,61.4398082 21.3961656,59.4261051 L22.1783446,56.4442755 L22.9585923,53.462446 L23.8180235,49.8093821 L18.4296793,45.4094777 L16.0078214,43.3957747 C14.3700737,42.0533059 14.7601976,40.7864433 16.9464362,40.6370752 L20.1485418,40.4139451 L27.2557485,39.8920788 L29.9885468,33.6278395 L31.2361705,30.795378 C32.0956018,28.855437 33.4243404,28.855437 34.2818404,30.795378 L35.5313955,33.6278395 L38.266125,39.8920788 L45.3694691,40.4139451 L48.5735061,40.6370752 C50.6033088,40.8602053 50.995364,42.0533059 49.3537537,43.3957747 Z"
-                                id="Stroke-423" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <p class="rt-space-top color-white">Мобильная связь</p>
-                    <p class="rt-space-top05 color-white05 rt-font-label">Мобильный <br/> интернет</p>
-                  </div>
-                  <div
-                    class="rt-col-4 rt-font-center rt-space-top2 rt-col-md-3 tv-icon rt-icon rt-icon--not-active rt-td-font-left">
-                    <svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="553-LP_Igrovoi_arrow" transform="translate(-971.000000, -2059.000000)">
-                          <g id="Group-8-Copy-3" transform="translate(938.000000, 2061.000000)">
-                            <g id="Group-7" transform="translate(35.000000, 0.000000)">
-                              <circle id="Oval-2-Copy" stroke="#FFFFFF" stroke-width="3" cx="50" cy="50"
-                                      r="50"></circle>
-                              <g id="icon_410" transform="translate(23.000000, 29.000000)">
-                                <path
-                                  d="M23.7007874,31 C22.8740157,31 22.4015748,30.3850267 22.4015748,29.6470588 L22.4015748,21.0374332 L12.5984252,21.0374332 L12.5984252,29.6470588 C12.5984252,30.3850267 12.007874,31 11.2992126,31 C10.5905512,31 10,30.3850267 10,29.6470588 L10,9.35294118 C10,8.61497326 10.5905512,8 11.2992126,8 C12.007874,8 12.5984252,8.61497326 12.5984252,9.35294118 L12.5984252,18.4545455 L22.4015748,18.4545455 L22.4015748,9.35294118 C22.4015748,8.61497326 22.992126,8 23.7007874,8 C24.4094488,8 25,8.61497326 25,9.35294118 L25,29.6470588 C25,30.3850267 24.4094488,31 23.7007874,31 Z"
-                                  id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-                                <path
-                                  d="M37.2580645,30 L31.3306452,30 C30.6048387,30 30,29.3956044 30,28.6703297 L30,9.32967033 C30,8.6043956 30.6048387,8 31.3306452,8 L37.2580645,8 C44.0322581,8 45,12.956044 45,16.2197802 L45,21.9010989 C45,25.1648352 44.0322581,30 37.2580645,30 Z M42.3387097,16.2197802 C42.3387097,13.3186813 41.4919355,10.5384615 37.1370968,10.5384615 L32.7822581,10.5384615 L32.7822581,27.4615385 L37.1370968,27.4615385 C41.4919355,27.4615385 42.3387097,24.5604396 42.3387097,21.7802198 L42.3387097,16.2197802 Z"
-                                  id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-                                <path
-                                  d="M6.50669643,0 L48.4933036,0 C52.0535714,0 55,2.96202532 55,6.54113924 L55,32.4588608 C55,36.0379747 52.0535714,39 48.4933036,39 L6.50669643,39 C2.94642857,39 0,36.0379747 0,32.4588608 L0,6.54113924 C0,2.96202532 2.94642857,0 6.50669643,0 Z"
-                                  id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
-                                <polygon id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero"
-                                         points="24 39 30 39 30 45 24 45"></polygon>
-                                <path d="M12,46 L42,46" id="Shape" stroke="#FFFFFF" stroke-width="2"
-                                      stroke-linecap="round"></path>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <p class="rt-space-top color-white">Интерактивное ТВ</p>
-                    <p class="rt-space-top05 color-white05 rt-font-label">Любимые каналы, фильмы <br/> и сериалы
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div
-                    class="rt-space-bottom6 rt-space-left15 rt-td-space-left-none rt-space-top2 rt-col-md-3">
-                    <div
-                      class="rt-l-internet-speed d-inline-block rt-space-left rt-md-space-left-none rt-td-space-left05">
-                      <p class="rt-l-internet-speed__value">250</p>
-                      <span class="rt-l-internet-speed__text">Мбит/сек</span>
-                    </div>
-                    <div class="rt-l-internet-speed-separator  d-inline-block">
-                      <svg width="42px" height="81px" viewBox="0 0 42 81" version="1.1"
-                           xmlns="http://www.w3.org/2000/svg">
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                           stroke-linecap="square">
-                          <g id="553-LP_Igrovoi_v1" transform="translate(-705.000000, -648.000000)"
-                             fill-rule="nonzero"
-                             stroke="#FFFFFF">
-                            <g id="Group" transform="translate(572.000000, 642.000000)">
-                              <path d="M133.5,86.5 L174.5,6.5" id="Line-3"></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    <div class="rt-l-internet-speed  d-inline-block">
-                      <p class="rt-l-internet-speed__value  color-orange">850</p>
-                      <span class="rt-l-internet-speed__text">Мбит/сек</span>
-                    </div>
-                  </div>
-                </div>
+            <div class="row td-flex-start-center rt-space-top4">
+              <div
+                class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
+                <img src="/static/images/game/game-icon2.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный <br/> премиум Танк Т-44-100
+                  (Р)
+                </p>
+                <p class="color-white05 rt-font-small-paragraph">Танк VIII уровня и слот <br/> в ангаре
+                </p>
               </div>
-              <div class="rt-col-1 md-d-none"></div>
+              <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
+                <img src="/static/images/game/game-icon3.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный премиум <br/> крейсер
+                  «Адмирал Макаров»</p>
+                <p class="color-white05 rt-font-small-paragraph">Крейсер VI уровня и слот в порту</p>
+              </div>
+              <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-vertical">
+                <img src="/static/images/game/game-icon9.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Эксклюзивный Премиум<br/>  самолет Яковлев ЯК-3Т</p>
+                <p class="color-white05 rt-font-small-paragraph">Самолет VI уровня и слот в ангаре</p>
+              </div>
+            </div>
+            <div class="row td-flex-start-center rt-space-top4 rt-md-space-top">
+              <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
+                <img src="/static/images/game/game-icon4.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Полная боевая готовность</p>
+                <p class="color-white05 rt-font-small-paragraph">Прокачанный экипаж</p>
+              </div>
+              <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
+                <img src="/static/images/game/game-icon10.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Премиум аккаунт</p>
+                <p class="color-white05 rt-font-small-paragraph">Предоставляется на весь<br/>  срок пользования опцией</p>
+              </div>
+              <div class="rt-col-4 rt-font-center rt-col-td-2 rt-col-md-3 rt-md-space-top">
+                <img src="/static/images/game/game-icon11.png" alt="" width="100"/>
+                <p class="color-white rt-space-bottom rt-space-top">Скоростной интернет</p>
+                <p class="color-white05 rt-font-small-paragraph">Приоритезация игрового трафика <br/> и низкий пинг во всех играх по опции</p>
+              </div>
+            </div>
+          </div>
+          <div class="rt-col-12">
+            <div class="row rt-space-top4">
               <div class="rt-col-5 rt-col-md-3 rt-col-td-6 rt-td-space-left">
                 <p class="rt-font-h2 rt-space-bottom">Заявка на подключение</p>
                 <div class="row rt-space-top">
@@ -614,7 +242,7 @@ export default {
                   <div class="row rt-space-top2">
                     <div class="rt-col-8 rt-col-md-3">
                       <rt-input placeholder="Телефон" value=""/>
-                    </div>
+                    </div>‭
                   </div>
                   <div class="row rt-space-top2">
                     <div class="rt-col-8 rt-col-md-3">
