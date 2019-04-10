@@ -29,6 +29,10 @@ export default {
     iconSize: {
       type: String,
       default: ''
+    },
+    alignLeft: {
+      type: Boolean,
+      default: false
     }
   },
   render(h){
