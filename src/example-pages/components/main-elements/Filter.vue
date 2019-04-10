@@ -2439,7 +2439,7 @@
                 <rt-popup
                   popup-wrapper-classes="rt-col-3"
                   popup-classes="rt-col-td-3 rt-col-md-3"
-                  :show-on-desctop="false"
+                  :show-on-desktop="false"
                   name="filter"
                 >
                   <div class="rt-close d-none td-d-block">
