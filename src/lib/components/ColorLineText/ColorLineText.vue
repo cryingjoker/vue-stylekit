@@ -1,4 +1,5 @@
 <script type="text/jsx">
+  import variables from '../../variables.json';
 export default {
   name: "RtColorLineText",
   props: {
@@ -12,8 +13,23 @@ export default {
     },
     isWhiteColor: {
       type: Boolean,
-      default: null
+      default: false
     }
+  },
+  data: () => ({
+    isMobile: false
+  }),
+  mounted(){
+    const adjust = () => {
+      setTimeout(() => {
+        this.isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
+        console.log(this.isMobile)
+      },0);
+    };
+    window.addEventListener('resize', () => {
+      adjust()
+    });
+    adjust();
   },
   computed: {
     colorLineIconClass() {
@@ -28,6 +44,7 @@ export default {
     },
     fillColorClass() {
       let className = "";
+      this.isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
       if (this.fillColor) {
         className += "color-line-text--" + this.fillColor;
       }
@@ -38,6 +55,8 @@ export default {
     }
   },
   render(h){
+//    let isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
+//    console.log(isMobile);
     const icon = ()=>{
       return <svg
           class={"color-line-paragraph-icon " + this.colorLineIconClass}
@@ -56,7 +75,7 @@ export default {
       </svg>;
     };
     const label = ()=>{
-      if(this.$slots.content) {
+      if(this.$slots.content && !this.isMobile) {
         return <p class="rt-font-banner-label color-line color-line-label">
         <span class={'color-line-text ' + this.fillColorClass}
         >{this.$slots.label}</span>
@@ -69,13 +88,25 @@ export default {
       }
     };
     const content = ()=>{
-      if(this.$slots.content) {
-        return <p class="color-line color-line--is-paragraph rt-space-bottom">
+      if(!this.isMobile) {
+        if(this.$slots.content) {
+          return <p class="color-line color-line--is-paragraph rt-space-bottom">
           <span
             class={'color-line-text rt-font-paragraph ' + this.fillColorClass}>{this.$slots.content}{icon()}</span>
-        </p>;
-      }else{}
-      return null;
+          </p>;
+        }else{
+          return null;
+        }
+      }else {
+        if(this.$slots.content) {
+          return <p class="color-line color-line--is-paragraph rt-space-bottom">
+          <span
+            class={'color-line-text rt-font-paragraph ' + this.fillColorClass}>{this.$slots.content}</span>
+          </p>;
+        }else{
+          return null;
+        }
+      }
     };
     return <div class="color-line-wrapper">
       {label()}
