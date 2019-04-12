@@ -1,15 +1,17 @@
 .{b2bAppName}-popup-wrapper
-  display none
+  //display none
   position fixed
-  top 0
+  top -100vh
   left 0
   right 0
   bottom 0
   width 100vw
   height 100vh
   z-index 999
+  transition top .4s ease-in-out
   &--active
-    display block
+    //display block
+    top 0
   &--mobile-only
     @media (min-width: desktop-lower-limit)
       display none
