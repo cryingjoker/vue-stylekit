@@ -168,6 +168,7 @@ export default {
         }
       }
       this.liftPlaceholder();
+      e.preventDefault();
     },
     emitSelected(value) {
       this.$emit("rt-selected", value);

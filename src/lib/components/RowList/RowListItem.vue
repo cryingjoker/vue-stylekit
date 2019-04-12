@@ -71,6 +71,7 @@
     this.howItWorks = this.$parent._props.isHowItWorksBlock;
     this.help = this.$parent._props.isHelpBlock;
     this.contentBlockType = this.$parent._props.contentBlockType;
+    this.alignLeft = this.$parent._props.alignLeft;
     if(this.columnsQuantity === 1){
       if (this.$slots.moreInfo) {
         return (
@@ -116,7 +117,7 @@
         );
       } else if(this.companyProfits) {
         return (
-          <div class="rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits">
+          <div class={"rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits" + (this.alignLeft ? " rtb-company-profits--left" : "")}>
             <div class="rt-row-list__header">
               <div class="rt-row-list__icon" style={this.iconImage}></div>
               {this.$slots.option}
