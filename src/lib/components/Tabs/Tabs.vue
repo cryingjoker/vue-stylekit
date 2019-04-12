@@ -17,6 +17,10 @@ export default {
     navigationHorizontalPadding: {
       type: Number,
       default: null
+    },
+    vertical: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -92,17 +96,27 @@ export default {
     }
   },
   render(){
-    return <div class={"rt-tabs "+(this.deviceType && !this.dontUseAdaptive ? "rt-tabs-"+this.deviceType : '')}>
-      <div class="rt-tabs-navigation-wrapper">
-        <div style={this.navigationStyle} class="rt-tabs-navigation">
-
+    if(this.vertical && window.innerWidth <= this.mobileSize) {
+      return <div class="rt-tabs rt-tabs--vertical">
+        <div class="rt-tabs-navigation">
           {this.$slots.navigation}
-      </div>
-    </div>
-    <div class="rt-tabs-content">
-      {this.$slots.content}
-    </div>
-  </div>;
+        </div>
+      </div>;
+    } else {
+      return <div class={"rt-tabs " +
+      (this.deviceType && !this.dontUseAdaptive ? "rt-tabs-"+this.deviceType : '') +
+      (this.vertical ? " rt-tabs--vertical" : "")}>
+        <div class="rt-tabs-navigation-wrapper">
+          <div style={this.navigationStyle} class="rt-tabs-navigation">
+
+            {this.$slots.navigation}
+          </div>
+        </div>
+        <div class="rt-tabs-content">
+          {this.$slots.content}
+        </div>
+      </div>;
+    }
   }
 };
 </script>

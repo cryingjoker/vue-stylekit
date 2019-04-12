@@ -67,3 +67,4 @@
  export { default as Opportunity } from './Opportunity/Opportunity.vue';
  export { default as OpportunityItem } from './Opportunity/OpportunityItem.vue';
  export { default as UnWrapper } from './MobileExpandWrapper/UnWrapper.vue';
+ export { default as RealPopup } from './Popup/RealPopup.vue';

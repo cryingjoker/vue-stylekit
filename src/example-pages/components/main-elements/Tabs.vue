@@ -206,7 +206,7 @@
                 </rt-row-list>
               </rt-tabs-content-item>
             </template>
-      </rt-tabs>
+          </rt-tabs>
           </div>
         </div>
       </div>

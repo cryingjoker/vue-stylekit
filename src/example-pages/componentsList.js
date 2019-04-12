@@ -57,6 +57,7 @@ import {
   Slide,
   Pattern,
   UnWrapper,
+  RealPopup,
   Opportunity,
   OpportunityItem
 } from "../lib/components/index";
@@ -124,4 +125,5 @@ componentsList[Slide.name] = Slide;
 componentsList[Opportunity.name] = Opportunity;
 componentsList[OpportunityItem.name] = OpportunityItem;
 componentsList[UnWrapper.name] = UnWrapper;
+componentsList[RealPopup.name] = RealPopup;
 export default { ...componentsList };
