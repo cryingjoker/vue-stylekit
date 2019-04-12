@@ -1,6 +1,6 @@
 <template>
-  <div :class="optionClasses" class="select-option" @click="setSelection">
-    <button class="select-option__inner">
+  <div :class="optionClasses" class="select-option">
+    <button class="select-option__inner" @click="setSelection">
       <slot />
     </button>
   </div>
@@ -53,8 +53,9 @@ export default {
     setValue() {
       this.text = this.getTextContent();
     },
-    setSelection() {
+    setSelection(e) {
       this.RtSelect.setValue({ text: this.text, value: this.key });
+      e.preventDefault();
     },
     getTextContent() {
       if (this.$el) {
