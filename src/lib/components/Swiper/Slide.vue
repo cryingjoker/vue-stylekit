@@ -1,16 +1,3 @@
-<!--<template>-->
-  <!--<div-->
-    <!--:class="[`${cmpName}-slide`, { 'not-shown': !shown }, getCustomClass]"-->
-    <!--:style="-->
-      <!--`-->
-      <!--padding-right: ${offsetSlide}px;-->
-    <!--`-->
-    <!--"-->
-  <!--&gt;-->
-    <!--<slot />-->
-  <!--</div>-->
-<!--</template>-->
-
 <script type="text/jsx">
 export default {
   name: "RtSlide",
