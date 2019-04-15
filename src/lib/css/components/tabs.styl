@@ -12,6 +12,49 @@
         &+.{newAppName}-row-list__item
           border-top none
           padding-top: 0
+  &--vertical
+    display flex
+    .{newAppName}-tabs-navigation
+      flex-direction: column
+      margin 0
+      white-space unset!important
+      width 100%
+      &-wrapper
+        width 34%
+        padding-right calc((100% + 20px) / 12)
+        border-left 1px solid main-color01
+        display inline-table!important
+      &__item
+        position relative
+        display block
+        &+.{newAppName}-tabs-navigation__item
+          margin-top vertical-space * .5
+        &:before
+          position absolute
+          content ''
+          top 0
+          left -1px
+          width 2px
+          height 0
+          border-bottom none
+          text-shadow 0 0 0
+          border-left 2px solid transparent
+          transition-timing-function ease-in-out
+          transition-duration .2s
+          transition-property border, height, text-shadow
+        &:hover,
+        &:focus,
+        &--is-active
+          &:before
+            height 100%
+            border-left-color b2c-purple
+      &__item-name
+        &:before
+          display none
+    .{newAppName}-tabs-content
+      border-top none
+      //padding-left vertical-space * 2
+      width 66%
 
 .{newAppName}-tabs-navigation
   display flex

@@ -19,7 +19,7 @@ export default {
       type: Boolean,
       default: false
     },
-    showOnDesctop:{
+    showOnDesktop:{
       type: Boolean,
       default: true
     }
@@ -125,7 +125,7 @@ export default {
 
     let wrapperClasses;
     let popupClasses;
-    if(this.showOnDesctop){
+    if(this.showOnDesktop){
       wrapperClasses = "rt-popup-wrapper";
       popupClasses = "rt-popup";
     }else{

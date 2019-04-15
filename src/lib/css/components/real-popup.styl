@@ -1,0 +1,46 @@
+.{b2bAppName}-popup-wrapper
+  //display none
+  position fixed
+  top -100vh
+  left 0
+  right 0
+  bottom 0
+  width 100vw
+  height 100vh
+  z-index 999
+  transition top .4s ease-in-out
+  &--active
+    //display block
+    top 0
+  &--mobile-only
+    @media (min-width: desktop-lower-limit)
+      display none
+
+.{b2bAppName}-popup
+  position relative
+  width auto
+  height auto
+  max-width 70vw
+  max-height 80vh
+  padding vertical-space * 2
+  display inline-block
+  background-color b2c-white
+  box-sizing border-box
+  box-shadow 0 20px 30px rgba(main-color, .2)
+  overflow-y auto
+  &-close
+    position absolute
+    top 20px
+    right 20px
+    cursor pointer
+  &--center-center
+    transform translateY(-50%) translateX(-50%)
+    top 50vh
+    left 50vw
+  &--top-center
+    top 0
+    left 50vw
+    transform translateX(-50%)
+  .row
+    max-height calc(70vh - 60px)
+    overflow scroll

@@ -30,6 +30,7 @@ import TestAccess from '../components/promo/test-access.vue';
 import Opportunity from '../components/complex-elements/Opportunity.vue';
 import HelpMain from '../components/complex-elements/HelpMain.vue';
 import UnWrapper from '../components/main-elements/UnWrapper.vue';
+import RealPopup from '../components/main-elements/Popup.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -98,6 +99,7 @@ const index = [
   { path: '/pattern', name: 'pattern', component: Pattern },
   { path: '/help-main', name: 'helpMain', component: HelpMain },
   { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
+  { path: '/popup', name: 'realPopup', component: RealPopup },
   // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];

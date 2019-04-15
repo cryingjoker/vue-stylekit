@@ -68,7 +68,8 @@ import {
   Opportunity,
   OpportunityItem,
   UnWrapper,
-  Ussd
+  RealPopup,
+  Ussdter
 } from "./components";
 
 
@@ -145,6 +146,7 @@ const VueRtStyle = {
       Vue.component(Opportunity.name, Opportunity);
       Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(UnWrapper.name, UnWrapper);
+      Vue.component(RealPopup.name, RealPopup);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
