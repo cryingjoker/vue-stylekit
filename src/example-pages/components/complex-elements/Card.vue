@@ -1658,6 +1658,7 @@
                         </div>
                       </template>
                     </links-block>
+                    <p class="rtb-card__links-block__footnote rt-font-small-paragraph color-main025">безлимитные сервисы</p>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>

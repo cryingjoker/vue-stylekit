@@ -77,6 +77,7 @@
     max-height 26px
     overflow hidden
     vertical-align middle
+    margin-right 5px
 
     &--expanded
       max-height none
@@ -109,7 +110,7 @@
   &__expand-button
     color b2c-purple
     font-size 14px
-    line-height 18px
+    line-height 28px
     margin-left 5px
     vertical-align middle
     cursor pointer
@@ -394,6 +395,12 @@
     transform translateY(-50%)
     font-size 14px
     line-height 18px
+    @media (max-width: tablet-upper-limit)
+      right auto
+      left 10px
+      top auto
+      bottom auto
+      transform translateX(-50%) translateY(30px)
   &--tooltip
     color b2b-state
     text-align center
@@ -408,6 +415,9 @@
       border-radius 5px
       right -30px
       top 50%
+      @media (max-width: tablet-upper-limit)
+        min-width 250px
+        max-width none
       &:before
         content ""
         width 0
@@ -418,6 +428,11 @@
         position absolute
         top calc(50% - 5px)
         left -5px
+        @media (max-width: tablet-upper-limit)
+          border-width 0 5px 5px 5px
+          border-color transparent transparent #f1f3f5 transparent
+          left calc(50% - 5px)
+          top -5px
   &--confirmed
     .{b2bAppName}-hint__text
       background-color b2c-green
