@@ -7,14 +7,23 @@
         </h1>
       </div>
       <div class="app-body">
-
         <div class="app-row row">
+          <pre-code
+            text='
           <div class="rt-col">
-            <rt-ussd phone="*12*21#">Интернет!!</rt-ussd>
+
+        <p>Отправить приглашение новому номеру:
+          <rt-ussd>*105*1*9ХХХХХХХХХ#</rt-ussd></p>
+        <p class="rt-space-top05">Проверить список номеров, подключенных к тарифу:
+          <rt-ussd>*105*2#</rt-ussd></p>
+            <p class="rt-space-top05">Проверить остаток общего пакета услуг:
+          <rt-ussd>*100*12#</rt-ussd></p>
+            <p class="rt-space-top05 rt-space-bottom05">Отключить номер: <rt-ussd>*105*0*9ХХХХХХХХХ#</rt-ussd> </p>
+
+        <rt-ussd :without-left-space="true" tel="*100*12#">Унать баланс на счету</rt-ussd>
+
           </div>
-          <div class="rt-col rt-space-top">
-            <rt-ussd>*102*101#</rt-ussd>
-          </div>
+          '></pre-code>
         </div>
       </div>
     </div>
