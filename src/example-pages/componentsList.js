@@ -58,7 +58,8 @@ import {
   Pattern,
   UnWrapper,
   Opportunity,
-  OpportunityItem
+  OpportunityItem,
+  Ussd
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -124,4 +125,5 @@ componentsList[Slide.name] = Slide;
 componentsList[Opportunity.name] = Opportunity;
 componentsList[OpportunityItem.name] = OpportunityItem;
 componentsList[UnWrapper.name] = UnWrapper;
+componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

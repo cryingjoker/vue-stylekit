@@ -58,6 +58,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "ussd",
+      "title" : "Ussd",
+      "url" : "/ussd",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "inline-dropdown",
       "title" : "Inline dropdown",
       "url" : "/inline-dropdown",
