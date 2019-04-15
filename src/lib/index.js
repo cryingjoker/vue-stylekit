@@ -69,7 +69,7 @@ import {
   OpportunityItem,
   UnWrapper,
   RealPopup,
-  Ussdter
+  Ussd
 } from "./components";
 
 
