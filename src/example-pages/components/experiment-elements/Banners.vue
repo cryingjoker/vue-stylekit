@@ -74,7 +74,7 @@
                        :has-image-on-mobile=&quot;true&quot;>
       <rt-banner-item :is-white-color=&quot;true&quot;
                       background-color=&quot;green&quot;
-                      background-image=&quot;/static/images/B2B/big-internet-slide-1.svg&quot;>
+                      background-image=&quot;/static/images/B2B/big-internet-slide-1.png&quot;>
         <h2 class=&quot;rt-font-bold&quot;>Легко обмениваться большими объемами информации</h2>
         <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Отправляйте объемные
           фото и видео, работайте с облачными сервисами и большими базами данных — скорости интернета хватит на всё</p>
@@ -82,7 +82,7 @@
       <rt-banner-item :is-white-color=&quot;true&quot;
                       content-mobile-height=&quot;500px&quot;
                       background-color=&quot;dark-blue-high&quot;
-                      background-image=&quot;/static/images/B2B/big-internet-slide-2.svg&quot;>
+                      background-image=&quot;/static/images/B2B/big-internet-slide-2.png&quot;>
         <h2 class=&quot;rt-font-bold&quot;>Эффективно работать  с онлайн-сервисами</h2>
         <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Благодаря стабильному высокоскоростному интернету
             вашим сотрудникам будет удобнее работать с корпоративной почтой и CRM-системой, что позволит повысить уровень продаж</p>
@@ -90,7 +90,7 @@
       <rt-banner-item :is-white-color=&quot;true&quot;
                       content-mobile-height=&quot;500px&quot;
                       background-color=&quot;dark-blue&quot;
-                      background-image=&quot;/static/images/B2B/big-internet-slide-3.svg&quot;>
+                      background-image=&quot;/static/images/B2B/big-internet-slide-3.png&quot;>
         <h2 class=&quot;rt-font-bold&quot;>Повысить лояльность клиентов</h2>
         <p class=&quot;p1 rt-space-top rt-space-bottom25&quot;>Офисы, кафе, салоны красоты и другие заведения с
           бесплатным Wi-Fi и телевидением привлекают и удерживают больше посетителей</p>

@@ -23,7 +23,6 @@ export default {
     const adjust = () => {
       setTimeout(() => {
         this.isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
-        console.log(this.isMobile)
       },0);
     };
     window.addEventListener('resize', () => {
