@@ -8,17 +8,17 @@
         'is-disabled-scrolling': disabledScrolling,
         'is-scrolling': !scrollingAutoEnd,
         'show-no-move-prev': !disabledScrolling && noMovesShown === 'prev',
-        'show-no-move-next': !disabledScrolling && noMovesShown === 'next'
+        'show-no-move-next': !disabledScrolling && noMovesShown === 'next',
+        'hide-navigation': hideNavigation
       }
     ]"
     :style="{
       marginTop: `${-offsetTop}px`,
-      marginBottom: `${-offsetBottom}px`,
-      padding
+      marginBottom: `${-offsetBottom}px`
     }"
   >
     <rt-navigation
-      v-if="!isTouch"
+      v-if="!isTouch && !hideNavigation"
       :class="`${cmpName}__navs`"
       :navigation-container="navigationContainer"
     />
@@ -164,6 +164,10 @@ export default {
     navigationContainer: {
       type: String,
       default: ""
+    },
+    hideNavigation: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

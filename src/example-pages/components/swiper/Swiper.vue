@@ -43,8 +43,8 @@
     </rt-swiper>
     <div class="rt-space-top5">
       <pre-code text='
-        <rt-swiper>
-          <rt-slide slide-classes="rt-col-4 in-plus-card">
+        <rt-swiper :hide-navigation="true">
+          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -57,7 +57,7 @@
               </template>
               <template slot="content">
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Интернет
                   </p>
                   <div class="rtb-card__description__row">
@@ -70,7 +70,7 @@
                   </div>
                 </div>
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Мобильная связь
                   </p>
                   <div class="rtb-card__description__row">
@@ -450,7 +450,7 @@
               </template>
             </rt-card>
           </rt-slide>
-          <rt-slide slide-classes="rt-col-4 in-plus-card">
+          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -463,7 +463,7 @@
               </template>
               <template slot="content">
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Интернет
                   </p>
                   <div class="rtb-card__description__row">
@@ -476,7 +476,7 @@
                   </div>
                 </div>
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Мобильная связь
                   </p>
                   <div class="rtb-card__description__row">
@@ -856,7 +856,7 @@
               </template>
             </rt-card>
           </rt-slide>
-          <rt-slide slide-classes="rt-col-4 in-plus-card">
+          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -869,7 +869,7 @@
               </template>
               <template slot="content">
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Интернет
                   </p>
                   <div class="rtb-card__description__row">
@@ -882,7 +882,7 @@
                   </div>
                 </div>
                 <div class="rtb-card__section">
-                  <p class="rtb-card__subtitle rt-space-bottom05">
+                  <p class="tagline color-main03 rt-space-bottom05">
                     Мобильная связь
                   </p>
                   <div class="rtb-card__description__row">
