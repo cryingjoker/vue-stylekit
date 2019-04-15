@@ -12,12 +12,12 @@
 import componentsMenu from "./componentsMenu.json";
 import VueRtStyle from "../../lib/index";
 import componentsList from "../componentsList";
-
+import RtInput from "../../lib/components/Input/Input.vue";
 
 export default {
   name: "AppMenu",
-
-    props: {
+  components: { RtInput },
+  props: {
       showMenu: {
         type: Boolean,
         default: false
@@ -44,10 +44,9 @@ export default {
     data: () => ({
       showMenuLocal: false,
       preUrl: "",
-      menuIsDisabled: false
-
+      menuIsDisabled: false,
+      searchValue: ''
     }),
-
   watch: {
     showMenu: function(newVal, oldVal) {
       if(!this.menuIsDisabled) {
@@ -77,11 +76,17 @@ export default {
       setTimeout(() => {
         this.menuIsDisabled = false;
       }, 500);
+    },
+    changeSearchParams(searchValue){
+      this.searchValue = searchValue;
     }
   },
   render() {
 
-    const renderList = (itemList) => itemList.map((item) => {
+    const renderList = (itemList) => itemList.filter((item)=>{
+      const reg = new RegExp(this.searchValue,'gi');
+      return this.searchValue.length === 0 || item.title.search(reg) >= 0
+    }).map((item) => {
       const content = (item) => {
 
         if (item) {
@@ -133,6 +138,9 @@ export default {
       </div>
 
       <div class="rt-space-top3">
+        <div class="rt-space-horizontal15 rt-space-bottom">
+          <rt-input placeholder="Component name" onInput={this.changeSearchParams}></rt-input>
+        </div>
         {renderList(componentsMenu.list)}
       </div>
     </div>;
