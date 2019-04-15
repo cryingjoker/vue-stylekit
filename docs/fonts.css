@@ -26,7 +26,7 @@
     url("/vue-stylekit/docs/fonts/BasisGrotesquePro-Bold-Web.woff") format("woff"),
     url("/vue-stylekit/docs/fonts/BasisGrotesquePro-Bold-Web.ttf") format("ttf");
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
 }
 @font-face {
     font-family: "RT Fonts";
@@ -36,5 +36,5 @@
     url("/vue-stylekit/docs/fonts/BasisGrotesquePro-Medium-Web.woff") format("woff"),
     url("/vue-stylekit/docs/fonts/BasisGrotesquePro-Medium-Web.ttf") format("ttf");
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
 }
