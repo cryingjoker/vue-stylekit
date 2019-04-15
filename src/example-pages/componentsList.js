@@ -59,7 +59,8 @@ import {
   UnWrapper,
   RealPopup,
   Opportunity,
-  OpportunityItem
+  OpportunityItem,
+  Ussd
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -126,4 +127,5 @@ componentsList[Opportunity.name] = Opportunity;
 componentsList[OpportunityItem.name] = OpportunityItem;
 componentsList[UnWrapper.name] = UnWrapper;
 componentsList[RealPopup.name] = RealPopup;
+componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

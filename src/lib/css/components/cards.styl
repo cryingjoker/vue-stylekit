@@ -386,7 +386,17 @@
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property top, opacity, visibility, max-height
-
+  .rt-close
+    right: 20px
+    top: 20px
+    position: absolute
+    cursor: pointer
+    transition-timing-function ease-in-out
+    transition-duration .4s
+    transition-property transform
+    z-index: 2
+    &:hover
+      transform rotate(180deg)
   .rt-card-buy__form-horizontal &
     max-height 0
     max-height 0
