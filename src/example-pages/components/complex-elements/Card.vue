@@ -1722,9 +1722,7 @@
               </template>
             </rt-card>
           </div>
-          <div
-            class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b"
-          >
+          <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b">
             <rt-card :equal-padding="true">
               <template slot="header">
                 <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">

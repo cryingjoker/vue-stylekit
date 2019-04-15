@@ -15,7 +15,7 @@
             <rt-real-popup>
               <template>
                 <div class="row">
-                  <div class="rt-col-12 rt-col-td-3 rt-col-md-3">
+                  <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
                     <rt-table :no-borders="true">
                       <template slot="label">Опция «Везде ноль»</template>
                       <template slot="columns">
