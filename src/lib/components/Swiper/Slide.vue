@@ -1,22 +1,10 @@
-<template>
-  <div
-    :class="[`${cmpName}-slide`, { 'not-shown': !shown }, getCustomClass]"
-    :style="
-      `
-      padding-right: ${offsetSlide}px;
-    `
-    "
-  >
-    <slot />
-  </div>
-</template>
-
-<script>
+<script type="text/jsx">
 export default {
   name: "RtSlide",
   props: {
     slideClasses: {
-      type: String
+      type: String,
+      default: ''
     },
     loaded: {
       type: Boolean,
@@ -56,6 +44,12 @@ export default {
     width() {
       return this.$el.clientWidth;
     }
+  },
+  render(h){
+    return <div class={this.cmpName + "-slide " + (this.shown ? '': ' not-shown ') +  this.getCustomClass}
+                style={"padding-right:" + this.offsetSlide + "px;"}>
+      {this.$slots.default}
+    </div>
   }
 };
 </script>
