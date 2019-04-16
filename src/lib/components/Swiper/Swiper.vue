@@ -539,7 +539,6 @@ export default {
             ? "prev"
             : "next"
           : null;
-      // console.log('swipe:' + this.touchObject.direction, 'start:' + this.swipingStartPoint)
       if (!this.disabledScrolling && this.touchObject.direction !== null) {
         this.$refs.overlay.scrollLeft =
           this.swipingStartPoint +
@@ -549,19 +548,6 @@ export default {
           this.isLongTouch = true;
         }, autoScrollingTimeout);
         this.touchObject.time = Date.now();
-        // console.log(
-        //   'x:start ' + this.touchObject.startX,
-        //   '\nx:move  ' + this.touchObject.curX,
-        //   '\ny:start ' + this.touchObject.startY,
-        //   '\ny:move  ' + this.touchObject.curY,
-        //   '\nLength: ' + this.touchObject.swipeLength,
-        //   '\ndirect: ' + this.touchObject.direction,
-        //   '\nstart:  ' + (this.swipingStartPoint || this.$refs.overlay.scrollLeft),
-        //   '\nnow:    ' + this.$refs.overlay.scrollLeft,
-        //   '\nisLong: ' + this.isLongTouch,
-        //   '\ndecele: ' + this.touchObject.swipeLength,
-        //   '\ndTime:  ' + this.touchObject.time
-        // )
       }
     },
     swipeEnd(e) {
