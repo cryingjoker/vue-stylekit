@@ -46,6 +46,7 @@ import Logo from "../components/main-elements/Logo.vue";
 import WarFace from "../components/promo/game-warface.vue";
 import Vip from "../components/promo/vip.vue";
 import Kids from "../components/promo/kids.vue";
+import PromoLp from "../components/promo/lp.vue";
 import Swiper from "../components/swiper/Swiper.vue";
 
 const index = [
@@ -93,6 +94,7 @@ const index = [
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/kids', name: 'kids', component: Kids },
+  { path: '/promo/lp', name: 'lp', component: PromoLp },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
   { path: '/opportunity', name: 'opportunity', component: Opportunity },
@@ -100,7 +102,6 @@ const index = [
   { path: '/help-main', name: 'helpMain', component: HelpMain },
   { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
   { path: '/popup', name: 'realPopup', component: RealPopup },
-  // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
 
