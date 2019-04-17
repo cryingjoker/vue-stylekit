@@ -37,9 +37,27 @@
 .app-header__left-panel
   flex: 1
   white-space nowrap
-.app-header__rigth-panel
-  padding-right: 20px
 
+.app-header__right-panel
+  padding-right: 20px
+  @media (max-width: mobile-upper-limit)
+    opacity: 0
+    visibility: hidden
+    padding-right: 0
+    left: 0
+    position: fixed
+    width: 0
+    top: 45px
+    left: -100vw
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property left
+    .app--has-open-menu &
+      left 0
+      top: 45px
+      opacity: 1
+      width: 100vw
+      visibility: visible
 .app-wrapper
   display: flex
   min-height: 100vh
@@ -235,6 +253,9 @@
   top: 0
   background-color: main-color
   z-index: 1
+  @media (min-width: mobile-upper-limit)
+    padding-bottom: 20px
+    padding-top: 10px
 .app-aside-menu__inner
   //position: sticky
   bottom: 0
