@@ -106,7 +106,7 @@
             </div>
 
 
-            <div class="rt-space-top">
+            <div class="rt-space-top rt-md-space-top25">
               <div class="rt-space-horizontal rt-space-bottom app-aside-menu__search">
                 <rt-input placeholder="Seacrh" onInput={this.changeSearchParams}></rt-input>
               </div>
