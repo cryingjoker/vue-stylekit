@@ -8,8 +8,6 @@
 <template>
 
   <div
-    v-rt-swipe-left="closeMenu"
-    v-rt-swipe-right="openMenu"
     :class="{ 'app--hide-scroll': showMenu }"
     class="app"
   >
