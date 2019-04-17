@@ -5,6 +5,7 @@
 <!--&gt;-->
   <!--Dark theme-->
 <!--</rt-switch>-->
+
 <template>
 
   <div
@@ -73,6 +74,7 @@
 <script>
   import VueRtStyle from "../../lib/index";
   import componentsList from "../componentsList";
+  import variables from "../../lib/variables.json";
 
   if (window) {
     window.VueRtStyle = {};
@@ -102,6 +104,9 @@
     watch: {
       $route(to, from) {
         document.querySelector('body').scroll(0,0)
+        if(window.innerWidth <= parseInt(variables['mobile-upper-limit'])){
+          this.showMenu = false
+        }
       }
     },
     created() {
