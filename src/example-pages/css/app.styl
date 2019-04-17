@@ -20,6 +20,9 @@
     position: fixed
     left: 0
     right: 0
+    .app--has-open-menu &
+      left: inherit
+      right: -100vw
   .rt-tabs-navigation
     padding-left: 100px
     height: 100%
@@ -217,7 +220,6 @@
   transition-duration .3s
   transition-property width
   white-space nowrap
-
 
   .app--has-open-menu &
     width: 200px
