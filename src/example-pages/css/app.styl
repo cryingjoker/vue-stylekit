@@ -7,6 +7,139 @@
 
 @import "../../develover-lib/css/editor"
 
+.app-header
+  height: 50px
+  background-color: main-color
+  color white
+  position: sticky
+  top: 0
+  display: flex
+  z-index: 1000
+  @media (max-width: mobile-upper-limit)
+    display: block
+  .rt-tabs-navigation
+    padding-left: 100px
+    height: 100%
+    align-items center
+  .rt-tabs-navigation__item-name
+    height: 48px
+    &:before
+      background-color: transparent
+      border-bottom-color #fff
+
+
+.app-header__left-panel
+  flex: 1
+  white-space nowrap
+.app-header__rigth-panel
+  padding-right: 20px
+
+.app-wrapper
+  display: flex
+  min-height: 100vh
+.app__content
+  flex: 1
+  min-height: 100%
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property width, min-width, max-width, flex
+  @media (max-width: mobile-upper-limit)
+    max-width: 100vw
+    min-width: 100vw
+    width: 100vw
+    overflow: hidden
+  .app--has-open-menu &
+    @media (max-width: mobile-upper-limit)
+      flex: 0
+      width: 0
+      overflow: hidden
+      height: 0
+      max-width: 0vw
+      min-width: 0vw
+.app-menu-trigger
+  position: absolute
+  left: 0px
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  height: 50px
+  width: 50px
+  background-color: #2B333E
+  padding-top: 11px
+  padding-bottom: 11px
+  cursor: pointer
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property background-color, left, right
+  &:hover
+    background-color: main-color
+  &:before
+    content: ''
+    display: block
+    height: 3px
+    position: absolute
+    left: 0
+    width: 24px
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    z-index: 2
+    top: 14px
+    background-color: #fff
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property transform, top
+  &:after
+    content: ''
+    z-index: 2
+    display: block
+    height: 3px
+    width: 24px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    position: absolute
+    bottom: 13px
+    background-color: #fff
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property transform, bottom
+.app-menu-trigger__line
+  position: absolute
+  bottom: 0
+  top: 0
+  margin-left: auto
+  margin-right: auto
+  margin-top: auto
+  margin-bottom: auto
+  height: 3px
+  width: 24px
+  background-color: #fff
+  left: 0px
+  right: 0
+.app--has-open-menu
+  .app-menu-trigger__line
+    width: 0
+    height: 0
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property width, height
+  .app-menu-trigger
+    @media (max-width: mobile-upper-limit)
+      position: fixed
+      bottom: inherit
+      left: inherit
+      background-color: transparent
+      right: 0
+    &:before
+      top: 24px
+      transform rotate(45deg)
+    &:after
+      bottom: 24px
+      transform rotate(-45deg)
+
 .app
   &--hide-scroll
     @media (max-width: mobile-upper-limit)
@@ -58,49 +191,45 @@
   left 20px
   z-index 900
   cursor pointer
+.aside-menu__item
+  max-width: 100%
+  overflow: hidden
 
+.app-aside-menu
+  min-height: 100%
+  box-sizing border-box
+  font-size 14px
+  background-color main-color
+  color white
+  padding-bottom 60px
+  left: 0
+  width: 0
+  top 0
+  text-overflow ellipsis
+  bottom 0
+  z-index 1000
+  transition-timing-function ease-in-out
+  transition-duration .3s
+  transition-property width
+  white-space nowrap
+
+
+  .app--has-open-menu &
+    width: 200px
+    display: flex
+    @media (max-width: mobile-upper-limit)
+      width 100vw
+
+.app-aside-menu__inner
+  position: sticky
+  bottom: 0
+  align-self: flex-end
 .aside
   &-menu
-    width 380px
-    height 100vh
-    box-sizing border-box
-    overflow auto
-    font-size 14px
-    background-color #fff
-    padding-bottom 60px
-    position fixed
-    top 0
-    top 0
-    bottom 0
-    left -370px
-    z-index 1000
-    transition-timing-function ease-in-out
-    transition-duration .3s
-    transition-property left
-
     .{newAppName}-dark-theme &
       background-color main-color
 
-    @media (max-width: mobile-upper-limit)
-      max-width 100vw
-      overflow-y auto
-      background-color #fff
-      padding-top vertical-space * 2
-      padding-right 0
-      left -120vw
-      z-index 999
 
-    &--active
-      left 0
-
-      &:hover
-        left 0
-
-      @media (max-width: mobile-upper-limit)
-        left 0
-
-    border-right 1px solid b2c-cool-grey05
-    padding-top 100px
 
     &__submenu-title
       border-bottom 1px solid b2c-cool-grey
@@ -110,13 +239,15 @@
       padding-bottom 5px
 
     &__link
-      display block
-      color main-color06
+      display inline-block
       text-decoration none !important
-      padding-top 10px
-      padding-bottom 10px
-      padding-left 30px
-      padding-right 15px
+      padding-top 2px
+      padding-bottom 2px
+      margin-top: 5px
+      margin-bottom: 5px
+      padding-left 7px
+      margin-left: 14px
+      padding-right 7px
       position relative
       cursor pointer
       transition-timing-function ease-in-out
@@ -124,24 +255,7 @@
       transition-property background, color
 
       .{newAppName}-dark-theme &
-        color b2c-cool-grey05
-
-      &:before
-        content ""
-        width 10px
-        height 1px
-        background-color b2c-red-high
-        margin-top auto
-        margin-bottom auto
-        opacity 0
-        position absolute
-        top 0
-        bottom 0
-        left 10px
-        transition-timing-function ease-in-out
-        transition-duration .3s
-        transition-property opacity
-        will-change opacity
+        color white
 
       &:hover,
       &:focus
@@ -152,9 +266,8 @@
 
       &--active
         color main-color
+        background-color: b2c-purple
 
-        &:before
-          opacity 1
 
   &-sub-menu
     margin-left 20px
@@ -263,23 +376,22 @@
   pointer-events none
 
   &--active
-    height 100vh
+    height 0vh
     bottom 0
+    opacity: 1
 
-  max-width 1320px
+  //max-width 1320px
   height 0
-  overflow hidden
+  opacity: 0
   margin-left auto
   margin-right auto
-  position fixed
+  position sticky
   top 0
   bottom 100vh
-  left 80px
-  right 80px
   z-index 200
   transition-timing-function ease-in-out
   transition-duration .3s
-  transition-property height, bottom
+  transition-property height, bottom, opacity
 
   @media (max-width: tablet-upper-limit)
     left 20px
