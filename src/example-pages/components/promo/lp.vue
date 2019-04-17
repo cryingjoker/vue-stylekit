@@ -10,7 +10,8 @@
     },
     methods: {},
     render(h) {
-      return <div>
+      return
+      <div>
         <div class="rt-container">
           <div class="row rt-space-bottom45">
             <div class="rt-col-3 rt-col-md-3">
@@ -68,7 +69,7 @@
               </p>
             </div>
             <div class="rt-col-2 md-d-none"></div>
-            <div class="rt-col-6 rt-col-md-3">
+            <div class="rt-col-6 rt-col-md-3 wc-inline">
               <rt-card class="">
                 <template slot="content">
                   <p class="rt-font-h3 rt-font-bold rt-space-bottom">Заявка на подключение <br/>Интернет + ТВ </p>
