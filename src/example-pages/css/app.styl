@@ -209,7 +209,6 @@
   font-size 14px
   background-color main-color
   color white
-  padding-bottom 60px
   left: 0
   width: 0
   top 0
@@ -221,16 +220,34 @@
   transition-property width
   white-space nowrap
 
+
   .app--has-open-menu &
     width: 200px
-    display: flex
     @media (max-width: mobile-upper-limit)
       width 100vw
-
-.app-aside-menu__inner
+.app-aside-menu__wrapper
+  overflow-x: hidden
   position: sticky
+  top: 0
+.app-aside-menu__search
+  position: sticky
+  top: 0
+  background-color: main-color
+  z-index: 1
+.app-aside-menu__inner
+  //position: sticky
   bottom: 0
-  align-self: flex-end
+  //align-self: flex-end
+  width: calc(100% + 20px)
+  padding-right: 20px
+  max-height: 100vh
+  padding-right: 20px
+  @media (min-width: mobile-upper-limit)
+    max-height: 100vh
+    overflow: auto
+  @media (max-width: mobile-upper-limit)
+    padding-right: 0
+    width: 100%
 .aside
   &-menu
     .{newAppName}-dark-theme &
@@ -401,8 +418,9 @@
   transition-property height, bottom, opacity
 
   @media (max-width: tablet-upper-limit)
-    left 20px
-    right 20px
+    left 0px
+    right 0px
+    position: fixed
 
   .row
     height 100vh
