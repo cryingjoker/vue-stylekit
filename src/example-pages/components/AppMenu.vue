@@ -79,15 +79,12 @@
                 </div>
               </div>;
             } else {
-              return <div class="aside-menu__item">
-                <router-link
-                  class="aside-menu__link"
-                  active-class="aside-menu__link--active"
-                  to={this.preUrl + item.url}
-                >
-                  {item.title}
-                </router-link>
-              </div>;
+              return <router-link
+                class="aside-menu__item"
+                active-class="aside-menu__item--active"
+                to={this.preUrl + item.url}>
+                <span class="aside-menu__link">{item.title}</span>
+              </router-link>;
             }
           }
         };

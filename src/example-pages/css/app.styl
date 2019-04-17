@@ -202,6 +202,7 @@
 .aside-menu__item
   max-width: 100%
   overflow: hidden
+  display: block
 
 .app-aside-menu
   min-height: 100%
@@ -288,8 +289,8 @@
         .{newAppName}-dark-theme &
           color white
 
-      &--active
-        color main-color
+      .aside-menu__item--active &,
+      .aside-menu__item:hover>&
         background-color: b2c-purple
 
 
