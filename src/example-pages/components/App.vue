@@ -101,9 +101,7 @@
     }),
     watch: {
       $route(to, from) {
-        setTimeout(function() {
-          fixSectionChange();
-        }, 50);
+        document.querySelector('body').scroll(0,0)
       }
     },
     created() {

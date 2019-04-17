@@ -96,24 +96,26 @@
 
 
       return <div class="app-aside-menu rt-dark-theme">
-        <div class="app-aside-menu__inner">
-          <div class="rt-space-horizontal rt-space-top05">
-          <rt-logo
-            width="18px"
-            english-theme="true"
-            show-text="true"
-            color="#ffffff"
-            height="32px"
-          />
-          </div>
+        <div class="app-aside-menu__wrapper">
+          <div class="app-aside-menu__inner">
+            <div class="rt-space-horizontal rt-space-top05">
+              <rt-logo
+                width="18px"
+                english-theme="true"
+                show-text="true"
+                color="#ffffff"
+                height="32px"
+              />
+            </div>
 
 
-        <div class="rt-space-top">
-          <div class="rt-space-horizontal rt-space-bottom">
-            <rt-input placeholder="Seacrh" onInput={this.changeSearchParams}></rt-input>
+            <div class="rt-space-top">
+              <div class="rt-space-horizontal rt-space-bottom app-aside-menu__search">
+                <rt-input placeholder="Seacrh" onInput={this.changeSearchParams}></rt-input>
+              </div>
+              {renderList(componentsMenu.list)}
+            </div>
           </div>
-          {renderList(componentsMenu.list)}
-        </div>
         </div>
       </div>;
     }
