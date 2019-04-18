@@ -97,7 +97,8 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, left, right
-  &:hover
+  &:hover,
+  &:focus
     background-color: main-color
   &:before
     content: ''
@@ -310,7 +311,8 @@
           color white
 
       .aside-menu__item--active &,
-      .aside-menu__item:hover>&
+      .aside-menu__item:hover>&,
+      .aside-menu__item:focus>&
         background-color: b2c-purple
 
   &-sub-menu
