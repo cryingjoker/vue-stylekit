@@ -46,13 +46,17 @@
   background-position: center center
   background-repeat: no-repeat
   min-height: 50%
+
   @media (min-width: tablet-lower-limit)
     border-radius 0 10px 10px 0
   @media (max-width: mobile-upper-limit)
     border-radius  10px 10px 0 0
     @supports (display: grid)
       grid-area: header
-
+.{newAppName}-product-card__image--hide-animate
+    animation 0.4s hideCardImage linear
+.{newAppName}-product-card__image--show-animate
+    animation 0.4s showCardImage linear
 
 .{newAppName}-product-card__body
   flex: 1 1 auto
@@ -61,3 +65,14 @@
   @media (max-width: mobile-upper-limit)
     @supports (display: grid)
       grid-area: footer
+
+@keyframes hideCardImage
+  0%
+    opacity 1
+  100%
+    opacity 0
+@keyframes showCardImage
+  0%
+    opacity 0
+  100%
+    opacity 1
