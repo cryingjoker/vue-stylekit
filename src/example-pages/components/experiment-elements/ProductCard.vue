@@ -10,7 +10,7 @@
     </div>
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
-        <div class="rt-space-bottom">
+        <div class="rt-space-bottom is-b2c">
         <rt-product-card
           background-image="/static/images/B2B/banner-img.png"
           tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
@@ -29,6 +29,7 @@
           </slot>
         </rt-product-card>
         </div>
+        <div class="is-b2b">
         <rt-product-card background-image="/static/images/B2B/banner-img.png">
           <slot>
             <div class="rt-product-card__content">
@@ -44,9 +45,10 @@
           </slot>
         </rt-product-card>
       </div>
+      </div>
     </div>
 
-    <div class="rt-container">
+    <div class="rt-container is-b2c">
       <div class="rt-col-12 rt-space-bottom2">
         <rt-banner
           :no-triangle="true"
@@ -68,14 +70,17 @@
 
       </div>
     </div>
+    <div class="rt-container rt-space-top25">
+      <documentation-builder :json="documentation" type="components" />
+    </div>
   </div>
 </template>
 
 <script>
-  // import documentation from "../../../lib/components/Annotation/docs/index.json";
-  import documentation from "../../../lib/components/Banner/docs/index.json";
-  import componentsList from "../../componentsList";
-  // const componentsList = {};
+
+  import documentation from "../../../lib/components/ProductCard/docs/index.json";
+
+  const componentsList = {};
   export default {
     name: "AppBanners",
     components: componentsList,
