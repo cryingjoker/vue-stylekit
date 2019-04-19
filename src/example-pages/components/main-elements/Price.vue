@@ -80,6 +80,7 @@
 
 <script>
   import documentation from "../../../lib/components/Price/docs/index.json";
+
   const componentsList = {};
   export default {
     name: "AppPrice",
