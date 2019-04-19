@@ -960,7 +960,7 @@
         var colsWidht = cols[0].clientWidth;
         var colsSize = cols.length;
         var wWidth = document.body.clientWidth;
-        console.info("colsWidht * colsSize > wWidth", colsWidht * colsSize > wWidth);
+        // console.info("colsWidht * colsSize > wWidth", colsWidht * colsSize > wWidth);
         if (colsWidht * colsSize > wWidth) {
           needToScroll = true;
           // var containerHeight = document.querySelector(".tariff-scroller-sticky").clientHeight;
