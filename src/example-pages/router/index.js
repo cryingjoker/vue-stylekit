@@ -48,6 +48,7 @@ import Vip from "../components/promo/vip.vue";
 import Kids from "../components/promo/kids.vue";
 import PromoLp from "../components/promo/lp.vue";
 import Swiper from "../components/swiper/Swiper.vue";
+import ProductCard from "../components/experiment-elements/ProductCard.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -84,6 +85,7 @@ const index = [
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
+  { path: '/product-cards', name: 'app-product-card', component: ProductCard },
   { path: '/tabs', name: 'app-banners', component: Tabs },
   { path: '/ussd', name: 'app-ussd', component: USSD },
   { path: '/promo/game', name: 'promoGame', component: PromoGame },

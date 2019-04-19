@@ -1,0 +1,61 @@
+.{newAppName}-product-card
+  border-radius 10px
+  color white
+  min-height: 300px
+  max-height: calc((1340px / 4))
+  width: 100%
+  background-color: #313a49
+  &.{newAppName}-product-card--has-fixed-heigth
+    max-height: 300px
+    min-height: 300px
+  @supports (display: grid)
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+
+
+
+  @media (max-width: mobile-upper-limit)
+    flex-direction: column-reverse
+    @supports (display: grid)
+      display: grid
+      grid-template-columns: 2fr
+      grid-template-rows: 1fr 1fr
+      grid-template-areas "header"\
+                          "footer"
+  @media (max-width: mobile-upper-limit)
+    min-height: 500px
+    &.{newAppName}-product-card--has-fixed-heigth
+      min-height: 300px
+
+
+
+.{newAppName}-product-card__content
+  flex: 1 1 auto
+  display: flex
+  flex-direction column
+  align-items: flex-start
+  padding 20px
+
+.{newAppName}-product-card__image
+  flex: 1 1 auto
+  padding 20px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  min-height: 50%
+  @media (min-width: tablet-lower-limit)
+    border-radius 0 10px 10px 0
+  @media (max-width: mobile-upper-limit)
+    border-radius  10px 10px 0 0
+    @supports (display: grid)
+      grid-area: header
+
+
+.{newAppName}-product-card__body
+  flex: 1 1 auto
+  display: flex
+  flex-direction column
+  @media (max-width: mobile-upper-limit)
+    @supports (display: grid)
+      grid-area: footer
