@@ -11,30 +11,66 @@ class ProductCard extends Vue {
   @Prop({ default: null }) tabletBackgroundImage: String;
   @Prop({ default: null }) mobileBackgroundImage: String;
 
-  checkWidth(){
+  checkWidth() {
     const w = window.innerWidth;
 
+    const image: any = this.$refs.image;
+    if (w <= parseInt(variables["tablet-upper-limit"])) {
 
-    if(w <= parseInt(variables["tablet-upper-limit"])) {
-      if (w < parseInt(variables["mobile-upper-limit"])){
-        this.type = 'mobile'
-      }else{
-        this.type = 'tablet'
+      if (w < parseInt(variables["mobile-upper-limit"])) {
+        if (this.type != "mobile") {
+          console.info("this.$refs.image", this.$refs.image);
+          image.classList.add("rt-product-card__image--hide-animate");
+          setTimeout(() => {
+            image.classList.remove("rt-product-card__image--hide-animate");
+            this.type = "mobile";
+            image.classList.add("rt-product-card__image--show-animate");
+            setTimeout(() => {
+              image.classList.remove("rt-product-card__image--show-animate");
+            }, 400);
+          }, 400);
+        }
+
+      } else {
+        console.error(this.type);
+        if (this.type != "tablet") {
+          image.classList.add("rt-product-card__image--hide-animate");
+          setTimeout(() => {
+            image.classList.remove("rt-product-card__image--hide-animate");
+            this.type = "tablet";
+            image.classList.add("rt-product-card__image--show-animate");
+
+            setTimeout(() => {
+              image.classList.remove("rt-product-card__image--show-animate");
+            }, 400);
+          }, 400);
+        }
       }
-    }else{
-      this.type = 'desktop'
+    } else {
+      if (this.type != "desktop") {
+        image.classList.add("rt-product-card__image--hide-animate");
+        setTimeout(() => {
+          image.classList.remove("rt-product-card__image--hide-animate");
+          this.type = "desktop";
+          image.classList.add("rt-product-card__image--show-animate");
+
+          setTimeout(() => {
+            image.classList.remove("rt-product-card__image--show-animate");
+          }, 400);
+        }, 400);
+      }
+
     }
   }
 
   mounted() {
     this.checkWidth();
-    if(this.tabletBackgroundImage || this.mobileBackgroundImage) {
+    if (this.tabletBackgroundImage || this.mobileBackgroundImage) {
       window.addEventListener("resize", this.checkWidth, {
         passive: false
       });
     }
   }
-
 
 
   render(h: CreateElement): VNode {
@@ -48,11 +84,11 @@ class ProductCard extends Vue {
     const productImageStyle = (() => {
       const styleObj = {};
       if (this.backgroundImage) {
-        if(this.type === 'tablet' && this.tabletBackgroundImage){
+        if (this.type === "tablet" && this.tabletBackgroundImage) {
           styleObj["backgroundImage"] = "url(" + this.tabletBackgroundImage + ")";
-        }else if(this.type === 'mobile' && this.mobileBackgroundImage){
+        } else if (this.type === "mobile" && this.mobileBackgroundImage) {
           styleObj["backgroundImage"] = "url(" + this.mobileBackgroundImage + ")";
-        }else {
+        } else {
           styleObj["backgroundImage"] = "url(" + this.backgroundImage + ")";
         }
       }
@@ -69,14 +105,14 @@ class ProductCard extends Vue {
             {this.$slots.footer}
           </div>
         </div>
-        <div class="rt-product-card__image"></div>
+        <div ref="image" class="rt-product-card__image"></div>
       </div>;
     }
     return <div class={productCardClass}>
       <div class="rt-product-card__body">
         {this.$slots.default}
       </div>
-      <div class="rt-product-card__image" style={productImageStyle}>
+      <div ref="image" class="rt-product-card__image" style={productImageStyle}>
 
       </div>
     </div>;
