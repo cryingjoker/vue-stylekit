@@ -914,9 +914,7 @@
               </template>
             </rt-card>
           </div>
-          <div
-            class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch is-b2c"
-          >
+          <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch is-b2c">
             <rt-card
               :background-opacity="0.9"
               :background-cover="true"

@@ -68,5 +68,6 @@
  export { default as OpportunityItem } from './Opportunity/OpportunityItem.vue';
  export { default as UnWrapper } from './MobileExpandWrapper/UnWrapper.vue';
  export { default as RealPopup } from './Popup/RealPopup.vue';
+ export { default as UseCase } from './Card/UseCase.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';
