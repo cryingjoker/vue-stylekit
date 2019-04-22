@@ -11,6 +11,7 @@ class ProductCard extends Vue {
   @Prop({ default: null }) tabletBackgroundImage: String;
   @Prop({ default: null }) mobileBackgroundImage: String;
   @Prop({ default: false }) safeImageRate: Boolean;
+  @Prop({ default: 'top' }) contentOrientation: String;
 
   checkWidth() {
     const w = window.innerWidth;
@@ -80,6 +81,9 @@ class ProductCard extends Vue {
       }
       if (this.fixedImageHeight && this.safeImageRate) {
         className += " rt-product-card--has-static-image-with-fix-height";
+      }
+      if(this.contentOrientation === 'bottom'){
+        className += ' rt-product-card--has-bottom-orient'
       }
       return className;
     })();

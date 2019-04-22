@@ -37,7 +37,15 @@
       "property":":safe-image-rate",
       "type": ["Boolean"],
       "description":"сохранение пропорций изображения для мобильной версии",
-      "value" :"null",
+      "value" :"false",
+      "version": "0.1.17"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":content-orientation",
+      "type": ["String"],
+      "description":"установка прибивки контента \n возжмый ввод 'top' и 'bottom'",
+      "value" :"top",
       "version": "0.1.17"
     }
   ]
