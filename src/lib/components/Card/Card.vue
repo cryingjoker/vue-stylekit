@@ -413,7 +413,7 @@ export default {
       return size;
     },
     flipCard() {
-      console.log(this.mobileLayout);
+
       if(this.$el.classList.contains('rtb-card--double-sided')){
         if(this.$el.classList.contains('is-flipped')){
           this.$el.classList.toggle('is-flipped');
@@ -423,7 +423,8 @@ export default {
           }
           this.$el.classList.toggle('is-flipped');
         }
-        if(this.mobileLayout) {
+        if(this.mobileLayout && document.querySelector('.popup-content')) {
+
           document.querySelector('.popup-content').innerHTML = this.$el.querySelector('.rtb-card__reverse').innerHTML;
           setTimeout(()=>{
             document.querySelector('.rtb-popup-wrapper').classList.add('rtb-popup-wrapper--active');
