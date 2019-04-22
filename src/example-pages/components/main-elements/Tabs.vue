@@ -8,6 +8,7 @@
       </div>
       <div class="app-body">
         <div class="app-row row">
+          <div class="rt-col-12">
           <pre-code
             text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
@@ -56,6 +57,7 @@
               </template>
             </rt-tabs>"
           />
+          </div>
         </div>
         <div class="app-row row">
           <div class="rt-col-8 rt-col-td-6 rt-col-md-3">

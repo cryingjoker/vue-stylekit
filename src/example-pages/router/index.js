@@ -5,6 +5,8 @@ import RadioButton from '../components/main-elements/RadioButton.vue';
 import Input from '../components/main-elements/Input.vue';
 import Select from '../components/main-elements/Select.vue';
 import Typography from '../components/main-elements/Typography.vue';
+import UseCase from '../components/experiment-elements/UseCase.vue';
+import VCOD from '../components/promo/VCOD.vue';
 import USSD from '../components/main-elements/USSD.vue';
 import Textarea from '../components/main-elements/Textarea.vue';
 import Switch from '../components/main-elements/Switch.vue';
@@ -87,6 +89,8 @@ const index = [
   { path: '/banners', name: 'app-banners', component: Banners },
   { path: '/product-cards', name: 'app-product-card', component: ProductCard },
   { path: '/tabs', name: 'app-banners', component: Tabs },
+  { path: '/use-case', name: 'useCase', component: UseCase },
+  { path: '/promo/vcod', name: 'VCOD', component: VCOD },
   { path: '/ussd', name: 'app-ussd', component: USSD },
   { path: '/promo/game', name: 'promoGame', component: PromoGame },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },

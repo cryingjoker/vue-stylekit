@@ -1,5 +1,6 @@
 <script type="text/jsx">
 const componentsList = {};
+import variables from "../../variables.json";
 
 export default {
   name: "RtCard",
@@ -136,10 +137,15 @@ export default {
     productCard: {
       type: Boolean,
       default: false
+    },
+    doubleSided: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
-    index: null
+    index: null,
+    mobileLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"])
   }),
   computed: {
     cardClass() {
@@ -197,6 +203,9 @@ export default {
       }
       if(this.productCard){
         cardClass += " rtb-card--product";
+      }
+      if(this.doubleSided) {
+        cardClass += " rtb-card--double-sided"
       }
       return cardClass;
     },
@@ -387,7 +396,11 @@ export default {
   },
 
   mounted: function() {
-
+    window.addEventListener('resize', () => {
+      this.mobileLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
+      this.setCardHeight();
+    });
+    this.setCardHeight();
   },
   methods: {
     normalizeSize(size) {
@@ -398,6 +411,35 @@ export default {
         return size;
       }
       return size;
+    },
+    flipCard() {
+      console.log(this.mobileLayout);
+      if(this.$el.classList.contains('rtb-card--double-sided')){
+        if(this.$el.classList.contains('is-flipped')){
+          this.$el.classList.toggle('is-flipped');
+        } else {
+          for(let i = 0; i < this.$parent.$children.length; i++){
+            this.$parent.$children[i].$el.classList.remove('is-flipped');
+          }
+          this.$el.classList.toggle('is-flipped');
+        }
+        if(this.mobileLayout) {
+          document.querySelector('.popup-content').innerHTML = this.$el.querySelector('.rtb-card__reverse').innerHTML;
+          setTimeout(()=>{
+            document.querySelector('.rtb-popup-wrapper').classList.add('rtb-popup-wrapper--active');
+//            document.body.style.overflow = 'hidden';
+          },300)
+        }
+      }
+    },
+    setCardHeight() {
+      if(this.doubleSided && !this.mobileLayout) {
+        setTimeout(()=>{
+          for(let i = 0; i < this.$parent.$children.length; i++) {
+            this.$parent.$children[i].$el.style.height = document.querySelector('.rtb-card__reverse').scrollHeight + 'px'
+          }
+        },0);
+      }
     }
   },
   render(h) {
@@ -535,17 +577,22 @@ export default {
         </div>
       }
     })();
-    if(!this.isB2bCategory){
-      return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
-        {this.backgroundImageStandAlone ? <div
-          style={this.standAloneBackgroundStyle}
-          class="rt-card__stand-alone-background"
-        /> : null}
+    const doubleSided = (() => {
+      if(this.doubleSided) {
+        return <div class="rtb-card__reverse">
+            <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" class="rtb-card-close" viewBox="-10 -10 35 35">
+              <path d="M15 1.5L13.5 0l-6 6-6-6L0 1.5l6 6-6 6L1.5 15l6-6 6 6 1.5-1.5-6-6z" fill="#101828" fill-rule="evenodd" fill-opacity=".5"/>
+            </svg>
+            {this.$slots.reverse}
+          </div>
+        }
+    })();
+    if(!this.isB2bCategory) {
+      return <div class={"rt-card" + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
+        {this.backgroundImageStandAlone ? <div style={this.standAloneBackgroundStyle} class="rt-card__stand-alone-background"/> : null}
         {discount}
         {label}
-        <div style={this.cardBackgroundStyle}
-             class={"rt-card__background" + this.cardBackgroundClass}
-        />
+        <div style={this.cardBackgroundStyle} class={"rt-card__background" + this.cardBackgroundClass}/>
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
           {productTriangle}
@@ -558,6 +605,7 @@ export default {
             {this.$slots["footer"]}
           </div>
         </div>
+        {doubleSided}
       </div>;
     } else {
       return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>

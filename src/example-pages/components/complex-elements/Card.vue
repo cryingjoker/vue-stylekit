@@ -914,9 +914,7 @@
               </template>
             </rt-card>
           </div>
-          <div
-            class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch is-b2c"
-          >
+          <div class="rt-col-6 rt-col-md-3 rt-space-top rt-font-hypnens-off d-stretch is-b2c">
             <rt-card
               :background-opacity="0.9"
               :background-cover="true"
@@ -1658,6 +1656,7 @@
                         </div>
                       </template>
                     </links-block>
+                    <p class="rtb-card__links-block__footnote rt-font-small-paragraph color-main025">безлимитные сервисы</p>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>

@@ -72,7 +72,7 @@
     this.help = this.$parent._props.isHelpBlock;
     this.contentBlockType = this.$parent._props.contentBlockType;
     this.alignLeft = this.$parent._props.alignLeft;
-    if(this.columnsQuantity === 1){
+    if(this.columnsQuantity === 1 && !this.companyProfits){
       if (this.$slots.moreInfo) {
         return (
           <div
@@ -115,15 +115,6 @@
             </div>
           </div>
         );
-      } else if(this.companyProfits) {
-        return (
-          <div class={"rt-row-list__item rt-col-3 rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits" + (this.alignLeft ? " rtb-company-profits--left" : "")}>
-            <div class="rt-row-list__header">
-              <div class="rt-row-list__icon" style={this.iconImage}></div>
-              {this.$slots.option}
-            </div>
-          </div>
-        )
       } else if(this.help) {
         if(this.buttonInMobile && this.componentView === 'mobile') {
           return <a href={"tel:" + this.phoneNumber} style="order:2;" class="rt-col-md-3">
@@ -208,6 +199,28 @@
           {this.$slots.option}
         </div>
       </div>);
+    } else if(this.companyProfits) {
+      const columnClass = (() => {
+        let profitColumn = '';
+        if(this.columnsQuantity === 1) {
+          profitColumn += ' rt-col-3 ';
+        }
+        if(this.columnsQuantity === 2) {
+          profitColumn += ' rt-col-6 ';
+        }
+        if(this.columnsQuantity === 3) {
+          profitColumn += ' rt-col-4 ';
+        }
+        return profitColumn;
+      })();
+      return (
+        <div class={"rt-row-list__item" + (columnClass) + " rt-col-td-3 rt-col-md-3 rtb-profit rtb-company-profits" + (this.alignLeft ? " rtb-company-profits--left" : "")}>
+          <div class="rt-row-list__header">
+            <div class="rt-row-list__icon" style={this.iconImage}></div>
+            {this.$slots.option}
+          </div>
+        </div>
+      )
     } else {
       const columnClass = (() => {
         let profitColumn = '';

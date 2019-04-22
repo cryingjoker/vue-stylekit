@@ -70,6 +70,7 @@ import {
   UnWrapper,
   RealPopup,
   Ussd,
+  UseCase,
   ProductCard
 } from "./components";
 
@@ -149,7 +150,6 @@ const VueRtStyle = {
       Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(RealPopup.name, RealPopup);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
-      Vue.component(ProductCard.name, ProductCard.component);
 
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
