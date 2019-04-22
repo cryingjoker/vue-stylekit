@@ -770,7 +770,6 @@
         var colsWidht = cols[0].clientWidth;
         var colsSize = cols.length;
         var wWidth = document.body.clientWidth;
-        console.info("colsWidht * colsSize > wWidth", colsWidht * colsSize > wWidth);
         if (colsWidht * colsSize > wWidth) {
           needToScroll = true;
           // var containerHeight = document.querySelector(".tariff-scroller-sticky").clientHeight;
@@ -867,7 +866,6 @@
       var activeIndex = 0;
       document.querySelectorAll(".vip-iphone-count__point").forEach(function(item) {
         item.addEventListener("click", function() {
-          console.info('!!!')
           if (!item.classList.contains("vip-iphone-count__point--is-active")) {
             document.querySelector(".vip-iphone-count__point--is-active").classList.remove("vip-iphone-count__point--is-active");
             item.classList.add("vip-iphone-count__point--is-active");

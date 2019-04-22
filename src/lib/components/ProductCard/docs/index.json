@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "name": "rt-product-card",
+      "property":":fixed-image-height",
+      "type": ["Boolean"],
+      "description":"Флаг фиксированной высоты в 300 для b2c",
+      "value" :"false",
+      "version": "0.1.14"
+    },
+     {
+      "name": "rt-product-card",
+      "property":":background-image",
+      "type": ["String"],
+      "description":"url для background карточки",
+      "value" :"null",
+       "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":tablet-background-image",
+      "type": ["String"],
+      "description":"url для background карточки для планшетов",
+      "value" :"null",
+      "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":mobile-background-image",
+      "type": ["String"],
+      "description":"url для background карточки для телефонов",
+      "value" :"null",
+      "version": "0.1.14"
+    }
+  ]
+}

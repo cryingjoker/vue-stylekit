@@ -10,9 +10,13 @@ body
   font-weight 400
 
 .{newAppName}-font-hero
-  font-size 48px
+  font-size 50px
   line-height 60px
-  font-weight 600
+  font-weight 500
+
+  @media (max-width: laptop-upper-limit)
+    font-size 44px
+    line-height 54px
 
   @media (max-width: tablet-upper-limit)
     font-size 36px
@@ -20,7 +24,7 @@ body
 
   @media (max-width: mobile-upper-limit)
     font-size 28px
-    line-height 36px
+    line-height 34px
 
 h1,
 .{newAppName}-font-h1
@@ -43,7 +47,7 @@ h1,
 .{newAppName}-font-banner-label
   font-size 50px
   line-height 60px
-  font-weight 600
+  font-weight 500
 
   @media (max-width: laptop-upper-limit)
     font-size 44px
@@ -126,7 +130,7 @@ h4,
 strong,
 b,
 .{newAppName}-font-bold
-  font-weight 600
+  font-weight 500
 
 .{newAppName}-font-real-bold
   font-weight 800

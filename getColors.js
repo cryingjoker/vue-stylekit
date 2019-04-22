@@ -11,7 +11,6 @@ readStream
   .pipe(unzip.Parse())
   .pipe(writeStream);
 readStream.on("end", function() {
-  console.info("lalalala");
 
 
   const sketchJsonFile = fs.readFileSync("./tmp/document.json", "utf8");

@@ -48,7 +48,9 @@ import Logo from "../components/main-elements/Logo.vue";
 import WarFace from "../components/promo/game-warface.vue";
 import Vip from "../components/promo/vip.vue";
 import Kids from "../components/promo/kids.vue";
+import PromoLp from "../components/promo/lp.vue";
 import Swiper from "../components/swiper/Swiper.vue";
+import ProductCard from "../components/experiment-elements/ProductCard.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -85,6 +87,7 @@ const index = [
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
+  { path: '/product-cards', name: 'app-product-card', component: ProductCard },
   { path: '/tabs', name: 'app-banners', component: Tabs },
   { path: '/use-case', name: 'useCase', component: UseCase },
   { path: '/promo/vcod', name: 'VCOD', component: VCOD },
@@ -97,6 +100,7 @@ const index = [
   { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/kids', name: 'kids', component: Kids },
+  { path: '/promo/lp', name: 'lp', component: PromoLp },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
   { path: '/opportunity', name: 'opportunity', component: Opportunity },
@@ -104,7 +108,6 @@ const index = [
   { path: '/help-main', name: 'helpMain', component: HelpMain },
   { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
   { path: '/popup', name: 'realPopup', component: RealPopup },
-  // { path: '/promo/homeinternet', name: 'homeinternet', component: Homeinternet },
   { path: '', name: 'default' },
 ];
 

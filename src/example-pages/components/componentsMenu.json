@@ -231,6 +231,15 @@
           "for_b2b" : true,
           "for_b2c" : true
         },
+
+        {
+          "name" : "ProductCard",
+          "title" : "ProductCard",
+          "url" : "/product-cards",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
         {
           "name" : "Cards with forms",
           "title" : "Cards with forms",

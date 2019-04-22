@@ -63,7 +63,7 @@ class logoRTWithTextClass extends Vue{
 
       <svg height={textHeight} class="rt-logo__rt-text" viewBox="0 0 171 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Logo" transform="translate(-168.000000, -1437.000000)" fill="#231F20">
+          <g id="Logo" transform="translate(-168.000000, -1437.000000)" fill={this.color}>
             <g id="Group-27-Copy" transform="translate(125.000000, 1393.000000)">
               <g id="Group-11" transform="translate(43.070905, 44.228760)">
                 <polygon id="Fill-7" points="133.243817 6.3124933 128.639834 6.3124933 123.140308 11.8827578 123.140308 6.3124933 119.247005 6.3124933 119.247005 21.6608003 123.140308 21.6608003 123.140308 15.3173588 128.732899 21.6608003 133.429313 21.6608003 126.198984 13.4299593"></polygon>

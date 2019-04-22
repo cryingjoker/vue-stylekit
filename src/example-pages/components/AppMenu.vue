@@ -9,14 +9,14 @@
 <!--</template>-->
 
 <script type="text/jsx">
-import componentsMenu from "./componentsMenu.json";
-import VueRtStyle from "../../lib/index";
-import componentsList from "../componentsList";
+  import componentsMenu from "./componentsMenu.json";
+  import VueRtStyle from "../../lib/index";
+  import componentsList from "../componentsList";
+  import RtInput from "../../lib/components/Input/Input.vue";
 
-
-export default {
-  name: "AppMenu",
-
+  export default {
+    name: "AppMenu",
+    components: { RtInput },
     props: {
       showMenu: {
         type: Boolean,
@@ -44,98 +44,77 @@ export default {
     data: () => ({
       showMenuLocal: false,
       preUrl: "",
-      menuIsDisabled: false
-
+      menuIsDisabled: false,
+      searchValue: ""
     }),
-
-  watch: {
-    showMenu: function(newVal, oldVal) {
-      if(!this.menuIsDisabled) {
-        this.showMenuLocal = newVal;
-      }
-    }
-  },
-  mounted() {
-    this.preUrl = location.protocol.search("https") >= 0 ? "/vue-stylekit/docs" : "";
-    document.querySelector(".aside-menu").addEventListener("mouseenter", (item) => {
-      this.showMenuLocal = true;
-    });
-    document.querySelector(".aside-menu").addEventListener("mouseleave", (item) => {
-      this.showMenuLocal = false;
-    });
-    document.querySelectorAll(".aside-menu__link").forEach((item) => {
-      item.addEventListener("click", () => {
-        this.disableMenu();
-      });
-    });
-
-  },
-  methods: {
-    disableMenu() {
-      this.showMenuLocal = false;
-      this.menuIsDisabled = true;
-      setTimeout(() => {
-        this.menuIsDisabled = false;
-      }, 500);
-    }
-  },
-  render() {
-
-    const renderList = (itemList) => itemList.map((item) => {
-      const content = (item) => {
-
-        if (item) {
-          if (item["list_child"] && item["list_child"].length > 0) {
-            return <div class="aside-menu__item">
-              <p class="aside-menu__submenu-title">{item.title}</p>
-              <div class="aside-sub-menu">
-                {renderList(item["list_child"])}
-              </div>
-            </div>;
-          } else {
-            return <div class="aside-menu__item">
-              <router-link
-                class="aside-menu__link"
-                active-class="aside-menu__link--active"
-                to={this.preUrl + item.url}
-              >
-                {item.title}
-              </router-link>
-            </div>;
-          }
+    watch: {
+      showMenu: function(newVal, oldVal) {
+        if (!this.menuIsDisabled) {
+          this.showMenuLocal = newVal;
         }
-      };
-      return content(item);
-    });
+      }
+    },
+    mounted() {
+      this.preUrl = location.protocol.search("https") >= 0 ? "/vue-stylekit/docs" : "";
+    },
+    methods: {
+      changeSearchParams(searchValue) {
+        this.searchValue = searchValue;
+      }
+    },
+    render() {
+
+      const renderList = (itemList) => itemList.filter((item) => {
+        const reg = new RegExp(this.searchValue, "gi");
+        return this.searchValue.length === 0 || item.title.search(reg) >= 0;
+      }).map((item) => {
+        const content = (item) => {
+
+          if (item) {
+            if (item["list_child"] && item["list_child"].length > 0) {
+              return <div class="aside-menu__item">
+                <p class="aside-menu__submenu-title">{item.title}</p>
+                <div class="aside-sub-menu">
+                  {renderList(item["list_child"])}
+                </div>
+              </div>;
+            } else {
+              return <router-link
+                class="aside-menu__item"
+                active-class="aside-menu__item--active"
+                to={this.preUrl + item.url}>
+                <span class="aside-menu__link">{item.title}</span>
+              </router-link>;
+            }
+          }
+        };
+        return content(item);
+      });
 
 
-    return <div class={"aside-menu" + (this.showMenuLocal ? " aside-menu--active" : "")}>
+      return <div class="app-aside-menu rt-dark-theme">
+        <div class="app-aside-menu__wrapper">
+          <div class="app-aside-menu__inner">
+            <div class="rt-space-horizontal rt-space-top05">
+              <rt-logo
+                width="18px"
+                english-theme="true"
+                show-text="true"
+                color="#ffffff"
+                height="32px"
+              />
+            </div>
 
-      <div class="aside-menu__item">
-        <div class="row">
-          <div class="d-flex">
-            <rt-switch
-              checked={this.codeViewer}
-              class="code-switcher"
-              onChange={this.codeViewerToggle}
-            >Show code viewer
-            </rt-switch>
-          </div>
-          <div class="d-flex">
-            <rt-switch
-              checked={this.showGrid}
-              class="grid-switcher"
-              onChange={this.gridToggle}
-            >Grid
-            </rt-switch>
+
+            <div class="rt-space-top rt-md-space-top25">
+              <div class="rt-space-horizontal rt-space-bottom app-aside-menu__search">
+                <rt-input placeholder="Seacrh" onInput={this.changeSearchParams}></rt-input>
+              </div>
+              {renderList(componentsMenu.list)}
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="rt-space-top3">
-        {renderList(componentsMenu.list)}
-      </div>
-    </div>;
-  }
-};
+      </div>;
+    }
+  };
 </script>
