@@ -304,6 +304,14 @@
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
+        } ,
+        {
+          "name" : "Use Case",
+          "title" : "Use Case",
+          "url" : "/use-case",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
         }
       ],
       "for_b2b" : true,
@@ -358,6 +366,14 @@
           "name" : "testAccess",
           "title" : "test access",
           "url" : "/promo/test-access",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "VCOD",
+          "title" : "VCOD",
+          "url" : "/promo/VCOD",
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true

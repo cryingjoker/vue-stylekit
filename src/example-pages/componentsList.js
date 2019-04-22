@@ -60,7 +60,8 @@ import {
   RealPopup,
   Opportunity,
   OpportunityItem,
-  Ussd
+  Ussd,
+  UseCase,
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -127,5 +128,6 @@ componentsList[Opportunity.name] = Opportunity;
 componentsList[OpportunityItem.name] = OpportunityItem;
 componentsList[UnWrapper.name] = UnWrapper;
 componentsList[RealPopup.name] = RealPopup;
+componentsList[UseCase.name] = UseCase;
 componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

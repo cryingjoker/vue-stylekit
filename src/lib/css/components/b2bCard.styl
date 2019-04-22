@@ -11,6 +11,8 @@
 
   &--package
     padding vertical-space * 1.5
+    @media (max-width: mobile-upper-limit)
+      padding vertical-space
 
   &__subtitle
     height 18px
@@ -75,6 +77,7 @@
     max-height 26px
     overflow hidden
     vertical-align middle
+    margin-right 5px
 
     &--expanded
       max-height none
@@ -107,7 +110,7 @@
   &__expand-button
     color b2c-purple
     font-size 14px
-    line-height 18px
+    line-height 28px
     margin-left 5px
     vertical-align middle
     cursor pointer
@@ -238,6 +241,82 @@
         height 330px
     .color-block
       color b2c-white
+  &--double-sided
+    //min-height 338px
+    perspective 1000px
+    transform-style: flat
+    transition transform 1s, right 1s
+    @media(max-width: mobile-upper-limit)
+      min-height 338px
+    .{newAppName}-card__background
+      &:after
+        position absolute
+        top 20px
+        left 20px
+        right 20px
+        bottom 20px
+        content ''
+        background linear-gradient(rgba(main-color, 0) 0%,rgba(main-color, .67) 50%, main-color 100%)
+    .{newAppName}-card__content
+      height 100%
+      //max-height 590px
+      padding-top: 310px
+      padding-right 55px
+      box-sizing border-box
+      position absolute
+      top 0
+      left 0
+      visibility visible
+      z-index 2
+      transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+      @media (max-width: tablet-upper-limit)
+        max-height none
+        padding-top 100px
+      @media (max-width: mobile-upper-limit)
+        padding-right 0
+        padding-top 50px
+    .{newAppName}-card__background
+      visibility visible
+      transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+    &.is-flipped
+      @media (min-width: laptop-lower-limit)
+        transform rotateY(180deg)
+        right 0
+  &__reverse
+    position absolute
+    transform: rotateY(180deg)
+    background-color b2c-white
+    padding 40px 40px 20px
+    //min-height 590px
+    visibility hidden
+    transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+    @media (max-width: tablet-upper-limit)
+      padding 20px
+      //min-height 720px
+    @media (max-width: mobile-upper-limit)
+      //min-height 770px
+      padding-top: 40px
+    .{newAppName}-font-bold
+      &:nth-child(n+2)
+        margin-top vertical-space
+
+  &-close
+    top 20px
+    right 20px
+    position absolute
+    cursor pointer
+    @media (max-width: tablet-upper-limit)
+      display none
+
+.is-flipped
+  @media (min-width: laptop-lower-limit)
+    .{b2bAppName}-card__reverse
+      z-index 3
+      visibility visible
+    .{newAppName}-card__content
+      visibility hidden
+    .{newAppName}-card__background
+      visibility hidden
 
 .{b2bAppName}-product__triangle
   position absolute
@@ -392,6 +471,12 @@
     transform translateY(-50%)
     font-size 14px
     line-height 18px
+    @media (max-width: tablet-upper-limit)
+      right auto
+      left 10px
+      top auto
+      bottom auto
+      transform translateX(-50%) translateY(30px)
   &--tooltip
     color b2b-state
     text-align center
@@ -406,6 +491,9 @@
       border-radius 5px
       right -30px
       top 50%
+      @media (max-width: tablet-upper-limit)
+        min-width 250px
+        max-width none
       &:before
         content ""
         width 0
@@ -416,6 +504,11 @@
         position absolute
         top calc(50% - 5px)
         left -5px
+        @media (max-width: tablet-upper-limit)
+          border-width 0 5px 5px 5px
+          border-color transparent transparent #f1f3f5 transparent
+          left calc(50% - 5px)
+          top -5px
   &--confirmed
     .{b2bAppName}-hint__text
       background-color b2c-green
@@ -696,6 +789,20 @@
     min-width 45vw
     max-width none
   @media (max-width: mobile-upper-limit)
-    min-width 85vw
+    min-width 75vw
 
-
+.{newAppName}-rotating-card-gallery
+  display flex
+  flex-wrap wrap
+  height auto!important
+  @media (max-width: mobile-upper-limit)
+    flex-wrap nowrap
+    overflow-x auto
+    padding-bottom vertical-space
+  &>*
+    &:nth-child(n+3)
+      margin-top vertical-space
+    @media (max-width: mobile-upper-limit)
+      margin-top vertical-space
+      width: 85vw
+      flex: 0 0 85%

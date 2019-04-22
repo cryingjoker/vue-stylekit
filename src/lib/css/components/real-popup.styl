@@ -20,7 +20,6 @@
   position relative
   width auto
   height auto
-  max-width 70vw
   max-height 80vh
   padding vertical-space * 2
   display inline-block
@@ -28,19 +27,22 @@
   box-sizing border-box
   box-shadow 0 20px 30px rgba(main-color, .2)
   overflow-y auto
+  @media (max-width: tablet-upper-limit)
+    max-height 100vh
   &-close
     position absolute
     top 20px
     right 20px
     cursor pointer
   &--center-center
-    transform translateY(-50%) translateX(-50%)
+    transform translateY(-50%)
     top 50vh
-    left 50vw
   &--top-center
     top 0
-    left 50vw
-    transform translateX(-50%)
   .row
-    max-height calc(70vh - 60px)
+    max-height calc(80vh - 60px)
     overflow scroll
+    @media (max-width: tablet-upper-limit)
+      max-height calc(100vh - 60px)
+    @media (max-width: tablet-upper-limit)
+      max-height calc(100vh - 80px)

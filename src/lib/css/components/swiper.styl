@@ -8,6 +8,11 @@ scrollHSpacePC = 70px
   position relative
   z-index swiperZIndex
 
+  @media (min-width: laptop-lower-limit)
+    //padding: 0 70px
+    max-width: 1480px
+    margin: 0 auto
+
   &__container
     display block
     position relative
@@ -105,6 +110,10 @@ scrollHSpacePC = 70px
 
   &.show-no-move-next
     animation show-no-moves-next .9s ease-in-out
+
+.hide-navigation
+  @media (min-width: laptop-lower-limit)
+    padding: 0 70px
 
 keyframes show-no-moves-prev
   0%

@@ -1,12 +1,3 @@
-<!--<template>-->
-<!--<div class="links-block">-->
-<!--<div class="rtb-card__links-block" :class="blockClasses">-->
-<!---->
-<!--</div>-->
-<!--<button class="rtb-card__expand-button" @click="unwrap()">ещё 4</button>-->
-<!--</div>-->
-<!--</template>-->
-
 <script type="text/jsx">
 export default {
   name: "LinksBlock",
@@ -52,7 +43,7 @@ export default {
         {content}
       </div>
       {button}
-      <p class="rtb-card__links-block__footnote rt-font-small-paragraph color-main025">безлимитные сервисы</p>
+
     </div>;
   }
 };
