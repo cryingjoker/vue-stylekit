@@ -5,12 +5,15 @@
   max-height: calc((1340px / 4))
   width: 100%
   background-color: #313a49
-  &.{newAppName}-product-card--has-fixed-heigth
+  &.{newAppName}-product-card--has-fixed-height
     max-height: 300px
     min-height: 300px
   @supports (display: grid)
     display: grid
     grid-template-columns: 1fr 1fr
+
+
+
 
 
 
@@ -23,11 +26,15 @@
       grid-template-rows: 1fr 1fr
       grid-template-areas "header"\
                           "footer"
+      &.{newAppName}-product-card--has-static-image-with-fix-height
+        grid-template-rows: 0fr 0fr
   @media (max-width: mobile-upper-limit)
     min-height: 500px
-    &.{newAppName}-product-card--has-fixed-heigth
+    &.{newAppName}-product-card--has-fixed-height
       min-height: 300px
-
+    &.{newAppName}-product-card--has-static-image-with-fix-height
+      min-height: initial
+      max-height: initial
 
 
 .{newAppName}-product-card__content
@@ -35,7 +42,7 @@
   display: flex
   flex-direction column
   align-items: flex-start
-  padding 30px
+  padding 40px
   @media (max-width: tablet-upper-limit)
     padding: 20px
 
@@ -53,6 +60,12 @@
     border-radius  10px 10px 0 0
     @supports (display: grid)
       grid-area: header
+.rt-product-card__image-tag
+
+  min-height: initial
+  padding: 0
+  @media (max-width: mobile-upper-limit)
+    width: 100%
 .{newAppName}-product-card__image--hide-animate
     animation 0.4s hideCardImage linear
 .{newAppName}-product-card__image--show-animate

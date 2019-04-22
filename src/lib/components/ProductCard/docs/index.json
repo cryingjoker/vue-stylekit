@@ -31,6 +31,14 @@
       "description":"url для background карточки для телефонов",
       "value" :"null",
       "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":safe-image-rate",
+      "type": ["Boolean"],
+      "description":"сохранение пропорций изображения для мобильной версии",
+      "value" :"null",
+      "version": "0.1.17"
     }
   ]
 }

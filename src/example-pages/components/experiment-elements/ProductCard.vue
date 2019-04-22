@@ -11,23 +11,43 @@
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
         <div class="rt-space-bottom is-b2c">
-        <rt-product-card
-          background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
-          tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
-          mobile-background-image="http://8c58e64aa1a7874c55b4-be3e3aa1b17f89aab5ecca1936c616df.r83.cf3.rackcdn.com/wp-content/uploads/2014/08/MacBook-Pro-HDMI-to-VGA-not-working-e1410348485493.jpg"
-          :fixed-image-height="true">
-          <slot>
-            <div class="rt-product-card__content">
-              <div class="rt-product-card__body">
-                <h3 class="rt-font-bold rt-space-bottom05">Яндекс.Диск</h3>
-                <p class="rt-font-small-paragraph rt-space-bottom">Храните фото, видео и документы в облаке, чтобы всегда иметь к ним доступ с любого устройства — компьютера, смартфона или планшета.</p>
+          <rt-product-card
+            background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
+            tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
+            mobile-background-image="http://8c58e64aa1a7874c55b4-be3e3aa1b17f89aab5ecca1936c616df.r83.cf3.rackcdn.com/wp-content/uploads/2014/08/MacBook-Pro-HDMI-to-VGA-not-working-e1410348485493.jpg"
+            :fixed-image-height="true">
+            <slot>
+              <div class="rt-product-card__content">
+                <div class="rt-product-card__body">
+                  <h3 class="rt-font-bold rt-space-bottom05">Яндекс.Диск</h3>
+                  <p class="rt-font-small-paragraph rt-space-bottom">Храните фото, видео и документы в облаке, чтобы всегда иметь к ним доступ с любого устройства — компьютера, смартфона или планшета.</p>
+                </div>
+                <div class="rt-product-card__footer">
+                  <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
+                </div>
               </div>
-              <div class="rt-product-card__footer">
-                <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
+            </slot>
+          </rt-product-card>
+        </div>
+        <div class="rt-space-bottom is-b2c">
+          <rt-product-card
+            background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
+            tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
+            mobile-background-image="http://8c58e64aa1a7874c55b4-be3e3aa1b17f89aab5ecca1936c616df.r83.cf3.rackcdn.com/wp-content/uploads/2014/08/MacBook-Pro-HDMI-to-VGA-not-working-e1410348485493.jpg"
+            :fixed-image-height="true"
+            :safe-image-rate="true">
+            <slot>
+              <div class="rt-product-card__content">
+                <div class="rt-product-card__body">
+                  <h3 class="rt-font-bold rt-space-bottom05">Яндекс.Диск</h3>
+                  <p class="rt-font-small-paragraph rt-space-bottom">Храните фото, видео и документы в облаке, чтобы всегда иметь к ним доступ с любого устройства — компьютера, смартфона или планшета.</p>
+                </div>
+                <div class="rt-product-card__footer">
+                  <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
+                </div>
               </div>
-            </div>
-          </slot>
-        </rt-product-card>
+            </slot>
+          </rt-product-card>
         </div>
         <div class="is-b2b">
         <rt-product-card background-image="/static/images/B2B/banner-img.png">
