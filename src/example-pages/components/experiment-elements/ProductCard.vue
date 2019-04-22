@@ -11,7 +11,8 @@
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
         <div class="rt-space-bottom is-b2c">
-          <rt-product-card
+          <pre-code
+            text='<rt-product-card
             background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
             tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
             mobile-background-image="http://8c58e64aa1a7874c55b4-be3e3aa1b17f89aab5ecca1936c616df.r83.cf3.rackcdn.com/wp-content/uploads/2014/08/MacBook-Pro-HDMI-to-VGA-not-working-e1410348485493.jpg"
@@ -27,10 +28,11 @@
                 </div>
               </div>
             </slot>
-          </rt-product-card>
+          </rt-product-card>'></pre-code>
         </div>
         <div class="rt-space-bottom is-b2c">
-          <rt-product-card
+          <pre-code
+            text='<rt-product-card
             content-orientation="bottom"
             background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
             tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
@@ -117,10 +119,11 @@
                 </div>
               </div>
             </slot>
-          </rt-product-card>
+          </rt-product-card>'></pre-code>
         </div>
-        <div class="rt-space-bottom is-b2c">
-          <rt-product-card
+        <div class="rt-space-bottom is-b2c app-is-main-component">
+          <pre-code
+            text='<rt-product-card
             background-image="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=730&crop=1"
             tablet-background-image="https://speedupmacbook.com/wp-content/uploads/man-with-macbook-coffee.jpg"
             mobile-background-image="http://8c58e64aa1a7874c55b4-be3e3aa1b17f89aab5ecca1936c616df.r83.cf3.rackcdn.com/wp-content/uploads/2014/08/MacBook-Pro-HDMI-to-VGA-not-working-e1410348485493.jpg"
@@ -206,10 +209,11 @@
                 </div>
               </div>
             </slot>
-          </rt-product-card>
+          </rt-product-card>'></pre-code>
         </div>
         <div class="is-b2b">
-        <rt-product-card background-image="/static/images/B2B/banner-img.png">
+          <pre-code
+            text='<rt-product-card background-image="/static/images/B2B/banner-img.png">
           <slot>
             <div class="rt-product-card__content">
               <div class="rt-product-card__body">
@@ -222,7 +226,7 @@
               </div>
             </div>
           </slot>
-        </rt-product-card>
+        </rt-product-card>'></pre-code>
       </div>
       </div>
     </div>
