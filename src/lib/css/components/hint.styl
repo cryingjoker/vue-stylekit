@@ -1,0 +1,254 @@
+.{newAppName}-hint
+  cursor: pointer
+  position: relative
+  z-index: 10
+  &:hover
+    &:after,
+    &:before
+      opacity: 1
+      visibility: visible
+  &:before
+    cursor: default
+    content  attr(hint-content)
+    z-index: 2
+    position: absolute
+    white-space nowrap
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-left: 10px
+    padding-right: 10px
+    opacity: 0
+    color #fff
+    visibility: hidden
+    transition cubic-bezier(.55,0,.1,1)
+    transition-duration 0.6s
+    transition-property background-color, color, opacity, visibility, left, right, top, bottom, margin
+  &:after
+    cursor: default
+    z-index: 2
+    content: ''
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    border-style: solid;
+    transition cubic-bezier(.55,0,.1,1)
+    transition-duration 0.6s
+    transition-property background-color, color, opacity, visibility, left,right, top, bottom, margin
+  &.{newAppName}-validation-icon--error
+    &:before
+      color white
+      background-color: error-color
+    &.{newAppName}-hint--left-orient
+      &:after
+        border-color: #0000 #0000 #0000 error-color
+    &.{newAppName}-hint--right-orient
+      &:after
+        border-color: #0000 error-color #0000 #0000
+    &.{newAppName}-hint--bottom-orient
+      &:after
+        border-color: #0000 #0000 error-color #0000
+    &.{newAppName}-hint--top-orient
+      &:after
+        border-color: error-color #0000 #0000 #0000
+    &.{newAppName}-md-hint--left-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 #0000 #0000 error-color
+    &.{newAppName}-md-hint--right-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 error-color #0000 #0000
+    &.{newAppName}-md-hint--bottom-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 #0000 error-color #0000
+    &.{newAppName}-md-hint--top-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: error-color #0000 #0000 #0000
+  &.{newAppName}-validation-icon--success
+    &:before
+      color white
+      background-color: b2c-green
+    &.{newAppName}-hint--left-orient
+      &:after
+        border-color: #0000 #0000 #0000 b2c-green
+    &.{newAppName}-hint--right-orient
+      &:after
+        border-color: #0000 b2c-green #0000 #0000
+    &.{newAppName}-hint--bottom-orient
+      &:after
+        border-color: #0000 #0000 b2c-green #0000
+    &.{newAppName}-hint--top-orient
+      &:after
+        border-color: b2c-green #0000 #0000 #0000
+    &.{newAppName}-md-hint--left-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 #0000 #0000 b2c-green
+    &.{newAppName}-md-hint--right-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 b2c-green #0000 #0000
+    &.{newAppName}-md-hint--bottom-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: #0000 #0000 b2c-green #0000
+    &.{newAppName}-md-hint--top-orient
+      @media (max-width: mobile-upper-limit)
+        &:after
+          border-color: b2c-green #0000 #0000 #0000
+
+.{newAppName}-hint--left-orient
+  &:after,
+  &:before
+    right: 0
+  &:after
+    margin-right: 3px
+    border-width: 7px 0px 7px 7px;
+  &:before
+    margin-right: 10px
+  &:hover
+    &:after,
+    &:before
+      right: 100%
+
+.{newAppName}-hint--right-orient
+  &:after,
+  &:before
+    left: 0
+  &:after
+    margin-left: 3px
+    border-width: 7px 7px 7px 0;
+  &:before
+    margin-left: 10px
+  &:hover
+    &:after,
+    &:before
+      left: 100%
+
+
+.{newAppName}-hint--bottom-orient
+  &:after,
+  &:before
+    top: 0
+  &:after
+    margin-top: 13px
+    border-width: 0px 7px 7px  7px;
+  &:before
+    margin-top: 20px
+  &:hover
+    &:after,
+    &:before
+      top: 100%
+
+.{newAppName}-hint--top-orient
+  &:after,
+  &:before
+    bottom: 0
+  &:after
+    margin-bottom: 13px
+    border-width: 7px 7px 0px 7px;
+  &:before
+    margin-bottom: 20px
+  &:hover
+    &:after,
+    &:before
+      bottom: 100%
+
+.{newAppName}-md-hint--left-orient
+  @media (max-width: mobile-upper-limit)
+    &:after,
+    &:before
+      right: 0
+      bottom: initial
+      left initial
+      top initial
+    &:after
+      margin-left: initial
+      margin-left initial
+      margin-top initial
+      margin-right: 3px
+      border-width: 7px 0px 7px 7px;
+    &:before
+      margin-right: 10px
+    &:hover
+      &:after,
+      &:before
+        right: 100%
+        left initial
+        top initial
+        bottom  initial
+
+.{newAppName}-md-hint--right-orient
+  @media (max-width: mobile-upper-limit)
+    &:after,
+    &:before
+      left: 0
+      bottom: initial
+      top initial
+      right initial
+    &:after
+      margin-bottom: initial
+      margin-top initial
+      margin-right initial
+      margin-left: 3px
+      border-width: 7px 7px 7px 0;
+    &:before
+      margin-left: 10px
+    &:hover
+      &:after,
+      &:before
+        left: 100%
+        top initial
+        right initial
+        bottom  initial
+
+
+.{newAppName}-md-hint--bottom-orient
+  @media (max-width: mobile-upper-limit)
+    &:after,
+    &:before
+      top: 0
+      left initial
+      right initial
+      bottom  initial
+    &:after
+      margin-left initial
+      margin-right initial
+      margin-bottom  initial
+      margin-top: 13px
+      border-width: 0px 7px 7px  7px;
+    &:before
+      margin-top: 20px
+    &:hover
+      &:after,
+      &:before
+        left initial
+        right initial
+        bottom  initial
+        top: 100%
+
+.{newAppName}-md-hint--top-orient
+  @media (max-width: mobile-upper-limit)
+    &:after,
+    &:before
+      bottom: 0
+      left initial
+      right initial
+      top initial
+    &:after
+      margin-left initial
+      margin-right initial
+      margin-top initial
+      margin-bottom: 13px
+      border-width: 7px 7px 0px 7px;
+    &:before
+      margin-bottom: 20px
+    &:hover
+      &:after,
+      &:before
+        left initial
+        right initial
+        top initial
+        bottom: 100%

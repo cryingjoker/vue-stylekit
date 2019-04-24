@@ -403,7 +403,7 @@ export default {
         } else {
           return <div class="password-icon" onClick={this.togglePasswordVisibility}>
             <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(1 1)" stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd">
+              <g transform="translate(1 1)" stroke="#101828" stroke-width="2" fill="none" fill-rule="evenodd">
                 <path d="M0 5c1.805 3.225 4.472 4.837 8 4.837 3.528 0 6.195-1.612 8-4.837M0 4.837C1.805 1.612 4.472 0
                 8 0c3.528 0 6.195 1.612 8 4.837" stroke-linecap="round"/>
                 <circle cx="8" cy="5" r="2"/>
@@ -447,16 +447,16 @@ export default {
           <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
-                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill-opacity=".5" fill="#E3E8EC"/>
-                <path d="M15 10H5" stroke="#575D68" stroke-width="2"/>
+                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
+                <path d="M15 10H5" stroke="#101828" stroke-width="2"/>
               </g>
             </svg>
           </button>
           <button class="input-arithmetic__button input-arithmetic__plus" onClick={this.addNumber}>
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
-                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill-opacity=".5" fill="#E3E8EC"/>
-                <path d="M10 10V5v5h5-5zm0 0v5-5H5h5z" stroke="#575D68" stroke-width="2"/>
+                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
+                <path d="M10 10V5v5h5-5zm0 0v5-5H5h5z"  stroke="#101828" stroke-width="2"/>
               </g>
             </svg>
           </button>
