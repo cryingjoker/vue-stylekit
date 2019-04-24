@@ -71,7 +71,8 @@ import {
   RealPopup,
   Ussd,
   UseCase,
-  ProductCard
+  ProductCard,
+  ValidationIcon
 } from "./components";
 
 
@@ -149,9 +150,14 @@ const VueRtStyle = {
       Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(RealPopup.name, RealPopup);
-      Vue.component(LogoCoBranding.name, LogoCoBranding.component);
+
       Vue.component(UseCase.name, UseCase);
+
+      // tsx components
+
+      Vue.component(LogoCoBranding.name, LogoCoBranding.component);
       Vue.component(ProductCard.name, ProductCard.component);
+      Vue.component(ValidationIcon.name, ValidationIcon.component);
 
 
       Vue.directive(SwipeLeft.name, SwipeLeft);

@@ -107,7 +107,12 @@
 
 .input-arithmetic__button
   cursor pointer
-
+  opacity: 0.5
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity
+  &:hover
+    opacity: 1
   &+&
     margin-left horizontal-space * .25
 
@@ -137,6 +142,7 @@
     display none
 
 .input-wrapper
+  position: relative
   &+&
     margin-top 5px
 
