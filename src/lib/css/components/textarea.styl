@@ -29,7 +29,10 @@
   font-size 14px
   line-height 18px
   margin-bottom 5px
-
+  .textarea--disabled &
+    color main-color03
+    .{newAppName}-dark-theme &
+      color b2c-white05
   .{newAppName}-dark-theme &
     color b2c-white05
 
@@ -51,11 +54,11 @@
       box-shadow 0 0 0 2px b2c-purple inset
 
     &[disabled]
-      border 2px dashed b2b-state !important
+      border 2px dashed b2c-cool-grey !important
       box-shadow none !important
 
-    .text-field--error &
-      box-shadow 0 0 0 2px error-color inset !important
+.textarea--static.text-field--error .textarea-element
+  box-shadow 0 0 0 2px error-color inset !important
 
 .{b2bAppName}-textarea
   min-height 60px
@@ -88,7 +91,7 @@
   .textarea-element[disabled]
     &+.text-field__border+.floating-placeholder,
     &+.text-field__line+.floating-placeholder
-      color b2c-cool-grey
+      color main-color05
 
     &+.text-field__line
       border-color transparent
