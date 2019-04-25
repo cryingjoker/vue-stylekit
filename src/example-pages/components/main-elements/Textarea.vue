@@ -30,6 +30,7 @@
             >
             <rt-textarea-static
               :has-error="true"
+              label="Введите комментарий:"
               error-message="textarea error message"
               placeholder="Textarea"
             />
@@ -43,6 +44,7 @@
             >
             <rt-textarea-static
               :disabled="true"
+              label="Введите комментарий:"
               error-message="textarea error message"
               placeholder="Textarea"
             />

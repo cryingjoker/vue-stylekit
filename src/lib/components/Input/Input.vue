@@ -432,12 +432,12 @@ export default {
 
         if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
           return <div class={errorMessageClass}>
-            <span class="error-message-text-content rt-font-control">{this.errorMessageFunc(this.localValue)}</span>
+            <span class="error-message-text-content rt-font-label">{this.errorMessageFunc(this.localValue)}</span>
           </div>;
         }
 
         return <div class={errorMessageClass}>
-          <span class="error-message-text-content rt-font-control">{this.errorMessage}</span>
+          <span class="error-message-text-content rt-font-label">{this.errorMessage}</span>
         </div>;
       }
     })();
