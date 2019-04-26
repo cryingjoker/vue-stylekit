@@ -174,11 +174,14 @@ export default {
   },
   methods: {
     bindEvents() {
+
       if (this["_events"]) {
         Object.keys(this["_events"]).map(eventName => {
+          const that = this;
           this.$refs.input.addEventListener(
             eventName,
-            this["_events"][eventName]
+            function(){
+              that["_events"][eventName][0](arguments[0])}
           );
         });
       }
