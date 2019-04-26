@@ -72,7 +72,8 @@ import {
   Ussd,
   UseCase,
   ProductCard,
-  ValidationIcon
+  ValidationIcon,
+  TariffCard
 } from "./components";
 
 
@@ -157,6 +158,7 @@ const VueRtStyle = {
 
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
       Vue.component(ProductCard.name, ProductCard.component);
+      Vue.component(TariffCard.name, TariffCard.component);
       Vue.component(ValidationIcon.name, ValidationIcon.component);
 
 

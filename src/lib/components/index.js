@@ -26,6 +26,7 @@
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
  export { default as ProductCard} from './ProductCard/ProductCard.tsx';
+ export { default as TariffCard} from './TariffCard/TariffCard.tsx';
  export { default as CardBuy} from './Card/CardBuy.vue';
  export { default as CardImage} from './Card/CardImage.vue';
  export { default as CardImageList} from './Card/CardImageList.vue';
