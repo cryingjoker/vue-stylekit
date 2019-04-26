@@ -50,6 +50,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "opacity",
+      "title" : "Opacity",
+      "url" : "/opacity",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "row-list",
       "title" : "Row list",
       "url" : "/row-list",

@@ -47,7 +47,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top1half">
+                <div class="rt-space-top-half">
                   <div class="d-flex flex-start-center">
 
                     <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"

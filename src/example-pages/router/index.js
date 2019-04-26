@@ -27,6 +27,7 @@ import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
+import OpacityElements from '../components/main-elements/OpacityClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
 import TestAccess from '../components/promo/test-access.vue';
 import Opportunity from '../components/complex-elements/Opportunity.vue';
@@ -56,6 +57,7 @@ import TariffCard from "../components/experiment-elements/TariffCard.vue";
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
   { path: '/space', name: 'app-grid', component: SpaceElements },
+  { path: '/opacity', name: 'app-opacity', component: OpacityElements },
   { path: '/buttons', name: 'app-buttons', component: Buttons },
   { path: '/checkbox', name: 'app-checkbox', component: Checkbox },
   { path: '/radiobutton', name: 'app-radiobutton', component: RadioButton },
