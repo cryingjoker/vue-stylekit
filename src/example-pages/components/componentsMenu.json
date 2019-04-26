@@ -241,6 +241,14 @@
           "for_b2c" : true
         },
         {
+          "name" : "TariffCards",
+          "title" : "TariffCards",
+          "url" : "/tariff-cards",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
           "name" : "Cards with forms",
           "title" : "Cards with forms",
           "url" : "/cards-with-forms",

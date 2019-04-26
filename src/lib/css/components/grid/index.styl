@@ -21,6 +21,56 @@ spaceRender(prefix, needMedia, value, mediaWidth)
     else
       name = "" + (step / 10)
 
+
+  .{newAppName}{prefix}-space-top{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-top (value / 10) * vertical-space + 5
+    else
+      padding-top (value / 10) * vertical-space + 5
+
+  .{newAppName}{prefix}-space-bottom{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-bottom (value / 10) * vertical-space + 5
+    else
+      padding-bottom (value / 10) * vertical-space + 5
+
+  .{newAppName}{prefix}-space-vertical{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-top (value / 10) * vertical-space + 5
+        padding-bottom (value / 10) * vertical-space + 5
+    else
+      padding-top (value / 10) * vertical-space + 5
+      padding-bottom (value / 10) * vertical-space + 5
+
+  .{newAppName}{prefix}-space-left{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-left (value / 10) * horizontal-space + 5
+    else
+      padding-left (value / 10) * horizontal-space + 5
+
+  .{newAppName}{prefix}-space-right{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-right (value / 10) * horizontal-space + 5
+    else
+      padding-right (value / 10) * horizontal-space + 5
+
+  .{newAppName}{prefix}-space-horizontal{name}-half
+    if (needMedia)
+      @media (max-width: mediaWidth)
+        padding-left (value / 10) * horizontal-space + 5
+        padding-right (value / 10) * horizontal-space + 5
+    else
+      padding-left (value / 10) * horizontal-space + 5
+      padding-right (value / 10) * horizontal-space + 5
+
+
+
+
   .{newAppName}{prefix}-space-top{name}
     if (needMedia)
       @media (max-width: mediaWidth)
