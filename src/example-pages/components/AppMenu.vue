@@ -58,8 +58,14 @@
       this.preUrl = location.protocol.search("https") >= 0 ? "/vue-stylekit/docs" : "";
     },
     methods: {
-      changeSearchParams(searchValue) {
-        this.searchValue = searchValue;
+      changeSearchParams(e) {
+        this.searchValue = this.$refs.input.$refs.input.value;
+      },
+      checkKeydown(e){
+        if(e.keyCode === 27){
+          this.$refs.input.$refs.input.value = '';
+          this.$refs.input.$refs.input.dispatchEvent(new Event('input'));
+        }
       }
     },
     render() {
@@ -118,7 +124,7 @@
 
             <div class="rt-space-top rt-md-space-top25">
               <div class="rt-space-horizontal rt-space-bottom app-aside-menu__search">
-                <rt-input placeholder="Seacrh" onInput={this.changeSearchParams}></rt-input>
+                <rt-input ref="input" placeholder="Seacrh" onInput={this.changeSearchParams} onKeydown={this.checkKeydown}></rt-input>
               </div>
               {renderList(componentsMenu.list)}
             </div>
