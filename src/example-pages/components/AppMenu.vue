@@ -66,7 +66,17 @@
 
       const renderList = (itemList) => itemList.filter((item) => {
         const reg = new RegExp(this.searchValue, "gi");
-        return this.searchValue.length === 0 || item.title.search(reg) >= 0;
+        let hasFound = false;
+        if(this.searchValue.length === 0){
+          hasFound = true;
+        }else {
+          if (item.list_child && item.list_child.length > 0) {
+            hasFound = item.list_child.filter(subitem => subitem.title.search(reg) >= 0).length > 0
+          } else {
+            hasFound = item.title.search(reg) >= 0
+          }
+        }
+        return hasFound;
       }).map((item) => {
         const content = (item) => {
 
