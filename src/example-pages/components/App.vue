@@ -16,6 +16,7 @@
     <div class="app-wrapper" :class="{'show-b2c': siteStatus === 'b2c','show-b2b': siteStatus === 'b2b', 'show-b2c show-b2b': siteStatus === 'joint'}">
       <keep-alive>
         <app-menu
+          ref="menu"
           :show-menu="showMenu"
           :code-viewer-toggle="codeViewerToggle"
           :code-viewer="codeViewer"
@@ -138,6 +139,7 @@
     methods: {
       openMenu() {
         this.showMenu = true;
+        this.$refs.menu.$refs.input.$refs.input.focus();
       },
       closeMenu() {
         this.showMenu = false;
