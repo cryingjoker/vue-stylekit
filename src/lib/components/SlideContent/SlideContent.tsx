@@ -8,6 +8,7 @@ class SlideContent extends Vue {
   @Prop({ default: false }) isOpen: boolean;
   @Prop({ default: 'left-right' }) arrowPosition: string;
   @Prop({ default: true }) needBorder: boolean;
+  @Prop({ default: false }) dottedView: boolean;
   isOpenLocal = false;
 
   toggleOpen(){
@@ -15,6 +16,14 @@ class SlideContent extends Vue {
   }
 
   render(h: CreateElement): VNode {
+    if(this.dottedView){
+      return <div class='slide-dotted'>
+        <div class='slide-dotted-header'>{this.$slots.header}</div>
+        <div class='slide-dotted-content'>{this.$slots.content}</div>
+      </div>
+    }
+
+
     let slideArrowClass = `rt-slide__arrow rt-slide__arrow--${this.arrowPosition}`;
     let slideClass = `rt-slide`;
 
