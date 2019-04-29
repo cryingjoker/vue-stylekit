@@ -113,7 +113,85 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top-2">
+                <div class="rt-space-top">
+                  <rt-slide-content arrow-position="right-bottom">
+                    <template slot="label">
+                      Дополнительно
+                    </template>
+                    <template slot="content">
+                        <div class="d-flex flex-start-center rt-tariff-item ">
+
+                          <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="ver1" transform="translate(-163.000000, -1251.000000)">
+                                <g id="Group-9" transform="translate(164.000000, 1213.000000)">
+                                  <g id="Group-12" transform="translate(0.000000, 37.000000)">
+                                    <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                                      <path d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20" id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                      <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis" font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                        <tspan x="9" y="30">%</tspan>
+                                      </text>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+
+                          <div class="rt-space-left05">
+                            <p class="rt-font-bold">Скидка до 30%</p>
+                            <p class="rt-font-control">при заказе с сайта</p>
+                          </div>
+                      </div>
+                      <div class="rt-space-top-half">
+                      <div class="d-flex flex-start-center rt-tariff-item ">
+
+
+
+
+                        <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ver1" transform="translate(-30.000000, -1512.000000)">
+                              <g id="Group-9" transform="translate(31.000000, 1348.000000)">
+                                <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
+                                  <path d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20" id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
+                                  <path d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20" id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
+                                  <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)" stroke="#101828">
+                                    <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5" height="8.31818182"></rect>
+                                    <path d="M3.79166667,3.27272727 L3.79166667,6.13636364" id="Path-3-Copy-2"></path>
+                                    <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7" stroke-width="1.5"></path>
+                                    <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
+                                    <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8" stroke-width="1.5"></path>
+                                    <path d="M9.20833333,3.27272727 L9.20833333,6.13636364" id="Path-3-Copy-4"></path>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+
+                          <div class="rt-space-left05">
+                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30 руб./мес.</p>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="rt-space-top-half">
+                        <div class="flex-center-center">
+                          <a href="#" class="rt-font-dashed">Хочу еще</a>
+                        </div>
+                      </div>
+                    </template>
+                  </rt-slide-content>
+                  <div class="flex-end-center">
+                    <rt-price value="749"/>
+                  </div>
+                  <div class="rt-space-top05 re-space-bottom">
+                  <rt-button class="rt-button--is-block rt-button-purple">Подключить</rt-button>
+                  </div>
+                  <div class="flex-center-center rt-space-top05 rt-space-bottom05">
+                    <span>Настроить</span>
+                  </div>
                 </div>
               </rt-tariff-card>
 
