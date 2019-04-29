@@ -25,7 +25,7 @@ class SlideContent extends Vue {
       slideClass += ' rt-slide--is-active';
     }
     let slideHeaderClass = `rt-slide__header rt-slide__header--${this.arrowPosition.split('-')[0]}`;
-
+    let slideContentClass = `rt-slide__content rt-slide__content--${this.arrowPosition.split('-')[0]}`;
     return <div class={slideClass}>
       <div class={slideHeaderClass} onClick={this.toggleOpen}>
         <svg class={slideArrowClass} width="8px" height="13px" viewBox="0 0 8 13" version="1.1"
@@ -48,7 +48,7 @@ class SlideContent extends Vue {
           {this.$slots.label}
         </div>
       </div>
-      <div class="rt-slide__content">
+      <div class={slideContentClass}>
         {this.$slots.content}
       </div>
     </div>;
