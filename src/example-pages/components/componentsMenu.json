@@ -328,6 +328,14 @@
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
+        },
+        {
+          "name" : "Slide Content",
+          "title" : "Slide Content",
+          "url" : "/slide-content",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
         }
       ],
       "for_b2b" : true,

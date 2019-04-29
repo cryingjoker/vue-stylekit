@@ -1,29 +1,32 @@
-<script type="text/jsx">
-export default {
-  name: "RtSlideContent",
-  props: {
-    isOpen: {
-      type: Boolean,
-      default: false
+import Vue, { CreateElement, VNode } from "vue";
+import { Component, Prop } from "vue-property-decorator";
+import color from "../../color.json";
+import { IColor } from "../../colorInterface";
+
+@Component
+class SlideContent extends Vue {
+  @Prop({ default: false }) isOpen: boolean;
+  @Prop({ default: 'left-right' }) arrowPosition: string;
+  @Prop({ default: true }) needBorder: boolean;
+  isOpenLocal = false;
+
+  toggleOpen(){
+    this.isOpenLocal= !this.isOpenLocal;
+  }
+
+  render(h: CreateElement): VNode {
+    let slideArrowClass = `rt-slide__arrow rt-slide__arrow--${this.arrowPosition}`;
+    let slideClass = `rt-slide`;
+    if(!this.needBorder){
+      slideClass += ' rt-slide--without-border';
     }
-  },
-  data: () => ({
-    isOpenLocal: false
-  }),
-  mounted() {
-    if (this.isOpen) {
-      this.isOpenLocal = this.isOpen;
+    if(this.isOpenLocal){
+      slideClass += ' rt-slide--is-active';
     }
-  },
-  methods:{
-    toggleOpen(){
-      this.isOpenLocal= !this.isOpenLocal;
-    }
-  },
-  render(h) {
-    return <div class={"rt-slide" + (this.isOpenLocal ? " rt-slide--is-active" : "")}>
+
+    return <div class={slideClass}>
       <div class="rt-slide__header" onClick={this.toggleOpen}>
-        <svg class="rt-slide__arrow" width="8px" height="13px" viewBox="0 0 8 13" version="1.1"
+        <svg class={slideArrowClass} width="8px" height="13px" viewBox="0 0 8 13" version="1.1"
              xmlns="http://www.w3.org/2000/svg">
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="new-abonent" transform="translate(-202.000000, -2087.000000)" fill="#101828">
@@ -48,5 +51,11 @@ export default {
       </div>
     </div>;
   }
+}
+
+export default {
+  component: SlideContent,
+  name: "RtSlideContent"
 };
-</script>
+
+
