@@ -133,7 +133,7 @@
               <rt-tariff-card discount="1%" color="b2c-purple"></rt-tariff-card>
             </div>
             <div class="rt-col-3 rt-col-md-3 rt-space-top">
-              <rt-tariff-card discount="хуй %" color="b2c-red"></rt-tariff-card>
+              <rt-tariff-card discount="много %" color="b2c-red"></rt-tariff-card>
             </div>
             <div class="rt-col-3 rt-col-md-3 rt-space-top">
               <rt-tariff-card discount="99%" color="b2c-yellow"></rt-tariff-card>

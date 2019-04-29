@@ -17,15 +17,17 @@ class SlideContent extends Vue {
   render(h: CreateElement): VNode {
     let slideArrowClass = `rt-slide__arrow rt-slide__arrow--${this.arrowPosition}`;
     let slideClass = `rt-slide`;
+
     if(!this.needBorder){
       slideClass += ' rt-slide--without-border';
     }
     if(this.isOpenLocal){
       slideClass += ' rt-slide--is-active';
     }
+    let slideHeaderClass = `rt-slide__header rt-slide__header--${this.arrowPosition.split('-')[0]}`;
 
     return <div class={slideClass}>
-      <div class="rt-slide__header" onClick={this.toggleOpen}>
+      <div class={slideHeaderClass} onClick={this.toggleOpen}>
         <svg class={slideArrowClass} width="8px" height="13px" viewBox="0 0 8 13" version="1.1"
              xmlns="http://www.w3.org/2000/svg">
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
