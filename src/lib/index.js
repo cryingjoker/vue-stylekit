@@ -137,7 +137,7 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
-      Vue.component(SlideContent.name, SlideContent);
+
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.component(Icon.name, Icon);
@@ -160,6 +160,7 @@ const VueRtStyle = {
       Vue.component(ProductCard.name, ProductCard.component);
       Vue.component(TariffCard.name, TariffCard.component);
       Vue.component(ValidationIcon.name, ValidationIcon.component);
+      Vue.component(SlideContent.name, SlideContent.component);
 
 
       Vue.directive(SwipeLeft.name, SwipeLeft);

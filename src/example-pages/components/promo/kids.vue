@@ -265,11 +265,8 @@
                       Заявка на подключение
                     </p>
                     <div class="row">
-                      <div class="rt-col-persent-5">
-                        <rt-input value="" placeholder="Фамилия"/>
-                      </div>
-                      <div class="rt-col-persent-5">
-                        <rt-input value="" placeholder="Имя"/>
+                      <div class="rt-col-persent-10">
+                        <rt-input value="" placeholder="Как вас зовут ?"/>
                       </div>
                     </div>
                     <div class="row rt-space-top05">
@@ -280,25 +277,7 @@
                         <rt-input value="" placeholder="E-mail"/>
                       </div>
                     </div>
-                    <div class="row rt-space-top">
-                      <p class="color-main05 rt-space-top05 rt-space-left05">Введите ваш адрес</p>
-                      <div class="d-flex">
-                        <div class="rt-col-persent-5">
-                          <rt-input value="" placeholder="Улица"/>
-                        </div>
-                        <div class="rt-col-persent-5">
-                          <div class="d-flex">
-                            <div class="rt-col-persent-5">
-                              <rt-input value="" placeholder="Дом"/>
-                            </div>
-                            <div class="rt-col-persent-5">
-                              <rt-input value="" placeholder="Кв"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p class="color-main05 rt-font-label rt-space-left05 rt-space-top05">Если в Вашем доме нет квартир, введите 0</p>
-                    </div>
+
                     <div class="rt-space-top">
                       <rt-select label="Удобное время доставки" value="0">
                         <rt-select-option>
@@ -319,12 +298,12 @@
                       </rt-select>
                     </div>
 
-                    <div class="rt-space-top">
+                    <div class="rt-space-top rt-font-control">
                       <rt-checkbox name="sms">Уведомлять о статусе по СМС</rt-checkbox>
                     </div>
-                    <div class="rt-space-top">
+                    <div class="rt-space-top rt-font-control">
                       <rt-checkbox name="email">Уведомлять о статусе по E-mail</rt-checkbox>
-                      <p class="rt-font-label color-main03 rt-space-left15">На E-mail будет выслана инструкция</p>
+                      <p class="rt-font-label rt-space-top05 color-main03 rt-space-left15">На E-mail будет выслана инструкция</p>
                     </div>
                     <div class="rt-space-top">
                       <rt-switch>
@@ -348,44 +327,47 @@
                             </span>
                       </rt-switch>
                     </div>
-                    <div class="rt-space-top2 rt-space-bottom">
+                    <div class="rt-space-top2 rt-space-bottom rt-font-control">
                       <div class="rt-card__border-content rt-reverse-horizontal">
-                        <div class="rt-card-image-list rt-card-image-list--without-top-border">
+                        <div class="rt-card-image-list rt-card-image-list--without-top-border rt-reverse-horizontal">
                           <div class="rt-card-image-list__content d-flex">
                             <div class="flex-fill flex-start-center">
                               Сервис
                             </div>
                             <p>
-                              <span class="rt-font-h4">99</span> <span class="color-main07 rt-font-light">руб.</span>
+                              <span class="rt-font-h4 rt-font-bold">99</span> <span class="color-main07 rt-font-light">руб.</span>
                             </p>
                           </div>
 
                         </div>
-                        <div class="rt-card-image-list rt-card-image-list--without-top-border">
+                        <div class="rt-card-image-list rt-card-image-list--without-top-border rt-font-control rt-reverse-horizontal">
                           <div class="rt-card-image-list__content rt-space-top">
                             <div>
                               Часы Q80/SBW
                             </div>
-                            <div class="rt-space-top">
+                            <div class="rt-space-top rt-space-bottom">
                               <div class="d-flex">
                                 <rt-radio-button name="card2" value="0"  class="flex-fill">
                                   <div class="d-flex">
                                     <div class="flex-fill">
                                       Единовременная  плата
                                     </div>
-                                    <div class="rt-font-bold">2990 руб.</div>
+                                    <div>
+                                      <span class="rt-font-bold rt-font-h4">2990</span>&nbsp;<span class="color-main07">руб.</span>
+                                    </div>
                                   </div>
                                 </rt-radio-button>
                               </div>
                             </div>
-                            <div class="rt-space-top">
+                            <div class="rt-space-top rt-font-control">
                               <div class="d-flex">
                                 <rt-radio-button name="card2" value="0"  class="flex-fill">
                                   <div class="d-flex">
                                     <div class="flex-fill">
                                       Ежемесячная плата
                                     </div>
-                                    <div class="rt-font-bold">270 руб.</div>
+                                    <div>
+                                      <span class="rt-font-bold rt-font-h4">270</span>&nbsp;<span class="color-main07">руб.</span></div>
                                   </div>
                                 </rt-radio-button>
                               </div>
@@ -396,7 +378,7 @@
 
                           Ежемесячная плата
                           <div class="d-flex flex-end-bottom">
-                            <rt-price :value='99'/>
+                            <rt-price :value='99' color-value="orange"/>
                           </div>
                         </div>
 
@@ -408,6 +390,12 @@
                         >
                           Подключить
                         </rt-button>
+                      </div>
+                      <p class="rt-space-top flex-center-center rt-font-control">
+                        <span class="color-main07">Всего к оплате:</span>&nbsp;3089 руб.
+                      </p>
+                      <div class="rt-space-top rt-font-control">
+                        <rt-checkbox name="sms">Согласен на обработку персоональных <br/> данных в соответсвии с условиями</rt-checkbox>
                       </div>
                     </div>
                     <!--</div>-->

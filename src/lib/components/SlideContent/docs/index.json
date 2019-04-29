@@ -1,0 +1,28 @@
+{
+  "items" : [
+    {
+      "name" : "rt-slide-content",
+      "property" : "is-open",
+      "type" : ["Boolean"],
+      "description" : "Флаг открытого слайда",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-slide-content",
+      "property" : "arrow-position",
+      "type" : ["String"],
+      "description" : "Ориентация стрелки \b\b `left-right` `right-bottom` ",
+      "value" : "left-right",
+      "version": "0.1.8"
+    },
+    {
+      "name" : "rt-slide-content",
+      "property" : "need-border",
+      "type" : ["Boolean"],
+      "description" : "флаг необходимости полосы междусписками слайдов",
+      "value" : "left-right",
+      "version": "0.1.8"
+    }
+  ]
+}

@@ -34,6 +34,7 @@ import Opportunity from '../components/complex-elements/Opportunity.vue';
 import HelpMain from '../components/complex-elements/HelpMain.vue';
 import UnWrapper from '../components/main-elements/UnWrapper.vue';
 import RealPopup from '../components/main-elements/Popup.vue';
+import SlideContent from '../components/experiment-elements/SlideContent.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -67,6 +68,7 @@ const index = [
   { path: '/table', name: 'app-table', component: Table },
   { path: '/select', name: 'app-select', component: Select },
   { path: '/typography', name: 'app-typography', component: Typography },
+  { path: '/slide-content', name: 'app-slide-content', component: SlideContent },
   { path: '/spinner', name: 'app-spinner', component: Spinner },
   { path: '/price', name: 'app-price', component: Price },
   { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
