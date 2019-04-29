@@ -51,6 +51,7 @@
 
 <script>
 import Navigation from "./Navigation.vue";
+import variables from "../../variables.json";
 
 const autoScrollingTimeout = 100; // Длительность задержки автоскроллинга
 // const swipeFriction = 0.95
@@ -229,7 +230,7 @@ export default {
     clearTimeout(this.toggleSlidesTimer);
   },
   methods: {
-    /*
+    /**
      * Простая навигация зоны просмотра по слайдам
      */
     advancePage(direction) {
@@ -268,7 +269,7 @@ export default {
         this.move(distance);
       }
     },
-    /*
+    /**
      * Доводчик позиции скролла до ближайшего слайда
      */
     autoScroller(delay = autoScrollingTimeout, to, mark) {
@@ -312,9 +313,9 @@ export default {
           getComputedStyle(this.$refs.slidedBlock).paddingLeft
         );
         let leftOffset = this.$refs.slidedBlock.getBoundingClientRect().left;
-        this.hSpace =
-          (leftPadding > 0 ? leftPadding : 0) +
-          (leftOffset > 0 ? leftOffset : 0);
+//        this.hSpace =
+//          (leftPadding > 0 ? leftPadding : 0) +
+//          (leftOffset > 0 && window.innerWidth <= parseInt(variables["mobile-upper-limit"]) ? leftOffset : 0);
         this.movesArr = [];
         this.slides.forEach((slide, i) => {
           this.movesArr.push({

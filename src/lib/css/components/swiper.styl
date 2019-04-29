@@ -4,14 +4,18 @@ scrollHSpace = 10px
 scrollHSpacePC = 70px
 
 .{swiperName}
-  width 100%
+  width calc(100vw - 140px)
   position relative
   z-index swiperZIndex
+  max-width: 1480px
+  margin: 0 auto
 
-  @media (min-width: laptop-lower-limit)
+
+  @media (max-width: tablet-upper-limit)
     //padding: 0 70px
-    max-width: 1480px
-    margin: 0 auto
+    max-width: none
+    //margin: 0 auto
+    width 100vw
 
   &__container
     display block
@@ -75,21 +79,27 @@ scrollHSpacePC = 70px
       scroll-snap-align start
 
       &:first-child
-        margin-left scrollHSpace
+        @media (max-width: tablet-upper-limit)
+          margin-left scrollHSpace
 
     .{swiperName}__spacer
-      min-width scrollHSpace
+      @media (max-width: mobile-upper-limit)
+        min-width scrollHSpace
 
-    @media (min-width: 1025px)
-      .{swiperName}__inner
-        scroll-padding-inline-start scrollHSpacePC
+    .{swiperName}__spacer
+      @media (max-width: tablet-upper-limit)
+        min-width scrollHSpace
 
-      .{swiperName}-slide
-        &:first-child
-          margin-left scrollHSpacePC
-
-      .{swiperName}__spacer
-        min-width scrollHSpacePC
+    //@media (min-width: 1025px)
+    //  .{swiperName}__inner
+    //    scroll-padding-inline-start scrollHSpacePC
+    //
+    //  .{swiperName}-slide
+    //    &:first-child
+    //      margin-left scrollHSpacePC
+    //
+    //  .{swiperName}__spacer
+    //    min-width scrollHSpacePC
 
   &.is-animating,
   &.is-disabled-scrolling
@@ -111,9 +121,16 @@ scrollHSpacePC = 70px
   &.show-no-move-next
     animation show-no-moves-next .9s ease-in-out
 
-.hide-navigation
-  @media (min-width: laptop-lower-limit)
-    padding: 0 70px
+//.hide-navigation
+//  @media (min-width: laptop-lower-limit)
+//    padding: 0 70px
+
+.in-plus-card
+  @media (max-width: tablet-upper-limit)
+    min-width 45vw
+    max-width none
+  @media (max-width: mobile-upper-limit)
+    min-width 75vw
 
 keyframes show-no-moves-prev
   0%
