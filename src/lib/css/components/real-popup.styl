@@ -27,8 +27,14 @@
   box-sizing border-box
   box-shadow 0 20px 30px rgba(main-color, .2)
   overflow-y auto
+  .popup-content
+    @media (max-width: tablet-upper-limit)
+      padding-bottom: 100px
   @media (max-width: tablet-upper-limit)
-    max-height 100vh
+    max-height: calc(100vh - 90px)
+    margin-top: 30px
+    margin-bottom: 60px
+    overflow: hidden
   &-close
     position absolute
     top 20px

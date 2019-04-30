@@ -26,6 +26,7 @@
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
  export { default as ProductCard} from './ProductCard/ProductCard.tsx';
+ export { default as TariffCard} from './TariffCard/TariffCard.tsx';
  export { default as CardBuy} from './Card/CardBuy.vue';
  export { default as CardImage} from './Card/CardImage.vue';
  export { default as CardImageList} from './Card/CardImageList.vue';
@@ -52,7 +53,7 @@
  export { default as Youtube } from './Youtube/Youtube.vue';
  export { default as Sticky } from './Sticky/Sticky.vue';
  export { default as ResizeContentHeight } from './ResizeContentHeight/ResizeContentHeight.vue';
- export { default as SlideContent } from './SlideContent/SlideContent.vue';
+ export { default as SlideContent } from './SlideContent/SlideContent.tsx';
  export { default as Popup } from './Popup/Popup.vue';
 
  export { default as LinksBlock } from './Card/LinksBlock.vue';
@@ -70,5 +71,6 @@
  export { default as UnWrapper } from './MobileExpandWrapper/UnWrapper.vue';
  export { default as RealPopup } from './Popup/RealPopup.vue';
  export { default as UseCase } from './Card/UseCase.vue';
+ export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx'
 
  export { default as Ussd } from './Ussd/Ussd.tsx';

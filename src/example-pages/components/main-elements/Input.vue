@@ -13,81 +13,118 @@
           </p>
         </div>
         <!--<div class="is-b2c">-->
-          <div class="app-row row">
-            <div class="rt-col-4 rt-col-md-2">
-              <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
-              <pre-code
-                text="<rt-input label=&quot;Начните вводить почту&quot; type=&quot;string&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />"
-              />
-            </div>
-            <div class="rt-col-4 rt-col-md-2 rt-md-space-top">
-              <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
-              <pre-code
-                text="<rt-input label=&quot;Начните вводить почту&quot; placeholder=&quot;Электронная почта&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot; :has-error=&quot;true&quot; />"
-              />
-            </div>
-            <div class="rt-col-4 rt-col-md-1 rt-md-space-top">
-              <span class="rt-font-label flex-fill rt-space-bottom05">disabled input</span>
-              <pre-code
-                text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; :disabled=&quot;true&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot;/>"
-              />
-            </div>
+        <div class="app-row row">
+          <div class="rt-col-4 rt-col-md-2">
+            <span class="rt-font-label flex-fill rt-space-bottom05">simple input</span>
+            <pre-code
+              text="<rt-input label=&quot;Начните вводить почту&quot; type=&quot;string&quot; value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />"
+            />
           </div>
-          <div class="app-row row">
-            <div class="rt-col-3 rt-col-md-3">
-              <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
-              <pre-code
-                text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; />"
-              />
-            </div>
-            <div class="rt-col-2 rt-col-md-2 rt-md-space-top">
-              <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 2 col</span>
-              <pre-code
-                text="<rt-input value=&quot;&quot; placeholder=&quot;Улица&quot; />"
-              />
-            </div>
-            <div class="rt-col-1 rt-col-md-1 rt-md-space-top">
-              <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 1 c</span>
-              <pre-code
-                text="<rt-input value=&quot;&quot; placeholder=&quot;Дом&quot;>
-                        <rt-hint :confirmation=&quot;true&quot; :confirmation-passed=&quot;false&quot;>Есть техническая возможность</rt-hint>
-                      </rt-input>"
-              />
-            </div>
-            <div class="rt-col-1"></div>
-            <div class="rt-col-3 rt-col-md-3">
-              <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">password input</span>
-              <rt-input type="password" placeholder="Введите пароль" />
-            </div>
+          <div class="rt-col-4 rt-col-md-2 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05">input with error</span>
+            <pre-code
+              text="<rt-input label=&quot;Начните вводить почту&quot; placeholder=&quot;Электронная почта&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot; :has-error=&quot;true&quot; />"
+            />
           </div>
-          <rt-input
-            insert-type="string"
-            value=""
-            insert-lang="ru"
-            placeholder="Ф.И.О."
-          />
-          <rt-input
-            insert-type="number"
-            value=""
-            :max-length="2"
-            placeholder="Ваше любимое число до 99"
-          />
-          <rt-input
-            insert-type="string"
-            value=""
-            insert-lang="en"
-            placeholder="enter your name(English, please)"
-          />
-          <div class="app-row row">
-            <div class="rt-col rt-col-12">
-              <rt-input :show-numbers-buttons="true" insert-type="number" />
-            </div>
+          <div class="rt-col-4 rt-col-md-1 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05">disabled input</span>
+            <pre-code
+              text="<rt-input value=&quot;&quot; placeholder=&quot;Электронная почта&quot; :disabled=&quot;true&quot; value=&quot;inputModelValue&quot; error-message=&quot;ошибка: не является почтой&quot;/>"
+            />
           </div>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
+            <rt-input value='' placeholder='Электронная почта' />
+          </div>
+          <div class="rt-col-2 rt-col-md-2 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 2 col</span>
+            <rt-input value='' placeholder='Улица' />
+          </div>
+          <div class="rt-col-1 rt-col-md-1 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 1 c</span>
+
+            <rt-input value='' placeholder='Дом'></rt-input>
+          </div>
+          <div class="rt-col-1"></div>
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">password input</span>
+            <rt-input type="password" placeholder="Введите пароль"/>
+          </div>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
+            <rt-input value='' placeholder='Электронная почта' />
+          </div>
+          <div class="rt-col-2 rt-col-md-2 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 2 col</span>
+            <rt-input value='' placeholder='Улица' />
+          </div>
+          <div class="rt-col-1 rt-col-md-1 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 1 c</span>
+
+            <rt-input value='' placeholder='Дом' :has-error="true">
+                <rt-validation-icon status="error" mobile-hint-orient="left" hint-text="Есть техническая возможность"></rt-validation-icon>
+            </rt-input>
+          </div>
+          <div class="rt-col-1"></div>
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">password input</span>
+            <rt-input type="password" placeholder="Введите пароль"/>
+          </div>
+        </div>
+        <div class="app-row row">
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
+            <rt-input value='' placeholder='Электронная почта' />
+          </div>
+          <div class="rt-col-2 rt-col-md-2 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 2 col</span>
+            <rt-input value='' placeholder='Улица' />
+          </div>
+          <div class="rt-col-1 rt-col-md-1 rt-md-space-top">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">input in 1 c</span>
+
+            <rt-input value='' placeholder='Дом'>
+                <rt-validation-icon status="success" mobile-hint-orient="left" hint-text="Есть техническая возможность"></rt-validation-icon>
+            </rt-input>
+          </div>
+          <div class="rt-col-1"></div>
+          <div class="rt-col-3 rt-col-md-3">
+            <span class="rt-font-label flex-fill rt-space-bottom05 rt-font-no-wrap">password input</span>
+            <rt-input type="password" placeholder="Введите пароль"/>
+          </div>
+        </div>
+        <rt-input
+          insert-type="string"
+          value=""
+          insert-lang="ru"
+          placeholder="Ф.И.О."
+        />
+        <rt-input
+          insert-type="number"
+          value=""
+          :max-length="2"
+          placeholder="Ваше любимое число до 99"
+        />
+        <rt-input
+          insert-type="string"
+          value=""
+          insert-lang="en"
+          placeholder="enter your name(English, please)"
+        />
+        <div class="app-row row">
+          <div class="rt-col rt-col-12">
+            <rt-input :show-numbers-buttons="true" insert-type="number"/>
+          </div>
+        </div>
         <!--</div>-->
         <!--<div class="is-b2b">-->
         <div class="app-row row rt-space-top rt-space-bottom ">
           <div class="rt-col rt-col-4 rt-col-td-3 rt-col-md-3">
-            <rt-input placeholder="Электронная почта" :is-b2b-input="true" />
+            <rt-input placeholder="Электронная почта" :is-b2b-input="true"/>
           </div>
           <div class="rt-col rt-col-4 rt-col-td-3 rt-col-md-3">
             <rt-input
@@ -147,13 +184,14 @@
           </div>
           <div class="rt-col-3 rt-col-td-1"></div>
           <div class="rt-col rt-col-6 rt-col-td-4 rt-col-md-3">
-            <rt-input placeholder="Имя" :is-b2b-input="true" />
-            <rt-input placeholder="Компания" :is-b2b-input="true" />
-            <rt-input placeholder="Электронная почта" :is-b2b-input="true" />
-            <rt-input placeholder="Телефон" :is-b2b-input="true" />
-            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true" />
+            <rt-input placeholder="Имя" :is-b2b-input="true"/>
+            <rt-input placeholder="Компания" :is-b2b-input="true"/>
+            <rt-input placeholder="Электронная почта" :is-b2b-input="true"/>
+            <rt-input placeholder="Телефон" :is-b2b-input="true"/>
+            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true"/>
             <div class="row flex-center-center rt-space-top">
-                <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a></rt-checkbox>
+              <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a>
+              </rt-checkbox>
             </div>
             <rt-button class="rt-button-transparent-purple">Получить код</rt-button>
 
@@ -163,25 +201,27 @@
       </div>
     </div>
     <div class="rt-space-top25">
-      <documentation-builder :json="documentation" type="components" />
+      <documentation-builder :json="documentation" type="components"/>
     </div>
   </div>
 </template>
 
 <script>
-import documentation from "../../../lib/components/Input/docs/index.json";
-import componentsList from "../../componentsList";
-export default {
-  name: "AppInput",
-  components: componentsList,
-  data: () => ({
-    inputModelValue: "test",
-    documentation: {}
-  }),
-  mounted() {
-    this.documentation = documentation;
-  },
-  created() {},
-  methods: {}
-};
+  import documentation from "../../../lib/components/Input/docs/index.json";
+  import componentsList from "../../componentsList";
+
+  export default {
+    name: "AppInput",
+    components: componentsList,
+    data: () => ({
+      inputModelValue: "test",
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>

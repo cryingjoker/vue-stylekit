@@ -68,36 +68,82 @@ export default {
             description: "`padding-left: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-left-half",
+            description: "`padding-left: 25px`"
+          },
+          {
             name: ".rt-space-left15",
             description: "`padding-left: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-left15-half",
+            description: "`padding-left: 35px`"
           },
           {
             name: ".rt-space-left2",
             description: "`padding-left: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-left2-half",
+            description: "`padding-left: 45px`"
+          },
+          {
             name: ".rt-space-left25",
             description: "`padding-left: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-left25-half",
+            description: "`padding-left: 55px`"
           },
           {
             name: ".rt-space-left3",
             description: "`padding-left: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-left3-half",
+            description: "`padding-left: 65px`"
+          },
+          {
             name: ".rt-space-left35",
             description: "`padding-left: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-left35-half",
+            description: "`padding-left: 75px`"
+
           },
           {
             name: ".rt-space-left4",
             description: "`padding-left: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-left4-half",
+            description: "`padding-left: 85px`"
+          },
+          {
             name: ".rt-space-left45",
             description: "`padding-left: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-left45-half",
+            description: "`padding-left: 95px`"
+          },
+          {
             name: ".rt-space-left5",
             description: "`padding-left: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-left5-half",
+            description: "`padding-left: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -145,36 +191,81 @@ export default {
             description: "`padding-right: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-right-half",
+            description: "`padding-right: 25px`"
+          },
+          {
             name: ".rt-space-right15",
             description: "`padding-right: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-right15-half",
+            description: "`padding-right: 35px`"
           },
           {
             name: ".rt-space-right2",
             description: "`padding-right: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-right2-half",
+            description: "`padding-right: 45px`"
+          },
+          {
             name: ".rt-space-right25",
             description: "`padding-right: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-right25-half",
+            description: "`padding-right: 55px`"
           },
           {
             name: ".rt-space-right3",
             description: "`padding-right: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-right3-half",
+            description: "`padding-right: 65px`"
+          },
+          {
             name: ".rt-space-right35",
             description: "`padding-right: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-right35-half",
+            description: "`padding-right: 75px`"
           },
           {
             name: ".rt-space-right4",
             description: "`padding-right: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-right4-half",
+            description: "`padding-right: 85px`"
+          },
+          {
             name: ".rt-space-right45",
             description: "`padding-right: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-right45-half",
+            description: "`padding-right: 95px`"
+          },
+          {
             name: ".rt-space-right5",
             description: "`padding-right: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-right5-half",
+            description: "`padding-right: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -222,36 +313,81 @@ export default {
             description: "`padding-top: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-top-half",
+            description: "`padding-top: 25px`"
+          },
+          {
             name: ".rt-space-top15",
             description: "`padding-top: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-top15-half",
+            description: "`padding-top: 35px`"
           },
           {
             name: ".rt-space-top2",
             description: "`padding-top: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-top2-half",
+            description: "`padding-top: 45px`"
+          },
+          {
             name: ".rt-space-top25",
             description: "`padding-top: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-top25-half",
+            description: "`padding-top: 55px`"
           },
           {
             name: ".rt-space-top3",
             description: "`padding-top: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-top3-half",
+            description: "`padding-top: 65px`"
+          },
+          {
             name: ".rt-space-top35",
             description: "`padding-top: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-top35-half",
+            description: "`padding-top: 75px`"
           },
           {
             name: ".rt-space-top4",
             description: "`padding-top: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-top4-half",
+            description: "`padding-top: 85px`"
+          },
+          {
             name: ".rt-space-top45",
             description: "`padding-top: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-top45-half",
+            description: "`padding-top: 95px`"
+          },
+          {
             name: ".rt-space-top5",
             description: "`padding-top: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-top5-half",
+            description: "`padding-top: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -298,7 +434,17 @@ export default {
             description: "`padding-bottom: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-bottom-half",
+            description: "`padding-bottom: 25px`"
+          },
+          {
             name: ".rt-space-bottom15",
+            description: "`padding-bottom: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-bottom15-half",
             description: "`padding-bottom: 30px`"
           },
           {
@@ -306,28 +452,63 @@ export default {
             description: "`padding-bottom: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-bottom2-half",
+            description: "`padding-bottom: 45px`"
+          },
+          {
             name: ".rt-space-bottom25",
             description: "`padding-bottom: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-bottom25-half",
+            description: "`padding-bottom: 55px`"
           },
           {
             name: ".rt-space-bottom3",
             description: "`padding-bottom: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-bottom3-half",
+            description: "`padding-bottom: 65px`"
+          },
+          {
             name: ".rt-space-bottom35",
             description: "`padding-bottom: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-bottom35-half",
+            description: "`padding-bottom: 75px`"
           },
           {
             name: ".rt-space-bottom4",
             description: "`padding-bottom: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-bottom4-half",
+            description: "`padding-bottom: 85px`"
+          },
+          {
             name: ".rt-space-bottom45",
             description: "`padding-bottom: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-bottom45-half",
+            description: "`padding-bottom: 95px`"
+          },
+          {
             name: ".rt-space-bottom5",
             description: "`padding-bottom: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-bottom5-half",
+            description: "`padding-bottom: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -375,36 +556,81 @@ export default {
             description: "```padding-top: 20px \npadding-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-vertical-half",
+            description: "```padding-top: 25px \npadding-bottom: 25px```"
+          },
+          {
             name: ".rt-space-vertical15",
             description: "```padding-top: 30px \npadding-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-vertical15-half",
+            description: "```padding-top: 35px \npadding-bottom: 35px```"
           },
           {
             name: ".rt-space-vertical2",
             description: "```padding-top: 40px \npadding-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-vertical2-half",
+            description: "```padding-top: 45px \npadding-bottom: 45px```"
+          },
+          {
             name: ".rt-space-vertical25",
             description: "```padding-top: 50px \npadding-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-vertical25-half",
+            description: "```padding-top: 55px \npadding-bottom: 55px```"
           },
           {
             name: ".rt-space-vertical3",
             description: "```padding-top: 60px \npadding-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-vertical3-half",
+            description: "```padding-top: 65px \npadding-bottom: 65px```"
+          },
+          {
             name: ".rt-space-vertical35",
             description: "```padding-top: 70px \npadding-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-vertical35-half",
+            description: "```padding-top: 75px \npadding-bottom: 75px```"
           },
           {
             name: ".rt-space-vertical4",
             description: "```padding-top: 80px \npadding-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-vertical4-half",
+            description: "```padding-top: 85px \npadding-bottom: 85px```"
+          },
+          {
             name: ".rt-space-vertical45",
             description: "```padding-top: 90px \npadding-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-vertical45-half",
+            description: "```padding-top: 95px \npadding-bottom: 95px```"
+          },
+          {
             name: ".rt-space-vertical5",
             description: "```padding-top 100px \npadding-bottom: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-vertical5-half",
+            description: "```padding-top 105px \npadding-bottom: 105px```"
           },
           {
             version: " \>= 0.0.17",
@@ -451,36 +677,81 @@ export default {
             description: "```padding-left: 20px \npright-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-horizontal-half",
+            description: "```padding-left: 25px \npright-bottom: 25px```"
+          },
+          {
             name: ".rt-space-horizontal15",
             description: "```padding-left: 30px \npright-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-horizontal15-half",
+            description: "```padding-left: 35px \npright-bottom: 35px```"
           },
           {
             name: ".rt-space-horizontal2",
             description: "```padding-left: 40px \npright-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-horizontal2-half",
+            description: "```padding-left: 45px \npright-bottom: 45px```"
+          },
+          {
             name: ".rt-space-horizontal25",
             description: "```padding-left: 50px \npright-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-horizontal25-half",
+            description: "```padding-left: 55px \npright-bottom: 55px```"
           },
           {
             name: ".rt-space-horizontal3",
             description: "```padding-left: 60px \npright-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-horizontal3-half",
+            description: "```padding-left: 65px \npright-bottom: 65px```"
+          },
+          {
             name: ".rt-space-horizontal35",
             description: "```padding-left: 70px \npright-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-horizontal35-half",
+            description: "```padding-left: 75px \npright-bottom: 75px```"
           },
           {
             name: ".rt-space-horizontal4",
             description: "```padding-left: 80px \npright-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-horizontal4-half",
+            description: "```padding-left: 85px \npright-bottom: 85px```"
+          },
+          {
             name: ".rt-space-horizontal45",
             description: "```padding-left: 90px \npright-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-space-horizontal45-half",
+            description: "```padding-left: 95px \npright-bottom: 95px```"
+          },
+          {
             name: ".rt-space-horizontal5",
             description: "```padding-left 100px \npadding-right: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-horizontal5-half",
+            description: "```padding-left 105px \npadding-right: 105px```"
           },
           {
             version: " \>= 0.0.17",
@@ -557,36 +828,81 @@ export default {
             description: "*for tablet* \n\n`padding-left: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-left-half",
+            description: "*for tablet* \n\n`padding-left: 25px`"
+          },
+          {
             name: ".rt-td-space-left15",
             description: "*for tablet* \n\n`padding-left: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-left15-half",
+            description: "*for tablet* \n\n`padding-left: 35px`"
           },
           {
             name: ".rt-td-space-left2",
             description: "*for tablet* \n\n`padding-left: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-left2-half",
+            description: "*for tablet* \n\n`padding-left: 45px`"
+          },
+          {
             name: ".rt-td-space-left25",
             description: "*for tablet* \n\n`padding-left: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-left25-half",
+            description: "*for tablet* \n\n`padding-left: 55px`"
           },
           {
             name: ".rt-td-space-left3",
             description: "*for tablet* \n\n`padding-left: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-left3-half",
+            description: "*for tablet* \n\n`padding-left: 65px`"
+          },
+          {
             name: ".rt-td-space-left35",
             description: "*for tablet* \n\n`padding-left: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-left35-half",
+            description: "*for tablet* \n\n`padding-left: 75px`"
           },
           {
             name: ".rt-td-space-left4",
             description: "*for tablet* \n\n`padding-left: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-left4-half",
+            description: "*for tablet* \n\n`padding-left: 85px`"
+          },
+          {
             name: ".rt-td-space-left45",
             description: "*for tablet* \n\n`padding-left: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-left45-half",
+            description: "*for tablet* \n\n`padding-left: 95px`"
+          },
+          {
             name: ".rt-td-space-left5",
             description: "*for tablet* \n\n`padding-left: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-left5-half",
+            description: "*for tablet* \n\n`padding-left: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -634,36 +950,81 @@ export default {
             description: "*for tablet* \n\n`padding-right: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-right-half",
+            description: "*for tablet* \n\n`padding-right: 25px`"
+          },
+          {
             name: ".rt-td-space-right15",
             description: "*for tablet* \n\n`padding-right: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-right15-half",
+            description: "*for tablet* \n\n`padding-right: 35px`"
           },
           {
             name: ".rt-td-space-right2",
             description: "*for tablet* \n\n`padding-right: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-right2-half",
+            description: "*for tablet* \n\n`padding-right: 45px`"
+          },
+          {
             name: ".rt-td-space-right25",
             description: "*for tablet* \n\n`padding-right: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-right25-half",
+            description: "*for tablet* \n\n`padding-right: 55px`"
           },
           {
             name: ".rt-td-space-right3",
             description: "*for tablet* \n\n`padding-right: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-right3-half",
+            description: "*for tablet* \n\n`padding-right: 65px`"
+          },
+          {
             name: ".rt-td-space-right35",
             description: "*for tablet* \n\n`padding-right: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-right35-half",
+            description: "*for tablet* \n\n`padding-right: 75px`"
           },
           {
             name: ".rt-td-space-right4",
             description: "*for tablet* \n\n`padding-right: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-right4-half",
+            description: "*for tablet* \n\n`padding-right: 85px`"
+          },
+          {
             name: ".rt-td-space-right45",
             description: "*for tablet* \n\n`padding-right: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-right45-half",
+            description: "*for tablet* \n\n`padding-right: 95px`"
+          },
+          {
             name: ".rt-td-space-right5",
             description: "*for tablet* \n\n`padding-right: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-right5-half",
+            description: "*for tablet* \n\n`padding-right: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -711,36 +1072,81 @@ export default {
             description: "*for tablet* \n\n`padding-top: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-top-half",
+            description: "*for tablet* \n\n`padding-top: 25px`"
+          },
+          {
             name: ".rt-td-space-top15",
             description: "*for tablet* \n\n`padding-top: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-top15-half",
+            description: "*for tablet* \n\n`padding-top: 35px`"
           },
           {
             name: ".rt-td-space-top2",
             description: "*for tablet* \n\n`padding-top: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-top2-half",
+            description: "*for tablet* \n\n`padding-top: 45px`"
+          },
+          {
             name: ".rt-td-space-top25",
             description: "*for tablet* \n\n`padding-top: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-top25-half",
+            description: "*for tablet* \n\n`padding-top: 55px`"
           },
           {
             name: ".rt-td-space-top3",
             description: "*for tablet* \n\n`padding-top: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-top3-half",
+            description: "*for tablet* \n\n`padding-top: 65px`"
+          },
+          {
             name: ".rt-td-space-top35",
             description: "*for tablet* \n\n`padding-top: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-top35-half",
+            description: "*for tablet* \n\n`padding-top: 75px`"
           },
           {
             name: ".rt-td-space-top4",
             description: "*for tablet* \n\n`padding-top: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-top4-half",
+            description: "*for tablet* \n\n`padding-top: 85px`"
+          },
+          {
             name: ".rt-td-space-top45",
             description: "*for tablet* \n\n`padding-top: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-top45-half",
+            description: "*for tablet* \n\n`padding-top: 95px`"
+          },
+          {
             name: ".rt-td-space-top5",
             description: "*for tablet* \n\n`padding-top: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-top5-half",
+            description: "*for tablet* \n\n`padding-top: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -787,36 +1193,81 @@ export default {
             description: "*for tablet* \n\n`padding-bottom: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom-half",
+            description: "*for tablet* \n\n`padding-bottom: 25px`"
+          },
+          {
             name: ".rt-td-space-bottom15",
             description: "*for tablet* \n\n`padding-bottom: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom15-half",
+            description: "*for tablet* \n\n`padding-bottom: 35px`"
           },
           {
             name: ".rt-td-space-bottom2",
             description: "*for tablet* \n\n`padding-bottom: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom2-half",
+            description: "*for tablet* \n\n`padding-bottom: 45px`"
+          },
+          {
             name: ".rt-td-space-bottom25",
             description: "*for tablet* \n\n`padding-bottom: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom25-half",
+            description: "*for tablet* \n\n`padding-bottom: 55px`"
           },
           {
             name: ".rt-td-space-bottom3",
             description: "*for tablet* \n\n`padding-bottom: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom3-half",
+            description: "*for tablet* \n\n`padding-bottom: 65px`"
+          },
+          {
             name: ".rt-td-space-bottom35",
             description: "*for tablet* \n\n`padding-bottom: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom35-half",
+            description: "*for tablet* \n\n`padding-bottom: 75px`"
           },
           {
             name: ".rt-td-space-bottom4",
             description: "*for tablet* \n\n`padding-bottom: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom4-half",
+            description: "*for tablet* \n\n`padding-bottom: 85px`"
+          },
+          {
             name: ".rt-td-space-bottom45",
             description: "*for tablet* \n\n`padding-bottom: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom45-half",
+            description: "*for tablet* \n\n`padding-bottom: 95px`"
+          },
+          {
             name: ".rt-td-space-bottom5",
             description: "*for tablet* \n\n`padding-bottom: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-bottom5-half",
+            description: "*for tablet* \n\n`padding-bottom: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -865,9 +1316,21 @@ export default {
               "*for tablet* \n\n```padding-top: 20px \npadding-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical-half",
+            description:
+              "*for tablet* \n\n```padding-top: 20px \npadding-bottom: 25px```"
+          },
+          {
             name: ".rt-td-space-vertical15",
             description:
               "*for tablet* \n\n```padding-top: 30px \npadding-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical15-half",
+            description:
+              "*for tablet* \n\n```padding-top: 30px \npadding-bottom: 35px```"
           },
           {
             name: ".rt-td-space-vertical2",
@@ -875,9 +1338,21 @@ export default {
               "*for tablet* \n\n```padding-top: 40px \npadding-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical2-half",
+            description:
+              "*for tablet* \n\n```padding-top: 40px \npadding-bottom: 45px```"
+          },
+          {
             name: ".rt-td-space-vertical25",
             description:
               "*for tablet* \n\n```padding-top: 50px \npadding-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical25-half",
+            description:
+              "*for tablet* \n\n```padding-top: 50px \npadding-bottom: 55px```"
           },
           {
             name: ".rt-td-space-vertical3",
@@ -885,9 +1360,21 @@ export default {
               "*for tablet* \n\n```padding-top: 60px \npadding-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical3-half",
+            description:
+              "*for tablet* \n\n```padding-top: 60px \npadding-bottom: 65px```"
+          },
+          {
             name: ".rt-td-space-vertical35",
             description:
               "*for tablet* \n\n```padding-top: 70px \npadding-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical35-half",
+            description:
+              "*for tablet* \n\n```padding-top: 70px \npadding-bottom: 75px```"
           },
           {
             name: ".rt-td-space-vertical4",
@@ -895,14 +1382,32 @@ export default {
               "*for tablet* \n\n```padding-top: 80px \npadding-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical4-half",
+            description:
+              "*for tablet* \n\n```padding-top: 80px \npadding-bottom: 85px```"
+          },
+          {
             name: ".rt-td-space-vertical45",
             description:
               "*for tablet* \n\n```padding-top: 90px \npadding-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical45-half",
+            description:
+              "*for tablet* \n\n```padding-top: 90px \npadding-bottom: 95px```"
+          },
+          {
             name: ".rt-td-space-vertical5",
             description:
               "*for tablet* \n\n```padding-top 100px \npadding-bottom: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-vertical5-half",
+            description:
+              "*for tablet* \n\n```padding-top 100px \npadding-bottom: 105px```"
           },
           {
             version: " \>= 0.0.17",
@@ -958,9 +1463,21 @@ export default {
               "*for tablet* \n\n```padding-left: 20px \npright-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal-half",
+            description:
+              "*for tablet* \n\n```padding-left: 25px \npright-bottom: 25px```"
+          },
+          {
             name: ".rt-td-space-horizontal15",
             description:
               "*for tablet* \n\n```padding-left: 30px \npright-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal15-half",
+            description:
+              "*for tablet* \n\n```padding-left: 35px \npright-bottom: 35px```"
           },
           {
             name: ".rt-td-space-horizontal2",
@@ -968,9 +1485,21 @@ export default {
               "*for tablet* \n\n```padding-left: 40px \npright-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal2-half",
+            description:
+              "*for tablet* \n\n```padding-left: 45px \npright-bottom: 45px```"
+          },
+          {
             name: ".rt-td-space-horizontal25",
             description:
               "*for tablet* \n\n```padding-left: 50px \npright-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal25-half",
+            description:
+              "*for tablet* \n\n```padding-left: 55px \npright-bottom: 55px```"
           },
           {
             name: ".rt-td-space-horizontal3",
@@ -978,9 +1507,21 @@ export default {
               "*for tablet* \n\n```padding-left: 60px \npright-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal3-half",
+            description:
+              "*for tablet* \n\n```padding-left: 65px \npright-bottom: 65px```"
+          },
+          {
             name: ".rt-td-space-horizontal35",
             description:
               "*for tablet* \n\n```padding-left: 70px \npright-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal35-half",
+            description:
+              "*for tablet* \n\n```padding-left: 75px \npright-bottom: 75px```"
           },
           {
             name: ".rt-td-space-horizontal4",
@@ -988,14 +1529,32 @@ export default {
               "*for tablet* \n\n```padding-left: 80px \npright-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal4-half",
+            description:
+              "*for tablet* \n\n```padding-left: 85px \npright-bottom: 85px```"
+          },
+          {
             name: ".rt-td-space-horizontal45",
             description:
               "*for tablet* \n\n```padding-left: 90px \npright-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal45-half",
+            description:
+              "*for tablet* \n\n```padding-left: 95px \npright-bottom: 95px```"
+          },
+          {
             name: ".rt-td-space-horizontal5",
             description:
               "*for tablet* \n\n```padding-left 100px \npadding-right: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-td-space-horizontal5-half",
+            description:
+              "*for tablet* \n\n```padding-left 105px \npadding-right: 105px```"
           },
           {
             version: " \>= 0.0.17",
@@ -1082,36 +1641,81 @@ export default {
             description: "*for mobile* \n\n`padding-left: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-left-half",
+            description: "*for mobile* \n\n`padding-left: 25px`"
+          },
+          {
             name: ".rt-md-space-left15",
             description: "*for mobile* \n\n`padding-left: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-left15-half",
+            description: "*for mobile* \n\n`padding-left: 35px`"
           },
           {
             name: ".rt-md-space-left2",
             description: "*for mobile* \n\n`padding-left: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-left2-half",
+            description: "*for mobile* \n\n`padding-left: 45px`"
+          },
+          {
             name: ".rt-md-space-left25",
             description: "*for mobile* \n\n`padding-left: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-left25-half",
+            description: "*for mobile* \n\n`padding-left: 55px`"
           },
           {
             name: ".rt-md-space-left3",
             description: "*for mobile* \n\n`padding-left: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-left3-half",
+            description: "*for mobile* \n\n`padding-left: 65px`"
+          },
+          {
             name: ".rt-md-space-left35",
             description: "*for mobile* \n\n`padding-left: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-left35-half",
+            description: "*for mobile* \n\n`padding-left: 75px`"
           },
           {
             name: ".rt-md-space-left4",
             description: "*for mobile* \n\n`padding-left: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-left4-half",
+            description: "*for mobile* \n\n`padding-left: 85px`"
+          },
+          {
             name: ".rt-md-space-left45",
             description: "*for mobile* \n\n`padding-left: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-left45-half",
+            description: "*for mobile* \n\n`padding-left: 95px`"
+          },
+          {
             name: ".rt-md-space-left5",
             description: "*for mobile* \n\n`padding-left: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-left5-half",
+            description: "*for mobile* \n\n`padding-left: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -1159,36 +1763,81 @@ export default {
             description: "*for mobile* \n\n`padding-right: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-right-half",
+            description: "*for mobile* \n\n`padding-right: 25px`"
+          },
+          {
             name: ".rt-md-space-right15",
             description: "*for mobile* \n\n`padding-right: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-right15-half",
+            description: "*for mobile* \n\n`padding-right: 35px`"
           },
           {
             name: ".rt-md-space-right2",
             description: "*for mobile* \n\n`padding-right: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-right2-half",
+            description: "*for mobile* \n\n`padding-right: 45px`"
+          },
+          {
             name: ".rt-md-space-right25",
             description: "*for mobile* \n\n`padding-right: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-right25-half",
+            description: "*for mobile* \n\n`padding-right: 55px`"
           },
           {
             name: ".rt-md-space-right3",
             description: "*for mobile* \n\n`padding-right: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-right3-half",
+            description: "*for mobile* \n\n`padding-right: 65px`"
+          },
+          {
             name: ".rt-md-space-right35",
             description: "*for mobile* \n\n`padding-right: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-right35-half",
+            description: "*for mobile* \n\n`padding-right: 75px`"
           },
           {
             name: ".rt-md-space-right4",
             description: "*for mobile* \n\n`padding-right: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-right4-half",
+            description: "*for mobile* \n\n`padding-right: 85px`"
+          },
+          {
             name: ".rt-md-space-right45",
             description: "*for mobile* \n\n`padding-right: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-right45-half",
+            description: "*for mobile* \n\n`padding-right: 95px`"
+          },
+          {
             name: ".rt-md-space-right5",
             description: "*for mobile* \n\n`padding-right: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-right5-half",
+            description: "*for mobile* \n\n`padding-right: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -1236,36 +1885,81 @@ export default {
             description: "*for mobile* \n\n`padding-top: 20px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-top-half",
+            description: "*for mobile* \n\n`padding-top: 25px`"
+          },
+          {
             name: ".rt-md-space-top15",
             description: "*for mobile* \n\n`padding-top: 30px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-top15-half",
+            description: "*for mobile* \n\n`padding-top: 35px`"
           },
           {
             name: ".rt-md-space-top2",
             description: "*for mobile* \n\n`padding-top: 40px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-top2-half",
+            description: "*for mobile* \n\n`padding-top: 45px`"
+          },
+          {
             name: ".rt-md-space-top25",
             description: "*for mobile* \n\n`padding-top: 50px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-top25-half",
+            description: "*for mobile* \n\n`padding-top: 55px`"
           },
           {
             name: ".rt-md-space-top3",
             description: "*for mobile* \n\n`padding-top: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-top3-half",
+            description: "*for mobile* \n\n`padding-top: 65px`"
+          },
+          {
             name: ".rt-md-space-top35",
             description: "*for mobile* \n\n`padding-top: 70px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-top35-half",
+            description: "*for mobile* \n\n`padding-top: 75px`"
           },
           {
             name: ".rt-md-space-top4",
             description: "*for mobile* \n\n`padding-top: 80px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-top4-half",
+            description: "*for mobile* \n\n`padding-top: 85px`"
+          },
+          {
             name: ".rt-md-space-top45",
             description: "*for mobile* \n\n`padding-top: 90px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-top45-half",
+            description: "*for mobile* \n\n`padding-top: 95px`"
+          },
+          {
             name: ".rt-md-space-top5",
             description: "*for mobile* \n\n`padding-top: 100px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-top5-half",
+            description: "*for mobile* \n\n`padding-top: 105px`"
           },
           {
             version: " \>= 0.0.17",
@@ -1310,43 +2004,82 @@ export default {
           {
             name: ".rt-md-space-bottom",
             description: "*for mobile* \n\n`padding-bottom: 20px`"
+          },{
+            name: ".rt-md-space-bottom",
+            description: "*for mobile* \n\n`padding-bottom: 20px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom15-half",
+            description: "*for mobile* \n\n`padding-bottom: 35px`"
           },
           {
             name: ".rt-md-space-bottom15",
             description: "*for mobile* \n\n`padding-bottom: 30px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom2-half",
+            description: "*for mobile* \n\n`padding-bottom: 45px`"
+          },
+          {
             name: ".rt-md-space-bottom2",
             description: "*for mobile* \n\n`padding-bottom: 40px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom25-half",
+            description: "*for mobile* \n\n`padding-bottom: 55px`"
           },
           {
             name: ".rt-md-space-bottom25",
             description: "*for mobile* \n\n`padding-bottom: 50px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom3-half",
+            description: "*for mobile* \n\n`padding-bottom: 65px`"
+          },
+          {
             name: ".rt-md-space-bottom3",
             description: "*for mobile* \n\n`padding-bottom: 60px`"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom35-half",
+            description: "*for mobile* \n\n`padding-bottom: 75px`"
+          },
+          {
             name: ".rt-md-space-bottom35",
             description: "*for mobile* \n\n`padding-bottom: 70px`"
+
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom4-half",
+            description: "*for mobile* \n\n`padding-bottom: 85px`"
+          },{
             name: ".rt-md-space-bottom4",
             description: "*for mobile* \n\n`padding-bottom: 80px`"
+
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom45-half",
+            description: "*for mobile* \n\n`padding-bottom: 95px`"
+          },{
             name: ".rt-md-space-bottom45",
             description: "*for mobile* \n\n`padding-bottom: 90px`"
+
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-bottom5-half",
+            description: "*for mobile* \n\n`padding-bottom: 105px`"
+          },{
             name: ".rt-md-space-bottom5",
             description: "*for mobile* \n\n`padding-bottom: 100px`"
-          },
-          {
-            version: " \>= 0.0.17",
-            name: ".rt-md-space-bottom55",
-            description: "*for mobile* \n\n`padding-bottom: 110px`"
+
           },
           {
             version: " \>= 0.0.17",
@@ -1390,9 +2123,21 @@ export default {
               "*for mobile* \n\n```padding-top: 20px \npadding-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical-half",
+            description:
+              "*for mobile* \n\n```padding-top: 25px \npadding-bottom: 25px```"
+          },
+          {
             name: ".rt-md-space-vertical15",
             description:
               "*for mobile* \n\n```padding-top: 30px \npadding-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical15-half",
+            description:
+              "*for mobile* \n\n```padding-top: 35px \npadding-bottom: 35px```"
           },
           {
             name: ".rt-md-space-vertical2",
@@ -1400,9 +2145,21 @@ export default {
               "*for mobile* \n\n```padding-top: 40px \npadding-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical2-half",
+            description:
+              "*for mobile* \n\n```padding-top: 45px \npadding-bottom: 45px```"
+          },
+          {
             name: ".rt-md-space-vertical25",
             description:
               "*for mobile* \n\n```padding-top: 50px \npadding-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical25-half",
+            description:
+              "*for mobile* \n\n```padding-top: 55px \npadding-bottom: 55px```"
           },
           {
             name: ".rt-md-space-vertical3",
@@ -1410,9 +2167,21 @@ export default {
               "*for mobile* \n\n```padding-top: 60px \npadding-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical3-half",
+            description:
+              "*for mobile* \n\n```padding-top: 65px \npadding-bottom: 65px```"
+          },
+          {
             name: ".rt-md-space-vertical35",
             description:
               "*for mobile* \n\n```padding-top: 70px \npadding-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical35-half",
+            description:
+              "*for mobile* \n\n```padding-top: 75px \npadding-bottom: 75px```"
           },
           {
             name: ".rt-md-space-vertical4",
@@ -1420,14 +2189,32 @@ export default {
               "*for mobile* \n\n```padding-top: 80px \npadding-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical4-half",
+            description:
+              "*for mobile* \n\n```padding-top: 85px \npadding-bottom: 85px```"
+          },
+          {
             name: ".rt-md-space-vertical45",
             description:
               "*for mobile* \n\n```padding-top: 90px \npadding-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical45-half",
+            description:
+              "*for mobile* \n\n```padding-top: 95px \npadding-bottom: 95px```"
+          },
+          {
             name: ".rt-md-space-vertical5",
             description:
               "*for mobile* \n\n```padding-top 100px \npadding-bottom: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical5-half",
+            description:
+              "*for mobile* \n\n```padding-top 105px \npadding-bottom: 105px```"
           },
           {
             version: " \>= 0.0.17",
@@ -1483,9 +2270,21 @@ export default {
               "*for mobile* \n\n```padding-left: 20px \npright-bottom: 20px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal-half",
+            description:
+              "*for mobile* \n\n```padding-left: 25px \npright-bottom: 25px```"
+          },
+          {
             name: ".rt-md-space-horizontal15",
             description:
               "*for mobile* \n\n```padding-left: 30px \npright-bottom: 30px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal15-half",
+            description:
+              "*for mobile* \n\n```padding-left: 35px \npright-bottom: 35px```"
           },
           {
             name: ".rt-md-space-horizontal2",
@@ -1493,9 +2292,21 @@ export default {
               "*for mobile* \n\n```padding-left: 40px \npright-bottom: 40px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal2-half",
+            description:
+              "*for mobile* \n\n```padding-left: 45px \npright-bottom: 45px```"
+          },
+          {
             name: ".rt-md-space-horizontal25",
             description:
               "*for mobile* \n\n```padding-left: 50px \npright-bottom: 50px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal25-half",
+            description:
+              "*for mobile* \n\n```padding-left: 55px \npright-bottom: 55px```"
           },
           {
             name: ".rt-md-space-horizontal3",
@@ -1503,9 +2314,21 @@ export default {
               "*for mobile* \n\n```padding-left: 60px \npright-bottom: 60px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal3-half",
+            description:
+              "*for mobile* \n\n```padding-left: 65px \npright-bottom: 65px```"
+          },
+          {
             name: ".rt-md-space-horizontal35",
             description:
               "*for mobile* \n\n```padding-left: 70px \npright-bottom: 70px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal35-half",
+            description:
+              "*for mobile* \n\n```padding-left: 75px \npright-bottom: 75px```"
           },
           {
             name: ".rt-md-space-horizontal4",
@@ -1513,14 +2336,32 @@ export default {
               "*for mobile* \n\n```padding-left: 80px \npright-bottom: 80px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal4-half",
+            description:
+              "*for mobile* \n\n```padding-left: 85px \npright-bottom: 85px```"
+          },
+          {
             name: ".rt-md-space-horizontal45",
             description:
               "*for mobile* \n\n```padding-left: 90px \npright-bottom: 90px```"
           },
           {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal45-half",
+            description:
+              "*for mobile* \n\n```padding-left: 95px \npright-bottom: 95px```"
+          },
+          {
             name: ".rt-md-space-horizontal5",
             description:
               "*for mobile* \n\n```padding-left 100px \npadding-right: 100px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-horizontal5-half",
+            description:
+              "*for mobile* \n\n```padding-left 105px \npadding-right: 105px```"
           },
           {
             version: " \>= 0.0.17",

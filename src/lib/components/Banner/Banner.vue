@@ -115,6 +115,7 @@
         type: Boolean,
         default: false
       },
+
       transparentBackgroundImage: {
         type: Boolean,
         default: false

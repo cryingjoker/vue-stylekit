@@ -11,13 +11,13 @@
   position relative
   z-index 2
   appearance field
-  placeholder(color main-color07, )
+  placeholder(color main-color05, )
 
   .input--with-button &
     padding-right horizontal-space * 3
 
   &[disabled]
-    color b2c-cool-grey03
+    color main-color03
     placeholder(color main-color03, )
 
   .{newAppName}-input--white &,
@@ -39,16 +39,19 @@
   right 5px
   z-index 2
   cursor pointer
+  opacity: 0
   transition-timing-function ease-in-out
   transition-duration .4s
-  transition-property opacity, transform
-  animation .3s showClearInput ease-in-out
+  transition-property opacity, visibility
+  .input-element:hover+.text-field__line+.floating-placeholder+&,
+  .input-element:focus+.text-field__line+.floating-placeholder+&
+    opacity: 1
+    visibility: visible
 
-  &:hover
-    transform rotate(180deg)
+
 
 .input-clear__icon
-  fill main-color
+  fill main-color07-no-opacity
 
   .{newAppName}-dark-theme &,
   .{newAppName}-input--white &
@@ -63,7 +66,6 @@
 .{b2bAppName}-input-clear
   top 23px
   right 20px
-
 .{b2bAppName}-input
   .input-element
     padding-bottom 10px
@@ -107,7 +109,12 @@
 
 .input-arithmetic__button
   cursor pointer
-
+  opacity: 0.5
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity
+  &:hover
+    opacity: 1
   &+&
     margin-left horizontal-space * .25
 
@@ -137,6 +144,7 @@
     display none
 
 .input-wrapper
+  position: relative
   &+&
     margin-top 5px
 
@@ -195,18 +203,3 @@
   top: 50%
   transform translateY(-50%)
 
-@keyframes showClearInput
-  0%
-    opacity 0
-    visibility hidden
-    transform rotate(60deg)
-
-  50%
-    opacity .3
-    visibility visible
-    transform rotate(60deg)
-
-  100%
-    opacity .7
-    visibility visible
-    transform rotate(0)

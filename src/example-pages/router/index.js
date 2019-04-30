@@ -27,12 +27,14 @@ import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
 import SpaceElements from '../components/main-elements/SpaceClassElements.vue';
+import OpacityElements from '../components/main-elements/OpacityClassElements.vue';
 import FilterElements from '../components/main-elements/Filter.vue';
 import TestAccess from '../components/promo/test-access.vue';
 import Opportunity from '../components/complex-elements/Opportunity.vue';
 import HelpMain from '../components/complex-elements/HelpMain.vue';
 import UnWrapper from '../components/main-elements/UnWrapper.vue';
 import RealPopup from '../components/main-elements/Popup.vue';
+import SlideContent from '../components/experiment-elements/SlideContent.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
 import Tabs from '../components/main-elements/Tabs.vue';
@@ -51,10 +53,12 @@ import Kids from "../components/promo/kids.vue";
 import PromoLp from "../components/promo/lp.vue";
 import Swiper from "../components/swiper/Swiper.vue";
 import ProductCard from "../components/experiment-elements/ProductCard.vue";
+import TariffCard from "../components/experiment-elements/TariffCard.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
   { path: '/space', name: 'app-grid', component: SpaceElements },
+  { path: '/opacity', name: 'app-opacity', component: OpacityElements },
   { path: '/buttons', name: 'app-buttons', component: Buttons },
   { path: '/checkbox', name: 'app-checkbox', component: Checkbox },
   { path: '/radiobutton', name: 'app-radiobutton', component: RadioButton },
@@ -64,6 +68,7 @@ const index = [
   { path: '/table', name: 'app-table', component: Table },
   { path: '/select', name: 'app-select', component: Select },
   { path: '/typography', name: 'app-typography', component: Typography },
+  { path: '/slide-content', name: 'app-slide-content', component: SlideContent },
   { path: '/spinner', name: 'app-spinner', component: Spinner },
   { path: '/price', name: 'app-price', component: Price },
   { path: '/fullscreen', name: 'app-fullscreen', component: FullscreenImage },
@@ -88,6 +93,7 @@ const index = [
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
   { path: '/product-cards', name: 'app-product-card', component: ProductCard },
+  { path: '/tariff-cards', name: 'app-tariff-card', component: TariffCard },
   { path: '/tabs', name: 'app-banners', component: Tabs },
   { path: '/use-case', name: 'useCase', component: UseCase },
   { path: '/promo/vcod', name: 'VCOD', component: VCOD },

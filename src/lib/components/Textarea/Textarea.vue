@@ -7,8 +7,8 @@
       @keyup="calculateHeight"
       @input="calculateHeight"
     />
-    <div v-if="outlined" class="text-field__border" />
-    <div v-else class="text-field__line" />
+    <div v-if="outlined" class="text-field__border" ></div>
+    <div v-else class="text-field__line" ></div>.
     <div
       v-if="!!placeholder"
       :class="placeholderClasses"

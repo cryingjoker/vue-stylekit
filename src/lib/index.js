@@ -71,7 +71,9 @@ import {
   RealPopup,
   Ussd,
   UseCase,
-  ProductCard
+  ProductCard,
+  ValidationIcon,
+  TariffCard
 } from "./components";
 
 
@@ -135,7 +137,7 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
-      Vue.component(SlideContent.name, SlideContent);
+
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.component(Icon.name, Icon);
@@ -149,9 +151,16 @@ const VueRtStyle = {
       Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(RealPopup.name, RealPopup);
-      Vue.component(LogoCoBranding.name, LogoCoBranding.component);
+
       Vue.component(UseCase.name, UseCase);
+
+      // tsx components
+
+      Vue.component(LogoCoBranding.name, LogoCoBranding.component);
       Vue.component(ProductCard.name, ProductCard.component);
+      Vue.component(TariffCard.name, TariffCard.component);
+      Vue.component(ValidationIcon.name, ValidationIcon.component);
+      Vue.component(SlideContent.name, SlideContent.component);
 
 
       Vue.directive(SwipeLeft.name, SwipeLeft);

@@ -21,13 +21,14 @@
   padding-bottom 10px
 
   &+&
-    border-top 1px solid main-color02
-    padding-top 20px
+    &:not(.rt-slide--without-border)
+      border-top 1px solid main-color02
+      padding-top 20px
 
   &__header
     padding-top 20px
     padding-bottom 20px
-    padding-left 30px
+
     position relative
     cursor pointer
 
@@ -36,12 +37,11 @@
     margin-top auto
     margin-bottom auto
     position absolute
-    top 0
-    bottom 5px
-    left 0
+
     transition-timing-function ease-in-out
     transition-duration .5s
     transition-property transform
+
 
     .rt-slide--is-active &
       transform rotate(90deg)
@@ -49,7 +49,7 @@
   &__content
     max-height 0
     overflow hidden
-    padding-left 30px
+
     opacity 0
     visibility hidden
     position relative
@@ -62,3 +62,24 @@
       padding-bottom 10px
       opacity 1
       visibility visible
+
+.rt-slide__header--left,
+.rt-slide__content--left
+  padding-left 30px
+
+.rt-slide__header--right,
+.rt-slide__content--right
+  padding-right 30px
+
+.rt-slide__arrow--left-right
+  top 0
+  bottom 5px
+  left 0
+.rt-slide__arrow--right-bottom
+  top 0
+  bottom 5px
+  right 0
+  transform rotate(90deg)
+  .rt-slide--is-active &
+    transform rotate(-90deg)
+

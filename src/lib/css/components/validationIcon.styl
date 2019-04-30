@@ -1,0 +1,23 @@
+
+.{newAppName}-validation-icon
+  width: 20px
+  height: 20px
+  border-radius 50%
+  position: relative
+  margin-left: 15px
+  text-align: center
+  display: inline-flex
+  align-items center
+  justify-content center
+  .input-wrapper &
+    position: absolute
+    left: 100%
+    margin-left: 15px
+    @media (max-width: mobile-upper-limit)
+      margin-left: -20px
+
+.{newAppName}-validation-icon--error
+  background-color: error-color
+
+.{newAppName}-validation-icon--success
+  background-color: b2c-green

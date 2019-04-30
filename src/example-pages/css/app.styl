@@ -6,7 +6,15 @@
   src url("./app-fonts/Menlo-Regular.eot?#iefix") format("embedded-opentype"), url("./app-fonts/Menlo-Regular.woff") format("woff"), url("./app-fonts/Menlo-Regular.woff2") format("woff2"), url("./app-fonts/Menlo-Regular.ttf") format("ttf")
 
 @import "../../develover-lib/css/editor"
-
+.app-is-main-component
+  &:after
+    content 'Основной компонент'
+    display: block
+    text-align: right
+    padding-top: 10px
+    text-transform: uppercase
+    font-size 11px
+    color b2c-purple-low
 .app-header
   height: 50px
   background-color: main-color

@@ -10,6 +10,8 @@ class ProductCard extends Vue {
   @Prop({ default: null }) backgroundImage: String;
   @Prop({ default: null }) tabletBackgroundImage: String;
   @Prop({ default: null }) mobileBackgroundImage: String;
+  @Prop({ default: false }) safeImageRate: Boolean;
+  @Prop({ default: 'top' }) contentOrientation: String;
 
   checkWidth() {
     const w = window.innerWidth;
@@ -19,7 +21,6 @@ class ProductCard extends Vue {
 
       if (w < parseInt(variables["mobile-upper-limit"])) {
         if (this.type != "mobile") {
-          console.info("this.$refs.image", this.$refs.image);
           image.classList.add("rt-product-card__image--hide-animate");
           setTimeout(() => {
             image.classList.remove("rt-product-card__image--hide-animate");
@@ -32,7 +33,6 @@ class ProductCard extends Vue {
         }
 
       } else {
-        console.error(this.type);
         if (this.type != "tablet") {
           image.classList.add("rt-product-card__image--hide-animate");
           setTimeout(() => {
@@ -76,27 +76,46 @@ class ProductCard extends Vue {
   render(h: CreateElement): VNode {
     let productCardClass = (() => {
       let className = "rt-product-card";
-      if (this.fixedImageHeight) {
-        className += " rt-product-card--has-fixed-heigth";
+      if (this.fixedImageHeight && !this.safeImageRate) {
+        className += " rt-product-card--has-fixed-height";
+      }
+      if (this.fixedImageHeight && this.safeImageRate) {
+        className += " rt-product-card--has-static-image-with-fix-height";
+      }
+      if(this.contentOrientation === 'bottom'){
+        className += ' rt-product-card--has-bottom-orient'
       }
       return className;
     })();
     const productImageStyle = (() => {
-      const styleObj = {};
-      if (this.backgroundImage) {
-        if (this.type === "tablet" && this.tabletBackgroundImage) {
-          styleObj["backgroundImage"] = "url(" + this.tabletBackgroundImage + ")";
-        } else if (this.type === "mobile" && this.mobileBackgroundImage) {
-          styleObj["backgroundImage"] = "url(" + this.mobileBackgroundImage + ")";
+        const styleObj = {};
+        if (this.safeImageRate && this.type === "mobile") {
+          if (this.type === "tablet" && this.tabletBackgroundImage) {
+            return this.tabletBackgroundImage;
+          } else if (this.type === "mobile" && this.mobileBackgroundImage) {
+            return this.mobileBackgroundImage;
+          } else {
+            return this.backgroundImage;
+          }
         } else {
-          styleObj["backgroundImage"] = "url(" + this.backgroundImage + ")";
+          if (this.backgroundImage) {
+            if (this.type === "tablet" && this.tabletBackgroundImage) {
+              styleObj["backgroundImage"] = "url(" + this.tabletBackgroundImage + ")";
+            } else if (this.type === "mobile" && this.mobileBackgroundImage) {
+              styleObj["backgroundImage"] = "url(" + this.mobileBackgroundImage + ")";
+            } else {
+              styleObj["backgroundImage"] = "url(" + this.backgroundImage + ")";
+            }
+          }
         }
+        return styleObj;
       }
-      return styleObj;
-    })();
 
-    if (this.$slots.footer && this.$slots.content) {
-      return <div class={productCardClass}>
+    )();
+
+    if (this.$slots.footer && this.$slots.content)
+    {
+      return<div class={productCardClass}>
         <div class="rt-product-card__body">
           <div class="rt-product-card__content">
             {this.$slots.content}
@@ -106,6 +125,17 @@ class ProductCard extends Vue {
           </div>
         </div>
         <div ref="image" class="rt-product-card__image"></div>
+      </div>;
+    }
+
+    if (this.safeImageRate && this.type === "mobile") {
+      return <div class={productCardClass}>
+        <div class="rt-product-card__body">
+          {this.$slots.default}
+        </div>
+        <div class="rt-product-card__image rt-product-card__image-tag">
+          <img ref="image" class="rt-product-card__image-tag" src={productImageStyle}/>
+        </div>
       </div>;
     }
     return <div class={productCardClass}>

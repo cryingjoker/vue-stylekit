@@ -50,6 +50,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "opacity",
+      "title" : "Opacity",
+      "url" : "/opacity",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "row-list",
       "title" : "Row list",
       "url" : "/row-list",
@@ -241,6 +249,14 @@
           "for_b2c" : true
         },
         {
+          "name" : "TariffCards",
+          "title" : "TariffCards",
+          "url" : "/tariff-cards",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
           "name" : "Cards with forms",
           "title" : "Cards with forms",
           "url" : "/cards-with-forms",
@@ -309,6 +325,14 @@
           "name" : "Use Case",
           "title" : "Use Case",
           "url" : "/use-case",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Slide Content",
+          "title" : "Slide Content",
+          "url" : "/slide-content",
           "list_child" : [],
           "for_b2b" : true,
           "for_b2c" : true
