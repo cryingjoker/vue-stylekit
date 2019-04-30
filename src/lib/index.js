@@ -61,6 +61,8 @@ import {
   Hint,
   BannerVideoGameControl,
   SlideContent,
+  SlideContentDottedContent,
+  SlideContentDottedHeader,
   Icon,
   Slide,
   Swiper,
@@ -161,8 +163,9 @@ const VueRtStyle = {
       Vue.component(TariffCard.name, TariffCard.component);
       Vue.component(ValidationIcon.name, ValidationIcon.component);
       Vue.component(SlideContent.name, SlideContent.component);
-
-
+      Vue.component(SlideContentDottedContent.name, SlideContentDottedContent.component);
+      Vue.component(SlideContentDottedHeader.name, SlideContentDottedHeader.component);
+      console.info('SlideContentDottedHeader.name',SlideContentDottedHeader.name)
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 

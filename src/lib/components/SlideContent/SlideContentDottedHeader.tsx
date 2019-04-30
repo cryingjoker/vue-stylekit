@@ -5,18 +5,14 @@ import { IColor } from "../../colorInterface";
 
 @Component
 class SlideContentDottedHeader extends Vue {
-  // @Prop({ default: false }) isOpen: boolean;
-  // @Prop({ default: 'left-right' }) arrowPosition: string;
-  // @Prop({ default: true }) needBorder: boolean;
-  // @Prop({ default: false }) dottedView: boolean;
-  // isOpenLocal = false;
-
-  // toggleOpen(){
-  //   this.isOpenLocal= !this.isOpenLocal;
-  // }
+  @Prop({ default: false }) isOpen: boolean;
 
   render(h: CreateElement): VNode {
-    return <h1>header</h1>
+    let headerClass = 'rt-slide-content-dotted-header';
+    if(this.isOpen){
+      headerClass += ' rt-slide-content-dotted-header--is-active';
+    }
+    return <div class={headerClass} ref="header">{this.$slots.default}</div>
   }
 }
 

@@ -83,3 +83,21 @@
   .rt-slide--is-active &
     transform rotate(-90deg)
 
+
+.rt-slide-content-dotted-content
+  overflow: hidden
+  max-height: 0
+  opacity: 0
+  visibility: visible
+  transition-timing-function ease-in-out
+  transition-duration .5s
+  transition-property max-height, opacity, visibility
+
+.rt-slide-content-dotted-content--is-active
+  max-height: 3000px
+  min-height: fit-content
+  opacity: 1
+  visibility: visible
+
+.rt-slide-content-trigger
+  cursor: pointer

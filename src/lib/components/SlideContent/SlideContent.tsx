@@ -3,6 +3,9 @@ import { Component, Prop } from "vue-property-decorator";
 import color from "../../color.json";
 import { IColor } from "../../colorInterface";
 
+const componentsList = {}
+
+
 @Component
 class SlideContent extends Vue {
   @Prop({ default: false }) isOpen: boolean;
@@ -14,12 +17,22 @@ class SlideContent extends Vue {
   toggleOpen(){
     this.isOpenLocal= !this.isOpenLocal;
   }
+  mounted(){
+    if(this.dottedView){
+      const header: any = this.$refs.header
+      header.$el.querySelector('.rt-slide-content-trigger').addEventListener('click',(e)=> {
+        this.isOpenLocal = !this.isOpenLocal;
+        window.getSelection().removeAllRanges();
+      });
 
+    }
+  }
   render(h: CreateElement): VNode {
     if(this.dottedView){
       return <div class='slide-dotted'>
-        <div class='slide-dotted-header'>{this.$slots.header}</div>
-        <div class='slide-dotted-content'>{this.$slots.content}</div>
+
+        <rt-slide-content-dotted-header ref="header" is-open={this.isOpenLocal}>{this.$slots.header}</rt-slide-content-dotted-header>
+        <rt-slide-content-dotted-content is-open={this.isOpenLocal}>{this.$slots.content}</rt-slide-content-dotted-content>
       </div>
     }
 

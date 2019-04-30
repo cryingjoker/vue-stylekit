@@ -5,18 +5,13 @@ import { IColor } from "../../colorInterface";
 
 @Component
 class SlideContentDottedContent extends Vue {
-  // @Prop({ default: false }) isOpen: boolean;
-  // @Prop({ default: 'left-right' }) arrowPosition: string;
-  // @Prop({ default: true }) needBorder: boolean;
-  // @Prop({ default: false }) dottedView: boolean;
-  // isOpenLocal = false;
-  //
-  // toggleOpen(){
-  //   this.isOpenLocal= !this.i2sOpenLocal;
-  // }
-
+  @Prop({ default: false }) isOpen: boolean;
   render(h: CreateElement): VNode {
-    return <h1>header</h1>
+    let slideContentClass = 'rt-slide-content-dotted-content';
+    if(this.isOpen){
+      slideContentClass += ' rt-slide-content-dotted-content--is-active';
+    }
+    return <div class={slideContentClass} ref="header">{this.$slots.default}</div>
   }
 }
 
