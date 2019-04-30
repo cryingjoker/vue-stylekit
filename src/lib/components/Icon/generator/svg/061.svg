@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="55px" viewBox="0 0 56 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>061-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-97.000000, -613.000000)">
+            <g id="061-C" transform="translate(97.000000, 613.000000)">
+                <g id="mobile_rtk_app_1-copy">
+                    <path d="M55.2476,27.5009 C55.2476,42.6889 42.9346,55.0009 27.7476,55.0009 C12.5596,55.0009 0.2476,42.6889 0.2476,27.5009 C0.2476,12.3129 12.5596,0.0009 27.7476,0.0009 C42.9346,0.0009 55.2476,12.3129 55.2476,27.5009" id="Fill-379" fill="#57D9B7"></path>
+                    <polygon id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="46.5 38.5 10.5 38.5 10.5 15.5 40.1 15.5 46.5 22.7"></polygon>
+                    <path d="M35.5,34.5 L15.5,34.5 C14.9,34.5 14.5,34.1 14.5,33.5 L14.5,20.9 C14.5,20.3 14.9,19.9 15.5,19.9 L35.5,19.9 C36.1,19.9 36.5,20.3 36.5,20.9 L36.5,33.5 C36.5,34 36.1,34.5 35.6,34.5 C35.6,34.5 35.6,34.5 35.6,34.5 L35.5,34.5 Z" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

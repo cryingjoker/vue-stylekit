@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>internet_speed_60_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-611.000000, -614.000000)" id="Group" stroke="#000000">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-87" transform="translate(467.000000, 494.000000)">
+                    <path d="M55.3521,28.0175 C55.3521,43.2055 43.0391,55.5175 27.8521,55.5175 C12.6641,55.5175 0.3521,43.2055 0.3521,28.0175 C0.3521,12.8295 12.6641,0.5175 27.8521,0.5175 C43.0391,0.5175 55.3521,12.8295 55.3521,28.0175" stroke-width="1.5"></path>
+                    <path d="M38.1548,12.9335 C43.0588,16.2465 46.2828,21.8575 46.2828,28.2215 C46.2828,38.4035 38.0298,46.6575 27.8468,46.6575" id="Stroke-89" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <polyline id="Stroke-91" stroke-width="1.5" stroke-linejoin="round" points="30.896 43.1816 27.847 47.0856 31.75 50.1336"></polyline>
+                    <path d="M27.8521,39.7333 C34.3421,39.7333 39.6021,34.4873 39.6021,28.0173 C39.6021,21.5473 34.3421,16.3013 27.8521,16.3013 C21.3621,16.3013 16.1011,21.5473 16.1011,28.0173 C16.1011,34.4873 21.3621,39.7333 27.8521,39.7333 Z" id="Stroke-105" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M27.8521,39.7333 C31.4201,39.7333 34.3131,34.4873 34.3131,28.0173 C34.3131,21.5473 31.4201,16.3013 27.8521,16.3013 C24.2831,16.3013 21.3901,21.5473 21.3901,28.0173 C21.3901,34.4873 24.2831,39.7333 27.8521,39.7333 Z" id="Stroke-107" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M27.8521,16.3017 L27.8521,39.7337" id="Stroke-109" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M16.1128,28.1698 L39.6028,28.1698" id="Stroke-111" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M17.9189,22.1186 L37.6319,22.1186" id="Stroke-113" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M18.2354,34.2211 L37.6324,34.2211" id="Stroke-115" stroke-width="1" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

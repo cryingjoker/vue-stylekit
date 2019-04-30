@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>176-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_B2C_table" transform="translate(-621.000000, -14614.000000)">
+            <g id="176-C" transform="translate(621.000000, 14614.000000)">
+                <circle id="Oval" fill="#7700FF" cx="28.0491228" cy="28.0491228" r="27.8526316"></circle>
+                <g id="Group" transform="translate(14.982456, 12.280702)">
+                    <polygon id="Path" fill="#BA80FE" points="1.22807018 20.2140351 1.22807018 19.6982456 19.8947368 0.0736842105 19.8701754 0.171929825 18.322807 2.94736842 13.2140351 11.8877193 7.93333333 21.2701754"></polygon>
+                    <path d="M8.49824561,19.9929825 C7.66315789,18.8631579 6.2877193,18.1508772 4.74035088,18.1508772 C2.18596491,18.1508772 0.122807018,20.1403509 0.122807018,22.5719298 C0.122807018,24.9052632 2.01403509,26.8210526 4.42105263,26.9684211 C4.42105263,26.9684211 4.44561404,26.9684211 4.44561404,26.9684211 C4.44561404,26.9684211 19.7964912,26.9684211 19.7964912,26.9684211 L19.8947368,0.0736842105 C19.722807,0.540350877 13.0175439,12.1578947 8.49824561,19.9929825 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

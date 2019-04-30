@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>103-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-489.000000, -1438.000000)">
+            <g id="103-C" transform="translate(489.000000, 1438.000000)">
+                <path d="M56,28 C56,43.4641455 43.4631273,56 28,56 C12.5358545,56 0,43.4641455 0,28 C0,12.5358545 12.5358545,0 28,0 C43.4631273,0 56,12.5358545 56,28" id="Fill-75" fill="#FFA307"></path>
+                <text id="M" font-family="RostelecomBasis-Regular, Rostelecom Basis" font-size="20" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="20.0190909" y="34.5090909">M</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

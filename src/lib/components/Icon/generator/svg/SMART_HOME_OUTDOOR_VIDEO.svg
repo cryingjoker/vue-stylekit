@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>smart_home_outdoor_video_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-294.000000, -500.000000)" id="Group" stroke="#000000" stroke-width="1.5">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-170" transform="translate(150.000000, 380.000000)">
+                    <path d="M55,27.6113 C55,42.7993 42.687,55.1113 27.5,55.1113 C12.312,55.1113 0,42.7993 0,27.6113 C0,12.4233 12.312,0.1113 27.5,0.1113 C42.687,0.1113 55,12.4233 55,27.6113"></path>
+                    <path d="M14.8520833,34.3975 C14.9291667,33.9325 14.6208333,33.4675 14.1583333,33.39 C14.08125,33.39 14.0041667,33.39 13.9270833,33.39 L12.1541667,33.39 L12.1541667,42.535 L13.7729167,42.535 C14.2354167,42.6125 14.6979167,42.3025 14.775,41.8375 C14.775,41.7858333 14.8006944,39.3058333 14.8520833,34.3975 Z" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M15.2822008,38.2075 L19.55,38.2075 C21.0916667,38.2075 22.4791667,37.2775 23.1729167,35.8825 L24.5449858,31.7136279" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M42.3267259,26.9027709 C40.7009075,27.7072137 39.5958333,27.5075 38.6708333,27.1975 L15.1604167,18.3625 C14.1583333,18.0525 13.85,16.735 14.1583333,15.7275 L15.0833333,12.7825 C15.46875,11.775 16.625,11.155 17.7041667,11.465 L48.075,22.625 C49.0770833,22.935 49.0770833,23.6325 48.075,23.9425 L42.3267259,26.9027709 Z" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M43.8354167,26.19 L42.1395833,31.15 C41.5229167,32.4675 40.2125,33.0875 38.9020833,32.4675 L13.85,23.245 C12.7708333,23.0125 12.0770833,21.9275 12.3083333,20.8425 C12.3854167,20.61 12.4625,20.455 12.5395833,20.3 L14.9164331,13.2879851" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polyline id="Shape" stroke-linecap="round" stroke-linejoin="round" points="44.4520833 25.88 46.0708333 26.5 46.0708333 26.5 44.4520833 31.77 44.14375 31.77 42.1395833 31.15"></polyline>
+                    <path d="M28.4958333,29.825 C27.95625,30.9875 26.8,31.7625 25.5666667,31.7625 C24.025,31.685 22.7145833,30.3675 22.6375,28.8175 C22.6375,28.1975 22.9458333,27.81 22.9458333,27.5" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

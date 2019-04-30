@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_channel_6_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g transform="translate(-967.000000, -1781.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-278-Copy" transform="translate(823.000000, 1661.000000)">
+                    <path d="M55,27.5 C55,42.688 42.687,55 27.5,55 C12.312,55 0,42.688 0,27.5 C0,12.312 12.312,0 27.5,0 C42.687,0 55,12.312 55,27.5" stroke="#000000" stroke-width="1.5"></path>
+                    <g id="icon_352-copy" stroke-width="1" fill-rule="evenodd" transform="translate(12.000000, 12.000000)" fill="#000000">
+                        <path d="M25.6479821,3.73099264 L18.0022422,21.5524699 L13.4843049,21.5524699 L5.56053812,3.58784824 C2.08520179,6.45073615 0,10.8166402 0,15.4688331 C0,24.0574968 6.95067265,31 15.5,31 C24.0493274,31 31,24.0574968 31,15.4688331 C31,10.9597846 29.0538117,6.66545275 25.6479821,3.73099264 Z M15.6390135,13.1069505 L11.2600897,0.581815934 C14.0403587,-0.205478242 17.029148,-0.205478242 19.8789238,0.653388131 L15.6390135,13.1069505 Z" id="Shape" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
