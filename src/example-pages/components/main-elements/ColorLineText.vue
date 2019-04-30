@@ -8,7 +8,7 @@
       </div>
       <div class="app-body">
         <pre-code
-          text="<div class=&quot;app-row row color-block--dark-blue&quot;><div class=&quot;rt-space-horizontal rt-space-vertical&quot;><rt-color-line-text><template slot=&quot;label&quot;>Будьте спокойны за своих близких</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем,  <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"
+          text="<div class=&quot;app-row row color-block--dark-blue&quot;><div class=&quot;rt-space-horizontal rt-space-vertical rt-col&quot;><rt-color-line-text><template slot=&quot;label&quot;>Будьте спокойны за своих близких</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем,  <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"
         />
         <pre-code
           text="<div class=&quot;app-row row color-block--purple-high&quot;><div class=&quot;rt-space-horizontal rt-space-vertical&quot;><rt-color-line-text color-icon=&quot;purple&quot;><template slot=&quot;label&quot;>Мама мыла раму!</template><template slot=&quot;content&quot;>Ваш дом всегда под контролем,  <br> даже когда вы далеко.</template></rt-color-line-text></div></div>"

@@ -13,34 +13,36 @@
         </div>
       </div>
     </div>
-    <rt-swiper>
-      <rt-slide v-for="i in 10" :key="i" class="rt-space-right15">
-        <h2>Слайд {{ i }}</h2>
-        <rt-row-list>
-          <rt-row-list-item v-for="i in 3" :key="i">
-            <template slot="option">
-              <div class="d-flex flex-row">
-                <div>
-                  <p>Антивирус</p>
-                  <p class="color-main05">
-                    Kaspersky Internet Security, месяц в подарок
-                  </p>
-                </div>
-              </div>
-            </template>
-          </rt-row-list-item>
-        </rt-row-list>
-        <rt-price
-          class="rt-space-vertical"
-          time-interval="мес"
-          is-option
-          :value="i * 1000"
-        />
-        <rt-button class="rt-button-orange">
-          Подключить
-        </rt-button>
-      </rt-slide>
-    </rt-swiper>
+    <!--<div class="rt-container">-->
+      <!--<rt-swiper>-->
+      <!--<rt-slide v-for="i in 10" :key="i" class="rt-space-right15">-->
+        <!--<h2>Слайд {{ i }}</h2>-->
+        <!--<rt-row-list>-->
+          <!--<rt-row-list-item v-for="i in 3" :key="i">-->
+            <!--<template slot="option">-->
+              <!--<div class="d-flex flex-row">-->
+                <!--<div>-->
+                  <!--<p>Антивирус</p>-->
+                  <!--<p class="color-main05">-->
+                    <!--Kaspersky Internet Security, месяц в подарок-->
+                  <!--</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</template>-->
+          <!--</rt-row-list-item>-->
+        <!--</rt-row-list>-->
+        <!--<rt-price-->
+          <!--class="rt-space-vertical"-->
+          <!--time-interval="мес"-->
+          <!--is-option-->
+          <!--:value="i * 1000"-->
+        <!--/>-->
+        <!--<rt-button class="rt-button-orange">-->
+          <!--Подключить-->
+        <!--</rt-button>-->
+      <!--</rt-slide>-->
+    <!--</rt-swiper>-->
+    <!--</div>-->
     <div class="rt-space-top5">
       <pre-code text='
         <rt-swiper :hide-navigation="true">

@@ -3,18 +3,40 @@ import { Component, Prop } from "vue-property-decorator";
 import color from "../../color.json";
 import { IColor } from "../../colorInterface";
 
+const componentsList = {}
+
+
 @Component
 class SlideContent extends Vue {
   @Prop({ default: false }) isOpen: boolean;
   @Prop({ default: 'left-right' }) arrowPosition: string;
   @Prop({ default: true }) needBorder: boolean;
+  @Prop({ default: false }) dottedView: boolean;
   isOpenLocal = false;
 
   toggleOpen(){
     this.isOpenLocal= !this.isOpenLocal;
   }
+  mounted(){
+    if(this.dottedView){
+      const header: any = this.$refs.header
+      header.$el.querySelector('.rt-slide-content-trigger').addEventListener('click',(e)=> {
+        this.isOpenLocal = !this.isOpenLocal;
+        window.getSelection().removeAllRanges();
+      });
 
+    }
+  }
   render(h: CreateElement): VNode {
+    if(this.dottedView){
+      return <div class='slide-dotted'>
+
+        <rt-slide-content-dotted-header ref="header" is-open={this.isOpenLocal}>{this.$slots.header}</rt-slide-content-dotted-header>
+        <rt-slide-content-dotted-content is-open={this.isOpenLocal}>{this.$slots.content}</rt-slide-content-dotted-content>
+      </div>
+    }
+
+
     let slideArrowClass = `rt-slide__arrow rt-slide__arrow--${this.arrowPosition}`;
     let slideClass = `rt-slide`;
 
