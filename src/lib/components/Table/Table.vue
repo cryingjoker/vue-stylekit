@@ -61,7 +61,7 @@ export default {
       );
     } else {
       return (
-        <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "")}>
+        <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
           {columns()}
           <div class="rt-table-head" ref="head">
             {this.$slots.header}
