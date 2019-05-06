@@ -62,6 +62,8 @@ import {
   OpportunityItem,
   Ussd,
   UseCase,
+  BenefitBlock,
+  BenefitItem
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -129,5 +131,7 @@ componentsList[OpportunityItem.name] = OpportunityItem;
 componentsList[UnWrapper.name] = UnWrapper;
 componentsList[RealPopup.name] = RealPopup;
 componentsList[UseCase.name] = UseCase;
+componentsList[BenefitBlock.name] = BenefitBlock;
+componentsList[BenefitItem.name] = BenefitItem;
 componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

@@ -227,6 +227,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "Benefit",
+      "title" : "Benefit",
+      "url" : "/benefit",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "Complex elements",
       "title" : "Complex elements",
       "url" : "",

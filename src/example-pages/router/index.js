@@ -54,6 +54,7 @@ import PromoLp from "../components/promo/lp.vue";
 import Swiper from "../components/swiper/Swiper.vue";
 import ProductCard from "../components/experiment-elements/ProductCard.vue";
 import TariffCard from "../components/experiment-elements/TariffCard.vue";
+import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -114,7 +115,8 @@ const index = [
   { path: '/help-main', name: 'helpMain', component: HelpMain },
   { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
   { path: '/popup', name: 'realPopup', component: RealPopup },
-  { path: '', name: 'default' },
+  { path: '/benefit', name: 'benefit', component: BenefitBlock },
+  { path: '', name: 'default' }
 ];
 
 export default {
