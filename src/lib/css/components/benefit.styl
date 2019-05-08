@@ -1,0 +1,37 @@
+.{newAppName}-benefit
+  &-block
+    width 100%
+    padding-top 60px
+  &-item
+    margin-bottom 60px
+    &__step,
+    &__icon
+      margin-bottom 20px
+    &__image
+      margin-bottom: 20px
+      &>img
+        width 100%
+    &__text
+      .rt-font-small-paragraph
+        opacity .7
+    &--center
+      text-align: center
+      .rt-benefit-item__icon
+        margin 0 auto 20px
+    &--inline
+      display flex
+      .{newAppName}-benefit-item__icon
+        flex-basis 80px
+        margin-bottom: 0
+      .{newAppName}-benefit-item__text
+        margin-left: 20px
+
+
+
+.rbi-pr70
+  @media(min-width: laptop-lower-limit)
+    padding-right 70px
+
+.rbi-pr1c
+  @media(min-width: laptop-lower-limit)
+    padding-right calc(50% * 1 / 6)
