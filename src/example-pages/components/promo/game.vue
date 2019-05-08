@@ -152,7 +152,7 @@ export default {
                     </rt-color-line-text>
                     <p class="rt-space-bottom" style="margin-top:-15px">быстрый интернет <br/> и уникальные игровые бонусы</p>
                     <div class="d-flex">
-                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/></div>
+                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/>/**/</div>
                       <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="250" currency="Мбит" time-interval="сек."/></div>
                     </div>
                     <div class="rt-space-top">
