@@ -53,7 +53,7 @@ class logoGameClass extends Vue{
                             points="265.495598 78.126573 261.267697 78.126573 256.21577 83.1299847 256.21577 78.126573 252.641251 78.126573 252.641251 91.9136152 256.21577 91.9136152 256.21577 86.2153524 261.353018 91.9136152 265.663996 91.9136152 259.024641 84.5196869 265.495598 78.126573"></polyline>
                   <g id="Group-20" transform="translate(142.599057, 71.561315)">
                     <mask id={`rt${this._uid}mask-2`} fill="white">
-                      <use xlinkHref={`#rt${this._uid}path-1`}></use>
+                      <use href={`#rt${this._uid}path-1`}></use>
                     </mask>
                     <g id="Clip-12"></g>
                     <path
