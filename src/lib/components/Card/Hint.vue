@@ -43,13 +43,13 @@
       showHint(){
         let hint = this.$el;
         if(hint.closest(".higher-z"))
-          hint.closest(".higher-z").style.zIndex = getComputedStyle(hint.closest(".higher-z")).zIndex + 1;
+          hint.closest(".higher-z").style.zIndex = 999;
         this.active = true;
       },
       hideHint(){
         let hint = this.$el;
         if(hint.closest(".higher-z"))
-          hint.closest(".higher-z").style.zIndex = getComputedStyle(hint.closest(".higher-z")).zIndex - 1;
+          hint.closest(".higher-z").style.zIndex = null;
         this.active = false;
       }
     },

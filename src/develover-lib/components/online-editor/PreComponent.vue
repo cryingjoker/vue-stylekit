@@ -71,6 +71,7 @@ export default {
         template: (this.localCode
           ? this.localCode
           : this.text.replace(/\\\{\\\{/g, "{{")
+              .replace(/rt\-template/g,'template')
         ).replace("/{/{", "{{"),
         components: componentsList
       };
@@ -91,13 +92,13 @@ export default {
   },
 
   mounted() {
-    this.localCode = this.text;
+    this.localCode = this.text.replace(/rt\-template/g,'template');
     this.getTextAsVue();
   },
   methods: {
     changeComponentCode(code) {
       if (code) {
-        this.localCode = code;
+        this.localCode = code.replace(/rt\-template/g,'template');
         this.getTextAsVue();
       }
     },
@@ -105,6 +106,7 @@ export default {
       if (this.localCode == null) return null;
       let options = {};
       for (let key in this.$parent) {
+
         if (key.search(/(^\$)|(^\_)|(^constructor$)/) === -1) {
           options[key] = this.$parent[key];
         }

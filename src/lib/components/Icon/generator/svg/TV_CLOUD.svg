@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_cloud_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-959.000000, -1907.000000)" id="Group" stroke="#000000" stroke-width="1.5">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Clip-301" transform="translate(815.000000, 1787.000000)">
+                    <path d="M0,27.644 C0,42.832 12.313,55.143 27.5,55.143 C42.688,55.143 55,42.832 55,27.644 C55,12.456 42.688,0.143 27.5,0.143 C12.313,0.143 0,12.456 0,27.644"></path>
+                    <path d="M17.1025,36.4804 L15.7765,36.4804 C13.1945,36.4804 11.1005,34.1074 11.1005,31.2464 C11.0305,28.9434 12.4965,26.7794 14.7295,26.0824 C14.6605,25.5924 14.6605,25.1044 14.6605,24.6164 C14.6605,19.5214 18.3585,15.4034 22.8945,15.4034 C26.5935,15.4034 29.7345,18.1264 30.7115,21.9634 C31.6185,21.1264 32.8055,20.7084 33.9915,20.7084 C36.7135,20.7084 38.9465,23.0104 39.2255,25.9424 C41.8085,25.9424 43.9015,28.3144 43.9015,31.1754 C43.9015,34.0374 41.8085,36.4104 39.2255,36.4104 L37.6205,36.4104" id="Stroke-314" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22.9648,36.4101 L31.6188,36.4101" id="Stroke-316" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M27.292,35.7822 L27.292,24.7562" id="Stroke-318" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polyline id="Stroke-320" stroke-linecap="round" stroke-linejoin="round" points="22.9648 29.082 27.2918 24.756 31.6188 29.082"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

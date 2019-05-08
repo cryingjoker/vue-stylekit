@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>BIG_BEN_BLACK</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="icons" transform="translate(-972.000000, -3214.000000)" stroke="#000000">
+            <g id="DSGN-830" transform="translate(814.000000, 3215.000000)">
+                <g id="BIG_BEN_BLACK" transform="translate(159.000000, 0.000000)">
+                    <path d="M55.3755,27.5029 C55.3755,42.6909 43.0635,55.0029 27.8755,55.0029 C12.6875,55.0029 0.3755,42.6909 0.3755,27.5029 C0.3755,12.3149 12.6875,0.0029 27.8755,0.0029 C43.0635,0.0029 55.3755,12.3149 55.3755,27.5029" id="Fill-159" stroke-width="1.5"></path>
+                    <g id="DSGN-830_BigBen_icon-2" transform="translate(14.000000, 4.000000)">
+                        <circle id="Oval" stroke-width="1.5" cx="14.1" cy="26.1" r="6.2"></circle>
+                        <path d="M6.8,13 C5.4,13 4,13 2.7,13 C1.7,13 0.9,13.8 0.9,14.8 L0.9,37.7 C0.9,38.7 1.7,39.5 2.7,39.5 L25.6,39.5 C26.6,39.5 27.4,38.7 27.4,37.7 L27.4,14.7 C27.4,13.7 26.6,12.9 25.6,12.9 C24.2,12.9 22.8,12.9 21.5,12.9 C16.6,13 11.7,13 6.8,13 Z" id="Shape" stroke-width="1.5"></path>
+                        <polygon id="Shape" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="21.5 9.9 14.1 9.9 6.8 9.9 6.8 13 21.5 13"></polygon>
+                        <path d="M19.8,9.9 C20.3,9.9 20.9,9.9 21.4,9.9 L17.8,6.7 L14.2,3.5 L10.6,6.7 L7,9.9 C7.5,9.9 8.1,9.9 8.6,9.9 C12.2,9.9 16,9.9 19.8,9.9 Z" id="Shape" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M14.1,0.2 L14.1,3.5" id="Shape" stroke-width="1.5" stroke-linecap="round"></path>
+                        <path d="M14.1,23.9 L14.1,26" id="Shape" stroke-linecap="round"></path>
+                        <path d="M11.7,28.5 L13.9,26.3" id="Shape" stroke-linecap="round"></path>
+                        <path d="M3.9,39.4 L3.9,49.2" id="Shape" stroke-width="1.5"></path>
+                        <path d="M9,39.4 L9,50.6" id="Shape" stroke-width="1.5"></path>
+                        <path d="M14.1,39.4 L14.1,51.1" id="Shape" stroke-width="1.5"></path>
+                        <path d="M19.3,39.4 L19.3,50.6" id="Shape" stroke-width="1.5"></path>
+                        <path d="M24.4,49.2 L24.4,39.4" id="Shape" stroke-width="1.5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

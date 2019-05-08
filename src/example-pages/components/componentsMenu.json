@@ -18,6 +18,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "icons",
+      "title" : "Icons",
+      "url" : "/icons",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "buttons",
       "title" : "Buttons",
       "url" : "/buttons",
@@ -222,6 +230,14 @@
       "name" : "Download content",
       "title" : "Download content",
       "url" : "/download-content",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
+      "name" : "Benefit",
+      "title" : "Benefit",
+      "url" : "/benefit",
       "list_child" : [],
       "for_b2b" : true,
       "for_b2c" : true

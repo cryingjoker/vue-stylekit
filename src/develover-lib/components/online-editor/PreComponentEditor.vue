@@ -18,7 +18,7 @@ export default {
   },
   mounted() {
     const editor = ace.edit("editor", {
-      value: this.code
+      value: this.code.replace('rt-template##','template')
     });
     editor.getSession().setMode("ace/mode/html");
     editor.setTheme("ace/theme/monokai");

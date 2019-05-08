@@ -75,7 +75,9 @@ import {
   UseCase,
   ProductCard,
   ValidationIcon,
-  TariffCard
+  TariffCard,
+  BenefitItem,
+  BenefitBlock
 } from "./components";
 
 
@@ -148,14 +150,13 @@ const VueRtStyle = {
       Vue.component(Swiper.name, Swiper);
       Vue.component(Slide.name, Slide);
       Vue.component(Pattern.name, Pattern);
-      Vue.component(Logo.name, Logo.component);
       Vue.component(Opportunity.name, Opportunity);
       Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(UnWrapper.name, UnWrapper);
       Vue.component(RealPopup.name, RealPopup);
-
       Vue.component(UseCase.name, UseCase);
-
+      Vue.component(BenefitBlock.name, BenefitBlock);
+      Vue.component(BenefitItem.name, BenefitItem);
       // tsx components
 
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
@@ -165,7 +166,6 @@ const VueRtStyle = {
       Vue.component(SlideContent.name, SlideContent.component);
       Vue.component(SlideContentDottedContent.name, SlideContentDottedContent.component);
       Vue.component(SlideContentDottedHeader.name, SlideContentDottedHeader.component);
-      console.info('SlideContentDottedHeader.name',SlideContentDottedHeader.name)
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 

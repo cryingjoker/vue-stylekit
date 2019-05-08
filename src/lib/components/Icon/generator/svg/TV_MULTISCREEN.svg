@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_multiscreen_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-967.000000, -496.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-186" transform="translate(823.000000, 376.000000)">
+                    <path d="M55.3755,27.9399 C55.3755,43.1279 43.0635,55.4399 27.8755,55.4399 C12.6875,55.4399 0.3755,43.1279 0.3755,27.9399 C0.3755,12.7519 12.6875,0.4399 27.8755,0.4399 C43.0635,0.4399 55.3755,12.7519 55.3755,27.9399" stroke="#000000" stroke-width="1.5"></path>
+                    <path d="M28.978,12 L40.957,12 C42.611,12 43.934,13.324 43.934,14.978 L43.934,41.449 C43.934,43.103 42.611,44.427 40.957,44.427 L28.978,44.427 C27.324,44.427 26,43.103 26,41.449 L26,14.978 C26,13.324 27.324,12 28.978,12 Z" id="Stroke-238" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <path d="M26,18 L44,18" id="Stroke-239" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M26,38 L44,38" id="Stroke-240" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M36.5,41.0400163 C36.5,41.8509596 35.7699061,42.4989792 34.9589628,42.4989792 C34.1492446,42.4989792 33.5,41.7701102 33.5,40.959167 C33.5,40.1482238 34.1492446,39.5002042 34.9589628,39.5002042 C35.8519804,39.5002042 36.5,40.1482238 36.5,41.0400163" id="Fill-241" fill="#000000" fill-rule="evenodd"></path>
+                    <path d="M11.438,17.8521211 L26.0042173,17.8521211 L26.0042173,37.6203 L11.438,37.6203 C9.494,37.6203 7.919,36.0453 7.919,34.1013 L7.919,21.3711211 C7.919,19.4281211 9.494,17.8521211 11.438,17.8521211 Z" id="Stroke-187" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <polygon id="Fill-190" fill="#000000" fill-rule="evenodd" points="32 31.913 38.255 27.457 32 23"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

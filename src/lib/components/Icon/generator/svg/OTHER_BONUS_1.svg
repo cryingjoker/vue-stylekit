@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="58px" viewBox="0 0 57 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>other_bonus_1_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-1975.000000, -393.000000)" id="Group" stroke="#000000">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-81" transform="translate(1830.000000, 273.000000)">
+                    <path d="M55.7534,28.1425 C55.7534,43.3305 43.4404,55.6425 28.2534,55.6425 C13.0654,55.6425 0.7534,43.3305 0.7534,28.1425 C0.7534,12.9545 13.0654,0.6425 28.2534,0.6425 C43.4404,0.6425 55.7534,12.9545 55.7534,28.1425" stroke-width="1.5"></path>
+                    <polyline id="Stroke-322" stroke-width="1" stroke-linejoin="round" points="24.4683 18.4203 21.6793 23.4673 28.2533 44.1873 43.9923 23.4673"></polyline>
+                    <polyline id="Stroke-324" stroke-width="1" stroke-linejoin="round" points="32.0386 18.4203 34.8276 23.4673 28.2536 44.1873 12.5146 23.4673"></polyline>
+                    <polygon id="Stroke-326" stroke-width="1" stroke-linejoin="round" points="12.5142 23.4677 20.0842 18.4207 36.4212 18.4207 43.9932 23.4677"></polygon>
+                    <polygon id="Stroke-328" stroke-width="1.5" stroke-linejoin="round" points="36.4214 18.4203 20.0844 18.4203 12.5144 23.4673 28.2534 44.1873 43.9924 23.4673"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
