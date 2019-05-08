@@ -38,13 +38,13 @@ class logoRTWithTextClass extends Vue{
                     <g id="logo/shadow/200">
                       <g id="logo/shadow/200/lower/orange" transform="translate(4.000000, 149.000000)">
                         <mask id="mask-4" fill="white">
-                          <use xlinkHref={`#rt${this._uid}path-3`}></use>
+                          <use href={`#rt${this._uid}path-3`}></use>
                         </mask>
                         <g fill-rule="evenodd">
                           <use fill={`url(#rt${this._uid}-linearGradient-1)`}
-                               xlinkHref={`#rt${this._uid}path-3`}></use>
+                               href={`#rt${this._uid}path-3`}></use>
                           <use fill-opacity="1" fill={`url(#rt${this._uid}-linearGradient-2)`}
-                               xlinkHref={`#rt${this._uid}path-3`}></use>
+                               href={`#rt${this._uid}path-3`}></use>
                         </g>
                       </g>
                       <g fill={this.topFillColor} fill-rule="evenodd">
