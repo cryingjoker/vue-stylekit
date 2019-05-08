@@ -1,9 +1,1 @@
-var icon = require('vue-svgicon')
-icon.register({
-  '${name}': {
-    width: ${width},
-    height: ${height},
-    viewBox: ${viewBox},
-    data: `${data}`
-  }
-})
+[{'${name}': {width: ${width},height: ${height},viewBox: ${viewBox},data: '${data}'}}]

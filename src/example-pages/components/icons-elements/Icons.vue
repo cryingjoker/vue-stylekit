@@ -11,7 +11,7 @@
     <div class="rt-container">
       <div class="rt-space-horizontal05">
         <div class="row">
-          <div class="rt-col-1">
+          <div class="rt-col-1 rt-space-bottom">
             <pre-code
               text='
                 <rt-icon type="user-silhouette"
@@ -21,11 +21,74 @@
                 ></rt-icon>
             '/>
           </div>
-          <div class="rt-col-1">
-            <pre-code text='<rt-icon type="MOBILE_CALL" caption="200" :candy=true></rt-icon>'/>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="004"></rt-icon>'/>
           </div>
-          <div class="rt-col-1">
-            <pre-code text='<rt-icon type="icon_403" caption="150" :candy=true></rt-icon>'/>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="049"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="054"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="056"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="057"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="058"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="059"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="060"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="061"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="062"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="063"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="064"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="065"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="066"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="067"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="068"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="069"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="070"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="071"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="072"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="073"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="074"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="SMART_HOME_MOVE_SENSOR" caption="200" :candy=true></rt-icon>'/>
           </div>
         </div>
       </div>
