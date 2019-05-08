@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>079-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-1038.000000, -845.000000)">
+            <g id="079-C" transform="translate(1038.000000, 845.000000)">
+                <path d="M55,27.5 C55,42.688 42.688,55 27.5,55 C12.312,55 0,42.688 0,27.5 C0,12.312 12.312,0 27.5,0 C42.688,0 55,12.312 55,27.5" id="Fill-236" fill="#FFD800"></path>
+                <g id="outline-pause-24px" transform="translate(15.272727, 15.272727)">
+                    <polygon id="Shape" points="0 0 24.4363636 0 24.4363636 24.4363636 0 24.4363636"></polygon>
+                    <path d="M6.10909091,19.3454545 L10.1818182,19.3454545 L10.1818182,5.09090909 L6.10909091,5.09090909 L6.10909091,19.3454545 Z M14.2545455,5.09090909 L14.2545455,19.3454545 L18.3272727,19.3454545 L18.3272727,5.09090909 L14.2545455,5.09090909 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_cloud_arh_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g transform="translate(-959.000000, -2017.000000)" id="Group" stroke="#000000">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Clip-301" transform="translate(815.000000, 1897.000000)">
+                    <path d="M0,27.644 C0,42.832 12.313,55.143 27.5,55.143 C42.688,55.143 55,42.832 55,27.644 C55,12.456 42.688,0.143 27.5,0.143 C12.313,0.143 0,12.456 0,27.644" stroke-width="1.5"></path>
+                    <path d="M16.4102018,37.1821 L14.9959108,37.1821 C12.2419898,37.1821 10.008562,34.6510952 10.008562,31.5995971 C9.93390113,29.1432532 11.4975139,26.8351645 13.8791969,26.0917551 C13.8056026,25.5691287 13.8056026,25.0486355 13.8056026,24.5281423 C13.8056026,19.0938947 17.7498318,14.7017 22.5878588,14.7017 C26.5331546,14.7017 29.8832963,17.6060094 30.9253493,21.6984939 C31.8927413,20.8057627 33.1587771,20.3599304 34.4237462,20.3599304 C37.326989,20.3599304 39.708672,22.8152077 40.0062491,25.9424333 C42.7612367,25.9424333 44.9935979,28.4723716 44.9935979,31.5238696 C44.9935979,34.5764342 42.7612367,37.1074391 40.0062491,37.1074391 L38.2943811,37.1074391 L16.4102018,37.1821 Z" id="Stroke-314" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polygon id="Shape" stroke-width="1" fill="#000000" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" points="25 25 31 28.4468085 25 31.893617"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

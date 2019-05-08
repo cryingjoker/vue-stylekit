@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>telephone_mobile_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-1639.000000, -614.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-234" transform="translate(1495.000000, 493.000000)">
+                    <path d="M55.2476,28.3788 C55.2476,43.5668 42.9346,55.8788 27.7476,55.8788 C12.5596,55.8788 0.2476,43.5668 0.2476,28.3788 C0.2476,13.1908 12.5596,0.8788 27.7476,0.8788 C42.9346,0.8788 55.2476,13.1908 55.2476,28.3788" stroke="#000000" stroke-width="1.5"></path>
+                    <path d="M21.7251,12.1655 L33.7041,12.1655 C35.3581,12.1655 36.6811,13.4895 36.6811,15.1435 L36.6811,41.6145 C36.6811,43.2685 35.3581,44.5925 33.7041,44.5925 L21.7251,44.5925 C20.0711,44.5925 18.7471,43.2685 18.7471,41.6145 L18.7471,15.1435 C18.7471,13.4895 20.0711,12.1655 21.7251,12.1655 Z" id="Stroke-238" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <path d="M18.7476,18.1879 L36.7476,18.1879" id="Stroke-239" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M18.7476,38.5702 L36.7476,38.5702" id="Stroke-240" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M28.939,41.6142 C28.939,42.2762 28.343,42.8052 27.681,42.8052 C27.02,42.8052 26.49,42.2102 26.49,41.5482 C26.49,40.8862 27.02,40.3572 27.681,40.3572 C28.41,40.3572 28.939,40.8862 28.939,41.6142" id="Fill-241" fill="#000000" fill-rule="evenodd"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

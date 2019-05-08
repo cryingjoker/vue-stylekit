@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>108-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_B2C_table" transform="translate(-1187.000000, -8960.000000)">
+            <g id="108-C" transform="translate(1187.000000, 8960.000000)">
+                <path d="M55.3755,28.3788 C55.3755,43.5668 43.0635,55.8788 27.8755,55.8788 C12.6875,55.8788 0.3755,43.5668 0.3755,28.3788 C0.3755,13.1908 12.6875,0.8788 27.8755,0.8788 C43.0635,0.8788 55.3755,13.1908 55.3755,28.3788" id="Fill-155" fill="#273A64"></path>
+                <path d="M16.438,15.9443 L39.313,15.9443 C41.257,15.9443 42.833,17.5203 42.833,19.4643 L42.833,33.5403 C42.833,35.4843 41.257,37.0603 39.313,37.0603 L16.438,37.0603 C14.494,37.0603 12.919,35.4843 12.919,33.5403 L12.919,19.4643 C12.919,17.5203 14.494,15.9443 16.438,15.9443 Z" id="Stroke-156" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M35.897,41.2524 L19.854,41.2524" id="Stroke-157" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
+                <polygon id="Fill-158" fill="#FFFFFF" points="25.889 41.252 29.861 41.252 29.861 37.06 25.889 37.06"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

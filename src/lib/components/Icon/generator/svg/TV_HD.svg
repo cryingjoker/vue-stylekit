@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_hd_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-967.000000, -391.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-159" transform="translate(823.000000, 271.000000)">
+                    <path d="M55.3755,27.5029 C55.3755,42.6909 43.0635,55.0029 27.8755,55.0029 C12.6875,55.0029 0.3755,42.6909 0.3755,27.5029 C0.3755,12.3149 12.6875,0.0029 27.8755,0.0029 C43.0635,0.0029 55.3755,12.3149 55.3755,27.5029" stroke="#000000" stroke-width="1.5"></path>
+                    <path d="M16.438,15.0683 L39.313,15.0683 C41.257,15.0683 42.833,16.6443 42.833,18.5873 L42.833,32.6643 C42.833,34.6083 41.257,36.1843 39.313,36.1843 L16.438,36.1843 C14.494,36.1843 12.919,34.6083 12.919,32.6643 L12.919,18.5873 C12.919,16.6443 14.494,15.0683 16.438,15.0683 Z" id="Stroke-160" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <path d="M35.897,40.3759 L19.854,40.3759" id="Stroke-161" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <polygon id="Fill-162" fill="#000000" fill-rule="evenodd" points="25.889 40.376 29.861 40.376 29.861 36.184 25.889 36.184"></polygon>
+                    <path d="M21.2031,21.1708 L21.2031,29.8468" id="Stroke-163" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"></path>
+                    <path d="M26.4805,21.1708 L26.4805,29.8468" id="Stroke-164" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"></path>
+                    <path d="M21.2031,25.6259 L26.4801,25.6259" id="Stroke-165" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M31.9336,29.8466 L29.2096,29.8466 L29.2096,21.1706 L31.9336,21.1706 C33.2936,21.1706 34.3956,22.2726 34.3956,23.6326 L34.3956,27.3846 C34.3956,28.7436 33.2936,29.8466 31.9336,29.8466 Z" id="Stroke-166" stroke="#000000" stroke-width="1" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

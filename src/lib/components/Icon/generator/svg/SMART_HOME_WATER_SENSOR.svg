@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>smart_home_water_sensor_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-296.000000, -849.000000)" id="Group" stroke="#000000" stroke-width="1.5">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-298" transform="translate(152.000000, 729.000000)">
+                    <path d="M55,27.6786 C55,42.8666 42.687,55.1786 27.5,55.1786 C12.312,55.1786 0,42.8666 0,27.6786 C0,12.4906 12.312,0.1786 27.5,0.1786 C42.687,0.1786 55,12.4906 55,27.6786"></path>
+                    <path d="M32.9848,35.1025 C32.9848,29.8985 23.5618,16.6785 23.5618,16.6785 C23.5618,16.6785 14.1378,29.8985 14.1378,35.1025 C14.1378,40.3065 18.3568,44.5265 23.5618,44.5265 C28.7658,44.5265 32.9848,40.3065 32.9848,35.1025 Z" id="Stroke-306" stroke-linejoin="round"></path>
+                    <path d="M31.9848,39.1025 C37.1898,39.1025 41.4088,34.8835 41.4088,29.6785 C41.4088,24.4745 31.9848,11.2545 31.9848,11.2545 C31.9848,11.2545 28.7968,15.7275 26.1288,20.4945" id="Stroke-308" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
