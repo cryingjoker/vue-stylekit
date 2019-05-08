@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>056-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-97.000000, -122.000000)">
+            <g id="056-C" transform="translate(97.000000, 122.000000)">
+                <path d="M55.2476,28.3788 C55.2476,43.5668 42.9346,55.8788 27.7476,55.8788 C12.5596,55.8788 0.2476,43.5668 0.2476,28.3788 C0.2476,13.1908 12.5596,0.8788 27.7476,0.8788 C42.9346,0.8788 55.2476,13.1908 55.2476,28.3788" id="Fill-234" fill="#BC104B"></path>
+                <path d="M21.7251,12.1655 L33.7041,12.1655 C35.3581,12.1655 36.6811,13.4895 36.6811,15.1435 L36.6811,41.6145 C36.6811,43.2685 35.3581,44.5925 33.7041,44.5925 L21.7251,44.5925 C20.0711,44.5925 18.7471,43.2685 18.7471,41.6145 L18.7471,15.1435 C18.7471,13.4895 20.0711,12.1655 21.7251,12.1655 Z" id="Stroke-238" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M18.7476,18.1879 L36.7476,18.1879" id="Stroke-239" stroke="#FFFFFF" stroke-linejoin="round"></path>
+                <path d="M18.7476,38.5702 L36.7476,38.5702" id="Stroke-240" stroke="#FFFFFF" stroke-linejoin="round"></path>
+                <path d="M28.49,41.3841608 C28.49,41.9250105 28.0032707,42.3572 27.4626419,42.3572 C26.9228297,42.3572 26.49,41.8710889 26.49,41.3302392 C26.49,40.7893895 26.9228297,40.3572 27.4626419,40.3572 C28.0579869,40.3572 28.49,40.7893895 28.49,41.3841608" id="Fill-241" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

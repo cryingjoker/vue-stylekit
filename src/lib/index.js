@@ -150,7 +150,6 @@ const VueRtStyle = {
       Vue.component(Swiper.name, Swiper);
       Vue.component(Slide.name, Slide);
       Vue.component(Pattern.name, Pattern);
-      Vue.component(Logo.name, Logo.component);
       Vue.component(Opportunity.name, Opportunity);
       Vue.component(OpportunityItem.name, OpportunityItem);
       Vue.component(UnWrapper.name, UnWrapper);

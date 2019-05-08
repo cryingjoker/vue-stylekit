@@ -18,6 +18,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "icons",
+      "title" : "Icons",
+      "url" : "/icons",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "buttons",
       "title" : "Buttons",
       "url" : "/buttons",

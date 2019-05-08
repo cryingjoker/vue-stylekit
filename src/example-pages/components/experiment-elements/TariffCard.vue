@@ -218,7 +218,7 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                              <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>

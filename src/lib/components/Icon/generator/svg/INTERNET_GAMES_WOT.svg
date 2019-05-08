@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="58px" viewBox="0 0 57 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>internet_games_wot_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-611.000000, -1392.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-224" transform="translate(467.000000, 1272.000000)">
+                    <path d="M55.0962,28.1835 C55.0962,43.3715 42.7832,55.6835 27.5962,55.6835 C12.4082,55.6835 0.0962,43.3715 0.0962,28.1835 C0.0962,12.9955 12.4082,0.6835 27.5962,0.6835 C42.7832,0.6835 55.0962,12.9955 55.0962,28.1835" stroke="#000000" stroke-width="1.5"></path>
+                    <polygon id="Fill-244" fill="#000000" fill-rule="evenodd" points="38.853 18.9599 36.188 16.2539 33.327 13.4249 21.629 13.4249 18.842 16.2539 16.177 18.9599 24.705 18.9599 24.705 43.3969 27.515 46.1769 30.325 43.3969 30.325 18.9599 30.326 18.9599"></polygon>
+                    <path d="M21.623,32.5077 L21.623,21.6047 L16.168,21.6047 L16.168,34.8887 L20.459,39.1297 L22.453,37.1937 L24.425,35.2777 L21.623,32.5077 Z M36.09,21.6047 L33.408,21.6047 L33.408,32.5077 L30.605,35.2777 L32.579,37.1937 L34.572,39.1297 L38.861,34.8887 L38.862,21.6047 L36.09,21.6047 Z" id="Fill-245" fill="#000000" fill-rule="evenodd"></path>
+                    <polygon id="Stroke-246" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" points="20.9507 10.664 13.7227 17.89 13.7227 35.402 27.5147 48.937 41.3067 35.402 41.3067 17.89 34.0797 10.664"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

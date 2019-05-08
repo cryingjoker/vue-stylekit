@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_channel_5_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-967.000000, -1654.000000)" id="Group">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-278" transform="translate(823.000000, 1533.000000)">
+                    <path d="M55.4204,28.3329 C55.4204,43.5209 43.1074,55.8329 27.9204,55.8329 C12.7324,55.8329 0.4204,43.5209 0.4204,28.3329 C0.4204,13.1449 12.7324,0.8329 27.9204,0.8329 C43.1074,0.8329 55.4204,13.1449 55.4204,28.3329" stroke="#000000" stroke-width="1.5"></path>
+                    <path d="M16.4829,15.8984 L39.3579,15.8984 C41.3009,15.8984 42.8769,17.4744 42.8769,19.4174 L42.8769,33.4944 C42.8769,35.4384 41.3009,37.0144 39.3579,37.0144 L16.4829,37.0144 C14.5389,37.0144 12.9629,35.4384 12.9629,33.4944 L12.9629,19.4174 C12.9629,17.4744 14.5389,15.8984 16.4829,15.8984 Z" id="Stroke-279" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <polygon id="Fill-158" fill="#000000" fill-rule="evenodd" points="25.889 41.252 29.861 41.252 29.861 37.06 25.889 37.06"></polygon>
+                    <path d="M35.9419,41.2065 L19.8989,41.2065" id="Stroke-280" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <path d="M29.6567,26.5512 L34.1007,26.5512" id="Stroke-282" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M31.8794,24.2914 L31.8794,28.9614" id="Stroke-283" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M24.9009,22.0981 L23.8769,22.0981 C22.7329,22.0981 21.8059,23.0251 21.8059,24.1681 L21.8059,28.8551 C21.8059,29.9981 22.7329,30.9261 23.8769,30.9261 L24.9009,30.9261 C26.0449,30.9261 26.9709,29.9981 26.9709,28.8551 L26.9709,24.1681 C26.9709,23.0251 26.0449,22.0981 24.9009,22.0981 Z" id="Stroke-284" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

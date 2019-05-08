@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="57px" viewBox="0 0 58 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>smart_home_main_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-292.000000, -122.000000)" id="Group" stroke="#000000" stroke-width="1.5">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-3" transform="translate(148.000000, 1.000000)">
+                    <path d="M55.4477,28.3788 C55.4477,43.5668 43.1347,55.8788 27.9477,55.8788 C12.7597,55.8788 0.4477,43.5668 0.4477,28.3788 C0.4477,13.1908 12.7597,0.8788 27.9477,0.8788 C43.1347,0.8788 55.4477,13.1908 55.4477,28.3788"></path>
+                    <polygon id="Stroke-254" stroke-linejoin="round" points="27.9477 10.3749 12.4927 24.6619 15.9267 24.6619 15.9267 42.3829 24.5127 42.3829 31.3817 42.3829 39.9677 42.3829 39.9677 24.6619 43.4027 24.6619 38.8007 20.4029 38.8007 10.3749 33.0987 10.3749 33.0987 15.1139"></polygon>
+                    <path d="M27.9819,22.8071 L27.9819,29.2641" id="Stroke-255" stroke-linejoin="round"></path>
+                    <path d="M25.043,25.3168 C22.338,26.8398 21.282,30.2338 22.648,33.0718 C24.07,36.0258 27.626,37.2298 30.581,35.8068 C33.535,34.3848 34.738,30.8288 33.316,27.8748 C32.774,26.7908 31.966,25.9288 30.932,25.3288" id="Stroke-256" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

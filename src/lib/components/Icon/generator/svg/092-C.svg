@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>092-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-489.000000, -503.000000)">
+            <g id="092-C" transform="translate(489.000000, 503.000000)">
+                <path d="M56,28 C56,43.4641455 43.4631273,56 28,56 C12.5358545,56 0,43.4641455 0,28 C0,12.5358545 12.5358545,0 28,0 C43.4631273,0 56,12.5358545 56,28" id="Fill-75" fill="#4897DF"></path>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" cx="35.0708618" cy="15.315508" rx="5.18144509" ry="5.13368984"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" cx="35.0708618" cy="40.4135472" rx="5.18144509" ry="5.13368984"></ellipse>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" cx="14.3450815" cy="27.8645276" rx="5.18144509" ry="5.13368984"></ellipse>
+                <path d="M30.5795099,17.8808239 L18.3750943,25.0124777" id="Shape" stroke="#FFFFFF"></path>
+                <path d="M18.8622159,30.7356179 L30.1169034,36.9697443 L18.8622159,30.7356179 Z" id="Shape" stroke="#FFFFFF"></path>
+                <path d="M34.8727273,20.3636364 L34.8727273,35.1942959" id="Shape" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

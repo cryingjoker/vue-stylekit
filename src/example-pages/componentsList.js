@@ -62,6 +62,8 @@ import {
   OpportunityItem,
   Ussd,
   UseCase,
+  SlideContentDottedContent,
+  SlideContentDottedHeader,
   BenefitBlock,
   BenefitItem
 } from "../lib/components/index";
@@ -119,7 +121,9 @@ componentsList[Youtube.name] = Youtube;
 componentsList[Sticky.name] = Sticky;
 componentsList[ResizeContentHeight.name] = ResizeContentHeight;
 componentsList[Popup.name] = Popup;
-componentsList[SlideContent.name] = SlideContent;
+componentsList[SlideContent.name] = SlideContent.component;
+componentsList[SlideContentDottedContent.name] = SlideContentDottedContent.component;
+componentsList[SlideContentDottedHeader.name] = SlideContentDottedHeader.component;
 componentsList[AppMenu.name] = AppMenu;
 componentsList[Icon.name] = Icon;
 componentsList[Pattern.name] = Pattern;

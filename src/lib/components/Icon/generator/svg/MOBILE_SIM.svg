@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-1315.000000, -850.000000)" stroke="#000000" stroke-width="1.5">
+            <g id="Group-11" transform="translate(1316.000000, 851.000000)">
+                <g id="mobile_rtk_app_3-copy" opacity="0.699999988">
+                    <path d="M55.2476,27.5009 C55.2476,42.6889 42.9346,55.0009 27.7476,55.0009 C12.5596,55.0009 0.2476,42.6889 0.2476,27.5009 C0.2476,12.3129 12.5596,0.0009 27.7476,0.0009 C42.9346,0.0009 55.2476,12.3129 55.2476,27.5009" id="Fill-379"></path>
+                </g>
+                <g id="mobile_svyaz_bonus_SIM" transform="translate(10.000000, 15.000000)" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon id="Shape" points="36.5 23.5 0.5 23.5 0.5 0.5 30.1 0.5 36.5 7.7"></polygon>
+                    <path d="M25.5,19.5 L5.5,19.5 C4.9,19.5 4.5,19.1 4.5,18.5 L4.5,5.9 C4.5,5.3 4.9,4.9 5.5,4.9 L25.5,4.9 C26.1,4.9 26.5,5.3 26.5,5.9 L26.5,18.5 C26.5,19 26.1,19.5 25.6,19.5 C25.6,19.5 25.6,19.5 25.6,19.5 L25.5,19.5 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

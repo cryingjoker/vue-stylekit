@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>tv_karaoke_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-967.000000, -730.000000)" id="Group" stroke="#000000">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-201" transform="translate(823.000000, 610.000000)">
+                    <path d="M55.3755,28.1249 C55.3755,43.3129 43.0635,55.6249 27.8755,55.6249 C12.6875,55.6249 0.3755,43.3129 0.3755,28.1249 C0.3755,12.9369 12.6875,0.6249 27.8755,0.6249 C43.0635,0.6249 55.3755,12.9369 55.3755,28.1249" stroke-width="1.5"></path>
+                    <path d="M38.1362,13.8642 C35.8122,11.5402 32.0452,11.5402 29.7212,13.8642 C27.3972,16.1872 27.3972,19.9552 29.7212,22.2782 C32.0452,24.6022 35.8122,24.6022 38.1362,22.2782 C40.4602,19.9552 40.4602,16.1872 38.1362,13.8642 Z" id="Stroke-204" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <polyline id="Stroke-205" stroke-width="1.5" stroke-linejoin="round" points="28.5186 20.1425 14.7846 33.8755 18.1236 37.2155 31.8576 23.4815"></polyline>
+                    <path d="M39.8789,24.0214 L27.9789,12.1214" id="Stroke-206" stroke-width="1" stroke-linejoin="round"></path>
+                    <path d="M27.5439,27.7958 L27.5439,42.5258" id="Stroke-207" stroke-width="1.5" stroke-linejoin="round"></path>
+                    <path d="M20.1675,42.5263 L34.9195,42.5263" id="Stroke-208" stroke-width="1.5" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
