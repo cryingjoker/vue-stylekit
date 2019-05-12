@@ -398,9 +398,10 @@ export default {
   mounted: function() {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
-      this.setCardHeight();
+//      this.setCardHeight();
     });
-    this.setCardHeight();
+
+//    this.setCardHeight();
   },
   methods: {
     normalizeSize(size) {
@@ -413,7 +414,6 @@ export default {
       return size;
     },
     flipCard() {
-
       if(this.$el.classList.contains('rtb-card--double-sided')){
         if(this.$el.classList.contains('is-flipped')){
           this.$el.classList.toggle('is-flipped');
@@ -433,15 +433,16 @@ export default {
         }
       }
     },
-    setCardHeight() {
-      if(this.doubleSided && !this.mobileLayout) {
-        setTimeout(()=>{
-          for(let i = 0; i < this.$parent.$children.length; i++) {
-            this.$parent.$children[i].$el.style.height = document.querySelector('.rtb-card__reverse').scrollHeight + 'px'
-          }
-        },0);
-      }
-    }
+//    setCardHeight() {
+//      window.onload = () => {
+//        if(this.doubleSided && !this.mobileLayout) {
+//          for(let i = 0; i < this.$parent.$children.length; i++) {
+//            console.log(this.$parent.$children[i]);
+//            this.$parent.$children[i].$el.style.height = this.$parent.$children[i].$el.querySelector('.rtb-card__reverse').scrollHeight + 'px'
+//          }
+//        }
+//      };
+//    }
   },
   render(h) {
     const categoryCard = (() => {
@@ -588,8 +589,20 @@ export default {
           </div>
         }
     })();
-    if(!this.isB2bCategory) {
-      return <div class={"rt-card" + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
+    if(this.doubleSided){
+      return <div class={"rt-card " + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
+        <div class={"rt-card__content" + this.cardContentClass} style={this.cardBackgroundStyle}>
+          <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
+            {this.$slots["content"]}
+          </div>
+          <div class="rt-card__footer">
+            {this.$slots["footer"]}
+          </div>
+        </div>
+        {doubleSided}
+      </div>;
+    }else if(!this.isB2bCategory) {
+      return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
         {this.backgroundImageStandAlone ? <div style={this.standAloneBackgroundStyle} class="rt-card__stand-alone-background"/> : null}
         {discount}
         {label}
@@ -606,7 +619,6 @@ export default {
             {this.$slots["footer"]}
           </div>
         </div>
-        {doubleSided}
       </div>;
     } else {
       return <div class={"rt-card" + this.cardClass} style={this.cardStyle}>
