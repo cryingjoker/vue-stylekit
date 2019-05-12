@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>093-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-489.000000, -614.000000)">
+            <g id="093-C" transform="translate(489.000000, 614.000000)">
+                <path d="M55.2476,28.2397 C55.2476,43.4277 42.9346,55.7397 27.7476,55.7397 C12.5596,55.7397 0.2476,43.4277 0.2476,28.2397 C0.2476,13.0517 12.5596,0.7397 27.7476,0.7397 C42.9346,0.7397 55.2476,13.0517 55.2476,28.2397" id="Fill-75" fill="#65DEED"></path>
+                <path d="M38.6469536,17.000521 L17.3082112,17.000521 C16.1638622,16.9960334 15.0643897,17.4470415 14.256614,18.2570611 C13.4465944,19.0648368 12.9933425,20.1643093 13.0000739,21.3086583 L13.0000739,30.8897761 C13.0000739,33.2570078 14.9185413,35.1754751 17.285773,35.1754751 L24.4211253,35.1754751 L33.3964113,43.5449293 L33.7554228,35.1754751 L38.7142683,35.1754751 C41.0814999,35.1754751 42.9999673,33.2570078 42.9999673,30.8897761 L42.9999673,21.3086583 C43.004455,20.1553341 42.5467154,19.0513739 41.7299643,18.2391105 C40.9109695,17.4290909 39.8002779,16.9825705 38.6469536,17.000521 Z" id="Stroke-389" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"></path>
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="20" cy="26" r="2"></circle>
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="28" cy="26" r="2"></circle>
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="36" cy="26" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

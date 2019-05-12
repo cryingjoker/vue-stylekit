@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>internet_router_3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g transform="translate(-611.000000, -1775.000000)" id="Group" stroke="#000000" stroke-width="1.5">
+            <g transform="translate(145.000000, 121.000000)">
+                <g id="Fill-178" transform="translate(467.000000, 1655.000000)">
+                    <path d="M55.2529,27.6034 C55.2529,42.7914 42.9399,55.1034 27.7529,55.1034 C12.5649,55.1034 0.2529,42.7914 0.2529,27.6034 C0.2529,12.4154 12.5649,0.1034 27.7529,0.1034 C42.9399,0.1034 55.2529,12.4154 55.2529,27.6034"></path>
+                    <path d="M42.3999,37.6728 L13.0149,37.6728 C11.6399,37.6728 10.5249,36.5588 10.5249,35.1828 L10.5249,30.1958 C10.5249,28.8208 11.6399,27.7058 13.0149,27.7058 L42.3999,27.7058 C43.7749,27.7058 44.8899,28.8208 44.8899,30.1958 L44.8899,35.1828 C44.8899,36.5588 43.7749,37.6728 42.3999,37.6728 Z" id="Stroke-218" stroke-linejoin="round"></path>
+                    <path d="M18.6978,32.6894 C18.6978,33.5314 18.0158,34.2134 17.1738,34.2134 C16.3318,34.2134 15.6498,33.5314 15.6498,32.6894 C15.6498,31.8474 16.3318,31.1664 17.1738,31.1664 C18.0158,31.1664 18.6978,31.8474 18.6978,32.6894 Z" id="Stroke-219" stroke-linejoin="round"></path>
+                    <path d="M37.2939,27.6034 L40.2209,12.0414" id="Stroke-220" stroke-linejoin="round"></path>
+                    <path d="M18.1211,27.6034 L15.1941,12.0414" id="Stroke-221" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

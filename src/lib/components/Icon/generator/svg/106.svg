@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>106-C</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_DSGN-1385" transform="translate(-489.000000, -1549.000000)">
+            <g id="106-C" transform="translate(489.000000, 1549.000000)">
+                <path d="M56,28 C56,43.4641455 43.4631273,56 28,56 C12.5358545,56 0,43.4641455 0,28 C0,12.5358545 12.5358545,0 28,0 C43.4631273,0 56,12.5358545 56,28" id="Fill-51" fill="#3BBC9E"></path>
+                <g id="internet_1-copy" transform="translate(11.403636, 10.366942)" stroke="#FFFFFF" stroke-linejoin="round">
+                    <path d="M17.0017851,34.5219174 C26.3320331,34.5219174 34.0035702,26.9540496 34.0035702,17.6238017 C34.0035702,8.29355372 26.4357025,0.72568595 17.0017851,0.72568595 C7.56786777,0.72568595 0,8.29355372 0,17.6238017 C0,26.9540496 7.56786777,34.5219174 17.0017851,34.5219174 Z" id="Stroke-53" stroke-width="2"></path>
+                    <path d="M24.9843306,9.12290909 C23.3256198,4.04310744 20.3192066,0.72568595 16.8981157,0.72568595 C13.4770248,0.72568595 10.4706116,4.04310744 8.81190083,9.12290909" id="Stroke-55_3_"></path>
+                    <path d="M9.01923967,26.6430413 C10.6779504,31.4118347 13.5806942,34.6255868 16.8981157,34.6255868 C20.2155372,34.6255868 23.118281,31.4118347 24.7769917,26.6430413" id="Stroke-55_1_"></path>
+                    <path d="M17.0017851,26.6430413 L17.0017851,34.6255868" id="Stroke-57_2_"></path>
+                    <path d="M17.0017851,0.72568595 L17.0017851,9.12290909" id="Stroke-57"></path>
+                    <path d="M2.59173554,9.12290909 L31.1008264,9.12290909" id="Stroke-61"></path>
+                    <path d="M3.11008264,26.6430413 L31.1008264,26.6430413" id="Stroke-63"></path>
+                </g>
+                <g id="internet_games_3" transform="translate(23.843967, 23.843967)" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="2">
+                    <path d="M8.29355372,4.14677686 L0,4.14677686" id="Stroke-174"></path>
+                    <path d="M4.14677686,8.29355372 L4.14677686,0" id="Stroke-175"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

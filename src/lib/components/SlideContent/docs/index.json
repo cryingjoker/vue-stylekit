@@ -2,7 +2,7 @@
   "items" : [
     {
       "name" : "rt-slide-content",
-      "property" : "is-open",
+      "property" : ":is-open",
       "type" : ["Boolean"],
       "description" : "Флаг открытого слайда",
       "value" : "false",
@@ -14,15 +14,23 @@
       "type" : ["String"],
       "description" : "Ориентация стрелки \b\b `left-right` `right-bottom` ",
       "value" : "left-right",
-      "version": "0.1.8"
+      "version": "0.1.18"
     },
     {
       "name" : "rt-slide-content",
-      "property" : "need-border",
+      "property" : ":need-border",
       "type" : ["Boolean"],
       "description" : "флаг необходимости полосы междусписками слайдов",
       "value" : "left-right",
-      "version": "0.1.8"
+      "version": "0.1.18"
+    },
+    {
+      "name" : "rt-slide-content",
+      "property" : ":dotted-view",
+      "type" : ["Boolean"],
+      "description" : "переключение в режим триггера и контента",
+      "value" : "left-right",
+      "version": "0.1.19"
     }
   ]
 }
