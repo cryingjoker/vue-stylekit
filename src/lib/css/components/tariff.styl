@@ -1,15 +1,19 @@
 .{newAppName}-tariff-item__icon-stroke
   stroke main-color
   .{newAppName}-tariff-item--is-disabled &
-    stroke b2c-cool-grey
+    stroke b2c-cool-grey!important
 
 .{newAppName}-tariff-item__icon-fill
   fill main-color
   .{newAppName}-tariff-item--is-disabled &
-    fill b2c-cool-grey
+    fill b2c-cool-grey!important
 
 .{newAppName}-tariff-item--is-disabled
   color b2c-cool-grey
+
+.{newAppName}-tariff-item__icon-wrapper
+  text-align: center
+  width: 40px
 
 .{newAppName}-tariff-item__icon
   min-width: 42px
