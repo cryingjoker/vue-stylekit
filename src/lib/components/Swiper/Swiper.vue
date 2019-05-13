@@ -313,9 +313,10 @@ export default {
           getComputedStyle(this.$refs.slidedBlock).paddingLeft
         );
         let leftOffset = this.$refs.slidedBlock.getBoundingClientRect().left;
-//        this.hSpace =
+        this.hSpace =
 //          (leftPadding > 0 ? leftPadding : 0) +
-//          (leftOffset > 0 && window.innerWidth <= parseInt(variables["mobile-upper-limit"]) ? leftOffset : 0);
+          ((leftOffset > 0 && window.innerWidth <= parseInt(variables["tablet-upper-limit"])) ? leftOffset : 0);
+        console.log(this.hSpace);
         this.movesArr = [];
         this.slides.forEach((slide, i) => {
           this.movesArr.push({
