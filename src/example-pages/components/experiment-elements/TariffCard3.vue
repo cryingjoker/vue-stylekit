@@ -16,7 +16,7 @@
               <rt-tariff-card discount="до 30%" color="b2c-purple">
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений</p>
                 <p class="rt-font-label color-main07">Акция «Название акции»</p>
-                <div class="rt-space-top d-flex">
+                <div class="rt-space-top d-flex flex-start-center">
                   <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                        xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -231,7 +231,7 @@
               <rt-tariff-card>
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений везде</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
-                <div class="rt-space-top d-flex">
+                <div class="rt-space-top d-flex flex-start-center">
                   <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                        xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -491,7 +491,7 @@
               <rt-tariff-card>
                 <p class="rt-font-h4 rt-font-bold"> Для семьи</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
-                <div class="rt-space-top d-flex">
+                <div class="rt-space-top d-flex flex-start-center">
                   <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                        xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -748,7 +748,7 @@
               <rt-tariff-card>
                 <p class="rt-font-h4 rt-font-bold"> Для всего</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
-                <div class="rt-space-top d-flex">
+                <div class="rt-space-top d-flex flex-start-center">
                   <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                        xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
