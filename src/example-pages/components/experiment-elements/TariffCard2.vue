@@ -13,9 +13,9 @@
         <div class="rt-space-bottom is-b2c">
           <div class="row">
             <div class="rt-col-3 rt-col-md-3 rt-space-top">
-              <rt-tariff-card :has-seal="true" color="b2c-purple">
+              <rt-tariff-card discount="до 30%" color="b2c-purple">
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений</p>
-                <p class="rt-font-label color-purple">Акция «Название акции»</p>
+                <p class="rt-font-label color-main07">Акция «Название акции»</p>
                 <div class="rt-space-top">
                   <div class="d-flex flex-start-center rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
@@ -25,6 +25,7 @@
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                            stroke-linejoin="round">
                           <g id="ver1" transform="translate(-174.000000, -956.000000)"
+                              style="stroke: #65B8DF"
                              class="rt-tariff-item__icon-stroke">
                             <g id="Group-8-Copy-11" transform="translate(170.000000, 952.000000)">
                               <g id="internet" transform="translate(4.000000, 4.000000)">
@@ -64,11 +65,14 @@
                                     <path
                                       d="M3.519,-1.77635684e-15 L26.394,-1.77635684e-15 C28.338,-1.77635684e-15 29.914,1.576 29.914,3.52 L29.914,17.596 C29.914,19.54 28.338,21.116 26.394,21.116 L3.519,21.116 C1.575,21.116 1.11910481e-13,19.54 1.11910481e-13,17.596 L1.11910481e-13,3.52 C1.11910481e-13,1.576 1.575,-1.77635684e-15 3.519,-1.77635684e-15 Z"
                                       id="Stroke-156" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #7700FF"
                                       stroke-linejoin="round"></path>
                                     <path d="M22.978,25.3081 L6.935,25.3081" id="Stroke-157"
                                           class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                          style="stroke: #7700FF"
                                           stroke-linejoin="round"></path>
                                     <polygon id="Fill-158" class="rt-tariff-item__icon-fill"
+                                             style="fill: #7700FF"
                                              points="12.97 25.3077 16.942 25.3077 16.942 21.1157 12.97 21.1157"></polygon>
                                   </g>
                                 </g>
@@ -107,10 +111,13 @@
                               <path
                                 d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
                                 id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                style="stroke: #57D9B7"
                                 stroke-linejoin="round"></path>
                               <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
+                                    style="stroke: #57D9B7"
                                     class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                               <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
+                                    style="stroke: #57D9B7"
                                     class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                               <path
                                 d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
@@ -136,6 +143,7 @@
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                          stroke-linejoin="round">
                         <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                           style="stroke: #FFBE08"
                            class="rt-tariff-item__icon-stroke" stroke-width="1.5">
                           <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
                             <g id="Group-5" transform="translate(6.000000, 7.000000)">
@@ -259,7 +267,7 @@
                     <rt-price :value="749"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
-                    <rt-button class="rt-button--is-block rt-button-purple">Подключить</rt-button>
+                    <rt-button class="rt-button--is-block rt-button-orange">Подключить</rt-button>
                   </div>
                   <div class="flex-center-center rt-space-top05 rt-space-bottom05">
                     <span>Настроить</span>
@@ -278,9 +286,10 @@
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                            xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        <g id="Page-1" stroke-width="1" stroke="none" fill="none" fill-rule="evenodd"
                            stroke-linejoin="round">
                           <g id="ver1" transform="translate(-174.000000, -956.000000)"
+                              style="stroke: #65B8DF"
                              class="rt-tariff-item__icon-stroke">
                             <g id="Group-8-Copy-11" transform="translate(170.000000, 952.000000)">
                               <g id="internet" transform="translate(4.000000, 4.000000)">
@@ -320,11 +329,14 @@
                                     <path
                                       d="M3.519,-1.77635684e-15 L26.394,-1.77635684e-15 C28.338,-1.77635684e-15 29.914,1.576 29.914,3.52 L29.914,17.596 C29.914,19.54 28.338,21.116 26.394,21.116 L3.519,21.116 C1.575,21.116 1.11910481e-13,19.54 1.11910481e-13,17.596 L1.11910481e-13,3.52 C1.11910481e-13,1.576 1.575,-1.77635684e-15 3.519,-1.77635684e-15 Z"
                                       id="Stroke-156" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #7700FF"
                                       stroke-linejoin="round"></path>
                                     <path d="M22.978,25.3081 L6.935,25.3081" id="Stroke-157"
                                           class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                          style="stroke: #7700FF"
                                           stroke-linejoin="round"></path>
                                     <polygon id="Fill-158" class="rt-tariff-item__icon-fill"
+                                             style="fill: #7700FF"
                                              points="12.97 25.3077 16.942 25.3077 16.942 21.1157 12.97 21.1157"></polygon>
                                   </g>
                                 </g>
@@ -367,13 +379,17 @@
                                     <path
                                       d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
                                       id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #57D9B7"
                                       stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path
                                       d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
+                                      style="fill: #57D9B7"
                                       id="Fill-233" class="rt-tariff-item__icon-fill"></path>
                                   </g>
                                 </g>
@@ -411,6 +427,7 @@
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                          stroke-linejoin="round">
                         <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                           style="stroke: #FFBE08"
                            class="rt-tariff-item__icon-stroke" stroke-width="1.5">
                           <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
                             <g id="Group-5" transform="translate(6.000000, 7.000000)">
@@ -556,6 +573,7 @@
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                            stroke-linejoin="round">
                           <g id="ver1" transform="translate(-174.000000, -956.000000)"
+                              style="stroke: #65B8DF"
                              class="rt-tariff-item__icon-stroke">
                             <g id="Group-8-Copy-11" transform="translate(170.000000, 952.000000)">
                               <g id="internet" transform="translate(4.000000, 4.000000)">
@@ -595,11 +613,14 @@
                                     <path
                                       d="M3.519,-1.77635684e-15 L26.394,-1.77635684e-15 C28.338,-1.77635684e-15 29.914,1.576 29.914,3.52 L29.914,17.596 C29.914,19.54 28.338,21.116 26.394,21.116 L3.519,21.116 C1.575,21.116 1.11910481e-13,19.54 1.11910481e-13,17.596 L1.11910481e-13,3.52 C1.11910481e-13,1.576 1.575,-1.77635684e-15 3.519,-1.77635684e-15 Z"
                                       id="Stroke-156" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #7700FF"
                                       stroke-linejoin="round"></path>
                                     <path d="M22.978,25.3081 L6.935,25.3081" id="Stroke-157"
                                           class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                          style="stroke: #7700FF"
                                           stroke-linejoin="round"></path>
                                     <polygon id="Fill-158" class="rt-tariff-item__icon-fill"
+                                             style="fill: #7700FF"
                                              points="12.97 25.3077 16.942 25.3077 16.942 21.1157 12.97 21.1157"></polygon>
                                   </g>
                                 </g>
@@ -641,13 +662,17 @@
                                     <path
                                       d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
                                       id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #57D9B7"
                                       stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path
                                       d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
+                                      style="fill: #57D9B7"
                                       id="Fill-233" class="rt-tariff-item__icon-fill"></path>
                                   </g>
                                 </g>
@@ -685,6 +710,7 @@
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                          stroke-linejoin="round">
                         <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                           style="stroke: #FFBE08"
                            class="rt-tariff-item__icon-stroke" stroke-width="1.5">
                           <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
                             <g id="Group-5" transform="translate(6.000000, 7.000000)">
@@ -740,6 +766,8 @@
                       </div>
                       <div class="rt-space-top-half">
                         <div class="d-flex flex-start-center rt-tariff-item ">
+
+
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -769,6 +797,7 @@
                               </g>
                             </g>
                           </svg>
+
                           <div class="rt-space-left05">
                             <p class="rt-font-bold">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
@@ -824,6 +853,7 @@
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                            stroke-linejoin="round">
                           <g id="ver1" transform="translate(-174.000000, -956.000000)"
+                              style="stroke: #65B8DF"
                              class="rt-tariff-item__icon-stroke">
                             <g id="Group-8-Copy-11" transform="translate(170.000000, 952.000000)">
                               <g id="internet" transform="translate(4.000000, 4.000000)">
@@ -863,11 +893,14 @@
                                     <path
                                       d="M3.519,-1.77635684e-15 L26.394,-1.77635684e-15 C28.338,-1.77635684e-15 29.914,1.576 29.914,3.52 L29.914,17.596 C29.914,19.54 28.338,21.116 26.394,21.116 L3.519,21.116 C1.575,21.116 1.11910481e-13,19.54 1.11910481e-13,17.596 L1.11910481e-13,3.52 C1.11910481e-13,1.576 1.575,-1.77635684e-15 3.519,-1.77635684e-15 Z"
                                       id="Stroke-156" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #7700FF"
                                       stroke-linejoin="round"></path>
                                     <path d="M22.978,25.3081 L6.935,25.3081" id="Stroke-157"
                                           class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                          style="stroke: #7700FF"
                                           stroke-linejoin="round"></path>
                                     <polygon id="Fill-158" class="rt-tariff-item__icon-fill"
+                                             style="fill: #7700FF"
                                              points="12.97 25.3077 16.942 25.3077 16.942 21.1157 12.97 21.1157"></polygon>
                                   </g>
                                 </g>
@@ -909,13 +942,17 @@
                                     <path
                                       d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
                                       id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                      style="stroke: #57D9B7"
                                       stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
+                                          style="stroke: #57D9B7"
                                           class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
                                     <path
                                       d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
+                                      style="fill: #57D9B7"
                                       id="Fill-233" class="rt-tariff-item__icon-fill"></path>
                                   </g>
                                 </g>
@@ -956,6 +993,7 @@
                           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                              stroke-linejoin="round">
                             <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                               style="stroke: #FFBE08"
                                class="rt-tariff-item__icon-stroke" stroke-width="1.5">
                               <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
                                 <g id="Group-5" transform="translate(6.000000, 7.000000)">
@@ -1096,6 +1134,9 @@
               </rt-tariff-card>
             </div>
           </div>
+
+
+
         </div>
       </div>
       <div class="rt-container rt-space-top25">

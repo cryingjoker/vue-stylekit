@@ -92,7 +92,7 @@
     "file-loader": "^3.0.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "fstream": "^1.0.11",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-shell": "^0.7.0",
     "gulp-tinypng-nokey-plus": "^1.0.1",
