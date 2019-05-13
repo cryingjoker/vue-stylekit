@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "name": "rt-icon",
+      "property": "type",
+      "type": [
+        "String"
+      ],
+      "description": "Название иконки из библиотеки",
+      "value": "default"
+    },
+    {
+      "name": "rt-icon",
+      "property": "image",
+      "type": [
+        "String"
+      ],
+      "description": "URL-для установки нестандартной иконки",
+      "value": "null"
+    },
+    {
+      "name": "rt-icon",
+      "property": "candy",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Используется для устаревшего шаблона, со стилями",
+      "value": "false"
+    },
+    {
+      "name": "rt-icon",
+      "property": "caption",
+      "type": [
+        "String"
+      ],
+      "description": "Подпись сверху",
+      "value": "null"
+    },
+    {
+      "name": "rt-icon",
+      "property": "captionColor",
+      "type": [
+        "String"
+      ],
+      "description": "Цвет подписи",
+      "value": "null"
+    },
+    {
+      "name": "rt-icon",
+      "property": "size",
+      "type": [
+        "Number"
+      ],
+      "description": "Размер иконки",
+      "value": "55"
+    },
+    {
+      "name": "rt-icon",
+      "property": "width",
+      "type": [
+        "String"
+      ],
+      "description": "Нестандартная ширина",
+      "value": "55px"
+    },
+    {
+      "name": "rt-icon",
+      "property": "height",
+      "type": [
+        "String"
+      ],
+      "description": "Нестандартная высота",
+      "value": "55px"
+    },
+    {
+      "name": "rt-icon",
+      "property": "bg",
+      "type": [
+        "String"
+      ],
+      "description": "Нестандартный фон иконки",
+      "value": "null"
+    },
+    {
+      "name": "rt-icon",
+      "property": "color",
+      "type": [
+        "String"
+      ],
+      "description": "Нестандартный цвет иконки",
+      "value": "null"
+    }
+  ]
+}

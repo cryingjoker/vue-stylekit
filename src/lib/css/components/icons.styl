@@ -1,9 +1,34 @@
+oldIcon()
+  border: none
+  fill: transparent
+  stroke: #fff
+  padding: 0
+  *
+    fill: inherit
+    stroke: inherit
+  g
+    opacity: 1
+  [pid="0"]
+    stroke-width: 0
+
+deprecatedIcon()
+  border: none
+  fill: transparent
+  stroke: #fff
+  padding: 10px
+  *
+    fill: inherit
+    stroke: inherit
+  g
+    opacity: 1
+
 .rt-icon
   opacity 1
+  position: relative
   visibility visible
   transition-timing-function ease-in-out
   transition-duration .4s
-  transition-property opacity, visibility
+  transition-property opacity,visibility
 
   &__wrapper
     display: inline-block
@@ -11,20 +36,8 @@
   &.wc-icon
     border: none
     border-radius: 50%
-    fill: transparent
-    position: relative
-    stroke: #FFF
     text-align: center
     vertical-align: middle
-    *
-      fill: inherit
-      stroke: inherit
-  &.wc-candy-icon
-    padding: 0
-    [pid="0"]
-      stroke: transparent
-    g
-      opacity: 1
 
   .caption.top
     background: inherit
@@ -63,261 +76,95 @@
       transition: stroke-dashoffset 2s ease
     path
       transition: transform 2s ease
+  
+  &_w
+    &55
+      width: 55px
+      height: 55px
+    &56
+      width: 56px
+      height: 56px
+    &80
+      width: 80px
+      height: 80px
+    &100
+      width: 100px
+      height: 100px
+    &200
+      width: 200px
+      height: 200px
+    &500
+      width: 500px
+      height: 500px
 
   &__
-    /* Candy icons from Web-Components */
-    &004
-      background: rgb(72, 151, 223)
-      [pid="3"],
-      [pid="5"]
-          stroke-width: 1
-      [pid="4"]
-        fill: #FFF
-        stroke-width: 0
-
-    &049
-      background: rgb(129, 235, 214)
-
-    &054
-      background: rgb(255, 191, 195)
-
-    &056
-      background: rgb(188, 16, 75)
-      [pid="2"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &057
-      background: rgb(255, 163, 7)
-      [pid="1"],
-      [pid="3"]
-        stroke-width: 1
-      [pid="4"]
-        fill: #FFF
-        stroke-width: 0
-
-    &058
-      background: rgb(101, 187, 223)
-      [pid="1"],
-      [pid="3"]
-        stroke-width: 1
-      [pid="4"]
-        fill: #FFF
-        stroke-width: 0
-
-    &059
-      background: rgb(255, 190, 8)
-      [pid="2"],
-      [pid="5"],
-      [pid="6"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &060
-      background: rgb(226, 46, 101)
-      [pid="1"]
-        stroke-width: 1
-      [pid="2"]
-        fill: #FFF
-        stroke-width: 0
-
-    &061
-      background: rgb(87, 217, 183)    &062
-      background: rgb(255, 191, 195)
-      [pid="1"],
-      [pid="3"],
-      [pid="6"]
-        stroke-width: 1
-      [pid="4"]
-        fill: #FFF
-        stroke-width: 0
-
-    &063
-      background: rgb(59, 188, 158)
-      [pid="2"],
-      [pid="5"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &064
-      background: rgb(145, 0, 70)
-      [pid="2"]
-        stroke-width: 1
-
-    &065
-      background: rgb(39, 83, 146)
-      [pid="2"],
-      [pid="5"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &066
-      background: rgb(102, 5, 198)
-      [pid="2"],
-      [pid="5"],
-      [pid="6"],
-      [pid="7"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &067
-      background: rgb(226, 46, 101)
-      [pid="1"]
-        fill: #FFF
-        stroke-width: 0
-
-    &068
-      background: rgb(101, 222, 237)
-      [pid="2"],
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &069
-      background: rgb(226, 46, 101)
-
-    &070
-      background: rgb(59, 188, 158)
-      tspan
-        fill: #FFF
-        stroke-width: 0
-
-    &071
-      background: rgb(72, 151, 223)
-      [pid="2"]
-        stroke-width: 1
-      [pid="3"],
-      [pid="5"]
-        fill: #FFF
-        stroke-width: 0
-      [pid="6"]
-        stroke-width: 0
-
-    &072
-      background: rgb(255, 130, 24)
-
-    &073
-      background: rgb(101, 222, 237)
-
-    &074
-      background: rgb(59, 188, 158)
-      [pid="2"]
-        stroke-width: 1
-      [pid="3"]
-        fill: #FFF
-        stroke-width: 0
-
-    &075
-      background: rgb(188, 16, 75)
-      [pid="2"]
-        stroke-width: 1
-      [pid="3"],
-      [pid="6"]
-        fill: #FFF
-        stroke-width: 0
-      [pid="5"]
-        stroke-width: 0
-
-    &077
-      background: rgb(87, 217, 183)
-      [pid="2"]
-        stroke-width: 1
-
-    &078
-      background: rgb(255, 163, 7)
-      [pid="1"],
-      [pid="2"],
-      [pid="4"]
-        stroke-width: 1
-
-    &079
-      background: rgb(255, 216, 0)
-      [pid="1"]
-        stroke-width: 0
-      [pid="2"]
-        fill: #FFF
-        stroke-width: 0
-
-    &087
-      background: rgb(226, 46, 101)
-      [pid="2"]
-        stroke-width: 1
-      tspan
-        fill: #FFF
-        stroke-width: 0
-
-    &092
-      background: rgb(72, 151, 223)
-      [pid="4"]
-        stroke-width: 1
-
-    &093
-      background: rgb(101, 222, 237)
-      [pid="2"],
-      [pid="3"],
-      [pid="4"]
-        fill: #FFF
-        stroke-width: 0
-
-    &100
-      background: rgb(255, 79, 18)
-      [pid="1"]
-        fill: #FFF
-        stroke-width: 0
-
-    &103
-      background: rgb(255, 163, 7)
-      tspan
-        fill: #FFF
-        stroke-width: 0
-
-    &104
-      background: rgb(101, 222, 237)
-      tspan
-        fill: #FFF
-        stroke-width: 0
-
-    &106
-      background: rgb(59, 188, 158)
-      [pid="2"]
-        stroke-width: 1
-
-    &107
-      background: rgb(255, 79, 18)
-      [pid="1"]
-        fill: #FFF
-        stroke-width: 0
-
-    &108
-      background: rgb(39, 58, 100)
-      [pid="2"]
-        fill: #FFF
-        stroke-width: 0
-
-    &115
-      background: rgb(39, 58, 100)
-      [pid="2"]
-        fill: #FFF
-        stroke-width: 0
-
-    &176
-      background: rgb(119, 0, 255)
-      [pid="1"]
-        fill: rgb(186, 128, 254)
-        stroke-width: 0
-      [pid="2"]
-        fill: #FFF
-        stroke-width: 0
+  /* Candy icons from Web-Components */
+    &INTERNET_ANTIVIRUS,
+    &INTERNET_ANTIVIRUS_K,
+    &INTERNET_GAMES,
+    &INTERNET_GAMES_FIFA,
+    &INTERNET_GAMES_WOT,
+    &INTERNET_GAMES_WOW,
+    &INTERNET_IP,
+    &INTERNET_MAIN,
+    &INTERNET_OFICE_365 ,
+    &INTERNET_PARENT_CONTROL,
+    &INTERNET_ROUTER,
+    &INTERNET_SPEED_0,
+    &INTERNET_SPEED_20,
+    &INTERNET_SPEED_60,
+    &INTERNET_SPEED_100,
+    &INTERNET_SPEED_200,
+    &INTERNET_SPEED_2,
+    &INTERNET_SPEED_2,
+    &INTERNET_SPEED_3,
+    &INTERNET_SPEED_NIGHT,
+    &MOBILE_MAIN,
+    &MOBILE_CALL,
+    &MOBILE_INTERNET,
+    &MOBILE_MESSAGE,
+    &MOBILE_RTK_APP,
+    &MOBILE_SIM,
+    &SMART_HOME_CLOUD,
+    &SMART_HOME_DOOR_SENSOR,
+    &SMART_HOME_FLAME_SENSOR,
+    &SMART_HOME_INDOOR_VIDEO,
+    &SMART_HOME_LED,
+    &SMART_HOME_MAIN,
+    &SMART_HOME_OUTDOOR_VIDEO,
+    &SMART_HOME_POW_SOCKET,
+    &SMART_HOME_MOVE_SENSOR,
+    &SMART_HOME_WATER_SENSOR,
+    &TELEPHONE_MAIN,
+    &TELEPHONE_MOBILE,
+    &TELEPHONE_TELEPHONES,
+    &TELEPHONE_UNLIM,
+    &TV_MAIN,
+    &TV_HD,
+    &TV_CHANNEL_1,
+    &TV_CHANNEL_2,
+    &TV_CHANNEL_3,
+    &TV_CHANNEL_4,
+    &TV_CHANNEL_5,
+    &TV_CHANNEL_6,
+    &TV_CLOUD,
+    &TV_CLOUD_ARH,
+    &TV_CONTROL,
+    &TV_KARAOKE,
+    &TV_MEDIABOX,
+    &TV_MULTIROOM,
+    &TV_MULTISCREEN,
+    &TV_ONLINE,
+    &TV_ONLINE_STAR,
+    &TV_PULT,
+    &OTHER_DEFAULT,
+    &OTHER_BONUS_1,
+    &OTHER_BONUS_2,
+    &OTHER_GIFT_1,
+    &OTHER_GIFT_2,
+    &OTHER_INSURANCE,
+    &YA_DISK
+      oldIcon()
 
     &INTERNET_ANTIVIRUS
       background: #ff5f4b
@@ -334,19 +181,19 @@
         stroke: transparent
 
     &INTERNET_GAMES
-      background-image: linear-gradient(135deg, #3023ae, #c86dd7)
+      background-image: linear-gradient(135deg,#3023ae,#c86dd7)
 
     &INTERNET_GAMES_FIFA
-      background: rgb(245, 245, 245)
+      background: rgb(245,245,245)
       [pid="1"],
       [pid="3"]
         fill: #E79A01
-        fill: linear-gradient(135deg, #FFD000, #E79A01)
+        fill: linear-gradient(135deg,#FFD000,#E79A01)
         stroke: transparent
       [pid="2"],
       [pid="4"],
       [pid="5"]
-        fill: rgb(29, 29, 27)
+        fill: rgb(29,29,27)
         stroke: transparent
 
     &INTERNET_GAMES_WOT
@@ -373,13 +220,13 @@
         stroke-width: 1px
 
     &INTERNET_OFICE_365 
-      background: rgba(239, 239, 239, 1)
+      background: rgba(239,239,239,1)
       [pid="1"]
-        fill: rgba(255, 63, 0, 1)
+        fill: rgba(255,63,0,1)
         stroke: transparent
 
     &INTERNET_PARENT_CONTROL
-      background-image: linear-gradient(157deg, #e99fd0, #e6a671)
+      background-image: linear-gradient(157deg,#e99fd0,#e6a671)
       [pid="1"],
       [pid="3"]
         stroke-width: 1px
@@ -426,22 +273,22 @@
         stroke-width: 2px
 
     &INTERNET_SPEED_2
-      background-image: linear-gradient(219deg, #ffbf4d, #ff475e)
+      background-image: linear-gradient(219deg,#ffbf4d,#ff475e)
       [pid="1"]
         stroke-width: 1px
 
     &INTERNET_SPEED_2
-      background-image: linear-gradient(219deg, #ffbf4d, #ff475e)
+      background-image: linear-gradient(219deg,#ffbf4d,#ff475e)
       [pid="1"]
         stroke-width: 1px
 
     &INTERNET_SPEED_3
-      background-image: linear-gradient(219deg, #ff8d4d, #ff475e)
+      background-image: linear-gradient(219deg,#ff8d4d,#ff475e)
       [pid="2"]
         stroke-width: 1px
 
     &INTERNET_SPEED_NIGHT
-      background-image: linear-gradient(135deg, #1900ff, #de3bf9)
+      background-image: linear-gradient(135deg,#1900ff,#de3bf9)
 
     &MOBILE_MAIN
       background-color: #f56ddc
@@ -450,7 +297,7 @@
         stroke-width: 1px
 
     &MOBILE_CALL
-      background-image: linear-gradient(135deg, #f56ddc, #ff7640)
+      background-image: linear-gradient(135deg,#f56ddc,#ff7640)
       [pid="1"],
       [pid="3"]
         stroke-width: 1px
@@ -459,7 +306,7 @@
         stroke: transparent
 
     &MOBILE_INTERNET
-      background-image: linear-gradient(to bottom, #74e2d0, #48b2f1)
+      background-image: linear-gradient(to bottom,#74e2d0,#48b2f1)
       [pid="2"],
       [pid="3"],
       [pid="5"],
@@ -467,14 +314,14 @@
         stroke-width: 1px
 
     &MOBILE_MESSAGE
-      background-image: linear-gradient(225deg, #7ed9f9, #48b2f1)
+      background-image: linear-gradient(225deg,#7ed9f9,#48b2f1)
       [pid="1"],
       [pid="3"],
       [pid="4"]
         stroke-width: 1px
 
     &MOBILE_RTK_APP
-      background-image: linear-gradient(139deg, #ff9b36, #ef98de)
+      background-image: linear-gradient(139deg,#ff9b36,#ef98de)
       [pid="1"],
       [pid="2"]
         stroke-width: 1px
@@ -486,15 +333,15 @@
         stroke-width: 1.5
 
     &SMART_HOME_CLOUD
-      background-image: linear-gradient(218deg, #00bffe, #4decff)
+      background-image: linear-gradient(218deg,#00bffe,#4decff)
 
     &SMART_HOME_DOOR_SENSOR
-      background-image: linear-gradient(to bottom, #e9dac2, #cfb28f)
+      background-image: linear-gradient(to bottom,#e9dac2,#cfb28f)
       [pid="5"]
         stroke-width: 1px
 
     &SMART_HOME_FLAME_SENSOR
-      background-image: linear-gradient(to bottom, #ffe4ad, #ff7e74)
+      background-image: linear-gradient(to bottom,#ffe4ad,#ff7e74)
 
     &SMART_HOME_INDOOR_VIDEO
       background: #00c8f9
@@ -522,12 +369,12 @@
         stroke-width: 1.5
 
     &SMART_HOME_MOVE_SENSOR
-      background-image: linear-gradient(45deg, #00d8d0, #00d6df)
+      background-image: linear-gradient(45deg,#00d8d0,#00d6df)
       [pid="1"]
         stroke: transparent
 
     &SMART_HOME_WATER_SENSOR
-      background-image: linear-gradient(to bottom, #3677eb, #0c8cd1)
+      background-image: linear-gradient(to bottom,#3677eb,#0c8cd1)
 
     &TELEPHONE_MAIN
       background: #ff7640
@@ -541,7 +388,7 @@
         stroke-width: 1px
 
     &TELEPHONE_TELEPHONES
-      background-image: linear-gradient(138deg, #f56ddc, #ff7640)
+      background-image: linear-gradient(138deg,#f56ddc,#ff7640)
       [pid="2"]
         stroke-width: 1px
 
@@ -563,7 +410,7 @@
         stroke-width: 1px
 
     &TV_CHANNEL_1
-      background-image: linear-gradient(to bottom, #ffd95f, #e49f4e)
+      background-image: linear-gradient(to bottom,#ffd95f,#e49f4e)
 
     &TV_CHANNEL_2
       background: #efefef
@@ -580,7 +427,7 @@
         stroke: transparent
 
     &TV_CHANNEL_4
-      background-image: linear-gradient(to bottom, #f5515f, #9f041b)
+      background-image: linear-gradient(to bottom,#f5515f,#9f041b)
       [pid="2"]
         fill: #fff
       [pid="3"]
@@ -597,19 +444,19 @@
       background: #efefef
       [pid="1"]
         fill: #5c79bb
-        fill: linear-gradient(to bottom, #5c79bb, #6e84b4)
+        fill: linear-gradient(to bottom,#5c79bb,#6e84b4)
         stroke: transparent
 
     &TV_CLOUD
-      background-image: linear-gradient(218deg, #00bffe, #4decff)
+      background-image: linear-gradient(218deg,#00bffe,#4decff)
 
     &TV_CLOUD_ARH
-      background-image: linear-gradient(218deg, #00bffe, #4decff)
+      background-image: linear-gradient(218deg,#00bffe,#4decff)
       [pid="2"]
         fill: #fff
 
     &TV_CONTROL
-      background-image: linear-gradient(228deg, #85ffcf, #31abde)
+      background-image: linear-gradient(228deg,#85ffcf,#31abde)
       [pid="2"]
         fill: #fff
 
@@ -622,10 +469,10 @@
       background: #c9c2e7
 
     &TV_MULTIROOM
-      background-image: linear-gradient(225deg, #fad961, #fbb0ff)
+      background-image: linear-gradient(225deg,#fad961,#fbb0ff)
 
     &TV_MULTISCREEN
-      background-image: linear-gradient(228deg, #d3ff85, #21938a)
+      background-image: linear-gradient(228deg,#d3ff85,#21938a)
       [pid="2"]
         stroke-width: 1px
       [pid="3"],
@@ -665,14 +512,14 @@
         stroke-width: 1px
 
     &OTHER_BONUS_1
-      background-image: linear-gradient(225deg, #d1cdff, #71e7ff 54%, #d8caff)
+      background-image: linear-gradient(225deg,#d1cdff,#71e7ff 54%,#d8caff)
       [pid="1"],
       [pid="2"],
       [pid="3"]
         stroke-width: 1px
 
     &OTHER_BONUS_2
-      background-image: linear-gradient(225deg, #ffdab1, #ffa99a 51%, #ffd8ac)
+      background-image: linear-gradient(225deg,#ffdab1,#ffa99a 51%,#ffd8ac)
       [pid="1"],
       [pid="2"],
       [pid="3"]
@@ -699,83 +546,87 @@
         fill: #0077FF
       [pid="2"]
         stroke-width: 0px
-        fill: rgb(13, 17, 20)
+        fill: rgb(13,17,20)
     /* ::Candy icons from Web-Components */
 
-    // Deprecated icons
+    /* Deprecated icons */
     &icon_
+
       &24,
-      &127, 
-      &233
+      &127,
+      &25,
+      &26,
+      &110,
+      &111,
+      &403,
+      &404,
+      &405,
+      &406,
+      &112,
+      &243,
+      &244,
+      &245,
+      &246,
+      &131,
+      &146,
+      &160,
+      &239,
+      &291,
+      &402,
+      &403,
+      &404,
+      &405,
+      &406,
+      &405,
+      &407,
+      &408,
+      &409,
+      &410,
+      &411,
+      &417,
+      &418,
+      &419
+        deprecatedIcon()
+
+      &24,
+      &127
         background: #c9c2e7
 
       &25
         background: #7800ff
 
-      &81
-        background-image: linear-gradient(to bottom, #ffc036, #ef98de)
-
-      &26, 
-      &27
+      &26
         background: #ff5f4b
 
-      &37
-        background-image: linear-gradient(to bottom, #ffe4ad, #ff7e74)
-
-      &110, 
-      &111, 
-      &403, 
-      &404, 
-      &405, 
+      &110,
+      &111,
+      &403,
+      &404,
+      &405,
       &406
         background: #48b2f1
 
-      // &111
-      //   background-image: linear-gradient(157deg, #e99fd0, #e6a671)
-
-      &112, 
-      &243, 
-      &244, 
-      &245, 
+      &112,
+      &243,
+      &244,
+      &245,
       &246
-        background-image: linear-gradient(to bottom, #ffd95f, #a46d2c)
-
-      &113, 
-      &207
-        background: #ff7e74
-
-      // &127
-      //   background: #7cbfff
+        background-image: linear-gradient(to bottom,#ffd95f,#a46d2c)
       
       &131
-        background-image: linear-gradient(225deg, #fad961, #fbb0ff)
+        background-image: linear-gradient(225deg,#fad961,#fbb0ff)
 
       &146
-        background-image: linear-gradient(135deg, #1900ff, #de3bf9)
-
-      &154
-        background-image: linear-gradient(218deg, #00bffe, #4decff)
+        background-image: linear-gradient(135deg,#1900ff,#de3bf9)
 
       &160
         background: #b6de4e
 
-      &239, 
-      &301
+      &239
         background: #50e3c2
 
       &291
-        background-image: linear-gradient(225deg, #d1cdff, #71e7ff 54%, #d8caff)
-
-      &308
-        background: #ffc232
-
-      &309
-        background-image: linear-gradient(135deg, #3023ae, #c86dd7)
-
-      &311, 
-      &355, 
-      &356
-        background: #00c8f9
+        background-image: linear-gradient(225deg,#d1cdff,#71e7ff 54%,#d8caff)
 
       &402
         background: #ff7640
@@ -783,53 +634,53 @@
       &403
         padding: 2px
         position: relative
-        [pid="2"], 
-        [pid="3"], 
+        [pid="2"],
+        [pid="3"],
         [pid="4"]
           stroke-width: 1px
 
-        [pid="0"], 
-        [pid="1"], 
+        [pid="0"],
+        [pid="1"],
         [pid="5"]
           stroke-width: 0
 
-      &404, 
-      &405, 
+      &404,
+      &405,
       &406
         padding: 2px
         position: relative
-        [pid="3"], 
-        [pid="4"], 
+        [pid="3"],
+        [pid="4"],
         [pid="5"]
           stroke-width: 1px
 
-        [pid="0"], 
-        [pid="1"], 
-        [pid="2"], 
+        [pid="0"],
+        [pid="1"],
+        [pid="2"],
         [pid="6"]
           stroke-width: 0
 
       &405
         padding: 2px
         position: relative
-        [pid="3"], 
-        [pid="4"], 
+        [pid="3"],
+        [pid="4"],
         [pid="5"]
           stroke-width: 1px
-        [pid="0"], 
-        [pid="1"], 
-        [pid="2"], 
+        [pid="0"],
+        [pid="1"],
+        [pid="2"],
         [pid="6"]
           stroke-width: 0
 
       &407
-        background-image: linear-gradient(to bottom, #74e2d0, #48b2f1)
-        svg > *, 
-        [pid="0"], 
-        [pid="1"], 
+        background-image: linear-gradient(to bottom,#74e2d0,#48b2f1)
+        svg > *,
+        [pid="0"],
+        [pid="1"],
         [pid="2"]
           stroke-width: 1
-        [pid="3"], 
+        [pid="3"],
         [pid="6"]
           stroke-width: 1.5
         [pid="5"]
@@ -837,10 +688,10 @@
           stroke: transparent
 
       &408
-        background-image: linear-gradient(225deg, #7ed9f9, #48b2f1)
+        background-image: linear-gradient(225deg,#7ed9f9,#48b2f1)
         svg > *
           stroke-width: 1
-        [pid="1"], 
+        [pid="1"],
         [pid="4"]
           stroke-width: 1.5
         [pid="3"]
@@ -848,19 +699,17 @@
           stroke: transparent
 
       &409
-        background-image: linear-gradient(135deg, #f56ddc, #ff7640)
-        svg > *
-          stroke-width: 1
-        [pid="1"], 
+        background-image: linear-gradient(135deg,#f56ddc,#ff7640)
+        [pid="1"],
         [pid="4"]
           stroke-width: 1.5
         [pid="3"]
           fill: #fff
           stroke: transparent
         &_fixed
-          background-image: linear-gradient(to bottom, #6cdf7f, #43c376)
+          background-image: linear-gradient(to bottom,#6cdf7f,#43c376)
         &_mobile
-          background-image: linear-gradient(to bottom, #74e2d0, #48b2f1)
+          background-image: linear-gradient(to bottom,#74e2d0,#48b2f1)
 
       &410
         background: #9a85fc
@@ -878,14 +727,18 @@
           stroke: transparent
 
       &417
-        background-image: linear-gradient(228deg, #85ffcf, #31abde)
+        background-image: linear-gradient(228deg,#85ffcf,#31abde)
 
       &418
-        background-image: linear-gradient(to bottom, #FF7E6C, #FF483A)
+        background-image: linear-gradient(to bottom,#FF7E6C,#FF483A)
+        [pid="0"]
+          stroke-width: 0
 
       &419
-        background-image: linear-gradient(101deg, #28ADD7, #9F8BFF)
-      // ::Deprecated icons
+        background-image: linear-gradient(101deg,#28ADD7,#9F8BFF)
+        [pid="0"]
+          stroke-width: 0
+      /* ::Deprecated icons */
 
   &--not-active
     opacity .3
