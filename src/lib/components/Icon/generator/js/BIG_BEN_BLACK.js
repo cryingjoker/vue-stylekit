@@ -1,9 +1,0 @@
-var icon = require('vue-svgicon')
-icon.register({
-  'BIG_BEN_BLACK': {
-    width: 58,
-    height: 57,
-    viewBox: '0 0 58 57',
-    data: `<g _stroke="#000" _fill="none" fill-rule="evenodd" opacity=".7"><path pid="0" d="M56.376 28.503c0 15.188-12.313 27.5-27.5 27.5-15.189 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.312 27.5 27.5" stroke-width="1.5"/><g transform="translate(15 5)"><circle pid="1" stroke-width="1.5" cx="14.1" cy="26.1" r="6.2"/><path pid="2" d="M6.8 13H2.7c-1 0-1.8.8-1.8 1.8v22.9c0 1 .8 1.8 1.8 1.8h22.9c1 0 1.8-.8 1.8-1.8v-23c0-1-.8-1.8-1.8-1.8h-4.1c-4.9.1-9.8.1-14.7.1z" stroke-width="1.5"/><path pid="3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M21.5 9.9H6.8V13h14.7zM19.8 9.9h1.6l-3.6-3.2-3.6-3.2-3.6 3.2L7 9.9H19.8z"/><path pid="4" d="M14.1.2v3.3" stroke-width="1.5" stroke-linecap="round"/><path pid="5" d="M14.1 23.9V26M11.7 28.5l2.2-2.2" stroke-linecap="round"/><path pid="6" d="M3.9 39.4v9.8M9 39.4v11.2M14.1 39.4v11.7M19.3 39.4v11.2M24.4 49.2v-9.8" stroke-width="1.5"/></g></g>`
-  }
-})

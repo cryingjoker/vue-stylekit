@@ -242,8 +242,7 @@
     .color-block
       color b2c-white
   &--double-sided
-    //min-height 338px
-    perspective 1000px
+    //perspective 1000px
     transform-style: flat
     transition transform 1s, right 1s
     @media(max-width: mobile-upper-limit)
@@ -259,7 +258,6 @@
         background linear-gradient(rgba(main-color, 0) 0%,rgba(main-color, .67) 50%, main-color 100%)
     .{newAppName}-card__content
       height 100%
-      //max-height 590px
       padding-top: 310px
       padding-right 55px
       box-sizing border-box
@@ -268,7 +266,9 @@
       left 0
       visibility visible
       z-index 2
-      transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+      transition visibility 0s .3s cubic-bezier(0, 1, 1, 0)
+      background-size: cover
+      background-position: 50% 50%
       @media (max-width: tablet-upper-limit)
         max-height none
         padding-top 100px
@@ -277,24 +277,21 @@
         padding-top 50px
     .{newAppName}-card__background
       visibility visible
-      transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+      transition visibility 0s .3s cubic-bezier(0, 1, 1, 0)
     &.is-flipped
       @media (min-width: laptop-lower-limit)
         transform rotateY(180deg)
-        right 0
+        //right 0
   &__reverse
     position absolute
     transform: rotateY(180deg)
     background-color b2c-white
     padding 40px 40px 20px
-    //min-height 590px
     visibility hidden
-    transition visibility .5s .3s cubic-bezier(0, 1, 1, 0)
+    transition visibility 0s .3s cubic-bezier(0, 1, 1, 0)
     @media (max-width: tablet-upper-limit)
       padding 20px
-      //min-height 720px
     @media (max-width: mobile-upper-limit)
-      //min-height 770px
       padding-top: 40px
     .{newAppName}-font-bold
       &:nth-child(n+2)
@@ -314,8 +311,6 @@
       z-index 3
       visibility visible
     .{newAppName}-card__content
-      visibility hidden
-    .{newAppName}-card__background
       visibility hidden
 
 .{b2bAppName}-product__triangle
@@ -799,3 +794,6 @@
       margin-top vertical-space
       width: 85vw
       flex: 0 0 85%
+
+//.perspective5k
+//  perspective 5000px

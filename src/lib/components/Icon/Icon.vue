@@ -1,15 +1,89 @@
-<script type="text/jsx">
+<template>
+  <div
+    :class="iconClassName"
+    :style="iconStyle"
+  >
+    <svgicon
+      v-if="iconPath"
+      ref="iconSvg"
+      :name="iconName"
+      width="100%"
+      height="100%"
+      :original="true"
+    />
+
+    <div
+      v-if="caption && isSpeedIcon"
+      class="icon-speed__spinned-arrow"
+    >
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        class="spinned-circle"
+        transform-origin="center"
+        :style="{ padding: '8px', transform: 'rotateZ(-70deg)' }"
+      >
+        <circle
+          stroke-dasharray="300%"
+          r="50%"
+          cx="50%"
+          cy="50%"
+          fill="transparent"
+          :style="{ strokeDashoffset: `${speedProgress().circle}%` }"
+        ></circle>
+      </svg>
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        class="spinned-arrow"
+        transform-origin="center"
+        :style="{ padding: '1px', transform: `rotateZ(${speedProgress().arrow}deg)` }"
+      >
+        <path
+          stroke-width="1"
+          fill="none"
+          d="M29.9 50.3l-4.5-4 4-4.5"
+        ></path>
+      </svg>
+    </div>
+
+    <img
+      v-if="!iconPath && image"
+      :src="image"
+      width="100%"
+      height="100%"
+      style="border: none;"
+    />
+
+    <span
+      v-if="caption && iconCaptionColor"
+      class="caption top"
+      v-html="caption"
+      :style="{background: iconCaptionColor}"
+    ></span>
+  </div>
+</template>
+
+<script>
 import Vue from "vue";
+import axios from 'axios/index'
 import colors from "../../color.json";
 import defaultValues from '../../defaultIconsSize.json';
 
 import * as svgicon from 'vue-svgicon'
-require('./generator/js')
+
+const arrKey = 'RTK_ICONS'
 
 Vue.use(svgicon)
 
 export default {
   name: "RtIcon",
+  data: function() {
+    return {
+      iconPath: null,
+      iconCaptionColor: null
+    }
+  },
   props: {
     type: {
       type: String,
@@ -28,7 +102,7 @@ export default {
     },
     size: {
       type: Number,
-      default: 55
+      default: null
     },
     width: {
       type: String,
@@ -45,6 +119,10 @@ export default {
     color: {
       type: String,
       default: null
+    },
+    captionColor: {
+      type: String,
+      default: null
     }
   },
   computed: {
@@ -57,13 +135,16 @@ export default {
     iconClassName() {
       return 'rt-icon ' + 'rt-icon__' + this.type + this.classSize + this.classCandy
     },
+    iconName() {
+      return this.type !== 'default' ? this.type : null
+    },
     iconStyle() {
       const styles = {}
       styles.background = this.bg ? this.bg : (defaultValues[this.type] ? defaultValues[this.type].bg : null)
       styles.fill = this.fill ? this.fill : (defaultValues[this.type] ? defaultValues[this.type].fill : null)
       styles.stroke = this.color ? this.color : (defaultValues[this.type] ? defaultValues[this.type].color : null)
-      styles.width = this.width ? this.width : (defaultValues[this.type] ? defaultValues[this.type].width : null)
-      styles.height = this.height ? this.height : (defaultValues[this.type] ? defaultValues[this.type].height : null)
+      styles.width = (!this.size && this.width) ? this.width : (defaultValues[this.type] ? defaultValues[this.type].width : null)
+      styles.height = (!this.size && this.height) ? this.height : (defaultValues[this.type] ? defaultValues[this.type].height : null)
       return styles
     },
     isSpeedIcon() {
@@ -74,119 +155,87 @@ export default {
         'icon_406',
         'INTERNET_SPEED_0'
       ].indexOf(this.type) > -1 && !isNaN(parseInt(this.caption, 10))
+    }
+  },
+  methods: {
+    fillCaption() {
+      const defaultCaptionColor = '#48b2f1'
+      if (!this.captionColor && this.$el && this.$el.nodeName === 'DIV' && this.$el.querySelector('[pid="0"]')) {
+        this.iconCaptionColor = this.$el.querySelector('[pid="0"]').getAttribute('fill') || defaultCaptionColor
+      } else if (this.captionColor) {
+        this.iconCaptionColor = this.captionColor || defaultCaptionColor
+      }
     },
-    speedProgress() {
+    isUniqueIcon() {
+      return window[arrKey] && typeof window[arrKey][this.iconName] === 'undefined'
+    },
+    getPath() {
+      var name = this.iconName
+      if (name) {
+        window[arrKey][name] = {}
+        return axios.request({
+          url: `/static/icons/${name}.js`,
+        }).then(r => {
+          var rIcon = eval(r.data)
+          if (rIcon && rIcon[0][name]) {
+            window[arrKey][name] = rIcon[0][name]
+            this.setPath()
+          }
+        })
+      } else {
+        this.fillCaption()
+      }
+    },
+    setPath() {
+      let pathSource = window[arrKey][this.iconName]
+      var icon = require('vue-svgicon')
+      var arr = {}
+      arr[this.iconName] = pathSource
+      icon.register(arr)
+      this.iconPath = true
+      this.$nextTick(function(){
+        this.fillCaption()
+      })
+    },
+    speedProgress () {
+      let speed = {
+        circle: null,
+        arrow: null
+      }
       if (this.isSpeedIcon) {
         let val = parseInt(this.caption, 10)
+
         let maxSpeed = 300
+
         // Извлекаем процентное отношение шкалы скорости
         let proc = (val > maxSpeed) ? 100 : (val * 100 / maxSpeed)
 
         // Собираем диапозоны позиций для круга и стрелки
-        // @TODO - При увеличении размера иконки необходимо расчитать другие координаты
-        let pos = {
-          circle: {
-            min: 20,
-            max: 280
-          },
-          arrow: { // Для стрелочки инвертированное значение позиции
-            min: -134,
-            max: 165
-          }
-        }
-        return {
-          arrowPos: pos.arrow.min + ((pos.arrow.max - pos.arrow.min) / 100 * proc),
-          circlePos: pos.circle.max - ((pos.circle.max - pos.circle.min) / 100 * proc)
+        let pos = this.getActualSpeedPos()
+
+        speed.circle = pos.circle.max - ((pos.circle.max - pos.circle.min) / 100 * proc)
+        speed.arrow = pos.arrow.min + ((pos.arrow.max - pos.arrow.min) / 100 * proc)
+      }
+      return speed
+    },
+    getActualSpeedPos () {
+      // @TODO - При увеличении размера иконки необходимо расчитать другие координаты
+      return {
+        circle: {
+          min: 20,
+          max: 280
+        },
+        arrow: { // Для стрелочки инвертированное значение позиции
+          min: -134,
+          max: 165
         }
       }
     }
   },
-  mounted() {},
-  render(h) {
-    const generatedRender = () => {
-      if (!this.image && this.type !== 'default') {
-        return <div
-            class={this.iconClassName}
-            style={this.iconStyle}
-          >
-            <svgicon
-              name={this.type}
-            ></svgicon>
-            {speedIconRender()}
-            {captionRender()}
-          </div>
-      }
-    }
-    const speedIconRender = () => {
-      if (this.isSpeedIcon) {
-        const innerRender = () => {
-          if (this.speedProgress && this.speedProgress.circlePos) {
-            const styleInner = { padding: '8px', transform: 'rotateZ(-70deg)' }
-            return <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              class="spinned-circle"
-              transform-origin="center"
-              style={styleInner}
-            >
-              <circle
-                stroke-dashoffset={this.speedProgress.circlePos + '%'}
-                stroke-dasharray="300%"
-                r="50%"
-                cx="50%"
-                cy="50%"
-                fill="transparent"
-              ></circle>
-            </svg>
-          }
-        }
-        const outerRender = () => {
-          if (this.speedProgress && this.speedProgress.arrowPos) {
-            const styleOuter = { padding: '1px', transform: `rotateZ(${this.speedProgress.arrowPos}deg)` }
-            return <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              class="spinned-arrow"
-              transform-origin="center"
-              style={styleOuter}
-            >
-              <path
-                stroke-width="1"
-                fill="none"
-                d="M29.9 50.3l-4.5-4 4-4.5"
-              ></path>
-            </svg>
-          }
-        }
-        return <div
-            class="icon-speed__spinned-arrow"
-          >
-            {innerRender()}
-            {outerRender()}
-          </div>
-      }
-    }
-    const captionRender = () => {
-      if (this.caption) {
-        return <span class="caption top">{this.caption}</span>
-      }
-    }
-    const imgRender = () => {
-      if (this.image) {
-        return <div
-          class={'rt-icon' + this.classSize}
-        >
-          <img src={this.image} width="100%" height="100%" style="border: none;" />
-        </div>
-      }
-    }
-
-    return (
-      <div class="widget-inline">
-        {generatedRender()}
-        {imgRender()}
-      </div>
-    );
+  mounted() {
+    if (!window[arrKey]) window[arrKey] = {}
+    // @TODO - add watcher for loaded icons
+    this.getPath()
   }
 };
 </script>
