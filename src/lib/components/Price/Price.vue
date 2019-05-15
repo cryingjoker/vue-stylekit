@@ -112,15 +112,28 @@ export default {
 
       switch (this.priceType) {
         case "only-price":
-          return (
-            <div class={`${rtPriceClass} rt-price-without-space`}>
-              <div
-                class={"rt-price__value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
-              <div class={rtPriceInfoClass}>
-                <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+          if(this.oldValue){
+            return (
+              <div class={`${rtPriceClass} rt-price-without-space`}>
+                <div class="rt-price__old-value">{this.normalizeOldValue}</div>
+                <div
+                  class={"rt-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+                <div class={rtPriceInfoClass}>
+                  <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                </div>
               </div>
-            </div>
-          );
+            );
+          }else {
+            return (
+              <div class={`${rtPriceClass} rt-price-without-space`}>
+                <div
+                  class={"rt-price__value" + (this.colorValue ? 'color-' + this.colorValue : '')}>{this.normalizeValue}</div>
+                <div class={rtPriceInfoClass}>
+                  <div class="rt-price__info-item">{this.normalizeCurrency}</div>
+                </div>
+              </div>
+            );
+          }
           break;
         case "oldval-price":
           return (
