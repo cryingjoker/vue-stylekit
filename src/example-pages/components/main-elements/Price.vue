@@ -73,11 +73,11 @@
                 text="<rt-price :value='500' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='' class='color-main09'/>"
               />
             </div>
-          </div>
+          </div>k
         </div>
       </div>
     </div>
-    <div class="rt-container rt-space-top25">
+    <div class="rt-space-top25">
       <documentation-builder :json="documentation" type="components" />
     </div>
   </div>

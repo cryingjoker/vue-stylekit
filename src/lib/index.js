@@ -95,7 +95,7 @@ const VueRtStyle = {
       Vue.component(CheckboxContainer.name, CheckboxContainer);
       Vue.component(Input.name, Input);
       Vue.component(InputWithoutJs.name, InputWithoutJs);
-      Vue.component(Price.name, Price);
+      Vue.component(Price.name, Price.component);
       Vue.component(RadioButton.name, RadioButton);
       Vue.component(RadioButtonContainer.name, RadioButtonContainer);
       Vue.component(Ripple.name, Ripple);
