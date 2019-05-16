@@ -200,6 +200,8 @@
         @media(max-width tablet-upper-limit)
           width 20px
           height 20px
+        @media(max-width mobile-upper-limit)
+          top 0
   &__footnote
     font-size 32px
     line-height 40px
@@ -451,6 +453,12 @@
 .desktop-only
   @media(max-width tablet-upper-limit)
     display none
+
+.thanx-popup
+  .rtb-popup
+    padding 80px 100px
+  .rt-button
+    width 177px
 
 @keyframes fadeIn1
   //0%

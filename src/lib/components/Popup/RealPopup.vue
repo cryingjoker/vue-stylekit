@@ -76,8 +76,8 @@
         <div class="rt-container">
           <div class="rt-col">
             <div class="row">
-            <div class="rt-col-2 rt-col-td-d-none"/>
-            <div class="rt-col-8 rt-col-td-6 rt-col-md-3">
+            <div class="rt-col-1 rt-col-td-d-none"/>
+            <div class="rt-col-10 rt-col-td-6 rt-col-md-3">
               <div class={"rtb-popup " + this.popupClasses} onMouseenter={this.popupEnter} onMouseleave={this.popupLeave}>
                 <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" class="rtb-popup-close" viewBox="-10 -10 35 35" onClick={this.close}>
                   <path d="M15 1.5L13.5 0l-6 6-6-6L0 1.5l6 6-6 6L1.5 15l6-6 6 6 1.5-1.5-6-6z" fill="#101828" fill-rule="evenodd" fill-opacity=".5"/>
@@ -85,7 +85,7 @@
                 {this.$slots.default}
               </div>
             </div>
-            <div class="rt-col-2 rt-col-td-d-none"/>
+            <div class="rt-col-1 rt-col-td-d-none"/>
             </div>
           </div>
         </div>

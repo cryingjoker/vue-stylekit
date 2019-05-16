@@ -403,16 +403,25 @@
         </div>
       </div>
     </div>
-    <rt-real-popup :position-bottom="true">
+    <rt-real-popup :position-bottom="true" class="speaker-popup">
       <template>
-        <div class="row">
-          <div class="rt-col-12 rt-col-td-6 rt-col-md-3 popup-content">
-            <div class="popup-image"/>
-            <div class="popup-title"/>
-            <h3 class="popup-theme"/>
-            <div class="popup-reputation p1"/>
-            <div class="popup-description p2"/>
-          </div>
+        <div class="popup-content">
+          <div class="popup-image"/>
+          <div class="popup-title"/>
+          <h3 class="popup-theme"/>
+          <div class="popup-reputation p1"/>
+          <div class="popup-description p2"/>
+        </div>
+      </template>
+    </rt-real-popup>
+    <rt-real-popup :position-center="true" class="thanx-popup">
+      <template>
+        <div class="popup-content">
+          <h3 class="rt-font-bold rt-font-h3 rt-space-bottom05">Спасибо! Ваша заявка № ХХХХ принята</h3>
+          <p class="rt-font-paragraph rt-space-bottom">В ближайшее время с Вами свяжется наш оператор. Спасибо, что Вы с нами!</p>
+          <p class="rt-font-paragraph rt-space-bottom2">С уважением, Ваш Ростелеком</p>
+          <p class="rt-font-small-paragraph rt-space-bottom color-white03">Информационно-справочная служба 8 800 200 3000</p>
+          <rt-button class="rt-button rt-button-orange">ОК</rt-button>
         </div>
       </template>
     </rt-real-popup>
