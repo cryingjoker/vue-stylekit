@@ -1,7 +1,14 @@
 <template>
   <div class="rt-container">
+    <div class="app-content">
 
+      <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
+        <div class="app-title"><h1 class="rt-font-hero">Scroll tabs</h1></div>
+      </div>
+
+    </div>
     <div class="app-content  rt-col-12 rt-col-md-3">
+
       <pre-code
         text='<div>
       <div
@@ -92,17 +99,27 @@
         </div>
       </div>
       </div>'></pre-code>
+      <div class="rt-space-top25">
+        <documentation-builder :json="documentation" type="components"/>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import componentsList from "../../componentsList";
-// const componentsList = {};
-export default {
-  name: "AppTypography",
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {}
-};
+  import documentation from "../../../lib/components/ScrollTabs/docs/index.json";
+  import componentsList from "../../componentsList";
+  // const componentsList = {};
+  export default {
+    name: "AppTypography",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>
