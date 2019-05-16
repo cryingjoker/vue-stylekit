@@ -16,7 +16,7 @@
             </div>
           </div>
           <pre-code text='
-            <rt-real-popup>
+            <rt-real-popup :position-center="true">
               <template>
                 <div class="row">
                   <div class="rt-col-12 rt-col-td-6 rt-col-md-3">

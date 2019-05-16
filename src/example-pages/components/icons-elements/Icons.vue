@@ -446,10 +446,16 @@
         </div>
       </div>
     </div>
+
+    <div class="rt-container rt-space-top25">
+      <documentation-builder :json="documentation" type="components" />
+    </div>
   </div>
 </template>
 
 <script>
+import documentation from "../../../lib/components/Icon/docs/index.json";
+
 const componentsList = {};
 
 export default {

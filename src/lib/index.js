@@ -1,6 +1,8 @@
 import Vue from "vue";
 import styles from "./css/vue-rt-style.styl";
+import Global from "./variables.json";
 import Project from "../../package.json";
+import * as svgicon from 'vue-svgicon'
 
 import {
   Button,
@@ -77,7 +79,12 @@ import {
   ValidationIcon,
   TariffCard,
   BenefitItem,
-  BenefitBlock
+  BenefitBlock,
+  PortraitTile,
+  PortraitTileItem,
+  Timeline,
+  TimelineItem,
+  Speakers
 } from "./components";
 
 
@@ -144,6 +151,7 @@ const VueRtStyle = {
 
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
+      Vue.use(svgicon)
       Vue.component(Icon.name, Icon);
       Vue.component(Logo.name, Logo.component);
       Vue.component(Ussd.name, Ussd.component);
@@ -157,6 +165,11 @@ const VueRtStyle = {
       Vue.component(UseCase.name, UseCase);
       Vue.component(BenefitBlock.name, BenefitBlock);
       Vue.component(BenefitItem.name, BenefitItem);
+      Vue.component(PortraitTile.name, PortraitTile);
+      Vue.component(PortraitTileItem.name, PortraitTileItem);
+      Vue.component(Timeline.name, Timeline);
+      Vue.component(TimelineItem.name, TimelineItem);
+      Vue.component(Speakers.name, Speakers);
       // tsx components
 
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
@@ -185,11 +198,19 @@ const VueRtStyle = {
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 
-const version = Project.version;
-
 // if(localStorage && localStorage.getItem('dev_mode')){
 //   localStorage.setItem('dev_mode__version',version);
 // }
+
+// Global stylekit settings
+const settingsKey = Global.globalSettingsKey;
+const version = Project.version;
+if (settingsKey) {
+  if (!window[settingsKey]) window[settingsKey] = {}
+  window[settingsKey].version = version;
+}
+
+// @Deprecated
 window.RTK_STYLE_VER = version;
 VueRtStyle.version = version;
 

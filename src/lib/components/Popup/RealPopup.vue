@@ -2,7 +2,15 @@
   export default {
     name: "RtRealPopup",
     props: {
-      topCenter: {
+      positionTop: {
+        type: Boolean,
+        default: false
+      },
+      positionBottom: {
+        type: Boolean,
+        default: false
+      },
+      positionCenter: {
         type: Boolean,
         default: false
       },
@@ -15,6 +23,21 @@
     data: () => ({
 
     }),
+    computed: {
+      popupClasses(){
+        let classList = "";
+        if(this.positionTop){
+          classList += ' rtb-popup--top-center';
+        }
+        if(this.positionBottom){
+          classList += ' rtb-popup--bottom-center';
+        }
+        if(this.positionCenter){
+          classList += ' rtb-popup--center-center';
+        }
+        return classList;
+      },
+    },
     methods:{
       popupEnter(){
         this.popupEnter = true
@@ -29,6 +52,7 @@
       },
       close(){
         this.$refs.popupWrapper.classList.remove('rtb-popup-wrapper--active');
+        document.body.style.overflow = 'auto';
       },
       countOffset(){
         setTimeout(() => {
@@ -54,7 +78,7 @@
             <div class="row">
             <div class="rt-col-2 rt-col-td-d-none"/>
             <div class="rt-col-8 rt-col-td-6 rt-col-md-3">
-              <div class={"rtb-popup" + (this.topCenter ? " rtb-popup--top-center" : " rtb-popup--center-center")} onMouseenter={this.popupEnter} onMouseleave={this.popupLeave}>
+              <div class={"rtb-popup " + this.popupClasses} onMouseenter={this.popupEnter} onMouseleave={this.popupLeave}>
                 <svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" class="rtb-popup-close" viewBox="-10 -10 35 35" onClick={this.close}>
                   <path d="M15 1.5L13.5 0l-6 6-6-6L0 1.5l6 6-6 6L1.5 15l6-6 6 6 1.5-1.5-6-6z" fill="#101828" fill-rule="evenodd" fill-opacity=".5"/>
                 </svg>

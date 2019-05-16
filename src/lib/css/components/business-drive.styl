@@ -1,0 +1,372 @@
+.business-drive
+  position relative
+  top 50px
+  &__header
+    padding 10px 0
+    position fixed
+    top 50px
+    left 0
+    right 0
+    z-index 20
+    .button-wrapper
+      margin-top 5px
+  &__footer
+    padding 20px 0
+  &__footer-link
+    margin-left 30px
+  &__tabs-wrapper
+    display inline-block
+    width auto
+    vertical-align: bottom
+    .rt-scroll-tab-header
+      height 26px
+      &__item
+        font-size 18px
+        line-height 26px
+        margin 0 20px
+        position relative
+        &:after
+          position absolute
+          content: ''
+          width 0
+          height 3px
+          background-color main-color
+          bottom -12px
+          left 0
+          transition width .3s linear
+        &--active
+          border-bottom-color transparent!important
+          &:after
+            width 100%
+  .rt-logo
+    vertical-align middle
+  .button-wrapper
+    float: right
+  .rtb-popup
+    background-color: #273656
+    color b2c-white
+    padding 0
+    overflow-x hidden
+    &-close
+      z-index 5
+      path
+        fill b2c-white
+        fill-opacity 1
+    .popup-image
+      position relative
+      width 100%
+      height 290px
+      background-size: cover
+      background-position: 50% 50%
+    .popup-title
+      font-size 56px
+      line-height 69px
+      margin-bottom 40px
+      margin-top -8px
+      position relative
+      .speaker-name__name,
+      .speaker-name__surname
+        border-width 8px
+    .popup-title,
+    .popup-reputation,
+    .popup-description,
+    .popup-theme
+      padding 0 30% 0 20px
+    .popup-description
+      padding-bottom 20px
+      opacity .5
+    .popup-theme
+      margin-bottom: 35px
+    .popup-reputation
+      margin-bottom: 15px
+    .row
+      max-height none
+  .map-block
+    width 100%
+    height 420px
+    //position relative
+    //&:after
+    //  position absolute
+    //  content: ''
+    //  top 0
+    //  left 0
+    //  right 0
+    //  bottom 0
+    //  width 100%
+    //  height 100%
+    //  background-color rgba(main-color, .3)
+    iframe
+      max-width 100%
+
+.animated-text
+  font-size 114px
+  line-height 103px
+  height 800px
+  padding-top 90px
+  box-sizing border-box
+  display flex
+  flex-direction column
+  &__line
+    opacity 0
+    &-item
+      position relative
+      &:after
+        position absolute
+        content: ''
+        top 50%
+        left 0
+        width 0
+        height 20px
+        background-color b2c-orange
+        transform translateY(-50%)
+  &__first-line
+    transform translateY(100%)
+    opacity 0
+    animation fadeIn1 .5s .3s ease-out forwards
+  &__second-line
+    transform translateY(140%)
+    opacity 0
+    animation fadeIn1 .5s .3s ease-out forwards
+    .animated-text__line-item
+      &:after
+        animation lineThrough1 .4s .5s ease-out forwards
+  &__third-line
+    transform translateY(180%)
+    opacity 0
+    animation fadeIn1 .5s .3s ease-out forwards
+    .animated-text__line-item
+      &:after
+        animation lineThrough1 .4s .7s ease-out forwards
+  &__fourth-line
+    transform translateY(220%)
+    opacity 0
+    animation fadeIn1 .5s .3s ease-out forwards
+    .animated-text__line-item
+      &:after
+        animation lineThrough1 .4s .9s ease-out forwards
+  &__fifth-line
+    transform translateY(380%)
+    opacity 0
+    animation fadeIn1 .5s .5s ease-out forwards
+  &__sixth-line
+    animation fadeIn2 .4s 1.2s linear forwards
+  &__seventh-line
+    animation fadeIn2 .4s 1.4s linear forwards
+  &__eighth-line
+    font-size 32px
+    line-height 40px
+    margin-top 30px
+    animation fadeIn2 .4s 1.7s linear forwards
+    .meeting-legend
+      padding-left 40px
+      position relative
+      display inline-block
+      opacity .8
+      animation bounce .5s 2.1s linear forwards
+      &:nth-child(2)
+        margin-left 30px
+      .icon
+        position absolute
+        left 0
+        top 5px
+        width 30px
+        height 30px
+  &__footnote
+    font-size 32px
+    line-height 40px
+    top 40px
+    right -40px
+    position absolute
+    min-width 240px
+    transform translateX(100%)
+
+.first-gradient-section
+  background linear-gradient(to bottom, #001c45, #002845 16%, #450031 50%, #001c45);
+
+.second-gradient-section
+  background linear-gradient(to bottom, #001c45, #002845 16%, #003d45 50%, #1c2c4d);
+
+.rt-portrait-tile-gallery
+  color b2c-white
+  &__item
+    margin-top vertical-space
+    position relative
+    &:after
+      position absolute
+      content: ''
+      top 0
+      left 0
+      bottom 0
+      right 0
+      background-color: #001C45
+      opacity .37
+      width 100%
+      height 100%
+    &-description
+      position absolute
+      bottom 20px
+      left 20px
+      z-index 2
+  &__image
+    border-radius 8px
+    background-position: 50% 50%
+    background-size: cover
+    width 100%
+    position relative
+    //&:after
+    //  position absolute
+    //  content: ''
+    //  top 0
+    //  left 0
+    //  bottom 0
+    //  right 0
+    //  background-color: #001C45
+    //  opacity .37
+    //  width 100%
+    //  height 100%
+    //box-sizing border-box
+  &__description
+    display none
+
+.speaker-name
+  display flex
+  flex-direction column
+  &__name
+    border-top 4px solid b2c-orange
+    border-bottom 4px solid b2c-orange
+    display inline-block
+  &__surname
+    border-bottom 4px solid b2c-orange
+    display inline-block
+
+.color-white03
+  color rgba(b2c-white, .3)
+  //opacity .3
+
+.business-drive__motto
+  height 860px
+  &-text
+    position absolute
+    top 50%
+    transform translateY(-50%)
+
+.rt-timeline
+  position relative
+  &:after
+    position absolute
+    content: ''
+    top 0
+    bottom 0
+    width 8px
+    background-color b2c-orange
+    left calc((100% - 8px) / 2)
+  &__item
+    color b2c-white
+    font-weight 500
+    width 50%
+    margin-left 50%
+    padding-left 10px
+    position relative
+    .rt-timeline__item-image-wrapper
+      left 200px
+    &:nth-child(2n - 1)
+      text-align: right
+      margin-left: 0
+      padding-right 10px
+      padding-left: 0
+      .rt-timeline__item-image-wrapper
+        right 200px
+        left auto
+    .timestamp
+      position relative
+      padding-top 5px
+      padding-bottom 2px
+      width 177px
+      display: inline-block
+      font-weight 500
+      &:before,
+      &:after
+        position absolute
+        content ''
+        width 100%
+        height 4px
+        background-color b2c-white
+        left 0
+      &:before
+        top 0
+      &:after
+        bottom 0
+      &-wrapper
+        z-index 2
+        position relative
+    &--important
+      .timestamp
+        color b2c-orange
+        font-size 56px
+        padding-bottom 0
+        width 232px
+        &:before,
+        &:after
+          background-color b2c-orange
+          height 8px
+      .rt-timeline__item-theme,
+      .rt-timeline__item-speaker
+        text-align left
+    &-image
+      width 100%
+      height 100%
+      background-position 50% 50%
+      background-size: cover
+      &-wrapper
+        width 275px
+        height 183px
+        position absolute
+        top -94px
+        z-index 1
+    .rt-timeline__item-speaker
+      margin-top vertical-space
+    &-description,
+    &-reputation
+      display none
+
+.clickable
+  cursor pointer
+
+.video-wrapper
+  width 100%
+
+//.ovh
+//  overflow: hidden
+
+@keyframes fadeIn1
+  //0%
+  //  transform translateY(150px)
+  //  opacity 0
+  50%
+    opacity .1
+  100%
+    transform translateY(0)
+    opacity 1
+
+@keyframes fadeIn2
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes lineThrough1
+  0%
+    width 0
+  100%
+    width 100%
+
+@keyframes bounce
+  0%
+    transform scale(1)
+    opacity .8
+  50%
+    opacity 1
+    transform scale(1.015)
+  100%
+    opacity 1
+    transform scale(1)
