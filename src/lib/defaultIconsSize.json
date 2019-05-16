@@ -2,7 +2,8 @@
   "default": {
     "width": "56px",
     "height": "94px",
-    "color": "#101828"
+    "color": "#101828",
+    "captionColor": "#48b2f1"
   },
   "dr-web": {
     "width": "150px",
