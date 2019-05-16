@@ -18,7 +18,7 @@
  export { default as SwitchContainer } from './Switch/SwitchContainer.vue';
  export { default as Textarea } from './Textarea/Textarea.vue';
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
- export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.vue';
+ export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.tsx';
  export { default as Tabs } from './Tabs/Tabs.vue';
  export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.vue';
  export { default as TabsContentItem } from './Tabs/TabsContentItem.vue';
