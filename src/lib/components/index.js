@@ -5,7 +5,7 @@
  export { default as CheckboxContainer } from './Checkbox/CheckboxContainer.vue';
  export { default as Input } from './Input/Input.vue';
  export { default as InputWithoutJs } from './Input/InputWithoutJs.vue';
- export { default as Price } from './Price/Price.vue';
+ export { default as Price } from './Price/Price.tsx';
  export { default as RadioButton } from './RadioButton/RadioButton.vue';
  export { default as RadioButtonContainer } from './RadioButton/RadioButtonContainer.vue';
  export { default as Ripple } from './Ripple/Ripple.vue';
