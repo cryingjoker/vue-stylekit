@@ -108,7 +108,7 @@ const VueRtStyle = {
       Vue.component(SwitchContainer.name, SwitchContainer);
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
-      Vue.component(ScrollTabs.name, ScrollTabs);
+      Vue.component(ScrollTabs.name, ScrollTabs.component);
       Vue.component(Tabs.name, Tabs);
       Vue.component(TabsNavigationItem.name, TabsNavigationItem);
       Vue.component(TabsContentItem.name, TabsContentItem);

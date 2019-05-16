@@ -1,13 +1,18 @@
 <template>
   <div class="rt-container">
+
     <div class="app-content  rt-col-12 rt-col-md-3">
+      <pre-code
+        text='<div>
       <div
-        class="color-block--dark-blue color-white rt-space-horizontal sticked app-sticked"
+        class="color-block--red color-white rt-space-horizontal sticked app-sticked"
       >
         <rt-scroll-tabs
+          :has-fixed-js-node="true"
           class="rt-contaner rt-scroll-tab-header"
           active-tabs-classname="rt-scroll-tab-header__item--active"
           tabs-classname="rt-scroll-tab-header__item"
+          :top-padding="40"
         >
           <div class="rt-scroll-tab-nav">
             <a class="rt-scroll-tab-header__item" href="#one">one</a>
@@ -17,14 +22,76 @@
           </div>
         </rt-scroll-tabs>
       </div>
-      <div id="one" class="color-block--orange" style="height: 100vh" />
+      <div id="one" class="color-block--orange" style="height: 100vh" >
+      </div>
       <div
         id="two"
         class="color-block--pink"
         style="height: 100vh; margin-top: 800px"
-      />
-      <div id="three" class="color-block--red" style="height: 100vh" />
-      <div id="four" class="color-block--purple" style="height: 100vh" />
+      >
+        <div
+          class="color-block--yellow rt-animate-opacity rt-space-horizontal sticked app-sticked"
+        >
+          <rt-scroll-tabs
+            :hide-if-not-in-viewport="true"
+            :has-fixed-js-node="true"
+            class="rt-contaner rt-scroll-tab-header"
+            active-tabs-classname="rt-scroll-tab-header__item--active"
+            tabs-classname="rt-scroll-tab-header__item"
+            :top-padding="40"
+          >
+            <div class="rt-scroll-tab-nav">
+              <a class="rt-scroll-tab-header__item" href="#one">one</a>
+              <a class="rt-scroll-tab-header__item" href="#two">two</a>
+              <a class="rt-scroll-tab-header__item" href="#three">three</a>
+              <a class="rt-scroll-tab-header__item" href="#four">four</a>
+            </div>
+          </rt-scroll-tabs>
+        </div>
+      </div>
+      <div id="three" class="color-block--red" style="height: 100vh" >
+        <div
+          class="color-block--dark-blue color-white rt-space-horizontal rt-animate-opacity sticked app-sticked"
+        >
+        <rt-scroll-tabs
+          :hide-if-not-in-viewport="true"
+          :has-fixed-js-node="true"
+          class="rt-contaner rt-scroll-tab-header"
+          active-tabs-classname="rt-scroll-tab-header__item--active"
+          tabs-classname="rt-scroll-tab-header__item"
+          :top-padding="40"
+        >
+          <div class="rt-scroll-tab-nav">
+            <a class="rt-scroll-tab-header__item" href="#one">one</a>
+            <a class="rt-scroll-tab-header__item" href="#two">two</a>
+            <a class="rt-scroll-tab-header__item" href="#three">three</a>
+            <a class="rt-scroll-tab-header__item" href="#four">four</a>
+          </div>
+        </rt-scroll-tabs>
+        </div>
+      </div>
+      <div id="four" class="color-block--purple" style="height: 100vh" >
+        <div
+          class="color-block--white rt-space-horizontal rt-animate-opacity sticked app-sticked"
+        >
+          <rt-scroll-tabs
+            :hide-if-not-in-viewport="true"
+            :has-fixed-js-node="true"
+            class="rt-contaner rt-scroll-tab-header"
+            active-tabs-classname="rt-scroll-tab-header__item--active"
+            tabs-classname="rt-scroll-tab-header__item"
+            :top-padding="40"
+          >
+            <div class="rt-scroll-tab-nav">
+              <a class="rt-scroll-tab-header__item" href="#one">one</a>
+              <a class="rt-scroll-tab-header__item" href="#two">two</a>
+              <a class="rt-scroll-tab-header__item" href="#three">three</a>
+              <a class="rt-scroll-tab-header__item" href="#four">four</a>
+            </div>
+          </rt-scroll-tabs>
+        </div>
+      </div>
+      </div>'></pre-code>
     </div>
   </div>
 </template>
