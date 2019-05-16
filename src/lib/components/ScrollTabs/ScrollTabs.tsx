@@ -195,7 +195,9 @@ class ScrollTabs extends Vue {
     this.fixedNodeWidth = this.fixedNode.offsetWidth;
 
     // this.fixedNodeTop = parentNode.getBoundingClientRect().top - this.fixedNode.offsetHeight + (window.pageYOffset || document.documentElement.scrollTop) - this.fixedNodeTop;
+    getFixedJsScrollPosition();
     setTimeout(()=>{
+
     window.addEventListener("scroll", getFixedJsScrollPosition, {
      passive: false
     })

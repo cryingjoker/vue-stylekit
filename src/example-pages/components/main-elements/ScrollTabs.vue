@@ -22,10 +22,10 @@
           :top-padding="40"
         >
           <div class="rt-scroll-tab-nav">
-            <a class="rt-scroll-tab-header__item" href="#one">one</a>
-            <a class="rt-scroll-tab-header__item" href="#two">two</a>
-            <a class="rt-scroll-tab-header__item" href="#three">three</a>
-            <a class="rt-scroll-tab-header__item" href="#four">four</a>
+            <a class="rt-scroll-tab-header__item" href="#one">один</a>
+            <a class="rt-scroll-tab-header__item" href="#two">два</a>
+            <a class="rt-scroll-tab-header__item" href="#three">три</a>
+            <a class="rt-scroll-tab-header__item" href="#four">четыре</a>
           </div>
         </rt-scroll-tabs>
       </div>
@@ -69,10 +69,10 @@
           :top-padding="40"
         >
           <div class="rt-scroll-tab-nav">
-            <a class="rt-scroll-tab-header__item" href="#one">one</a>
-            <a class="rt-scroll-tab-header__item" href="#two">two</a>
-            <a class="rt-scroll-tab-header__item" href="#three">three</a>
-            <a class="rt-scroll-tab-header__item" href="#four">four</a>
+            <a class="rt-scroll-tab-header__item" href="#one">1</a>
+            <a class="rt-scroll-tab-header__item" href="#two">2</a>
+            <a class="rt-scroll-tab-header__item" href="#three">3</a>
+            <a class="rt-scroll-tab-header__item" href="#four">4</a>
           </div>
         </rt-scroll-tabs>
         </div>
