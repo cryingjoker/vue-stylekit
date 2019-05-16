@@ -75,6 +75,11 @@
  export { default as UseCase } from './Card/UseCase.vue';
  export { default as BenefitBlock } from './BenefitBlock/BenefitBlock.vue';
  export { default as BenefitItem } from './BenefitBlock/BenefitItem.vue';
+ export { default as PortraitTile } from './BusinessDrive/PortraitTile.vue';
+ export { default as Timeline } from './BusinessDrive/Timeline.vue';
+ export { default as Speakers } from './BusinessDrive/Speakers.vue';
+ export { default as TimelineItem } from './BusinessDrive/TimelineItem.vue';
+ export { default as PortraitTileItem } from './BusinessDrive/PortraitTileItem.vue';
  export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx'
 
  export { default as Ussd } from './Ussd/Ussd.tsx';
