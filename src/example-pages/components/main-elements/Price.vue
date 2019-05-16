@@ -40,9 +40,14 @@
             </div>
           </div>
           <div class="row rt-space-top">
-            <div class="rt-col-16 rt-col-md-3">
+            <div class="rt-col-8 rt-col-md-3">
               <pre-code
                 text="<rt-price :value='1231223169' :only-price='true' currency='€' />"
+              />
+            </div>
+            <div class="rt-col-8 rt-col-md-3">
+              <pre-code
+                text="<rt-price :value='1231223169' :old-value='666' :only-price='true' currency='€' />"
               />
             </div>
           </div>
@@ -68,11 +73,11 @@
                 text="<rt-price :value='500' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='' class='color-main09'/>"
               />
             </div>
-          </div>
+          </div>k
         </div>
       </div>
     </div>
-    <div class="rt-container rt-space-top25">
+    <div class="rt-space-top25">
       <documentation-builder :json="documentation" type="components" />
     </div>
   </div>

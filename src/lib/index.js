@@ -100,7 +100,7 @@ const VueRtStyle = {
       Vue.component(CheckboxContainer.name, CheckboxContainer);
       Vue.component(Input.name, Input);
       Vue.component(InputWithoutJs.name, InputWithoutJs);
-      Vue.component(Price.name, Price);
+      Vue.component(Price.name, Price.component);
       Vue.component(RadioButton.name, RadioButton);
       Vue.component(RadioButtonContainer.name, RadioButtonContainer);
       Vue.component(Ripple.name, Ripple);
@@ -113,7 +113,7 @@ const VueRtStyle = {
       Vue.component(SwitchContainer.name, SwitchContainer);
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
-      Vue.component(ScrollTabs.name, ScrollTabs);
+      Vue.component(ScrollTabs.name, ScrollTabs.component);
       Vue.component(Tabs.name, Tabs);
       Vue.component(TabsNavigationItem.name, TabsNavigationItem);
       Vue.component(TabsContentItem.name, TabsContentItem);

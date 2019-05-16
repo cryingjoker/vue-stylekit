@@ -1,401 +1,387 @@
 [
   {
-    "code_variable_name":"b2c-purple",
-    "label": "",
-    "value":"#7700FF"
+    "code_variable_name": "b2c-purple",
+    "label": "Palette / Purple",
+    "value": "#7700FF"
   },
   {
-    "code_variable_name":"b2c-purple-low",
-    "label": "",
-    "value":"#6605C6"
+    "code_variable_name": "b2c-purple-low",
+    "label": "L&H/Purple_low",
+    "value": "#6605C6"
   },
   {
-    "code_variable_name":"b2c-purple-high",
-    "label": "",
-    "value":"#8348FC"
+    "code_variable_name": "b2c-purple-high",
+    "label": "L&H/Purple_high",
+    "value": "#8348FC"
   },
-
   {
-    "code_variable_name":"b2c-red",
-    "label": "",
-    "value":"#BC104B"
+    "code_variable_name": "b2c-red",
+    "label": "Palette / Red",
+    "value": "#BC104B"
   },
   {
-    "code_variable_name":"b2c-red-low",
-    "label": "",
-    "value":"#910046"
+    "code_variable_name": "b2c-red-low",
+    "label": "L&H/Red_low",
+    "value": "#910046"
   },
   {
-    "code_variable_name":"b2c-red-high",
-    "label": "",
-    "value":"#E22E65"
+    "code_variable_name": "b2c-red-high",
+    "label": "L&H/Red_ligh",
+    "value": "#E22E65"
   },
-
   {
-    "code_variable_name":"b2c-dark-blue",
-    "label": "",
-    "value":"#273A64"
+    "code_variable_name": "b2c-dark-blue",
+    "label": "Palette / Dark Blue",
+    "value": "#273A64"
   },
   {
-    "code_variable_name":"b2c-dark-blue-low",
-    "label": "",
-    "value":"#001C45"
+    "code_variable_name": "b2c-dark-blue-low",
+    "label": "L&H/Dark-blue_low",
+    "value": "#001C45"
   },
   {
-    "code_variable_name":"b2c-dark-blue-high",
-    "label": "",
-    "value":"#275392"
+    "code_variable_name": "b2c-dark-blue-high",
+    "label": "L&H/Dark-blue_high",
+    "value": "#275392"
   },
-
   {
-    "code_variable_name":"b2c-light-blue",
+    "code_variable_name": "b2c-light-blue",
     "label": "",
-    "value":"#65BBDF"
+    "value": "#65BBDF"
   },
   {
-    "code_variable_name":"b2c-light-blue-low",
-    "label": "",
-    "value":"#4897DF"
+    "code_variable_name": "b2c-light-blue-low",
+    "label": "L&H/Blue_low",
+    "value": "#4897DF"
   },
   {
-    "code_variable_name":"b2c-light-blue-high",
-    "label": "",
-    "value":"#65DEED"
+    "code_variable_name": "b2c-light-blue-high",
+    "label": "L&H/Blue_high",
+    "value": "#65DEED"
   },
-
   {
-    "code_variable_name":"b2c-yellow",
-    "label": "",
-    "value":"#FFBE08"
+    "code_variable_name": "b2c-yellow",
+    "label": "Palette / Yellow",
+    "value": "#FFBE08"
   },
   {
-    "code_variable_name":"b2c-yellow-low",
+    "code_variable_name": "b2c-yellow-low",
     "label": "",
-    "value":"#FFA307"
+    "value": "#FFA307"
   },
   {
-    "code_variable_name":"b2c-yellow-high",
-    "label": "",
-    "value":"#FFD800"
+    "code_variable_name": "b2c-yellow-high",
+    "label": "L&H/Yellow_high",
+    "value": "#FFD800"
   },
-
   {
-    "code_variable_name":"b2c-orange",
-    "label": "",
-    "value":"#FF4F12"
+    "code_variable_name": "b2c-orange",
+    "label": "Palette / Orange",
+    "value": "#FF4F12"
   },
   {
-    "code_variable_name":"b2c-orange-low",
-    "label": "",
-    "value":"#D33706"
+    "code_variable_name": "b2c-orange-low",
+    "label": "L&H/Orange_low",
+    "value": "#D33706"
   },
   {
-    "code_variable_name":"b2c-orange-high",
-    "label": "",
-    "value":"#FF8218"
+    "code_variable_name": "b2c-orange-high",
+    "label": "L&H/Orange_high",
+    "value": "#FF8218"
   },
-
   {
-    "code_variable_name":"b2c-pink",
-    "label": "",
-    "value":"#FFBFC3"
+    "code_variable_name": "b2c-pink",
+    "label": "Palette / Pink",
+    "value": "#FFBFC3"
   },
   {
-    "code_variable_name":"b2c-pink-low",
-    "label": "",
-    "value":"#FFA0A7"
+    "code_variable_name": "b2c-pink-low",
+    "label": "L&H/Pink_low",
+    "value": "#FFA0A7"
   },
   {
-    "code_variable_name":"b2c-pink-high",
-    "label": "",
-    "value":"#FFD2DD"
+    "code_variable_name": "b2c-pink-high",
+    "label": "L&H/Pink_high",
+    "value": "#FFD2DD"
   },
-
   {
-    "code_variable_name":"b2c-green",
-    "label": "",
-    "value":"#57D9B7"
+    "code_variable_name": "b2c-green",
+    "label": "Palette / Green",
+    "value": "#57D9B7"
   },
   {
-    "code_variable_name":"b2c-green-low",
-    "label": "",
-    "value":"#3BBC9E"
+    "code_variable_name": "b2c-green-low",
+    "label": "L&H/Green_low",
+    "value": "#3BBC9E"
   },
   {
-    "code_variable_name":"b2c-green-high",
-    "label": "",
-    "value":"#81EBD6"
+    "code_variable_name": "b2c-green-high",
+    "label": "L&H/Green_high",
+    "value": "#81EBD6"
   },
-
   {
-    "code_variable_name":"main-color",
-    "label": "",
-    "value":"#101828"
+    "code_variable_name": "main-color",
+    "label": "Palette/Black 100",
+    "value": "#101828"
   },
   {
-    "code_variable_name":"main-color09",
+    "code_variable_name": "main-color09",
     "label": "",
-    "value":"rgba(16,24,40,0.9)"
+    "value": "rgba(16,24,40,0.9)"
   },
   {
-    "code_variable_name":"main-color08",
+    "code_variable_name": "main-color08",
     "label": "",
-    "value":"rgba(16,24,40,0.8)"
+    "value": "rgba(16,24,40,0.8)"
   },
   {
-    "code_variable_name":"main-color07",
+    "code_variable_name": "main-color07",
     "label": "",
-    "value":"rgba(16,24,40,0.7)"
+    "value": "rgba(16,24,40,0.7)"
   },
   {
-    "code_variable_name":"main-color06",
+    "code_variable_name": "main-color06",
     "label": "",
-    "value":"rgba(16,24,40,0.6)"
+    "value": "rgba(16,24,40,0.6)"
   },
   {
-    "code_variable_name":"main-color05",
+    "code_variable_name": "main-color05",
     "label": "",
-    "value":"rgba(16,24,40,0.5)"
+    "value": "rgba(16,24,40,0.5)"
   },
   {
-    "code_variable_name":"main-color04",
+    "code_variable_name": "main-color04",
     "label": "",
-    "value":"rgba(16,24,40,0.4)"
+    "value": "rgba(16,24,40,0.4)"
   },
   {
-    "code_variable_name":"main-color03",
+    "code_variable_name": "main-color03",
     "label": "",
-    "value":"rgba(16,24,40,0.3)"
+    "value": "rgba(16,24,40,0.3)"
   },
   {
-    "code_variable_name":"main-color02",
+    "code_variable_name": "main-color02",
     "label": "",
-    "value":"rgba(16,24,40,0.2)"
+    "value": "rgba(16,24,40,0.2)"
   },
   {
-    "code_variable_name":"main-color01",
+    "code_variable_name": "main-color01",
     "label": "",
-    "value":"rgba(16,24,40,0.1)"
+    "value": "rgba(16,24,40,0.1)"
   },
   {
-    "code_variable_name":"main-color003",
+    "code_variable_name": "main-color003",
     "label": "",
-    "value":"rgba(16,24,40,0.03)"
+    "value": "rgba(16,24,40,0.03)"
   },
-
   {
-    "code_variable_name":"main-color09-no-opacity",
-    "label": "",
-    "value":"#272F3D"
+    "code_variable_name": "main-color09-no-opacity",
+    "label": "no-opacity/Black 90",
+    "value": "#272F3D"
   },
   {
-    "code_variable_name":"main-color07-no-opacity",
-    "label": "",
-    "value":"#575D68"
+    "code_variable_name": "main-color07-no-opacity",
+    "label": "no-opacity/Black 70",
+    "value": "#575D68"
   },
   {
-    "code_variable_name":"main-color05-no-opacity",
-    "label": "",
-    "value":"#868B95"
+    "code_variable_name": "main-color05-no-opacity",
+    "label": "no-opacity/Black 50",
+    "value": "#868B95"
   },
   {
-    "code_variable_name":"main-color03-no-opacity",
-    "label": "",
-    "value":"#B8B9C0"
+    "code_variable_name": "main-color03-no-opacity",
+    "label": "no-opacity/Black 30",
+    "value": "#B8B9C0"
   },
   {
-    "code_variable_name":"main-color01-no-opacity",
-    "label": "",
-    "value":"#B8B9C0"
+    "code_variable_name": "main-color01-no-opacity",
+    "label": "no-opacity/Black 30",
+    "value": "#B8B9C0"
   },
   {
-    "code_variable_name":"main-color003-no-opacity",
-    "label": "",
-    "value":"#E7E7E9"
+    "code_variable_name": "main-color003-no-opacity",
+    "label": "no-opacity/Black 10",
+    "value": "#E7E7E9"
   },
-
   {
-    "code_variable_name":"b2c-cool-grey",
-    "label": "",
-    "value":"#E3E8EC"
+    "code_variable_name": "b2c-cool-grey",
+    "label": "Palette/Cool Grey",
+    "value": "#E3E8EC"
   },
   {
-    "code_variable_name":"b2c-cool-grey05",
+    "code_variable_name": "b2c-cool-grey05",
     "label": "",
-    "value":"rgba(227,232,236,0.5)"
+    "value": "rgba(227,232,236,0.5)"
   },
   {
-    "code_variable_name":"b2c-cool-grey03",
+    "code_variable_name": "b2c-cool-grey03",
     "label": "",
-    "value":"rgba(227,232,236,0.3)"
+    "value": "rgba(227,232,236,0.3)"
   },
   {
-    "code_variable_name":"b2b-cool-grey05-no-opacity",
+    "code_variable_name": "b2b-cool-grey05-no-opacity",
     "label": "",
-    "value":"#F1F3F5"
+    "value": "#F1F3F5"
   },
-
   {
-    "code_variable_name":"b2c-purple-high05",
+    "code_variable_name": "b2c-purple-high05",
     "label": "",
-    "value":"rgba(131,72,252,0.5)"
+    "value": "rgba(131,72,252,0.5)"
   },
   {
-    "code_variable_name":"b2c-purple-high02",
+    "code_variable_name": "b2c-purple-high02",
     "label": "",
-    "value":"rgba(131,72,252,0.2)"
+    "value": "rgba(131,72,252,0.2)"
   },
   {
-    "code_variable_name":"b2c-orange-high05",
+    "code_variable_name": "b2c-orange-high05",
     "label": "",
-    "value":"rgba(255,130,24,0.5)"
+    "value": "rgba(255,130,24,0.5)"
   },
   {
-    "code_variable_name":"b2c-orange-high02",
+    "code_variable_name": "b2c-orange-high02",
     "label": "",
-    "value":"rgba(255,130,24,0.2)"
+    "value": "rgba(255,130,24,0.2)"
   },
-
   {
-    "code_variable_name":"b2b-state",
-    "label": "",
-    "value":"#7B939B"
+    "code_variable_name": "b2b-state",
+    "label": "B2B/Slate",
+    "value": "#7B939B"
   },
   {
-    "code_variable_name":"b2b-dark-state",
-    "label": "",
-    "value":"#313A49"
+    "code_variable_name": "b2b-dark-state",
+    "label": "B2B / Dark Slate",
+    "value": "#313A49"
   },
   {
-    "code_variable_name":"b2b-burgundy",
-    "label": "",
-    "value":"#431625"
+    "code_variable_name": "b2b-burgundy",
+    "label": "B2B / Burgundy",
+    "value": "#431625"
   },
-
   {
-    "code_variable_name":"b2c-white",
+    "code_variable_name": "b2c-white",
     "label": "",
-    "value":"#ffffff"
+    "value": "#ffffff"
   },
   {
-    "code_variable_name":"b2c-white09",
+    "code_variable_name": "b2c-white09",
     "label": "",
-    "value":"rgba(255,255,255, 0.9)"
+    "value": "rgba(255,255,255, 0.9)"
   },
   {
-    "code_variable_name":"b2c-white08",
+    "code_variable_name": "b2c-white08",
     "label": "",
-    "value":"rgba(255,255,255, 0.8)"
+    "value": "rgba(255,255,255, 0.8)"
   },
   {
-    "code_variable_name":"b2c-white07",
+    "code_variable_name": "b2c-white07",
     "label": "",
-    "value":"rgba(255,255,255, 0.7)"
+    "value": "rgba(255,255,255, 0.7)"
   },
   {
-    "code_variable_name":"b2c-white06",
+    "code_variable_name": "b2c-white06",
     "label": "",
-    "value":"rgba(255,255,255, 0.6)"
+    "value": "rgba(255,255,255, 0.6)"
   },
   {
-    "code_variable_name":"b2c-white05",
+    "code_variable_name": "b2c-white05",
     "label": "",
-    "value":"rgba(255,255,255, 0.5)"
+    "value": "rgba(255,255,255, 0.5)"
   },
   {
-    "code_variable_name":"b2c-white04",
+    "code_variable_name": "b2c-white04",
     "label": "",
-    "value":"rgba(255,255,255, 0.4)"
+    "value": "rgba(255,255,255, 0.4)"
   },
   {
-    "code_variable_name":"b2c-white03",
+    "code_variable_name": "b2c-white03",
     "label": "",
-    "value":"rgba(255,255,255, 0.3)"
+    "value": "rgba(255,255,255, 0.3)"
   },
   {
-    "code_variable_name":"b2c-white02",
+    "code_variable_name": "b2c-white02",
     "label": "",
-    "value":"rgba(255,255,255, 0.2)"
+    "value": "rgba(255,255,255, 0.2)"
   },
   {
-    "code_variable_name":"b2c-white01",
+    "code_variable_name": "b2c-white01",
     "label": "",
-    "value":"rgba(255,255,255, 0.1)"
+    "value": "rgba(255,255,255, 0.1)"
   },
-
   {
-    "code_variable_name":"dark-card-background",
+    "code_variable_name": "dark-card-background",
     "label": "",
-    "value":"rgba(0,0,0,0.8)"
+    "value": "rgba(0,0,0,0.8)"
   },
   {
-    "code_variable_name":"disable-button-color",
+    "code_variable_name": "disable-button-color",
     "label": "",
-    "value":"#e6e6e6"
+    "value": "#e6e6e6"
   },
   {
-    "code_variable_name":"disable-button-color-dark-theme",
+    "code_variable_name": "disable-button-color-dark-theme",
     "label": "",
-    "value":"rgba(255,255,255,0.1)"
+    "value": "rgba(255,255,255,0.1)"
   },
   {
-    "code_variable_name":"card-list-border",
+    "code_variable_name": "card-list-border",
     "label": "",
-    "value":"#E5E5E5"
+    "value": "#E5E5E5"
   },
   {
-    "code_variable_name":"default-wive-color",
+    "code_variable_name": "default-wive-color",
     "label": "",
-    "value":"#808080"
+    "value": "#808080"
   },
   {
-    "code_variable_name":"error-color",
+    "code_variable_name": "error-color",
     "label": "",
-    "value":"#FF0C0C"
+    "value": "#FF0C0C"
   },
   {
-    "code_variable_name":"error-color-text",
+    "code_variable_name": "error-color-text",
     "label": "",
-    "value":"rgba(255,12,12,0.58)"
+    "value": "rgba(255,12,12,0.58)"
   },
   {
-    "code_variable_name":"box-shadow-background",
+    "code_variable_name": "box-shadow-background",
     "label": "",
-    "value":"rgba(16,24,40,0.1)"
+    "value": "rgba(16,24,40,0.1)"
   },
   {
-    "code_variable_name":"dark-theme-dropdown-background",
+    "code_variable_name": "dark-theme-dropdown-background",
     "label": "",
-    "value":"#202432"
+    "value": "#202432"
   },
   {
-    "code_variable_name":"light-grey",
+    "code_variable_name": "light-grey",
     "label": "",
-    "value":"#fafafa"
+    "value": "#fafafa"
   },
   {
-    "code_variable_name":"rule-color",
-    "label": "",
-    "value":"#272F3D"
+    "code_variable_name": "rule-color",
+    "label": "no-opacity/Black 90",
+    "value": "#272F3D"
   },
   {
-    "code_variable_name":"card-shadow",
+    "code_variable_name": "card-shadow",
     "label": "",
-    "value":"0 0 5px rgba(16,24,40,0.15)"
+    "value": "0 0 5px rgba(16,24,40,0.15)"
   },
   {
-    "code_variable_name":"card-shadow--hovered",
+    "code_variable_name": "card-shadow--hovered",
     "label": "",
-    "value":"0 5px 5px rgba(16,24,40,0.15)"
+    "value": "0 5px 5px rgba(16,24,40,0.15)"
   },
   {
-    "code_variable_name":"switcher-color",
+    "code_variable_name": "switcher-color",
     "label": "",
-    "value":"#404653"
+    "value": "#404653"
   },
   {
-    "code_variable_name":"game-promo-color",
-    "label": "",
-    "value":"#001424"
+    "code_variable_name": "game-promo-color",
+    "label": "Palette/Igrovoy",
+    "value": "#001424"
   }
 ]

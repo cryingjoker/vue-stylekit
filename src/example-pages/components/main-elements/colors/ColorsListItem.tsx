@@ -31,6 +31,10 @@ class ColorsListItem extends Vue {
            <p>{this.color.code_variable_name}</p>
          </rt-table-item>;
            break
+         case 'label': return <rt-table-item>
+           <p>{this.color.label}</p>
+         </rt-table-item>;
+           break
          default:
            return <rt-table-item></rt-table-item>
        }

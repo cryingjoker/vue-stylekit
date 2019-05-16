@@ -5,7 +5,7 @@
  export { default as CheckboxContainer } from './Checkbox/CheckboxContainer.vue';
  export { default as Input } from './Input/Input.vue';
  export { default as InputWithoutJs } from './Input/InputWithoutJs.vue';
- export { default as Price } from './Price/Price.vue';
+ export { default as Price } from './Price/Price.tsx';
  export { default as RadioButton } from './RadioButton/RadioButton.vue';
  export { default as RadioButtonContainer } from './RadioButton/RadioButtonContainer.vue';
  export { default as Ripple } from './Ripple/Ripple.vue';
@@ -18,7 +18,7 @@
  export { default as SwitchContainer } from './Switch/SwitchContainer.vue';
  export { default as Textarea } from './Textarea/Textarea.vue';
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
- export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.vue';
+ export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.tsx';
  export { default as Tabs } from './Tabs/Tabs.vue';
  export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.vue';
  export { default as TabsContentItem } from './Tabs/TabsContentItem.vue';
