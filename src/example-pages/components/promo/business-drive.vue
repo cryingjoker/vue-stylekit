@@ -4,20 +4,23 @@
       <div class="rt-container">
         <div class="rt-col">
           <rt-logo height="40px" width="24px" top-fill-color="b2b-state" />
-          <div class="business-drive__tabs-wrapper">
-            <rt-scroll-tabs class="rt-scroll-tab-header rt-font-bold"
-                            active-tabs-classname="rt-scroll-tab-header__item--active"
-                            tabs-classname="rt-scroll-tab-header__item">
-              <div class="rt-scroll-tab-nav">
-                <a class="rt-scroll-tab-header__item" href="#one">Спикеры</a>
-                <a class="rt-scroll-tab-header__item" href="#two">Программа</a>
-                <a class="rt-scroll-tab-header__item" href="#three">Как это было</a>
-                <a class="rt-scroll-tab-header__item" href="#four">Как добраться</a>
-              </div>
-            </rt-scroll-tabs>
-          </div>
-          <div class="button-wrapper">
-            <rt-button class="rt-button-small rt-button-orange">Регистрация</rt-button>
+          <div class="mobile-burger"/>
+          <div class="business-drive__header-menu">
+            <div class="business-drive__tabs-wrapper">
+              <rt-scroll-tabs class="rt-scroll-tab-header rt-font-bold"
+                              active-tabs-classname="rt-scroll-tab-header__item--active"
+                              tabs-classname="rt-scroll-tab-header__item">
+                <div class="rt-scroll-tab-nav">
+                  <a class="rt-scroll-tab-header__item" href="#one">Спикеры</a>
+                  <a class="rt-scroll-tab-header__item" href="#two">Программа</a>
+                  <a class="rt-scroll-tab-header__item" href="#three">Как это было</a>
+                  <a class="rt-scroll-tab-header__item" href="#four">Как добраться</a>
+                </div>
+              </rt-scroll-tabs>
+            </div>
+            <div class="button-wrapper">
+              <rt-button class="rt-button-small rt-button-orange">Регистрация</rt-button>
+            </div>
           </div>
         </div>
       </div>
@@ -434,7 +437,21 @@
     name: "AppPromoBusinessDrive",
     components: componentsList,
     mounted() {
-
+      document.querySelector('.mobile-burger').addEventListener('click', function(){
+        if(!document.querySelector('.mobile-burger').classList.contains('mobile-burger--active')){
+          document.querySelector('.mobile-burger').classList.add('mobile-burger--active');
+          document.querySelector('.business-drive__header-menu').classList.add('business-drive__header-menu--active');
+        } else {
+          document.querySelector('.mobile-burger').classList.remove('mobile-burger--active');
+          document.querySelector('.business-drive__header-menu').classList.remove('business-drive__header-menu--active');
+        }
+      });
+      for(let i = 0; i < document.querySelectorAll('.rt-scroll-tab-header__item').length; i++){
+        document.querySelectorAll('.rt-scroll-tab-header__item')[i].addEventListener('click', function(){
+          document.querySelector('.mobile-burger').classList.remove('mobile-burger--active');
+          document.querySelector('.business-drive__header-menu').classList.remove('business-drive__header-menu--active');
+        })
+      }
     }
   }
 </script>
