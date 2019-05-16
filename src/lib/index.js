@@ -77,7 +77,12 @@ import {
   ValidationIcon,
   TariffCard,
   BenefitItem,
-  BenefitBlock
+  BenefitBlock,
+  PortraitTile,
+  PortraitTileItem,
+  Timeline,
+  TimelineItem,
+  Speakers
 } from "./components";
 
 
@@ -157,6 +162,11 @@ const VueRtStyle = {
       Vue.component(UseCase.name, UseCase);
       Vue.component(BenefitBlock.name, BenefitBlock);
       Vue.component(BenefitItem.name, BenefitItem);
+      Vue.component(PortraitTile.name, PortraitTile);
+      Vue.component(PortraitTileItem.name, PortraitTileItem);
+      Vue.component(Timeline.name, Timeline);
+      Vue.component(TimelineItem.name, TimelineItem);
+      Vue.component(Speakers.name, Speakers);
       // tsx components
 
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);

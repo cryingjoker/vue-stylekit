@@ -65,7 +65,12 @@ import {
   SlideContentDottedContent,
   SlideContentDottedHeader,
   BenefitBlock,
-  BenefitItem
+  BenefitItem,
+  PortraitTile,
+  PortraitTileItem,
+  Timeline,
+  TimelineItem,
+  Speakers
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -137,5 +142,10 @@ componentsList[RealPopup.name] = RealPopup;
 componentsList[UseCase.name] = UseCase;
 componentsList[BenefitBlock.name] = BenefitBlock;
 componentsList[BenefitItem.name] = BenefitItem;
+componentsList[PortraitTile.name] = PortraitTile;
+componentsList[PortraitTileItem.name] = PortraitTileItem;
+componentsList[Timeline.name] = Timeline;
+componentsList[TimelineItem.name] = TimelineItem;
+componentsList[Speakers.name] = Speakers;
 componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

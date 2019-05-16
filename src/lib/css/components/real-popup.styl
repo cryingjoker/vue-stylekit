@@ -17,9 +17,10 @@
       display none
 
 .{b2bAppName}-popup
-  position relative
+  position absolute
   width auto
-  height auto
+  //height auto
+  height 81vh
   max-height 80vh
   padding vertical-space * 2
   display inline-block
@@ -45,6 +46,8 @@
     top 50vh
   &--top-center
     top 0
+  &--bottom-center
+    top 20vh
   .row
     max-height calc(80vh - 60px)
     overflow scroll
