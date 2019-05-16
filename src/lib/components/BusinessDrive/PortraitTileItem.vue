@@ -38,17 +38,17 @@
         let space = fullName.indexOf(' ');
         let firstName = fullName.substring(0, space);
         let lastName = fullName.substr(space + 1);
-        return <h3 class="speaker-name rt-font-bold rt-space-bottom">
+        return <div class="speaker-name rt-font-bold rt-space-bottom rt-md-space-bottom-none">
           <div class="speaker-name__wrapper">
             <div class="speaker-name__name">{firstName}</div>
           </div>
           <div class="speaker-name__wrapper">
             <div class="speaker-name__surname">{lastName}</div>
           </div>
-        </h3>
+        </div>
       })();
 
-      return <div class="rt-col-6">
+      return <div class="rt-col-6 rt-col-td-3 rt-col-md-3">
         <div class="rt-portrait-tile-gallery__item" onClick={this.showSpeakerPopup}>
           <img class="rt-portrait-tile-gallery__image" src={this.photo}/>
           <div class="rt-portrait-tile-gallery__item-description">

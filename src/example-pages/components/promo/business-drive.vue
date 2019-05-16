@@ -5,7 +5,7 @@
         <div class="rt-col">
           <rt-logo height="40px" width="24px" top-fill-color="b2b-state" />
           <div class="business-drive__tabs-wrapper">
-            <rt-scroll-tabs class="rt-scroll-tab-header"
+            <rt-scroll-tabs class="rt-scroll-tab-header rt-font-bold"
                             active-tabs-classname="rt-scroll-tab-header__item--active"
                             tabs-classname="rt-scroll-tab-header__item">
               <div class="rt-scroll-tab-nav">
@@ -47,14 +47,14 @@
             <div class="animated-text__line animated-text__eighth-line">
               <div class="meeting-legend">Тюмень, БЦ Аметист
                 <div class="icon navigation-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     <path fill="#FF4F12" fill-rule="evenodd" d="M0 15h15v15h1.667L30 0 0 13.333z"/>
                   </svg>
                 </div>
               </div>
               <div class="meeting-legend">22 мая
                 <div class="icon calendar-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     <g fill="#FF4E00">
                       <path d="M30 30H0V3.158h5.893v4.64H4.64V25.39h20.722V7.798h-1.317v-4.64H30z"/>
                       <path d="M7.895 0h4.737v9.474H7.895zm9.473 0h4.737v9.474h-4.737zm-4.736 3.158h3.158v4.737h-3.158z"/>
@@ -82,7 +82,7 @@
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo1.png">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
-                  <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                  <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
                 <template slot="description">
                   <p class="rt-font-small-paragraph rt-space-bottom">Основатель Агентства «Умные метрики». С 2007 года занимался
@@ -100,7 +100,7 @@
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo2.png">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
-                  <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                  <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
                 <template slot="description">
                   <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
@@ -118,7 +118,7 @@
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo3.png">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
-                  <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                  <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
                 <template slot="description">
                   <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
@@ -136,7 +136,7 @@
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo4.png">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
-                  <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                  <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
                 <template slot="description">
                   <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
@@ -153,35 +153,35 @@
               </rt-portrait-tile-item>
             </rt-portrait-tile>
             <div class="row">
-              <div class="rt-col-2"/>
-              <div class="rt-col-8">
+              <div class="rt-col-2 rt-col-td-1 md-d-none"/>
+              <div class="rt-col-8 rt-col-td-4 rt-col-md-3">
                 <div class="business-drive__motto color-white03">
                   <h1 class="rt-font-bold rt-font-h1 business-drive__motto-text">Бизнесу не нужны слова, ему нужно работать, чтобы развиваться.
                     Предприниматели — люди дела, у них нет времени на пустые разговоры</h1>
                 </div>
               </div>
-              <div class="rt-col-2"/>
+              <div class="rt-col-2 rt-col-td-1 md-d-none"/>
             </div>
           </div>
           <div id="two">
             <div class="row">
-              <div class="rt-col-8 rt-space-bottom4">
+              <div class="rt-col-8 rt-col-td-6 rt-space-bottom4">
                 <h2 class="rt-font-h2 color-orange rt-space-bottom05 rt-font-bold">Программа</h2>
-                <h3 class="rt-font-h3 color-white03">Встречаемся 22 мая в Лотте Отеле, ул. Семеновская, д. 29. <br>Без
-                  «воды», без общих слов, все четко и по делу</h3>
+                <p class="address-text color-white03">Встречаемся 22 мая в Лотте Отеле, ул. Семеновская, д. 29. <br>Без
+                  «воды», без общих слов, все четко и по делу</p>
               </div>
             </div>
             <div class="row">
-            <div class="rt-col-1"/>
-            <div class="rt-col-10">
+            <div class="rt-col-1 td-d-none"/>
+            <div class="rt-col-10 rt-col-td-6 rt-col-md-3">
               <rt-timeline>
                 <rt-timeline-item>
                   <template slot="time-stamp">09:30</template>
-                  <template slot="theme">Сбор участников,<br> регистрация</template>
+                  <template slot="theme">Сбор участников,<br class="desktop-only"> регистрация</template>
                 </rt-timeline-item>
                 <rt-timeline-item top-margin="50">
                   <template slot="time-stamp">10:00</template>
-                  <template slot="theme">Открытие <br>конференции</template>
+                  <template slot="theme">Открытие <br class="desktop-only">конференции</template>
                 </rt-timeline-item>
                 <rt-timeline-item
                   :important="true"
@@ -321,7 +321,7 @@
                 </rt-timeline-item>
               </rt-timeline>
             </div>
-            <div class="rt-col-1"/>
+            <div class="rt-col-1 td-d-none"/>
           </div>
           </div>
         </div>
@@ -332,18 +332,22 @@
       <div class="rt-container">
         <div class="rt-col">
           <div class="row">
-            <div class="rt-col-2"/>
-            <div class="rt-col-8">
+            <div class="rt-col-2 rt-col-td-1 md-d-none"/>
+            <div class="rt-col-8 rt-col-td-4 rt-col-md-3">
               <div class="business-drive__motto color-white03">
                 <h1 class="rt-font-bold rt-font-h1 business-drive__motto-text">Им не нужна мотивация, им нужна
                   эффективность. Им не нужны обещания покорения мира, им нужны инструменты для этого</h1>
               </div>
             </div>
-            <div class="rt-col-2"/>
+            <div class="rt-col-2 rt-col-td-1 md-d-none"/>
           </div>
         </div>
       </div>
       <div id="three">
+        <div class="slider-block-title rt-font-center">
+          <p class="slider-block-title__item slider-block-title__first-line color-white">Как это было</p>
+          <p class="slider-block-title__item slider-block-title__second-line color-orange">#бизнесдрайвростелеком</p>
+        </div>
         <h1 class="rt-font-center color-orange rt-font-bold">Insert slider here</h1>
         <div class="business-drive__video-block">
           <video src="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4" class="video-wrapper" controls></video>
@@ -352,16 +356,16 @@
       <div class="rt-container">
         <div class="rt-col">
           <div class="row">
-            <div class="rt-col-2"/>
-            <div class="rt-col-8">
+            <div class="rt-col-2 rt-col-td-1 md-d-none"/>
+            <div class="rt-col-8 rt-col-td-4 rt-col-md-3">
               <div class="business-drive__motto color-white03">
-                <h1 class="rt-font-bold rt-font-h1 business-drive__motto-text">Мы видим реальную <span class="color-white">картину</span><br>
+                <h1 class="rt-font-bold rt-font-h1 business-drive__motto-text">Мы видим реальную <span class="color-white">картину</span><br class="desktop-only">
                   рынка и <span class="color-white">поддерживаем</span> средний и малый <span class="color-white">бизнес</span>.<br>
                   Мы <span class="color-white">даем</span> качественную проверенную <span class="color-white">информацию</span>.
                   Мы <span class="color-white">не берем</span> плату за участие и <span class="color-white">не навязываем</span> свои услуги</h1>
               </div>
             </div>
-            <div class="rt-col-2"/>
+            <div class="rt-col-2 rt-col-td-1 md-d-none"/>
             <div class="rt-col-12">
               <h1 class="rt-font-center color-orange rt-font-bold">Insert registration form here</h1>
             </div>
@@ -372,9 +376,9 @@
         <div class="rt-container">
           <div class="rt-col">
             <div class="row rt-space-bottom2">
-              <div class="rt-col-5">
+              <div class="rt-col-5 rt-col-td-3 rt-col-md-3">
                 <h2 class="rt-font-h2 rt-font-bold color-white">Как добраться</h2>
-                <h3 class="rt-font-h3 color-white03">Драматический театр им. Шукшина <br>г. Барнаул, ул. Молодежная, 15</h3>
+                <p class="address-text color-white03">Драматический театр им. Шукшина <br class="desktop-only">г. Барнаул, ул. Молодежная, 15</p>
               </div>
               <div class="rt-col-7"/>
             </div>

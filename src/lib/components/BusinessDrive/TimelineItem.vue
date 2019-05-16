@@ -91,7 +91,7 @@
             <span class="timestamp">{this.$slots['time-stamp']}</span>
           </div>
           {eventImage}
-          <h2 class="rt-timeline__item-theme">{this.$slots.theme}</h2>
+          <h2 class="rt-timeline__item-theme rt-font-bold">{this.$slots.theme}</h2>
           {speakerName}
           <div class="rt-timeline__item-description">{this.$slots.description}</div>
           <div class="rt-timeline__item-reputation">{this.$slots.reputation}</div>
@@ -101,7 +101,7 @@
           <h2 class="timestamp-wrapper rt-space-bottom">
             <span class="timestamp">{this.$slots['time-stamp']}</span>
           </h2>
-          <h3 class="rt-timeline__item-theme">{this.$slots.theme}</h3>
+          <h3 class="rt-timeline__item-theme rt-font-bold">{this.$slots.theme}</h3>
         </div>;
       }
     }
