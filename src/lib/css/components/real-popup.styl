@@ -9,9 +9,11 @@
   height 100vh
   z-index 999
   transition top .4s ease-in-out
+  opacity 0
   &--active
     //display block
     top 0
+    opacity 1
   &--mobile-only
     @media (min-width: desktop-lower-limit)
       display none
