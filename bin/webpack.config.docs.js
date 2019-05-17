@@ -64,18 +64,6 @@ const config = {
         ],
       },
       {
-        test: /\.tsx$/,
-        loader: 'babel-loader!ts-loader',
-        exclude: /node_modules/,
-
-      },
-      {
-        test: /\.ts$/,
-        loader: 'babel-loader!ts-loader',
-        exclude: /node_modules/,
-
-      },
-      {
         test: /\.js$/,
         loader: `babel-loader`,
         include: [path.join(local_dirname, `src`)],
