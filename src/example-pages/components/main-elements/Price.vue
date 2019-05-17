@@ -73,7 +73,7 @@
                 text="<rt-price :value='500' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='' class='color-main09'/>"
               />
             </div>
-          </div>k
+          </div>
         </div>
       </div>
     </div>
