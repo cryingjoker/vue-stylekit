@@ -8,8 +8,70 @@
     left 0
     right 0
     z-index 20
-    .button-wrapper
-      margin-top 5px
+    //.button-wrapper
+    //  margin-top 5px
+    &-menu
+      width calc(100% - 50px)
+      display: inline-block
+      vertical-align: middle
+      margin-bottom -5px
+      @media(max-width mobile-upper-limit)
+        position: absolute
+        top -100vh
+      transition top .4s
+      &--active
+        @media(max-width mobile-upper-limit)
+          display: block
+          position: absolute
+          top: 50px
+          width: 100vw
+          height: calc(100vh - 50px)
+          left: -10px
+          background-color b2c-white
+          box-sizing border-box
+          padding 20px
+        .rt-scroll-tab-header
+          display block
+          height auto!important
+          margin-left 0
+        .rt-scroll-tab-nav
+          flex-direction column
+          justify-content flex-start
+          height auto
+          align-items flex-start
+        .button-wrapper
+          float none!important
+  .mobile-burger
+    width 24px
+    height 3px
+    margin 18px 0
+    float: right
+    background-color: #313948
+    position relative
+    &:before,
+    &:after
+      position absolute
+      content: ''
+      width 100%
+      height 3px
+      left 0
+      background-color: #313948
+      transition-property top, bottom, transform
+      transition-duration .3s
+    &:before
+      top -8px
+    &:after
+      bottom -8px
+    &--active
+      background-color: transparent
+      &:before
+        transform rotate(45deg)
+        top 0
+      &:after
+        transform rotate(-45deg)
+        bottom 0
+    @media(min-width tablet-lower-limit)
+      display none
   &__footer
     padding 20px 0
   &__footer-link
@@ -17,14 +79,17 @@
   &__tabs-wrapper
     display inline-block
     width auto
-    vertical-align: bottom
+    //vertical-align: bottom
     .rt-scroll-tab-header
-      height 26px
+      height 34px
       &__item
         font-size 18px
-        line-height 26px
+        line-height 34px
         margin 0 20px
         position relative
+        @media(max-width tablet-upper-limit)
+          font-size 16px
+          line-height 22px
         &:after
           position absolute
           content: ''
@@ -47,6 +112,8 @@
     color b2c-white
     padding 0
     overflow-x hidden
+    @media(max-width tablet-upper-limit)
+      overflow-y auto
     &-close
       z-index 5
       path
@@ -64,6 +131,9 @@
       margin-bottom 40px
       margin-top -8px
       position relative
+      @media(max-width mobile-upper-limit)
+        font-size 27px
+        line-height 37px
       .speaker-name__name,
       .speaker-name__surname
         border-width 8px
@@ -72,6 +142,8 @@
     .popup-description,
     .popup-theme
       padding 0 30% 0 20px
+      @media(max-width mobile-upper-limit)
+        padding-right 20px
     .popup-description
       padding-bottom 20px
       opacity .5
@@ -84,19 +156,18 @@
   .map-block
     width 100%
     height 420px
-    //position relative
-    //&:after
-    //  position absolute
-    //  content: ''
-    //  top 0
-    //  left 0
-    //  right 0
-    //  bottom 0
-    //  width 100%
-    //  height 100%
-    //  background-color rgba(main-color, .3)
     iframe
       max-width 100%
+  .popup-content
+    @media(max-width tablet-upper-limit)
+      padding-bottom 50px
+  .rt-scroll-tab-header__item
+    @media(max-width mobile-upper-limit)
+      font-size 18px
+      line-height 24px
+      font-weight 400
+      margin 0
+      margin-bottom 30px
 
 .animated-text
   font-size 114px
@@ -106,6 +177,13 @@
   box-sizing border-box
   display flex
   flex-direction column
+  @media(max-width tablet-upper-limit)
+    font-size 75px
+    line-height 68px
+    height 700px
+  @media(max-width mobile-upper-limit)
+    font-size 34px
+    line-height 37px
   &__line
     opacity 0
     &-item
@@ -119,6 +197,10 @@
         height 20px
         background-color b2c-orange
         transform translateY(-50%)
+        @media(max-width tablet-upper-limit)
+          height 14px
+        @media(max-width mobile-upper-limit)
+          height 7px
   &__first-line
     transform translateY(100%)
     opacity 0
@@ -157,20 +239,38 @@
     line-height 40px
     margin-top 30px
     animation fadeIn2 .4s 1.7s linear forwards
+    @media(max-width tablet-upper-limit)
+      margin-top: 20px
     .meeting-legend
       padding-left 40px
       position relative
       display inline-block
       opacity .8
       animation bounce .5s 2.1s linear forwards
+      @media(max-width tablet-upper-limit)
+        font-size 21px
+        line-height 34px
+        padding-left 30px
+      @media(max-width mobile-upper-limit)
+        font-size 18px
+        line-height 26px
       &:nth-child(2)
         margin-left 30px
+        @media(max-width tablet-upper-limit)
+          margin-left: 20px
+        @media(max-width mobile-upper-limit)
+          margin-left: 0
       .icon
         position absolute
         left 0
         top 5px
         width 30px
         height 30px
+        @media(max-width tablet-upper-limit)
+          width 20px
+          height 20px
+        @media(max-width mobile-upper-limit)
+          top 0
   &__footnote
     font-size 32px
     line-height 40px
@@ -179,6 +279,16 @@
     position absolute
     min-width 240px
     transform translateX(100%)
+    @media(max-width tablet-upper-limit)
+      font-size 22px
+      line-height 28px
+      top 26px
+      right -20px
+    @media(max-width mobile-upper-limit)
+      font-size 12px
+      line-height 14px
+      top 10px
+      right -9px
 
 .first-gradient-section
   background linear-gradient(to bottom, #001c45, #002845 16%, #450031 50%, #001c45);
@@ -191,6 +301,12 @@
   &__item
     margin-top vertical-space
     position relative
+    @media(max-width tablet-upper-limit)
+      height calc((100vw - 60px) / 2)
+      overflow hidden
+      border-radius 8px
+    @media(max-width mobile-upper-limit)
+      height calc(100vw - 40px)
     &:after
       position absolute
       content: ''
@@ -209,28 +325,24 @@
       z-index 2
   &__image
     border-radius 8px
-    background-position: 50% 50%
-    background-size: cover
     width 100%
-    position relative
-    //&:after
-    //  position absolute
-    //  content: ''
-    //  top 0
-    //  left 0
-    //  bottom 0
-    //  right 0
-    //  background-color: #001C45
-    //  opacity .37
-    //  width 100%
-    //  height 100%
-    //box-sizing border-box
+    @media(max-width tablet-upper-limit)
+      position absolute
+      width: auto
+      height: 100%
+      left: 50%
+      transform: translateX(-50%)
   &__description
     display none
 
 .speaker-name
   display flex
   flex-direction column
+  font-size 27px
+  line-height 37px
+  @media(max-width tablet-upper-limit)
+    font-size 21px
+    line-height 29px
   &__name
     border-top 4px solid b2c-orange
     border-bottom 4px solid b2c-orange
@@ -241,10 +353,15 @@
 
 .color-white03
   color rgba(b2c-white, .3)
-  //opacity .3
+  @media(max-width tablet-upper-limit)
+    color rgba(b2c-white, .5)
 
 .business-drive__motto
   height 860px
+  @media(max-width tablet-upper-limit)
+    height 100vw
+  @media(max-width mobile-upper-limit)
+    height 200vw
   &-text
     position absolute
     top 50%
@@ -260,6 +377,12 @@
     width 8px
     background-color b2c-orange
     left calc((100% - 8px) / 2)
+    @media(max-width tablet-upper-limit)
+      width 6px
+      left calc((100% - 6px) / 2)
+    @media(max-width mobile-upper-limit)
+      left 0
+      width 4px
   &__item
     color b2c-white
     font-weight 500
@@ -267,16 +390,30 @@
     margin-left 50%
     padding-left 10px
     position relative
+    @media(max-width mobile-upper-limit)
+      width 100%
+      margin-left: 0
+      margin-top 0!important
+      &+&
+        margin-top 40px!important
     .rt-timeline__item-image-wrapper
       left 200px
+      @media(max-width tablet-upper-limit)
+        left 165px
     &:nth-child(2n - 1)
       text-align: right
       margin-left: 0
       padding-right 10px
       padding-left: 0
+      @media(max-width mobile-upper-limit)
+        text-align left
+        padding-right 0
+        padding-left 10px
       .rt-timeline__item-image-wrapper
         right 200px
         left auto
+        @media(max-width tablet-upper-limit)
+          right 165px
     .timestamp
       position relative
       padding-top 5px
@@ -284,6 +421,8 @@
       width 177px
       display: inline-block
       font-weight 500
+      @media(max-width tablet-upper-limit)
+        width 118px
       &:before,
       &:after
         position absolute
@@ -305,26 +444,45 @@
         font-size 56px
         padding-bottom 0
         width 232px
+        @media(max-width tablet-upper-limit)
+          width 176px
+          font-size 46px
+          line-height 1
+          padding-top 10px
+          padding-bottom 5px
         &:before,
         &:after
           background-color b2c-orange
           height 8px
-      .rt-timeline__item-theme,
-      .rt-timeline__item-speaker
-        text-align left
+          @media(max-width tablet-upper-limit)
+            height 6px
+    .rt-timeline__item-theme,
+    .rt-timeline__item-speaker
+      text-align left
     &-image
       width 100%
       height 100%
-      background-position 50% 50%
-      background-size: cover
+      @media(max-width tablet-upper-limit)
+        position absolute
+        top 0
+        left 50%
+        transform translateX(-50%)
       &-wrapper
         width 275px
         height 183px
         position absolute
         top -94px
         z-index 1
+        @media(max-width tablet-upper-limit)
+          width 198px
+          height 132px
+          top -71px
+        @media(max-width mobile-upper-limit)
+          display none
     .rt-timeline__item-speaker
       margin-top vertical-space
+      @media(max-width tablet-upper-limit)
+        margin-top vertical-space * .5
     &-description,
     &-reputation
       display none
@@ -335,38 +493,84 @@
 .video-wrapper
   width 100%
 
-//.ovh
-//  overflow: hidden
+.slider-block-title
+  &__item
+    font-size 36px
+    line-height 42px
+    @media(max-width tablet-upper-limit)
+      font-size 32px
+      line-height 40px
+  &__first-line
+    @media(max-width mobile-upper-limit)
+      font-size 27px
+      line-height 35px
+  &__second-line
+    @media(max-width mobile-upper-limit)
+      font-size 21px
+      line-height 35px
 
-@keyframes fadeIn1
-  //0%
-  //  transform translateY(150px)
-  //  opacity 0
-  50%
-    opacity .1
-  100%
-    transform translateY(0)
-    opacity 1
+.address-text
+  font-size 27px
+  line-height 35px
+  @media(max-width tablet-upper-limit)
+    font-size 20px
+    line-height 26px
+  @media(max-width mobile-upper-limit)
+    font-size 18px
+    line-height 24px
 
-@keyframes fadeIn2
-  0%
-    opacity 0
-  100%
-    opacity 1
+.desktop-only
+  @media(max-width tablet-upper-limit)
+    display none
 
-@keyframes lineThrough1
-  0%
-    width 0
-  100%
-    width 100%
+.thanx-popup
+  .rtb-popup
+    padding 80px 100px
+    @media(max-width tablet-upper-limit)
+      padding 40px
+    @media(max-width mobile-upper-limit)
+      padding 40px 20px
+    .popup-content
+      padding-bottom: 0
+  .rt-button
+    width 177px
+    @media(max-width mobile-upper-limit)
+      width 110px
+      height 34px
+  .rtb-popup-close
+    @media(max-width mobile-upper-limit)
+      top 10px
+      right 10px
 
-@keyframes bounce
-  0%
-    transform scale(1)
-    opacity .8
-  50%
-    opacity 1
-    transform scale(1.015)
-  100%
-    opacity 1
-    transform scale(1)
+      @keyframes fadeIn1
+        //0%
+        //  transform translateY(150px)
+        //  opacity 0
+        50%
+          opacity .1
+        100%
+          transform translateY(0)
+          opacity 1
+
+      @keyframes fadeIn2
+        0%
+          opacity 0
+        100%
+          opacity 1
+
+      @keyframes lineThrough1
+        0%
+          width 0
+        100%
+          width 100%
+
+      @keyframes bounce
+        0%
+          transform scale(1)
+          opacity .8
+        50%
+          opacity 1
+          transform scale(1.015)
+        100%
+          opacity 1
+          transform scale(1)
