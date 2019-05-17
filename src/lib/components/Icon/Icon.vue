@@ -56,7 +56,7 @@
     />
 
     <span
-      v-if="caption && iconCaptionColor"
+      v-if="caption"
       class="caption top"
       v-html="caption"
       :style="{background: iconCaptionColor}"
@@ -65,16 +65,11 @@
 </template>
 
 <script>
-import Vue from "vue";
 import axios from 'axios/index'
 import colors from "../../color.json";
 import defaultValues from '../../defaultIconsSize.json';
 
-import * as svgicon from 'vue-svgicon'
-
 const arrKey = 'RTK_ICONS'
-
-Vue.use(svgicon)
 
 export default {
   name: "RtIcon",
@@ -97,13 +92,8 @@ export default {
       type: Boolean,
       default: false
     },
-    caption: {
-      type: String
-    },
-    size: {
-      type: Number,
-      default: null
-    },
+    caption: {},
+    size: {},
     width: {
       type: String,
       default: '55px'
@@ -159,11 +149,16 @@ export default {
   },
   methods: {
     fillCaption() {
-      const defaultCaptionColor = '#48b2f1'
-      if (!this.captionColor && this.$el && this.$el.nodeName === 'DIV' && this.$el.querySelector('[pid="0"]')) {
-        this.iconCaptionColor = this.$el.querySelector('[pid="0"]').getAttribute('fill') || defaultCaptionColor
-      } else if (this.captionColor) {
-        this.iconCaptionColor = this.captionColor || defaultCaptionColor
+      if (this.captionColor) {
+        this.iconCaptionColor = this.captionColor
+      } else if (!this.candy) {
+        var el = this.$el
+        var firstPath = el.firstChild.querySelector('[pid="0"]')
+        if (firstPath && firstPath.getAttribute('fill')) {
+          this.iconCaptionColor = this.$el.querySelector('[pid="0"]').getAttribute('fill')
+        } else {
+          this.iconCaptionColor = defaultValues.default.captionColor
+        }
       }
     },
     isUniqueIcon() {
@@ -171,10 +166,12 @@ export default {
     },
     getPath() {
       var name = this.iconName
+      var base_path = window.RTK_STYLE && window.RTK_STYLE.base_path ? window.RTK_STYLE.base_path : '';
+      var icons_path = window.RTK_STYLE && window.RTK_STYLE.icons_path ? window.RTK_STYLE.icons_path : '/static/icons/';
       if (name) {
         window[arrKey][name] = {}
         return axios.request({
-          url: `/static/icons/${name}.js`,
+          url: `${base_path}${icons_path}${name}.js`,
         }).then(r => {
           var rIcon = eval(r.data)
           if (rIcon && rIcon[0][name]) {

@@ -1,6 +1,7 @@
 {
   "newAppName": "rt",
   "b2bAppName": "rtb",
+  "globalSettingsKey": "RTK_STYLE",
   "horizontal-space": "20px",
   "vertical-space": "20px",
   "iphone8": "415px",
