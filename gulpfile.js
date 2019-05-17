@@ -30,7 +30,7 @@ gulp.task(
     "git push",
     "git checkout master"
   ])
-);s
+);
 // todo need to update this tasks for gulp 4
 // gulp.task("start", shell.task(["npm start"]));
 //
