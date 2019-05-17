@@ -124,6 +124,16 @@
     },
     {
       "name": "rt-banner",
+      "property": ":fixed-image",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Фиксация изображения слайда `background-attachment`",
+      "value": "false",
+      "version": "0.1.20"
+    },
+    {
+      "name": "rt-banner",
       "property": "banner-logo",
       "type": [
         "String"

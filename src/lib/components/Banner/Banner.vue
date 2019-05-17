@@ -115,7 +115,10 @@
         type: Boolean,
         default: false
       },
-
+      fixedImage:{
+        type: Boolean,
+        default: false
+      },
       transparentBackgroundImage: {
         type: Boolean,
         default: false
@@ -170,6 +173,9 @@
       },
       bannerClass() {
         let className = "rt-banner rt-banner-id__" + this.RtBanners.id || this._uid;
+        if(this.fixedImage){
+          className+=" rt-banner--fixed-image";
+        }
         const activeIndex = this.RtBanners.activeIndex;
         if (this.RtBanners.items[activeIndex]) {
           if(this.isBackgroundBanner){
