@@ -63,14 +63,14 @@
           <div class="row rt-space-top">
             <div class="rt-col-4 rt-col-md-3">
               <pre-code
-                text="<rt-price oldPriceColor='red' :old-value='2500' :value='400' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='в месяц' class='color-main09'/>"
+                text="<rt-price old-price-color='red' :old-value='2500' :value='400' :is-option='false' currency='₽' :b2bPrice='true' time-interval='в месяц' class='color-main09'/>"
               />
             </div>
           </div>
           <div class="row rt-space-top">
             <div class="rt-col-4 rt-col-md-3">
               <pre-code
-                text="<rt-price :value='500' :is-option='false' currency='₽' :b2bPrice='true' timeInterval='' class='color-main09'/>"
+                text="<rt-price :value='500' currency='₽' :b2b-price='true' time-interval='' class='color-main09' :is-option='true'/>"
               />
             </div>
           </div>
