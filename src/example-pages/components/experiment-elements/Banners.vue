@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="rt-container">
-      <div class="grid-center" />
+      <div class="grid-center"/>
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title">
           <div class="row"><h1 class="rt-font-hero rt-col">Banners</h1></div>
@@ -200,7 +200,29 @@
         </rt-banner-item>
       </rt-banner>
     "/>
-    <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true" :has-custom-content="true">
+    <pre-code
+      text="<rt-banner :switch-off-timer='true'
+                       :fixed-image='true'
+                       :is-fullscreen-image='true'
+                       content-height='600px'
+                       :without-empty-column='true'
+                       :without-second-empty-column='true'
+                       justify='left'
+                       content-mobile-height='500px'>
+      <rt-banner-item background-image='/static/images/windows.jpg'
+                      :is-white-color='true'>
+          <p class='tagline color-orange rt-space-bottom05'>сервис или продукт</p>
+          <rt-color-line-text :is-white-color='true' color-icon='orange' fill-color='dark-blue'>
+            <template slot='label'>Виртуальная <br> телефония</template>
+            <template slot='content'>Быстрое подключение без трат на оборудование,<br>
+      возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</template>
+    </rt-color-line-text>
+    <rt-button class='rt-button-orange'>Подробнее</rt-button>
+    </rt-banner-item>
+    </rt-banner>
+    "/>
+    <rt-banner :sleep-time="30000" :is-fullscreen-image="true" content-height="470px" :is-background-banner="true"
+               :has-custom-content="true">
       <rt-banner-item is-game-banner-item background-video="/static/video/Trailer_Warface_Annoucement_20180628_4000.mp4"
                       :is-white-color="true" background-color="dark-state"
       />
@@ -242,7 +264,7 @@
     <!--/>-->
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder :json="documentation" type="components" />
+      <documentation-builder :json="documentation" type="components"/>
     </div>
   </div>
 </template>
