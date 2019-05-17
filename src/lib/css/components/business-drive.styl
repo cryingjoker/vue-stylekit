@@ -19,6 +19,7 @@
         position: absolute
         top -100vh
         transition top .4s
+
       &--active
         @media(max-width mobile-upper-limit)
           display: block
@@ -456,9 +457,9 @@
           height 8px
           @media(max-width tablet-upper-limit)
             height 6px
-      .rt-timeline__item-theme,
-      .rt-timeline__item-speaker
-        text-align left
+    .rt-timeline__item-theme,
+    .rt-timeline__item-speaker
+      text-align left
     &-image
       width 100%
       height 100%
@@ -542,35 +543,35 @@
       top 10px
       right 10px
 
-@keyframes fadeIn1
-  //0%
-  //  transform translateY(150px)
-  //  opacity 0
-  50%
-    opacity .1
-  100%
-    transform translateY(0)
-    opacity 1
+      @keyframes fadeIn1
+        //0%
+        //  transform translateY(150px)
+        //  opacity 0
+        50%
+          opacity .1
+        100%
+          transform translateY(0)
+          opacity 1
 
-@keyframes fadeIn2
-  0%
-    opacity 0
-  100%
-    opacity 1
+      @keyframes fadeIn2
+        0%
+          opacity 0
+        100%
+          opacity 1
 
-@keyframes lineThrough1
-  0%
-    width 0
-  100%
-    width 100%
+      @keyframes lineThrough1
+        0%
+          width 0
+        100%
+          width 100%
 
-@keyframes bounce
-  0%
-    transform scale(1)
-    opacity .8
-  50%
-    opacity 1
-    transform scale(1.015)
-  100%
-    opacity 1
-    transform scale(1)
+      @keyframes bounce
+        0%
+          transform scale(1)
+          opacity .8
+        50%
+          opacity 1
+          transform scale(1.015)
+        100%
+          opacity 1
+          transform scale(1)

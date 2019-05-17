@@ -175,157 +175,157 @@
               </div>
             </div>
             <div class="row">
-            <div class="rt-col-1 td-d-none"/>
-            <div class="rt-col-10 rt-col-td-6 rt-col-md-3">
-              <rt-timeline>
-                <rt-timeline-item>
-                  <template slot="time-stamp">09:30</template>
-                  <template slot="theme">Сбор участников,<br class="desktop-only"> регистрация</template>
-                </rt-timeline-item>
-                <rt-timeline-item top-margin="50">
-                  <template slot="time-stamp">10:00</template>
-                  <template slot="theme">Открытие <br class="desktop-only">конференции</template>
-                </rt-timeline-item>
-                <rt-timeline-item
-                  :important="true"
-                  image="/static/images/B2B/business__drive/photo1.png"
-                  top-margin="10"
-                  :speaker-event="true">
-                  <template slot="time-stamp">10:15</template>
-                  <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
-                  <template slot="speaker-name">Владимир Маринович</template>
-                  <template slot="reputation">
-                    <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
-                  </template>
-                  <template slot="description">
-                    <p class="rt-font-small-paragraph rt-space-bottom">Основатель Агентства «Умные метрики». С 2007 года занимался
-                      построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
-                      «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
-                      Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
-                    <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
-                      сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
-                      востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph">Разработал свою методологию построения «Матрицы сервисных
-                      сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
-                      клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
-                  </template>
-                </rt-timeline-item>
-                <rt-timeline-item
-                  :important="true"
-                  image="/static/images/B2B/business__drive/photo3.png"
-                  top-margin="-50"
-                  :speaker-event="true">
-                  <template slot="time-stamp">10:45</template>
-                  <template slot="theme">Маркетинг для малого <br>бизнеса: пошаговое <br>планирование</template>
-                  <template slot="speaker-name">Антон Шаяхов</template>
-                  <template slot="reputation">
-                    <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
-                  </template>
-                  <template slot="description">
-                    <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
-                      сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
-                      востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
-                      сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
-                      клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
-                      построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
-                      «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
-                      Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
-                  </template>
-                </rt-timeline-item>
-                <rt-timeline-item top-margin="-20">
-                  <template slot="time-stamp">12:15</template>
-                  <template slot="theme">Кофе-брейк</template>
-                </rt-timeline-item>
-                <rt-timeline-item
-                  :important="true"
-                  image="/static/images/B2B/business__drive/photo1.png"
-                  top-margin="90"
-                  :speaker-event="true">
-                  <template slot="time-stamp">12:30</template>
-                  <template slot="theme">Эффективные продажи <br>по телефону</template>
-                  <template slot="speaker-name">Настасья Белочкина</template>
-                  <template slot="reputation">
-                    <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
-                  </template>
-                  <template slot="description">
-                    <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
-                      сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
-                      клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph rt-space-bottom">Основатель Агентства «Умные метрики». С 2007 года занимался
-                      построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
-                      «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
-                      Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
-                    <p class="rt-font-small-paragraph">Являясь директором по маркетингу, создавал уникальный клиентский
-                      сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
-                      востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
-                  </template>
-                </rt-timeline-item>
-                <rt-timeline-item :important="true" image="/static/images/B2B/business__drive/photo3.png" top-margin="-40">
-                  <template slot="time-stamp">13:30</template>
-                  <template slot="theme">Бизнес-ланч</template>
-                </rt-timeline-item>
-                <rt-timeline-item
-                  :important="true"
-                  image="/static/images/B2B/business__drive/photo2.png"
-                  top-margin="90"
-                  :speaker-event="true">
-                  <template slot="time-stamp">14:10</template>
-                  <template slot="theme">Создание лучшего <br>клиентского сервиса <br>и продуктов</template>
-                  <template slot="speaker-name">Михаил Качалкин</template>
-                  <template slot="reputation">
-                    <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
-                  </template>
-                  <template slot="description">
-                    <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
-                      сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
-                      клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
-                      сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
-                      востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
-                      построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
-                      «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
-                      Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
-                  </template>
-                </rt-timeline-item>
-                <rt-timeline-item
-                  :important="true"
-                  image="/static/images/B2B/business__drive/photo4.png"
-                  top-margin="-115"
-                  :speaker-event="true">
-                  <template slot="time-stamp">15:30</template>
-                  <template slot="theme">Как создать эффективную <br>команду бизнеса, <br>создающую прибыль</template>
-                  <template slot="speaker-name">Владимир Маринович</template>
-                  <template slot="reputation">
-                    <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
-                  </template>
-                  <template slot="description">
-                    <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
-                      сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
-                      клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
-                      сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
-                      востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
-                    <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
-                      построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
-                      «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
-                      Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
-                  </template>
-                </rt-timeline-item>
-                <rt-timeline-item :important="true" :has-image="false" top-margin="-30">
-                  <template slot="time-stamp">17:00</template>
-                  <template slot="theme">Подведение итогов, <br>розыгрыш призов </template>
-                </rt-timeline-item>
-                <rt-timeline-item top-margin="30">
-                  <template slot="time-stamp">17:30</template>
-                  <template slot="theme">Кофе-брейк, <br>неформальное <br>общение</template>
-                </rt-timeline-item>
-              </rt-timeline>
+              <div class="rt-col-1 td-d-none"/>
+              <div class="rt-col-10 rt-col-td-6 rt-col-md-3">
+                <rt-timeline>
+                  <rt-timeline-item>
+                    <template slot="time-stamp">09:30</template>
+                    <template slot="theme">Сбор участников,<br class="desktop-only"> регистрация</template>
+                  </rt-timeline-item>
+                  <rt-timeline-item top-margin="50">
+                    <template slot="time-stamp">10:00</template>
+                    <template slot="theme">Открытие <br class="desktop-only">конференции</template>
+                  </rt-timeline-item>
+                  <rt-timeline-item
+                    :important="true"
+                    image="/static/images/B2B/business__drive/photo1.png"
+                    top-margin="10"
+                    :speaker-event="true">
+                    <template slot="time-stamp">10:15</template>
+                    <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
+                    <template slot="speaker-name">Владимир Маринович</template>
+                    <template slot="reputation">
+                      <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                    </template>
+                    <template slot="description">
+                      <p class="rt-font-small-paragraph rt-space-bottom">Основатель Агентства «Умные метрики». С 2007 года занимался
+                        построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                        «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                        Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
+                        сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                        востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph">Разработал свою методологию построения «Матрицы сервисных
+                        сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                        клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                    </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item
+                    :important="true"
+                    image="/static/images/B2B/business__drive/photo3.png"
+                    top-margin="-50"
+                    :speaker-event="true">
+                    <template slot="time-stamp">10:45</template>
+                    <template slot="theme">Маркетинг для малого <br>бизнеса: пошаговое <br>планирование</template>
+                    <template slot="speaker-name">Антон Шаяхов</template>
+                    <template slot="reputation">
+                      <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                    </template>
+                    <template slot="description">
+                      <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
+                        сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                        востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
+                        сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                        клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
+                        построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                        «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                        Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
+                    </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item top-margin="-20">
+                    <template slot="time-stamp">12:15</template>
+                    <template slot="theme">Кофе-брейк</template>
+                  </rt-timeline-item>
+                  <rt-timeline-item
+                    :important="true"
+                    image="/static/images/B2B/business__drive/photo1.png"
+                    top-margin="90"
+                    :speaker-event="true">
+                    <template slot="time-stamp">12:30</template>
+                    <template slot="theme">Эффективные продажи <br>по телефону</template>
+                    <template slot="speaker-name">Настасья Белочкина</template>
+                    <template slot="reputation">
+                      <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                    </template>
+                    <template slot="description">
+                      <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
+                        сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                        клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom">Основатель Агентства «Умные метрики». С 2007 года занимался
+                        построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                        «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                        Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
+                      <p class="rt-font-small-paragraph">Являясь директором по маркетингу, создавал уникальный клиентский
+                        сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                        востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                    </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item :important="true" image="/static/images/B2B/business__drive/photo3.png" top-margin="-40">
+                    <template slot="time-stamp">13:30</template>
+                    <template slot="theme">Бизнес-ланч</template>
+                  </rt-timeline-item>
+                  <rt-timeline-item
+                    :important="true"
+                    image="/static/images/B2B/business__drive/photo2.png"
+                    top-margin="90"
+                    :speaker-event="true">
+                    <template slot="time-stamp">14:10</template>
+                    <template slot="theme">Создание лучшего <br>клиентского сервиса <br>и продуктов</template>
+                    <template slot="speaker-name">Михаил Качалкин</template>
+                    <template slot="reputation">
+                      <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                    </template>
+                    <template slot="description">
+                      <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
+                        сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                        клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
+                        сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                        востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
+                        построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                        «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                        Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
+                    </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item
+                    :important="true"
+                    image="/static/images/B2B/business__drive/photo4.png"
+                    top-margin="-115"
+                    :speaker-event="true">
+                    <template slot="time-stamp">15:30</template>
+                    <template slot="theme">Как создать эффективную <br>команду бизнеса, <br>создающую прибыль</template>
+                    <template slot="speaker-name">Владимир Маринович</template>
+                    <template slot="reputation">
+                      <p class="rt-font-paragraph">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                    </template>
+                    <template slot="description">
+                      <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
+                        сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                        клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
+                        сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                        востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                      <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
+                        построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                        «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                        Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
+                    </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item :important="true" :has-image="false" top-margin="-30">
+                    <template slot="time-stamp">17:00</template>
+                    <template slot="theme">Подведение итогов, <br>розыгрыш призов </template>
+                  </rt-timeline-item>
+                  <rt-timeline-item top-margin="30">
+                    <template slot="time-stamp">17:30</template>
+                    <template slot="theme">Кофе-брейк, <br>неформальное <br>общение</template>
+                  </rt-timeline-item>
+                </rt-timeline>
+              </div>
+              <div class="rt-col-1 td-d-none"/>
             </div>
-            <div class="rt-col-1 td-d-none"/>
-          </div>
           </div>
         </div>
       </div>
