@@ -118,6 +118,7 @@ class Price extends Vue {
       }
       return <div class="rt-price  rtb-price rt-price-without-space">
         {oldB2bPriceRender()}
+        {opinionRender()}
         <div
           class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
         <div class="rt-price__info">

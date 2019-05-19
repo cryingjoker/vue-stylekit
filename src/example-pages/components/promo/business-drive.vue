@@ -409,13 +409,15 @@
     </div>
     <rt-real-popup :position-bottom="true" class="speaker-popup">
       <template>
-        <div class="popup-content">
-          <div class="popup-image"/>
-          <div class="popup-title"/>
-          <h3 class="popup-theme"/>
-          <div class="popup-reputation p1"/>
-          <div class="popup-description p2"/>
-        </div>
+        <rt-scroll-bar ref="ScrollBar">
+          <div class="popup-content">
+            <div class="popup-image"/>
+            <div class="popup-title"/>
+            <h3 class="popup-theme"/>
+            <div class="popup-reputation p1"/>
+            <div class="popup-description p2"/>
+          </div>
+        </rt-scroll-bar>
       </template>
     </rt-real-popup>
     <rt-real-popup :position-center="true" class="thanx-popup">
@@ -430,26 +432,6 @@
       </template>
     </rt-real-popup>
   </div>
-  <!--<vue-scrollbar classes="my-scrollbar" ref="Scrollbar">-->
-    <!--<div class="instagram-wrap">-->
-      <!--<blockquote class="instagram-media" data-instgrm-captioned :data-instgrm-permalink="post" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">-->
-        <!--<div style="padding:16px;">-->
-          <!--<a :href="post" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">-->
-            <!--<div style=" display: flex; flex-direction: row; align-items: center;">-->
-              <!--<div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>-->
-            <!--</div>-->
-          <!--</a>-->
-          <!--<p style=" margin:8px 0 0 0; padding:0 4px;">-->
-            <!--<a :href="post" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Бизнес драйв - сказать, что было продуктивно - скажу😍 Актуальные темы на сегодняшний день, разбор вопросов, которые волнуют многих людей, ведущих бизнес ⠀ #бизнесдрайв #бизнесдрайвростелеком #vladivostok #студиявладивосток #lottehotel #moscow #vdk #vl #russia</a>-->
-          <!--</p>-->
-          <!--<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Публикация от <a href="https://www.instagram.com/_lera_art_/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> МАКИЯЖ | БРОВИ ||ВЛАДИВОСТОК</a> (@_lera_art_) <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-11-14T07:43:16+00:00">13 Ноя 2018 в 11:43 PST</time>-->
-          <!--</p>-->
-        <!--</div>-->
-      <!--</blockquote>-->
-    <!--</div>-->
-    <!--<a target="_blank" :href="post" class="post-link">-->
-    <!--</a>-->
-  <!--</vue-scrollbar>-->
 </template>
 <script>
   const componentsList = {};
