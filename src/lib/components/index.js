@@ -77,7 +77,8 @@
  export { default as BenefitItem } from './BenefitBlock/BenefitItem.vue';
  export { default as PortraitTile } from './BusinessDrive/PortraitTile.vue';
  export { default as Timeline } from './BusinessDrive/Timeline.vue';
- export { default as Speakers } from './BusinessDrive/Speakers.vue';
+ export { default as ScrollBar } from './ScrollBar/ScrollBar.vue';
+ export { default as VerticalScrollBar } from './ScrollBar/VerticalScrollBar.vue';
  export { default as TimelineItem } from './BusinessDrive/TimelineItem.vue';
  export { default as PortraitTileItem } from './BusinessDrive/PortraitTileItem.vue';
  export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx'
