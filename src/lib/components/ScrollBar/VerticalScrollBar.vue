@@ -50,7 +50,6 @@
     },
     methods: {
       startDrag (e) {
-        console.log('startDrag')
         e.preventDefault()
         e.stopPropagation()
         e = e.changedTouches ? e.changedTouches[0] : e

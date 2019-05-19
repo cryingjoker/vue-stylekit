@@ -91,8 +91,11 @@
           // Horizontal Scrolling
           if (shifted && canScrollX) this.normalizeHorizontal(nextX)
         })
+        var OSName="Unknown OS";
+        if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+        if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
         // prevent Default only if scrolled content is not at the top/bottom
-        if (!this.allowBodyScroll) {
+        if (!this.allowBodyScroll && OSName !== "MacOS") {
           e.preventDefault()
           e.stopPropagation()
         }

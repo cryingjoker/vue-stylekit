@@ -28,6 +28,7 @@
         document.querySelector('.popup-title').innerHTML = this.$el.querySelector('.speaker-name').innerHTML;
         document.querySelector('.popup-reputation').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__item-description .rt-font-paragraph').innerHTML;
         document.querySelector('.popup-description').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__description').innerHTML;
+        document.querySelector('.rtb-popup').scrollTo(0, 0);
         document.querySelector('.speaker-popup').classList.add('rtb-popup-wrapper--active');
         document.body.style.overflow = 'hidden';
       }
