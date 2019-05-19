@@ -70,7 +70,8 @@ import {
   PortraitTileItem,
   Timeline,
   TimelineItem,
-  Speakers
+  ScrollBar,
+  VerticalScrollBar
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -146,6 +147,7 @@ componentsList[PortraitTile.name] = PortraitTile;
 componentsList[PortraitTileItem.name] = PortraitTileItem;
 componentsList[Timeline.name] = Timeline;
 componentsList[TimelineItem.name] = TimelineItem;
-componentsList[Speakers.name] = Speakers;
+componentsList[ScrollBar.name] = ScrollBar;
+componentsList[VerticalScrollBar.name] = VerticalScrollBar;
 componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

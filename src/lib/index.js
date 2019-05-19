@@ -84,7 +84,8 @@ import {
   PortraitTileItem,
   Timeline,
   TimelineItem,
-  Speakers
+  ScrollBar,
+  VerticalScrollBar
 } from "./components";
 
 
@@ -169,7 +170,8 @@ const VueRtStyle = {
       Vue.component(PortraitTileItem.name, PortraitTileItem);
       Vue.component(Timeline.name, Timeline);
       Vue.component(TimelineItem.name, TimelineItem);
-      Vue.component(Speakers.name, Speakers);
+      Vue.component(ScrollBar.name, ScrollBar);
+      Vue.component(VerticalScrollBar.name, VerticalScrollBar);
       // tsx components
 
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);

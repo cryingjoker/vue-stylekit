@@ -409,13 +409,15 @@
     </div>
     <rt-real-popup :position-bottom="true" class="speaker-popup">
       <template>
-        <div class="popup-content">
-          <div class="popup-image"/>
-          <div class="popup-title"/>
-          <h3 class="popup-theme"/>
-          <div class="popup-reputation p1"/>
-          <div class="popup-description p2"/>
-        </div>
+        <rt-scroll-bar ref="ScrollBar">
+          <div class="popup-content">
+            <div class="popup-image"/>
+            <div class="popup-title"/>
+            <h3 class="popup-theme"/>
+            <div class="popup-reputation p1"/>
+            <div class="popup-description p2"/>
+          </div>
+        </rt-scroll-bar>
       </template>
     </rt-real-popup>
     <rt-real-popup :position-center="true" class="thanx-popup">
