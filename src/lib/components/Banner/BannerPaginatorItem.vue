@@ -17,6 +17,11 @@
 </template>
 
 <script>
+import Animate from '../../utils/animate'
+
+const dashOffsetStart = 180
+const dashOffsetEnd = 150
+
 export default {
   name: "RtBannerPaginatorItem",
   props: {
@@ -42,12 +47,17 @@ export default {
   },
   data() {
     return {
+      dashOffset: dashOffsetStart,
       id: Math.random()
         .toString(36)
-        .slice(4)
+        .slice(4),
+      requestId: null
     };
   },
   computed: {
+    isAnimated() {
+      return (this.RtBanners.activeIndex === this.index && !this.isPause && !this.isStopped)
+    },
     paginatorItemClass() {
       const classArray = {};
       if (this.RtBanners.activeIndex === this.index) {
@@ -64,7 +74,7 @@ export default {
     paginatorItemStyle() {
       if (this.sleepTime && !this.isStopped) {
         return {
-          animationDuration: this.sleepTime / 1000 + "s"
+          strokeDashoffset: this.dashOffset
         };
       }
     },
@@ -74,6 +84,24 @@ export default {
         classArray["circle-switcher__item--active"] = true;
       }
       return classArray;
+    },
+  },
+  mounted () {
+    if (this.isAnimated) {
+      Animate.start({
+        draw: (dist, rId) => {
+          this.rId = rId
+          this.dashOffset = parseInt(dashOffsetStart + (dashOffsetEnd - dashOffsetStart) * dist)
+        },
+        duration: this.sleepTime,
+        onLeave: () => {},
+        timing: Animate.timingFunctions['linear']
+      })
+    }
+  },
+  destroyed () {
+    if (this.isAnimated) {
+      Animate.stop(this.rId)
     }
   },
   methods: {
