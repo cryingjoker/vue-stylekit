@@ -10,7 +10,8 @@
               <rt-scroll-tabs class="rt-scroll-tab-header rt-font-bold"
                               active-tabs-classname="rt-scroll-tab-header__item--active"
                               tabs-classname="rt-scroll-tab-header__item"
-                              :top-padding="150">
+                              :top-padding="150"
+                              :remove-base-tag="false">
                 <div class="rt-scroll-tab-nav">
                   <a class="rt-scroll-tab-header__item" href="#one">Спикеры</a>
                   <a class="rt-scroll-tab-header__item" href="#two">Программа</a>
@@ -20,7 +21,9 @@
               </rt-scroll-tabs>
             </div>
             <div class="button-wrapper">
-              <rt-button class="rt-button-small rt-button-orange">Регистрация</rt-button>
+              <a href="#registration-form">
+                <rt-button class="rt-button-small rt-button-orange">Регистрация</rt-button>
+              </a>
             </div>
           </div>
         </div>
@@ -83,7 +86,7 @@
             <h2 class="rt-font-h2 color-white rt-space-bottom05 rt-font-bold">Без «воды», без общих слов</h2>
             <h3 class="rt-font-h3 color-white03 rt-space-bottom">Наши спикеры вовлекают качеством контента, <br>а не киловаттами света и звука</h3>
             <rt-portrait-tile>
-              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo1.png">
+              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo1.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
@@ -101,7 +104,7 @@
                     клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
                 </template>
               </rt-portrait-tile-item>
-              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo2.png">
+              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo2.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
@@ -119,7 +122,7 @@
                     Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
                 </template>
               </rt-portrait-tile-item>
-              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo3.png">
+              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo3.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
@@ -135,6 +138,24 @@
                   <p class="rt-font-small-paragraph">Являясь директором по маркетингу, создавал уникальный клиентский
                     сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
                     востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                </template>
+              </rt-portrait-tile-item>
+              <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo4.png">
+                <template slot="title">Михаил Качалкин</template>
+                <template slot="reputation">
+                  <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
+                </template>
+                <template slot="description">
+                  <p class="rt-font-small-paragraph rt-space-bottom">Разработал свою методологию построения «Матрицы сервисных
+                    сценариев» и «Цифровые метрики клиентской удовлетворённости». Является экспертом в построении
+                    клиентоцентричных стратегий в развитии бизнеса. Совладелец 3 компаний малого бизнеса.</p>
+                  <p class="rt-font-small-paragraph rt-space-bottom">Являясь директором по маркетингу, создавал уникальный клиентский
+                    сервис в «Модуль банке», и по версии Агентства «Markswebb Банк» вошел в ТОП 3 самых удобных и
+                    востребованных предпринимателями банков. За 3 года привлек более 100 000 клиентов малого бизнеса.</p>
+                  <p class="rt-font-small-paragraph">Основатель Агентства «Умные метрики». С 2007 года занимался
+                    построением клиентского сервиса в крупных компаниях, таких как «Мосэнерго» / «МГЭСК» (2007-2008),
+                    «Сбербанк» (2008-2014), «Росстандарт» (2017), «ВЭБ» / «Связь банк» с 2017 года. Так же работал с
+                    Компанией «МТС», «Альфа банком» и «Сбербанк CIB» (крупнейшие клиенты).</p>
                 </template>
               </rt-portrait-tile-item>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo4.png">
@@ -370,9 +391,11 @@
               </div>
             </div>
             <div class="rt-col-2 rt-col-td-1 md-d-none"/>
+            <a name="registration-form">
             <div class="rt-col-12">
               <h1 class="rt-font-center color-orange rt-font-bold">Insert registration form here</h1>
             </div>
+            </a>
           </div>
         </div>
       </div>
