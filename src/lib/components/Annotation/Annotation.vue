@@ -71,7 +71,7 @@ export default {
   methods: {
     toggleOpen() {
       this.isOpen = !this.isOpen;
-      this.allowHeight = this.isOpen ? (getComputedStyle(this.$refs.contentHeightResolver).height + 'px') : null
+      this.allowHeight = this.isOpen ? `${parseInt(getComputedStyle(this.$refs.contentHeightResolver).height, 10) + 10}px` : null
     }
   }
 };
