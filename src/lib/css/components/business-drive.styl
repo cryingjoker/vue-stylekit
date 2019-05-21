@@ -74,8 +74,15 @@
       display none
   &__footer
     padding 20px 0
+    font-size 14px
+    line-height 18px
   &__footer-link
     margin-left 30px
+    @media(max-width mobile-upper-limit)
+      margin-left: 0
+    &+.business-drive__footer-link
+      @media(max-width mobile-upper-limit)
+        margin-left 20px
   &__tabs-wrapper
     display inline-block
     width auto
@@ -299,12 +306,15 @@
 .rt-portrait-tile-gallery
   color b2c-white
   &__item
+    border-radius 8px
     margin-top vertical-space
     position relative
+    overflow hidden
+    min-height 370px
     @media(max-width tablet-upper-limit)
       height calc((100vw - 60px) / 2)
-      overflow hidden
       border-radius 8px
+      min-height auto
     @media(max-width mobile-upper-limit)
       height calc(100vw - 40px)
     &:after
@@ -324,14 +334,13 @@
       left 20px
       z-index 2
   &__image
-    border-radius 8px
-    width 100%
-    @media(max-width tablet-upper-limit)
-      position absolute
-      width: auto
-      height: 100%
-      left: 50%
-      transform: translateX(-50%)
+    position: absolute
+    top: 0
+    bottom: 0
+    height: 100%
+    left: 50%
+    transform: translateX(-50%)
+    width: auto
   &__description
     display none
 
@@ -460,13 +469,13 @@
       .rt-timeline__item-speaker
         text-align left
     &-image
-      width 100%
+      position: absolute
+      top: 0
+      bottom: 0
+      width: auto
+      left: 50%
+      transform: translateX(-50%)
       height 100%
-      @media(max-width tablet-upper-limit)
-        position absolute
-        top 0
-        left 50%
-        transform translateX(-50%)
       &-wrapper
         width 275px
         height 183px
@@ -541,6 +550,11 @@
     @media(max-width mobile-upper-limit)
       top 10px
       right 10px
+
+.business-drive__copyright
+  @media(max-width mobile-upper-limit)
+    display block
+    margin-bottom 18px
 
 @keyframes fadeIn1
   //0%
