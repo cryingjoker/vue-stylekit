@@ -59,14 +59,14 @@
 
       const patternItem = (() => {
         if(this.patternType === 1) {
-          return <svg height="100%" viewBox={(-this.svgOffset/6) + " 0 768 401"} xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+          return <svg height="100%" viewBox={(-this.svgOffset/6) + " 0 768 401"} xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink">
             <defs>
               <path id="a" d="M.439.569h767v400h-767z"/>
             </defs>
             <g fill="none" fill-rule="evenodd">
               <path class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M.439.569h767v400h-767z" fill-rule="nonzero"/>
               <mask id="b" fill="#fff">
-                <use xlinkHref="#a"/>
+                <use href="#a"/>
               </mask>
               <g fill-rule="nonzero" mask="url(#b)">
                 <path class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M286.317 152.379l-17.87-29.86-.11.073c-.358-.676-.683-1.364-1.084-2.029-11.927-19.826-38.062-26.59-58.377-15.108-.005.007-766.935 433.524-766.935 433.524L64.785 700.065l411.189-232.428-189.657-315.258z"/>
@@ -76,7 +76,7 @@
           </svg>
         }
         if(this.patternType === 2) {
-          return <svg height="500px" viewBox="0 0 804 501" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
+          return <svg height="500px" viewBox="0 0 804 501" xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink">
             <defs>
               <path id="a" d="M.008.673h803v500h-803z"class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')}/>
             </defs>

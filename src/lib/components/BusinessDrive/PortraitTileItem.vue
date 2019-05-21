@@ -10,6 +10,10 @@
         type: String,
         default: ''
       },
+      smallImage: {
+        type: Boolean,
+        default: false
+      }
     },
     data() {
       return {
@@ -49,7 +53,7 @@
         </div>
       })();
 
-      return <div class="rt-col-6 rt-col-td-3 rt-col-md-3">
+      return <div class={(this.smallImage ? "rt-col-4 rt-col-td-2" : "rt-col-6 rt-col-td-3") + " rt-col-md-3"}>
         <div class="rt-portrait-tile-gallery__item" onClick={this.showSpeakerPopup}>
           <img class="rt-portrait-tile-gallery__image" src={this.photo}/>
           <div class="rt-portrait-tile-gallery__item-description">
