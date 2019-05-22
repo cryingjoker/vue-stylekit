@@ -1,11 +1,11 @@
 <template>
   <div
     @click="calculateSize"
-    :class="'vue-scrollbar__wrapper' + ( this.classes ? ' ' + this.classes : '' )"
+    :class="'rt-scrollbar__wrapper' + ( this.classes ? ' ' + this.classes : '' )"
     ref="scrollWrapper"
     :style="this.styles">
     <div
-      :class="'vue-scrollbar__area' + ( this.dragging ? ' ' : ' vue-scrollbar-transition')"
+      :class="'rt-scrollbar__area' + ( this.dragging ? ' ' : ' rt-scrollbar-transition')"
       ref="scrollArea"
       @wheel="scroll"
       @touchstart="startDrag"
@@ -95,7 +95,7 @@
         if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
         if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
         // prevent Default only if scrolled content is not at the top/bottom
-        if (!this.allowBodyScroll && OSName !== "MacOS") {
+        if (!this.allowBodyScroll) {
           e.preventDefault()
           e.stopPropagation()
         }
@@ -218,6 +218,7 @@
       calculateSize (cb) {
         if (typeof cb !== 'function') cb = null
         let elementSize = this.getSize()
+//        console.log(elementSize);
         if (elementSize.scrollWrapperHeight !== this.scrollWrapperHeight ||
           elementSize.scrollWrapperWidth !== this.scrollWrapperWidth ||
           elementSize.scrollAreaHeight !== this.scrollAreaHeight ||
@@ -230,6 +231,7 @@
           this.scrollWrapperWidth = elementSize.scrollWrapperWidth
           // Make sure The wrapper is Ready, then render the scrollbar
           this.ready = true
+          console.log(this.ready)
           return cb ? cb() : false
         } else return cb ? cb() : false
       }
