@@ -218,7 +218,6 @@
       calculateSize (cb) {
         if (typeof cb !== 'function') cb = null
         let elementSize = this.getSize()
-//        console.log(elementSize);
         if (elementSize.scrollWrapperHeight !== this.scrollWrapperHeight ||
           elementSize.scrollWrapperWidth !== this.scrollWrapperWidth ||
           elementSize.scrollAreaHeight !== this.scrollAreaHeight ||
@@ -231,7 +230,6 @@
           this.scrollWrapperWidth = elementSize.scrollWrapperWidth
           // Make sure The wrapper is Ready, then render the scrollbar
           this.ready = true
-          console.log(this.ready)
           return cb ? cb() : false
         } else return cb ? cb() : false
       }
