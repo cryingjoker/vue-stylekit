@@ -557,6 +557,49 @@
     display block
     margin-bottom 18px
 
+.rt-scrollbar__wrapper
+  height 100%!important
+
+.rt-scrollbar-transition,
+.rt-scrollbar__scrollbar-vertical
+  transition: all 0.5s ease
+
+.rt-scrollbar-transition--scrollbar
+  transition: opacity 0.5s linear
+
+.rt-scrollbar__wrapper
+  margin: 0 auto
+  overflow: hidden
+  position: relative
+
+.rt-scrollbar__wrapper:hover .rt-scrollbar__scrollbar-vertical
+  opacity: 1
+
+.rt-scrollbar__scrollbar-vertical
+  opacity: 0.5
+  position: absolute
+  background: transparent
+
+.rt-scrollbar__scrollbar-vertical:hover
+  background: rgba(16, 24, 40, 0.6)
+
+.rt-scrollbar__scrollbar-vertical .scrollbar
+  position: relative
+  background: rgba(16, 24, 40, 0.6)
+  border-radius: 10px
+  cursor: default
+
+.rt-scrollbar__scrollbar-vertical
+  width: 10px
+  height: 100%
+  top: 0
+  right: 0
+
+.rt-scrollbar__scrollbar-vertical .scrollbar
+  width: 10px
+
+
+
 @keyframes fadeIn1
   //0%
   //  transform translateY(150px)
