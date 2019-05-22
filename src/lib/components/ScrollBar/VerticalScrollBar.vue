@@ -1,13 +1,13 @@
 <template>
   <div>
     <div
-      v-if="height > 100"
-      class="vue-scrollbar__scrollbar-vertical"
+      v-if="height < 100"
+      class="rt-scrollbar__scrollbar-vertical"
       ref="container"
       @click="jump">
 
       <div
-        :class="'scrollbar' + ( dragging || draggingFromParent ? '' : ' vue-scrollbar-transition')"
+        :class="'scrollbar' + ( dragging || draggingFromParent ? '' : ' rt-scrollbar-transition')"
         ref="scrollbar"
         @touchstart="startDrag"
         @mousedown="startDrag "
@@ -100,7 +100,9 @@
       },
       calculateSize (source) {
         // Scrollbar Height
+        console.log(this.height)
         this.height = source.wrapper.height / source.area.height * 100
+        console.log(this.height)
       },
       getSize () {
         // The Elements
@@ -119,6 +121,7 @@
       }
     },
     mounted () {
+      console.log('this  ',this)
       this.calculateSize(this)
       // Put the Listener
       document.addEventListener('mousemove', this.onDrag)
