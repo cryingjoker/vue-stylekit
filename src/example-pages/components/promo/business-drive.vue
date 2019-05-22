@@ -435,7 +435,7 @@
             <div class="popup-image"/>
             <div class="popup-title"/>
             <h3 class="popup-theme"/>
-            <div class="popup-reputation p1"/>
+            <div class="popup-reputation rt-font-bold"/>
             <div class="popup-description p2"/>
           </div>
         </rt-scroll-bar>
