@@ -140,9 +140,12 @@
       @media(max-width mobile-upper-limit)
         font-size 27px
         line-height 37px
+        margin-top: -4px
       .speaker-name__name,
       .speaker-name__surname
         border-width 8px
+        @media(max-width mobile-upper-limit)
+          border-width 4px
     .popup-title,
     .popup-reputation,
     .popup-description,
@@ -153,6 +156,7 @@
     .popup-description
       padding-bottom 20px
       opacity .5
+      font-size 28px
     .popup-theme
       margin-bottom: 35px
     .popup-reputation
@@ -179,7 +183,7 @@
   font-size 12vh
   line-height 12vh
   height 100vh
-  padding-top 90px
+  padding-top 10vh
   box-sizing border-box
   display flex
   flex-direction column
@@ -198,16 +202,18 @@
       &:after
         position absolute
         content: ''
-        top 50%
+        top calc(50% + 5px)
         left 0
         width 0
         height 20px
         background-color b2c-orange
         transform translateY(-50%)
         @media(max-width tablet-upper-limit)
+          top calc(50% + 4px)
           height 14px
         @media(max-width mobile-upper-limit)
           height 7px
+          top calc(50% + 2px)
   &__first-line
     transform translateY(100%)
     opacity 0
@@ -296,6 +302,8 @@
       line-height 14px
       top 10px
       right -9px
+  .rt-button
+    height 55px
 
 .first-gradient-section
   background linear-gradient(to bottom, #001c45, #002845 16%, #450031 50%, #001c45);
@@ -310,7 +318,7 @@
     margin-top vertical-space
     position relative
     overflow hidden
-    min-height 410px
+    min-height 373px
     cursor pointer
     @media(max-width tablet-upper-limit)
       height calc((100vw - 60px) / 2)

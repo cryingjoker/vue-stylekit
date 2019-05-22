@@ -100,9 +100,7 @@
       },
       calculateSize (source) {
         // Scrollbar Height
-        console.log(this.height)
         this.height = source.wrapper.height / source.area.height * 100
-        console.log(this.height)
       },
       getSize () {
         // The Elements
@@ -121,7 +119,6 @@
       }
     },
     mounted () {
-      console.log('this  ',this)
       this.calculateSize(this)
       // Put the Listener
       document.addEventListener('mousemove', this.onDrag)
