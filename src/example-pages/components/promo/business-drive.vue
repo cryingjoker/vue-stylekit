@@ -79,7 +79,6 @@
     </div>
 
     <div class="first-gradient-section">
-      <!--<rt-speakers>-->
       <div class="rt-container">
         <div class="rt-col">
           <div id="one">
@@ -351,7 +350,6 @@
           </div>
         </div>
       </div>
-      <!--</rt-speakers>-->
     </div>
     <div class="second-gradient-section">
       <div class="rt-container">

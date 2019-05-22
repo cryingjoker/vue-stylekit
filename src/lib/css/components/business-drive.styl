@@ -1,10 +1,9 @@
 .business-drive
   position relative
-  top 50px
   &__header
     padding 10px 0
     position fixed
-    top 50px
+    top 0
     left 0
     right 0
     z-index 20
@@ -177,9 +176,9 @@
       margin-bottom 30px
 
 .animated-text
-  font-size 114px
-  line-height 103px
-  height 800px
+  font-size 12vh
+  line-height 12vh
+  height 100vh
   padding-top 90px
   box-sizing border-box
   display flex
@@ -187,8 +186,9 @@
   @media(max-width tablet-upper-limit)
     font-size 75px
     line-height 68px
-    height 700px
+    height 500px
   @media(max-width mobile-upper-limit)
+    padding-top 60px
     font-size 34px
     line-height 37px
   &__line
@@ -310,7 +310,8 @@
     margin-top vertical-space
     position relative
     overflow hidden
-    min-height 370px
+    min-height 410px
+    cursor pointer
     @media(max-width tablet-upper-limit)
       height calc((100vw - 60px) / 2)
       border-radius 8px

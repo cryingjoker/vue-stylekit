@@ -52,7 +52,7 @@
       },
       close(){
         this.$refs.popupWrapper.classList.remove('rtb-popup-wrapper--active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'unset';
       },
       countOffset(){
         setTimeout(() => {
