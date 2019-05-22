@@ -36,7 +36,7 @@
 <script>
   const componentsList = {};
   import variables from "../../variables.json";
-//  import VerticalScrollBar from './rt-vertical-scroll-bar.vue'
+  import VerticalScrollBar from './VerticalScrollBar.vue'
 
   export default {
     name: "RtScrollBar",

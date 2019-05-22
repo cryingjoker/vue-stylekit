@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      v-if="height < 100"
+      v-if="height > 100"
       class="vue-scrollbar__scrollbar-vertical"
       ref="container"
       @click="jump">
