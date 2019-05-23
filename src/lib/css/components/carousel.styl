@@ -1,0 +1,84 @@
+carouselSel = newAppName + '-carousel'
+carouselZIndex = 10
+scrollHSpace = 10px
+scrollHSpacePC = 70px
+
+.{carouselSel}
+  width 100%
+  position relative
+  z-index carouselZIndex
+
+  &__overlay
+    display block
+    overflow hidden
+    overflow-x auto
+    -webkit-overflow-scrolling touch
+    -ms-overflow-style none
+    position relative
+    scrollbar-width none
+    white-space nowrap
+
+    &::-webkit-scrollbar
+      display none
+
+  &__inner
+    display flex
+    flex-direction row
+    -webkit-box-orient horizontal
+    -webkit-box-direction normal
+    white-space normal
+
+  &__slide
+    backface-visibility hidden
+    opacity 1
+    position relative
+    user-select none
+    z-index carouselZIndex + 1
+
+    &.marked
+      transform scale(1.02)
+
+    &.not-shown
+      opacity .5
+      pointer-events none
+
+  &.is-touch-device
+    .{carouselSel}__overlay
+      -webkit-scroll-padding-inline-start scrollHSpace
+      scroll-padding-inline-start scrollHSpace
+      -webkit-scroll-snap-type mandatory
+      -webkit-scroll-snap-type-x mandatory
+      scroll-snap-type mandatory
+      scroll-snap-type x mandatory
+
+    .{carouselSel}__slide
+      -webkit-scroll-snap-align start
+      scroll-snap-align start
+
+      @media (max-width: 425px)
+        min-width 83.33333250000001%
+
+    .{carouselSel}__spacer
+      min-width scrollHSpace
+
+    @media (min-width: 1024px)
+      .{carouselSel}__inner
+        scroll-padding-inline-start scrollHSpacePC
+
+      .{carouselSel}__spacer
+        min-width scrollHSpacePC
+
+  &.is-animating,
+  &.is-disabled-scrolling
+    .{carouselSel}__overlay
+      overflow-x hidden
+
+  &.is-animating,
+  &.is-scrolling
+    .{carouselSel}__slide
+      pointer-events none
+
+.{newAppName}-container
+  .{carouselSel}__inner.{newAppName}-container
+    padding-left 0
+    padding-right 0

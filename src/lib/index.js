@@ -34,6 +34,7 @@ import {
   Banner,
   BannerItem,
   BannerPaginatorItem,
+  Carousel,
   Card,
   CardBuy,
   CardImage,
@@ -130,6 +131,7 @@ const VueRtStyle = {
       Vue.component(BannerItem.name, BannerItem);
       Vue.component(BannerPaginatorItem.name, BannerPaginatorItem);
       Vue.component(BannerVideoGameControl.name, BannerVideoGameControl);
+      Vue.component(Carousel.name, Carousel.component);
       Vue.component(FullscreenImage.name, FullscreenImage);
       Vue.component(RowList.name, RowList);
       Vue.component(RowListItem.name, RowListItem);

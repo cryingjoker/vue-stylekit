@@ -4,7 +4,7 @@ let EaseIn = (power) => { return (t) => { return Math.pow(t, power) } }
 let EaseOut = (power) => { return (t) => { return 1 - Math.abs(Math.pow(t - 1, power)) } }
 let EaseInOut = (power) => { return (t) => { return t < 0.5 ? EaseIn(power)(t * 2) / 2 : EaseOut(power)(t * 2 - 1) / 2 + 0.5 } }
 
-const Animate = {
+let Animate = {
   timingFunctions: {
     linear: EaseInOut(1),
     easeInQuad: EaseIn(2),

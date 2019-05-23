@@ -18,6 +18,7 @@ import CardsWithForms from '../components/complex-elements/CardsWithForms.vue';
 import Icons from '../components/icons-elements/Icons.vue';
 import Pattern from '../components/main-elements/Pattern.vue';
 import Banners from '../components/experiment-elements/Banners.vue';
+import Carousels from '../components/experiment-elements/Carousels.vue';
 import PromoTv from '../components/promo/tv.vue';
 import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
@@ -96,6 +97,7 @@ const index = [
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
+  { path: '/carousels', name: 'app-carousels', component: Carousels },
   { path: '/product-cards', name: 'app-product-card', component: ProductCard },
   { path: '/tariff-cards', name: 'app-tariff-card', component: TariffCard },
   { path: '/tariff-cards2', name: 'app-tariff-card', component: TariffCard2 },
