@@ -7,14 +7,16 @@ const cssSelector = 'rt-carousel__slide'
 class CarouselSlide extends Vue {
 
   @Prop({ default: '' }) slideClasses: string
+  @Prop() loaded: undefined|boolean
 
-  shown: boolean = true
+  shown: boolean = this.loaded !== undefined ? this.loaded : true
   offsetSlide: number|string
 
   mounted () { }
 
   toggle (flag: boolean|undefined) {
-    this.shown = flag !== undefined ? flag : !this.shown
+    if (this.loaded === undefined || this.loaded)
+      this.shown = flag !== undefined ? flag : !this.shown
   }
 
   width (): number {

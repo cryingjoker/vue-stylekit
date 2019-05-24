@@ -13,302 +13,446 @@
     </div>
 
     <div style="width: 100vw">
-      <rt-carousel>
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <img width="175px" class="rt-card__headeremitSelectedData__image" src="/static/images/homeinternet/homeinternet-image18.jpg" />
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Kaspersky Internet Security 4</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства</p>
-            </template>
-            <template slot="bottom-list">
-              <div class="rt-card-list rt-space-bottom2">
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <img src="/static/images/medium-icon.svg" />
-                    </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Защищает 2 устройства одновременно</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+      <pre-code text='<rt-carousel :hide-arrows="true" slides-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <img width="175px" class="rt-card__headeremitSelectedData__image" src="/static/images/homeinternet/homeinternet-image18.jpg" />
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Kaspersky Internet Security 4</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Одна лицензия на&nbsp;все&nbsp;«детские» Android-устройства</p>
+              </template>
+              <template slot="bottom-list">
+                <div class="rt-card-list rt-space-bottom2">
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <img src="/static/images/medium-icon.svg" />
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Защищает 2 устройства одновременно</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Контроль интернет-сайтов</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Контроль интернет-сайтов</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Игровой формат и&nbsp;простые настройки</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Игровой формат и&nbsp;простые настройки</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Определение местоположения</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Определение местоположения</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Сообщения ребенку</p>
-                    </div>
-                  </div>
-                  <div class="rt-card-list__item">
-                    <div class="rt-card-list__icon">
-                      <div class="rt-space-left15">
-                        <img src="/static/images/small-icon.svg" />
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Сообщения ребенку</p>
                       </div>
                     </div>
-                    <div class="rt-card-list__name">
-                      <p class="rt-font-small-paragraph color-main05">Контроль приложений и&nbsp;времени</p>
+                    <div class="rt-card-list__item">
+                      <div class="rt-card-list__icon">
+                        <div class="rt-space-left15">
+                          <img src="/static/images/small-icon.svg" />
+                        </div>
+                      </div>
+                      <div class="rt-card-list__name">
+                        <p class="rt-font-small-paragraph color-main05">Контроль приложений и&nbsp;времени</p>
+                      </div>
+                    </div>
+                </div>
+              </template>
+
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="1600" :old-value="1800" time-interval="год."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
+                </div>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
+
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 1</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
                     </div>
                   </div>
-              </div>
-            </template>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
+                </div>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="1000" :old-value="1800" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
+                </div>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="1600" :old-value="1800" time-interval="год."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 2</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="1000" :old-value="1800" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 1</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="1000" :old-value="1800" time-interval="мес."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 3</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="700" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 2</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="1000" :old-value="1800" time-interval="мес."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 4</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="450" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 3</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="700" time-interval="мес."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 5</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="300" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 4</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="450" time-interval="мес."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 6</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="650" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
 
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 5</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="300" time-interval="мес."></rt-price>
+          <rt-carousel-slide>
+            <rt-card>
+              <template slot="header">
+                <rt-logo height="70"></rt-logo>
+              </template>
+              <template slot="content">
+                <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 7</p>
+                <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
+                <p>&nbsp;</p>
+                <div class="rt-card-list__item">
+                  <div class="rt-card-list__icon">
+                    <div class="rt-space-left15">
+                      <img src="/static/images/small-icon.svg" />
+                    </div>
+                  </div>
+                  <div class="rt-card-list__name">
+                    <p class="rt-font-small-paragraph color-main05">Первый месяц в&nbsp;подарок</p>
+                  </div>
                 </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                <p>&nbsp;</p>
+              </template>
+              <template slot="content-without-wrapper">
+                <div class="rt-card__border-content">
+                  <div class="rt-col-12 flex-end-center rt-space-top">
+                    <rt-price :value="777" time-interval="мес."></rt-price>
+                  </div>
+                  <div class="rt-space-top05">
+                    <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
-
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 6</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="650" time-interval="мес."></rt-price>
-                </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
-                </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
-
-        <rt-carousel-slide slide-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
-          <rt-card>
-            <template slot="header">
-              <rt-logo height="70"></rt-logo>
-            </template>
-            <template slot="content">
-              <p class="rt-font-paragraph color-main07 rt-font-bold rt-space-top2">Предложение из прод каталога 7</p>
-              <p class="rt-space-top color-main07 rt-space-right2">Краткое описание из продуктового каталога</p>
-              <p>&nbsp;</p>
-            </template>
-            <template slot="content-without-wrapper">
-              <div class="rt-card__border-content">
-                <div class="rt-col-12 flex-end-center rt-space-top">
-                  <rt-price :value="777" time-interval="мес."></rt-price>
-                </div>
-                <div class="rt-space-top05">
-                  <rt-button class="rt-button-orange rt-button--is-block">Подключить</rt-button>
-                </div>
-              </div>
-            </template>
-          </rt-card>
-        </rt-carousel-slide>
-      </rt-carousel>
+              </template>
+            </rt-card>
+          </rt-carousel-slide>
+        </rt-carousel>
+      </div>'
+      />
     </div>
 
 
-
-
-    <!--<div class="rt-container">-->
-      <!--<rt-swiper>-->
-      <!--<rt-slide v-for="i in 10" :key="i" class="rt-space-right15">-->
-        <!--<h2>Слайд {{ i }}</h2>-->
-        <!--<rt-row-list>-->
-          <!--<rt-row-list-item v-for="i in 3" :key="i">-->
-            <!--<template slot="option">-->
-              <!--<div class="d-flex flex-row">-->
-                <!--<div>-->
-                  <!--<p>Антивирус</p>-->
-                  <!--<p class="color-main05">-->
-                    <!--Kaspersky Internet Security, месяц в подарок-->
-                  <!--</p>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</template>-->
-          <!--</rt-row-list-item>-->
-        <!--</rt-row-list>-->
-        <!--<rt-price-->
-          <!--class="rt-space-vertical"-->
-          <!--time-interval="мес"-->
-          <!--is-option-->
-          <!--:value="i * 1000"-->
-        <!--/>-->
-        <!--<rt-button class="rt-button-orange">-->
-          <!--Подключить-->
-        <!--</rt-button>-->
-      <!--</rt-slide>-->
-    <!--</rt-swiper>-->
-    <!--</div>-->
-    <!-- <div class="rt-space-top5">
+    <div class="rt-space-top5" style="width: 100wv">
       <pre-code text='
-        <rt-swiper :hide-navigation="true">
-          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
+        <rt-carousel slides-classes="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off is-b2c">
+          <rt-carousel-slide>
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage1.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">
+                  Headstone
+                </p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </rt-carousel-slide>
+          <rt-carousel-slide>
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage2.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">
+                  Headstone
+                </p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </rt-carousel-slide>
+          <rt-carousel-slide>
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage3.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">
+                  Headstone
+                </p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </rt-carousel-slide>
+          <rt-carousel-slide :loaded="false">
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage1.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">
+                  Headstone (not-loaded demo)
+                </p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </rt-carousel-slide>
+          <rt-carousel-slide>
+            <rt-card-image
+              :is-white-color="true"
+              :col-size="2"
+              background-color-type="light-blue"
+              card-image="/static/images/cardImage2.jpg"
+            >
+              <template slot="body">
+                <p class="rt-font-paragraph rt-font-bold">
+                  Headstone
+                </p>
+                <p class="rt-font-label-uppercase rt-space-vertical05">
+                  игровой интернет
+                </p>
+                <p>Получай подарки в лучших играх Headstone!</p>
+              </template>
+            </rt-card-image>
+          </rt-carousel-slide>
+        </rt-carousel>
+      </div>' />
+    </div>
+
+    <div class="rt-space-top5" style="width: 100vw">
+      <pre-code text='
+        <rt-carousel :hide-navigation="true">
+          <rt-carousel-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -713,8 +857,8 @@
                 </a>
               </template>
             </rt-card>
-          </rt-slide>
-          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
+          </rt-carousel-slide>
+          <rt-carousel-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -1119,8 +1263,8 @@
                 </a>
               </template>
             </rt-card>
-          </rt-slide>
-          <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
+          </rt-carousel-slide>
+          <rt-carousel-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
               :has-discount="true"
@@ -1525,29 +1669,59 @@
                 </a>
               </template>
             </rt-card>
-          </rt-slide>
-        </rt-swiper>'/>
-    </div> -->
+          </rt-carousel-slide>
+        </rt-carousel>'/>
+    </div>
+
+    <div class="rt-space-top5" style="width: 100wv">
+      <rt-carousel >
+        <rt-carousel-slide v-for="i in 7" :key="i">
+          <h2>Слайд {{ i }}</h2>
+          <rt-row-list>
+            <rt-row-list-item v-for="ir in 3" :key="ir">
+              <template slot="option">
+                <div class="d-flex flex-row">
+                  <div>
+                    <p>Антивирус</p>
+                    <p class="color-main05" v-for="o in i" :key="o">Kaspersky Internet Security, месяц в подарок</p>
+                  </div>
+                </div>
+              </template>
+            </rt-row-list-item>
+          </rt-row-list>
+          <rt-price
+            class="rt-space-vertical"
+            time-interval="мес"
+            is-option
+            :value="i * 1000"
+          />
+          <rt-button class="rt-button-orange" value="Подключить">Подключить</rt-button>
+        </rt-carousel-slide>
+      </rt-carousel>
+    </div>
+
     <div class="rt-container">
-      <!-- <div class="app-content rt-col-12 rt-col-md-3">
+      <div class="app-content rt-col-12 rt-col-md-3">
         <documentation-builder :json="documentation" type="components" />
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-// import documentation from "../../../lib/components/Carousel/docs/index.json";
+import documentation from "../../../lib/components/Carousel/docs/index.json";
 import componentsList from "../../componentsList";
 
 export default {
   name: "AppCarousel",
   components: componentsList,
-  data: () => ({
-    // documentation: {}
-  }),
+  data: () => {
+    return ({
+      documentation: {}
+    });
+  },
   mounted() {
-    // this.documentation = documentation;
+    this.documentation = documentation;
   },
   created() {},
   methods: {}

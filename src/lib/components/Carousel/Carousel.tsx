@@ -11,9 +11,6 @@ const cssSelector = 'rt-carousel'
 const cssContainer = 'rt-container'
 const autoScrollingTimeout = 100; // Длительность задержки автоскроллинга
 const slideSwipingMinDistance = 40 // Минимальное значение сдвига для автоскроллинга
-let scrollingTimer = null
-let toggleSlidesTimer = null
-let currentWindowWidth = null
 
 let listOfChilds = {}
 listOfChilds[CarouselNavi.name] = CarouselNavi.component
@@ -23,11 +20,15 @@ listOfChilds[CarouselNavi.name] = CarouselNavi.component
 })
 class Carousel extends Vue {
 
+  @Prop({ default: false }) hideArrows: boolean
   @Prop({ default: false }) hideNavigation: boolean
+  @Prop({ default: false }) disabledScrolling: boolean
   @Prop({ default: true }) autoScrolling: boolean
   @Prop({ default: 500 }) duration: number
   @Prop({ default: 20 }) offsetTop: number
   @Prop({ default: 20 }) offsetBottom: number
+  @Prop({ default: 113 }) navsPosStart: number
+  @Prop({ default: 200 }) navsPosEnd: number
   @Prop({ default: 'rt-col-3 rt-col-md-2 rt-col-td-3' }) slidesClasses: string
   @Prop({ default: 'easeInOutCubic' }) transitionFunction: string
 
@@ -37,13 +38,14 @@ class Carousel extends Vue {
   isTouch: boolean = Mobile.isTouch
   hSpace: number = 0
   movesArr: any = [] // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
+  toggleSlidesTimer = null
+  scrollingTimer = null
 
   canAdvanceForward: boolean = false
   canAdvanceBackward: boolean = false
 
   scrollingAutoEnd: boolean = true
   swipingStartPoint: null|number = null // Детектор направления свайпинга
-  disabledScrolling: boolean = false
 
   get overlayEl () {
     return this.$refs.overlay as HTMLElement
@@ -64,8 +66,9 @@ class Carousel extends Vue {
   mounted () {
     if (!this.isTouch) {
       this.createMoves()
-      this.overlayEl.addEventListener('scroll', this.scrollNative, { passive: true })
       window.addEventListener('resize', this.createMoves, { passive: true })
+      if (this.overlayEl)
+        this.overlayEl.addEventListener('scroll', this.scrollNative, { passive: true })
     }
   }
 
@@ -74,15 +77,51 @@ class Carousel extends Vue {
     this.isPending = true
     if (!this.isTouch) {
       window.removeEventListener("resize", this.createMoves)
-      clearTimeout(scrollingTimer)
-      clearTimeout(toggleSlidesTimer)
+      clearTimeout(this.scrollingTimer)
+      clearTimeout(this.toggleSlidesTimer)
+    }
+  }
+
+  /**
+   * Простая навигация зоны просмотра по слайдам
+   */
+  advancePage (direction: null|string) {
+    if (!this.isPending && !this.isAnimating) {
+      let now: number = this.overlayEl.scrollLeft
+      let distance: number = 0
+      let wrapStyles = getComputedStyle(this.slidedEl)
+      let wrapperWidth = parseFloat(wrapStyles.width) - parseFloat(wrapStyles.paddingLeft) * 2
+      if (direction === "next") {
+        this.movesArr.some((w: any) => {
+          distance += w.width
+          if (Math.round((distance * 100) / 100) >= wrapperWidth) {
+            distance = now + distance
+            return true
+          }
+        })
+      } else if (direction === "prev") {
+        void [...this.movesArr].reverse().some(w => {
+          distance += w.width
+          if (Math.round((distance * 100) / 100) >= wrapperWidth) {
+            distance = now - distance
+            return true
+          }
+        })
+      }
+      if (distance > this.overlayEl.scrollWidth)
+        distance = this.overlayEl.scrollWidth
+      if (distance < 0)
+        distance = 0
+      if (!this.swipingStartPoint)
+        this.swipingStartPoint = now
+      this.move(distance)
     }
   }
 
   autoScroller (delay = autoScrollingTimeout) {
     if (this.autoScrolling && !this.isPending && !this.isAnimating) {
       let now = this.overlayEl.scrollLeft
-      scrollingTimer = setTimeout(() => {
+      this.scrollingTimer = setTimeout(() => {
         if (
           (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
           (!this.isAnimating && !this.isPending)
@@ -103,8 +142,8 @@ class Carousel extends Vue {
   }
 
   autoScrollerRemove () {
-    clearTimeout(scrollingTimer)
-    scrollingTimer = null
+    clearTimeout(this.scrollingTimer)
+    this.scrollingTimer = null
     this.scrollingAutoEnd = true
   }
 
@@ -116,14 +155,11 @@ class Carousel extends Vue {
     this.isPending = true
     this.movesArr = []
     this.isPending = false
-    currentWindowWidth = window.innerWidth
     let leftPadding = parseFloat(getComputedStyle(this.slidedEl).paddingLeft)
     let leftOffset = this.slidedEl.getBoundingClientRect().left
     this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
-    let d = 0
     this.slides.forEach((slide: any, i) => {
       if (slide.width()) {
-        d += slide.width()
         this.movesArr.push({
           width: slide.width(),
           key: i
@@ -160,7 +196,6 @@ class Carousel extends Vue {
           }
         })
       }
-      // console.log(distance, nextNav, this.swipingStartPoint, to, this.isLongTouch)
       return distance;
     } else {
       return null;
@@ -173,17 +208,30 @@ class Carousel extends Vue {
         resolve()
       }
       let from = this.overlayEl.scrollLeft
+      let overlayContainerWidth = parseFloat(getComputedStyle(this.overlayEl).width)
+      let slidesWidth = () => {
+        if (this.movesArr.length) {
+          return this.movesArr.reduce(
+            (accum, curVal) => (
+              typeof accum === "object" && accum.constructor === Object
+                ? accum.width
+                : accum
+            ) + curVal.width + this.hSpace
+          )
+        }
+        return 0
+      }
       let updateNavs = () => {
         if (!this.isTouch) {
           this.canAdvanceBackward = to > 1
-          this.isFinalSlide = this.overlayEl.scrollLeft + this.overlayEl.clientWidth + 2 >= this.overlayEl.scrollWidth
-          this.canAdvanceForward = !this.isFinalSlide
+          this.isFinalSlide = this.overlayEl.scrollLeft + overlayContainerWidth + 2 >= this.overlayEl.scrollWidth
+          let navsOnlyLackOfWidth = overlayContainerWidth < slidesWidth()
+          this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
         }
       }
       if (from !== to && from !== to + 1) {
-        // console.log('mc:start', from, to, this.isLongTouch)
         this.isAnimating = true
-        this.$emit('onAnimatingStart', callback => { callback() })
+        this.$emit('onAnimatingStart', callback => callback())
         Animate.start({
           duration: this.duration,
           timing: Animate.timingFunctions[this.transitionFunction],
@@ -194,10 +242,9 @@ class Carousel extends Vue {
           },
           onLeave: () => {
             updateNavs()
-            this.$emit('onAnimatingEnd', callback => { callback() })
+            this.$emit('onAnimatingEnd', callback => callback())
             setTimeout(() => {
               this.isAnimating = false
-              // console.log('mc:end', from, to)
               resolve()
             }, 1) // В FF скроллинг быстрее отрабатывает, чем триггер isAnimating
           }
@@ -222,11 +269,13 @@ class Carousel extends Vue {
 
   toggleSlides () {
     if (!this.isTouch) {
-      clearTimeout(toggleSlidesTimer)
-      toggleSlidesTimer = setTimeout(() => {
-        if (!this.overlayEl) {
+      clearTimeout(this.toggleSlidesTimer)
+      this.toggleSlidesTimer = setTimeout(() => {
+        if (!this.overlayEl && !this.$refs.overlay) {
           return
         }
+        if (!this.overlayEl)
+          return
         let startScrolling = this.overlayEl.scrollLeft
         let distance = 0
         let distanceLeft = 0
@@ -291,7 +340,15 @@ class Carousel extends Vue {
       if (!this.hideNavigation && !this.isTouch)
         return <rt-carousel-navi
             h-space={ this.hSpace }
+            isPending={ this.isPending }
+            hideArrows={ this.hideArrows }
             containerName={ cssContainer }
+            overlayEl={ this.$refs.overlay } // Не используй HTMLElement (this.overlayEl), т.к будет перезаписана переменная геттера
+            advancePage={ this.advancePage }
+            canAdvanceForward={ this.canAdvanceForward }
+            canAdvanceBackward={ this.canAdvanceBackward }
+            navsPosStart={ this.navsPosStart }
+            navsPosEnd={ this.navsPosEnd }
           />
     }
     const spacerBlock = () => {
