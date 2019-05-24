@@ -2,9 +2,12 @@ import Vue, { VNode } from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 
 const cssSelector = 'rt-carousel__slide'
+const name = 'RtCarouselSlide'
 
 @Component
 class CarouselSlide extends Vue {
+
+  name: string = name
 
   @Prop({ default: '' }) slideClasses: string
   @Prop() loaded: undefined|boolean
@@ -37,5 +40,5 @@ class CarouselSlide extends Vue {
 
 export default {
   component: CarouselSlide,
-  name: 'RtCarouselSlide'
+  name: name
 }

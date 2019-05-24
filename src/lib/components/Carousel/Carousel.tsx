@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue, { VNode } from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 
 // @ts-ignore
@@ -7,6 +7,7 @@ import CarouselNavi from './CarouselNavi.tsx'
 import Mobile from '../../utils/mobile'
 import Animate from '../../utils/animate'
 
+const name = 'RtCarousel'
 const cssSelector = 'rt-carousel'
 const cssContainer = 'rt-container'
 const autoScrollingTimeout = 100; // Длительность задержки автоскроллинга
@@ -20,10 +21,14 @@ listOfChilds[CarouselNavi.name] = CarouselNavi.component
 })
 class Carousel extends Vue {
 
+  name: string = name
+
+  @Prop({ default: false }) decorated: boolean // Технический параметр для обворачивания карусели в другой компонент
   @Prop({ default: false }) hideArrows: boolean
   @Prop({ default: false }) hideNavigation: boolean
   @Prop({ default: false }) disabledScrolling: boolean
   @Prop({ default: true }) autoScrolling: boolean
+  @Prop({ default: false }) showTipsNext: boolean
   @Prop({ default: 500 }) duration: number
   @Prop({ default: 20 }) offsetTop: number
   @Prop({ default: 20 }) offsetBottom: number
@@ -56,11 +61,27 @@ class Carousel extends Vue {
   }
 
   get slides () {
-    return (
-      this.$children && this.$children.filter(
-        slide => slide.$vnode && slide.$vnode.tag && slide.$vnode.tag.indexOf('CarouselSlide') > -1
+    if (this.decorated) {
+      let list = []
+      this.$parent && this.$parent.$children
+        .filter((vn: any) => vn.$vnode && vn.$vnode.tag &&  vn.$vnode.tag.indexOf('slide') > -1)
+        .forEach((ch: any) => {
+          if (ch.$children && ch.$children.length > 0) {
+            ch.$children.forEach((child: any) => {
+              if (child.name && child.name.indexOf('CarouselSlide') > -1) {
+                list.push(child)
+              }
+            })
+          }
+        })
+      return list
+    } else {
+      return (
+        this.$children && this.$children.filter(
+          (slide: any) => slide.name && slide.name.indexOf('CarouselSlide') > -1
+        )
       )
-    )
+    }
   }
 
   mounted () {
@@ -301,7 +322,7 @@ class Carousel extends Vue {
     }
   }
 
-  render () {
+  render (): VNode {
 
     const desktopBlock = () => {
       if (!this.isTouch)
@@ -337,11 +358,12 @@ class Carousel extends Vue {
         </div>
     }
     const navsBlock = () => {
-      if (!this.hideNavigation && !this.isTouch)
+      if (!this.hideNavigation && !this.isTouch && !this.disabledScrolling)
         return <rt-carousel-navi
-            h-space={ this.hSpace }
+            hSpace={ this.hSpace }
             isPending={ this.isPending }
             hideArrows={ this.hideArrows }
+            showTipsNext={ this.showTipsNext }
             containerName={ cssContainer }
             overlayEl={ this.$refs.overlay } // Не используй HTMLElement (this.overlayEl), т.к будет перезаписана переменная геттера
             advancePage={ this.advancePage }
@@ -385,5 +407,5 @@ class Carousel extends Vue {
 
 export default {
   component: Carousel,
-  name:'RtCarousel'
+  name: name
 }

@@ -2,10 +2,13 @@ import Vue, { VNode } from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 
 const cssSelector = 'rt-carousel__navi'
+const name = 'RtCarouselNavi'
 let navContainerChanged = false
 
 @Component
 class CarouselNavi extends Vue {
+
+  name: string = name
 
   @Prop() overlayEl: HTMLElement
   @Prop({ default: 0 }) hSpace: number
@@ -161,5 +164,5 @@ class CarouselNavi extends Vue {
 
 export default {
   component: CarouselNavi,
-  name: 'RtCarouselNavi'
+  name: name
 }
