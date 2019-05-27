@@ -30,6 +30,7 @@
       showSpeakerPopup() {
         document.querySelector('.popup-image').style.backgroundImage = 'url(' + this.$el.querySelector('.rt-portrait-tile-gallery__image').src + ')';
         document.querySelector('.popup-title').innerHTML = this.$el.querySelector('.speaker-name').innerHTML;
+        document.querySelector('.popup-theme').innerHTML = 'Тема: &#171;' + this.$el.querySelector('.rt-portrait-tile-gallery__theme').innerHTML + '&#187;';
         document.querySelector('.popup-reputation').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__item-description .rt-font-paragraph').innerHTML;
         document.querySelector('.popup-description').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__description').innerHTML;
         document.querySelector('.rtb-popup').scrollTo(0, 0);
@@ -61,6 +62,7 @@
             {this.$slots.reputation}
           </div>
            <div class="rt-portrait-tile-gallery__description">{this.$slots.description}</div>
+           <div class="rt-portrait-tile-gallery__theme">{this.$slots.theme}</div>
         </div>
       </div>
     }

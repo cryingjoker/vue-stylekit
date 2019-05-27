@@ -4,7 +4,9 @@
       <div class="rt-container">
         <div class="rt-col">
           <rt-logo height="40px" width="24px" top-fill-color="b2b-state" />
-          <div class="mobile-burger"/>
+          <div class="mobile-burger-wrapper">
+            <div class="mobile-burger"/>
+          </div>
           <div class="business-drive__header-menu">
             <div class="business-drive__tabs-wrapper">
               <rt-scroll-tabs class="rt-scroll-tab-header rt-font-bold"
@@ -87,6 +89,7 @@
             <rt-portrait-tile>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo1.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
+                <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов и получения полезных<br> для бизнеса контактов</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
@@ -105,6 +108,7 @@
               </rt-portrait-tile-item>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo2.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
+                <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
@@ -123,6 +127,7 @@
               </rt-portrait-tile-item>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo3.png" :small-image="true">
                 <template slot="title">Михаил Качалкин</template>
+                <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
@@ -141,6 +146,7 @@
               </rt-portrait-tile-item>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo4.png">
                 <template slot="title">Михаил Качалкин</template>
+                <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
@@ -159,6 +165,7 @@
               </rt-portrait-tile-item>
               <rt-portrait-tile-item photo="/static/images/B2B/business__drive/photo4.png">
                 <template slot="title">Михаил Качалкин</template>
+                <template slot="theme">Техника знакомства<br> и получения полезных<br> для бизнеса контактов</template>
                 <template slot="reputation">
                   <p class="rt-font-paragraph td-d-none">Предприниматель, эксперт <br>по клиентоцентричному сервису</p>
                 </template>
