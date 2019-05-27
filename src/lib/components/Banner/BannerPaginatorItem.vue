@@ -51,7 +51,7 @@ export default {
       id: Math.random()
         .toString(36)
         .slice(4),
-      requestId: null
+      rId: null
     };
   },
   computed: {
@@ -91,7 +91,7 @@ export default {
       Animate.start({
         draw: (dist, rId) => {
           this.rId = rId
-          this.dashOffset = parseInt(dashOffsetStart + (dashOffsetEnd - dashOffsetStart) * dist)
+          this.dashOffset = dashOffsetStart + (dashOffsetEnd - dashOffsetStart) * dist
         },
         duration: this.sleepTime,
         onLeave: () => {},
