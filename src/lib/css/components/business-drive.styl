@@ -44,7 +44,7 @@
     width 24px
     height 3px
     margin 18px 0
-    float: right
+    //float: right
     background-color: #313948
     position relative
     &:before,
@@ -69,6 +69,8 @@
       &:after
         transform rotate(-45deg)
         bottom 0
+    &-wrapper
+      float: right
     @media(min-width tablet-lower-limit)
       display none
   &__footer
@@ -350,7 +352,8 @@
     left: 50%
     transform: translateX(-50%)
     width: auto
-  &__description
+  &__description,
+  &__theme
     display none
 
 .speaker-name
