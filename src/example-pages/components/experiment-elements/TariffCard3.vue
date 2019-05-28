@@ -69,7 +69,7 @@
                 </div>
                 <div class="rt-space-top">
                   <div class="d-flex flex-start-center rt-tariff-item">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">100 Мбит/с</p>
                     </div>
@@ -79,7 +79,7 @@
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">125
                             каналов</p>
@@ -88,19 +88,19 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
 
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Мобильная связь</p>
                       <p class="rt-font-control">Не входит</p>
                     </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="rt-space-top-half">
                   <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Умный дом</p>
                       <p class="rt-font-control">Не входит</p>
                     </div>
@@ -144,8 +144,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -185,7 +185,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -201,15 +201,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -218,7 +218,7 @@
                     <rt-price :value="749"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
-                    <rt-button class="rt-button--is-block rt-button-orange">Подключить</rt-button>
+                    <rt-button class="rt-button--is-block rt-button-orange">Подключить по акции</rt-button>
                   </div>
                   <div class="flex-center-center rt-space-top05 rt-space-bottom05">
                     <span>Настроить</span>
@@ -313,7 +313,7 @@
                 </div>
                 <div class="rt-space-top">
                   <div class="d-flex flex-start-center rt-tariff-item">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">300 Мбит/с</p>
                     </div>
@@ -323,7 +323,7 @@
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">165
                             каналов</p>
@@ -332,13 +332,13 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -346,7 +346,7 @@
                     <template slot="header">
                       <div class="d-flex flex-start-center rt-tariff-item">
 
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
 
 
@@ -356,19 +356,19 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
 
                 <div class="rt-space-top-half">
                   <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Умный дом</p>
                       <p class="rt-font-control">Не входит</p>
                     </div>
@@ -404,8 +404,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -445,7 +445,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
                               30
                               руб./мес.</p>
@@ -462,15 +462,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -573,7 +573,7 @@
                 </div>
                 <div class="rt-space-top">
                   <div class="d-flex flex-start-center rt-tariff-item">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">300 Мбит/с</p>
                     </div>
@@ -583,7 +583,7 @@
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">192
                             каналов</p>
@@ -592,20 +592,20 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
 
 
@@ -617,18 +617,18 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top-half">
                   <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Умный дом</p>
                       <p class="rt-font-control">Не входит</p>
                     </div>
@@ -664,8 +664,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -703,7 +703,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -719,15 +719,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -851,7 +851,7 @@
                 </div>
                 <div class="rt-space-top">
                   <div class="d-flex flex-start-center rt-tariff-item">
-                    <div class="rt-space-left05">
+                    <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">700 Мбит/с</p>
                     </div>
@@ -861,7 +861,7 @@
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">232
                             канала</p>
@@ -870,20 +870,20 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
                       <div class="d-flex flex-start-center rt-tariff-item">
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
 
 
@@ -895,12 +895,12 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -910,19 +910,19 @@
                       <div class="d-flex flex-start-center rt-tariff-item">
 
 
-                        <div class="rt-space-left05">
+                        <div class="">
                           <p class="rt-font-bold">Видеокамера + сервис</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Умный дом</p>
                         </div>
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -956,8 +956,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -995,7 +995,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -1011,15 +1011,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>

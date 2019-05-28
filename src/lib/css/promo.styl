@@ -203,8 +203,6 @@
 
 
 
-
-
 .scroll-step--is-active .scroll-step-text
   color white
   background-color #65B8DF
@@ -788,3 +786,92 @@
 
 .rt-container--mobile-full-width
   padding 0
+
+
+.rt-forgame
+  .rt-logo-co-branding
+    height: 30px
+  .rt-logo-co-branding__item
+    padding-left: 0
+    padding-right: 30px
+    &+.rt-logo-co-branding__line+.rt-logo-co-branding__item
+      padding-left: 20px
+
+
+.forgame-games-header__item
+  position: relative
+  cursor: pointer
+
+  &:hover
+    &:before
+      height: 3px
+      bottom: -10px
+
+  &:before
+    content: ''
+    position: absolute
+    height: 0
+    width: 100%
+    background-color: #FF4F12
+    bottom: -7px
+    transition-timing-function cubic-bezier(.77,.34,.39,.77)
+    transition-duration .2s
+    transition-property height, bottom
+
+.forgame-games-header__item--is-active
+  &:before
+    height: 3px
+    bottom: -10px
+
+.forgame-games-body__item
+  display: none
+
+.forgame-games-body__item--is-active
+  display: block
+
+.forgame-white-line
+  padding-bottom: 10px
+  border-bottom: 2px solid white
+
+.forgame-green-line
+  padding-bottom: 10px
+  border-bottom: 2px solid #466E1B
+  min-height: 55px
+
+.forgame-day-icon
+  width: 50px
+  height: 50px
+
+.pseudo-full-width
+  background-color: #fff
+  width: 100vw
+  position: relative
+  left: calc((100% - 100vw) / 2)
+  .rt-slide__arrow #new-abonent
+    fill #fff!important
+.rt-forgame
+  .rt-col-md-3
+    @media (max-width: mobile-upper-limit)
+      max-width: calc(100% - 30px)
+  .pseudo-full-width
+    background-color: rgba(27,40,65,0.5)
+
+    //background linear-gradient(to bottom, rgba(main-color, 0) 0%,  rgba(main-color, .75) 100%)
+
+.forgame-main-image
+  @media (max-width: tablet-upper-limit)
+    max-width: calc(50vw - 20px)
+  @media (max-width: mobile-upper-limit)
+    max-width: calc(100vw - 20px)
+
+.rt-forgame-small-image
+  @media (max-width: mobile-upper-limit)
+    height: 50px
+
+
+.rt-forgame-linege
+  @media (max-width: mobile-upper-limit)
+    min-height: 180px
+.rt-forgame-linege-row
+  @media (max-width: mobile-upper-limit)
+    max-width: 80%

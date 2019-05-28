@@ -129,7 +129,7 @@ export default {
                         </g>
                       </g>
                     </svg>
-                    
+
                     <div class="row rt-space-bottom2">
                       <div class="col flex-start-center rt-space-left05">
                         <div class=""><img src="/static/images/game/game-icon5.png" alt=""
@@ -152,7 +152,7 @@ export default {
                     </rt-color-line-text>
                     <p class="rt-space-bottom" style="margin-top:-15px">быстрый интернет <br/> и уникальные игровые бонусы</p>
                     <div class="d-flex">
-                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/>/**/</div>
+                      <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="850"/></div>
                       <div class="rt-orange-breaker-item"><rt-price color-value="white" class="color-white" value="250" currency="Мбит" time-interval="сек."/></div>
                     </div>
                     <div class="rt-space-top">

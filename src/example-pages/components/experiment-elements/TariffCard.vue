@@ -17,7 +17,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений</p>
                 <p class="rt-font-label color-purple">Акция «Название акции»</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -53,7 +53,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -85,17 +85,17 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
 
                     <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                          xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -161,7 +161,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -185,12 +185,12 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +226,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -236,21 +236,21 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -259,7 +259,7 @@
                     <rt-price :value="749"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
-                    <rt-button class="rt-button--is-block rt-button-purple">Подключить</rt-button>
+                    <rt-button class="rt-button--is-block rt-button-purple">Подключить по акции</rt-button>
                   </div>
                   <div class="flex-center-center rt-space-top05 rt-space-bottom05">
                     <span>Настроить</span>
@@ -273,7 +273,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений везде</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -309,7 +309,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -341,19 +341,19 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
 
                         <div class="rt-tariff-item__icon-wrapper">
 
@@ -391,18 +391,18 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
 
                 <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -436,7 +436,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -460,12 +460,12 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -501,7 +501,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
                               30
                               руб./мес.</p>
@@ -512,21 +512,21 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -548,7 +548,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для семьи</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -584,7 +584,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -616,19 +616,19 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -667,17 +667,17 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -710,7 +710,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -734,12 +734,12 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item ">
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -770,7 +770,7 @@
                             </g>
                           </svg>
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -780,21 +780,21 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -816,7 +816,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для всего</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -852,7 +852,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -884,19 +884,19 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -935,19 +935,19 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex rt-tariff-item">
 
 
                         <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -976,12 +976,12 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -991,7 +991,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -1015,12 +1015,12 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -1054,7 +1054,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -1064,21 +1064,21 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>

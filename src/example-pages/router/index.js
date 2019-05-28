@@ -24,6 +24,7 @@ import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
 import BusinessDrive from '../components/promo/business-drive.vue';
 import PromoGame from '../components/promo/game.vue';
+import PromoForgame from '../components/promo/forgame.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
@@ -113,6 +114,7 @@ const index = [
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/kids', name: 'kids', component: Kids },
   { path: '/promo/lp', name: 'lp', component: PromoLp },
+  { path: '/promo/forgame', name: 'forGame', component: PromoForgame },
   { path: '/promo/business-drive', name: 'business-drive', component: BusinessDrive },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },
