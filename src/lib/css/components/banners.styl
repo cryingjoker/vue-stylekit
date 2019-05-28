@@ -723,8 +723,6 @@
     position relative
     z-index 3
     cursor pointer
-    animation-duration 5s
-    animation-play-state running
 
     &:before
       content ""
@@ -742,7 +740,6 @@
       transition-timing-function ease-in-out
       transition-duration .3s
       transition-property background-color, width, height, border, margin, left, right
-      animation-play-state paused
 
     & + &
       margin-left horizontal-space
@@ -758,23 +755,15 @@
     stroke-dasharray 0
     stroke-width 0
 
-    .rt-banner--is-stopped &
-      animation none !important
-
     .circle-switcher__item:hover &
       stroke-dasharray 60
       stroke-width .5px
 
     .{newAppName}-banner--run-timer &
-      animation-name switcherRound
-      animation-duration inherit
-      animation-timing-function linear
       stroke-dasharray 60
       stroke-width .5px
 
     .{newAppName}-banner--pause &
-      animation none
-      animation-play-state paused
       stroke-dashoffset 120 !important
 
       &.{newAppName}-banner--run-timer
@@ -838,13 +827,6 @@
     top 0
     bottom 0
     right 7px
-
-@keyframes switcherRound
-  0%
-    stroke-dashoffset 180
-
-  100%
-    stroke-dashoffset 120
 
 @keyframes hideShowContent
   0%

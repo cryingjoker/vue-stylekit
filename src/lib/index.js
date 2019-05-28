@@ -34,6 +34,8 @@ import {
   Banner,
   BannerItem,
   BannerPaginatorItem,
+  Carousel,
+  CarouselSlide,
   Card,
   CardBuy,
   CardImage,
@@ -174,6 +176,8 @@ const VueRtStyle = {
       Vue.component(VerticalScrollBar.name, VerticalScrollBar);
       // tsx components
 
+      Vue.component(Carousel.name, Carousel.component);
+      Vue.component(CarouselSlide.name, CarouselSlide.component);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
       Vue.component(ProductCard.name, ProductCard.component);
       Vue.component(TariffCard.name, TariffCard.component);
