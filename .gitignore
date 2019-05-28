@@ -11,7 +11,7 @@ node_modules/
 # Compiled output
 tmp/
 # dist/
-
+server/
 # e2e
 e2e/*.js
 e2e/*.map

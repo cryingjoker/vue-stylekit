@@ -210,6 +210,11 @@
     "value": "#E3E8EC"
   },
   {
+    "code_variable_name": "b2c-cool-grey07",
+    "label": "",
+    "value": "rgba(227,232,236,0.7)"
+  },
+  {
     "code_variable_name": "b2c-cool-grey05",
     "label": "",
     "value": "rgba(227,232,236,0.5)"

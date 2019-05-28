@@ -18,12 +18,14 @@ import CardsWithForms from '../components/complex-elements/CardsWithForms.vue';
 import Icons from '../components/icons-elements/Icons.vue';
 import Pattern from '../components/main-elements/Pattern.vue';
 import Banners from '../components/experiment-elements/Banners.vue';
+import Carousels from '../components/experiment-elements/Carousels.vue';
 import PromoTv from '../components/promo/tv.vue';
 import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
 import BusinessDrive from '../components/promo/business-drive.vue';
 import PromoGame from '../components/promo/game.vue';
+import PromoForgame from '../components/promo/forgame.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
@@ -96,6 +98,7 @@ const index = [
   { path: '/scroll-tabs', name: 'app-scrollTabs', component: ScrollTabs },
   { path: '/icons', name: 'app-icons', component: Icons },
   { path: '/banners', name: 'app-banners', component: Banners },
+  { path: '/carousels', name: 'app-carousels', component: Carousels },
   { path: '/product-cards', name: 'app-product-card', component: ProductCard },
   { path: '/tariff-cards', name: 'app-tariff-card', component: TariffCard },
   { path: '/tariff-cards2', name: 'app-tariff-card', component: TariffCard2 },
@@ -113,6 +116,7 @@ const index = [
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/kids', name: 'kids', component: Kids },
   { path: '/promo/lp', name: 'lp', component: PromoLp },
+  { path: '/promo/forgame', name: 'forGame', component: PromoForgame },
   { path: '/promo/business-drive', name: 'business-drive', component: BusinessDrive },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },

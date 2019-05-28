@@ -5,6 +5,7 @@
   "main": "lib/vue-rt-style.js",
   "scripts": {
     "start": "node bin/local/index.js",
+    "optimize": "node node_modules/rt-image-optimizer --orig=/tmp/ --dist=/dist/ --max-width=1600",
     "build": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.lib.js",
     "build:docs": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.docs.js",
     "build:icons": "npx vsvg -s ./src/lib/components/Icon/generator/svg -t ./static/icons --tpl ./src/lib/components/Icon/generator/icon-tpl.js",
@@ -111,6 +112,7 @@
     "push-dir": "^0.4.1",
     "raw-loader": "^2.0.0",
     "regenerator-runtime": "^0.13.1",
+    "rt-image-optimizer": "^1.0.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
