@@ -17,14 +17,14 @@ export default {
   computed: {},
   methods: {
     setCardHeight() {
-      window.onload = () => {
+      window.addEventListener('load', () => {
         if(!this.mobileLayout) {
           for(let i = 0; i < this.$children.length; i++) {
             this.$children[i].$el.style.height = this.$children[i].$el.querySelector('.rtb-card__reverse').scrollHeight + 'px';
           }
         }
         this.equalizeCardsHeight();
-      };
+      });
     },
     equalizeCardsHeight() {
       let maxHeight = 0;
