@@ -46,7 +46,6 @@
           } else {
             styles.flexBasis = "calc(100% - 80px)";
           }
-          console.log(styles.iconSize);
         }
         return styles;
       }
@@ -60,8 +59,6 @@
       this.hasImage = this.$parent._props.hasImage;
       this.alignCenter = this.$parent._props.alignCenter;
       this.inlineLayout = this.$parent._props.inlineLayout;
-//      window.addEventListener('resize', {function});
-
     },
     methods: {},
     render: function (h) {
@@ -85,13 +82,13 @@
 
       const columnClass = (() => {
         if(this.columnsQuantity === 2) {
-          return 'rt-col-6 rt-col-td-3 rbi-pr1c '
+          return 'rt-col-6 rt-col-td-3 rbi-pr1c'
         }
         if(this.columnsQuantity === 3) {
-          return 'rt-col-4 rt-col-td-2 rbi-pr70 '
+          return 'rt-col-4 rt-col-td-2 rbi-pr70'
         }
         if(this.columnsQuantity === 4) {
-          return 'rt-col-3 rt-col-td-3 '
+          return 'rt-col-3 rt-col-td-3 rt-space-right rt-td-space-right-none'
         }
       })();
 

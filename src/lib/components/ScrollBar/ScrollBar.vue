@@ -1,11 +1,11 @@
 <template>
   <div
     @click="calculateSize"
-    :class="'vue-scrollbar__wrapper' + ( this.classes ? ' ' + this.classes : '' )"
+    :class="'rt-scrollbar__wrapper' + ( this.classes ? ' ' + this.classes : '' )"
     ref="scrollWrapper"
     :style="this.styles">
     <div
-      :class="'vue-scrollbar__area' + ( this.dragging ? ' ' : ' vue-scrollbar-transition')"
+      :class="'rt-scrollbar__area' + ( this.dragging ? ' ' : ' rt-scrollbar-transition')"
       ref="scrollArea"
       @wheel="scroll"
       @touchstart="startDrag"
@@ -36,7 +36,7 @@
 <script>
   const componentsList = {};
   import variables from "../../variables.json";
-//  import VerticalScrollBar from './rt-vertical-scroll-bar.vue'
+  import VerticalScrollBar from './VerticalScrollBar.vue'
 
   export default {
     name: "RtScrollBar",
@@ -95,7 +95,7 @@
         if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
         if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
         // prevent Default only if scrolled content is not at the top/bottom
-        if (!this.allowBodyScroll && OSName !== "MacOS") {
+        if (!this.allowBodyScroll) {
           e.preventDefault()
           e.stopPropagation()
         }

@@ -1,10 +1,9 @@
 .business-drive
   position relative
-  top 50px
   &__header
     padding 10px 0
     position fixed
-    top 50px
+    top 0
     left 0
     right 0
     z-index 20
@@ -45,7 +44,7 @@
     width 24px
     height 3px
     margin 18px 0
-    float: right
+    //float: right
     background-color: #313948
     position relative
     &:before,
@@ -70,6 +69,8 @@
       &:after
         transform rotate(-45deg)
         bottom 0
+    &-wrapper
+      float: right
     @media(min-width tablet-lower-limit)
       display none
   &__footer
@@ -141,9 +142,12 @@
       @media(max-width mobile-upper-limit)
         font-size 27px
         line-height 37px
+        margin-top: -4px
       .speaker-name__name,
       .speaker-name__surname
         border-width 8px
+        @media(max-width mobile-upper-limit)
+          border-width 4px
     .popup-title,
     .popup-reputation,
     .popup-description,
@@ -154,6 +158,7 @@
     .popup-description
       padding-bottom 20px
       opacity .5
+      font-size 28px
     .popup-theme
       margin-bottom: 35px
     .popup-reputation
@@ -177,18 +182,19 @@
       margin-bottom 30px
 
 .animated-text
-  font-size 114px
-  line-height 103px
-  height 800px
-  padding-top 90px
+  font-size 12vh
+  line-height 12vh
+  height 100vh
+  padding-top 10vh
   box-sizing border-box
   display flex
   flex-direction column
   @media(max-width tablet-upper-limit)
     font-size 75px
     line-height 68px
-    height 700px
+    height 500px
   @media(max-width mobile-upper-limit)
+    padding-top 60px
     font-size 34px
     line-height 37px
   &__line
@@ -198,16 +204,18 @@
       &:after
         position absolute
         content: ''
-        top 50%
+        top calc(50% + 5px)
         left 0
         width 0
         height 20px
         background-color b2c-orange
         transform translateY(-50%)
         @media(max-width tablet-upper-limit)
+          top calc(50% + 4px)
           height 14px
         @media(max-width mobile-upper-limit)
           height 7px
+          top calc(50% + 2px)
   &__first-line
     transform translateY(100%)
     opacity 0
@@ -296,6 +304,8 @@
       line-height 14px
       top 10px
       right -9px
+  .rt-button
+    height 55px
 
 .first-gradient-section
   background linear-gradient(to bottom, #001c45, #002845 16%, #450031 50%, #001c45);
@@ -310,7 +320,8 @@
     margin-top vertical-space
     position relative
     overflow hidden
-    min-height 370px
+    min-height 373px
+    cursor pointer
     @media(max-width tablet-upper-limit)
       height calc((100vw - 60px) / 2)
       border-radius 8px
@@ -341,7 +352,8 @@
     left: 50%
     transform: translateX(-50%)
     width: auto
-  &__description
+  &__description,
+  &__theme
     display none
 
 .speaker-name
@@ -555,6 +567,49 @@
   @media(max-width mobile-upper-limit)
     display block
     margin-bottom 18px
+
+.rt-scrollbar__wrapper
+  height 100%!important
+
+.rt-scrollbar-transition,
+.rt-scrollbar__scrollbar-vertical
+  transition: all 0.5s ease
+
+.rt-scrollbar-transition--scrollbar
+  transition: opacity 0.5s linear
+
+.rt-scrollbar__wrapper
+  margin: 0 auto
+  overflow: hidden
+  position: relative
+
+.rt-scrollbar__wrapper:hover .rt-scrollbar__scrollbar-vertical
+  opacity: 1
+
+.rt-scrollbar__scrollbar-vertical
+  opacity: 0.5
+  position: absolute
+  background: transparent
+
+.rt-scrollbar__scrollbar-vertical:hover
+  background: rgba(16, 24, 40, 0.6)
+
+.rt-scrollbar__scrollbar-vertical .scrollbar
+  position: relative
+  background: rgba(16, 24, 40, 0.6)
+  border-radius: 10px
+  cursor: default
+
+.rt-scrollbar__scrollbar-vertical
+  width: 10px
+  height: 100%
+  top: 0
+  right: 0
+
+.rt-scrollbar__scrollbar-vertical .scrollbar
+  width: 10px
+
+
 
 @keyframes fadeIn1
   //0%

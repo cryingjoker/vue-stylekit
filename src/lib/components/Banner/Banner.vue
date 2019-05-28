@@ -483,7 +483,7 @@
       },
       calculateSwipe() {
         if (Math.abs(this.touchendX - this.touchstartX) > 50) {
-          if (this.touchendX > this.touchstartX) {
+          if (this.touchendX < this.touchstartX) {
             this.getNextSlide();
           } else {
             this.getPreviousSlide();

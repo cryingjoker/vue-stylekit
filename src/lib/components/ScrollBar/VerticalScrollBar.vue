@@ -2,12 +2,12 @@
   <div>
     <div
       v-if="height < 100"
-      class="vue-scrollbar__scrollbar-vertical"
+      class="rt-scrollbar__scrollbar-vertical"
       ref="container"
       @click="jump">
 
       <div
-        :class="'scrollbar' + ( dragging || draggingFromParent ? '' : ' vue-scrollbar-transition')"
+        :class="'scrollbar' + ( dragging || draggingFromParent ? '' : ' rt-scrollbar-transition')"
         ref="scrollbar"
         @touchstart="startDrag"
         @mousedown="startDrag "
