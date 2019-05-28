@@ -46,8 +46,8 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Домашний интернет</p>
-                      <p class="rt-font-control color-dark07">100 Мбит/с</p>
+                      <p class="rt-font-bold">100 Мбит/с</p>
+                      <p class="rt-font-control color-dark07">Домашний интернет</p>
                     </div>
                   </div>
                 </div>
@@ -81,21 +81,21 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Интерактивное ТВ</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">125
+                          <p class="rt-font-bold">125
                             каналов</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
                       </div>
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -128,8 +128,8 @@
                       </g>
                     </svg>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Мобильная связь</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-bold">Не входит</p>
+                      <p class="rt-font-control">Мобильная связь</p>
                     </div>
                   </div>
                 </div>
@@ -158,8 +158,8 @@
                       </g>
                     </svg>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-bold">Не входит</p>
+                      <p class="rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
@@ -193,8 +193,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -234,7 +234,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -250,15 +250,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -267,7 +267,7 @@
                     <rt-price :value="749"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
-                    <rt-button class="rt-button--is-block rt-button-orange">Подключить</rt-button>
+                    <rt-button class="rt-button--is-block rt-button-orange">Подключить по акции</rt-button>
                   </div>
                   <div class="flex-center-center rt-space-top05 rt-space-bottom05">
                     <span>Настроить</span>
@@ -310,8 +310,8 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Домашний интернет</p>
-                      <p class="rt-font-control color-dark07">300 Мбит/с</p>
+                      <p class="rt-font-bold">300 Мбит/с</p>
+                      <p class="rt-font-control color-dark07">Домашний интернет</p>
                     </div>
                   </div>
                 </div>
@@ -345,21 +345,21 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Интерактивное ТВ</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">165
+                          <p class="rt-font-bold">165
                             каналов</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
                       </div>
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -398,21 +398,21 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
-
-
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">∞ Гб, 500
+                          <p class="rt-font-bold">∞ Гб, 500
                             минут, 50 смс</p>
+
+
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Мобильная связь, 1 SIM</p>
                         </div>
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -442,8 +442,8 @@
                       </g>
                     </svg>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-bold">Не входит</p>
+                      <p class="rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
@@ -477,8 +477,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -518,7 +518,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
                               30
                               руб./мес.</p>
@@ -535,15 +535,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -594,8 +594,8 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Домашний интернет</p>
-                      <p class="rt-font-control color-dark07">300 Мбит/с</p>
+                      <p class="rt-font-bold">300 Мбит/с</p>
+                      <p class="rt-font-control color-dark07">Домашний интернет</p>
                     </div>
                   </div>
                 </div>
@@ -629,21 +629,21 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Интерактивное ТВ</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">192
+                          <p class="rt-font-bold">192
                             каналов</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
                       </div>
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -681,23 +681,23 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
-
-
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">20 Гб, 600
+                          <p class="rt-font-bold">20 Гб, 600
                             минут, 50 смс</p>
+
+
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Мобильная связь, 1 SIM</p>
 
 
                         </div>
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -725,8 +725,8 @@
                       </g>
                     </svg>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-bold">Не входит</p>
+                      <p class="rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
@@ -760,8 +760,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -799,7 +799,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -815,15 +815,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -874,8 +874,8 @@
                       </svg>
                     </div>
                     <div class="rt-space-left05">
-                      <p class="rt-font-bold">Домашний интернет</p>
-                      <p class="rt-font-control color-dark07">700 Мбит/с</p>
+                      <p class="rt-font-bold">700 Мбит/с</p>
+                      <p class="rt-font-control color-dark07">Домашний интернет</p>
                     </div>
                   </div>
                 </div>
@@ -909,21 +909,21 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Интерактивное ТВ</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">232
+                          <p class="rt-font-bold">232
                             канала</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
                       </div>
                     </div>
                   </template>
                   <template slot="content">
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
-                    <p>1</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
+                    <p>описание фичей, которые входят в продукт</p>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -961,23 +961,23 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
-
-
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">20 Гб, 600
+                          <p class="rt-font-bold">20 Гб, 600
                             минут, 50 смс</p>
+
+
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Мобильная связь, 1 SIM</p>
 
 
                         </div>
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -1014,12 +1014,12 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
-                      <p>1</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
+                      <p>описание фичей, которые входят в продукт</p>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -1053,8 +1053,8 @@
                         </svg>
 
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Скидка до 30%</p>
-                          <p class="rt-font-control">при заказе с сайта</p>
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
@@ -1092,7 +1092,7 @@
                           </svg>
 
                           <div class="rt-space-left05">
-                            <p class="rt-font-bold">Оборудование</p>
+                            <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
@@ -1108,15 +1108,15 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
-                          <p>1</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
+                          <p>описание фичей, которые входят в продукт</p>
                         </template>
                       </rt-slide-content>
                     </template>
