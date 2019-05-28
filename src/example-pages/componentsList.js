@@ -28,6 +28,8 @@ import {
   Banner,
   BannerItem,
   BannerPaginatorItem,
+  Carousel,
+  CarouselSlide,
   Card,
   CardBuy,
   CardImage,
@@ -105,6 +107,8 @@ componentsList[ColorLineText.name] = ColorLineText;
 componentsList[Banner.name] = Banner;
 componentsList[BannerItem.name] = BannerItem;
 componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
+componentsList[Carousel.name] = Carousel.component;
+componentsList[CarouselSlide.name] = CarouselSlide.component;
 componentsList[Card.name] = Card;
 componentsList[CardBuy.name] = CardBuy;
 componentsList[CardImage.name] = CardImage;

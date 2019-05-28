@@ -34,6 +34,8 @@
  export { default as BannerItem } from './Banner/BannerItem.vue';
  export { default as BannerVideoGameControl } from './Banner/BannerVideoGameControl.vue';
  export { default as BannerPaginatorItem } from './Banner/BannerPaginatorItem.vue';
+ export { default as Carousel } from './Carousel/Carousel.tsx';
+ export { default as CarouselSlide } from './Carousel/CarouselSlide.tsx';
  export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';
  export { default as RowList } from './RowList/RowList.vue';
  export { default as RowListItem } from './RowList/RowListItem.vue';
