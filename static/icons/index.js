@@ -1,4 +1,7 @@
 /* eslint-disable */
+require('./001-bw')
+require('./001-c')
+require('./001-g')
 require('./004-C')
 require('./004')
 require('./049-C')
