@@ -14,9 +14,7 @@ export default {
       <div class="app-content rt-col-12 rt-col-md-3">
         <div class="app-title"><h1 class="rt-font-hero">Colors</h1></div>
         <div class="app-body">
-          <div class="row">
           {colorMap}
-          </div>
         </div>
       </div>
     </div>;
