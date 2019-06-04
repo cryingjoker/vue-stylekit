@@ -110,7 +110,7 @@ export default {
     calculateHeight() {
       const textarea = this.$el.querySelector(".textarea-element");
       textarea.style.height = "";
-      textarea.style.height = textarea.scrollHeight;
+      textarea.style.height = textarea.scrollHeight + 'px';
     },
     clearInput() {
       this.localValue = "";

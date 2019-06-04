@@ -574,7 +574,7 @@
           maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
         }
         for(let i = 0; i < this.parentArray.length; i++) {
-          document.querySelector('.custom-carousel').children[i].style.height = maxHeight;
+          document.querySelector('.custom-carousel').children[i].style.height = maxHeight + 'px';
         }
       }
     }
