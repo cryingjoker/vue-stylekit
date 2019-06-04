@@ -7,16 +7,24 @@
     &__step,
     &__icon
       margin-bottom 20px
+      &-background
+        border-radius 50%
+        position relative
+        .{newAppName}-benefit-item__icon
+          position absolute
+          top 50%
+          left 50%
+          transform translateY(-50%) translateX(-50%)
     &__image
       margin-bottom: 20px
       &>img
         width 100%
     &__text
-      .rt-font-small-paragraph
+      .{newAppName}-font-small-paragraph
         opacity .7
     &--center
       text-align: center
-      .rt-benefit-item__icon
+      .{newAppName}-benefit-item__icon
         margin 0 auto 20px
     &--inline
       display flex
