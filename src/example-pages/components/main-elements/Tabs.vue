@@ -70,7 +70,7 @@
             <template slot="content">
               <rt-tabs-content-item name="apps">
                 <rt-row-list :content-block-type="true">
-                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                  <rt-row-list-item>
                     <template slot="icon">
                       <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <g fill-rule="nonzero" fill="none">
@@ -131,7 +131,7 @@
               </rt-tabs-content-item>
               <rt-tabs-content-item name="hardware">
                 <rt-row-list :content-block-type="true">
-                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                  <rt-row-list-item>
                     <template slot="icon">
                       <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <g fill-rule="nonzero" fill="none">
@@ -172,7 +172,7 @@
                       </div>
                     </template>
                   </rt-row-list-item>
-                  <rt-row-list-item icon="/static/images/B2B/ATS.svg">
+                  <rt-row-list-item>
                     <template slot="icon">
                       <svg viewBox="0 0 64 45" width="100%" xmlns="http://www.w3.org/2000/svg">
                         <g fill-rule="nonzero" fill="none">
