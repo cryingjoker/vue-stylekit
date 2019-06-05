@@ -8,6 +8,14 @@
       "value" :"false",
       "version": "0.1.14"
     },
+    {
+      "name": "rt-product-card",
+      "property":"color",
+      "type": ["String"],
+      "description":"Цвет карточки",
+      "value" :"false",
+      "version": "0.1.27"
+    },
      {
       "name": "rt-product-card",
       "property":":background-image",
