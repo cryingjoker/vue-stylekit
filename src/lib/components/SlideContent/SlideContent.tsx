@@ -18,7 +18,11 @@ class SlideContent extends Vue {
     this.isOpenLocal= !this.isOpenLocal;
   }
   mounted(){
+    if(this.isOpen){
+      this.isOpenLocal = this.isOpen;
+    }
     if(this.dottedView){
+
       const header: any = this.$refs.header
       header.$el.querySelector('.rt-slide-content-trigger').addEventListener('click',(e)=> {
         this.isOpenLocal = !this.isOpenLocal;
