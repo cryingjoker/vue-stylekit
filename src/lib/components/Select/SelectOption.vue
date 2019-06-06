@@ -54,7 +54,7 @@ export default {
       this.text = this.getTextContent();
     },
     setSelection(e) {
-      this.RtSelect.setValue({ text: this.text, value: this.key });
+      this.RtSelect.setValue({ text: this.text, value: this.value });
       e.preventDefault();
     },
     getTextContent() {
