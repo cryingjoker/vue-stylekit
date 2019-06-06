@@ -98,6 +98,7 @@ import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideCo
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
+
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
       Vue.component(ButtonWithoutRipple.name, ButtonWithoutRipple);
@@ -151,7 +152,6 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
-
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.use(svgicon)

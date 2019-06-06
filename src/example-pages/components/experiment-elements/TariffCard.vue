@@ -85,13 +85,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-icons/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -242,15 +236,7 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
+                          <app-tariff-cars-icons/>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -341,13 +327,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-icons/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -391,12 +371,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -507,28 +482,9 @@
                               руб./мес.</p>
                           </div>
                         </div>
+                        <app-tariff-cars-icons/>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                        </template>
-                      </rt-slide-content>
+
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -616,13 +572,45 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <div class="d-flex rt-tariff-item">
+                      <div class="rt-tariff-item__icon-wrapper">
+
+                        <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg"
+                             class="rt-tariff-item__icon">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ver1" transform="translate(-180.000000, -1076.000000)">
+                              <g id="Group-10-Copy-11" transform="translate(170.000000, 1070.000000)">
+                                <g id="mob-copy" transform="translate(11.000000, 7.000000)">
+                                  <path
+                                    d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
+                                    id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                                  <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
+                                        class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
+                                  <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
+                                        class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
+                                  <path
+                                    d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
+                                    id="Fill-233" class="rt-tariff-item__icon-fill"></path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="rt-space-left05">
+                        <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
+
+
+                        <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">20 Гб, 600
+                          минут, 50 смс</p>
+
+
+                      </div>
+                    </div>
+
+
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -667,12 +655,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -705,7 +688,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -786,15 +769,7 @@
                         </template>
                         >
                         <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
+                          <app-tariff-cars-icons/>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -884,13 +859,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-icons/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -935,12 +904,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -976,17 +940,12 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -1060,27 +1019,8 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                        </template>
-                      </rt-slide-content>
+
+                        <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -1108,8 +1048,9 @@
 <script>
 
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
-
+  import AppTariffCarsIcons from './TariffCardIcons.vue';
   const componentsList = {};
+  componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
   export default {
     name: "AppTariffCars",
     components: componentsList,

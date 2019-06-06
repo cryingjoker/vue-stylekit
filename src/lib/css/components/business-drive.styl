@@ -216,76 +216,85 @@
         @media(max-width mobile-upper-limit)
           height 7px
           top calc(50% + 2px)
-  &__first-line
-    transform translateY(100%)
-    opacity 0
-    animation fadeIn1 .5s .3s ease-out forwards
-  &__second-line
-    transform translateY(140%)
-    opacity 0
-    animation fadeIn1 .5s .3s ease-out forwards
-    .animated-text__line-item
-      &:after
-        animation lineThrough1 .4s .5s ease-out forwards
-  &__third-line
-    transform translateY(180%)
-    opacity 0
-    animation fadeIn1 .5s .3s ease-out forwards
-    .animated-text__line-item
-      &:after
-        animation lineThrough1 .4s .7s ease-out forwards
-  &__fourth-line
-    transform translateY(220%)
-    opacity 0
-    animation fadeIn1 .5s .3s ease-out forwards
-    .animated-text__line-item
-      &:after
-        animation lineThrough1 .4s .9s ease-out forwards
-  &__fifth-line
-    transform translateY(380%)
-    opacity 0
-    animation fadeIn1 .5s .5s ease-out forwards
-  &__sixth-line
-    animation fadeIn2 .4s 1.2s linear forwards
-  &__seventh-line
-    animation fadeIn2 .4s 1.4s linear forwards
-  &__eighth-line
-    font-size 32px
-    line-height 40px
-    margin-top 30px
-    animation fadeIn2 .4s 1.7s linear forwards
-    @media(max-width tablet-upper-limit)
-      margin-top: 20px
-    .meeting-legend
-      padding-left 40px
-      position relative
-      display inline-block
-      opacity .8
-      animation bounce .5s 2.1s linear forwards
+  &--active
+    .animated-text__first-line
+      transform translateY(100%)
+      opacity 0
+      animation fadeIn1 .5s .3s ease-out forwards
+    .animated-text__second-line
+      transform translateY(140%)
+      opacity 0
+      animation fadeIn1 .5s .4s ease-out forwards
+      .animated-text__line-item
+        &:after
+          animation lineThrough1 .4s .6s ease-out forwards
+    .animated-text__third-line
+      transform translateY(180%)
+      opacity 0
+      animation fadeIn1 .5s .5s ease-out forwards
+      .animated-text__line-item
+        &:after
+          animation lineThrough1 .4s .8s ease-out forwards
+    .animated-text__fourth-line
+      transform translateY(220%)
+      opacity 0
+      animation fadeIn1 .5s .6s ease-out forwards
+      .animated-text__line-item
+        &:after
+          animation lineThrough1 .4s 1s ease-out forwards
+    .animated-text__fifth-line
+      transform translateY(480%)
+      opacity 0
+      animation fadeIn1 .5s .9s ease-out forwards
+    .animated-text__sixth-line
+      animation fadeIn1 .4s 1.3s linear forwards
+      transform translateY(100%)
+    .animated-text__seventh-line
+      animation fadeIn1 .4s 1.4s linear forwards
+      transform translateY(100%)
+    .animated-text__eighth-line
+      font-size 32px
+      line-height 40px
+      margin-top 30px
+      animation fadeIn2 .4s 1.7s linear forwards
       @media(max-width tablet-upper-limit)
-        font-size 21px
-        line-height 34px
-        padding-left 30px
-      @media(max-width mobile-upper-limit)
-        font-size 18px
-        line-height 26px
-      &:nth-child(2)
-        margin-left 30px
+        margin-top: 20px
+      .meeting-legend
+        padding-left 40px
+        position relative
+        display inline-block
+        opacity .8
+        animation bounce .5s 2.1s linear forwards
         @media(max-width tablet-upper-limit)
-          margin-left: 20px
+          font-size 21px
+          line-height 34px
+          padding-left 30px
         @media(max-width mobile-upper-limit)
-          margin-left: 0
-      .icon
-        position absolute
-        left 0
-        top 5px
-        width 30px
-        height 30px
-        @media(max-width tablet-upper-limit)
-          width 20px
-          height 20px
-        @media(max-width mobile-upper-limit)
-          top 0
+          font-size 18px
+          line-height 26px
+        &:nth-child(2)
+          margin-left 30px
+          @media(max-width tablet-upper-limit)
+            margin-left: 20px
+          @media(max-width mobile-upper-limit)
+            margin-left: 0
+        .icon
+          position absolute
+          left 0
+          top 5px
+          width 30px
+          height 30px
+          @media(max-width tablet-upper-limit)
+            width 20px
+            height 20px
+          @media(max-width mobile-upper-limit)
+            top 0
+    .animated-text__ninth-line
+      transform translateY(480%)
+      opacity 0
+      animation fadeIn2 .4s 2.2s ease-out forwards
+      .button-bounce
+        animation bounce .5s 2.6s linear forwards
   &__footnote
     font-size 32px
     line-height 40px

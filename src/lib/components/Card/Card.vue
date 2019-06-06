@@ -573,7 +573,7 @@ export default {
     const productTriangle = (() => {
       if(this.productCard) {
         return <div class="rtb-product__triangle">
-          <svg class="rtb-product-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364 38">
+          <svg class="rtb-product__triangle-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364 38">
             <polygon points="0 38,364 38,364 0"/>
           </svg>
         </div>

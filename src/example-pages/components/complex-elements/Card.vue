@@ -1121,9 +1121,9 @@
               category-icon-mobile=&quot;/static/images/B2B/shield.svg&quot;
             >
               <template slot=&quot;content&quot;>
-                <h3 class=&quot;rt-font-bold rt-space-bottom05&quot;>
+                <p class=&quot;rt-font-h3 rt-font-bold rt-space-bottom05 rtb-category__title&quot;>
                   Виртуальная АТС
-                </h3>
+                </p>
                 <div class=&quot;rt-font-small-paragraph&quot;>
                   Быстрое подключение без трат на оборудование, возможность
                   пользоваться из любой точки мира и ни одного пропущенного
@@ -1156,7 +1156,7 @@
               category-icon-mobile=&quot;/static/images/B2B/shield.svg&quot;
             >
               <template slot=&quot;content&quot;>
-                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05 rtb-category__title&quot;>
                   Сервис по защите от сетевых угроз
                 </p>
                 <div class=&quot;rt-font-small-paragraph&quot;>
@@ -1180,7 +1180,7 @@
               category-icon-mobile=&quot;/static/images/B2B/mobile-call.svg&quot;
             >
               <template slot=&quot;content&quot;>
-                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05&quot;>
+                <p class=&quot;rt-font-paragraph rt-font-bold rt-space-bottom05 rtb-category__title&quot;>
                   Сервис по защите от сетевых угроз
                 </p>
                 <div class=&quot;rt-font-small-paragraph&quot;>

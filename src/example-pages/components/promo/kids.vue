@@ -979,7 +979,7 @@
           });
           scrollerWidth = scrollerWidth - wWidth;
           if (scrollerWidth > 0) {
-            scroller.style.height = scrollerWidth + stickyItem.clientHeight + 300;
+            scroller.style.height = (scrollerWidth + stickyItem.clientHeight + 300)+'px';
             scroller.classList.add("animate-scroller-sticky-wrapper--is-active");
           } else {
             if (scroller.classList.contains("animate-scroller-sticky-wrapper--is-active"))

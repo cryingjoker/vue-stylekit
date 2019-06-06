@@ -60,8 +60,10 @@
     }
   },
   methods: {
-    toggleShow() {
+    toggleShow(e) {
       this.show = !this.show;
+
+      e.stopPropagation()
     }
   },
   render: function(h) {
@@ -76,10 +78,7 @@
       if (this.$slots.moreInfo) {
         return (
           <div
-            class={
-              "rt-row-list__item rt-col-12 rt-col-md-3" +
-              (this.show ? " rt-row-list__item--active" : "")
-            }
+            class={"rt-row-list__item rt-col-12 rt-col-md-3"}
             onClick={this.toggleShow}
           >
             <div class="rt-row-list__header rt-row-list__header--has-more-content row">
@@ -101,7 +100,10 @@
                 {this.$slots.value}
               </div>
             </div>
-            <div class={"rt-row-list__body row"}>
+            <div class={
+              "rt-row-list__body row" +
+              (this.show ? " rt-row-list__item--active" : "")
+            }>
               {this.$slots.icon ? <div class="rt-col-1 rt-col-md-3" /> : null}
               <div
                 class={

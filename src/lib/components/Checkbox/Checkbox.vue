@@ -12,7 +12,7 @@
       :id="uid"
       ref="input"
       v-model="isChecked"
-      v-validate="'required'"
+      v-validate="{ required: requiredRule }"
       :disabled="isDisabled"
       :name="name"
       type="checkbox"
@@ -58,6 +58,10 @@ export default {
     isDisabled: {
       type: Boolean,
       default: false
+    },
+    requiredRule: {
+      type: Boolean,
+      default: true
     },
     checked: {
       type: Boolean,

@@ -17,6 +17,9 @@ const router = new VueRouter({
   mode: "history",
   routes: routes.routes
 });
+import VeeValidate from "vee-validate";
+
+Vue.use(VeeValidate);
 
 const App = new Vue({
   el: "#app",

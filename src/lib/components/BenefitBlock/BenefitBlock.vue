@@ -41,6 +41,14 @@
       inlineLayout: {
         type: Boolean,
         default: false
+      },
+      iconBackingColor: {
+        type: String,
+        default: ''
+      },
+      iconBackingSize: {
+        type: [Number, String],
+        default: null
       }
     },
     render(h){

@@ -352,7 +352,7 @@
     </div>
 
 
-    <div class="rt-space-top5" style="width: 100wv">
+    <div class="rt-space-top5" style="width: 100vw;">
       <pre-code text='
         <rt-carousel slides-classes="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off is-b2c">
           <rt-carousel-slide>
@@ -1673,7 +1673,7 @@
         </rt-carousel>'/>
     </div>
 
-    <div class="rt-space-top5" style="width: 100wv">
+    <div class="rt-space-top5" style="width: 100vw;">
       <rt-carousel >
         <rt-carousel-slide v-for="i in 7" :key="i">
           <h2>Слайд {{ i }}</h2>
