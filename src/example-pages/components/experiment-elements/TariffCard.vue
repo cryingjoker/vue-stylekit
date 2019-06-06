@@ -334,9 +334,7 @@
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
                       <div class="d-flex rt-tariff-item">
-
                         <div class="rt-tariff-item__icon-wrapper">
-
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                                xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
@@ -506,7 +504,6 @@
                 <div class="rt-space-top">
                   <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
-
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                            xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -574,7 +571,6 @@
                   <template slot="content">
                     <div class="d-flex rt-tariff-item">
                       <div class="rt-tariff-item__icon-wrapper">
-
                         <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                              xmlns="http://www.w3.org/2000/svg"
                              class="rt-tariff-item__icon">

@@ -24,7 +24,7 @@
     <div class="rt-space-top-half">
       <div class="d-flex rt-tariff-item">
         <div class="rt-tariff-item__icon-wrapper">
-          <svg viewBox="0 0 57 58" class="rt-tariff-item__icon" style="width: 42px; height: 42px; background-color:#f5f5f5">
+          <svg viewBox="0 0 57 58" class="rt-tariff-item__icon" style="width: 42px; height: 42px; background-color:#f5f5f5; border-radius: 50%;">
             <g fill="none" fill-rule="evenodd" opacity=".7">
               <path pid="0"
                     d="M55.787 29.183c0 15.188-12.313 27.5-27.5 27.5-15.188 0-27.5-12.312-27.5-27.5s12.312-27.5 27.5-27.5c15.187 0 27.5 12.313 27.5 27.5"

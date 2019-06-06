@@ -1,501 +1,574 @@
 <script type="text/jsx">
-import Vue from "vue";
-import VeeValidate from "vee-validate";
+  import Vue from "vue";
+  import VeeValidate from "vee-validate";
 
-export default {
-  name: "RtInput",
-  props: {
-    customRules: {
-      type: Array,
-      default: () => ([])
+  export default {
+    $_veeValidate: {
+      // value resolver
+      value() {
+        return this.$refs.input.value;
+      }
     },
-    minNumber: {
-      type: Number,
-      default: null
-    },
-    maxLength: {
-      type: Number,
-      default: null
-    },
-    maxNumber: {
-      type: Number,
-      default: null
-    },
-    defaultValue: {
-      type: [String, Number],
-      default: null
-    },
-    insertLang: {
-      type: String,// [ru, en]
-      default: null
-    },
-    insertType: {
-      type: String, //[number, string, password]
-      default: null
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    placeholder: {
-      type: String,
-      default: null
-    },
-    hasError: {
-      type: Boolean,
-      default: false
-    },
-    errorMessageFunc: {
-      type: Function,
-      default: null
-    },
-    errorMessage: {
-      type: String,
-      default: null
-    },
-    value: {
-      type: String,
-      default: ""
-    },
-    isWhite: {
-      type: Boolean,
-      default: false
-    },
-    name: {
-      type: String,
-      default: null
-    },
-    validate: {},
-    showNumbersButtons: {
-      type: Boolean,
-      default: false
-    },
-    label: {
-      type: String,
-      default: null
-    },
-    type:{
-      type: String,
-      default: 'text'
-    },
-    passwordVisibility: {
-      type: Boolean,
-      default: false
-    },
-    isB2bInput: {
-      type: Boolean,
-      default: false
-    },
-    outlined: {
-      type: Boolean,
-      default: false
-    },
-    color: {
-      type: String,
-      default: 'purple'
-    },
-    technicalPossibilityHint: {
-      type: String,
-      default: ''
-    },
-    isHidden: {
-      type: Boolean,
-      default: false
-    },
-    approved: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data() {
-    return {
-      index: null,
-      localLabel: this.label,
-      localValue: this.value ? this.value : "",
-      hasInputText: this.value ? this.value.length > 0 : false,
-      hintPosition: 'right'
-    };
-  },
+    name: "RtInput",
+    props: {
+      customRules: {
+        type: Array,
+        default: () => ([])
+      },
+      minNumber: {
+        type: Number,
+        default: null
+      },
+      maxLength: {
+        type: Number,
+        default: null
+      },
+      maxNumber: {
+        type: Number,
+        default: null
+      },
+      defaultValue: {
+        type: [String, Number],
+        default: null
+      },
+      insertLang: {
+        type: String,// [ru, en]
+        default: null
+      },
+      insertType: {
+        type: String, //[number, string, password]
+        default: null
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      placeholder: {
+        type: String,
+        default: null
+      },
+      hasError: {
+        type: Boolean,
+        default: false
+      },
+      errorMessageFunc: {
+        type: Function,
+        default: null
+      },
+      errorMessage: {
+        type: String,
+        default: null
+      },
+      value: {
+        type: String,
+        default: ""
+      },
+      isWhite: {
+        type: Boolean,
+        default: false
+      },
+      name: {
+        type: String,
+        default: null
+      },
+      validate: {
+        type: String,
+        default: null
+      },
+      vvAs: {
+        type: String,
+        default: null
+      },
+      showNumbersButtons: {
+        type: Boolean,
+        default: false
+      },
+      label: {
+        type: String,
+        default: null
+      },
+      type: {
+        type: String,
+        default: "text"
+      },
+      passwordVisibility: {
+        type: Boolean,
+        default: false
+      },
+      isB2bInput: {
+        type: Boolean,
+        default: false
+      },
+      outlined: {
+        type: Boolean,
+        default: false
+      },
+      color: {
+        type: String,
+        default: "purple"
+      },
+      technicalPossibilityHint: {
+        type: String,
+        default: ""
+      },
+      isHidden: {
+        type: Boolean,
+        default: false
+      },
+      approved: {
+        type: Boolean,
+        default: false
+      },
+      realtimeValidate: {
+        type: Boolean,
+        default: false
+      },
+      validateOnBlur: {
+        type: Boolean,
+        default: false
+      }
 
-  computed: {
-    fieldName() {
-      return this.name || "input-field__" + this._uid;
     },
-    isInvalid() {
-      if (this.validate || this.hasError) {
-        return this.hasError || this.errors.has(this.fieldName);
-      }
+    data() {
+      return {
+        index: null,
+        localLabel: this.label,
+        localValue: this.value ? this.value : "",
+        hasInputText: this.value ? this.value.length > 0 : false,
+        hintPosition: "right",
+        veeMessageError: null
+      };
     },
-    inputClass() {
-      let className = 'input-wrapper';
-      if(this.outlined) {
-        className += ' input-wrapper--outlined';
-      }
-      if(this.isB2bInput) {
-        className += ' rtb-input color-block--white';
-      }
-      if(this.isHidden) {
-        className += ' rtb-input--hidden';
-      }
-      if(this.approved) {
-        className += ' rtb-input--approved'
-      }
-      return className;
-    }
-  },
-  watch: {
-    localValue(val) {
-      this.$emit("input", val);
-    },
-    label() {
-      this.localLabel = this.label;
-    }
-  },
 
-  mounted() {
-    this.customRules.forEach(({nameRule, rule}) => VeeValidate.Validator.extend(nameRule, { validate: rule }));
-    Vue.use(VeeValidate);
-    this.setValue();
-    this.setDisabled();
-    this.bindEvents();
-    if(this.$el.getBoundingClientRect().left > window.innerWidth / 2) {
-      this.hintPosition = 'left';
-    } else {
-      this.hintPosition = 'right';
-    };
-  },
-
-  updated() {
-    this.unbindEvents();
-    this.bindEvents();
-  },
-  beforeDestroy() {
-    this.unbindEvents();
-  },
-  methods: {
-    bindEvents() {
-
-      if (this["_events"]) {
-        Object.keys(this["_events"]).map(eventName => {
-          const that = this;
-          this.$refs.input.addEventListener(
-            eventName,
-            function(){
-              that["_events"][eventName][0](arguments[0])}
-          );
-        });
-      }
-    },
-    unbindEvents() {
-      if (this["_events"]) {
-        Object.keys(this["_events"]).map(eventName => {
-          this.$refs.input.removeEventListener(
-            eventName,
-            this["_events"][eventName]
-          );
-        });
-      }
-    },
-    addNumber() {
-      this.localValue = typeof parseInt(this.localValue) === "number" ? this.localValue - 0 + 1 : 1;
-      if (this.maxNumber !== null && this.localValue > this.maxNumber) {
-        this.localValue = this.maxNumber;
-        event.target.value = this.maxNumber;
-      }
-      this.updateInputValue();
-    },
-    subtractNumber() {
-      this.localValue = typeof parseInt(this.localValue) === "number" ? this.localValue - 1 : 0;
-      if (this.minNumber !== null && this.localValue < this.minNumber) {
-        this.localValue = this.minNumber;
-        event.target.value = this.minNumber;
-      }
-      this.updateInputValue();
-    },
-    updateInputValue() {
-      this.$el.querySelector(".input-element").value = this.localValue;
-    },
-    setValue() {
-      this.$el.querySelector(".input-element").value = this.localValue;
-      this.setValueLength();
-    },
-    setDisabled() {
-      this.$el.querySelector(".input-element").disabled = Boolean(
-        this.disabled
-      );
-    },
-    setValueLength() {
-      this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
-    },
-    inputHandler($event) {
-      this.localValue = this.$el.querySelector(".input-element").value;
-      this.setValueLength();
-    },
-    clearInput() {
-      this.localValue = "";
-      this.setValue();
-    },
-    getChar(event) {
-      if (event.which == null) {
-        if (event.keyCode < 32) return null;
-        return String.fromCharCode(event.keyCode);
-      }
-      if (event.which < 32) return null;
-      return String.fromCharCode(event.which);
-    },
-    isSpecialCharacters(chr) {
-      return chr.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) !== null;
-    },
-    keyPress(event) {
-
-      let chr = this.getChar(event);
-      if(this.maxLength && this.maxLength <= event.target.value.length){
-        event.preventDefault();
-        event.stopPropagation();
-        return null;
-      }
-      if (this.insertType) {
-        switch (this.insertType) {
-          case "number":
-            if (!chr.match(/[0-9]/)) {
-              event.preventDefault();
-              event.stopPropagation();
-              return null;
-            }
-            break;
-          case "string":
-            if (chr.match(/[0-9]/)) {
-              event.preventDefault();
-              event.stopPropagation();
-              return null;
-            }
-            break;
-
+    computed: {
+      fieldName() {
+        return this.name || "input-field__" + this._uid;
+      },
+      isInvalid() {
+        if (this.veeMessageError) {
+          return true;
         }
-      }
-      if (this.insertLang) {
-
-        if (isNaN(parseInt(chr)) && !this.isSpecialCharacters(chr)) {
-          switch (this.insertLang) {
-            case "en":
-              if (!chr.match(/[a-z]/i)) {
-                event.preventDefault();
-                event.stopPropagation();
-                return null;
-              }
-              break;
-            case "ru":
-              if (!chr.match(/[а-я]/i)) {
-                event.preventDefault();
-                event.stopPropagation();
-                return null;
-              }
-              break;
-          }
+        if (this.validate || (this.hasError && !this.errors)) {
+          return this.hasError;
         }
+        if (this.validate && this.errors) {
+          return this.errors.has(this.fieldName);
+        }
+      },
+      inputClass() {
+        let className = "input-wrapper";
+        if (this.outlined) {
+          className += " input-wrapper--outlined";
+        }
+        if (this.isB2bInput) {
+          className += " rtb-input color-block--white";
+        }
+        if (this.isHidden) {
+          className += " rtb-input--hidden";
+        }
+        if (this.approved) {
+          className += " rtb-input--approved";
+        }
+        return className;
       }
     },
-    keyUp(event) {
-      if (this.insertType) {
-        switch (this.insertType) {
-          case "number":
-            let value = event.target.value - 0;
-            if (this.maxNumber !== null && value > this.maxNumber) {
-              this.localValue = this.maxNumber;
-              event.target.value = this.maxNumber;
-            }
-            if (this.minNumber !== null && value < this.minNumber) {
-              this.localValue = this.minNumber;
-              event.target.value = this.minNumber;
-            }
-            break;
-        }
+    watch: {
+      localValue(val) {
+        this.$emit("input", val);
+      },
+      label() {
+        this.localLabel = this.label;
       }
     },
-    changeFromParent(props) {
-      if (props && this.name in props) {
-        const propsForItem = props[this.name];
-        if ("0" in propsForItem) {
-          this.$refs.input.value = propsForItem[0];
-          this.inputHandler();
-        }
-      } else {
-        if (this.insertType === "number") {
-          if (this.minNumber) {
-            this.$refs.input.value = this.minNumber;
-          } else {
-            this.$refs.input.value = 0;
-          }
-        }
-      }
-    },
-    togglePasswordVisibility() {
-      let inputElement = this.$el.getElementsByTagName('input')[0];
-      if (inputElement.getAttribute('type') === 'password'){
-        inputElement.setAttribute('type', 'text');
-      } else if (inputElement.getAttribute('type') === 'text') {
-        inputElement.setAttribute('type', 'password');
-      }
-      this.passwordVisibility = !this.passwordVisibility;
-    }
-  },
-  render() {
-    let inputClass = "input text-field";
-    if (this.isInvalid) {
-      inputClass += " text-field--error";
-    }
-    if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
-      inputClass += " input--with-button";
-    }
-    if (this.isWhite) {
-      inputClass += " rt-input--white";
-    }
-    if(this.type && this.type === "password") {
-      inputClass += " rt-input--password";
-    }
-    if(this.color === 'orange') {
-      inputClass += " text-field--orange";
-    } else {
-      inputClass += " text-field--purple";
-    }
 
-    const placeholder = (() => {
-      if (this.placeholder) {
-        let placeholderClassNames = "floating-placeholder";
-        if (this.hasInputText) {
-          placeholderClassNames += " floating-placeholder--go-top";
-        }
-        return <div class={placeholderClassNames}>
-          {this.placeholder}
-        </div>;
-      }
-      return null;
-    })();
-
-    const clearButton = (() => {
-      const buttonClass = (() => {
-        let clearButtonClassNames = "input-clear";
-        if(this.isB2bInput) {
-          clearButtonClassNames += " rtb-input-clear";
-        }
-        return clearButtonClassNames;
-      })();
-      if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != 'password') {
-        return <div class={buttonClass} onClick={this.clearInput}>
-          <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13"
-               xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
-                  fill-rule="evenodd"/>
-          </svg>
-        </div>;
-      }
-      return null;
-    })();
-
-    const passwordIcon = (() => {
-      if(this.type === 'password') {
-        if(!this.passwordVisibility){
-          return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
-            <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
-              <g stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
-                <path d="M3.333 1C4.838 3.687 7.06 5.031 10 5.031S15.162 3.687 16.667 1M10 7.667v1.25M14.396 6.833l.572
-              1.031M5.801 6.833L5.23 7.864M17.5 4.333l.833.834M2.5 4.333l-.833.834"/>
-              </g>
-            </svg>
-          </div>;
+    mounted() {
+      this.customRules.forEach(({ nameRule, rule }) => VeeValidate.Validator.extend(nameRule, { validate: rule }));
+      Vue.use(VeeValidate);
+      setTimeout(() => {
+        this.setValue();
+        this.setDisabled();
+        this.bindEvents();
+        this.bindValidate();
+        if (this.$el.getBoundingClientRect().left > window.innerWidth / 2) {
+          this.hintPosition = "left";
         } else {
-          return <div class="password-icon" onClick={this.togglePasswordVisibility}>
-            <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(1 1)" stroke="#101828" stroke-width="2" fill="none" fill-rule="evenodd">
-                <path d="M0 5c1.805 3.225 4.472 4.837 8 4.837 3.528 0 6.195-1.612 8-4.837M0 4.837C1.805 1.612 4.472 0
-                8 0c3.528 0 6.195 1.612 8 4.837" stroke-linecap="round"/>
-                <circle cx="8" cy="5" r="2"/>
-              </g>
-            </svg>
-          </div>;
+          this.hintPosition = "right";
         }
-      }
-      return null;
-    })();
+        ;
+      }, 300);
+    },
 
-    const errorMessage = (() => {
+    updated() {
+      this.unbindEvents();
+      this.bindEvents();
+    },
+    beforeDestroy() {
+      this.unbindEvents();
+    },
+
+    methods: {
+      validateIt() {
+        if (this.$validator) {
+          this.$validator.validateAll();
+          if (this.$validator.errors.first(this.fieldName)) {
+            this.veeMessageError = this.$validator.errors.first(this.fieldName);
+          } else {
+            this.veeMessageError = null;
+          }
+        }
+      },
+      bindValidate() {
+        if (this.$refs.input && this.validate) {
+          if (this.realtimeValidate) {
+            this.$refs.input.addEventListener("input", () => {
+              this.validateIt();
+            });
+          } else if (this.validateOnBlur) {
+            this.$refs.input.addEventListener("blur", () => {
+              this.validateIt();
+            });
+          } else {
+            this.$el.addEventListener("validate", () => {
+              this.validateIt();
+            });
+          }
+        }
+      },
+      bindEvents() {
+
+        if (this["_events"]) {
+
+          Object.keys(this["_events"]).map(eventName => {
+            const that = this;
+
+            this.$refs.input.addEventListener(
+              eventName,
+              function() {
+                that["_events"][eventName][0](arguments[0]);
+              }
+            );
+          });
+        }
+      },
+      unbindEvents() {
+        if (this["_events"]) {
+          Object.keys(this["_events"]).map(eventName => {
+            this.$refs.input.removeEventListener(
+              eventName,
+              this["_events"][eventName]
+            );
+          });
+        }
+      },
+      addNumber() {
+        this.localValue = typeof parseInt(this.localValue) === "number" ? this.localValue - 0 + 1 : 1;
+        if (this.maxNumber !== null && this.localValue > this.maxNumber) {
+          this.localValue = this.maxNumber;
+          event.target.value = this.maxNumber;
+        }
+        this.updateInputValue();
+      },
+      subtractNumber() {
+        this.localValue = typeof parseInt(this.localValue) === "number" ? this.localValue - 1 : 0;
+        if (this.minNumber !== null && this.localValue < this.minNumber) {
+          this.localValue = this.minNumber;
+          event.target.value = this.minNumber;
+        }
+        this.updateInputValue();
+      },
+      updateInputValue() {
+        this.$el.querySelector(".input-element").value = this.localValue;
+      },
+      setValue() {
+        this.$el.querySelector(".input-element").value = this.localValue;
+        this.setValueLength();
+      },
+      setDisabled() {
+        this.$el.querySelector(".input-element").disabled = Boolean(
+          this.disabled
+        );
+      },
+      setValueLength() {
+        this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
+      },
+      inputHandler($event) {
+        this.localValue = this.$el.querySelector(".input-element").value;
+        this.setValueLength();
+      },
+      clearInput() {
+        this.localValue = "";
+        this.setValue();
+        if (this.$refs.input && this.validate && this.validateOnBlur) {
+          setTimeout(() => {
+            this.validateIt();
+          }, 0);
+        }
+      },
+      getChar(event) {
+        if (event.which == null) {
+          if (event.keyCode < 32) return null;
+          return String.fromCharCode(event.keyCode);
+        }
+        if (event.which < 32) return null;
+        return String.fromCharCode(event.which);
+      },
+      isSpecialCharacters(chr) {
+        return chr.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) !== null;
+      },
+      keyPress(event) {
+
+        let chr = this.getChar(event);
+        if (this.maxLength && this.maxLength <= event.target.value.length) {
+          event.preventDefault();
+          event.stopPropagation();
+          return null;
+        }
+        if (this.insertType) {
+          switch (this.insertType) {
+            case "number":
+              if (!chr.match(/[0-9]/)) {
+                event.preventDefault();
+                event.stopPropagation();
+                return null;
+              }
+              break;
+            case "string":
+              if (chr.match(/[0-9]/)) {
+                event.preventDefault();
+                event.stopPropagation();
+                return null;
+              }
+              break;
+
+          }
+        }
+        if (this.insertLang) {
+
+          if (isNaN(parseInt(chr)) && !this.isSpecialCharacters(chr)) {
+            switch (this.insertLang) {
+              case "en":
+                if (!chr.match(/[a-z]/i)) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  return null;
+                }
+                break;
+              case "ru":
+                if (!chr.match(/[а-я]/i)) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  return null;
+                }
+                break;
+            }
+          }
+        }
+      },
+      keyUp(event) {
+        if (this.insertType) {
+          switch (this.insertType) {
+            case "number":
+              let value = event.target.value - 0;
+              if (this.maxNumber !== null && value > this.maxNumber) {
+                this.localValue = this.maxNumber;
+                event.target.value = this.maxNumber;
+              }
+              if (this.minNumber !== null && value < this.minNumber) {
+                this.localValue = this.minNumber;
+                event.target.value = this.minNumber;
+              }
+              break;
+          }
+        }
+      },
+      changeFromParent(props) {
+        if (props && this.name in props) {
+          const propsForItem = props[this.name];
+          if ("0" in propsForItem) {
+            this.$refs.input.value = propsForItem[0];
+            this.inputHandler();
+          }
+        } else {
+          if (this.insertType === "number") {
+            if (this.minNumber) {
+              this.$refs.input.value = this.minNumber;
+            } else {
+              this.$refs.input.value = 0;
+            }
+          }
+        }
+      },
+      togglePasswordVisibility() {
+        let inputElement = this.$el.getElementsByTagName("input")[0];
+        if (inputElement.getAttribute("type") === "password") {
+          inputElement.setAttribute("type", "text");
+        } else if (inputElement.getAttribute("type") === "text") {
+          inputElement.setAttribute("type", "password");
+        }
+        this.passwordVisibility = !this.passwordVisibility;
+      }
+    },
+    render() {
+      let inputClass = "input text-field";
       if (this.isInvalid) {
-        let errorMessageClass = "text-field__error-message";
-        if (this.label) {
-          errorMessageClass += " text-field__error-message--has-label";
-        }
-        if(this.isB2bInput) {
-          errorMessageClass += " rtb-text-field__error-message rt-col-rt-col-3";
-        }
-        if(this.hintPosition === 'right') {
-          errorMessageClass += " rtb-text-field__error-message--on-the-right";
-        } else if(this.hintPosition === 'left') {
-          errorMessageClass += " rtb-text-field__error-message--on-the-left";
-        }
+        inputClass += " text-field--error";
+      }
+      if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
+        inputClass += " input--with-button";
+      }
+      if (this.isWhite) {
+        inputClass += " rt-input--white";
+      }
+      if (this.type && this.type === "password") {
+        inputClass += " rt-input--password";
+      }
+      if (this.color === "orange") {
+        inputClass += " text-field--orange";
+      } else {
+        inputClass += " text-field--purple";
+      }
 
-        if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
-          return <div class={errorMessageClass}>
-            <span class="error-message-text-content rt-font-label">{this.errorMessageFunc(this.localValue)}</span>
+      const placeholder = (() => {
+        if (this.placeholder) {
+          let placeholderClassNames = "floating-placeholder";
+          if (this.hasInputText) {
+            placeholderClassNames += " floating-placeholder--go-top";
+          }
+          return <div class={placeholderClassNames}>
+            {this.placeholder}
           </div>;
         }
+        return null;
+      })();
 
-        return <div class={errorMessageClass}>
-          <span class="error-message-text-content rt-font-label">{this.errorMessage}</span>
-        </div>;
-      }
-    })();
-    const arithmeticButtons = (() => {
-      if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
-        return <div class="input-arithmetic">
-          <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
-                <path d="M15 10H5" stroke="#101828" stroke-width="2"/>
-              </g>
+      const clearButton = (() => {
+        const buttonClass = (() => {
+          let clearButtonClassNames = "input-clear";
+          if (this.isB2bInput) {
+            clearButtonClassNames += " rtb-input-clear";
+          }
+          return clearButtonClassNames;
+        })();
+        if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != "password") {
+          return <div class={buttonClass} onClick={this.clearInput}>
+            <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7z"
+                    fill-rule="evenodd"/>
             </svg>
-          </button>
-          <button class="input-arithmetic__button input-arithmetic__plus" onClick={this.addNumber}>
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
-                <path d="M10 10V5v5h5-5zm0 0v5-5H5h5z"  stroke="#101828" stroke-width="2"/>
-              </g>
-            </svg>
-          </button>
-        </div>;
-      }
-    })();
+          </div>;
+        }
+        return null;
+      })();
 
-    const inputLabel = (() => {
-      if (this.localLabel)
-        return <div class="input-label">{this.localLabel}</div>;
-    })();
+      const passwordIcon = (() => {
+        if (this.type === "password") {
+          if (!this.passwordVisibility) {
+            return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
+              <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                  <path d="M3.333 1C4.838 3.687 7.06 5.031 10 5.031S15.162 3.687 16.667 1M10 7.667v1.25M14.396 6.833l.572
+              1.031M5.801 6.833L5.23 7.864M17.5 4.333l.833.834M2.5 4.333l-.833.834"/>
+                </g>
+              </svg>
+            </div>;
+          } else {
+            return <div class="password-icon" onClick={this.togglePasswordVisibility}>
+              <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(1 1)" stroke="#101828" stroke-width="2" fill="none" fill-rule="evenodd">
+                  <path d="M0 5c1.805 3.225 4.472 4.837 8 4.837 3.528 0 6.195-1.612 8-4.837M0 4.837C1.805 1.612 4.472 0
+                8 0c3.528 0 6.195 1.612 8 4.837" stroke-linecap="round"/>
+                  <circle cx="8" cy="5" r="2"/>
+                </g>
+              </svg>
+            </div>;
+          }
+        }
+        return null;
+      })();
 
-    return <div class={this.inputClass} >
-      <div class="input text-field" class={inputClass}>
-        <input
-          onKeypress={this.keyPress}
-          onKeyup={this.keyUp}
-          ref="input"
-          autocomplete="off"
-          autocapitalize="off"
-          type={this.type}
-          class="input-element"
-          name={this.fieldName}
-          onInput={this.inputHandler}
-          v-validate={this.validate}
-        />
-        {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
-        {placeholder}
-        {clearButton}
-        {passwordIcon}
-        {errorMessage}
-        {arithmeticButtons}
-      </div>
-      {inputLabel}
-      {this.$slots.default}
-    </div>;
-  }
-};
+      const errorMessage = (() => {
+        if (this.isInvalid) {
+          let errorMessageClass = "text-field__error-message";
+          if (this.label) {
+            errorMessageClass += " text-field__error-message--has-label";
+          }
+          if (this.isB2bInput) {
+            errorMessageClass += " rtb-text-field__error-message rt-col-rt-col-3";
+          }
+          if (this.hintPosition === "right") {
+            errorMessageClass += " rtb-text-field__error-message--on-the-right";
+          } else if (this.hintPosition === "left") {
+            errorMessageClass += " rtb-text-field__error-message--on-the-left";
+          }
+
+          if (Object.prototype.toString.call(this.errorMessageFunc) === "[object Function]") {
+            return <div class={errorMessageClass}>
+              <span class="error-message-text-content rt-font-label">{this.errorMessageFunc(this.localValue)}</span>
+            </div>;
+          }
+          if (this.veeMessageError) {
+
+            return <div class={errorMessageClass}>
+              <span class="error-message-text-content rt-font-label">{this.veeMessageError}</span>
+            </div>;
+          }
+          return <div class={errorMessageClass}>
+            <span class="error-message-text-content rt-font-label">{this.errorMessage}</span>
+          </div>;
+        }
+      })();
+      const arithmeticButtons = (() => {
+        if (this.showNumbersButtons && this.insertType && this.insertType === "number") {
+          return <div class="input-arithmetic">
+            <button class="input-arithmetic__button input-arithmetic__minus" onClick={this.subtractNumber}>
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
+                  <path d="M15 10H5" stroke="#101828" stroke-width="2"/>
+                </g>
+              </svg>
+            </button>
+            <button class="input-arithmetic__button input-arithmetic__plus" onClick={this.addNumber}>
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M0 10c0 5.5 4.5 10 10 10s10-4.5 10-10S15.5 0 10 0 0 4.5 0 10z" fill="#E3E8EC"/>
+                  <path d="M10 10V5v5h5-5zm0 0v5-5H5h5z" stroke="#101828" stroke-width="2"/>
+                </g>
+              </svg>
+            </button>
+          </div>;
+        }
+      })();
+
+      const inputLabel = (() => {
+        if (this.localLabel)
+          return <div class="input-label">{this.localLabel}</div>;
+      })();
+      return <div class={this.inputClass}>
+        <div class="input text-field" class={inputClass}>
+          <input
+            onKeypress={this.keyPress}
+            onKeyup={this.keyUp}
+            ref="input"
+            autocomplete="off"
+            autocapitalize="off"
+            type={this.type}
+            v-validate={this.validate}
+            class="input-element"
+            name={this.fieldName}
+            onInput={this.inputHandler}
+          />
+          {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
+          {placeholder}
+          {clearButton}
+          {passwordIcon}
+          {errorMessage}
+          {arithmeticButtons}
+        </div>
+        {inputLabel}
+        {this.$slots.default}
+      </div>;
+    }
+  };
 </script>
