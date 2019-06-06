@@ -73,7 +73,11 @@
               </div>
             </div>
             <div class="rt-space-top2">
-              <rt-button class="rt-button-orange">Принять участие</rt-button>
+              <div class="animated-text__line animated-text__eighth-line">
+                <div class="button-bounce">
+                  <rt-button class="rt-button-orange">Принять участие</rt-button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -468,6 +472,12 @@
     name: "AppPromoBusinessDrive",
     components: componentsList,
     mounted() {
+      window.addEventListener('DOMContentLoaded', animateKeyVisual);
+
+      function animateKeyVisual(){
+        document.querySelector('.animated-text').classList.add('animated-text--active');
+      }
+
       document.querySelector('.mobile-burger').addEventListener('click', function(){
         if(!document.querySelector('.mobile-burger').classList.contains('mobile-burger--active')){
           document.querySelector('.mobile-burger').classList.add('mobile-burger--active');
