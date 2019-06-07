@@ -181,7 +181,7 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
@@ -669,7 +669,7 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
@@ -941,7 +941,7 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>

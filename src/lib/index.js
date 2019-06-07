@@ -2,7 +2,8 @@ import Vue from "vue";
 import styles from "./css/vue-rt-style.styl";
 import Global from "./variables.json";
 import Project from "../../package.json";
-import * as svgicon from 'vue-svgicon'
+import * as svgicon from 'vue-svgicon';
+import VeeValidate from "vee-validate";
 
 import {
   Button,
@@ -94,7 +95,6 @@ import {
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
-
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
@@ -155,6 +155,9 @@ const VueRtStyle = {
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.use(svgicon)
+      Vue.use(VeeValidate, {
+        locale: 'ru'
+      });
       Vue.component(Icon.name, Icon);
       Vue.component(Logo.name, Logo.component);
       Vue.component(Ussd.name, Ussd.component);

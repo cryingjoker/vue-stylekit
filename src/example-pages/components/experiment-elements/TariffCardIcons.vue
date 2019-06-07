@@ -17,7 +17,7 @@
         </div>
         <div class="rt-space-left05">
           <p class="rt-font-bold rt-font-control">Kaspersky Internet Security</p>
-          <p class="rt-font-control">2 устройства</p>
+          <p class="rt-font-control color-dark07">2 устройства</p>
         </div>
       </div>
     </div>
