@@ -183,7 +183,6 @@
 
     mounted() {
       this.customRules.forEach(({ nameRule, rule }) => VeeValidate.Validator.extend(nameRule, { validate: rule }));
-      Vue.use(VeeValidate);
       setTimeout(() => {
         this.setValue();
         this.setDisabled();
