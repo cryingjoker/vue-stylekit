@@ -85,11 +85,11 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
                     <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                          xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -155,7 +155,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item flex-start-center ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -184,7 +184,7 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -327,7 +327,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -369,13 +369,13 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
 
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -409,7 +409,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item flex-start-center ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -438,7 +438,7 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -480,7 +480,7 @@
                               руб./мес.</p>
                           </div>
                         </div>
-                        <app-tariff-cars-icons/>
+                        <app-tariff-cars-text/>
                       </div>
 
                     </template>
@@ -569,44 +569,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <div class="d-flex rt-tariff-item">
-                      <div class="rt-tariff-item__icon-wrapper">
-                        <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg"
-                             class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-180.000000, -1076.000000)">
-                              <g id="Group-10-Copy-11" transform="translate(170.000000, 1070.000000)">
-                                <g id="mob-copy" transform="translate(11.000000, 7.000000)">
-                                  <path
-                                    d="M2.79845455,0 L14.0505152,0 C15.6042727,0 16.8480303,1.24375758 16.8480303,2.79751515 L16.8480303,27.6642121 C16.8480303,29.2179697 15.6042727,30.4617273 14.0505152,30.4617273 L2.79845455,30.4617273 C1.24469697,30.4617273 -1.77635684e-15,29.2179697 -1.77635684e-15,27.6642121 L-1.77635684e-15,2.79751515 C-1.77635684e-15,1.24375758 1.24469697,0 2.79845455,0 Z"
-                                    id="Stroke-230" class="rt-tariff-item__icon-stroke" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                                  <path d="M0.00046969697,5.6575 L16.9095606,5.6575" id="Stroke-231"
-                                        class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
-                                  <path d="M0.00046969697,24.8045091 L16.9095606,24.8045091" id="Stroke-232"
-                                        class="rt-tariff-item__icon-stroke" stroke-linejoin="round"></path>
-                                  <path
-                                    d="M9.57420909,27.6639303 C9.57420909,28.2858091 9.0143303,28.7827485 8.39339091,28.7827485 C7.77151212,28.7827485 7.27457273,28.2238091 7.27457273,27.6019303 C7.27457273,26.9800515 7.77151212,26.4831121 8.39339091,26.4831121 C9.0772697,26.4831121 9.57420909,26.9800515 9.57420909,27.6639303"
-                                    id="Fill-233" class="rt-tariff-item__icon-fill"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                      <div class="rt-space-left05">
-                        <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
-
-
-                        <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">20 Гб, 600
-                          минут, 50 смс</p>
-
-
-                      </div>
-                    </div>
-
-
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -651,14 +614,14 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
-
+                    <div class="rt-tariff-item__icon-wrapper">
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          class="rt-tariff-item__icon">
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -677,6 +640,7 @@
                         </g>
                       </g>
                     </svg>
+                    </div>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Умный дом</p>
                       <p class="rt-font-control">Не входит</p>
@@ -689,8 +653,8 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
-
+                      <div class="d-flex rt-tariff-item flex-start-center ">
+                        <div class="rt-tariff-item__icon-wrapper">
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -711,6 +675,7 @@
                             </g>
                           </g>
                         </svg>
+                        </div>
 
                         <div class="rt-space-left05">
                           <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
@@ -718,7 +683,8 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
+                          <div class="rt-tariff-item__icon-wrapper">
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -748,6 +714,7 @@
                               </g>
                             </g>
                           </svg>
+                          </div>
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
                              <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
@@ -855,7 +822,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -900,7 +867,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -909,7 +876,7 @@
                     <template slot="header">
                       <div class="d-flex rt-tariff-item">
 
-
+                        <div class="rt-tariff-item__icon-wrapper">
                         <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
                              xmlns="http://www.w3.org/2000/svg"
                              class="rt-tariff-item__icon">
@@ -929,14 +896,15 @@
                             </g>
                           </g>
                         </svg>
+                        </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">Видеокамера + сервис</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Умный дом</p>
+                          <p class="rt-font-bold">Умный дом</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Видеокамера + сервис</p>
                         </div>
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -946,8 +914,8 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
-
+                      <div class="d-flex rt-tariff-item flex-start-center ">
+<div class="rt-tariff-item__icon-wrapper">
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -968,16 +936,16 @@
                             </g>
                           </g>
                         </svg>
-
+</div>
                         <div class="rt-space-left05">
                           <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
                           <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
 
-
+                          <div class="rt-tariff-item__icon-wrapper">
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -1007,6 +975,7 @@
                               </g>
                             </g>
                           </svg>
+                          </div>
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
@@ -1015,8 +984,7 @@
                           </div>
                         </div>
                       </div>
-
-                        <app-tariff-cars-icons/>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -1045,8 +1013,10 @@
 
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
   import AppTariffCarsIcons from './TariffCardIcons.vue';
+  import AppTariffCarsText from './TariffCardText.vue';
   const componentsList = {};
   componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
+  componentsList[AppTariffCarsText.name] = AppTariffCarsText;
   export default {
     name: "AppTariffCars",
     components: componentsList,

@@ -17,7 +17,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений</p>
                 <p class="rt-font-label color-main07">Акция «Название акции»</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -54,7 +54,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +239,7 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
                             </div>
                           </div>
                         </template>
@@ -271,7 +271,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений везде</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -308,7 +308,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -350,7 +350,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
 
                         <div class="rt-tariff-item__icon-wrapper">
 
@@ -509,7 +509,7 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
                             </div>
                           </div>
                         </template>
@@ -540,7 +540,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для семьи</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -577,7 +577,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -619,7 +619,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -696,7 +696,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom"  :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -774,7 +774,7 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
                             </div>
                           </div>
                         </template>
@@ -805,7 +805,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для всего</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -842,7 +842,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -884,7 +884,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -934,7 +934,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
 
 
                         <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -969,7 +969,7 @@
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -1043,22 +1043,7 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <app-tariff-cars-icons/>
-
-
-
-                        </template>
-                      </rt-slide-content>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -1090,7 +1075,10 @@
 
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
 
+  import AppTariffCarsIcons from './TariffCardIcons.vue';
   const componentsList = {};
+  componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
+
   export default {
     name: "AppTariffCars",
     components: componentsList,

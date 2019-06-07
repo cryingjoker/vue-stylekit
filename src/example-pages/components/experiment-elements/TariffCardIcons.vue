@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="rt-space-top-half">
-      <div class="d-flex rt-tariff-item">
+      <div class="d-flex rt-tariff-item flex-start-center">
         <div class="rt-tariff-item__icon-wrapper">
           <svg viewBox="0 0 58 57" class="rt-tariff-item__icon" style="width: 42px; height: 42px; background: #ff5f4b; border-radius: 50%;">
             <g fill="none" fill-rule="evenodd" opacity=".7">
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="rt-space-top-half">
-      <div class="d-flex rt-tariff-item">
+      <div class="d-flex rt-tariff-item flex-start-center">
         <div class="rt-tariff-item__icon-wrapper">
           <svg viewBox="0 0 57 58" class="rt-tariff-item__icon" style="width: 42px; height: 42px; background-color:#f5f5f5; border-radius: 50%;">
             <g fill="none" fill-rule="evenodd" opacity=".7">
