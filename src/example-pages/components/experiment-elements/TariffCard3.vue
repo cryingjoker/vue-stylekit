@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">100 Мбит/с</p>
@@ -78,7 +78,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">125
@@ -190,7 +190,7 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
                             </div>
                           </div>
                         </template>
@@ -302,7 +302,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">300 Мбит/с</p>
@@ -312,7 +312,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">165
@@ -329,7 +329,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
 
                         <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
@@ -436,7 +436,7 @@
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
                             </div>
                           </div>
                         </template>
@@ -547,7 +547,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">300 Мбит/с</p>
@@ -557,7 +557,7 @@
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">192
@@ -574,7 +574,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
 
@@ -600,7 +600,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -674,22 +674,7 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <app-tariff-cars-icons/>
-
-
-
-                        </template>
-                      </rt-slide-content>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -810,17 +795,17 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item">
+                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                     <div class="">
                       <p class="rt-font-bold">Домашний интернет</p>
                       <p class="rt-font-control color-dark07">700 Мбит/с</p>
                     </div>
                   </div>
                 </div>
-                <rt-slide-content :dotted-view="true">
+                <rt-slide-content :dotted-view="true" :is-open="true">
                   <template slot="header">
                     <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Интерактивное ТВ</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">232
@@ -837,7 +822,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
                           <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
 
@@ -857,7 +842,7 @@
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item">
+                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
 
 
                         <div class="">
@@ -872,7 +857,7 @@
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -946,22 +931,7 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">Хочу еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <app-tariff-cars-icons/>
-
-
-
-                        </template>
-                      </rt-slide-content>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -993,7 +963,10 @@
 
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
 
+  import AppTariffCarsIcons from './TariffCardIcons.vue';
   const componentsList = {};
+  componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
+
   export default {
     name: "AppTariffCars",
     components: componentsList,
