@@ -88,7 +88,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
 
                   </template>
                 </rt-slide-content>
@@ -322,7 +322,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
 
                   </template>
                 </rt-slide-content>
@@ -341,7 +341,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -567,7 +567,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
 
                   </template>
                 </rt-slide-content>
@@ -587,7 +587,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -815,7 +815,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <app-tariff-cars-icons/>
+                    <app-tariff-cars-text/>
 
                   </template>
                 </rt-slide-content>
@@ -835,7 +835,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -852,7 +852,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -964,8 +964,10 @@
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
 
   import AppTariffCarsIcons from './TariffCardIcons.vue';
+  import AppTariffCarsText from './TariffCardText.vue';
   const componentsList = {};
   componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
+  componentsList[AppTariffCarsText.name] = AppTariffCarsText;
 
   export default {
     name: "AppTariffCars",
