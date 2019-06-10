@@ -480,7 +480,7 @@
                               руб./мес.</p>
                           </div>
                         </div>
-                        <app-tariff-cars-text/>
+                        <app-tariff-cars-icons/>
                       </div>
 
                     </template>
@@ -984,7 +984,7 @@
                           </div>
                         </div>
                       </div>
-                      <app-tariff-cars-icons/>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
