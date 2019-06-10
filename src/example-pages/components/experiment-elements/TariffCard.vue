@@ -984,7 +984,7 @@
                           </div>
                         </div>
                       </div>
-                      <app-tariff-cars-text/>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">

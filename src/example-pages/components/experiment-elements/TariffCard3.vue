@@ -831,8 +831,8 @@
 
 
                         <div class="">
-                          <p class="rt-font-bold">Видеокамера + сервис</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Умный дом</p>
+                          <p class="rt-font-bold">Умный дом</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Видеокамера + сервис</p>
                         </div>
                       </div>
                     </template>
