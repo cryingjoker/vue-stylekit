@@ -477,7 +477,7 @@ export default {
               </div>
             </div>
             <div class="rtb-category__triangle">
-              <svg class="rtb-category-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 364">
+              <svg class="rtb-category__triangle-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 364">
                 <polygon points="0 364,76 0,0 0"/>
               </svg>
             </div>
