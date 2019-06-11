@@ -150,7 +150,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -404,7 +404,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -480,7 +480,19 @@
                               руб./мес.</p>
                           </div>
                         </div>
-                        <app-tariff-cars-icons/>
+                        <rt-slide-content :dotted-view="true">
+                          <template slot="header">
+                            <div class="rt-space-top-half">
+                              <div class="flex-center-center">
+                                <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+                              </div>
+                            </div>
+                          </template>
+                          >
+                          <template slot="content">
+                            <app-tariff-cars-icons/>
+                          </template>
+                        </rt-slide-content>
                       </div>
 
                     </template>
@@ -984,7 +996,19 @@
                           </div>
                         </div>
                       </div>
-                      <app-tariff-cars-icons/>
+                      <rt-slide-content :dotted-view="true">
+                        <template slot="header">
+                          <div class="rt-space-top-half">
+                            <div class="flex-center-center">
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+                            </div>
+                          </div>
+                        </template>
+                        >
+                        <template slot="content">
+                          <app-tariff-cars-icons/>
+                        </template>
+                      </rt-slide-content>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
