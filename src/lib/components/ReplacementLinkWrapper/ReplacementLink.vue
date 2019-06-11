@@ -28,8 +28,6 @@
       if (navigator.appVersion.indexOf("Mac") != -1) this.deviceOS = "MacOS";
       if (navigator.appVersion.indexOf("X11") != -1) this.deviceOS = "UNIX";
       if (navigator.appVersion.indexOf("Linux") != -1) this.deviceOS = "Linux";
-
-      console.log(this.deviceOS);
     },
     render: function(h) {
 
