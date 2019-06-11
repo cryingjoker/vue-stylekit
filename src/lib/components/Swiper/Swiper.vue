@@ -221,12 +221,11 @@ export default {
     //   this.$refs.slidedBlock.addEventListener('touchmove', this.swipeHandler, false)
     //   this.$refs.slidedBlock.addEventListener('touchend', this.swipeHandler, false)
     // }
+    if(window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
+      this.isTouch = true
+    }
     window.addEventListener('resize', () => {
-      if(window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
-        this.isTouch = true
-      } else {
-        this.isTouch = false
-      }
+      this.isTouch = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) ? true : false;
     })
   },
   destroyed() {
