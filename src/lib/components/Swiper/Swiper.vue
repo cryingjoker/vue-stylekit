@@ -221,6 +221,13 @@ export default {
     //   this.$refs.slidedBlock.addEventListener('touchmove', this.swipeHandler, false)
     //   this.$refs.slidedBlock.addEventListener('touchend', this.swipeHandler, false)
     // }
+    window.addEventListener('resize', () => {
+      if(window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
+        this.isTouch = true
+      } else {
+        this.isTouch = false
+      }
+    })
   },
   destroyed() {
     this.isAnimating = false;
