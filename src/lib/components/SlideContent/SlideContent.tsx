@@ -12,6 +12,7 @@ class SlideContent extends Vue {
   @Prop({ default: 'left-right' }) arrowPosition: string;
   @Prop({ default: true }) needBorder: boolean;
   @Prop({ default: false }) dottedView: boolean;
+  @Prop({ default: false }) revertDottedView: boolean;
   isOpenLocal = false;
 
   toggleOpen(){
@@ -24,15 +25,25 @@ class SlideContent extends Vue {
     if(this.dottedView){
 
       const header: any = this.$refs.header
-      header.$el.querySelector('.rt-slide-content-trigger').addEventListener('click',(e)=> {
-        this.isOpenLocal = !this.isOpenLocal;
-        window.getSelection().removeAllRanges();
-      });
+      header.$el.querySelectorAll('.rt-slide-content-trigger').forEach((el)=> {
+        el.addEventListener('click', (e) => {
+          this.isOpenLocal = !this.isOpenLocal;
+          window.getSelection().removeAllRanges();
+        });
+      })
 
     }
   }
   render(h: CreateElement): VNode {
+    if(this.revertDottedView){
+      return <div class='slide-dotted'>
+
+        <rt-slide-content-dotted-content is-open={this.isOpenLocal}>{this.$slots.content}</rt-slide-content-dotted-content>
+        <rt-slide-content-dotted-header ref="header" is-open={this.isOpenLocal}>{this.$slots.header}</rt-slide-content-dotted-header>
+      </div>
+    }
     if(this.dottedView){
+
       return <div class='slide-dotted'>
 
         <rt-slide-content-dotted-header ref="header" is-open={this.isOpenLocal}>{this.$slots.header}</rt-slide-content-dotted-header>

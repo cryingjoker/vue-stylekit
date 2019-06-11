@@ -92,7 +92,7 @@
   opacity: 0
   visibility: visible
   transition-timing-function ease-in-out
-  transition-duration .5s
+  transition-duration .3s
   transition-property min-height, max-height, opacity, visibility
 
 .rt-slide-content-dotted-content--is-active
@@ -103,3 +103,11 @@
 
 .rt-slide-content-trigger
   cursor: pointer
+
+.rt-slide-content-trigger--open
+  display: none
+.rt-slide-content-dotted-header--is-active
+  .rt-slide-content-trigger--open
+    display: block
+  .rt-slide-content-trigger--open+.rt-slide-content-trigger
+    display: none
