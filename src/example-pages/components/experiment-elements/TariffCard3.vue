@@ -186,22 +186,7 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <app-tariff-cars-icons/>
-
-
-
-                        </template>
-                      </rt-slide-content>
+                      <app-tariff-cars-icons/>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -585,7 +570,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
+                  <rt-slide-content arrow-position="right-bottom">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -787,7 +772,7 @@
                     </div>
                   </div>
                 </div>
-                <rt-slide-content :dotted-view="true" :is-open="true">
+                <rt-slide-content :dotted-view="true" >
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
@@ -842,7 +827,7 @@
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
+                  <rt-slide-content arrow-position="right-bottom">
                     <template slot="label">
                       Дополнительно
                     </template>

@@ -159,7 +159,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -235,22 +235,10 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <app-tariff-cars-icons/>
+                      <app-tariff-cars-icons/>
 
 
 
-                        </template>
-                      </rt-slide-content>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -348,7 +336,7 @@
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
-                  <rt-slide-content :dotted-view="true">
+                  <rt-slide-content :dotted-view="true" >
                     <template slot="header">
                       <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
 
@@ -428,7 +416,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -559,7 +547,7 @@
                     </div>
                   </div>
                 </div>
-                <rt-slide-content :dotted-view="true">
+                <rt-slide-content :dotted-view="true" >
                   <template slot="header">
                     <div class="rt-space-top-half">
                       <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
@@ -681,7 +669,7 @@
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom"  :is-open="true">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
@@ -755,22 +743,7 @@
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger"> еще</span>
-                            </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
                           <app-tariff-cars-icons/>
-
-
-
-                        </template>
-                      </rt-slide-content>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
