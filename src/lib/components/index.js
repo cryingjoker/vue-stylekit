@@ -83,6 +83,7 @@
  export { default as VerticalScrollBar } from './ScrollBar/VerticalScrollBar.vue';
  export { default as TimelineItem } from './BusinessDrive/TimelineItem.vue';
  export { default as PortraitTileItem } from './BusinessDrive/PortraitTileItem.vue';
- export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx'
+ export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx';
+ export { default as ReplacementLink } from './ReplacementLinkWrapper/ReplacementLink.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';
