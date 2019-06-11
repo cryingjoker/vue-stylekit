@@ -1206,7 +1206,7 @@
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b color-white">
             <pre-code
               text='
-                <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="yellow-high">
+                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="yellow-high">
                   <template slot="content">
                     <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
                     <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
@@ -1233,7 +1233,7 @@
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
             <pre-code
               text='
-                <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="purple">
+                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="purple">
                   <template slot="content">
                     <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
                     <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
@@ -1260,7 +1260,7 @@
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
             <pre-code
               text='
-                <rt-card backgroundImage="/static/images/B2B/category-img.png" :product-card="true" background-color-type="green">
+                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="white">
                   <template slot="content">
                     <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
                     <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
@@ -2140,11 +2140,11 @@
                   />
                 </div>
                 <a href="#">
-                  <button
+                  <rt-button
                     class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05"
                   >
                     Выбрать
-                  </button>
+                  </rt-button>
                 </a>
               </template>
             </rt-card>

@@ -434,6 +434,7 @@
       <template>
         <div class="row">
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 popup-content"></div>
+          <rt-button class="rt-button-small rt-button-purple-border">Закрыть</rt-button>
         </div>
       </template>
     </rt-real-popup>
