@@ -182,7 +182,7 @@ export default {
       isFinalSlide: false,
       isLongTouch: false, // Позволяет на мобиле удерживать слайд на полпути
       isPending: null,
-      isTouch: typeof window !== "undefined" && "ontouchstart" in window,
+      isTouch: false, // typeof window !== "undefined" && "ontouchstart" in window,
       hSpace: 0, // Горизонтальный отступ для центрирования зоны просмотра, складывается из отступов
       longTouchTimer: null,
       movesArr: [], // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
@@ -318,10 +318,10 @@ export default {
         let leftPadding = parseFloat(
           getComputedStyle(this.$refs.slidedBlock).paddingLeft
         );
-//        let leftOffset = this.$refs.slidedBlock.getBoundingClientRect().left;
-//        this.hSpace =
-////          (leftPadding > 0 ? leftPadding : 0) +
-//          ((leftOffset > 0 && window.innerWidth <= parseInt(variables["tablet-upper-limit"])) ? leftOffset : 0);
+        let leftOffset = this.$refs.slidedBlock.getBoundingClientRect().left;
+        this.hSpace =
+//          (leftPadding > 0 ? leftPadding : 0) +
+          (leftOffset > 0 ? leftOffset : 0);
         this.movesArr = [];
         this.slides.forEach((slide, i) => {
           this.movesArr.push({
