@@ -875,3 +875,77 @@
 .rt-forgame-linege-row
   @media (max-width: mobile-upper-limit)
     max-width: 80%
+
+.partner-offers
+  &__header
+    .rt-col-10
+      @media (max-width: tablet-upper-limit)
+        margin-top 5px
+    &-title
+      width 570px
+      height 53px
+      @media (max-width: tablet-upper-limit)
+        width 480px
+        height 45px
+      &-text
+        position absolute
+        font-size 52px
+        top -15px
+  &__back-link
+    &-button
+      width 50px
+      height 50px
+      background-color: #3e235a
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1)
+      border-radius 50%
+      position relative
+    &-arrow
+      position absolute
+      top 50%
+      left 50%
+      transform translateY(-50%) translateX(-50%)
+  .rt-logo__rt-text
+    margin-left -1%
+  &__card-image
+    max-height 85px
+    max-width 195px
+    vertical-align middle
+    @media (max-width: tablet-upper-limit)
+      max-height 55px
+      max-width 142px
+  &__main-block
+    .rt-card,
+    .rt-card__content
+      min-height auto
+  .helper
+    height 100%
+    vertical-align middle
+    display inline-block
+  .rt-card__image-wrapper
+    vertical-align: middle
+    height 155px
+    @media (max-width: tablet-upper-limit)
+      height 105px
+  .d-flex
+    @media (max-width: tablet-upper-limit)
+      flex-direction column
+  .rt-card__body
+    @media (max-width: tablet-upper-limit)
+      padding 0 30px
+
+  .rtk-carousel__inner
+    width: calc((100vw - 140px)/1.2)
+    max-width: calc(1340px/1.2)
+    @media (max-width: tablet-upper-limit)
+      width calc((100vw - 20px) / 1.2)
+      overflow visible!important
+      .rtk-carousel-slide:first-child
+        margin-left: 0
+    @media (max-width: mobile-upper-limit)
+      width calc(100vw - 20px)
+      flex-direction column
+  .rtk-carousel.is-touch-device .rtk-carousel-slide
+    max-width 100vw
+
+.gradient-header
+  background linear-gradient(to right, #2f0045, #1c2c4d)
