@@ -85,18 +85,12 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
-
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
+                    <div class="rt-tariff-item__icon-wrapper">
                     <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                          xmlns="http://www.w3.org/2000/svg"
                          class="rt-tariff-item__icon">
@@ -120,48 +114,50 @@
                         </g>
                       </g>
                     </svg>
+                    </div>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Мобильная связь</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-control d-inline-block">Не входит</p>
                     </div>
                   </div>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
-
-                    <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg"
-                         class="rt-tariff-item__icon">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                         stroke-linejoin="round">
-                        <g id="ver1" transform="translate(-175.000000, -1135.000000)"
-                           class="rt-tariff-item__icon-stroke" stroke-width="1.5">
-                          <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
-                            <g id="Group-5" transform="translate(6.000000, 7.000000)">
-                              <polygon id="Stroke-353"
-                                       points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
-                              <path
-                                d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
-                                id="Stroke-355"></path>
+                    <div class="rt-tariff-item__icon-wrapper">
+                      <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="rt-tariff-item__icon">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                           stroke-linejoin="round">
+                          <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                             class="rt-tariff-item__icon-stroke" stroke-width="1.5">
+                            <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
+                              <g id="Group-5" transform="translate(6.000000, 7.000000)">
+                                <polygon id="Stroke-353"
+                                         points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
+                                <path
+                                  d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
+                                  id="Stroke-355"></path>
+                              </g>
                             </g>
                           </g>
                         </g>
-                      </g>
-                    </svg>
+                      </svg>
+                    </div>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-control d-inline-block">Не входит</p>
                     </div>
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item flex-start-center ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -190,7 +186,7 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -227,30 +223,24 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                            <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в
+                              аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
+                      <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
+                              <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
                               <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
+                          <app-tariff-cars-icons/>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -341,22 +331,14 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
                       <div class="d-flex rt-tariff-item">
-
                         <div class="rt-tariff-item__icon-wrapper">
-
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                                xmlns="http://www.w3.org/2000/svg"
                                class="rt-tariff-item__icon">
@@ -391,20 +373,16 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
 
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
 
+                    <div class="rt-tariff-item__icon-wrapper">
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
                          xmlns="http://www.w3.org/2000/svg"
                          class="rt-tariff-item__icon">
@@ -424,19 +402,20 @@
                         </g>
                       </g>
                     </svg>
+                    </div>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-control d-inline-block">Не входит</p>
                     </div>
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
+                      <div class="d-flex rt-tariff-item flex-start-center ">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -465,7 +444,7 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -502,33 +481,27 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
+                            <p class="rt-font-control d-inline-block">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
                               30
                               руб./мес.</p>
                           </div>
                         </div>
-                      </div>
-                      <rt-slide-content :dotted-view="true">
-                        <template slot="header">
-                          <div class="rt-space-top-half">
-                            <div class="flex-center-center">
-                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+                        <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
+                          <template slot="header">
+                            <div class="rt-space-top-half">
+                              <div class="flex-center-center">
+                                <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
+                                <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+                              </div>
                             </div>
-                          </div>
-                        </template>
-                        >
-                        <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                        </template>
-                      </rt-slide-content>
+                          </template>
+                          >
+                          <template slot="content">
+                            <app-tariff-cars-icons/>
+                          </template>
+                        </rt-slide-content>
+                      </div>
+
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -550,7 +523,6 @@
                 <div class="rt-space-top">
                   <div class="d-flex rt-tariff-item">
                     <div class="rt-tariff-item__icon-wrapper">
-
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
                            xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
@@ -616,13 +588,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -667,71 +633,69 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
                 <div class="rt-space-top-half">
-                  <div class="d-flex rt-tariff-item rt-tariff-item--is-disabled">
+                  <div class="d-flex rt-tariff-item flex-start-center rt-tariff-item--is-disabled">
 
-
-                    <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         class="rt-tariff-item__icon">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                         stroke-linejoin="round">
-                        <g id="ver1" transform="translate(-175.000000, -1135.000000)"
-                           class="rt-tariff-item__icon-stroke" stroke-width="1.5">
-                          <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
-                            <g id="Group-5" transform="translate(6.000000, 7.000000)">
-                              <polygon id="Stroke-353"
-                                       points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
-                              <path
-                                d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
-                                id="Stroke-355"></path>
+                    <div class="rt-tariff-item__icon-wrapper">
+                      <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="rt-tariff-item__icon">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                           stroke-linejoin="round">
+                          <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                             class="rt-tariff-item__icon-stroke" stroke-width="1.5">
+                            <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
+                              <g id="Group-5" transform="translate(6.000000, 7.000000)">
+                                <polygon id="Stroke-353"
+                                         points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
+                                <path
+                                  d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
+                                  id="Stroke-355"></path>
+                              </g>
                             </g>
                           </g>
                         </g>
-                      </g>
-                    </svg>
+                      </svg>
+                    </div>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Умный дом</p>
-                      <p class="rt-font-control">Не входит</p>
+                      <p class="rt-font-control d-inline-block">Не входит</p>
                     </div>
                   </div>
                 </div>
                 <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
+                      <div class="d-flex rt-tariff-item flex-start-center ">
+                        <div class="rt-tariff-item__icon-wrapper">
+                          <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
+                               xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="ver1" transform="translate(-163.000000, -1251.000000)">
+                                <g id="Group-9" transform="translate(164.000000, 1213.000000)">
+                                  <g id="Group-12" transform="translate(0.000000, 37.000000)">
+                                    <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                      <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
+                                            font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                        <tspan x="9" y="30">%</tspan>
+                                      </text>
+                                    </g>
                                   </g>
                                 </g>
                               </g>
                             </g>
-                          </g>
-                        </svg>
+                          </svg>
+                        </div>
 
                         <div class="rt-space-left05">
                           <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
@@ -739,62 +703,58 @@
                         </div>
                       </div>
                       <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
-                          <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                               class="rt-tariff-item__icon">
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="ver1" transform="translate(-30.000000, -1512.000000)">
-                                <g id="Group-9" transform="translate(31.000000, 1348.000000)">
-                                  <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
-                                    <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
-                                       stroke="#101828">
-                                      <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
-                                            height="8.31818182"></rect>
-                                      <path d="M3.79166667,3.27272727 L3.79166667,6.13636364" id="Path-3-Copy-2"></path>
-                                      <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
-                                            stroke-width="1.5"></path>
-                                      <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
-                                      <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
-                                            stroke-width="1.5"></path>
-                                      <path d="M9.20833333,3.27272727 L9.20833333,6.13636364" id="Path-3-Copy-4"></path>
+                        <div class="d-flex rt-tariff-item flex-start-center ">
+                            <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 class="rt-tariff-item__icon">
+                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="ver1" transform="translate(-30.000000, -1512.000000)">
+                                  <g id="Group-9" transform="translate(31.000000, 1348.000000)">
+                                    <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
+                                      <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
+                                         stroke="#101828">
+                                        <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
+                                              height="8.31818182"></rect>
+                                        <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
+                                              id="Path-3-Copy-2"></path>
+                                        <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
+                                              stroke-width="1.5"></path>
+                                        <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
+                                        <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
+                                              stroke-width="1.5"></path>
+                                        <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
+                                              id="Path-3-Copy-4"></path>
+                                      </g>
                                     </g>
                                   </g>
                                 </g>
                               </g>
-                            </g>
-                          </svg>
+                            </svg>
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                            <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в
+                              аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
+                      <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
+                              <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
                               <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
+                          <app-tariff-cars-icons/>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -884,13 +844,7 @@
                     </div>
                   </template>
                   <template slot="content">
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
-                    <p>описание фичей, которые входят в продукт</p>
+                    <app-tariff-cars-text/>
                   </template>
                 </rt-slide-content>
                 <div class="rt-space-top-half">
@@ -935,12 +889,7 @@
                       </div>
                     </template>
                     <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
+                      <app-tariff-cars-text/>
                     </template>
                   </rt-slide-content>
                 </div>
@@ -949,136 +898,129 @@
                     <template slot="header">
                       <div class="d-flex rt-tariff-item">
 
-
-                        <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg"
-                             class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                             stroke-linejoin="round">
-                            <g id="ver1" transform="translate(-175.000000, -1135.000000)"
-                               class="rt-tariff-item__icon-stroke" stroke-width="1.5">
-                              <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
-                                <g id="Group-5" transform="translate(6.000000, 7.000000)">
-                                  <polygon id="Stroke-353"
-                                           points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
-                                  <path
-                                    d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
-                                    id="Stroke-355"></path>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold">Видеокамера + сервис</p>
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Умный дом</p>
-                        </div>
-                      </div>
-                    </template>
-                    <template slot="content">
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                      <p>описание фичей, которые входят в продукт</p>
-                    </template>
-                  </rt-slide-content>
-                </div>
-                <div class="rt-space-top">
-                  <rt-slide-content arrow-position="right-bottom">
-                    <template slot="label">
-                      Дополнительно
-                    </template>
-                    <template slot="content">
-                      <div class="d-flex rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                        <div class="rt-tariff-item__icon-wrapper">
+                          <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
+                               xmlns="http://www.w3.org/2000/svg"
+                               class="rt-tariff-item__icon">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                               stroke-linejoin="round">
+                              <g id="ver1" transform="translate(-175.000000, -1135.000000)"
+                                 class="rt-tariff-item__icon-stroke" stroke-width="1.5">
+                                <g id="Group-11-Copy-11" transform="translate(170.000000, 1129.000000)">
+                                  <g id="Group-5" transform="translate(6.000000, 7.000000)">
+                                    <polygon id="Stroke-353"
+                                             points="13.9584516 9.09494702e-13 0 12.9043871 3.10167742 12.9043871 3.10167742 28.9104516 10.8567742 28.9104516 17.0610323 28.9104516 24.816129 28.9104516 24.816129 12.9043871 27.9178065 12.9043871 23.7611613 9.05754839 23.7611613 9.09494702e-13 18.6109677 9.09494702e-13 18.6109677 4.2803871"></polygon>
                                     <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
+                                      d="M13.5889419,23.7701032 C13.5889419,23.7701032 9.11436129,22.5137161 9.11436129,18.6903613 L9.11436129,12.4553935 L10.3572,12.6468774 C12.7182323,13.0099742 15.1199097,13.0126839 17.4818452,12.6550065 L18.8023613,12.4553935 L18.8023613,18.6641677 C18.8023613,22.5137161 14.3277806,23.7701032 14.3277806,23.7701032 L13.5889419,23.7701032 Z"
+                                      id="Stroke-355"></path>
                                   </g>
                                 </g>
                               </g>
                             </g>
-                          </g>
-                        </svg>
-
+                          </svg>
+                        </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
+                          <p class="rt-font-bold">Умный дом</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Видеокамера +
+                            сервис</p>
                         </div>
                       </div>
-                      <div class="rt-space-top-half">
-                        <div class="d-flex rt-tariff-item ">
-
-
-                          <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                               class="rt-tariff-item__icon">
+                    </template>
+                    <template slot="content">
+                      <app-tariff-cars-text/>
+                    </template>
+                  </rt-slide-content>
+                </div>
+                <div class="rt-space-top">
+                  <rt-slide-content arrow-position="right-bottom" :is-open="true">
+                    <template slot="label">
+                      Дополнительно
+                    </template>
+                    <template slot="content">
+                      <div class="d-flex rt-tariff-item flex-start-center ">
+                        <div class="rt-tariff-item__icon-wrapper">
+                          <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
+                               xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="ver1" transform="translate(-30.000000, -1512.000000)">
-                                <g id="Group-9" transform="translate(31.000000, 1348.000000)">
-                                  <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
-                                    <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
-                                       stroke="#101828">
-                                      <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
-                                            height="8.31818182"></rect>
-                                      <path d="M3.79166667,3.27272727 L3.79166667,6.13636364" id="Path-3-Copy-2"></path>
-                                      <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
-                                            stroke-width="1.5"></path>
-                                      <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
-                                      <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
-                                            stroke-width="1.5"></path>
-                                      <path d="M9.20833333,3.27272727 L9.20833333,6.13636364" id="Path-3-Copy-4"></path>
+                              <g id="ver1" transform="translate(-163.000000, -1251.000000)">
+                                <g id="Group-9" transform="translate(164.000000, 1213.000000)">
+                                  <g id="Group-12" transform="translate(0.000000, 37.000000)">
+                                    <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                      <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
+                                            font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                        <tspan x="9" y="30">%</tspan>
+                                      </text>
                                     </g>
                                   </g>
                                 </g>
                               </g>
                             </g>
                           </svg>
+                        </div>
+                        <div class="rt-space-left05">
+                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
+                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
+                        </div>
+                      </div>
+                      <div class="rt-space-top-half">
+                        <div class="d-flex rt-tariff-item flex-start-center ">
+
+                            <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 class="rt-tariff-item__icon">
+                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="ver1" transform="translate(-30.000000, -1512.000000)">
+                                  <g id="Group-9" transform="translate(31.000000, 1348.000000)">
+                                    <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
+                                      <path
+                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                        id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
+                                      <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
+                                         stroke="#101828">
+                                        <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
+                                              height="8.31818182"></rect>
+                                        <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
+                                              id="Path-3-Copy-2"></path>
+                                        <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
+                                              stroke-width="1.5"></path>
+                                        <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
+                                        <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
+                                              stroke-width="1.5"></path>
+                                        <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
+                                              id="Path-3-Copy-4"></path>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
+                            <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в
+                              аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
                       </div>
-                      <rt-slide-content :dotted-view="true">
+                      <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
                         <template slot="header">
                           <div class="rt-space-top-half">
                             <div class="flex-center-center">
+                              <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
                               <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+
                             </div>
                           </div>
                         </template>
                         >
                         <template slot="content">
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
-                          <p>описание фичей, которые входят в продукт</p>
+                          <app-tariff-cars-icons/>
                         </template>
                       </rt-slide-content>
                     </template>
@@ -1108,8 +1050,12 @@
 <script>
 
   // import documentation from "../../../lib/components/ProductCard/docs/index.json";
+  import AppTariffCarsIcons from "./TariffCardIcons.vue";
+  import AppTariffCarsText from "./TariffCardText.vue";
 
   const componentsList = {};
+  componentsList[AppTariffCarsIcons.name] = AppTariffCarsIcons;
+  componentsList[AppTariffCarsText.name] = AppTariffCarsText;
   export default {
     name: "AppTariffCars",
     components: componentsList,

@@ -8,9 +8,11 @@ class ProductCard extends Vue {
   type: String = "desktop";
   @Prop({ default: false }) fixedImageHeight: Boolean;
   @Prop({ default: null }) backgroundImage: String;
+  @Prop({ default: null }) color: String;
   @Prop({ default: null }) tabletBackgroundImage: String;
   @Prop({ default: null }) mobileBackgroundImage: String;
   @Prop({ default: false }) safeImageRate: Boolean;
+
   @Prop({ default: 'top' }) contentOrientation: String;
 
   checkWidth() {
@@ -84,6 +86,9 @@ class ProductCard extends Vue {
       }
       if(this.contentOrientation === 'bottom'){
         className += ' rt-product-card--has-bottom-orient'
+      }
+      if(this.color){
+        className += ` rt-product-card--${this.color}`
       }
       return className;
     })();

@@ -75,13 +75,15 @@
   top 0
   bottom 5px
   left 0
+
 .rt-slide__arrow--right-bottom
   top 0
   bottom 5px
   right 0
   transform rotate(90deg)
+  transition-duration .3s
   .rt-slide--is-active &
-    transform rotate(-90deg)
+    transform rotate(270deg)
 
 
 .rt-slide-content-dotted-content
@@ -90,7 +92,7 @@
   opacity: 0
   visibility: visible
   transition-timing-function ease-in-out
-  transition-duration .5s
+  transition-duration .3s
   transition-property min-height, max-height, opacity, visibility
 
 .rt-slide-content-dotted-content--is-active
@@ -101,3 +103,11 @@
 
 .rt-slide-content-trigger
   cursor: pointer
+
+.rt-slide-content-trigger--open
+  display: none
+.rt-slide-content-dotted-header--is-active
+  .rt-slide-content-trigger--open
+    display: block
+  .rt-slide-content-trigger--open+.rt-slide-content-trigger
+    display: none

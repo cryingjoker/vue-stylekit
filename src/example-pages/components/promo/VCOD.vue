@@ -434,6 +434,7 @@
       <template>
         <div class="row">
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 popup-content"></div>
+          <rt-button class="rt-button-small rt-button-purple-border">Закрыть</rt-button>
         </div>
       </template>
     </rt-real-popup>
@@ -574,7 +575,7 @@
           maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
         }
         for(let i = 0; i < this.parentArray.length; i++) {
-          document.querySelector('.custom-carousel').children[i].style.height = maxHeight;
+          document.querySelector('.custom-carousel').children[i].style.height = maxHeight + 'px';
         }
       }
     }

@@ -48,6 +48,25 @@
           }
         }
         return styles;
+      },
+      iconBackground() {
+        const styles = {};
+        if (this.iconBackingSize) {
+          if(typeof this.iconBackingSize === 'number') {
+            styles.width = "" + this.iconBackingSize + "px";
+            styles.height = "" + this.iconBackingSize + "px";
+            styles.flexBasis = "" + this.iconBackingSize + "px";
+          } else if(typeof this.iconBackingSize === 'string'){
+            styles.width = this.iconBackingSize;
+            styles.height = this.iconBackingSize;
+            styles.flexBasis = this.iconBackingSize;
+          }
+        } else {
+          styles.width = "80px";
+          styles.height = "80px";
+          styles.flexBasis = "80px";
+        }
+        return styles;
       }
     },
     mounted(){
@@ -59,19 +78,25 @@
       this.hasImage = this.$parent._props.hasImage;
       this.alignCenter = this.$parent._props.alignCenter;
       this.inlineLayout = this.$parent._props.inlineLayout;
+      this.iconBackingColor = this.$parent._props.iconBackingColor;
+      this.iconBackingSize = this.$parent._props.iconBackingSize;
     },
     methods: {},
     render: function (h) {
       const icon = (() => {
-        if(this.hasIcon && !this.step && !this.hasImage) {
+        if(this.iconBackingColor){
+          return <div class={"rt-benefit-item__icon-background color-block--" + this.iconBackingColor} style={this.iconBackground}>
+            <div class="rt-benefit-item__icon" style={this.iconImage}>{this.$slots.image}</div>
+          </div>
+        }else if(this.hasIcon && !this.step && !this.hasImage) {
           return <div class="rt-benefit-item__icon" style={this.iconImage}>{this.$slots.image}</div>
         }
       })();
       const step = (() => {
         if(this.step && !this.hasImage && !this.hasIcon ) {
-          return <h1 class="rt-benefit-item__step rt-font-h1 rt-font-bold">
+          return <p class="rt-benefit-item__step rt-font-h1 rt-font-bold">
               {(Array.prototype.indexOf.call(this.$el.parentNode.children, this.$el) + 1) + ' ' + this.stepTitle}
-            </h1>
+            </p>
         }
       })();
       const image = (() => {

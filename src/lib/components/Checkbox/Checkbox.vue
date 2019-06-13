@@ -92,7 +92,6 @@ export default {
     }
   },
   mounted() {
-    Vue.use(VeeValidate);
     this.bindEvents();
   },
 

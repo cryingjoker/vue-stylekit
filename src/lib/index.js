@@ -2,7 +2,8 @@ import Vue from "vue";
 import styles from "./css/vue-rt-style.styl";
 import Global from "./variables.json";
 import Project from "../../package.json";
-import * as svgicon from 'vue-svgicon'
+import * as svgicon from 'vue-svgicon';
+import VeeValidate from "vee-validate";
 
 import {
   Button,
@@ -87,17 +88,18 @@ import {
   Timeline,
   TimelineItem,
   ScrollBar,
-  VerticalScrollBar
+  VerticalScrollBar,
+  ReplacementLink
 } from "./components";
 
 
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
-
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
+
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
       Vue.component(ButtonWithoutRipple.name, ButtonWithoutRipple);
@@ -151,10 +153,12 @@ const VueRtStyle = {
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);
-
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
       Vue.use(svgicon)
+      Vue.use(VeeValidate, {
+        locale: 'ru'
+      });
       Vue.component(Icon.name, Icon);
       Vue.component(Logo.name, Logo.component);
       Vue.component(Ussd.name, Ussd.component);
@@ -174,6 +178,7 @@ const VueRtStyle = {
       Vue.component(TimelineItem.name, TimelineItem);
       Vue.component(ScrollBar.name, ScrollBar);
       Vue.component(VerticalScrollBar.name, VerticalScrollBar);
+      Vue.component(ReplacementLink.name, ReplacementLink);
       // tsx components
 
       Vue.component(Carousel.name, Carousel.component);

@@ -4,11 +4,10 @@ scrollHSpace = 10px
 scrollHSpacePC = 70px
 
 .{swiperName}
-  width 100vw
   position relative
   z-index swiperZIndex
-  max-width: 1480px
-  margin: 0 auto
+  //max-width: 1480px
+  //margin: 0 auto
 
 
   @media (max-width: tablet-upper-limit)
@@ -31,13 +30,14 @@ scrollHSpacePC = 70px
     transform translate3d(0, 0, 0)
     -ms-overflow-style none
     scrollbar-width none
-    max-width: 1340px
-    width: calc(100vw - 140px)
+    //max-width: 1340px
+    //width: calc(100vw - 140px)
     margin: 0 auto
+    width calc(100vw - (100vw - 100%))
     @media (max-width: tablet-upper-limit)
       padding-right 0
       padding-left 0
-      width 100vw
+      //width calc(100vw - (100vw - 100%))
 
   &__overlay::-webkit-scrollbar
     display none
@@ -47,8 +47,10 @@ scrollHSpacePC = 70px
     flex-direction row
     white-space normal
     padding 30px 0 10px
+    width calc(100vw - 140px)
+    max-width 1340px
     @media (max-width: tablet-upper-limit)
-      padding 30px 0 10px
+      width 100vw
 
   &__inner-default 
     flex-wrap wrap
@@ -94,9 +96,9 @@ scrollHSpacePC = 70px
         @media (max-width: tablet-upper-limit)
           margin-left scrollHSpace
 
-    .{swiperName}__spacer
-      @media (max-width: mobile-upper-limit)
-        min-width scrollHSpace
+    //.{swiperName}__spacer
+    //  @media (max-width: mobile-upper-limit)
+    //    min-width scrollHSpace
 
     .{swiperName}__spacer
       @media (max-width: tablet-upper-limit)
