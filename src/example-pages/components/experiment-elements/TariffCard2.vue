@@ -124,7 +124,7 @@
                     </svg>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Не входит</p>
-                      <p class="rt-font-control">Мобильная связь</p>
+                      <p class="d-inline-block rt-font-control">Мобильная связь</p>
                     </div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@
                     </svg>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Не входит</p>
-                      <p class="rt-font-control">Умный дом</p>
+                      <p class="d-inline-block rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
@@ -411,7 +411,7 @@
                     </svg>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Не входит</p>
-                      <p class="rt-font-control">Умный дом</p>
+                      <p class="d-inline-block rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
@@ -664,7 +664,7 @@
                     </svg>
                     <div class="rt-space-left05">
                       <p class="rt-font-bold">Не входит</p>
-                      <p class="rt-font-control">Умный дом</p>
+                      <p class="d-inline-block rt-font-control">Умный дом</p>
                     </div>
                   </div>
                 </div>
