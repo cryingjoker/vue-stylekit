@@ -34,11 +34,11 @@ scrollHSpacePC = 70px
     //max-width: 1340px
     //width: calc(100vw - 140px)
     margin: 0 auto
-    width 100vw
+    width calc(100vw - (100vw - 100%))
     @media (max-width: tablet-upper-limit)
       padding-right 0
       padding-left 0
-      width 100vw
+      //width calc(100vw - (100vw - 100%))
 
   &__overlay::-webkit-scrollbar
     display none
