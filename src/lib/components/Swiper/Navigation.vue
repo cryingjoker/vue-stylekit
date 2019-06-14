@@ -79,21 +79,21 @@ export default {
     }
   },
   mounted() {
-    if (
-      this.$parent.navsArrows &&
-      this.$el.scrollHeight >
-        this.$parent.navsPosStart + this.$parent.navsPosEnd
-    ) {
-      this.$nextTick(() => {
-        window.addEventListener("scroll", this.stickNavs, { passive: true });
-        window.addEventListener("resize", this.stickNavs, { passive: true });
-      });
-      this.stickNavs();
-    } else if (this.$parent.navsArrows) {
-      // Если заданная высота отступа выше зоны просмотра, то центрируем стрелочки
-      this.topPos = "0px";
-      this.bottomPos = "0px";
-    }
+//    if (
+//      this.$parent.navsArrows &&
+//      this.$el.scrollHeight >
+//        this.$parent.navsPosStart + this.$parent.navsPosEnd
+//    ) {
+//      this.$nextTick(() => {
+//        window.addEventListener("scroll", this.stickNavs, { passive: true });
+//        window.addEventListener("resize", this.stickNavs, { passive: true });
+//      });
+//      this.stickNavs();
+//    } else if (this.$parent.navsArrows) {
+//      // Если заданная высота отступа выше зоны просмотра, то центрируем стрелочки
+//      this.topPos = "0px";
+//      this.bottomPos = "0px";
+//    }
   },
   updated() {
     if (!this.navContainerChanged && this.navigationContainer !== "") {
