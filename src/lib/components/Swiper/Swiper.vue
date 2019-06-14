@@ -33,7 +33,7 @@
     >
       <div
         ref="slidedBlock"
-        :class="`${cmpName}__inner ${containerName}`"
+        :class="styleInnerCarousel"
         :draggable="isTouch"
       >
         <slot />
@@ -107,6 +107,14 @@ export default {
     [Navigation.name]: Navigation
   },
   props: {
+    disableCarousel: {
+      type: Boolean,
+      default: false
+    },
+    minScreenWidthDisable: {
+      type: Number,
+      default: 0
+    },
     autoScrolling: {
       type: Boolean,
       default: true
@@ -196,7 +204,8 @@ export default {
       swipingStartPoint: null, // Детектор направления свайпинга
       toggleSlidesTimer: null,
       touchObject: defaultTouch,
-      verticalScrolling: true
+      verticalScrolling: true,
+      isDisableCarousel: this.disableCarousel
     };
   },
   computed: {
@@ -210,6 +219,14 @@ export default {
             slide.$vnode.tag.indexOf("RtSlide") > -1
         )
       );
+    },
+    styleInnerCarousel() {
+      let result = `${this.cmpName}__inner ${this.containerName}`
+      
+      if (this.isDisableCarousel) {
+        result += ` ${this.cmpName}__inner-default`
+      }
+      return result
     }
   },
   mounted() {
@@ -313,6 +330,8 @@ export default {
      * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
      */
     createMoves() {
+      this.controlDisableCarousel()
+
       if (this.$refs.overlay && this.currentWindowWidth !== window.innerWidth) {
         this.currentWindowWidth = window.innerWidth;
         let leftPadding = parseFloat(
@@ -322,6 +341,7 @@ export default {
         this.hSpace =
 //          (leftPadding > 0 ? leftPadding : 0) +
           (leftOffset > 0 ? leftOffset : 0);
+
         this.movesArr = [];
         this.slides.forEach((slide, i) => {
           this.movesArr.push({
@@ -333,6 +353,16 @@ export default {
           this.move();
           this.toggleSlides();
         }, 50);
+      }
+    },
+
+    controlDisableCarousel() {
+      if (this.disableCarousel) {
+        if (window.innerWidth < this.minScreenWidthDisable) {
+          this.isDisableCarousel = false
+        } else {
+          this.isDisableCarousel = true
+        }
       }
     },
     /**
@@ -603,19 +633,23 @@ export default {
           let distanceRight =
             startScrolling + this.$refs.slidedBlock.clientWidth;
           let hiddenSlides = [];
-          this.movesArr.forEach(w => {
-            distance += w.width;
-            if (startScrolling - slideSwipingMinDistance > distanceLeft) {
-              if (this.canAdvanceBackward) {
-                hiddenSlides.push(w.key);
+
+          if (!this.isDisableCarousel) {
+            this.movesArr.forEach(w => {
+              distance += w.width;
+              if (startScrolling - slideSwipingMinDistance > distanceLeft) {
+                if (this.canAdvanceBackward) {
+                  hiddenSlides.push(w.key);
+                }
+                distanceLeft += w.width;
               }
-              distanceLeft += w.width;
-            }
-            if (distance - slideSwipingMinDistance > distanceRight) {
-              hiddenSlides.push(w.key);
-              distanceRight += w.width;
-            }
-          });
+              if (distance - slideSwipingMinDistance > distanceRight) {
+                hiddenSlides.push(w.key);
+                distanceRight += w.width;
+              }
+            });
+          }
+
           this.slides.forEach((s, k) => {
             s.toggle(hiddenSlides.indexOf(k) === -1);
           });
