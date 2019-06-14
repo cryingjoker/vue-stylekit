@@ -481,27 +481,26 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control d-inline-block">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
-                              30
+                            <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в
+                              аренду за 30
                               руб./мес.</p>
                           </div>
                         </div>
-                        <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
-                          <template slot="header">
-                            <div class="rt-space-top-half">
-                              <div class="flex-center-center">
-                                <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
-                                <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
-                              </div>
-                            </div>
-                          </template>
-                          >
-                          <template slot="content">
-                            <app-tariff-cars-icons/>
-                          </template>
-                        </rt-slide-content>
                       </div>
-
+                      <rt-slide-content :dotted-view="true" :revert-dotted-view="true">
+                        <template slot="header">
+                          <div class="rt-space-top-half">
+                            <div class="flex-center-center">
+                              <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
+                              <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
+                            </div>
+                          </div>
+                        </template>
+                        >
+                        <template slot="content">
+                          <app-tariff-cars-icons/>
+                        </template>
+                      </rt-slide-content>
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
@@ -674,28 +673,27 @@
                     </template>
                     <template slot="content">
                       <div class="d-flex rt-tariff-item flex-start-center ">
-                        <div class="rt-tariff-item__icon-wrapper">
-                          <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                               xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                                <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                  <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                    <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                      <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                            font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                        <tspan x="9" y="30">%</tspan>
-                                      </text>
-                                    </g>
+
+                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
+                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
+                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
+                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
+                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                      <tspan x="9" y="30">%</tspan>
+                                    </text>
                                   </g>
                                 </g>
                               </g>
                             </g>
-                          </svg>
-                        </div>
+                          </g>
+                        </svg>
 
                         <div class="rt-space-left05">
                           <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
@@ -704,37 +702,40 @@
                       </div>
                       <div class="rt-space-top-half">
                         <div class="d-flex rt-tariff-item flex-start-center ">
-                            <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 class="rt-tariff-item__icon">
-                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="ver1" transform="translate(-30.000000, -1512.000000)">
-                                  <g id="Group-9" transform="translate(31.000000, 1348.000000)">
-                                    <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
-                                      <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
-                                         stroke="#101828">
-                                        <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
-                                              height="8.31818182"></rect>
-                                        <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
-                                              id="Path-3-Copy-2"></path>
-                                        <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
-                                              stroke-width="1.5"></path>
-                                        <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
-                                        <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
-                                              stroke-width="1.5"></path>
-                                        <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
-                                              id="Path-3-Copy-4"></path>
-                                      </g>
+
+
+                          <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                               class="rt-tariff-item__icon">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="ver1" transform="translate(-30.000000, -1512.000000)">
+                                <g id="Group-9" transform="translate(31.000000, 1348.000000)">
+                                  <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
+                                    <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
+                                       stroke="#101828">
+                                      <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
+                                            height="8.31818182"></rect>
+                                      <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
+                                            id="Path-3-Copy-2"></path>
+                                      <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
+                                            stroke-width="1.5"></path>
+                                      <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
+                                      <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
+                                            stroke-width="1.5"></path>
+                                      <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
+                                            id="Path-3-Copy-4"></path>
                                     </g>
                                   </g>
                                 </g>
                               </g>
-                            </svg>
+                            </g>
+                          </svg>
+
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в
@@ -938,28 +939,28 @@
                     </template>
                     <template slot="content">
                       <div class="d-flex rt-tariff-item flex-start-center ">
-                        <div class="rt-tariff-item__icon-wrapper">
-                          <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                               xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                                <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                  <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                    <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                      <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                            font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                        <tspan x="9" y="30">%</tspan>
-                                      </text>
-                                    </g>
+
+                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
+                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
+                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
+                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
+                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
+                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                      <tspan x="9" y="30">%</tspan>
+                                    </text>
                                   </g>
                                 </g>
                               </g>
                             </g>
-                          </svg>
-                        </div>
+                          </g>
+                        </svg>
+
                         <div class="rt-space-left05">
                           <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
                           <p class="rt-font-control color-dark07">при заказе с сайта</p>
@@ -968,37 +969,38 @@
                       <div class="rt-space-top-half">
                         <div class="d-flex rt-tariff-item flex-start-center ">
 
-                            <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 class="rt-tariff-item__icon">
-                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="ver1" transform="translate(-30.000000, -1512.000000)">
-                                  <g id="Group-9" transform="translate(31.000000, 1348.000000)">
-                                    <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
-                                      <path
-                                        d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                        id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
-                                      <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
-                                         stroke="#101828">
-                                        <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
-                                              height="8.31818182"></rect>
-                                        <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
-                                              id="Path-3-Copy-2"></path>
-                                        <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
-                                              stroke-width="1.5"></path>
-                                        <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
-                                        <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
-                                              stroke-width="1.5"></path>
-                                        <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
-                                              id="Path-3-Copy-4"></path>
-                                      </g>
+
+                          <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                               class="rt-tariff-item__icon">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="ver1" transform="translate(-30.000000, -1512.000000)">
+                                <g id="Group-9" transform="translate(31.000000, 1348.000000)">
+                                  <g id="Group-8-Copy-2" transform="translate(0.000000, 165.000000)">
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-172-Copy-31" stroke="#E3E8EC"></path>
+                                    <path
+                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
+                                      id="Fill-172-Copy-29" stroke="#E3E8EC"></path>
+                                    <g id="Group-14-Copy-16" transform="translate(6.000000, 15.000000)"
+                                       stroke="#101828">
+                                      <rect id="Rectangle" stroke-width="1.5" x="0.75" y="0.75" width="24.5"
+                                            height="8.31818182"></rect>
+                                      <path d="M3.79166667,3.27272727 L3.79166667,6.13636364"
+                                            id="Path-3-Copy-2"></path>
+                                      <path d="M3.79166667,8.72727273 L3.79166667,11.5909091" id="Path-3-Copy-7"
+                                            stroke-width="1.5"></path>
+                                      <path d="M6.5,3.27272727 L6.5,6.13636364" id="Path-3-Copy-3"></path>
+                                      <path d="M22.2083333,8.72727273 L22.2083333,11.5909091" id="Path-3-Copy-8"
+                                            stroke-width="1.5"></path>
+                                      <path d="M9.20833333,3.27272727 L9.20833333,6.13636364"
+                                            id="Path-3-Copy-4"></path>
                                     </g>
                                   </g>
                                 </g>
                               </g>
-                            </svg>
+                            </g>
+                          </svg>
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
@@ -1014,7 +1016,6 @@
                             <div class="flex-center-center">
                               <span class="rt-font-dashed rt-slide-content-trigger rt-slide-content-trigger--open">скрыть</span>
                               <span class="rt-font-dashed rt-slide-content-trigger">ещё</span>
-
                             </div>
                           </div>
                         </template>
