@@ -16,7 +16,7 @@ class Price extends Vue {
   @Prop({ default: false}) boldOption: boolean;
   @Prop({ default: false}) b2bPrice: boolean;
   @Prop({ default: ""}) oldPriceColor: boolean;
-
+  @Prop({ default: false}) isTimeIntervalBottom: boolean;
 
 
   normalizeValue: string = parseInt(this.value.toString(), 10).toString().replace(
@@ -100,6 +100,29 @@ class Price extends Vue {
         return null
       }
     }
+    const priceInfoRender = ()=>{
+      if(this.isTimeIntervalBottom) {
+        return  <div>
+                  <div class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>
+                    {this.normalizeValue}
+                  </div>
+                  <div class="rtb-price__info rt-price__info">{this.normalizeCurrency}</div>
+                  <div class="rt-font-small-paragraph rt-font-bold rtb-price__info-interval">{this.normalizeTimeInterval}</div>
+                </div>
+      }else{
+        return <div>
+                  <div class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>
+                    {this.normalizeValue}
+                  </div>
+                  <div class="rt-price__info">
+                    <div class="rt-price__info rtb-price__info">
+                      <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
+                      <div class="rtb-price__info-item rtb-price__info-item">{this.normalizeTimeInterval}</div>
+                    </div>
+                  </div>
+                </div>
+      }
+    }
     if(this.b2bPrice) {
       const oldB2bPriceRender = ()=>{
         if(this.normalizeOldValue && parseInt(this.normalizeOldValue) > 0) {
@@ -117,18 +140,11 @@ class Price extends Vue {
         }
       }
       return <div class="rt-price  rtb-price rt-price-without-space">
-        {oldB2bPriceRender()}
-        {opinionRender()}
-        <div
-          class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>{this.normalizeValue}</div>
-        <div class="rt-price__info">
-          <div class="rt-price__info rtb-price__info">
-            <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
-            <div class="rtb-price__info-item rtb-price__info-item">{this.normalizeTimeInterval}</div>
-          </div>
+          {oldB2bPriceRender()}
+          {opinionRender()}
+          {priceInfoRender()}
         </div>
-      </div>
-    }else{
+    } else {
       return <div class={`${rtPriceClass} rt-price-without-space`}>
         {opinionRender()}
         {oldValueRender()}
