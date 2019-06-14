@@ -221,6 +221,8 @@
       position absolute
       top 5
       left 5
+    &-hover
+      display:none
 
   &__product-image
       position: relative
@@ -297,6 +299,11 @@
       @media (min-width: laptop-lower-limit)
         transform rotateY(180deg)
         //right 0
+
+  &:hover &__label-hover {
+    display block
+  }
+
   &__reverse
     position absolute
     transform: rotateY(180deg)
