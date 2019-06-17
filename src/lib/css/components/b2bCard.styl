@@ -224,18 +224,22 @@
     &-hover
       display:none
 
-  &__product-image
-      position: relative
-      height 180px
-      top 0
-      left 0
-      right 0
-      bottom 0
-      background-size cover
-      border-radius 0
-      & + .rt-card__content
-        padding-top: 20px
-        min-height auto
+  &__product-image,
+  &__product-icon
+    position: relative
+    height 180px
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-size cover
+    border-radius 0
+    & + .rt-card__content
+      padding-top: 20px
+      min-height auto
+  &__product-icon
+    background-size 80px
+    background-position 20px 100%
   &--product
     height 580px
     display block
@@ -247,8 +251,10 @@
         height 330px
     .color-block
       color b2c-white
+    .color-block--white
+      color main-color
   &--double-sided
-    //perspective 1000px
+    perspective 2000px
     transform-style: flat
     transition transform 1s, right 1s
     @media(max-width: mobile-upper-limit)
