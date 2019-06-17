@@ -52,7 +52,7 @@ scrollHSpacePC = 70px
     @media (max-width: tablet-upper-limit)
       width 100vw
 
-  &__inner-default 
+  &__inner-default
     flex-wrap wrap
 
   &__spacer
@@ -140,11 +140,13 @@ scrollHSpacePC = 70px
 //    padding: 0 70px
 
 .in-plus-card
+  @media (max-width: laptop-upper-limit)
+    max-width calc(275px + 20px)
   @media (max-width: tablet-upper-limit)
-    min-width 45vw
+    min-width calc(35vw + 20px)
     max-width none
   @media (max-width: mobile-upper-limit)
-    min-width 75vw
+    min-width calc(75vw + 20px)
 
 keyframes show-no-moves-prev
   0%

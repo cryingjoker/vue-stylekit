@@ -10,6 +10,7 @@
   z-index 999
   transition top .4s ease-in-out
   opacity 0
+  background-color rgba(255, 255, 255, .75)
   &--active
     top 0
     opacity 1
@@ -18,10 +19,18 @@
         transform translateY(-50%)
         top 50vh
         height auto
+        @media (max-width: tablet-upper-limit)
+          top calc(50vh + 40px)
+        @media (max-width: mobile-upper-limit)
+          top calc(50vh + 20px)
       &--top-center
         top 0
       &--bottom-center
         top 20vh
+        @media (max-width: tablet-upper-limit)
+          top 40px
+        @media (max-width: mobile-upper-limit)
+          top 20px
   &--mobile-only
     @media (min-width: desktop-lower-limit)
       display none
@@ -29,8 +38,7 @@
 .{b2bAppName}-popup
   position relative
   width 100%
-  //height auto
-  height 81vh
+  height auto
   max-height 80vh
   padding vertical-space * 2
   display inline-block
@@ -43,27 +51,13 @@
     @media (max-width: tablet-upper-limit)
       padding-bottom: 100px
   @media (max-width: tablet-upper-limit)
-    max-height: calc(100vh - 90px)
-    margin-top: 30px
-    margin-bottom: 60px
-    overflow: hidden
+    max-height: calc(100vh - 40px)
+  @media (max-width: mobile-upper-limit)
+    max-height: calc(100vh - 20px)
   &-close
     position absolute
     top 20px
     right 20px
     cursor pointer
-  //&--center-center
-  //  transform translateY(-50%)
-  //  top 50vh
-  //  height auto
-  //&--top-center
-  //  top 0
-  //&--bottom-center
-  //  top 20vh
-  .row
-    max-height calc(80vh - 60px)
-    //overflow scroll
-    @media (max-width: tablet-upper-limit)
-      max-height calc(100vh - 60px)
-    @media (max-width: tablet-upper-limit)
-      max-height calc(100vh - 80px)
+  .rt-annotation__content
+    max-height none!important
