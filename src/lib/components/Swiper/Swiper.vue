@@ -222,9 +222,12 @@ export default {
     },
     styleInnerCarousel() {
       let result = `${this.cmpName}__inner ${this.containerName}`
-      
+      let styleDisableCarousel = ` ${this.cmpName}__inner-default`
+
       if (this.isDisableCarousel) {
-        result += ` ${this.cmpName}__inner-default`
+        result += styleDisableCarousel
+      } else {
+         result = result.replace(new RegExp(styleDisableCarousel, 'g'), '')
       }
       return result
     }
