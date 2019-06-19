@@ -1,6 +1,8 @@
 <script type="text/jsx">
 const componentsList = {};
 import variables from "../../variables.json";
+import colors from "../../color.json";
+
 
 export default {
   name: "RtCard",
@@ -147,6 +149,18 @@ export default {
       default: false
     },
     productIcon: {
+      type: String,
+      default: ''
+    },
+    labelMainColor: {
+      type: String,
+      default: 'b2c-red'
+    },
+    labelAdditionalColor: {
+      type: String,
+      default: 'b2c-yellow'
+    },
+    labelFontSize: {
       type: String,
       default: ''
     }
@@ -440,7 +454,8 @@ export default {
           document.querySelector('.popup-content').innerHTML = this.$el.querySelector('.rtb-card__reverse').innerHTML;
           setTimeout(()=>{
             document.querySelector('.rtb-popup-wrapper').classList.add('rtb-popup-wrapper--active');
-//            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
           },300)
         }
       }
@@ -506,10 +521,17 @@ export default {
     const label =(() => {
       if (this.hasLabel){
         return <div class={this.showLabelWhenHover ? 'rtb-card__label-hover rtb-card__label' : 'rtb-card__label'}>
-          <svg width="80" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M79.153 35.741l-.007.012a2.955 2.955 0 0 1-.373.538c-.02.024-.039.05-.06.072l-.041.047-11.426 11.196V31.304h9.118a3.251 3.251 0 0 1 .438.033h.005a2.977 2.977 0 0 1 .253.046c.152.035.302.08.448.137l.017.006c.07.028.14.058.207.091l.03.015c.069.033.137.07.203.108l.004.003c.065.038.128.08.19.122l.03.021a2.99 2.99 0 0 1 .21.164 2.962 2.962 0 0 1 .341.335l.026.028c.05.06.098.12.143.182l.022.03c.046.065.09.13.13.197l.004.008c.042.07.08.14.116.213l.004.008a3.082 3.082 0 0 1 .104.237 3.014 3.014 0 0 1 .202.99v.03c.004.159-.005.318-.027.475l-.006.03c-.02.138-.05.275-.091.41l-.007.019a2.765 2.765 0 0 1-.086.241l-.011.025a2.93 2.93 0 0 1-.11.233z" fill="#FFBE08"/><path d="M79.777 14.674v11.41l-.001 7.415c-.004.071-.013.141-.02.212l-.018.174c-.129 1.016-.596 1.921-1.268 2.638l.087-.103a2.919 2.919 0 0 0 .627-2.206 3.018 3.018 0 0 0-.895-1.799 3.335 3.335 0 0 0-.604-.463 3.145 3.145 0 0 0-.446-.216 3.185 3.185 0 0 0-1.16-.222h-5.73L0 31.512V0h74.962c2.661-.008 4.812 2.167 4.813 4.788l.002 9.886zm-1.665 22.214c.044-.038.082-.083.125-.123l-.125.123z" fill="#BC104B"/></g></svg>
-            <div class="rtb-card__label-content">
+          <div class="rtb-card__label-content" style={"font-size:" + this.labelFontSize}>
+            <p class={"rtb-card__label-text color-block--" + this.labelMainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} style={"background-color:" + this.labelMainColor}>
               {this.$slots.label}
-            </div>
+            </p>
+          </div>
+          <svg width="80" height="48" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <path class={"svg-fill--" + this.labelAdditionalColor} d="M79.153 35.741l-.007.012a2.955 2.955 0 0 1-.373.538c-.02.024-.039.05-.06.072l-.041.047-11.426 11.196V31.304h9.118a3.251 3.251 0 0 1 .438.033h.005a2.977 2.977 0 0 1 .253.046c.152.035.302.08.448.137l.017.006c.07.028.14.058.207.091l.03.015c.069.033.137.07.203.108l.004.003c.065.038.128.08.19.122l.03.021a2.99 2.99 0 0 1 .21.164 2.962 2.962 0 0 1 .341.335l.026.028c.05.06.098.12.143.182l.022.03c.046.065.09.13.13.197l.004.008c.042.07.08.14.116.213l.004.008a3.082 3.082 0 0 1 .104.237 3.014 3.014 0 0 1 .202.99v.03c.004.159-.005.318-.027.475l-.006.03c-.02.138-.05.275-.091.41l-.007.019a2.765 2.765 0 0 1-.086.241l-.011.025a2.93 2.93 0 0 1-.11.233z"/>
+              <path class={"svg-fill--" + this.labelMainColor} d="M79.777 14.674v11.41l-.001 7.415c-.004.071-.013.141-.02.212l-.018.174c-.129 1.016-.596 1.921-1.268 2.638l.087-.103a2.919 2.919 0 0 0 .627-2.206 3.018 3.018 0 0 0-.895-1.799 3.335 3.335 0 0 0-.604-.463 3.145 3.145 0 0 0-.446-.216 3.185 3.185 0 0 0-1.16-.222h-5.73L0 31.512V0h74.962c2.661-.008 4.812 2.167 4.813 4.788l.002 9.886zm-1.665 22.214c.044-.038.082-.083.125-.123l-.125.123z"/>
+            </g>
+          </svg>
         </div>;
       }
     })();

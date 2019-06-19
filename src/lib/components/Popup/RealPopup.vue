@@ -53,6 +53,7 @@
       close(){
         this.$refs.popupWrapper.classList.remove('rtb-popup-wrapper--active');
         document.body.style.overflow = 'unset';
+        document.documentElement.style.overflowY = 'unset';
       },
       countOffset(){
         setTimeout(() => {

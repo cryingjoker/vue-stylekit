@@ -210,7 +210,7 @@
     box-sizing border-box
     color b2c-white
     text-align center
-    background-image url("/static/images/B2B/sale-label.svg")
+    //background-image url("/static/images/B2B/sale-label.svg")
     background-repeat no-repeat
     padding-top 4px
     position absolute
@@ -218,11 +218,18 @@
     right -13px
     z-index 3
     &-content
-      position absolute
-      top 5px
-      left 5px
+      position relative
+      top 0
+      width 100%
+      line-height 32px
     &-hover
       display:none
+    &-text
+      white-space nowrap
+      position absolute
+      right 12px
+      top 0
+      padding-left 10px
 
   &__product-image,
   &__product-icon
