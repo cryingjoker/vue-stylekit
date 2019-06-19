@@ -926,9 +926,6 @@
     height 155px
     @media (max-width: tablet-upper-limit)
       height 105px
-  .d-flex
-    @media (max-width: tablet-upper-limit)
-      flex-direction column
   .rt-card__body
     @media (max-width: tablet-upper-limit)
       padding 0 30px
@@ -949,3 +946,26 @@
 
 .gradient-header
   background linear-gradient(to right, #2f0045, #1c2c4d)
+
+.additional-possibilities
+  //.rtk-carousel__inner
+  //  width calc(100vw - 140px)
+  //  max-width none
+  .rt-card__image-wrapper
+    width 100%
+    height auto
+
+.a-p__popup
+  &-upper-text-block,
+  &-image,
+  &-benefit
+    flex-basis calc(50% - 10px)
+    &s-list
+      flex-wrap wrap
+  &-image
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: 50% 50%
+  .rtb-popup
+    padding 0
+
