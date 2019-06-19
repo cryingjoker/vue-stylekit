@@ -1083,6 +1083,87 @@
           </div>
         </div>
         <div class="row">
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b color-white">
+            <pre-code
+              text='
+                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="yellow-high">
+                  <template slot="content">
+                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                  </template>
+                  <template slot="footer">
+                    <div class="rtb-card__cost">
+                      <rt-price
+                        :value="2.5"
+                        :is-option="true"
+                        currency="₽"
+                        :b2b-price="true"
+                        time-interval="в месяц"
+                      />
+                    </div>
+                  </template>
+                </rt-card>
+            '/>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
+            <pre-code
+              text='
+                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="purple">
+                  <template slot="content">
+                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                  </template>
+                  <template slot="footer">
+                    <div class="rtb-card__cost">
+                      <rt-price
+                        :value="2.5"
+                        :is-option="true"
+                        currency="₽"
+                        :b2b-price="true"
+                        time-interval="в месяц"
+                      />
+                    </div>
+                  </template>
+                </rt-card>
+            '/>
+          </div>
+          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
+            <pre-code
+              text='
+                <rt-card product-icon="/static/images/B2B/063-c.svg" :product-card="true" background-color-type="white">
+                  <template slot="content">
+                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
+                      рекламная платформа</p>
+                  </template>
+                  <template slot="footer">
+                    <div class="rtb-card__cost">
+                      <rt-price
+                        :value="2.5"
+                        :is-option="true"
+                        currency="₽"
+                        :b2b-price="true"
+                        time-interval="в месяц"
+                      />
+                    </div>
+                  </template>
+                </rt-card>
+            '/>
+          </div>
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 rt-space-top is-b2b">
             <pre-code
               text="<rt-card
@@ -1202,87 +1283,6 @@
                 </a>
               </template>
             </rt-card>"/>
-          </div>
-          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b color-white">
-            <pre-code
-              text='
-                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="yellow-high">
-                  <template slot="content">
-                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                  </template>
-                  <template slot="footer">
-                    <div class="rtb-card__cost">
-                      <rt-price
-                        :value="2.5"
-                        :is-option="true"
-                        currency="₽"
-                        :b2b-price="true"
-                        time-interval="в месяц"
-                      />
-                    </div>
-                  </template>
-                </rt-card>
-            '/>
-          </div>
-          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
-            <pre-code
-              text='
-                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="purple">
-                  <template slot="content">
-                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                  </template>
-                  <template slot="footer">
-                    <div class="rtb-card__cost">
-                      <rt-price
-                        :value="2.5"
-                        :is-option="true"
-                        currency="₽"
-                        :b2b-price="true"
-                        time-interval="в месяц"
-                      />
-                    </div>
-                  </template>
-                </rt-card>
-            '/>
-          </div>
-          <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
-            <pre-code
-              text='
-                <rt-card background-image="/static/images/B2B/category-img.png" :product-card="true" background-color-type="white">
-                  <template slot="content">
-                    <h3 class="rt-font-bold rt-space-bottom">Номер 8 800</h3>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2 rt-space-bottom05">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                    <p class="p2">Мощные роутеры в аренду, удобный личный кабинет и
-                      рекламная платформа</p>
-                  </template>
-                  <template slot="footer">
-                    <div class="rtb-card__cost">
-                      <rt-price
-                        :value="2.5"
-                        :is-option="true"
-                        currency="₽"
-                        :b2b-price="true"
-                        time-interval="в месяц"
-                      />
-                    </div>
-                  </template>
-                </rt-card>
-            '/>
           </div>
           <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b">
             <pre-code text='
