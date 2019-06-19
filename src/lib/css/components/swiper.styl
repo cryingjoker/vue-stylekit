@@ -64,6 +64,10 @@ scrollHSpacePC = 70px
     z-index swiperZIndex + 1
     backface-visibility hidden
     user-select none
+    @media (max-width: tablet-upper-limit)
+      width calc(35vw + 20px)
+    @media (max-width: mobile-upper-limit)
+      width calc(75vw + 20px)
 
     &.marked
       transform scale(1.02)

@@ -616,6 +616,20 @@ export default {
           </div>
         }
     })();
+    const hiddenPopupBenefits = (()=>{
+      if(this.$slots['popup-special-benefits']){
+        return <div class="rt-card__popup-benefits">{this.$slots['popup-special-benefits']}</div>;
+      }else{
+        return null;
+      }
+    })();
+    const hiddenPopupCosts = (()=>{
+      if(this.$slots['popup-special-costs']){
+        return <div class="rt-card__popup-costs">{this.$slots['popup-special-costs']}</div>;
+      }else{
+        return null;
+      }
+    })();
     if(this.doubleSided){
       return <div class={"rt-card " + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
         <div class={"rt-card__content" + this.cardContentClass} style={this.cardBackgroundStyle}>
@@ -645,6 +659,8 @@ export default {
           <div class="rt-card__footer">
             {this.$slots["footer"]}
           </div>
+          {hiddenPopupBenefits}
+          {hiddenPopupCosts}
         </div>
       </div>;
     } else {
