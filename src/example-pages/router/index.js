@@ -24,8 +24,8 @@ import PromoTvTV from '../components/promo/tvtv.vue';
 import smartHouse from '../components/promo/smart-house.vue';
 import PromoMobile from '../components/promo/promo-mobile.vue';
 import BusinessDrive from '../components/promo/business-drive.vue';
-import PromoGame from '../components/promo/game.vue';
-import PromoForgame from '../components/promo/forgame.vue';
+// import PromoGame from '../components/promo/game.vue';
+// import PromoForgame from '../components/promo/forgame.vue';
 import ScrollTabs from '../components/main-elements/ScrollTabs.vue';
 import FullscreenImage from '../components/main-elements/FullscreenImage.vue';
 import GridElements from '../components/main-elements/Grid.vue';
@@ -50,7 +50,7 @@ import Youtube from "../components/main-elements/Youtube.vue";
 import Colors from "../components/main-elements/colors/ColorsList.tsx";
 import List from "../components/main-elements/List.vue";
 import Logo from "../components/main-elements/Logo.vue";
-import WarFace from "../components/promo/game-warface.vue";
+// import WarFace from "../components/promo/game-warface.vue";
 import Vip from "../components/promo/vip.vue";
 import Kids from "../components/promo/kids.vue";
 import PromoLp from "../components/promo/lp.vue";
@@ -107,16 +107,16 @@ const index = [
   { path: '/use-case', name: 'useCase', component: UseCase },
   { path: '/promo/vcod', name: 'VCOD', component: VCOD },
   { path: '/ussd', name: 'app-ussd', component: USSD },
-  { path: '/promo/game', name: 'promoGame', component: PromoGame },
+  // { path: '/promo/game', name: 'promoGame', component: PromoGame },
   { path: '/promo/tv', name: 'promoTv', component: PromoTv },
   { path: '/promo/tvtv', name: 'promoTv', component: PromoTvTV },
   { path: '/promo/mobile', name: 'promoMobile', component: PromoMobile },
   { path: '/promo/smart-house', name: 'smartHouse', component: smartHouse },
-  { path: '/promo/game-warface', name: 'warFace', component: WarFace },
+  // { path: '/promo/game-warface', name: 'warFace', component: WarFace },
   { path: '/promo/vip', name: 'vip', component: Vip },
   { path: '/promo/kids', name: 'kids', component: Kids },
   { path: '/promo/lp', name: 'lp', component: PromoLp },
-  { path: '/promo/forgame', name: 'forGame', component: PromoForgame },
+  // { path: '/promo/forgame', name: 'forGame', component: PromoForgame },
   { path: '/promo/business-drive', name: 'business-drive', component: BusinessDrive },
   { path: '/promo/test-access', name: 'testAccess', component: TestAccess },
   { path: '/swiper', name: 'swiper', component: Swiper },

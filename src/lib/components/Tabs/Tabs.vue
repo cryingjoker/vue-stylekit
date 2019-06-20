@@ -6,6 +6,10 @@ export default {
   name: "RtTabs",
   components: componentsList,
   props: {
+    roundTabletView:{
+      type: Boolean,
+      default: false
+    },
     dontUseAdaptive:{
       type: Boolean,
       default: false
@@ -96,6 +100,7 @@ export default {
     }
   },
   render(){
+
     if(this.vertical && window.innerWidth <= this.mobileSize) {
       return <div class="rt-tabs rt-tabs--vertical">
         <div class="rt-tabs-navigation">
@@ -104,6 +109,7 @@ export default {
       </div>;
     } else {
       return <div class={"rt-tabs " +
+      (this.roundTabletView ? "rt-tabs--round-tablet-view " : "") +
       (this.deviceType && !this.dontUseAdaptive ? "rt-tabs-"+this.deviceType : '') +
       (this.vertical ? " rt-tabs--vertical" : "")}>
         <div class="rt-tabs-navigation-wrapper">

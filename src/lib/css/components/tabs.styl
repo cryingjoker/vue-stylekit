@@ -125,3 +125,42 @@
     cursor default
 
   cursor pointer
+.{newAppName}-tabs--round-tablet-view
+  .{newAppName}-tabs-navigation__item
+    padding-left: 0
+    padding-right: 0
+  .rt-tabs-navigation
+    margin-left: 0
+    margin-right: 0
+  .rt-tabs-navigation__item-name
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 16px
+    padding-bottom: 14px
+    &:before
+      width: 0!important
+    &:hover,
+    &:focus
+      border-bottom-width: 0
+
+  .{newAppName}-tabs-navigation
+    overflow: hidden
+  .{newAppName}-tabs-navigation-wrapper
+    overflow: hidden
+    display: inline-block
+    border-radius 10px
+    border 2px solid b2c-purple
+  .{newAppName}-tabs-navigation__item-name
+    padding-left: 20px
+    padding-right: 20px
+  .{newAppName}-tabs-navigation__item
+    background-color: transparent
+
+    &+&
+      margin-left: -1ex
+  .{newAppName}-tabs-navigation__item--is-active
+    background-color: b2c-purple
+    color #fff
+  .{newAppName}-tabs-content
+    border-top-width: 0
+
