@@ -36,6 +36,7 @@
         document.querySelector('.rtb-popup').scrollTo(0, 0);
         document.querySelector('.speaker-popup').classList.add('rtb-popup-wrapper--active');
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
       }
     },
     render(h) {
