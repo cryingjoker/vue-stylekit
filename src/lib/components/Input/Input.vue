@@ -92,11 +92,11 @@
       },
       color: {
         type: String,
-        default: 'purple'
+        default: "purple"
       },
       technicalPossibilityHint: {
         type: String,
-        default: ''
+        default: ""
       },
       isHidden: {
         type: Boolean,
@@ -113,7 +113,7 @@
         localLabel: this.label,
         localValue: this.value ? this.value : "",
         hasInputText: this.value ? this.value.length > 0 : false,
-        hintPosition: 'right'
+        hintPosition: "right"
       };
     },
 
@@ -123,22 +123,22 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.hasError || this.errors.has(this.fieldName);
+          return this.hasError //|| this.errors.has(this.fieldName);
         }
       },
       inputClass() {
-        let className = 'input-wrapper';
+        let className = "input-wrapper";
         if (this.outlined) {
-          className += ' input-wrapper--outlined';
+          className += " input-wrapper--outlined";
         }
         if (this.isB2bInput) {
-          className += ' rtb-input color-block--white';
+          className += " rtb-input color-block--white";
         }
         if (this.isHidden) {
-          className += ' rtb-input--hidden';
+          className += " rtb-input--hidden";
         }
         if (this.approved) {
-          className += ' rtb-input--approved'
+          className += " rtb-input--approved"
         }
         return className;
       }
@@ -159,9 +159,9 @@
       this.setDisabled();
       this.bindEvents();
       if (this.$el.getBoundingClientRect().left > window.innerWidth / 2) {
-        this.hintPosition = 'left';
+        this.hintPosition = "left";
       } else {
-        this.hintPosition = 'right';
+        this.hintPosition = "right";
       }
       ;
     },
@@ -332,11 +332,11 @@
         }
       },
       togglePasswordVisibility() {
-        let inputElement = this.$el.getElementsByTagName('input')[0];
-        if (inputElement.getAttribute('type') === 'password') {
-          inputElement.setAttribute('type', 'text');
-        } else if (inputElement.getAttribute('type') === 'text') {
-          inputElement.setAttribute('type', 'password');
+        let inputElement = this.$el.getElementsByTagName("input")[0];
+        if (inputElement.getAttribute("type") === "password") {
+          inputElement.setAttribute("type", "text");
+        } else if (inputElement.getAttribute("type") === "text") {
+          inputElement.setAttribute("type", "password");
         }
         this.passwordVisibility = !this.passwordVisibility;
       }
@@ -355,7 +355,7 @@
       if (this.type && this.type === "password") {
         inputClass += " rt-input--password";
       }
-      if (this.color === 'orange') {
+      if (this.color === "orange") {
         inputClass += " text-field--orange";
       } else {
         inputClass += " text-field--purple";
@@ -382,7 +382,7 @@
           }
           return clearButtonClassNames;
         })();
-        if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != 'password') {
+        if (!this.showNumbersButtons && !this.disabled && this.hasInputText && this.type != "password") {
           return <div class={buttonClass} onClick={this.clearInput}>
             <svg class="input-clear__icon" viewBox="0 0 14 14" width="13" height="13"
                  xmlns="http://www.w3.org/2000/svg">
@@ -395,7 +395,7 @@
       })();
 
       const passwordIcon = (() => {
-        if (this.type === 'password') {
+        if (this.type === "password") {
           if (!this.passwordVisibility) {
             return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
               <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -429,13 +429,13 @@
           if (this.isB2bInput) {
             errorMessageClass += " rtb-text-field__error-message rt-col-rt-col-3";
           }
-          if (this.hintPosition === 'right') {
+          if (this.hintPosition === "right") {
             errorMessageClass += " rtb-text-field__error-message--on-the-right";
-          } else if (this.hintPosition === 'left') {
+          } else if (this.hintPosition === "left") {
             errorMessageClass += " rtb-text-field__error-message--on-the-left";
           }
 
-          if (Object.prototype.toString.call(this.errorMessageFunc) === '[object Function]') {
+          if (Object.prototype.toString.call(this.errorMessageFunc) === "[object Function]") {
             return <div class={errorMessageClass}>
               <span class="error-message-text-content rt-font-label">{this.errorMessageFunc(this.localValue)}</span>
             </div>;
@@ -488,7 +488,7 @@
             onInput={this.inputHandler}
             v-validate={this.validate}
           />
-          {this.outlined ? <div className="text-field__border"/> : <div className="text-field__line"/>}
+          {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
           {placeholder}
           {clearButton}
           {passwordIcon}
@@ -501,3 +501,4 @@
     }
   };
 </script>
+
