@@ -226,7 +226,7 @@
           this.scrollAreaHeight = elementSize.scrollAreaHeight
           this.scrollAreaWidth = elementSize.scrollAreaWidth
           // Scroll Wrapper Height and Width
-          this.scrollWrapperHeight = elementSize.scrollWrapperHeight
+          this.scrollWrapperHeight = this.$el.closest('.rtb-popup').style.height//.scrollWrapperHeight
           this.scrollWrapperWidth = elementSize.scrollWrapperWidth
           // Make sure The wrapper is Ready, then render the scrollbar
           this.ready = true

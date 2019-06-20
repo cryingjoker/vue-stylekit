@@ -8,10 +8,11 @@
   width 100vw
   height 100vh
   z-index 999
-  transition top .4s ease-in-out
+  transition top .4s ease-in-out, background-color .4s .6s linear
   opacity 0
-  background-color rgba(255, 255, 255, .75)
+  background-color: transparent
   &--active
+    background-color rgba(255, 255, 255, .75)
     top 0
     opacity 1
     .{b2bAppName}-popup
@@ -60,5 +61,6 @@
     right 20px
     cursor pointer
     z-index 9
+
   .rt-annotation__content
     max-height none!important
