@@ -47,10 +47,10 @@ scrollHSpacePC = 70px
     flex-direction row
     white-space normal
     padding 30px 0 10px
-    width calc(100vw - 140px)
+    width calc(100vw - (100vw - 100%) - 140px)
     max-width 1340px
     @media (max-width: tablet-upper-limit)
-      width 100vw
+      width calc(100vw - (100vw - 100%))
 
   &__inner-default
     flex-wrap wrap
@@ -64,6 +64,8 @@ scrollHSpacePC = 70px
     z-index swiperZIndex + 1
     backface-visibility hidden
     user-select none
+    @media (max-width: laptop-upper-limit) and (min-width: desktop-lower-limit)
+      max-width calc(275px + 20px)
     @media (max-width: tablet-upper-limit)
       width calc(35vw + 20px)
     @media (max-width: mobile-upper-limit)
@@ -144,7 +146,7 @@ scrollHSpacePC = 70px
 //    padding: 0 70px
 
 .in-plus-card
-  @media (max-width: laptop-upper-limit)
+  @media (max-width: laptop-upper-limit) and (min-width: desktop-lower-limit)
     max-width calc(275px + 20px)
   @media (max-width: tablet-upper-limit)
     min-width calc(35vw + 20px)
