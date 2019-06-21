@@ -17,6 +17,7 @@ class SlideContent extends Vue {
 
   toggleOpen(){
     this.isOpenLocal= !this.isOpenLocal;
+
   }
   mounted(){
     if(this.isOpen){
@@ -29,6 +30,12 @@ class SlideContent extends Vue {
         el.addEventListener('click', (e) => {
           this.isOpenLocal = !this.isOpenLocal;
           window.getSelection().removeAllRanges();
+          setTimeout(()=>{
+            window.dispatchEvent(new Event("resize"));
+            setTimeout(()=>{
+              window.dispatchEvent(new Event("resize"));
+            },300)
+          },50)
         });
       })
 
