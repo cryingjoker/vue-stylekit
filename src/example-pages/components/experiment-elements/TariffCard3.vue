@@ -11,6 +11,8 @@
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
         <div class="rt-space-bottom is-b2c">
+          <rt-resize-content-height
+            :query-selectors-names="[]">
           <div class="row">
             <div class="rt-col-3 rt-col-md-3 rt-space-top">
               <rt-tariff-card discount="до 30%" color="b2c-purple">
@@ -345,35 +347,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
+                      <div class="">
                         <div class="d-flex flex-start-center rt-tariff-item ">
 
 
@@ -546,7 +520,7 @@
                     <template slot="header">
                       <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
                         <div class="">
-                          <p class="rt-font-bold">Мобильная связь, 1 SIM</p>
+                          <p class="rt-font-bold">Мобильная связь, до 5 SIM</p>
 
 
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">20 Гб, 600
@@ -575,35 +549,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
+                      <div class="">
                         <div class="d-flex flex-start-center rt-tariff-item ">
 
 
@@ -832,35 +778,7 @@
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
+                      <div class="">
                         <div class="d-flex flex-start-center rt-tariff-item ">
 
 
@@ -917,6 +835,7 @@
               </rt-tariff-card>
             </div>
           </div>
+          </rt-resize-content-height>
 
 
 
