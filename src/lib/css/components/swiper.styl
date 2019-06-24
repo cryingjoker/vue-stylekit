@@ -6,6 +6,7 @@ scrollHSpacePC = 70px
 .{swiperName}
   position relative
   z-index swiperZIndex
+  width inherit
   //max-width: 1480px
   //margin: 0 auto
 
@@ -51,9 +52,6 @@ scrollHSpacePC = 70px
     max-width 1340px
     @media (max-width: tablet-upper-limit)
       width calc(100vw - (100vw - 100%))
-
-  &__inner-default
-    flex-wrap wrap
 
   &__spacer
     display flex
@@ -140,6 +138,18 @@ scrollHSpacePC = 70px
 
   &.show-no-move-next
     animation show-no-moves-next .9s ease-in-out
+
+  &-override
+    width inherit
+    .{swiperName}__inner-default
+      flex-wrap wrap
+
+    .{swiperName}-slide
+      flex 0
+
+      &:first-child
+        @media (max-width: tablet-upper-limit)
+          margin-left 0 !important
 
 //.hide-navigation
 //  @media (min-width: laptop-lower-limit)
