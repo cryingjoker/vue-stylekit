@@ -68,6 +68,7 @@
           })
         }
       }
+      this.mobileSwipe();
     },
     methods: {
       addPaginator() {
@@ -88,14 +89,14 @@
       mobileCarousel(index) {
         let carouselPaginatorWrapper = document.querySelector('.custom-carousel__paginator');
         let slideWidth = document.querySelector('.carousel-card').offsetWidth;
-        let carouselWrapperPadding = +window.getComputedStyle(document.querySelector('.custom-carousel')).paddingLeft.replace('px', '')
+        let carouselWrapperPadding = +window.getComputedStyle(document.querySelector('.custom-carousel')).paddingLeft.replace('px', '');
         for(let i = 0; i < this.parentArray.length; i++) {
           carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
         }
         carouselPaginatorWrapper.children[index].classList.add('custom-carousel__paginator-item--active');
-        document.querySelector('.custom-carousel').scrollBy({
+        this.$el.scrollBy({
           top: 0,
-          left: (slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - document.querySelector('.custom-carousel').scrollLeft,
+          left: (slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
           behavior: 'smooth'
         });
 //        document.querySelector('.custom-carousel').scrollBy(slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding);
@@ -159,12 +160,36 @@
       fixCardHeightMobile() {
         let maxHeight = 0;
         for(let i = 0; i < this.parentArray.length; i++) {
-          let cardHeight = +window.getComputedStyle(document.querySelector('.custom-carousel').children[i]).height.replace('px', '');
+          let cardHeight = +window.getComputedStyle(this.$el.children[i]).height.replace('px', '');
           maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
         }
         for(let i = 0; i < this.parentArray.length; i++) {
-          document.querySelector('.custom-carousel').children[i].style.height = maxHeight + 'px';
+          this.$el.children[i].style.height = maxHeight + 'px';
+          this.$el.children[i].style.minHeight = maxHeight + 'px';
         }
+      },
+
+      mobileSwipe() {
+        let carouselPaginatorWrapper = document.querySelector('.custom-carousel__paginator');
+        let cardGallery = this.$el;
+        let cardWidth = document.querySelector('.carousel-card').offsetWidth;
+        let timer;
+        this.$el.addEventListener('scroll',function(){
+          let activePaginatorButton = Math.floor((cardGallery.scrollLeft + cardWidth / 2) / cardWidth);
+          for(let i = 0; i < document.querySelectorAll('.carousel-card').length; i++) {
+            carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
+          }
+          carouselPaginatorWrapper.children[activePaginatorButton].classList.add('custom-carousel__paginator-item--active');
+          clearTimeout(timer);
+          let refresh = () => {
+            cardGallery.scrollBy({
+              top: 0,
+              left: cardWidth * activePaginatorButton + (20 * (activePaginatorButton - 1)) - cardGallery.scrollLeft,
+              behavior: 'smooth'
+            });
+          };
+          timer = setTimeout( refresh , 150 );
+        })
       }
     }
   }
