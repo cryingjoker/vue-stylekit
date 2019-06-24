@@ -74,7 +74,8 @@ import {
   TimelineItem,
   ScrollBar,
   VerticalScrollBar,
-  ReplacementLink
+  ReplacementLink,
+  CardCarousel
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -155,5 +156,6 @@ componentsList[TimelineItem.name] = TimelineItem;
 componentsList[ScrollBar.name] = ScrollBar;
 componentsList[VerticalScrollBar.name] = VerticalScrollBar;
 componentsList[ReplacementLink.name] = ReplacementLink;
+componentsList[CardCarousel.name] = CardCarousel;
 componentsList[Ussd.name] = Ussd.component;
 export default { ...componentsList };

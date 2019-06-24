@@ -85,5 +85,6 @@
  export { default as PortraitTileItem } from './BusinessDrive/PortraitTileItem.vue';
  export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx';
  export { default as ReplacementLink } from './ReplacementLinkWrapper/ReplacementLink.vue';
+ export { default as CardCarousel } from './Card/CardCarousel.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';
