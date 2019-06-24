@@ -88,7 +88,8 @@ import {
   TimelineItem,
   ScrollBar,
   VerticalScrollBar,
-  ReplacementLink
+  ReplacementLink,
+  CardCarousel
 } from "./components";
 
 
@@ -177,6 +178,7 @@ const VueRtStyle = {
       Vue.component(ReplacementLink.name, ReplacementLink);
       Vue.component(Carousel.name, Carousel);
       Vue.component(CarouselSlide.name, CarouselSlide);
+      Vue.component(CardCarousel.name, CardCarousel);
 
       // tsx components
 
