@@ -143,9 +143,10 @@ scrollHSpacePC = 70px
     width inherit
     .{swiperName}__inner-default
       flex-wrap wrap
+      width 100% !important
 
-    .{swiperName}-slide
-      flex 0
+      .{swiperName}-slide
+        flex none
 
       &:first-child
         @media (max-width: tablet-upper-limit)
@@ -183,3 +184,4 @@ keyframes show-no-moves-next
 
   100%
     transform translateX(0)
+
