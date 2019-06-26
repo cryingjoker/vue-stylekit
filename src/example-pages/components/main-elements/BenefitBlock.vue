@@ -16,26 +16,26 @@
             <rt-benefit-block :columns-quantity="3">
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Планирование бюджета</h4>
-                  <p class="rt-font-small-paragraph">Excel поможет эффективно управлять финансами.</p>
+                  <h4>Планирование бюджета</h4>
+                  <p>Excel поможет эффективно управлять финансами.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Выявление программ-шантажистов</h4>
-                  <p class="rt-font-small-paragraph">Даже после атаки программы-шантажиста вы сможете легко восстановить все файлы в OneDrive.</p>
+                  <h4>Выявление программ-шантажистов</h4>
+                  <p>Даже после атаки программы-шантажиста вы сможете легко восстановить все файлы в OneDrive.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4">Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>
@@ -45,26 +45,26 @@
             <rt-benefit-block :columns-quantity="4" :step="true" step-title="этап">
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>
@@ -88,8 +88,8 @@
                   </svg>
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -108,8 +108,8 @@
                   </svg>
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -128,8 +128,8 @@
                   </svg>
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -148,8 +148,8 @@
                   </svg>
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>
@@ -163,8 +163,8 @@
                   <img src="/static/images/B2B/phone12.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4 >Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -172,8 +172,8 @@
                   <img src="/static/images/B2B/phone13.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -181,8 +181,8 @@
                   <img src="/static/images/B2B/phone14.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и
                   <rt-replacement-link macos-link="macos-link" windows-link="windows-link" link-text="покажет алгоритм"/>
                    решения задачи.</p>
                 </template>
@@ -192,8 +192,8 @@
                   <img src="/static/images/B2B/phone15.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <h4>Помощь в математике</h4>
+                  <p>OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>
