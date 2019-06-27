@@ -1290,7 +1290,8 @@
               :equal-padding="true"
               :has-discount="true"
               :discount-lines="2"
-              :is-b2b-package="true">
+              :is-b2b-package="true"
+              discount-text="159 услуг и все с наценкой">
               <template slot="header">
                 <h3 class="rt-space-bottom rt-font-bold">
                   Пакет S

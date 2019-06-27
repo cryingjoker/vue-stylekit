@@ -49,7 +49,8 @@
               :equal-padding="true"
               :has-discount="true"
               :discount-lines="1"
-              :is-b2b-package="true">
+              :is-b2b-package="true"
+              discount-text="1 услуга co скидкой 50%">
               <template slot="header">
                 <h3 class="rt-space-bottom rt-font-bold">
                   Пакет S
@@ -455,7 +456,8 @@
               :equal-padding="true"
               :has-discount="true"
               :discount-lines="1"
-              :is-b2b-package="true">
+              :is-b2b-package="true"
+              discount-text="1 услуга co скидкой 50%">
               <template slot="header">
                 <h3 class="rt-space-bottom rt-font-bold">
                   Пакет S
@@ -861,7 +863,8 @@
               :equal-padding="true"
               :has-discount="true"
               :discount-lines="2"
-              :is-b2b-package="true">
+              :is-b2b-package="true"
+              discount-text="2 услуги co скидкой 50%">
               <template slot="header">
                 <h3 class="rt-space-bottom rt-font-bold">
                   Пакет S
@@ -1267,7 +1270,8 @@
               :equal-padding="true"
               :has-discount="true"
               :discount-lines="3"
-              :is-b2b-package="true">
+              :is-b2b-package="true"
+              discount-text="3 услуги co скидкой 50%">
               <template slot="header">
                 <h3 class="rt-space-bottom rt-font-bold">
                   Пакет S
