@@ -25,6 +25,10 @@ export default {
     vertical: {
       type: Boolean,
       default: false
+    },
+    positionCenter: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -110,8 +114,9 @@ export default {
     } else {
       return <div class={"rt-tabs " +
       (this.roundTabletView ? "rt-tabs--round-tablet-view " : "") +
-      (this.deviceType && !this.dontUseAdaptive ? "rt-tabs-"+this.deviceType : '') +
-      (this.vertical ? " rt-tabs--vertical" : "")}>
+      (this.deviceType && !this.dontUseAdaptive ? "rt-tabs-"+this.deviceType : "") +
+      (this.vertical ? " rt-tabs--vertical" : "") +
+      (this.positionCenter ? " rt-tabs--centered" : "")}>
         <div class="rt-tabs-navigation-wrapper">
           <div style={this.navigationStyle} class="rt-tabs-navigation">
 
