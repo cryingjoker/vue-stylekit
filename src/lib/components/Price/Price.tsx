@@ -103,6 +103,7 @@ class Price extends Vue {
     const priceInfoRender = ()=>{
       if(this.isTimeIntervalBottom) {
         return  <div>
+                  {opinionRender()}
                   <div class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>
                     {this.normalizeValue}
                   </div>
@@ -111,6 +112,7 @@ class Price extends Vue {
                 </div>
       }else{
         return <div>
+                  {opinionRender()}
                   <div class={"rt-price__value rtb-price__value" + (this.colorValue ? ' color-' + this.colorValue : '')}>
                     {this.normalizeValue}
                   </div>
@@ -139,9 +141,8 @@ class Price extends Vue {
           return null
         }
       }
-      return <div class="rt-price  rtb-price rt-price-without-space">
+      return <div class="rt-price rtb-price rt-price-without-space">
           {oldB2bPriceRender()}
-          {opinionRender()}
           {priceInfoRender()}
         </div>
     } else {
