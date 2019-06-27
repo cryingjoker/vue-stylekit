@@ -6,6 +6,7 @@ scrollHSpacePC = 70px
 .{swiperName}
   position relative
   z-index swiperZIndex
+  width inherit
   //max-width: 1480px
   //margin: 0 auto
 
@@ -34,6 +35,7 @@ scrollHSpacePC = 70px
     //width: calc(100vw - 140px)
     margin: 0 auto
     width calc(100vw - (100vw - 100%))
+    max-width 100vw
     @media (max-width: tablet-upper-limit)
       padding-right 0
       padding-left 0
@@ -52,9 +54,6 @@ scrollHSpacePC = 70px
     @media (max-width: tablet-upper-limit)
       width calc(100vw - (100vw - 100%))
 
-  &__inner-default
-    flex-wrap wrap
-
   &__spacer
     display flex
 
@@ -66,10 +65,13 @@ scrollHSpacePC = 70px
     user-select none
     @media (max-width: laptop-upper-limit) and (min-width: desktop-lower-limit)
       max-width calc(275px + 20px)
+      flex-basis calc(275px + 20px)
     @media (max-width: tablet-upper-limit)
       width calc(35vw + 20px)
+      flex-basis calc(35vw + 20px)
     @media (max-width: mobile-upper-limit)
       width calc(75vw + 20px)
+      flex-basis calc(75vw + 20px)
 
     &.marked
       transform scale(1.02)
@@ -140,6 +142,18 @@ scrollHSpacePC = 70px
 
   &.show-no-move-next
     animation show-no-moves-next .9s ease-in-out
+
+  &-override
+    width inherit
+    .{swiperName}__inner-default
+      flex-wrap wrap
+
+    .{swiperName}-slide
+      flex 0
+
+      &:first-child
+        @media (max-width: tablet-upper-limit)
+          margin-left 0 !important
 
 //.hide-navigation
 //  @media (min-width: laptop-lower-limit)

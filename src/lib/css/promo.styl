@@ -718,9 +718,15 @@
     flex-wrap nowrap
     flex-direction row
     width auto
-    overflow-x hidden
+    overflow-x auto
     height auto
     padding 0 10px 60px
+    &:after
+      content: ''
+      min-width: 10px
+      min-height: 100%
+      display: block
+      flex: 1
   &__paginator
     position absolute
     bottom 20px

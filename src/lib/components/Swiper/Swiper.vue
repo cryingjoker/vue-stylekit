@@ -10,7 +10,8 @@
         'show-no-move-prev': !disabledScrolling && noMovesShown === 'prev',
         'show-no-move-next': !disabledScrolling && noMovesShown === 'next',
         'hide-navigation': hideNavigation
-      }
+      },
+      styleIfCarouselOverride
     ]"
     :style="{
       marginTop: `${-offsetTop}px`,
@@ -205,7 +206,8 @@ export default {
       toggleSlidesTimer: null,
       touchObject: defaultTouch,
       verticalScrolling: true,
-      isDisableCarousel: this.disableCarousel
+      isDisableCarousel: this.disableCarousel,
+      styleIfCarouselOverride: '' //стили, если карусель на некоторых разрешениях должна быть выключена
     };
   },
   computed: {
@@ -247,6 +249,8 @@ export default {
     window.addEventListener('resize', () => {
       this.isTouch = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) ? true : false;
     })
+    // для включения стилей, если карусель на некоторых разрешениях должна быть выключена
+    this.overideCarouselStyles()
   },
   destroyed() {
     this.isAnimating = false;
@@ -657,6 +661,11 @@ export default {
             s.toggle(hiddenSlides.indexOf(k) === -1);
           });
         }, 15);
+      }
+    },
+    overideCarouselStyles () {
+      if (this.isDisableCarousel) {
+        this.styleIfCarouselOverride = `${this.cmpName}-override`
       }
     }
   }
