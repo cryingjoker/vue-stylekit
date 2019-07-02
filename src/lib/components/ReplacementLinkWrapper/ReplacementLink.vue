@@ -16,6 +16,14 @@
         type: String,
         default: null,
         required: true
+      },
+      preLinkText: {
+        type: String,
+        default: ''
+      },
+      postLinkText: {
+        type: String,
+        default: ''
       }
     },
 
@@ -32,11 +40,11 @@
     render: function(h) {
 
       if(this.deviceOS === 'MacOS') {
-        return <a href={'' + this.macosLink + ''} class="rt-link">{this.linkText}</a>;
+        return <p>{this.preLinkText}<a href={'' + this.macosLink + ''} class="rt-link">{this.linkText}</a>{this.postLinkText}</p>;
       } else if(this.deviceOS === 'Windows') {
-        return <a href={'' + this.windowsLink + ''} class="rt-link">{this.linkText}</a>;
+        return <p>{this.preLinkText}<a href={'' + this.windowsLink + ''} class="rt-link">{this.linkText}</a>{this.postLinkText}</p>;
       } else {
-        return <span>{this.linkText}</span> ;
+        return <p>{this.preLinkText}<span>{this.linkText}</span>{this.postLinkText}</p>;
       }
     }
   };

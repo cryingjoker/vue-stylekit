@@ -8,6 +8,23 @@
   .{newAppName}-dark-theme &
     color b2c-orange
 
+  &-back
+    color main-color
+    position relative
+    padding-left 25px
+    &:before
+      position absolute
+      content: ''
+      width 16px
+      height 16px
+      background-image: url('/static/images/B2B/back-arrow.svg')
+      top 1px
+      left 0
+      transition left .3s ease-in
+    &:hover
+      &:before
+        left -5px
+
 .{newAppName}-link--orange
   color b2c-orange
 
