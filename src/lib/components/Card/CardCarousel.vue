@@ -130,7 +130,7 @@
           for(let i = 0; i < this.parentArray.length; i++){
             if(this.parent.children[i].classList.contains('carousel-card--active')){
               this.activeSlideIndex = this.parentArray.indexOf(this.parent.children[i]);
-              this.nextSlideIndex = (this.activeSlideIndex +  1) % 8 ? this.activeSlideIndex + 1 : 0;
+              this.nextSlideIndex = (this.activeSlideIndex +  1) % this.parentArray.length ? this.activeSlideIndex + 1 : 0;
             }
           }
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
