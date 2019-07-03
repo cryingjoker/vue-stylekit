@@ -1,6 +1,12 @@
 <script type="text/jsx">
+
+  import variables from "../../variables.json";
+
+  const componentsList = {};
+
   export default {
     name: "RtBenefitBlock",
+    components: componentsList,
     props: {
       columnsQuantity: {
         type: Number,
@@ -49,19 +55,62 @@
       iconBackingSize: {
         type: [Number, String],
         default: null
+      },
+      swiperOnMobile: {
+        type: Boolean,
+        default: false
+      },
+      noTransparencyDescription: {
+        type: Boolean,
+        default: false
+      }
+    },
+    data: () => ({
+      layout: ''
+    }),
+
+    computed: {
+      transparencyClass(){
+        let className = 'rt-benefit-block';
+        if(this.backgroundColorClass){
+          className += (' ' + this.backgroundColorClass);
+        }
+        if(this.noTransparencyDescription) {
+          className += ' rt-benefit-block--no-transparency';
+        }
+        return className;
+      }
+    },
+
+    mounted () {
+      this.specifyLayout();
+      window.addEventListener('resize', this.specifyLayout);
+    },
+    methods: {
+      specifyLayout(){
+        if(window.innerWidth <= parseInt(variables["mobile-upper-limit"]) && this.swiperOnMobile){
+          this.layout = 'swiper';
+//          console.log(this.layout)
+        } else {
+          this.layout = 'benefit';
+//          console.log(this.layout)
+        }
       }
     },
     render(h){
-
-      return <div class={"rt-benefit-block " + this.backgroundColorClass}>
-        <div class="rt-container">
-          <div class="rt-col">
-            <div class="row">
-              {this.$slots.default}
+      if(this.layout === 'swiper'){
+        return <rt-swiper>{this.$slots.default}</rt-swiper>
+      } else {
+        return <div class={this.transparencyClass}>
+          <div class="rt-container">
+            <div class="rt-col">
+              <div class="row">
+                {this.$slots.default}
+              </div>
             </div>
           </div>
-        </div>
-      </div>;
+        </div>;
+      }
     }
   };
 </script>
