@@ -672,6 +672,86 @@
         </rt-scroll-bar>
       </template>
     </rt-real-popup>
+    <div class="rt-container rt-space-bottom3 rt-space-top3">
+      <div class="tile-block">
+        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 tile-block__ordered-item--secondary">
+            <div class="tile__item">
+              <rt-card background-color-type="light-grey">
+                <template slot="header">
+                  <div class="rt-card__image-wrapper rt-font-center">
+                    <span class="helper"/>
+                    <img class="additional-possibilities__card-image" src="/static/images/B2B/p-setting-fff-1-90-end-500-1-removebg-preview.png">
+                  </div>
+                </template>
+                <template slot="footer">
+                  <p class="rt-font-small-paragraph">Mini PC PN40</p>
+                  <rt-price :value='1100' currency='₽' :b2b-price='true' time-interval='в месяц' class='color-main09' :is-option='true' :is-time-interval-bottom="true"/>
+                </template>
+              </rt-card>
+            </div>
+            <div class="tile__item">
+              <rt-card background-color-type="light-grey">
+                <template slot="header">
+                  <div class="rt-card__image-wrapper rt-font-center">
+                    <span class="helper"/>
+                    <img class="additional-possibilities__card-image" src="/static/images/B2B/p-setting-fff-1-90-end-500-removebg-preview.png">
+                  </div>
+                </template>
+                <template slot="footer">
+                  <p class="rt-font-small-paragraph">Mini PC PN40</p>
+                  <rt-price :value='1100' currency='₽' :b2b-price='true' time-interval='в месяц' class='color-main09' :is-option='true' :is-time-interval-bottom="true"/>
+                </template>
+              </rt-card>
+            </div>
+        </div>
+        <div class="rt-col-6 rt-col-td-6 rt-col-md-3 tile-block__ordered-item--main rt-td-space-bottom">
+          <div class="tile__item tile__item--double-sized">
+            <rt-card background-color-type="light-grey">
+              <template slot="header">
+                <div class="rt-card__image-wrapper rt-font-center">
+                  <span class="helper"/>
+                  <img class="additional-possibilities__card-image" src="/static/images/B2B/lg-55-lv-340-c-1-removebg-preview.png">
+                </div>
+              </template>
+              <template slot="footer">
+                <p class="rt-font-small-paragraph">Mini PC PN40</p>
+                <rt-price :value='1100' currency='₽' :b2b-price='true' time-interval='в месяц' class='color-main09' :is-option='true' :is-time-interval-bottom="true"/>
+              </template>
+            </rt-card>
+          </div>
+        </div>
+        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 tile-block__ordered-item--secondary rt-md-space-top">
+          <div class="tile__item">
+            <rt-card background-color-type="light-grey">
+              <template slot="header">
+                <div class="rt-card__image-wrapper rt-font-center">
+                  <span class="helper"/>
+                  <img class="additional-possibilities__card-image" src="/static/images/B2B/p-setting-fff-1-90-end-500-1-removebg-preview.png">
+                </div>
+              </template>
+              <template slot="footer">
+                <p class="rt-font-small-paragraph">Mini PC PN40</p>
+                <rt-price :value='1100' currency='₽' :b2b-price='true' time-interval='в месяц' class='color-main09' :is-option='true' :is-time-interval-bottom="true"/>
+              </template>
+            </rt-card>
+          </div>
+          <div class="tile__item">
+            <rt-card background-color-type="light-grey">
+              <template slot="header">
+                <div class="rt-card__image-wrapper rt-font-center">
+                  <span class="helper"/>
+                  <img class="additional-possibilities__card-image" src="/static/images/B2B/p-setting-fff-1-90-end-500-removebg-preview.png">
+                </div>
+              </template>
+              <template slot="footer">
+                <p class="rt-font-small-paragraph">Mini PC PN40</p>
+                <rt-price :value='1100' currency='₽' :b2b-price='true' time-interval='в месяц' class='color-main09' :is-option='true' :is-time-interval-bottom="true"/>
+              </template>
+            </rt-card>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -697,6 +777,26 @@
       }
       function shoveContent(parentCard, destination, source) {
         document.querySelector('.rtb-popup-wrapper').querySelector(destination).innerHTML = parentCard.querySelector(source).innerHTML;
+      }
+      window.addEventListener('resize', fixTileHeight);
+      if(window.innerWidth >= 768 && window.innerWidth <= 1024) {
+        fixTileHeight();
+      }
+
+      function fixTileHeight() {
+        if(window.innerWidth >= 768 && window.innerWidth <= 1024) {
+          var maxHeight = 0;
+          var tileList = document.querySelectorAll('.tile__item');
+          for (var i = 0; i < tileList.length; i++){
+            if(!(tileList[i].classList.contains('tile__item--double-sized'))){
+              maxHeight = (maxHeight > tileList[i].offsetHeight) ? maxHeight : tileList[i].offsetHeight;
+            }
+          }
+          document.querySelector('.tile__item--double-sized').style.height = maxHeight * 2 + 20 + 'px';
+        } else {
+          document.querySelector('.tile__item--double-sized').style.height = '';
+        }
+
       }
     },
     created() {},

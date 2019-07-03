@@ -975,3 +975,69 @@
   .rtb-popup
     padding 0
 
+.tile-block
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  .rt-card,
+  .rt-card:hover
+    box-shadow none//card-shadow--before-hovered
+  &__ordered-item
+    &--main
+      @media (max-width: tablet-upper-limit)
+        order -1
+    &--secondary
+      @media (max-width: tablet-upper-limit)
+        order 1
+
+.tile__item
+  &+&
+    margin-top 20px
+  .additional-possibilities__card-image
+    width 100%
+    max-width 148px
+  &--double-sized
+    height 100%
+    .additional-possibilities__card-image
+      left -20px
+      position relative
+      margin-top 70px
+      margin-bottom: 80px
+      float left
+      max-width: none
+      width calc(100% + 40px)
+      @media (max-width: tablet-upper-limit)
+        max-width 700px
+      @media (max-width: mobile-upper-limit)
+        max-width none
+    .rt-card,
+    .rt-card__content
+      height 100%
+
+.rt-tabs
+  .rt-card
+    text-align left
+    &--gradient-shadow:after
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      content ''
+      background linear-gradient(to right, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 17%, rgba(16, 24, 40, 0.67) 22%, rgba(16, 24, 40, 0.9) 42%, #101828 50%, #101828 100%)
+      z-index 1
+      @media (max-width: mobile-upper-limit)
+        background linear-gradient(to bottom, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);
+
+.with-icon
+  position relative
+  @media (max-width: tablet-upper-limit)
+    margin-left 25px
+  &:before
+    position absolute
+    content: ''
+    background-image: url('/static/images/B2B/purple.svg')
+    top 3px
+    left -25px
+    width 20px
+    height 20px

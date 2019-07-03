@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 191.61">
+  <defs>
+    <filter id="a" x="86.37" y="-6952.91" width="130.63" height="32766" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <linearGradient id="d" x1="162.91" y1="83.68" x2="140.45" y2="122.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#999"/>
+      <stop offset=".04" stop-color="#ababab"/>
+      <stop offset=".13" stop-color="#c9c9c9"/>
+      <stop offset=".22" stop-color="#e1e1e1"/>
+      <stop offset=".31" stop-color="#f2f2f2"/>
+      <stop offset=".42" stop-color="#fcfcfc"/>
+      <stop offset=".55" stop-color="#fff"/>
+      <stop offset=".63" stop-color="#fafafa"/>
+      <stop offset=".72" stop-color="#ededed"/>
+      <stop offset=".82" stop-color="#d7d7d7"/>
+      <stop offset=".92" stop-color="#b8b8b8"/>
+      <stop offset="1" stop-color="#999"/>
+    </linearGradient>
+    <filter id="c" x="86.37" y="65.1" width="130.63" height="76.06" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="e" x="86.37" y="65.1" width="130.63" height="76.06" maskUnits="userSpaceOnUse">
+      <g mask="url(#b)" filter="url(#c)">
+        <path d="M215.41 114.39c2.12 1.24 2.12 3.24 0 4.47l-36.7 21.37a8.45 8.45 0 0 1-7.68 0L88 91.86c-2.12-1.23-2.12-3.23 0-4.47L124.66 66a8.45 8.45 0 0 1 7.68 0z" style="mix-blend-mode:multiply" fill="url(#d)"/>
+      </g>
+    </mask>
+    <linearGradient id="f" x1="162.91" y1="83.68" x2="140.45" y2="122.58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#545a97"/>
+      <stop offset=".15" stop-color="#444c90"/>
+      <stop offset=".33" stop-color="#3a438b"/>
+      <stop offset=".55" stop-color="#37408a"/>
+      <stop offset=".73" stop-color="#3c448c"/>
+      <stop offset=".92" stop-color="#495092"/>
+      <stop offset="1" stop-color="#505695"/>
+    </linearGradient>
+    <linearGradient id="g" x1="216.97" y1="99.39" x2="86.37" y2="99.39" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#889bd0"/>
+      <stop offset=".56" stop-color="#c1d6fc"/>
+      <stop offset="1" stop-color="#fcf6ff"/>
+    </linearGradient>
+    <linearGradient id="h" x1="125.35" y1="121.21" x2="178.02" y2="68.54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d2defd"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="i" x1="195.14" y1="118.73" x2="190.01" y2="113.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5c5fce"/>
+      <stop offset=".15" stop-color="#4c51c6"/>
+      <stop offset=".33" stop-color="#4248c2"/>
+      <stop offset=".55" stop-color="#3f45c0"/>
+      <stop offset=".73" stop-color="#4449c2"/>
+      <stop offset=".92" stop-color="#5154c9"/>
+      <stop offset="1" stop-color="#585acc"/>
+    </linearGradient>
+    <linearGradient id="j" x1="190.01" y1="118.1" x2="195.14" y2="112.96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbe3fd"/>
+      <stop offset=".02" stop-color="#dde4fd"/>
+      <stop offset=".21" stop-color="#e9e9fd"/>
+      <stop offset=".46" stop-color="#f1ecfd"/>
+      <stop offset="1" stop-color="#f3edfd"/>
+    </linearGradient>
+  </defs>
+  <g data-name="Слой 2">
+    <g data-name="Layer 8">
+      <path fill="none" d="M0 0h285v191.61H0z"/>
+      <path d="M199 76.18c20.27 11.8 20.27 30.93 0 42.73s-53.13 11.81-73.4 0-20.27-30.93 0-42.73 53.14-11.81 73.4 0z" fill="#dd5414"/>
+      <path d="M169.68 74.3c23.8 13.85 23.8 36.32 0 50.17s-62.38 13.86-86.18 0-23.8-36.31 0-50.17 62.38-13.86 86.18 0z" fill="#6600f8"/>
+      <g mask="url(#e)">
+        <path d="M215.41 114.39c2.12 1.24 2.12 3.24 0 4.47l-36.7 21.37a8.45 8.45 0 0 1-7.68 0L88 91.86c-2.12-1.23-2.12-3.23 0-4.47L124.66 66a8.45 8.45 0 0 1 7.68 0z" opacity=".8" fill="url(#f)"/>
+      </g>
+      <path d="M217 108.09v4.49a2.8 2.8 0 0 1-1.56 2.54l-36.7 21.37a8.45 8.45 0 0 1-7.68 0L88 88.12a2.74 2.74 0 0 1-1.59-2.32v-4.45l38.29-19.07a8.45 8.45 0 0 1 7.68 0z" fill="url(#g)"/>
+      <path d="M215.41 106.14c2.12 1.23 2.12 3.23 0 4.47L178.71 132a8.45 8.45 0 0 1-7.68 0L88 83.61c-2.12-1.24-2.12-3.24 0-4.47l36.7-21.37a8.42 8.42 0 0 1 7.68 0z" fill="url(#h)"/>
+      <path fill="#313d62" d="M204.57 102.37l-40.01 23.3-70.12-40.83 40.01-23.3 70.12 40.83z"/>
+      <path d="M215.29 108.89l-36.7 21.37a8.39 8.39 0 0 1-7.68 0L87.84 81.89a3.34 3.34 0 0 1-1.32-1.25c-.42 1 .06 2.16 1.44 3L171 132a8.45 8.45 0 0 0 7.68 0l36.7-21.37c1.49-.87 1.93-2.12 1.32-3.22a3.3 3.3 0 0 1-1.41 1.48z" opacity=".3" fill="#fff"/>
+      <path d="M115 69.43c.26.15.32.35.15.45l-6.36 3.7a.87.87 0 0 1-.77-.08l-.16-.09c-.25-.15-.32-.35-.14-.45l6.35-3.7a.86.86 0 0 1 .78.08z" fill="#40418a"/>
+      <path d="M178.71 132a8.45 8.45 0 0 1-7.68 0L88 83.61c-2.12-1.24-2.12-3.24 0-4.47l36.7-21.37a8.42 8.42 0 0 1 7.68 0z" opacity=".2" fill="#fff"/>
+      <path d="M197.22 115.72a.47.47 0 0 1 0 .89l-3.92 2.27a1.72 1.72 0 0 1-1.53 0l-3.84-2.27a.47.47 0 0 1 0-.89l3.92-2.27a1.74 1.74 0 0 1 1.54 0z" opacity=".6" fill="url(#i)"/>
+      <path d="M197.22 115.08a.48.48 0 0 1 0 .9l-3.92 2.26a1.65 1.65 0 0 1-1.53 0l-3.84-2.24a.47.47 0 0 1 0-.89l3.92-2.27a1.67 1.67 0 0 1 1.54 0z" fill="url(#j)"/>
+      <path d="M140.67 84.33c4.82-3.61 13.59-2.81 19.8 1.93 6.46 4.94 7.76 12.25 2.65 16.17s-14.51 2.75-20.67-2.5c-5.93-5.05-6.62-11.93-1.78-15.6z" fill-rule="evenodd" fill="#fff"/>
+      <path d="M160 94.72a.69.69 0 0 1 0 .61l-1.35 2.34a1 1 0 0 1-.26.33 1.51 1.51 0 0 1-.35.23h-.26a5.19 5.19 0 0 1-.87.14 6 6 0 0 1-1.54-.06 11.17 11.17 0 0 1-2.2-.55 14.41 14.41 0 0 1-2.79-1.33 16.28 16.28 0 0 1-2.08-1.41 12.86 12.86 0 0 1-1.44-1.35 9.52 9.52 0 0 1-.94-1.2 7 7 0 0 1-.53-1 3.48 3.48 0 0 1-.24-.67 1.61 1.61 0 0 0-.06-.28 1.66 1.66 0 0 1 0-.44 1.13 1.13 0 0 1 .15-.39l1.33-2.35a.67.67 0 0 1 .39-.32.59.59 0 0 1 .35 0 1 1 0 0 1 .3.2l2.21 2.43a.74.74 0 0 1 .2.47.88.88 0 0 1-.12.51l-.49.87a.25.25 0 0 0 0 .1.39.39 0 0 0 0 .11 2.55 2.55 0 0 0 .43.61 6.2 6.2 0 0 0 .72.68 8.19 8.19 0 0 0 1.27.84 8.45 8.45 0 0 0 1.36.7 7.21 7.21 0 0 0 .81.46 2.07 2.07 0 0 0 .54.06h.27a.17.17 0 0 0 .07-.08l.57-1a.9.9 0 0 1 .52-.38.65.65 0 0 1 .39 0l3.07.87a.73.73 0 0 1 .57.25z" fill="#87d7b6"/>
+      <ellipse cx="68" cy="90.18" rx="12.83" ry="12.94" fill="#fff"/>
+      <text transform="translate(64.8 93.22)" font-size="12" font-family="BasisGrotesquePro-Bold,Basis Grotesque Pro" font-weight="700">
+        1
+      </text>
+    </g>
+  </g>
+</svg>
