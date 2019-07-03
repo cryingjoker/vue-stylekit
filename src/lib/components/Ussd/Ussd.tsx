@@ -6,25 +6,40 @@ class Ussd extends Vue {
   tel: String = "";
   @Prop({ default: null }) phone: String;
   @Prop({ default: false }) withoutLeftSpace: Boolean;
-
+  private hasHtml:boolean = false;
+  private telHtml:string = null;
   mounted() {
+
     let tel = "";
+
     if (this.phone) {
       tel = "tel:" + this.phone;
     } else {
-      tel = "tel:" + this.$slots.default[0].text;
+      if (this.$slots.default[0].text) {
+        tel = "tel:" + this.$slots.default[0].text;
+      } else {
+        if (this.$el && this.$el.querySelector && this.$el.querySelector(".epc-options__value")) {
+          this.telHtml = this.$el.querySelector(".epc-options__value").innerHTML;
+          tel = "tel:" + this.telHtml;
+          this.tel = tel;
+          this.hasHtml = true;
+        }
+
+      }
     }
     this.tel = tel;
   }
 
+
   render(h: CreateElement): VNode {
-    let ussdClassName = 'rt-ussd';
-    if(this.withoutLeftSpace){
-      ussdClassName += ' rt-ussd--stand-alone';
+    let ussdClassName = "rt-ussd";
+    if (this.withoutLeftSpace) {
+      ussdClassName += " rt-ussd--stand-alone";
     }
+
     if (this.tel) {
       return <a class={ussdClassName} href={this.tel}>
-        {this.$slots.default}
+        {this.hasHtml ? this.telHtml : this.$slots.default}
         <svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg"
              class="rt-ussd__icon">
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -35,10 +50,15 @@ class Ussd extends Vue {
         </svg>
       </a>;
     } else {
+
+      if(this.$slots.default[0]){
+        return <span class="d-none">{this.$slots.default[0]}</span>
+      }
       return null;
     }
   }
 }
+
 export default {
   component: Ussd,
   name: "RtUssd"

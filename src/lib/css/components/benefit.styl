@@ -2,6 +2,10 @@
   &-block
     width 100%
     padding-top 60px
+    &--no-transparency
+      .{newAppName}-benefit-item__text
+        p
+          opacity 1
   &-item
     margin-bottom 60px
     &__step,
@@ -33,6 +37,29 @@
         margin-bottom: 0
       .{newAppName}-benefit-item__text
         margin-left: 20px
+
+  &-item__text
+    h4
+      font-size 22px
+      line-height 28px
+      font-weight 500
+      margin-bottom 10px
+      @media (max-width: laptop-upper-limit)
+        font-size 20px
+        line-height 26px
+      @media (max-width: mobile-upper-limit)
+        font-size 18px
+        line-height 24px
+    p
+      font-size 16px
+      line-height 24px
+      opacity .7
+      @media (max-width: laptop-upper-limit)
+        font-size 16px
+        line-height 22px
+      @media (max-width: mobile-upper-limit)
+        font-size 14px
+        line-height 18px
 
 .rbi-pr70
   @media(min-width: laptop-lower-limit)

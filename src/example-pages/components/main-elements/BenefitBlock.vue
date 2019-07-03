@@ -13,7 +13,7 @@
       <div class="app-row">
         <pre-code
           text='
-            <rt-benefit-block :columns-quantity="3">
+            <rt-benefit-block :columns-quantity="3" :swiper-on-mobile="true">
               <rt-benefit-item>
                 <template slot="description">
                   <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
@@ -157,14 +157,13 @@
 
         <pre-code
           text='
-            <rt-benefit-block :columns-quantity="3" :has-image="true">
+            <rt-benefit-block :columns-quantity="4" :has-image="true" :no-transparency-description="true">
               <rt-benefit-item>
                 <template slot="image">
                   <img src="/static/images/B2B/phone12.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">Мобильный или SIP-телефон</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -172,8 +171,13 @@
                   <img src="/static/images/B2B/phone13.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">
+                    <rt-replacement-link link-text="специальная программа"
+                                         macos-link="https://apps.apple.com/us/app/telefon-rostelekom/id1033204349?mt=12"
+                                         windows-link="https://moscow.rt.ru/sites/default/files/b2b/instruction_vats/Svetets_Telephone-Rostelecom_3.8.67.zip"
+                                         pre-link-text="или "
+                                         post-link-text=" на компьютере или ноутбуке"/>
+                  </p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -181,19 +185,7 @@
                   <img src="/static/images/B2B/phone14.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и
-                  <rt-replacement-link macos-link="macos-link" windows-link="windows-link" link-text="покажет алгоритм"/>
-                   решения задачи.</p>
-                </template>
-              </rt-benefit-item>
-              <rt-benefit-item>
-                <template slot="image">
-                  <img src="/static/images/B2B/phone15.svg">
-                </template>
-                <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">Интернет от любого провайдера</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>

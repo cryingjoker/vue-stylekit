@@ -34,8 +34,8 @@
  export { default as BannerItem } from './Banner/BannerItem.vue';
  export { default as BannerVideoGameControl } from './Banner/BannerVideoGameControl.vue';
  export { default as BannerPaginatorItem } from './Banner/BannerPaginatorItem.vue';
- export { default as Carousel } from './Carousel/Carousel.tsx';
- export { default as CarouselSlide } from './Carousel/CarouselSlide.tsx';
+ export { default as Carousel } from './Carousel/Carousel.vue';
+ export { default as CarouselSlide } from './Carousel/CarouselSlide.vue';
  export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';
  export { default as RowList } from './RowList/RowList.vue';
  export { default as RowListItem } from './RowList/RowListItem.vue';
@@ -85,5 +85,6 @@
  export { default as PortraitTileItem } from './BusinessDrive/PortraitTileItem.vue';
  export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx';
  export { default as ReplacementLink } from './ReplacementLinkWrapper/ReplacementLink.vue';
+ export { default as CardCarousel } from './Card/CardCarousel.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';

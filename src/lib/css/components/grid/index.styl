@@ -695,6 +695,18 @@ for devideStep in steps
 .d-flex-nowrap
   flex-wrap nowrap
 
+.gray-border-top
+  position: relative
+  &:before
+    content: ''
+    top: 0
+    position: absolute
+    margin-left: -20px
+    margin-right: -20px
+    left: 0
+    right: 0
+    border-top: 2px solid #e3e8ec
+
 .{newAppName}-animate-opacity
   transition-timing-function ease-in-out
   transition-duration .2s

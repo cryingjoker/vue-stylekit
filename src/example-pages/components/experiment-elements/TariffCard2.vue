@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tariff-cards-background">
     <div class="rt-container">
 
       <div class="app-content rt-col-12 rt-col-md-3">
@@ -11,13 +11,19 @@
     <div class="rt-container">
       <div class="rt-col-12 rt-space-bottom2">
         <div class="rt-space-bottom is-b2c">
+          <rt-resize-content-height
+            :query-selectors-names="[
+              '.rt-slide__content.rt-slide__content--right']">
+            <rt-resize-content-height
+              :query-selectors-names="[
+              '.rt-tariff-card-first-more-icon']">
           <div class="row">
             <div class="rt-col-3 rt-col-md-3 rt-space-top">
               <rt-tariff-card discount="до 30%" color="b2c-purple">
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений</p>
                 <p class="rt-font-label color-main07">Акция «Название акции»</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                  <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -53,8 +59,8 @@
                 </div>
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
-                    <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                    <div class="rt-space-top">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +87,7 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">125
+                          <p class="rt-font-bold">129
                             каналов</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
@@ -93,8 +99,8 @@
 
                   </template>
                 </rt-slide-content>
-                <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                <div class="rt-space-top">
+                  <div class="d-flex flex-start-start rt-tariff-item rt-tariff-item--is-disabled">
 
                     <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
                          xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +134,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                <div class="rt-space-top">
+                  <div class="d-flex flex-start-start rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -158,13 +164,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top">
+                <div class="">
                   <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="d-flex flex-start-start rt-tariff-item rt-tariff-card-first-more-icon">
 
                         <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
                              xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
@@ -175,7 +181,7 @@
                                   <g id="Group-10" transform="translate(0.000000, 2.000000)">
                                     <path
                                       d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
+                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#70f"></path>
                                     <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
                                           font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
                                       <tspan x="9" y="30">%</tspan>
@@ -192,8 +198,8 @@
                           <p class="rt-font-control color-dark07">при заказе с сайта</p>
                         </div>
                       </div>
-                      <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="">
+                        <div class="d-flex flex-start-start rt-tariff-item">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -230,12 +236,34 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
-                              руб./мес.</p>
+                             <p class="rt-font-control color-dark07">Роутер и ТВ-приставка включены в тариф</p>
                           </div>
                         </div>
                       </div>
-                      <app-tariff-cars-icons/>
+                      <div>
+                        <div class="rt-space-top">
+                          <div class="d-flex rt-tariff-item flex-start-center">
+                            <div class="rt-tariff-item__icon-wrapper">
+                              <svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <g id="031-C-Copy-2" fill-rule="nonzero">
+                                    <g id="031-C-Copy">
+                                      <path d="M41.840325,21.137625 C41.840325,32.528625 32.605575,41.762625 21.215325,41.762625 C9.824325,41.762625 0.590325,32.528625 0.590325,21.137625 C0.590325,9.746625 9.824325,0.512625 21.215325,0.512625 C32.605575,0.512625 41.840325,9.746625 41.840325,21.137625" id="Fill-247" stroke="#F1F3F5" fill="#FFFFFF"></path>
+                                      <g id="yandex-disk_02" transform="translate(7.500000, 12.000000)">
+                                        <path d="M26.325,2.925 C22.05,0.45 14.25,3.45 10.5,5.325 C6.975,7.05 0.525,11.25 0.3,15.15 C0.225,16.725 1.95,17.325 3.375,17.7 C8.625,18.975 16.275,16.2 20.7,12.975 C21.9,12.075 22.65,11.4 23.7,10.35 C24.75,9.3 25.35,8.475 26.175,7.2 C27.075,5.625 27.375,4.275 26.325,2.925 Z M21.15,10.575 C19.875,12.825 14.625,15.375 11.55,15.75 C4.8,16.65 11.625,9.525 18.825,8.7 C20.325,8.475 22.125,8.85 21.15,10.575 Z" id="Shape" fill="#0077FF"></path>
+                                        <path d="M10.5,5.325 C14.25,3.45 22.05,0.45 26.4,2.925 C25.05,0.6 19.2,1.2 17.7,0.9 C14.775,0.3 12.825,-0.975 8.55,1.35 C5.55,3 5.025,5.7 3.75,7.65 C3.3,8.4 2.025,9.6 1.275,10.8 C0.9,11.475 0.675,11.925 0.375,12.675 C0.075,13.425 1.31838984e-15,14.175 0.3,15 C0.3,15 0.375,15.075 0.375,15.15 C0.525,11.25 6.975,7.05 10.5,5.325 Z" id="Shape" fill="#000000"></path>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="rt-space-left05">
+                              <p class="rt-font-bold rt-font-control">Яндекс.Диск Unlim</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
 
 
@@ -259,7 +287,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для впечатлений везде</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                  <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -295,8 +323,8 @@
                 </div>
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
-                    <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                    <div class="rt-space-top">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +351,7 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">165
+                          <p class="rt-font-bold">169
                             каналов</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
@@ -335,10 +363,10 @@
 
                   </template>
                 </rt-slide-content>
-                <div class="rt-space-top-half">
+                <div class="rt-space-top">
                   <rt-slide-content :dotted-view="true" >
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
 
                         <div class="rt-tariff-item__icon-wrapper">
 
@@ -385,8 +413,8 @@
                   </rt-slide-content>
                 </div>
 
-                <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                <div class="rt-space-top">
+                  <div class="d-flex flex-start-start rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -415,42 +443,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top">
+                <div class="">
                   <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="">
+                        <div class="d-flex flex-start-start rt-tariff-item rt-tariff-card-first-more-icon">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -487,9 +487,7 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                            <p class="rt-font-control">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за
-                              30
-                              руб./мес.</p>
+                            <p class="rt-font-control color-dark07">Роутер и ТВ-приставка включены в тариф</p>
                           </div>
                         </div>
                       </div>
@@ -513,7 +511,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для семьи</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                  <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -549,8 +547,8 @@
                 </div>
                 <rt-slide-content :dotted-view="true" >
                   <template slot="header">
-                    <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                    <div class="rt-space-top">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -577,7 +575,7 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">192
+                          <p class="rt-font-bold">197
                             каналов</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
@@ -589,10 +587,10 @@
 
                   </template>
                 </rt-slide-content>
-                <div class="rt-space-top-half">
+                <div class="rt-space-top">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -628,7 +626,7 @@
                             минут, 50 смс</p>
 
 
-                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Мобильная связь, 1 SIM</p>
+                          <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Мобильная связь, до 5 SIM</p>
 
 
                         </div>
@@ -639,8 +637,8 @@
                     </template>
                   </rt-slide-content>
                 </div>
-                <div class="rt-space-top-half">
-                  <div class="d-flex flex-start-center rt-tariff-item rt-tariff-item--is-disabled">
+                <div class="rt-space-top">
+                  <div class="d-flex flex-start-start rt-tariff-item rt-tariff-item--is-disabled">
 
 
                     <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -668,42 +666,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="rt-space-top">
+                <div class="">
                   <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="">
+                        <div class="d-flex flex-start-start rt-tariff-item rt-tariff-card-first-more-icon rt-space-bottom">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -738,8 +708,8 @@
 
                           <div class="rt-space-left05">
                             <p class="rt-font-bold rt-font-control">Оборудование</p>
-                             <p class="rt-font-control color-dark07">Роутер в аренду за 110 руб./мес. и ТВ-приставка в аренду за 30
-                              руб./мес.</p>
+                             <p class="rt-font-control color-dark07">Роутер за 110 руб./мес. и ТВ-приставка за 30 руб./мес. в аренду
+                             </p>
                           </div>
                         </div>
                       </div>
@@ -747,7 +717,7 @@
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
-                    <rt-price :value="1030"/>
+                    <rt-price :value="1120"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
                     <rt-button class="rt-button--is-block rt-button-orange">Подключить</rt-button>
@@ -763,7 +733,7 @@
                 <p class="rt-font-h4 rt-font-bold"> Для всего</p>
                 <p class="rt-font-label color-purple">&nbsp;</p>
                 <div class="rt-space-top">
-                  <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                  <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                     <div class="rt-tariff-item__icon-wrapper">
 
                       <svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1"
@@ -799,8 +769,8 @@
                 </div>
                 <rt-slide-content :dotted-view="true">
                   <template slot="header">
-                    <div class="rt-space-top-half">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                    <div class="rt-space-top">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
                           <svg width="32px" height="28px" viewBox="0 0 32 28" version="1.1"
                                xmlns="http://www.w3.org/2000/svg">
@@ -827,7 +797,7 @@
                           </svg>
                         </div>
                         <div class="rt-space-left05">
-                          <p class="rt-font-bold">232
+                          <p class="rt-font-bold">229
                             канала</p>
                           <p class="rt-font-control color-dark07 rt-font-dashed rt-slide-content-trigger">Интерактивное ТВ</p>
                         </div>
@@ -839,10 +809,10 @@
 
                   </template>
                 </rt-slide-content>
-                <div class="rt-space-top-half">
+                <div class="rt-space-top">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
                         <div class="rt-tariff-item__icon-wrapper">
 
                           <svg width="19px" height="33px" viewBox="0 0 19 33" version="1.1"
@@ -889,10 +859,10 @@
                     </template>
                   </rt-slide-content>
                 </div>
-                <div class="rt-space-top-half">
+                <div class="rt-space-top">
                   <rt-slide-content :dotted-view="true">
                     <template slot="header">
-                      <div class="d-flex flex-start-center rt-tariff-item flex-start-center">
+                      <div class="d-flex flex-start-start rt-tariff-item flex-start-start">
 
 
                         <svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1"
@@ -926,42 +896,14 @@
                     </template>
                   </rt-slide-content>
                 </div>
-                <div class="rt-space-top">
+                <div class="">
                   <rt-slide-content arrow-position="right-bottom" :is-open="true">
                     <template slot="label">
                       Дополнительно
                     </template>
                     <template slot="content">
-                      <div class="d-flex flex-start-center rt-tariff-item ">
-
-                        <svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1"
-                             xmlns="http://www.w3.org/2000/svg" class="rt-tariff-item__icon">
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="ver1" transform="translate(-163.000000, -1251.000000)">
-                              <g id="Group-9" transform="translate(164.000000, 1213.000000)">
-                                <g id="Group-12" transform="translate(0.000000, 37.000000)">
-                                  <g id="Group-10" transform="translate(0.000000, 2.000000)">
-                                    <path
-                                      d="M40,20 C40,31.0458182 31.0450909,40 20,40 C8.95418182,40 0,31.0458182 0,20 C0,8.95418182 8.95418182,0 20,0 C31.0450909,0 40,8.95418182 40,20"
-                                      id="Fill-37-Copy-6" stroke="#E3E8EC" fill="#FF4F12"></path>
-                                    <text id="%-copy" font-family="RostelecomBasis-Medium, Rostelecom Basis"
-                                          font-size="24" font-weight="400" line-spacing="28" fill="#FFFFFF">
-                                      <tspan x="9" y="30">%</tspan>
-                                    </text>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-
-                        <div class="rt-space-left05">
-                          <p class="rt-font-bold rt-font-control">Скидка до 30%</p>
-                          <p class="rt-font-control color-dark07">при заказе с сайта</p>
-                        </div>
-                      </div>
-                      <div class="rt-space-top-half">
-                        <div class="d-flex flex-start-center rt-tariff-item ">
+                      <div class="">
+                        <div class="d-flex flex-start-start rt-tariff-item rt-tariff-card-first-more-icon rt-space-bottom">
 
 
                           <svg width="42px" height="42px" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -1005,7 +947,7 @@
                     </template>
                   </rt-slide-content>
                   <div class="flex-end-center">
-                    <rt-price :value="1360"/>
+                    <rt-price :value="1450"/>
                   </div>
                   <div class="rt-space-top05 re-space-bottom">
                     <rt-button class="rt-button--is-block rt-button-orange">Подключить</rt-button>
@@ -1017,6 +959,8 @@
               </rt-tariff-card>
             </div>
           </div>
+          </rt-resize-content-height>
+          </rt-resize-content-height>
 
 
 

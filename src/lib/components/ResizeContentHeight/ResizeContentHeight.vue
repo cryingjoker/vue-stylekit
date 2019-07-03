@@ -84,9 +84,9 @@ export default {
       const isMobile =
         window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       const isTablet =
-        window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+        window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
       this.isMobile = isMobile;
-      this.isTablet = isMobile;
+      this.isTablet = isTablet;
       if (isMobile && this.mobileNotResize) {
         this.querySelectorsNames.forEach((selectorName) => {
           this.$el.querySelectorAll(`${selectorName}`).forEach((node, index) => {
