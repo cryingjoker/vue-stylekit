@@ -287,6 +287,17 @@ for devideStep in steps
 .d-space-between
   justify-content space-between
 
+.d-space-center
+  justify-content center
+
+.td-d-space-center
+  @media (max-width: tablet-upper-limit)
+    justify-content center
+
+.md-d-space-center
+  @media (max-width: mobile-upper-limit)
+    justify-content center
+
 .d-static
   display static
 
@@ -686,6 +697,9 @@ for devideStep in steps
 .md-flex-fill-none
   @media (max-width: mobile-upper-limit)
     flex 0 0 0
+.md-flex-fill
+  @media (max-width: mobile-upper-limit)
+    flex 1 0 0
 
 .max-full-width
   max-width 100%
