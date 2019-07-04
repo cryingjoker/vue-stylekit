@@ -55,39 +55,41 @@
         }
       }
       window.addEventListener('resize', () => {
-        this.mobileLayout = window.innerWidth <= 767
+        this.mobileLayout = window.innerWidth <= 767;
+        this.renderLayout();
       });
-      this.positionCarouselCards();
-
-      if(this.mobileLayout) {
-        this.addPaginator();
-        this.fixCardHeightMobile();
-        for(let i = 0; i < this.parentArray.length; i++) {
-          document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
-            let activePaginatorIndex = this.getChildNumber(e.target);
-            this.mobileCarousel(activePaginatorIndex);
-          })
-        }
-      } else {
-        this.positionCarouselCards();
-      }
-      this.mobileSwipe();
+//      this.positionCarouselCards();
+      this.renderLayout();
+//      if(this.mobileLayout) {
+//        this.addPaginator();
+//        this.fixCardHeightMobile();
+//        for(let i = 0; i < this.parentArray.length; i++) {
+//          document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
+//            let activePaginatorIndex = this.getChildNumber(e.target);
+//            this.mobileCarousel(activePaginatorIndex);
+//          })
+//        }
+//      } else {
+//        this.positionCarouselCards();
+//      }
     },
     methods: {
-//      renderLayout() {
-//        if(this.mobileLayout) {
-//          this.addPaginator();
-//          this.fixCardHeightMobile();
-//          for(let i = 0; i < this.parentArray.length; i++) {
-//            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
-//              let activePaginatorIndex = this.getChildNumber(e.target);
-//              this.mobileCarousel(activePaginatorIndex);
-//            })
-//          }
-//        } else {
-//          this.positionCarouselCards();
-//        }
-//      },
+      renderLayout() {
+        if(this.mobileLayout) {
+          this.addPaginator();
+          this.fixCardHeightMobile();
+          for(let i = 0; i < this.parentArray.length; i++) {
+            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
+              let activePaginatorIndex = this.getChildNumber(e.target);
+              this.mobileCarousel(activePaginatorIndex);
+            })
+          }
+          this.mobileSwipe();
+        } else {
+          this.removePaginator();
+          this.positionCarouselCards();
+        }
+      },
 
       addPaginator() {
         for(let i = 0; i < this.parentArray.length; i++) {
@@ -97,6 +99,13 @@
           if(i === this.nextSlideIndex) {
             document.querySelector('.custom-carousel__paginator-item').classList.add('custom-carousel__paginator-item--active');
           }
+        }
+      },
+
+      removePaginator() {
+        let myNode = document.querySelector('.custom-carousel__paginator');
+        while (myNode.firstChild) {
+          myNode.removeChild(myNode.firstChild);
         }
       },
 
