@@ -38,7 +38,7 @@
     components: componentsList,
     data () {
       return {
-        mobileLayout: window.innerWidth <= 767,
+        mobileLayout: window.innerWidth <= parseInt(variables["mobile-upper-limit"]),
         parentArray: [],
         element: null,
         parent: null,
@@ -55,7 +55,7 @@
         }
       }
       window.addEventListener('resize', () => {
-        this.mobileLayout = window.innerWidth <= 767;
+        this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
         this.renderLayout();
       });
       this.renderLayout();
