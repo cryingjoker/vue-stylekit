@@ -123,7 +123,7 @@
           return 'rtk-carousel-slide'
         }
       })();
-      
+
       return <div class={"rt-benefit-item " + columnClass + " rt-col-md-3" +
       (this.alignCenter ? " rt-benefit-item--center" : "") +
       (this.inlineLayout ? " rt-benefit-item--inline" : "")}>
