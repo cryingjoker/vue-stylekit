@@ -58,24 +58,12 @@
         this.mobileLayout = window.innerWidth <= 767;
         this.renderLayout();
       });
-//      this.positionCarouselCards();
       this.renderLayout();
-//      if(this.mobileLayout) {
-//        this.addPaginator();
-//        this.fixCardHeightMobile();
-//        for(let i = 0; i < this.parentArray.length; i++) {
-//          document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
-//            let activePaginatorIndex = this.getChildNumber(e.target);
-//            this.mobileCarousel(activePaginatorIndex);
-//          })
-//        }
-//      } else {
-//        this.positionCarouselCards();
-//      }
     },
     methods: {
       renderLayout() {
         if(this.mobileLayout) {
+          this.removePaginator();
           this.addPaginator();
           this.fixCardHeightMobile();
           for(let i = 0; i < this.parentArray.length; i++) {
@@ -88,6 +76,9 @@
         } else {
           this.removePaginator();
           this.positionCarouselCards();
+          for(let i = 0; i < this.parentArray.length; i++) {
+            this.$el.children[i].removeAttribute("style")
+          }
         }
       },
 
@@ -123,7 +114,7 @@
         carouselPaginatorWrapper.children[index].classList.add('custom-carousel__paginator-item--active');
         this.$el.scrollBy({
           top: 0,
-          left: (slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
+          left: (slideWidth * index + (20 * index + 20) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
           behavior: 'smooth'
         });
       },
