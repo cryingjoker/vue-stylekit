@@ -124,14 +124,6 @@
         }
       })();
 
-//      const descriptionIcon = (() => {
-//        if(this.$slots['description-icon']){
-//          return <div class="d-inline-block rt-benefit-item__text-icon">
-//            {this.$slots['description-icon']}
-//          </div>
-//        }
-//      })();
-
       return <div class={"rt-benefit-item " + columnClass + " rt-col-md-3" +
       (this.alignCenter ? " rt-benefit-item--center" : "") +
       (this.inlineLayout ? " rt-benefit-item--inline" : "")}>
