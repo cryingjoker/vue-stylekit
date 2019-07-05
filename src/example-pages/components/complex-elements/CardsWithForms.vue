@@ -16,6 +16,7 @@
                 scrollWhenActive: true,
                 triggerClassName: 'rt-link',
                 containerClassName: 'rt-slide-content-vertical-content',
+                slideName: 'test',
                 activeContainerClassName:
                   'rt-slide-content-vertical-content--is-active'
               }"
@@ -41,7 +42,7 @@
                         <p
                           class="rt-font-center color-main03 rt-font-label rt-space-top05"
                         >
-                          Необходим контроллер
+                          Необходим контроллер ЖОООПППААА
                         </p>
                       </div>
                     </div>
