@@ -42,7 +42,7 @@
                         <p
                           class="rt-font-center color-main03 rt-font-label rt-space-top05"
                         >
-                          Необходим контроллер ЖОООПППААА
+                          Необходим контроллер
                         </p>
                       </div>
                     </div>
