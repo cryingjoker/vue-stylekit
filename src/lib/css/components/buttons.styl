@@ -7,8 +7,8 @@
   border-radius 5px
   box-shadow 0 2px 5px rgba(0, 0, 0, 0)
   margin 0
-  padding-left horizontal-space
-  padding-right horizontal-space
+  padding-left 30px
+  padding-right 30px
   cursor pointer
   transition-timing-function ease-in-out
   transition-duration .4s
@@ -46,19 +46,20 @@
   &-small
     height 34px
     font-size 14px
+    padding 0 20px
 
     .ripple
-      padding-left 10px
-      padding-right 10px
+      padding-left 0!important
+      padding-right 0!important
 
   &-md-small
     @media (max-width: 767px)
       height 34px
       font-size 14px
 
-      .ripple
-        padding-left 10px
-        padding-right 10px
+      //.ripple
+      //  padding-left 20px!important
+      //  padding-right 20px!important
 
   &:before
     display none
@@ -115,7 +116,7 @@
       background-color b2c-orange-low
 
     .ripple
-      padding 0 18px
+      padding 0 30px
 
     .fake-radiobutton-for-button:checked+&
       color b2c-white
@@ -211,7 +212,7 @@
       border-color main-color01
 
     .ripple
-      padding 0 18px
+      padding 0 30px
 
     .fake-radiobutton-for-button:checked+&
       color b2c-white
@@ -261,7 +262,7 @@
         background-color b2c-white01
 
     .ripple
-      padding 0 18px
+      padding 0 30px
 
     .fake-radiobutton-for-button:checked+&
       color b2c-white

@@ -185,7 +185,7 @@
                        content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
                       :is-white-color='true'>
-          <p class='tagline rt-space-bottom05'>сервис или продукт</p>
+          <a href='#' class='rt-link-back'>Текст ссылки</a>
           <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
           <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
             возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
