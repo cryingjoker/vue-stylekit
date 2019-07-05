@@ -2,6 +2,10 @@
   &-block
     width 100%
     padding-top 60px
+    &--no-transparency
+      .{newAppName}-benefit-item__text
+        p
+          opacity 1
   &-item
     margin-bottom 60px
     &__step,
@@ -56,10 +60,21 @@
       @media (max-width: mobile-upper-limit)
         font-size 14px
         line-height 18px
+    &-icon
+      width 24px
+      height 24px
+      display: inline-block
+      margin-right: 10px
+      &-svg
+        width 100%
+        height 100%
 
 .rbi-pr70
+  @media(min-width: tablet-lower-limit)
+    padding-right 30px
   @media(min-width: laptop-lower-limit)
     padding-right 70px
+
 
 .rbi-pr1c
   @media(min-width: laptop-lower-limit)

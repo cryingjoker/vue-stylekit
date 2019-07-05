@@ -123,7 +123,7 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.hasError //|| this.errors.has(this.fieldName);
+          return this.errors.has(this.fieldName);
         }
       },
       inputClass() {

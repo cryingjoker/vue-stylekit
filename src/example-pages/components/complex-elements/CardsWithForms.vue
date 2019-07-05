@@ -16,6 +16,7 @@
                 scrollWhenActive: true,
                 triggerClassName: 'rt-link',
                 containerClassName: 'rt-slide-content-vertical-content',
+                slideName: 'test',
                 activeContainerClassName:
                   'rt-slide-content-vertical-content--is-active'
               }"

@@ -4,8 +4,8 @@
   &-content
     border-top 1px solid main-color01
     .{newAppName}-row-list__item
-      padding-top vertical-space * 2
-      padding-bottom vertical-space * 2
+      padding-top vertical-space
+      padding-bottom vertical-space
       @media (max-width: mobile-upper-limit)
         padding-top vertical-space
         padding-bottom vertical-space
@@ -61,6 +61,25 @@
         margin-bottom 5px
         &:not(:first-of-type)
           margin-top vertical-space
+  &--centered
+    text-align: center
+    .{newAppName}-tabs-navigation-wrapper
+      display: inline-block
+      border-bottom 1px solid main-color01
+      @media (max-width: tablet-upper-limit)
+        position relative
+        width calc(100% + 40px)
+        left -20px
+    .{newAppName}-tabs-navigation
+      @media (max-width: tablet-upper-limit)
+        width 100%
+        margin-left 0
+        margin-right 0
+        overflow-y hidden!important
+    .{newAppName}-tabs-navigation__item
+      white-space nowrap
+    .rt-tabs-content
+      border-top none
 
 .{newAppName}-tabs-navigation
   display flex

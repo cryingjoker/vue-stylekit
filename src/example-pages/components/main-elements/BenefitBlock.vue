@@ -13,10 +13,21 @@
       <div class="app-row">
         <pre-code
           text='
-            <rt-benefit-block :columns-quantity="3">
+            <rt-benefit-block :columns-quantity="3" :swiper-on-mobile="true">
               <rt-benefit-item>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
+                  <div class="rt-benefit-item__text-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 78" class="rt-benefit-item__text-icon-svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path fill="#000" fill-rule="nonzero" d="M38.163 9.813c-6.054 0-10.979 4.925-10.979 10.979v4.688h2.742v-4.691c0-4.541 3.693-8.234 8.234-8.234 4.54 0 8.234 3.693 8.234 8.234v4.691h2.742v-4.691c.003-6.051-4.918-10.976-10.973-10.976z"/>
+                        <path fill="#000" fill-rule="nonzero" d="M47.763 27.944l.007 17.168-19.207.006-.006-17.174h19.206m.01-3.2H28.56a3.194 3.194 0 0 0-3.194 3.19v17.184a3.194 3.194 0 0 0 3.194 3.194h19.213a3.194 3.194 0 0 0 3.193-3.194V27.934a3.194 3.194 0 0 0-3.193-3.19"/>
+                        <path fill="#000" fill-rule="nonzero" d="M38.163 33.886a1.6 1.6 0 0 0-1.6 1.6v3.204a1.6 1.6 0 0 0 3.2 0v-3.204c0-.883-.713-1.6-1.6-1.6z"/>
+                        <path fill="#000" fill-rule="nonzero" d="M38.166 77.09l-.65-.288C2.126 61.074.315 15.234.299 14.77L.25 13.122H1.9c6.295 0 11.412-5.12 11.412-11.412V.11h49.706v1.6c0 6.292 5.12 11.412 11.41 11.412h1.652l-.051 1.648c-.016.464-1.824 46.304-37.216 62.028l-.647.292zM3.6 16.222c.653 7.908 5.206 43.821 34.566 57.357C67.562 60.027 72.09 24.126 72.733 16.222 66 15.438 60.646 10.06 59.907 3.31H16.426c-.74 6.75-6.093 12.128-12.826 12.912z"/>
+                        <path d="M-2-1h80v80H-2z"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <h4 class="rt-font-bold rt-space-bottom05 d-inline-block rt-vam">Помощь в математике</h4>
                   <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
                 </template>
               </rt-benefit-item>
@@ -157,14 +168,13 @@
 
         <pre-code
           text='
-            <rt-benefit-block :columns-quantity="3" :has-image="true">
+            <rt-benefit-block :columns-quantity="4" :has-image="true" :no-transparency-description="true">
               <rt-benefit-item>
                 <template slot="image">
                   <img src="/static/images/B2B/phone12.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">Мобильный или SIP-телефон</p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -172,8 +182,13 @@
                   <img src="/static/images/B2B/phone13.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">
+                    <rt-replacement-link link-text="специальная программа"
+                                         macos-link="https://apps.apple.com/us/app/telefon-rostelekom/id1033204349?mt=12"
+                                         windows-link="https://moscow.rt.ru/sites/default/files/b2b/instruction_vats/Svetets_Telephone-Rostelecom_3.8.67.zip"
+                                         pre-link-text="или "
+                                         post-link-text=" на компьютере или ноутбуке"/>
+                  </p>
                 </template>
               </rt-benefit-item>
               <rt-benefit-item>
@@ -181,19 +196,7 @@
                   <img src="/static/images/B2B/phone14.svg">
                 </template>
                 <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и
-                  <rt-replacement-link macos-link="macos-link" windows-link="windows-link" link-text="покажет алгоритм"/>
-                   решения задачи.</p>
-                </template>
-              </rt-benefit-item>
-              <rt-benefit-item>
-                <template slot="image">
-                  <img src="/static/images/B2B/phone15.svg">
-                </template>
-                <template slot="description">
-                  <h4 class="rt-font-bold rt-space-bottom05">Помощь в математике</h4>
-                  <p class="rt-font-small-paragraph">OneNote справится с любым уравнением и покажет алгоритм решения задачи.</p>
+                  <p class="rt-font-paragraph">Интернет от любого провайдера</p>
                 </template>
               </rt-benefit-item>
             </rt-benefit-block>

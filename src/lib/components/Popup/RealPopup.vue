@@ -57,8 +57,8 @@
       },
       countOffset(){
         setTimeout(() => {
-          if(window.innerWidth <= 767 && !this.$el.parentNode.classList.contains('rt-banner-image')){
-            this.svgOffset = 767 - window.innerWidth;
+          if(window.innerWidth <= parseInt(variables["mobile-upper-limit"]) && !this.$el.parentNode.classList.contains('rt-banner-image')){
+            this.svgOffset = parseInt(variables["mobile-upper-limit"]) - window.innerWidth;
             return this.svgOffset
           }
         },0);

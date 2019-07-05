@@ -6,12 +6,12 @@
     name: "RtBenefitItem",
     props: {},
     data: () => ({
-      show: false,
       iconSize: '',
       columnsQuantity: null,
       step: null,
       alignCenter: false,
-      inlineLayout: false
+      inlineLayout: false,
+      layout: ''
     }),
     computed: {
       iconImage() {
@@ -81,6 +81,11 @@
       this.iconBackingColor = this.$parent._props.iconBackingColor;
       this.iconBackingSize = this.$parent._props.iconBackingSize;
     },
+    updated(){
+      if(this.$parent.$data.layout !== 'benefit' || this.$parent._props.swiperOnMobile) {
+        this.layout = 'swiper';
+      }
+    },
     methods: {},
     render: function (h) {
       const icon = (() => {
@@ -104,16 +109,18 @@
           return <div class="rt-benefit-item__image">{this.$slots.image}</div>
         }
       })();
-
       const columnClass = (() => {
         if(this.columnsQuantity === 2) {
           return 'rt-col-6 rt-col-td-3 rbi-pr1c'
         }
         if(this.columnsQuantity === 3) {
-          return 'rt-col-4 rt-col-td-2 rbi-pr70'
+          return 'rt-col-4 rt-col-td-3 rbi-pr70'
         }
         if(this.columnsQuantity === 4) {
           return 'rt-col-3 rt-col-td-3 rt-space-right rt-td-space-right-none'
+        }
+        if(this.layout === 'swiper'){
+          return 'rtk-carousel-slide'
         }
       })();
 

@@ -31,13 +31,14 @@
 
 <script type="text/jsx">
   const componentsList = {};
+  import variables from "../../variables.json";
 
   export default {
     name: "RtCardCarousel",
     components: componentsList,
     data () {
       return {
-        mobileLayout: window.innerWidth <= 767,
+        mobileLayout: window.innerWidth <= parseInt(variables["mobile-upper-limit"]),
         parentArray: [],
         element: null,
         parent: null,
@@ -54,23 +55,33 @@
         }
       }
       window.addEventListener('resize', () => {
-        this.mobileLayout = window.innerWidth <= 767
+        this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+        this.renderLayout();
       });
-      this.positionCarouselCards();
-
-      if(this.mobileLayout) {
-        this.addPaginator();
-        this.fixCardHeightMobile();
-        for(let i = 0; i < this.parentArray.length; i++) {
-          document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
-            let activePaginatorIndex = this.getChildNumber(e.target);
-            this.mobileCarousel(activePaginatorIndex);
-          })
-        }
-      }
-      this.mobileSwipe();
+      this.renderLayout();
     },
     methods: {
+      renderLayout() {
+        if(this.mobileLayout) {
+          this.removePaginator();
+          this.addPaginator();
+          this.fixCardHeightMobile();
+          for(let i = 0; i < this.parentArray.length; i++) {
+            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
+              let activePaginatorIndex = this.getChildNumber(e.target);
+              this.mobileCarousel(activePaginatorIndex);
+            })
+          }
+          this.mobileSwipe();
+        } else {
+          this.removePaginator();
+          this.positionCarouselCards();
+          for(let i = 0; i < this.parentArray.length; i++) {
+            this.$el.children[i].removeAttribute("style")
+          }
+        }
+      },
+
       addPaginator() {
         for(let i = 0; i < this.parentArray.length; i++) {
           let paginatorItem = document.createElement('div');
@@ -79,6 +90,13 @@
           if(i === this.nextSlideIndex) {
             document.querySelector('.custom-carousel__paginator-item').classList.add('custom-carousel__paginator-item--active');
           }
+        }
+      },
+
+      removePaginator() {
+        let myNode = document.querySelector('.custom-carousel__paginator');
+        while (myNode.firstChild) {
+          myNode.removeChild(myNode.firstChild);
         }
       },
 
@@ -96,20 +114,19 @@
         carouselPaginatorWrapper.children[index].classList.add('custom-carousel__paginator-item--active');
         this.$el.scrollBy({
           top: 0,
-          left: (slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
+          left: (slideWidth * index + (20 * index + 20) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
           behavior: 'smooth'
         });
-//        document.querySelector('.custom-carousel').scrollBy(slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding);
       },
 
       positionCarouselCards() {
         if(!this.mobileLayout){
           this.parentArray.forEach((el, i)=>{
             if(((i + 1) < this.nextSlideIndex) || (i - 1) > this.nextSlideIndex) {
-              el.classList.remove('carousel-card--next', 'carousel-card--previous');
-              if(((i - 2) === this.nextSlideIndex)) {
+              el.classList.remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
+              if(((i - 2) === this.nextSlideIndex) || (this.nextSlideIndex === this.parentArray.length - 2 && i === 0) || (this.nextSlideIndex === this.parentArray.length - 1 && i === 1)) {
                 el.classList.add('carousel-card--next-via-one');
-              } else if(((i + 2) === this.nextSlideIndex)) {
+              } else if(((i + 2) === this.nextSlideIndex) || (this.nextSlideIndex === 0 && i === this.parentArray.length - 2) || this.nextSlideIndex === 1 && i === (this.parentArray.length - 1)) {
                 el.classList.add('carousel-card--previous-via-one');
               }
             }
@@ -130,7 +147,7 @@
           for(let i = 0; i < this.parentArray.length; i++){
             if(this.parent.children[i].classList.contains('carousel-card--active')){
               this.activeSlideIndex = this.parentArray.indexOf(this.parent.children[i]);
-              this.nextSlideIndex = (this.activeSlideIndex +  1) % 8 ? this.activeSlideIndex + 1 : 0;
+              this.nextSlideIndex = (this.activeSlideIndex +  1) % this.parentArray.length ? this.activeSlideIndex + 1 : 0;
             }
           }
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
@@ -184,11 +201,11 @@
           let refresh = () => {
             cardGallery.scrollBy({
               top: 0,
-              left: cardWidth * activePaginatorButton + (20 * (activePaginatorButton - 1)) - cardGallery.scrollLeft,
+              left: cardWidth * activePaginatorButton + (20 * (activePaginatorButton - 1) + 20) - cardGallery.scrollLeft,
               behavior: 'smooth'
             });
           };
-          timer = setTimeout( refresh , 150 );
+          timer = setTimeout( refresh , 50 );
         })
       }
     }

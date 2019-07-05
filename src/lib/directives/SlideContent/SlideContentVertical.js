@@ -16,6 +16,8 @@ class SlideContentVertical {
     this.activeContainerClassName = this.value.activeContainerClassName || "rt-slide-content-vertical-content--is-active";
     this.activeTriggerClassName = this.activeTriggerClassName.split(' ');
     this.activeContainerClassName = this.activeContainerClassName.split(' ');
+    this.slideName = this.value.slideName ? this.value.slideName.trim() : null;
+
   }
 
   bind = () => {
@@ -29,6 +31,16 @@ class SlideContentVertical {
       this.checkActiveStatus();
       if (trigger) {
         trigger.addEventListener("mousedown", this.trigger, { passive: false });
+      }
+    }
+    if(this.slideName){
+      let rtSettings = localStorage.getItem('rt-settings');
+      if(rtSettings){
+        rtSettings = JSON.parse(rtSettings);
+        if(rtSettings.slideContent && rtSettings.slideContent[this.slideName]){
+          this.trigger();
+        }
+
       }
     }
   };
@@ -63,6 +75,24 @@ class SlideContentVertical {
         });
       }
       this.isActive = !this.isActive;
+      console.info('this.slideName',this.slideName,this);
+      if(this.slideName) {
+        let rtSettings = localStorage.getItem('rt-settings');
+        if (rtSettings) {
+          rtSettings = JSON.parse(rtSettings)
+        }else{
+          rtSettings = {};
+        }
+        if(this.isActive){
+          rtSettings.slideContent = rtSettings.slideContent || {};
+          rtSettings.slideContent[this.slideName] = 1
+        }else{
+          if(rtSettings.slideContent && rtSettings.slideContent[this.slideName]){
+            delete rtSettings.slideContent[this.slideName];
+          }
+        }
+        localStorage.setItem('rt-settings', JSON.stringify(rtSettings));
+      }
       if(this.isActive && this.scrollWhenActive){
         scrollIt(content.offsetTop,400)
       }

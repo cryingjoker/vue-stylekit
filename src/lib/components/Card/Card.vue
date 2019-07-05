@@ -163,6 +163,14 @@ export default {
     labelFontSize: {
       type: String,
       default: ''
+    },
+//    backgroundPosition: {
+//      type: String,
+//      default: ''
+//    },
+    discountText: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
@@ -228,6 +236,13 @@ export default {
       }
       if(this.doubleSided) {
         cardClass += " rtb-card--double-sided"
+      }
+      if(this.backgroundPosition) {
+        if(this.backgroundPosition === 'left'){
+          cardClass += " rtb-card--bgp-left"
+        } else {
+          cardClass += " rtb-card--bgp-right"
+        }
       }
       return cardClass;
     },
@@ -542,7 +557,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">1 услуга со скидкой 50%</span>
+                <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
             </div>
           </div>;
         }
@@ -551,7 +566,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
-                <span class="rtb-card__discount-line__flag-text rtb-card__discount-line__flag-text-2">2 услуги со скидкой 50%</span>
+                <span class="rtb-card__discount-line__flag-text rtb-card__discount-line__flag-text-2">{this.discountText}</span>
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
@@ -562,7 +577,7 @@ export default {
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
               <div class="rtb-card__discount-line__flag">
                 <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#64DDEC" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">3 услуги со скидкой 50%</span>
+                <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2"></div>
             <div class="rtb-card__discount-line rtb-card__discount-line-3"></div>

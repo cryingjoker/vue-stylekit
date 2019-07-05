@@ -14,8 +14,8 @@
 
         <p>Отправить приглашение новому номеру:
           <rt-ussd>*105*1*9ХХХХХХХХХ#</rt-ussd></p>
-        <p class="rt-space-top05">Проверить список номеров, подключенных к тарифу:
-          <rt-ussd>*105*2#</rt-ussd></p>
+        <p class="rt-space-top05">Проверить список номеров, подключенных к тарифу: -->>
+          <rt-ussd><div class="epc-options__value">*105*2#</div></rt-ussd></p>
             <p class="rt-space-top05">Проверить остаток общего пакета услуг:
           <rt-ussd>*100*12#</rt-ussd></p>
             <p class="rt-space-top05 rt-space-bottom05">Отключить номер: <rt-ussd>*105*0*9ХХХХХХХХХ#</rt-ussd> </p>

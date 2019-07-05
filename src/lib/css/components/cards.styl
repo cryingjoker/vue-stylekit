@@ -10,6 +10,8 @@
   width 100%
   min-height min-content
   overflow hidden
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
   color main-color
   background-position-x center
   background-position-y center
@@ -176,6 +178,9 @@
 
     .{newAppName}-card-dark-slate &
       background-color b2b-dark-state
+
+    .{newAppName}-card-light-grey &
+      background-color light-grey
 
     &--position-background-top
       background-position-x center
