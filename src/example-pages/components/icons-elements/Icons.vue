@@ -457,7 +457,8 @@
 import documentation from "../../../lib/components/Icon/docs/index.json";
 
 const componentsList = {};
-window.RTK_STYLE.icons_path = '/vue-stylekit/static/icons/';
+if (!window.RTK_STYLE) window.RTK_STYLE = {};
+window.RTK_STYLE.icons_path = ((window.location.hostname !== 'localhost') ? '/vue-stylekit' : '' ) + '/static/icons/';
 
 export default {
   name: "AppIcons",
