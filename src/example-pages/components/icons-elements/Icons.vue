@@ -462,6 +462,9 @@ window.RTK_STYLE.icons_path = '/vue-stylekit/static/icons/';
 export default {
   name: "AppIcons",
   components: componentsList,
+  data: () => ({
+    documentation: {}
+  }),
   mounted() {},
   created() {},
   methods: {}
