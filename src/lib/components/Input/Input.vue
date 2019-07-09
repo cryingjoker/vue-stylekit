@@ -123,7 +123,7 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.errors.has(this.fieldName);
+          return this.errors && this.errors.has(this.fieldName);
         }
       },
       inputClass() {
@@ -154,7 +154,6 @@
 
     mounted() {
       this.customRules.forEach(({ nameRule, rule }) => VeeValidate.Validator.extend(nameRule, { validate: rule }));
-      // Vue.use(VeeValidate);
       this.setValue();
       this.setDisabled();
       this.bindEvents();

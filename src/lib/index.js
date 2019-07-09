@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VeeValidate from "vee-validate";
 import styles from "./css/vue-rt-style.styl";
 import Global from "./variables.json";
 import Project from "../../package.json";
@@ -99,6 +100,10 @@ import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideCo
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
+
+      if (window && window[Global.globalSettingsKey] && window[Global.globalSettingsKey].useValidator) {
+        Vue.use(VeeValidate)
+      }
 
       Vue.component(Button.name, Button);
       Vue.component(ButtonRippleWithoutJs.name, ButtonRippleWithoutJs);
