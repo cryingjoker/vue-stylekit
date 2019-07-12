@@ -57,54 +57,54 @@
               </template>
             </rt-tabs>"
           />
-          <!--<pre-code-->
-            <!--text="<rt-tabs>-->
-              <!--<template slot=&quot;navigation&quot;>-->
-                <!--<rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов Готов Готов Готов Готов Готов</rt-tabs-nav-item>-->
-                <!--<rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта</rt-tabs-nav-item>-->
-                <!--<rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость Значимость Значимость Значимость Значимость Значимость</rt-tabs-nav-item>-->
-              <!--</template>-->
-              <!--<template slot=&quot;content&quot;>-->
-                <!--<rt-tabs-content-item name=&quot;one&quot;>-->
-                  <!--<h1>TEST</h1>-->
-                <!--</rt-tabs-content-item>-->
-                <!--<rt-tabs-content-item name=&quot;two&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>-->
-                  <!--<p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом-->
-                    <!--представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении-->
-                    <!--поставленных задач. Равным образом консультация с широким активом влечет за собой процесс внедрения-->
-                    <!--и модернизации форм развития. Повседневная практика показывает, что консультация с широким активом-->
-                    <!--обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий-->
-                    <!--активизации. С другой стороны новая модель организационной деятельности позволяет оценить значение-->
-                    <!--новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас-->
-                    <!--анализа новых предложений. Идейные соображения высшего порядка, а также реализация намеченных-->
-                    <!--плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций,-->
-                    <!--занимаемых участниками в отношении поставленных задач.</p>-->
-                  <!--<p class=&quot;rt-font-paragraph&quot;>Идейные соображения высшего порядка, а также постоянное-->
-                    <!--информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает-->
-                    <!--создание существенных финансовых и административных условий. С другой стороны постоянный-->
-                    <!--количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке-->
-                    <!--существенных финансовых и административных условий. Таким образом консультация с широким активом-->
-                    <!--влечет за собой процесс внедрения и модернизации форм развития. С другой стороны сложившаяся-->
-                    <!--структура организации требуют определения и уточнения системы обучения кадров, соответствует-->
-                    <!--насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный-->
-                    <!--эксперимент проверки направлений прогрессивного развития.</p></rt-tabs-content-item>-->
-                <!--<rt-tabs-content-item name=&quot;tree&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>-->
-                  <!--<p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким-->
-                    <!--активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении-->
-                    <!--поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от-->
-                    <!--нас анализа направлений прогрессивного развития. Повседневная практика показывает, что сложившаяся-->
-                    <!--структура организации представляет собой интересный эксперимент проверки форм развития. Значимость-->
-                    <!--этих проблем настолько очевидна, что укрепление и развитие структуры позволяет оценить значение-->
-                    <!--систем массового участия.</p>-->
-                  <!--<p class=&quot;rt-font-paragraph&quot;>Разнообразный и богатый опыт рамки и место обучения кадров способствует-->
-                    <!--подготовки и реализации соответствующий условий активизации. Повседневная практика показывает, что-->
-                    <!--дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки-->
-                    <!--существенных финансовых и административных условий. Идейные соображения высшего порядка, а также-->
-                    <!--укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании-->
-                    <!--форм развития.</p></rt-tabs-content-item>-->
-              <!--</template>-->
-            <!--</rt-tabs>"-->
-          <!--/>-->
+          <pre-code
+            text="<rt-tabs>
+              <template slot=&quot;navigation&quot;>
+                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов Готов Готов Готов Готов Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость Значимость Значимость Значимость Значимость Значимость</rt-tabs-nav-item>
+              </template>
+              <template slot=&quot;content&quot;>
+                <rt-tabs-content-item name=&quot;one&quot;>
+                  <h1>TEST</h1>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name=&quot;two&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
+                  <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
+                    представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении
+                    поставленных задач. Равным образом консультация с широким активом влечет за собой процесс внедрения
+                    и модернизации форм развития. Повседневная практика показывает, что консультация с широким активом
+                    обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий
+                    активизации. С другой стороны новая модель организационной деятельности позволяет оценить значение
+                    новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас
+                    анализа новых предложений. Идейные соображения высшего порядка, а также реализация намеченных
+                    плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций,
+                    занимаемых участниками в отношении поставленных задач.</p>
+                  <p class=&quot;rt-font-paragraph&quot;>Идейные соображения высшего порядка, а также постоянное
+                    информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает
+                    создание существенных финансовых и административных условий. С другой стороны постоянный
+                    количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке
+                    существенных финансовых и административных условий. Таким образом консультация с широким активом
+                    влечет за собой процесс внедрения и модернизации форм развития. С другой стороны сложившаяся
+                    структура организации требуют определения и уточнения системы обучения кадров, соответствует
+                    насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
+                    эксперимент проверки направлений прогрессивного развития.</p></rt-tabs-content-item>
+                <rt-tabs-content-item name=&quot;tree&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>
+                  <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
+                    активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
+                    поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от
+                    нас анализа направлений прогрессивного развития. Повседневная практика показывает, что сложившаяся
+                    структура организации представляет собой интересный эксперимент проверки форм развития. Значимость
+                    этих проблем настолько очевидна, что укрепление и развитие структуры позволяет оценить значение
+                    систем массового участия.</p>
+                  <p class=&quot;rt-font-paragraph&quot;>Разнообразный и богатый опыт рамки и место обучения кадров способствует
+                    подготовки и реализации соответствующий условий активизации. Повседневная практика показывает, что
+                    дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки
+                    существенных финансовых и административных условий. Идейные соображения высшего порядка, а также
+                    укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании
+                    форм развития.</p></rt-tabs-content-item>
+              </template>
+            </rt-tabs>"
+          />
           </div>
         </div>
         <div class="app-row row">
@@ -267,14 +267,18 @@
                 <rt-tabs-nav-item anchor="two" name="humanResources">Кадрам</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="three" name="sales">Отделу продаж</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="four" name="support">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="five" name="test1">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="six" name="test2">Клиентскому отделу</rt-tabs-nav-item>
               </template>
               <template slot="content">
                 <rt-tabs-content-item name="marketing">
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
+                      <rt-card background-image="/static/images/B2B/screens.jpg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
+                          <!--<div class="rt-md-space-top5"/>-->
+                          <div class="rt-md-space-top5"/>
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
                             <div class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
@@ -342,6 +346,54 @@
                   </div>
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name="support">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test1">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test2">
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
