@@ -22,6 +22,10 @@
       patternType: {
         type: Number,
         default: '1'
+      },
+      patternForTextBlock: {
+        type: Boolean,
+        default: false
       }
     },
 
@@ -44,28 +48,43 @@
         }
       }
     }
-//    if(this.patternType === 3){
-//      if(this.$el.parentNode.classList.contains('rt-banner-image')){
-//        let bannerParent = this.$el.parentNode;
-//        let height = bannerParent.offsetHeight;
-//        this.activeViewBox = `0 0 ${height * 3.2} ${height}`;
-//        this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
-//        this.$el.getElementsByTagName('svg')[0].style.left = `calc((-1920px + 100vw) / 2)`;
-//      }
-//    }
+
+
+    const patternPositioning = () => {
+      if(this.patternForTextBlock){
+        let parentBlock = this.$el.parentNode;
+        let height = parentBlock.offsetHeight;
+        let width = parentBlock.offsetWidth;
+        let windowWidth = window.innerWidth;
+        let minX = 0;
+        if(window.innerWidth <= 500) {
+          minX = windowWidth/2 - 80;
+        } else if(windowWidth <= parseInt(variables["tablet-upper-limit"])) {
+          minX = (1460 - windowWidth) / 4;
+        }
+        this.activeViewBox = `${minX} 0 ${width} ${height}`;
+
+        this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
+
+      }
+    };
 
     const countOffset = () => {
-      setTimeout(() => {
-        if(window.innerWidth <= parseInt(variables["mobile-upper-limit"]) && !this.$el.parentNode.classList.contains('rt-banner-image')){
-          this.svgOffset = parseInt(variables["mobile-upper-limit"]) - window.innerWidth;
-          return this.svgOffset
-        }
-      },0);
+      if(this.$el.parentNode){
+        setTimeout(() => {
+          if(window.innerWidth <= parseInt(variables["mobile-upper-limit"]) && !this.$el.parentNode.classList.contains('rt-banner-image')){
+            this.svgOffset = parseInt(variables["mobile-upper-limit"]) - window.innerWidth;
+            return this.svgOffset
+          }
+        },0);
+      }
     };
     window.addEventListener('resize', () => {
-      countOffset()
+      countOffset();
+      patternPositioning();
     });
     countOffset();
+    patternPositioning();
   },
   render: function(h) {
 
@@ -96,6 +115,31 @@
           <path class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} fill-rule="evenodd" clip-rule="evenodd" d="M0 0h1920v600H0z"/>
           <path class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M205.7 0C554.4 159.9 891 314.3 1060.3 391.9c71.7 32.9 113.4 52 113.4 52 55.6 25.5 122.2 1.9 148.7-52.8.9-1.8 1.6-3.7 2.4-5.6l.3.2 39.7-82.3L1511.9 0H205.7z" fill-rule="evenodd" clip-rule="evenodd"/>
           <path class={"rt-pattern--" + this.rightColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M1920 0h-407.8l-147.7 303.7c-23.8 49-39.7 81.7-39.7 81.8l-.1.1c-.4.7-.9 1.4-1.3 2.1-.5 1-.8 2.1-1.3 3.1-26.5 54.5-93 78.1-148.6 52.7 0 0 15.6 7.1 28.7 13.1 41.1 18.8 89.7 21.6 136.1 5.2.1 0 283.4-100.5 581.5-206.3V0z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </svg>
+      }
+      if(this.patternType === 4) {
+        return <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" >
+          <defs>
+            <path id="a" d="M0 0h1460v370H0z"/>
+            <path id="c" d="M0 0h1595v1781H0z"/>
+            <path id="e" d="M.875.673h1281v1902H.875z"/>
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <use fill="#E3E8EC" xlinkHref="#a"/>
+            <g mask="url(#b)">
+              <g transform="rotate(71 1330.093 458.357)">
+                <use fill="#8348FC" xlinkHref="#c"/>
+                <g mask="url(#d)">
+                  <g transform="scale(-1 1) rotate(83 -69.592 7.323)">
+                    <g mask="url(#f)">
+                      <path fill="#101828" fill-opacity=".7" d="M935.18 796.972l76.12 1.677-.007-.288c1.67.124 3.323.322 5.022.353 50.615 1 93.349-39.471 95.45-90.402l4.287-103.92c16.51-400.12 75.067-1818.837 75.067-1818.837L172.908-249.778l-42.55 1030.872 804.822 15.878z"/>
+                      <path fill="#70F" fill-rule="nonzero" d="M-57.81 1761.074c165.565 3.086 211.332-61.943 327.276-171.834l793.288-751.88c29.783-28.227 46.083-65.424 47.657-103.018.508-12.082 1.121-26.315 1.121-26.315-2.153 50.853-44.843 91.315-95.35 90.374-.95-.016-1.87-.145-2.811-.192-.685.022-1.384.12-2.068.125l-.01.009h-.12c-.132 0-30.379-.54-75.767-1.446l-1077.623-20.08-1394.71-25.985-41.915 982.238 1521.032 28.004z"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
         </svg>
       }
     })();
