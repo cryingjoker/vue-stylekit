@@ -117,7 +117,7 @@
           return 'rt-col-4 rt-col-td-3 rbi-pr70'
         }
         if(this.columnsQuantity === 4) {
-          return 'rt-col-3 rt-col-td-3 rt-space-right rt-td-space-right-none'
+          return 'rt-col-3 rt-col-td-3 rt-space-right rt-td-space-right05'
         }
         if(this.layout === 'swiper'){
           return 'rtk-carousel-slide'
