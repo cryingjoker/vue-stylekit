@@ -66,11 +66,13 @@
     .{newAppName}-tabs-navigation-wrapper
       display: inline-block
       border-bottom 1px solid main-color01
+      height 34px
       @media (max-width: tablet-upper-limit)
         position relative
         width calc(100% + 40px)
         left -20px
     .{newAppName}-tabs-navigation
+      margin-bottom 30px
       @media (max-width: tablet-upper-limit)
         width 100%
         margin-left 0
@@ -87,11 +89,15 @@
   width calc(100% + 20px)
   margin-left -(vertical-space)
   margin-right -(vertical-space)
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
 
   .rt-tabs-tablet &,
   .rt-tabs-mobile &
     display block
     overflow auto
+    overflow-y hidden
     white-space nowrap
     position relative
 
@@ -101,6 +107,8 @@
     display block
     overflow hidden
     position relative
+    &::-webkit-scrollbar
+      display: none
 
 .{newAppName}-tabs-navigation__item
   padding-left vertical-space
@@ -183,3 +191,32 @@
   .{newAppName}-tabs-content
     border-top-width: 0
 
+.rt-tabs
+  .rt-card--gradient-shadow
+    background-color main-color
+    .rt-card__background
+      height 100%
+      width calc(((100vw - 140px - 20px)/12*10)/2)
+      top 0
+      bottom 0
+      left 0
+      z-index 4
+      background-position-x 0
+      background-size: cover
+      @media (max-width: mobile-upper-limit)
+        width 100%
+        height calc(100vw - 40px)
+      &:after
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        content ''
+        background linear-gradient(to right, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);//linear-gradient(to right, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 17%, rgba(16, 24, 40, 0.67) 22%, rgba(16, 24, 40, 0.9) 42%, #101828 50%, #101828 100%)
+        z-index 1
+        @media (max-width: mobile-upper-limit)
+          background linear-gradient(to bottom, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);
+    .rt-card__content
+      @media (max-width: tablet-upper-limit)
+        z-index 5

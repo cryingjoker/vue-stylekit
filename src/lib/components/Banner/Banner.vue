@@ -181,12 +181,11 @@
           if(this.isBackgroundBanner){
             className += " rt-banner--has-absolute-position";
           }
-          if (this.RtBanners.items[activeIndex].backgroundColor !== "none") {
+          if (this.RtBanners.items[activeIndex].backgroundColor) {
             className += " rt-banner--background-" + this.RtBanners.items[activeIndex].backgroundColor;
           }
           if(this.RtBanners.items[activeIndex].patternBackground) {
-            let bgColor = '';
-            bgColor = this.RtBanners.items[activeIndex].patternLeftColor.replace(/^(b2b\-)|(b2c\-)/i,'');
+            let bgColor = this.RtBanners.items[activeIndex].patternLeftColor.replace(/^(b2b\-)|(b2c\-)/i,'');
             className += " rt-banner--background-" + bgColor;
           }
           if (this.isFullscreenImage) {
@@ -209,6 +208,9 @@
           }
           if(this.mobileImageOnTop) {
             className += ' rt-banner--image-ontop';
+          }
+          if(this.RtBanners.items[activeIndex].patternType && this.RtBanners.items[activeIndex].patternType === 3) {
+            className += " rt-banner--full-screen";
           }
         }
         return className;
@@ -718,7 +720,7 @@
       changePatternType() {
         if(this.RtBanners.items[this.RtBanners.activeIndex] !== undefined &&
           this.RtBanners.items[this.RtBanners.activeIndex].imageOnMobile !== undefined){
-          if(window.innerWidth <= 767){
+          if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])){
             this.RtBanners.items[this.RtBanners.activeIndex].patternType = 1;
           } else {
             this.RtBanners.items[this.RtBanners.activeIndex].patternType = 2;

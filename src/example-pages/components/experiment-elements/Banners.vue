@@ -44,25 +44,22 @@
         </rt-banner>
     '/>
     <pre-code
-      text="<rt-banner content-mobile-height=&quot;400px&quot;
-                       :has-image-on-mobile=&quot;true&quot;>
-      <rt-pattern top-color=&quot;error-color&quot;
-                  left-color=&quot;b2c-purple-high&quot;
-                  right-color=&quot;b2c-pink&quot;
-                  :pattern-type=&quot;1&quot;/>
-      <rt-banner-item :is-white-color=&quot;true&quot;
-                      content-mobile-height=&quot;400px&quot;
-                      :pattern-background=&quot;true&quot;
-                      :pattern-type=&quot;2&quot;
-                      pattern-top-color=&quot;b2c-yellow&quot;
-                      pattern-left-color=&quot;main-color&quot;
-                      pattern-right-color=&quot;error-color&quot;>
-        <h1 class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</h1>
-        <p class=&quot;p1 rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br>
+      text='<rt-banner content-height="600px"
+                       content-mobile-height="500px"
+                       :has-image-on-mobile="true">
+      <rt-banner-item :is-white-color="true"
+                      content-mobile-height="400px"
+                      :pattern-background="true"
+                      :pattern-type="3"
+                      pattern-top-color="b2c-yellow"
+                      pattern-left-color="main-color"
+                      pattern-right-color="error-color">
+        <h1 class="rt-font-banner-label">Виртуальная <br> телефония</h1>
+        <p class="p1 rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br>
           возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
-        <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        <rt-button class="rt-button-orange">Подробнее</rt-button>
       </rt-banner-item>
-    </rt-banner>"
+    </rt-banner>'
     />
     <pre-code
       text="<rt-banner :no-triangle=&quot;true&quot;
@@ -185,7 +182,12 @@
                        content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
                       :is-white-color='true'>
-          <a href='#' class='rt-link-back'>Текст ссылки</a>
+          <div class='rt-link-back-wrapper'>
+            <svg width='16px' height='16px' viewBox='0 0 16 16' class='rt-vam rt-link-arrow'>
+              <path d='M 8,15 L 1,8 L 16,8 L 1,8 L 8,1' stroke='#000000' stroke-width='2' fill='none'/>
+            </svg>
+            <a href='#' class='rt-link-back'>Текст ссылки</a>
+          </div>
           <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
           <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
             возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>

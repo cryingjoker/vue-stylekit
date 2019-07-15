@@ -1,4 +1,6 @@
 <script type="text/jsx">
+  import variables from "../../variables.json";
+
   export default {
     name: "RtRealPopup",
     props: {

@@ -153,7 +153,7 @@ export default {
         this.iconCaptionColor = this.captionColor
       } else if (!this.candy) {
         var el = this.$el
-        var firstPath = el.firstChild.querySelector('[pid="0"]')
+        var firstPath = el && typeof el.firstChild === 'function' && el.firstChild.querySelector('[pid="0"]')
         if (firstPath && firstPath.getAttribute('fill')) {
           this.iconCaptionColor = this.$el.querySelector('[pid="0"]').getAttribute('fill')
         } else {
