@@ -20,7 +20,7 @@
           </div>
 
           <div class="text-block-pattern-backing rt-font-center rt-space-vertical5 rt-td-space-vertical3 rt-md-space-bottom2 color-white rt-font-md-left">
-            <rt-pattern top-color="main-color" left-color="error-color" right-color="orange" :pattern-type="4" :pattern-for-text-block="true"/>
+            <rt-pattern top-color="orange" left-color="main-color" right-color="error-color" :pattern-type="4" :pattern-for-text-block="true"/>
             <div class="rt-container">
               <div class="rt-col">
                 <div class="row">
