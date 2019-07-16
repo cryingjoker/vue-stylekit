@@ -63,9 +63,17 @@
           minX = (1460 - windowWidth) / 4;
         }
         this.activeViewBox = `${minX} 0 ${width} ${height}`;
-
         this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
-
+      }
+      if(this.patternType === 3) {
+        let parentBlock = this.$el.parentNode;
+        let height = parentBlock.offsetHeight;
+        let width = parentBlock.offsetWidth;
+        let windowWidth = window.innerWidth;
+        let minX = windowWidth > parseInt(variables["tablet-upper-limit"]) ? (1920 - windowWidth) / 2 : (1920 - windowWidth) / 1.5;
+        let minY = height <= 600 ? 600 - height : 0;
+        this.activeViewBox = `${minX} ${minY} ${width} ${height}`;
+        this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
       }
     };
 
@@ -98,20 +106,15 @@
 
       }
       if(this.patternType === 2) {
-        return <svg height="500px" viewBox="0 0 804 501" xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink">
-          <defs>
-            <path id="a" d="M.008.673h803v500h-803z" class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')}/>
-          </defs>
-          <g fill="none" fill-rule="evenodd">
-            <g mask="url(#b)">
-              <path  class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M382.519 332.73l59.42-47.657-.19-.216c1.36-.979 2.754-1.89 4.076-2.958 39.437-31.777 46.165-90.26 15.026-130.631-.003-.001-23.38-30.308-63.54-82.373C152.666-248.27-714.759-1372.855-714.759-1372.855L-874.839 20.873l630.29 817.151 627.068-505.295z"/>
-              <path class={"rt-pattern--" + this.rightColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M242.405 1709.81c128.882-104.086 122.143-183.333 140.343-342.071 18.249-159.153 124.5-1085.898 124.522-1086.09 4.676-40.775-6.75-79.754-29.72-109.567-7.38-9.584-16.062-20.882-16.062-20.882 31.05 40.345 24.35 98.792-14.966 130.545-.74.598-1.526 1.09-2.278 1.66-.51.457-.984.98-1.505 1.425l-.002.013-.092.078c-.101.084-23.63 19.118-59.001 47.605L-455.216 1010l-1085.688 876.82L-941.4 2666.3l1183.806-956.49z"/>
-            </g>
-          </g>
+        return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 804 500" height="500">
+          <path class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M0 0h804v500H0z"/>
+          <path class={"rt-pattern--" + this.rightColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M460.8 150.7c31.1 40.3 24.4 98.8-14.9 130.6-.7.6-27.6 22.2-63 50.7L174.3 500l307.2-.1c14.8-128.7 25.1-218.7 25.1-218.8 4.7-40.8-6.8-79.8-29.7-109.6-7.4-9.5-16.1-20.8-16.1-20.8z"/>
+          <path class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M0 500h174.3l208.2-167.8s61.9-49.8 63.2-50.9c39.4-31.8 46.1-90.2 15.1-130.6 0 0-23.4-30.3-63.5-82.4-15.3-19.7-33-42.7-52.7-68.3H0v500z"/>
         </svg>
+
       }
       if(this.patternType === 3) {
-        return <svg xmlns="http://www.w3.org/2000/svg"  height="100%" viewBox="0 0 1920 600">
+        return <svg xmlns="http://www.w3.org/2000/svg"  height="100%" width="100%" >
           <path class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} fill-rule="evenodd" clip-rule="evenodd" d="M0 0h1920v600H0z"/>
           <path class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M205.7 0C554.4 159.9 891 314.3 1060.3 391.9c71.7 32.9 113.4 52 113.4 52 55.6 25.5 122.2 1.9 148.7-52.8.9-1.8 1.6-3.7 2.4-5.6l.3.2 39.7-82.3L1511.9 0H205.7z" fill-rule="evenodd" clip-rule="evenodd"/>
           <path class={"rt-pattern--" + this.rightColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M1920 0h-407.8l-147.7 303.7c-23.8 49-39.7 81.7-39.7 81.8l-.1.1c-.4.7-.9 1.4-1.3 2.1-.5 1-.8 2.1-1.3 3.1-26.5 54.5-93 78.1-148.6 52.7 0 0 15.6 7.1 28.7 13.1 41.1 18.8 89.7 21.6 136.1 5.2.1 0 283.4-100.5 581.5-206.3V0z" fill-rule="evenodd" clip-rule="evenodd"/>
