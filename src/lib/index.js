@@ -90,7 +90,8 @@ import {
   ScrollBar,
   VerticalScrollBar,
   ReplacementLink,
-  CardCarousel
+  CardCarousel,
+  CardLayout
 } from "./components";
 
 
@@ -184,6 +185,7 @@ const VueRtStyle = {
       Vue.component(Carousel.name, Carousel);
       Vue.component(CarouselSlide.name, CarouselSlide);
       Vue.component(CardCarousel.name, CardCarousel);
+      Vue.component(CardLayout.name, CardLayout);
 
       // tsx components
 

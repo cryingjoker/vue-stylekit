@@ -186,31 +186,6 @@
                   множества проектов федерального масштаба</p>
               </template>
             </rt-card>
-            <!--<div class="custom-carousel__nav">-->
-              <!--<div class="custom-carousel__nav-item custom-carousel__left" @click="previousSlide">-->
-                <!--<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__left-arrow">-->
-                  <!--<g id="Page-1" stroke-width="1">-->
-                    <!--<g transform="translate(-132.000000, -2341.000000)">-->
-                      <!--<g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">-->
-                        <!--<polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>-->
-                      <!--</g>-->
-                    <!--</g>-->
-                  <!--</g>-->
-                <!--</svg>-->
-              <!--</div>-->
-              <!--<div class="custom-carousel__nav-item custom-carousel__right" @click="nextSlide">-->
-                <!--<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__right-arrow">-->
-                  <!--<g id="Page-1" stroke-width="1">-->
-                    <!--<g transform="translate(-132.000000, -2341.000000)">-->
-                      <!--<g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">-->
-                        <!--<polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>-->
-                      <!--</g>-->
-                    <!--</g>-->
-                  <!--</g>-->
-                <!--</svg>-->
-              <!--</div>-->
-              <!--<div class="custom-carousel__paginator"></div>-->
-            <!--</div>-->
           </rt-card-carousel>
         </div>
       </div>

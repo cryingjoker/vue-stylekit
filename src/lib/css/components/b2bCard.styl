@@ -860,3 +860,18 @@
   position absolute
   top -30px
   left -20px
+
+.card-layout
+  &-6
+    width 50%
+    @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
+      width auto
+    .rt-col-3
+      max-width 50%
+      flex-basis 50%
+
+.specified-card-layout
+  justify-content space-between
+  display flex
+  .rtk-carousel-slide
+    padding-top 20px

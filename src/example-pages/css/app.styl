@@ -19,15 +19,13 @@
   height: 50px
   background-color: main-color
   color white
-  position: sticky
-  top: 0
+  position: fixed
+  left: 0
+  right: 0
   display: flex
   z-index: 1000
   @media (max-width: mobile-upper-limit)
     display: block
-    position: fixed
-    left: 0
-    right: 0
     .app--has-open-menu &
       left: inherit
       right: -100vw
@@ -79,8 +77,8 @@
   min-width: 100vw
   width: 100vw
   overflow: hidden
-  @media (max-width: mobile-upper-limit)
-    padding-top: 50px
+  //@media (max-width: mobile-upper-limit)
+  //  padding-top: 50px
   .app--has-open-menu &
     @media (max-width: mobile-upper-limit)
       flex: 0
@@ -192,7 +190,7 @@
 
   &-content
     flex 1
-    //padding-top 50px
+    padding-top 50px
     padding-bottom 30px
 
   &-col-fill

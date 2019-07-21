@@ -17,64 +17,64 @@
         <div class="app-row row">
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-purple&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-purple'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-orange&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-orange'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-purple-border&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-purple-border'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-orange-border&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-orange-border'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-transparent&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-transparent'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-white&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-white'>Подключить</rt-button>"
             />
           </div>
         </div>
         <div class="app-row row">
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-purple&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-purple'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-orange&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-orange'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-purple-border&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-purple-border'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-orange-border&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-orange-border'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-transparent&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-transparent'>Подключить</rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
             <pre-code
-              text="<rt-button class=&quot;rt-button-small rt-button-white&quot;>Подключить</rt-button>"
+              text="<rt-button class='rt-button-small rt-button-white'>Подключить</rt-button>"
             />
           </div>
         </div>
@@ -91,28 +91,28 @@
             <span class="rt-font-label flex-fill rt-space-bottom05">Purple button
               <span class="rt-code"> .rt-button-purple</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-purple&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-purple'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Orange button
               <span class="rt-code"> .rt-button-orange</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-orange&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-orange'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Purple border button
               <span class="rt-code"> .rt-button-purple-border</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-purple-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-purple-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Orange border button
               <span class="rt-code"> .rt-button-orange-border</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-orange-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-orange-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
 
@@ -120,13 +120,13 @@
             <span class="rt-font-label flex-fill rt-space-bottom05">White button
               <span class="rt-code"> .rt-button-transparent</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-transparent'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">White button <span class="rt-code"> .rt-button-white</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-white&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-white'>Подключить</rt-button-without-ripple>"
             />
           </div>
         </div>
@@ -134,38 +134,38 @@
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled purple button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-purple&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-purple'>Подключить</rt-button-without-ripple>"
             />
           </div>
 
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled orange button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-orange&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-orange'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled purple border button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-purple-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-purple-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled orange border button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-orange-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-orange-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled transparent button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-transparent'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled white button</span>
             <pre-code
-              text="<rt-button-without-ripple disabled class=&quot;rt-button-white&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple disabled class='rt-button-white'>Подключить</rt-button-without-ripple>"
             />
           </div>
         </div>
@@ -175,7 +175,7 @@
               <span class="rt-code">
                 .rt-button-purple.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-purple&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-purple'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
@@ -183,7 +183,7 @@
               <span class="rt-code">
                 .rt-button-orange.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-orange&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-orange'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
@@ -191,7 +191,7 @@
               <span class="rt-code">
                 .rt-button-purple-border.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-purple-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-purple-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
@@ -199,7 +199,7 @@
               <span class="rt-code">
                 .rt-button-orange-border.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-orange-border&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-orange-border'>Подключить</rt-button-without-ripple>"
             />
           </div>
 
@@ -208,7 +208,7 @@
               <span class="rt-code">
                 .rt-button-transparent.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-transparent&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-transparent'>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
@@ -217,7 +217,7 @@
               <span class="rt-code">
                 .rt-button-white.rt-button-small</span></span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-white&quot;>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-white'>Подключить</rt-button-without-ripple>"
             />
           </div>
         </div>
@@ -225,48 +225,48 @@
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled purple small button</span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-purple&quot; disabled>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-purple' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled orange small button</span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-orange&quot; disabled>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-orange' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled purple small border button</span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-purple-border&quot; disabled>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-purple-border' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled orange small border button</span>
             <pre-code
-              text="<rt-button-without-ripple class=&quot;rt-button-small rt-button-orange-border&quot; disabled>Подключить</rt-button-without-ripple>"
+              text="<rt-button-without-ripple class='rt-button-small rt-button-orange-border' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled transparent small border button</span>
             <pre-code
-              text=" <rt-button-without-ripple class=&quot;rt-button-small rt-button-transparent&quot; disabled>Подключить</rt-button-without-ripple>"
+              text=" <rt-button-without-ripple class='rt-button-small rt-button-transparent' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <span class="rt-font-label flex-fill rt-space-bottom05">Disabled white small border button</span>
             <pre-code
-              text=" <rt-button-without-ripple class=&quot;rt-button-small rt-button-white&quot; disabled>Подключить</rt-button-without-ripple>"
+              text=" <rt-button-without-ripple class='rt-button-small rt-button-white' disabled>Подключить</rt-button-without-ripple>"
             />
           </div>
         </div>
         <div class="app-row row">
           <div class="d-inline-block rt-space-right">
             <pre-code
-              text=" <rt-button :has-icon=&quot;true&quot; class=&quot;rt-button rt-button-cool-grey-border&quot;>
-                <template slot=&quot;icon&quot;>
-                  <rt-icon type=&quot;user-silhouette&quot; width=&quot;16&quot; height=&quot;16&quot; color=&quot;101828&quot;/>
+              text=" <rt-button :has-icon='true' class='rt-button rt-button-cool-grey-border'>
+                <template slot='icon'>
+                  <rt-icon type='user-silhouette' width='16' height='16' color='101828'/>
                 </template>
-                <template slot=&quot;button-text&quot;>Подключить</template>
+                <template slot='button-text'>Подключить</template>
               </rt-button>"
             />
           </div>
@@ -295,9 +295,9 @@
         </div>
 
         <pre-code
-          text="<div class=&quot;app-row&quot;>
-            <rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button>
-            <rt-button class=&quot;rt-button-purple rt-button-md-small&quot;>Подключить</rt-button>
+          text="<div class='app-row'>
+            <rt-button class='rt-button-purple rt-button-md-small'>Подключить</rt-button>
+            <rt-button class='rt-button-purple rt-button-md-small'>Подключить</rt-button>
           </div>"
         />
 
@@ -307,33 +307,33 @@
           </p>
         </div>
         <pre-code
-          text="<div class=&quot;app-row&quot;>
-            <rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button>
-            <rt-button class=&quot;rt-button-vertical rt-button-purple&quot;>Подключить</rt-button>
+          text="<div class='app-row'>
+            <rt-button class='rt-button-vertical rt-button-purple'>Подключить</rt-button>
+            <rt-button class='rt-button-vertical rt-button-purple'>Подключить</rt-button>
           </div>"
         />
         <div class="app-row row rt-space-top">
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <pre-code
-              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
-              <span class=&quot;original-text&quot;>Подключить</span>
-              <span class=&quot;checked-text&quot;>Подключено</span>
+              text="<rt-button buttonClassList='rt-button-purple-border' :checkboxBehavior='true'>
+              <span class='original-text'>Подключить</span>
+              <span class='checked-text'>Подключено</span>
               </rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <pre-code
-              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
-              <span class=&quot;original-text&quot;>Подключить</span>
-              <span class=&quot;checked-text&quot;>Подключено</span>
+              text="<rt-button buttonClassList='rt-button-purple-border' :checkboxBehavior='true'>
+              <span class='original-text'>Подключить</span>
+              <span class='checked-text'>Подключено</span>
               </rt-button>"
             />
           </div>
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-md-space-top">
             <pre-code
-              text="<rt-button buttonClassList=&quot;rt-button-purple-border&quot; :checkboxBehavior=&quot;true&quot;>
-              <span class=&quot;original-text&quot;>Подключить</span>
-              <span class=&quot;checked-text&quot;>Подключено</span>
+              text="<rt-button buttonClassList='rt-button-purple-border' :checkboxBehavior='true'>
+              <span class='original-text'>Подключить</span>
+              <span class='checked-text'>Подключено</span>
               </rt-button>"
             />
           </div>
