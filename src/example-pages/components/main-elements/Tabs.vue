@@ -301,7 +301,7 @@
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -325,7 +325,7 @@
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -349,7 +349,7 @@
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -373,7 +373,7 @@
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -397,7 +397,7 @@
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
-                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true" class="rt-card--gradient-shadow">
                         <template slot="content">
                           <div class="row rt-space-top35 rt-md-space-top5">
                             <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -506,7 +506,7 @@
                             <div class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-td-space-top rt-md-space-top-none rt-space-right4 rt-td-space-right15 rt-md-space-right05">
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom with-icon">Таргетировать контент по полу и возрасту посетителей2</p>
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom45 with-icon">Собирать статистику по охвату и среднему времени просмотра контента</p>
-                              <div class="rt-space-top45 rt-space-bottom15 rt-md-space-bottom-none">
+                              <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
                                 <p class="rt-font-small-paragraph rt-font-bold">Абонентская плата за опцию</p>
                                 <rt-price :value='900' currency='₽' :b2b-price='true' time-interval='в месяц' :is-time-interval-bottom="true" class='color-main09'/>
                               </div>

@@ -42,22 +42,25 @@ export default {
       default: ''
     }
   },
-    computed: {
-      buttonClass() {
-        let className = 'rt-button rt-button-with-ripple';
-        if(this.isBlock) {
-          className += ' rt-button--is-block';
-        }
-        if(this.isFetched) {
-          className += ' rt-button--is-fitched';
-        }
-        className += ' ' + this.buttonClassList + '';
-        return className;
+  data: () => ({
+    hide: false
+  }),
+  computed: {
+    buttonClass() {
+      let className = 'rt-button rt-button-with-ripple';
+      if(this.isBlock) {
+        className += ' rt-button--is-block';
       }
-    },
-    mounted: function () {
-      this.isDisabled = this.$el.disabled;
-    },
+      if(this.isFetched) {
+        className += ' rt-button--is-fitched';
+      }
+      className += ' ' + this.buttonClassList + '';
+      return className;
+    }
+  },
+  mounted: function () {
+    this.hide = this.$el.disabled || this.isDisabled;
+  },
   methods: {
     triggerClick($event) {
       if(this.checkboxBehavior) {
@@ -90,7 +93,7 @@ export default {
         <label>
           <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
           <button class={this.buttonClass} onClick={this.triggerClick}>
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+            <rt-ripple notRender={this.hide} twiceRender={true}>
               {spinner}
               {this.$slots.default}
             </rt-ripple>
@@ -102,7 +105,7 @@ export default {
         return(
           <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
             {icon}
-            <rt-ripple notRender={this.isDisabled} twiceRender={true}>
+            <rt-ripple notRender={this.hide} twiceRender={true}>
               {spinner}
               {buttonTextContent}
             </rt-ripple>
@@ -111,7 +114,7 @@ export default {
       } else {
         return(
           <button onClick={this.triggerClick} class={this.buttonClass}>
-            <rt-ripple notRender={this.isDisabled} twiceRender={true} waitParentClicked={true}>
+            <rt-ripple notRender={this.hide} twiceRender={true} waitParentClicked={true}>
               {spinner}
               {this.$slots.default}
             </rt-ripple>
