@@ -68,18 +68,18 @@
 .app-wrapper
   display: flex
   min-height: 100vh
-.app__content
 
+.app__content
   flex: 1
   min-height: 100%
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property width, min-width, max-width, flex
-  @media (max-width: tablet-upper-limit)
-    max-width: 100vw
-    min-width: 100vw
-    width: 100vw
-    overflow: hidden
+  max-width: 100vw
+  min-width: 100vw
+  width: 100vw
+  overflow: hidden
+  @media (max-width: mobile-upper-limit)
     padding-top: 50px
   .app--has-open-menu &
     @media (max-width: mobile-upper-limit)
@@ -192,7 +192,7 @@
 
   &-content
     flex 1
-    padding-top 50px
+    //padding-top 50px
     padding-bottom 30px
 
   &-col-fill
@@ -428,23 +428,25 @@
 .grid
   pointer-events none
 
-  &--active
-    height 0vh
-    bottom 0
-    opacity: 1
-
-  //max-width 1320px
   height 0
   opacity: 0
   margin-left auto
   margin-right auto
-  position sticky
+  //position sticky
+  position fixed
   top 0
   bottom 100vh
   z-index 200
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property height, bottom, opacity
+  &--active
+    //height 0vh
+    bottom 0
+    opacity: 1
+    height 100vh
+    left 0
+    right 0
 
   @media (max-width: tablet-upper-limit)
     left 0px
