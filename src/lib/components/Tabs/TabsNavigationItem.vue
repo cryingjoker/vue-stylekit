@@ -60,6 +60,12 @@ export default {
   methods: {
     setActiveTabName() {
       this.RtTabs.setActiveTabName(this.name, this.anchor);
+      var currentScrollLeft = this.$el.parentNode.scrollLeft;
+      this.$el.parentNode.scrollBy({
+        top: 0,
+        left: (this.$el.offsetLeft - ((window.innerWidth - this.$el.offsetWidth)/2)) - currentScrollLeft,
+        behavior: 'smooth'
+      });
     }
   }
 };

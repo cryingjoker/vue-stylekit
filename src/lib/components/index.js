@@ -86,5 +86,6 @@
  export { default as ValidationIcon } from  './ValidationIcon/ValidationIcon.tsx';
  export { default as ReplacementLink } from './ReplacementLinkWrapper/ReplacementLink.vue';
  export { default as CardCarousel } from './Card/CardCarousel.vue';
+ export { default as CardLayout } from './Card/CardLayout.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';

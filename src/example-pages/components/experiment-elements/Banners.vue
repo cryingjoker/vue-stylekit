@@ -44,8 +44,8 @@
         </rt-banner>
     '/>
     <pre-code
-      text='<rt-banner content-height="600px"
-                       content-mobile-height="500px"
+      text='<rt-banner content-height="500px"
+                       content-mobile-height="400px"
                        :has-image-on-mobile="true">
       <rt-banner-item :is-white-color="true"
                       content-mobile-height="400px"
@@ -55,8 +55,8 @@
                       pattern-left-color="main-color"
                       pattern-right-color="error-color">
         <h1 class="rt-font-banner-label">Виртуальная <br> телефония</h1>
-        <p class="p1 rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br>
-          возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
+        <p class="p1 rt-space-top rt-space-bottom15">Быстрое подключение без трат на оборудование,<br class="md-d-none">
+          возможность пользоваться из любой точки мира <br class="md-d-none"> и ни одного пропущенного звонка клиента</p>
         <rt-button class="rt-button-orange">Подробнее</rt-button>
       </rt-banner-item>
     </rt-banner>'
@@ -182,7 +182,12 @@
                        content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
                       :is-white-color='true'>
-          <a href='#' class='rt-link-back'>Текст ссылки</a>
+          <div class='rt-link-back-wrapper'>
+            <svg width='16px' height='16px' viewBox='0 0 16 16' class='rt-vam rt-link-arrow'>
+              <path d='M 8,15 L 1,8 L 16,8 L 1,8 L 8,1' stroke='#000000' stroke-width='2' fill='none'/>
+            </svg>
+            <a href='#' class='rt-link-back'>Текст ссылки</a>
+          </div>
           <h1 class='rt-font-banner-label'>Виртуальная <br> телефония</h1>
           <p class='p1 rt-space-top rt-space-bottom15'>Быстрое подключение без трат на оборудование,<br>
             возможность пользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
