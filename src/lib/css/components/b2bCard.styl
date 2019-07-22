@@ -869,9 +869,34 @@
     .rt-col-3
       max-width 50%
       flex-basis 50%
+  &-8
+    width calc(100% / 3 * 2)
+    @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
+      width auto
+    .rt-col-3
+      max-width calc(100% / 3)
+      flex-basis calc(100% / 3)
+    .rt-col-4
+      max-width calc(50%)
+      flex-basis calc(50%)
+  &-9
+    width 75%
+    @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
+      width auto
+    .rt-col-3
+      max-width calc(100% / 3)
+      flex-basis calc(100% / 3)
+    .rt-col-4
+      max-width calc(100% / 9 * 4)
+      flex-basis calc(100% / 9 * 4)
+
 
 .specified-card-layout
   justify-content space-between
   display flex
   .rtk-carousel-slide
     padding-top 20px
+
+//.{newAppName}-col-ld-12
+//  max-width 100%
+//  flex-basis 100%

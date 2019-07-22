@@ -15,6 +15,10 @@
       width: {
         type: Number,
         default: 12
+      },
+      singleRow: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -36,20 +40,8 @@
       window.addEventListener('resize', this.specifyLayout);
     },
     updated() {
-
-//      console.log(this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes);
-//        console.log(this.$el.childNodes[2].childNodes);
-//        console.log(this.$el.childNodes[0].childNodes[0].childNodes);
-//        console.log(this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes);
-      if(this.$slots.cards && window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
-        this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
-          el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
-        })
-      } else if(this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["tablet-upper-limit"])) {
-        this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
-          el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
-        })
-      }
+      this.specifyCardClass();
+      window.addEventListener('resize', this.specifyCardClass);
     },
     methods: {
       specifyLayout(){
@@ -57,6 +49,24 @@
           this.layout = 'swiper';
         } else {
           this.layout = 'grid';
+        }
+      },
+      specifyCardClass() {
+        if(this.$slots.cards && window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
+          this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
+            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
+          });
+          this.singleRow ? this.$el.classList.add('row') : null;
+        } else if(this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
+          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
+            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
+          });
+          this.singleRow ? this.$el.classList.add('row') : null;
+        } else if(this.$slots.cards && window.innerWidth > parseInt(variables["desktop-lower-limit"])) {
+          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
+            el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
+          });
+          this.singleRow ? this.$el.classList.remove('row'): null;
         }
       }
     },
