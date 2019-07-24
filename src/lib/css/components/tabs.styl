@@ -196,15 +196,17 @@
     background-color main-color
     .rt-card__background
       height 100%
-      width calc(((100vw - 140px - 20px)/12*10)/2)
+      width calc(((100vw - 140px - 20px) / 12 * 10) / 2)
       top 0
       bottom 0
       left 0
       z-index 4
       background-position-x 0
       background-size: cover
-      @media (max-width: desktop-lower-limit)
+      @media (min-width: laptop-lower-limit)
         max-width calc(1320px/12*10/2)
+      @media (max-width: tablet-upper-limit)
+        width calc(((100vw - 20px - 20px) / 2))
       @media (max-width: mobile-upper-limit)
         width 100%
         height calc(100vw - 40px)
@@ -220,5 +222,4 @@
         @media (max-width: mobile-upper-limit)
           background linear-gradient(to bottom, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);
     .rt-card__content
-      @media (max-width: tablet-upper-limit)
-        z-index 5
+      z-index 5
