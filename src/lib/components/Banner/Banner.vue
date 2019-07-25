@@ -762,8 +762,8 @@
           return <rt-banner-paginator-item
             key={"paginator-index" + Math.random().toString(5).slice(4)}
             is-stopped={this.isStopped}
-            sleep-time={sleepTime}
-            is-pause={this.isPause}
+            sleep-time={this.isMobile ? null : sleepTime}
+            is-pause={this.isMobile ? false : this.isPause}
             index={index}
           />;
         });
