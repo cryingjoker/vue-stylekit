@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>111_Возможности-Календарь. Перенос на след.месяц</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="RTRU-2829_Help_new_main" transform="translate(-958.000000, -1561.000000)">
+            <g id="Group-5" transform="translate(938.000000, 1524.000000)">
+                <g id="111_Возможности-Календарь.-Перенос-на-след.месяц" transform="translate(20.000000, 37.000000)">
+                    <circle id="Ellipse_30" fill="#BC104B" cx="40" cy="40" r="40"></circle>
+                    <path d="M50,46.6 L52.22,48 L50,49.4 L50,46.6 L50,46.6 Z M48,43 L48,53 L56,48 L48,43 L48,43 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="36" y="47" width="12" height="2"></rect>
+                    <path d="M62,24 L62.04,58 L18,58.04 L18.04,24 L62,24 L62,24 Z M62.02,22 L18.04,22 C16.92,22 16,22.92 16,24.04 L16,58.06 C16,59.12 16.88,60 17.96,60 L62.04,60 C63.12,60 64,59.12 64,58.04 L64,23.98 C64,22.88 63.12,22 62.02,22 L62.02,22 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="54" y="18" width="2" height="10"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="48" y="18" width="2" height="10"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="42" y="18" width="2" height="10"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="36" y="18" width="2" height="10"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="30" y="18" width="2" height="10"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="24" y="18" width="2" height="10"></rect>
+                    <path d="M54,34 L54,38 L50,38 L50,34 L54,34 L54,34 Z M56,32 L48,32 L48,40 L56,40 L56,32 L56,32 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M42,34 L42,38 L38,38 L38,34 L42,34 L42,34 Z M44,32 L36,32 L36,40 L44,40 L44,32 L44,32 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M30,46 L30,50 L26,50 L26,46 L30,46 L30,46 Z M32,44 L24,44 L24,52 L32,52 L32,44 L32,44 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M30,34 L30,38 L26,38 L26,34 L30,34 L30,34 Z M32,32 L24,32 L24,40 L32,40 L32,32 L32,32 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
