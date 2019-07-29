@@ -950,9 +950,9 @@
               </div>
             </div>
             <div class="a-p__popup-costs"/>
-          </div>
-          <div class="rt-space-top2 rt-space-bottom25 rt-space-horizontal">
-            <div class="a-p__popup-benefits-list d-flex flex-row d-space-between rt-col"/>
+            <div class="rt-space-top2 rt-space-bottom25">
+              <div class="a-p__popup-benefits-list d-flex flex-row d-space-between"/>
+            </div>
           </div>
         </rt-scroll-bar>
       </template>
@@ -1059,6 +1059,7 @@
         shoveContent(parentCard, '.a-p__popup-costs', '.rt-card__popup-costs');
         document.querySelector('.a-p__popup-image').style.backgroundImage = 'url(' + parentCard.querySelector('.additional-possibilities__card-image').src + ')';
         document.querySelector('.rtb-popup-wrapper').classList.add('rtb-popup-wrapper--active');
+        document.documentElement.style.overflow = 'hidden';
       }
       function shoveContent(parentCard, destination, source) {
         document.querySelector('.rtb-popup-wrapper').querySelector(destination).innerHTML = parentCard.querySelector(source).innerHTML;

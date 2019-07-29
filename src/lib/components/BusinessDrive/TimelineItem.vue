@@ -62,7 +62,6 @@
         document.querySelector('.popup-theme').innerHTML = 'Тема: &#171;' + this.$el.querySelector('.rt-timeline__item-theme').innerHTML + '&#187;';
         document.querySelector('.popup-description').innerHTML = this.$el.querySelector('.rt-timeline__item-description').innerHTML;
         document.querySelector('.popup-reputation').innerHTML = this.$el.querySelector('.rt-timeline__item-reputation').innerHTML;
-        document.querySelector('.rtb-popup').scrollTo(0, 0);
         document.querySelector('.speaker-popup').classList.add('rtb-popup-wrapper--active');
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
