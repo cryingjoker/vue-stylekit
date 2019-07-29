@@ -1,5 +1,5 @@
 <template>
-  <div
+  <div v-if="windowWidth"
     @click="calculateSize"
     :class="'rt-scrollbar__wrapper' + ( this.classes ? ' ' + this.classes : '' )"
     ref="scrollWrapper"
@@ -30,7 +30,9 @@
       </rt-vertical-scroll-bar>
     </div>
   </div>
-
+  <div v-else>
+    <slot/>
+  </div>
 </template>
 
 <script>
@@ -65,7 +67,8 @@
         start: {
           y: 0, x: 0
         },
-        allowBodyScroll: false
+        allowBodyScroll: false,
+        windowWidth: window.innerWidth >= 1024
       }
     },
     methods: {
@@ -226,7 +229,7 @@
           this.scrollAreaHeight = elementSize.scrollAreaHeight
           this.scrollAreaWidth = elementSize.scrollAreaWidth
           // Scroll Wrapper Height and Width
-          this.scrollWrapperHeight = this.$el.closest('.rtb-popup').style.height//.scrollWrapperHeight
+          this.scrollWrapperHeight = elementSize.scrollWrapperHeight//this.$el.closest('.rtb-popup').style.height
           this.scrollWrapperWidth = elementSize.scrollWrapperWidth
           // Make sure The wrapper is Ready, then render the scrollbar
           this.ready = true
