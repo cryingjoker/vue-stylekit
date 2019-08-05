@@ -156,8 +156,8 @@
     &:after
       position absolute
       content: ''
-      width calc(100% + 40px)
-      left -40px
+      width calc(100% + 41px)
+      left -41px
       bottom 0
       background-color b2c-cool-grey
       height 2px
@@ -175,8 +175,8 @@
     &:after
       position absolute
       content: ''
-      width calc(100% + 40px)
-      left -40px
+      width calc(100% + 41px)
+      left -41px
       bottom 0
       background-color b2c-cool-grey
       height 2px
@@ -232,18 +232,22 @@
     border-bottom none
     padding-left: 0
   .rt-tabs-navigation__item-name
-    padding-left: 30px
-    padding-right: 30px
-    padding-top: 15px
-    padding-bottom: 15px
+    padding 15px 30px
     &:before
       width: 0!important
     &:hover,
     &:focus
       border-bottom-width: 0
-
+    @media (max-width tablet-upper-limit)
+      padding-left 20px
+      padding-right 20px
+    @media (max-width mobile-upper-limit)
+      padding-top 8px
+      padding-bottom 8px
   .{newAppName}-tabs-navigation
     overflow: hidden
+    &:after
+      display none
   .{newAppName}-tabs-navigation-wrapper
     overflow: hidden
     display: inline-block
@@ -251,9 +255,6 @@
     border 2px solid b2c-purple
     left 0
     width auto
-  .{newAppName}-tabs-navigation__item-name
-    padding-left: 20px
-    padding-right: 20px
   .{newAppName}-tabs-navigation__item
     background-color: transparent
     &+&
@@ -297,3 +298,17 @@
     .rt-card__content
       z-index 5
 
+.{newAppName}-dark-theme
+  .rt-tabs-navigation:after
+    background-color b2c-white07
+  .rt-tabs-navigation__item-name:hover:before,
+  .rt-tabs-navigation__item-name:focus:before,
+  .rt-tabs-navigation__item--is-active .rt-tabs-navigation__item-name:before
+    border-bottom-color b2c-orange
+  .rt-tabs--round-tablet-view .rt-tabs-navigation-wrapper
+    border-color b2c-orange
+  .rt-tabs--round-tablet-view .rt-tabs-navigation__item--is-active
+    background-color b2c-orange
+  .rt-tabs--round-tablet-view
+    .rt-tabs-navigation__item+.rt-tabs-navigation__item
+      border-color b2c-orange

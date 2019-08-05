@@ -60,9 +60,9 @@
           <pre-code
             text="<rt-tabs>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов Готов Готов Готов Готов Готов</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта Смысл сайта</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость Значимость Значимость Значимость Значимость Значимость</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл сайта</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
                 <rt-tabs-content-item name=&quot;one&quot;>
