@@ -577,8 +577,20 @@
     display block
     margin-bottom 18px
 
-//.rt-scrollbar__wrapper
-//  height 100%!important
+.rt-scrollbar__wrapper
+  //height 100%!important
+  .rtb-popup--bottom-center &
+    max-height calc(100vh - 80px)
+    @media (max-width: tablet-upper-limit)
+      max-height calc(100vh - 40px)
+    @media (max-width: mobile-upper-limit)
+      max-height calc(100vh - 20px)
+  .rtb-popup--center-center &
+      max-height 80vh
+    @media (max-width: tablet-upper-limit)
+      max-height calc(100vh - 40px)
+    @media (max-width: mobile-upper-limit)
+      max-height calc(100vh - 20px)
 
 .rt-scrollbar-transition,
 .rt-scrollbar__scrollbar-vertical

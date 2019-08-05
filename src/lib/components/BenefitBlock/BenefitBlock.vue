@@ -90,10 +90,8 @@
       specifyLayout(){
         if(window.innerWidth <= parseInt(variables["mobile-upper-limit"]) && this.swiperOnMobile){
           this.layout = 'swiper';
-//          console.log(this.layout)
         } else {
           this.layout = 'benefit';
-//          console.log(this.layout)
         }
       }
     },

@@ -145,7 +145,8 @@
   .rt-pattern-3
     svg
       position absolute
-      left calc((-1920px + 100vw) /2)
+      @media (max-width: mobile-upper-limit)
+        left 0
 
 .text-block-pattern-backing
   position relative

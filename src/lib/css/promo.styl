@@ -792,10 +792,6 @@
   &__right-arrow
     transform translateX(-50%) translateY(-50%) rotate(-90deg)
 
-.rt-container--mobile-full-width
-  padding 0
-
-
 .rt-forgame
   .rt-logo-co-branding
     height: 30px
@@ -968,8 +964,18 @@
   &-image,
   &-benefit
     flex-basis calc(50% - 10px)
+    border-radius 10px
+    padding 10px 0
     &s-list
       flex-wrap wrap
+    .rt-card__background
+      background-color light-grey
+    .rt-card
+      min-height auto
+      padding-bottom 50px
+      box-shadow none
+    .rt-card__content
+      min-height auto
   &-image
     background-repeat: no-repeat
     background-size: contain

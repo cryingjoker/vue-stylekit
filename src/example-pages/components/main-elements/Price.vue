@@ -16,6 +16,11 @@
               />
             </div>
             <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
+              <pre-code
+                text="<rt-price :show-float='true' :value='18750.32' :old-value='123.2' />"
+              />
+            </div>
+            <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
               <pre-code text="<rt-price :value='750.231' />" />
             </div>
           </div>

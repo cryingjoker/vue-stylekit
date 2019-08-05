@@ -150,10 +150,13 @@
               this.nextSlideIndex = (this.activeSlideIndex +  1) % this.parentArray.length ? this.activeSlideIndex + 1 : 0;
             }
           }
+          document.querySelector('.carousel-card--next').classList.remove('carousel-card--next');
+          document.querySelector('.carousel-card--previous').classList.remove('carousel-card--previous');
+          document.querySelector('.carousel-card--next-via-one').classList.remove('carousel-card--next-via-one');
+          document.querySelector('.carousel-card--previous-via-one').classList.remove('carousel-card--previous-via-one');
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
           this.parentArray[this.nextSlideIndex].classList.add('carousel-card--active');
-          this.parentArray[this.nextSlideIndex].classList
-            .remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
+//          this.parentArray[this.nextSlideIndex].classList.remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
           this.positionCarouselCards()
         }
       },
@@ -166,10 +169,13 @@
               this.nextSlideIndex = (this.activeSlideIndex -  1) >= 0 ? this.activeSlideIndex - 1 : this.parentArray.length - 1;
             }
           }
+          document.querySelector('.carousel-card--next').classList.remove('carousel-card--next');
+          document.querySelector('.carousel-card--previous').classList.remove('carousel-card--previous');
+          document.querySelector('.carousel-card--next-via-one').classList.remove('carousel-card--next-via-one');
+          document.querySelector('.carousel-card--previous-via-one').classList.remove('carousel-card--previous-via-one');
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
           this.parentArray[this.nextSlideIndex].classList.add('carousel-card--active');
-          this.parentArray[this.nextSlideIndex].classList
-            .remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
+//          this.parentArray[this.nextSlideIndex].classList.remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
           this.positionCarouselCards()
         }
       },

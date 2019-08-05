@@ -555,18 +555,23 @@ export default {
         if(this.discountLines === 1){
           return <div class="rtb-card__discount">
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
               <div class="rtb-card__discount-line__flag">
-                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
+                <svg width="30" height="29" viewBox="0 0 83 80" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#FCD500" fill-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
           </div>;
         }
         if(this.discountLines === 2){
           return <div class="rtb-card__discount">
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
               <div class="rtb-card__discount-line__flag">
-                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/></svg>
-                <span class="rtb-card__discount-line__flag-text rtb-card__discount-line__flag-text-2">{this.discountText}</span>
+                <svg width="30" height="29" viewBox="0 0 83 80" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#54D3B1" fill-rule="evenodd"/>
+                </svg>
               </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2" ></div>
@@ -575,9 +580,12 @@ export default {
         if(this.discountLines === 3){
           return <div class="rtb-card__discount triple">
             <div class="rtb-card__discount-line rtb-card__discount-line-1">
+              <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
               <div class="rtb-card__discount-line__flag">
-                <svg width="83" height="80" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#64DDEC" fill-rule="evenodd"/></svg></div>
-                <span class="rtb-card__discount-line__flag-text">{this.discountText}</span>
+                <svg width="30" height="29" viewBox="0 0 83 80" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h83v80l-41.45-6.884L0 80z" fill="#64DDEC" fill-rule="evenodd"/>
+                </svg>
+              </div>
             </div>
             <div class="rtb-card__discount-line rtb-card__discount-line-2"></div>
             <div class="rtb-card__discount-line rtb-card__discount-line-3"></div>
