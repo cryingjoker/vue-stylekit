@@ -15,6 +15,10 @@
         type: Boolean,
         default: false
       },
+      autoNextOnlyOnDesktop: {
+        type: Boolean,
+        default: false
+      },
       hasCustomContent: {
         type: Boolean,
         default: false
@@ -115,7 +119,7 @@
         type: Boolean,
         default: false
       },
-      fixedImage:{
+      fixedImage: {
         type: Boolean,
         default: false
       },
@@ -128,7 +132,7 @@
         default: false
       },
       switchOffTimer: {
-        type:Boolean,
+        type: Boolean,
         default: false
       },
       backgroundImageLeft: {
@@ -137,6 +141,7 @@
       }
     },
     data: () => ({
+      deviceType: 2,
       isMobile: false,
       isPause: false,
       touchstartX: null,
@@ -173,19 +178,19 @@
       },
       bannerClass() {
         let className = "rt-banner rt-banner-id__" + this.RtBanners.id || this._uid;
-        if(this.fixedImage){
-          className+=" rt-banner--fixed-image";
+        if (this.fixedImage) {
+          className += " rt-banner--fixed-image";
         }
         const activeIndex = this.RtBanners.activeIndex;
         if (this.RtBanners.items[activeIndex]) {
-          if(this.isBackgroundBanner){
+          if (this.isBackgroundBanner) {
             className += " rt-banner--has-absolute-position";
           }
           if (this.RtBanners.items[activeIndex].backgroundColor) {
             className += " rt-banner--background-" + this.RtBanners.items[activeIndex].backgroundColor;
           }
-          if(this.RtBanners.items[activeIndex].patternBackground) {
-            let bgColor = this.RtBanners.items[activeIndex].patternLeftColor.replace(/^(b2b\-)|(b2c\-)/i,'');
+          if (this.RtBanners.items[activeIndex].patternBackground) {
+            let bgColor = this.RtBanners.items[activeIndex].patternLeftColor.replace(/^(b2b\-)|(b2c\-)/i, "");
             className += " rt-banner--background-" + bgColor;
           }
           if (this.isFullscreenImage) {
@@ -200,16 +205,16 @@
           if (this.roundAngles) {
             className += " rtb-banner";
           }
-          if(this.RtBanners.items[this.RtBanners.activeIndex].isGameBannerItem){
+          if (this.RtBanners.items[this.RtBanners.activeIndex].isGameBannerItem) {
             className += " rt-banner--for-game";
           }
-          if(this.categoryBanner) {
-            className += ' rtb-banner--category';
+          if (this.categoryBanner) {
+            className += " rtb-banner--category";
           }
-          if(this.mobileImageOnTop) {
-            className += ' rt-banner--image-ontop';
+          if (this.mobileImageOnTop) {
+            className += " rt-banner--image-ontop";
           }
-          if(this.RtBanners.items[activeIndex].patternType && this.RtBanners.items[activeIndex].patternType === 3) {
+          if (this.RtBanners.items[activeIndex].patternType && this.RtBanners.items[activeIndex].patternType === 3) {
             className += " rt-banner--full-screen";
           }
         }
@@ -235,14 +240,14 @@
             styles.height = this.normalizeVariable(this.contentMobileHeight);
           }
         }
-        if(this.hasCustomHeight) {
+        if (this.hasCustomHeight) {
           styles.height = this.normalizeVariable(this.hasCustomHeight);
         }
 
         return styles;
       },
       imageClass() {
-        let className = 'rt-banner-image rt-banner-image--main';
+        let className = "rt-banner-image rt-banner-image--main";
         const activeIndex = this.RtBanners.activeIndex;
         if (
           this.RtBanners.items[activeIndex] &&
@@ -252,24 +257,24 @@
             activeIndex
             ].patternBackground;
           this.showNoTriangle = true;
-          let bgColor = '';
-          bgColor = this.RtBanners.items[activeIndex].patternTopColor.replace(/^(b2b\-)|(b2c\-)/i,'');
+          let bgColor = "";
+          bgColor = this.RtBanners.items[activeIndex].patternTopColor.replace(/^(b2b\-)|(b2c\-)/i, "");
           className += " color-block--" + bgColor + "";
         } else {
           this.showNoTriangle = false;
         }
-        if(this.transparentBackgroundImage){
-          className += " rt-banner-image--contain"
+        if (this.transparentBackgroundImage) {
+          className += " rt-banner-image--contain";
         }
-        if(this.backgroundImageLeft) {
-          className += " rt-banner-image--left"
+        if (this.backgroundImageLeft) {
+          className += " rt-banner-image--left";
         }
-        if(this.hasImageOnMobile || (!!this.RtBanners.items[activeIndex] && !!this.RtBanners.items[activeIndex].imageOnMobile)) {
-          className += " rt-banner-image--mobile-visible"
+        if (this.hasImageOnMobile || (!!this.RtBanners.items[activeIndex] && !!this.RtBanners.items[activeIndex].imageOnMobile)) {
+          className += " rt-banner-image--mobile-visible";
         }
-        if(this.RtBanners.items[activeIndex] &&
+        if (this.RtBanners.items[activeIndex] &&
           this.RtBanners.items[activeIndex].colorFillOnMobile) {
-          className += " rt-banner-image--color-fill"
+          className += " rt-banner-image--color-fill";
         }
         return className;
       },
@@ -317,6 +322,7 @@
       this.addListener();
       this.calculateScroll();
       this.calculateMobileOptions();
+      this.setDeviceType();
       this.changePatternType();
       this.changePatternTypeOnResize();
     },
@@ -444,7 +450,7 @@
         const el = this.$el;
         const deltaY = Math.max(window.innerHeight, el.offsetHeight);
         if (
-          el && typeof el.getBoundingClientRect === 'function' && (
+          el && typeof el.getBoundingClientRect === "function" && (
             el.getBoundingClientRect().top > deltaY ||
             el.getBoundingClientRect().top < -1 * deltaY
           )
@@ -591,7 +597,8 @@
         });
       },
       setStartTimer() {
-        if(!this.switchOffTimer){
+
+        if (!this.switchOffTimer) {
           const RtBanners = this.RtBanners;
           if (RtBanners && !this.isStopped && RtBanners.activeIndex >= 0) {
             if (RtBanners.timer) {
@@ -602,12 +609,17 @@
               sleepTime += 1000;
             }
             RtBanners.timer = setTimeout(() => {
-              if (!this.stopAnimation && !this.isPause) {
-                const index = (RtBanners.activeIndex + 1) % RtBanners.items.length;
-                if (this.scrollToNextImage) {
-                  this.getNextSlide();
-                } else {
-                  this.setActiveIndex(index);
+              console.info('!this.autoNextOnlyOnDesktop || this.deviceType === 1',!this.autoNextOnlyOnDesktop || this.deviceType === 1);
+              if (!this.autoNextOnlyOnDesktop || this.deviceType === 1) {
+                if (!this.stopAnimation && !this.isPause) {
+                  const index = (RtBanners.activeIndex + 1) % RtBanners.items.length;
+                  console.info('index',this.autoNextOnlyOnDesktop,index)
+                  if (this.scrollToNextImage) {
+                    this.getNextSlide();
+                  } else {
+                    this.setActiveIndex(index);
+                  }
+                  console.info('index',this.autoNextOnlyOnDesktop,index)
                 }
               }
               if (RtBanners.items.length > 1) {
@@ -713,14 +725,25 @@
         });
       },
       changePatternTypeOnResize() {
-        window.addEventListener('resize', () => {
+        window.addEventListener("resize", () => {
+          this.setDeviceType();
           this.changePatternType();
         });
       },
+      setDeviceType() {
+        if (window.innerWidth < parseInt(variables["mobile-upper-limit"])) {
+          this.deviceType = 3;
+        } else if (window.innerWidth < parseInt(variables["tablet-upper-limit"])) {
+          this.deviceType = 2;
+        } else {
+          this.deviceType = 1;
+        }
+        console.info("this.deviceType", this.deviceType);
+      },
       changePatternType() {
-        if(this.RtBanners.items[this.RtBanners.activeIndex] !== undefined &&
-          this.RtBanners.items[this.RtBanners.activeIndex].imageOnMobile !== undefined){
-          if(window.innerWidth <= parseInt(variables["mobile-upper-limit"])){
+        if (this.RtBanners.items[this.RtBanners.activeIndex] !== undefined &&
+          this.RtBanners.items[this.RtBanners.activeIndex].imageOnMobile !== undefined) {
+          if (window.innerWidth <= parseInt(variables["mobile-upper-limit"])) {
             this.RtBanners.items[this.RtBanners.activeIndex].patternType = 1;
           } else {
             this.RtBanners.items[this.RtBanners.activeIndex].patternType = 2;
@@ -745,8 +768,8 @@
       };
 
       const gradient = () => {
-        if(!!this.RtBanners.items[this.RtBanners.activeIndex] && !!this.RtBanners.items[this.RtBanners.activeIndex].backgroundImage) {
-          return <div class="rt-banner-image--mobile-gradient"></div>
+        if (!!this.RtBanners.items[this.RtBanners.activeIndex] && !!this.RtBanners.items[this.RtBanners.activeIndex].backgroundImage) {
+          return <div class="rt-banner-image--mobile-gradient"></div>;
         }
       };
 
@@ -758,6 +781,9 @@
             if (this.scrollToNextImage) {
               sleepTime += 1000;
             }
+          }
+          if (!this.autoNextOnlyOnDesktop && this.deviceType > 1) {
+            sleepTime = 0;
           }
           return <rt-banner-paginator-item
             key={"paginator-index" + Math.random().toString(5).slice(4)}
@@ -862,7 +888,7 @@
               {this.$slots.default}
             </div>
           </div>;
-        } else if(this.withoutEmptyColumn && this.withoutSecondEmptyColumn){
+        } else if (this.withoutEmptyColumn && this.withoutSecondEmptyColumn) {
           return <div class="rt-col-12">
             <div class="row">
               <div class="rt-col-6 rt-col-md-3 rt-col-td-3">
@@ -889,7 +915,8 @@
           {bannerContent()}
         </div>
         {paginator()}
-        <div style={this.imageStyle} class={this.imageClass + (this.imageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
+        <div style={this.imageStyle}
+             class={this.imageClass + (this.imageOnMobile ? " rt-banner-image--mobile-visible" : "")}>
           {leftTriangle()}
           {video()}
           {rightTriangle()}
