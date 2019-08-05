@@ -9,6 +9,13 @@
     },
     {
       "name": "rt-price",
+      "property":":show-float",
+      "type": ["Boolean"],
+      "description":"Флаг отображения плавующей точки",
+      "value" :"false"
+    },
+    {
+      "name": "rt-price",
       "property":":old-value",
       "type": ["Number"],
       "description":"Значение ценника до",
