@@ -32,6 +32,16 @@
     },
     {
       "name": "rt-banner",
+      "property": ":auto-next-only-on-desktop",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Флаг выключения автопереключения слайдов не на дектопе",
+      "value": "false",
+      "version": "0.1.43"
+    },
+    {
+      "name": "rt-banner",
       "property": ":has-custom-content",
       "type": [
         "Boolean"

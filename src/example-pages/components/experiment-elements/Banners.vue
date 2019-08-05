@@ -129,9 +129,9 @@
       <!--</rt-banner>"-->
     <!--/>-->
     <pre-code
-      text="<rt-banner :sleep-time=&quot;10000&quot;>
+      text="<rt-banner :sleep-time=&quot;10000&quot; :auto-next-only-on-desktop=&quot;true">
         <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
-          <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
+          <p class=&quot;rt-font-banner-label&quot;>Виртуальная !!!<br> телефония</p>
           <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
           <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
         </rt-banner-item>
@@ -179,6 +179,7 @@
                        :without-empty-column='true'
                        :without-second-empty-column='true'
                        justify='left'
+
                        content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
                       :is-white-color='true'>
