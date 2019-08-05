@@ -54,8 +54,7 @@ export default {
     }
   },
   render(h){
-//    let isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
-//    console.log(isMobile);
+
     const icon = ()=>{
       return <svg
           class={"color-line-paragraph-icon " + this.colorLineIconClass}

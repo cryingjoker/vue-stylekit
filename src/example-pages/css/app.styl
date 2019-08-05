@@ -33,6 +33,9 @@
     padding-left: 100px
     height: 100%
     align-items center
+    border-bottom-color transparent
+    &:after
+      display none
   .rt-tabs-navigation__item-name
     height: 48px
     &:before
@@ -103,6 +106,7 @@
   transition-timing-function ease-in-out
   transition-duration .3s
   transition-property background-color, left, right
+  z-index 8
   &:hover,
   &:focus
     background-color: main-color
