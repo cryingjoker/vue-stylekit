@@ -609,17 +609,14 @@
               sleepTime += 1000;
             }
             RtBanners.timer = setTimeout(() => {
-              console.info('!this.autoNextOnlyOnDesktop || this.deviceType === 1',!this.autoNextOnlyOnDesktop || this.deviceType === 1);
               if (!this.autoNextOnlyOnDesktop || this.deviceType === 1) {
                 if (!this.stopAnimation && !this.isPause) {
                   const index = (RtBanners.activeIndex + 1) % RtBanners.items.length;
-                  console.info('index',this.autoNextOnlyOnDesktop,index)
                   if (this.scrollToNextImage) {
                     this.getNextSlide();
                   } else {
                     this.setActiveIndex(index);
                   }
-                  console.info('index',this.autoNextOnlyOnDesktop,index)
                 }
               }
               if (RtBanners.items.length > 1) {
@@ -738,7 +735,6 @@
         } else {
           this.deviceType = 1;
         }
-        console.info("this.deviceType", this.deviceType);
       },
       changePatternType() {
         if (this.RtBanners.items[this.RtBanners.activeIndex] !== undefined &&
