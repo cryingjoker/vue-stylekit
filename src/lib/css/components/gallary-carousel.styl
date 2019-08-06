@@ -1,0 +1,127 @@
+
+figure{
+  margin: 0
+}
+
+  .rt-gallery-carousel-arrow {
+    width: 110px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 3;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .rt-gallery-carousel-arrow {
+      width: 104px;
+    }
+  }
+  .rt-gallery-carousel-arrow--left {
+    left: 0px;
+    background-image: linear-gradient(to left, rgba(16, 24, 40, 0), #272f3d);
+  }
+
+  @media (max-width: 768px) {
+    .rt-gallery-carousel-arrow--left {
+      left: 16.5vw;
+    }
+  }
+
+
+  .rt-gallery-carousel-arrow--right {
+    right: 0px;
+    background-image: linear-gradient(to right, rgba(16, 24, 40, 0), #272f3d);
+  }
+
+  @media (max-width: 768px) {
+    .rt-gallery-carousel-arrow--right {
+      left: calc(15.5vw + 100vw - 58px);
+      right: initial;
+    }
+  }
+
+  .rt-gallery-carousel-arrow__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 12px;
+    height: 20px;
+  }
+  .rt-gallery-carousel{
+    display: flex
+    flex-direction row
+  }
+
+  @media (max-width: 768px) {
+    .rt-gallery-carousel {
+      width: 141vw;
+      margin-left: -22.5vw;
+      margin-right: 0;
+    }
+  }
+
+  .rt-gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    flex-wrap: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @media (max-width: mobile-upper-limit) {
+      width: 141vw;
+      margin-left: -22.5vw;
+      margin-right: 0;
+    }
+  }
+
+  .rt-gallery-carousel:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 10%;
+
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .rt-gallery-carousel:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10%;
+    background-image: linear-gradient(to left, rgba(16, 24, 40, 0), #272f3d);
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .rt-l-bottom-scroll-arrow,
+  .game-item {
+    cursor: pointer;
+  }
+  .rt-gallery-carousel-item{
+    min-width: 12.5%;
+    max-width: 12.5%;
+    display: flex
+    padding-left: 10px
+    padding-right: 10px
+    transition-timing-function cubic-bezier(.45,.07,.46,.93)
+    transition-duration .5s
+    transition-property margin
+    @media (max-width: tablet-upper-limit) {
+      max-width: 20%;
+      min-width: 20%;
+    }
+    @media (max-width: mobile-upper-limit) {
+      max-width: 47vw;
+      min-width: 47vw;
+    }
+  }

@@ -76,7 +76,9 @@ import {
   VerticalScrollBar,
   ReplacementLink,
   CardCarousel,
-  CardLayout
+  CardLayout,
+  GalleryCarousel,
+  GalleryCarouselItem
 } from "../lib/components/index";
 
 import AppMenu from "./components/AppMenu.vue";
@@ -160,4 +162,6 @@ componentsList[ReplacementLink.name] = ReplacementLink;
 componentsList[CardCarousel.name] = CardCarousel;
 componentsList[CardLayout.name] = CardLayout;
 componentsList[Ussd.name] = Ussd.component;
+componentsList[GalleryCarousel.name] = GalleryCarousel.component;
+componentsList[GalleryCarouselItem.name] = GalleryCarouselItem.component;
 export default { ...componentsList };

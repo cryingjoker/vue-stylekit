@@ -91,7 +91,9 @@ import {
   VerticalScrollBar,
   ReplacementLink,
   CardCarousel,
-  CardLayout
+  CardLayout,
+  GalleryCarousel,
+  GalleryCarouselItem
 } from "./components";
 
 
@@ -191,6 +193,8 @@ const VueRtStyle = {
 
       // Vue.component(Carousel.name, Carousel.component);
       // Vue.component(CarouselSlide.name, CarouselSlide.component);
+      Vue.component(GalleryCarousel.name, GalleryCarousel.component);
+      Vue.component(GalleryCarouselItem.name, GalleryCarouselItem.component);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
       Vue.component(ProductCard.name, ProductCard.component);
       Vue.component(TariffCard.name, TariffCard.component);
