@@ -60,6 +60,7 @@ import TariffCard from "../components/experiment-elements/TariffCard.vue";
 import TariffCard2 from "../components/experiment-elements/TariffCard2.vue";
 import TariffCard3 from "../components/experiment-elements/TariffCard3.vue";
 import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
+import GallaryCarousel from '../components/main-elements/GallaryCarousel.vue'
 
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
@@ -87,6 +88,7 @@ const index = [
   { path: '/colors', name: 'app-colors', component: Colors.component },
   { path: '/list', name: 'app-list', component: List },
   { path: '/logo', name: 'app-logo', component: Logo },
+  { path: '/gallery-carousel', name: 'gallary-carousel', component: GallaryCarousel },
   {
     path: '/color-line-text',
     name: 'app-color-line-text',

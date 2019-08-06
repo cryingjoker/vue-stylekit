@@ -89,3 +89,6 @@
  export { default as CardLayout } from './Card/CardLayout.vue';
 
  export { default as Ussd } from './Ussd/Ussd.tsx';
+
+ export { default as GalleryCarousel } from './GalleryCarousel/GalleryCarousel.tsx';
+ export { default as GalleryCarouselItem } from './GalleryCarousel/GalleryCarouselItem.tsx';

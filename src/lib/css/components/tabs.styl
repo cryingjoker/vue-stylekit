@@ -2,7 +2,7 @@
   width 100%
   font-size 18px
   &-content
-    border-top 1px solid main-color01
+    //border-top 1px solid main-color01
     .{newAppName}-row-list__item
       padding-top vertical-space
       padding-bottom vertical-space
@@ -65,7 +65,7 @@
     text-align: center
     .{newAppName}-tabs-navigation-wrapper
       display: inline-block
-      border-bottom 1px solid main-color01
+      //border-bottom 1px solid main-color01
       height 35px
       @media (max-width: tablet-upper-limit)
         position relative
@@ -73,8 +73,10 @@
         left -20px
     .{newAppName}-tabs-navigation
       margin-bottom 30px
+      //display flex
+      //justify-content center
       @media (max-width: tablet-upper-limit)
-        width 100%
+        width auto
         margin-left 0
         margin-right 0
         overflow-y hidden!important
@@ -84,47 +86,107 @@
       border-top none
 
 .{newAppName}-tabs-navigation
-  display flex
+  display inline-flex
   flex-direction row
-  width calc(100% + 20px)
-  margin-left -(vertical-space)
-  margin-right -(vertical-space)
+  max-width 100%  //calc(100% + 20px)
+  //margin-left -(vertical-space)
+  //margin-right -(vertical-space)
   scrollbar-width: none
+  position relative
+  &:after
+    content: ''
+    position absolute
+    bottom 0
+    height 2px
+    left 0
+    width 100%
+    background-color b2c-cool-grey
   &::-webkit-scrollbar
     display: none
 
-  .rt-tabs-tablet &,
-  .rt-tabs-mobile &
-    display block
+  .rt-tabs-tablet &
+    //display block
     overflow auto
-    overflow-y hidden
+    //overflow-y hidden
     white-space nowrap
-    position relative
+    padding-left 40px
+    &:after
+      //left 40px
+      //right 0
+      display none
+  .rt-tabs-mobile &
+    //display block
+    overflow auto
+    //overflow-y hidden
+    white-space nowrap
+    padding-left 20px
+    &:after
+      //left 20px
+      //right 0
+      display none
 
 .{newAppName}-tabs-navigation-wrapper
   .rt-tabs-tablet &,
   .rt-tabs-mobile &
-    display block
-    overflow hidden
-    position relative
+    width: 100vw
+    left: calc((100% - 100vw)/2)
+    position: relative
     &::-webkit-scrollbar
       display: none
 
 .{newAppName}-tabs-navigation__item
-  padding-left vertical-space
-  padding-right vertical-space
+  //padding-left vertical-space
+  //padding-right vertical-space
   cursor pointer
+  z-index 9
+  &+&
+    margin-left 40px
 
-  .rt-tabs-tablet &,
+  .rt-tabs-tablet &
+    display inline-block
+    position relative
+    &:last-child
+      padding-right 40px
+      &:after
+        width calc(100% + 40px - 40px)
+    &:first-child
+      &:after
+        width 100%
+        left 0
+    &:after
+      position absolute
+      content: ''
+      width calc(100% + 41px)
+      left -41px
+      bottom 0
+      background-color b2c-cool-grey
+      height 2px
   .rt-tabs-mobile &
     display inline-block
+    position relative
+    &:last-child
+      padding-right 20px
+      &:after
+        width calc(100% + 40px - 20px)
+    &:first-child
+      &:after
+        width 100%
+        left 0
+    &:after
+      position absolute
+      content: ''
+      width calc(100% + 41px)
+      left -41px
+      bottom 0
+      background-color b2c-cool-grey
+      height 2px
 
 .{newAppName}-tabs-navigation__item-name
   box-sizing border-box
   text-align inherit
   border none
   outline none
-  padding-bottom horizontal-space * .5
+  padding-bottom 12px
   position relative
 
   &:before
@@ -134,13 +196,14 @@
     text-shadow 0 0 0
     border-bottom 2px solid transparent
     position absolute
-    bottom -1px
+    bottom 0
     left 0
     right 0
+    border-radius 1px
     transition-timing-function ease-in-out
     transition-duration .2s
     transition-property border, width, text-shadow
-
+    z-index 9
   &:hover,
   &:focus,
   .{newAppName}-tabs-navigation__item--is-active &
@@ -156,33 +219,44 @@
   .{newAppName}-tabs-navigation__item
     padding-left: 0
     padding-right: 0
+    &:after
+      display none
+    &:last-child
+      padding-right: 0
+    &+.{newAppName}-tabs-navigation__item
+      margin-left: 0
+      border-left 2px solid b2c-purple
   .rt-tabs-navigation
     margin-left: 0
     margin-right: 0
+    border-bottom none
+    padding-left: 0
   .rt-tabs-navigation__item-name
-    padding-left: 20px
-    padding-right: 20px
-    padding-top: 16px
-    padding-bottom: 14px
+    padding 15px 30px
     &:before
       width: 0!important
     &:hover,
     &:focus
       border-bottom-width: 0
-
+    @media (max-width tablet-upper-limit)
+      padding-left 20px
+      padding-right 20px
+    @media (max-width mobile-upper-limit)
+      padding-top 8px
+      padding-bottom 8px
   .{newAppName}-tabs-navigation
     overflow: hidden
+    &:after
+      display none
   .{newAppName}-tabs-navigation-wrapper
     overflow: hidden
     display: inline-block
-    border-radius 10px
+    border-radius 5px
     border 2px solid b2c-purple
-  .{newAppName}-tabs-navigation__item-name
-    padding-left: 20px
-    padding-right: 20px
+    left 0
+    width auto
   .{newAppName}-tabs-navigation__item
     background-color: transparent
-
     &+&
       margin-left: -1ex
   .{newAppName}-tabs-navigation__item--is-active
@@ -223,3 +297,18 @@
           background linear-gradient(to bottom, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);
     .rt-card__content
       z-index 5
+
+.{newAppName}-dark-theme
+  .rt-tabs-navigation:after
+    background-color b2c-white07
+  .rt-tabs-navigation__item-name:hover:before,
+  .rt-tabs-navigation__item-name:focus:before,
+  .rt-tabs-navigation__item--is-active .rt-tabs-navigation__item-name:before
+    border-bottom-color b2c-orange
+  .rt-tabs--round-tablet-view .rt-tabs-navigation-wrapper
+    border-color b2c-orange
+  .rt-tabs--round-tablet-view .rt-tabs-navigation__item--is-active
+    background-color b2c-orange
+  .rt-tabs--round-tablet-view
+    .rt-tabs-navigation__item+.rt-tabs-navigation__item
+      border-color b2c-orange

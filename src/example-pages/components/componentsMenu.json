@@ -82,6 +82,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "gallery carousel",
+      "title" : "GalleryCarousel",
+      "url" : "/gallery-carousel",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "inline-dropdown",
       "title" : "Inline dropdown",
       "url" : "/inline-dropdown",
