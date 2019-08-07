@@ -25,6 +25,9 @@
           </div>
           '></pre-code>
         </div>
+        <div class="rt-space-top25">
+          <documentation-builder :json="documentation" type="components" />
+        </div>
       </div>
     </div>
   </div>
@@ -33,10 +36,16 @@
 <script>
   // const componentsList = {};
   import componentsList from "../../componentsList";
+  import documentation from "../../../lib/components/Ussd/docs/index.json";
   export default {
     name: "AppSwitch",
     components: componentsList,
-    mounted() {},
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
     created() {},
     methods: {}
   };

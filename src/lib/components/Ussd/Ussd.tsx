@@ -6,28 +6,30 @@ class Ussd extends Vue {
   tel: String = "";
   @Prop({ default: null }) phone: String;
   @Prop({ default: false }) withoutLeftSpace: Boolean;
-  private hasHtml:boolean = false;
-  private telHtml:string = null;
+  @Prop({ default: 0 }) checkAfterTime: number;
+  private hasHtml: boolean = false;
+  private telHtml: string = null;
+
   mounted() {
-
-    let tel = "";
-
-    if (this.phone) {
-      tel = "tel:" + this.phone;
-    } else {
-      if (this.$slots.default[0].text) {
-        tel = "tel:" + this.$slots.default[0].text;
+    setTimeout(() => {
+      let tel = "";
+      if (this.phone) {
+        tel = "tel:" + this.phone;
       } else {
-        if (this.$el && this.$el.querySelector && this.$el.querySelector(".epc-options__value")) {
-          this.telHtml = this.$el.querySelector(".epc-options__value").innerHTML;
-          tel = "tel:" + this.telHtml;
-          this.tel = tel;
-          this.hasHtml = true;
-        }
+        if (this.$slots.default[0].text) {
+          tel = "tel:" + this.$slots.default[0].text;
+        } else {
+          if (this.$el && this.$el.querySelector && this.$el.querySelector(".epc-options__value")) {
+            this.telHtml = this.$el.querySelector(".epc-options__value").innerHTML;
+            tel = "tel:" + this.telHtml;
+            this.tel = tel;
+            this.hasHtml = true;
+          }
 
+        }
       }
-    }
-    this.tel = tel;
+      this.tel = tel;
+    }, this.checkAfterTime);
   }
 
 
@@ -51,8 +53,8 @@ class Ussd extends Vue {
       </a>;
     } else {
 
-      if(this.$slots.default[0]){
-        return <span class="d-none">{this.$slots.default[0]}</span>
+      if (this.$slots.default[0]) {
+        return <span class="d-none">{this.$slots.default[0]}</span>;
       }
       return null;
     }
