@@ -40,6 +40,14 @@ export default {
       type: String,
       default: null
     },
+    lazyLoad: {
+      type: Boolean,
+      default: true
+    },
+    lazyBackgroundImage: {
+      type: String,
+      default: null
+    },
     backgroundCover: {
       type: Boolean,
       default: false
@@ -175,7 +183,10 @@ export default {
   },
   data: () => ({
     index: null,
-    mobileLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"])
+    mobileLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"]),
+    localBackgroundImage: null,
+    localProductIcon: null,
+    localCategoryIconMobile: null
   }),
   computed: {
     cardClass() {
@@ -354,10 +365,10 @@ export default {
     cardBackgroundStyle() {
       const styles = {};
       if (this.backgroundImage && !this.backgroundImageStandAlone) {
-        styles.backgroundImage = "url(" + this.backgroundImage + ")";
+        styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
       if (this.productIcon) {
-        styles.backgroundImage = "url(" + this.productIcon + ")";
+        styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
         const backgroundSizeWidth = this.normalizeSize(
@@ -397,7 +408,7 @@ export default {
       if (this.backgroundImageStandAlone && this.backgroundImage) {
         const styles = {};
 
-        styles.backgroundImage = "url(" + this.backgroundImage + ")";
+        styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
         styles.width =
           this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgroundSizeHeight);
@@ -417,7 +428,7 @@ export default {
       const styles = {};
 
       if(this.backgroundImage) {
-        styles.backgroundImage = "url(" + this.backgroundImage + ")";
+        styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
       return styles;
     },
@@ -425,7 +436,7 @@ export default {
       const styles = {};
 
       if(this.categoryIconMobile) {
-        styles.backgroundImage = "url(" + this.categoryIconMobile + ")";
+        styles.backgroundImage = "url(" + this.localCategoryIconMobile + ")";
       }
       return styles;
     },
@@ -442,9 +453,60 @@ export default {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
     });
+    this.checkLazy()
 
   },
   methods: {
+    loadImageAsync (src, resolve, reject) {
+      let image = new Image();
+      image.src = src;
+      image.onload = function () {
+        resolve({
+          naturalHeight: image.naturalHeight,
+          naturalWidth: image.naturalWidth,
+          src: image.src
+        });
+      };
+      image.onerror = function (e) {
+        reject(e);
+      };
+    },
+    checkLazy(){
+
+        if (this.lazyLoad) {
+
+          if(this.backgroundImage) {
+            if(this.lazyBackgroundImage){
+              this.localBackgroundImage = this.lazyBackgroundImage;
+            }
+            this.loadImageAsync(this.backgroundImage, img => {
+              this.localBackgroundImage = this.backgroundImage;
+            },err=>{console.error(err)});
+          }
+          if(this.productIcon) {
+            this.loadImageAsync(this.productIcon, img => {
+              this.localProductIcon = this.productIcon;
+            });
+          }
+          if(this.categoryIconMobile) {
+            this.loadImageAsync(this.categoryIconMobile, img => {
+              this.localCategoryIconMobile = this.categoryIconMobile;
+            });
+          }
+
+        } else {
+          if(this.backgroundImage) {
+            this.localBackgroundImage = this.backgroundImage;
+          }
+          if(this.productIcon) {
+            this.localProductIcon = this.productIcon;
+          }
+          if(this.categoryIconMobile) {
+            this.localCategoryIconMobile = this.categoryIconMobile;
+          }
+        }
+
+    },
     normalizeSize(size) {
       if (typeof size === "number") {
         return size + "px";

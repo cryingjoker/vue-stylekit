@@ -927,7 +927,7 @@
             <div class="row">
               <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch is-b2c">
                 <pre-code
-                  text="<rt-card background-image='/static/example-images/cardBackground3.png' :is-white-color='true' :background-cover='true' :background-smoke='0.3'><template slot='content'><p class='rt-font-paragraph rt-space-bottom rt-font-bold'>Оплата услуг</p><rt-input value='' placeholder='телефон, email или счёт' /><p class='rt-space-top05 rt-card-text rt-space-right'>Введите номер телефона, email или номер лицевого счёта</p></template><template slot='footer'><rt-button :is-block='true' class='rt-button-small rt-button-white white-wave'>Оплатить</rt-button></template></rt-card>"
+                  text="<rt-card lazy-background-image='https://pm1.narvii.com/6871/d75902fe4db353dc19d3bbf8ae2a2f64f6c84a0dr1-1280-864v2_128.jpg' background-image='/static/example-images/cardBackground3.png' :is-white-color='true' :background-cover='true' :background-smoke='0.3'><template slot='content'><p class='rt-font-paragraph rt-space-bottom rt-font-bold'>Оплата услуг</p><rt-input value='' placeholder='телефон, email или счёт' /><p class='rt-space-top05 rt-card-text rt-space-right'>Введите номер телефона, email или номер лицевого счёта</p></template><template slot='footer'><rt-button :is-block='true' class='rt-button-small rt-button-white white-wave'>Оплатить</rt-button></template></rt-card>"
                 />
               </div>
               <div class="rt-col-3 rt-col-md-3 rt-space-top d-stretch is-b2c">
@@ -2442,6 +2442,29 @@
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 default value
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">
+              rt-card
+            </div>
+            <div class="app-documentation__name rt-col-3">
+              :lazy-background-image
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >String</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Ссылка на низкого качества картинку для lazy-load
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
               </div>
             </div>
           </div>
