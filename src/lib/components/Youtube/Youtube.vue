@@ -346,7 +346,7 @@ export default {
     const playButton = (()=>{
       if(!this.isPlaying) {
         return <div class="rt-youtube__play" onClick={this.playVideo}>
-          <svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <svg class="rt-youtube__play__icon" width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="smart-home-copy" transform="translate(-273.000000, -2232.000000)" fill="#FFFFFF"
                  fill-rule="nonzero">
@@ -359,7 +359,7 @@ export default {
         </div>;
       }else {
         return <div class="rt-youtube__pause" onClick={this.pauseVideo}>
-          <svg width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <svg class="rt-youtube__play__icon" width="9px" height="13px" viewBox="0 0 9 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="smart-home-copy" transform="translate(-273.000000, -1119.000000)" fill="#FFFFFF"
                  fill-rule="nonzero">
