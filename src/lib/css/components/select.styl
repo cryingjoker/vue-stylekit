@@ -15,12 +15,17 @@
 
   &-arrow
     position absolute
-    top 30px
+    top 0px
+    bottom: 0
+    margin-top: auto
+    margin-bottom: auto
     right 0
     transform rotate(0)
     transition-timing-function ease-in-out
     transition-duration .2s
     transition-property transform
+    width: 13px
+    height: 7px
 
     .select--is-open &
       transform rotate(180deg)
@@ -31,6 +36,8 @@
       transition-duration .2s
       transition-property opacity, fill
       fill main-color
+      position: absolute
+      top: 0
 
       .{newAppName}-dark-theme &
         fill white
@@ -47,6 +54,7 @@
     padding-top 5px
     padding-bottom 5px
     cursor pointer
+    position: relative
 
     .select--disabled &
       color main-color05
@@ -139,7 +147,10 @@
     padding 10px 10px 0
 
   .select-arrow
-    top 25px
+    top: 0
+    bottom: 0
+    margin-top: auto
+    margin-bottom: auto
     right 10px
 
   .floating-placeholder
