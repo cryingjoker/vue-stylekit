@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="app-row row">
-          <div class="rt-col-4  rt-col-md-2 rt-md-space-top">
+          <div class="rt-col-4  rt-col-md-2 rt-md-space-top d-flex flex-column">
             <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea</span>
             <rt-textarea placeholder="Textarea" />
           </div>
