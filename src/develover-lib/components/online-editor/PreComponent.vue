@@ -32,111 +32,124 @@
         </svg>
       </div>
       <pre-code-editor
-        :code="normalizeCode.template"
+        :code="normalizeCodeLocal.template"
         @change="changeComponentCode($event)"
       />
     </div>
-    <div :is="normalizeCode" class="wc-inline-render" />
+    <div :is="normalizeCode" class="wc-inline-render"/>
   </div>
 </template>
 <script>
-import PreComponentEditor from "./PreComponentEditor.vue";
+  import PreComponentEditor from "./PreComponentEditor.vue";
 
-import componentsList from "../../../example-pages/componentsList";
+  import componentsList from "../../../example-pages/componentsList";
 
-componentsList[PreComponentEditor.name] = PreComponentEditor;
-import Vue from "vue/dist/vue.js";
-export default {
-  name: "PreCode",
-  comments: componentsList,
-  components: componentsList,
-  props: {
-    text: {
-      type: String,
-      default: null
-    },
-    fullWidth: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data: () => ({
-    component: null,
-    localCode: "",
-    showCodeEditor: false
-  }),
-  computed: {
-    normalizeCode() {
-      return {
-        template: (this.localCode
-          ? this.localCode
-          : this.text.replace(/\\\{\\\{/g, "{{")
-              .replace(/rt\-template/g,'template')
-        ).replace("/{/{", "{{"),
-        components: componentsList
-      };
-    },
-    toggleClassObjects() {
-      const classObject = {};
-      if (this.showCodeEditor) {
-        classObject["pre-component__trigger--is-active"] = true;
-      }
-      return classObject;
-    }
-  },
+  componentsList[PreComponentEditor.name] = PreComponentEditor;
+  import Vue from "vue/dist/vue.js";
 
-  watch: {
-    text(value) {
-      this.localCode = this.changeComponentCode(this.text);
-    }
-  },
-
-  mounted() {
-    this.localCode = this.text.replace(/rt\-template/g,'template');
-    this.getTextAsVue();
-  },
-  methods: {
-    changeComponentCode(code) {
-      if (code) {
-        this.localCode = code.replace(/rt\-template/g,'template');
-        this.getTextAsVue();
+  export default {
+    name: "PreCode",
+    comments: componentsList,
+    components: componentsList,
+    props: {
+      text: {
+        type: String,
+        default: null
+      },
+      fullWidth: {
+        type: Boolean,
+        default: false
       }
     },
-    getTextAsVue() {
-      if (this.localCode == null) return null;
-      let options = {};
-      for (let key in this.$parent) {
+    data: () => ({
+      component: null,
+      localCode: "",
+      showCodeEditor: false
+    }),
+    computed: {
+      normalizeCode() {
+        return {
+          template: (this.localCode
+              ? this.localCode
+              : this.text.replace(/\\\{\\\{/g, "{{")
+                .replace(/rt-template/g, "template")
+          ).replace("/{/{", "{{"),
+          components: componentsList
+        };
+      },
+      normalizeCodeLocal() {
+        return {
+          template: (this.localCode
+            ? this.localCode.replace(/\\\{\\\{/g, "{{")
+              .replace(/<template/g, "<rt-template")
+              .replace(/<\/template/g, "</rt-template")
+          : this.text.replace(/\\\{\\\{/g, "{{").replace(/template/g, "rt-template")
+      ).replace("/{/{", "{{"),
+          components: componentsList
+      }
 
-        if (key.search(/(^\$)|(^\_)|(^constructor$)/) === -1) {
-          options[key] = this.$parent[key];
+      },
+      toggleClassObjects() {
+        const classObject = {};
+        if (this.showCodeEditor) {
+          classObject["pre-component__trigger--is-active"] = true;
         }
+        return classObject;
       }
-      // if(this.normalizeCode) {
-      //   Vue.use(VueRtStyle);
-      //   this.component = new Vue({
-      //     el:'.wc-inline-render',
-      //     name: 'Content',
-      //     components: preComponentsList,
-      //     template: this.normalizeCode,
-      //     data: () => {
-      //       return options
-      //     },
-      //     components: preComponentsList
-      //   });
-      // }
     },
-    close() {
-      this.showCodeEditor = false;
-    },
-    toggleShow() {
-      if (document.querySelector(".code-editor__close")) {
-        document
-          .querySelector(".code-editor__close")
-          .dispatchEvent(new Event("click"));
-      }
 
-      this.showCodeEditor = !this.showCodeEditor;
+    watch: {
+      text(value) {
+        this.localCode = this.changeComponentCode(this.text);
+      }
+    },
+
+    mounted() {
+      this.localCode = this.text.replace(/rt\-template/g, "template");
+      this.getTextAsVue();
+    },
+    methods: {
+      changeComponentCode(code) {
+        if (code) {
+          this.localCode = code.replace(/rt\-template/g, "template");
+          this.getTextAsVue();
+        }
+      },
+      getTextAsVue() {
+        if (this.localCode == null) return null;
+        let options = {};
+        for (let key in this.$parent) {
+
+          if (key.search(/(^\$)|(^\_)|(^constructor$)/) === -1) {
+            options[key] = this.$parent[key];
+          }
+        }
+        // if(this.normalizeCode) {
+        //   Vue.use(VueRtStyle);
+        //   this.component = new Vue({
+        //     el:'.wc-inline-render',
+        //     name: 'Content',
+        //     components: preComponentsList,
+        //     template: this.normalizeCode,
+        //     data: () => {
+        //       return options
+        //     },
+        //     components: preComponentsList
+        //   });
+        // }
+      },
+      close() {
+        this.showCodeEditor = false;
+      },
+      toggleShow() {
+        if (document.querySelector(".code-editor__close")) {
+          document
+            .querySelector(".code-editor__close")
+            .dispatchEvent(new Event("click"));
+        }
+
+        this.showCodeEditor = !this.showCodeEditor;
+      }
     }
-  }
-};
+  };
 </script>
