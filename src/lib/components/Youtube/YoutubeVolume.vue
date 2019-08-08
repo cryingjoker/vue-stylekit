@@ -103,7 +103,7 @@
           buttonClass += ' rt-youtube__sound-control--mute';
         }
         return <div class={buttonClass} onClick={this.muteToggle}>
-          <svg width="18px" height="13px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <svg class="rt-youtube__sound-control__icon" width="18px" height="13px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="smart-home-copy" transform="translate(-908.000000, -2230.000000)" fill="#FFFFFF"
                  fill-rule="nonzero">

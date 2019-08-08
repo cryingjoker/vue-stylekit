@@ -136,9 +136,19 @@
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity
+  width: 18px
+  height: 13px
+  position: relative
 
   &--mute
     opacity .3
+
+.rt-youtube__sound-control__icon
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
 
 .rt-youtube__volume
   display flex
@@ -261,6 +271,22 @@
   .rt-youtube-fraction:hover &
     height 4px
 
+.rt-youtube__play
+  width: 10px
+  height: 13px
+  position: relative
+.rt-youtube__pause
+  position: relative
+  width: 9px
+  height: 13px
+
+.rt-youtube__play__icon
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+
 .rt-youtube-fraction__played-line
   height 2px
   background-color b2c-orange
@@ -297,7 +323,7 @@
   color #fff
   font-size 11px
   margin-top 3px
-  margin-left horizontal-space * .5
+  margin-left 10px
   letter-spacing 1px
 
 .rt-youtube-fraction__will-be-played
