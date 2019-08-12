@@ -438,7 +438,7 @@
           this.mobileImageMaxHeight !== null
         ) {
           const isMobile =
-            window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
+            window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
             this.isMobile = isMobile;
@@ -784,8 +784,8 @@
           return <rt-banner-paginator-item
             key={"paginator-index" + Math.random().toString(5).slice(4)}
             is-stopped={this.isStopped}
-            sleep-time={sleepTime}
-            is-pause={this.isPause}
+            sleep-time={this.isMobile ? null : sleepTime}
+            is-pause={this.isMobile ? false : this.isPause}
             index={index}
           />;
         });
