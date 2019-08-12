@@ -1,4 +1,5 @@
 <script type="text/jsx">
+import variables from "../../variables.json";
 const componentsList = {};
 
 export default {
@@ -65,9 +66,29 @@ export default {
       type: String,
       default: null
     },
+    backgroundImageMobile: {
+      type: String,
+      default: null
+    },
+    backgroundImageTablet: {
+      type: String,
+      default: null
+    },
     lazyImage: {
       type: String,
       default: null
+    },
+    lazyImageMobile: {
+      type: String,
+      default: null
+    },
+    lazyImageTablet: {
+      type: String,
+      default: null
+    },
+    preloadImage: {
+      type: Boolean,
+      default: false
     },
     isWhiteColor: {
       type: Boolean,
@@ -176,6 +197,34 @@ export default {
       }
 
       return className;
+    },
+    isMobile () {
+      return window.innerWidth <= parseInt(variables["mobile-upper-limit"])
+    },
+    isTablet () {
+      return window.innerWidth >= parseInt(variables["tablet-lower-limit"]) && window.innerWidth <= parseInt(variables["tablet-upper-limit"])
+    },
+    computedBackgroundImage () {
+      let lesult
+      if (this.isMobile && this.backgroundImageMobile) {
+        lesult = this.backgroundImageMobile
+      } else if (this.isTablet && this.backgroundImageTablet) {
+        lesult = this.backgroundImageTablet
+      } else {
+        lesult = this.backgroundImage
+      }
+      return lesult
+    },
+    computedLazyImage () {
+      let lesult
+      if (this.isMobile && this.lazyImageMobile) {
+        lesult = this.lazyImageMobile
+      } else if (this.isTablet && this.lazyImageTablet) {
+        lesult = this.lazyImageTablet
+      } else {
+        lesult = this.lazyImage
+      }
+      return lesult
     }
   },
   beforeMount: function() {
@@ -185,11 +234,11 @@ export default {
         isWhiteColor: this.isWhiteColor,
         id: this.id
       };
-      if (this.backgroundImage) {
-        bannerItemData.backgroundImage = this.lazyImage || this.backgroundImage;
-        if (this.lazyImage) {
-          this.loadImageAsync(this.backgroundImage, img => {
-            bannerItemData.backgroundImage = this.backgroundImage;
+      if (this.computedBackgroundImage) {
+        bannerItemData.backgroundImage = this.computedLazyImage || this.computedBackgroundImage;
+        if (this.computedLazyImage) {
+          this.loadImageAsync(this.computedBackgroundImage, img => {
+            bannerItemData.backgroundImage = this.computedBackgroundImage;
           });
         }
       }
@@ -245,8 +294,10 @@ export default {
           }
         }
       }
-      const preloadImage = new Image();
-      preloadImage.src = this.backgroundImage;
+      if (this.preloadImage || this.computedLazyImage) {
+        const preloadImage = new Image()
+        preloadImage.src = this.computedBackgroundImage
+      }
     }
   },
   mounted () {
