@@ -66,12 +66,12 @@
           this.removePaginator();
           this.addPaginator();
           this.fixCardHeightMobile();
-          for(let i = 0; i < this.parentArray.length; i++) {
-            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
-              let activePaginatorIndex = this.getChildNumber(e.target);
-              this.mobileCarousel(activePaginatorIndex);
-            })
-          }
+//          for(let i = 0; i < this.parentArray.length; i++) {
+//            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
+//              let activePaginatorIndex = this.getChildNumber(e.target);
+//              this.mobileCarousel(activePaginatorIndex);
+//            })
+//          }
           this.mobileSwipe();
         } else {
           this.removePaginator();
@@ -112,11 +112,10 @@
           carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
         }
         carouselPaginatorWrapper.children[index].classList.add('custom-carousel__paginator-item--active');
-        this.$el.scrollBy({
-          top: 0,
-          left: (slideWidth * index + (20 * index + 20) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - this.$el.scrollLeft,
-          behavior: 'smooth'
-        });
+        let endScrollPosition = parseInt(slideWidth * index + (20 * index + 30) - ((window.innerWidth - Math.round(slideWidth)) / 2) + carouselWrapperPadding);
+        let cardGallery = this.$el;
+        let currentScroll = cardGallery.scrollLeft;
+        this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
       },
 
       positionCarouselCards() {
@@ -156,7 +155,6 @@
           document.querySelector('.carousel-card--previous-via-one').classList.remove('carousel-card--previous-via-one');
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
           this.parentArray[this.nextSlideIndex].classList.add('carousel-card--active');
-//          this.parentArray[this.nextSlideIndex].classList.remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
           this.positionCarouselCards()
         }
       },
@@ -175,44 +173,78 @@
           document.querySelector('.carousel-card--previous-via-one').classList.remove('carousel-card--previous-via-one');
           this.parentArray[this.activeSlideIndex].classList.remove('carousel-card--active');
           this.parentArray[this.nextSlideIndex].classList.add('carousel-card--active');
-//          this.parentArray[this.nextSlideIndex].classList.remove('carousel-card--next', 'carousel-card--previous', 'carousel-card--next-via-one', 'carousel-card--previous-via-one');
           this.positionCarouselCards()
         }
       },
 
       fixCardHeightMobile() {
-        let maxHeight = 0;
-        for(let i = 0; i < this.parentArray.length; i++) {
-          let cardHeight = +window.getComputedStyle(this.$el.children[i]).height.replace('px', '');
-          maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
-        }
-        for(let i = 0; i < this.parentArray.length; i++) {
-          this.$el.children[i].style.height = maxHeight + 'px';
-          this.$el.children[i].style.minHeight = maxHeight + 'px';
-        }
+        setTimeout(() => {
+          let maxHeight = 0;
+          setTimeout(() => {
+            for(let i = 0; i < this.parentArray.length; i++) {
+              let cardHeight = +window.getComputedStyle(this.$el.children[i]).height.replace('px', '');
+              maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
+            }
+            for(let i = 0; i < this.parentArray.length; i++) {
+              this.$el.children[i].style.height = maxHeight + 'px';
+              this.$el.children[i].style.minHeight = maxHeight + 'px';
+            }
+          },500);
+        }, 300);
       },
 
       mobileSwipe() {
         let carouselPaginatorWrapper = document.querySelector('.custom-carousel__paginator');
         let cardGallery = this.$el;
         let cardWidth = document.querySelector('.carousel-card').offsetWidth;
-        let timer;
-        this.$el.addEventListener('scroll',function(){
-          let activePaginatorButton = Math.floor((cardGallery.scrollLeft + cardWidth / 2) / cardWidth);
-          for(let i = 0; i < document.querySelectorAll('.carousel-card').length; i++) {
-            carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
+        let activePaginatorButton;
+        let carouselWrapperPadding = +window.getComputedStyle(document.querySelector('.custom-carousel')).paddingLeft.replace('px', '');
+        let isScrolling;
+
+        this.$el.addEventListener('scroll', () => {
+          window.clearTimeout( isScrolling );
+          isScrolling = setTimeout(() => {
+            let currentScroll = cardGallery.scrollLeft;
+            activePaginatorButton = Math.floor((currentScroll + (cardWidth / 2) + 20) / (cardWidth  + 20));
+            let endScrollPosition = parseInt(cardWidth * activePaginatorButton + (20 * activePaginatorButton + 27) - ((window.innerWidth - Math.round(cardWidth)) / 2) + carouselWrapperPadding);
+            for(let i = 0; i < document.querySelectorAll('.carousel-card').length; i++) {
+              carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
+            };
+            carouselPaginatorWrapper.children[activePaginatorButton].classList.add('custom-carousel__paginator-item--active');
+            console.log(activePaginatorButton);
+            this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
+          }, 150);
+        }, false);
+
+      },
+      mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery) {
+
+        if(currentScroll < (endScrollPosition - 1) || currentScroll > (endScrollPosition + 1)) {
+          if(currentScroll < endScrollPosition) {
+
+            let int = setInterval(function() {
+              if (currentScroll > (endScrollPosition - 20)) currentScroll += 1;
+              else if (currentScroll > (endScrollPosition - 40)) currentScroll += 3;
+              else if (currentScroll > (endScrollPosition - 80)) currentScroll += 8;
+              else if (currentScroll > (endScrollPosition - 160)) currentScroll += 18;
+              else if (currentScroll > (endScrollPosition - 200)) currentScroll += 24;
+              else if (currentScroll > (endScrollPosition - 300)) currentScroll += 40;
+              cardGallery.scrollTo(currentScroll, 0);
+              if (currentScroll >= endScrollPosition) clearInterval(int);
+            }, 5);
+          } else {
+            let int = setInterval(function() {
+              if (currentScroll < (endScrollPosition + 20)) currentScroll -= 1;
+              else if (currentScroll < (endScrollPosition + 40)) currentScroll -= 3;
+              else if (currentScroll < (endScrollPosition + 80)) currentScroll -= 8;
+              else if (currentScroll < (endScrollPosition + 160)) currentScroll -= 18;
+              else if (currentScroll < (endScrollPosition + 200)) currentScroll -= 24;
+              else if (currentScroll < (endScrollPosition + 300)) currentScroll -= 40;
+              cardGallery.scrollTo(currentScroll, 0);
+              if (currentScroll <= endScrollPosition) clearInterval(int);
+            }, 5);
           }
-          carouselPaginatorWrapper.children[activePaginatorButton].classList.add('custom-carousel__paginator-item--active');
-          clearTimeout(timer);
-          let refresh = () => {
-            cardGallery.scrollBy({
-              top: 0,
-              left: cardWidth * activePaginatorButton + (20 * (activePaginatorButton - 1) + 20) - cardGallery.scrollLeft,
-              behavior: 'smooth'
-            });
-          };
-          timer = setTimeout( refresh , 50 );
-        })
+        }
       }
     }
   }

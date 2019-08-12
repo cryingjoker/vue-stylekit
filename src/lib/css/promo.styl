@@ -708,6 +708,8 @@
       transform none
 
 .custom-carousel
+  -webkit-overflow-scrolling: touch
+  scroll-behavior: smooth
   height 560px
   width 100%
   padding 60px calc((100% - 566px) / 2)
@@ -761,8 +763,12 @@
           width 20px
           height 20px
           border 1px solid main-color
-
           box-sizing border-box
+  &__nav
+    @media(max-width: mobile-upper-limit)
+      position absolute
+      left 50%
+      bottom 0
   &__nav-item
     width 50px
     height 50px
