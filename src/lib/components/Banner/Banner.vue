@@ -438,7 +438,7 @@
           this.mobileImageMaxHeight !== null
         ) {
           const isMobile =
-            window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
+            window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
           if (this.RtBanners.isMobile !== isMobile) {
             this.RtBanners.isMobile = isMobile;
             this.isMobile = isMobile;
