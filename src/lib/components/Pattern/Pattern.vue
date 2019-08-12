@@ -65,16 +65,16 @@
         this.activeViewBox = `${minX} 0 ${width} ${height}`;
         this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
       }
-      if(this.patternType === 3) {
-        let parentBlock = this.$el.parentNode;
-        let height = parentBlock.offsetHeight;
-        let width = parentBlock.offsetWidth;
-        let windowWidth = window.innerWidth;
-        let minX = windowWidth > parseInt(variables["tablet-upper-limit"]) ? (1920 - windowWidth) / 2 : (1920 - windowWidth) / 1.5;
-        let minY = height <= 600 ? 600 - height : 0;
-        this.activeViewBox = `${minX} ${minY} ${width} ${height}`;
-        this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
-      }
+//      if(this.patternType === 3) {
+//        let parentBlock = this.$el.parentNode;
+//        let height = parentBlock.offsetHeight;
+//        let width = parentBlock.offsetWidth;
+//        let windowWidth = window.innerWidth;
+//        let minX = windowWidth > parseInt(variables["tablet-upper-limit"]) ? (1920 - windowWidth) / 2 : (1920 - windowWidth) / 1.5;
+//        let minY = height <= 600 ? 600 - height : 0;
+//        this.activeViewBox = `${minX} ${minY} ${width} ${height}`;
+//        this.$el.getElementsByTagName('svg')[0].setAttribute('viewBox', this.activeViewBox);
+//      }
     };
 
     const countOffset = () => {
@@ -114,11 +114,7 @@
 
       }
       if(this.patternType === 3) {
-        return <svg xmlns="http://www.w3.org/2000/svg"  height="100%" width="100%" >
-          <path class={"rt-pattern--" + this.mainColor.replace(/^(b2b\-)|(b2c\-)/i,'')} fill-rule="evenodd" clip-rule="evenodd" d="M0 0h1920v600H0z"/>
-          <path class={"rt-pattern--" + this.leftColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M205.7 0C554.4 159.9 891 314.3 1060.3 391.9c71.7 32.9 113.4 52 113.4 52 55.6 25.5 122.2 1.9 148.7-52.8.9-1.8 1.6-3.7 2.4-5.6l.3.2 39.7-82.3L1511.9 0H205.7z" fill-rule="evenodd" clip-rule="evenodd"/>
-          <path class={"rt-pattern--" + this.rightColor.replace(/^(b2b\-)|(b2c\-)/i,'')} d="M1920 0h-407.8l-147.7 303.7c-23.8 49-39.7 81.7-39.7 81.8l-.1.1c-.4.7-.9 1.4-1.3 2.1-.5 1-.8 2.1-1.3 3.1-26.5 54.5-93 78.1-148.6 52.7 0 0 15.6 7.1 28.7 13.1 41.1 18.8 89.7 21.6 136.1 5.2.1 0 283.4-100.5 581.5-206.3V0z" fill-rule="evenodd" clip-rule="evenodd"/>
-        </svg>
+        return null //empty digit - can be fullfilled later
       }
       if(this.patternType === 4) {
         return <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -141,7 +137,7 @@
       }
     })();
 
-    return <div class={"rt-pattern" + (this.patternType === 3 ? " rt-pattern-3" : "")}>
+    return <div class="rt-pattern">
       {patternItem}
     </div>;
   }
