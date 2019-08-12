@@ -58,6 +58,14 @@ class SlideContentVertical {
     const el = this.$el;
     const trigger = el.querySelector(`.${this.triggerClassName}`);
     const content = el.querySelector(`.${this.containerClassName}`);
+    const addActiveClass = ()=>{
+      this.activeTriggerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
+        trigger.classList.add(className);
+      });
+      this.activeContainerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
+        content.classList.add(className);
+      });
+    };
     if (trigger) {
       if (this.isActive) {
         this.activeTriggerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
@@ -67,15 +75,18 @@ class SlideContentVertical {
           content.classList.remove(className);
         });
       } else {
-        this.activeTriggerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
-          trigger.classList.add(className);
-        });
-        this.activeContainerClassName.filter(className=> className.trim().length > 0).forEach((className)=>{
-          content.classList.add(className);
-        });
+        addActiveClass();
+        setTimeout(()=>{
+          addActiveClass()
+        },500);
+        setTimeout(()=>{
+          addActiveClass()
+        },1000);
+        setTimeout(()=>{
+          addActiveClass()
+        },1500);
       }
       this.isActive = !this.isActive;
-      console.info('this.slideName',this.slideName,this);
       if(this.slideName) {
         let rtSettings = localStorage.getItem('rt-settings');
         if (rtSettings) {
