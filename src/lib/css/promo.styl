@@ -708,6 +708,8 @@
       transform none
 
 .custom-carousel
+  -webkit-overflow-scrolling: touch
+  scroll-behavior: smooth
   height 560px
   width 100%
   padding 60px calc((100% - 566px) / 2)
@@ -761,8 +763,12 @@
           width 20px
           height 20px
           border 1px solid main-color
-
           box-sizing border-box
+  &__nav
+    @media(max-width: mobile-upper-limit)
+      position absolute
+      left 50%
+      bottom 0
   &__nav-item
     width 50px
     height 50px
@@ -1084,3 +1090,11 @@
 
 .b2b-screen .rt-card
   box-shadow 0 0 5px 0 rgba(16, 24, 40, 0.2);
+.b2b-screen .rt-tabs-navigation__item:hover .rt-tabs-navigation__item-name:before,
+.b2b-screen .rt-tabs-navigation__item--is-active .rt-tabs-navigation__item-name:before
+  border-bottom-color: main-color
+.b2b-screen .flex-row
+  flex-direction row
+.b2b-screen .rt-tabs-content .rt-row-list__item
+  padding-top: 16px
+  padding-bottom: 16px

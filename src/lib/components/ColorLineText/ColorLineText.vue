@@ -14,6 +14,10 @@ export default {
     isWhiteColor: {
       type: Boolean,
       default: false
+    },
+    customType: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -38,6 +42,9 @@ export default {
       }
       if (this.fillColor) {
         className += " color-line-paragraph-icon--fill-" + this.fillColor;
+      }
+      if(this.customType) {
+        className += " color-line-wrapper--custom";
       }
       return className;
     },
