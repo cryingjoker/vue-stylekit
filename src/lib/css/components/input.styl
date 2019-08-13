@@ -11,6 +11,7 @@
   position relative
   z-index 2
   appearance field
+  position: relative
   placeholder(color main-color05, )
 
   .input--with-button &
@@ -68,6 +69,21 @@
 .{b2bAppName}-input-clear
   top 23px
   right 20px
+
+.password-icon__icon
+  position: absolute
+  width: 20px
+  height: 10px
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+.password-icon__icon-show
+  height: 12px
+
+
 .{b2bAppName}-input
   .input-element
     padding-bottom 10px
@@ -78,6 +94,9 @@
 
   .password-icon
     right 20px
+    position: relative
+
+
 
   &--hidden
     display none
