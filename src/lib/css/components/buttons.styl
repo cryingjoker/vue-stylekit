@@ -72,8 +72,10 @@
       background-color b2c-orange-low
 
     &:hover
-      background-color b2c-orange-high
-      box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      @media (hover: hover) {
+        background-color b2c-orange-high
+        box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      }
 
     &[disabled]
       color white
@@ -96,16 +98,20 @@
       background-color transparent !important
 
     &:hover
-      color b2c-orange-low
-      background-color rgba(b2c-orange, .1)
-      border-color b2c-orange-low
+      @media (hover: hover) {
+        color b2c-orange-low
+        background-color rgba(b2c-orange, .1)
+        border-color b2c-orange-low
+      }
 
     &[disabled]
       color main-color01
       border-color main-color01
 
       &:hover
-        background-color transparent
+        @media (hover: hover) {
+          background-color transparent
+        }
 
       .{newAppName}-dark-theme &
         color b2c-white03
@@ -131,8 +137,10 @@
     border 2px solid white
 
     &:hover
-      background-color b2c-cool-grey05
-      opacity .7
+      @media (hover: hover) {
+        background-color b2c-cool-grey05
+        opacity .7
+      }
 
       .{newAppName}-dark-theme &
         background-color b2c-white01
@@ -144,7 +152,9 @@
       color main-color01
 
       &:hover
-        background-color transparent
+        @media (hover: hover) {
+          background-color transparent
+        }
 
       .{newAppName}-dark-theme &
         color b2c-white03 !important
@@ -162,8 +172,10 @@
       background-color b2c-purple-low
 
     &:hover
-      background-color b2c-purple-high
-      box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      @media (hover: hover) {
+        background-color b2c-purple-high
+        box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+      }
 
     &[disabled]
       color white
@@ -196,12 +208,16 @@
         border-color b2c-white03
 
       &:hover
-        background-color transparent
+        @media (hover: hover) {
+          background-color transparent
+        }
 
     &:hover
-      color b2c-purple-low
-      background-color hsl(rgba(b2c-purple, .1))
-      border-color b2c-purple-low
+      @media (hover: hover) {
+        color b2c-purple-low
+        background-color hsl(rgba(b2c-purple, .1))
+        border-color b2c-purple-low
+      }
 
     .ripple-wave
       background-color b2c-purple-low
@@ -227,8 +243,10 @@
     border 2px solid transparent
 
     &:hover
-      background-color b2c-cool-grey05
-      opacity .7
+      @media (hover: hover) {
+        background-color b2c-cool-grey05
+        opacity .7
+      }
 
       .{newAppName}-dark-theme &
         background-color b2c-white01
@@ -240,7 +258,9 @@
       color main-color01
 
       &:hover
-        background-color transparent
+        @media (hover: hover) {
+          background-color transparent
+        }
 
       .{newAppName}-dark-theme &
         color b2c-white03 !important
@@ -254,8 +274,10 @@
     border 2px solid b2c-cool-grey
 
     &:hover
-      background-color b2c-cool-grey05
-      opacity .7
+      @media (hover: hover) {
+        background-color b2c-cool-grey05
+        opacity .7
+      }
 
       .{newAppName}-dark-theme &
         background-color b2c-white01
