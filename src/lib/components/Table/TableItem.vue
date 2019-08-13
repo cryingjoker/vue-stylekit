@@ -63,14 +63,14 @@ export default {
 
 
     return (
-      <div
+      <td
         style={style}
         colspan={this.colspan}
         class={classList}
         label={this.tableLabels[this.slotIndex]}
       >
         {this.html ? <div domPropsInnerHTML={this.html} class="rt-table-body__content"></div> : <div class="rt-table-body__content">{this.$slots.default}</div>}
-      </div>
+      </td>
     );
   }
 };

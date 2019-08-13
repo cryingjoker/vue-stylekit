@@ -26,13 +26,13 @@ export default {
       });
     };
     return (
-      <div
+      <tr
         class={
           "rt-table-body__row" + (this.fill ? " rt-table-body__row--fill" : "")
         }
       >
         {renderSlots()}
-      </div>
+      </tr>
     );
   }
 };
