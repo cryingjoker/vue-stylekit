@@ -55,7 +55,9 @@ export default {
             <thead class="rt-table-head" ref="head">
               {this.$slots.header}
             </thead>
-            {renderBodyFn()}
+            <tbody>
+              {renderBodyFn()}
+            </tbody>
           </table>
         </div>
       );
@@ -66,8 +68,9 @@ export default {
           <thead class="rt-table-head" ref="head">
             {this.$slots.header}
           </thead>
-
-          {renderBodyFn()}
+          <tbody>
+            {renderBodyFn()}
+          </tbody>
         </table>
       );
     }
