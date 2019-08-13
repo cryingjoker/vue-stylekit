@@ -59,6 +59,7 @@
             <span class="rt-font-label flex-fill rt-space-bottom05">dynamic textarea with error</span>
             <rt-textarea
               :has-error="true"
+              label="Введите комментарий:"
               placeholder="Textarea"
               error-message="textarea error message"
             />
@@ -68,6 +69,7 @@
             <span class="rt-font-label flex-fill rt-space-bottom05">dynamic disabled textarea</span>
             <rt-textarea
               :disabled="true"
+              label="Введите комментарий:"
               placeholder="Textarea"
               error-message="textarea error message"
             />
