@@ -251,6 +251,7 @@
 
   .app--has-open-menu &
     width: 200px
+    min-width: 200px
     @media (max-width: mobile-upper-limit)
       width 100vw
 .app-aside-menu__wrapper
@@ -270,7 +271,8 @@
   bottom: 0
   //align-self: flex-end
   width: calc(100% + 20px)
-  padding-right: 20px
+  //min-width: 270px
+  padding-left: 20px
   max-height: 100vh
   padding-right: 20px
   @media (min-width: mobile-upper-limit)
