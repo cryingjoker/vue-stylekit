@@ -8,6 +8,10 @@ export default {
       type: Boolean,
       default: false
     },
+    colspan: {
+      type: Number, String,
+      default: 1
+    },
     verticalAlign: {
       type: String,
       default: null
@@ -36,9 +40,9 @@ export default {
     }
 
     return (
-      <div class="rt-table-head__item" style={style}>
+      <th class="rt-table-head__item" colspan={this.colspan} style={style}>
         {this.$slots.default}
-      </div>
+      </th>
     );
   }
 };

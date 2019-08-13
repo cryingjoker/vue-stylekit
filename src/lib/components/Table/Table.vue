@@ -50,25 +50,25 @@ export default {
             {this.$slots.label}
           </p>
           {this.$slots.description}
-          <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
+          <table class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
             {columns()}
-            <div class="rt-table-head" ref="head">
+            <thead class="rt-table-head" ref="head">
               {this.$slots.header}
-            </div>
+            </thead>
             {renderBodyFn()}
-          </div>
+          </table>
         </div>
       );
     } else {
       return (
-        <div class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
+        <table class={"rt-table" + (this.tabletListType ? " rt-table--list" : "") + (this.noBorders ? " rt-table--no-borders" : "")}>
           {columns()}
-          <div class="rt-table-head" ref="head">
+          <thead class="rt-table-head" ref="head">
             {this.$slots.header}
-          </div>
+          </thead>
 
           {renderBodyFn()}
-        </div>
+        </table>
       );
     }
   }
