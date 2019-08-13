@@ -397,7 +397,7 @@
         if (this.type === "password") {
           if (!this.passwordVisibility) {
             return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
-              <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg" class="password-icon__icon">
                 <g stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
                   <path d="M3.333 1C4.838 3.687 7.06 5.031 10 5.031S15.162 3.687 16.667 1M10 7.667v1.25M14.396 6.833l.572
               1.031M5.801 6.833L5.23 7.864M17.5 4.333l.833.834M2.5 4.333l-.833.834"/>
@@ -406,7 +406,7 @@
             </div>;
           } else {
             return <div class="password-icon" onClick={this.togglePasswordVisibility}>
-              <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg">
+              <svg width="18" height="12" xmlns="http://www.w3.org/2000/svg" class="password-icon__icon password-icon__icon-show">
                 <g transform="translate(1 1)" stroke="#101828" stroke-width="2" fill="none" fill-rule="evenodd">
                   <path d="M0 5c1.805 3.225 4.472 4.837 8 4.837 3.528 0 6.195-1.612 8-4.837M0 4.837C1.805 1.612 4.472 0
                 8 0c3.528 0 6.195 1.612 8 4.837" stroke-linecap="round"/>
@@ -493,9 +493,10 @@
           {passwordIcon}
           {errorMessage}
           {arithmeticButtons}
+          {this.$slots.default}
         </div>
         {inputLabel}
-        {this.$slots.default}
+
       </div>;
     }
   };
