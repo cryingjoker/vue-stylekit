@@ -1,317 +1,317 @@
 [
   {
     "code_variable_name": "b2c-purple",
-    "label": "Palette / Purple",
+    "label": "Rostelecom Purple",
     "value": "#7700FF"
   },
   {
     "code_variable_name": "b2c-purple-low",
-    "label": "L&H/Purple_low",
+    "label": "Rostelecom Purple Low",
     "value": "#6605C6"
   },
   {
     "code_variable_name": "b2c-purple-high",
-    "label": "L&H/Purple_high",
+    "label": "Rostelecom Purple High",
     "value": "#8348FC"
   },
   {
     "code_variable_name": "b2c-red",
-    "label": "Palette / Red",
+    "label": "Rostelecom Red",
     "value": "#BC104B"
   },
   {
     "code_variable_name": "b2c-red-low",
-    "label": "L&H/Red_low",
+    "label": "Rostelecom Red Low",
     "value": "#910046"
   },
   {
     "code_variable_name": "b2c-red-high",
-    "label": "L&H/Red_ligh",
+    "label": "Rostelecom Red Ligh",
     "value": "#E22E65"
   },
   {
     "code_variable_name": "b2c-dark-blue",
-    "label": "Palette / Dark Blue",
+    "label": "Rostelecom Dark Blue",
     "value": "#273A64"
   },
   {
     "code_variable_name": "b2c-dark-blue-low",
-    "label": "L&H/Dark-blue_low",
+    "label": "Rostelecom Dark Blue Low",
     "value": "#001C45"
   },
   {
     "code_variable_name": "b2c-dark-blue-high",
-    "label": "L&H/Dark-blue_high",
+    "label": "Rostelecom Dark Blue High",
     "value": "#275392"
   },
   {
     "code_variable_name": "b2c-light-blue",
-    "label": "",
+    "label": "Rostelecom Light Blue",
     "value": "#65BBDF"
   },
   {
     "code_variable_name": "b2c-light-blue-low",
-    "label": "L&H/Blue_low",
+    "label": "Rostelecom Light Blue Low",
     "value": "#4897DF"
   },
   {
     "code_variable_name": "b2c-light-blue-high",
-    "label": "L&H/Blue_high",
+    "label": "Rostelecom Light Blue High",
     "value": "#65DEED"
   },
   {
     "code_variable_name": "b2c-yellow",
-    "label": "Palette / Yellow",
+    "label": "Rostelecom Yellow",
     "value": "#FFBE08"
   },
   {
     "code_variable_name": "b2c-yellow-low",
-    "label": "",
+    "label": "Rostelecom Yellow Low",
     "value": "#FFA307"
   },
   {
     "code_variable_name": "b2c-yellow-high",
-    "label": "L&H/Yellow_high",
+    "label": "Rostelecom Yellow High",
     "value": "#FFD800"
   },
   {
     "code_variable_name": "b2c-orange",
-    "label": "Palette / Orange",
+    "label": "Rostelecom Orange",
     "value": "#FF4F12"
   },
   {
     "code_variable_name": "b2c-orange-low",
-    "label": "L&H/Orange_low",
+    "label": "Rostelecom Orange Low",
     "value": "#D33706"
   },
   {
     "code_variable_name": "b2c-orange-high",
-    "label": "L&H/Orange_high",
+    "label": "Rostelecom Orange High",
     "value": "#FF8218"
   },
   {
     "code_variable_name": "b2c-pink",
-    "label": "Palette / Pink",
+    "label": "Rostelecom Pink",
     "value": "#FFBFC3"
   },
   {
     "code_variable_name": "b2c-pink-low",
-    "label": "L&H/Pink_low",
+    "label": "Rostelecom Pink Low",
     "value": "#FFA0A7"
   },
   {
     "code_variable_name": "b2c-pink-high",
-    "label": "L&H/Pink_high",
+    "label": "Rostelecom Pink High",
     "value": "#FFD2DD"
   },
   {
     "code_variable_name": "b2c-green",
-    "label": "Palette / Green",
+    "label": "Rostelecom Green",
     "value": "#57D9B7"
   },
   {
     "code_variable_name": "b2c-green-low",
-    "label": "L&H/Green_low",
+    "label": "Rostelecom Green Low",
     "value": "#3BBC9E"
   },
   {
     "code_variable_name": "b2c-green-high",
-    "label": "L&H/Green_high",
+    "label": "Rostelecom Green High",
     "value": "#81EBD6"
   },
   {
     "code_variable_name": "main-color",
-    "label": "Palette/Black 100",
+    "label": "Rostelecom Black",
     "value": "#101828"
   },
   {
     "code_variable_name": "main-color09",
-    "label": "",
+    "label": "Rostelecom Black 90%",
     "value": "rgba(16,24,40,0.9)"
   },
   {
     "code_variable_name": "main-color08",
-    "label": "",
+    "label": "Rostelecom Black 80%",
     "value": "rgba(16,24,40,0.8)"
   },
   {
     "code_variable_name": "main-color07",
-    "label": "",
+    "label": "Rostelecom Black 70%",
     "value": "rgba(16,24,40,0.7)"
   },
   {
     "code_variable_name": "main-color06",
-    "label": "",
+    "label": "Rostelecom Black 60%",
     "value": "rgba(16,24,40,0.6)"
   },
   {
     "code_variable_name": "main-color05",
-    "label": "",
+    "label": "Rostelecom Black 50%",
     "value": "rgba(16,24,40,0.5)"
   },
   {
     "code_variable_name": "main-color04",
-    "label": "",
+    "label": "Rostelecom Black 40%",
     "value": "rgba(16,24,40,0.4)"
   },
   {
     "code_variable_name": "main-color03",
-    "label": "",
+    "label": "Rostelecom Black 30%",
     "value": "rgba(16,24,40,0.3)"
   },
   {
     "code_variable_name": "main-color02",
-    "label": "",
+    "label": "Rostelecom Black 20%",
     "value": "rgba(16,24,40,0.2)"
   },
   {
     "code_variable_name": "main-color01",
-    "label": "",
+    "label": "Rostelecom Black 10%",
     "value": "rgba(16,24,40,0.1)"
   },
   {
     "code_variable_name": "main-color003",
-    "label": "",
+    "label": "Rostelecom Black 3%",
     "value": "rgba(16,24,40,0.03)"
   },
   {
     "code_variable_name": "main-color09-no-opacity",
-    "label": "no-opacity/Black 90",
+    "label": "Rostelecom Black 90%",
     "value": "#272F3D"
   },
   {
     "code_variable_name": "main-color07-no-opacity",
-    "label": "no-opacity/Black 70",
+    "label": "Rostelecom Black 70%",
     "value": "#575D68"
   },
   {
     "code_variable_name": "main-color05-no-opacity",
-    "label": "no-opacity/Black 50",
+    "label": "Rostelecom Black 50%",
     "value": "#868B95"
   },
   {
     "code_variable_name": "main-color03-no-opacity",
-    "label": "no-opacity/Black 30",
+    "label": "Rostelecom Black 30%",
     "value": "#B8B9C0"
   },
   {
     "code_variable_name": "main-color01-no-opacity",
-    "label": "no-opacity/Black 30",
+    "label": "Rostelecom Black 10%",
     "value": "#B8B9C0"
   },
   {
     "code_variable_name": "main-color003-no-opacity",
-    "label": "no-opacity/Black 10",
+    "label": "Rostelecom Black 3%",
     "value": "#E7E7E9"
   },
   {
     "code_variable_name": "b2c-cool-grey",
-    "label": "Palette/Cool Grey",
+    "label": "Rostelecom Cool Grey",
     "value": "#E3E8EC"
   },
   {
     "code_variable_name": "b2c-cool-grey07",
-    "label": "",
+    "label": "Rostelecom Cool Grey 70%",
     "value": "rgba(227,232,236,0.7)"
   },
   {
     "code_variable_name": "b2c-cool-grey05",
-    "label": "",
+    "label": "Rostelecom Cool Grey 50%",
     "value": "rgba(227,232,236,0.5)"
   },
   {
     "code_variable_name": "b2c-cool-grey03",
-    "label": "",
+    "label": "Rostelecom Cool Grey 30%",
     "value": "rgba(227,232,236,0.3)"
   },
   {
     "code_variable_name": "b2b-cool-grey05-no-opacity",
-    "label": "",
+    "label": "Rostelecom Cool Grey 50%",
     "value": "#F1F3F5"
   },
   {
     "code_variable_name": "b2c-purple-high05",
-    "label": "",
+    "label": "Rostelecom Purple High 50%",
     "value": "rgba(131,72,252,0.5)"
   },
   {
     "code_variable_name": "b2c-purple-high02",
-    "label": "",
+    "label": "Rostelecom Purple High 20%",
     "value": "rgba(131,72,252,0.2)"
   },
   {
     "code_variable_name": "b2c-orange-high05",
-    "label": "",
+    "label": "Rostelecom Purple High 50%",
     "value": "rgba(255,130,24,0.5)"
   },
   {
     "code_variable_name": "b2c-orange-high02",
-    "label": "",
+    "label": "Rostelecom Purple High 20%",
     "value": "rgba(255,130,24,0.2)"
   },
   {
     "code_variable_name": "b2b-state",
-    "label": "B2B/Slate",
+    "label": "Rostelecom Slate",
     "value": "#7B939B"
   },
   {
     "code_variable_name": "b2b-dark-state",
-    "label": "B2B / Dark Slate",
+    "label": "Rostelecom Dark Slate",
     "value": "#313A49"
   },
   {
     "code_variable_name": "b2b-burgundy",
-    "label": "B2B / Burgundy",
+    "label": "Rostelecom Burgundy",
     "value": "#431625"
   },
   {
     "code_variable_name": "b2c-white",
-    "label": "",
+    "label": "Rostelecom White",
     "value": "#ffffff"
   },
   {
     "code_variable_name": "b2c-white09",
-    "label": "",
+    "label": "Rostelecom White 90%",
     "value": "rgba(255,255,255, 0.9)"
   },
   {
     "code_variable_name": "b2c-white08",
-    "label": "",
+    "label": "Rostelecom White 80%",
     "value": "rgba(255,255,255, 0.8)"
   },
   {
     "code_variable_name": "b2c-white07",
-    "label": "",
+    "label": "Rostelecom White 70%",
     "value": "rgba(255,255,255, 0.7)"
   },
   {
     "code_variable_name": "b2c-white06",
-    "label": "",
+    "label": "Rostelecom White 60%",
     "value": "rgba(255,255,255, 0.6)"
   },
   {
     "code_variable_name": "b2c-white05",
-    "label": "",
+    "label": "Rostelecom White 50%",
     "value": "rgba(255,255,255, 0.5)"
   },
   {
     "code_variable_name": "b2c-white04",
-    "label": "",
+    "label": "Rostelecom White 40%",
     "value": "rgba(255,255,255, 0.4)"
   },
   {
     "code_variable_name": "b2c-white03",
-    "label": "",
+    "label": "Rostelecom White 30%",
     "value": "rgba(255,255,255, 0.3)"
   },
   {
     "code_variable_name": "b2c-white02",
-    "label": "",
+    "label": "Rostelecom White 20%",
     "value": "rgba(255,255,255, 0.2)"
   },
   {
     "code_variable_name": "b2c-white01",
-    "label": "",
+    "label": "Rostelecom White 10%",
     "value": "rgba(255,255,255, 0.1)"
   },
   {
