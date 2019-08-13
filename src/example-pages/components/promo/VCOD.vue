@@ -405,7 +405,7 @@
       </rt-use-case>
     </div>
     <iframe id="frame"></iframe>
-    <rt-real-popup>
+    <rt-real-popup :position-center="true">
       <template>
         <div class="row">
           <div class="rt-col-12 rt-col-td-6 rt-col-md-3 popup-content"></div>
@@ -455,6 +455,7 @@
           <!--})-->
         <!--}-->
       <!--}-->
+
     <!--},-->
     <!--methods: {-->
       <!--addPaginator() {-->
@@ -485,7 +486,6 @@
           <!--left: (slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding) - document.querySelector('.custom-carousel').scrollLeft,-->
           <!--behavior: 'smooth'-->
         <!--});-->
-<!--//        document.querySelector('.custom-carousel').scrollBy(slideWidth * index + (20 * index) - ((window.innerWidth - slideWidth) / 2) + carouselWrapperPadding);-->
       <!--},-->
 
       <!--positionCarouselCards() {-->
