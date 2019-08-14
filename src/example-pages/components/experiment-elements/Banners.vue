@@ -16,6 +16,8 @@
           :has-custom-content="true">
           <rt-banner-item
             background-image="/static/images/B2B/banner-img.png"
+            background-image-tablet="https://www.apple.com/v/home/ek/images/heroes/airpods-film/hero__dvsxv8smkkgi_mediumtall_2x.jpg"
+            background-image-mobile="https://www.apple.com/v/apple-arcade/c/images/overview/game_poster_thepathless__qvjhsw7g0h26_medium_2x.jpg"
             :is-white-color="true"
             background-color="b2b-dark-state">
             <div class="rtb-banner__text-content">
