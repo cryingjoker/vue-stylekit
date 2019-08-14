@@ -73,6 +73,8 @@ export default {
       isFinalSlide: false,
       isPending: true,
       isTouch: Mobile.isTouch,
+      isInnerBlock: false, // Позволяет вынести блок карусели за контейнер
+      innerBlockOffset: null,
       hSpace: 0,
       movesArr: [], // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
       toggleSlidesTimer: null,
@@ -113,6 +115,7 @@ export default {
     }
   },
   mounted() {
+    this.isInnerBlock = document.querySelector(`.${cssContainer} .${cssSelector}[data-uid="${this._uid}"]`) !== null
     if (!this.isTouch) {
       this.createMoves()
       window.addEventListener('resize', this.createMoves, { passive: true })
@@ -156,8 +159,6 @@ export default {
             }
           })
         }
-        if (distance > this.overlayEl.scrollWidth)
-          distance = this.overlayEl.scrollWidth
         if (distance < 0)
           distance = 0
         if (!this.swipingStartPoint)
@@ -199,33 +200,41 @@ export default {
      * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
      */
     createMoves () {
-      // Пересчитываем ширину контейнера
       this.isPending = true
       this.movesArr = []
+      if (this.isInnerBlock) {
+        this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
+      }
       this.isPending = false
-      let leftPadding = parseFloat(getComputedStyle(this.slidedEl).paddingLeft)
-      let leftOffset = this.slidedEl.getBoundingClientRect().left
-      this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
-      this.slides.forEach((slide, i) => {
-        if (typeof slide.width === 'function') {
-          this.movesArr.push({
-            width: slide.width(),
-            key: i
-          })
-        }
-      })
-      setTimeout(() => {
+
+      if (this.isInnerBlock) {
+        this.hSpace = this.innerBlockOffset
+      } else {
+        let leftPadding = parseFloat(getComputedStyle(this.slidedEl).paddingLeft)
+        let leftOffset = this.slidedEl.getBoundingClientRect().left
+        this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
+      }
+
+      this.$nextTick(() => {
+        this.slides.forEach((slide, i) => {
+          if (typeof slide.width === 'function') {
+            this.movesArr.push({
+              width: slide.width(),
+              key: i
+            })
+          }
+        })
         this.move()
         this.toggleSlides()
-      }, 50)
+      })
     },
     getNearbySlide (to = this.overlayEl.scrollLeft) {
       if (this.swipingStartPoint !== to) {
         let nextNav = this.swipingStartPoint <= to
         let distance = nextNav ? 0 : this.overlayEl.scrollWidth - this.hSpace * 2
         if (nextNav) {
-          this.movesArr.some((w) => {
-            if (distance + slideSwipingMinDistance >= to) {
+          this.movesArr.some(w => {
+            if (distance + slideSwipingMinDistance > to) {
               return true
             } else {
               distance += w.width
@@ -281,7 +290,7 @@ export default {
         let updateNavs = () => {
           if (!this.isTouch) {
             this.canAdvanceBackward = to > 1
-            this.isFinalSlide = this.overlayEl.scrollLeft + overlayContainerWidth + 2 >= this.overlayEl.scrollWidth
+            this.isFinalSlide = this.overlayEl.scrollLeft + overlayContainerWidth + slideSwipingMinDistance >= this.overlayEl.scrollWidth
             let navsOnlyLackOfWidth = overlayContainerWidth < slidesWidth()
             this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
           }
@@ -316,7 +325,7 @@ export default {
       if (!this.disabledScrolling && !this.isTouch) {
         let el = e.target
         this.canAdvanceBackward = el.scrollLeft > 0
-        this.isFinalSlide = el.scrollLeft + el.offsetWidth + 1 >= el.scrollWidth
+        this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
         this.canAdvanceForward = !this.isFinalSlide
         this.autoScroller()
       }
@@ -427,9 +436,12 @@ export default {
           'is-disabled-scrolling': this.disabledScrolling
         }
       ]}
+      data-uid={ this._uid }
       style={{
         marginTop: -this.offsetTop + 'px',
-        marginBottom: -this.offsetBottom + 'px'
+        marginBottom: -this.offsetBottom + 'px',
+        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
+        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
       }}
     >
       { navsBlock() }
