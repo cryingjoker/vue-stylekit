@@ -28,7 +28,14 @@ export default {
   created() {
   },
   mounted: function() {
-    this.tableLabels.push(this.$el.innerText.trim());
+    const name = this.$el.innerText.trim();
+    this.tableLabels.push(name);
+    if(this.tableLabels.length === 1 && this.tableLabels[0] === name){
+      this.tableLabels.push(name);
+    }
+    for(let i = 0; i < parseInt(this.colspan) - 1; i++ ){
+      this.tableLabels.push('');
+    }
   },
   render: function(h) {
     const style = {};
