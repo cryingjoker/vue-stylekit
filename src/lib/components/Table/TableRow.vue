@@ -11,6 +11,12 @@ export default {
       default: false
     }
   },
+  mounted(){
+    // return this.$slots.default.map(slotVNode => {
+    //   console.info('!!',slotVNode.elm);
+    // })
+
+  },
   render: function(h) {
     const renderSlots = () => {
       let counter = 0;
@@ -19,8 +25,16 @@ export default {
           slotVNode.componentOptions = slotVNode.componentOptions || {};
           slotVNode.componentOptions.propsData =
             slotVNode.componentOptions.propsData || {};
+          // for(let i in Object.keys(slotVNode)){
+          //   console.info('++',Object.keys(slotVNode)[i],slotVNode[Object.keys(slotVNode)[i]])
+          // }
+
           slotVNode.componentOptions.propsData.slotIndex = counter;
-          counter++;
+          if(slotVNode.componentOptions.propsData.colspan){
+           counter +=  slotVNode.componentOptions.propsData.colspan - 0 ;
+          }else {
+            counter++;
+          }
         }
         return slotVNode;
       });

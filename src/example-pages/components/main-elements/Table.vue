@@ -28,11 +28,9 @@
                   <rt-table-row>
                     <rt-table-item>Архангельская и Мурманская
                       область Республика Карелия</rt-table-item>
-                    <rt-table-item>Домашний интернет,
+                    <rt-table-item  colspan='3'>Домашний интернет,
                       Домашний телефон
                       Интерактивное ТВ</rt-table-item>
-                    <rt-table-item>60 дней</rt-table-item>
-                    <rt-table-item>3 дня</rt-table-item>
                     <rt-table-item>30 дней</rt-table-item>
                     <rt-table-item>7 руб./в день</rt-table-item>
                   </rt-table-row>

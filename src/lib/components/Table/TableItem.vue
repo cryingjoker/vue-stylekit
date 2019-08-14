@@ -61,13 +61,22 @@ export default {
       classList += " rt-table-body__item--inactive";
     }
 
+    console.info('this.tableLabels',this.tableLabels);
+    let slotLabel = '';
+    if(this.colspan == 1){
+      slotLabel = this.tableLabels[this.slotIndex]
+    }else{
+      for(let i = 0;  i <= this.colspan; i++){
+        slotLabel += this.tableLabels[i] + ', '
+      }
 
+    }
     return (
       <td
         style={style}
         colspan={this.colspan}
         class={classList}
-        label={this.tableLabels[this.slotIndex]}
+        label={slotLabel}
       >
         {this.html ? <div domPropsInnerHTML={this.html} class="rt-table-body__content"></div> : <div class="rt-table-body__content">{this.$slots.default}</div>}
       </td>
