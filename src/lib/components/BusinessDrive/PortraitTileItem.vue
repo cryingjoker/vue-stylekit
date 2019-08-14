@@ -30,7 +30,7 @@
       showSpeakerPopup() {
         document.querySelector('.popup-image').style.backgroundImage = 'url(' + this.$el.querySelector('.rt-portrait-tile-gallery__image').src + ')';
         document.querySelector('.popup-title').innerHTML = this.$el.querySelector('.speaker-name').innerHTML;
-        document.querySelector('.popup-theme').innerHTML = 'Тема: &#171;' + this.$el.querySelector('.rt-portrait-tile-gallery__theme').innerHTML + '&#187;';
+        document.querySelector('.popup-theme').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__theme').innerHTML;
         document.querySelector('.popup-reputation').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__item-description .rt-font-paragraph').innerHTML;
         document.querySelector('.popup-description').innerHTML = this.$el.querySelector('.rt-portrait-tile-gallery__description').innerHTML;
         document.querySelector('.speaker-popup').classList.add('rtb-popup-wrapper--active');
