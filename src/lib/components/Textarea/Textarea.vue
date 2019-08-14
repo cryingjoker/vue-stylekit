@@ -6,9 +6,10 @@
       @change="inputHandler"
       @keyup="calculateHeight"
       @input="calculateHeight"
+      :id="fieldId"
     />
-    <div v-if="outlined" class="text-field__border" ></div>
-    <div v-else class="text-field__line" ></div>
+    <div v-if="outlined" class="text-field__border"></div>
+    <div v-else class="text-field__line"></div>
     <div
       v-if="!!placeholder"
       :class="placeholderClasses"
@@ -57,6 +58,10 @@ export default {
     color: {
       type: String,
       default: "purple"
+    },
+    fieldId: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
