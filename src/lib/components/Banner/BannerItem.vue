@@ -145,88 +145,11 @@ export default {
 
   data() {
     return {
-      id: this._uid
+      id: this._uid,
+      index: null
     };
   },
 
-  computed: {
-
-    bannerItemWrapperClass(){
-      let bannerItemWrapperClass = "";
-      if(this.isGameBannerItem){
-        bannerItemWrapperClass += 'rt-banner__item-wrapper rt-banner__item-wrapper-game';
-      }
-      return bannerItemWrapperClass;
-    },
-    bannerStyle() {
-      const styles = {};
-
-      if (this.contentMinWidth !== null) {
-        styles.minWidth = this.normalizeVariable(this.contentMinWidth);
-      }
-      if (this.contentMaxWidth !== null) {
-        styles.maxWidth = this.normalizeVariable(this.contentMaxWidth);
-      }
-      if (!this.RtBanners.isMobile) {
-        if (this.contentMinHeight) {
-          styles.minHeight = this.normalizeVariable(this.contentMinHeight);
-        }
-        if (this.contentHeight) {
-          styles.height = this.normalizeVariable(this.contentHeight);
-        }
-        if (this.mobileImageMaxHeight) {
-          styles.maxHeight = this.mobileImageMaxHeight;
-        }
-      } else {
-        if (this.contentMobileMinHeight !== null) {
-          styles.minHeight = this.normalizeVariable(
-            this.contentMobileMinHeight
-          );
-        }
-        if (this.contentMobileHeight !== null) {
-          styles.height = this.normalizeVariable(this.contentMobileHeight);
-        }
-      }
-
-      return styles;
-    },
-    bannerClass() {
-      let className = " rt-banner__item-wrapper";
-      if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
-        className += " rt-banner-content--active";
-      }
-
-      return className;
-    },
-    isMobile () {
-      return window.innerWidth <= parseInt(variables["mobile-upper-limit"])
-    },
-    isTablet () {
-      return window.innerWidth >= parseInt(variables["tablet-lower-limit"]) && window.innerWidth <= parseInt(variables["tablet-upper-limit"])
-    },
-    computedBackgroundImage () {
-      let lesult
-      if (this.isMobile && this.backgroundImageMobile) {
-        lesult = this.backgroundImageMobile
-      } else if (this.isTablet && this.backgroundImageTablet) {
-        lesult = this.backgroundImageTablet
-      } else {
-        lesult = this.backgroundImage
-      }
-      return lesult
-    },
-    computedLazyImage () {
-      let lesult
-      if (this.isMobile && this.lazyImageMobile) {
-        lesult = this.lazyImageMobile
-      } else if (this.isTablet && this.lazyImageTablet) {
-        lesult = this.lazyImageTablet
-      } else {
-        lesult = this.lazyImage
-      }
-      return lesult
-    }
-  },
   beforeMount: function() {
     if (this.RtBanners) {
       this.index = this.RtBanners.items.length;
@@ -300,12 +223,111 @@ export default {
       }
     }
   },
+  computed: {
+
+    bannerItemWrapperClass(){
+      let bannerItemWrapperClass = "";
+      if(this.isGameBannerItem){
+        bannerItemWrapperClass += 'rt-banner__item-wrapper rt-banner__item-wrapper-game';
+      }
+      return bannerItemWrapperClass;
+    },
+    bannerStyle() {
+      const styles = {};
+
+      if (this.contentMinWidth !== null) {
+        styles.minWidth = this.normalizeVariable(this.contentMinWidth);
+      }
+      if (this.contentMaxWidth !== null) {
+        styles.maxWidth = this.normalizeVariable(this.contentMaxWidth);
+      }
+      if (!this.RtBanners.isMobile) {
+        if (this.contentMinHeight) {
+          styles.minHeight = this.normalizeVariable(this.contentMinHeight);
+        }
+        if (this.contentHeight) {
+          styles.height = this.normalizeVariable(this.contentHeight);
+        }
+        if (this.mobileImageMaxHeight) {
+          styles.maxHeight = this.mobileImageMaxHeight;
+        }
+      } else {
+        if (this.contentMobileMinHeight !== null) {
+          styles.minHeight = this.normalizeVariable(
+            this.contentMobileMinHeight
+          );
+        }
+        if (this.contentMobileHeight !== null) {
+          styles.height = this.normalizeVariable(this.contentMobileHeight);
+        }
+      }
+
+      return styles;
+    },
+    bannerClass() {
+      let className = " rt-banner__item-wrapper";
+      if (this.RtBanners && this.RtBanners.activeIndex === this.index) {
+        className += " rt-banner-content--active";
+      }
+
+      return className;
+    },
+
+    computedBackgroundImage () {
+      return this.computedBackgroundImageFn()
+    },
+    computedLazyImage () {
+      let lesult
+      if (this.isMobile && this.lazyImageMobile) {
+        lesult = this.lazyImageMobile
+      } else if (this.isTablet && this.lazyImageTablet) {
+        lesult = this.lazyImageTablet
+      } else {
+        lesult = this.lazyImage
+      }
+      return lesult
+    }
+  },
   mounted () {
     if (this.ga) {
       this.activateEventToLink();
     }
+    window.addEventListener('resize', ()=>{
+      let computedBackgroundImage = this.computedBackgroundImageFn();
+      if (computedBackgroundImage){
+        this.$forceUpdate()
+
+        if(this.RtBanners.items[this.index]) {
+          this.RtBanners.items[this.index].backgroundImage = computedBackgroundImage;
+
+          if (this.computedLazyImage) {
+            this.loadImageAsync(computedBackgroundImage, img => {
+              this.RtBanners.items[this.index].backgroundImage = computedBackgroundImage;
+            });
+          }
+        }
+      }
+    })
+
   },
   methods: {
+    isMobile () {
+      return window.innerWidth <= parseInt(variables["mobile-upper-limit"])
+    },
+    isTablet () {
+      return window.innerWidth >= parseInt(variables["tablet-lower-limit"]) && window.innerWidth <= parseInt(variables["tablet-upper-limit"])
+    },
+    computedBackgroundImageFn(){
+      let lesult
+      if (this.isMobile() && this.backgroundImageMobile) {
+        lesult = this.backgroundImageMobile
+      } else if (this.isTablet() && this.backgroundImageTablet) {
+        lesult = this.backgroundImageTablet
+      } else {
+        lesult = this.backgroundImage
+      }
+      return lesult
+    },
     normalizeVariable(variable) {
       if (typeof variable === "number") {
         variable += "px";
