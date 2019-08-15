@@ -252,7 +252,7 @@ export default {
             }
           })
         }
-        return distance;
+        return Number(distance.toFixed());
       } else {
         return null;
       }
