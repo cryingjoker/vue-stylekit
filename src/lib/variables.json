@@ -15,5 +15,6 @@
   "laptop-upper-limit": "1279px",
   "desktop-lower-limit": "1280px",
   "desktop-upper-limit": "1400px",
-  "large-desktop-lower-limit": "1401px"
+  "large-desktop-lower-limit": "1401px",
+  "container-upper-limit": "1480px"
 }
