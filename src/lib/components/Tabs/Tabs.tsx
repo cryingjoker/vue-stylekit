@@ -93,6 +93,9 @@ class RtTabs extends Vue {
         classNames += " rt-tabs-"+this.deviceType
       }
     }
+    if(this.positionCenter){
+      classNames += " rt-tabs--centered";
+    }
     if(this.fillContent){
       classNames += " rt-tabs--fill"
       if(this.justifyAllWidth){
