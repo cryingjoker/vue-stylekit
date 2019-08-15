@@ -116,7 +116,7 @@ class ScrollTabs extends Vue {
   }, 150);
   scrollBind = (e) => {
     const anchor = e.target.getAttribute("href").replace("#", "");
-    scrollIt(this.anchorObejects[anchor].y_start);
+    scrollIt(this.anchorObejects[anchor].y_start + 40);
     e.preventDefault();
   };
 

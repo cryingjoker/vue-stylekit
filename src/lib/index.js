@@ -129,9 +129,6 @@ const VueRtStyle = {
       Vue.component(Textarea.name, Textarea);
       Vue.component(TextareaStatic.name, TextareaStatic);
       Vue.component(ScrollTabs.name, ScrollTabs.component);
-      Vue.component(Tabs.name, Tabs);
-      Vue.component(TabsNavigationItem.name, TabsNavigationItem);
-      Vue.component(TabsContentItem.name, TabsContentItem);
       Vue.component(Annotation.name, Annotation);
       Vue.component(ColorLineText.name, ColorLineText);
       Vue.component(Card.name, Card);
@@ -193,6 +190,9 @@ const VueRtStyle = {
 
       // Vue.component(Carousel.name, Carousel.component);
       // Vue.component(CarouselSlide.name, CarouselSlide.component);
+      Vue.component(Tabs.name, Tabs.component);
+      Vue.component(TabsContentItem.name, TabsContentItem.component);
+      Vue.component(TabsNavigationItem.name, TabsNavigationItem.component);
       Vue.component(GalleryCarousel.name, GalleryCarousel.component);
       Vue.component(GalleryCarouselItem.name, GalleryCarouselItem.component);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);
@@ -218,6 +218,7 @@ const VueRtStyle = {
     }
   }
 };
+console.info('Tabs',Tabs);
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 

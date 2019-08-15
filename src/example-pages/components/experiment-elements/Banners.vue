@@ -181,10 +181,11 @@
                        :without-empty-column='true'
                        :without-second-empty-column='true'
                        justify='left'
-
+                       :mobile-image-on-top='true'
                        content-mobile-height='500px'>
       <rt-banner-item background-image='/static/images/B2B/test-image.png'
-                      :is-white-color='true'>
+                      :is-white-color='true'
+                      background-color='main-color'>
           <div class='rt-link-back-wrapper'>
             <svg width='16px' height='16px' viewBox='0 0 16 16' class='rt-vam rt-link-arrow'>
               <path d='M 8,15 L 1,8 L 16,8 L 1,8 L 8,1' stroke='#000000' stroke-width='2' fill='none'/>
