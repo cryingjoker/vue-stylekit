@@ -1,20 +1,22 @@
 .{b2bAppName}-popup-wrapper
   //display none
   position fixed
-  top -100vh
+  top 0
   left 0
   right 0
   bottom 0
   width 100vw
   height 100vh
-  z-index 999
-  transition top .4s ease-in-out, background-color .4s .6s linear
+  //z-index 999
+  transition background-color .4s .6s linear
   opacity 0
-  background-color: transparent
+  background-color transparent
+  z-index -1
   &--active
     background-color rgba(255, 255, 255, .75)
-    top 0
+    //top 0
     opacity 1
+    z-index 999
     .{b2bAppName}-popup
       &--center-center
         transform translateY(-50%)
@@ -51,7 +53,9 @@
   box-sizing border-box
   box-shadow 0 20px 30px rgba(main-color, .2)
   overflow-y auto
-  bottom 100vh
+  //bottom 100vh
+  top -100vh
+  transition top .4s ease-in-out
   .popup-content
     @media (max-width: tablet-upper-limit)
       padding-bottom: 100px

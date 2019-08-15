@@ -18,10 +18,11 @@ class Price extends Vue {
   @Prop({ default: false }) b2bPrice: boolean;
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
-
+  localValue:number = 0
+  cost:number = 0;
   //todo сделать проверку системного языка с заменой . , у double данных
   normalizeValue: string = this.showFloat ?
-    parseFloat(this.value.toString()).toString().split('.').map((item,index)=>{
+    parseFloat(this.cost.toString()).toString().split('.').map((item,index)=>{
       if(index === 0){
         item=item.replace(
           /(\d)(?=(\d\d\d)+([^\d]|$))/g,
@@ -53,21 +54,22 @@ class Price extends Vue {
 
   @Watch("value", { immediate: true, deep: true })
   onValueChanged(val: number | string, oldVal: number | string) {
-
-
-    this.normalizeValue = this.showFloat ?
-      parseFloat(val.toString()).toString().split('.').map((item,index)=>{
-        if(index === 0){
-          item=item.replace(
-            /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            "$1 "
-          )
-        }
-        return item
-      }).join(',') : parseInt(val.toString(), 10).toString().replace(
-      /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-      "$1 "
-      ).trim()
+    this.$nextTick(()=>{
+      this.localValue = this.cost || parseFloat(val.toString());
+      this.normalizeValue = this.showFloat ?
+        parseFloat(this.localValue.toString()).toString().split('.').map((item,index)=>{
+          if(index === 0){
+            item=item.replace(
+              /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+              "$1 "
+            )
+          }
+          return item
+        }).join(',') : parseInt(this.localValue.toString(), 10).toString().replace(
+        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+        "$1 "
+        ).trim()
+    })
   }
 
   @Watch("oldValue", { immediate: true, deep: true })
@@ -97,9 +99,10 @@ class Price extends Vue {
   onTimeIntervalChanged(val: string, oldVal: string) {
     this.normalizeTimeInterval = val;
   }
-
   mounted() {
-
+    console.info('this.value',this.value);
+    this.cost = this.$slots['default'] && parseFloat(this.$slots['default'][0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
+    console.info('this.cost',this.cost);
   }
 
   render(h: CreateElement): VNode {

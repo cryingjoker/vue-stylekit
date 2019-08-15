@@ -481,7 +481,9 @@ export default {
             }
             this.loadImageAsync(this.backgroundImage, img => {
               this.localBackgroundImage = this.backgroundImage;
-            },err=>{console.error(err)});
+            },err=>{
+//              console.error(err)
+            });
           }
           if(this.productIcon) {
             this.loadImageAsync(this.productIcon, img => {
