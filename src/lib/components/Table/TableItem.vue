@@ -61,7 +61,6 @@ export default {
       classList += " rt-table-body__item--inactive";
     }
 
-    console.info('this.tableLabels',this.tableLabels);
     let slotLabel = '';
     if(this.colspan == 1){
       slotLabel = this.tableLabels[this.slotIndex]
