@@ -33,7 +33,7 @@ let Animate = {
         startTime = startTime || timestamp
         let timeElapsedSinceStart = timestamp - startTime
         let progress = timeElapsedSinceStart / opt.duration
-        let safeProgress = Math.min(progress.toFixed(2), 1)
+        let safeProgress = Math.min(Number(progress.toFixed(2)), 1)
         if (safeProgress >= 1) {
           opt.draw(opt.timing(1), rId)
           Animate.stop(rId)
