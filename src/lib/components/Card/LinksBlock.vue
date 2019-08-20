@@ -63,7 +63,7 @@ export default {
         let linksLayout = '';
         this.iconArray.forEach((el)=> {
           let link = `${this.sourceDirectory}${el}.svg`;
-          linksLayout += (`<div class="rtb-card__social-link"><img src=${link}/></div>`)
+          linksLayout += (`<div class="rtb-card__social-link"><img src=${link} title=${el} /></div>`)
         });
         this.$el.children[0].innerHTML = linksLayout;
       }
