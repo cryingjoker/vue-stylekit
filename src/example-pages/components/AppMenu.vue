@@ -126,6 +126,7 @@
               <div class="rt-space-horizontal rt-space-bottom app-aside-menu__search">
                 <rt-input ref="input" placeholder="Seacrh" onInput={this.changeSearchParams} onKeydown={this.checkKeydown}></rt-input>
               </div>
+              {renderList(componentsMenu.list)}
             </div>
           </div>
         </div>
