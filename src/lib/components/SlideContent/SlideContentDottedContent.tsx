@@ -1,7 +1,5 @@
 import Vue, { CreateElement, VNode } from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import color from "../../color.json";
-import { IColor } from "../../colorInterface";
 
 @Component
 class SlideContentDottedContent extends Vue {

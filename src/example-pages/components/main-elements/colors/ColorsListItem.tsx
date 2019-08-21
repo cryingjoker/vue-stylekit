@@ -1,5 +1,5 @@
 import Vue, { CreateElement, VNode } from "vue";
-import { Component, Prop, Watch} from "vue-property-decorator";
+import { Component, Prop} from "vue-property-decorator";
 import {IColorListItem} from "./IColorList";
 
 

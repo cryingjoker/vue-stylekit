@@ -1,9 +1,9 @@
 import Vue, { CreateElement, VNode } from "vue";
-import { Component, Prop } from "vue-property-decorator";
+import { Component } from "vue-property-decorator";
 import ColorItem from "./ColorsListItem.tsx";
 import colors from "../../../../lib/colorFullDocs.json";
 
-import { IColorListItem, IColorList, IRGBA } from "./IColorList";
+import { IColorList } from "./IColorList";
 import colorListSettings from "./colorListSettings.json";
 
 const componentsList = {};
