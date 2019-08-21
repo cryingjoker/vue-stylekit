@@ -73,14 +73,15 @@
 
   &__links-block
     display inline-block
-    max-width 175px
+    max-width calc(100% - 42px)
     max-height 26px
     overflow hidden
     vertical-align middle
-    margin-right 5px
+    //margin-right 5px
 
     &--expanded
       max-height none
+      max-width none
 
       & + .rtb-card__expand-button
         display none
@@ -93,27 +94,27 @@
       margin-top 5px
 
   &__social-link
-    margin-bottom 6px
-    size(26px)
+    margin-bottom 9px
+    width 26px
+    height 26px
     display inline-block
     vertical-align middle
+    margin-right 6px
 
-    &+&
-      margin-left 6px
+    //&:nth-child(6n)
+    //  margin-left 0
 
-    &:nth-child(6n)
-      margin-left 0
-
-    &:nth-child(5+n)
+    &--hidden
       display none
 
   &__expand-button
     color b2c-purple
     font-size 14px
     line-height 28px
-    margin-left 5px
+    //margin-left 5px
     vertical-align middle
     cursor pointer
+    min-width 41px
 
   .{newAppName}-card__content
     min-height auto
@@ -897,3 +898,8 @@
   display flex
   .rtk-carousel-slide
     padding-top 20px
+
+.links-block
+  @media (min-width laptop-lower-limit)
+    display flex
+    justify-content space-between
