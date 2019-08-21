@@ -27,9 +27,6 @@ import {
   Textarea,
   TextareaStatic,
   ScrollTabs,
-  Tabs,
-  TabsNavigationItem,
-  TabsContentItem,
   Annotation,
   ColorLineText,
   Banner,
@@ -77,6 +74,9 @@ import {
   UnWrapper,
   RealPopup,
   Ussd,
+  Tabs,
+  TabsNavigationItem,
+  TabsContentItem,
   UseCase,
   ProductCard,
   ValidationIcon,
@@ -205,7 +205,6 @@ const VueRtStyle = {
       Vue.directive(SwipeLeft.name, SwipeLeft);
       Vue.directive(SwipeRight.name, SwipeRight);
 
-      Vue.directive(Ussd.name, Ussd);
 
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
       Vue.directive(
@@ -218,7 +217,6 @@ const VueRtStyle = {
     }
   }
 };
-console.info('Tabs',Tabs);
 // VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective, FilterCallerDirective};
 VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 

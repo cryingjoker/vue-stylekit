@@ -8,7 +8,7 @@ class Ussd extends Vue {
   @Prop({ default: false }) withoutLeftSpace: Boolean;
   @Prop({ default: 0 }) checkAfterTime: number;
   private hasHtml: boolean = false;
-  private telHtml: string = null;
+  private telHtml: string = '';
 
   mounted() {
     setTimeout(() => {
@@ -53,7 +53,7 @@ class Ussd extends Vue {
       </a>;
     } else {
 
-      if (this.$slots.default[0]) {
+      if (this.$slots && this.$slots.default && this.$slots.default[0]) {
         return <span class="d-none">{this.$slots.default[0]}</span>;
       }
       return null;

@@ -8,12 +8,18 @@
     ],
     "target": "es6",
     "module": "es6",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./libs/types/",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "jsx": "preserve",
+    "jsxFactory": "h",
     "resolveJsonModule": true
   }
 }

@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import VueRtStyle from "../lib/index";
+// import VueRtStyle from "../../lib/vue-rt-style";
 import VueRtDevStyle from "../develover-lib/index";
 import routes from "./router";
 import RootPage from "./components/App.vue";

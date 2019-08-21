@@ -1,5 +1,5 @@
 import Vue, { CreateElement, VNode } from "vue";
-import { Component, Prop, Watch } from "vue-property-decorator";
+import { Component} from "vue-property-decorator";
 
 @Component
 class GalleryCarouselItem extends Vue {

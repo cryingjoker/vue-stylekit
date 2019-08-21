@@ -3,10 +3,6 @@ import { Component, Prop } from "vue-property-decorator";
 import { debounce } from 'ts-debounce';
 import { scrollIt } from "../../utils";
 
-import color from "../../color.json";
-import { IColor } from "../../colorInterface";
-
-const componentsList = {};
 
 
 @Component
@@ -143,12 +139,10 @@ class ScrollTabs extends Vue {
     const resizeSize = debounce(()=> {
       const parentNode:any= this.fixedNode.parentNode
       const fixedNodeTop =parentNode.getBoundingClientRect().top - this.fixedNode.offsetHeight + (window.pageYOffset || document.documentElement.scrollTop) - this.fixedNodeTop;
-      console.info('fixedNodeTop',fixedNodeTop)
       if(window.pageYOffset || document.documentElement.scrollTop > fixedNodeTop){
         this.removeFixedElementStyle()
       }
       this.fixedNodeHeight = this.fixedNode.offsetHeight;
-      let topPadding = 0
       if(this.fixedNodeParent.style.paddingTop){
         this.fixedNodeHeight += parseInt(this.fixedNodeParent.style.paddingTop)
       }

@@ -75,14 +75,13 @@
   min-height: 100%
   transition-timing-function ease-in-out
   transition-duration .3s
-  transition-property width, min-width, max-width, flex
-  max-width: 100vw
-  min-width: 100vw
+  transition-property width, min-width, max-width, flex, max-width, left
   width: 100vw
   overflow: hidden
   //@media (max-width: mobile-upper-limit)
   //  padding-top: 50px
   .app--has-open-menu &
+    width: calc(100vw - 200px)
     @media (max-width: mobile-upper-limit)
       flex: 0
       width: 0
@@ -250,7 +249,7 @@
 
 
   .app--has-open-menu &
-    width: 200px
+    min-width: 200px
     @media (max-width: mobile-upper-limit)
       width 100vw
 .app-aside-menu__wrapper
@@ -443,7 +442,9 @@
   z-index 200
   transition-timing-function ease-in-out
   transition-duration .3s
-  transition-property height, bottom, opacity
+  transition-property height, bottom, opacity, left
+  .app--has-open-menu &
+    left: 200px
   &--active
     //height 0vh
     bottom 0

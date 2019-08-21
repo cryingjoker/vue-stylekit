@@ -1,9 +1,6 @@
 import Vue, { CreateElement, VNode } from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import color from "../../color.json";
-import { IColor } from "../../colorInterface";
 
-const componentsList = {}
 
 
 @Component
@@ -27,7 +24,7 @@ class SlideContent extends Vue {
 
       const header: any = this.$refs.header
       header.$el.querySelectorAll('.rt-slide-content-trigger').forEach((el)=> {
-        el.addEventListener('click', (e) => {
+        el.addEventListener('click', () => {
           this.isOpenLocal = !this.isOpenLocal;
           window.getSelection().removeAllRanges();
           setTimeout(()=>{

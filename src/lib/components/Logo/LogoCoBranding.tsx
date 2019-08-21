@@ -1,9 +1,7 @@
 import Vue, { CreateElement, VNode } from "vue";
-import { Component, Prop } from "vue-property-decorator";
-import defaultValues from "../../defaultIconsSize.json";
+import { Component} from "vue-property-decorator";
 import {listOfLogos} from "./logoItems/index.ts";
 
-import colors from "../../color.json";
 
 const componentList = listOfLogos;
 

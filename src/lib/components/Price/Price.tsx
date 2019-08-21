@@ -53,7 +53,7 @@ class Price extends Vue {
   normalizeTimeInterval = this.timeInterval;
 
   @Watch("value", { immediate: true, deep: true })
-  onValueChanged(val: number | string, oldVal: number | string) {
+  onValueChanged(val: number | string) {
     this.$nextTick(()=>{
       this.localValue = this.cost || parseFloat(val.toString());
       this.normalizeValue = this.showFloat ?
@@ -73,7 +73,7 @@ class Price extends Vue {
   }
 
   @Watch("oldValue", { immediate: true, deep: true })
-  onOldValueChanged(val: number | string, oldVal: number | string) {
+  onOldValueChanged(val: number | string) {
 
     this.normalizeOldValue = this.showFloat ?
       parseFloat(val.toString()).toString().split('.').map((item,index)=>{
@@ -91,12 +91,12 @@ class Price extends Vue {
   }
 
   @Watch("currency", { immediate: true, deep: true })
-  onCurrencyChanged(val: string, oldVal: string) {
+  onCurrencyChanged(val: string) {
     this.normalizeCurrency = val;
   }
 
   @Watch("timeInterval", { immediate: true, deep: true })
-  onTimeIntervalChanged(val: string, oldVal: string) {
+  onTimeIntervalChanged(val: string) {
     this.normalizeTimeInterval = val;
   }
   mounted() {

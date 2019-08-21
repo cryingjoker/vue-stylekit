@@ -1,7 +1,6 @@
 import Vue, { CreateElement, VNode } from "vue";
-import { Component, Prop, Watch, Inject } from "vue-property-decorator";
-import variables from "../../../lib/variables.json";
-
+import { Component, Prop } from "vue-property-decorator";
+import {tabsStore} from "./TabsStore.tsx";
 @Component
 class RtTabsNavItem extends Vue {
 
@@ -11,10 +10,9 @@ class RtTabsNavItem extends Vue {
 
 
   isActive: boolean = false;
-  @Inject() readonly RtTabs!: any;
 
   setActiveTabName() {
-    this.RtTabs.setActiveTabName(this.name, this.anchor);
+    tabsStore.setActiveTabName(this.name, this.anchor);
     const $el: any = this.$el;
     var currentScrollLeft = $el.parentNode.scrollLeft;
     $el.parentNode.scrollBy({
@@ -25,7 +23,7 @@ class RtTabsNavItem extends Vue {
   }
 
   mounted() {
-    this.RtTabs.addTabName(this.name);
+    tabsStore.addTabName(this.name)
     if (this.removeBaseTag) {
       let baseNode = document.querySelector("base");
       if (baseNode) {
@@ -39,14 +37,14 @@ class RtTabsNavItem extends Vue {
     }
     if (this.anchor && document.location.hash) {
       if (document.location.hash.replace(/^\#/, "") === this.anchor) {
-        this.RtTabs.setActiveTabName(this.name);
+        tabsStore.setActiveTabName(this.name);
       }
     }
   }
 
   render(h: CreateElement): VNode {
     let tabsItemClass = "rt-tabs-navigation__item";
-    if (this.name === this.RtTabs.activeName) {
+    if (this.name === tabsStore.activeName) {
       tabsItemClass += " rt-tabs-navigation__item--is-active";
     }
 
