@@ -17,11 +17,20 @@ class Ussd extends Vue {
         tel = "tel:" + this.phone;
       } else {
         if (this.$slots.default[0].text) {
-          tel = "tel:" + this.$slots.default[0].text;
+          if (this.$slots.default[0].text.endsWith('#')) {
+            tel = "tel:" + this.$slots.default[0].text.replace(/#$/gm, '%23')
+          }else{
+            tel = "tel:" + this.$slots.default[0].text;
+          }
+
         } else {
           if (this.$el && this.$el.querySelector && this.$el.querySelector(".epc-options__value")) {
             this.telHtml = this.$el.querySelector(".epc-options__value").innerHTML;
-            tel = "tel:" + this.telHtml;
+            if(this.telHtml.endsWith('#')) {
+              tel = "tel:" + this.telHtml.replace(/#$/gm, '%23');
+            }else{
+              tel = "tel:" + this.telHtml
+            }
             this.tel = tel;
             this.hasHtml = true;
           }
