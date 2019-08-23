@@ -30,6 +30,19 @@
             </rt-radio-button>
           </div>
         </div>
+        <div class="app-row row">
+          <div class="rt-col">
+            <rt-radio-button name="type1">
+              Огонь
+            </rt-radio-button>
+            <rt-radio-button name="type1">
+              Вода
+            </rt-radio-button>
+            <rt-radio-button name="type1">
+              Медные трубы
+            </rt-radio-button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

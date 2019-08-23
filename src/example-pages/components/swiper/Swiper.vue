@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-      <rt-swiper>
+      <rt-swiper :scroll-on-click="true" :hide-navigation="true">
       <rt-slide v-for="i in 10" :key="i" class="rt-space-right15">
         <h2>Слайд {{ i }}</h2>
         <rt-row-list>
@@ -42,7 +42,7 @@
       </rt-slide>
     </rt-swiper>
     <div class="rt-space-top5">
-      <rt-swiper :hide-navigation="true">
+      <rt-swiper :hide-navigation="true" :scroll-on-click="true">
         <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
           <rt-card
             :equal-padding="true"
@@ -101,7 +101,7 @@
                 </div>
                 <div class="rtb-card__description__row">
                   <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                    'facebook','ya_navigator', 'ya_transport']"/>
+                    'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
                 </div>
                 <div class="rtb-card__description__row rt-space-top05">
                   <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -136,7 +136,7 @@
               </a>
             </template>
           </rt-card>
-      </rt-slide>
+        </rt-slide>
         <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
           <rt-card
             :equal-padding="true"
@@ -195,7 +195,7 @@
                 </div>
                 <div class="rtb-card__description__row">
                   <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                    'facebook','ya_navigator', 'ya_transport']"/>
+                    'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
                 </div>
                 <div class="rtb-card__description__row rt-space-top05">
                   <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -289,7 +289,7 @@
                 </div>
                 <div class="rtb-card__description__row">
                   <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                    'facebook','ya_navigator', 'ya_transport']"/>
+                    'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
                 </div>
                 <div class="rtb-card__description__row rt-space-top05">
                   <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -383,7 +383,7 @@
                 </div>
                 <div class="rtb-card__description__row">
                   <links-block  :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                    'facebook','ya_navigator', 'ya_transport']"/>
+                    'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
                 </div>
                 <div class="rtb-card__description__row rt-space-top05">
                   <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>

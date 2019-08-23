@@ -581,8 +581,7 @@
                     <div class="row rt-space-top2">
                       <div class="rt-col-1 td-d-none"/>
                       <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
+                        <rt-card background-image="/static/images/B2B/test-image.png" :is-white-color="true">
                           <template slot="content">
                             <div class="row rt-space-top35 rt-md-space-top5">
                               <div class="rt-col-6 rt-col-td-2 md-d-none"/>
@@ -610,8 +609,8 @@
             <div class="rt-col-12 rt-space-top3">
               <rt-tabs :position-center="true">
                 <template slot="navigation">
-                  <rt-tabs-nav-item anchor="five" name="analytics">Видеоаналитика</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="six" name="editor">Редактор шаблонов</rt-tabs-nav-item>
+                  <rt-tabs-nav-item anchor="alnfg" name="analytics">Видеоаналитика</rt-tabs-nav-item>
+                  <rt-tabs-nav-item anchor="sadgfasd" name="editor">Редактор шаблонов</rt-tabs-nav-item>
                 </template>
                 <template slot="content">
                   <rt-tabs-content-item name="analytics">
@@ -718,6 +717,189 @@
                         </rt-card>
                       </div>
                     </div>
+                  </rt-tabs-content-item>
+                </template>
+              </rt-tabs>
+            </div>
+            <div class="rt-col-12 rt-space-top3">
+              <rt-tabs :position-center="true">
+                <template slot="navigation">
+                  <rt-tabs-nav-item anchor="al1nfg" name="analytics21">Видеоаналитика</rt-tabs-nav-item>
+                  <rt-tabs-nav-item anchor="sad3gfasd" name="editor21">Редактор шаблонов</rt-tabs-nav-item>
+                </template>
+                <template slot="content">
+                  <rt-tabs-content-item name="analytics21">
+                    <rt-card-layout :swiper-on-mobile="true" :width="6">
+                      <template slot="cards">
+                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                          <rt-card>
+                            <template slot="header">
+                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                            </template>
+                            <template slot="content">
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">4 антенны</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                              </div>
+                            </template>
+                            <template slot="footer">
+                              <div class="rt-space-bottom" />
+                              <div class="rtb-card__cost rt-space-bottom">
+                                <rt-price :value="500"
+                                          :is-option="false"
+                                          currency="₽"
+                                          :b2b-price="true"
+                                          time-interval="в месяц"
+                                          :is-time-interval-bottom="true"/>
+                              </div>
+                              <a href="#">
+                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                  Выбрать
+                                </rt-button>
+                              </a>
+                            </template>
+                          </rt-card>
+                        </div>
+                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                          <rt-card>
+                            <template slot="header">
+                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                            </template>
+                            <template slot="content">
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">4 антенны</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                              </div>
+                            </template>
+                            <template slot="footer">
+                              <div class="rt-space-bottom" />
+                              <div class="rtb-card__cost rt-space-bottom">
+                                <rt-price :value="500"
+                                          :is-option="false"
+                                          currency="₽"
+                                          :b2b-price="true"
+                                          time-interval="в месяц"
+                                          :is-time-interval-bottom="true"/>
+                              </div>
+                              <a href="#">
+                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                  Выбрать
+                                </rt-button>
+                              </a>
+                            </template>
+                          </rt-card>
+                        </div>
+                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                          <rt-card>
+                            <template slot="header">
+                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                            </template>
+                            <template slot="content">
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">4 антенны</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                              </div>
+                            </template>
+                            <template slot="footer">
+                              <div class="rt-space-bottom" />
+                              <div class="rtb-card__cost rt-space-bottom">
+                                <rt-price :value="500"
+                                          :is-option="false"
+                                          currency="₽"
+                                          :b2b-price="true"
+                                          time-interval="в месяц"
+                                          :is-time-interval-bottom="true"/>
+                              </div>
+                              <a href="#">
+                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                  Выбрать
+                                </rt-button>
+                              </a>
+                            </template>
+                          </rt-card>
+                        </div>
+                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                          <rt-card>
+                            <template slot="header">
+                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                            </template>
+                            <template slot="content">
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph ">4 антенны</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                              </div>
+                              <div class="rtb-card__description__row">
+                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                              </div>
+                            </template>
+                            <template slot="footer">
+                              <div class="rt-space-bottom" />
+                              <div class="rtb-card__cost rt-space-bottom">
+                                <rt-price :value="500"
+                                          :is-option="false"
+                                          currency="₽"
+                                          :b2b-price="true"
+                                          time-interval="в месяц"
+                                          :is-time-interval-bottom="true"/>
+                              </div>
+                              <a href="#">
+                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                  Выбрать
+                                </rt-button>
+                              </a>
+                            </template>
+                          </rt-card>
+                        </div>
+                      </template>
+                      <template slot="side-text">
+                        <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-top">
+                          <div class="rtb-card__description__row">
+                            <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                          </div>
+                          <div class="rtb-card__description__row">
+                            <p class="rt-font-paragraph ">4 антенны</p>
+                          </div>
+                          <div class="rtb-card__description__row">
+                            <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                          </div>
+                          <div class="rtb-card__description__row">
+                            <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                          </div>
+                        </div>
+                      </template>
+                    </rt-card-layout>
+                  </rt-tabs-content-item>
+                  <rt-tabs-content-item name="editor21">
+
                   </rt-tabs-content-item>
                 </template>
               </rt-tabs>
