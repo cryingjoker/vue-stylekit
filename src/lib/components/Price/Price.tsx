@@ -18,35 +18,41 @@ class Price extends Vue {
   @Prop({ default: false }) b2bPrice: boolean;
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
-  localValue:number = 0
-  cost:number = 0;
+  localValue: number = 0;
+  cost: number = 0;
   //todo сделать проверку системного языка с заменой . , у double данных
   normalizeValue: string = this.showFloat ?
-    parseFloat(this.cost.toString()).toString().split('.').map((item,index)=>{
-      if(index === 0){
-        item=item.replace(
+    parseFloat(this.cost.toString()).toString().split(".").map((item:any, index) => {
+      if (index === 0) {
+        item = item.replace(
           /(\d)(?=(\d\d\d)+([^\d]|$))/g,
           "$1 "
-        )
+        );
+      }else {
+        item = parseInt(item).toFixed(2).toString()
+        item = item[0]+item[1];
       }
-      return item
-    }).join(',') : parseInt(this.value.toString(), 10).toString().replace(
-    /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-    "$1 "
-  ).trim();
+      return item;
+    }).join(",") : parseInt(this.value.toString(), 10).toString().replace(
+      /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+      "$1 "
+    ).trim();
   normalizeOldValue: string = this.showFloat ?
-      parseFloat(this.oldValue.toString()).toString().split('.').map((item,index)=>{
-        if(index === 0){
-          item=item.replace(
-            /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-            "$1 "
-          )
-        }
-        return item
-      }).join(',') : parseInt(this.oldValue.toString(), 10).toString().replace(
-    /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-    "$1 "
-  ).trim()
+    parseFloat(this.oldValue.toString()).toString().split(".").map((item:any, index) => {
+      if (index === 0) {
+        item = item.replace(
+          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+          "$1 "
+        );
+      }else {
+        item = parseInt(item).toFixed(2).toString()
+        item = item[0]+item[1];
+      }
+      return item;
+    }).join(",") : parseInt(this.oldValue.toString(), 10).toString().replace(
+      /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+      "$1 "
+    ).trim();
 
   priceType = "";
   normalizeCurrency = this.currency;
@@ -54,40 +60,47 @@ class Price extends Vue {
 
   @Watch("value", { immediate: true, deep: true })
   onValueChanged(val: number | string) {
-    this.$nextTick(()=>{
+    this.$nextTick(() => {
       this.localValue = this.cost || parseFloat(val.toString());
       this.normalizeValue = this.showFloat ?
-        parseFloat(this.localValue.toString()).toString().split('.').map((item,index)=>{
-          if(index === 0){
-            item=item.replace(
+        parseFloat(this.localValue.toString()).toString().split(".").map((item: any, index) => {
+          if (index === 0) {
+            item = item.replace(
               /(\d)(?=(\d\d\d)+([^\d]|$))/g,
               "$1 "
-            )
+            );
+          } else {
+            item = parseInt(item).toFixed(2).toString();
+            item = item[0]+item[1];
           }
-          return item
-        }).join(',') : parseInt(this.localValue.toString(), 10).toString().replace(
-        /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-        "$1 "
-        ).trim()
-    })
+          return item;
+        }).join(",") : parseInt(this.localValue.toString(), 10).toString().replace(
+          /(\d)(?=(\d\d\d)+([^\d]|$))/g,
+          "$1 "
+        ).trim();
+    });
   }
 
   @Watch("oldValue", { immediate: true, deep: true })
   onOldValueChanged(val: number | string) {
 
     this.normalizeOldValue = this.showFloat ?
-      parseFloat(val.toString()).toString().split('.').map((item,index)=>{
-        if(index === 0){
-          item=item.replace(
+      parseFloat(val.toString()).toString().split(".").map((item:any, index) => {
+        if (index === 0) {
+          item = item.replace(
             /(\d)(?=(\d\d\d)+([^\d]|$))/g,
             "$1 "
-          )
+          );
+        } else {
+          item = parseInt(item).toFixed(2).toString()
+          item = item[0]+item[1];
         }
-        return item
-      }).join(',') : parseInt(val.toString(), 10).toString().replace(
+
+        return item;
+      }).join(",") : parseInt(val.toString(), 10).toString().replace(
         /(\d)(?=(\d\d\d)+([^\d]|$))/g,
         "$1 "
-      ).trim()
+      ).trim();
   }
 
   @Watch("currency", { immediate: true, deep: true })
@@ -99,8 +112,9 @@ class Price extends Vue {
   onTimeIntervalChanged(val: string) {
     this.normalizeTimeInterval = val;
   }
+
   mounted() {
-    this.cost = this.$slots['default'] && parseFloat(this.$slots['default'][0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
+    this.cost = this.$slots["default"] && parseFloat(this.$slots["default"][0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
   }
 
   render(h: CreateElement): VNode {
