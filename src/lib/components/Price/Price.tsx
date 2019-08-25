@@ -31,6 +31,7 @@ class Price extends Vue {
       }else {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
+        item = item.replace('.','');
       }
       return item;
     }).join(",") : parseInt(this.value.toString(), 10).toString().replace(
@@ -47,6 +48,7 @@ class Price extends Vue {
       }else {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
+        item = item.replace('.','');
       }
       return item;
     }).join(",") : parseInt(this.oldValue.toString(), 10).toString().replace(
@@ -72,6 +74,7 @@ class Price extends Vue {
           } else {
             item = parseInt(item).toFixed(2).toString();
             item = item[0]+item[1];
+            item = item.replace('.','');
           }
           return item;
         }).join(",") : parseInt(this.localValue.toString(), 10).toString().replace(
@@ -94,6 +97,7 @@ class Price extends Vue {
         } else {
           item = parseInt(item).toFixed(2).toString()
           item = item[0]+item[1];
+          item = item.replace('.','');
         }
 
         return item;
