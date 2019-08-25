@@ -179,6 +179,10 @@ export default {
     discountText: {
       type: String,
       default: ''
+    },
+    inTabsWImage: {
+      type: Boolean,
+      default: true
     }
   },
   data: () => ({
@@ -186,7 +190,8 @@ export default {
     mobileLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"]),
     localBackgroundImage: null,
     localProductIcon: null,
-    localCategoryIconMobile: null
+    localCategoryIconMobile: null,
+    mobileSvgWidth: 0
   }),
   computed: {
     cardClass() {
@@ -254,6 +259,9 @@ export default {
         } else {
           cardClass += " rtb-card--bgp-right"
         }
+      }
+      if(this.inTabsWImage) {
+        cardClass += " rt-card--half-white-plus-image"
       }
       return cardClass;
     },
@@ -453,8 +461,8 @@ export default {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
     });
-    this.checkLazy()
-
+    this.checkLazy();
+    this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2))
   },
   methods: {
     loadImageAsync (src, resolve, reject) {
@@ -717,6 +725,17 @@ export default {
         return null;
       }
     })();
+    const triangle = (()=>{
+      if(this.mobileLayout) {
+        return <svg width={this.mobileSvgWidth} height="100" class="rt-card__content-triangle">
+          <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgba(255, 255, 255)"/>
+        </svg>
+      } else {
+        return <svg width="100" height="490" class="rt-card__content-triangle">
+          <polygon points="0,0 100,0 0,490" fill="rgba(255, 255, 255)"/>
+        </svg>
+      }
+    })();
     if(this.doubleSided){
       return <div class={"rt-card " + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
         <div class={"rt-card__content" + this.cardContentClass} style={this.cardBackgroundStyle}>
@@ -748,6 +767,7 @@ export default {
           </div>
           {hiddenPopupBenefits}
           {hiddenPopupCosts}
+          {triangle}
         </div>
       </div>;
     } else {
