@@ -297,6 +297,51 @@
           background linear-gradient(to bottom, rgba(16, 24, 40, 0), rgba(16, 24, 40, 0.23) 33%, rgba(16, 24, 40, 0.67) 63%, rgba(16, 24, 40, 0.9) 85%, #101828);
     .rt-card__content
       z-index 5
+  .rt-card--half-white-plus-image
+    height 490px
+    display inline-flex
+    flex-direction row-reverse
+    @media (max-width: tablet-upper-limit)
+      display flex
+      flex-direction column
+      min-height 615px
+    @media (max-width: mobile-upper-limit)
+      min-height 500px
+    .rt-card__background
+      position relative
+      top 0
+      left auto
+      right 0
+      bottom 0
+      flex-basis 50%
+      @media (max-width: tablet-upper-limit)
+        height 50%
+      @media (max-width: mobile-upper-limit)
+        flex-basis 200px
+    .rt-card
+      &__content
+        padding 70px 0
+        max-height 100%
+        min-width auto
+        flex-basis 50%
+        @media (max-width: tablet-upper-limit)
+          max-height 50%
+          min-height auto
+          padding 50px 0 60px
+        @media (max-width: mobile-upper-limit)
+          flex-basis calc(100% - 200px)
+          max-height none
+          padding 30px 0
+      &__content-triangle
+        position absolute
+        top 0
+        right -100px
+        @media (max-width: tablet-upper-limit)
+          top -100px
+          left 0
+          right 0
+          transform rotate(180 deg) scale(-1)
+
 .{newAppName}-tabs--fill
   width: 100%
   .{newAppName}-tabs-navigation

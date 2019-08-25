@@ -178,6 +178,10 @@ export default {
     hideNavigation: {
       type: Boolean,
       default: false
+    },
+    scrollOnClick: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
