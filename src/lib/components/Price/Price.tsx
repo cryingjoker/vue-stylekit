@@ -7,7 +7,7 @@ class Price extends Vue {
   @Prop({ default: 0 }) value: number | string;
   @Prop({ default: 0 }) oldValue: number | string;
   @Prop({ default: "от" }) optionLabel: string;
-  @Prop({ default: true }) showFloat: boolean;
+  @Prop({ default: false }) showFloat: boolean;
   @Prop({ default: null }) colorValue: string;
   @Prop({ default: "руб." }) currency: string;
   @Prop({ default: "мес." }) timeInterval: string;
