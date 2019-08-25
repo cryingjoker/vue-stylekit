@@ -129,7 +129,7 @@ class Price extends Vue {
     this.normalizeTimeInterval = val;
   }
   mounted() {
-    this.cost = this.$slots['default'] && parseFloat(this.$slots['default'][0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
+    this.cost = this.$slots['default'] && parseFloat(this.$slots['default'][0].children[0].children[0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
   }
 
   render(h: CreateElement): VNode {
