@@ -7,7 +7,7 @@
           <div class="row">
             <div class="rt-col-4 rt-col-md-3">
               <pre-code
-                text="<rt-price :value='750.231132' :old-value='666.2234' currency='$' />"
+                text="<rt-price :value='750.2' :old-value='666.2234' currency='$' />"
               />
             </div>
             <div class="rt-col-4 rt-col-md-3 rt-md-space-top">

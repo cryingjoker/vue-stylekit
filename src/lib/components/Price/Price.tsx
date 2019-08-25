@@ -32,6 +32,9 @@ class Price extends Vue {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
         item = item.replace('.','');
+        if(item.length === 1){
+          item += '0';
+        }
       }
       return item;
     }).join(",") : parseInt(this.value.toString(), 10).toString().replace(
@@ -49,6 +52,9 @@ class Price extends Vue {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
         item = item.replace('.','');
+        if(item.length === 1){
+          item += '0';
+        }
       }
       return item;
     }).join(",") : parseInt(this.oldValue.toString(), 10).toString().replace(
@@ -75,6 +81,9 @@ class Price extends Vue {
             item = parseInt(item).toFixed(2).toString();
             item = item[0]+item[1];
             item = item.replace('.','');
+            if(item.length === 1){
+              item += '0';
+            }
           }
           return item;
         }).join(",") : parseInt(this.localValue.toString(), 10).toString().replace(
@@ -98,6 +107,9 @@ class Price extends Vue {
           item = parseInt(item).toFixed(2).toString()
           item = item[0]+item[1];
           item = item.replace('.','');
+          if(item.length === 1){
+            item += '0';
+          }
         }
 
         return item;
