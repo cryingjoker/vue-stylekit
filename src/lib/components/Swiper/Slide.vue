@@ -46,8 +46,6 @@ export default {
     },
     scrollIntoView() {
       if(this.$parent.scrollOnClick) {
-        console.log(this.$el.offsetLeft);
-        console.log(this.$el.parentNode);
         this.$el.parentNode.scrollTo({left: this.$el.offsetLeft, behavior: "smooth"});
       }
     }
