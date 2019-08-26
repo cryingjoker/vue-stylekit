@@ -7,7 +7,7 @@
           <div class="row">
             <div class="rt-col-4 rt-col-md-3">
               <pre-code
-                text="<rt-price :value='750.231' :old-value='123.2' currency='$' />"
+                text="<rt-price :value='750.2' :old-value='666.2234' currency='$' />"
               />
             </div>
             <div class="rt-col-4 rt-col-md-3 rt-md-space-top">
@@ -75,7 +75,7 @@
           <div class="row rt-space-top">
             <div class="rt-col-4 rt-col-md-3">
               <pre-code
-                text="<rt-price :value='500' currency='₽' :b2b-price='true' time-interval='' class='color-main09' :is-option='true'>234.35</rt-price>"
+                text="<rt-price :value='500' currency='₽' :b2b-price='true' time-interval='' class='color-main09' :is-option='true'><div><span>234.30</span></div></rt-price>"
               />
             </div>
           </div>

@@ -43,11 +43,16 @@ export default {
     },
     width() {
       return this.$el.clientWidth;
+    },
+    scrollIntoView() {
+      if(this.$parent.scrollOnClick) {
+        this.$el.parentNode.scrollTo({left: this.$el.offsetLeft, behavior: "smooth"});
+      }
     }
   },
   render(h){
     return <div class={this.cmpName + "-slide " + (this.shown ? '': ' not-shown ') +  this.getCustomClass}
-                style={"padding-right:" + this.offsetSlide + "px;"}>
+                style={"padding-right:" + this.offsetSlide + "px;"} onClick={this.scrollIntoView}>
       {this.$slots.default}
     </div>
   }

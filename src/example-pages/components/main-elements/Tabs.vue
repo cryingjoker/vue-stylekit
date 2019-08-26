@@ -16,21 +16,21 @@
             <pre-code
               text="<rt-tabs :round-tablet-view='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one99&quot;>Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two99&quot;>Смысл</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree99&quot;>Значимость</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one&quot;>
+                <rt-tabs-content-item name=&quot;one99&quot;>
                   <h1>TEST</h1>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;two&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
+                <rt-tabs-content-item name=&quot;two99&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
                     представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении
                     поставленных задач. Равным образом консультация с широким активом влечет за собой процесс внедрения
                     и модернизации форм развития. Повседневная практика показывает, что консультация с широким активом
                     обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий
-                    активизации. С другой стороны новая модель организационной деятельности позволяет оценить значение
+                    активизации. С другой стороны новая модель оргоганизационной деятельности позволяет оценить значение
                     новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас
                     анализа новых предложений. Идейные соображения высшего порядка, а также реализация намеченных
                     плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций,
@@ -44,7 +44,7 @@
                     структура организации требуют определения и уточнения системы обучения кадров, соответствует
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;tree&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>
+                <rt-tabs-content-item name=&quot;tree99&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
                     активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
                     поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от
@@ -108,18 +108,18 @@
             <pre-code
               text="<rt-tabs :fill-content='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;one1&quot; :remove-base-tag=&quot;true&quot; name=&quot;one1&quot;>Первый пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one2&quot; :remove-base-tag=&quot;true&quot; name=&quot;one2&quot;>Второй пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one3&quot; :remove-base-tag=&quot;true&quot; name=&quot;one3&quot;>Третий пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one4&quot; :remove-base-tag=&quot;true&quot; name=&quot;one4&quot;>Четвертый пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one1&quot; :remove-base-tag=&quot;true&quot; name=&quot;one166&quot;>Первый пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one2&quot; :remove-base-tag=&quot;true&quot; name=&quot;one266&quot;>Второй пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one3&quot; :remove-base-tag=&quot;true&quot; name=&quot;one366&quot;>Третий пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one4&quot; :remove-base-tag=&quot;true&quot; name=&quot;one466&quot;>Четвертый пункт</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one1&quot;>
+                <rt-tabs-content-item name=&quot;one166&quot;>
                 <div class='rt-space-top3'>
                   <h1>TEST</h1>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;one2&quot;>
+                <rt-tabs-content-item name=&quot;one266&quot;>
                 <div class='rt-space-top3'>
                 <p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
@@ -142,7 +142,7 @@
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p>
                     </div></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;one3&quot;>
+                <rt-tabs-content-item name=&quot;one366&quot;>
                 <div class='rt-space-top3'>
                 <p class=&quot;rt-font-h1&quot;>Значимость</p></div>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
@@ -202,6 +202,17 @@
                     укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании
                     форм развития.</p>
                     </div></rt-tabs-content-item>
+                    <rt-tabs-content-item name=&quot;one466&quot;>
+                <div class='rt-space-top3'>
+                <p class=&quot;rt-font-h1&quot;>Значимость</p></div>
+                  <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
+                    активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
+                    поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от
+                    нас анализа направлений прогрессивного развития. Повседневная практика показывает, что сложившаяся
+                    структура организации представляет собой интересный эксперимент проверки форм развития. Значимость
+                    этих проблем настолько очевидна, что укрепление и развитие структуры позволяет оценить значение
+                    систем массового участия.</p>
+                  </rt-tabs-content-item>
               </template>
             </rt-tabs>"
             />
@@ -213,17 +224,17 @@
               <pre-code
                 text="<rt-tabs :fill-content='true' :justify-all-width='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;ready!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one1&quot;>Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;two1&quot;>Смысл</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree1&quot;>Значимость</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one&quot;>
+                <rt-tabs-content-item name=&quot;one1&quot;>
                 <div class='rt-space-top3'>
                   <h1>TEST</h1>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;two&quot;>
+                <rt-tabs-content-item name=&quot;two1&quot;>
                 <div class='rt-space-top3'><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
                     представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении
@@ -244,7 +255,7 @@
                     структура организации требуют определения и уточнения системы обучения кадров, соответствует
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p></div></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;tree&quot;>
+                <rt-tabs-content-item name=&quot;tree1&quot;>
                 <div class='rt-space-top3'><p class=&quot;rt-font-h1&quot;>Значимость</p>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
                     активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
@@ -264,8 +275,7 @@
               />
             </div>
           </div>
-          <div class="app-row row">
-            <div class="rt-col-8 rt-col-td-6 rt-col-md-3">
+          <div class="rt-col-8 rt-col-td-6 rt-col-md-3 rt-space-bottom2">
               <h3 class="rt-font-bold rt-space-bottom15">Инструкции по настройке VoIP</h3>
               <rt-tabs>
                 <template slot="navigation">
@@ -427,483 +437,471 @@
                 </template>
               </rt-tabs>
             </div>
+          <div class="rt-col-12">
+            <rt-tabs :position-center="true">
+              <template slot="navigation">
+                <rt-tabs-nav-item anchor="one" name="marketing">Маркетингу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="two" name="humanResources">Кадрам</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="three" name="sales">Отделу продаж</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="four" name="support">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="five" name="test1">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="six" name="test2">Клиентскому отделу</rt-tabs-nav-item>
+              </template>
+              <template slot="content">
+                <rt-tabs-content-item name="marketing">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/screens.jpg" :is-white-color="true">
+                        <template slot="content">
+                          <!--<div class="rt-md-space-top5"/>-->
+                          <div class="rt-md-space-top5"/>
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций1</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
+                                Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="humanResources">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-12">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :in-tabs-w-image="true">
+                        <template slot="content">
+                          <div class="rt-space-horizontal25 rt-td-space-horizontal rt-md-space-horizontal-none">
+                            <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций2</p>
+                            <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom">
+                              Настройте современную и эффективную систему коммуникации с вашей целевой аудиторией.
+                              Рассказывайте о ваших новинках, акциях, ценах предложениях и многом другом.</p>
+                            <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom-none">
+                              Настройте современную и эффективную систему коммуникации с вашей целевой аудиторией.
+                              Рассказывайте о ваших новинках, акциях, ценах предложениях и многом другом.</p>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="sales">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
+                               class="rt-card--gradient-shadow">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций3</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
+                                Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="support">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
+                               class="rt-card--gradient-shadow">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
+                                Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test1">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
+                               class="rt-card--gradient-shadow">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
+                                Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test2">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-1 td-d-none"/>
+                    <div class="rt-col-10 rt-col-td-6">
+                      <rt-card background-image="/static/images/B2B/test-image.png" :is-white-color="true">
+                        <template slot="content">
+                          <div class="row rt-space-top35 rt-md-space-top5">
+                            <div class="rt-col-6 rt-col-td-2 md-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
+                              <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
+                                Настройте современную и
+                                эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
+                                новинках, акциях, ценах предложениях и многом другом.</p>
+                              <div class="rt-space-bottom4 rt-md-space-bottom-none">
+                                <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-1 td-d-none"/>
+                  </div>
+                </rt-tabs-content-item>
+              </template>
+            </rt-tabs>
           </div>
-          <div class="app-row row">
-            <div class="rt-col-12">
-              <rt-tabs :position-center="true">
-                <template slot="navigation">
-                  <rt-tabs-nav-item anchor="one" name="marketing">Маркетингу</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="two" name="humanResources">Кадрам</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="three" name="sales">Отделу продаж</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="four" name="support">Клиентскому отделу</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="five" name="test1">Клиентскому отделу</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="six" name="test2">Клиентскому отделу</rt-tabs-nav-item>
-                </template>
-                <template slot="content">
-                  <rt-tabs-content-item name="marketing">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/screens.jpg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
-                          <template slot="content">
-                            <!--<div class="rt-md-space-top5"/>-->
-                            <div class="rt-md-space-top5"/>
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций1</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="humanResources">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
-                          <template slot="content">
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций2</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="sales">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
-                          <template slot="content">
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций3</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="support">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
-                          <template slot="content">
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="test1">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/img_test_1400x1000.jpeg" :is-white-color="true"
-                                 class="rt-card--gradient-shadow">
-                          <template slot="content">
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="test2">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-1 td-d-none"/>
-                      <div class="rt-col-10 rt-col-td-6">
-                        <rt-card background-image="/static/images/B2B/test-image.png" :is-white-color="true">
-                          <template slot="content">
-                            <div class="row rt-space-top35 rt-md-space-top5">
-                              <div class="rt-col-6 rt-col-td-2 md-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h3 rt-font-bold">Для эффективных коммуникаций4</p>
-                                <p class="rt-space-top05 rt-font-small-paragraph rt-space-bottom rt-md-space-bottom2">
-                                  Настройте современную и
-                                  эффективную систему коммуникации с вашей целевой аудиторией. Рассказывайте о ваших
-                                  новинках, акциях, ценах предложениях и многом другом.</p>
-                                <div class="rt-space-bottom4 rt-md-space-bottom-none">
-                                  <rt-button class="rt-button-small rt-button-white">Кейс</rt-button>
-                                </div>
-                              </div>
-                            </div>
-                          </template>
-                        </rt-card>
-                      </div>
-                      <div class="rt-col-1 td-d-none"/>
-                    </div>
-                  </rt-tabs-content-item>
-                </template>
-              </rt-tabs>
-            </div>
-            <div class="rt-col-12 rt-space-top3">
-              <rt-tabs :position-center="true">
-                <template slot="navigation">
-                  <rt-tabs-nav-item anchor="alnfg" name="analytics">Видеоаналитика</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="sadgfasd" name="editor">Редактор шаблонов</rt-tabs-nav-item>
-                </template>
-                <template slot="content">
-                  <rt-tabs-content-item name="analytics">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-12 rt-col-td-6">
-                        <rt-card background-image="">
-                          <template slot="content">
-                            <div class="row rt-md-space-top5">
-                              <div class="rt-col-4 rt-col-td-2 md-d-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     viewBox="0 0 374 550" class="card-pattern">
-                                  <defs>
-                                    <path id="a" d="M0 0h374v553H0z"/>
-                                    <path id="c" d="M.537.382h785.597V1079.59H.537z"/>
-                                  </defs>
-                                  <g fill="none" fill-rule="evenodd">
-                                    <mask id="b" fill="#fff">
-                                      <use xlink:href="#a"/>
-                                    </mask>
-                                    <g mask="url(#b)">
-                                      <g transform="scale(1 -1) rotate(-67 -216.885 405.032)">
-                                        <mask id="d" fill="#fff">
-                                          <use xlink:href="#c"/>
-                                        </mask>
-                                        <g mask="url(#d)">
-                                          <path fill="#3BBC9E"
-                                                d="M632.464 456.942l43.979-.47.001-.174c.963.043 1.916.13 2.897.116 29.245-.382 54.74-25.597 56.946-56.323l4.5-62.694c17.326-241.389 78.772-1097.29 78.772-1097.29L212.084-158.89l-44.649 621.917 465.029-6.084z"/>
-                                          <path fill="#57D9B7" fill-rule="nonzero"
-                                                d="M39.193 1056.198c95.667-1.36 123.394-41.43 192.568-109.893L705.05 477.88c17.769-17.586 27.917-40.314 29.557-62.994.53-7.29 1.16-15.876 1.16-15.876-2.233 30.68-27.703 55.888-56.887 56.304-.55.008-1.078-.051-1.622-.062-.396.027-.802.099-1.198.116l-.006.005-.07.003c-.075.002-17.553.265-43.778.602L9.53 464.835-796.367 476.3l-43.336 592.604 878.896-12.707z"/>
-                                        </g>
+          <div class="rt-col-12 rt-space-top3">
+            <rt-tabs :position-center="true">
+              <template slot="navigation">
+                <rt-tabs-nav-item anchor="alnfg" name="analytics">Видеоаналитика</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="sadgfasd" name="editor">Редактор шаблонов</rt-tabs-nav-item>
+              </template>
+              <template slot="content">
+                <rt-tabs-content-item name="analytics">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-12 rt-col-td-6">
+                      <rt-card background-image="">
+                        <template slot="content">
+                          <div class="row rt-md-space-top5">
+                            <div class="rt-col-4 rt-col-td-2 md-d-none">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                   viewBox="0 0 374 550" class="card-pattern">
+                                <defs>
+                                  <path id="a" d="M0 0h374v553H0z"/>
+                                  <path id="c" d="M.537.382h785.597V1079.59H.537z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd">
+                                  <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"/>
+                                  </mask>
+                                  <g mask="url(#b)">
+                                    <g transform="scale(1 -1) rotate(-67 -216.885 405.032)">
+                                      <mask id="d" fill="#fff">
+                                        <use xlink:href="#c"/>
+                                      </mask>
+                                      <g mask="url(#d)">
+                                        <path fill="#3BBC9E"
+                                              d="M632.464 456.942l43.979-.47.001-.174c.963.043 1.916.13 2.897.116 29.245-.382 54.74-25.597 56.946-56.323l4.5-62.694c17.326-241.389 78.772-1097.29 78.772-1097.29L212.084-158.89l-44.649 621.917 465.029-6.084z"/>
+                                        <path fill="#57D9B7" fill-rule="nonzero"
+                                              d="M39.193 1056.198c95.667-1.36 123.394-41.43 192.568-109.893L705.05 477.88c17.769-17.586 27.917-40.314 29.557-62.994.53-7.29 1.16-15.876 1.16-15.876-2.233 30.68-27.703 55.888-56.887 56.304-.55.008-1.078-.051-1.622-.062-.396.027-.802.099-1.198.116l-.006.005-.07.003c-.075.002-17.553.265-43.778.602L9.53 464.835-796.367 476.3l-43.336 592.604 878.896-12.707z"/>
                                       </g>
                                     </g>
                                   </g>
-                                </svg>
-                              </div>
-                              <div class="rt-col-2 td-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h4 rt-font-bold rt-space-bottom">Таргетировать контент по полу и
-                                  возрасту посетителей1</p>
-                                <p class="rt-font-h4 rt-font-bold rt-space-bottom45">Собирать статистику по охвату
-                                  и среднему времени просмотра контента</p>
-                                <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
-                                  <p class="rt-font-small-paragraph rt-font-bold">Абонентская плата за опцию</p>
-                                  <rt-price :value='900' currency='₽' :b2b-price='true' time-interval='в месяц'
-                                            :is-time-interval-bottom="true" class='color-main09'/>
-                                </div>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="rt-col-2 td-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h4 rt-font-bold rt-space-bottom">Таргетировать контент по полу и
+                                возрасту посетителей1</p>
+                              <p class="rt-font-h4 rt-font-bold rt-space-bottom45">Собирать статистику по охвату
+                                и среднему времени просмотра контента</p>
+                              <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
+                                <p class="rt-font-small-paragraph rt-font-bold">Абонентская плата за опцию</p>
+                                <rt-price :value='900' currency='₽' :b2b-price='true' time-interval='в месяц'
+                                          :is-time-interval-bottom="true" class='color-main09'/>
                               </div>
                             </div>
-                          </template>
-                        </rt-card>
-                      </div>
+                          </div>
+                        </template>
+                      </rt-card>
                     </div>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="editor">
-                    <div class="row rt-space-top2">
-                      <div class="rt-col-12 rt-col-td-6">
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="editor21">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-12 rt-col-td-6">
+                      <rt-card>
+                        <template slot="content">
+                          <div class="row rt-md-space-top5 rt-md-space-top-none">
+                            <div class="rt-col-4 rt-col-td-2 md-d-none">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                   viewBox="0 0 374 550" class="card-pattern">
+                                <defs>
+                                  <path id="a" d="M0 0h374v553H0z"/>
+                                  <path id="c" d="M.537.382h785.597V1079.59H.537z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd">
+                                  <mask id="b" fill="#fff">
+                                    <use xlink:href="#a"/>
+                                  </mask>
+                                  <g mask="url(#b)">
+                                    <g transform="scale(1 -1) rotate(-67 -216.885 405.032)">
+                                      <mask id="d" fill="#fff">
+                                        <use xlink:href="#c"/>
+                                      </mask>
+                                      <g mask="url(#d)">
+                                        <path fill="#3BBC9E"
+                                              d="M632.464 456.942l43.979-.47.001-.174c.963.043 1.916.13 2.897.116 29.245-.382 54.74-25.597 56.946-56.323l4.5-62.694c17.326-241.389 78.772-1097.29 78.772-1097.29L212.084-158.89l-44.649 621.917 465.029-6.084z"/>
+                                        <path fill="#57D9B7" fill-rule="nonzero"
+                                              d="M39.193 1056.198c95.667-1.36 123.394-41.43 192.568-109.893L705.05 477.88c17.769-17.586 27.917-40.314 29.557-62.994.53-7.29 1.16-15.876 1.16-15.876-2.233 30.68-27.703 55.888-56.887 56.304-.55.008-1.078-.051-1.622-.062-.396.027-.802.099-1.198.116l-.006.005-.07.003c-.075.002-17.553.265-43.778.602L9.53 464.835-796.367 476.3l-43.336 592.604 878.896-12.707z"/>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="rt-col-2 td-d-none"/>
+                            <div
+                              class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-td-space-top rt-md-space-top-none rt-space-right4 rt-td-space-right15 rt-md-space-right05">
+                              <p class="rt-font-h4 rt-font-bold rt-space-bottom with-icon">Таргетировать контент по
+                                полу
+                                и возрасту посетителей2</p>
+                              <p class="rt-font-h4 rt-font-bold rt-space-bottom45 with-icon">Собирать статистику по
+                                охвату и среднему времени просмотра контента</p>
+                              <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
+                                <p class="rt-font-small-paragraph rt-font-bold">Абонентская плата за опцию</p>
+                                <rt-price :value='900' currency='₽' :b2b-price='true' time-interval='в месяц'
+                                          :is-time-interval-bottom="true" class='color-main09'/>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                      </rt-card>
+                    </div>
+                  </div>
+                </rt-tabs-content-item>
+              </template>
+            </rt-tabs>
+          </div>
+          <div class="rt-col-12 rt-space-top3">
+            <rt-tabs :position-center="true">
+              <template slot="navigation">
+                <rt-tabs-nav-item anchor="al1nfg" name="analytics21">Видеоаналитика</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="sad3gfasd" name="editor21">Редактор шаблонов</rt-tabs-nav-item>
+              </template>
+              <template slot="content">
+                <rt-tabs-content-item name="analytics21">
+                  <rt-card-layout :swiper-on-mobile="true" :width="6">
+                    <template slot="cards">
+                      <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                         <rt-card>
+                          <template slot="header">
+                            <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                          </template>
                           <template slot="content">
-                            <div class="row rt-md-space-top5 rt-md-space-top-none">
-                              <div class="rt-col-4 rt-col-td-2 md-d-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     viewBox="0 0 374 550" class="card-pattern">
-                                  <defs>
-                                    <path id="a" d="M0 0h374v553H0z"/>
-                                    <path id="c" d="M.537.382h785.597V1079.59H.537z"/>
-                                  </defs>
-                                  <g fill="none" fill-rule="evenodd">
-                                    <mask id="b" fill="#fff">
-                                      <use xlink:href="#a"/>
-                                    </mask>
-                                    <g mask="url(#b)">
-                                      <g transform="scale(1 -1) rotate(-67 -216.885 405.032)">
-                                        <mask id="d" fill="#fff">
-                                          <use xlink:href="#c"/>
-                                        </mask>
-                                        <g mask="url(#d)">
-                                          <path fill="#3BBC9E"
-                                                d="M632.464 456.942l43.979-.47.001-.174c.963.043 1.916.13 2.897.116 29.245-.382 54.74-25.597 56.946-56.323l4.5-62.694c17.326-241.389 78.772-1097.29 78.772-1097.29L212.084-158.89l-44.649 621.917 465.029-6.084z"/>
-                                          <path fill="#57D9B7" fill-rule="nonzero"
-                                                d="M39.193 1056.198c95.667-1.36 123.394-41.43 192.568-109.893L705.05 477.88c17.769-17.586 27.917-40.314 29.557-62.994.53-7.29 1.16-15.876 1.16-15.876-2.233 30.68-27.703 55.888-56.887 56.304-.55.008-1.078-.051-1.622-.062-.396.027-.802.099-1.198.116l-.006.005-.07.003c-.075.002-17.553.265-43.778.602L9.53 464.835-796.367 476.3l-43.336 592.604 878.896-12.707z"/>
-                                        </g>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                              </div>
-                              <div class="rt-col-2 td-d-none"/>
-                              <div
-                                class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-td-space-top rt-md-space-top-none rt-space-right4 rt-td-space-right15 rt-md-space-right05">
-                                <p class="rt-font-h4 rt-font-bold rt-space-bottom with-icon">Таргетировать контент по
-                                  полу
-                                  и возрасту посетителей2</p>
-                                <p class="rt-font-h4 rt-font-bold rt-space-bottom45 with-icon">Собирать статистику по
-                                  охвату и среднему времени просмотра контента</p>
-                                <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
-                                  <p class="rt-font-small-paragraph rt-font-bold">Абонентская плата за опцию</p>
-                                  <rt-price :value='900' currency='₽' :b2b-price='true' time-interval='в месяц'
-                                            :is-time-interval-bottom="true" class='color-main09'/>
-                                </div>
-                              </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">до 650 Мбит/</p>
                             </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">4 антенны</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                            </div>
+                          </template>
+                          <template slot="footer">
+                            <div class="rt-space-bottom" />
+                            <div class="rtb-card__cost rt-space-bottom">
+                              <rt-price :value="500"
+                                        :is-option="false"
+                                        currency="₽"
+                                        :b2b-price="true"
+                                        time-interval="в месяц"
+                                        :is-time-interval-bottom="true"/>
+                            </div>
+                            <a href="#">
+                              <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                Выбрать
+                              </rt-button>
+                            </a>
                           </template>
                         </rt-card>
                       </div>
-                    </div>
-                  </rt-tabs-content-item>
-                </template>
-              </rt-tabs>
-            </div>
-            <div class="rt-col-12 rt-space-top3">
-              <rt-tabs :position-center="true">
-                <template slot="navigation">
-                  <rt-tabs-nav-item anchor="al1nfg" name="analytics21">Видеоаналитика</rt-tabs-nav-item>
-                  <rt-tabs-nav-item anchor="sad3gfasd" name="editor21">Редактор шаблонов</rt-tabs-nav-item>
-                </template>
-                <template slot="content">
-                  <rt-tabs-content-item name="analytics21">
-                    <rt-card-layout :swiper-on-mobile="true" :width="6">
-                      <template slot="cards">
-                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
-                          <rt-card>
-                            <template slot="header">
-                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
-                            </template>
-                            <template slot="content">
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">4 антенны</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
-                              </div>
-                            </template>
-                            <template slot="footer">
-                              <div class="rt-space-bottom" />
-                              <div class="rtb-card__cost rt-space-bottom">
-                                <rt-price :value="500"
-                                          :is-option="false"
-                                          currency="₽"
-                                          :b2b-price="true"
-                                          time-interval="в месяц"
-                                          :is-time-interval-bottom="true"/>
-                              </div>
-                              <a href="#">
-                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
-                                  Выбрать
-                                </rt-button>
-                              </a>
-                            </template>
-                          </rt-card>
+                      <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                        <rt-card>
+                          <template slot="header">
+                            <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                          </template>
+                          <template slot="content">
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">4 антенны</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                            </div>
+                          </template>
+                          <template slot="footer">
+                            <div class="rt-space-bottom" />
+                            <div class="rtb-card__cost rt-space-bottom">
+                              <rt-price :value="500"
+                                        :is-option="false"
+                                        currency="₽"
+                                        :b2b-price="true"
+                                        time-interval="в месяц"
+                                        :is-time-interval-bottom="true"/>
+                            </div>
+                            <a href="#">
+                              <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                Выбрать
+                              </rt-button>
+                            </a>
+                          </template>
+                        </rt-card>
+                      </div>
+                      <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                        <rt-card>
+                          <template slot="header">
+                            <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                          </template>
+                          <template slot="content">
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">4 антенны</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                            </div>
+                          </template>
+                          <template slot="footer">
+                            <div class="rt-space-bottom" />
+                            <div class="rtb-card__cost rt-space-bottom">
+                              <rt-price :value="500"
+                                        :is-option="false"
+                                        currency="₽"
+                                        :b2b-price="true"
+                                        time-interval="в месяц"
+                                        :is-time-interval-bottom="true"/>
+                            </div>
+                            <a href="#">
+                              <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                Выбрать
+                              </rt-button>
+                            </a>
+                          </template>
+                        </rt-card>
+                      </div>
+                      <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
+                        <rt-card>
+                          <template slot="header">
+                            <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                          </template>
+                          <template slot="content">
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">до 650 Мбит/</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph ">4 антенны</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
+                            </div>
+                            <div class="rtb-card__description__row">
+                              <p class="rt-font-paragraph color-main025">Защита роутера</p>
+                            </div>
+                          </template>
+                          <template slot="footer">
+                            <div class="rt-space-bottom" />
+                            <div class="rtb-card__cost rt-space-bottom">
+                              <rt-price :value="500"
+                                        :is-option="false"
+                                        currency="₽"
+                                        :b2b-price="true"
+                                        time-interval="в месяц"
+                                        :is-time-interval-bottom="true"/>
+                            </div>
+                            <a href="#">
+                              <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                                Выбрать
+                              </rt-button>
+                            </a>
+                          </template>
+                        </rt-card>
+                      </div>
+                    </template>
+                    <template slot="side-text">
+                      <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-top">
+                        <div class="rtb-card__description__row">
+                          <p class="rt-font-paragraph ">до 650 Мбит/</p>
                         </div>
-                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
-                          <rt-card>
-                            <template slot="header">
-                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
-                            </template>
-                            <template slot="content">
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">4 антенны</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
-                              </div>
-                            </template>
-                            <template slot="footer">
-                              <div class="rt-space-bottom" />
-                              <div class="rtb-card__cost rt-space-bottom">
-                                <rt-price :value="500"
-                                          :is-option="false"
-                                          currency="₽"
-                                          :b2b-price="true"
-                                          time-interval="в месяц"
-                                          :is-time-interval-bottom="true"/>
-                              </div>
-                              <a href="#">
-                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
-                                  Выбрать
-                                </rt-button>
-                              </a>
-                            </template>
-                          </rt-card>
+                        <div class="rtb-card__description__row">
+                          <p class="rt-font-paragraph ">4 антенны</p>
                         </div>
-                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
-                          <rt-card>
-                            <template slot="header">
-                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
-                            </template>
-                            <template slot="content">
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">4 антенны</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
-                              </div>
-                            </template>
-                            <template slot="footer">
-                              <div class="rt-space-bottom" />
-                              <div class="rtb-card__cost rt-space-bottom">
-                                <rt-price :value="500"
-                                          :is-option="false"
-                                          currency="₽"
-                                          :b2b-price="true"
-                                          time-interval="в месяц"
-                                          :is-time-interval-bottom="true"/>
-                              </div>
-                              <a href="#">
-                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
-                                  Выбрать
-                                </rt-button>
-                              </a>
-                            </template>
-                          </rt-card>
+                        <div class="rtb-card__description__row">
+                          <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
                         </div>
-                        <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
-                          <rt-card>
-                            <template slot="header">
-                              <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
-                            </template>
-                            <template slot="content">
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">до 650 Мбит/</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph ">4 антенны</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
-                              </div>
-                              <div class="rtb-card__description__row">
-                                <p class="rt-font-paragraph color-main025">Защита роутера</p>
-                              </div>
-                            </template>
-                            <template slot="footer">
-                              <div class="rt-space-bottom" />
-                              <div class="rtb-card__cost rt-space-bottom">
-                                <rt-price :value="500"
-                                          :is-option="false"
-                                          currency="₽"
-                                          :b2b-price="true"
-                                          time-interval="в месяц"
-                                          :is-time-interval-bottom="true"/>
-                              </div>
-                              <a href="#">
-                                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
-                                  Выбрать
-                                </rt-button>
-                              </a>
-                            </template>
-                          </rt-card>
+                        <div class="rtb-card__description__row">
+                          <p class="rt-font-paragraph color-main025">Защита роутера</p>
                         </div>
-                      </template>
-                      <template slot="side-text">
-                        <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-top">
-                          <div class="rtb-card__description__row">
-                            <p class="rt-font-paragraph ">до 650 Мбит/</p>
-                          </div>
-                          <div class="rtb-card__description__row">
-                            <p class="rt-font-paragraph ">4 антенны</p>
-                          </div>
-                          <div class="rtb-card__description__row">
-                            <p class="rt-font-paragraph color-main025">Авторизация через СМС</p>
-                          </div>
-                          <div class="rtb-card__description__row">
-                            <p class="rt-font-paragraph color-main025">Защита роутера</p>
-                          </div>
-                        </div>
-                      </template>
-                    </rt-card-layout>
-                  </rt-tabs-content-item>
-                  <rt-tabs-content-item name="editor21">
-
-                  </rt-tabs-content-item>
-                </template>
-              </rt-tabs>
-            </div>
+                      </div>
+                    </template>
+                  </rt-card-layout>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="editor21">
+                  <h1>editor21</h1>
+                </rt-tabs-content-item>
+              </template>
+            </rt-tabs>
           </div>
         </div>
       </div>
