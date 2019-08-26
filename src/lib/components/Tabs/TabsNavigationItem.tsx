@@ -1,6 +1,7 @@
 import Vue, { CreateElement, VNode } from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import {tabsStore} from "./TabsStore.tsx";
+import { tabsStore } from "./TabsStore.tsx";
+
 @Component
 class RtTabsNavItem extends Vue {
 
@@ -8,22 +9,23 @@ class RtTabsNavItem extends Vue {
   @Prop({ default: false }) removeBaseTag: boolean;
   @Prop({ default: null }) name: string;
 
-
+  parentid: string = "";
   isActive: boolean = false;
 
   setActiveTabName() {
     tabsStore.setActiveTabName(this.name, this.anchor);
-    const $el: any = this.$el;
-    var currentScrollLeft = $el.parentNode.scrollLeft;
-    $el.parentNode.scrollBy({
-      top: 0,
-      left: ($el.offsetLeft - ((window.innerWidth - $el.offsetWidth) / 2)) - currentScrollLeft,
-      behavior: "smooth"
-    });
+      const $el: any = this.$el;
+      var currentScrollLeft = $el.parentNode.scrollLeft;
+      $el.parentNode.scrollBy({
+        top: 0,
+        left: ($el.offsetLeft - ((window.innerWidth - $el.offsetWidth) / 2)) - currentScrollLeft,
+        behavior: "smooth"
+      });
   }
 
+
   mounted() {
-    tabsStore.addTabName(this.name)
+    tabsStore.addTabUuid(this.$parent._uid, this.name);
     if (this.removeBaseTag) {
       let baseNode = document.querySelector("base");
       if (baseNode) {
@@ -37,17 +39,27 @@ class RtTabsNavItem extends Vue {
     }
     if (this.anchor && document.location.hash) {
       if (document.location.hash.replace(/^\#/, "") === this.anchor) {
-        tabsStore.setActiveTabName(this.name);
+        this.setActiveTabName();
       }
     }
+
+  }
+  onUpdateTabsStore(){
+    this.$forceUpdate()
   }
 
+
+  created() {
+    tabsStore.addWatcher(this.onUpdateTabsStore);
+  }
+
+
   render(h: CreateElement): VNode {
+
     let tabsItemClass = "rt-tabs-navigation__item";
-    if (this.name === tabsStore.activeName) {
+    if (tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid][this.name].isActive) {
       tabsItemClass += " rt-tabs-navigation__item--is-active";
     }
-
     return <div class={tabsItemClass} on-click={this.setActiveTabName}>
       <button class="rt-tabs-navigation__item-name">
         {this.$slots.default}

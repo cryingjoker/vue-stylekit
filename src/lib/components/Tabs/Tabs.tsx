@@ -3,7 +3,6 @@ import  { CreateElement, VNode } from "vue";
 import { Component, Prop, ProvideReactive } from "vue-property-decorator";
 import variables from "../../../lib/variables.json";
 import * as tsx from "vue-tsx-support";
-import {tabsStore} from "./TabsStore.tsx";
 
 @Component
 class RtTabs extends tsx.Component<{}> {
@@ -70,6 +69,8 @@ class RtTabs extends tsx.Component<{}> {
   };
 
   mounted() {
+
+
     if (!this.dontUseAdaptive) {
       this.tabletSize = parseInt(variables["tablet-upper-limit"]);
       this.mobileSize = parseInt(variables["mobile-upper-limit"]);
@@ -90,8 +91,6 @@ class RtTabs extends tsx.Component<{}> {
 
 
   render(h: CreateElement): VNode {
-    console.log('tabsStore',tabsStore);
-
 
     let classNames = "rt-tabs";
     if (this.vertical && window.innerWidth <= this.mobileSize) {

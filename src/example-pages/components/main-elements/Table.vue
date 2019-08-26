@@ -179,7 +179,6 @@
 
 <script>
 import componentsList from "../../componentsList";
-console.info('check',componentsList);
 // const componentsList = {};
 export default {
   name: "AppTable",

@@ -16,21 +16,21 @@
             <pre-code
               text="<rt-tabs :round-tablet-view='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one99&quot;>Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two99&quot;>Смысл</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree99&quot;>Значимость</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one&quot;>
+                <rt-tabs-content-item name=&quot;one99&quot;>
                   <h1>TEST</h1>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;two&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
+                <rt-tabs-content-item name=&quot;two99&quot;><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
                     представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении
                     поставленных задач. Равным образом консультация с широким активом влечет за собой процесс внедрения
                     и модернизации форм развития. Повседневная практика показывает, что консультация с широким активом
                     обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий
-                    активизации. С другой стороны новая модель организационной деятельности позволяет оценить значение
+                    активизации. С другой стороны новая модель оргоганизационной деятельности позволяет оценить значение
                     новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас
                     анализа новых предложений. Идейные соображения высшего порядка, а также реализация намеченных
                     плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций,
@@ -44,7 +44,7 @@
                     структура организации требуют определения и уточнения системы обучения кадров, соответствует
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;tree&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>
+                <rt-tabs-content-item name=&quot;tree99&quot;><p class=&quot;rt-font-h1&quot;>Значимость</p>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
                     активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
                     поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от
@@ -108,18 +108,18 @@
             <pre-code
               text="<rt-tabs :fill-content='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;one1&quot; :remove-base-tag=&quot;true&quot; name=&quot;one1&quot;>Первый пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one2&quot; :remove-base-tag=&quot;true&quot; name=&quot;one2&quot;>Второй пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one3&quot; :remove-base-tag=&quot;true&quot; name=&quot;one3&quot;>Третий пункт</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;one4&quot; :remove-base-tag=&quot;true&quot; name=&quot;one4&quot;>Четвертый пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one1&quot; :remove-base-tag=&quot;true&quot; name=&quot;one166&quot;>Первый пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one2&quot; :remove-base-tag=&quot;true&quot; name=&quot;one266&quot;>Второй пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one3&quot; :remove-base-tag=&quot;true&quot; name=&quot;one366&quot;>Третий пункт</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;one4&quot; :remove-base-tag=&quot;true&quot; name=&quot;one466&quot;>Четвертый пункт</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one1&quot;>
+                <rt-tabs-content-item name=&quot;one166&quot;>
                 <div class='rt-space-top3'>
                   <h1>TEST</h1>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;one2&quot;>
+                <rt-tabs-content-item name=&quot;one266&quot;>
                 <div class='rt-space-top3'>
                 <p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
@@ -142,7 +142,7 @@
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p>
                     </div></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;one3&quot;>
+                <rt-tabs-content-item name=&quot;one366&quot;>
                 <div class='rt-space-top3'>
                 <p class=&quot;rt-font-h1&quot;>Значимость</p></div>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
@@ -202,6 +202,17 @@
                     укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании
                     форм развития.</p>
                     </div></rt-tabs-content-item>
+                    <rt-tabs-content-item name=&quot;one466&quot;>
+                <div class='rt-space-top3'>
+                <p class=&quot;rt-font-h1&quot;>Значимость</p></div>
+                  <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
+                    активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
+                    поставленных задач. Задача организации, в особенности же рамки и место обучения кадров требуют от
+                    нас анализа направлений прогрессивного развития. Повседневная практика показывает, что сложившаяся
+                    структура организации представляет собой интересный эксперимент проверки форм развития. Значимость
+                    этих проблем настолько очевидна, что укрепление и развитие структуры позволяет оценить значение
+                    систем массового участия.</p>
+                  </rt-tabs-content-item>
               </template>
             </rt-tabs>"
             />
@@ -213,17 +224,17 @@
               <pre-code
                 text="<rt-tabs :fill-content='true' :justify-all-width='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;ready!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one&quot;>Готов</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hello&quot; :remove-base-tag=&quot;true&quot; name=&quot;two&quot;>Смысл</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;world&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree&quot;>Значимость</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;ready!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;one1&quot;>Готов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;hello!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;two1&quot;>Смысл</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor=&quot;world!!&quot; :remove-base-tag=&quot;true&quot; name=&quot;tree1&quot;>Значимость</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
-                <rt-tabs-content-item name=&quot;one&quot;>
+                <rt-tabs-content-item name=&quot;one1&quot;>
                 <div class='rt-space-top3'>
                   <h1>TEST</h1>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;two&quot;>
+                <rt-tabs-content-item name=&quot;two1&quot;>
                 <div class='rt-space-top3'><p class=&quot;rt-font-h1&quot;>Смысл сайта</p>
                   <p class=&quot;rt-font-paragraph&quot;>Повседневная практика показывает, что консультация с широким активом
                     представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении
@@ -244,7 +255,7 @@
                     структура организации требуют определения и уточнения системы обучения кадров, соответствует
                     насущным потребностям. Товарищи! рамки и место обучения кадров представляет собой интересный
                     эксперимент проверки направлений прогрессивного развития.</p></div></rt-tabs-content-item>
-                <rt-tabs-content-item name=&quot;tree&quot;>
+                <rt-tabs-content-item name=&quot;tree1&quot;>
                 <div class='rt-space-top3'><p class=&quot;rt-font-h1&quot;>Значимость</p>
                   <p class=&quot;rt-font-paragraph&quot;>Значимость этих проблем настолько очевидна, что консультация с широким
                     активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении
@@ -653,7 +664,7 @@
                     </div>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name="editor">
+                <rt-tabs-content-item name="editor21">
                   <div class="row rt-space-top2">
                     <div class="rt-col-12 rt-col-td-6">
                       <rt-card>
@@ -887,7 +898,7 @@
                   </rt-card-layout>
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name="editor21">
-
+                  <h1>editor21</h1>
                 </rt-tabs-content-item>
               </template>
             </rt-tabs>
