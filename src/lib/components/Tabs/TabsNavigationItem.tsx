@@ -42,6 +42,11 @@ class RtTabsNavItem extends Vue {
         this.setActiveTabName();
       }
     }
+    setTimeout(()=>{
+      if(this.$parent['roundTabletView'] && this.$parent['roundTabletViewMaxWidth']){
+        tabsStore.setTabWidth(this.$parent._uid,this.$el['offsetWidth']+2)
+      }
+    },2000)
 
   }
   onUpdateTabsStore(){
@@ -55,16 +60,24 @@ class RtTabsNavItem extends Vue {
 
 
   render(h: CreateElement): VNode {
-
     let tabsItemClass = "rt-tabs-navigation__item";
     if (tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid][this.name].isActive) {
       tabsItemClass += " rt-tabs-navigation__item--is-active";
     }
-    return <div class={tabsItemClass} on-click={this.setActiveTabName}>
-      <button class="rt-tabs-navigation__item-name">
-        {this.$slots.default}
-      </button>
-    </div>;
+
+    if(tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid].width){
+      return <div class={tabsItemClass} on-click={this.setActiveTabName} style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width+'px') }}  >
+        <button class="rt-tabs-navigation__item-name"  >
+          {this.$slots.default}
+        </button>
+      </div>;
+    }else {
+      return <div class={tabsItemClass} on-click={this.setActiveTabName}>
+        <button class="rt-tabs-navigation__item-name">
+          {this.$slots.default}
+        </button>
+      </div>;
+    }
   }
 
 }

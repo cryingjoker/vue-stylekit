@@ -8,6 +8,7 @@ import * as tsx from "vue-tsx-support";
 class RtTabs extends tsx.Component<{}> {
 
   @Prop({ default: false }) roundTabletView: boolean;
+  @Prop({ default: false }) roundTabletViewMaxWidth: boolean;
   @Prop({ default: false }) fillContent: boolean;
   @Prop({ default: false }) justifyAllWidth: boolean;
 
