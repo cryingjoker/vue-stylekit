@@ -4,7 +4,9 @@ const setActiveTabName = (tabsName:string, tabAnchore:string = '', dontResize:bo
   const parentId = tabsStore.tabsNames[tabsName];
   const parentArray = tabsStore.tabsParents[parentId];
   for(let key in parentArray){
-    parentArray[key].isActive = false;
+    if(typeof parentArray[key] === 'object') {
+      parentArray[key].isActive = false;
+    }
   }
   parentArray[tabsName].isActive = true;
   if(!dontResize) {
@@ -22,7 +24,6 @@ const runWatchers = ()=>{
 }
 const addTabUuid = (tabsContainerId: number, tabsName: string) => {
 
-
   if (!tabsStore.tabsParents[tabsContainerId]) {
     tabsStore.tabsParents[tabsContainerId] = {};
     if(tabsStore.tabsParents[tabsContainerId][tabsName]){
@@ -39,12 +40,36 @@ const addTabUuid = (tabsContainerId: number, tabsName: string) => {
 const addWatcher = (fn) => {
   tabsStore.watcherFunction.push(fn);
 };
+const setTabWidth = (parentUiid:number, width:number)=>{
+  if(!tabsStore.tabsParents[parentUiid].width) {
+    tabsStore.tabsParents[parentUiid].width = width;
+    tabsStore.tabsParents[parentUiid].lastUpdateTime = (new Date()).getTime();
+  }
+  else{
+    if(tabsStore.tabsParents[parentUiid].width < width){
+      tabsStore.tabsParents[parentUiid].width = width;
+      tabsStore.tabsParents[parentUiid].lastUpdateTime = (new Date()).getTime();
+    }
+  }
+  setTimeout(()=>{
+    checkMaxWidth(parentUiid);
+  },400)
+  // runWatchers();
+}
+const checkMaxWidth = (parentUiid)=>{
+  const time =(new Date()).getTime();
+  if(time - tabsStore.tabsParents[parentUiid].lastUpdateTime >= 400 ){
+    tabsStore.tabsParents[parentUiid].lastUpdateTime = (new Date()).getTime();
+    runWatchers();
+  }
+}
 export const tabsStore = Vue.observable({
   setActiveTabName: setActiveTabName,
   addTabUuid: addTabUuid,
   tabsParents: {},
   tabsNames: {},
   addWatcher: addWatcher,
-  watcherFunction: []
+  watcherFunction: [],
+  setTabWidth: setTabWidth
 
 });
