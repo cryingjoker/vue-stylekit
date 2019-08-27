@@ -658,11 +658,11 @@
           <div class="rt-col-12 rt-space-top3">
             <rt-tabs :position-center="true">
               <template slot="navigation">
-                <rt-tabs-nav-item anchor="alnfg" name="analytics">Видеоаналитика</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor="sadgfasd" name="editor">Редактор шаблонов</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="alnfg" name="analytics22">Видеоаналитика</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="sadgfasd" name="edit66or">Редактор шаблонов</rt-tabs-nav-item>
               </template>
               <template slot="content">
-                <rt-tabs-content-item name="analytics">
+                <rt-tabs-content-item name="analytics22">
                   <div class="row rt-space-top2">
                     <div class="rt-col-12 rt-col-td-6">
                       <rt-card background-image="">
@@ -714,7 +714,7 @@
                     </div>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name="editor21">
+                <rt-tabs-content-item name="edit66or">
                   <div class="row rt-space-top2">
                     <div class="rt-col-12 rt-col-td-6">
                       <rt-card>
@@ -752,7 +752,7 @@
                               class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-td-space-top rt-md-space-top-none rt-space-right4 rt-td-space-right15 rt-md-space-right05">
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom with-icon">Таргетировать контент по
                                 полу
-                                и возрасту посетителей2</p>
+                                и возрасту посетителей2 ^^</p>
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom45 with-icon">Собирать статистику по
                                 охвату и среднему времени просмотра контента</p>
                               <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
