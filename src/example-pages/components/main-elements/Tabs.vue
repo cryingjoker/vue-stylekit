@@ -494,8 +494,8 @@
                 <rt-tabs-nav-item anchor="two" name="humanResources">Кадрам</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="three" name="sales">Отделу продаж</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="four" name="support">Клиентскому отделу</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor="five" name="test1">Клиентскому отделу</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor="six" name="test2">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="five" name="test111">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="six" name="test112">Клиентскому отделу</rt-tabs-nav-item>
               </template>
               <template slot="content">
                 <rt-tabs-content-item name="marketing">
@@ -599,7 +599,7 @@
                     <div class="rt-col-1 td-d-none"/>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name="test1">
+                <rt-tabs-content-item name="test111">
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
@@ -626,7 +626,7 @@
                     <div class="rt-col-1 td-d-none"/>
                   </div>
                 </rt-tabs-content-item>
-                <rt-tabs-content-item name="test2">
+                <rt-tabs-content-item name="test112">
                   <div class="row rt-space-top2">
                     <div class="rt-col-1 td-d-none"/>
                     <div class="rt-col-10 rt-col-td-6">
@@ -949,6 +949,88 @@
                 </rt-tabs-content-item>
                 <rt-tabs-content-item name="editor21">
                   <h1>editor21</h1>
+                </rt-tabs-content-item>
+              </template>
+            </rt-tabs>
+          </div>
+          <div class="rt-col-12 rt-space-top3">
+            <rt-tabs>
+              <template slot="navigation">
+                <rt-tabs-nav-item anchor="test1" name="test1">Веб-камеры</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="test2" name="test2">Плееры</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="test3" name="test3">Экраны</rt-tabs-nav-item>
+              </template>
+              <template slot="content">
+                <rt-tabs-content-item name="test1">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-6 rt-col-md-3">
+                      <rt-card unfold-button-text="Характеристики">
+                        <template slot="header">
+                          <div class="equipment">
+                            <div class="equipment__image rt-font-td-center">
+                              <img src="/static/images/B2B/group-40-copy.jpg"/>
+                            </div>
+                            <div class="equipment__short-description">
+                              <div class="equipment__short-description__top-part">
+                                <p class="rt-font-paragraph">Creative LIVE!CAM Sync HD</p>
+                                <p class="rt-font-small-paragraph">Веб-камера</p>
+                              </div>
+                              <div class="equipment__short-description__bottom-part">
+                                <rt-price :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true">
+                                  <div>
+                                    <span>132</span>
+                                  </div>
+                                </rt-price>
+                                <rt-hint>
+
+                                </rt-hint>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+                        <template slot="content">
+                          <div class="equipment__full-description">
+                            <div class="equipment__full-description-line">
+                              <div class="equipment__full-description-line__title">Разрешение</div>
+                              <div class="equipment__full-description-line__value">1280×720 пикс.</div>
+                            </div>
+                            <div class="equipment__full-description-line">
+                              <div class="equipment__full-description-line__title">Поддержка MIMO</div>
+                              <div class="equipment__full-description-line__value">Есть</div>
+                            </div>
+                            <div class="equipment__full-description-line">
+                              <div class="equipment__full-description-line__title">Разъем для внешней антенны</div>
+                              <div class="equipment__full-description-line__value">CRC-9</div>
+                            </div>
+                            <div class="equipment__full-description-line">
+                              <div class="equipment__full-description-line__title">Размеры</div>
+                              <div class="equipment__full-description-line__value">28×11.5×88мм</div>
+                            </div>
+                            <div class="equipment__full-description-line">
+                              <div class="equipment__full-description-line__title">Вес</div>
+                              <div class="equipment__full-description-line__value">50 гр</div>
+                            </div>
+                          </div>
+                        </template>
+                        <!--<template slot="footer">-->
+
+                        <!--</template>-->
+                      </rt-card>
+                    </div>
+                    <div class="rt-col-6"></div>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test2">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-6"></div>
+                    <div class="rt-col-6"></div>
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="test3">
+                  <div class="row rt-space-top2">
+                    <div class="rt-col-6"></div>
+                    <div class="rt-col-6"></div>
+                  </div>
                 </rt-tabs-content-item>
               </template>
             </rt-tabs>
