@@ -472,7 +472,7 @@
       })();
       return <div class={inputClassWrapper}>
         <div class="input text-field" class={inputClass}>
-          <span style={{position: 'absolute', 'left': '-40px'}}>{this._uid}</span>
+
           <input
             onKeypress={this.keyPress}
             onKeyup={this.keyUp}
