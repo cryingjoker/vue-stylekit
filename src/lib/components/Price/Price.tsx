@@ -139,10 +139,10 @@ class Price extends Vue {
     }
   }
   mounted() {
-    if(this.epcPrice){
-      this.check()
-    }
     this.cost = this.value ? parseFloat(this.value.toString()) : 0;
+    if(this.epcPrice){
+      this.check();
+    }
   }
 
   render(h: CreateElement): VNode {
