@@ -240,8 +240,11 @@ b,
   @media (max-width: mobile-upper-limit)
     text-align left
 
-.{newAppName}-font-md
-  &-center
+.{newAppName}-font
+  &-td-center
+    @media (max-width: tablet-upper-limit)
+      text-align center
+  &-md-center
     @media (max-width: mobile-upper-limit)
       text-align center
 

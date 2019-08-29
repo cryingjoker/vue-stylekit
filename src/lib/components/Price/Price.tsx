@@ -18,6 +18,7 @@ class Price extends Vue {
   @Prop({ default: false }) b2bPrice: boolean;
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
+  @Prop({ default: false }) epcPrice: boolean;
   localValue: number = 0;
   cost: number = 0;
   //todo сделать проверку системного языка с заменой . , у double данных
@@ -104,7 +105,7 @@ class Price extends Vue {
             "$1 "
           );
         } else {
-          item = parseInt(item).toFixed(2).toString()
+          item = parseInt(item).toFixed(2).toString();
           item = item[0]+item[1];
           item = item.replace('.','');
           if(item.length === 1){
@@ -128,13 +129,29 @@ class Price extends Vue {
   onTimeIntervalChanged(val: string) {
     this.normalizeTimeInterval = val;
   }
+  check(){
+    if(this.$slots['default'] && this.$slots['default'][0].children[0].children[0].text) {
+      this.cost = parseFloat(this.$slots['default'][0].children[0].children[0].text);
+    }else{
+      setTimeout(()=>{
+        this.check()
+      },300)
+    }
+  }
   mounted() {
-    this.cost = this.$slots['default'] && parseFloat(this.$slots['default'][0].children[0].children[0].text) || (this.value ? parseFloat(this.value.toString()) : 0);
+    if(this.epcPrice){
+      this.check()
+    }
+    this.cost = this.value ? parseFloat(this.value.toString()) : 0;
   }
 
   render(h: CreateElement): VNode {
+
     const rtPriceClass = "rt-price" + (this.forGame ? " rt-price-game" : "");
     const rtPriceInfoClass = "rt-price__info" + (this.boldOption ? " rt-price__info--bold-font" : "");
+    if(this.epcPrice){
+      return <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>{this.$slots['default'][0].children[0].children[0].text}</div>
+    }
     const timeIntervalRender = () => {
       if (this.normalizeTimeInterval && !this.onlyPrice) {
         {
