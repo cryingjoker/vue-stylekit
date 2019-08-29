@@ -713,6 +713,7 @@
   height 560px
   width 100%
   padding 60px calc((100% - 566px) / 2)
+  -ms-overflow-style: none
   @media(max-width: tablet-upper-limit)
     height 431px
     padding 40px calc((100% - 452px) / 2)
@@ -797,6 +798,8 @@
     transform translateX(-50%) translateY(-50%) rotate(90deg)
   &__right-arrow
     transform translateX(-50%) translateY(-50%) rotate(-90deg)
+  &::-webkit-scrollbar
+    width: 0 !important
 
 .rt-forgame
   .rt-logo-co-branding

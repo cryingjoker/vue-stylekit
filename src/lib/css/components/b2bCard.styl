@@ -892,7 +892,6 @@
       max-width calc(100% / 9 * 4)
       flex-basis calc(100% / 9 * 4)
 
-
 .specified-card-layout
   justify-content space-between
   display flex
@@ -903,3 +902,45 @@
   @media (min-width laptop-lower-limit)
     display flex
     justify-content space-between
+
+.equipment
+  display flex
+  flex-direction row
+  @media (max-width tablet-upper-limit)
+    flex-direction column
+  &__short-description,
+  &__image
+    flex-basis 50%
+  &__short-description
+    display flex
+    flex-direction column
+    justify-content space-between
+    @media (max-width tablet-upper-limit)
+      flex-basis 140px
+    &__top-part,
+    &__bottom-part
+      flex-basis 50%
+  &__full-description
+    @media (max-width mobile-upper-limit)
+      height 0
+      &--shown
+        height auto
+    &-line
+      display flex
+      justify-content space-between
+      padding 15px 0
+      @media (max-width tablet-upper-limit)
+        flex-direction column
+      &+.equipment__full-description-line
+        border-top 1px solid b2c-cool-grey
+      &__title
+        color main-color05
+  &__unfold-button
+    position relative
+    &:after
+      position absolute
+      content: ''
+      top 50%
+      right 20px
+      height 20px
+      width 20px

@@ -183,11 +183,16 @@ export default {
     inTabsWImage: {
       type: Boolean,
       default: false
+    },
+    unfoldButtonText: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
     index: null,
-    mobileLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"]),
+    mobileLayout: window.innerWidth <= parseInt(variables["mobile-upper-limit"]),
+    tabletLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"]),
     localBackgroundImage: null,
     localProductIcon: null,
     localCategoryIconMobile: null,
@@ -459,12 +464,12 @@ export default {
 
   mounted: function() {
     window.addEventListener('resize', () => {
-      this.mobileLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
+      this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+      this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
+      console.log(this.mobileLayout)
     });
     this.checkLazy();
-    if(this.mobileSvgWidth !== 0) {
-      this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2))
-    }
+    this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2))
   },
   methods: {
     loadImageAsync (src, resolve, reject) {
@@ -538,7 +543,7 @@ export default {
           }
           this.$el.classList.toggle('is-flipped');
         }
-        if(this.mobileLayout && document.querySelector('.popup-content')) {
+        if(this.tabletLayout && document.querySelector('.popup-content')) {
 
           document.querySelector('.popup-content').innerHTML = this.$el.querySelector('.rtb-card__reverse').innerHTML;
           setTimeout(()=>{
@@ -549,6 +554,11 @@ export default {
         }
       }
     },
+    unfoldFeatures() {
+      this.$el.querySelector('.equipment__full-description').classList.contains('equipment__full-description--shown') ?
+        this.$el.querySelector('.equipment__full-description').classList.remove('equipment__full-description--shown') :
+        this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown')
+    }
   },
   render(h) {
     const categoryCard = (() => {
@@ -729,7 +739,7 @@ export default {
     })();
     const triangle = (()=>{
       if(this.inTabsWImage) {
-        if(this.mobileLayout) {
+        if(this.tabletLayout) {
           return <svg width={this.mobileSvgWidth} height="100" class="rt-card__content-triangle">
             <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgba(255, 255, 255)"/>
           </svg>
@@ -738,6 +748,11 @@ export default {
             <polygon points="0,0 100,0 0,490" fill="rgba(255, 255, 255)"/>
           </svg>
         }
+      }
+    })();
+    const unfoldButton = (()=> {
+      if(this.mobileLayout) {
+        return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>{this.unfoldButtonText}</div>
       }
     })();
     if(this.doubleSided){
@@ -762,6 +777,7 @@ export default {
           {header}
           {productTriangle}
           <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
+            {unfoldButton}
             {this.$slots["content"]}
           </div>
           {bottomList}
