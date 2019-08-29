@@ -12,7 +12,7 @@ const setActiveTabName = (tabsName:string, tabAnchore:string = '', dontResize:bo
   if(!dontResize) {
     window.dispatchEvent(new Event("resize"));
   }
-  if (tabAnchore.length > 0) {
+  if (tabAnchore && tabAnchore.length > 0) {
     window.history.replaceState(undefined, undefined, "#" + tabAnchore);
   }
   runWatchers();

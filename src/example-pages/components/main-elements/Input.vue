@@ -33,7 +33,7 @@
             />
           </div>
         </div>
-        <div class="app-row row">
+        <div class="app-row row ">
           <div class="rt-col-3 rt-col-md-3">
             <span class="rt-font-label flex-fill rt-space-bottom05">input in 3 col</span>
             <rt-input value='' placeholder='Электронная почта' />
