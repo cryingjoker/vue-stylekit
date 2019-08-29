@@ -211,7 +211,6 @@
               carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
             };
             carouselPaginatorWrapper.children[activePaginatorButton].classList.add('custom-carousel__paginator-item--active');
-            console.log(activePaginatorButton);
             this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
           }, 150);
         }, false);

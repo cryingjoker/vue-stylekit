@@ -466,7 +466,6 @@ export default {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
-      console.log(this.mobileLayout)
     });
     this.checkLazy();
     this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2))

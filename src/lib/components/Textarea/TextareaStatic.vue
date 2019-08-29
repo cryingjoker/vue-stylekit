@@ -58,7 +58,6 @@ export default {
     inputHandler($event) {
       this.localValue = this.$refs.textarea.value;
       this.setValueLength();
-      console.log(this.value);
     },
     clearInput() {
       this.localValue = "";
