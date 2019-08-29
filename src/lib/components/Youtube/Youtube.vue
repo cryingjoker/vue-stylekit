@@ -42,6 +42,10 @@ export default {
     pauseImage: {
       type: String,
       default: null
+    },
+    disableButtons: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -96,7 +100,7 @@ export default {
   },
   methods: {
     keyPressHolder(event){
-      if(this.duration){
+      if(this.duration && !this.disableButtons){
         switch(event.keyCode) {
           case 32:
             if (this.isPlaying) {
