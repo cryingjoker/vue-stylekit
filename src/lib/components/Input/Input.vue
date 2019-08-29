@@ -117,6 +117,32 @@
       };
     },
 
+    computed: {
+      fieldName() {
+        return this.name || "input-field__" + this._uid;
+      },
+      isInvalid() {
+        if (this.validate || this.hasError) {
+          return this.errors && this.errors.has(this.fieldName);
+        }
+      },
+      inputClass() {
+        let className = "input-wrapper";
+        if (this.outlined) {
+          className += " input-wrapper--outlined";
+        }
+        if (this.isB2bInput) {
+          className += " rtb-input color-block--white";
+        }
+        if (this.isHidden) {
+          className += " rtb-input--hidden";
+        }
+        if (this.approved) {
+          className += " rtb-input--approved"
+        }
+        return className;
+      }
+    },
 
     watch: {
       localValue(val) {
@@ -318,27 +344,6 @@
       }
     },
     render() {
-      let inputClassWrapper =  "input-wrapper";
-        if (this.outlined) {
-          inputClassWrapper += " input-wrapper--outlined";
-        }
-        if (this.isB2bInput) {
-          inputClassWrapper += " rtb-input color-block--white";
-        }
-        if (this.isHidden) {
-          inputClassWrapper += " rtb-input--hidden";
-        }
-        if (this.approved) {
-          inputClassWrapper += " rtb-input--approved"
-        }
-      let isInvalid = false;
-
-      if (this.validate || this.hasError) {
-        isInvalid =  this.errors && this.errors.has(this.fieldName);
-      }
-
-      const fieldName = this.name || "input-field__" + this._uid;
-
       let inputClass = "input text-field";
       if (this.isInvalid) {
         inputClass += " text-field--error";
@@ -418,7 +423,7 @@
       })();
 
       const errorMessage = (() => {
-        if (isInvalid) {
+        if (this.isInvalid) {
           let errorMessageClass = "text-field__error-message";
           if (this.label) {
             errorMessageClass += " text-field__error-message--has-label";
@@ -470,7 +475,7 @@
         if (this.localLabel)
           return <div class="input-label">{this.localLabel}</div>;
       })();
-      return <div class={inputClassWrapper}>
+      return <div class={this.inputClass}>
         <div class="input text-field" class={inputClass}>
 
           <input
@@ -481,7 +486,7 @@
             autocapitalize="off"
             type={this.type}
             class="input-element"
-            name={fieldName}
+            name={this.fieldName}
             onInput={this.inputHandler}
             v-validate={this.validate}
           />
