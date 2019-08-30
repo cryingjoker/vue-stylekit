@@ -4,7 +4,7 @@ import { Component, Prop } from 'vue-property-decorator'
 const cssSelector = 'rt-carousel__slide'
 const name = 'RtCarouselSlide'
 
-@Component
+@Component({ name })
 class CarouselSlide extends Vue {
 
   name: string = name
@@ -14,8 +14,6 @@ class CarouselSlide extends Vue {
 
   shown: boolean = this.loaded !== undefined ? this.loaded : true
   offsetSlide: number|string
-
-  mounted () { }
 
   toggle (flag: boolean|undefined) {
     if (this.loaded === undefined || this.loaded)

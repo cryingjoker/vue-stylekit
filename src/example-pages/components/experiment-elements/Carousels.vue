@@ -5,7 +5,7 @@
         <div class="app-title">
           <div class="row">
             <h1 class="rt-font-hero rt-col">
-              Carousel 2.0
+              Carousel 3.0
             </h1>
           </div>
         </div>
@@ -13,7 +13,90 @@
     </div>
 
     <div style="width: 100vw">
-      <pre-code text='<rt-carousel :hide-arrows="true" slides-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
+      <pre-code text='
+        <div class="rt-container">
+          <div class="app-content rt-col-12 rt-col-md-3">
+            <h3>Carousel in Tabs</h3>
+            <div class="app-body">
+              <div class="app-row row">
+                <div class="rt-col-12 rt-space-bottom3">
+                  <rt-tabs :round-tablet-view="true">
+                    <template slot="navigation">
+                      <rt-tabs-nav-item :remove-base-tag="true" name="one">Демо-карточки</rt-tabs-nav-item>
+                      <rt-tabs-nav-item :remove-base-tag="true" name="two">С фоновым изображением</rt-tabs-nav-item>
+                    </template>
+                    <template slot="content">
+                      <rt-tabs-content-item name="one">
+                        <div class="area">
+                          <rt-carousel :debug="true">
+                            <rt-carousel-slide
+                              v-for="i in 17"
+                              :key="i"
+                            >
+                              <div
+                                style="
+                                  align-content: center;
+                                  border-radius: 8px;
+                                  color: white;
+                                  display: flex;
+                                  flex-flow: wrap;
+                                  font-size: 150px;
+                                  justify-content: center;
+                                  height: 450px;
+                                "
+                                :style="`background-color: rgb(${i*8},${255/i},${i*4});`"
+                                v-text="i"
+                              ></div>
+                            </rt-carousel-slide>
+                          </rt-carousel>
+                        </div>
+                      </rt-tabs-content-item>
+                      <rt-tabs-content-item name="two">
+                        <div class="area">
+                          <rt-carousel
+                            :navs-pos-end="144"
+                          >
+                            <rt-carousel-slide
+                              v-for="i in 15"
+                              :key="i"
+                            >
+                              <div
+                                style="
+                                  border-radius: 8px;
+                                  height: 300px;
+                                  position: relative;
+                                "
+                                :style="`background: url(https://picsum.photos/300/300?getForId=${i})`"
+                              >
+                                <div
+                                  style="
+                                    background-color: black;
+                                    color: white;
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    padding: 0 10px;
+                                  "
+                                  v-text="i"
+                                ></div>
+                              </div>
+                            </rt-carousel-slide>
+                          </rt-carousel>
+                        </div>
+                      </rt-tabs-content-item>
+                    </template>
+                  </rt-tabs>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ' />
+    </div>
+
+    <div style="width: 100vw">
+      <pre-code text='
+        <rt-carousel :hide-arrows="true" slides-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
           <rt-carousel-slide>
             <rt-card>
               <template slot="header">
@@ -449,7 +532,7 @@
       </div>' />
     </div>
 
-    <div class="rt-space-top5" style="width: 100vw">
+    <!-- <div class="rt-space-top5" style="width: 100vw">
       <pre-code text='
         <rt-carousel :hide-navigation="true">
           <rt-carousel-slide slide-classes="rt-col-4 in-plus-card higher-z">
@@ -1671,11 +1754,11 @@
             </rt-card>
           </rt-carousel-slide>
         </rt-carousel>'/>
-    </div>
+    </div> -->
 
     <div class="rt-space-top5" style="width: 100vw;">
-      <rt-carousel >
-        <rt-carousel-slide v-for="i in 7" :key="i">
+      <rt-carousel :debug="true">
+        <rt-carousel-slide v-for="i in 27" :key="i">
           <h2>Слайд {{ i }}</h2>
           <rt-row-list>
             <rt-row-list-item v-for="ir in 3" :key="ir">
@@ -1683,7 +1766,7 @@
                 <div class="d-flex flex-row">
                   <div>
                     <p>Антивирус</p>
-                    <p class="color-main05" v-for="o in i" :key="o">Kaspersky Internet Security, месяц в подарок</p>
+                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
                   </div>
                 </div>
               </template>

@@ -9,12 +9,20 @@ const cssContainer = 'rt-container'
 const autoScrollingTimeout = 100 // Длительность задержки автоскроллинга
 const slideSwipingMinDistance = 40 // Минимальное значение сдвига для автоскроллинга
 
+// Используется для отладки
+let perfStart
+let perfResult = 0
+
 export default {
   name: name,
   components: {
     [Navigation.name]: Navigation
   },
   props: {
+    debug: {
+      type: Boolean,
+      default: false
+    },
     decorated: {
       type: Boolean // Технический параметр для обворачивания карусели в другой компонент
     },
@@ -138,6 +146,7 @@ export default {
      */
     advancePage(direction) {
       if (!this.isPending && !this.isAnimating) {
+        perfStart = performance.now()
         let now = this.overlayEl.scrollLeft
         let distance = 0
         let wrapStyles = getComputedStyle(this.slidedEl)
@@ -177,6 +186,7 @@ export default {
             (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
             (!this.isAnimating && !this.isPending)
           ) {
+            perfStart = performance.now()
             this.scrollingAutoEnd = false
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide()
@@ -311,6 +321,7 @@ export default {
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
                 this.isAnimating = false
+                perfResult = performance.now() - perfStart
                 resolve()
               }, 1) // В FF скроллинг быстрее отрабатывает, чем триггер isAnimating
             }
@@ -338,7 +349,7 @@ export default {
           if (!this.overlayEl && !this.$refs.overlay) {
             return
           }
-          if (!this.overlayEl)
+          if (!this.overlayEl || !this.slidedEl)
             return
           let startScrolling = this.overlayEl.scrollLeft
           let distance = 0
@@ -367,6 +378,31 @@ export default {
     }
   },
   render (h) {
+    const debugBlock = () => {
+      if (this.debug) {
+        return (
+          <div
+            style="
+              background: black;
+              color: #3fa;
+              font-size: 10px;
+              padding: 5px;
+              position: absolute;
+              height: 100px;
+              width: 100px;
+              bottom: 0;
+              right: 0;
+              z-index: 12;
+            "
+          >
+            <p>offset: { this.innerBlockOffset }</p>
+            <p>mc: { this.isAnimating ? 'run' : 'stopped' }</p>
+            <p>now: { this.$refs && this.$refs.overlay ? this.$refs.overlay.scrollLeft : '' }</p>
+            <p>perf: 0.0{ parseInt(Math.floor(perfResult/10)) }s</p>
+          </div>
+        )
+      }
+    }
     const desktopBlock = () => {
       if (!this.isTouch)
         return <div
@@ -444,6 +480,7 @@ export default {
         marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
       }}
     >
+      { debugBlock() }
       { navsBlock() }
       { desktopBlock() }
       { mobileBlock() }
