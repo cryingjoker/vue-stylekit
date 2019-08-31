@@ -1,46 +1,44 @@
-<template>
-  <div :class="selectClasses" class="select text-field">
-    <button :disabled="disabled" class="select__inner" @click="toggleOpen">
-      <label class="floating-placeholder" :class="placeholderClasses">{{
-        label
-      }}</label>
-      <div class="select-value">
-        <p class="select-input">
-          {{ localValue }}
-        </p>
-        <div class="select-arrow">
-          <svg
-            class="select-arrow__icon"
-            width="13"
-            height="7"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z"
-              fill="#575D68"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </button>
-    <div
-      :class="{
-        'text-field__border': outlined,
-        'text-field__line': !outlined,
-        'text-field__border--error': outlined && hasError
-      }"
-    />
-    <!--<div v-else class="text-field__line" />-->
-    <div v-if="!disabled" :style="selectListStyle" class="select-list">
-      <slot />
-    </div>
-    <p v-if="!!hasError" class="text-field__error-message">
-      {{ errorMessage }}
-    </p>
-  </div>
-</template>
-<script>
+<!--<template>-->
+  <!--<div :class="selectClasses" class="select text-field">-->
+    <!--<button :disabled="disabled" class="select__inner" @click="toggleOpen">-->
+      <!--<label class="floating-placeholder" :class="placeholderClasses">{{-->
+        <!--label-->
+      <!--}}</label>-->
+      <!--<div class="select-value">-->
+        <!--<p class="select-input">-->
+          <!--{{ localValue }}-->
+        <!--</p>-->
+        <!--<div class="select-arrow">-->
+          <!--<svg class="select-arrow__icon"-->
+               <!--width="13"-->
+               <!--height="7"-->
+               <!--xmlns="http://www.w3.org/2000/svg">-->
+            <!--<path-->
+              <!--d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z"-->
+              <!--fill="#575D68"-->
+              <!--fill-rule="evenodd"-->
+            <!--/>-->
+          <!--</svg>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</button>-->
+    <!--<div-->
+      <!--:class="{-->
+        <!--'text-field__border': outlined,-->
+        <!--'text-field__line': !outlined,-->
+        <!--'text-field__border&#45;&#45;error': outlined && hasError-->
+      <!--}"-->
+    <!--/>-->
+    <!--&lt;!&ndash;<div v-else class="text-field__line" />&ndash;&gt;-->
+    <!--<div v-if="!disabled" :style="selectListStyle" class="select-list">-->
+      <!--<slot />-->
+    <!--</div>-->
+    <!--<p v-if="!!hasError" class="text-field__error-message">-->
+      <!--{{ errorMessage }}-->
+    <!--</p>-->
+  <!--</div>-->
+<!--</template>-->
+<script type="text/jsx">
 export default {
   name: "RtSelect",
   props: {
@@ -83,6 +81,10 @@ export default {
     outlined: {
       type: Boolean,
       default: false
+    },
+    activeInput: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -100,20 +102,36 @@ export default {
   },
   computed: {
     selectClasses() {
-      return {
-        "select--error text-field--error": this.hasError,
-        "select--is-open": this.isOpen,
-        "select--is-reset-width": this.resetWrapperWidth,
-        "select--disabled": Boolean(this.disabled),
-        "select--invert-open-list": this.isOpenListOnTop,
-        "rtb-select": this.isB2bSelect,
-        "rtb-select--outlined": this.outlined
-      };
+      let selectClasses = '';
+      if(this.hasError) {
+        selectClasses += " select--error text-field--error"
+      }
+      if(this.isOpen) {
+        selectClasses += " select--is-open"
+      }
+      if(this.resetWrapperWidth) {
+        selectClasses += " select--is-reset-width"
+      }
+      if(Boolean(this.disabled)) {
+        selectClasses += " select--disabled"
+      }
+      if(this.isOpenListOnTop) {
+        selectClasses += " select--invert-open-list"
+      }
+      if(this.isB2bSelect) {
+        selectClasses += " rtb-select"
+      }
+      if(this.outlined) {
+        selectClasses += " rtb-select--outlined"
+      }
+      return selectClasses;
     },
     placeholderClasses() {
-      return {
-        "floating-placeholder--go-top": this.hasSelected
-      };
+      let placeholderClasses = '';
+      if(this.hasSelected) {
+        placeholderClasses += ' floating-placeholder--go-top'
+      }
+      return placeholderClasses;
     },
     selectListStyle() {
       if (this.dropdownMinWidth) {
@@ -125,6 +143,12 @@ export default {
           "min-width": width
         };
       }
+    },
+    borderClass() {
+      let borderClass = '';
+      borderClass += this.outlined ? 'text-field__border' : 'text-field__line';
+      borderClass += (this.outlined && this.hasError) ? ' text-field__border--error' : '';
+      return borderClass;
     }
   },
   provide() {
@@ -250,7 +274,56 @@ export default {
             .classList.remove("floating-placeholder--go-top");
         }
       }
+    },
+    checkFill() {
+      let inputValue = this.$el.children[0].childNodes[1].children[0].value;
+      this.$children.forEach(el => {
+        if(!el.$el.innerText.toLowerCase().startsWith(inputValue.toLowerCase())) {
+          el.$el.classList.add('select-option--hidden');
+        } else {
+          el.$el.classList.remove('select-option--hidden');
+        }
+      })
     }
+  },
+  render(h) {
+    const disabled = (() =>{
+      if(!this.disabled) {
+        return <div style={this.selectListStyle} class="select-list">
+          {this.$slots.default}
+        </div>
+      }
+    })();
+    const errorMessage = (() =>{
+      if(!!this.hasError) {
+        return <p class="text-field__error-message">{this.errorMessage}</p>
+      }
+    })();
+
+    const activeInput = (() => {
+      if(this.activeInput) {
+        return <input class="select-input" value={this.localValue} onInput={this.checkFill}/>
+      } else {
+        return <p class="select-input">{this.localValue}</p>
+      }
+    })();
+
+    return <div class={"select text-field " + this.selectClasses}>
+      <button disabled={this.disabled} class="select__inner" onClick={this.toggleOpen}>
+        <label class={"floating-placeholder " + this.placeholderClasses}>{this.label}</label>
+        <div class="select-value">
+          {activeInput}
+          <div class="select-arrow">
+            <svg class="select-arrow__icon" width="13" height="7" xmlns="http://www.w3.org/2000/svg">
+              <path d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z" fill="#575D68" fill-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+      </button>
+      <div class={ this.borderClass}/>
+      {disabled}
+      {errorMessage}
+    </div>
   }
 };
 </script>
