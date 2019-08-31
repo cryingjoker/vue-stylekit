@@ -213,43 +213,22 @@
           class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
         >
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-              :has-error="true"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
-                {{ option }}
-              </rt-select-option>
+            <rt-select :is-b2b-select="true"
+                       label="Выберите регион"
+                       :has-error="true">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">{{ option }}</rt-select-option>
             </rt-select>
           </div>
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-              :outlined="true"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
-                {{ option }}
-              </rt-select-option>
+            <rt-select :is-b2b-select="true"
+                       label="Выберите регион"
+                       :outlined="true"
+                       :active-input="true">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' +Math.random().toString(5).slice(4)"
+                                :value="String(index)">{{ option }}</rt-select-option>
             </rt-select>
           </div>
         </div>
