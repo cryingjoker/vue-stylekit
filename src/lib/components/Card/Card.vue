@@ -746,11 +746,11 @@ export default {
       if(this.inTabsWImage) {
         if(this.tabletLayout) {
           return <svg width={this.mobileSvgWidth} height="100" class="rt-card__content-triangle">
-            <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgba(255, 255, 255)"/>
+            <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgb(255, 255, 255)"/>
           </svg>
         } else {
           return <svg width="100" height="490" class="rt-card__content-triangle">
-            <polygon points="0,0 100,0 0,490" fill="rgba(255, 255, 255)"/>
+            <polygon points="0,0 100,0 0,490" fill="rgb(255, 255, 255)"/>
           </svg>
         }
       }
