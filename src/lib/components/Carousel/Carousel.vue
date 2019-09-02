@@ -138,6 +138,8 @@ export default {
   },
   mounted() {
     this.isInnerBlock = document.querySelector(`.${cssContainer} .${cssSelector}[data-uid="${this._uid}"]`) !== null
+    if (this.isInnerBlock)
+      this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
     if (!this.isTouch) {
       this.createMoves()
       window.addEventListener('resize', this.createMoves, { passive: true })
@@ -232,9 +234,6 @@ export default {
       this.pages = []
 
       this.overlayEl.scrollLeft = 0
-
-      if (this.isInnerBlock)
-        this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
       this.isPending = false
 
       let wrapStyles = getComputedStyle(this.slidedEl)
