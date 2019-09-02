@@ -37,6 +37,7 @@
                                 style="
                                   align-content: center;
                                   border-radius: 8px;
+                                  border: 2px solid;
                                   color: white;
                                   display: flex;
                                   flex-flow: wrap;
@@ -44,7 +45,7 @@
                                   justify-content: center;
                                   height: 450px;
                                 "
-                                :style="`background-color: rgb(${i*8},${255/i},${i*4});`"
+                                :style="`border-color: rgb(${177-i*0.6},${255/10+i},${i*15});`"
                                 v-text="i"
                               ></div>
                             </rt-carousel-slide>
@@ -1758,27 +1759,29 @@
 
     <div class="rt-space-top5" style="width: 100vw;">
       <rt-carousel :debug="true">
-        <rt-carousel-slide v-for="i in 27" :key="i">
-          <h2>Слайд {{ i }}</h2>
-          <rt-row-list>
-            <rt-row-list-item v-for="ir in 3" :key="ir">
-              <template slot="option">
-                <div class="d-flex flex-row">
-                  <div>
-                    <p>Антивирус</p>
-                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+        <rt-carousel-slide v-for="i in 17" :key="i">
+          <div class="rt-space-horizontal05">
+            <h2>Слайд {{ i }}</h2>
+            <rt-row-list>
+              <rt-row-list-item v-for="ir in 3" :key="ir">
+                <template slot="option">
+                  <div class="d-flex flex-row">
+                    <div>
+                      <p>Антивирус</p>
+                      <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                    </div>
                   </div>
-                </div>
-              </template>
-            </rt-row-list-item>
-          </rt-row-list>
-          <rt-price
-            class="rt-space-vertical"
-            time-interval="мес"
-            is-option
-            :value="i * 1000"
-          />
-          <rt-button class="rt-button-orange" value="Подключить">Подключить</rt-button>
+                </template>
+              </rt-row-list-item>
+            </rt-row-list>
+            <rt-price
+              class="rt-space-vertical"
+              time-interval="мес"
+              is-option
+              :value="i * 1000"
+            />
+            <rt-button class="rt-button-orange" value="Подключить">Подключить</rt-button>
+          </div>
         </rt-carousel-slide>
       </rt-carousel>
     </div>

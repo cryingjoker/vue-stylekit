@@ -1,4 +1,12 @@
 <script type="text/jsx">
+/**
+ * @TODO :
+ * + Оптимизировать работу с ускорителем
+ * - Отрефакторить калькулятор навигатора (ms:0.053s[@1280x920,17slides])
+ * - "Подглядывание" карточек
+ * - Более гладкая работа с различными габаритами слайдов
+ */
+
 import Navigation from './CarouselNavi.vue'
 import Mobile from '../../utils/mobile'
 import Animate from '../../utils/animate'
@@ -12,6 +20,8 @@ const slideSwipingMinDistance = 40 // Минимальное значение с
 // Используется для отладки
 let perfStart
 let perfResult = 0
+
+let boostedIndex = 1
 
 export default {
   name: name,
@@ -78,13 +88,18 @@ export default {
   data() {
     return {
       isAnimating: false,
+      isBoosted: false,
       isFinalSlide: false,
       isPending: true,
       isTouch: Mobile.isTouch,
       isInnerBlock: false, // Позволяет вынести блок карусели за контейнер
-      innerBlockOffset: null,
+      innerBlockOffset: 0,
       hSpace: 0,
       movesArr: [], // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
+      pages: [], // Набор слайдов с позицией для ускорителя
+      activeMCId: null,
+      activePage: 0,
+      MCEndPos: null,
       toggleSlidesTimer: null,
       scrollingTimer: null,
       canAdvanceForward: false,
@@ -138,6 +153,7 @@ export default {
       window.removeEventListener("resize", this.createMoves)
       clearTimeout(this.scrollingTimer)
       clearTimeout(this.toggleSlidesTimer)
+      clearTimeout(this.boostTimer)
     }
   },
   methods: {
@@ -145,46 +161,48 @@ export default {
      * Простая навигация зоны просмотра по слайдам
      */
     advancePage(direction) {
-      if (!this.isPending && !this.isAnimating) {
+      if (!this.isPending && this.pages.length > 0) {
         perfStart = performance.now()
-        let now = this.overlayEl.scrollLeft
-        let distance = 0
-        let wrapStyles = getComputedStyle(this.slidedEl)
-        let wrapperWidth = parseFloat(wrapStyles.width) - parseFloat(wrapStyles.paddingLeft) * 2
-        if (direction === "next") {
-          this.movesArr.some((w) => {
-            distance += w.width
-            if (Math.round((distance * 100) / 100) >= wrapperWidth) {
-              distance = now + distance
-              return true
+
+        if (this.isBoosted)
+          boostedIndex++
+
+        let currPage = this.activePage + (direction === 'next' ? 1 : -1)
+
+        if (!this.pages[currPage])
+          return
+
+        // Ускоритель, когда несколько раз щелкнуть на навигатор
+        if (this.isAnimating) {
+          this.isBoosted = true
+          this.boostTimer = setTimeout(() => {
+            let boostedPageId = currPage + (direction === 'next' ? boostedIndex : -boostedIndex)
+            if (this.pages[boostedPageId]) {
+              this.activePage = boostedPageId
+              this.MCEndPos = this.pages[boostedPageId].slides[0].move
             }
-          })
-        } else if (direction === "prev") {
-          void [...this.movesArr].reverse().some(w => {
-            distance += w.width
-            if (Math.round((distance * 100) / 100) >= wrapperWidth) {
-              distance = now - distance
-              return true
-            }
-          })
+          }, autoScrollingTimeout)
         }
-        if (distance < 0)
-          distance = 0
-        if (!this.swipingStartPoint)
-          this.swipingStartPoint = now
-        this.move(distance)
+
+        if (!this.isAnimating && !this.isBoosted) {
+          this.activePage = currPage
+          this.move(this.pages[currPage].slides[0].move).then(() => { this.isBoosted = false })
+          this.isBoosted = false
+          clearTimeout(this.boostTimer)
+          this.boostTimer = null
+        }
       }
     },
     /**
      * Доводчик позиции скролла до ближайшего слайда
      */
     autoScroller(delay = autoScrollingTimeout) {
-      if (this.autoScrolling && !this.isPending && !this.isAnimating) {
+      if (this.autoScrolling && !this.isPending && !this.isAnimating && this.isBoosted) {
         let now = this.overlayEl.scrollLeft
         this.scrollingTimer = setTimeout(() => {
           if (
             (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
-            (!this.isAnimating && !this.isPending)
+            (!this.isAnimating && !this.isPending && !this.isBoosted)
           ) {
             perfStart = performance.now()
             this.scrollingAutoEnd = false
@@ -210,32 +228,107 @@ export default {
      * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
      */
     createMoves () {
+      if (!this.slidedEl || !this.overlayEl)
+        return
+
+      clearTimeout(this.scrollingTimer)
+      clearTimeout(this.toggleSlidesTimer)
+      clearTimeout(this.boostTimer)
+
       this.isPending = true
+      this.isBoosted = false
       this.movesArr = []
-      if (this.isInnerBlock) {
+      this.pages = []
+
+      this.overlayEl.scrollLeft = 0
+
+      if (this.isInnerBlock)
         this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
-      }
       this.isPending = false
 
+      let wrapStyles = getComputedStyle(this.slidedEl)
+      let leftPadding = parseFloat(wrapStyles.paddingLeft)
+      let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
+      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
+      let wrapperWidth
+      let maxMoveDist
+
       if (this.isInnerBlock) {
-        this.hSpace = this.innerBlockOffset
+        this.hSpace = this.innerBlockOffset - innerWrapPadding
       } else {
-        let leftPadding = parseFloat(getComputedStyle(this.slidedEl).paddingLeft)
         let leftOffset = this.slidedEl.getBoundingClientRect().left
         this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
       }
 
       this.$nextTick(() => {
+        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
+        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+
+        let currPage = 0
+        let pageWidth = 0
+        let distance = 0
+
         this.slides.forEach((slide, i) => {
           if (typeof slide.width === 'function') {
-            this.movesArr.push({
-              width: slide.width(),
-              key: i
+            let isNextPage = false
+            let slideWidth = slide.width()
+            if (Math.round(distance * 100) / 100 >= wrapperWidth) {
+              isNextPage = true
+              currPage++
+              distance = 0
+            }
+            if (!this.pages[currPage])
+              this.pages[currPage] = {
+                active: false,
+                slides: []
+              }
+            this.pages[currPage].slides.push({
+              key: i,
+              move: pageWidth,
+              page: currPage,
+              slide: i + 1,
+              width: slideWidth
             })
+            this.movesArr.push({
+              key: i,
+              page: currPage,
+              width: slideWidth
+            })
+            distance += slideWidth
+            pageWidth += slideWidth
+            // Не меньше ширины следующего слайда
+            // Не может быть больше inner.srollLeft-innerWrap+leftPadding
+            if (pageWidth > maxMoveDist)
+              pageWidth = maxMoveDist
+            // @TODO - не может быть меньше зоны предпросмотра
           }
         })
-        this.move()
-        this.toggleSlides()
+
+        if (this.pages[0]) {
+          this.pages[0].active = true
+          this.move()
+          this.toggleSlides()
+        }
+
+        // @try:1 - create pages when mounted
+        //  s1  s2  s3  s4
+        // [285,285,285,285]=1140
+        // [======1140=====]
+        // [0,1140,2280,3420,3705]
+
+        // if (maxMoveDist > 0)
+        //   console.log(
+        //     'Instance ', this,
+        //     '\n pages ', this.pages,
+        //     // '\n maxMoveDist ', maxMoveDist,
+        //     // '\n oldWrapperWidth ', this.overlayEl.scrollWidth - this.hSpace * 2,
+        //     // '\n naturalWidth ', getComputedStyle(this.slidedEl).width,
+        //     // '\n wrapperWidth ', wrapperWidth,
+        //     // '\n innerWrapPadding ', innerWrapPadding,
+        //     // '\n leftPadding ', leftPadding,
+        //     // '\n hSpace ', this.hSpace,
+        //     '\n isInnerBlock ', this.isInnerBlock
+        //   )
       })
     },
     getNearbySlide (to = this.overlayEl.scrollLeft) {
@@ -306,17 +399,22 @@ export default {
           }
         }
         if (from !== to && from !== to + 1) {
+          this.MCEndPos = to
           this.isAnimating = true
           this.$emit('onAnimatingStart', callback => callback())
           Animate.start({
             duration: this.duration,
             timing: Animate.timingFunctions[this.transitionFunction],
-            draw: (progress) => {
+            draw: (progress, rId) => {
               if (this.overlayEl) {
-                this.overlayEl.scrollLeft = from + (to - from) * progress
+                this.overlayEl.scrollLeft = from + (this.MCEndPos - from) * progress
+                this.activeMCId = rId
               }
             },
             onLeave: () => {
+              boostedIndex = 1
+              this.activeMCId = null
+              this.MCEndPos = null
               updateNavs()
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
@@ -396,9 +494,11 @@ export default {
             "
           >
             <p>offset: { this.innerBlockOffset }</p>
-            <p>mc: { this.isAnimating ? 'run' : 'stopped' }</p>
-            <p>now: { this.$refs && this.$refs.overlay ? this.$refs.overlay.scrollLeft : '' }</p>
-            <p>perf: 0.0{ parseInt(Math.floor(perfResult/10)) }s</p>
+            <p>mc: { this.activeMCId } { this.isAnimating ? 'run' : 'stopped' }</p>
+            <p>mcEndPos: { this.MCEndPos }</p>
+            <p>page: { this.activePage }</p>
+            <p>perf: { parseInt(Math.floor(perfResult/10)) }ms</p>
+            <p>scrollLeft: { this.$refs && this.$refs.overlay ? this.$refs.overlay.scrollLeft : '' }</p>
           </div>
         )
       }
