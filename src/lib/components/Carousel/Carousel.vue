@@ -368,25 +368,8 @@ export default {
           resolve()
         }
         let from = this.overlayEl.scrollLeft
-        // let overlayContainerWidth = parseFloat(getComputedStyle(this.overlayEl).width)
-        // let slidesWidth = () => {
-        //   if (this.movesArr.length) {
-        //     return this.movesArr.reduce(
-        //       (accum, curVal) => (
-        //         typeof accum === "object" && accum.constructor === Object
-        //           ? accum.width
-        //           : accum
-        //       ) + curVal.width + this.hSpace
-        //     )
-        //   }
-        //   return 0
-        // }
         let updateNavs = () => {
           if (!this.isTouch) {
-            // this.canAdvanceBackward = to > 1
-            // this.isFinalSlide = this.overlayEl.scrollLeft + overlayContainerWidth + slideSwipingMinDistance >= this.overlayEl.scrollWidth
-            // let navsOnlyLackOfWidth = overlayContainerWidth < slidesWidth()
-            // this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
             if (this.pages.length > 0) {
               this.canAdvanceBackward = this.activePage !== 0
               this.canAdvanceForward = !this.pages[this.pages.length - 1].active
@@ -395,7 +378,6 @@ export default {
           }
         }
         if (from !== to && from !== to + 1) {
-          // this.MCEndPos = to
           this.isAnimating = true
           this.$emit('onAnimatingStart', callback => callback())
           Animate.start({
@@ -409,7 +391,6 @@ export default {
             },
             onLeave: () => {
               this.activeMCId = null
-              // this.MCEndPos = null
               updateNavs()
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
@@ -433,39 +414,40 @@ export default {
         this.canAdvanceForward = !this.isFinalSlide
         this.autoScroller()
       }
-      // this.toggleSlides()
+      this.toggleSlides()
     },
     toggleSlides () {
       if (!this.isTouch) {
-        clearTimeout(this.toggleSlidesTimer)
+        clearTimeout(this.toggleSlidesTimer) // Throttle for scroll event
         this.toggleSlidesTimer = setTimeout(() => {
           if (!this.overlayEl && !this.$refs.overlay) {
             return
           }
           if (!this.overlayEl || !this.slidedEl)
             return
-          // let startScrolling = this.overlayEl.scrollLeft
-          // let distance = 0
-          // let distanceLeft = 0
-          // let distanceRight = startScrolling + this.slidedEl.clientWidth
-          // let hiddenSlides = []
-          // this.movesArr.forEach((w) => {
-          //   distance += w.width
-          //   if (startScrolling - slideSwipingMinDistance > distanceLeft) {
-          //     if (this.canAdvanceBackward) {
-          //       hiddenSlides.push(w.key)
-          //     }
-          //     distanceLeft += w.width
-          //   }
-          //   if (distance - slideSwipingMinDistance > distanceRight) {
-          //     hiddenSlides.push(w.key)
-          //     distanceRight += w.width
-          //   }
-          // })
-          // this.slides.forEach((s, k) => {
-          //   if (typeof s.toggle === 'function')
-          //     s.toggle(hiddenSlides.indexOf(k) === -1)
-          // })
+
+          let startScrolling = this.overlayEl.scrollLeft
+          let distance = 0
+          let distanceLeft = 0
+          let distanceRight = startScrolling + this.slidedEl.clientWidth
+          let hiddenSlides = []
+          this.movesArr.forEach((w) => {
+            distance += w.width
+            if (startScrolling - slideSwipingMinDistance > distanceLeft) {
+              if (this.canAdvanceBackward) {
+                hiddenSlides.push(w.key)
+              }
+              distanceLeft += w.width
+            }
+            if (distance - slideSwipingMinDistance > distanceRight) {
+              hiddenSlides.push(w.key)
+              distanceRight += w.width
+            }
+          })
+          this.slides.forEach((s, k) => {
+            if (typeof s.toggle === 'function')
+              s.toggle(hiddenSlides.indexOf(k) === -1)
+          })
         }, 15)
       }
     }
