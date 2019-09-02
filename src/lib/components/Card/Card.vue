@@ -466,9 +466,10 @@ export default {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
+      this.redrawSvg();
     });
     this.checkLazy();
-    this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2))
+    this.redrawSvg();
   },
   methods: {
     loadImageAsync (src, resolve, reject) {
@@ -557,6 +558,11 @@ export default {
       this.$el.querySelector('.equipment__full-description').classList.contains('equipment__full-description--shown') ?
         this.$el.querySelector('.equipment__full-description').classList.remove('equipment__full-description--shown') :
         this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown')
+    },
+    redrawSvg() {
+      if(this.$el.querySelector('.rt-card__content')) {
+        this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2));
+      }
     }
   },
   render(h) {
