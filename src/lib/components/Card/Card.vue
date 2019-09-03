@@ -562,6 +562,7 @@ export default {
     redrawSvg() {
       if(this.$el.querySelector('.rt-card__content')) {
         this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2));
+        console.log(this.mobileSvgWidth);
       }
     }
   },
