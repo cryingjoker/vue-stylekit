@@ -1,4 +1,82 @@
-<script type="text/jsx">
+<template>
+    <div
+      :class="carouselClassesState"
+      :data-uid="_uid"
+      :style="carouselStylesState"
+    >
+      <div
+        v-if="debug"
+        style="
+          background: black;
+          color: #3fa;
+          font-size: 10px;
+          padding: 5px;
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          bottom: 0;
+          right: 0;
+          z-index: 12;
+        "
+      >
+        <p>offset: {{ innerBlockOffset }}</p>
+        <p>mc: {{ activeMCId }} {{ isAnimating ? 'run' : 'stopped' }}</p>
+        <p>page: {{ activePage }}</p>
+        <p>perf: {{ parseInt(Math.floor(perfResult/10)) }}ms</p>
+        <p>scrollLeft: {{ $refs && $refs.overlay ? $refs.overlay.scrollLeft : '' }}</p>
+      </div>
+
+      <RtCarouselNavi
+        v-if="!hideNavigation && !isTouch && !disabledScrolling"
+        :hSpace="hSpace"
+        :isPending="isPending"
+        :hideArrows="hideArrows"
+        :showTipsNext="showTipsNext"
+        :containerName="cssContainer"
+        :overlayEl="$refs.overlay"
+        :advancePage="advancePage"
+        :canAdvanceForward="canAdvanceForward"
+        :canAdvanceBackward="canAdvanceBackward"
+        :navsPosStart="navsPosStart"
+        :navsPosEnd="navsPosEnd"
+      />
+
+      <div
+        ref="overlay"
+        v-if="!isTouch"
+        :class="cssSelector + '__overlay'"
+      >
+        <div
+          ref="inner"
+          :class="cssSelector + '__inner ' + cssContainer"
+          :style="innerStylesState"
+        >
+          <slot></slot>
+          <div
+            :class="cssSelector + '__spacer'"
+            :style="spacerStylesState"
+          >
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-else
+        ref="overlay"
+        :class="cssSelector + '__overlay ' + cssSelector + '__inner ' + cssContainer"
+        :style="overlayStyleState"
+      >
+        <slot></slot>
+        <div
+          :class="cssSelector + '__spacer'"
+          :style="spacerStylesState"
+        >
+        </div>
+      </div>
+    </div>
+</template>
+
+<script>
 /**
  * @TODO :
  * - "Подглядывание" карточек
@@ -9,14 +87,8 @@ import Mobile from '../../utils/mobile'
 import Animate from '../../utils/animate'
 
 const name = 'RtCarousel'
-const cssSelector = 'rt-carousel'
-const cssContainer = 'rt-container'
 const autoScrollingTimeout = 100 // Длительность задержки автоскроллинга
 const slideSwipingMinDistance = 40 // Минимальное значение сдвига для автоскроллинга
-
-// Используется для отладки
-let perfStart
-let perfResult = 0
 
 let boostedIndex = 0
 
@@ -95,16 +167,57 @@ export default {
       pages: [], // Набор слайдов с позицией для ускорителя
       activeMCId: null,
       activePage: 0,
-      MCEndPos: null,
       toggleSlidesTimer: null,
       scrollingTimer: null,
       canAdvanceForward: false,
       canAdvanceBackward: false,
       scrollingAutoEnd: true,
-      swipingStartPoint: null // Детектор направления свайпинга
+      swipingStartPoint: null, // Детектор направления свайпинга
+
+      cssSelector: 'rt-carousel',
+      cssContainer: 'rt-container',
+      // Используется для отладки
+      perfStart: 0,
+      perfResult: 0
     }
   },
   computed: {
+    carouselClassesState () {
+      return [
+        this.cssSelector,
+        {
+          'is-touch-device': this.isTouch,
+          'is-pending': this.isPending,
+          'is-animating': this.isAnimating,
+          'is-hide-navs': this.hideNavigation,
+          'is-scrolling' : !this.scrollingAutoEnd,
+          'is-disabled-scrolling': this.disabledScrolling
+        }
+      ]
+    },
+    carouselStylesState () {
+      return {
+        marginTop: -this.offsetTop + 'px',
+        marginBottom: -this.offsetBottom + 'px',
+        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
+        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
+      }
+    },
+    innerStylesState () {
+      return {
+        paddingTop: this.offsetTop + 'px',
+        paddingBottom: this.offsetBottom + 'px'
+      }
+    },
+    overlayStyleState () {
+      return {
+        paddingTop: this.offsetTop + 'px',
+        paddingBottom: this.offsetBottom + 'px'
+      }
+    },
+    spacerStylesState () {
+      return 'flex: 0 0 ' + this.hSpace + 'px'
+    },
     overlayEl () {
       return this.$refs.overlay
     },
@@ -134,7 +247,7 @@ export default {
     }
   },
   mounted() {
-    this.isInnerBlock = document.querySelector(`.${cssContainer} .${cssSelector}[data-uid="${this._uid}"]`) !== null
+    this.isInnerBlock = document.querySelector(`.${this.cssContainer} .${this.cssSelector}[data-uid="${this._uid}"]`) !== null
     if (!this.isTouch) {
       this.createMoves()
       window.addEventListener('resize', this.createMoves, { passive: true })
@@ -257,7 +370,7 @@ export default {
      */
     advancePage(direction) {
       if (!this.isPending && this.pages.length > 0) {
-        perfStart = performance.now()
+        this.perfStart = performance.now()
 
         let currPage = this.activePage + (direction === 'next' ? 1 : -1)
 
@@ -321,7 +434,7 @@ export default {
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
                 this.isAnimating = false
-                perfResult = performance.now() - perfStart // @TMP
+                this.perfResult = performance.now() - this.perfStart // @TMP
                 resolve()
               }, 1) // В FF скроллинг быстрее отрабатывает, чем триггер isAnimating
             }
@@ -363,7 +476,7 @@ export default {
             (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
             (!this.isAnimating && !this.isPending)
           ) {
-            perfStart = performance.now()
+            this.perfStart = performance.now()
             this.scrollingAutoEnd = false
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide()
@@ -471,118 +584,6 @@ export default {
         }, 15)
       }
     }
-  },
-
-  render (h) {
-    const debugBlock = () => {
-      if (this.debug) {
-        return (
-          <div
-            style="
-              background: black;
-              color: #3fa;
-              font-size: 10px;
-              padding: 5px;
-              position: absolute;
-              height: 100px;
-              width: 100px;
-              bottom: 0;
-              right: 0;
-              z-index: 12;
-            "
-          >
-            <p>offset: { this.innerBlockOffset }</p>
-            <p>mc: { this.activeMCId } { this.isAnimating ? 'run' : 'stopped' }</p>
-            <p>mcEndPos: { this.MCEndPos }</p>
-            <p>page: { this.activePage }</p>
-            <p>perf: { parseInt(Math.floor(perfResult/10)) }ms</p>
-            <p>scrollLeft: { this.$refs && this.$refs.overlay ? this.$refs.overlay.scrollLeft : '' }</p>
-          </div>
-        )
-      }
-    }
-    const desktopBlock = () => {
-      if (!this.isTouch)
-        return <div
-          ref="overlay"
-          class={ cssSelector + '__overlay' }
-        >
-          <div
-            ref="inner"
-            class={ cssSelector + '__inner ' + cssContainer }
-            style={{
-              paddingTop: this.offsetTop + 'px',
-              paddingBottom: this.offsetBottom + 'px'
-            }}
-          >
-            { this.$slots.default }
-            { spacerBlock() }
-          </div>
-        </div>
-    }
-    const mobileBlock = () => {
-      if (this.isTouch)
-        return <div
-          ref="overlay"
-          class={ cssSelector + '__overlay ' + cssSelector + '__inner ' + cssContainer }
-          style={{
-            paddingTop: this.offsetTop + 'px',
-            paddingBottom: this.offsetBottom + 'px'
-          }}
-        >
-          { this.$slots.default }
-          { spacerBlock() }
-        </div>
-    }
-    const navsBlock = () => {
-      if (!this.hideNavigation && !this.isTouch && !this.disabledScrolling)
-        return <rt-carousel-navi
-            hSpace={ this.hSpace }
-            isPending={ this.isPending }
-            hideArrows={ this.hideArrows }
-            showTipsNext={ this.showTipsNext }
-            containerName={ cssContainer }
-            overlayEl={ this.$refs.overlay } // Не используй HTMLElement (this.overlayEl), т.к будет перезаписана переменная геттера
-            advancePage={ this.advancePage }
-            canAdvanceForward={ this.canAdvanceForward }
-            canAdvanceBackward={ this.canAdvanceBackward }
-            navsPosStart={ this.navsPosStart }
-            navsPosEnd={ this.navsPosEnd }
-          />
-    }
-    const spacerBlock = () => {
-      return <div
-          class={ cssSelector + '__spacer' }
-          style={{ flex: '0 0 ' + this.hSpace + 'px' }}
-        >
-        </div>
-    }
-
-    return <div
-      class={[
-        cssSelector,
-        {
-          'is-touch-device': this.isTouch,
-          'is-pending': this.isPending,
-          'is-animating': this.isAnimating,
-          'is-hide-navs': this.hideNavigation,
-          'is-scrolling' : !this.scrollingAutoEnd,
-          'is-disabled-scrolling': this.disabledScrolling
-        }
-      ]}
-      data-uid={ this._uid }
-      style={{
-        marginTop: -this.offsetTop + 'px',
-        marginBottom: -this.offsetBottom + 'px',
-        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
-        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
-      }}
-    >
-      { debugBlock() }
-      { navsBlock() }
-      { desktopBlock() }
-      { mobileBlock() }
-    </div>
   }
 }
 </script>
