@@ -138,8 +138,6 @@ export default {
   },
   mounted() {
     this.isInnerBlock = document.querySelector(`.${cssContainer} .${cssSelector}[data-uid="${this._uid}"]`) !== null
-    if (this.isInnerBlock)
-      this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
     if (!this.isTouch) {
       this.createMoves()
       window.addEventListener('resize', this.createMoves, { passive: true })
@@ -158,7 +156,107 @@ export default {
   },
   methods: {
     /**
-     * Простая навигация зоны просмотра по слайдам
+     * Основной метод для навигации по слайдам
+     * + Формирует постраничную навигацию
+     * + Собирает диапозоны широт в виде массива
+     */
+    createMoves () {
+      if (!this.slidedEl || !this.overlayEl)
+        return
+
+      this.autoScrollerRemove()
+      clearTimeout(this.toggleSlidesTimer)
+
+      if (this.isInnerBlock)
+        this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
+
+      this.activePage = 0
+      this.isPending = true
+      this.movesArr = []
+      this.pages = []
+
+      this.overlayEl.scrollLeft = 0
+      this.isPending = false
+
+      let wrapStyles = getComputedStyle(this.slidedEl)
+      let leftPadding = parseFloat(wrapStyles.paddingLeft)
+      let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
+      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
+      let wrapperWidth
+      let maxMoveDist
+
+      if (this.isInnerBlock) {
+        this.hSpace = this.innerBlockOffset - innerWrapPadding
+      } else {
+        let leftOffset = this.slidedEl.getBoundingClientRect().left
+        this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
+      }
+
+      this.$nextTick(() => {
+        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
+        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+
+        let currPage = 0
+        let pageWidth = 0
+        let distance = 0
+        let distanceAfter = 0
+
+        this.slides.forEach((slide, i) => {
+          if (typeof slide.width === 'function') {
+            let slideWidth = slide.width()
+            let nextResolveWidth = distanceAfter + slideWidth
+            distance += slideWidth
+
+            if (Math.round(distance * 100) / 100 >= wrapperWidth || nextResolveWidth > wrapperWidth) {
+              currPage++
+              distance = 0
+              distanceAfter = 0
+            }
+            if (!this.pages[currPage]) {
+              this.pages[currPage] = {
+                active: false,
+                slides: []
+              }
+            }
+            this.slides[i].page = currPage
+            this.slides[i].move = pageWidth
+            this.pages[currPage].slides.push({
+              key: i,
+              move: pageWidth,
+              page: currPage,
+              slide: i + 1,
+              width: slideWidth
+            })
+            this.movesArr.push({
+              key: i,
+              page: currPage,
+              width: slideWidth
+            })
+            pageWidth += slideWidth
+            // Не может быть больше inner.srollLeft-innerWrap+leftPadding
+            if (pageWidth > maxMoveDist)
+              pageWidth = maxMoveDist
+            distanceAfter += slideWidth
+          }
+        })
+
+        if (this.pages[0]) {
+          this.pages[0].active = true
+          this.move()
+          this.toggleSlides()
+        }
+
+        if (this.debug && maxMoveDist > 0)
+          console.log(
+            'Instance ', this,
+            '\n pages ', this.pages,
+            '\n isInnerBlock ', this.isInnerBlock
+          )
+      })
+    },
+
+    /**
+     * Простая навигация зоны просмотра по слайдам (Навигаторы, стрелочки)
      */
     advancePage(direction) {
       if (!this.isPending && this.pages.length > 0) {
@@ -188,180 +286,11 @@ export default {
         }
       }
     },
+
     /**
-     * Доводчик позиции скролла до ближайшего слайда
+     * Анимированный скроллинг к указанной позиции
      */
-    autoScroller(delay = autoScrollingTimeout) {
-      if (this.autoScrolling && !this.isPending && !this.isAnimating) {
-        let now = this.overlayEl.scrollLeft
-        this.scrollingTimer = setTimeout(() => {
-          if (
-            (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
-            (!this.isAnimating && !this.isPending)
-          ) {
-            perfStart = performance.now()
-            this.scrollingAutoEnd = false
-            // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
-            let distance = this.getNearbySlide()
-            if (distance !== null && this.overlayEl.scrollLeft !== distance) {
-              this.move(distance).then(() => {
-                this.autoScrollerRemove()
-              })
-            } else {
-              this.autoScrollerRemove()
-            }
-          }
-        }, delay)
-      }
-    },
-    autoScrollerRemove() {
-      clearTimeout(this.scrollingTimer)
-      this.scrollingTimer = null
-      this.scrollingAutoEnd = true
-    },
-    /**
-     * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
-     */
-    createMoves () {
-      if (!this.slidedEl || !this.overlayEl)
-        return
-
-      clearTimeout(this.scrollingTimer)
-      clearTimeout(this.toggleSlidesTimer)
-
-      this.isPending = true
-      this.movesArr = []
-      this.pages = []
-
-      this.overlayEl.scrollLeft = 0
-      this.isPending = false
-
-      let wrapStyles = getComputedStyle(this.slidedEl)
-      let leftPadding = parseFloat(wrapStyles.paddingLeft)
-      let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
-      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
-      let wrapperWidth
-      let maxMoveDist
-
-      if (this.isInnerBlock) {
-        this.hSpace = this.innerBlockOffset - innerWrapPadding
-      } else {
-        let leftOffset = this.slidedEl.getBoundingClientRect().left
-        this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
-      }
-
-      this.$nextTick(() => {
-        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
-        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
-
-        let currPage = 0
-        let pageWidth = 0
-        let distance = 0
-
-        this.slides.forEach((slide, i) => {
-          if (typeof slide.width === 'function') {
-            let isNextPage = false
-            let slideWidth = slide.width()
-            if (Math.round(distance * 100) / 100 >= wrapperWidth) {
-              isNextPage = true
-              currPage++
-              distance = 0
-            }
-            if (!this.pages[currPage])
-              this.pages[currPage] = {
-                active: false,
-                slides: []
-              }
-            this.pages[currPage].slides.push({
-              key: i,
-              move: pageWidth,
-              page: currPage,
-              slide: i + 1,
-              width: slideWidth
-            })
-            this.movesArr.push({
-              key: i,
-              page: currPage,
-              width: slideWidth
-            })
-            distance += slideWidth
-            pageWidth += slideWidth
-            // Не меньше ширины следующего слайда
-            // Не может быть больше inner.srollLeft-innerWrap+leftPadding
-            if (pageWidth > maxMoveDist)
-              pageWidth = maxMoveDist
-            // @TODO - не может быть меньше зоны предпросмотра
-          }
-        })
-
-        if (this.pages[0]) {
-          this.pages[0].active = true
-          this.move()
-          this.toggleSlides()
-        }
-
-        // @try:1 - create pages when mounted
-        //  s1  s2  s3  s4
-        // [285,285,285,285]=1140
-        // [======1140=====]
-        // [0,1140,2280,3420,3705]
-
-        // if (maxMoveDist > 0)
-        //   console.log(
-        //     'Instance ', this,
-        //     '\n pages ', this.pages,
-        //     // '\n maxMoveDist ', maxMoveDist,
-        //     // '\n oldWrapperWidth ', this.overlayEl.scrollWidth - this.hSpace * 2,
-        //     // '\n naturalWidth ', getComputedStyle(this.slidedEl).width,
-        //     // '\n wrapperWidth ', wrapperWidth,
-        //     // '\n innerWrapPadding ', innerWrapPadding,
-        //     // '\n leftPadding ', leftPadding,
-        //     // '\n hSpace ', this.hSpace,
-        //     '\n isInnerBlock ', this.isInnerBlock
-        //   )
-      })
-    },
-    getNearbySlide (to = this.overlayEl.scrollLeft) {
-      if (this.swipingStartPoint !== to) {
-        let nextNav = this.swipingStartPoint <= to
-        let distance = nextNav ? 0 : this.overlayEl.scrollWidth - this.hSpace * 2
-        if (nextNav) {
-          this.movesArr.some(w => {
-            if (distance + slideSwipingMinDistance > to) {
-              return true
-            } else {
-              distance += w.width
-            }
-          })
-        } else {
-          void [...this.movesArr].reverse().some((w) => {
-            if (distance - slideSwipingMinDistance <= to) {
-              return true
-            } else {
-              distance -= w.width
-            }
-            if (distance < 0) {
-              distance = 0
-            }
-          })
-        }
-        return Number(distance.toFixed());
-      } else {
-        return null;
-      }
-    },
-    slidesWidth() {
-      if (this.movesArr.length) {
-        return this.movesArr.reduce(
-          (accum, curVal) =>
-            (typeof accum === "object" && accum.constructor === Object
-              ? accum.width
-              : accum) + curVal.width
-        );
-      }
-      return 0
-    },
-    move (to = 0) {
+    move (to = 0, isAdvance = true) {
       return new Promise(resolve => {
         if (!this.overlayEl) {
           resolve()
@@ -390,7 +319,8 @@ export default {
             },
             onLeave: () => {
               this.activeMCId = null
-              updateNavs()
+              if (isAdvance)
+                updateNavs()
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
                 this.isAnimating = false
@@ -400,25 +330,122 @@ export default {
             }
           })
         } else {
-          updateNavs()
+          if (isAdvance)
+            updateNavs()
           resolve()
         }
       })
     },
+
+    /**
+     * Нативное событие скроллинга
+     */
     scrollNative (e) {
       if (!this.disabledScrolling && !this.isTouch) {
+        
+        this.autoScroller()
+
         let el = e.target
         this.canAdvanceBackward = el.scrollLeft > 0
         this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
         this.canAdvanceForward = !this.isFinalSlide
-        this.autoScroller()
       }
       this.toggleSlides()
     },
+
+    /**
+     * Доводчик позиции скролла до ближайшего слайда
+     */
+    autoScroller(delay = autoScrollingTimeout) {
+      if (this.autoScrolling && !this.isPending && !this.isAnimating) {
+        this.swipingStartPoint = this.overlayEl.scrollLeft
+        let now = this.swipingStartPoint
+        this.scrollingTimer = setTimeout(() => {
+          now = this.overlayEl.scrollLeft
+          if (
+            (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
+            (!this.isAnimating && !this.isPending)
+          ) {
+            perfStart = performance.now()
+            this.scrollingAutoEnd = false
+            // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
+            let distance = this.getNearbySlide()
+            if (distance !== null && this.overlayEl.scrollLeft !== distance) {
+              this.move(distance, false).then(() => {
+                this.autoScrollerRemove()
+                this.toggleSlides()
+              })
+            } else {
+              this.autoScrollerRemove()
+            }
+          }
+        }, delay)
+      }
+    },
+    autoScrollerRemove() {
+      clearTimeout(this.scrollingTimer)
+      this.scrollingTimer = null
+      this.scrollingAutoEnd = true
+    },
+
+    /**
+     * Определяет ближайший слайд для автоскролла и сэттит страницу
+     */
+    getNearbySlide (to = Number(this.overlayEl.scrollLeft.toFixed())) {
+      if (this.swipingStartPoint !== to) {
+
+        let nextNav = this.swipingStartPoint <= to
+        let from = this.swipingStartPoint || 0
+        let findedSlide
+        let distance = 0
+
+        if (nextNav) {
+          let prevMove = 0
+          this.slides.some(slide => {
+            if (prevMove + slideSwipingMinDistance > to) {
+              findedSlide = slide
+              distance = slide.move
+              this.pages[this.activePage].active = false
+              this.activePage = findedSlide.page
+              this.pages[this.activePage].active = true
+              return true
+            }
+            prevMove += slide.width()
+          })
+        } else {
+          let prevMove = this.overlayEl.scrollWidth - this.hSpace * 2
+          void [...this.slides].reverse().some(slide => {
+            if (prevMove - slideSwipingMinDistance <= to) {
+              findedSlide = slide
+              distance = slide.move
+              this.pages[this.activePage].active = false
+              this.activePage = findedSlide.page
+              this.pages[this.activePage].active = true
+              return true
+            }
+            prevMove -= slide.width()
+          })
+        }
+        if (this.debug)
+          console.log(
+            '\n distance', distance,
+            '\n findedSlide', findedSlide
+          )
+        return Number(distance.toFixed())
+      } else {
+        return null;
+      }
+    },
+
+    /**
+     * Меняет состояние слайдов
+     */
     toggleSlides () {
       if (!this.isTouch) {
-        clearTimeout(this.toggleSlidesTimer) // Throttle for scroll event
+        clearTimeout(this.toggleSlidesTimer)
+        // Throttle for scroll event
         this.toggleSlidesTimer = setTimeout(() => {
+
           if (!this.overlayEl && !this.$refs.overlay) {
             return
           }
@@ -430,27 +457,25 @@ export default {
           let distanceLeft = 0
           let distanceRight = startScrolling + this.slidedEl.clientWidth
           let hiddenSlides = []
-          this.movesArr.forEach((w) => {
-            distance += w.width
+
+          this.slides.forEach((slide, key) => {
+            distance += slide.width()
+            let flag = true
             if (startScrolling - slideSwipingMinDistance > distanceLeft) {
-              if (this.canAdvanceBackward) {
-                hiddenSlides.push(w.key)
-              }
-              distanceLeft += w.width
+              distanceLeft += slide.width()
+              flag = false
             }
             if (distance - slideSwipingMinDistance > distanceRight) {
-              hiddenSlides.push(w.key)
-              distanceRight += w.width
+              distanceRight += slide.width()
+              flag = false
             }
-          })
-          this.slides.forEach((s, k) => {
-            if (typeof s.toggle === 'function')
-              s.toggle(hiddenSlides.indexOf(k) === -1)
+            slide.toggle(flag)
           })
         }, 15)
       }
     }
   },
+
   render (h) {
     const debugBlock = () => {
       if (this.debug) {

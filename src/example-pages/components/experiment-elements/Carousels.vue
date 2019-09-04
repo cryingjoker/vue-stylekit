@@ -38,7 +38,6 @@
                                   align-content: center;
                                   border-radius: 8px;
                                   border: 2px solid;
-                                  color: white;
                                   display: flex;
                                   flex-flow: wrap;
                                   font-size: 150px;
