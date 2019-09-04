@@ -1,10 +1,7 @@
 <script type="text/jsx">
 /**
  * @TODO :
- * + Оптимизировать работу с ускорителем
- * - Отрефакторить калькулятор навигатора (ms:0.053s[@1280x920,17slides])
  * - "Подглядывание" карточек
- * - Более гладкая работа с различными габаритами слайдов
  */
 
 import Navigation from './CarouselNavi.vue'
@@ -342,7 +339,7 @@ export default {
      */
     scrollNative (e) {
       if (!this.disabledScrolling && !this.isTouch) {
-        
+
         this.autoScroller()
 
         let el = e.target
