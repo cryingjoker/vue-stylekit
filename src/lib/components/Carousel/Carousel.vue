@@ -451,6 +451,15 @@ export default {
     },
 
     /**
+     * Скроллит к указанному слайду
+     * @param {Number} slideId
+     */
+    moveTo (slideId) {
+      if (slideId !== undefined && this.slides[slideId])
+        this.move(this.slides[slideId].move)
+    },
+
+    /**
      * Нативное событие скроллинга
      */
     scrollNative (e) {
