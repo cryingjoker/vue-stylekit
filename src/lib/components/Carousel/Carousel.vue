@@ -394,6 +394,9 @@ export default {
           this.activePage = currPage
           this.move(this.pages[currPage].slides[0].move).then(() => { boostedIndex = 0 })
         }
+
+        if (!this.swipingStartPoint)
+          this.swipingStartPoint = this.overlayEl.scrollLeft
       }
     },
 
@@ -452,7 +455,6 @@ export default {
      */
     scrollNative (e) {
       if (!this.disabledScrolling && !this.isTouch) {
-
         this.autoScroller()
 
         let el = e.target
@@ -468,10 +470,10 @@ export default {
      */
     autoScroller(delay = autoScrollingTimeout) {
       if (this.autoScrolling && !this.isPending && !this.isAnimating) {
-        this.swipingStartPoint = this.overlayEl.scrollLeft
-        let now = this.swipingStartPoint
+        if (!this.swipingStartPoint)
+          this.swipingStartPoint = this.overlayEl.scrollLeft
+        let now = this.overlayEl.scrollLeft
         this.scrollingTimer = setTimeout(() => {
-          now = this.overlayEl.scrollLeft
           if (
             (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
             (!this.isAnimating && !this.isPending)
@@ -482,8 +484,8 @@ export default {
             let distance = this.getNearbySlide()
             if (distance !== null && this.overlayEl.scrollLeft !== distance) {
               this.move(distance, false).then(() => {
-                this.autoScrollerRemove()
                 this.toggleSlides()
+                this.autoScrollerRemove()
               })
             } else {
               this.autoScrollerRemove()
@@ -493,6 +495,7 @@ export default {
       }
     },
     autoScrollerRemove() {
+      this.swipingStartPoint = this.overlayEl.scrollLeft
       clearTimeout(this.scrollingTimer)
       this.scrollingTimer = null
       this.scrollingAutoEnd = true
@@ -505,7 +508,6 @@ export default {
       if (this.swipingStartPoint !== to) {
 
         let nextNav = this.swipingStartPoint <= to
-        let from = this.swipingStartPoint || 0
         let findedSlide
         let distance = 0
 
@@ -566,7 +568,6 @@ export default {
           let distance = 0
           let distanceLeft = 0
           let distanceRight = startScrolling + this.slidedEl.clientWidth
-          let hiddenSlides = []
 
           this.slides.forEach((slide, key) => {
             distance += slide.width()
