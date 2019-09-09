@@ -1,13 +1,96 @@
-<script type="text/jsx">
+<template>
+    <div
+      :class="carouselClassesState"
+      :data-uid="_uid"
+      :style="carouselStylesState"
+    >
+      <div
+        v-if="debug"
+        style="
+          background: black;
+          color: #3fa;
+          font-size: 10px;
+          padding: 5px;
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          bottom: 0;
+          right: 0;
+          z-index: 12;
+        "
+      >
+        <p>offset: {{ innerBlockOffset }}</p>
+        <p>mc: {{ activeMCId }} {{ isAnimating ? 'run' : 'stopped' }}</p>
+        <p>page: {{ activePage }}</p>
+        <p>perf: {{ parseInt(Math.floor(perfResult/10)) }}ms</p>
+        <p>scrollLeft: {{ $refs && $refs.overlay ? $refs.overlay.scrollLeft : '' }}</p>
+      </div>
+
+      <RtCarouselNavi
+        v-if="!hideNavigation && !isTouch && !disabledScrolling"
+        :hSpace="hSpace"
+        :isPending="isPending"
+        :hideArrows="hideArrows"
+        :showTipsNext="showTipsNext"
+        :containerName="cssContainer"
+        :overlayEl="$refs.overlay"
+        :advancePage="advancePage"
+        :canAdvanceForward="canAdvanceForward"
+        :canAdvanceBackward="canAdvanceBackward"
+        :navsPosStart="navsPosStart"
+        :navsPosEnd="navsPosEnd"
+      />
+
+      <div
+        ref="overlay"
+        v-if="!isTouch"
+        :class="cssSelector + '__overlay'"
+      >
+        <div
+          ref="inner"
+          :class="cssSelector + '__inner ' + cssContainer"
+          :style="innerStylesState"
+        >
+          <slot></slot>
+          <div
+            :class="cssSelector + '__spacer'"
+            :style="spacerStylesState"
+          >
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-else
+        ref="overlay"
+        :class="cssSelector + '__overlay ' + cssSelector + '__inner ' + cssContainer"
+        :style="overlayStyleState"
+      >
+        <slot></slot>
+        <div
+          :class="cssSelector + '__spacer'"
+          :style="spacerStylesState"
+        >
+        </div>
+      </div>
+    </div>
+</template>
+
+<script>
+/**
+ * @TODO :
+ * - "Подглядывание" карточек
+ */
+
 import Navigation from './CarouselNavi.vue'
 import Mobile from '../../utils/mobile'
 import Animate from '../../utils/animate'
 
 const name = 'RtCarousel'
-const cssSelector = 'rt-carousel'
-const cssContainer = 'rt-container'
 const autoScrollingTimeout = 100 // Длительность задержки автоскроллинга
 const slideSwipingMinDistance = 40 // Минимальное значение сдвига для автоскроллинга
+
+let boostedIndex = 0
 
 export default {
   name: name,
@@ -15,6 +98,10 @@ export default {
     [Navigation.name]: Navigation
   },
   props: {
+    debug: {
+      type: Boolean,
+      default: false
+    },
     decorated: {
       type: Boolean // Технический параметр для обворачивания карусели в другой компонент
     },
@@ -74,18 +161,63 @@ export default {
       isPending: true,
       isTouch: Mobile.isTouch,
       isInnerBlock: false, // Позволяет вынести блок карусели за контейнер
-      innerBlockOffset: null,
+      innerBlockOffset: 0,
       hSpace: 0,
       movesArr: [], // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
+      pages: [], // Набор слайдов с позицией для ускорителя
+      activeMCId: null,
+      activePage: 0,
       toggleSlidesTimer: null,
       scrollingTimer: null,
       canAdvanceForward: false,
       canAdvanceBackward: false,
       scrollingAutoEnd: true,
-      swipingStartPoint: null // Детектор направления свайпинга
+      swipingStartPoint: null, // Детектор направления свайпинга
+
+      cssSelector: 'rt-carousel',
+      cssContainer: 'rt-container',
+      // Используется для отладки
+      perfStart: 0,
+      perfResult: 0
     }
   },
   computed: {
+    carouselClassesState () {
+      return [
+        this.cssSelector,
+        {
+          'is-touch-device': this.isTouch,
+          'is-pending': this.isPending,
+          'is-animating': this.isAnimating,
+          'is-hide-navs': this.hideNavigation,
+          'is-scrolling' : !this.scrollingAutoEnd,
+          'is-disabled-scrolling': this.disabledScrolling
+        }
+      ]
+    },
+    carouselStylesState () {
+      return {
+        marginTop: -this.offsetTop + 'px',
+        marginBottom: -this.offsetBottom + 'px',
+        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
+        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
+      }
+    },
+    innerStylesState () {
+      return {
+        paddingTop: this.offsetTop + 'px',
+        paddingBottom: this.offsetBottom + 'px'
+      }
+    },
+    overlayStyleState () {
+      return {
+        paddingTop: this.offsetTop + 'px',
+        paddingBottom: this.offsetBottom + 'px'
+      }
+    },
+    spacerStylesState () {
+      return 'flex: 0 0 ' + this.hSpace + 'px'
+    },
     overlayEl () {
       return this.$refs.overlay
     },
@@ -115,7 +247,7 @@ export default {
     }
   },
   mounted() {
-    this.isInnerBlock = document.querySelector(`.${cssContainer} .${cssSelector}[data-uid="${this._uid}"]`) !== null
+    this.isInnerBlock = document.querySelector(`.${this.cssContainer} .${this.cssSelector}[data-uid="${this._uid}"]`) !== null
     if (!this.isTouch) {
       this.createMoves()
       window.addEventListener('resize', this.createMoves, { passive: true })
@@ -134,54 +266,234 @@ export default {
   },
   methods: {
     /**
-     * Простая навигация зоны просмотра по слайдам
+     * Основной метод для навигации по слайдам
+     * + Формирует постраничную навигацию
+     * + Собирает диапозоны широт в виде массива
+     */
+    createMoves () {
+      if (!this.slidedEl || !this.overlayEl)
+        return
+
+      this.autoScrollerRemove()
+      clearTimeout(this.toggleSlidesTimer)
+
+      if (this.isInnerBlock)
+        this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
+
+      this.activePage = 0
+      this.isPending = true
+      this.movesArr = []
+      this.pages = []
+
+      this.overlayEl.scrollLeft = 0
+      this.isPending = false
+
+      let wrapStyles = getComputedStyle(this.slidedEl)
+      let leftPadding = parseFloat(wrapStyles.paddingLeft)
+      let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
+      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
+      let wrapperWidth
+      let maxMoveDist
+
+      if (this.isInnerBlock) {
+        this.hSpace = this.innerBlockOffset - innerWrapPadding
+      } else {
+        let leftOffset = this.slidedEl.getBoundingClientRect().left
+        this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
+      }
+
+      this.$nextTick(() => {
+        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
+        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+
+        let currPage = 0
+        let pageWidth = 0
+        let distance = 0
+        let distanceAfter = 0
+
+        this.slides.forEach((slide, i) => {
+          if (typeof slide.width === 'function') {
+            let slideWidth = slide.width()
+            let nextResolveWidth = distanceAfter + slideWidth
+            distance += slideWidth
+
+            if (Math.round(distance * 100) / 100 >= wrapperWidth || nextResolveWidth > wrapperWidth) {
+              currPage++
+              distance = 0
+              distanceAfter = 0
+            }
+            if (!this.pages[currPage]) {
+              this.pages[currPage] = {
+                active: false,
+                slides: []
+              }
+            }
+            this.slides[i].page = currPage
+            this.slides[i].move = pageWidth
+            this.pages[currPage].slides.push({
+              key: i,
+              move: pageWidth,
+              page: currPage,
+              slide: i + 1,
+              width: slideWidth
+            })
+            this.movesArr.push({
+              key: i,
+              page: currPage,
+              width: slideWidth
+            })
+            pageWidth += slideWidth
+            // Не может быть больше inner.srollLeft-innerWrap+leftPadding
+            if (pageWidth > maxMoveDist)
+              pageWidth = maxMoveDist
+            distanceAfter += slideWidth
+          }
+        })
+
+        if (this.pages[0]) {
+          this.pages[0].active = true
+          this.move()
+          this.toggleSlides()
+        }
+
+        if (this.debug && maxMoveDist > 0)
+          console.log(
+            'Instance ', this,
+            '\n pages ', this.pages,
+            '\n isInnerBlock ', this.isInnerBlock
+          )
+      })
+    },
+
+    /**
+     * Простая навигация зоны просмотра по слайдам (Навигаторы, стрелочки)
      */
     advancePage(direction) {
-      if (!this.isPending && !this.isAnimating) {
-        let now = this.overlayEl.scrollLeft
-        let distance = 0
-        let wrapStyles = getComputedStyle(this.slidedEl)
-        let wrapperWidth = parseFloat(wrapStyles.width) - parseFloat(wrapStyles.paddingLeft) * 2
-        if (direction === "next") {
-          this.movesArr.some((w) => {
-            distance += w.width
-            if (Math.round((distance * 100) / 100) >= wrapperWidth) {
-              distance = now + distance
-              return true
-            }
-          })
-        } else if (direction === "prev") {
-          void [...this.movesArr].reverse().some(w => {
-            distance += w.width
-            if (Math.round((distance * 100) / 100) >= wrapperWidth) {
-              distance = now - distance
-              return true
-            }
-          })
+      if (!this.isPending && this.pages.length > 0) {
+        this.perfStart = performance.now()
+
+        let currPage = this.activePage + (direction === 'next' ? 1 : -1)
+
+        if (!this.pages[currPage])
+          return
+
+        // Ускоритель, когда несколько раз щелкнуть на навигатор
+        if (this.isAnimating) {
+          boostedIndex++
+          let boostedPageId = this.activePage + (direction === 'next' ? boostedIndex : -boostedIndex)
+          if (this.pages[boostedPageId]) {
+            this.activePage = boostedPageId
+            Animate.stop(this.activeMCId)
+            this.move(this.pages[boostedPageId].slides[0].move).then(() => { boostedIndex = 0 })
+          }
         }
-        if (distance < 0)
-          distance = 0
+
+        if (!this.isAnimating) {
+          this.pages[this.activePage].active = false
+          this.pages[currPage].active = true
+          this.activePage = currPage
+          this.move(this.pages[currPage].slides[0].move).then(() => { boostedIndex = 0 })
+        }
+
         if (!this.swipingStartPoint)
-          this.swipingStartPoint = now
-        this.move(distance)
+          this.swipingStartPoint = this.overlayEl.scrollLeft
       }
     },
+
+    /**
+     * Анимированный скроллинг к указанной позиции
+     */
+    move (to = 0, isAdvance = true) {
+      return new Promise(resolve => {
+        if (!this.overlayEl) {
+          resolve()
+        }
+        let from = this.overlayEl.scrollLeft
+        let updateNavs = () => {
+          if (!this.isTouch) {
+            if (this.pages.length > 0) {
+              this.canAdvanceBackward = this.activePage !== 0
+              this.canAdvanceForward = !this.pages[this.pages.length - 1].active
+              this.isFinalSlide = this.canAdvanceForward
+            }
+          }
+        }
+        if (from !== to && from !== to + 1) {
+          this.isAnimating = true
+          this.$emit('onAnimatingStart', callback => callback())
+          Animate.start({
+            duration: this.duration,
+            timing: Animate.timingFunctions[this.transitionFunction],
+            draw: (progress, rId) => {
+              if (this.overlayEl) {
+                this.overlayEl.scrollLeft = from + (to - from) * progress
+                this.activeMCId = rId
+              }
+            },
+            onLeave: () => {
+              this.activeMCId = null
+              if (isAdvance)
+                updateNavs()
+              this.$emit('onAnimatingEnd', callback => callback())
+              setTimeout(() => {
+                this.isAnimating = false
+                this.perfResult = performance.now() - this.perfStart // @TMP
+                resolve()
+              }, 1) // В FF скроллинг быстрее отрабатывает, чем триггер isAnimating
+            }
+          })
+        } else {
+          if (isAdvance)
+            updateNavs()
+          resolve()
+        }
+      })
+    },
+
+    /**
+     * Скроллит к указанному слайду
+     * @param {Number} slideId
+     */
+    moveTo (slideId) {
+      if (slideId !== undefined && this.slides[slideId])
+        this.move(this.slides[slideId].move)
+    },
+
+    /**
+     * Нативное событие скроллинга
+     */
+    scrollNative (e) {
+      if (!this.disabledScrolling && !this.isTouch) {
+        this.autoScroller()
+
+        let el = e.target
+        this.canAdvanceBackward = el.scrollLeft > 0
+        this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
+        this.canAdvanceForward = !this.isFinalSlide
+      }
+      this.toggleSlides()
+    },
+
     /**
      * Доводчик позиции скролла до ближайшего слайда
      */
     autoScroller(delay = autoScrollingTimeout) {
       if (this.autoScrolling && !this.isPending && !this.isAnimating) {
+        if (!this.swipingStartPoint)
+          this.swipingStartPoint = this.overlayEl.scrollLeft
         let now = this.overlayEl.scrollLeft
         this.scrollingTimer = setTimeout(() => {
           if (
             (now === this.overlayEl.scrollLeft && now !== this.swipingStartPoint) &&
             (!this.isAnimating && !this.isPending)
           ) {
+            this.perfStart = performance.now()
             this.scrollingAutoEnd = false
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide()
             if (distance !== null && this.overlayEl.scrollLeft !== distance) {
-              this.move(distance).then(() => {
+              this.move(distance, false).then(() => {
+                this.toggleSlides()
                 this.autoScrollerRemove()
               })
             } else {
@@ -192,262 +504,96 @@ export default {
       }
     },
     autoScrollerRemove() {
+      this.swipingStartPoint = this.overlayEl.scrollLeft
       clearTimeout(this.scrollingTimer)
       this.scrollingTimer = null
       this.scrollingAutoEnd = true
     },
+
     /**
-     * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
+     * Определяет ближайший слайд для автоскролла и сэттит страницу
      */
-    createMoves () {
-      this.isPending = true
-      this.movesArr = []
-      if (this.isInnerBlock) {
-        this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
-      }
-      this.isPending = false
-
-      if (this.isInnerBlock) {
-        this.hSpace = this.innerBlockOffset
-      } else {
-        let leftPadding = parseFloat(getComputedStyle(this.slidedEl).paddingLeft)
-        let leftOffset = this.slidedEl.getBoundingClientRect().left
-        this.hSpace = (leftPadding > 0 ? leftPadding : 0) + (leftOffset > 0 ? leftOffset : 0)
-      }
-
-      this.$nextTick(() => {
-        this.slides.forEach((slide, i) => {
-          if (typeof slide.width === 'function') {
-            this.movesArr.push({
-              width: slide.width(),
-              key: i
-            })
-          }
-        })
-        this.move()
-        this.toggleSlides()
-      })
-    },
-    getNearbySlide (to = this.overlayEl.scrollLeft) {
+    getNearbySlide (to = Number(this.overlayEl.scrollLeft.toFixed())) {
       if (this.swipingStartPoint !== to) {
+
         let nextNav = this.swipingStartPoint <= to
-        let distance = nextNav ? 0 : this.overlayEl.scrollWidth - this.hSpace * 2
+        let findedSlide
+        let distance = 0
+
         if (nextNav) {
-          this.movesArr.some(w => {
-            if (distance + slideSwipingMinDistance > to) {
+          let prevMove = 0
+          this.slides.some(slide => {
+            if (prevMove + slideSwipingMinDistance > to) {
+              findedSlide = slide
+              distance = slide.move
+              this.pages[this.activePage].active = false
+              this.activePage = findedSlide.page
+              this.pages[this.activePage].active = true
               return true
-            } else {
-              distance += w.width
             }
+            prevMove += slide.width()
           })
         } else {
-          void [...this.movesArr].reverse().some((w) => {
-            if (distance - slideSwipingMinDistance <= to) {
+          let prevMove = this.overlayEl.scrollWidth - this.hSpace * 2
+          void [...this.slides].reverse().some(slide => {
+            if (prevMove - slideSwipingMinDistance <= to) {
+              findedSlide = slide
+              distance = slide.move
+              this.pages[this.activePage].active = false
+              this.activePage = findedSlide.page
+              this.pages[this.activePage].active = true
               return true
-            } else {
-              distance -= w.width
             }
-            if (distance < 0) {
-              distance = 0
-            }
+            prevMove -= slide.width()
           })
         }
-        return Number(distance.toFixed());
+        if (this.debug)
+          console.log(
+            '\n distance', distance,
+            '\n findedSlide', findedSlide
+          )
+        return Number(distance.toFixed())
       } else {
         return null;
       }
     },
-    slidesWidth() {
-      if (this.movesArr.length) {
-        return this.movesArr.reduce(
-          (accum, curVal) =>
-            (typeof accum === "object" && accum.constructor === Object
-              ? accum.width
-              : accum) + curVal.width
-        );
-      }
-      return 0
-    },
-    move (to = 0) {
-      return new Promise(resolve => {
-        if (!this.overlayEl) {
-          resolve()
-        }
-        let from = this.overlayEl.scrollLeft
-        let overlayContainerWidth = parseFloat(getComputedStyle(this.overlayEl).width)
-        let slidesWidth = () => {
-          if (this.movesArr.length) {
-            return this.movesArr.reduce(
-              (accum, curVal) => (
-                typeof accum === "object" && accum.constructor === Object
-                  ? accum.width
-                  : accum
-              ) + curVal.width + this.hSpace
-            )
-          }
-          return 0
-        }
-        let updateNavs = () => {
-          if (!this.isTouch) {
-            this.canAdvanceBackward = to > 1
-            this.isFinalSlide = this.overlayEl.scrollLeft + overlayContainerWidth + slideSwipingMinDistance >= this.overlayEl.scrollWidth
-            let navsOnlyLackOfWidth = overlayContainerWidth < slidesWidth()
-            this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth
-          }
-        }
-        if (from !== to && from !== to + 1) {
-          this.isAnimating = true
-          this.$emit('onAnimatingStart', callback => callback())
-          Animate.start({
-            duration: this.duration,
-            timing: Animate.timingFunctions[this.transitionFunction],
-            draw: (progress) => {
-              if (this.overlayEl) {
-                this.overlayEl.scrollLeft = from + (to - from) * progress
-              }
-            },
-            onLeave: () => {
-              updateNavs()
-              this.$emit('onAnimatingEnd', callback => callback())
-              setTimeout(() => {
-                this.isAnimating = false
-                resolve()
-              }, 1) // В FF скроллинг быстрее отрабатывает, чем триггер isAnimating
-            }
-          })
-        } else {
-          updateNavs()
-          resolve()
-        }
-      })
-    },
-    scrollNative (e) {
-      if (!this.disabledScrolling && !this.isTouch) {
-        let el = e.target
-        this.canAdvanceBackward = el.scrollLeft > 0
-        this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
-        this.canAdvanceForward = !this.isFinalSlide
-        this.autoScroller()
-      }
-      this.toggleSlides()
-    },
+
+    /**
+     * Меняет состояние слайдов
+     */
     toggleSlides () {
       if (!this.isTouch) {
         clearTimeout(this.toggleSlidesTimer)
+        // Throttle for scroll event
         this.toggleSlidesTimer = setTimeout(() => {
+
           if (!this.overlayEl && !this.$refs.overlay) {
             return
           }
-          if (!this.overlayEl)
+          if (!this.overlayEl || !this.slidedEl)
             return
+
           let startScrolling = this.overlayEl.scrollLeft
           let distance = 0
           let distanceLeft = 0
           let distanceRight = startScrolling + this.slidedEl.clientWidth
-          let hiddenSlides = []
-          this.movesArr.forEach((w) => {
-            distance += w.width
+
+          this.slides.forEach((slide, key) => {
+            distance += slide.width()
+            let flag = true
             if (startScrolling - slideSwipingMinDistance > distanceLeft) {
-              if (this.canAdvanceBackward) {
-                hiddenSlides.push(w.key)
-              }
-              distanceLeft += w.width
+              distanceLeft += slide.width()
+              flag = false
             }
             if (distance - slideSwipingMinDistance > distanceRight) {
-              hiddenSlides.push(w.key)
-              distanceRight += w.width
+              distanceRight += slide.width()
+              flag = false
             }
-          })
-          this.slides.forEach((s, k) => {
-            if (typeof s.toggle === 'function')
-              s.toggle(hiddenSlides.indexOf(k) === -1)
+            slide.toggle(flag)
           })
         }, 15)
       }
     }
-  },
-  render (h) {
-    const desktopBlock = () => {
-      if (!this.isTouch)
-        return <div
-          ref="overlay"
-          class={ cssSelector + '__overlay' }
-        >
-          <div
-            ref="inner"
-            class={ cssSelector + '__inner ' + cssContainer }
-            style={{
-              paddingTop: this.offsetTop + 'px',
-              paddingBottom: this.offsetBottom + 'px'
-            }}
-          >
-            { this.$slots.default }
-            { spacerBlock() }
-          </div>
-        </div>
-    }
-    const mobileBlock = () => {
-      if (this.isTouch)
-        return <div
-          ref="overlay"
-          class={ cssSelector + '__overlay ' + cssSelector + '__inner ' + cssContainer }
-          style={{
-            paddingTop: this.offsetTop + 'px',
-            paddingBottom: this.offsetBottom + 'px'
-          }}
-        >
-          { this.$slots.default }
-          { spacerBlock() }
-        </div>
-    }
-    const navsBlock = () => {
-      if (!this.hideNavigation && !this.isTouch && !this.disabledScrolling)
-        return <rt-carousel-navi
-            hSpace={ this.hSpace }
-            isPending={ this.isPending }
-            hideArrows={ this.hideArrows }
-            showTipsNext={ this.showTipsNext }
-            containerName={ cssContainer }
-            overlayEl={ this.$refs.overlay } // Не используй HTMLElement (this.overlayEl), т.к будет перезаписана переменная геттера
-            advancePage={ this.advancePage }
-            canAdvanceForward={ this.canAdvanceForward }
-            canAdvanceBackward={ this.canAdvanceBackward }
-            navsPosStart={ this.navsPosStart }
-            navsPosEnd={ this.navsPosEnd }
-          />
-    }
-    const spacerBlock = () => {
-      return <div
-          class={ cssSelector + '__spacer' }
-          style={{ flex: '0 0 ' + this.hSpace + 'px' }}
-        >
-        </div>
-    }
-
-    return <div
-      class={[
-        cssSelector,
-        {
-          'is-touch-device': this.isTouch,
-          'is-pending': this.isPending,
-          'is-animating': this.isAnimating,
-          'is-hide-navs': this.hideNavigation,
-          'is-scrolling' : !this.scrollingAutoEnd,
-          'is-disabled-scrolling': this.disabledScrolling
-        }
-      ]}
-      data-uid={ this._uid }
-      style={{
-        marginTop: -this.offsetTop + 'px',
-        marginBottom: -this.offsetBottom + 'px',
-        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
-        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
-      }}
-    >
-      { navsBlock() }
-      { desktopBlock() }
-      { mobileBlock() }
-    </div>
   }
 }
 </script>

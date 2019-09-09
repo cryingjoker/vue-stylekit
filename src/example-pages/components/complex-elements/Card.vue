@@ -1366,7 +1366,7 @@
             <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top higher-z is-b2b">
               <rt-card :equal-padding="true">
                 <template slot="header">
-                  <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">
+                  <p class="rt-font-paragraph rt-space-bottom rt-font-bold">
                     Вызов 400
                   </p>
                 </template>
@@ -1426,12 +1426,19 @@
             <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top is-b2b">
               <rt-card :equal-padding="true" :has-label="true">
                 <template slot="header">
-                  <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">
-                    Тариф 1
-                  </p>
+                  <div class="rt-space-bottom">
+                    <span class="rt-font-paragraph rt-font-bold">
+                      Видеонаблюдение 500
+                    </span>
+                    <rt-hint :simple-tool-tip="true">
+                      <slot>
+                        Это всё что угодно,<br >но не адрес электронной почты
+                      </slot>
+                    </rt-hint>
+                  </div>
                 </template>
                 <template slot="label">
-                  <h4>- 30%</h4>
+                  <h4 class="rt-font-h4">- 30%</h4>
                 </template>
                 <template slot="content">
                   <div class="rtb-card__description__row">
@@ -1483,7 +1490,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                   <template slot="header">
-                    <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                    <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                   </template>
                   <template slot="content">
                     <div class="rtb-card__description__row">
@@ -1520,7 +1527,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                   <rt-card>
                     <template slot="header">
-                      <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                      <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                     </template>
                     <template slot="content">
                       <div class="rtb-card__description__row">
@@ -1557,7 +1564,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                 <template slot="header">
-                  <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                  <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                 </template>
                 <template slot="content">
                   <div class="rtb-card__description__row">
@@ -1594,7 +1601,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                   <template slot="header">
-                    <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                    <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                   </template>
                   <template slot="content">
                     <div class="rtb-card__description__row">
@@ -1653,7 +1660,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                   <template slot="header">
-                    <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                    <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                   </template>
                   <template slot="content">
                     <div class="rtb-card__description__row">
@@ -1690,7 +1697,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                   <template slot="header">
-                    <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                    <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                   </template>
                   <template slot="content">
                     <div class="rtb-card__description__row">
@@ -1727,7 +1734,7 @@
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
                 <rt-card>
                   <template slot="header">
-                    <p class="rt-font-paragraph rt-space-bottom rt-font-real-bold">Тариф 1</p>
+                    <p class="rt-font-paragraph rt-space-bottom rt-font-bold">Тариф 1</p>
                   </template>
                   <template slot="content">
                     <div class="rtb-card__description__row">
