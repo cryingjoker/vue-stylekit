@@ -190,7 +190,7 @@ const VueRtStyle = {
 
       // Vue.component(Carousel.name, Carousel.component);
       // Vue.component(CarouselSlide.name, CarouselSlide.component);
-      Vue.component(Tabs.name, Tabs.component);
+      Vue.component(Tabs.name, Tabs);
       Vue.component(TabsContentItem.name, TabsContentItem.component);
       Vue.component(TabsNavigationItem.name, TabsNavigationItem.component);
       Vue.component(GalleryCarousel.name, GalleryCarousel.component);
