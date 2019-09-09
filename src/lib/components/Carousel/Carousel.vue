@@ -276,12 +276,13 @@ export default {
 
       this.autoScrollerRemove()
       clearTimeout(this.toggleSlidesTimer)
+      
+      this.isPending = true
 
       if (this.isInnerBlock)
         this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
 
       this.activePage = 0
-      this.isPending = true
       this.movesArr = []
       this.pages = []
 
