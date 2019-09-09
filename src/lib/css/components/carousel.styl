@@ -41,6 +41,13 @@ scrollHSpacePC = 70px
     &.not-shown
       opacity .5
       pointer-events none
+    
+    &.rt-col-td-3
+      @media (min-width: tablet-lower-limit) and (max-width: tabler-upper-limit)
+        max-width 47.99998%
+    
+    @media (max-width: 425px)
+      min-width 83.33333250000001%
 
   &__navi
     position absolute
@@ -52,6 +59,7 @@ scrollHSpacePC = 70px
 
     &-side
       cursor pointer
+      min-width 30px
       position absolute
       height 100%
       z-index carouselZIndex + 2
@@ -156,9 +164,6 @@ scrollHSpacePC = 70px
     .{carouselSel}__slide
       -webkit-scroll-snap-align start
       scroll-snap-align start
-
-      @media (max-width: 425px)
-        min-width 83.33333250000001%
 
     .{carouselSel}__spacer
       -webkit-scroll-snap-align end

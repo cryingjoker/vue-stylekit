@@ -25,6 +25,7 @@ e2e/*.map
 
 # Build files
 src/assets/images/map.svg
+libs/
 
 # Test coverage
 coverage

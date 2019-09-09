@@ -23,6 +23,7 @@
     <rt-youtube
       height=""
       :playlist-id="['PLbAFXJC0J5GanbANaPaaWYB6Vdc_JPZ6n']"
+      :disable-buttons="true"
     />
   </div>
 </template>

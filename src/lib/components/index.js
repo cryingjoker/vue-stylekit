@@ -19,7 +19,7 @@
  export { default as Textarea } from './Textarea/Textarea.vue';
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
  export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.tsx';
- export { default as Tabs } from './Tabs/Tabs.tsx';
+ export { default as Tabs } from './Tabs/Tabs.vue';
  export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.tsx';
  export { default as TabsContentItem } from './Tabs/TabsContentItem.tsx';
  export { default as Annotation } from './Annotation/Annotation.vue';

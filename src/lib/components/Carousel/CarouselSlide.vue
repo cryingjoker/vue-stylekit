@@ -16,6 +16,8 @@ export default {
   },
   data() {
     return {
+      move: null,
+      page: null,
       shown: true
     }
   },
@@ -42,7 +44,12 @@ export default {
   render(h){
     return <div
         class={ cssSelector + (this.shown ? '' : ' not-shown') + ' ' + this.getCustomClass }
-        style={{ paddingRight: this.offsetSlide + 'px' }}
+        style={
+          {
+            backgroundColor: this.$parent.debug && !this.shown ? '#3ca' : null,
+            paddingRight: this.offsetSlide + 'px'
+          }
+        }
       >{ this.$slots.default }</div>
   }
 };

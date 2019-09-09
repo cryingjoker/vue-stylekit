@@ -117,32 +117,7 @@
       };
     },
 
-    computed: {
-      fieldName() {
-        return this.name || "input-field__" + this._uid;
-      },
-      isInvalid() {
-        if (this.validate || this.hasError) {
-          return this.errors && this.errors.has(this.fieldName);
-        }
-      },
-      inputClass() {
-        let className = "input-wrapper";
-        if (this.outlined) {
-          className += " input-wrapper--outlined";
-        }
-        if (this.isB2bInput) {
-          className += " rtb-input color-block--white";
-        }
-        if (this.isHidden) {
-          className += " rtb-input--hidden";
-        }
-        if (this.approved) {
-          className += " rtb-input--approved"
-        }
-        return className;
-      }
-    },
+
     watch: {
       localValue(val) {
         this.$emit("input", val);
@@ -181,7 +156,9 @@
             this.$refs.input.addEventListener(
               eventName,
               function() {
-                that["_events"][eventName][0](arguments[0])
+                if(that["_events"]&& that["_events"][eventName] && that["_events"][eventName][0] && typeof that["_events"][eventName][0] === 'function') {
+                  that["_events"][eventName][0](arguments[0])
+                }
               }
             );
           });
@@ -341,6 +318,27 @@
       }
     },
     render() {
+      let inputClassWrapper =  "input-wrapper";
+        if (this.outlined) {
+          inputClassWrapper += " input-wrapper--outlined";
+        }
+        if (this.isB2bInput) {
+          inputClassWrapper += " rtb-input color-block--white";
+        }
+        if (this.isHidden) {
+          inputClassWrapper += " rtb-input--hidden";
+        }
+        if (this.approved) {
+          inputClassWrapper += " rtb-input--approved"
+        }
+      let isInvalid = false;
+
+      if (this.validate || this.hasError) {
+        isInvalid =  this.errors && this.errors.has(this.fieldName);
+      }
+
+      const fieldName = this.name || "input-field__" + this._uid;
+
       let inputClass = "input text-field";
       if (this.isInvalid) {
         inputClass += " text-field--error";
@@ -420,7 +418,7 @@
       })();
 
       const errorMessage = (() => {
-        if (this.isInvalid) {
+        if (isInvalid) {
           let errorMessageClass = "text-field__error-message";
           if (this.label) {
             errorMessageClass += " text-field__error-message--has-label";
@@ -472,9 +470,9 @@
         if (this.localLabel)
           return <div class="input-label">{this.localLabel}</div>;
       })();
-
-      return <div class={this.inputClass}>
+      return <div class={inputClassWrapper}>
         <div class="input text-field" class={inputClass}>
+
           <input
             onKeypress={this.keyPress}
             onKeyup={this.keyUp}
@@ -483,7 +481,7 @@
             autocapitalize="off"
             type={this.type}
             class="input-element"
-            name={this.fieldName}
+            name={fieldName}
             onInput={this.inputHandler}
             v-validate={this.validate}
           />

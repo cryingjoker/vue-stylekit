@@ -66,6 +66,9 @@
     text-overflow ellipsis
     white-space nowrap
     padding-right 20px
+    outline none
+    border none
+    width 100%
 
   &-list
     width 100%
@@ -131,6 +134,8 @@
         color white
         background-color b2c-purple-high
         transition-duration 0s
+    &--hidden
+      display none
 
 .{b2bAppName}-select
   height 60px !important
@@ -147,7 +152,7 @@
     padding 10px 10px 0
 
   .select-arrow
-    top: 0
+    top -15px
     bottom: 0
     margin-top: auto
     margin-bottom: auto
@@ -195,8 +200,8 @@
         color main-color05
         top -15px
 
-    .select-arrow
-      top 5px
+    //.select-arrow
+    //  top 5px
 
     &:hover
       .text-field__border

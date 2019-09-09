@@ -5,7 +5,7 @@ const cssSelector = 'rt-carousel__navi'
 const name = 'RtCarouselNavi'
 let navContainerChanged = false
 
-@Component
+@Component({ name })
 class CarouselNavi extends Vue {
 
   name: string = name
