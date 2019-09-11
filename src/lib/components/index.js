@@ -20,8 +20,8 @@
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
  export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.tsx';
  export { default as Tabs } from './Tabs/Tabs.vue';
- export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.tsx';
- export { default as TabsContentItem } from './Tabs/TabsContentItem.tsx';
+ export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.vue';
+ export { default as TabsContentItem } from './Tabs/TabsContentItem.vue';
  export { default as Annotation } from './Annotation/Annotation.vue';
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
