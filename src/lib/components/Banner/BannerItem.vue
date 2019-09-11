@@ -296,7 +296,7 @@ export default {
     if (this.ga) {
       this.activateEventToLink('b2c', this.ga);
     }
-    if (this.ga) {
+    if (this.gaB2b) {
       this.activateEventToLink('b2b', this.gaB2b);
     }
     window.addEventListener('resize', ()=>{
