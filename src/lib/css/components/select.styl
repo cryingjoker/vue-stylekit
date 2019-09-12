@@ -15,7 +15,7 @@
 
   &-arrow
     position absolute
-    top 0px
+    top -15px
     bottom: 0
     margin-top: auto
     margin-bottom: auto
@@ -23,12 +23,13 @@
     transform rotate(0)
     transition-timing-function ease-in-out
     transition-duration .2s
-    transition-property transform
+    transition-property transform, top
     width: 13px
     height: 7px
 
     .select--is-open &
       transform rotate(180deg)
+      top 5px
 
     &__icon
       opacity .7
@@ -36,8 +37,8 @@
       transition-duration .2s
       transition-property opacity, fill
       fill main-color
-      position: absolute
-      top: 0
+      //position: absolute
+      //top: 0
 
       .{newAppName}-dark-theme &
         fill white

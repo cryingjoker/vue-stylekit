@@ -40,6 +40,8 @@ import RealPopup from '../components/main-elements/Popup.vue';
 import SlideContent from '../components/experiment-elements/SlideContent.vue';
 // import Homeinternet from '../components/promo/homeinternet.vue';
 import RowList from '../components/main-elements/RowList.vue';
+import OptionsList from '../components/main-elements/OptionsList.vue';
+
 import Tabs from '../components/main-elements/Tabs.vue';
 import Table from '../components/main-elements/Table.vue';
 import DownloadContent from '../components/main-elements/DownloadContent.vue';
@@ -94,6 +96,7 @@ const index = [
     name: 'app-color-line-text',
     component: ColorLineText,
   },
+  { path: '/options-list', name: 'app-row-list', component: OptionsList },
   { path: '/row-list', name: 'app-row-list', component: RowList },
   { path: '/cards', name: 'app-cards', component: Cards },
   { path: '/cards-with-forms', name: 'app-cards', component: CardsWithForms },

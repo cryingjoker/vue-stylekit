@@ -19,6 +19,7 @@ class Price extends Vue {
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
   @Prop({ default: false }) epcPrice: boolean;
+  @Prop({ default: false }) trimHundredth: boolean;
   localValue: number = 0;
   cost: number = 0;
   //todo сделать проверку системного языка с заменой . , у double данных
@@ -33,7 +34,7 @@ class Price extends Vue {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
         item = item.replace('.','');
-        if(item.length === 1){
+        if(item.length === 1 && !this.trimHundredth){
           item += '0';
         }
       }
@@ -53,7 +54,7 @@ class Price extends Vue {
         item = parseInt(item).toFixed(2).toString()
         item = item[0]+item[1];
         item = item.replace('.','');
-        if(item.length === 1){
+        if(item.length === 1 && !this.trimHundredth){
           item += '0';
         }
       }
@@ -82,7 +83,7 @@ class Price extends Vue {
             item = parseInt(item).toFixed(2).toString();
             item = item[0]+item[1];
             item = item.replace('.','');
-            if(item.length === 1){
+            if(item.length === 1 && !this.trimHundredth){
               item += '0';
             }
           }
@@ -108,7 +109,7 @@ class Price extends Vue {
           item = parseInt(item).toFixed(2).toString();
           item = item[0]+item[1];
           item = item.replace('.','');
-          if(item.length === 1){
+          if(item.length === 1 && !this.trimHundredth){
             item += '0';
           }
         }

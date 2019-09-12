@@ -93,10 +93,11 @@ import {
   CardCarousel,
   CardLayout,
   GalleryCarousel,
-  GalleryCarouselItem
+  GalleryCarouselItem,
+  OptionsList
 } from "./components";
 
-
+console.info('OptionsList',OptionsList)
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
@@ -153,6 +154,7 @@ const VueRtStyle = {
       Vue.component(TagsList.name, TagsList);
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
+      Vue.component(OptionsList.name, OptionsList);
       Vue.component(FilterCaller.name, FilterCaller);
       Vue.component(Sticky.name, Sticky);
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
@@ -191,8 +193,8 @@ const VueRtStyle = {
       // Vue.component(Carousel.name, Carousel.component);
       // Vue.component(CarouselSlide.name, CarouselSlide.component);
       Vue.component(Tabs.name, Tabs);
-      Vue.component(TabsContentItem.name, TabsContentItem.component);
-      Vue.component(TabsNavigationItem.name, TabsNavigationItem.component);
+      Vue.component(TabsContentItem.name, TabsContentItem);
+      Vue.component(TabsNavigationItem.name, TabsNavigationItem);
       Vue.component(GalleryCarousel.name, GalleryCarousel.component);
       Vue.component(GalleryCarouselItem.name, GalleryCarouselItem.component);
       Vue.component(LogoCoBranding.name, LogoCoBranding.component);

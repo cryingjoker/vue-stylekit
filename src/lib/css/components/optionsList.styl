@@ -1,0 +1,89 @@
+.{newAppName}-options-list
+  display: flex
+  width: 100%
+  flex-direction column
+
+.{newAppName}-options-list__header
+  display: flex
+  flex-flow: row wrap;
+  padding-top: 20px
+  padding-bottom: 20px
+  padding-left: 20px
+  padding-right: 20px
+  transition-timing-function cubic-bezier(.67,.05,.21,.85)
+  transition-duration .4s
+  transition-property background-color
+  cursor: pointer
+  &:hover
+    background-color: b2c-cool-grey05
+
+.{newAppName}-options-list__info
+  flex: 1
+  display: flex
+  flex-flow: row wrap
+  vertical-align middle
+  align-items center
+
+.{newAppName}-options-list__info-content
+  flex: 1
+
+.{newAppName}-options-list__content
+  max-height: 0
+  padding-top: 0
+  padding-bottom: 0
+  padding-left: 96px
+  opacity: 0
+  visibility: hidden
+  transition-timing-function cubic-bezier(.67,.05,.21,.85)
+  transition-duration .4s
+  transition-property max-height, padding, opacity, visibility
+
+.rt-options-list--is-active
+  .{newAppName}-options-list__content
+    padding-top: 5px
+    padding-bottom: 5px
+    max-height: 1000px
+    opacity: 1
+    visibility: visible
+
+.{newAppName}-options-list__info-aside
+  vertical-align middle
+  align-items center
+  display: flex
+
+.{newAppName}-options-list__icon
+  max-width: 76px
+  min-width: 76px
+  min-height: 56px
+  max-height: 56px
+  box-sizing border-box
+
+
+
+
+@media (max-width: mobile-upper-limit)
+  .{newAppName}-options-break-mobile
+    flex-basis: 100%;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+  .{newAppName}-options-list__info-aside
+    padding-top: 5px
+
+@media (max-width: tablet-upper-limit)
+  .{newAppName}-options-break
+    flex-basis: 100%;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+
+  .{newAppName}-options-list__info-more-button
+    background-color: transparent
+    color b2c-purple
+    padding: 0!important
+    &:hover
+      background-color: transparent
+      color b2c-purple
+      box-shadow none
+    .ripple
+      padding: 0!important

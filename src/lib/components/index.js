@@ -20,8 +20,8 @@
  export { default as TextareaStatic } from './Textarea/TextareaStatic.vue';
  export { default as ScrollTabs } from './ScrollTabs/ScrollTabs.tsx';
  export { default as Tabs } from './Tabs/Tabs.vue';
- export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.tsx';
- export { default as TabsContentItem } from './Tabs/TabsContentItem.tsx';
+ export { default as TabsNavigationItem } from './Tabs/TabsNavigationItem.vue';
+ export { default as TabsContentItem } from './Tabs/TabsContentItem.vue';
  export { default as Annotation } from './Annotation/Annotation.vue';
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
@@ -38,6 +38,7 @@
  export { default as CarouselSlide } from './Carousel/CarouselSlide.vue';
  export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';
  export { default as RowList } from './RowList/RowList.vue';
+ export { default as OptionsList } from './OptionsList/OptionsList.vue';
  export { default as RowListItem } from './RowList/RowListItem.vue';
  export { default as Table } from './Table/Table.vue';
  export { default as TableHeadItem } from './Table/TableHeadItem.vue';
