@@ -93,10 +93,11 @@ import {
   CardCarousel,
   CardLayout,
   GalleryCarousel,
-  GalleryCarouselItem
+  GalleryCarouselItem,
+  OptionsList
 } from "./components";
 
-
+console.info('OptionsList',OptionsList)
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
@@ -153,6 +154,7 @@ const VueRtStyle = {
       Vue.component(TagsList.name, TagsList);
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
+      Vue.component(OptionsList.name, OptionsList);
       Vue.component(FilterCaller.name, FilterCaller);
       Vue.component(Sticky.name, Sticky);
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);

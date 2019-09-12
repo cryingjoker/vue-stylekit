@@ -38,6 +38,7 @@
  export { default as CarouselSlide } from './Carousel/CarouselSlide.vue';
  export { default as FullscreenImage } from './FullscreenImage/FullscreenImage.vue';
  export { default as RowList } from './RowList/RowList.vue';
+ export { default as OptionsList } from './OptionsList/OptionsList.vue';
  export { default as RowListItem } from './RowList/RowListItem.vue';
  export { default as Table } from './Table/Table.vue';
  export { default as TableHeadItem } from './Table/TableHeadItem.vue';
