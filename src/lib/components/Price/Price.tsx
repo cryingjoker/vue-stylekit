@@ -71,6 +71,7 @@ class Price extends Vue {
   @Watch("value", { immediate: true, deep: true })
   onValueChanged(val: number | string) {
     this.$nextTick(() => {
+      console.log('ticked');
       this.localValue = this.cost || parseFloat(val.toString());
       this.normalizeValue = this.showFloat ?
         parseFloat(this.localValue.toString()).toString().split(".").map((item: any, index) => {
@@ -130,36 +131,30 @@ class Price extends Vue {
   onTimeIntervalChanged(val: string) {
     this.normalizeTimeInterval = val;
   }
-  check(){
-    if(this.$slots['default'] && this.$slots['default'][0].children[0].children[0].text) {
-      this.cost = parseFloat(this.$slots['default'][0].children[0].children[0].text);
-    }else{
-      setTimeout(()=>{
-        this.check()
-      },300)
-    }
-  }
+
   mounted() {
     this.cost = this.value ? parseFloat(this.value.toString()) : 0;
     if(this.epcPrice){
-      this.check();
+      this.$on('update-price', (value) => {
+        this.cost = parseInt(value, 10);
+        // this.$el.innerHTML = this.cost.toString();
+      });
     }
+
+    setTimeout(()=>{
+      this.$emit("update-price", 351);
+    },2000)
   }
 
   render(h: CreateElement): VNode {
 
     const rtPriceClass = "rt-price" + (this.forGame ? " rt-price-game" : "");
     const rtPriceInfoClass = "rt-price__info" + (this.boldOption ? " rt-price__info--bold-font" : "");
-    if(this.epcPrice){
-      return <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>{this.$slots['default'][0].children[0].children[0].text}</div>
-    }
     const timeIntervalRender = () => {
       if (this.normalizeTimeInterval && !this.onlyPrice) {
-        {
-          return <div class="rt-price__info-item">
-            {this.normalizeTimeInterval}
-          </div>;
-        }
+        return <div class="rt-price__info-item">
+          {this.normalizeTimeInterval}
+        </div>;
       } else {
         return null;
       }
@@ -194,7 +189,7 @@ class Price extends Vue {
         return <div>
           {opinionRender()}
           <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>
-            {this.normalizeValue}
+            {this.epcPrice ? this.cost : this.normalizeValue}
           </div>
           <div class="rtb-price__info rt-price__info">{this.normalizeCurrency}</div>
           <div class="rt-font-small-paragraph rt-font-bold rtb-price__info-interval">{this.normalizeTimeInterval}</div>
@@ -203,7 +198,7 @@ class Price extends Vue {
         return <div>
           {opinionRender()}
           <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>
-            {this.normalizeValue}
+            {this.epcPrice ? this.cost : this.normalizeValue}
           </div>
           <div class="rt-price__info">
             <div class="rt-price__info rtb-price__info">
@@ -218,8 +213,7 @@ class Price extends Vue {
       const oldB2bPriceRender = () => {
         if (this.normalizeOldValue && parseFloat(this.normalizeOldValue) > 0) {
           return <div class="rtb-price__old-value">
-            <div
-              class={"rt-price__old-value rtb-price__old-value" + (this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeOldValue}
+            <div class={"rt-price__old-value rtb-price__old-value" + (this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeOldValue}
               <div class={"rt-price__info rtb-price__info-item"}>
               <span
                 class={(this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeCurrency}</span>
