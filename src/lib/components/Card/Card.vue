@@ -377,10 +377,10 @@ export default {
     },
     cardBackgroundStyle() {
       const styles = {};
-      if (this.backgroundImage && !this.backgroundImageStandAlone) {
+      if (this.backgroundImage && !this.backgroundImageStandAlone && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
-      if (this.productIcon) {
+      if (this.productIcon && this.localBackgroundImage && this.localProductIcon) {
         styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
@@ -421,7 +421,9 @@ export default {
       if (this.backgroundImageStandAlone && this.backgroundImage) {
         const styles = {};
 
-        styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
+        if (this.localBackgroundImage) {
+          styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
+        }
         styles.width =
           this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgroundSizeHeight);
@@ -440,7 +442,7 @@ export default {
     categoryImage() {
       const styles = {};
 
-      if(this.backgroundImage) {
+      if(this.backgroundImage && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
       return styles;
@@ -448,7 +450,7 @@ export default {
     categoryIcon() {
       const styles = {};
 
-      if(this.categoryIconMobile) {
+      if(this.categoryIconMobile && this.localCategoryIconMobile) {
         styles.backgroundImage = "url(" + this.localCategoryIconMobile + ")";
       }
       return styles;
