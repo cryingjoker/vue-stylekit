@@ -71,7 +71,6 @@ class Price extends Vue {
   @Watch("value", { immediate: true, deep: true })
   onValueChanged(val: number | string) {
     this.$nextTick(() => {
-      console.log('ticked');
       this.localValue = this.cost || parseFloat(val.toString());
       this.normalizeValue = this.showFloat ?
         parseFloat(this.localValue.toString()).toString().split(".").map((item: any, index) => {
