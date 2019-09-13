@@ -51,7 +51,7 @@ class Price extends Vue {
           "$1 "
         );
       }else {
-        item = parseInt(item).toFixed(2).toString()
+        item = parseInt(item).toFixed(2).toString();
         item = item[0]+item[1];
         item = item.replace('.','');
         if(item.length === 1 && !this.trimHundredth){
@@ -137,13 +137,8 @@ class Price extends Vue {
     if(this.epcPrice){
       this.$on('update-price', (value) => {
         this.cost = parseInt(value, 10);
-        // this.$el.innerHTML = this.cost.toString();
       });
     }
-
-    setTimeout(()=>{
-      this.$emit("update-price", 351);
-    },2000)
   }
 
   render(h: CreateElement): VNode {
