@@ -196,7 +196,7 @@ export default {
     localBackgroundImage: null,
     localProductIcon: null,
     localCategoryIconMobile: null,
-    mobileSvgWidth: 0
+    mobileSvgWidth: window.innerWidth - 40
   }),
   computed: {
     cardClass() {
@@ -468,6 +468,8 @@ export default {
       this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
       this.redrawSvg();
     });
+    this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+    this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
     this.checkLazy();
     this.redrawSvg();
   },
@@ -562,7 +564,6 @@ export default {
     redrawSvg() {
       if(this.$el.querySelector('.rt-card__content')) {
         this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2));
-        console.log(this.mobileSvgWidth);
       }
     }
   },
@@ -745,7 +746,7 @@ export default {
     })();
     const triangle = (()=>{
       if(this.inTabsWImage) {
-        if(this.tabletLayout) {
+        if(this.tabletLayout || this.mobileLayout) {
           return <svg width="100%" height="100" class="rt-card__content-triangle">
             <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgb(255, 255, 255)"/>
           </svg>
