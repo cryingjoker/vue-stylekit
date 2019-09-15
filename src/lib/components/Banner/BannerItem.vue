@@ -110,6 +110,10 @@ export default {
       type: Object,
       default: null
     },
+    gaB2b: {
+      type: Object,
+      default: null
+    },
     patternBackground: {
       type: Boolean,
       default: false
@@ -290,7 +294,10 @@ export default {
   },
   mounted () {
     if (this.ga) {
-      this.activateEventToLink();
+      this.activateEventToLink('b2c', this.ga);
+    }
+    if (this.gaB2b) {
+      this.activateEventToLink('b2b', this.gaB2b);
     }
     window.addEventListener('resize', ()=>{
       let computedBackgroundImage = this.computedBackgroundImageFn();
@@ -334,9 +341,8 @@ export default {
       }
       return variable;
     },
-    activateEventToLink () {
+    activateEventToLink (typeEvent, ga) {
       if (this.$el.querySelector('a')) {
-        let ga = this.ga;
         let parentId = this.RtBanners.id;
         let currentKey = this.index;
         this.$el.querySelector('a').addEventListener('click', function(e){
@@ -346,7 +352,7 @@ export default {
               window.dataLayer = [];
             }
             window.dataLayer.push({
-              event: 'b2c',
+              event: typeEvent,
               type: 'banner_click',
               banner_name: ga.name,
               banner_id: parentId,

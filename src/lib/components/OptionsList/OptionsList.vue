@@ -14,7 +14,6 @@
     methods: {
       changeStatus() {
         optionsListStore.changeStatus(this._uid);
-        optionsListStore.getStatus();
       },
       onChangeStatus() {
         const options = optionsListStore.getStatus(this._uid);
