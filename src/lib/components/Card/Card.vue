@@ -196,7 +196,7 @@ export default {
     localBackgroundImage: null,
     localProductIcon: null,
     localCategoryIconMobile: null,
-    mobileSvgWidth: 0
+    mobileSvgWidth: window.innerWidth - 40
   }),
   computed: {
     cardClass() {
@@ -377,10 +377,10 @@ export default {
     },
     cardBackgroundStyle() {
       const styles = {};
-      if (this.backgroundImage && !this.backgroundImageStandAlone) {
+      if (this.backgroundImage && !this.backgroundImageStandAlone && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
-      if (this.productIcon) {
+      if (this.productIcon && this.localBackgroundImage && this.localProductIcon) {
         styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
@@ -421,7 +421,9 @@ export default {
       if (this.backgroundImageStandAlone && this.backgroundImage) {
         const styles = {};
 
-        styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
+        if (this.localBackgroundImage) {
+          styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
+        }
         styles.width =
           this.normalizeSize(this.backgroundSizeWidth) ||
           this.normalizeSize(this.backgroundSizeHeight);
@@ -440,7 +442,7 @@ export default {
     categoryImage() {
       const styles = {};
 
-      if(this.backgroundImage) {
+      if(this.backgroundImage && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
       return styles;
@@ -448,7 +450,7 @@ export default {
     categoryIcon() {
       const styles = {};
 
-      if(this.categoryIconMobile) {
+      if(this.categoryIconMobile && this.localCategoryIconMobile) {
         styles.backgroundImage = "url(" + this.localCategoryIconMobile + ")";
       }
       return styles;
@@ -468,6 +470,8 @@ export default {
       this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
       this.redrawSvg();
     });
+    this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+    this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
     this.checkLazy();
     this.redrawSvg();
   },
@@ -744,7 +748,7 @@ export default {
     })();
     const triangle = (()=>{
       if(this.inTabsWImage) {
-        if(this.tabletLayout) {
+        if(this.tabletLayout || this.mobileLayout) {
           return <svg width="100%" height="100" class="rt-card__content-triangle">
             <polygon points={"0,100 " + this.mobileSvgWidth + ",0 " + this.mobileSvgWidth + ",100"} fill="rgb(255, 255, 255)"/>
           </svg>
