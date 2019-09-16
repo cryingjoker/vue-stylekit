@@ -208,8 +208,18 @@ export default {
           },
           {
             version: "0.1.56",
-            name: ".rt-space-right",
-            description: "`padding-right: 20px`"
+            name: ".rt-space-right0-half",
+            description: "`padding-right: 5px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-right05",
+            description: "`padding-right: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-right05-half",
+            description: "`padding-right: 15px`"
           },
           {
             version: "0.1.18",
