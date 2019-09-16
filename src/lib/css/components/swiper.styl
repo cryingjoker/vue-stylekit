@@ -27,9 +27,6 @@ scrollHSpacePC = 70px
     margin: 0 auto
     width calc(100vw - (100vw - 100%))
     max-width 100vw
-    @media (max-width: tablet-upper-limit)
-      padding-right 0
-      padding-left 0
 
   &__overlay::-webkit-scrollbar
     display none
@@ -82,11 +79,13 @@ scrollHSpacePC = 70px
       overflow-x auto
       overflow-y hidden
       -webkit-scroll-padding-inline-start scrollHSpace
-      scroll-padding-inline-start scrollHSpace
+      scroll-padding-inline-start scrollHSpace * 3
       -webkit-scroll-snap-type mandatory
       -webkit-scroll-snap-type-x mandatory
       scroll-snap-type mandatory
       scroll-snap-type x mandatory
+      @media (max-width: mobile-upper-limit)
+        scroll-padding-inline-start scrollHSpace
 
     .{swiperName}-slide
       max-width 90vw
@@ -96,10 +95,14 @@ scrollHSpacePC = 70px
 
       &:first-child
         @media (max-width: tablet-upper-limit)
+          margin-left scrollHSpace * 3
+        @media (max-width: mobile-upper-limit)
           margin-left scrollHSpace
 
     .{swiperName}__spacer
       @media (max-width: tablet-upper-limit)
+        min-width scrollHSpace * 3
+      @media (max-width: mobile-upper-limit)
         min-width scrollHSpace
 
   &.is-animating,
