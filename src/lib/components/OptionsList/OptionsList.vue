@@ -3,24 +3,50 @@
 
   export default {
     name: "RtOptionsList",
-    props: {},
+    props: {
+      hash: {
+        type: String,
+        default: ""
+      },
+      needToSave: {
+        type: Boolean,
+        default: false
+      },
+      name: {
+        type: String,
+        default: ""
+      },
+      closeOther:{
+        type: Boolean,
+        default: false
+      }
+
+    },
     data: () => ({
+
       isActive: false
     }),
     mounted() {
-      optionsListStore.addInListArray(this._uid);
-      optionsListStore.addWatcher(this._uid, this.onChangeStatus);
+
+      optionsListStore.addInListArray(this.name || this._uid, this.hash, this.needToSave, this.closeOther);
+      optionsListStore.addWatcher(this.name || this._uid, this.onChangeStatus);
+
     },
     methods: {
+
       changeStatus() {
-        optionsListStore.changeStatus(this._uid);
+
+        optionsListStore.changeStatus(this.name || this._uid);
+
       },
       onChangeStatus() {
-        const options = optionsListStore.getStatus(this._uid);
+
+        const options = optionsListStore.getStatus(this.name || this._uid);
         this.isActive = options.isActive;
       }
     },
     render(h) {
+
       let optionsListClass = "rt-options-list";
       if (this.isActive) {
         optionsListClass += " rt-options-list--is-active";
