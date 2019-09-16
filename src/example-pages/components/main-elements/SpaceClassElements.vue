@@ -69,17 +69,17 @@ export default {
             description: "`padding-left: 20px`"
           },
           {
-            version: "0.1.18",
+            version: "0.1.56",
             name: ".rt-space-left0-half",
             description: "`padding-left: 5px`"
           },
           {
-            version: "0.1.18",
+            version: "0.1.56",
             name: ".rt-space-left05",
             description: "`padding-left: 10px`"
           },
           {
-            version: "0.1.18",
+            version: "0.1.56",
             name: ".rt-space-left05-half",
             description: "`padding-left: 15px`"
           },

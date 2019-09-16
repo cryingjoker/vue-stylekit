@@ -305,9 +305,7 @@
     @media (max-width: tablet-upper-limit)
       display flex
       flex-direction column
-      min-height 715px
-    @media (max-width: mobile-upper-limit)
-      min-height 700px
+      height auto
     .rt-card__background
       position relative
       top 0
@@ -318,9 +316,9 @@
       background-size cover
       border-radius 0
       @media (max-width: tablet-upper-limit)
-        height 50%
+        flex-basis calc((100vw - 80px) / 2)
       @media (max-width: mobile-upper-limit)
-        flex-basis 200px
+        flex-basis calc((100vw - 40px) / 1.4)
     .rt-card
       &__content
         padding 70px 0
