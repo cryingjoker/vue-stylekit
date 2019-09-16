@@ -1,7 +1,9 @@
 carouselSel = newAppName + '-carousel'
 carouselZIndex = 10
 scrollHSpace = 10px
+scrollHSpaceTablet = 30px
 scrollHSpacePC = 70px
+offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
 
 .{carouselSel}
   width 100%
@@ -43,10 +45,10 @@ scrollHSpacePC = 70px
       pointer-events none
     
     &.rt-col-td-3
-      @media (min-width: tablet-lower-limit) and (max-width: tabler-upper-limit)
+      @media (min-width: tablet-lower-limit) and (max-width: tablet-upper-limit)
         max-width 47.99998%
     
-    @media (max-width: 425px)
+    @media (max-width: iphone8)
       min-width 83.33333250000001%
 
   &__navi
@@ -169,13 +171,34 @@ scrollHSpacePC = 70px
       -webkit-scroll-snap-align end
       scroll-snap-align end
       min-width scrollHSpace
+    
+    @media (min-width: tablet-lower-limit)
+      .{carouselSel}__inner
+        scroll-padding-inline-start scrollHSpaceTablet
 
-    @media (min-width: 1024px)
+      .{carouselSel}__spacer
+        min-width scrollHSpaceTablet
+
+    @media (min-width: laptop-lower-limit)
       .{carouselSel}__inner
         scroll-padding-inline-start scrollHSpacePC
 
       .{carouselSel}__spacer
         min-width scrollHSpacePC
+    
+    &.is-inner-block
+      width 100vw
+      margin-left 0 - horizontal-space
+      margin-right 0 - horizontal-space
+      @media (min-width: tablet-lower-limit)
+        margin-left 0 - scrollHSpaceTablet - scrollHSpace
+        margin-right 0 - scrollHSpaceTablet - scrollHSpace
+      @media (min-width: laptop-lower-limit)
+        margin-left 0 - scrollHSpacePC - scrollHSpace
+        margin-right 0 - scrollHSpacePC - scrollHSpace
+      @media (min-width: container-upper-limit)
+        margin-left "calc((100vw - %s)/-2)" % offsetSpacePC
+
 
   &.is-animating,
   &.is-disabled-scrolling
