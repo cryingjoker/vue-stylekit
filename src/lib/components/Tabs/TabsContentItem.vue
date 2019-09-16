@@ -12,7 +12,7 @@
     data: () => ({
       isActive: false,
       parentid: "",
-      namesArray,
+      namesArray: [],
       activeName: ""
     }),
     created() {
