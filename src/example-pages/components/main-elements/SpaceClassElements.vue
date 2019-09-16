@@ -75,6 +75,16 @@ export default {
           },
           {
             version: "0.1.18",
+            name: ".rt-space-left05",
+            description: "`padding-left: 10px`"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-space-left05-half",
+            description: "`padding-left: 15px`"
+          },
+          {
+            version: "0.1.18",
             name: ".rt-space-left-half",
             description: "`padding-left: 25px`"
           },
@@ -329,6 +339,16 @@ export default {
             description: "`padding-top: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-space-top05",
+            description: "`padding-top: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-top05-half",
+            description: "`padding-top: 15px`"
+          },
+          {
             version: "0.1.18",
             name: ".rt-space-top-half",
             description: "`padding-top: 25px`"
@@ -464,6 +484,16 @@ export default {
             description: "`padding-bottom: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-space-bottom05",
+            description: "`padding-bottom: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-bottom05-half",
+            description: "`padding-bottom: 15px`"
+          },
+          {
             version: "0.1.18",
             name: ".rt-space-bottom15-half",
             description: "`padding-bottom: 30px`"
@@ -580,6 +610,11 @@ export default {
             version: "0.1.56",
             name: ".rt-space-vertical0-half",
             description: "```padding-top: 5px \npadding-bottom: 5px```"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-vertical05",
+            description: "```padding-top: 10px \npadding-bottom: 10px```"
           },
           {
             version: "0.1.18",
@@ -705,7 +740,12 @@ export default {
           {
             version: "0.1.56",
             name: ".rt-space-horizontal0-half",
-            description: "```padding-left: 5px \npright-bottom: 5px```"
+            description: "```padding-left: 10px \npright-bottom: 10px```"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-space-horizontal05",
+            description: "```padding-left: 10px \npright-bottom: 10px```"
           },
           {
             version: "0.1.18",
@@ -860,6 +900,16 @@ export default {
             description: "*for tablet* \n\n`padding-left: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-td-space-left05",
+            description: "*for tablet* \n\n`padding-left: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-left05-half",
+            description: "*for tablet* \n\n`padding-left: 15px`"
+          },
+          {
             name: ".rt-td-space-left",
             description: "*for tablet* \n\n`padding-left: 20px`"
           },
@@ -984,6 +1034,16 @@ export default {
             version: "0.1.56",
             name: ".rt-td-space-right0-half",
             description: "*for tablet* \n\n`padding-right: 5px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-right05",
+            description: "*for tablet* \n\n`padding-right: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-right05-half",
+            description: "*for tablet* \n\n`padding-right: 15px`"
           },
           {
             name: ".rt-td-space-right",
@@ -1112,6 +1172,16 @@ export default {
             description: "*for tablet* \n\n`padding-top: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-td-space-top05",
+            description: "*for tablet* \n\n`padding-top: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-top05-half",
+            description: "*for tablet* \n\n`padding-top: 15px`"
+          },
+          {
             name: ".rt-td-space-top",
             description: "*for tablet* \n\n`padding-top: 20px`"
           },
@@ -1236,6 +1306,16 @@ export default {
             version: "0.1.56",
             name: ".rt-td-space-bottom0-half",
             description: "*for tablet* \n\n`padding-bottom: 5px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-bottom05",
+            description: "*for tablet* \n\n`padding-bottom: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-bottom05-half",
+            description: "*for tablet* \n\n`padding-bottom: 15px`"
           },
           {
             name: ".rt-td-space-bottom",
@@ -1369,6 +1449,12 @@ export default {
             name: ".rt-td-space-vertical0-half",
             description:
               "*for tablet* \n\n```padding-top: 5px \npadding-bottom: 5px```"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-vertical05",
+            description:
+              "*for tablet* \n\n```padding-top: 5px \npadding-bottom: 10px```"
           },
           {
             version: "0.1.18",
@@ -1522,6 +1608,12 @@ export default {
             name: ".rt-td-space-horizontal0-half",
             description:
               "*for tablet* \n\n```padding-left: 5px \npright-bottom: 5px```"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-td-space-horizontal05",
+            description:
+              "*for tablet* \n\n```padding-left: 5px \npright-bottom: 10px```"
           },
           {
             version: "0.1.18",
@@ -1703,6 +1795,16 @@ export default {
             description: "*for mobile* \n\n`padding-left: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-md-space-left05",
+            description: "*for mobile* \n\n`padding-left: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-left05-half",
+            description: "*for mobile* \n\n`padding-left: 15px`"
+          },
+          {
             name: ".rt-md-space-left",
             description: "*for mobile* \n\n`padding-left: 20px`"
           },
@@ -1827,6 +1929,16 @@ export default {
             version: "0.1.56",
             name: ".rt-md-space-right0-half",
             description: "*for mobile* \n\n`padding-right: 5px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-right05",
+            description: "*for mobile* \n\n`padding-right: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-right05-half",
+            description: "*for mobile* \n\n`padding-right: 15px`"
           },
           {
             name: ".rt-md-space-right",
@@ -1955,6 +2067,16 @@ export default {
             description: "*for mobile* \n\n`padding-top: 5px`"
           },
           {
+            version: "0.1.56",
+            name: ".rt-md-space-top05",
+            description: "*for mobile* \n\n`padding-top: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-top05-half",
+            description: "*for mobile* \n\n`padding-top: 15px`"
+          },
+          {
             name: ".rt-md-space-top",
             description: "*for mobile* \n\n`padding-top: 20px`"
           },
@@ -2079,6 +2201,16 @@ export default {
             version: "0.1.56",
             name: ".rt-md-space-bottom0-half",
             description: "*for mobile* \n\n`padding-bottom: 5px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-bottom05",
+            description: "*for mobile* \n\n`padding-bottom: 10px`"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-bottom05-half",
+            description: "*for mobile* \n\n`padding-bottom: 15px`"
           },
           {
             name: ".rt-md-space-bottom",
@@ -2206,6 +2338,12 @@ export default {
             name: ".rt-md-space-vertical0-half",
             description:
               "*for mobile* \n\n```padding-top: 5px \npadding-bottom: 5px```"
+          },
+          {
+            version: "0.1.18",
+            name: ".rt-md-space-vertical05",
+            description:
+              "*for mobile* \n\n```padding-top: 5px \npadding-bottom: 10px```"
           },
           {
             version: "0.1.18",
@@ -2359,6 +2497,12 @@ export default {
             name: ".rt-md-space-horizontal0-half",
             description:
               "*for mobile* \n\n```padding-left: 5px \npright-bottom: 5px```"
+          },
+          {
+            version: "0.1.56",
+            name: ".rt-md-space-horizontal05",
+            description:
+              "*for mobile* \n\n```padding-left: 5px \npright-bottom: 10px```"
           },
           {
             version: "0.1.18",
