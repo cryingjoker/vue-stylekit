@@ -186,8 +186,7 @@ export default {
             position: this.position,
             height: this.buttonSize + 'px',
             top: this.topPos,
-            bottom: this.bottomPos,
-            maxWidth: this.overlayEl ? this.overlayEl.clientWidth + 'px' : null
+            bottom: this.bottomPos
           }}
         >
           { btnRender('prev') }

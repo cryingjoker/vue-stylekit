@@ -12,7 +12,7 @@
           font-size: 10px;
           padding: 5px;
           position: absolute;
-          height: 100px;
+          height: 150px;
           width: 100px;
           bottom: 0;
           right: 0;
@@ -24,11 +24,13 @@
         <p>page: {{ activePage }}</p>
         <p>perf: {{ parseInt(Math.floor(perfResult/10)) }}ms</p>
         <p>scrollLeft: {{ $refs && $refs.overlay ? $refs.overlay.scrollLeft : '' }}</p>
+        <p>canBack: {{ canAdvanceBackward }}</p>
+        <p>canForward: {{ canAdvanceForward }}</p>
       </div>
 
       <RtCarouselNavi
         v-if="!hideNavigation && !isTouch && !disabledScrolling"
-        :hSpace="hSpace"
+        :hSpace="isInnerBlock && innerBlockOffset > 10 ? innerBlockOffset - 10 : hSpace"
         :isPending="isPending"
         :hideArrows="hideArrows"
         :showTipsNext="showTipsNext"
@@ -163,7 +165,6 @@ export default {
       isInnerBlock: false, // Позволяет вынести блок карусели за контейнер
       innerBlockOffset: 0,
       hSpace: 0,
-      movesArr: [], // Для ускорения работы используется массив с широтами слайдов, а не vue-инстансы
       pages: [], // Набор слайдов с позицией для ускорителя
       activeMCId: null,
       activePage: 0,
@@ -187,6 +188,7 @@ export default {
         this.cssSelector,
         {
           'is-touch-device': this.isTouch,
+          'is-inner-block': this.isInnerBlock,
           'is-pending': this.isPending,
           'is-animating': this.isAnimating,
           'is-hide-navs': this.hideNavigation,
@@ -199,8 +201,8 @@ export default {
       return {
         marginTop: -this.offsetTop + 'px',
         marginBottom: -this.offsetBottom + 'px',
-        width: this.isInnerBlock ? `${document.body.clientWidth}px` : null,
-        marginLeft: this.isInnerBlock ? `-${this.innerBlockOffset}px` : null
+        width: this.isInnerBlock && !this.isTouch ? `${document.body.clientWidth}px` : null,
+        marginLeft: this.isInnerBlock && !this.isTouch ? `-${this.innerBlockOffset}px` : null
       }
     },
     innerStylesState () {
@@ -216,7 +218,7 @@ export default {
       }
     },
     spacerStylesState () {
-      return 'flex: 0 0 ' + this.hSpace + 'px'
+      return `flex: 0 0 ${this.isInnerBlock ? (this.innerBlockOffset - 10) : this.hSpace}px`
     },
     overlayEl () {
       return this.$refs.overlay
@@ -283,7 +285,6 @@ export default {
         this.innerBlockOffset = this.$el.parentElement.getBoundingClientRect().left
 
       this.activePage = 0
-      this.movesArr = []
       this.pages = []
 
       this.overlayEl.scrollLeft = 0
@@ -318,7 +319,7 @@ export default {
             let nextResolveWidth = distanceAfter + slideWidth
             distance += slideWidth
 
-            if (Math.round(distance * 100) / 100 >= wrapperWidth || nextResolveWidth > wrapperWidth) {
+            if (Math.round(distance * 100) / 100 > wrapperWidth || nextResolveWidth > wrapperWidth) {
               currPage++
               distance = 0
               distanceAfter = 0
@@ -336,11 +337,6 @@ export default {
               move: pageWidth,
               page: currPage,
               slide: i + 1,
-              width: slideWidth
-            })
-            this.movesArr.push({
-              key: i,
-              page: currPage,
               width: slideWidth
             })
             pageWidth += slideWidth
@@ -410,15 +406,6 @@ export default {
           resolve()
         }
         let from = this.overlayEl.scrollLeft
-        let updateNavs = () => {
-          if (!this.isTouch) {
-            if (this.pages.length > 0) {
-              this.canAdvanceBackward = this.activePage !== 0
-              this.canAdvanceForward = !this.pages[this.pages.length - 1].active
-              this.isFinalSlide = this.canAdvanceForward
-            }
-          }
-        }
         if (from !== to && from !== to + 1) {
           this.isAnimating = true
           this.$emit('onAnimatingStart', callback => callback())
@@ -434,7 +421,7 @@ export default {
             onLeave: () => {
               this.activeMCId = null
               if (isAdvance)
-                updateNavs()
+                this.updateNavs()
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
                 this.isAnimating = false
@@ -445,7 +432,7 @@ export default {
           })
         } else {
           if (isAdvance)
-            updateNavs()
+            this.updateNavs()
           resolve()
         }
       })
@@ -466,11 +453,9 @@ export default {
     scrollNative (e) {
       if (!this.disabledScrolling && !this.isTouch) {
         this.autoScroller()
-
-        let el = e.target
-        this.canAdvanceBackward = el.scrollLeft > 0
-        this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
-        this.canAdvanceForward = !this.isFinalSlide
+        this.$nextTick(() => {
+          this.updateNavs()
+        })
       }
       this.toggleSlides()
     },
@@ -593,6 +578,14 @@ export default {
             slide.toggle(flag)
           })
         }, 15)
+      }
+    },
+    updateNavs () {
+      if (!this.isTouch && this.overlayEl) {
+        let el = this.overlayEl
+        this.canAdvanceBackward = el.scrollLeft > 0
+        this.isFinalSlide = el.scrollLeft + el.offsetWidth + slideSwipingMinDistance >= el.scrollWidth
+        this.canAdvanceForward = !this.isFinalSlide
       }
     }
   }
