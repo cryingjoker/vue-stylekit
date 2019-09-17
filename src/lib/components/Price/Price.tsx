@@ -134,7 +134,7 @@ class Price extends Vue {
   mounted() {
     this.cost = this.value ? parseFloat(this.value.toString()) : 0;
     if(this.epcPrice){
-      this.$on('update-price', (value) => {
+      this.$root.$on('update-price', (value) => {
         this.cost = parseInt(value, 10);
       });
     }
