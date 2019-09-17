@@ -11,7 +11,7 @@ export default {
 
   computed: {},
   mounted() {
-    this.quantity = this.$el.getElementsByclassName('.rtb-card__social-link').length;
+    this.quantity = this.$el.getElementsByClassName('rtb-card__social-link').length;
     this.quantityHidden = this.quantity - 5;
   },
   created() {},
