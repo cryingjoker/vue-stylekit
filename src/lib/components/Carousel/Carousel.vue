@@ -293,7 +293,7 @@ export default {
       let wrapStyles = getComputedStyle(this.slidedEl)
       let leftPadding = parseFloat(wrapStyles.paddingLeft)
       let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
-      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
+      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0
       let wrapperWidth
       let maxMoveDist
 
@@ -305,8 +305,15 @@ export default {
       }
 
       this.$nextTick(() => {
-        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
-        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+        // Calculate wrapper after move slidedEl
+        if (this.isInnerBlock) {
+          wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
+          maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+        } else {
+          wrapperWidth = parseFloat(wrapStyles.width)
+          maxMoveDist = this.overlayEl.scrollWidth
+        }
+        
 
         let currPage = 0
         let pageWidth = 0
@@ -356,6 +363,9 @@ export default {
         if (this.debug && maxMoveDist > 0)
           console.log(
             'Instance ', this,
+            '\n left', this.slidedEl.getBoundingClientRect().left,
+            '\n hSpace', this.hSpace,
+            '\n wrapperWidth', wrapperWidth,
             '\n pages ', this.pages,
             '\n isInnerBlock ', this.isInnerBlock
           )

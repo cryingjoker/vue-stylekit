@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div style="width: 100vw">
+    <div>
       <pre-code text='
         <div class="rt-container">
           <div class="app-content rt-col-12 rt-col-md-3">
@@ -94,7 +94,7 @@
       ' />
     </div>
 
-    <div style="width: 100vw">
+    <div>
       <pre-code text='
         <rt-carousel :hide-arrows="true" slides-classes="rt-col-4 rt-col-md-2 rt-col-td-3">
           <rt-carousel-slide>
@@ -435,7 +435,7 @@
     </div>
 
 
-    <div class="rt-space-top5" style="width: 100vw;">
+    <div class="rt-space-top5">
       <pre-code text='
         <rt-carousel slides-classes="rt-col-3 rt-col-md-3 rt-space-top rt-font-hypnens-off is-b2c">
           <rt-carousel-slide>
@@ -532,9 +532,9 @@
       </div>' />
     </div>
 
-    <!-- <div class="rt-space-top5" style="width: 100vw">
+    <div class="rt-space-top5">
       <pre-code text='
-        <rt-carousel :hide-navigation="true">
+        <rt-carousel>
           <rt-carousel-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
               :equal-padding="true"
@@ -1754,9 +1754,9 @@
             </rt-card>
           </rt-carousel-slide>
         </rt-carousel>'/>
-    </div> -->
+    </div>
 
-    <div class="rt-space-top5" style="width: 100vw;">
+    <div class="rt-space-top5">
       <rt-carousel :debug="true">
         <rt-carousel-slide v-for="i in 17" :key="i">
           <div class="rt-space-horizontal05">
