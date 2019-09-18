@@ -218,21 +218,22 @@ export default {
     slides() {
       return (
         this.$children &&
-        this.$children.filter( slide => {
+        this.$children.filter(
+          slide =>
           slide.$vnode &&
           slide.$vnode.tag &&
           slide.$vnode.tag.indexOf("RtSlide") > -1
-        })
+        )
       );
     },
     styleInnerCarousel() {
-      let result = `${this.cmpName}__inner ${this.containerName}`;
-      let styleDisableCarousel = ` ${this.cmpName}__inner-default`;
+      let result = `${this.cmpName}__inner ${this.containerName}`
+      let styleDisableCarousel = ` ${this.cmpName}__inner-default`
 
       if (this.isDisableCarousel) {
         result += styleDisableCarousel
       } else {
-         result = result.replace(new RegExp(styleDisableCarousel, 'g'), '')
+        result = result.replace(new RegExp(styleDisableCarousel, 'g'), '')
       }
       return result
     }
@@ -250,8 +251,8 @@ export default {
       this.isTouch = true
     }
     window.addEventListener('resize', () => {
-      this.isTouch = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
-    });
+      this.isTouch = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) ? true : false;
+    })
     // для включения стилей, если карусель на некоторых разрешениях должна быть выключена
     this.overideCarouselStyles()
   },
@@ -271,7 +272,8 @@ export default {
         let now = this.$refs.overlay.scrollLeft;
         let distance = 0;
         let wrapStyles = getComputedStyle(this.$refs.slidedBlock);
-        let wrapperWidth = parseFloat(wrapStyles.width) - parseFloat(wrapStyles.paddingLeft) * 2;
+        let wrapperWidth =
+          parseFloat(wrapStyles.width) - parseFloat(wrapStyles.paddingLeft) * 2;
         if (direction === "next") {
           this.movesArr.some(w => {
             distance += w.width;
@@ -308,11 +310,18 @@ export default {
       if (this.autoScrolling && !this.isPending && !this.isAnimating) {
         let now = this.$refs.overlay.scrollLeft;
         this.scrollingTimer = setTimeout(() => {
-          if (now === this.$refs.overlay.scrollLeft && now !== this.swipingStartPoint && (!this.isAnimating && !this.isPending)) {
+          if (
+            now === this.$refs.overlay.scrollLeft &&
+            now !== this.swipingStartPoint &&
+            (!this.isAnimating && !this.isPending)
+          ) {
             this.scrollingAutoEnd = false;
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide();
-            if (distance !== null && this.$refs.overlay.scrollLeft !== parseInt(distance)) {
+            if (
+              distance !== null &&
+              this.$refs.overlay.scrollLeft !== parseInt(distance)
+            ) {
               this.move(distance).then(() => {
                 this.autoScrollerRemove();
               });
@@ -332,11 +341,13 @@ export default {
      * Оптимизирует навигацию по слайдам, собирая диапозоны широт в виде массива
      */
     createMoves() {
-      this.controlDisableCarousel();
+      this.controlDisableCarousel()
 
       if (this.$refs.overlay && this.currentWindowWidth !== window.innerWidth) {
         this.currentWindowWidth = window.innerWidth;
-        let leftPadding = parseFloat(getComputedStyle(this.$refs.slidedBlock).paddingLeft);
+        let leftPadding = parseFloat(
+          getComputedStyle(this.$refs.slidedBlock).paddingLeft
+        );
         let leftOffset = this.$refs.slidedBlock.getBoundingClientRect().left;
         this.hSpace =
 //          (leftPadding > 0 ? leftPadding : 0) +
@@ -396,7 +407,9 @@ export default {
     getNearbySlide(to = this.$refs.overlay.scrollLeft) {
       if (this.swipingStartPoint !== to) {
         let nextNav = this.swipingStartPoint <= to;
-        let distance = nextNav ? 0 : this.$refs.overlay.scrollWidth - this.hSpace * 8;
+        let distance = nextNav
+          ? 0
+          : this.$refs.overlay.scrollWidth - this.hSpace * 2;
         if (nextNav) {
           this.movesArr.some(w => {
             if (distance + slideSwipingMinDistance >= to) {
@@ -417,7 +430,7 @@ export default {
             }
           });
         }
-//        console.log(distance, nextNav, this.swipingStartPoint, to, this.isLongTouch);
+        // console.log(distance, nextNav, this.swipingStartPoint, to, this.isLongTouch)
         return distance;
       } else {
         return null;
@@ -425,8 +438,11 @@ export default {
     },
     slidesWidth() {
       if (this.movesArr.length) {
-        return this.movesArr.reduce((accum, curVal) =>
-          (typeof accum === "object" && accum.constructor === Object ? accum.width : accum) + curVal.width
+        return this.movesArr.reduce(
+          (accum, curVal) =>
+          (typeof accum === "object" && accum.constructor === Object
+            ? accum.width
+            : accum) + curVal.width
         );
       }
       return 0
@@ -443,15 +459,21 @@ export default {
         let from = parseInt(this.$refs.overlay.scrollLeft);
         let updateNavs = () => {
           if (!this.isTouch) {
-            let navsOnlyLackOfWidth = !this.navsOnlyLackOfWidth ||
-              (this.navsOnlyLackOfWidth && this.overlayContainerWidth() < this.slidesWidth());
+            let navsOnlyLackOfWidth =
+              !this.navsOnlyLackOfWidth ||
+              (this.navsOnlyLackOfWidth &&
+              this.overlayContainerWidth() < this.slidesWidth());
             this.canAdvanceBackward = to > 1;
-            this.isFinalSlide = this.$refs.overlay.scrollLeft + this.overlayContainerWidth() + 2 >= this.$refs.overlay.scrollWidth;
+            this.isFinalSlide =
+              this.$refs.overlay.scrollLeft +
+              this.overlayContainerWidth() +
+              2 >=
+              this.$refs.overlay.scrollWidth;
             this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth;
           }
         };
         if (from !== to && from !== to + 1) {
-//          console.log('mc:start', from, to, this.isLongTouch)
+          // console.log('mc:start', from, to, this.isLongTouch)
           this.isAnimating = true;
           this.$emit("onAnimatingStart", callback => {
             callback();
@@ -461,7 +483,9 @@ export default {
             timing: timingFunctions[this.transitionFunction],
             draw: progress => {
               if (this.$refs.overlay) {
-                this.$refs.overlay.scrollLeft = parseInt(from + (to - from) * progress);
+                this.$refs.overlay.scrollLeft = parseInt(
+                  from + (to - from) * progress
+                );
               }
             },
             onLeave: () => {
@@ -499,14 +523,17 @@ export default {
     scrollNative(e) {
       if (!this.disabledScrolling && !this.isTouch) {
         this.canAdvanceBackward = e.target.scrollLeft > 0;
-        this.isFinalSlide = e.target.scrollLeft + e.target.offsetWidth + 1 >= e.target.scrollWidth;
+        this.isFinalSlide =
+          e.target.scrollLeft + e.target.offsetWidth + 1 >=
+          e.target.scrollWidth;
         this.canAdvanceForward = !this.isFinalSlide;
         this.autoScroller();
       }
       this.toggleSlides();
     },
     swipeHandler(e) {
-      this.touchObject.fingerCount = e.changedTouches !== undefined ? e.changedTouches.length : 1;
+      this.touchObject.fingerCount =
+        e.changedTouches !== undefined ? e.changedTouches.length : 1;
       switch (e.type) {
         case "touchstart":
           this.swipeStart(e);
@@ -561,11 +588,14 @@ export default {
       this.touchObject.direction =
         this.touchObject.startX !== this.touchObject.curX
           ? this.touchObject.startX < this.touchObject.curX
-            ? "prev"
-            : "next"
+          ? "prev"
+          : "next"
           : null;
       if (!this.disabledScrolling && this.touchObject.direction !== null) {
-        this.$refs.overlay.scrollLeft = this.swipingStartPoint + this.touchObject.swipeLength * (this.touchObject.direction === "next" ? 1 : -1);
+        this.$refs.overlay.scrollLeft =
+          this.swipingStartPoint +
+          this.touchObject.swipeLength *
+          (this.touchObject.direction === "next" ? 1 : -1);
         this.longTouchTimer = setTimeout(() => {
           this.isLongTouch = true;
         }, autoScrollingTimeout);
@@ -611,7 +641,8 @@ export default {
           let startScrolling = this.$refs.overlay.scrollLeft;
           let distance = 0;
           let distanceLeft = 0;
-          let distanceRight = startScrolling + this.$refs.slidedBlock.clientWidth;
+          let distanceRight =
+            startScrolling + this.$refs.slidedBlock.clientWidth;
           let hiddenSlides = [];
 
           if (!this.isDisableCarousel) {
