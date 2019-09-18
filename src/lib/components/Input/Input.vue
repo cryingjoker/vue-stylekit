@@ -181,7 +181,9 @@
             this.$refs.input.addEventListener(
               eventName,
               function() {
-                that["_events"][eventName][0](arguments[0])
+                if(that["_events"]&& that["_events"][eventName] && that["_events"][eventName][0] && typeof that["_events"][eventName][0] === 'function') {
+                  that["_events"][eventName][0](arguments[0])
+                }
               }
             );
           });
