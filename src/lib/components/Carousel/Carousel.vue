@@ -293,7 +293,7 @@ export default {
       let wrapStyles = getComputedStyle(this.slidedEl)
       let leftPadding = parseFloat(wrapStyles.paddingLeft)
       let innerWrapDiffPadding = this.innerBlockOffset - leftPadding
-      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0 // @TMP
+      let innerWrapPadding = innerWrapDiffPadding > 0 ? innerWrapDiffPadding : 0
       let wrapperWidth
       let maxMoveDist
 
@@ -305,8 +305,15 @@ export default {
       }
 
       this.$nextTick(() => {
-        wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
-        maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+        // Calculate wrapper after move slidedEl
+        if (this.isInnerBlock) {
+          wrapperWidth = parseFloat(wrapStyles.width) - this.hSpace * 2
+          maxMoveDist = this.overlayEl.scrollWidth - wrapperWidth - this.hSpace * 2
+        } else {
+          wrapperWidth = parseFloat(wrapStyles.width)
+          maxMoveDist = this.overlayEl.scrollWidth
+        }
+        
 
         let currPage = 0
         let pageWidth = 0
@@ -349,13 +356,16 @@ export default {
 
         if (this.pages[0]) {
           this.pages[0].active = true
-          this.move()
+          this.move().then(() => { this.updateNavs() })
           this.toggleSlides()
         }
 
         if (this.debug && maxMoveDist > 0)
           console.log(
             'Instance ', this,
+            '\n left', this.slidedEl.getBoundingClientRect().left,
+            '\n hSpace', this.hSpace,
+            '\n wrapperWidth', wrapperWidth,
             '\n pages ', this.pages,
             '\n isInnerBlock ', this.isInnerBlock
           )
@@ -381,7 +391,11 @@ export default {
           if (this.pages[boostedPageId]) {
             this.activePage = boostedPageId
             Animate.stop(this.activeMCId)
-            this.move(this.pages[boostedPageId].slides[0].move).then(() => { boostedIndex = 0 })
+            this.move(this.pages[boostedPageId].slides[0].move).then(() => {
+              boostedIndex = 0
+              this.autoScrollerRemove()
+              this.updateNavs()
+            })
           }
         }
 
@@ -389,7 +403,11 @@ export default {
           this.pages[this.activePage].active = false
           this.pages[currPage].active = true
           this.activePage = currPage
-          this.move(this.pages[currPage].slides[0].move).then(() => { boostedIndex = 0 })
+          this.move(this.pages[currPage].slides[0].move).then(() => {
+            boostedIndex = 0
+            this.autoScrollerRemove()
+            this.updateNavs()
+          })
         }
 
         if (!this.swipingStartPoint)
@@ -400,7 +418,7 @@ export default {
     /**
      * Анимированный скроллинг к указанной позиции
      */
-    move (to = 0, isAdvance = true) {
+    move (to = 0) {
       return new Promise(resolve => {
         if (!this.overlayEl) {
           resolve()
@@ -420,8 +438,6 @@ export default {
             },
             onLeave: () => {
               this.activeMCId = null
-              if (isAdvance)
-                this.updateNavs()
               this.$emit('onAnimatingEnd', callback => callback())
               setTimeout(() => {
                 this.isAnimating = false
@@ -431,8 +447,6 @@ export default {
             }
           })
         } else {
-          if (isAdvance)
-            this.updateNavs()
           resolve()
         }
       })
@@ -444,7 +458,7 @@ export default {
      */
     moveTo (slideId) {
       if (slideId !== undefined && this.slides[slideId])
-        this.move(this.slides[slideId].move)
+        this.move(this.slides[slideId].move).then(() => { this.updateNavs() })
     },
 
     /**
@@ -478,7 +492,7 @@ export default {
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide()
             if (distance !== null && this.overlayEl.scrollLeft !== distance) {
-              this.move(distance, false).then(() => {
+              this.move(distance).then(() => {
                 this.toggleSlides()
                 this.autoScrollerRemove()
               })
