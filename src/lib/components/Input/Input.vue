@@ -105,6 +105,10 @@
       approved: {
         type: Boolean,
         default: false
+      },
+      emitEvent: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
@@ -146,6 +150,8 @@
     watch: {
       localValue(val) {
         this.$emit("input", val);
+        if(this.emitEvent)
+          this.emitValue();
       },
       label() {
         this.localLabel = this.label;
@@ -338,6 +344,9 @@
           inputElement.setAttribute("type", "password");
         }
         this.passwordVisibility = !this.passwordVisibility;
+      },
+      emitValue() {
+        this.$root.$emit('chosen-value', this.localValue.toString());
       }
     },
     render() {
