@@ -12,10 +12,9 @@ import Global from "../lib/variables.json";
 
 // Vue.use(VueRx, Rx);
 Vue.use(VueRouter);
+if (!window[Global.globalSettingsKey]) window[Global.globalSettingsKey] = {}
 // Use validator only demo-stand for provide validation
-window[Global.globalSettingsKey] = {
-  useValidator: true
-};
+window[Global.globalSettingsKey].useValidator = true
 Vue.use(VueRtDevStyle);
 Vue.use(VueRtStyle);
 const router = new VueRouter({
