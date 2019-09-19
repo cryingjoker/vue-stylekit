@@ -253,6 +253,14 @@
       "description": "Устанавливает для слайда фон в виде прелоадера, пока не загрузится основное изображение \n string - ссылка на внутренний или внешний файл",
       "value": "null",
       "version": " >= 0.0.30"
+    },
+    {
+      "name": "rt-banner-item",
+      "property": ":ga",
+      "type": "Object",
+      "description": "Используется для сбора Google-аналитики. \n\n`:ga=\"{\n  name: Заголовок слайда баннера,\n  section: Раздел сайта (main_page, /bonus, /smarthouse - по-умолчанию location.pathname)\n}\"`",
+      "value": "null",
+      "version": " >= 0.0.30"
     }
   ]
 }
