@@ -942,11 +942,7 @@
                                 <p class="rt-font-small-paragraph">Веб-камера</p>
                               </div>
                               <div class="equipment__short-description__bottom-part">
-                                <rt-price :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true">
-                                  <div>
-                                    <span>132</span>
-                                  </div>
-                                </rt-price>
+                                <rt-price :is-option="true" :value="132" :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true"></rt-price>
                                 <rt-hint>
 
                                 </rt-hint>

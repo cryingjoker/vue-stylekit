@@ -195,7 +195,8 @@ export default {
           "controls" :"0",
           "disablekb": "1",
           "showinfo": "0",
-          "iv_load_policy": "3"
+          "iv_load_policy": "3",
+          "enablejsapi": "1"
         },
         events: {
           'onReady': this.setVideoReady,
