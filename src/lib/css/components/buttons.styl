@@ -164,6 +164,32 @@
       .ripple-wave
         background-color b2c-cool-grey
 
+  &-full-white
+    background-color: white
+    color #000000
+    .ripple-wave
+      background-color b2c-white
+    &:hover
+      @media (hover: hover) {
+        border-color b2c-white05
+        background-color b2c-white05
+      }
+
+
+    &:active
+      background-color b2c-white05
+
+    &[disabled]
+      color main-color01
+      background-color: transparent
+
+      &:hover
+        @media (hover: hover) {
+          background-color transparent
+        }
+
+
+
   &-purple
     color #fff
     background-color b2c-purple

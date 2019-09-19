@@ -45,6 +45,7 @@
               text="<rt-button class='rt-button-white'>Подключить</rt-button>"
             />
           </div>
+
         </div>
         <div class="app-row row">
           <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
@@ -78,7 +79,18 @@
             />
           </div>
         </div>
-
+        <div class="app-row row">
+          <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
+            <pre-code
+              text="<rt-button class='rt-button-full-white'>Подключить</rt-button>"
+            />
+          </div>
+          <div class="rt-col-2 rt-col-td-2 rt-col-md-3 flex-column d-flex rt-td-space-top">
+            <pre-code
+              text="<rt-button class='rt-button-full-white rt-button-small'>Подключить</rt-button>"
+            />
+          </div>
+        </div>
         <div class="row rt-space-top">
           <div class="rt-col">
             <p class="rt-font-h3">
