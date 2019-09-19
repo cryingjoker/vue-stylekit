@@ -198,7 +198,6 @@ export default {
           }
         })
       } else {
-        this.setValueWidth()
         this.fillCaption()
       }
     },
