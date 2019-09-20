@@ -384,7 +384,7 @@ export default {
       if (this.backgroundImage && !this.backgroundImageStandAlone && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
-      if (this.productIcon) {
+      if (this.productIcon && this.localProductIcon) {
         styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
