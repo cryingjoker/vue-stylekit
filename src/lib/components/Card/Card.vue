@@ -380,7 +380,7 @@ export default {
       if (this.backgroundImage && !this.backgroundImageStandAlone && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
-      if (this.productIcon && this.localBackgroundImage && this.localProductIcon) {
+      if (this.productIcon) {
         styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
