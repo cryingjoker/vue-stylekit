@@ -187,6 +187,10 @@ export default {
     unfoldButtonText: {
       type: String,
       default: ''
+    },
+    ga: {
+      type: Object,
+      default: null
     }
   },
   data: () => ({
@@ -474,6 +478,21 @@ export default {
     this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
     this.checkLazy();
     this.redrawSvg();
+    let anchor = this.$el.querySelector('a, button')
+    if (anchor && this.ga) {
+      anchor.addEventListener('click', Event => {
+        let el = Event.target
+        if (el.getAttribute('data-ga-pushed') || !this.ga) return
+        Event.preventDefault()
+        if (!window.dataLayer) window.dataLayer = []
+        window.dataLayer.push(Object.assign({
+          event: window[variables.globalSettingsKey].segment,
+          type: 'card_click'
+        }, this.ga))
+        el.setAttribute('data-ga-pushed', 'true')
+        el.click()
+      }, false)
+    }
   },
   methods: {
     loadImageAsync (src, resolve, reject) {

@@ -17,7 +17,7 @@
             <div class="row rt-space-top is-b2c">
               <div class="rt-col-4">
                 <pre-code
-                  text="<rt-card>
+                  text="<rt-card :ga=&quot;{ offerName: 'Kaspersky Internet Security 4' }&quot;>
                     <template slot='header'>
                       <img width='175px'
                            class='rt-card__headeremitSelectedData__image'
@@ -2443,6 +2443,29 @@
               </div>
               <div class="app-documentation__value-item rt-col-6">
                 Устанавливает высоту контейнера для контента карточки
+              </div>
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--fill">null</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-documentation__row rt-space-vertical">
+            <div class="app-documentation__name rt-col-2">
+              rt-card
+            </div>
+            <div class="app-documentation__name rt-col-3">
+              :ga
+            </div>
+            <div
+              class="app-documentation__value app-documentation__row rt-col-7"
+            >
+              <div class="app-documentation__value-item rt-col-3">
+                <span class="rt-code rt-font-label rt-code--component"
+                  >Object</span
+                >
+              </div>
+              <div class="app-documentation__value-item rt-col-6">
+                Используется для сбора Google-аналитики.<br>:ga="{ value: 'Заголовок на карточке' }"
               </div>
               <div class="app-documentation__value-item rt-col-3">
                 <span class="rt-code rt-font-label rt-code--fill">null</span>
