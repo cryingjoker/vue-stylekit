@@ -117,7 +117,7 @@
         />
         <div class="app-row row">
           <div class="rt-col rt-col-12">
-            <rt-input :show-numbers-buttons="true" insert-type="number" :min-number="0" :emit-event="true"/>
+            <rt-input :show-numbers-buttons="true" insert-type="number" :min-number="0" :emit-event="true" placeholder="Количество, шт."/>
           </div>
         </div>
         <!--</div>-->

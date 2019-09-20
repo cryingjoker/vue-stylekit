@@ -74,9 +74,7 @@
           </div>
           <div class="row rt-space-top">
             <div class="rt-col-4 rt-col-md-3">
-              <rt-price :value='500' currency='₽' :b2b-price='true' time-interval='' class='color-main09' :is-option='true' :epc-price='true'>
-                <div><span>789312798312</span></div>
-              </rt-price>
+              <rt-price :value='500' currency='₽' :b2b-price='true' time-interval='' class='color-main09' :is-option='true' :epc-price='true'/>
             </div>
           </div>
         </div>
