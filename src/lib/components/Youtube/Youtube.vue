@@ -61,8 +61,7 @@ export default {
     videoIdsArray: [],
     videoSize: 0,
     touchCount: 0,
-    isTouchDevice: false,
-    disableButtonControl: false
+    isTouchDevice: false
   }),
 
   mounted: function() {
