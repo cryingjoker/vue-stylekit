@@ -84,6 +84,15 @@
       white-space nowrap
     .rt-tabs-content
       border-top none
+  .rtk-carousel
+    width 100vw
+    @media (max-width: tablet-upper-limit)
+      left -40px
+    @media (max-width: mobile-upper-limit)
+      left -20px
+    .rtk-carousel__spacer
+      @media (max-width: tablet-upper-limit) and (min-width tablet-lower-limit)
+        flex-basis 30px
 
 .{newAppName}-tabs-navigation
   display inline-flex

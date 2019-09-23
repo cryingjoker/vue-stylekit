@@ -782,17 +782,19 @@ export default {
       }
     })();
     const unfoldButton = (()=> {
-      if(this.mobileLayout) {
-        return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>
-          {this.unfoldButtonText}
-          <div class="equipment__unfold-button-arrow">
-            <svg width="20" height="20">
-              <polyline points="2,6 10,14 18,6" fill="none" stroke="#e3e8ec" stroke-width="2"/>
-            </svg>
+      if(this.unfoldButtonText) {
+        if(this.mobileLayout) {
+          return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>
+            {this.unfoldButtonText}
+            <div class="equipment__unfold-button-arrow">
+              <svg width="20" height="20">
+                <polyline points="2,6 10,14 18,6" fill="none" stroke="#e3e8ec" stroke-width="2"/>
+              </svg>
+            </div>
           </div>
-          </div>
-      } else {
-        return null;
+        } else {
+          return null;
+        }
       }
     })();
     if(this.doubleSided){
