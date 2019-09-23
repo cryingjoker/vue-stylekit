@@ -580,7 +580,10 @@ export default {
     unfoldFeatures() {
       this.$el.querySelector('.equipment__full-description').classList.contains('equipment__full-description--shown') ?
         this.$el.querySelector('.equipment__full-description').classList.remove('equipment__full-description--shown') :
-        this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown')
+        this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown');
+      this.$el.querySelector('.equipment__unfold-button-arrow').classList.contains('equipment__unfold-button-arrow--reverse') ?
+        this.$el.querySelector('.equipment__unfold-button-arrow').classList.remove('equipment__unfold-button-arrow--reverse') :
+        this.$el.querySelector('.equipment__unfold-button-arrow').classList.add('equipment__unfold-button-arrow--reverse')
     },
     redrawSvg() {
       if(this.$el.querySelector('.rt-card__content')) {
@@ -780,7 +783,16 @@ export default {
     })();
     const unfoldButton = (()=> {
       if(this.mobileLayout) {
-        return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>{this.unfoldButtonText}</div>
+        return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>
+          {this.unfoldButtonText}
+          <div class="equipment__unfold-button-arrow">
+            <svg width="20" height="20">
+              <polyline points="2,6 10,14 18,6" fill="none" stroke="#e3e8ec" stroke-width="2"/>
+            </svg>
+          </div>
+          </div>
+      } else {
+        return null;
       }
     })();
     if(this.doubleSided){
