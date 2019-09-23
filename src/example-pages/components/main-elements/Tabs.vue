@@ -896,7 +896,7 @@
                       </div>
                     </template>
                     <template slot="side-text">
-                      <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-top">
+                      <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-top rt-font-left">
                         <div class="rtb-card__description__row">
                           <p class="rt-font-paragraph ">до 650 Мбит/</p>
                         </div>
@@ -942,10 +942,7 @@
                                 <p class="rt-font-small-paragraph">Веб-камера</p>
                               </div>
                               <div class="equipment__short-description__bottom-part">
-                                <rt-price :is-option="true" :value="132" :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true"></rt-price>
-                                <rt-hint>
-
-                                </rt-hint>
+                                <rt-price :is-option="true" :value="132" :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true"/>
                               </div>
                             </div>
                           </div>
