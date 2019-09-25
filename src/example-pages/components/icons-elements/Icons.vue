@@ -438,6 +438,9 @@
           </div>
 
           <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon value="%" :candy="true" color="white" bg="#7800ff"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
             <pre-code text='<rt-icon type="icon_403" :candy=true caption="200"></rt-icon>'/>
           </div>
           <div class="rt-col-1 rt-space-bottom">
@@ -458,7 +461,8 @@ import documentation from "../../../lib/components/Icon/docs/index.json";
 
 const componentsList = {};
 if (!window.RTK_STYLE) window.RTK_STYLE = {};
-window.RTK_STYLE.icons_path = ((window.location.hostname !== 'localhost') ? '/vue-stylekit' : '' ) + '/static/icons/';
+if (window.location.hostname === 'localhost')
+  window.RTK_STYLE.icons_path = '/static/icons/'
 
 export default {
   name: "AppIcons",
@@ -466,7 +470,9 @@ export default {
   data: () => ({
     documentation: {}
   }),
-  mounted() {},
+  mounted() {
+    this.documentation = documentation
+  },
   created() {},
   methods: {}
 };

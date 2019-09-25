@@ -55,6 +55,18 @@
       style="border: none;"
     />
 
+    <svg
+      v-if="value"
+      class="rt-icon__value"
+      width="100%" height="100%" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"
+      :style="{
+        fill: color,
+        stroke: 'transparent'
+      }"
+    >
+      <text x="15" y="20" v-html="value" text-anchor="middle"></text>
+    </svg>
+
     <span
       v-if="caption"
       class="caption top"
@@ -113,17 +125,18 @@ export default {
     captionColor: {
       type: String,
       default: null
+    },
+    value: {
+      type: String,
+      default: null
     }
   },
   computed: {
-    classSize() {
-      return ' rt-icon_w' + this.size + ' '
-    },
     classCandy() {
       return this.candy ? ' wc-icon wc-candy-icon' : ''
     },
     iconClassName() {
-      return 'rt-icon ' + 'rt-icon__' + this.type + this.classSize + this.classCandy
+      return 'rt-icon ' + 'rt-icon__' + this.type + this.classCandy
     },
     iconName() {
       return this.type !== 'default' ? this.type : null
@@ -133,8 +146,13 @@ export default {
       styles.background = this.bg ? this.bg : (defaultValues[this.type] ? defaultValues[this.type].bg : null)
       styles.fill = this.fill ? this.fill : (defaultValues[this.type] ? defaultValues[this.type].fill : null)
       styles.stroke = this.color ? this.color : (defaultValues[this.type] ? defaultValues[this.type].color : null)
-      styles.width = (!this.size && this.width) ? this.width : (defaultValues[this.type] ? defaultValues[this.type].width : null)
-      styles.height = (!this.size && this.height) ? this.height : (defaultValues[this.type] ? defaultValues[this.type].height : null)
+      if (this.size) {
+        styles.width = `${this.size}px`
+        styles.height = `${this.size}px`
+      } else {
+        styles.width = (this.width) ? this.width : (defaultValues[this.type] ? defaultValues[this.type].width : null)
+        styles.height = (this.height) ? this.height : (defaultValues[this.type] ? defaultValues[this.type].height : null)
+      }
       return styles
     },
     isSpeedIcon() {
@@ -167,7 +185,7 @@ export default {
     getPath() {
       var name = this.iconName
       var base_path = window.RTK_STYLE && window.RTK_STYLE.base_path ? window.RTK_STYLE.base_path : '';
-      var icons_path = window.RTK_STYLE && window.RTK_STYLE.icons_path ? window.RTK_STYLE.icons_path : '/static/icons/';
+      var icons_path = window.RTK_STYLE && window.RTK_STYLE.icons_path ? window.RTK_STYLE.icons_path : 'https://cryingjoker.github.io/vue-stylekit/static/icons/';
       if (name) {
         window[arrKey][name] = {}
         return axios.request({

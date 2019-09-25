@@ -77,23 +77,23 @@
       if(this.layout === 'swiper'){
         return <div>
           <rt-swiper>{this.$slots.cards}</rt-swiper>
-          <div class="rt-container">
-            <div class="rt-col">
-              {this.$slots["side-text"]}
-            </div>
+          <div class="row">
+            {this.$slots["side-text"]}
           </div>
         </div>
       } else {
-        return<div class="rt-container specified-card-layout">
-          <div class={this.wrapperClass}>
-            <div class="rt-col">
-              <div class="row">
-                {this.$slots.cards}
+        return <div class="row">
+          <div class="specified-card-layout">
+            <div class={this.wrapperClass}>
+              <div class="rt-col">
+                <div class="row">
+                  {this.$slots.cards}
+                </div>
               </div>
             </div>
+            {this.$slots["side-text"]}
           </div>
-          {this.$slots["side-text"]}
-        </div>;
+        </div>
       }
     }
   };

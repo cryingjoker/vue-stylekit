@@ -270,7 +270,11 @@
     .{newAppName}-card__content
       height 400px
       @media (max-width: tablet-upper-limit)
-        height 330px
+        min-height 330px
+        height auto
+    @media (max-width: mobile-upper-limit)
+      min-height 400px
+      height auto
     .color-block
       color b2c-white
     .color-block--white
@@ -897,6 +901,7 @@
 .specified-card-layout
   justify-content space-between
   display flex
+  width 100%
   .rtk-carousel-slide
     padding-top 20px
 
@@ -939,13 +944,15 @@
         color main-color05
   &__unfold-button
     position relative
-    &:after
+    &-arrow
       position absolute
-      content: ''
-      top 50%
+      top 3px
       right 20px
-      height 20px
       width 20px
+      height 20px
+      transition transform .2s linear
+      &--reverse
+        transform rotate(180deg)
 
 .{b2bAppName}-card__label+.{newAppName}-card__background+.{newAppName}-card__content
   .{newAppName}-card__header
