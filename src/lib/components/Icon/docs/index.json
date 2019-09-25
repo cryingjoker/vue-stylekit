@@ -20,6 +20,16 @@
     },
     {
       "name": "rt-icon",
+      "property": "value",
+      "type": [
+        "String"
+      ],
+      "description": "Строковое значение для отображения в иконке",
+      "value": "null",
+      "version": " >= 0.1.60"
+    },
+    {
+      "name": "rt-icon",
       "property": "candy",
       "type": [
         "Boolean"

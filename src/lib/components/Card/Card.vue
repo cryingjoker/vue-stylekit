@@ -187,6 +187,10 @@ export default {
     unfoldButtonText: {
       type: String,
       default: ''
+    },
+    ga: {
+      type: Object,
+      default: null
     }
   },
   data: () => ({
@@ -380,7 +384,7 @@ export default {
       if (this.backgroundImage && !this.backgroundImageStandAlone && this.localBackgroundImage) {
         styles.backgroundImage = "url(" + this.localBackgroundImage + ")";
       }
-      if (this.productIcon && this.localBackgroundImage && this.localProductIcon) {
+      if (this.productIcon && this.localProductIcon) {
         styles.backgroundImage = "url(" + this.localProductIcon + ")";
       }
       if (this.backgroundSizeWidth && this.backgroundSizeHeight) {
@@ -474,6 +478,21 @@ export default {
     this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
     this.checkLazy();
     this.redrawSvg();
+    let anchor = this.$el.querySelector('a, button')
+    if (anchor && this.ga) {
+      anchor.addEventListener('click', Event => {
+        let el = Event.target
+        if (el.getAttribute('data-ga-pushed') || !this.ga) return
+        Event.preventDefault()
+        if (!window.dataLayer) window.dataLayer = []
+        window.dataLayer.push(Object.assign({
+          event: window[variables.globalSettingsKey].segment,
+          type: 'card_click'
+        }, this.ga))
+        el.setAttribute('data-ga-pushed', 'true')
+        el.click()
+      }, false)
+    }
   },
   methods: {
     loadImageAsync (src, resolve, reject) {
@@ -561,7 +580,10 @@ export default {
     unfoldFeatures() {
       this.$el.querySelector('.equipment__full-description').classList.contains('equipment__full-description--shown') ?
         this.$el.querySelector('.equipment__full-description').classList.remove('equipment__full-description--shown') :
-        this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown')
+        this.$el.querySelector('.equipment__full-description').classList.add('equipment__full-description--shown');
+      this.$el.querySelector('.equipment__unfold-button-arrow').classList.contains('equipment__unfold-button-arrow--reverse') ?
+        this.$el.querySelector('.equipment__unfold-button-arrow').classList.remove('equipment__unfold-button-arrow--reverse') :
+        this.$el.querySelector('.equipment__unfold-button-arrow').classList.add('equipment__unfold-button-arrow--reverse')
     },
     redrawSvg() {
       if(this.$el.querySelector('.rt-card__content')) {
@@ -760,8 +782,19 @@ export default {
       }
     })();
     const unfoldButton = (()=> {
-      if(this.mobileLayout) {
-        return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>{this.unfoldButtonText}</div>
+      if(this.unfoldButtonText) {
+        if(this.mobileLayout) {
+          return <div class="equipment__unfold-button color-purple" onClick={this.unfoldFeatures}>
+            {this.unfoldButtonText}
+            <div class="equipment__unfold-button-arrow">
+              <svg width="20" height="20">
+                <polyline points="2,6 10,14 18,6" fill="none" stroke="#e3e8ec" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        } else {
+          return null;
+        }
       }
     })();
     if(this.doubleSided){

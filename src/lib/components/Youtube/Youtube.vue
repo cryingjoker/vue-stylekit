@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     keyPressHolder(event){
-      if(this.duration && !this.disableButtons){
+      if(this.duration && !this.buttonControlDisabled()){
         switch(event.keyCode) {
           case 32:
             if (this.isPlaying) {
@@ -334,6 +334,9 @@ export default {
         }
       },2000);
 
+    },
+    buttonControlDisabled() {
+      return this.disableButtons && (this.$el.getBoundingClientRect().bottom < 0 || this.$el.getBoundingClientRect().top > window.innerHeight)
     }
   },
   render(){

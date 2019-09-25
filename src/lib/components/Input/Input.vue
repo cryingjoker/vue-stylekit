@@ -105,6 +105,10 @@
       approved: {
         type: Boolean,
         default: false
+      },
+      emitEvent: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
@@ -146,6 +150,8 @@
     watch: {
       localValue(val) {
         this.$emit("input", val);
+        if(this.emitEvent)
+          this.emitValue();
       },
       label() {
         this.localLabel = this.label;
@@ -206,6 +212,8 @@
           event.target.value = this.maxNumber;
         }
         this.updateInputValue();
+        this.setValueLength();
+        this.$refs.input.focus();
       },
       subtractNumber() {
         this.localValue = typeof parseInt(this.localValue) === "number" ? this.localValue - 1 : 0;
@@ -214,6 +222,8 @@
           event.target.value = this.minNumber;
         }
         this.updateInputValue();
+        this.setValueLength();
+        this.$refs.input.focus();
       },
       updateInputValue() {
         this.$el.querySelector(".input-element").value = this.localValue;
@@ -223,12 +233,10 @@
         this.setValueLength();
       },
       setDisabled() {
-        this.$el.querySelector(".input-element").disabled = Boolean(
-          this.disabled
-        );
+        this.$el.querySelector(".input-element").disabled = Boolean(this.disabled);
       },
       setValueLength() {
-        this.hasInputText = this.localValue ? this.localValue.length > 0 : false;
+        this.hasInputText = this.localValue.toString() ? this.localValue.toString().length > 0 : false;
       },
       inputHandler($event) {
         this.localValue = this.$el.querySelector(".input-element").value;
@@ -340,6 +348,9 @@
           inputElement.setAttribute("type", "password");
         }
         this.passwordVisibility = !this.passwordVisibility;
+      },
+      emitValue() {
+        this.$emit('change', this.localValue.toString());
       }
     },
     render() {

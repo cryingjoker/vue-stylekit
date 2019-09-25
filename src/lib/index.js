@@ -226,11 +226,16 @@ VueRtStyle.directives = { SwipeLeft, SwipeRight, OutsideClickDirective };
 //   localStorage.setItem('dev_mode__version',version);
 // }
 
-// Global stylekit settings
+/**
+ * Глобальные настройки библиотеки
+ * -Для добавления своих настроек, создайте объект
+ * с названием из Global.globalSettingsKey и положите перед подключением либы
+ */
 const settingsKey = Global.globalSettingsKey;
 const version = Project.version;
 if (settingsKey) {
   if (!window[settingsKey]) window[settingsKey] = {}
+  if (!window[settingsKey].segment) window[settingsKey].segment = Global.defaultSegment
   window[settingsKey].version = version;
 }
 
