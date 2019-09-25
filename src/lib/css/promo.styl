@@ -1110,6 +1110,9 @@
 
 .winklp__first
   text-align: center
+  @media(max-width: mobile-upper-limit)
+    padding-left: 20px
+    padding-right: 20px
 
 
 .winklp__first__label
@@ -1121,9 +1124,15 @@
   margin-left: auto
   margin-right: auto
   position: relative!important
+  @media(max-width: mobile-upper-limit)
+    width: 280px!important
+    height: 280px!important
 .winklp__first__video
   width: 682px!important
   height: 682px!important
+  @media(max-width: mobile-upper-limit)
+    width: 280px!important
+    height: 280px!important
   //background-image url('/static/images/wink/img_1i2x1i8m.png')
   background-size: contain
   background-repeat: no-repeat
@@ -1131,8 +1140,8 @@
   margin-right: auto
 
 .winklp__first__text
-  font-size: 48px
-  line-height: 54px
+  font-size: 32px
+  line-height: 40px
   @media(max-width: mobile-upper-limit)
     font-size: 24px
     line-height: 32px
@@ -1140,45 +1149,70 @@
 .winklp__first__second-text
   margin-top: 30px
   margin-bottom: 30px
+  @media(max-width: tablet-upper-limit)
+    padding-left: 40px
+    padding-right: 40px
+  @media(max-width: mobile-upper-limit)
+    padding-left: 0
+    padding-right: 0
 
 
 
 
 .winklp__first__second-text
-  font-size: 32px
-  line-height: 39px
+  font-size: 24px
+  line-height: 30px
   @media(max-width: mobile-upper-limit)
     font-size: 20px
     line-height: 28px
 
-
+.winklp__second
+  @media(max-width: mobile-upper-limit)
+    display: flex
+    flex-wrap wrap
 .winklp__second__text
-  font-size: 60px
-  line-height: 60px
+  font-size: 45px
+  line-height: 50px
   font-weight: 500
+  @media(max-width: tablet-upper-limit)
+    font-size: 30px
+    line-height: 35px
+
+.winklp__second-block
+  flex 1
 
 .orange-text
   color #FF4F12
 
 .winklp__second__label-text
-  font-size: 80px
-  line-height: 68px
+  font-size: 60px
+  line-height: 48px
+  @media(max-width: mobile-upper-limit)
+    font-size: 30px
+    line-height: 35px
+
 
 .winklp__second__label-subtext
-  font-size: 32px
-  line-height: 40px
+  font-size: 24px
+  line-height: 30px
+  @media(max-width: mobile-upper-limit)
+    font-size: 18px
+    line-height: 25px
 
 .winklp__third
   margin-top: 180px
 
 .winklp__third-label
-  font-size: 80px
-  line-height: 68px
+  font-size: 60px
+  line-height: 48px
   font-weight: 500
+  @media(max-width: tablet-upper-limit)
+    font-size: 40px
+    line-height: 40px
 
 .winklp__third-text
-  font-size: 32px
-  line-height: 40px
+  font-size: 24px
+  line-height: 30px
   margin-top: 30px
 
 .winklp__third__cards
@@ -1187,6 +1221,9 @@
   margin-right: 80px
   display: flex
   justify-content: space-between
+  @media(max-width: tablet-upper-limit)
+    margin-left: 0
+    margin-right: 0
 
 .winklp__third__cards-item
   width: 480px
@@ -1195,17 +1232,50 @@
   padding-top: 40px
   color: #fff
   font-size: 18px
+  @media(max-width: tablet-upper-limit)
+    padding-right: (270/21.3)vw
+    width: (100vw - (270/10.15)vw)
+
 .winklp__pictures
   position: absolute
   right: 0
   display: flex
   top: 0
+  @media(max-width: tablet-upper-limit)
+    top: (65/10.68)vw
+  @media(max-width: 768px)
+    top: (80/10.68)vw
+.winklp__pictures-first
+  @media(max-width: mobile-upper-limit)
+    position: static
+  .winklp__pictures
+    @media(max-width: tablet-upper-limit)
+      top: (206/10.68)vw
+    @media(max-width: 768px)
+      top: (201/10.68)vw
+.winklp__pictures-second
+  @media(max-width: mobile-upper-limit)
+    position: static
+  .winklp__pictures
+    @media(max-width: tablet-upper-limit)
+      top: (156/10.68)vw
+    @media(max-width: 768px)
+      top: (90/10.68)vw
+
 .winklp__third__cards-images
   text-align: center
   margin-top: 50px
 .winklp__third__cards-images-item
   max-width: 100%
-
+  @media(max-width: tablet-upper-limit)
+    position: absolute
+    width: (270/10.68)vw
+    height: (203/10.68)vw
+    top: 0
+    bottom: 0
+    margin-top: auto
+    margin-bottom: auto
+    right: -(270/21.36)vw
 .winklp__third__cards-item--orange
   background-color: #FF4F12
 
@@ -1215,16 +1285,22 @@
   position: relative
   top: -80px
   color #fff
+  @media(max-width: tablet-upper-limit)
+    top: 0
+    background-color: #65B8DF
 
 .winklp__third__cards-title
   font-size: 32px
 winklp__third-text
 
 .winklp__fourth
-
   margin-top: 160px
   height: 545px
   display: flex
+  @media(max-width: tablet-upper-limit)
+    height:initial
+    margin-top: 120px
+
 
 .winklp__fourth__block
   flex: 1
@@ -1233,6 +1309,12 @@ winklp__third-text
   vertical-align middle
   align-items: center
   height: 545px
+  @media(max-width: tablet-upper-limit)
+    height: auto
+    align-items start
+  &+&
+    @media(max-width: tablet-upper-limit)
+      display: none
 
 .winklp__pictures-zero
   position: absolute
@@ -1241,6 +1323,9 @@ winklp__third-text
 .winklp__fourth
   margin-left: 80px
   margin-right: 80px
+  @media(max-width: tablet-upper-limit)
+    margin-right: 0
+    margin-left: 0
 .winklp__pictures__item
   position: relative
   transition-timing-function ease-in-out
@@ -1255,49 +1340,76 @@ winklp__third-text
 
 .winklp__pictures__item-zero-0
   width: 185px
-  height: 241px
+  height: 201px
   transition-delay 0.8s
+  @media(max-width: tablet-upper-limit)
+    width: (100/10.68)vw
+    height: (130/10.68)vw
 
 
 .winklp__pictures__item-zero-1
   width: 255px
-  height: 307px
+  height: 267px
+  @media(max-width: tablet-upper-limit)
+    width: (138/10.68)vw
+    height: (166/10.68)vw
 
 .winklp__pictures__item-zero-2
   width: 234px
-  height: 280px
+  height: 240px
   transition-delay 0.8s
+  @media(max-width: tablet-upper-limit)
+    width: (156/10.68)vw
+    height: (222/10.68)vw
 
 .winklp__pictures__item-first-0
   width: 371px
-  height: 280px
+  height: 210px
   transition-delay 1.6s
+  @media(max-width: tablet-upper-limit)
+    width: (201/10.68)vw
+    height: (166/10.68)vw
 
 
 .winklp__pictures__item-first-1
   width: 255px
-  height: 280px
+  height: 210px
+  @media(max-width: tablet-upper-limit)
+    width: (138/10.68)vw
+    height: (166/10.68)vw
   transition-delay 1.2s
 
 .winklp__pictures__item-first-2
   width: 234px
-  height: 280px
+  height: 210px
+  @media(max-width: tablet-upper-limit)
+    width: (138/10.68)vw
+    height: (166/10.68)vw
   transition-delay 1.6s
 
 .winklp__pictures__item-second-0
   width: 158px
-  height: 191px
+  height: 151px
   transition-delay 2s
+  @media(max-width: tablet-upper-limit)
+    width: (85/10.68)vw
+    height: (103/10.68)vw
 
 .winklp__pictures__item-second-1
   width: 283px
-  height: 235px
+  height: 195px
   transition-delay 1.7s
+  @media(max-width: tablet-upper-limit)
+    width: (153/10.68)vw
+    height: (127/10.68)vw
 
 .winklp__pictures__item-second-2
   width: 255px
-  height: 191px
+  height: 151px
   transition-delay 2s
+  @media(max-width: tablet-upper-limit)
+    width: (138/10.68)vw
+    height: (103/10.68)vw
 
 .winklp__pictures__item-image
   width: 0%
@@ -1321,6 +1433,9 @@ winklp__third-text
   font-size: 48px
   line-height: 54px
   font-weight: 500
+  @media(max-width: tablet-upper-limit)
+    font-size: 30px
+    line-height: 35px
 
 .winklp__fourth__list
   margin-top: 40px
@@ -1348,6 +1463,8 @@ winklp__third-text
 .winklp__five__list
   display: flex
   margin-top: 65px
+  @media(max-width: tablet-upper-limit)
+    flex-wrap wrap
 
 .winklp__five__list-item
   flex 1.4
@@ -1356,6 +1473,11 @@ winklp__third-text
   &+&
     flex 1
     padding-left: 100px
+    @media(max-width: tablet-upper-limit)
+      padding-left: 0
+      padding-right: 30px
+      &:before
+        left: 0
 .winklp__five__list-item-big
   font-size: 32px
   line-height: 40px
@@ -1414,19 +1536,26 @@ winklp__third-text
   animation 1s showCardForm linear
 
 .winklp__first__label-image
-  width: 400px
+  width: 350px
   @media(max-width: tablet-upper-limit)
     width: 325px
   @media(max-width: mobile-upper-limit)
     width: 220px
 
 .winklp__pictures-zero
+  @media(max-width: mobile-upper-limit)
+    position: static
+  .winklp__pictures
+    @media(max-width: tablet-upper-limit)
+      top: 0vh
   .show-swipe-top-on-scroll
     animation 1s showCardForm linear
 .winklp__pictures-first
   .show-swipe-top-on-scroll
     animation 2s showCardForm2 linear
 .winklp__pictures-second
+  @media(max-width: mobile-upper-limit)
+    position: static
   .show-swipe-top-on-scroll
     animation 2.5s showCardForm3 linear
 .winklp__fourth__block-image
@@ -1437,8 +1566,8 @@ winklp__third-text
   flex-direction: row
   align-items center
 
-.winklp__five
-
+.winklp__five,
+.winklp__six
   .download-content
     margin-top: 40px
     padding-left: 30px
@@ -1447,18 +1576,39 @@ winklp__third-text
     padding-bottom: 10px
     border-radius 5px
     border 1px dashed
+    white-space nowrap
     .download-content__icon
       left: 15px
     .download-content__text
       display: inline-block
       opacity: 1
+      font-size: 18px
+      white-space nowrap
       color: #000
       margin-left: 12px
     .download-content__info
+      font-size: 14px
+    .download-content__info
       display: inline-block
       margin-left: 15px
+.winklp__six
+  .winklp__five__list-item
+    padding-top: 0
+  .winklp__five__list-item-big
+    &:before
+      display: none
+      padding-top: 0
+  .download-content
+    .download-content__info,
+    .download-content__text
+      color #fff
+    .download-content__icon-svg
+      stroke #fff
 .winklp__five__list-item-big
   position: relative
+  @media(max-width: tablet-upper-limit)
+    min-width: 100vw
+    padding-bottom: 50px
   &:before
     content: ''
     width: 40px

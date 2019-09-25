@@ -9,11 +9,11 @@
                                              alt=""></p>
         <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
 
-        <p class="winklp__first__second-text">Wink, домашний интернет <br>и мобильная связь в одном пакете</p>
+        <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="md-d-none"> с домашним и мобильным интернетом</p>
         <div class="winklp__first__footr">
           <div class="winklp__first__footr-content">
             <rt-button class="rt-button-orange">Подключить</rt-button>
-            <span class="rt-space-left">от 400 руб./мес.</span>
+            <span class="rt-space-left rt-md-space-left-none d-md-block rt-md-space-top">от 400 руб./мес.</span>
           </div>
         </div>
         <div id="animation_container">
@@ -24,9 +24,9 @@
       <div class="winklp__second">
         <div class="relative">
           <div class="rt-container">
-            <p class="winklp__second__text show-swipe-top-on-scroll">Популярные <br>фильмы, сериалы, <br>каналы, которые
-              <br>можно смотреть
-              <br>где угодно
+            <p class="winklp__second__text show-swipe-top-on-scroll">Популярные <br class="td-d-none">фильмы, сериалы, <br class="td-d-none">каналы, которые
+              <br class="td-d-none">можно смотреть
+              <br class="td-d-none">где угодно
             </p>
           </div>
           <div class="winklp__pictures winklp__pictures-zero">
@@ -38,10 +38,10 @@
                  backgrounds='["/static/images/wink/Group 29.png","/static/images/wink/Bitmap (1).png"]'></div>
           </div>
         </div>
-        <div class="rt-space-top-half">
+        <div class="rt-space-top-half winklp__second-block">
           <div class="winklp__second__label">
             <div class="relative winklp__pictures-first">
-              <div class="rt-container rt-space-top4 rt-space-bottom4">
+              <div class="rt-container rt-space-top2 rt-space-bottom2 rt-md-space-top-none rt-md-space-bottom-none">
                 <div class="show-swipe-top-on-scroll">
                   <p class="winklp__second__label-text">3000+</p>
                   <p class="winklp__second__label-subtext">фильмов и сериалов</p>
@@ -58,10 +58,10 @@
             </div>
           </div>
         </div>
-        <div class="rt-space-top15">
+        <div class="rt-space-top3 rt-md-space-top-none winklp__second-block">
           <div class="winklp__second__label">
             <div class="relative winklp__pictures-second">
-              <div class="rt-container rt-space-top4">
+              <div class="rt-container rt-space-top">
                 <div class="show-swipe-top-on-scroll">
                   <p class="winklp__second__label-text">180+</p>
                   <p class="winklp__second__label-subtext">ТВ-каналов</p>
@@ -86,7 +86,7 @@
             непрерывно на любых
             устройствах</p>
           <div class="winklp__third__cards">
-            <div class="winklp__third__cards-item winklp__third__cards-item--orange">
+            <div class="winklp__third__cards-item winklp__third__cards-item--orange td-d-none">
               <p class="winklp__third__cards-title">Мобильную связь</p>
               <p class="winklp__third__cards-text">Безлимитный интернет и звонки на номера Ростелекома.</p>
               <div class="winklp__third__cards-images">
@@ -133,6 +133,7 @@
               курьеру,
               <br>который привезет вам <br>временную
               sim-карту
+              <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
             </div>
             <div class="winklp__five__list-item winklp__five__list-item-sim">SIM-карта будет активна уже с первого дня,
               а мы переведем ваш номер в
@@ -142,7 +143,24 @@
               перехода.
             </div>
           </div>
-          <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
+
+        </div>
+      </div>
+      <div class="winklp__six d-none td-d-block">
+        <div class="rt-container">
+          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br>  мобильная связь
+          </div>
+          <div class="winklp__five__list">
+            <div class="winklp__five__list-item winklp__five__list-item-big">Подключите мобильную программу  и пользуйтесь мобильной связью бесплатно
+              <div class="d-flex">
+                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br> как активировать программу.</p>
+                <div class="flex-fill">
+                  <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
