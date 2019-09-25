@@ -3015,7 +3015,7 @@ lib.properties = {
 	color: "#7700FF",
 	opacity: 1.00,
 	manifest: [
-		{src:"/static/images/wink/RTC_September_300x300_atlas_.jpg?1569327975496", id:"RTC_September_300x300_atlas_"}
+		{src:"/vue-stylekit/static/images/wink/RTC_September_300x300_atlas_.jpg?1569327975496", id:"RTC_September_300x300_atlas_"}
 	],
 	preloads: []
 };
