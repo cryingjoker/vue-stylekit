@@ -1168,6 +1168,12 @@
 
 .winklp__second
   @media(max-width: mobile-upper-limit)
+    position: relative
+    padding-bottom: 170px
+  .relative
+    @media(max-width: mobile-upper-limit)
+      position: static
+  @media(max-width: mobile-upper-limit)
     display: flex
     flex-wrap wrap
 .winklp__second__text
@@ -1243,8 +1249,12 @@
   top: 0
   @media(max-width: tablet-upper-limit)
     top: (65/10.68)vw
+
   @media(max-width: 768px)
     top: (80/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    top: initial
+    bottom: (85/10.68)vw
 .winklp__pictures-first
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1253,6 +1263,9 @@
       top: (206/10.68)vw
     @media(max-width: 768px)
       top: (201/10.68)vw
+    @media(max-width: mobile-upper-limit)
+      top: initial
+      bottom: (241/10.68)vw
 .winklp__pictures-second
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1261,6 +1274,9 @@
       top: (156/10.68)vw
     @media(max-width: 768px)
       top: (90/10.68)vw
+    @media(max-width: mobile-upper-limit)
+      top: initial
+      bottom: (140/10.68)vw
 
 .winklp__third__cards-images
   text-align: center
@@ -1543,11 +1559,12 @@ winklp__third-text
     width: 220px
 
 .winklp__pictures-zero
-  @media(max-width: mobile-upper-limit)
-    position: static
   .winklp__pictures
     @media(max-width: tablet-upper-limit)
       top: 0vh
+    @media(max-width: mobile-upper-limit)
+      bottom: 0
+      top: initial
   .show-swipe-top-on-scroll
     animation 1s showCardForm linear
 .winklp__pictures-first
