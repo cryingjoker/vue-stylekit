@@ -8,7 +8,7 @@
         <p class="winklp__first__label"><img class="winklp__first__label-image" src="/static/images/wink/winklogo.png"
                                              alt=""></p>
         <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
-        <div class="winklp__first__video"></div>
+
         <p class="winklp__first__second-text">Wink, домашний интернет <br>и мобильная связь в одном пакете</p>
         <div class="winklp__first__footr">
           <div class="winklp__first__footr-content">
@@ -16,13 +16,17 @@
             <span class="rt-space-left">от 400 руб./мес.</span>
           </div>
         </div>
+        <div id="animation_container">
+          <canvas id="canvas" class="winklp__first__video"></canvas>
+          <div id="dom_overlay_container"></div>
+        </div>
       </div>
       <div class="winklp__second">
         <div class="relative">
           <div class="rt-container">
-            <p class="winklp__second__text show-swipe-top-on-scroll"> Много <span class="orange-text"> популярных <br>фильмов, сериалов<br> каналов,</span>
-              которые<br> можно
-              смотреть<br> где угодно
+            <p class="winklp__second__text show-swipe-top-on-scroll">Популярные <br>фильмы, сериалы, <br>каналы, которые
+              <br>можно смотреть
+              <br>где угодно
             </p>
           </div>
           <div class="winklp__pictures winklp__pictures-zero">
@@ -54,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="rt-space-top3">
+        <div class="rt-space-top15">
           <div class="winklp__second__label">
             <div class="relative winklp__pictures-second">
               <div class="rt-container rt-space-top4">
@@ -104,8 +108,7 @@
           <div class="winklp__fourth__block">
             <div class="winklp__fourth__block-content">
               <div>
-                <p class="winklp__fourth__title"> Единый личный счет
-                  и кабинет удобного для управления тарифом</p>
+                <p class="winklp__fourth__title"> Единый личный счет и <br>кабинет для удобного <br>управления  тарифом</p>
                 <div class="winklp__fourth__list">
                   <div class="winklp__fourth__list-item">Графическое представление статистики</div>
                   <div class="winklp__fourth__list-item">Отчеты по начислениям, детализации звонков</div>
@@ -126,14 +129,18 @@
             в Ростелеком со своим <br> мобильным номером
           </div>
           <div class="winklp__five__list">
-            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br>передайте курьеру,
+            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br>передайте
+              курьеру,
               <br>который привезет вам <br>временную
               sim-карту
             </div>
-            <div class="winklp__five__list-item winklp__five__list-item-sim">SIM-карта будет активна уже с первого дня, а мы переведем ваш номер в
+            <div class="winklp__five__list-item winklp__five__list-item-sim">SIM-карта будет активна уже с первого дня,
+              а мы переведем ваш номер в
               любой удобный вам срок — от 8 дней до 6 месяцев.
             </div>
-            <div class="winklp__five__list-item winklp__five__list-item-bell">Вы получите SMS-уведомление о статусе перехода.</div>
+            <div class="winklp__five__list-item winklp__five__list-item-bell">Вы получите SMS-уведомление о статусе
+              перехода.
+            </div>
           </div>
           <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
         </div>
@@ -205,6 +212,75 @@
         }, 100);
       };
       runPlayImage();
+
+      function addScript(src) {
+        var s = document.createElement("script");
+        s.setAttribute("src", src);
+        document.body.appendChild(s);
+      }
+
+      addScript("https://code.createjs.com/createjs-2015.11.26.min.js");
+      addScript("/static/images/wink/RTC_September_300x300.js");
+      var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+      setTimeout(function() {
+
+
+
+        function init() {
+          canvas = document.getElementById("canvas");
+          anim_container = document.getElementById("animation_container");
+          dom_overlay_container = document.getElementById("dom_overlay_container");
+          var comp = AdobeAn.getComposition("AF34C5BC54BC4B2B8DBF7553E9164E0E");
+          var lib = comp.getLibrary();
+          var loader = new createjs.LoadQueue(false);
+          loader.addEventListener("fileload", function(evt) {
+            console.info('fileload')
+            handleFileLoad(evt, comp);
+          });
+          loader.addEventListener("complete", function(evt) {
+            console.info('complete')
+            handleComplete(evt, comp);
+          });
+          var lib = comp.getLibrary();
+          loader.loadManifest(lib.properties.manifest);
+        }
+
+        function handleFileLoad(evt, comp) {
+          var images = comp.getImages();
+          if (evt && (evt.item.type == "image")) {
+            images[evt.item.id] = evt.result;
+          }
+        }
+
+        function handleComplete(evt, comp) {
+          //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+          var lib = comp.getLibrary();
+          var ss = comp.getSpriteSheet();
+          var queue = evt.target;
+          var ssMetadata = lib.ssMetadata;
+          for (var i = 0; i < ssMetadata.length; i++) {
+            ss[ssMetadata[i].name] = new createjs.SpriteSheet({
+              "images": [queue.getResult(ssMetadata[i].name)],
+              "frames": ssMetadata[i].frames
+            });
+          }
+          exportRoot = new lib.RTC_September_300x300();
+          stage = new lib.Stage(canvas);
+          window.stage = stage;
+          //Registers the "tick" event listener.
+          fnStartAnimation = function() {
+            stage.addChild(exportRoot);
+            createjs.Ticker.setFPS(lib.properties.fps);
+            createjs.Ticker.addEventListener("tick", stage);
+          };
+          //Code to support hidpi screens and responsive scaling.
+          AdobeAn.makeResponsive(false, "both", false, 1, [canvas, anim_container, dom_overlay_container]);
+          AdobeAn.compositionLoaded(lib.properties.id);
+          fnStartAnimation();
+        }
+        init();
+      }, 1500);
+
     },
     created() {
     },

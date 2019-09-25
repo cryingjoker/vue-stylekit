@@ -1115,12 +1115,16 @@
 .winklp__first__label
   color #FF4F12
   font-size: 140px
-
+#animation_container
+  width: 682px!important
+  height: 682px!important
+  margin-left: auto
+  margin-right: auto
+  position: relative!important
 .winklp__first__video
-  width: 1066px
-  height: 682px
-  background-image url('/static/images/wink/img_1i2x1i8m.png')
-  max-width: 100%
+  width: 682px!important
+  height: 682px!important
+  //background-image url('/static/images/wink/img_1i2x1i8m.png')
   background-size: contain
   background-repeat: no-repeat
   margin-left: auto
@@ -1129,17 +1133,23 @@
 .winklp__first__text
   font-size: 48px
   line-height: 54px
+  @media(max-width: mobile-upper-limit)
+    font-size: 24px
+    line-height: 32px
 
 .winklp__first__second-text
-  margin-top: 5px
-  margin-bottom: 48px
+  margin-top: 30px
+  margin-bottom: 30px
 
-.winklp__first__footr
-  margin-bottom: 200px
+
+
 
 .winklp__first__second-text
   font-size: 32px
   line-height: 39px
+  @media(max-width: mobile-upper-limit)
+    font-size: 20px
+    line-height: 28px
 
 
 .winklp__second__text
@@ -1260,18 +1270,18 @@ winklp__third-text
 
 .winklp__pictures__item-first-0
   width: 371px
-  height: 307px
+  height: 280px
   transition-delay 1.6s
 
 
 .winklp__pictures__item-first-1
   width: 255px
-  height: 307px
+  height: 280px
   transition-delay 1.2s
 
 .winklp__pictures__item-first-2
   width: 234px
-  height: 307px
+  height: 280px
   transition-delay 1.6s
 
 .winklp__pictures__item-second-0
@@ -1405,6 +1415,11 @@ winklp__third-text
 
 .winklp__first__label-image
   width: 400px
+  @media(max-width: tablet-upper-limit)
+    width: 325px
+  @media(max-width: mobile-upper-limit)
+    width: 220px
+
 .winklp__pictures-zero
   .show-swipe-top-on-scroll
     animation 1s showCardForm linear
