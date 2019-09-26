@@ -24,7 +24,7 @@
       <div class="winklp__second">
         <div class="relative">
           <div class="rt-container">
-            <p class="winklp__second__text show-swipe-top-on-scroll">Популярные <br class="td-d-none">фильмы, сериалы, <br class="td-d-none">каналы, которые
+            <p class="winklp__second__text show-swipe-top-on-scroll rt-md-space-horizontal05">Популярные <br class="td-d-none">фильмы, сериалы, <br class="td-d-none">каналы, которые
               <br class="td-d-none">можно смотреть
               <br class="td-d-none">где угодно
             </p>
@@ -43,8 +43,8 @@
             <div class="relative winklp__pictures-first">
               <div class="rt-container rt-space-top2 rt-space-bottom2 rt-md-space-top-none rt-md-space-bottom-none">
                 <div class="show-swipe-top-on-scroll">
-                  <p class="winklp__second__label-text">3000+</p>
-                  <p class="winklp__second__label-subtext">фильмов и сериалов</p>
+                  <p class="winklp__second__label-text rt-md-space-left05">3000+</p>
+                  <p class="winklp__second__label-subtext rt-md-space-left05">фильмов и сериалов</p>
                 </div>
               </div>
               <div class="winklp__pictures">
@@ -81,8 +81,8 @@
       </div>
       <div class="winklp__third">
         <div class="rt-container">
-          <p class="winklp__third-label"> Дарим интернет</p>
-          <p class="winklp__third-text"> Пользуйтесь Wink, где вам удобно. <br> Смотрите кино, сериалы и тв <br>
+          <p class="winklp__third-label rt-md-space-horizontal05"> Дарим интернет</p>
+          <p class="winklp__third-text rt-md-space-horizontal05"> Пользуйтесь Wink, где вам удобно. <br class="md-d-none"> Смотрите кино, сериалы и тв <br class="md-d-none">
             непрерывно на любых
             устройствах</p>
           <div class="winklp__third__cards">
@@ -108,8 +108,8 @@
           <div class="winklp__fourth__block">
             <div class="winklp__fourth__block-content">
               <div>
-                <p class="winklp__fourth__title"> Единый личный счет и <br>кабинет для удобного <br>управления  тарифом</p>
-                <div class="winklp__fourth__list">
+                <p class="winklp__fourth__title rt-md-space-horizontal05"> Единый личный счет и <br class="md-d-none">кабинет для удобного <br class="md-d-none">управления  тарифом</p>
+                <div class="winklp__fourth__list rt-md-space-horizontal05">
                   <div class="winklp__fourth__list-item">Графическое представление статистики</div>
                   <div class="winklp__fourth__list-item">Отчеты по начислениям, детализации звонков</div>
                 </div>
@@ -125,17 +125,17 @@
 
       <div class="winklp__five">
         <div class="rt-container">
-          <div class="winklp__fourth__title"><span class="orange-text">Переходите легко</span> <br>
+          <div class="winklp__fourth__title rt-md-space-horizontal05"><span class="orange-text">Переходите легко</span> <br class="md-d-none">
             в Ростелеком со своим <br> мобильным номером
           </div>
-          <div class="winklp__five__list">
-            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br>передайте
+          <div class="winklp__five__list rt-md-space-horizontal05">
+            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br class="md-d-none">передайте
               курьеру,
-              <br>который привезет вам <br>временную
+              <br class="md-d-none">который привезет вам <br class="md-d-none">временную
               sim-карту
               <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
             </div>
-            <div class="winklp__five__list-item winklp__five__list-item-sim">SIM-карта будет активна уже с первого дня,
+            <div class="winklp__five__list-item winklp__five__list-item-sim rt-md-space-bottom2">SIM-карта будет активна уже с первого дня,
               а мы переведем ваш номер в
               любой удобный вам срок — от 8 дней до 6 месяцев.
             </div>
@@ -148,12 +148,12 @@
       </div>
       <div class="winklp__six d-none td-d-block">
         <div class="rt-container">
-          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br>  мобильная связь
+          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br class="md-d-none">  мобильная связь
           </div>
           <div class="winklp__five__list">
             <div class="winklp__five__list-item winklp__five__list-item-big">Подключите мобильную программу  и пользуйтесь мобильной связью бесплатно
-              <div class="d-flex">
-                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br> как активировать программу.</p>
+              <div class="d-flex md-d-block">
+                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br class="md-d-none"> как активировать программу.</p>
                 <div class="flex-fill">
                   <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
                 </div>

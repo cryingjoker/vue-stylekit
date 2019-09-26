@@ -1207,6 +1207,8 @@
 
 .winklp__third
   margin-top: 180px
+  @media(max-width: mobile-upper-limit)
+    margin-top: 60px
 
 .winklp__third-label
   font-size: 60px
@@ -1241,7 +1243,21 @@
   @media(max-width: tablet-upper-limit)
     padding-right: (270/21.3)vw
     width: (100vw - (270/10.15)vw)
+  @media(max-width: mobile-upper-limit)
+    padding-right: 20px
+    padding-left: 20px
+    width: 100vw
 
+.winklp__pictures-zero
+  position: absolute
+  bottom: 0
+  align-items: baseline
+.winklp__fourth
+  margin-left: 80px
+  margin-right: 80px
+  @media(max-width: tablet-upper-limit)
+    margin-right: 0
+    margin-left: 0
 .winklp__pictures
   position: absolute
   right: 0
@@ -1254,7 +1270,12 @@
     top: (80/10.68)vw
   @media(max-width: mobile-upper-limit)
     top: initial
-    bottom: (85/10.68)vw
+    bottom: (341/10.68)vw
+.winklp__pictures-zero
+  .winklp__pictures
+    @media(max-width: mobile-upper-limit)
+      top: initial
+      bottom: (141/10.68)vw
 .winklp__pictures-first
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1265,7 +1286,7 @@
       top: (201/10.68)vw
     @media(max-width: mobile-upper-limit)
       top: initial
-      bottom: (241/10.68)vw
+      bottom: (151/10.68)vw
 .winklp__pictures-second
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1276,7 +1297,7 @@
       top: (90/10.68)vw
     @media(max-width: mobile-upper-limit)
       top: initial
-      bottom: (140/10.68)vw
+      bottom: 0
 
 .winklp__third__cards-images
   text-align: center
@@ -1292,6 +1313,14 @@
     margin-top: auto
     margin-bottom: auto
     right: -(270/21.36)vw
+  @media(max-width: mobile-upper-limit)
+    right: initial
+    top: initial
+    bottom: -40px
+    width: 218px
+    height: 164px
+    right: 20px
+    left:inherit
 .winklp__third__cards-item--orange
   background-color: #FF4F12
 
@@ -1304,10 +1333,15 @@
   @media(max-width: tablet-upper-limit)
     top: 0
     background-color: #65B8DF
+  @media(max-width: mobile-upper-limit)
+    padding-bottom: 140px
 
 .winklp__third__cards-title
   font-size: 32px
-winklp__third-text
+  @media(max-width: mobile-upper-limit)
+    font-size: 24px
+    line-height: 30px
+    padding-bottom: 20px
 
 .winklp__fourth
   margin-top: 160px
@@ -1332,16 +1366,7 @@ winklp__third-text
     @media(max-width: tablet-upper-limit)
       display: none
 
-.winklp__pictures-zero
-  position: absolute
-  bottom: 0
-  align-items: baseline
-.winklp__fourth
-  margin-left: 80px
-  margin-right: 80px
-  @media(max-width: tablet-upper-limit)
-    margin-right: 0
-    margin-left: 0
+
 .winklp__pictures__item
   position: relative
   transition-timing-function ease-in-out
@@ -1497,6 +1522,9 @@ winklp__third-text
 .winklp__five__list-item-big
   font-size: 32px
   line-height: 40px
+  @media(max-width: mobile-upper-limit)
+    font-size: 24px
+    line-height: 30px
 
 @keyframes showCardForm
   0%
@@ -1594,6 +1622,8 @@ winklp__third-text
     border-radius 5px
     border 1px dashed
     white-space nowrap
+    @media(max-width: mobile-upper-limit)
+      width: 100%
     .download-content__icon
       left: 15px
     .download-content__text
@@ -1624,7 +1654,7 @@ winklp__third-text
 .winklp__five__list-item-big
   position: relative
   @media(max-width: tablet-upper-limit)
-    min-width: 100vw
+    min-width: calc(100vw - 40px)
     padding-bottom: 50px
   &:before
     content: ''
@@ -1637,6 +1667,8 @@ winklp__third-text
     background-size: cover
 .winklp__five__list-item-bell
   position: relative
+  @media(max-width: mobile-upper-limit)
+    min-width: calc(100vw - 40px)
   &:before
     content: ''
     width: 40px
@@ -1648,6 +1680,8 @@ winklp__third-text
     background-size: cover
 .winklp__five__list-item-sim
   position: relative
+  @media(max-width: mobile-upper-limit)
+    min-width: calc(100vw - 40px)
   &:before
     content: ''
     width: 42px
@@ -1657,3 +1691,4 @@ winklp__third-text
     top: 0
     left: 100px
     background-size: cover
+
