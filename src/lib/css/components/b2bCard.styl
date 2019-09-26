@@ -387,6 +387,8 @@
     display flex
     flex-direction row
     height 100%
+    @media (max-width: mobile-upper-limit)
+      flex 1 0 100%
 
     &-top
       overflow hidden
@@ -422,6 +424,8 @@
     @media (max-width: tablet-upper-limit)
       width 100%
       padding-top vertical-space * 2
+    @media (max-width: mobile-upper-limit)
+      flex 1 0 100%
 
   &__mobile-header
     width 60px
@@ -435,14 +439,15 @@
 
   &--large
     @media (max-width: mobile-upper-limit)
-      height 420px
+      height auto
+      min-height 420px
 
     .{b2bAppName}-category__image
       display block !important
 
       @media (max-width: mobile-upper-limit)
         width 100%
-        height 40%
+        height 168px
         background-size cover
 
     .{b2bAppName}-category__text-content
@@ -453,7 +458,7 @@
 
       @media (max-width: mobile-upper-limit)
         width 100%
-        height 60%
+        height auto
 
     .{b2bAppName}-category__content
       @media (max-width: mobile-upper-limit)
@@ -913,8 +918,11 @@
 .equipment
   display flex
   flex-direction row
+  border-bottom 1px solid b2c-cool-grey
   @media (max-width tablet-upper-limit)
     flex-direction column
+  @media (max-width mobile-upper-limit)
+    margin-bottom: 20px
   &__short-description,
   &__image
     flex-basis 50%
