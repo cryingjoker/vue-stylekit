@@ -22,9 +22,6 @@ export default {
   },
   data: () => ({
     isMobile: false,
-    chromeTransformVariable: "translate(0.25, -0.75)",
-    safariTransformVariableTop: "translate(-0.35, -0.25)",
-    safariTransformVariableBottom: "translate(0, 0.5)",
     isSafari: /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))
   }),
   mounted(){
@@ -37,7 +34,6 @@ export default {
       adjust()
     });
     adjust();
-//    console.log(this.isSafari);
   },
   computed: {
     colorLineIconClass() {
