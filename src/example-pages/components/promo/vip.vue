@@ -11,7 +11,7 @@
             <p class="winklp__first__label"><img class="winklp__first__label-image"
                                                  src="/static/images/wink/winklogo.png"
                                                  alt=""></p>
-            <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
+            <p class="winklp__first__text">Смотрите на 5 экранах, <br class="md-d-none">а интернет – в подарок</p>
 
             <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="td-d-none"> с домашним и
               мобильным интернетом</p>
@@ -99,14 +99,16 @@
           <div class="winklp__third__cards">
             <div class="winklp__third__cards-item winklp__third__cards-item--orange">
               <p class="winklp__third__cards-title">Мобильную связь</p>
-              <p class="winklp__third__cards-text rt-td-space-top">Безлимитный интернет и звонки на номера Ростелекома.</p>
+              <p class="winklp__third__cards-text rt-td-space-top">Безлимитный интернет и звонки на номера
+                Ростелекома.</p>
               <div class="winklp__third__cards-images">
                 <img src="/static/images/wink/Group 22 (1).png" alt="" class="winklp__third__cards-images-item">
               </div>
             </div>
             <div class="winklp__third__cards-item winklp__third__cards-item--blue">
               <p class="winklp__third__cards-title">Домашний интернет</p>
-              <p class="winklp__third__cards-text rt-td-space-top">Бесплатный, высокоскоротсной интернет для любых развлечений</p>
+              <p class="winklp__third__cards-text rt-td-space-top">Бесплатный, высокоскоротсной интернет для любых
+                развлечений</p>
               <div class="winklp__third__cards-images">
                 <img src="/static/images/wink/image 2.png" alt="" class="winklp__third__cards-images-item">
               </div>
@@ -180,6 +182,34 @@
 
         </div>
       </div>
+      <div class="rt-container">
+        <div class="winklp__fourth">
+          <div class="winklp__fourth__block">
+            <div class="winklp__fourth__block-content">
+              <div>
+                <p class="winklp__fourth__title rt-md-space-horizontal05"> Бесплатная <br class="md-d-none"> мобильная
+                  связь </p>
+                <p class="winklp__third-text">Подключите мобильную программу <br class="md-d-none"> и пользуйтесь
+                  мобильной связью <br class="md-d-none">бесплатно</p>
+                <div class="d-flex md-d-block rt-md-space-bottom2">
+                  <div class="flex-fill rt-space-top2-half">Скачайте инструцию и узнайте <br class="md-d-none"> как активировать программу.
+                  </div>
+                  <div class="flex-fill">
+                    <div class="rt-space-left2 rt-md-space-left-none">
+                      <rt-download-content fileSize="1.5 Мб">Скачать инструкцию</rt-download-content>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="winklp__fourth__block">
+            <img class="winklp__fourth__block-image" src="/static/images/wink/Apple iPhone XS Space Grey (1).png"
+                 alt="">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -196,7 +226,7 @@
     name: "AppPromoVip",
     components: componentsList,
     mounted() {
-      document.querySelector('.app-header').remove();
+      document.querySelector(".app-header").remove();
       var activeIndex = 0;
       document.querySelectorAll(".winklp__pictures__item").forEach(function(item) {
         setTimeout(function() {

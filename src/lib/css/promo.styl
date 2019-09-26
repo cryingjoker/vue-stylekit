@@ -1172,7 +1172,7 @@
 .winklp__second
   @media(max-width: mobile-upper-limit)
     position: relative
-    padding-bottom: 170px
+    padding-bottom: 110vw
   .relative
     @media(max-width: mobile-upper-limit)
       position: static
@@ -1281,12 +1281,12 @@
     top: (80/10.68)vw
   @media(max-width: mobile-upper-limit)
     top: initial
-    bottom: (341/10.68)vw
+    bottom: (341/10.68)*2vw
 .winklp__pictures-zero
   .winklp__pictures
     @media(max-width: mobile-upper-limit)
       top: initial
-      bottom: (141/10.68)vw
+      bottom: (141/10.68)*2vw
 .winklp__pictures-first
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1297,7 +1297,7 @@
       top: (201/10.68)vw
     @media(max-width: mobile-upper-limit)
       top: initial
-      bottom: (151/10.68)vw
+      bottom: (151/10.68)*2vw
 .winklp__pictures-second
   @media(max-width: mobile-upper-limit)
     position: static
@@ -1305,7 +1305,7 @@
     position: relative
     top: -70px
     @media(max-width: mobile-upper-limit)
-      top: 0
+      top: 5px
   .winklp__pictures
     @media(max-width: tablet-upper-limit)
       top: (156/10.68)vw
@@ -1318,6 +1318,8 @@
 .winklp__third__cards-images
   text-align: center
   margin-top: 50px
+  @media(max-width: mobile-upper-limit)
+    margin-top: 0
 
   .winklp__third__cards-item--orange &
     @media(max-width: tablet-upper-limit)
@@ -1392,6 +1394,8 @@
   @media(max-width: tablet-upper-limit)
     height:initial
     margin-top: 120px
+  @media(max-width: mobile-upper-limit)
+    margin-top: 30px
 
 
 .winklp__fourth__block
@@ -1430,6 +1434,10 @@
     .winklp__pictures__item-image-content, &
       width: (100/10.68)vw
       height: (130/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (200/10.68)vw
+      height: (260/10.68)vw
 
 
 .winklp__pictures__item-zero-1
@@ -1440,6 +1448,10 @@
     .winklp__pictures__item-image-content, &
       width: (138/10.68)vw
       height: (166/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)*2vw
+      height: (166/10.68)*2vw
 
 .winklp__pictures__item-zero-2
   .winklp__pictures__item-image-content, &
@@ -1450,6 +1462,10 @@
     .winklp__pictures__item-image-content, &
       width: (156/10.68)vw
       height: (222/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (156/10.68)*2vw
+      height: (222/10.68)*2vw
 
 .winklp__pictures__item-first-0
   .winklp__pictures__item-image-content, &
@@ -1460,6 +1476,10 @@
     .winklp__pictures__item-image-content, &
       width: (201/10.68)vw
       height: (166/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (201/10.68)*2vw
+      height: (166/10.68)*2vw
 
 
 .winklp__pictures__item-first-1
@@ -1470,6 +1490,10 @@
     .winklp__pictures__item-image-content, &
       width: (138/10.68)vw
       height: (166/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)*2vw
+      height: (166/10.68)*2vw
   transition-delay 1.2s
 
 .winklp__pictures__item-first-2
@@ -1480,6 +1504,10 @@
     .winklp__pictures__item-image-content, &
       width: (138/10.68)vw
       height: (166/10.68)vw
+  @media(max-width: tablet-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)*2vw
+      height: (166/10.68)*2vw
   transition-delay 1.6s
 
 .winklp__pictures__item-second-0
@@ -1491,6 +1519,10 @@
     .winklp__pictures__item-image-content, &
       width: (85/10.68)vw
       height: (103/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (85/10.68)*2vw
+      height: (103/10.68)*2vw
 
 .winklp__pictures__item-second-1
   .winklp__pictures__item-image-content, &
@@ -1501,6 +1533,10 @@
     .winklp__pictures__item-image-content, &
       width: (153/10.68)vw
       height: (127/10.68)vw
+  @media(max-width: tablet-upper-limit)
+    .winklp__pictures__item-image-content, &
+      width: (153/10.68)*2vw
+      height: (127/10.68)*2vw
 .winklp__pictures__item-image-content
   background-size: cover
   background-position: center
@@ -1514,6 +1550,10 @@
     & .winklp__pictures__item-image-content, &
       width: (138/10.68)vw
       height: (103/10.68)vw
+  @media(max-width: mobile-upper-limit)
+    & .winklp__pictures__item-image-content, &
+      width: (138/10.68)*2vw
+      height: (103/10.68)*2vw
 
 .winklp__pictures__item-image
   width: 0%
@@ -1622,7 +1662,8 @@
   align-items center
 
 .winklp__five,
-.winklp__six
+.winklp__six,
+.winklp__fourth
   .download-content
     margin-top: 40px
     padding-left: 30px
@@ -1648,7 +1689,8 @@
     .download-content__info
       display: inline-block
       margin-left: 15px
-.winklp__six
+.winklp__six,
+.winklp__fourth
   .winklp__five__list-item
     padding-top: 0
   .winklp__five__list-item-big
