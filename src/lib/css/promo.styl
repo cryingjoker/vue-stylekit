@@ -1380,77 +1380,98 @@
 
 
 .winklp__pictures__item-zero-0
-  width: 185px
-  height: 201px
+  .winklp__pictures__item-image-content, &
+    width: 185px
+    height: 201px
   transition-delay 0.8s
   @media(max-width: tablet-upper-limit)
-    width: (100/10.68)vw
-    height: (130/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (100/10.68)vw
+      height: (130/10.68)vw
 
 
 .winklp__pictures__item-zero-1
-  width: 255px
-  height: 267px
+  .winklp__pictures__item-image-content, &
+    width: 255px
+    height: 267px
   @media(max-width: tablet-upper-limit)
-    width: (138/10.68)vw
-    height: (166/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)vw
+      height: (166/10.68)vw
 
 .winklp__pictures__item-zero-2
-  width: 234px
-  height: 240px
+  .winklp__pictures__item-image-content, &
+    width: 234px
+    height: 240px
   transition-delay 0.8s
   @media(max-width: tablet-upper-limit)
-    width: (156/10.68)vw
-    height: (222/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (156/10.68)vw
+      height: (222/10.68)vw
 
 .winklp__pictures__item-first-0
-  width: 371px
-  height: 210px
+  .winklp__pictures__item-image-content, &
+    width: 371px
+    height: 210px
   transition-delay 1.6s
   @media(max-width: tablet-upper-limit)
-    width: (201/10.68)vw
-    height: (166/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (201/10.68)vw
+      height: (166/10.68)vw
 
 
 .winklp__pictures__item-first-1
-  width: 255px
-  height: 210px
+  .winklp__pictures__item-image-content, &
+    width: 255px
+    height: 210px
   @media(max-width: tablet-upper-limit)
-    width: (138/10.68)vw
-    height: (166/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)vw
+      height: (166/10.68)vw
   transition-delay 1.2s
 
 .winklp__pictures__item-first-2
-  width: 234px
-  height: 210px
+  .winklp__pictures__item-image-content, &
+    width: 234px
+    height: 210px
   @media(max-width: tablet-upper-limit)
-    width: (138/10.68)vw
-    height: (166/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (138/10.68)vw
+      height: (166/10.68)vw
   transition-delay 1.6s
 
 .winklp__pictures__item-second-0
-  width: 158px
-  height: 151px
+  .winklp__pictures__item-image-content, &
+    width: 158px
+    height: 151px
   transition-delay 2s
   @media(max-width: tablet-upper-limit)
-    width: (85/10.68)vw
-    height: (103/10.68)vw
+    .winklp__pictures__item-image-content, &
+      width: (85/10.68)vw
+      height: (103/10.68)vw
 
 .winklp__pictures__item-second-1
-  width: 283px
-  height: 195px
+  .winklp__pictures__item-image-content, &
+    width: 283px
+    height: 195px
   transition-delay 1.7s
   @media(max-width: tablet-upper-limit)
-    width: (153/10.68)vw
-    height: (127/10.68)vw
-
+    .winklp__pictures__item-image-content, &
+      width: (153/10.68)vw
+      height: (127/10.68)vw
+.winklp__pictures__item-image-content
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
 .winklp__pictures__item-second-2
-  width: 255px
-  height: 151px
   transition-delay 2s
+  & .winklp__pictures__item-image-content, &
+    width: 255px
+    height: 151px
   @media(max-width: tablet-upper-limit)
-    width: (138/10.68)vw
-    height: (103/10.68)vw
+    & .winklp__pictures__item-image-content, &
+      width: (138/10.68)vw
+      height: (103/10.68)vw
 
 .winklp__pictures__item-image
   width: 0%
@@ -1461,12 +1482,14 @@
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
+
+
 .winklp__pictures__item--show
   top: 0
   opacity: 1
   .winklp__pictures__item-image--active
     width: 100%
-
+    overflow: hidden
     z-index 2
     opacity 1
     transition-timing-function ease-in-out

@@ -188,8 +188,11 @@
         var backgrounds = JSON.parse(item.getAttribute("backgrounds"));
         backgrounds.forEach(function(bg) {
           var node = document.createElement("div");
+          var nodeContent = document.createElement("div");
           node.classList.add("winklp__pictures__item-image");
-          node.style.backgroundImage = "url(\"" + bg + "\")";
+          node.appendChild(nodeContent);
+          nodeContent.classList.add("winklp__pictures__item-image-content");
+          nodeContent.style.backgroundImage = "url(\"" + bg + "\")";
           item.appendChild(node);
         });
         item.removeAttribute("backgrounds");
@@ -205,7 +208,7 @@
               if (active) {
                 active.classList.remove("winklp__pictures__item-image--active");
               }
-              nextActive.style.zIndex = 2;
+              nextActive.style.zIndex = '';
             }, 2000);
             nextActive.classList.add("winklp__pictures__item-image--active");
             nextActive.style.zIndex = 3;
