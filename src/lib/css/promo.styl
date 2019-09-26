@@ -1121,7 +1121,6 @@
 
 .winklp__first__label
   color #FF4F12
-  font-size: 140px
 #animation_container
   width: 682px!important
   height: 682px!important
@@ -1150,6 +1149,8 @@
 .winklp__first__text
   font-size: 32px
   line-height: 40px
+  font-weight: 800
+  margin-top: 20px
   @media(max-width: mobile-upper-limit)
     font-size: 24px
     line-height: 32px
@@ -1300,6 +1301,11 @@
 .winklp__pictures-second
   @media(max-width: mobile-upper-limit)
     position: static
+  .show-swipe-top-on-scroll
+    position: relative
+    top: -70px
+    @media(max-width: mobile-upper-limit)
+      top: 0
   .winklp__pictures
     @media(max-width: tablet-upper-limit)
       top: (156/10.68)vw
@@ -1587,58 +1593,8 @@
     font-size: 24px
     line-height: 30px
 
-@keyframes showCardForm
-  0%
-    opacity 0
-    position: relative
-    top 5vh
 
-  99%
-    opacity 1
-    position relative
-    top 0
 
-  100%
-    opacity 1
-    top 0
-
-@keyframes showCardForm2
-  0%
-    opacity 0
-    position: relative
-    top 5vh
-  25%
-    opacity 0
-    position: relative
-    top 5vh
-  99%
-    opacity 1
-    position relative
-    top 0
-
-  100%
-    opacity 1
-    top 0
-@keyframes showCardForm3
-  0%
-    opacity 0
-    position: relative
-    top 5vh
-  50%
-    opacity 0
-    position: relative
-    top 5vh
-  99%
-    opacity 1
-    position relative
-    top 0
-
-  100%
-    opacity 1
-    top 0
-
-.show-swipe-top-on-scroll
-  animation 1s showCardForm linear
 
 .winklp__first__label-image
   width: 350px
@@ -1654,16 +1610,9 @@
     @media(max-width: mobile-upper-limit)
       bottom: 0
       top: initial
-  .show-swipe-top-on-scroll
-    animation 1s showCardForm linear
-.winklp__pictures-first
-  .show-swipe-top-on-scroll
-    animation 2s showCardForm2 linear
 .winklp__pictures-second
   @media(max-width: mobile-upper-limit)
     position: static
-  .show-swipe-top-on-scroll
-    animation 2.5s showCardForm3 linear
 .winklp__fourth__block-image
   width: 270px
 .winklp__fourth__block-content
