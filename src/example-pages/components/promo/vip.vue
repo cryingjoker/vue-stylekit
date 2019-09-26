@@ -209,7 +209,7 @@
                 active.classList.remove("winklp__pictures__item-image--active");
               }
               nextActive.style.zIndex = '';
-            }, 2000);
+            },1000);
             nextActive.classList.add("winklp__pictures__item-image--active");
             nextActive.style.zIndex = 3;
             var t = time;
