@@ -13,7 +13,7 @@
                                                  alt=""></p>
             <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
 
-            <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="md-d-none"> с домашним и
+            <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="tкd-d-none"> с домашним и
               мобильным интернетом</p>
             <div class="winklp__first__footr">
               <div class="winklp__first__footr-content">
@@ -196,6 +196,7 @@
     name: "AppPromoVip",
     components: componentsList,
     mounted() {
+      document.querySelector('.app-header').remove();
       var activeIndex = 0;
       document.querySelectorAll(".winklp__pictures__item").forEach(function(item) {
         setTimeout(function() {
