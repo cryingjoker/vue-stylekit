@@ -4,27 +4,37 @@
 
     <!-- Каталог книг -->
     <div class="winklp">
-      <div class="winklp__first">
-        <p class="winklp__first__label"><img class="winklp__first__label-image" src="/static/images/wink/winklogo.png"
-                                             alt=""></p>
-        <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
 
-        <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="md-d-none"> с домашним и мобильным интернетом</p>
-        <div class="winklp__first__footr">
-          <div class="winklp__first__footr-content">
-            <rt-button class="rt-button-orange">Подключить</rt-button>
-            <span class="rt-space-left rt-md-space-left-none d-md-block rt-md-space-top">от 400 руб./мес.</span>
+      <div class="rt-container">
+        <div class="winklp__first">
+          <div class="winklp__first-block">
+            <p class="winklp__first__label"><img class="winklp__first__label-image"
+                                                 src="/static/images/wink/winklogo.png"
+                                                 alt=""></p>
+            <p class="winklp__first__text">Смотрите на 5 экранах, <br>а интернет – в подарок</p>
+
+            <p class="winklp__first__second-text">ТВ, кино и сериалы в одном пакете <br class="md-d-none"> с домашним и
+              мобильным интернетом</p>
+            <div class="winklp__first__footr">
+              <div class="winklp__first__footr-content">
+                <rt-button class="rt-button-orange">Подключить</rt-button>
+                <span class="rt-space-left rt-md-space-left-none d-md-block rt-md-space-top">от 400 руб./мес.</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div id="animation_container">
-          <canvas id="canvas" class="winklp__first__video"></canvas>
-          <div id="dom_overlay_container"></div>
+          <div class="winklp__first-block">
+            <div id="animation_container">
+              <canvas id="canvas" class="winklp__first__video"></canvas>
+              <div id="dom_overlay_container"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="winklp__second">
         <div class="relative">
           <div class="rt-container">
-            <p class="winklp__second__text show-swipe-top-on-scroll rt-md-space-horizontal05">Популярные <br class="td-d-none">фильмы, сериалы, <br class="td-d-none">каналы, которые
+            <p class="winklp__second__text show-swipe-top-on-scroll rt-md-space-horizontal05">Популярные <br
+              class="td-d-none">фильмы, сериалы, <br class="td-d-none">каналы, которые
               <br class="td-d-none">можно смотреть
               <br class="td-d-none">где угодно
             </p>
@@ -82,7 +92,8 @@
       <div class="winklp__third">
         <div class="rt-container">
           <p class="winklp__third-label rt-md-space-horizontal05"> Дарим интернет</p>
-          <p class="winklp__third-text rt-md-space-horizontal05"> Пользуйтесь Wink, где вам удобно. <br class="md-d-none"> Смотрите кино, сериалы и тв <br class="md-d-none">
+          <p class="winklp__third-text rt-md-space-horizontal05"> Пользуйтесь Wink, где вам удобно. <br
+            class="md-d-none"> Смотрите кино, сериалы и тв <br class="md-d-none">
             непрерывно на любых
             устройствах</p>
           <div class="winklp__third__cards">
@@ -108,7 +119,8 @@
           <div class="winklp__fourth__block">
             <div class="winklp__fourth__block-content">
               <div>
-                <p class="winklp__fourth__title rt-md-space-horizontal05"> Единый личный счет и <br class="md-d-none">кабинет для удобного <br class="md-d-none">управления  тарифом</p>
+                <p class="winklp__fourth__title rt-md-space-horizontal05"> Единый личный счет и <br class="md-d-none">кабинет
+                  для удобного <br class="md-d-none">управления тарифом</p>
                 <div class="winklp__fourth__list rt-md-space-horizontal05">
                   <div class="winklp__fourth__list-item">Графическое представление статистики</div>
                   <div class="winklp__fourth__list-item">Отчеты по начислениям, детализации звонков</div>
@@ -125,17 +137,20 @@
 
       <div class="winklp__five">
         <div class="rt-container">
-          <div class="winklp__fourth__title rt-md-space-horizontal05"><span class="orange-text">Переходите легко</span> <br class="md-d-none">
+          <div class="winklp__fourth__title rt-md-space-horizontal05"><span class="orange-text">Переходите легко</span>
+            <br class="md-d-none">
             в Ростелеком со своим <br> мобильным номером
           </div>
           <div class="winklp__five__list rt-md-space-horizontal05">
-            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br class="md-d-none">передайте
+            <div class="winklp__five__list-item winklp__five__list-item-big">Заполните заявление и <br
+              class="md-d-none">передайте
               курьеру,
               <br class="md-d-none">который привезет вам <br class="md-d-none">временную
               sim-карту
               <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
             </div>
-            <div class="winklp__five__list-item winklp__five__list-item-sim rt-md-space-bottom2">SIM-карта будет активна уже с первого дня,
+            <div class="winklp__five__list-item winklp__five__list-item-sim rt-md-space-bottom2">SIM-карта будет активна
+              уже с первого дня,
               а мы переведем ваш номер в
               любой удобный вам срок — от 8 дней до 6 месяцев.
             </div>
@@ -148,12 +163,14 @@
       </div>
       <div class="winklp__six d-none td-d-block">
         <div class="rt-container">
-          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br class="md-d-none">  мобильная связь
+          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br class="md-d-none"> мобильная связь
           </div>
           <div class="winklp__five__list">
-            <div class="winklp__five__list-item winklp__five__list-item-big">Подключите мобильную программу  и пользуйтесь мобильной связью бесплатно
+            <div class="winklp__five__list-item winklp__five__list-item-big">Подключите мобильную программу и
+              пользуйтесь мобильной связью бесплатно
               <div class="d-flex md-d-block">
-                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br class="md-d-none"> как активировать программу.</p>
+                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br
+                  class="md-d-none"> как активировать программу.</p>
                 <div class="flex-fill">
                   <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
                 </div>
@@ -184,7 +201,7 @@
         setTimeout(function() {
           item.classList.add("winklp__pictures__item--show");
         }, 600);
-        console.info('item.getAttribute("backgrounds")',item.getAttribute("backgrounds"));
+        console.info("item.getAttribute(\"backgrounds\")", item.getAttribute("backgrounds"));
         var backgrounds = JSON.parse(item.getAttribute("backgrounds"));
         backgrounds.forEach(function(bg) {
           var node = document.createElement("div");
@@ -208,8 +225,8 @@
               if (active) {
                 active.classList.remove("winklp__pictures__item-image--active");
               }
-              nextActive.style.zIndex = '';
-            },1000);
+              nextActive.style.zIndex = "";
+            }, 1000);
             nextActive.classList.add("winklp__pictures__item-image--active");
             nextActive.style.zIndex = 3;
             var t = time;
@@ -245,7 +262,6 @@
       setTimeout(function() {
 
 
-
         function init() {
           canvas = document.getElementById("canvas");
           anim_container = document.getElementById("animation_container");
@@ -254,11 +270,11 @@
           var lib = comp.getLibrary();
           var loader = new createjs.LoadQueue(false);
           loader.addEventListener("fileload", function(evt) {
-            console.info('fileload')
+            console.info("fileload");
             handleFileLoad(evt, comp);
           });
           loader.addEventListener("complete", function(evt) {
-            console.info('complete')
+            console.info("complete");
             handleComplete(evt, comp);
           });
           var lib = comp.getLibrary();
@@ -298,6 +314,7 @@
           AdobeAn.compositionLoaded(lib.properties.id);
           fnStartAnimation();
         }
+
         init();
       }, 1500);
 
