@@ -31,11 +31,11 @@
           </div>
           <div class="winklp__pictures winklp__pictures-zero">
             <div class="winklp__pictures__item winklp__pictures__item-zero-0"
-                 backgrounds='["/static/images/wink/Group 24.png","/static/images/wink/Bitmap (1).png"]'></div>
+                 backgrounds='["/static/images/wink/Group 24.png","/static/images/wink/255x307.png","/static/images/wink/158x191 copy.png"]'></div>
             <div class="winklp__pictures__item winklp__pictures__item-zero-1"
-                 backgrounds='["/static/images/wink/Bitmap (1).png","/static/images/wink/Group 24.png"]'></div>
+                 backgrounds='["/static/images/wink/Bitmap (1).png","/static/images/wink/158x191.png","/static/images/wink/241x185 copy.png"]'></div>
             <div class="winklp__pictures__item winklp__pictures__item-zero-2"
-                 backgrounds='["/static/images/wink/Group 29.png","/static/images/wink/Bitmap (1).png"]'></div>
+                 backgrounds='["/static/images/wink/Group 29.png","/static/images/wink/241x185.png", "/static/images/wink/255x191 copy.png"]'></div>
           </div>
         </div>
         <div class="rt-space-top-half winklp__second-block">
@@ -49,11 +49,11 @@
               </div>
               <div class="winklp__pictures">
                 <div class="winklp__pictures__item winklp__pictures__item-first-0"
-                     backgrounds='["/static/images/wink/Bitmap (2).png"]'></div>
+                     backgrounds='["/static/images/wink/Bitmap (2).png","/static/images/wink/255x191.png", "/static/images/wink/255x307 (1).png"]'></div>
                 <div class="winklp__pictures__item winklp__pictures__item-first-1"
-                     backgrounds='["/static/images/wink/Bitmap Copy 3.png"]'></div>
+                     backgrounds='["/static/images/wink/Bitmap Copy 3.png","/static/images/wink/255x307 copy 2.png", "/static/images/wink/255x307 copy 3.png"]'></div>
                 <div class="winklp__pictures__item winklp__pictures__item-first-2"
-                     backgrounds='["/static/images/wink/Bitmap Copy 5.png"]'></div>
+                     backgrounds='["/static/images/wink/Bitmap Copy 5.png","/static/images/wink/255x307 copy.png", "/static/images/wink/255x3071.png"]'></div>
               </div>
             </div>
           </div>
@@ -69,11 +69,11 @@
               </div>
               <div class="winklp__pictures">
                 <div class="winklp__pictures__item winklp__pictures__item-second-0"
-                     backgrounds='["/static/images/wink/Group 22.png"]'></div>
+                     backgrounds='["/static/images/wink/Group 22.png","/static/images/wink/283x235 copy.png", "/static/images/wink/283x235.png"]'></div>
                 <div class="winklp__pictures__item winklp__pictures__item-second-1"
-                     backgrounds='["/static/images/wink/Bitmap Copy 2.png"]'></div>
+                     backgrounds='["/static/images/wink/Bitmap Copy 2.png","/static/images/wink/371x307 copy.png", "/static/images/wink/371x307.png"]'></div>
                 <div class="winklp__pictures__item winklp__pictures__item-second-2"
-                     backgrounds='["/static/images/wink/Bitmap Copy 5.1 (1).png"]'></div>
+                     backgrounds='["/static/images/wink/Bitmap Copy 5.1 (1).png","/static/images/wink/Artboard Copy.png", "/static/images/wink/Artboard.png"]'></div>
               </div>
             </div>
           </div>
@@ -184,6 +184,7 @@
         setTimeout(function() {
           item.classList.add("winklp__pictures__item--show");
         }, 600);
+        console.info('item.getAttribute("backgrounds")',item.getAttribute("backgrounds"));
         var backgrounds = JSON.parse(item.getAttribute("backgrounds"));
         backgrounds.forEach(function(bg) {
           var node = document.createElement("div");
@@ -198,18 +199,17 @@
         if (time) {
           var active = wrap.querySelector(".winklp__pictures__item-image--active");
           var images = wrap.querySelectorAll(".winklp__pictures__item-image");
-          var nextActive = wrap.querySelectorAll(".winklp__pictures__item-image")[activeIndex % size];
+          var nextActive = wrap.querySelectorAll(".winklp__pictures__item-image").item(index);
           if (images.length > 1 || !active) {
             setTimeout(function() {
               if (active) {
                 active.classList.remove("winklp__pictures__item-image--active");
               }
               nextActive.style.zIndex = 2;
-            }, 3000);
+            }, 2000);
             nextActive.classList.add("winklp__pictures__item-image--active");
             nextActive.style.zIndex = 3;
             var t = time;
-
             setTimeout(function() {
 
               imageTick(wrap, (index + 1) % size, size, time);
@@ -223,9 +223,8 @@
           document.querySelectorAll(".winklp__pictures__item").forEach(function(item, i) {
 
             var images = item.querySelectorAll(".winklp__pictures__item-image");
-            var time = 3000 + i * 300;
+            var time = 3000 + i * 800;
             imageTick(item, 0, images.length, time);
-            console.info("i", i, item, time);
           });
         }, 100);
       };

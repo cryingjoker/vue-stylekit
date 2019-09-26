@@ -1458,17 +1458,19 @@
   position: absolute
   top: 0
   left: 0
-  -webkit-background-size: cover
   background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
 .winklp__pictures__item--show
   top: 0
   opacity: 1
   .winklp__pictures__item-image--active
     width: 100%
+
     z-index 2
     opacity 1
-    transition-timing-function cubic-bezier(.11, .34, .97, .33)
-    transition-duration 0.8s
+    transition-timing-function ease-in-out
+    transition-duration 2s
     transition-property width, opacity
 .winklp__fourth__title
   font-size: 48px
