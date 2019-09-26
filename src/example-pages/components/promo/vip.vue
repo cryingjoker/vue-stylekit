@@ -97,16 +97,16 @@
             непрерывно на любых
             устройствах</p>
           <div class="winklp__third__cards">
-            <div class="winklp__third__cards-item winklp__third__cards-item--orange td-d-none">
+            <div class="winklp__third__cards-item winklp__third__cards-item--orange">
               <p class="winklp__third__cards-title">Мобильную связь</p>
-              <p class="winklp__third__cards-text">Безлимитный интернет и звонки на номера Ростелекома.</p>
+              <p class="winklp__third__cards-text rt-td-space-top">Безлимитный интернет и звонки на номера Ростелекома.</p>
               <div class="winklp__third__cards-images">
                 <img src="/static/images/wink/Group 22 (1).png" alt="" class="winklp__third__cards-images-item">
               </div>
             </div>
             <div class="winklp__third__cards-item winklp__third__cards-item--blue">
               <p class="winklp__third__cards-title">Домашний интернет</p>
-              <p class="winklp__third__cards-text">Бесплатный, высокоскоротсной интернет для любых развлечений</p>
+              <p class="winklp__third__cards-text rt-td-space-top">Бесплатный, высокоскоротсной интернет для любых развлечений</p>
               <div class="winklp__third__cards-images">
                 <img src="/static/images/wink/image 2.png" alt="" class="winklp__third__cards-images-item">
               </div>

@@ -1234,6 +1234,8 @@
   @media(max-width: tablet-upper-limit)
     margin-left: 0
     margin-right: 0
+  @media(max-width: mobile-upper-limit)
+    display: block
 
 .winklp__third__cards-item
   width: 480px
@@ -1242,13 +1244,19 @@
   padding-top: 40px
   color: #fff
   font-size: 18px
+  &+&
+    @media(max-width: tablet-upper-limit)
+      margin-left: 40px
+    @media(max-width: mobile-upper-limit)
+      margin-left: 0
   @media(max-width: tablet-upper-limit)
     padding-right: (270/21.3)vw
     width: (100vw - (270/10.15)vw)
   @media(max-width: mobile-upper-limit)
     padding-right: 20px
     padding-left: 20px
-    width: 100vw
+    width: calc(100vw - 30px)
+    margin-left: 5px
 
 .winklp__pictures-zero
   position: absolute
@@ -1304,6 +1312,15 @@
 .winklp__third__cards-images
   text-align: center
   margin-top: 50px
+
+  .winklp__third__cards-item--orange &
+    @media(max-width: tablet-upper-limit)
+      margin-top: 110px;
+      left: 60px;
+      position: relative;
+    @media(max-width: mobile-upper-limit)
+      position: static
+      margin-top: 20px
 .winklp__third__cards-images-item
   max-width: 100%
   @media(max-width: tablet-upper-limit)
@@ -1315,6 +1332,13 @@
     margin-top: auto
     margin-bottom: auto
     right: -(270/21.36)vw
+    .winklp__third__cards-item+.winklp__third__cards-item &
+      margin-bottom: 30px
+    .winklp__third__cards-item+.winklp__third__cards-item &,
+    .winklp__third__cards-item--orange &
+      right: inherit
+      top: inherit
+      position: relative
   @media(max-width: mobile-upper-limit)
     right: initial
     top: initial
@@ -1323,20 +1347,30 @@
     height: 164px
     right: 20px
     left:inherit
+    .winklp__third__cards-item--orange &
+      bottom: 0
+      position: static
 .winklp__third__cards-item--orange
   background-color: #FF4F12
+  @media(max-width: tablet-upper-limit)
+    margin-right: 40px
 
 
 .winklp__third__cards-item--blue
-  background-color: #6588DF
+  background-color: #65B8DF
   position: relative
   top: -80px
   color #fff
   @media(max-width: tablet-upper-limit)
     top: 0
-    background-color: #65B8DF
+    .winklp__third__cards-item+&
+      top: -80px
   @media(max-width: mobile-upper-limit)
-    padding-bottom: 140px
+    padding-bottom: 20px
+    .winklp__third__cards-item+&
+      top: 0px
+      margin-top: 20px
+      margin-left: 5px
 
 .winklp__third__cards-title
   font-size: 32px
