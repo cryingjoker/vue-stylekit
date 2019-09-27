@@ -163,26 +163,8 @@
 
         </div>
       </div>
-      <div class="winklp__six d-none td-d-block">
-        <div class="rt-container">
-          <div class="winklp__fourth__title rt-space-top4">Бесплатная <br class="md-d-none"> мобильная связь
-          </div>
-          <div class="winklp__five__list">
-            <div class="winklp__five__list-item winklp__five__list-item-big">Подключите мобильную программу и
-              пользуйтесь мобильной связью бесплатно
-              <div class="d-flex md-d-block">
-                <p class="flex-fill rt-font-paragraph rt-td-space-top25-half">Скачайте инструцию и узнайте <br
-                  class="md-d-none"> как активировать программу.</p>
-                <div class="flex-fill">
-                  <rt-download-content fileSize="1.5 Мб">Скачать заявление</rt-download-content>
-                </div>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-      <div class="rt-container">
+      <div class="rt-container rt-space-bottom15">
         <div class="winklp__fourth">
           <div class="winklp__fourth__block">
             <div class="winklp__fourth__block-content">
