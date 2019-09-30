@@ -365,7 +365,7 @@ export default {
         }, false);
       }
     },
-    loadImageAsync (src, resolve, reject) {
+    loadImageAsync (src, resolve, reject=function(err){}) {
       let image = new Image();
       image.src = src;
       image.onload = function () {
