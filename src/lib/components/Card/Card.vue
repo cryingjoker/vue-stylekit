@@ -272,6 +272,9 @@ export default {
       if(this.inTabsWImage) {
         cardClass += " rt-card--half-white-plus-image"
       }
+      if(this.hasDiscount) {
+        cardClass += " rt-card--has-discount"
+      }
       return cardClass;
     },
     cardContentClass() {
