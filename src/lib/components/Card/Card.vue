@@ -472,12 +472,14 @@ export default {
     window.addEventListener('resize', () => {
       this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
       this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
-      this.redrawSvg();
+      if(this.inTabsWImage)
+        this.redrawSvg();
     });
     this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
     this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
     this.checkLazy();
-    this.redrawSvg();
+    if(this.inTabsWImage)
+      this.redrawSvg();
     let anchor = this.$el.querySelector('a, button')
     if (anchor && this.ga) {
       anchor.addEventListener('click', Event => {
