@@ -167,7 +167,8 @@ export default {
       if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
-//        this.liftPlaceholder();
+        if(!this.activeInput)
+          this.liftPlaceholder();
       }
     },
     bindKeyboardEvents(e) {
