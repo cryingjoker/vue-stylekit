@@ -941,7 +941,7 @@
                                 <p class="rt-font-paragraph">Creative LIVE!CAM Sync HD</p>
                                 <p class="rt-font-small-paragraph">Веб-камера</p>
                               </div>
-                              <div class="equipment__short-description__bottom-part">
+                              <div class="equipment__short-description__bottom-part rt-space-bottom">
                                 <rt-price :is-option="true" :value="132" :b2b-price="true" time-interval="в месяц в рассрочку" currency="₽" :is-time-interval-bottom="true"/>
                               </div>
                             </div>

@@ -57,7 +57,8 @@ export default {
       isOpen: false,
       selected: {},
       isOpenListOnTop: false,
-      hasSelected: this.text ? true : false
+      hasSelected: this.text ? true : false,
+      focused: false
     };
   },
   computed: {
@@ -139,6 +140,11 @@ export default {
     toggleOpen(e) {
       if (!this.disabled) {
         this.isOpen = !this.isOpen;
+        if(this.activeInput && this.isOpen) {
+          this.$refs.activeInput.focus();
+        }
+        if(this.focused)
+          this.isOpen = true;
         if (this.isOpen) {
           this.scrollToSelected();
           if (window.innerHeight - e.clientY < 200 && e.clientY > 200) {
@@ -161,7 +167,7 @@ export default {
       if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
-        this.liftPlaceholder();
+//        this.liftPlaceholder();
       }
     },
     bindKeyboardEvents(e) {
@@ -213,27 +219,18 @@ export default {
     scrollToSelected() {
       const selectElement = this.$el.querySelector(".select-option--select");
       if (selectElement) {
-        const scrollPosition =
-          selectElement.offsetTop - selectElement.parentNode.offsetTop;
+        const scrollPosition = selectElement.offsetTop - selectElement.parentNode.offsetTop;
         selectElement.parentNode.scrollTop = scrollPosition;
       }
     },
     liftPlaceholder() {
-      if (!this.$el.querySelector(".select-input").innerText) {
-        if (
-          !this.$el
-            .querySelector(".floating-placeholder")
-            .classList.contains("floating-placeholder--go-top")
-        ) {
-          this.$el
-            .querySelector(".floating-placeholder")
-            .classList.add("floating-placeholder--go-top");
+        if (!this.$el.querySelector(".floating-placeholder").classList.contains("floating-placeholder--go-top")) {
+          this.$el.querySelector(".floating-placeholder").classList.add("floating-placeholder--go-top");
         } else {
-          this.$el
-            .querySelector(".floating-placeholder")
-            .classList.remove("floating-placeholder--go-top");
+          if(!this.focused){
+            this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
+          }
         }
-      }
     },
     checkFill() {
       let inputValue = this.$el.children[0].childNodes[1].children[0].value;
@@ -244,6 +241,14 @@ export default {
           el.$el.classList.remove('select-option--hidden');
         }
       })
+    },
+    setFocus(){
+      this.focused = true;
+    },
+    removeFocus(){
+      this.focused = false;
+      this.isOpen = false;
+      this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
     }
   },
   render(h) {
@@ -262,7 +267,12 @@ export default {
 
     const activeInput = (() => {
       if(this.activeInput) {
-        return <input class="select-input" value={this.localValue} onInput={this.checkFill}/>
+        return <input class="select-input"
+                      value={this.localValue}
+                      onInput={this.checkFill}
+                      onFocus={this.setFocus}
+                      onBlur={this.removeFocus}
+                      ref="activeInput"/>
       } else {
         return <p class="select-input">{this.localValue}</p>
       }
