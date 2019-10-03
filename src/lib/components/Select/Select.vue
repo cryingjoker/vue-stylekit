@@ -180,9 +180,7 @@ export default {
           e.preventDefault();
           e.stopPropagation();
           let selectedItem = this.$el.querySelector(".select-option--select");
-          const focusedItem = this.$el.querySelector(
-            ".select-option__inner:focus"
-          );
+          const focusedItem = this.$el.querySelector(".select-option__inner:focus");
           const optionItems = this.$el.querySelectorAll(".select-option");
           const optionItemsLength = optionItems.length;
           if (focusedItem) {
@@ -199,9 +197,7 @@ export default {
             selectedIndex =
               (selectedIndex + 1 + optionItemsLength) % optionItemsLength;
           }
-          optionItems[selectedIndex]
-            .querySelector(".select-option__inner")
-            .focus();
+          optionItems[selectedIndex].querySelector(".select-option__inner").focus();
         }
       }
     },
