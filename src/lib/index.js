@@ -42,6 +42,7 @@ import {
   RowList,
   RowListItem,
   Table,
+  TableCol,
   TableHeadItem,
   TableItem,
   TableRow,
@@ -97,7 +98,7 @@ import {
   OptionsList
 } from "./components";
 
-console.info('OptionsList',OptionsList)
+// console.info('OptionsList',OptionsList)
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
@@ -144,6 +145,7 @@ const VueRtStyle = {
       Vue.component(RowList.name, RowList);
       Vue.component(RowListItem.name, RowListItem);
       Vue.component(Table.name, Table);
+      Vue.component(TableCol.name, TableCol);
       Vue.component(TableHeadItem.name, TableHeadItem);
       Vue.component(TableItem.name, TableItem);
       Vue.component(TableRow.name, TableRow);
@@ -162,7 +164,7 @@ const VueRtStyle = {
       Vue.component(Popup.name, Popup);
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
-      Vue.use(svgicon)
+      Vue.use(svgicon);
       Vue.component(Icon.name, Icon);
       Vue.component(Logo.name, Logo.component);
       Vue.component(Ussd.name, Ussd.component);

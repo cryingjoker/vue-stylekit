@@ -1,4 +1,5 @@
 <script type="text/jsx">
+  import { tabsStore } from "./TabsStore.tsx";
   import variables from "../../../lib/variables.json";
 
   const componentsList = {};
@@ -87,7 +88,7 @@
       },
 
       setActiveTabName(name, hashAnchor = false) {
-        this.RtTabs.activeName = name;
+        tabsStore.setActiveTabName(name, hashAnchor);
         window.dispatchEvent(new Event("resize"));
         if (hashAnchor) {
           window.history.replaceState(undefined, undefined, "#" + hashAnchor);
