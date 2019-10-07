@@ -494,6 +494,137 @@
       </rt-swiper>
       </rt-resize-content-height>
     </div>
+    <div class="rt-space-top5">
+      <rt-swiper>
+        <rt-slide v-for="i in 4" :key="i" slide-classes="rt-col-3 in-plus-card higher-z">
+          <rt-card>
+            <template slot="header">
+              <p class="rt-font-h2 rt-font-bold rt-space-bottom">Тариф {{ i }}</p>
+            </template>
+            <template slot="content">
+              <div class="rtb-card__description__row" v-for="j in 3" :key="j">
+                <p class="rt-font-paragraph">
+                  Какая-то инфа {{ j }}
+                </p>
+              </div>
+            </template>
+            <template slot="footer">
+              <div class="rtb-card__cost">
+                <rt-price
+                  :value="i * 500"
+                  :is-option="false"
+                  currency="₽"
+                  :b2b-price="true"
+                  time-interval="в месяц"
+                  :is-time-interval-bottom="true"
+                />
+              </div>
+              <a href="#">
+                <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                  Выбрать {{ i }}
+                </rt-button>
+              </a>
+            </template>
+          </rt-card>
+        </rt-slide>
+      </rt-swiper>
+      <div class="rt-container">
+        <div class="rt-col-6 rt-col-td-6 rt-space-bottom2">
+          <p class="rt-font-bold rt-font-paragraph">Когда много пользователей</p>
+          <p class="rt-font-small-paragraph">Для большого количества пользователей и трафика, можно использовать и в помещении, и на улице. Безлимитная авторизация через портал государственных услуг и по номеру 8 800.</p>
+        </div>
+      </div>
+    </div>
+    <div class="rt-container rt-container--mobile-full-width">
+      <div class="rt-col">
+        <rt-card-layout :swiper-on-mobile="true" :width="9" :single-row="true">
+          <template slot="cards">
+            <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top" v-for="i in 3" :key="i">
+              <rt-card>
+                <template slot="header">
+                  <p class="rt-font-h2 rt-font-bold rt-space-bottom">Тариф {{ i }}</p>
+                </template>
+                <template slot="content">
+                  <div class="rtb-card__description__row" v-for="j in 3" :key="j">
+                    <p class="rt-font-paragraph">
+                      Какая-то инфа {{ j }}
+                    </p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <div class="rtb-card__cost">
+                    <rt-price
+                      :value="i * 500"
+                      :is-option="false"
+                      currency="₽"
+                      :b2b-price="true"
+                      time-interval="в месяц"
+                      :is-time-interval-bottom="true"
+                    />
+                  </div>
+                  <a href="#">
+                    <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                      Выбрать {{ i }}
+                    </rt-button>
+                  </a>
+                </template>
+              </rt-card>
+            </div>
+          </template>
+          <template slot="side-text">
+            <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-bottom">
+              <p class="rt-font-bold rt-font-paragraph">Когда много пользователей</p>
+              <p class="rt-font-small-paragraph">Для большого количества пользователей и трафика, можно использовать и 
+                в помещении, и на улице. Безлимитная авторизация через портал государственных услуг и по номеру 8 800.</p>
+            </div>
+          </template>
+        </rt-card-layout>
+      </div>
+    </div>
+    <div class="rt-container rt-container--mobile-full-width">
+      <div class="rt-col">
+        <rt-card-layout :swiper-on-mobile="true" :width="8" :single-row="true">
+          <template slot="cards">
+            <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top" v-for="i in 2" :key="i">
+              <rt-card>
+                <template slot="header">
+                  <p class="rt-font-h2 rt-font-bold rt-space-bottom">Тариф {{ i }}</p>
+                </template>
+                <template slot="content">
+                  <div class="rtb-card__description__row" v-for="j in 3" :key="j">
+                    <p class="rt-font-paragraph">
+                      Какая-то инфа {{ j }}
+                    </p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <div class="rtb-card__cost">
+                    <rt-price
+                      :value="i * 500"
+                      :is-option="false"
+                      currency="₽"
+                      :b2b-price="true"
+                      time-interval="в месяц"
+                      :is-time-interval-bottom="true"
+                    />
+                  </div>
+                  <rt-button class="rt-button rt-button-small rt-button-purple-border rt-space-horizontal05">
+                    Выбрать {{ i }}
+                  </rt-button>
+                </template>
+              </rt-card>
+            </div>
+          </template>
+          <template slot="side-text">
+            <div class="rt-col-4 rt-col-td-6 rt-col-md-3 rt-space-bottom">
+              <p class="rt-font-bold rt-font-paragraph">Когда много пользователей</p>
+              <p class="rt-font-small-paragraph">Для большого количества пользователей и трафика, можно использовать и 
+                в помещении, и на улице. Безлимитная авторизация через портал государственных услуг и по номеру 8 800.</p>
+            </div>
+          </template>
+        </rt-card-layout>
+      </div>
+    </div>
     <div class="rt-container">
       <div class="app-content rt-col-12 rt-col-md-3">
         <documentation-builder :json="documentation" type="components" />

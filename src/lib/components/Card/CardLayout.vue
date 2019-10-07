@@ -62,8 +62,8 @@
           this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
           });
-          this.singleRow ? this.$el.classList.add('row') : null;
-          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
+//          this.singleRow ? this.$el.classList.add('row') : null;
+//          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         } else if(this.$slots.cards && window.innerWidth > parseInt(variables["desktop-lower-limit"])) {
           this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
@@ -77,8 +77,12 @@
       if(this.layout === 'swiper'){
         return <div>
           <rt-swiper>{this.$slots.cards}</rt-swiper>
-          <div class="row">
-            {this.$slots["side-text"]}
+          <div class="rt-container">
+            <div class="rt-col">
+              <div class="row">
+                {this.$slots["side-text"]}
+              </div>
+            </div>
           </div>
         </div>
       } else {
