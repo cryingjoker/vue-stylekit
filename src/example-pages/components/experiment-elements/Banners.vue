@@ -122,7 +122,8 @@
     </rt-banner>"
     />
     <pre-code
-      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;>
+      text="<rt-banner :is-fullscreen-image=&quot;true&quot; bannerLogo=&quot;/static/example-images/Logo.svg&quot;
+                       content-height=&quot;100vh&quot;>
         <rt-banner-item background-image=&quot;/static/example-images/banerBackground1.jpg&quot; :is-white-color=&quot;true&quot;background-color=&quot;dark-state&quot;>
           <p class=&quot;rt-font-banner-label&quot;>Виртуальная <br> телефония</p>
           <p class=&quot;rt-space-top rt-space-bottom15&quot;>Быстрое подключение без трат на оборудование,<br> возможностьпользоваться из любой точки мира <br> и ни одного пропущенного звонка клиента</p>
@@ -238,41 +239,65 @@
         </div>
       </div>
     </div>
-    <!--<pre-code-->
-    <!--text="-->
-    <!--<rt-banner :is-fullscreen-image=&quot;true&quot; :sleep-time=&quot;30000&quot;  content-mobile-min-height=&quot;100vh&quot; content-mobile-height=&quot;400px&quot;>-->
-    <!--<rt-banner-item background-video=&quot;https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4&quot;-->
-    <!--:slide-time=&quot;50000&quot;-->
-    <!--link-target=&quot;_blank&quot;-->
-    <!--link=&quot;https://www.google.co.uk/search?q=yosemite+national+park&quot;-->
-    <!--:is-white-color=&quot;true&quot; background-color=&quot;dark-state&quot;>-->
-    <!--<rt-color-line-text>-->
-    <!--<template sljs-form-calc-profile ot=&quot;label&quot;>Расширяя границы</template>-->
-    <!--<template slot=&quot;content&quot;>Высокоскоростной интернет теперь повсюду</template>-->
-    <!--</rt-color-line-text>-->
-    <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
-    <!--</rt-banner-item>-->
-    <!--<rt-banner-item background-color=&quot;yellow&quot; background-image=&quot;/static/example-images/banerBackground2.jpg&quot; :slide-time=&quot;2000&quot;>-->
-    <!--<rt-color-line-text>-->
-    <!--<template slot=&quot;label&quot;>Помогаем бизнесу <br> экономить</template>-->
-    <!--<template slot=&quot;content&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса-->
-    <!--</template>-->
-    <!--</rt-color-line-text>-->
-    <!--<rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>-->
-    <!--</rt-banner-item>-->
-    <!--<rt-banner-item-->
-    <!--link=&quot;https://www.google.co.uk/search?q=ElephantsDream&quot;-->
-    <!--background-video=&quot;http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4&quot;-->
-    <!--:is-white-color=&quot;true&quot; background-color=&quot;orange&quot; :slide-time=&quot;30000&quot;>-->
-    <!--<rt-color-line-text color-icon=&quot;purple&quot;>-->
-    <!--<template slot=&quot;label&quot;>Wink</template>-->
-    <!--<template slot=&quot;content&quot;>Более 200 ТВ-каналов, тысячи фильмов и сериалов в одном приложении</template>-->
-    <!--</rt-color-line-text>-->
-    <!--<rt-button class=&quot;rt-button-purple&quot;>Подробнее</rt-button>-->
-    <!--</rt-banner-item>-->
-    <!--</rt-banner>-->
-    <!--"-->
-    <!--/>-->
+    <pre-code
+    text="
+      <rt-banner :is-fullscreen-image=&quot;true&quot; :sleep-time=&quot;30000&quot; content-height=&quot;100vh&quot; content-mobile-min-height=&quot;100vh&quot; content-mobile-height=&quot;400px&quot;>
+        <rt-banner-item background-video=&quot;https://qq.webrtc.win/tv/Pear-Demo-Yosemite_National_Park.mp4&quot;
+                        :slide-time=&quot;50000&quot;
+                        link-target=&quot;_blank&quot;
+                        link=&quot;https://www.google.co.uk/search?q=yosemite+national+park&quot;
+                        :is-white-color=&quot;true&quot; background-color=&quot;dark-state&quot;>
+          <rt-color-line-text>
+            <template slot=&quot;label&quot;>Расширяя границы</template>
+            <template slot=&quot;content&quot;>Высокоскоростной интернет теперь повсюду</template>
+          </rt-color-line-text>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item background-color=&quot;yellow&quot;
+                        background-image=&quot;/static/example-images/banerBackground2.jpg&quot;
+                        :slide-time=&quot;2000&quot;>
+          <rt-color-line-text>
+            <template slot=&quot;label&quot;>Помогаем бизнесу <br> экономить</template>
+            <template slot=&quot;content&quot;>Цифровые сервисы и технологии по выгодным ценам для среднего и малогобизнеса
+            </template>
+          </rt-color-line-text>
+          <rt-button class=&quot;rt-button-orange&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+        <rt-banner-item link=&quot;https://www.google.co.uk/search?q=ElephantsDream&quot;
+                        background-video=&quot;http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4&quot;
+                        :is-white-color=&quot;true&quot;
+                        background-color=&quot;orange&quot;
+                        :slide-time=&quot;30000&quot;>
+          <rt-color-line-text color-icon=&quot;purple&quot;>
+            <template slot=&quot;label&quot;>Wink</template>
+            <template slot=&quot;content&quot;>Более 200 ТВ-каналов, тысячи фильмов и сериалов в одном приложении</template>
+          </rt-color-line-text>
+          <rt-button class=&quot;rt-button-purple&quot;>Подробнее</rt-button>
+        </rt-banner-item>
+      </rt-banner>
+    "/>
+    <rt-banner :is-fullscreen-image="true" content-height="500px">
+      <rt-banner-item :is-white-color="true"
+                      background-image="/static/images/B2B/ArtboardCopy.png"
+                      background-color="main-color"
+                      :half-height-image="true">
+        <p class="rt-font-bold rt-font-h2">Виртуальная АТС</p>
+        <p class="rt-font-paragraph rt-space-bottom05-half">Ни одного пропущенного звонка, работает без офиса и
+          дополнительного оборудования, из любой точки мира</p>
+        <div class="rt-space-bottom25">
+          <rt-button class="rt-button-orange">Оставить заявку</rt-button>
+        </div>
+        <rt-price :b2b-price='true'
+                  :value="1.57"
+                  currency='₽'
+                  :is-option="true"
+                  time-interval="в минуту"
+                  class='color-white'
+                  show-float='true'
+                  :is-time-interval-bottom="true"/>
+        <div class="rt-md-space-bottom"/>
+      </rt-banner-item>
+    </rt-banner>
 
     <div class="rt-container rt-space-top25">
       <documentation-builder :json="documentation" type="components"/>
@@ -298,4 +323,5 @@
     },
     methods: {}
   };
+  //js-form-calc-profile - WTF??
 </script>

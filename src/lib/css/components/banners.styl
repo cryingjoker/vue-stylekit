@@ -49,7 +49,7 @@
     opacity 0
 
   &--full-screen
-    height 100vh
+    height auto
 
   &-video
     &__content
@@ -679,12 +679,12 @@
       flex-direction column-reverse
       height auto
       .{newAppName}-banner-image
-        position relative//absolute
-        top auto//0
+        position relative
+        top auto
         bottom auto
         left auto
         right auto
-        height calc(65vw/6*5)//224px
+        height calc(65vw/6*5)
         width 100vw
         background-position-x 50%
       .{newAppName}-banner-container
@@ -694,7 +694,6 @@
         min-height 250px
         left 0
         right 0
-        //align-items flex-end
         &--active
           position relative
         &__inner
@@ -703,6 +702,13 @@
         content: ""
         display: table
         clear: both
+
+  &--image-half-top
+    @media (max-width: mobile-upper-limit)
+      .rt-banner-image
+        height 224px
+      .rt-banner-content
+        align-items flex-end
 
 .circle-switcher
   text-align center
