@@ -94,6 +94,13 @@
       @media (max-width: tablet-upper-limit) and (min-width tablet-lower-limit)
         flex-basis 30px
 
+  .rtk-carousel+.rt-container
+    @media (max-width: tablet-upper-limit)
+      left -40px
+      position relative
+    @media (max-width: mobile-upper-limit)
+      left -20px
+
 .{newAppName}-tabs-navigation
   display inline-flex
   flex-direction row
