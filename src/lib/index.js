@@ -95,7 +95,8 @@ import {
   CardLayout,
   GalleryCarousel,
   GalleryCarouselItem,
-  OptionsList
+  OptionsList,
+  GameArrow
 } from "./components";
 
 // console.info('OptionsList',OptionsList)
@@ -165,6 +166,7 @@ const VueRtStyle = {
       Vue.component(Popup.name, Popup);
       Vue.component(LinksBlock.name, LinksBlock);
       Vue.component(Hint.name, Hint);
+      Vue.component(GameArrow.name, GameArrow);
       Vue.use(svgicon);
       Vue.component(Icon.name, Icon);
       Vue.component(Logo.name, Logo.component);
