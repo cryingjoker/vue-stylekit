@@ -240,15 +240,21 @@
     line-height 26px
     padding 0 5px
 
-    .{newAppName}-price__old-value
+    &.{newAppName}-price__old-value
       opacity 1
 
       &:before
-        border-bottom-color b2c-red
+        border-bottom none
+        border-top 1px solid b2c-red
 
     .{b2bAppName}-price__info-item
       margin-left 5px
       color b2c-red
+  &--darkened
+    .{b2bAppName}-price
+      &__value,
+      &__info
+        font-size inherit
 
   .{newAppName}-price__opinion
     font-size 18px

@@ -20,6 +20,7 @@ class Price extends Vue {
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
   @Prop({ default: false }) epcPrice: boolean;
   @Prop({ default: false }) trimHundredth: boolean;
+  @Prop({ default: false }) darkened: boolean;
   localValue: number = 0;
   cost: number = 0;
   //todo сделать проверку системного языка с заменой . , у double данных
@@ -194,11 +195,9 @@ class Price extends Vue {
           <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>
             {this.epcPrice ? this.cost : this.normalizeValue}
           </div>
-          <div class="rt-price__info">
-            <div class="rt-price__info rtb-price__info">
-              <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
-              <div class="rtb-price__info-item rtb-price__info-item">{this.normalizeTimeInterval}</div>
-            </div>
+          <div class="rt-price__info rtb-price__info">
+            <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
+            <div class="rtb-price__info-item">{this.normalizeTimeInterval}</div>
           </div>
         </div>;
       }
@@ -206,19 +205,17 @@ class Price extends Vue {
     if (this.b2bPrice) {
       const oldB2bPriceRender = () => {
         if (this.normalizeOldValue && parseFloat(this.normalizeOldValue) > 0) {
-          return <div class="rtb-price__old-value">
-            <div class={"rt-price__old-value rtb-price__old-value" + (this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeOldValue}
-              <div class={"rt-price__info rtb-price__info-item"}>
-              <span
-                class={(this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeCurrency}</span>
-              </div>
+          return <div class={"rt-price__old-value rtb-price__old-value" + (this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeOldValue}
+            <div class={"rt-price__info rtb-price__info-item"}>
+            <span
+              class={(this.oldPriceColor ? " color-" + this.oldPriceColor : "")}>{this.normalizeCurrency}</span>
             </div>
           </div>;
         } else {
           return null;
         }
       };
-      return <div class="rt-price rtb-price rt-price-without-space">
+      return <div class={"rt-price rtb-price rt-price-without-space" + (this.darkened ? " rtb-price--darkened" : "")}>
         {oldB2bPriceRender()}
         {priceInfoRender()}
       </div>;
