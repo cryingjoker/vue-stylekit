@@ -42,6 +42,7 @@ const runWatcher = (id: number | string) => {
 
   const watchers = optionsListStatuses[id].watchers;
   for (let wKey in watchers) {
+    console.info('runWatcher',id,optionsListStatuses[id])
     watchers[wKey]();
   }
 };
@@ -84,6 +85,9 @@ const changeStatus = (id: number | string, status?: boolean) => {
   } else {
     optionsListStatuses[id].isActive = !optionsListStatuses[id].isActive;
   }
+
+  console.info('optionsListStatuses',id,optionsListStatuses[id]);
+
   if (needSave) {
     saveToLocalStorage(id, optionsListStatuses[id].isActive);
   }

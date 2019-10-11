@@ -34,28 +34,33 @@
     },
     methods: {
 
-      changeStatus() {
-
-        optionsListStore.changeStatus(this.name || this._uid);
-
-      },
       onChangeStatus() {
 
         const options = optionsListStore.getStatus(this.name || this._uid);
         this.isActive = options.isActive;
+        console.info('options',options);
+      },
+      changeStatus() {
+
+        optionsListStore.changeStatus(this.name || this._uid);
+        console.info('this.name || this._uid',this.name || this._uid);
+
+
       }
     },
     render(h) {
 
       let optionsListClass = "rt-options-list";
+      console.info('this.isActive',this.isActive);
       if (this.isActive) {
         optionsListClass += " rt-options-list--is-active";
       }
       return <div class={optionsListClass}>
         <div class="rt-options-list__header" onClick={this.changeStatus}>
+
           <div class="rt-options-list__icon">
             <div class="rt-space-right">
-              {this.$slots.icon}
+              {this.$slots.icon} <p>{this.isActive ? 1 : 0}</p>
             </div>
           </div>
           <div class="rt-options-list__info">

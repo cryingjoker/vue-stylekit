@@ -48,87 +48,35 @@
               </div>
             </template>
             <template slot="moreinfo">Подробнее</template>
-            <template slot="content">content!!</template>
-          </rt-options-list>
-          <rt-options-list name="test" :need-to-save="true" :close-other="true">
-            <template slot="icon"></template>
-            <template slot="info">
-              <div>
-                <p class="rt-font-bold">День в сети</p>
-                <p>Платите только когда пользуетесь.</p>
-              </div>
-            </template>
-            <template slot="aside">
-              <div class="d-flex">
-
-                <span class="rt-font-bold rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
-            </template>
-            <template slot="moreinfo">Подробнее</template>
             <template slot="content">
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-            </template>
-          </rt-options-list>
-          <rt-options-list name="test2" :need-to-save="true">
-            <template slot="icon"></template>
-            <template slot="info">
-              <div>
-                <p class="rt-font-bold">День в сети</p>
-                <p>Платите только когда пользуетесь.</p>
-              </div>
-            </template>
-            <template slot="aside">
-              <div class="d-flex">
 
-                <span class="rt-font-bold rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
-            </template>
-            <template slot="moreinfo">Подробнее</template>
-            <template slot="content">
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-            </template>
-          </rt-options-list>
-          <rt-options-list name="test3" :need-to-save="true" >
-            <template slot="icon"></template>
-            <template slot="info">
-              <div>
-                <p class="rt-font-bold">День в сети</p>
-                <p>Платите только когда пользуетесь.</p>
-              </div>
-            </template>
-            <template slot="aside">
-              <div class="d-flex">
+              <rt-options-list name="test2" :need-to-save="true" >
+                <template slot="icon"></template>
+                <template slot="info">
+                  <div>
+                    <p class="rt-font-bold">День в сети</p>
+                    <p>Платите только когда пользуетесь.</p>
+                  </div>
+                </template>
+                <template slot="aside">
+                  <div class="d-flex">
 
-                <span class="rt-font-bold rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
-            </template>
-            <template slot="moreinfo">Подробнее</template>
-            <template slot="content">
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
-              <p>Управление услугой доступно в Личном кабинете.</p>
-              <p>Платите только когда пользуетесь.</p>
+                    <span class="rt-font-bold rt-space-left rt-md-space-left-none">250 мб</span>
+                    <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
+                  </div>
+                </template>
+                <template slot="moreinfo">Подробнее</template>
+                <template slot="content">
+                  <p>Управление услугой доступно в Личном кабинете.</p>
+                  <p>Платите только когда пользуетесь.</p>
+                  <p>Управление услугой доступно в Личном кабинете.</p>
+                  <p>Платите только когда пользуетесь.</p>
+                  <p>Управление услугой доступно в Личном кабинете.</p>
+                  <p>Платите только когда пользуетесь.</p>
+                  <p>Управление услугой доступно в Личном кабинете.</p>
+                  <p>Платите только когда пользуетесь.</p>
+                </template>
+              </rt-options-list>
             </template>
           </rt-options-list>
         </div>
