@@ -64,6 +64,8 @@ import TariffCard3 from "../components/experiment-elements/TariffCard3.vue";
 import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 import GallaryCarousel from '../components/main-elements/GallaryCarousel.vue'
 
+console.info('GameArrows',GameArrows);
+import GameArrows from '../components/game-ui/GameArrows.vue'
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
   { path: '/space', name: 'app-grid', component: SpaceElements },
@@ -131,6 +133,8 @@ const index = [
   { path: '/unwrapper', name: 'unWrapper', component: UnWrapper },
   { path: '/popup', name: 'realPopup', component: RealPopup },
   { path: '/benefit', name: 'benefit', component: BenefitBlock },
+
+  { path: '/game-arrows', name: 'AppGameArrows', component: GameArrows },
   { path: '', name: 'default' }
 ];
 

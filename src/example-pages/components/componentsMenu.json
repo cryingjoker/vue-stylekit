@@ -374,6 +374,47 @@
       "for_b2c" : true
     },
     {
+      "name" : "Game UI",
+      "title" : "Game UI",
+      "url" : "",
+      "list_child" : [
+        {
+          "name" : "Game Arrows",
+          "title" : "Game Arrows",
+          "url" : "/game-arrows",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Filters",
+          "title" : "Filters",
+          "url" : "/filter",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        } ,
+        {
+          "name" : "Use Case",
+          "title" : "Use Case",
+          "url" : "/use-case",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        },
+        {
+          "name" : "Slide Content",
+          "title" : "Slide Content",
+          "url" : "/slide-content",
+          "list_child" : [],
+          "for_b2b" : true,
+          "for_b2c" : true
+        }
+      ],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "Banners",
       "title" : "Banners",
       "url" : "/banners",

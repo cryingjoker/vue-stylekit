@@ -88,7 +88,7 @@
  export { default as ReplacementLink } from './ReplacementLinkWrapper/ReplacementLink.vue';
  export { default as CardCarousel } from './Card/CardCarousel.vue';
  export { default as CardLayout } from './Card/CardLayout.vue';
-
+ export { default as GameArrow } from './Game/Arrow/GameArrow.vue'
  export { default as Ussd } from './Ussd/Ussd.tsx';
 
  export { default as GalleryCarousel } from './GalleryCarousel/GalleryCarousel.tsx';
