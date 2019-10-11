@@ -9,7 +9,8 @@
       </div>
     </div>
     <div class="rt-container">
-      <div class="rt-col-12 rt-space-bottom2">
+      <pre-code
+        text='<div class="rt-col-12 rt-space-bottom2">
         <rt-banner
           :no-triangle="true"
           :round-angles="true"
@@ -24,12 +25,12 @@
               <h3 class="rt-font-bold rt-space-bottom05">Скидка 50% на Wi-Fi для бизнеса  при подключении интернета</h3>
               <p class="rt-font-small-paragraph">Пакет «Быть в плюсе»</p>
             </div>
-            <div>
+            <div v-rt-scroll-to-on-click="{ scrollToId : &#39;test&#39; }">
               <rt-button class="rt-button-small rt-button-white rt-button-with-ripple">Подробнее</rt-button>
             </div>
           </rt-banner-item>
         </rt-banner>
-      </div>
+      </div>'></pre-code>
     </div>
     <pre-code
       text='
@@ -284,7 +285,7 @@
         <p class="rt-font-bold rt-font-h2">Виртуальная АТС</p>
         <p class="rt-font-paragraph rt-space-bottom05-half">Ни одного пропущенного звонка, работает без офиса и
           дополнительного оборудования, из любой точки мира</p>
-        <div class="rt-space-bottom25">
+        <div id="test" class="rt-space-bottom25">
           <rt-button class="rt-button-orange">Оставить заявку</rt-button>
         </div>
         <rt-price :b2b-price='true'
