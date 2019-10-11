@@ -49,6 +49,7 @@ const setTabWidth = (parentUiid:number, width:number)=>{
     if(tabsStore.tabsParents[parentUiid].width < width){
       tabsStore.tabsParents[parentUiid].width = width;
       tabsStore.tabsParents[parentUiid].lastUpdateTime = (new Date()).getTime();
+      tabsStore.tabsParents[parentUiid].centerText = true;
     }
   }
   setTimeout(()=>{
