@@ -102,6 +102,7 @@ import {
 import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
+import { ScrollToOnClickDirective } from "./directives/ScrollToOnClick/ScrollToOnClick";
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
@@ -211,9 +212,14 @@ const VueRtStyle = {
 
 
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
+      console.info('ScrollToOnClickDirective',ScrollToOnClickDirective)
       Vue.directive(
         SlideContentVerticalDirective.name,
         SlideContentVerticalDirective
+      );
+      Vue.directive(
+        ScrollToOnClickDirective.name,
+        ScrollToOnClickDirective
       );
 
       Vue.RtStyle = true;
