@@ -18,6 +18,45 @@
 
                 <rt-template slot=&quot;header&quot;>
                   <rt-table-head-item>Территория</rt-table-head-item>
+                  <rt-table-head-item colspan='3'>Наименование услуги</rt-table-head-item>
+                  <rt-table-head-item>Мораторий на блокировку</rt-table-head-item>
+                  <rt-table-head-item>Минимальный период блокировки</rt-table-head-item>
+                  <rt-table-head-item>Стоимость добровольной блокировки в базовый период</rt-table-head-item>
+                </rt-template>
+                <rt-template slot=&quot;body&quot;>
+                  <rt-table-row>
+                    <rt-table-item>Архангельская и Мурманская
+                      область Республика Карелия</rt-table-item>
+                    <rt-table-item  colspan='3'>Домашний интернет,
+                      Домашний телефон
+                      Интерактивное ТВ</rt-table-item>
+                    <rt-table-item>30 дней</rt-table-item>
+                    <rt-table-item>7 руб./в день</rt-table-item>
+                  </rt-table-row>
+                  <rt-table-row>
+                    <rt-table-item>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и Ленинградская области и город Санкт-Петербург</rt-table-item>
+                    <rt-table-item>Домашний интернет,
+                      Домашний телефон
+                      Интерактивное ТВ</rt-table-item>
+                    <rt-table-item>60 дней</rt-table-item>
+                    <rt-table-item>3 дня</rt-table-item>
+                    <rt-table-item>30 дней</rt-table-item>
+                    <rt-table-item>7 руб./в день</rt-table-item>
+                  </rt-table-row>
+                </rt-template>
+              </rt-table>
+              "
+            />
+            <div class="rt-space-top2">
+            <pre-code
+              text="
+              <rt-table class=&quot;rt-space-bottom2&quot; :tablet-list-type=&quot;true&quot;>
+                <rt-template slot=&quot;label&quot;>
+                  Тарифы на добровольную блокировку
+                </rt-template>
+
+                <rt-template slot=&quot;header&quot;>
+                  <rt-table-head-item>Территория</rt-table-head-item>
                   <rt-table-head-item>Наименование услуги</rt-table-head-item>
                   <rt-table-head-item>Бесплатный период</rt-table-head-item>
                   <rt-table-head-item>Мораторий на блокировку</rt-table-head-item>
@@ -48,6 +87,7 @@
               </rt-table>
               "
             />
+            </div>
             <pre-code
               text="<rt-table class=&quot;rt-space-bottom2&quot;>
                 <rt-template slot=&quot;label&quot;>
