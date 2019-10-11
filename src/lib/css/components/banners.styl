@@ -464,6 +464,9 @@
       opacity 1
       visibility visible
 
+    &__inner
+      width 100%
+
   &-logo
     text-align right
     position absolute
@@ -664,24 +667,24 @@
           height 400px
 
   &--image-ontop
-    //@media (max-width: tablet-upper-limit)
-    //  height 350px
-    //  .{newAppName}-banner-content
-    //    height 350px
-    //  .{newAppName}-banner-image
-    //    width 50vw
-    //    left 50vw
+    @media (max-width: tablet-upper-limit)
+      height 350px
+      .{newAppName}-banner-content
+        height 350px
+      .{newAppName}-banner-image
+        width 50vw
+        left 50vw
     @media (max-width: mobile-upper-limit)
       display flex
       flex-direction column-reverse
       height auto
       .{newAppName}-banner-image
-        position absolute
-        top 0
+        position relative
+        top auto
         bottom auto
         left auto
         right auto
-        height 224px //calc(65vw/6*5)
+        height calc(65vw/6*5)
         width 100vw
         background-position-x 50%
       .{newAppName}-banner-container
@@ -691,15 +694,21 @@
         min-height 250px
         left 0
         right 0
-        align-items flex-end
-        //&--active
-        //  position relative
-        //&__inner
-        //  text-align: center
+        &--active
+          position relative
+        &__inner
+          text-align: center
       .rt-container > .rt-col-12 > .row > .rt-col-6 > div:after
         content: ""
         display: table
         clear: both
+
+  &--image-half-top
+    @media (max-width: mobile-upper-limit)
+      .rt-banner-image
+        height 224px
+      .rt-banner-content
+        align-items flex-end
 
 .circle-switcher
   text-align center

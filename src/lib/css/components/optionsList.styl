@@ -31,6 +31,13 @@
 
 .{newAppName}-options-list__info-content
   flex: 1
+.{newAppName}-options-list .{newAppName}-options-list
+  margin-left: -97px
+  width: calc(100% + 97px)
+  @media (max-width: mobile-upper-limit)
+    margin-left: 0
+    width: 100%
+
 
 .{newAppName}-options-list__content
   max-height: 0
@@ -45,8 +52,21 @@
   @media (max-width: mobile-upper-limit)
     padding-left: 0
 
-.rt-options-list--is-active
-  .{newAppName}-options-list__content
+.{newAppName}-options-list--is-active
+  .{newAppName}-options-list
+    .{newAppName}-options-list__content
+      max-height: 0
+      padding-top: 0
+      padding-bottom: 0
+      padding-left: 96px
+      opacity: 0
+      visibility: hidden
+      transition-timing-function cubic-bezier(.67,.05,.21,.85)
+      transition-duration 0.6s
+      transition-property max-height, padding, opacity, visibility
+
+  .{newAppName}-options-list__content,
+  .{newAppName}-options-list--is-active .{newAppName}-options-list__content
     padding-top: 5px
     padding-bottom: 5px
     max-height: 10000px

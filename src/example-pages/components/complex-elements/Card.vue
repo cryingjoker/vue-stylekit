@@ -1299,7 +1299,7 @@
                     </div>
                     <div class="rtb-card__description__row">
                       <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                      'facebook','ya_navigator', 'ya_transport']">
+                      'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/">
                       </links-block>
                       <p class="rtb-card__links-block__footnote rt-font-small-paragraph color-main025">безлимитные сервисы</p>
                     </div>
@@ -1400,7 +1400,7 @@
                   </div>
                   <div class="rtb-card__description__row">
                     <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                    'facebook','ya_navigator', 'ya_transport']">
+                    'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/">
                     </links-block>
                   </div>
                 </template>

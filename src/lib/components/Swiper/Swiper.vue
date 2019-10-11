@@ -459,16 +459,10 @@ export default {
         let from = parseInt(this.$refs.overlay.scrollLeft);
         let updateNavs = () => {
           if (!this.isTouch) {
-            let navsOnlyLackOfWidth =
-              !this.navsOnlyLackOfWidth ||
-              (this.navsOnlyLackOfWidth &&
-              this.overlayContainerWidth() < this.slidesWidth());
+            let navsOnlyLackOfWidth = !this.navsOnlyLackOfWidth ||
+              (this.navsOnlyLackOfWidth && this.overlayContainerWidth() < this.slidesWidth());
             this.canAdvanceBackward = to > 1;
-            this.isFinalSlide =
-              this.$refs.overlay.scrollLeft +
-              this.overlayContainerWidth() +
-              2 >=
-              this.$refs.overlay.scrollWidth;
+            this.isFinalSlide = this.$refs.overlay.scrollLeft + this.overlayContainerWidth() + 2 >= this.$refs.overlay.scrollWidth;
             this.canAdvanceForward = !this.isFinalSlide && navsOnlyLackOfWidth;
           }
         };
@@ -483,9 +477,7 @@ export default {
             timing: timingFunctions[this.transitionFunction],
             draw: progress => {
               if (this.$refs.overlay) {
-                this.$refs.overlay.scrollLeft = parseInt(
-                  from + (to - from) * progress
-                );
+                this.$refs.overlay.scrollLeft = parseInt(from + (to - from) * progress);
               }
             },
             onLeave: () => {
@@ -523,9 +515,7 @@ export default {
     scrollNative(e) {
       if (!this.disabledScrolling && !this.isTouch) {
         this.canAdvanceBackward = e.target.scrollLeft > 0;
-        this.isFinalSlide =
-          e.target.scrollLeft + e.target.offsetWidth + 1 >=
-          e.target.scrollWidth;
+        this.isFinalSlide = e.target.scrollLeft + e.target.offsetWidth + 1 >= e.target.scrollWidth;
         this.canAdvanceForward = !this.isFinalSlide;
         this.autoScroller();
       }
@@ -585,12 +575,9 @@ export default {
       if (!this.swipingStartPoint) {
         this.swipingStartPoint = this.$refs.overlay.scrollLeft;
       }
-      this.touchObject.direction =
-        this.touchObject.startX !== this.touchObject.curX
-          ? this.touchObject.startX < this.touchObject.curX
-          ? "prev"
-          : "next"
-          : null;
+      this.touchObject.direction = this.touchObject.startX !== this.touchObject.curX
+        ? this.touchObject.startX < this.touchObject.curX ? "prev" : "next"
+        : null;
       if (!this.disabledScrolling && this.touchObject.direction !== null) {
         this.$refs.overlay.scrollLeft =
           this.swipingStartPoint +

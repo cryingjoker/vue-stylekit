@@ -217,6 +217,9 @@
           if (this.RtBanners.items[activeIndex].patternType && this.RtBanners.items[activeIndex].patternType === 3) {
             className += " rt-banner--full-screen";
           }
+          if(this.RtBanners.items[activeIndex] && this.RtBanners.items[activeIndex].halfHeightImage) {
+            className += " rt-banner--image-half-top"
+          }
         }
         return className;
       },
@@ -249,10 +252,7 @@
       imageClass() {
         let className = "rt-banner-image rt-banner-image--main";
         const activeIndex = this.RtBanners.activeIndex;
-        if (
-          this.RtBanners.items[activeIndex] &&
-          this.RtBanners.items[activeIndex].patternBackground
-        ) {
+        if (this.RtBanners.items[activeIndex] && this.RtBanners.items[activeIndex].patternBackground) {
           this.backgroundPattern = this.RtBanners.items[
             activeIndex
             ].patternBackground;
@@ -272,8 +272,7 @@
         if (this.hasImageOnMobile || (!!this.RtBanners.items[activeIndex] && !!this.RtBanners.items[activeIndex].imageOnMobile)) {
           className += " rt-banner-image--mobile-visible";
         }
-        if (this.RtBanners.items[activeIndex] &&
-          this.RtBanners.items[activeIndex].colorFillOnMobile) {
+        if (this.RtBanners.items[activeIndex] && this.RtBanners.items[activeIndex].colorFillOnMobile) {
           className += " rt-banner-image--color-fill";
         }
         return className;

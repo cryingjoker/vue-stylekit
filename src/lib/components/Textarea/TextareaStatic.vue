@@ -21,6 +21,10 @@ export default {
     value: {
       type: String,
       default: null
+    },
+    fieldId: {
+      type: String,
+      default: ''
     }
   },
   data: () => ({
@@ -92,7 +96,7 @@ export default {
 
     return <div class={textareaClasses}>
             {label}
-            <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} />
+            <textarea class="textarea-element" ref="textarea" onInput={this.inputHandler} id={this.fieldId}/>
             <div class="textarea-border" />
             <p class="text-field__error-message">{this.errorMessage }</p>
           </div>;

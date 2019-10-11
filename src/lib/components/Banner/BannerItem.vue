@@ -141,6 +141,10 @@ export default {
     colorFillOnMobile: {
       type: Boolean,
       default: false
+    },
+    halfHeightImage: {
+      type: Boolean,
+      default: false
     }
   },
   inject: {
@@ -205,6 +209,9 @@ export default {
       }
       if(this.colorFillOnMobile) {
         bannerItemData.colorFillOnMobile = this.colorFillOnMobile
+      }
+      if(this.halfHeightImage) {
+        bannerItemData.halfHeightImage = this.halfHeightImage
       }
 
       this.RtBanners.items.push(bannerItemData);
@@ -365,7 +372,7 @@ export default {
         }, false);
       }
     },
-    loadImageAsync (src, resolve, reject) {
+    loadImageAsync (src, resolve, reject=function(err){}) {
       let image = new Image();
       image.src = src;
       image.onload = function () {
