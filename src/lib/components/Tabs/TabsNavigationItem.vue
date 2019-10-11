@@ -75,8 +75,12 @@
       }
 
       if(tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid].width){
-        return <div class={tabsItemClass} on-click={this.setActiveTabName} style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width+'px') }}  >
-          <button class="rt-tabs-navigation__item-name"  >
+        let align = 'left';
+        if(tabsStore.tabsParents[this.$parent._uid].centerText){
+          align = 'center';
+        }
+        return <div class={tabsItemClass} on-click={this.setActiveTabName} style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width+'px'), 'text-align' : align }}>
+          <button class="rt-tabs-navigation__item-name">
             {this.$slots.default}
           </button>
         </div>;
