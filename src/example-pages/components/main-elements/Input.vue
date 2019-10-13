@@ -117,7 +117,7 @@
         />
         <div class="app-row row">
           <div class="rt-col rt-col-12">
-            <rt-input :show-numbers-buttons="true" insert-type="number" :min-number="0" :emit-event="true" placeholder="Количество, шт."/>
+            <rt-input :show-numbers-buttons="true" insert-type="number" :min-number="0" placeholder="Количество, шт."/>
           </div>
         </div>
         <!--</div>-->
@@ -188,12 +188,12 @@
             <rt-input placeholder="Компания" :is-b2b-input="true"/>
             <rt-input placeholder="Электронная почта" :is-b2b-input="true"/>
             <rt-input placeholder="Телефон" :is-b2b-input="true"/>
-            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true"/>
+            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true" v-model="inputValue"/>
             <div class="row flex-center-center rt-space-top">
               <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a>
               </rt-checkbox>
             </div>
-            <rt-button class="rt-button-transparent-purple">Получить код</rt-button>
+            <rt-button class="rt-button-transparent-purple" @click="clearInput">Получить код</rt-button>
 
           </div>
           <div class="rt-col-3 rt-col-td-1"></div>
@@ -215,13 +215,19 @@
     components: componentsList,
     data: () => ({
       inputModelValue: "test",
-      documentation: {}
+      documentation: {},
+      inputValue: 'test'
     }),
     mounted() {
       this.documentation = documentation;
     },
     created() {
     },
-    methods: {}
+    methods: {
+      clearInput(){
+        this.inputValue = '';
+        console.log(this.inputValue);
+      }
+    }
   };
 </script>
