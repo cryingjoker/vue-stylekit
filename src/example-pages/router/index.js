@@ -63,6 +63,7 @@ import TariffCard2 from "../components/experiment-elements/TariffCard2.vue";
 import TariffCard3 from "../components/experiment-elements/TariffCard3.vue";
 import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 import GallaryCarousel from '../components/main-elements/GallaryCarousel.vue'
+import CheckboxTabs from '../components/main-elements/CheckboxTabs.vue'
 
 console.info('GameArrows',GameArrows);
 import GameArrows from '../components/game-ui/GameArrows.vue'
@@ -111,6 +112,7 @@ const index = [
   { path: '/tariff-cards2', name: 'app-tariff-card', component: TariffCard2 },
   { path: '/tariff-cards3', name: 'app-tariff-card', component: TariffCard3 },
   { path: '/tabs', name: 'app-banners', component: Tabs },
+  { path: '/checkbox-tabs', name: 'app-checkbox-tabs', component: CheckboxTabs },
   { path: '/use-case', name: 'useCase', component: UseCase },
   { path: '/promo/vcod', name: 'VCOD', component: VCOD },
   { path: '/ussd', name: 'app-ussd', component: USSD },

@@ -227,6 +227,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "Checkbox Tabs",
+      "title" : "Checkbox Tabs",
+      "url" : "/checkbox-tabs",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "Table",
       "title" : "Table",
       "url" : "/table",

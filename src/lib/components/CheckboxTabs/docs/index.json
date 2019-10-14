@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "name": "is-active",
+      "version": "0.1.65",
+      "property": "type",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Активное состояние по умолчанию",
+      "value": "false"
+    },
+    {
+      "name": "hide-not-active",
+      "version": "0.1.65",
+      "property": "type",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Флаг на отключение рендеринга не активной вкладки",
+      "value": "false"
+    }
+  ]
+}
