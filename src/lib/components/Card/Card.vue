@@ -571,7 +571,7 @@ export default {
           }
           this.$el.classList.toggle('is-flipped');
         }
-        if(this.tabletLayout && document.querySelector('.popup-content')) {
+        if((this.tabletLayout || this.mobileLayout) && document.querySelector('.popup-content')) {
 
           document.querySelector('.popup-content').innerHTML = this.$el.querySelector('.rtb-card__reverse').innerHTML;
           setTimeout(()=>{
