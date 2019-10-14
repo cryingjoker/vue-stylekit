@@ -42,7 +42,7 @@
       </rt-slide>
     </rt-swiper>
     <div class="rt-space-top5">
-      <rt-resize-content-height :query-selectors-names="['.rt-card']">
+      <!--<rt-resize-content-height :query-selectors-names="['.rt-card']">-->
         <rt-swiper :hide-navigation="true" :scroll-on-click="true">
           <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
@@ -101,8 +101,8 @@
                     </p>
                   </div>
                   <div class="rtb-card__description__row">
-                    <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                      'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
+                    <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki']"
+                                 source-directory="/static/images/B2B/"/>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -497,7 +497,7 @@
           </rt-card>
         </rt-slide>
       </rt-swiper>
-      </rt-resize-content-height>
+      <!--</rt-resize-content-height>-->
     </div>
     <div class="rt-space-top5">
       <rt-swiper>
@@ -577,7 +577,7 @@
             </div>
           </template>
           <template slot="side-text">
-            <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-bottom">
+            <div class="rt-col-3 rt-col-td-6 rt-col-md-3 rt-space-vertical">
               <p class="rt-font-bold rt-font-paragraph">Когда много пользователей</p>
               <p class="rt-font-small-paragraph">Для большого количества пользователей и трафика, можно использовать и 
                 в помещении, и на улице. Безлимитная авторизация через портал государственных услуг и по номеру 8 800.</p>
@@ -621,7 +621,7 @@
             </div>
           </template>
           <template slot="side-text">
-            <div class="rt-col-4 rt-col-td-6 rt-col-md-3 rt-space-bottom">
+            <div class="rt-col-4 rt-col-td-6 rt-col-md-3 rt-space-vertical">
               <p class="rt-font-bold rt-font-paragraph">Когда много пользователей</p>
               <p class="rt-font-small-paragraph">Для большого количества пользователей и трафика, можно использовать и 
                 в помещении, и на улице. Безлимитная авторизация через портал государственных услуг и по номеру 8 800.</p>
