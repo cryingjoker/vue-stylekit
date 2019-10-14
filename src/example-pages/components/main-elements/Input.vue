@@ -188,7 +188,8 @@
             <rt-input placeholder="Компания" :is-b2b-input="true"/>
             <rt-input placeholder="Электронная почта" :is-b2b-input="true"/>
             <rt-input placeholder="Телефон" :is-b2b-input="true"/>
-            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true" v-model="inputValue"/>
+            <rt-input placeholder="Код из смс" :is-b2b-input="true" :approved="true" v-model="inputValue" v-on:input="$emit('input', inputValue = $event)"/>
+            {{JSON.stringify(inputValue)}}
             <div class="row flex-center-center rt-space-top">
               <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a>
               </rt-checkbox>
@@ -225,8 +226,7 @@
     },
     methods: {
       clearInput(){
-        this.inputValue = '';
-        console.log(this.inputValue);
+        this.inputValue = '666';
       }
     }
   };
