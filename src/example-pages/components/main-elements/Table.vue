@@ -18,7 +18,7 @@
 
                 <rt-template slot=&quot;header&quot;>
                   <rt-table-head-item>Территория</rt-table-head-item>
-                  <rt-table-head-item colspan='3'>Наименование услуги</rt-table-head-item>
+                  <rt-table-head-item colspan='4'>Наименование услуги</rt-table-head-item>
                   <rt-table-head-item>Мораторий на блокировку</rt-table-head-item>
                   <rt-table-head-item>Минимальный период блокировки</rt-table-head-item>
                   <rt-table-head-item>Стоимость добровольной блокировки в базовый период</rt-table-head-item>
@@ -30,12 +30,14 @@
                     <rt-table-item  colspan='3'>Домашний интернет,
                       Домашний телефон
                       Интерактивное ТВ</rt-table-item>
+                      <rt-table-item>3 дня</rt-table-item>
                     <rt-table-item>30 дней</rt-table-item>
+                    <rt-table-item>7 руб./в день</rt-table-item>
                     <rt-table-item>7 руб./в день</rt-table-item>
                   </rt-table-row>
                   <rt-table-row>
                     <rt-table-item>Республика Коми, Вологодская, Калининградская, Новгородская, Псковская и Ленинградская области и город Санкт-Петербург</rt-table-item>
-                    <rt-table-item>Домашний интернет,
+                    <rt-table-item colspan='3'>Домашний интернет,
                       Домашний телефон
                       Интерактивное ТВ</rt-table-item>
                     <rt-table-item>60 дней</rt-table-item>
