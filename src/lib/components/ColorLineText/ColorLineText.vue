@@ -18,6 +18,10 @@ export default {
     customType: {
       type: Boolean,
       default: false
+    },
+    hideArrow:{
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -78,6 +82,9 @@ export default {
   render(h){
 
     const icon = ()=>{
+      if(this.hideArrow){
+        return null
+      }
       return <svg
           class={"color-line-paragraph-icon " + this.colorLineIconClass}
           width="38"
