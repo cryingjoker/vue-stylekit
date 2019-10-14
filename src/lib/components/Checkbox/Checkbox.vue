@@ -95,10 +95,11 @@ export default {
     this.bindEvents();
   },
 
-  updated() {
-    this.unbindEvents();
-    this.bindEvents();
-  },
+  // updated() {
+  //   this.unbindEvents();
+  //   this.bindEvents();
+  //   console.info('updated')
+  // },
   beforeDestroy() {
     this.unbindEvents();
   },
@@ -141,20 +142,26 @@ export default {
     bindEvents() {
       if (this["_events"]) {
         Object.keys(this["_events"]).map(eventName => {
-          this.$refs.input.addEventListener(
-            eventName,
-            this["_events"][eventName]
-          );
+          this["_events"][eventName].forEach((fn)=>{
+            this.$refs.input.addEventListener(
+              eventName,
+              fn
+            );
+          })
+
         });
       }
     },
     unbindEvents() {
       if (this["_events"]) {
         Object.keys(this["_events"]).map(eventName => {
-          this.$refs.input.removeEventListener(
-            eventName,
-            this["_events"][eventName]
-          );
+          this["_events"][eventName].forEach((fn)=>{
+            this.$refs.input.removeEventListener(
+              eventName,
+              fn
+            );
+          })
+
         });
       }
     },

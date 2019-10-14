@@ -12,6 +12,9 @@
             Выбор сразу
             нескольких элементов в списке</p>
           </div>
+          <div class="rt-col-12 rt-space-bottom2">
+            <rt-checkbox-tabs label="Я являюь клиентов данной организации"></rt-checkbox-tabs>
+          </div>
           <div class="rt-col-12 rt-space-bottom3">
             <pre-code
               text="<rt-tabs :round-tablet-view='true'>

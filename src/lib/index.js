@@ -96,7 +96,8 @@ import {
   GalleryCarousel,
   GalleryCarouselItem,
   OptionsList,
-  GameArrow
+  GameArrow,
+  CheckboxTabs
 } from "./components";
 
 // console.info('OptionsList',OptionsList)
@@ -197,7 +198,9 @@ const VueRtStyle = {
 
       // Vue.component(Carousel.name, Carousel.component);
       // Vue.component(CarouselSlide.name, CarouselSlide.component);
+
       Vue.component(Tabs.name, Tabs);
+      Vue.component(CheckboxTabs.name, CheckboxTabs);
       Vue.component(TabsContentItem.name, TabsContentItem);
       Vue.component(TabsNavigationItem.name, TabsNavigationItem);
       Vue.component(GalleryCarousel.name, GalleryCarousel.component);
