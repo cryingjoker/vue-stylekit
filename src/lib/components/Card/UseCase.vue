@@ -12,19 +12,23 @@ export default {
     }
   },
   mounted(){
-    this.setCardHeight();
+    window.addEventListener('load', () => {
+      this.setCardHeight();
+      document.addEventListener('resize', ()=> {
+        this.setCardHeight();
+      })
+    });
+
   },
   computed: {},
   methods: {
     setCardHeight() {
-      window.addEventListener('load', () => {
-        if(!this.mobileLayout) {
-          for(let i = 0; i < this.$children.length; i++) {
-            this.$children[i].$el.style.height = this.$children[i].$el.querySelector('.rtb-card__reverse').scrollHeight + 'px';
-          }
+      if(!this.mobileLayout) {
+        for(let i = 0; i < this.$children.length; i++) {
+          this.$children[i].$el.style.height = this.$children[i].$el.querySelector('.rtb-card__reverse').scrollHeight + 'px';
         }
-        this.equalizeCardsHeight();
-      });
+      }
+      this.equalizeCardsHeight();
     },
     equalizeCardsHeight() {
       let maxHeight = 0;

@@ -78,9 +78,10 @@ import {
   CardCarousel,
   CardLayout,
   GalleryCarousel,
-  GalleryCarouselItem
+  GalleryCarouselItem,
+  CheckboxTabs
 } from "../lib/components/index";
-
+console.info('CheckboxTabs',CheckboxTabs);
 import AppMenu from "./components/AppMenu.vue";
 const componentsList = {};
 componentsList[Button.name] = Button;
@@ -164,4 +165,5 @@ componentsList[CardLayout.name] = CardLayout;
 componentsList[Ussd.name] = Ussd.component;
 componentsList[GalleryCarousel.name] = GalleryCarousel.component;
 componentsList[GalleryCarouselItem.name] = GalleryCarouselItem.component;
+componentsList[CheckboxTabs.name] = CheckboxTabs;
 export default { ...componentsList };
