@@ -67,8 +67,8 @@
         if(this.$el) {
           let linksLayout = '';
           this.iconArray.forEach((el)=> {
-            let link = `${this.sourceDirectory}${el}.svg`;
-            let title = el.replace('b2b_', '');
+            let link = `${this.sourceDirectory}${el.path}.svg`;
+            let title = el.tooltip;
             linksLayout += (`<div class="rtb-card__social-link"><img src=${link} title=${title} /></div>`)
           });
           this.$el.children[0].innerHTML = linksLayout;
