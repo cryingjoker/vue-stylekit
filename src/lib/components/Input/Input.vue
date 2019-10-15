@@ -148,6 +148,10 @@
       }
     },
     watch: {
+      value(val){
+        this.localValue = this.value;
+        this.setValue();
+      },
       localValue(val) {
         this.$emit("input", val);
         if(this.emitEvent)
@@ -180,18 +184,16 @@
     },
     methods: {
       bindEvents() {
-
         if (this["_events"]) {
           Object.keys(this["_events"]).map(eventName => {
             const that = this;
-            this.$refs.input.addEventListener(
-              eventName,
-              function() {
-                if(that["_events"]&& that["_events"][eventName] && that["_events"][eventName][0] && typeof that["_events"][eventName][0] === 'function') {
-                  that["_events"][eventName][0](arguments[0])
-                }
+            that["_events"][eventName].forEach((fn)=> {
+
+              if(eventName != 'input') { // for work with v-model
+                this.$refs.input.addEventListener(eventName, fn)
               }
-            );
+            })
+
           });
         }
       },
