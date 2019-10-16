@@ -98,7 +98,7 @@
                 <div class="rt-md-space-right">
                   <img src="https://spb.rt.ru/sites/default/files/img/game/game-icon2.png" alt=""
                        class="rt-game-banner-round-icon js-game-icon--weapon1" style="width: auto;"/>
-                </div>
+                </div>  
                 <div class="rt-font-md-left md-flex-center-start flex-column"><p
                   class="js-game-text color-white rt-space-bottom rt-space-top rt-md-space-bottom-none rt-md-space-top-none">
                   Экслюзивная техника <br> и слот в
