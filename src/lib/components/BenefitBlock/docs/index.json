@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "name": "rt-benefit-block",
+      "property": "columns-quantity",
+      "type": "Number",
+      "description": "Устанавливает во сколько колонок будут располагаться дочерние элементы",
+      "value": "null"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "(:)icon-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает размер иконок дочерних элементов",
+      "value": "null"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "align-сenter",
+      "type": "Boolean",
+      "description": "Устанавливает горизонтальное выравнивание текста и картинок в дочерних элементах по центру",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "background-color-class",
+      "type": "String",
+      "description": "Устанавливает класс для задания фонового цвета блока. Используются классы из `color-block--...`",
+      "value": "null"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "has-icon",
+      "type": "Boolean",
+      "description": "Флаг установки иконки",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "step",
+      "type": "Boolean",
+      "description": "Флаг установки нумерации дочерних элементов",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "step-title",
+      "type": "String",
+      "description": "Устанавливает подпись для нумерации дочерних элементов",
+      "value": "шаг"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "has-image",
+      "type": "Boolean",
+      "description": "Флаг установки изображения",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "inline-layout",
+      "type": "Boolean",
+      "description": "Флаг установки расположения в строку иконки/изображения и текста в дочерних элементах",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "icon-backing-color",
+      "type": "String",
+      "description": "Устанавливает цвет подложки для иконок",
+      "value": "null"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "icon-backing-size",
+      "type": [
+        "Number",
+        "String"
+      ],
+      "description": "Устанавливает размер подложки под иконкой",
+      "value": "null"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "swiper-on-mobile",
+      "type": "Boolean",
+      "description": "Флаг отвечающий за оборачивание дочерних элементов в компонент `rt-swiper` в мобильной версии",
+      "value": "false"
+    },
+    {
+      "name": "rt-benefit-block",
+      "property": "no-transparency-description",
+      "type": "Boolean",
+      "description": "Флаг установки непрозрачности для текста описания в дочерних элементах",
+      "value": "false"
+    }
+  ]
+}

@@ -101,7 +101,15 @@
                     </p>
                   </div>
                   <div class="rtb-card__description__row">
-                    <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki']"
+                    <links-block :icon-array="[
+                    {tooltip: 'gjlcrfprf1', path: 'vk'},
+                    {tooltip: 'gjlcrfprf2', path: 'ya_map'},
+                    {tooltip: 'gjlcrfprf3', path: 'youtube'},
+                    {tooltip: 'gjlcrfprf4', path: 'viber'},
+                    {tooltip: 'gjlcrfprf5', path: 'whatsapp'},
+                    {tooltip: 'gjlcrfprf6', path: 'tamtam'},
+                    {tooltip: 'gjlcrfprf7', path: 'odnoklassniki'}
+                    ]"
                                  source-directory="/static/images/B2B/"/>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
@@ -196,8 +204,19 @@
                     </p>
                   </div>
                   <div class="rtb-card__description__row">
-                    <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                      'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
+                    <links-block :icon-array="[
+                    {tooltip: 'gjlcrfprf1', path: 'vk'},
+                    {tooltip: 'gjlcrfprf2', path: 'ya_map'},
+                    {tooltip: 'gjlcrfprf3', path: 'youtube'},
+                    {tooltip: 'gjlcrfprf4', path: 'viber'},
+                    {tooltip: 'gjlcrfprf5', path: 'whatsapp'},
+                    {tooltip: 'gjlcrfprf6', path: 'tamtam'},
+                    {tooltip: 'gjlcrfprf7', path: 'odnoklassniki'},
+                    {tooltip: 'gjlcrfprf8', path: 'facebook'},
+                    {tooltip: 'gjlcrfprf9', path: 'ya_navigator'},
+                    {tooltip: 'gjlcrfprf10', path: 'ya_transport'},
+                    ]"
+                                 source-directory="/static/images/B2B/"/>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -291,8 +310,19 @@
                     </p>
                   </div>
                   <div class="rtb-card__description__row">
-                    <links-block :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                      'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
+                    <links-block :icon-array="[
+                    {tooltip: 'gjlcrfprf1', path: 'vk'},
+                    {tooltip: 'gjlcrfprf2', path: 'ya_map'},
+                    {tooltip: 'gjlcrfprf3', path: 'youtube'},
+                    {tooltip: 'gjlcrfprf4', path: 'viber'},
+                    {tooltip: 'gjlcrfprf5', path: 'whatsapp'},
+                    {tooltip: 'gjlcrfprf6', path: 'tamtam'},
+                    {tooltip: 'gjlcrfprf7', path: 'odnoklassniki'},
+                    {tooltip: 'gjlcrfprf8', path: 'facebook'},
+                    {tooltip: 'gjlcrfprf9', path: 'ya_navigator'},
+                    {tooltip: 'gjlcrfprf10', path: 'ya_transport'},
+                    ]"
+                                 source-directory="/static/images/B2B/"/>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
@@ -386,8 +416,19 @@
                     </p>
                   </div>
                   <div class="rtb-card__description__row">
-                    <links-block  :icon-array="['vk','ya_map','youtube','viber','whatsapp','tamtam','odnoklassniki',
-                      'facebook','ya_navigator', 'ya_transport']" source-directory="/static/images/B2B/"/>
+                    <links-block  :icon-array="[
+                    {tooltip: 'gjlcrfprf1', path: 'vk'},
+                    {tooltip: 'gjlcrfprf2', path: 'ya_map'},
+                    {tooltip: 'gjlcrfprf3', path: 'youtube'},
+                    {tooltip: 'gjlcrfprf4', path: 'viber'},
+                    {tooltip: 'gjlcrfprf5', path: 'whatsapp'},
+                    {tooltip: 'gjlcrfprf6', path: 'tamtam'},
+                    {tooltip: 'gjlcrfprf7', path: 'odnoklassniki'},
+                    {tooltip: 'gjlcrfprf8', path: 'facebook'},
+                    {tooltip: 'gjlcrfprf9', path: 'ya_navigator'},
+                    {tooltip: 'gjlcrfprf10', path: 'ya_transport'},
+                    ]"
+                                  source-directory="/static/images/B2B/"/>
                   </div>
                   <div class="rtb-card__description__row rt-space-top05">
                     <a href="#" class="rt-font-control rt-link rt-link--purple">Условия тарифа «Вызов 250»</a>
