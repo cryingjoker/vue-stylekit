@@ -84,7 +84,7 @@
             </rt-color-line-text>
             <div class="rt-space-top2 rt-md-space-top-none rt-md-space-bottom05 relative">
               <rt-button class="md-d-none rt-button-full-white">Подключить</rt-button>
-              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;
+              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;<span class="d-none md-d-inline-block">&nbsp;об игре</span>
                 <svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-game-more-info__icon">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="328-LP_Igrovoy_UPD-2nd-page" transform="translate(-3143.000000, -621.000000)" fill-rule="nonzero" stroke="#FF4F12" stroke-width="2">
@@ -154,7 +154,7 @@
             </rt-color-line-text>
             <div class="rt-space-top2 rt-md-space-top-none rt-md-space-bottom05 relative">
               <rt-button class="md-d-none rt-button-full-white">Подключить</rt-button>
-              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;
+              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;<span class="d-none md-d-inline-block">&nbsp;об игре</span>
                 <svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-game-more-info__icon">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="328-LP_Igrovoy_UPD-2nd-page" transform="translate(-3143.000000, -621.000000)" fill-rule="nonzero" stroke="#FF4F12" stroke-width="2">
@@ -236,7 +236,7 @@
             </rt-color-line-text>
             <div class="rt-space-top2 rt-md-space-top-none rt-md-space-bottom05 relative">
               <rt-button class="md-d-none rt-button-full-white">Подключить</rt-button>
-              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;
+              <rt-button class="rt-button-white color-white rt-game-more-info">Подробнее&nbsp;<span class="d-none md-d-inline-block">&nbsp;об игре</span>
                 <svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-game-more-info__icon">
                   <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="328-LP_Igrovoy_UPD-2nd-page" transform="translate(-3143.000000, -621.000000)" fill-rule="nonzero" stroke="#FF4F12" stroke-width="2">
