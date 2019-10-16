@@ -69,3 +69,159 @@
   .rt-banner__item flex
     @media (max-width: mobile-upper-limit)
       display block
+
+.rt-game-banner
+  min-height: 100vh
+  display: flex
+  width: 100%
+  flex-direction column
+  background-color: #000
+  position: relative
+  .color-line-wrapper
+    margin-left: 10px
+    margin-right: 10px
+
+.rt-game-banner__content
+  min-height: 100%
+  flex: 1
+  position: relative
+
+.rt-game-banner__item
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  padding-top: 9vh
+  padding-bottom: 9vh
+  opacity: 0
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity
+  @media (max-width: mobile-upper-limit)
+    padding-top: 168px
+
+
+.rt-game-banner__item--is-active
+  position: relative
+  opacity: 1
+.rt-game-banner__icons
+  display: flex
+  align-items center
+  padding-bottom: 34px
+  position: relative
+  @media (max-width: mobile-upper-limit)
+    padding-bottom: 25px
+    padding-left: 10px
+    padding-right: 10px
+
+.rt-game-banner__icons__item
+  &+&
+    margin-left: 32px
+.rt-game-banner__icons__item-img
+  max-height: 38px
+  @media (max-width: mobile-upper-limit)
+    max-height: 24px
+
+
+.rt-game-arrow-contaner
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+.rt-game-banner-image
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center top
+  @media (max-width: mobile-upper-limit)
+    height: 260px
+
+
+.rt-game-arrow
+  position: absolute
+  top: 0
+  bottom: 0
+  margin-top: auto
+  margin-bottom: auto
+  width: 50px
+  height: 50px
+  z-index: 10
+  cursor: pointer
+
+.rt-game-arrow-prew
+  left: 0
+.rt-game-arrow-next
+  right: 0
+.rt-game-banner-round-icon
+  width: 100px
+  height: 100px
+.rt-game-banner__paginator
+  text-align: center
+  padding-top: 40px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+.rt-game-banner__paginator-item
+  display inline-block
+  width 20px
+  height 20px
+  box-sizing border-box
+  position relative
+  z-index 3
+  cursor pointer
+
+  &:before
+    content ""
+    width 10px
+    height 10px
+    box-sizing border-box
+    border 2px solid #fff
+    border-radius 50%
+    margin auto
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property background-color, width, height, border, margin, left, right
+
+  & + &
+    margin-left 20px
+  &__icon
+    width inherit
+    height inherit
+    transform rotate(-90deg)
+    transition-timing-function ease-in-out
+    transition-duration .3s
+    transition-property stroke-dasharray, stroke-width
+    stroke #fff
+    stroke-dasharray 0
+    stroke-width 0
+
+    .rt-game-banner__paginator-item:hover &,
+    .rt-game-banner__paginator-item--is-active &
+      stroke-dasharray 60
+      stroke-width 1px
+
+.rt-game-more-info
+  @media (max-width: mobile-upper-limit)
+    border-width 0
+    margin-left: 10px!important
+    .ripple
+      padding: 0
+.rt-game-more-info__icon
+  display: none
+  @media (max-width: mobile-upper-limit)
+    margin-left: 10px
+    position: relative
+    bottom: -2px
+    display: block
