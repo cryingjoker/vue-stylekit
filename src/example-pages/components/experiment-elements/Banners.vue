@@ -307,7 +307,6 @@
 </template>
 
 <script>
-  // import documentation from "../../../lib/components/Annotation/docs/index.json";
   import documentation from "../../../lib/components/Banner/docs/index.json";
   import componentsList from "../../componentsList";
   // const componentsList = {};
@@ -324,5 +323,4 @@
     },
     methods: {}
   };
-  //js-form-calc-profile - WTF??
 </script>

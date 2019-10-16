@@ -30,7 +30,7 @@
         default: null
       },
       insertType: {
-        type: String, //[number, string, password]
+        type: String, //[number, string, password, tel]
         default: null
       },
       disabled: {
@@ -105,10 +105,6 @@
       approved: {
         type: Boolean,
         default: false
-      },
-      emitEvent: {
-        type: Boolean,
-        default: false
       }
     },
     data() {
@@ -154,8 +150,6 @@
       },
       localValue(val) {
         this.$emit("input", val);
-        if(this.emitEvent)
-          this.emitValue();
       },
       label() {
         this.localLabel = this.label;
@@ -283,7 +277,14 @@
                 return null;
               }
               break;
-
+            case "tel":
+              if (!chr.match(/[0-9]/)) {
+                event.preventDefault();
+                event.stopPropagation();
+                return null;
+              }
+              this.enablePhoneMask();
+              break;
           }
         }
         if (this.insertLang) {
@@ -351,8 +352,37 @@
         }
         this.passwordVisibility = !this.passwordVisibility;
       },
-      emitValue() {
-        this.$emit('change', this.localValue.toString());
+      enablePhoneMask() {
+        this.$el.querySelector('.input-element').addEventListener("input", this.mask, false);
+        this.$el.querySelector('.input-element').addEventListener("focus", this.mask, false);
+        this.$el.querySelector('.input-element').addEventListener("blur", this.mask, false);
+      },
+      mask(e) {
+        let matrix = "+7 (___) ___-__-__",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.$el.querySelector('.input-element').value.replace(/\D/g, "");
+        if (def.length >= val.length) val = def;
+        this.$el.querySelector('.input-element').value = matrix.replace(/./g, function(a) {
+          return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        });
+        if (e.type === "blur") {
+          if (this.$el.querySelector('.input-element').value.length == 2)
+            this.$el.querySelector('.input-element').value = ""
+        } else
+          this.setCursorPosition(this.$el.querySelector('.input-element').value.length, this.$el)
+      },
+      setCursorPosition(pos, elem) {
+        elem.focus();
+        if (elem.setSelectionRange)
+          elem.setSelectionRange(pos, pos);
+        else if (elem.createTextRange) {
+          let range = elem.createTextRange();
+          range.collapse(true);
+          range.moveEnd("character", pos);
+          range.moveStart("character", pos);
+          range.select();
+        }
       }
     },
     render() {
