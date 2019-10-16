@@ -13,6 +13,14 @@
         type: Boolean,
         default: false
       },
+      showAsTags: {
+        type: Boolean,
+        default: false
+      },
+      reverseView: {
+        type: Boolean,
+        default: false
+      },
       roundTabletViewMaxWidth: {
         type: Boolean,
         default: false
@@ -132,6 +140,9 @@
           classNames += " rt-tabs--justify-all-width";
         }
       }
+      if(this.showAsTags){
+        classNames += " rt-tabs--tag-mode";
+      }
       // fillContent
       if (this.vertical && window.innerWidth <= this.mobileSize) {
         return <div class={classNames}>
@@ -140,16 +151,30 @@
           </div>
         </div>;
       } else {
-        return <div class={classNames}>
-          <div class="rt-tabs-navigation-wrapper">
-            <div style={this.navigationStyle} class="rt-tabs-navigation">
-              {this.$slots.navigation}
+        if(!this.reverseView) {
+          return <div class={classNames}>
+            <div class="rt-tabs-navigation-wrapper">
+              <div style={this.navigationStyle} class="rt-tabs-navigation">
+                {this.$slots.navigation}
+              </div>
             </div>
-          </div>
-          <div class="rt-tabs-content">
-            {this.$slots.content}
-          </div>
-        </div>;
+            <div class="rt-tabs-content">
+              {this.$slots.content}
+            </div>
+          </div>;
+        }else{
+          return <div class={classNames}>
+            <div class="rt-tabs-content">
+              {this.$slots.content}
+            </div>
+            <div class="rt-tabs-navigation-wrapper">
+              <div style={this.navigationStyle} class="rt-tabs-navigation">
+                {this.$slots.navigation}
+              </div>
+            </div>
+          </div>;
+        }
+
       }
 
     }

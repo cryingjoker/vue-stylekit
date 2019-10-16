@@ -174,7 +174,8 @@
     .{newAppName}-tag:hover
       background main-color
 
-.{newAppName}-tag
+.{newAppName}-tag,
+.rt-tabs--tag-mode .rt-tabs-navigation__item .rt-tabs-navigation__item-name
   font-size 14px
   background-color main-color003
   border-radius 25px
@@ -195,10 +196,27 @@
     background-color b2c-white01
 
   &:hover,
-  &--is-active
+  &--is-active,
     .{newAppName}-dark-theme &
       color b2c-white
       background-color b2c-purple
 
     color b2c-white
     background-color b2c-purple
+.rt-tabs--tag-mode .rt-tabs-navigation__item--is-active .rt-tabs-navigation__item-name
+  .{newAppName}-dark-theme &
+    color b2c-white
+    background-color b2c-purple
+
+  color b2c-white
+  background-color b2c-purple
+.rt-tabs--tag-mode .rt-tabs-navigation__item .rt-tabs-navigation__item-name
+  margin-left: 0
+.rt-tabs--tag-mode .rt-tabs-navigation
+  &:after
+    display: none
+.rt-tabs--tag-mode .rt-tabs-navigation__item+.rt-tabs-navigation__item
+  margin-left: 0px
+.rt-tabs--tag-mode .rt-tabs-navigation__item .rt-tabs-navigation__item-name
+  &:before
+    display: none!important
