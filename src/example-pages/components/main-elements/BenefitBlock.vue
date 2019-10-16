@@ -203,22 +203,24 @@
         '/>
 
       </div>
-      <!--<documentation-builder :json="documentation" type="components" />-->
+      <div class="rt-container rt-space-top25">
+        <documentation-builder :json="documentation" type="components"/>
+      </div>
     </div>
   </div>
-  <!--</div>-->
 </template>
 
 <script>
-//  import documentation from "../../../lib/components/InlineDropdown/docs/index.json";
+  import documentation from "../../../lib/components/BenefitBlock/docs/index.json";
+  import componentsList from "../../componentsList";
   export default {
     name: "AppBenefitBlock",
-    components: {},
+    components: componentsList,
     data: () => ({
-//      documentation: {}
+      documentation: {}
     }),
     mounted() {
-//      this.documentation = documentation;
+      this.documentation = documentation;
     }
   };
 </script>
