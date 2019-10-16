@@ -54,7 +54,7 @@
       countHiddenIconsQuantity() {
         let visibleIcons = Math.floor((+getComputedStyle(this.$el.children[0]).width.slice(0, -2)) / 32);
         this.quantityHidden = this.totalQuantity - visibleIcons;
-        if(this.quantityHidden <= 1) {
+        if(this.quantityHidden === 1) {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = '100%';
         } else {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = 'calc(100% - 42px)';
@@ -67,15 +67,15 @@
         if(this.$el) {
           let linksLayout = '';
           this.iconArray.forEach((el)=> {
-            let link = `${this.sourceDirectory}${el}.svg`;
-            let title = el.replace('b2b_', '');
+            let link = `${this.sourceDirectory}${el.path}.svg`;
+            let title = el.tooltip;
             linksLayout += (`<div class="rtb-card__social-link"><img src=${link} title=${title} /></div>`)
           });
           this.$el.children[0].innerHTML = linksLayout;
         }
       })();
       const button = (() => {
-        if(this.totalQuantity > 6 && this.quantityHidden > 1){
+        if(this.quantityHidden && this.totalQuantity > 6 && this.quantityHidden !== 1){
           return <button class="rtb-card__expand-button" onClick={this.unwrap}>ещё {this.quantityHidden}</button>;
         } else {
           return null;

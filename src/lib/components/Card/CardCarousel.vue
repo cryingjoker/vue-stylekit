@@ -59,6 +59,7 @@
         this.renderLayout();
       });
       this.renderLayout();
+      window.addEventListener('load', this.fixCardHeightMobile);
     },
     methods: {
       renderLayout() {
@@ -178,19 +179,20 @@
       },
 
       fixCardHeightMobile() {
-        setTimeout(() => {
-          let maxHeight = 0;
-          setTimeout(() => {
-            for(let i = 0; i < this.parentArray.length; i++) {
-              let cardHeight = +window.getComputedStyle(this.$el.children[i]).height.replace('px', '');
+        if (this.mobileLayout) {
+          var maxHeight = 0;
+          setTimeout(function () {
+            for (var i = 0; i < (document.querySelector('.carousel-card').parentNode.children.length - 1); i++) {
+              var cardHeight = +window.getComputedStyle(document.querySelector('.carousel-card').parentNode.children[i].querySelector('.rt-card__content')).height.replace('px', '');
               maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
             }
-            for(let i = 0; i < this.parentArray.length; i++) {
-              this.$el.children[i].style.height = maxHeight + 'px';
-              this.$el.children[i].style.minHeight = maxHeight + 'px';
+
+            for (var j = 0; j < (document.querySelector('.carousel-card').parentNode.children.length - 1); j++) {
+              document.querySelector('.carousel-card').parentNode.children[j].height = maxHeight + 'px';
+              document.querySelector('.carousel-card').parentNode.children[j].style.minHeight = maxHeight + 'px';
             }
-          },500);
-        }, 300);
+          }, 100)
+        }
       },
 
       mobileSwipe() {
