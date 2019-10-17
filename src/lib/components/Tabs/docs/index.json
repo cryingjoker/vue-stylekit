@@ -1,0 +1,85 @@
+{
+  "items" : [
+    {
+      "name" : "rt-tabs",
+      "property" : "round-tablet-view",
+      "type" : ["Boolean"],
+      "description" : "Отображение больших скругленных табов",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "show-as-tags",
+      "type" : ["Boolean"],
+      "description" : "Отображение как теги",
+      "value" : "false",
+      "version": "0.1.65"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "reverse-view",
+      "type" : ["Boolean"],
+      "description" : "Поменять местами навигацию и контент",
+      "value" : "false",
+      "version": "0.1.65"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "round-tablet-view-max-width",
+      "type" : ["Boolean"],
+      "description" : "Все скругленные табы одинаковой ширины",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "fill-content",
+      "type" : ["Boolean"],
+      "description" : "Растянуть контейнер табов по ширине",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "justify-all-width",
+      "type" : ["Boolean"],
+      "description" : "Растянуть табов по ширине контейнера",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "dont-use-adaptive",
+      "type" : ["Boolean"],
+      "description" : "Запрет адаптироваться табам",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "is-disabled",
+      "type" : ["Boolean"],
+      "description" : "выключить табы",
+      "value" : "false",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "navigation-horizontal-padding",
+      "type" : ["Number"],
+      "description" : "Отступ контейнера по горизонтали",
+      "value" : "null",
+      "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs",
+      "property" : "positionCenter,",
+      "type" : ["Boolean"],
+      "description" : "Центрировать контейнер табов по ширине",
+      "value" : "false",
+      "version": "0.1.0"
+    }
+
+  ]
+}

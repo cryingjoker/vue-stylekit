@@ -52,7 +52,6 @@
       positionCenter: {
         type: Boolean,
         default: false
-
       }
     },
     data: () => ({
