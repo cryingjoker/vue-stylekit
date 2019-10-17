@@ -24,7 +24,9 @@
   transition-duration .2s
   transition-property box-shadow
   &:hover
-    box-shadow card-shadow--hovered
+    @media (hover: hover) {
+      box-shadow card-shadow--hovered
+    }
 
   &--custom-height
     min-height initial

@@ -1305,15 +1305,25 @@
           </div>
         </div>
       </div>
+      <documentation-builder :json="documentation" type="components" />
     </div>
   </div>
 </template>
 
+
+
 <script>
+  import documentation from "../../../lib/components/Tabs/docs/index.json";
   import componentsList from "../../componentsList";
 
   export default {
     name: "AppTabs",
-    components: componentsList
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    }
   };
 </script>
