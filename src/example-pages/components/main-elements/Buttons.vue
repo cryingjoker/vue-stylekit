@@ -350,18 +350,27 @@
             />
           </div>
         </div>
+        <div class="rt-container rt-space-top25">
+          <documentation-builder :json="documentation" type="components"/>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import componentsList from "../../componentsList";
-export default {
-  name: "AppButtons",
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {}
-};
+  import documentation from "../../../lib/components/Button/docs/index.json";
+  import componentsList from "../../componentsList";
+  export default {
+    name: "AppButtons",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {},
+    methods: {}
+  };
 </script>

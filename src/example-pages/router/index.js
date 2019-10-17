@@ -65,7 +65,6 @@ import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 import GallaryCarousel from '../components/main-elements/GallaryCarousel.vue'
 import CheckboxTabs from '../components/main-elements/CheckboxTabs.vue'
 
-console.info('GameArrows',GameArrows);
 import GameArrows from '../components/game-ui/GameArrows.vue'
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },

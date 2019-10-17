@@ -105,6 +105,22 @@
       approved: {
         type: Boolean,
         default: false
+      },
+      hasTimer: {
+        type: Boolean,
+        default: false
+      },
+      timerDuration: {
+        type: String,
+        default: ''
+      },
+      inputButton: {
+        type: Boolean,
+        default: false
+      },
+      inputButtonText: {
+        type: String,
+        default: ''
       }
     },
     data() {
@@ -166,7 +182,6 @@
       } else {
         this.hintPosition = "right";
       }
-      ;
     },
 
     updated() {
@@ -383,6 +398,10 @@
           range.moveStart("character", pos);
           range.select();
         }
+      },
+      getCode() {
+//        console.log(this.$root);
+        this.$root.$emit('getCode', this.localValue);
       }
     },
     render() {
@@ -534,14 +553,15 @@
           />
           {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
           {placeholder}
-          {clearButton}
+          {this.inputButton ? null : clearButton}
           {passwordIcon}
           {errorMessage}
           {arithmeticButtons}
           {this.$slots.default}
+          {this.hasTimer ? <rt-countdown-timer duration={this.timerDuration}/> : null}
         </div>
         {inputLabel}
-
+        {this.inputButton ? <rt-button class="rt-button-transparent-purple rt-button-small" onClick={this.getCode}>{this.inputButtonText}</rt-button> : null}
       </div>;
     }
   };
