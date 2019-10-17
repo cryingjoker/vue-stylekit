@@ -97,7 +97,8 @@ import {
   GalleryCarouselItem,
   OptionsList,
   GameArrow,
-  CheckboxTabs
+  CheckboxTabs,
+  CountdownTimer
 } from "./components";
 
 // console.info('OptionsList',OptionsList)
@@ -193,6 +194,7 @@ const VueRtStyle = {
       Vue.component(CarouselSlide.name, CarouselSlide);
       Vue.component(CardCarousel.name, CardCarousel);
       Vue.component(CardLayout.name, CardLayout);
+      Vue.component(CountdownTimer.name, CountdownTimer);
 
       // tsx components
 
@@ -217,7 +219,6 @@ const VueRtStyle = {
 
 
       Vue.directive(OutsideClickDirective.name, OutsideClickDirective);
-      console.info('ScrollToOnClickDirective',ScrollToOnClickDirective)
       Vue.directive(
         SlideContentVerticalDirective.name,
         SlideContentVerticalDirective

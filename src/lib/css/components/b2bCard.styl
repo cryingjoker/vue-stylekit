@@ -266,14 +266,14 @@
     display block
     @media (max-width: tablet-upper-limit)
       height 510px
+    @media (max-width: mobile-upper-limit)
+      min-height 400px
+      height auto
     .{newAppName}-card__content
       height 400px
       @media (max-width: tablet-upper-limit)
         min-height 330px
         height auto
-    @media (max-width: mobile-upper-limit)
-      min-height 400px
-      height auto
     .color-block
       color b2c-white
     .color-block--white
@@ -368,7 +368,7 @@
 
 .{b2bAppName}-product__triangle
   position absolute
-  top 0
+  top 1px
   left 0
   right 0
   transform translateY(-99%)
