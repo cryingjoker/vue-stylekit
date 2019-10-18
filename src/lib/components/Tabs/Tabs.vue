@@ -93,10 +93,20 @@
           }
         }
       },
+      
+      dispatchEvent() {
+        if (navigator.userAgent.indexOf("MSIE") !== -1 || navigator.appVersion.indexOf("Trident/") > 0) {
+          const resizeEvent = window.document.createEvent('UIEvents');
+          resizeEvent.initUIEvent('resize', true, false, window, 0);
+          window.dispatchEvent(resizeEvent);
+        } else {
+          window.dispatchEvent(new Event("resize"));
+        }
+      },
 
       setActiveTabName(name, hashAnchor = false) {
         tabsStore.setActiveTabName(name, hashAnchor);
-        window.dispatchEvent(new Event("resize"));
+        this.dispatchEvent();
         if (hashAnchor) {
           window.history.replaceState(undefined, undefined, "#" + hashAnchor);
         }
