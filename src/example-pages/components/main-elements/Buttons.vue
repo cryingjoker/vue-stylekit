@@ -350,7 +350,7 @@
             />
           </div>
         </div>
-        <div class="rt-container rt-space-top25">
+        <div class="rt-space-top25">
           <documentation-builder :json="documentation" type="components"/>
         </div>
       </div>
