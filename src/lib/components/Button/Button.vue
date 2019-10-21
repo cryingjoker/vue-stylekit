@@ -70,6 +70,12 @@
 
     mounted: function() {
       this.hide = this.$el.disabled || this.isDisabled;
+      if (this.ga) {
+        this.activateEventToLink('b2c', this.ga);
+      }
+      if (this.gaB2b) {
+        this.activateEventToLink('b2b', this.gaB2b);
+      }
 
     },
     methods: {
@@ -86,33 +92,37 @@
       },
       activateEventToLink(typeEvent, ga) {
 
-        if (this.refs["button"].parentElement.tagName.toLocaleLowerCase() === "a") {
-          this.refs["button"].parentElement.addEventListener("click", function(e) {
-            if (!this.getAttribute("data-ga-pushed")) {
-              e.preventDefault();
-              if (!window.dataLayer) {
-                window.dataLayer = [];
+        if (this.$refs && this.$refs["button"]) {
+          const button = this.$refs["button"];
+          if (button.parentElement.tagName.toLocaleLowerCase() === "a") {
+            button.parentElement.addEventListener("click", (e) => {
+              if (!this.getAttribute("data-ga-pushed")) {
+                e.preventDefault();
+                if (!window.dataLayer) {
+                  window.dataLayer = [];
+                }
+                window.dataLayer.push({
+                  event: typeEvent,
+                  button: button.innerText
+                });
               }
-              window.dataLayer.push({
-                event: typeEvent,
-                button: this.refs["button"].innerText,
-              });
-            }
-          }, false);
-        } else {
-          this.refs["button"].addEventListener("click", function(e) {
-            if (!this.getAttribute("data-ga-pushed")) {
-              e.preventDefault();
-              if (!window.dataLayer) {
-                window.dataLayer = [];
-              }
-              window.dataLayer.push({
-                event: typeEvent,
-                button: this.refs["button"].innerText,
-              });
+            }, false);
+          } else {
+            button.addEventListener("click", (e) => {
+              if (!this.getAttribute("data-ga-pushed")) {
+                e.preventDefault();
+                if (!window.dataLayer) {
+                  window.dataLayer = [];
+                }
+                window.dataLayer.push({
+                  event: typeEvent,
+                  button: button.innerText
+                });
 
-            }
-          }, false);
+              }
+            }, false);
+
+          }
         }
       }
     },
@@ -132,14 +142,15 @@
       })();
       if (this.checkboxBehavior) {
         return (
-          <label>
-            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
-            <button class={this.buttonClass} onClick={this.triggerClick}>
+          <label ref="button">
+            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName}
+                   value={this.radioValue}/>
+            <butto class={this.buttonClass} onClick={this.triggerClick}>
               <rt-ripple notRender={this.hide} twiceRender={true}>
                 {spinner}
                 {this.$slots.default}
               </rt-ripple>
-            </button>
+            </butto>
           </label>
         );
       } else {
