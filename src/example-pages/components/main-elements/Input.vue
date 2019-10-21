@@ -186,8 +186,8 @@
           <div class="rt-col rt-col-6 rt-col-td-4 rt-col-md-3">
             <rt-input placeholder="Имя" :is-b2b-input="true"/>
             <rt-input placeholder="Компания" :is-b2b-input="true"/>
-            <rt-input placeholder="Электронная почта" :is-b2b-input="true"/>
-            <rt-input placeholder="Телефон" :is-b2b-input="true"/>
+            <rt-input placeholder="Электронная почта" :is-b2b-input="true" :input-button="true" input-button-text="Получить код"/>
+            <rt-input placeholder="Телефон" :is-b2b-input="true" :has-timer="true" timer-duration="1" insert-type="tel"/>
             <rt-input placeholder="Код из смс"
                       :is-b2b-input="true"
                       :approved="true"

@@ -1,127 +1,180 @@
 <script type="text/jsx">
-import { default as Spinner } from "../Spinner/Spinner.vue";
-import { default as RippleComponent } from "../Ripple/Ripple.vue";
-const componentsList = {};
-componentsList[RippleComponent.name] = RippleComponent;
-componentsList[Spinner.name] = Spinner;
+  import { default as Spinner } from "../Spinner/Spinner.vue";
+  import { default as RippleComponent } from "../Ripple/Ripple.vue";
 
-export default {
-  name: "RtButton",
-  components: componentsList,
-  props: {
-    isBlock: {
-      type: Boolean,
-      default: false
-    },
-    isDisabled: {
-      type: Boolean,
-      default: false
-    },
-    isFetched: {
-      type: Boolean,
-      default: false
-    },
-    hasIcon: {
-      type: Boolean,
-      default: false
-    },
-    checkboxBehavior: {
-      type: Boolean,
-      default: false
-    },
-    radioGroupName: {
-      type: String,
-      default: 'radio-group'
-    },
-    buttonClassList: {
-      type: String,
-      default: ''
-    },
-    radioValue: {
-      type: String,
-      default: ''
-    }
-  },
-  data: () => ({
-    hide: false
-  }),
-  computed: {
-    buttonClass() {
-      let className = 'rt-button rt-button-with-ripple';
-      if(this.isBlock) {
-        className += ' rt-button--is-block';
+  const componentsList = {};
+  componentsList[RippleComponent.name] = RippleComponent;
+  componentsList[Spinner.name] = Spinner;
+
+  export default {
+    name: "RtButton",
+    components: componentsList,
+    props: {
+      ga: {
+        type: Object,
+        default: null
+      },
+      gaB2b: {
+        type: Object,
+        default: null
+      },
+      isBlock: {
+        type: Boolean,
+        default: false
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false
+      },
+      isFetched: {
+        type: Boolean,
+        default: false
+      },
+      hasIcon: {
+        type: Boolean,
+        default: false
+      },
+      checkboxBehavior: {
+        type: Boolean,
+        default: false
+      },
+      radioGroupName: {
+        type: String,
+        default: "radio-group"
+      },
+      buttonClassList: {
+        type: String,
+        default: ""
+      },
+      radioValue: {
+        type: String,
+        default: ""
       }
-      if(this.isFetched) {
-        className += ' rt-button--is-fitched';
-      }
-      className += ' ' + this.buttonClassList + '';
-      return className;
-    }
-  },
-  mounted: function () {
-    this.hide = this.$el.disabled || this.isDisabled;
-  },
-  methods: {
-    triggerClick($event) {
-      if(this.checkboxBehavior) {
-        if(!this.$el.querySelector('.fake-radiobutton-for-button').checked) {
-          this.$el.querySelector('.fake-radiobutton-for-button').click();
-        } else {
-          this.$el.querySelector('.fake-radiobutton-for-button').checked = false;
+    },
+    data: () => ({
+      hide: false
+    }),
+    computed: {
+      buttonClass() {
+        let className = "rt-button rt-button-with-ripple";
+        if (this.isBlock) {
+          className += " rt-button--is-block";
         }
-      } else {
-        this.$emit("click", $event);
+        if (this.isFetched) {
+          className += " rt-button--is-fitched";
+        }
+        className += " " + this.buttonClassList + "";
+        return className;
       }
-    }
-  },
-  render: function (h) {
-    const buttonTextContent  = (() => {
-      return <span>{this.$slots["button-text"]}</span>;
-    })();
-    const icon = (() => {
-      return this.$slots.icon;
-    })();
-    const spinner = (() => {
-      if(this.isFetched) {
-        return <rt-spinner fill={true} isAbsolute={true} />;
-      } else {
-        return null;
+    },
+
+    mounted: function() {
+      this.hide = this.$el.disabled || this.isDisabled;
+      if (this.ga) {
+        this.activateEventToLink('b2c', this.ga);
       }
-    })();
-    if(this.checkboxBehavior) {
-      return (
-        <label>
-          <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName} value={this.radioValue}/>
-          <button class={this.buttonClass} onClick={this.triggerClick}>
-            <rt-ripple notRender={this.hide} twiceRender={true}>
-              {spinner}
-              {this.$slots.default}
-            </rt-ripple>
-          </button>
-        </label>
-      );
-    } else {
-      if(this.hasIcon) {
-        return(
-          <button class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
-            {icon}
-            <rt-ripple notRender={this.hide} twiceRender={true}>
-              {spinner}
-              {buttonTextContent}
-            </rt-ripple>
-          </button>
+      if (this.gaB2b) {
+        this.activateEventToLink('b2b', this.gaB2b);
+      }
+
+    },
+    methods: {
+      triggerClick($event) {
+        if (this.checkboxBehavior) {
+          if (!this.$el.querySelector(".fake-radiobutton-for-button").checked) {
+            this.$el.querySelector(".fake-radiobutton-for-button").click();
+          } else {
+            this.$el.querySelector(".fake-radiobutton-for-button").checked = false;
+          }
+        } else {
+          this.$emit("click", $event);
+        }
+      },
+      activateEventToLink(typeEvent, ga) {
+
+        if (this.$refs && this.$refs["button"]) {
+          const button = this.$refs["button"];
+          if (button.parentElement.tagName.toLocaleLowerCase() === "a") {
+            button.parentElement.addEventListener("click", (e) => {
+              if (!this.getAttribute("data-ga-pushed")) {
+                e.preventDefault();
+                if (!window.dataLayer) {
+                  window.dataLayer = [];
+                }
+                window.dataLayer.push({
+                  event: typeEvent,
+                  button: button.innerText
+                });
+              }
+            }, false);
+          } else {
+            button.addEventListener("click", (e) => {
+              if (!this.getAttribute("data-ga-pushed")) {
+                e.preventDefault();
+                if (!window.dataLayer) {
+                  window.dataLayer = [];
+                }
+                window.dataLayer.push({
+                  event: typeEvent,
+                  button: button.innerText
+                });
+
+              }
+            }, false);
+
+          }
+        }
+      }
+    },
+    render: function(h) {
+      const buttonTextContent = (() => {
+        return <span>{this.$slots["button-text"]}</span>;
+      })();
+      const icon = (() => {
+        return this.$slots.icon;
+      })();
+      const spinner = (() => {
+        if (this.isFetched) {
+          return <rt-spinner fill={true} isAbsolute={true}/>;
+        } else {
+          return null;
+        }
+      })();
+      if (this.checkboxBehavior) {
+        return (
+          <label ref="button">
+            <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName}
+                   value={this.radioValue}/>
+            <butto class={this.buttonClass} onClick={this.triggerClick}>
+              <rt-ripple notRender={this.hide} twiceRender={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </butto>
+          </label>
         );
       } else {
-        return(
-          <button onClick={this.triggerClick} class={this.buttonClass}>
-            <rt-ripple notRender={this.hide} twiceRender={true} waitParentClicked={true}>
-              {spinner}
-              {this.$slots.default}
-            </rt-ripple>
-          </button>
-        );
+        if (this.hasIcon) {
+          return (
+            <button ref="button" class={this.buttonClass} onClick={this.triggerClick} style="position: relative;">
+              {icon}
+              <rt-ripple notRender={this.hide} twiceRender={true}>
+                {spinner}
+                {buttonTextContent}
+              </rt-ripple>
+            </button>
+          );
+        } else {
+          return (
+            <button ref="button" onClick={this.triggerClick} class={this.buttonClass}>
+              <rt-ripple notRender={this.hide} twiceRender={true} waitParentClicked={true}>
+                {spinner}
+                {this.$slots.default}
+              </rt-ripple>
+            </button>
+          );
+        }
       }
     }
-  }
-};
+  };
 </script>

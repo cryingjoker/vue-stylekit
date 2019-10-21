@@ -155,7 +155,8 @@ export default {
         this.getCurrentTime();
         this.getDuration();
         this.volume = this.player.getVolume();
-        this.videoSize = this.player.getPlaylist().length;
+        if(this.player.getPlaylist())
+          this.videoSize = this.player.getPlaylist().length;
       }
       if(event.data == YT.PlayerState.PAUSED && this.isPlaying){
         this.isPlaying = false;
@@ -194,9 +195,7 @@ export default {
           "showinfo":"0",
           "controls" :"0",
           "disablekb": "1",
-          "showinfo": "0",
-          "iv_load_policy": "3",
-          "enablejsapi": "1"
+          "iv_load_policy": "3"
         },
         events: {
           'onReady': this.setVideoReady,

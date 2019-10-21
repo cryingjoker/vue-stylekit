@@ -9,8 +9,17 @@ const setActiveTabName = (tabsName:string, tabAnchore:string = '', dontResize:bo
     }
   }
   parentArray[tabsName].isActive = true;
-  if(!dontResize) {
-    window.dispatchEvent(new Event("resize"));
+  // Определение Internet Explorer. нужно т.к. в нем не работет resize
+  const browserName = navigator.userAgent.toLowerCase(),
+    isIE = (/trident/gi).test(browserName) || (/msie/gi).test(browserName);
+  if (!dontResize) {
+    if (!isIE) {
+      window.dispatchEvent(new Event("resize"));
+    } else {
+      let resizeEvent = window.document.createEvent('UIEvents'); 
+      resizeEvent.initUIEvent('resize', true, false, window, 0); 
+      window.dispatchEvent(resizeEvent);
+    }
   }
   if (tabAnchore && tabAnchore.length > 0) {
     window.history.replaceState(undefined, undefined, "#" + tabAnchore);

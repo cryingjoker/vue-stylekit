@@ -221,13 +221,17 @@ export default {
       }
     },
     liftPlaceholder() {
-        if (!this.$el.querySelector(".floating-placeholder").classList.contains("floating-placeholder--go-top")) {
-          this.$el.querySelector(".floating-placeholder").classList.add("floating-placeholder--go-top");
-        } else {
-          if(!this.focused){
-            this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
+      if (!this.$el.querySelector(".floating-placeholder").classList.contains("floating-placeholder--go-top")) {
+        this.$el.querySelector(".floating-placeholder").classList.add("floating-placeholder--go-top");
+      } else {
+        if(!this.focused){
+          if(this.$refs.passiveInput) {
+            !this.$refs.passiveInput.innerText ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
+          }else if(this.$refs.activeInput) {
+            !this.$refs.activeInput.value ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
           }
         }
+      }
     },
     checkFill() {
       let inputValue = this.$el.children[0].childNodes[1].children[0].value;
@@ -245,7 +249,11 @@ export default {
     removeFocus(){
       this.focused = false;
       this.isOpen = false;
-      this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
+      this.$refs.activeInput.blur();
+      setTimeout(() => {
+        !this.localValue ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
+      },1);
+
     }
   },
   render(h) {
@@ -271,7 +279,7 @@ export default {
                       onBlur={this.removeFocus}
                       ref="activeInput"/>
       } else {
-        return <p class="select-input">{this.localValue}</p>
+        return <p class="select-input" ref="passiveInput">{this.localValue}</p>
       }
     })();
 
@@ -287,7 +295,7 @@ export default {
           </div>
         </div>
       </button>
-      <div class={ this.borderClass}/>
+      <div class={this.borderClass}/>
       {disabled}
       {errorMessage}
     </div>

@@ -1,6 +1,7 @@
 <script type="text/jsx">
   import Vue from "vue";
   import VeeValidate from "vee-validate";
+  import variables from "../../variables.json";
 
   export default {
     name: "RtInput",
@@ -105,6 +106,22 @@
       approved: {
         type: Boolean,
         default: false
+      },
+      hasTimer: {
+        type: Boolean,
+        default: false
+      },
+      timerDuration: {
+        type: String,
+        default: ''
+      },
+      inputButton: {
+        type: Boolean,
+        default: false
+      },
+      inputButtonText: {
+        type: String,
+        default: ''
       }
     },
     data() {
@@ -166,7 +183,6 @@
       } else {
         this.hintPosition = "right";
       }
-      ;
     },
 
     updated() {
@@ -182,12 +198,19 @@
           Object.keys(this["_events"]).map(eventName => {
             const that = this;
             that["_events"][eventName].forEach((fn)=> {
-
-              if(eventName != 'input') { // for work with v-model
+              if(eventName != 'input' && window[variables.globalSettingsKey].segment != 'b2c') { // for work with v-model
                 this.$refs.input.addEventListener(eventName, fn)
+              } else {
+                this.$refs.input.addEventListener(
+                  eventName,
+                  function() {
+                    if (that["_events"] && that["_events"][eventName] && that["_events"][eventName][0] && typeof that["_events"][eventName][0] === 'function') {
+                      that["_events"][eventName][0](arguments[0])
+                    }
+                  }
+                );
               }
             })
-
           });
         }
       },
@@ -353,15 +376,16 @@
         this.passwordVisibility = !this.passwordVisibility;
       },
       enablePhoneMask() {
-        this.$el.querySelector('.input-element').addEventListener("input", this.mask, false);
         this.$el.querySelector('.input-element').addEventListener("focus", this.mask, false);
         this.$el.querySelector('.input-element').addEventListener("blur", this.mask, false);
+        this.$el.querySelector('.input-element').addEventListener("input", this.mask, false);
       },
       mask(e) {
         let matrix = "+7 (___) ___-__-__",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.$el.querySelector('.input-element').value.replace(/\D/g, "");
+        console.log(e);
         if (def.length >= val.length) val = def;
         this.$el.querySelector('.input-element').value = matrix.replace(/./g, function(a) {
           return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
@@ -383,6 +407,9 @@
           range.moveStart("character", pos);
           range.select();
         }
+      },
+      getCode() {
+        this.$root.$emit('getCode', this.localValue);
       }
     },
     render() {
@@ -534,14 +561,15 @@
           />
           {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
           {placeholder}
-          {clearButton}
+          {this.inputButton ? null : clearButton}
           {passwordIcon}
           {errorMessage}
           {arithmeticButtons}
           {this.$slots.default}
+          {this.hasTimer ? <rt-countdown-timer duration={this.timerDuration}/> : null}
         </div>
         {inputLabel}
-
+        {this.inputButton ? <rt-button class="rt-button-transparent-purple rt-button-small" onClick={this.getCode}>{this.inputButtonText}</rt-button> : null}
       </div>;
     }
   };

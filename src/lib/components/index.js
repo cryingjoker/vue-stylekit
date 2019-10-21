@@ -94,3 +94,6 @@
 
  export { default as GalleryCarousel } from './GalleryCarousel/GalleryCarousel.tsx';
  export { default as GalleryCarouselItem } from './GalleryCarousel/GalleryCarouselItem.tsx';
+ export { default as CountdownTimer } from './CountdownTimer/CountdownTimer.vue';
+
+

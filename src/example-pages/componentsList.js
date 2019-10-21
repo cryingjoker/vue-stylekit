@@ -79,9 +79,9 @@ import {
   CardLayout,
   GalleryCarousel,
   GalleryCarouselItem,
-  CheckboxTabs
+  CheckboxTabs,
+  CountdownTimer
 } from "../lib/components/index";
-console.info('CheckboxTabs',CheckboxTabs);
 import AppMenu from "./components/AppMenu.vue";
 const componentsList = {};
 componentsList[Button.name] = Button;
@@ -166,4 +166,5 @@ componentsList[Ussd.name] = Ussd.component;
 componentsList[GalleryCarousel.name] = GalleryCarousel.component;
 componentsList[GalleryCarouselItem.name] = GalleryCarouselItem.component;
 componentsList[CheckboxTabs.name] = CheckboxTabs;
+componentsList[CountdownTimer.name] = CountdownTimer;
 export default { ...componentsList };
