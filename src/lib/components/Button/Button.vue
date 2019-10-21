@@ -86,8 +86,6 @@
       },
       activateEventToLink(typeEvent, ga) {
 
-        let parentId = this.RtBanners.id;
-        let currentKey = this.index;
         if (this.refs["button"].parentElement.tagName.toLocaleLowerCase() === "a") {
           this.refs["button"].parentElement.addEventListener("click", function(e) {
             if (!this.getAttribute("data-ga-pushed")) {
@@ -97,11 +95,7 @@
               }
               window.dataLayer.push({
                 event: typeEvent,
-                type: "banner_click",
-                banner_name: ga.name,
-                banner_id: parentId,
-                banner_place: currentKey + 1,
-                banner_section: ga.section || window.location.pathname
+                button: this.refs["button"].innerText,
               });
             }
           }, false);
@@ -114,11 +108,7 @@
               }
               window.dataLayer.push({
                 event: typeEvent,
-                type: "banner_click",
-                banner_name: ga.name,
-                banner_id: parentId,
-                banner_place: currentKey + 1,
-                banner_section: ga.section || window.location.pathname
+                button: this.refs["button"].innerText,
               });
 
             }
