@@ -629,7 +629,7 @@ export default {
           {
             version: "0.1.56",
             name: ".rt-space-vertical05-half",
-            description: "```padding-top: 10px \npadding-bottom: 10px```"
+            description: "```padding-top: 15px \npadding-bottom: 15px```"
           },
           {
             version: "0.1.18",
