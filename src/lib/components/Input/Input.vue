@@ -264,6 +264,7 @@
       clearInput() {
         this.localValue = "";
         this.setValue();
+        this.$emit('clearField');
       },
       getChar(event) {
         if (event.which == null) {
