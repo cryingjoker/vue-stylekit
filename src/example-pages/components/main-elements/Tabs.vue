@@ -118,8 +118,8 @@
               <pre-code
                 text="<rt-tabs :reverse-view='true' :show-as-tags='true'>
               <template slot=&quot;navigation&quot;>
-                <rt-tabs-nav-item anchor=&quot;read2y!&quot; :remove-base-tag=&quot;true&quot; name=&quot;2one&quot;>Телефония</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor=&quot;hell2o&quot; :remove-base-tag=&quot;true&quot; name=&quot;2two&quot;>Интернет</rt-tabs-nav-item>
+                <rt-tabs-nav-item :scroll-on-top=&quot;true&quot; anchor=&quot;read2y!&quot; :remove-base-tag=&quot;true&quot; name=&quot;2one&quot;>Телефония</rt-tabs-nav-item>
+                <rt-tabs-nav-item :scroll-on-top=&quot;true&quot; anchor=&quot;hell2o&quot; :remove-base-tag=&quot;true&quot; name=&quot;2two&quot;>Интернет</rt-tabs-nav-item>
               </template>
               <template slot=&quot;content&quot;>
                 <rt-tabs-content-item name=&quot;2one&quot;>

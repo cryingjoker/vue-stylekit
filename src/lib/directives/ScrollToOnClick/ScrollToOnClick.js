@@ -5,8 +5,10 @@ class ScrollToOnClick {
     this.$el = element;
     this.vnode = vnode;
     this.value = data.value;
+    if(typeof this.value === 'string'){
+      this.value = JSON.parse(this.value);
+    }
     this.scrollToId = this.value.scrollToId;
-
     if (this.scrollToId) {
       this.bind();
 
@@ -81,13 +83,9 @@ export const ScrollToOnClickDirective = {
   name: "RtScrollToOnClick",
   isFn: true,
   bind(el, bindings, vnode) {
-    console.info('ScrollToOnClick',ScrollToOnClick)
     vnode.context.ScrollToOnClick = new ScrollToOnClick(vnode.elm, bindings, vnode);
-    console.info('vnode.context',vnode.context)
-    console.info('vnode.context.ScrollToOnClick',vnode.context.ScrollToOnClick)
   },
   update(el, bindings, vnode) {
-    console.info('vnode.context',vnode.context.ScrollToOnClick)
     vnode.context.ScrollToOnClick.update(el);
   },
   beforeDestroy() {
