@@ -79,6 +79,14 @@
       "description" : "Центрировать контейнер табов по ширине",
       "value" : "false",
       "version": "0.1.0"
+    },
+    {
+      "name" : "rt-tabs-item",
+      "property" : ":scroll-on-top",
+      "type" : ["Boolean"],
+      "description" : "Скроллировать к началу контейнера с табами",
+      "value" : "false",
+      "version": "0.1.70"
     }
 
   ]

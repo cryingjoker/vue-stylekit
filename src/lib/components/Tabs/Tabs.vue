@@ -143,15 +143,16 @@
         classNames += " rt-tabs--tag-mode";
       }
       // fillContent
+      let id = 'tabs-'+this._uid;
       if (this.vertical && window.innerWidth <= this.mobileSize) {
-        return <div class={classNames}>
+        return <div id={id} class={classNames}>
           <div class="rt-tabs-navigation">
             {this.$slots.navigation}
           </div>
         </div>;
       } else {
         if(!this.reverseView) {
-          return <div class={classNames}>
+          return <div id={id} class={classNames}>
             <div class="rt-tabs-navigation-wrapper">
               <div style={this.navigationStyle} class="rt-tabs-navigation">
                 {this.$slots.navigation}
@@ -162,7 +163,7 @@
             </div>
           </div>;
         }else{
-          return <div class={classNames}>
+          return <div id={id} class={classNames}>
             <div class="rt-tabs-content">
               {this.$slots.content}
             </div>
