@@ -41,11 +41,10 @@ export default {
     checkValue(watcherValue, filterValue) {
       let res = false;
       let typeOfCheck = 0;
-
-      if (watcherValue.search("less than") === 0) {
+      if ((watcherValue+'').search("less than") === 0) {
         typeOfCheck = 1;
       }
-      if (watcherValue.search("more than") === 0) {
+      if ((watcherValue+'').search("more than") === 0) {
         typeOfCheck = 2;
       }
       switch (typeOfCheck) {
@@ -69,7 +68,7 @@ export default {
         if (this.valuesList[optionIndex]) {
           this.valuesList[optionIndex].forEach((value, valueIndex) => {
 
-            if (value.search(/(only )|(not )/) === 0) {
+            if ((value+'').search(/(only )|(not )/) === 0) {
 
               importantOptionsMap[optionName] = value;
               if (this.valuesList[optionIndex][valueIndex].search(/(only )/) === 0) {

@@ -40,8 +40,7 @@ export default {
     }
   },
   render(){
-
-    return <div onClick={this.setActive} class={"rt-tag"+(this.RtTags.indexOfActiveTag === this.index ? " rt-tag--is-active": "")}>
+    return <div onClick={this.setActive} class={"rt-tag"+(this.RtTags.indexOfActiveTag != null && this.RtTags.indexOfActiveTag === this.index ? " rt-tag--is-active": "")}>
       {this.$slots.default}
     </div>;
   }
