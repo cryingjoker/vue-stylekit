@@ -16,6 +16,7 @@
       "type": [
         "Boolean"
       ],
+      "version": "0.1.69",
       "description": "Скрытие пагинатора при мобильном отображении",
       "value": "false"
     },
@@ -25,6 +26,7 @@
       "type": [
         "Boolean"
       ],
+      "version": "0.1.69",
       "description": "Скрытие пагинатора при планшетном отображении",
       "value": "false"
     },

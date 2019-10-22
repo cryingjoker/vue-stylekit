@@ -33,13 +33,14 @@
       this.quantityHidden = this.totalQuantity - 6;
       document.addEventListener('DOMContentLoaded', ()=>{
         this.iconsList = this.$el.children[0].children;
-        for(let i = 0; i < this.totalQuantity; i++) {
-          this.totalQuantity !== 7 ? (i > 5 ? this.iconsList[i].classList.add('rtb-card__social-link--hidden') : null) : null;
-        }
+        this.hideIcons();
         this.countHiddenIconsQuantity();
       });
       window.addEventListener('resize', () => {
-        this.countHiddenIconsQuantity();
+        this.hideIcons();
+        setTimeout(() => {
+          this.countHiddenIconsQuantity();
+        },10);
       });
     },
 
@@ -52,12 +53,29 @@
         }
       },
       countHiddenIconsQuantity() {
-        let visibleIcons = Math.floor((+getComputedStyle(this.$el.children[0]).width.slice(0, -2)) / 32);
+        // 32 - icon.width + icon.margin
+        let outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
+        let innerWidth = +getComputedStyle(this.$el.children[0]).width.slice(0, -2);
+        let visibleIcons = Math.floor(innerWidth / 32);
         this.quantityHidden = this.totalQuantity - visibleIcons;
-        if(this.quantityHidden === 1) {
+
+        if(this.quantityHidden === 1 || this.quantityHidden === 0) {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = '100%';
+          if(outerWidth < this.totalQuantity * 32) {
+            this.quantityHidden = this.totalQuantity - (visibleIcons - 1);
+            this.$el.querySelector('.rtb-card__links-block').removeAttribute('style');
+          }
         } else {
-          this.$el.querySelector('.rtb-card__links-block').style.maxWidth = 'calc(100% - 42px)';
+          this.$el.querySelector('.rtb-card__links-block').removeAttribute('style');
+        }
+      },
+      hideIcons() {
+        console.log('hideIcons')
+        for(let i = 0; i < this.totalQuantity; i++) {
+//          this.totalQuantity !== 7 ? (i > 5 ? this.iconsList[i].classList.add('rtb-card__social-link--hidden') : null) : null;
+          if(this.totalQuantity !== 7 && i > 5) {
+            this.iconsList[i].classList.add('rtb-card__social-link--hidden');
+          }
         }
       }
     },
