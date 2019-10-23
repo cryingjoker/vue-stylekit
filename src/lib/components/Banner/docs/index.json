@@ -12,6 +12,26 @@
     },
     {
       "name": "rt-banner",
+      "property": ":hide-paginator-on-mobile",
+      "type": [
+        "Boolean"
+      ],
+      "version": "0.1.69",
+      "description": "Скрытие пагинатора при мобильном отображении",
+      "value": "false"
+    },
+    {
+      "name": "rt-banner",
+      "property": ":hide-paginator-on-tablet",
+      "type": [
+        "Boolean"
+      ],
+      "version": "0.1.69",
+      "description": "Скрытие пагинатора при планшетном отображении",
+      "value": "false"
+    },
+    {
+      "name": "rt-banner",
       "property": "(:)content-height",
       "type": [
         "Number",

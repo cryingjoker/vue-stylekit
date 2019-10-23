@@ -16,6 +16,10 @@
         type: String,
         default: null
       },
+      scrollOnTop:{
+        type: Boolean,
+        default: false
+      }
     },
 
 
@@ -42,6 +46,7 @@
     },
     mounted() {
       tabsStore.addTabUuid(this.$parent._uid, this.name);
+      this.$refs['tabItem'].addEventListener('click',()=>{this.setActiveTabName()},true);
       if (this.removeBaseTag) {
         let baseNode = document.querySelector("base");
         if (baseNode) {
@@ -73,23 +78,47 @@
       if (tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid][this.name].isActive) {
         tabsItemClass += " rt-tabs-navigation__item--is-active";
       }
-
-      if(tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid].width){
-        let align = 'left';
-        if(tabsStore.tabsParents[this.$parent._uid].centerText){
-          align = 'center';
+      if(this.scrollOnTop && this.$el){
+        const id = this.$el.closest('.rt-tabs').getAttribute('id');
+        const scrollToTopData = '{ "scrollToId" : "'+ id+'" }';
+        if (tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid].width) {
+          let align = 'left';
+          if (tabsStore.tabsParents[this.$parent._uid].centerText) {
+            align = 'center';
+          }
+          return <div ref="tabItem"  class={tabsItemClass}
+                      v-rt-scroll-to-on-click={scrollToTopData}
+                      style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width + 'px'), 'text-align': align }}>
+            <button class="rt-tabs-navigation__item-name">
+              {this.$slots.default}
+            </button>
+          </div>;
+        } else {
+          return <div ref="tabItem" class={tabsItemClass} v-rt-scroll-to-on-click={scrollToTopData}>
+            <button class="rt-tabs-navigation__item-name">
+              {this.$slots.default}
+            </button>
+          </div>;
         }
-        return <div class={tabsItemClass} on-click={this.setActiveTabName} style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width+'px'), 'text-align' : align }}>
-          <button class="rt-tabs-navigation__item-name">
-            {this.$slots.default}
-          </button>
-        </div>;
       }else {
-        return <div class={tabsItemClass} on-click={this.setActiveTabName}>
-          <button class="rt-tabs-navigation__item-name">
-            {this.$slots.default}
-          </button>
-        </div>;
+        if (tabsStore.tabsParents[this.$parent._uid] && tabsStore.tabsParents[this.$parent._uid].width) {
+          let align = 'left';
+          if (tabsStore.tabsParents[this.$parent._uid].centerText) {
+            align = 'center';
+          }
+          return <div ref="tabItem" class={tabsItemClass}
+                      style={{ 'width': (tabsStore.tabsParents[this.$parent._uid].width + 'px'), 'text-align': align }}>
+            <button class="rt-tabs-navigation__item-name">
+              {this.$slots.default}
+            </button>
+          </div>;
+        } else {
+          return <div ref="tabItem" class={tabsItemClass}>
+            <button class="rt-tabs-navigation__item-name">
+              {this.$slots.default}
+            </button>
+          </div>;
+        }
       }
     }
   };

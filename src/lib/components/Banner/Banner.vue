@@ -111,6 +111,14 @@
         type: String,
         default: null
       },
+      hidePaginatorOnMobile: {
+        type: Boolean,
+        default: false
+      },
+      hidePaginatorOnTablet: {
+        type: Boolean,
+        default: false
+      },
 //      categoryBanner: {
 //        type: Boolean,
 //        default: null
@@ -173,6 +181,12 @@
         let className = "circle-switcher";
         if (this.paginatorPosition) {
           className += " circle-switcher--" + this.paginatorPosition;
+        }
+        if(this.hidePaginatorOnMobile){
+          className += " md-d-none";
+        }
+        if(this.hidePaginatorOnTablet){
+          className += " td-d-none";
         }
         return className;
       },
