@@ -31,7 +31,7 @@
     mounted() {
       this.totalQuantity = this.iconArray.length;
       this.quantityHidden = this.totalQuantity - 6;
-      document.addEventListener('DOMContentLoaded', ()=>{
+      window.addEventListener('load', ()=>{
         this.iconsList = this.$el.children[0].children;
         this.hideIcons();
         this.countHiddenIconsQuantity();
@@ -70,7 +70,6 @@
         }
       },
       hideIcons() {
-        console.log('hideIcons')
         for(let i = 0; i < this.totalQuantity; i++) {
 //          this.totalQuantity !== 7 ? (i > 5 ? this.iconsList[i].classList.add('rtb-card__social-link--hidden') : null) : null;
           if(this.totalQuantity !== 7 && i > 5) {
