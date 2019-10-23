@@ -48,6 +48,22 @@
       "type": "String",
       "description": "Устанавливает значение для кнопки при использовании `checkbox-behavior`",
       "value": ""
+    },
+    {
+      "name": "rt-button",
+      "property": ":ga",
+      "type": "Object",
+      "description": "Устанавливает google analitics для b2c",
+      "value": "",
+      "version": "0.1.68"
+    },
+    {
+      "name": "rt-button",
+      "property": ":ga-b2b",
+      "type": "Object",
+      "description": "Устанавливает google analitics для b2b",
+      "value": "",
+      "version": "0.1.68"
     }
   ]
 }
