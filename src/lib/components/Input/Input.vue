@@ -302,11 +302,11 @@
               }
               break;
             case "tel":
-              if (!chr.match(/[0-9]/)) {
-                event.preventDefault();
-                event.stopPropagation();
-                return null;
-              }
+//              if (!chr.match(/[0-9]/)) {
+//                event.preventDefault();
+//                event.stopPropagation();
+//                return null;
+//              }
               this.enablePhoneMask();
               break;
           }
@@ -376,26 +376,24 @@
         }
         this.passwordVisibility = !this.passwordVisibility;
       },
-      enablePhoneMask() {
-        this.$el.querySelector('.input-element').addEventListener("focus", this.mask, false);
-        this.$el.querySelector('.input-element').addEventListener("blur", this.mask, false);
-        this.$el.querySelector('.input-element').addEventListener("input", this.mask, false);
-      },
       mask(e) {
-        let matrix = "+7 (___) ___-__-__",
+        let matrix = "+7 (___) ___ ____",
             i = 0,
             def = matrix.replace(/\D/g, ""),
-            val = this.$el.querySelector('.input-element').value.replace(/\D/g, "");
-        console.log(e);
+            val = this.$refs.input.value.replace(/\D/g, "");
         if (def.length >= val.length) val = def;
-        this.$el.querySelector('.input-element').value = matrix.replace(/./g, function(a) {
-          return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        this.$refs.input.value = matrix.replace(/./g, function(a) {
+          return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
         });
         if (e.type === "blur") {
-          if (this.$el.querySelector('.input-element').value.length == 2)
-            this.$el.querySelector('.input-element').value = ""
-        } else
-          this.setCursorPosition(this.$el.querySelector('.input-element').value.length, this.$el)
+          if (this.$refs.input.value.length == 2){
+            this.$refs.input.value = "";
+          }
+        } else {
+          this.setCursorPosition(this.$refs.input.value.length, this.$refs.input);
+        }
+        this.localValue = this.$refs.input.value;
+        this.setValueLength();
       },
       setCursorPosition(pos, elem) {
         elem.focus();
@@ -408,6 +406,11 @@
           range.moveStart("character", pos);
           range.select();
         }
+      },
+      enablePhoneMask() {
+        this.$refs.input.addEventListener("input", this.mask, false);
+        this.$refs.input.addEventListener("focus", this.mask, false);
+        this.$refs.input.addEventListener("blur", this.mask, false);
       },
       getCode() {
         this.$root.$emit('getCode', this.localValue);
@@ -546,9 +549,9 @@
           return <div class="input-label">{this.localLabel}</div>;
       })();
 
-      return <div class={this.inputClass}>
-        <div class="input text-field" class={inputClass}>
-          <input
+      const inputElementByType = (() => {
+        if(this.insertType !== 'tel' ) {
+          return <input
             onKeypress={this.keyPress}
             onKeyup={this.keyUp}
             ref="input"
@@ -560,6 +563,27 @@
             onInput={this.inputHandler}
             v-validate={this.validate}
           />
+        } else {
+          return <input
+            onKeypress={this.keyPress}
+            onKeyup={this.keyUp}
+            ref="input"
+            autocomplete="off"
+            autocapitalize="off"
+            type={this.type}
+            class="input-element"
+            name={this.fieldName}
+            onInput={this.inputHandler}
+            v-validate={this.validate}
+            onFocus={this.mask}
+            onBlur={this.mask}
+          />
+        }
+      })();
+
+      return <div class={this.inputClass}>
+        <div class="input text-field" class={inputClass}>
+          {inputElementByType}
           {this.outlined ? <div class="text-field__border"/> : <div class="text-field__line"/>}
           {placeholder}
           {this.inputButton ? null : clearButton}

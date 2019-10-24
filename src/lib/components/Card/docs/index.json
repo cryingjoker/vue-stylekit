@@ -1,0 +1,179 @@
+{
+  "items" : [
+    {
+      "name" : "rt-card",
+      "property" : ":lazy-background-image",
+      "type" : "String",
+      "description" : "Ссылка на низкого качества картинку для lazy-load",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":static-body-height",
+      "type" : "Boolean",
+      "description" : "Устанавливает `flex: 0` для card. Необходимо для случаев сброса авто ширины и высоты",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":hide-background-on-mobile",
+      "type" : "Boolean",
+      "description" : "Скрывает картинку карточки при мобильном разрешении",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-size-width",
+      "type" : ["String", "Number"],
+      "description" : "Задает ширину картинки карточки `number` - любое число становится px, `string` - любые значения",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-size-height",
+      "type" : ["String", "Number"],
+      "description" : "Задает высоту картинки карточки `number` - любое число становится px, `string` - любые значения",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-image-stand-alone",
+      "type" : "Boolean",
+      "description" : "Картинка карточки будет создана как отдельный блок",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "background-color-type",
+      "type" : "String",
+      "description" : "Устанавливает цвет фона карточки возможные значения: `dark-state`, `yellow`, `red`, `dark-blue`, `light-blue`, `orange`, `pink`, `green`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "background-image",
+      "type" : "String",
+      "description" : "url-адрес картинки карточки",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-cover",
+      "type" : "Boolean",
+      "description" : "Устанавливает `cover` значение для картинки карточки",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-repeat",
+      "type" : "Boolean",
+      "description" : "Устанавливает `background-repeat` опцию на картинке фона",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-blur",
+      "type" : "Number",
+      "description" : "Размытие картинки значение от `0.0` до `1.0`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-smoke",
+      "type" : "Number",
+      "description" : "Размытие заднего фона значения `0.2`, `0.3`, `0.5`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":background-opacity",
+      "type" : "Boolean",
+      "description" : "Прозрачность заднего фона значение от `0.0` до `1.0`",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":is-white-color",
+      "type" : "Boolean",
+      "description" : "Устанавливает белый цвет текста",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "background-position",
+      "type" : "String",
+      "description" : "Задает расположение фона карточки возможные значения: `top`, `left`, `bottom`, `right`, `top-left`, `top-right`, `bottom-left`, `bottom-right`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-position-top",
+      "type" : ["String", "Number"],
+      "description" : "Устанавливает отступ картинки сверху `number - любое число становится px, `string` - любые значения. `Работает только при background-image-stand-alone и background-image`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-position-left",
+      "type" : ["String", "Number"],
+      "description" : "Устанавливает отступ картинки слева `number - любое число становится px, `string` - любые значения. `Работает только при background-image-stand-alone и background-image`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-position-right",
+      "type" : ["String", "Number"],
+      "description" : "Устанавливает отступ картинки справа `number - любое число становится px, `string` - любые значения. `Работает только при background-image-stand-alone и background-image`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "(:)background-position-bottom",
+      "type" : ["String", "Number"],
+      "description" : "Устанавливает отступ картинки снизу `number - любое число становится px, `string` - любые значения. `Работает только при background-image-stand-alone и background-image`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":offset-top",
+      "type" : "Boolean",
+      "description" : "Флаг указывающий отступ сверху карточки",
+      "value" : "false"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":col-size",
+      "type" : "Number",
+      "description" : "Поджимает контент карточки. Было создано для создания 6 колоночной карточки, где 3 колонки - текст, остальное - картинка. `Доступно только значение 2`",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":card-height",
+      "type" : "Number",
+      "description" : "Устанавливает высоту карточки",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":card-header-height",
+      "type" : "Number",
+      "description" : "Устанавливает высоту заголовка карточки",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":card-body-height",
+      "type" : "Number",
+      "description" : "Устанавливает высоту контейнера для контента карточки",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : ":ga",
+      "type" : "Object",
+      "description" : "Используется для сбора Google-аналитики.:ga=\"{ value: 'Заголовок на карточке' }\"",
+      "value" : "null"
+    }
+  ]
+}
