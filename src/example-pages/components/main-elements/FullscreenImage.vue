@@ -38,7 +38,7 @@
     <pre-code
       text='<rt-fullscreen-image
       background-image="https://img00.deviantart.net/3949/i/2018/277/7/a/s_f_c_city_by_renata_s_art-dcoj7ap.png"
-    >'></pre-code>
+    >
       <div class="rt-container">
         <div class="rt-col-12 rt-col-md-3">
           <p class="rt-space-top">
@@ -65,7 +65,7 @@
           </p>
         </div>
       </div>
-    </rt-fullscreen-image>
+    </rt-fullscreen-image>'></pre-code>
     <div class="app-body">
       <div class="rt-container">
         <div class="rt-col-12 rt-col-md-3">
