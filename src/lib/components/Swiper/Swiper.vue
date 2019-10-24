@@ -152,9 +152,9 @@ export default {
       type: Number,
       default: 20
     },
-    offsetSlide: {
-      type: Number
-    },
+//    offsetSlide: {
+//      type: Number
+//    },
     padding: {
       type: String,
       default: "0"
