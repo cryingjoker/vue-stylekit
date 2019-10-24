@@ -51,6 +51,9 @@
         for(let i = 0; i < this.totalQuantity; i++) {
           this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
         }
+        setTimeout(() => {
+          window.dispatchEvent(new Event("resizeTrigger"));
+        }, 1)
       },
       countHiddenIconsQuantity() {
         // 32 - icon.width + icon.margin
