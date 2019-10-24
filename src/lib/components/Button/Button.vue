@@ -145,12 +145,12 @@
           <label ref="button">
             <input type="radio" class="fake-radiobutton-for-button" name={this.radioGroupName}
                    value={this.radioValue}/>
-            <butto class={this.buttonClass} onClick={this.triggerClick}>
+            <button class={this.buttonClass} onClick={this.triggerClick}>
               <rt-ripple notRender={this.hide} twiceRender={true}>
                 {spinner}
                 {this.$slots.default}
               </rt-ripple>
-            </butto>
+            </button>
           </label>
         );
       } else {
