@@ -90,7 +90,7 @@ export default {
       this.isTablet = isTablet;
       if (isMobile && this.mobileNotResize) {
         this.querySelectorsNames.forEach((selectorName) => {
-          this.$el.querySelectorAll(`${selectorName}`).forEach((node, index) => {
+          this.$el.querySelectorAll(`${selectorName}`).forEach((node) => {
             if (node.style.height) {
               node.style.height = null;
             }

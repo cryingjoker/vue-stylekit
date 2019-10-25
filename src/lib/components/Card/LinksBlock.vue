@@ -74,7 +74,6 @@
       },
       hideIcons() {
         for(let i = 0; i < this.totalQuantity; i++) {
-//          this.totalQuantity !== 7 ? (i > 5 ? this.iconsList[i].classList.add('rtb-card__social-link--hidden') : null) : null;
           if(this.totalQuantity !== 7 && i > 5) {
             this.iconsList[i].classList.add('rtb-card__social-link--hidden');
           }
