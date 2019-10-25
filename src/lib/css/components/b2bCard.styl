@@ -74,7 +74,7 @@
   &__links-block
     display inline-block
     max-width calc(100% - 42px)
-    max-height 26px
+    max-height 35px
     overflow hidden
     vertical-align middle
 
@@ -111,9 +111,10 @@
     font-size 14px
     line-height 28px
     //margin-left 5px
-    vertical-align middle
+    vertical-align top
     cursor pointer
     min-width 41px
+    margin-top -10px
 
   .{newAppName}-card__content
     min-height auto
@@ -874,15 +875,15 @@
   top -30px
   left -20px
 
-.card-layout
-  &-6
+.card
+  &-layout-6
     width 50%
     @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
       width auto
     .rt-col-3
       max-width 50%
       flex-basis 50%
-  &-8
+  &-layout-8
     width calc(100% / 3 * 2)
     //@media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
     //  width auto
@@ -892,7 +893,7 @@
     .rt-col-4
       max-width calc(50%)
       flex-basis calc(50%)
-  &-9
+  &-layout-9
     width 75%
     @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
       min-width 75%
@@ -917,7 +918,7 @@
 .links-block
   @media (min-width laptop-lower-limit)
     display flex
-    justify-content space-between
+    justify-content flex-start
 
 .equipment
   display flex

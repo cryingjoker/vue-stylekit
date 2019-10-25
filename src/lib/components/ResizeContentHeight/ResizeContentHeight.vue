@@ -71,6 +71,9 @@ export default {
         this.calculateMaxHeight();
       }, 500);
     }
+    window.addEventListener('resizeTrigger', () => {
+      this.calculateMaxHeight();
+    })
   },
   methods: {
     bindResize() {
@@ -81,15 +84,13 @@ export default {
     },
     calculateMaxHeight() {
 
-      const isMobile =
-        window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
-      const isTablet =
-        window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
+      const isMobile = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
+      const isTablet = window.innerWidth <= parseInt(variables["tablet-upper-limit"]);
       this.isMobile = isMobile;
       this.isTablet = isTablet;
       if (isMobile && this.mobileNotResize) {
         this.querySelectorsNames.forEach((selectorName) => {
-          this.$el.querySelectorAll(`${selectorName}`).forEach((node, index) => {
+          this.$el.querySelectorAll(`${selectorName}`).forEach((node) => {
             if (node.style.height) {
               node.style.height = null;
             }
@@ -166,6 +167,7 @@ export default {
         });
       }, 50);
     }
+
   },
   render(h) {
     return <div>

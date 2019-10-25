@@ -76,9 +76,19 @@
       "type": [
         "Boolean"
       ],
-      "description": "Флаг удаления отступа в колонку",
+      "description": "Флаг удаления отступа в колонку слева от контента",
       "value": "false",
       "version": "0.0.29"
+    },
+    {
+      "name": "rt-banner",
+      "property": ":without-second-empty-column",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Флаг удаления отступа в колонку справа от контента",
+      "value": "false",
+      "version": ""
     },
     {
       "name": "rt-banner",
@@ -182,6 +192,26 @@
       "version": " >= 0.0.25"
     },
     {
+      "name": "rt-banner",
+      "property": "no-triangle",
+      "type": [
+        "Boolean"
+      ],
+      "description": "Убирает скосы справа и слева от изображения",
+      "value": "false",
+      "version": ""
+    },
+    {
+      "name": "rt-banner",
+      "property": "paginator-position",
+      "type": [
+        "String"
+      ],
+      "description": "Устанавливает позицию пагинатора. Сейчас принимая `top` переносит пагинатор наверх",
+      "value": "null",
+      "version": ""
+    },
+    {
       "name": "rt-banner-item",
       "property": "background-position",
       "type": [
@@ -262,14 +292,14 @@
     {
       "name": "rt-banner-item",
       "property": ":is-white-color",
-      "type": ["Boolean"],
+      "type": "Boolean",
       "description": "Устанавливает белый цвет текста слайда",
       "value": "false"
     },
     {
       "name": "rt-banner-item",
       "property": "lazy-image",
-      "type": ["String"],
+      "type": "String",
       "description": "Устанавливает для слайда фон в виде прелоадера, пока не загрузится основное изображение \n string - ссылка на внутренний или внешний файл",
       "value": "null",
       "version": " >= 0.0.30"
