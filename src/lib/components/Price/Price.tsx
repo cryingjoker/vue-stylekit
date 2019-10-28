@@ -18,7 +18,6 @@ class Price extends Vue {
   @Prop({ default: false }) b2bPrice: boolean;
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
-  @Prop({ default: false }) epcPrice: boolean;
   @Prop({ default: false }) trimHundredth: boolean;
   @Prop({ default: false }) darkened: boolean;
   localValue: number = 0;
