@@ -216,7 +216,6 @@
 //            this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
           }, 150);
         }, false);
-        console.log('swipe')
       },
       mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery) {
 
@@ -246,7 +245,6 @@
             }, 5);
           }
         }
-        console.log('smooth')
       }
     }
   }
