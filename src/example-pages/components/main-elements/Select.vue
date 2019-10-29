@@ -14,49 +14,27 @@
         </div>
         <div class="app-row row">
           <div class="rt-col-6 rt-col-md-2 flex-column d-flex">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple select</span
-            >
-            <rt-select-without-js
-              label="Оборудование"
-              value="0"
-              text="Новгородская обл"
-            >
-              <option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <span class="rt-font-label flex-fill rt-space-bottom05">simple select</span>
+            <rt-select-without-js label="Оборудование"
+                                  value="0"
+                                  text="Новгородская обл">
+              <option v-for="(option, index) in optionsList"
+                      :key="'index' + Math.random().toString(5).slice(4)"
+                      :value="String(index)">
                 {{ option }}
               </option>
             </rt-select-without-js>
           </div>
 
           <div class="rt-col-6 rt-col-md-1 flex-column d-flex">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple disabled select</span
-            >
-            <rt-select-without-js
-              :disabled="true"
-              label="Оборудование"
-              value="0"
-              text="Новгородская обл"
-            >
-              <option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <span class="rt-font-label flex-fill rt-space-bottom05">simple disabled select</span>
+            <rt-select-without-js :disabled="true"
+                                  label="Оборудование"
+                                  value="0"
+                                  text="Новгородская обл">
+              <option v-for="(option, index) in optionsList"
+                      :key="'index' + Math.random().toString(5).slice(4)"
+                      :value="String(index)">
                 {{ option }}
               </option>
             </rt-select-without-js>
@@ -64,26 +42,15 @@
         </div>
         <div class="app-row row">
           <div class="col rt-col-md-3 flex-column d-flex">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple select with error</span
-            >
-            <rt-select-without-js
-              :error-message="'ошибка: не выбран город'"
-              :has-error="true"
-              label="Оборудование"
-              value="0"
-              text="Новгородская обл"
-            >
-              <option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <span class="rt-font-label flex-fill rt-space-bottom05">simple select with error</span>
+            <rt-select-without-js :error-message="'ошибка: не выбран город'"
+                                  :has-error="true"
+                                  label="Оборудование"
+                                  value="0"
+                                  text="Новгородская обл">
+              <option v-for="(option, index) in optionsList"
+                      :key="'index' + Math.random().toString(5).slice(4)"
+                      :value="String(index)">
                 {{ option }}
               </option>
             </rt-select-without-js>
@@ -99,20 +66,11 @@
         </div>
         <div class="app-row row">
           <div class="col rt-col-md-3">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >simple select</span
-            >
+            <span class="rt-font-label flex-fill rt-space-bottom05">simple select</span>
             <rt-select label="Оборудование" value="0">
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
@@ -120,160 +78,111 @@
         </div>
         <div class="app-row row">
           <div class="rt-col-6 rt-col-md-2 rt-md-space-top d-flex flex-column">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >select with error</span
-            >
-            <rt-select
-              :error-message="'ошибка: не выбран город'"
-              :has-error="true"
-              label="Оборудование"
-              value="0"
-              text="Новгородская обл"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <span class="rt-font-label flex-fill rt-space-bottom05">select with error</span>
+            <rt-select :error-message="'ошибка: не выбран город'"
+                       :has-error="true"
+                       label="Оборудование"
+                       value="0"
+                       text="Новгородская обл">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
           <div class="rt-col-6 rt-col-md-1 rt-md-space-top d-flex flex-column">
-            <span class="rt-font-label flex-fill rt-space-bottom05"
-              >disabled select</span
-            >
-            <rt-select
-              :disabled="true"
-              label="Оборудование"
-              value="0"
-              text="Новгородская обл"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <span class="rt-font-label flex-fill rt-space-bottom05">disabled select</span>
+            <rt-select :disabled="true"
+                       label="Оборудование"
+                       value="0"
+                       text="Новгородская обл">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div
-          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
-        >
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
             <rt-select :is-b2b-select="true" label="Выберите регион">
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-              :disabled="true"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <rt-select :is-b2b-select="true"
+                       label="Выберите регион"
+                       :disabled="true">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div
-          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
-        >
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
             <rt-select :is-b2b-select="true"
                        label="Выберите регион"
                        :has-error="true">
               <rt-select-option v-for="(option, index) in optionsList"
                                 :key="'index' + Math.random().toString(5).slice(4)"
-                                :value="String(index)">{{ option }}</rt-select-option>
+                                :value="String(index)">
+                {{ option }}
+              </rt-select-option>
             </rt-select>
           </div>
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
             <rt-select :is-b2b-select="true"
                        label="Выберите регион"
                        :outlined="true"
-                       :active-input="true">
+                       :auto-complete="true">
               <rt-select-option v-for="(option, index) in optionsList"
-                                :key="'index' +Math.random().toString(5).slice(4)"
-                                :value="String(index)">{{ option }}</rt-select-option>
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
+                {{ option }}
+              </rt-select-option>
             </rt-select>
           </div>
         </div>
-        <div
-          class="app-row row color-block--light-grey rt-space-top rt-space-bottom"
-        >
+        <div class="app-row row color-block--light-grey rt-space-top rt-space-bottom">
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-              :outlined="true"
-              :disabled="true"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <rt-select :is-b2b-select="true"
+                       label="Выберите регион"
+                       :outlined="true"
+                       :disabled="true">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
               </rt-select-option>
             </rt-select>
           </div>
           <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
-            <rt-select
-              :is-b2b-select="true"
-              label="Выберите регион"
-              :outlined="true"
-              :has-error="true"
-            >
-              <rt-select-option
-                v-for="(option, index) in optionsList"
-                :key="
-                  'index' +
-                    Math.random()
-                      .toString(5)
-                      .slice(4)
-                "
-                :value="String(index)"
-              >
+            <rt-select :is-b2b-select="true"
+                       label="Выберите регион"
+                       :outlined="true"
+                       :has-error="true">
+              <rt-select-option v-for="(option, index) in optionsList"
+                                :key="'index' + Math.random().toString(5).slice(4)"
+                                :value="String(index)">
                 {{ option }}
+              </rt-select-option>
+            </rt-select>
+          </div>
+        </div>
+        <div class="app-row row rt-space-top rt-space-bottom">
+          <div class="rt-col-6 rt-col-md-2 d-flex flex-column">
+            <rt-select label="multiSelect" :multi="true" field-id="235">
+              <rt-select-option v-for="i in 5" :key="i" :value="String(i)">
+                Вариант {{ i }} fghsdfgsdfsdfgsdfg
               </rt-select-option>
             </rt-select>
           </div>

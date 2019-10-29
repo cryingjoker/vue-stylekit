@@ -42,9 +42,17 @@ export default {
       type: Boolean,
       default: false
     },
-    activeInput: {
+    autoComplete: {
       type: Boolean,
       default: false
+    },
+    multi: {
+      type: Boolean,
+      default: false
+    },
+    fieldId: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -58,7 +66,9 @@ export default {
       selected: {},
       isOpenListOnTop: false,
       hasSelected: this.text ? true : false,
-      focused: false
+      focused: false,
+      multiLocalValue: [],
+      multiValue: ''
     };
   },
   computed: {
@@ -85,11 +95,14 @@ export default {
       if(this.outlined) {
         selectClasses += " rtb-select--outlined"
       }
+      if(this.multi) {
+        selectClasses += " rtb-select--multi"
+      }
       return selectClasses;
     },
     placeholderClasses() {
       let placeholderClasses = '';
-      if(this.hasSelected) {
+      if(this.hasSelected && !(this.localValue === '' && this.multiLocalValue.length === 0)) {
         placeholderClasses += ' floating-placeholder--go-top'
       }
       return placeholderClasses;
@@ -130,18 +143,32 @@ export default {
   methods: {
     setValue(data) {
       const { value, text } = data;
-      this.localValue = text;
+      if(!this.multi)
+        this.localValue = text;
+      else {
+        if(text !== null) {
+          if (!this.multiLocalValue.includes(text)) {
+            this.multiLocalValue.push(text)
+          } else {
+            this.multiLocalValue.splice(this.multiLocalValue.indexOf(text), 1)
+          }
+        }
+        this.multiValue = this.multiLocalValue.join(', ');
+      }
       this.RtSelect.selectedValue = text;
-      this.emitSelected(this.localValue);
+      !this.multi ? this.emitSelected(this.localValue) : this.emitSelected(this.multiLocalValue);
       this.isOpen = false;
       this.removeBindEvents();
       this.$emit("select", data);
+      if(this.localValue === '' && this.multiLocalValue.length === 0) {
+        this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top")
+      }
     },
     toggleOpen(e) {
       if (!this.disabled) {
         this.isOpen = !this.isOpen;
-        if(this.activeInput && this.isOpen) {
-          this.$refs.activeInput.focus();
+        if(this.autoComplete && this.isOpen) {
+          this.$refs.autoCompleteSelect.focus();
         }
         if(this.focused)
           this.isOpen = true;
@@ -167,7 +194,7 @@ export default {
       if (!e.target.closest(".select--is-open")) {
         this.isOpen = false;
         this.removeBindEvents();
-        if(!this.activeInput)
+        if(!this.autoComplete)
           this.liftPlaceholder();
       }
     },
@@ -223,13 +250,14 @@ export default {
     liftPlaceholder() {
       if (!this.$el.querySelector(".floating-placeholder").classList.contains("floating-placeholder--go-top")) {
         this.$el.querySelector(".floating-placeholder").classList.add("floating-placeholder--go-top");
-      } else {
-        if(!this.focused){
-          if(this.$refs.passiveInput) {
-            !this.$refs.passiveInput.innerText ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
-          }else if(this.$refs.activeInput) {
-            !this.$refs.activeInput.value ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
-          }
+      } else if(!this.focused){
+        if(this.$refs.simpleSelect && !this.$refs.simpleSelect.innerText) {
+          console.log('enter')
+          this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
+        } else if(this.$refs.autoCompleteSelect && !this.$refs.autoCompleteSelect.value) {
+          this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
+        } else if(this.localValue === '' && this.multiLocalValue.length === 0) {
+          this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
         }
       }
     },
@@ -249,7 +277,7 @@ export default {
     removeFocus(){
       this.focused = false;
       this.isOpen = false;
-      this.$refs.activeInput.blur();
+      this.$refs.autoCompleteSelect.blur();
       setTimeout(() => {
         !this.localValue ? this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top") : null;
       },1);
@@ -270,16 +298,19 @@ export default {
       }
     })();
 
-    const activeInput = (() => {
-      if(this.activeInput) {
+    const selectType = (() => {
+      if(this.autoComplete) {
         return <input class="select-input"
                       value={this.localValue}
                       onInput={this.checkFill}
                       onFocus={this.setFocus}
                       onBlur={this.removeFocus}
-                      ref="activeInput"/>
+                      ref="autoCompleteSelect"
+                      id={this.fieldId}/>
+      } else if(this.multi) {
+        return <p class="select-input" ref="multiSelect" id={this.fieldId}>{this.multiValue}</p>
       } else {
-        return <p class="select-input" ref="passiveInput">{this.localValue}</p>
+        return <p class="select-input" ref="simpleSelect" id={this.fieldId}>{this.localValue}</p>
       }
     })();
 
@@ -287,7 +318,7 @@ export default {
       <button disabled={this.disabled} class="select__inner" onClick={this.toggleOpen}>
         <label class={"floating-placeholder " + this.placeholderClasses}>{this.label}</label>
         <div class="select-value">
-          {activeInput}
+          {selectType}
           <div class="select-arrow">
             <svg class="select-arrow__icon" width="13" height="7" xmlns="http://www.w3.org/2000/svg">
               <path d="M.705 1.704l5.999 6 6-6L11.295.295h-.002l-4.59 4.58L2.115.294h-.002z" fill="#575D68" fill-rule="evenodd"/>

@@ -6,7 +6,7 @@
       </p>
 
       <div class="select-value">
-        <select :disabled="disabled" class="select-list-native">
+        <select :disabled="disabled" class="select-list-native" :id="fieldId">
           <slot />
         </select>
         <div class="select-arrow">
@@ -56,6 +56,10 @@ export default {
       default: false
     },
     errorMessage: {
+      type: String,
+      default: null
+    },
+    fieldId: {
       type: String,
       default: null
     }
