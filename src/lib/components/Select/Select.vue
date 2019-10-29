@@ -252,7 +252,6 @@ export default {
         this.$el.querySelector(".floating-placeholder").classList.add("floating-placeholder--go-top");
       } else if(!this.focused){
         if(this.$refs.simpleSelect && !this.$refs.simpleSelect.innerText) {
-          console.log('enter')
           this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
         } else if(this.$refs.autoCompleteSelect && !this.$refs.autoCompleteSelect.value) {
           this.$el.querySelector(".floating-placeholder").classList.remove("floating-placeholder--go-top");
