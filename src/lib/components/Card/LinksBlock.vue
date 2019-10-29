@@ -51,6 +51,9 @@
         for(let i = 0; i < this.totalQuantity; i++) {
           this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
         }
+        setTimeout(() => {
+          window.dispatchEvent(new Event("resizeTrigger"));
+        }, 1)
       },
       countHiddenIconsQuantity() {
         // 32 - icon.width + icon.margin
@@ -71,7 +74,6 @@
       },
       hideIcons() {
         for(let i = 0; i < this.totalQuantity; i++) {
-//          this.totalQuantity !== 7 ? (i > 5 ? this.iconsList[i].classList.add('rtb-card__social-link--hidden') : null) : null;
           if(this.totalQuantity !== 7 && i > 5) {
             this.iconsList[i].classList.add('rtb-card__social-link--hidden');
           }

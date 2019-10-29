@@ -1,14 +1,19 @@
 import Vue from "vue";
 
 const setActiveTabName = (tabsName:string, tabAnchore:string = '', dontResize:boolean = false) => {
-  const parentId = tabsStore.tabsNames[tabsName];
-  const parentArray = tabsStore.tabsParents[parentId];
-  for(let key in parentArray){
-    if(typeof parentArray[key] === 'object') {
-      parentArray[key].isActive = false;
-    }
+  if(!tabsStore.tabsNames){
+    tabsStore.tabsNames = []
   }
-  parentArray[tabsName].isActive = true;
+  if(tabsStore.tabsNames[tabsName]) {
+    const parentId = tabsStore.tabsNames[tabsName];
+    const parentArray = tabsStore.tabsParents[parentId];
+    for (let key in parentArray) {
+      if (typeof parentArray[key] === 'object') {
+        parentArray[key].isActive = false;
+      }
+    }
+    parentArray[tabsName].isActive = true;
+  }
   // Определение Internet Explorer. нужно т.к. в нем не работет resize
   const browserName = navigator.userAgent.toLowerCase(),
     isIE = (/trident/gi).test(browserName) || (/msie/gi).test(browserName);

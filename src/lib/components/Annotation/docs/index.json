@@ -3,16 +3,23 @@
     {
       "name" : "rt-annotation",
       "property" : "label",
-      "type" : ["String"],
+      "type" : "String",
       "description" : "Верхний текст примечания",
       "value" : "null"
     },
     {
       "name" : "rt-annotation",
       "property" : "has-white-color",
-      "type" : ["String"],
+      "type" : "String",
       "description" : "flag белого цвета",
       "value" : "null"
+    },
+    {
+      "name" : "rt-annotation",
+      "property" : "open",
+      "type" : "Boolean",
+      "description" : "Задаёт открытое состояние для блока по умолчанию",
+      "value" : "false"
     }
   ]
 }

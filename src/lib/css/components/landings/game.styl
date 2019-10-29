@@ -69,7 +69,11 @@
   .rt-banner__item flex
     @media (max-width: mobile-upper-limit)
       display block
-      
+
+
+
+//
+//mobile-upper-limit = 767px
 //.rt-game-banner
 //  min-height: 100vh
 //  display: flex
@@ -89,6 +93,7 @@
 //  flex-direction column
 //
 //.rt-game-banner__item
+//  overflow: hidden;
 //  position: absolute
 //  top: 0
 //  bottom: 0
@@ -102,6 +107,9 @@
 //  transition-property opacity
 //  @media (max-width: mobile-upper-limit)
 //    padding-top: 168px
+//  @media (max-height: 800px) and (min-width: 1024px)
+//    padding-top: 100px
+//    padding-bottom: 100px
 //
 //
 //.rt-game-banner__item--is-active
@@ -171,6 +179,12 @@
 //  top: 0
 //  left: 0
 //  right: 0
+//  @media (max-width: mobile-upper-limit)
+//    position: sticky
+//    background-color: #122545
+//    padding-top: 15px
+//    z-index 2
+//    padding-bottom: 15px
 //.rt-game-banner__paginator-item
 //  display inline-block
 //  width 20px
@@ -179,7 +193,9 @@
 //  position relative
 //  z-index 3
 //  cursor pointer
-//
+//  font-size 16px
+//  font-weight: 500
+//  width auto
 //  &:before
 //    content ""
 //    width 10px
@@ -196,6 +212,8 @@
 //    transition-timing-function ease-in-out
 //    transition-duration .3s
 //    transition-property background-color, width, height, border, margin, left, right
+//    @media (max-width: mobile-upper-limit)
+//      display none
 //
 //  & + &
 //    margin-left 20px
@@ -215,6 +233,31 @@
 //      stroke-dasharray 60
 //      stroke-width 1px
 //
+//.rt-game-banner__paginator-item:before
+//  @media (max-width: mobile-upper-limit)
+//    content ''
+//    display: block
+//    background-color: #FF4F12
+//    position: absolute;
+//    bottom: 0
+//    right: 0
+//    left: 0
+//    border none
+//    width: 100%
+//    height: 0
+//    border-radius 0
+//    top: inherit
+//    bottom: -17px
+//    opacity: 0
+//    transition-timing-function ease-in-out
+//    transition-duration .3s
+//    transition-property height, opacity
+//
+//.rt-game-banner__paginator-item:hover:before,
+//.rt-game-banner__paginator-item--is-active:before
+//  @media (max-width: mobile-upper-limit)
+//    height: 2px
+//    opacity: 1
 //.rt-game-more-info
 //  @media (max-width: mobile-upper-limit)
 //    border-width 0
@@ -228,3 +271,10 @@
 //    position: relative
 //    bottom: -2px
 //    display: block
+//
+//.rt-game-text-link-center
+//  @media (min-width: mobile-upper-limit)
+//    position: absolute;
+//    bottom: 100px
+//    left: 0
+//    right: 0

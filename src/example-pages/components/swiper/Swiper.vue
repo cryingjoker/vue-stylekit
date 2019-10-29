@@ -42,7 +42,7 @@
       </rt-slide>
     </rt-swiper>
     <div class="rt-space-top5">
-      <!--<rt-resize-content-height :query-selectors-names="['.rt-card']">-->
+      <rt-resize-content-height :query-selectors-names="['.rt-card']">
         <rt-swiper :hide-navigation="true" :scroll-on-click="true">
           <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
@@ -538,7 +538,7 @@
           </rt-card>
         </rt-slide>
       </rt-swiper>
-      <!--</rt-resize-content-height>-->
+      </rt-resize-content-height>
     </div>
     <div class="rt-space-top5">
       <rt-swiper>
@@ -677,6 +677,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>

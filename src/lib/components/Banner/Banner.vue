@@ -222,9 +222,9 @@
           if (this.RtBanners.items[this.RtBanners.activeIndex].isGameBannerItem) {
             className += " rt-banner--for-game";
           }
-          if (this.categoryBanner) {
-            className += " rtb-banner--category";
-          }
+//          if (this.categoryBanner) {
+//            className += " rtb-banner--category";
+//          }
           if (this.mobileImageOnTop) {
             className += " rt-banner--image-ontop";
           }
