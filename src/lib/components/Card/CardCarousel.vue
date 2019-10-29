@@ -73,7 +73,7 @@
 //              this.mobileCarousel(activePaginatorIndex);
 //            })
 //          }
-          this.mobileSwipe();
+//          this.mobileSwipe(); //using CSS positioning
         } else {
           this.removePaginator();
           this.positionCarouselCards();
@@ -213,10 +213,9 @@
               carouselPaginatorWrapper.children[i].classList.remove('custom-carousel__paginator-item--active');
             };
             carouselPaginatorWrapper.children[activePaginatorButton].classList.add('custom-carousel__paginator-item--active');
-            this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
+//            this.mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery);
           }, 150);
         }, false);
-
       },
       mobileSmoothScroll(currentScroll, endScrollPosition, cardGallery) {
 
