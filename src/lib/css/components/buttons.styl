@@ -22,9 +22,17 @@
     color transparent !important
 
   &--is-block
+
     display block
     min-width 100%
-
+  &-md--is-block
+    @media (max-width: mobile-upper-limit)
+      display block
+      min-width 100%
+  &-td--is-block
+    @media (max-width: tablet-upper-limit)
+      display block
+      min-width 100%
   .ripple-wave
     background-color default-wive-color
 

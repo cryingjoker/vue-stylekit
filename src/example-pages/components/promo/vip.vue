@@ -3,19 +3,19 @@
     <div class="rt-game-banner">
       <div class="rt-game-banner__paginator">
         <div class="rt-game-banner__paginator-item rt-game-banner__paginator-item--is-active">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon d-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
           <div class="rt-game-banner__paginator-item__span">Wargaming</div>
         </div>
         <div class="rt-game-banner__paginator-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon d-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
           <div class="rt-game-banner__paginator-item__span">Warface</div>
         </div>
         <div class="rt-game-banner__paginator-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon d-none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
           <div class="rt-game-banner__paginator-item__span">4Game</div>
