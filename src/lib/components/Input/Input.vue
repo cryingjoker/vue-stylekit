@@ -6,10 +6,6 @@
 
   export default {
     name: "RtInput",
-    model: {
-      prop: 'value',
-      event: 'input'
-    },
     props: {
       customRules: {
         type: Array,
