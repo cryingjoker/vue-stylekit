@@ -53,24 +53,21 @@
       },
       specifyCardClass() {
         if(this.$slots.cards && window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
-          for (let i = 0; i < this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.length; i++) {
-            let el = this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes[i];
+          this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
-          }
+          });
           this.singleRow ? this.$el.classList.add('row') : null;
           this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
         } else if(this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
-          for (let i = 0; i < this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.length; i++) {
-            let el = this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes[i];
+          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
-          }
+          });
 //          this.singleRow ? this.$el.classList.add('row') : null;
 //          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         } else if(this.$slots.cards && window.innerWidth > parseInt(variables["desktop-lower-limit"])) {
-          for (let i = 0; i < this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.length; i++) {
-            let el = this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes[i];
+          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
-          };
+          });
           this.singleRow ? this.$el.classList.remove('row'): null;
           this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         }
