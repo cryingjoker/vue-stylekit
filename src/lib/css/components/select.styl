@@ -28,8 +28,8 @@
     height: 7px
 
     .select--is-open &
-      transform rotate(180deg)
-      top 5px!important
+      transform rotate(-180deg)
+      top 15px!important
 
     &__icon
       opacity .7
@@ -68,6 +68,7 @@
     outline none
     border none
     width 100%
+    min-height 20px
 
   &-list
     width 100%
@@ -135,6 +136,44 @@
         transition-duration 0s
     &--hidden
       display none
+    &--multi
+      position relative
+      padding 0 20px
+      &:hover
+        background-color b2c-purple
+        color b2c-white
+        .select-option__inner
+          border-top none!important
+      &:before
+        content: ''
+        position absolute
+        left 20px
+        top 50%
+        transform translateY(-50%)
+        width 20px
+        height 20px
+        box-sizing border-box
+        border 2px solid b2c-cool-grey07
+        background-color b2c-white
+      .select-option__inner
+        padding 14px 0
+        text-indent 30px
+        &:hover
+          background-color: transparent
+      &+&
+        .select-option__inner
+          border-top 1px solid b2c-cool-grey
+    &__checked-sign
+      display inline-block
+      position absolute
+      top 15px
+      left 25px
+      opacity 0
+      transition opacity .2s linear
+    &__hidden-checkbox
+      display: none
+      &:checked+.select-option__checked-sign
+        opacity 1
 
 .{b2bAppName}-select
   height 60px !important
@@ -219,3 +258,10 @@
     .select__inner[disabled]
       .floating-placeholder
         color main-color05
+
+  &--multi
+    min-height 49px
+    height auto!important
+    .select-input
+      white-space normal
+      text-overflow initial

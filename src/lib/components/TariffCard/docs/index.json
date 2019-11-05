@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "name": "rt-product-card",
+      "property":":fixed-image-height",
+      "type": ["Boolean"],
+      "description":"Флаг фиксированной высоты в 300 для b2c",
+      "value" :"false",
+      "version": "0.1.14"
+    },
+     {
+      "name": "rt-product-card",
+      "property":":background-image",
+      "type": ["String"],
+      "description":"url для background карточки",
+      "value" :"null",
+       "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":tablet-background-image",
+      "type": ["String"],
+      "description":"url для background карточки для планшетов",
+      "value" :"null",
+      "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":mobile-background-image",
+      "type": ["String"],
+      "description":"url для background карточки для телефонов",
+      "value" :"null",
+      "version": "0.1.14"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":safe-image-rate",
+      "type": ["Boolean"],
+      "description":"сохранение пропорций изображения для мобильной версии",
+      "value" :"false",
+      "version": "0.1.17"
+    },
+    {
+      "name": "rt-product-card",
+      "property":":content-orientation",
+      "type": ["String"],
+      "description":"установка прибивки контента \n возжмый ввод 'top' и 'bottom'",
+      "value" :"top",
+      "version": "0.1.17"
+    }
+  ]
+}

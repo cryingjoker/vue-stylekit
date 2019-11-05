@@ -1,22 +1,26 @@
 <template>
   <div class="rt-space-top4">
     <div class="rt-game-banner">
-      <div class="rt-game-banner__paginator md-d-none">
+      <div class="rt-game-banner__paginator">
         <div class="rt-game-banner__paginator-item rt-game-banner__paginator-item--is-active">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
+          <div class="rt-game-banner__paginator-item__span">Wargaming</div>
         </div>
         <div class="rt-game-banner__paginator-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
+          <div class="rt-game-banner__paginator-item__span">Warface</div>
         </div>
         <div class="rt-game-banner__paginator-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" class="rt-game-banner__paginator-item__icon md-d-none">
             <circle r="4" cx="4.5" cy="4.5" fill="transparent"></circle>
           </svg>
+          <div class="rt-game-banner__paginator-item__span">4Game</div>
         </div>
+
       </div>
       <div class="rt-game-banner__content">
         <div class="rt-game-arrow-contaner rt-container td-d-none">
@@ -284,8 +288,13 @@
             </div>
           </div>
         </div>
-        <rt-game-arrow></rt-game-arrow>
+        <div v-rt-scroll-to-on-click='{"scrollToId": "rt-game-banner"}'>
+          <rt-game-arrow></rt-game-arrow>
+        </div>
       </div>
+    </div>
+    <div class="rt-space-top8">
+      <div id="rt-game-banner">123123</div>
     </div>
   </div>
   <!-- Описание -->

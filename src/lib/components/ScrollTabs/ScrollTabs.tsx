@@ -120,7 +120,13 @@ class ScrollTabs extends Vue {
     this.fixedNode.style.removeProperty('position');
     this.fixedNode.style.removeProperty('width');
     this.fixedNode.style.removeProperty('top');
-    this.fixedNode.style.height = '0px';
+    const parentNode:any= this.fixedNode.parentNode
+    const fixedNodeTop = parentNode.getBoundingClientRect().top - this.fixedNode.offsetHeight + (window.pageYOffset || document.documentElement.scrollTop) - this.fixedNodeTop;
+    if(document.documentElement.scrollTop > fixedNodeTop) {
+      this.fixedNode.style.height = '0px';
+    }else{
+      this.fixedNode.style.removeProperty('height');
+    }
     this.fixedNode.style.overflow = 'hidden';
 
     this.fixedNodeParent.style.removeProperty('padding-top');

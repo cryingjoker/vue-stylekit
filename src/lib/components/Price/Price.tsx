@@ -18,7 +18,6 @@ class Price extends Vue {
   @Prop({ default: false }) b2bPrice: boolean;
   @Prop({ default: "" }) oldPriceColor: boolean;
   @Prop({ default: false }) isTimeIntervalBottom: boolean;
-  @Prop({ default: false }) epcPrice: boolean;
   @Prop({ default: false }) trimHundredth: boolean;
   @Prop({ default: false }) darkened: boolean;
   localValue: number = 0;
@@ -134,11 +133,6 @@ class Price extends Vue {
 
   mounted() {
     this.cost = this.value ? parseFloat(this.value.toString()) : 0;
-    if(this.epcPrice){
-      this.$root.$on('update-price', (value) => {
-        this.cost = parseInt(value, 10);
-      });
-    }
   }
 
   render(h: CreateElement): VNode {
@@ -184,7 +178,7 @@ class Price extends Vue {
         return <div>
           {opinionRender()}
           <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>
-            {this.epcPrice ? this.cost : this.normalizeValue}
+            {this.$slots.epcPrice ? this.$slots.epcPrice : this.normalizeValue}
           </div>
           <div class="rtb-price__info rt-price__info">{this.normalizeCurrency}</div>
           <div class="rt-font-small-paragraph rt-font-bold rtb-price__info-interval">{this.normalizeTimeInterval}</div>
@@ -193,7 +187,7 @@ class Price extends Vue {
         return <div>
           {opinionRender()}
           <div class={"rt-price__value rtb-price__value" + (this.colorValue ? " color-" + this.colorValue : "")}>
-            {this.epcPrice ? this.cost : this.normalizeValue}
+            {this.$slots.epcPrice ? this.$slots.epcPrice : this.normalizeValue}
           </div>
           <div class="rt-price__info rtb-price__info">
             <div class="rt-price__info-item rtb-price__info-item">{this.normalizeCurrency}</div>
