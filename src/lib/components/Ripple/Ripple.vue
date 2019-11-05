@@ -76,7 +76,9 @@ export default {
             el.style[i] = style[i];
           }
           setTimeout(() => {
-            el.remove();
+            if (el.parentNode) {
+              el.parentNode.removeChild(el);
+            }
           }, 400);
         }, 10);
       }
