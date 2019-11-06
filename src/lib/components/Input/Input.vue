@@ -126,6 +126,10 @@
       inputButtonText: {
         type: String,
         default: ''
+      },
+      scope: {
+        type: String,
+        default: ''
       }
     },
     data() {
@@ -145,7 +149,7 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.errors && this.errors.has(this.fieldName);
+          return this.errors && this.errors.has(this.scope ? this.scope + '.' + this.fieldName : this.fieldName);
         }
       },
       inputClass() {
