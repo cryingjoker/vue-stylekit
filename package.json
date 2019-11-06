@@ -1,6 +1,6 @@
 {
   "name": "vue_rt_style",
-  "version": "0.1.73",
+  "version": "0.1.74",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.styl": [
-      "stylus-supremacy format src/**/*.styl --replace --options stylus-supremacy.config.json",
+      "stylus-supremacy format src/**/*.styl --replace --options stylus-supremacy.config.jљson",
       "git add"
     ],
     "*.{js,json,vue}": [
