@@ -34,11 +34,7 @@
         tabsStore.setActiveTabName(this.name, this.anchor);
         const $el = this.$el;
         var currentScrollLeft = $el.parentNode.scrollLeft;
-        $el.parentNode.scrollBy({
-          top: 0,
-          left: ($el.offsetLeft - ((window.innerWidth - $el.offsetWidth) / 2)) - currentScrollLeft,
-          behavior: "smooth"
-        });
+        $el.parentNode.scrollLeft = ($el.offsetLeft - ((window.innerWidth - $el.offsetWidth) / 2)) - currentScrollLeft
       },
       onUpdateTabsStore(){
         this.$forceUpdate()
