@@ -192,7 +192,6 @@
                       :is-b2b-input="true"
                       :approved="true"
                       v-model="inputValue"
-                      @input="$emit('input', inputValue = $event)"
                       @click="consoleEvent($event)"
                       @change="consoleEvent($event)"
                       @keyup="consoleEvent($event)"
@@ -200,6 +199,7 @@
                       @focus="consoleEvent($event)"
                       @blur="consoleEvent($event)"/>
             <div class="row flex-center-center rt-space-top">
+              {{inputValue}}
               <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a>
               </rt-checkbox>
             </div>

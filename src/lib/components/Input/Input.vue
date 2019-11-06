@@ -5,6 +5,10 @@
 
   export default {
     name: "RtInput",
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       customRules: {
         type: Array,
@@ -198,9 +202,10 @@
           Object.keys(this["_events"]).map(eventName => {
             const that = this;
             that["_events"][eventName].forEach((fn)=> {
+              //console.log(that.model)
               if(eventName != 'input' && window[variables.globalSettingsKey].segment != 'b2c') { // for work with v-model
                 this.$refs.input.addEventListener(eventName, fn)
-              } else {
+              } else if (eventName != 'input') {
                 this.$refs.input.addEventListener(
                   eventName,
                   function() {

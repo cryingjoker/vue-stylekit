@@ -65,7 +65,7 @@ import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 import GallaryCarousel from '../components/main-elements/GallaryCarousel.vue'
 import CheckboxTabs from '../components/main-elements/CheckboxTabs.vue'
 
-import GameArrows from '../components/game-ui/GameArrows.vue'
+import GameArrows from '../components/game-ui/gameArrows.vue'
 const index = [
   { path: '/grid', name: 'app-grid', component: GridElements },
   { path: '/space', name: 'app-grid', component: SpaceElements },
