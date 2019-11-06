@@ -230,37 +230,23 @@
           </div>
           <div class="rt-col-3 rt-col-td-1" />
           <div class="rt-col rt-col-6 rt-col-td-4 rt-col-md-3">
-            <rt-input placeholder="Имя" :is-b2b-input="true" />
-            <rt-input placeholder="Компания" :is-b2b-input="true" />
-            <rt-input
-              placeholder="Электронная почта"
-              :is-b2b-input="true"
-              :input-button="true"
-              input-button-text="Получить код"
-            />
-            <rt-input
-              placeholder="Телефон"
-              :is-b2b-input="true"
-              :has-timer="true"
-              timer-duration="1"
-              insert-type="tel"
-            />
-            <rt-input
-              v-model="inputValue"
-              placeholder="Код из смс"
-              :is-b2b-input="true"
-              :approved="true"
-              @input="$emit('input', (inputValue = $event))"
-              @click="consoleEvent($event)"
-              @change="consoleEvent($event)"
-              @keyup="consoleEvent($event)"
-              @keydown="consoleEvent($event)"
-              @focus="consoleEvent($event)"
-              @blur="consoleEvent($event)"
-            />
+            <rt-input placeholder="Имя" :is-b2b-input="true"/>
+            <rt-input placeholder="Компания" :is-b2b-input="true"/>
+            <rt-input placeholder="Электронная почта" :is-b2b-input="true" :input-button="true" input-button-text="Получить код"/>
+            <rt-input placeholder="Телефон" :is-b2b-input="true" :has-timer="true" timer-duration="1" insert-type="tel"/>
+            <rt-input placeholder="Код из смс"
+                      :is-b2b-input="true"
+                      :approved="true"
+                      v-model="inputValue"
+                      @click="consoleEvent($event)"
+                      @change="consoleEvent($event)"
+                      @keyup="consoleEvent($event)"
+                      @keydown="consoleEvent($event)"
+                      @focus="consoleEvent($event)"
+                      @blur="consoleEvent($event)"/>
             <div class="row flex-center-center rt-space-top">
-              <rt-checkbox name="agreement" class="color-main05">
-                Я принимаю <a href="">условия передачи информации</a>
+              {{inputValue}}
+              <rt-checkbox name="agreement" class="color-main05">Я принимаю <a href="">условия передачи информации</a>
               </rt-checkbox>
             </div>
             <rt-button class="rt-button-transparent-purple" @click="clearInput">
