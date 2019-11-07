@@ -108,6 +108,7 @@ import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideCo
 import { ScrollToOnClickDirective } from "./directives/ScrollToOnClick/ScrollToOnClick";
 import 'element-closest-polyfill';
 import 'nodelist-foreach-polyfill';
+import 'element-remove';
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {
