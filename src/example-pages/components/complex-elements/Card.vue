@@ -1357,8 +1357,8 @@
         </div>
       </div>
       <div class="rt-space-top2">
-        <div class="rt-container">
-          <div class="rt-col">
+        <!--<div class="rt-container">-->
+          <!--<div class="rt-col">-->
             <rt-card-layout :swiper-on-mobile="true" :width="6">
             <template slot="cards">
               <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
@@ -1527,12 +1527,12 @@
               </div>
             </template>
           </rt-card-layout>
-          </div>
-        </div>
+          <!--</div>-->
+        <!--</div>-->
       </div>
       <div class="rt-space-top2">
-        <div class="rt-container">
-          <div class="rt-col">
+        <!--<div class="rt-container">-->
+          <!--<div class="rt-col">-->
             <rt-card-layout :swiper-on-mobile="true" :width="9" :single-row="true">
               <template slot="cards">
                 <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top">
@@ -1664,8 +1664,8 @@
                 </div>
               </template>
             </rt-card-layout>
-          </div>
-        </div>
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
     <div class="rt-container rt-space-top25">

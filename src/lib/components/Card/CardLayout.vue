@@ -86,16 +86,20 @@
           </div>
         </div>
       } else {
-        return <div class="row">
-          <div class="specified-card-layout">
-            <div class={this.wrapperClass}>
-              <div class="rt-col">
-                <div class="row">
-                  {this.$slots.cards}
+        return <div class="rt-container">
+          <div class="rt-col">
+            <div class="row">
+              <div class="specified-card-layout">
+                <div class={this.wrapperClass}>
+                  <div class="rt-col">
+                    <div class="row">
+                      {this.$slots.cards}
+                    </div>
+                  </div>
                 </div>
+                {this.$slots["side-text"]}
               </div>
             </div>
-            {this.$slots["side-text"]}
           </div>
         </div>
       }
