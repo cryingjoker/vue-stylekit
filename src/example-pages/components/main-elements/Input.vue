@@ -238,6 +238,7 @@
                       :is-b2b-input="true"
                       :approved="true"
                       v-model="inputValue"
+                      validate="required"
                       @click="consoleEvent($event)"
                       @change="consoleEvent($event)"
                       @keyup="consoleEvent($event)"

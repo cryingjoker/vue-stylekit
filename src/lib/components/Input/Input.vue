@@ -72,7 +72,7 @@
         default: null
       },
       validate: {
-        type: Object,
+        type: Object | String,
         default: null
       },
       showNumbersButtons: {
