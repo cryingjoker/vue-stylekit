@@ -106,6 +106,8 @@ import { SwipeLeft, SwipeRight } from "./directives/Swipe/swipe";
 import { OutsideClickDirective } from "./directives/OudsideClick/OudsideClick";
 import { SlideContentVerticalDirective } from "./directives/SlideContent/SlideContentVertical";
 import { ScrollToOnClickDirective } from "./directives/ScrollToOnClick/ScrollToOnClick";
+import 'element-closest-polyfill';
+import 'nodelist-foreach-polyfill';
 const VueRtStyle = {
   install(Vue, config) {
     if (!Vue.RtStyle) {

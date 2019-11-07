@@ -76,8 +76,6 @@
   import VueRtStyle from "../../lib/index";
   import componentsList from "../componentsList";
   import variables from "../../lib/variables.json";
-  import 'element-closest-polyfill';
-  import 'nodelist-foreach-polyfill';
 
   if (window) {
     window.VueRtStyle = {};
