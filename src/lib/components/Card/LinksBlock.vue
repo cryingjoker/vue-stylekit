@@ -19,8 +19,11 @@
         isOpen: false,
         totalQuantity: null,
         quantityHidden: null,
-        iconsList: []
-      };
+        iconsList: [],
+        outerWidth: null,
+        innerWidth: null,
+        visibleIcons: null
+      }
     },
 
     computed: {
@@ -31,6 +34,9 @@
     mounted() {
       this.totalQuantity = this.iconArray.length;
       this.quantityHidden = this.totalQuantity - 6;
+      this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
+      this.innerWidth = +getComputedStyle(this.$el.children[0]).width.slice(0, -2);
+      this.visibleIcons = Math.floor(innerWidth / 32) > 6 ? 6 : Math.floor(innerWidth / 32);
       window.addEventListener('load', ()=>{
         this.iconsList = this.$el.children[0].children;
         this.hideIcons();
@@ -57,15 +63,13 @@
       },
       countHiddenIconsQuantity() {
         // 32 - icon.width + icon.margin
-        let outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
-        let innerWidth = +getComputedStyle(this.$el.children[0]).width.slice(0, -2);
-        let visibleIcons = Math.floor(innerWidth / 32);
-        this.quantityHidden = this.totalQuantity - visibleIcons;
+        this.quantityHidden = this.totalQuantity - this.visibleIcons;
 
         if(this.quantityHidden === 1 || this.quantityHidden === 0) {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = '100%';
+          this.visibleIcons = 7;
           if(outerWidth < this.totalQuantity * 32) {
-            this.quantityHidden = this.totalQuantity - (visibleIcons - 1);
+            this.quantityHidden = this.totalQuantity - (this.visibleIcons - 1);
             this.$el.querySelector('.rtb-card__links-block').removeAttribute('style');
           }
         } else {
@@ -73,10 +77,8 @@
         }
       },
       hideIcons() {
-        for(let i = 0; i < this.totalQuantity; i++) {
-          if(this.totalQuantity !== 7 && i > 5) {
-            this.iconsList[i].classList.add('rtb-card__social-link--hidden');
-          }
+        for(var i = this.visibleIcons; i < this.totalQuantity; i++) {
+          this.iconsList[i].classList.add('rtb-card__social-link--hidden');
         }
       }
     },
@@ -101,7 +103,7 @@
         }
       })();
       return <div class="links-block">
-        <div class="rtb-card__links-block" >
+        <div class="rtb-card__links-block">
           {content}
         </div>
         {button}

@@ -20,8 +20,8 @@
     opacity 1!important
     flex 0 0 75vw
     max-width 320px
-    -webkit-scroll-snap-align center
-    scroll-snap-align center
+    -webkit-scroll-snap-align start
+    scroll-snap-align start
     &+&
       margin-left: 20px
   &--active
@@ -82,6 +82,8 @@
     -webkit-scroll-snap-type-x mandatory
     scroll-snap-type mandatory
     scroll-snap-type x mandatory
+    scroll-snap-padding 0 20px
+    scroll-padding 0 20px
     &:after
       content: ''
       min-width: 20px

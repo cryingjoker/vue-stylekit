@@ -1,6 +1,6 @@
 {
   "name": "vue_rt_style",
-  "version": "0.1.75",
+  "version": "0.1.76",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -44,6 +44,7 @@
     "@vue/babel-preset-jsx": "^1.1.0",
     "babel-plugin-transform-vue-tsx": "^3510.0.3",
     "element-closest-polyfill": "^1.0.0",
+    "element-remove": "^1.0.4",
     "http-proxy-middleware": "^0.19.1",
     "markdown": "^0.5.0",
     "nodelist-foreach-polyfill": "^1.2.0",

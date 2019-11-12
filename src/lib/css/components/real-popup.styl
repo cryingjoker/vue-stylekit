@@ -30,13 +30,14 @@
         top 0
         max-height calc(100% - 100px)
       &--bottom-center
-        top 80px
+        top 100vh
+        transform translateY(-100%)
         max-height calc(100vh - 80px)
         @media (max-width: tablet-upper-limit)
-          top 40px
+          //top 40px
           max-height calc(100vh - 40px)
         @media (max-width: mobile-upper-limit)
-          top 20px
+          //top 20px
           max-height calc(100vh - 20px)
   &--mobile-only
     @media (min-width: desktop-lower-limit)
