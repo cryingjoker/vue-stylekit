@@ -1,10 +1,15 @@
 <script type="text/jsx">
+  /* eslint-disable vue/return-in-computed-property */
   import Vue from "vue";
   import VeeValidate from "vee-validate";
   import variables from "../../variables.json";
 
   export default {
     name: "RtInput",
+    model: {
+      prop: 'value',
+      event: 'input'
+    },
     props: {
       customRules: {
         type: Array,
@@ -66,7 +71,10 @@
         type: String,
         default: null
       },
-      validate: {},
+      validate: {
+        type: Object | String,
+        default: null
+      },
       showNumbersButtons: {
         type: Boolean,
         default: false
@@ -122,6 +130,10 @@
       inputButtonText: {
         type: String,
         default: ''
+      },
+      scope: {
+        type: String,
+        default: ''
       }
     },
     data() {
@@ -130,7 +142,8 @@
         localLabel: this.label,
         localValue: this.value ? this.value : "",
         hasInputText: this.value ? this.value.length > 0 : false,
-        hintPosition: "right"
+        hintPosition: "right",
+        passwordVisibilityLocal: this.passwordVisibility
       };
     },
 
@@ -140,7 +153,7 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.errors && this.errors.has(this.fieldName);
+          return this.errors && this.errors.has(this.scope ? this.scope + '.' + this.fieldName : this.fieldName);
         }
       },
       inputClass() {
@@ -155,7 +168,7 @@
           className += " rtb-input--hidden";
         }
         if (this.approved) {
-          className += " rtb-input--approved"
+          className += " rtb-input--approved";
         }
         return className;
       }
@@ -200,17 +213,17 @@
             that["_events"][eventName].forEach((fn)=> {
               if(eventName != 'input' && window[variables.globalSettingsKey].segment != 'b2c') { // for work with v-model
                 this.$refs.input.addEventListener(eventName, fn)
-              } else {
+              } else if (eventName != 'input') {
                 this.$refs.input.addEventListener(
                   eventName,
                   function() {
                     if (that["_events"] && that["_events"][eventName] && that["_events"][eventName][0] && typeof that["_events"][eventName][0] === 'function') {
-                      that["_events"][eventName][0](arguments[0])
+                      that["_events"][eventName][0](arguments[0]);
                     }
                   }
                 );
               }
-            })
+            });
           });
         }
       },
@@ -374,7 +387,7 @@
         } else if (inputElement.getAttribute("type") === "text") {
           inputElement.setAttribute("type", "password");
         }
-        this.passwordVisibility = !this.passwordVisibility;
+        this.passwordVisibilityLocal = !this.passwordVisibilityLocal;
       },
       mask(e) {
         let matrix = "+7 (___) ___ ____",
@@ -471,7 +484,7 @@
 
       const passwordIcon = (() => {
         if (this.type === "password") {
-          if (!this.passwordVisibility) {
+          if (!this.passwordVisibilityLocal) {
             return <div class="password-icon password-hidden" onClick={this.togglePasswordVisibility}>
               <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg" class="password-icon__icon">
                 <g stroke="#575D68" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
@@ -562,7 +575,7 @@
             name={this.fieldName}
             onInput={this.inputHandler}
             v-validate={this.validate}
-          />
+          />;
         } else {
           return <input
             onKeypress={this.keyPress}
@@ -577,7 +590,7 @@
             v-validate={this.validate}
             onFocus={this.mask}
             onBlur={this.mask}
-          />
+          />;
         }
       })();
 
@@ -599,4 +612,3 @@
     }
   };
 </script>
-

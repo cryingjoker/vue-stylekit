@@ -26,6 +26,7 @@
 
 .rt-l-internet-speed__text
   color b2c-white07
+
 .rt-banner__item--is-active
   position relative
 
@@ -71,16 +72,20 @@
       display block
 
 
-
 //
 //mobile-upper-limit = 767px
+//tablet-upper-limit = 1024px
 //.rt-game-banner
-//  min-height: 100vh
+//  min-height: 500px
+//  height: 500px
 //  display: flex
 //  width: 100%
 //  flex-direction column
 //  background-color: #000
 //  position: relative
+//  @media (max-width: mobile-upper-limit)
+//    height: 404px
+//
 //  .color-line-wrapper
 //    margin-left: 10px
 //    margin-right: 10px
@@ -116,6 +121,7 @@
 //  position: relative
 //  opacity: 1
 //  flex: 1
+//
 //.rt-game-banner__icons
 //  display: flex
 //  align-items center
@@ -127,8 +133,9 @@
 //    padding-right: 10px
 //
 //.rt-game-banner__icons__item
-//  &+&
+//  & + &
 //    margin-left: 32px
+//
 //.rt-game-banner__icons__item-img
 //  max-height: 38px
 //  @media (max-width: mobile-upper-limit)
@@ -141,6 +148,7 @@
 //  bottom: 0
 //  left: 0
 //  right: 0
+//
 //.rt-game-banner-image
 //  position: absolute
 //  top: 0
@@ -150,9 +158,22 @@
 //  background-size: cover
 //  background-repeat: no-repeat
 //  background-position: center top
-//  @media (max-width: mobile-upper-limit)
-//    height: 260px
 //
+//.rt-game-banner__item:nth-child(1) .rt-game-banner-image
+//  @media (max-width: mobile-upper-limit)
+//    background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/banner1.png') !important
+//
+//.rt-game-banner__item:nth-child(2) .rt-game-banner-image
+//  @media (max-width: mobile-upper-limit)
+//    background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/banner2.png') !important
+//
+//.rt-game-banner__item:nth-child(3) .rt-game-banner-image
+//  @media (max-width: mobile-upper-limit)
+//    background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/banner3.png') !important
+//
+//.color-line--is-paragraph
+//  @media (max-width: tablet-upper-limit)
+//    left: 0
 //
 //.rt-game-arrow
 //  position: absolute
@@ -167,56 +188,41 @@
 //
 //.rt-game-arrow-prew
 //  left: 0
+//
 //.rt-game-arrow-next
 //  right: 0
+//
 //.rt-game-banner-round-icon
 //  width: 100px
 //  height: 100px
+//
 //.rt-game-banner__paginator
-//  text-align: center
-//  padding-top: 40px
-//  position: absolute
-//  top: 0
-//  left: 0
-//  right: 0
+//  text-align: right
+//  @media (max-width: tablet-upper-limit)
+//    text-align center
 //  @media (max-width: mobile-upper-limit)
 //    position: sticky
 //    background-color: #122545
 //    padding-top: 15px
 //    z-index 2
 //    padding-bottom: 15px
+//    white-space nowrap
+//
+//.rt-game-banner__container
+//  height: 100%
+//
 //.rt-game-banner__paginator-item
 //  display inline-block
-//  width 20px
-//  height 20px
 //  box-sizing border-box
 //  position relative
 //  z-index 3
 //  cursor pointer
-//  font-size 16px
-//  font-weight: 500
 //  width auto
-//  &:before
-//    content ""
-//    width 10px
-//    height 10px
-//    box-sizing border-box
-//    border 2px solid #fff
-//    border-radius 50%
-//    margin auto
-//    position absolute
-//    top 0
-//    bottom 0
-//    left 0
-//    right 0
-//    transition-timing-function ease-in-out
-//    transition-duration .3s
-//    transition-property background-color, width, height, border, margin, left, right
-//    @media (max-width: mobile-upper-limit)
-//      display none
+//
 //
 //  & + &
-//    margin-left 20px
+//    margin-left 80px
+//
 //  &__icon
 //    width inherit
 //    height inherit
@@ -253,17 +259,43 @@
 //    transition-duration .3s
 //    transition-property height, opacity
 //
-//.rt-game-banner__paginator-item:hover:before,
-//.rt-game-banner__paginator-item--is-active:before
+//.rt-game-banner__paginator-item__span
+//  display: none
 //  @media (max-width: mobile-upper-limit)
-//    height: 2px
-//    opacity: 1
+//    display: block
+//
+//.rt-game-banner__paginator-item:before {
+//  content: ''
+//  position: absolute
+//  bottom: -22px
+//  height: 3px
+//  left: 0
+//  right: 0
+//  width: 100%
+//  background-color: #FF4F12
+//  opacity 0
+//  visibility hidden
+//  transition-timing-function ease-in-out
+//  transition-duration .3s
+//  transition-property opacity, visibility
+//  @media (max-width: mobile-upper-limit) {
+//    bottom: -15px
+//  }
+//}
+//
+//.rt-game-banner__paginator-item:hover:before,
+//.rt-game-banner__paginator-item--is-active:before {
+//  opacity: 1
+//  visibility visible
+//}
+//
 //.rt-game-more-info
 //  @media (max-width: mobile-upper-limit)
 //    border-width 0
-//    margin-left: 10px!important
+//    margin-left: 10px !important
 //    .ripple
 //      padding: 0
+//
 //.rt-game-more-info__icon
 //  display: none
 //  @media (max-width: mobile-upper-limit)
@@ -278,3 +310,367 @@
 //    bottom: 100px
 //    left: 0
 //    right: 0
+//
+//
+//.rt-banner-for-game {
+//  background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface1.png')
+//  background-position: 80% 50%;
+//  background-size: cover;
+//  background-repeat: no-repeat
+//}
+//
+//.rt-orange-breaker-item + .rt-orange-breaker-item:before {
+//  background-image: url("data:image/svg+xml,%0A%3Csvg width='32px' height='42px' viewBox='0 0 32 42' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Design' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='RTRU_5560_1460_Warface_close_final_2' transform='translate(-290.000000, -490.000000)' fill-rule='nonzero' stroke='%23FFFFFF' stroke-width='4'%3E%3Cg id='1' transform='translate(0.000000, -42.000000)'%3E%3Cg id='speed' transform='translate(150.000000, 496.000000)'%3E%3Cg id='Group-18' transform='translate(0.000000, 33.000000)'%3E%3Cline x1='143' y1='42' x2='169' y2='6' id='Line-3'%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+//}
+//
+//.rt-game-circle {
+//  position: relative;
+//  height: 166px
+//}
+//
+//.rt-game-rect-icon {
+//  width: 50px
+//  height: 50px
+//}
+//
+//.rt-game-circle:before {
+//  content: '';
+//  display: block;
+//  width: 166px;
+//  height: 166px;
+//  background-color: #1B2841;
+//  opacity: 0.5;
+//  position: absolute;
+//  border-radius 50%
+//}
+//
+//.rt-game-k {
+//  height: 166px
+//  width: 166px
+//  position: relative;
+//
+//}
+//
+//.rt-game-k__image {
+//  position: absolute;
+//  top: 0
+//  left: 0
+//  right: 0
+//  bottom: 0
+//  margin auto
+//  width: 45px
+//  height: 55px
+//  z-index 1
+//}
+//
+//.rt-game-k:before {
+//  content: '';
+//  display: block;
+//  width: 166px;
+//  height: 166px;
+//  background-color: #1B2841;
+//  opacity: 0.5;
+//  position: absolute;
+//  border-radius 50%
+//}
+//
+//.rt-game-circle__title {
+//  position: absolute;
+//  z-index 1
+//  top: 119px
+//  left: 0
+//
+//}
+//
+//.rt-game-circle__text {
+//  position: absolute;
+//  z-index 1
+//  top: 139px
+//}
+//
+//.rt-game-circle__weapon {
+//  position: relative;
+//  z-index 1
+//}
+//
+//.rt-game-circle__weapon1 {
+//  width: 170px
+//  margin-top: 29px
+//  padding-left: 42px
+//}
+//
+//.rt-game-circle__weapon2 {
+//  width: 148px
+//  margin-left: 55px
+//  margin-top: 27px
+//}
+//
+//.rt-game-circle__weapon3 {
+//  width: 200px
+//  margin-left: 20px
+//  margin-top: 34px
+//}
+//
+//.rt-game-circle__weapon4 {
+//  width: 176px
+//  margin-left: 36px
+//  margin-top: 34px
+//}
+//
+//.rt-game-circle__weapon5 {
+//  width: 100px
+//  margin-left: 83px
+//  margin-top: 32px
+//}
+//
+//.rt-game-circle__weapon6 {
+//  width: 150px
+//  margin-left: 52px
+//  margin-top: 47px
+//}
+//
+//.rt-game-circle__weapon7 {
+//  width: 104px
+//  margin-left: 70px
+//  margin-top: 26px
+//}
+//
+//.rt-game-circle__weapon8 {
+//  width: 176px
+//  margin-left: 53px
+//  margin-top: 11px
+//}
+//
+//.rt-game-circle__weapon9 {
+//  width: 167px
+//  margin-left: 35px
+//  margin-top: 31px
+//}
+//
+//.rt-game-circle__weapon10 {
+//  width: 180px
+//  margin-left: 44px
+//  margin-top: 42px
+//}
+//
+//.rt-game-circle__weapon11 {
+//  width: 176px
+//  margin-left: 53px
+//  margin-top: 11px
+//}
+//
+//.rt-game-circle__weapon12 {
+//  width: 149px
+//  margin-left: 53px
+//  margin-top: 24px
+//}
+//
+//.rt-game-circle__weapon13 {
+//  width: 190px
+//  margin-left: 40px
+//  margin-top: 30px
+//}
+//
+//.rt-game-circle__weapon14 {
+//  width: 189px
+//  margin-left: 42px
+//  margin-top: 31px
+//}
+//
+//.rt-game-circle__weapon15 {
+//  width: 189px
+//  margin-left: 33px
+//  margin-top: 28px
+//}
+//
+//.rt-game-circle__weapon16 {
+//  width: 191px
+//  margin-left: 24px
+//  margin-top: 38px
+//}
+//
+//.rt-game-circle__weapon17 {
+//  width: 205px
+//  margin-left: 0px
+//  margin-top: 14px
+//}
+//
+//.rt-game-circle__weapon18 {
+//  width: 203px
+//  margin-left: 23px
+//  margin-top: 31px
+//}
+//
+//.rt-game-circle__weapon19 {
+//  width: 137px
+//  margin-left: 44px
+//  margin-top: 17px
+//}
+//
+//.rt-game-circle__weapon20 {
+//  width: 207px
+//  margin-left: 10px
+//  margin-top: 19px
+//}
+//
+//.rt-game-circle__weapon21 {
+//  width: 200px
+//  margin-left: 10px
+//  margin-top: 2px
+//}
+//
+//.rt-game-circle__weapon22 {
+//  width: 133px
+//  margin-left: 45px
+//  margin-top: 31px
+//}
+//
+//.rt-game-circle__weapon23 {
+//  width: 231px
+//  margin-left: 2px
+//  margin-top: 37px
+//}
+//
+//.rt-game-circle__weapon24 {
+//  width: 139px
+//  margin-left: 45px
+//  margin-top: 38px
+//}
+//
+//.rt-game-circle__weapon25 {
+//  width: 184px
+//  margin-left: 30px
+//  margin-top: 30px
+//}
+//
+//.rt-game-circle__weapon26 {
+//  width: 199px
+//  margin-left: 29px
+//  margin-top: 17px
+//}
+//
+//.rt-game-circle__weapon27 {
+//  width: 265px
+//  margin-left: -20px
+//  margin-top: 19px
+//}
+//
+//.rt-game-circle__weapon28 {
+//  width: 228px
+//  margin-left: 6px
+//  margin-top: 16px
+//}
+//
+//.rt-game-circle__weapon29 {
+//  width: 102px
+//  margin-left: 75px
+//  margin-top: 21px
+//}
+//
+//.rt-game-circle__weapon30 {
+//  width: 122px
+//  margin-left: 31px
+//  margin-top: 33px
+//}
+//
+//.rt-game-circle__weapon31 {
+//  width: 89px
+//  margin-left: 91px
+//  margin-top: 31px
+//}
+//
+//.rt-game-circle__weapon32 {
+//  width: 120px
+//  margin-left: 46px
+//  margin-top: 32px
+//}
+//
+//.rt-game-circle__weapon33 {
+//  width: 197px
+//  margin-left: 46px
+//  margin-top: 13px
+//}
+//
+//.rt-game-circle__weapon34 {
+//  width: 111px
+//  margin-left: 70px
+//  margin-top: 26px
+//}
+//
+//.rt-game-big-number {
+//  font-size 50px
+//  line-height: 60px
+//}
+//
+//.rt-warface-page {
+//  background-color: #101828
+//}
+//
+//.rt-game-color-block-light-blue {
+//  background-color: #151F34
+//}
+//
+//.rt-banner-for-game__navidation {
+//  border-bottom: 1px solid #F1F3F5;
+//  position: sticky;
+//  top: -20px;
+//  background-color: #101828;
+//  z-index: 98;
+//  @media (max-width: mobile-upper-limit) {
+//    top: 70px
+//  }
+//}
+//
+//.rt-game-banner__item-container-data {
+//  display: none
+//}
+//
+//.rt-game-banner__item-container-data--is-active {
+//  display: block
+//}
+//
+//.color-line--is-paragraph .color-line-text {
+//  @media (max-width: mobile-upper-limit) {
+//    background-color: #fff !important
+//    color main-color !important
+//    border-radius 0
+//    box-shadow: 15px 0 0 #fff, -15px 0 0 #fff !important;
+//    left: 15px
+//    padding-top: 10
+//    padding-bottom: 10px
+//  }
+//}
+//
+//.rt-game-banner__paginator-item__svg {
+//  @media (max-width: mobile-upper-limit) {
+//    height: 56px
+//  }
+//}
+//
+//.game__logo {
+//  position: absolute;
+//  left: 0px
+//  top: 30px
+//  height: 70px
+//  @media (max-width: tablet-upper-limit) {
+//    height: 60px
+//  }
+//  @media (max-width: mobile-upper-limit) {
+//    height: 40px
+//    top: 20px
+//  }
+//}
+//
+//.color-block--game-promo-steps {
+//  background-color: #131C2F;
+//}
+//.color-block--game-promo-color-form{
+//  background-color: #152034
+//}
+//.game__logo-wrapper {
+//  z-index: 99;
+//  height: 80px
+//  @media (max-width: mobile-upper-limit) {
+//    background-color: #101828
+//  }
+//}

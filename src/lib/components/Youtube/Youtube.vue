@@ -179,6 +179,7 @@ export default {
       }
     },
     createPlayer(){
+      const loc = document.location.href.split('/');
       const settings = {
         height: '56.25%',
         width: '100%',
@@ -195,7 +196,8 @@ export default {
           "showinfo":"0",
           "controls" :"0",
           "disablekb": "1",
-          "iv_load_policy": "3"
+          "iv_load_policy": "3",
+          "origin": loc[0]+'//'+loc[2]
         },
         events: {
           'onReady': this.setVideoReady,

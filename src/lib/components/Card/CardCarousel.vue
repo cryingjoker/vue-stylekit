@@ -1,34 +1,3 @@
-<template>
-  <div class="custom-carousel">
-    <slot/>
-    <div class="custom-carousel__nav">
-      <div class="custom-carousel__nav-item custom-carousel__left" @click="previousSlide">
-        <svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__left-arrow">
-          <g id="Page-1" stroke-width="1">
-            <g transform="translate(-132.000000, -2341.000000)">
-              <g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">
-                <polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="custom-carousel__nav-item custom-carousel__right" @click="nextSlide">
-        <svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__right-arrow">
-          <g id="Page-1" stroke-width="1">
-            <g transform="translate(-132.000000, -2341.000000)">
-              <g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">
-                <polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="custom-carousel__paginator"></div>
-    </div>
-  </div>
-</template>
-
 <script type="text/jsx">
   const componentsList = {};
   import variables from "../../variables.json";
@@ -181,17 +150,23 @@
       fixCardHeightMobile() {
         if (this.mobileLayout) {
           var maxHeight = 0;
-          setTimeout(function () {
-            for (var i = 0; i < (document.querySelector('.carousel-card').parentNode.children.length - 1); i++) {
-              var cardHeight = +window.getComputedStyle(document.querySelector('.carousel-card').parentNode.children[i].querySelector('.rt-card__content')).height.replace('px', '');
+          let carouselLength = this.$el.querySelectorAll('.carousel-card').length;
+          setTimeout(() => {
+            for (var i = 0; i < carouselLength; i++) {
+              var cardHeight = +window.getComputedStyle(this.$el.querySelectorAll('.carousel-card')[i].querySelector('.rt-card__content')).height.replace('px', '');
               maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
             }
 
-            for (var j = 0; j < (document.querySelector('.carousel-card').parentNode.children.length - 1); j++) {
-              document.querySelector('.carousel-card').parentNode.children[j].height = maxHeight + 'px';
-              document.querySelector('.carousel-card').parentNode.children[j].style.minHeight = maxHeight + 'px';
+            for (var j = 0; j < carouselLength; j++) {
+              this.$el.querySelectorAll('.carousel-card')[j].style.height = maxHeight + 'px';
+              this.$el.querySelectorAll('.carousel-card')[j].style.minHeight = maxHeight + 'px';
             }
-          }, 100)
+//            this.$refs.mobileWrapper.style.minHeight = maxHeight + 'px';
+          }, 10)
+        } else {
+          for (var j = 0; j < (this.$el.querySelectorAll('.carousel-card').length); j++) {
+            this.$el.querySelectorAll('.carousel-card')[j].removeAttribute('style');
+          }
         }
       },
 
@@ -246,6 +221,54 @@
           }
         }
       }
+    },
+    render(h) {
+      const leftArrow = (() => {
+        return <div class="custom-carousel__nav-item custom-carousel__left" onClick={this.previousSlide}>
+          <svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__left-arrow">
+            <g id="Page-1" stroke-width="1">
+              <g transform="translate(-132.000000, -2341.000000)">
+                <g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">
+                  <polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      });
+
+      const rightArrow = (() => {
+        return <div class="custom-carousel__nav-item custom-carousel__right" onClick={this.nextSlide}>
+          <svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" class="custom-carousel__right-arrow">
+            <g id="Page-1" stroke-width="1">
+              <g transform="translate(-132.000000, -2341.000000)">
+                <g id="Group-3-Copy-2" transform="translate(132.000000, 2332.000000)">
+                  <polygon id="Shape-Copy" points="10.6 9 6 13.3513514 1.4 9 0 10.3243243 6 16 12 10.3243243"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      });
+
+      if(this.mobileLayout) {
+        return <div class="custom-carousel">
+          {this.$slots.default}
+          <div class="custom-carousel__nav">
+            <div class="custom-carousel__paginator"></div>
+          </div>
+        </div>
+      } else {
+        return <div class="custom-carousel">
+          {this.$slots.default}
+          <div class="custom-carousel__nav">
+            {leftArrow()}
+            {rightArrow()}
+            <div class="custom-carousel__paginator"></div>
+          </div>
+        </div>
+      }
+
     }
   }
 </script>

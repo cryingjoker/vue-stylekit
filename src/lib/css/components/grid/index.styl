@@ -650,6 +650,9 @@ for devideStep in steps
 .{newAppName}-fill-viewport-height
   min-height 100vh
 
+.{newAppName}-md-viewport-height-reset
+  @media (max-width:  mobile-upper-limit)
+    min-height auto
 .{newAppName}-space-horizontal-none
   padding-left 0
   padding-right 0
@@ -865,4 +868,73 @@ for devideStep in steps
   transition-timing-function ease-in-out
   transition-duration .2s
   transition-property opacity, visibility
+
+
+
+//tablet-upper-limit = 1024px
+//mobile-upper-limit = 767px
+//newAppName = 'rt'
+
+.{newAppName}-main-footer
+  padding-top: 25px
+  padding-bottom: 25px
+  border-top: 2px solid #585D68
+
+.{newAppName}-main-footer-container
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 1fr
+  grid-template-areas: left center right
+  align-items: center
+  @media (max-width: tablet-upper-limit)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+
+  @media (max-width: mobile-upper-limit)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr 1fr
+
+
+.{newAppName}-main-footer-copyright
+  grid-column-start: 1;
+  grid-column-end: 1;
+  @media (max-width: tablet-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  @media (max-width: mobile-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-start: 2;
+
+.{newAppName}-main-footer-social
+  grid-column-start: 2;
+  grid-column-end: 2;
+  @media (max-width: tablet-upper-limit)
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  @media (max-width: mobile-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-start: 3;
+
+.{newAppName}-main-footer-phone
+  grid-column-start: 3;
+  grid-column-end: 3;
+  text-align: right
+  @media (max-width: tablet-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: left
+  @media (max-width: mobile-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-start: 1;
+
 @require './elementOpacity.styl'

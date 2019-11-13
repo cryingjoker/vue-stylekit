@@ -56,20 +56,20 @@
           this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
           });
-          this.singleRow ? this.$el.classList.add('row') : null;
-          this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
-        } else if(this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
-          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
+//          this.singleRow ? this.$el.classList.add('row') : null;
+//          this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
+        } else if(!!this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
+          this.$refs.layout.childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
           });
 //          this.singleRow ? this.$el.classList.add('row') : null;
 //          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
-        } else if(this.$slots.cards && window.innerWidth > parseInt(variables["desktop-lower-limit"])) {
-          this.$el.childNodes[0].childNodes[0].childNodes[0].childNodes.forEach(el => {
+        } else if(!!this.$slots.cards && window.innerWidth >= parseInt(variables["desktop-lower-limit"])) {
+          this.$refs.layout.childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
           });
-          this.singleRow ? this.$el.classList.remove('row'): null;
-          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
+//          this.singleRow ? this.$el.classList.remove('row'): null;
+//          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         }
       }
     },
@@ -86,16 +86,20 @@
           </div>
         </div>
       } else {
-        return <div class="row">
-          <div class="specified-card-layout">
-            <div class={this.wrapperClass}>
-              <div class="rt-col">
-                <div class="row">
-                  {this.$slots.cards}
+        return <div class="rt-container">
+          <div class="rt-col">
+            <div class="row">
+              <div class="specified-card-layout" ref="layout">
+                <div class={this.wrapperClass}>
+                  <div class="rt-col">
+                    <div class="row">
+                      {this.$slots.cards}
+                    </div>
+                  </div>
                 </div>
+                {this.$slots["side-text"]}
               </div>
             </div>
-            {this.$slots["side-text"]}
           </div>
         </div>
       }

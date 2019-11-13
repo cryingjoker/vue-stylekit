@@ -49,6 +49,10 @@
       radioValue: {
         type: String,
         default: ""
+      },
+      showAsTag:{
+        type:Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -62,6 +66,9 @@
         }
         if (this.isFetched) {
           className += " rt-button--is-fitched";
+        }
+        if(this.showAsTag){
+          className += " rt-button--as-tag";
         }
         className += " " + this.buttonClassList + "";
         return className;
