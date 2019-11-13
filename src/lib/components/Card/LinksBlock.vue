@@ -26,24 +26,25 @@
       }
     },
 
-    computed: {
-
-    },
+    computed: {},
     created() {},
 
     mounted() {
-      this.totalQuantity = this.iconArray.length;
-      this.quantityHidden = this.totalQuantity - 6;
-      this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
-      this.innerWidth = +getComputedStyle(this.$el.children[0]).width.slice(0, -2);
-      this.visibleIcons = Math.floor(innerWidth / 32) > 6 ? 6 : Math.floor(innerWidth / 32);
       window.addEventListener('load', ()=>{
-        this.iconsList = this.$el.children[0].children;
-        this.hideIcons();
-        this.countHiddenIconsQuantity();
+        this.totalQuantity = this.iconArray.length;
+        this.quantityHidden = this.totalQuantity - 6;
+        setTimeout(()=> {
+          this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
+          this.innerWidth = +getComputedStyle(this.$refs.inner).width.slice(0, -2);
+          this.visibleIcons = Math.floor(this.innerWidth / 32) > 6 ? 6 : Math.floor(this.innerWidth / 32);
+          this.iconsList = this.$refs.inner.children;
+          setTimeout(()=> {
+            this.hideIcons();
+            this.countHiddenIconsQuantity();
+          },1);
+        },1)
       });
       window.addEventListener('resize', () => {
-        this.hideIcons();
         setTimeout(() => {
           this.countHiddenIconsQuantity();
         },10);
@@ -63,9 +64,14 @@
       },
       countHiddenIconsQuantity() {
         // 32 - icon.width + icon.margin
+        this.$el.querySelectorAll('.rtb-card__social-link').forEach((item)=> {
+          item.classList.remove('rtb-card__social-link--hidden');
+        });
+        this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
+        this.innerWidth = +getComputedStyle(this.$refs.inner).width.slice(0, -2);
+        this.visibleIcons = Math.floor(this.innerWidth / 32) > 6 ? 6 : Math.floor(this.innerWidth / 32);
         this.quantityHidden = this.totalQuantity - this.visibleIcons;
-
-        if(this.quantityHidden === 1 || this.quantityHidden === 0) {
+        if((this.innerWidth + 32) <= this.outerWidth && (this.quantityHidden === 1 || this.quantityHidden === 0)) {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = '100%';
           this.visibleIcons = 7;
           if(outerWidth < this.totalQuantity * 32) {
@@ -75,6 +81,9 @@
         } else {
           this.$el.querySelector('.rtb-card__links-block').removeAttribute('style');
         }
+        setTimeout(() => {
+          this.hideIcons();
+        },10);
       },
       hideIcons() {
         for(var i = this.visibleIcons; i < this.totalQuantity; i++) {
@@ -103,7 +112,7 @@
         }
       })();
       return <div class="links-block">
-        <div class="rtb-card__links-block">
+        <div class="rtb-card__links-block" ref="inner">
           {content}
         </div>
         {button}
