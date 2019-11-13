@@ -68,8 +68,8 @@
           this.$refs.layout.childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
           });
-          this.singleRow ? this.$el.classList.remove('row'): null;
-          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
+//          this.singleRow ? this.$el.classList.remove('row'): null;
+//          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         }
       }
     },
