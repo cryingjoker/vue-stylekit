@@ -56,8 +56,8 @@
           this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
           });
-          this.singleRow ? this.$el.classList.add('row') : null;
-          this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
+//          this.singleRow ? this.$el.classList.add('row') : null;
+//          this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
         } else if(!!this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
           this.$refs.layout.childNodes.forEach(el => {
             el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;

@@ -71,7 +71,7 @@
         this.innerWidth = +getComputedStyle(this.$refs.inner).width.slice(0, -2);
         this.visibleIcons = Math.floor(this.innerWidth / 32) > 6 ? 6 : Math.floor(this.innerWidth / 32);
         this.quantityHidden = this.totalQuantity - this.visibleIcons;
-        if(this.quantityHidden === 1 || this.quantityHidden === 0) {
+        if((this.innerWidth + 32) <= this.outerWidth && (this.quantityHidden === 1 || this.quantityHidden === 0)) {
           this.$el.querySelector('.rtb-card__links-block').style.maxWidth = '100%';
           this.visibleIcons = 7;
           if(outerWidth < this.totalQuantity * 32) {
@@ -81,7 +81,9 @@
         } else {
           this.$el.querySelector('.rtb-card__links-block').removeAttribute('style');
         }
-        this.hideIcons();
+        setTimeout(() => {
+          this.hideIcons();
+        },10);
       },
       hideIcons() {
         for(var i = this.visibleIcons; i < this.totalQuantity; i++) {
