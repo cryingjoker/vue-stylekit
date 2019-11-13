@@ -2,6 +2,32 @@
   display: flex
   width: 100%
   flex-direction column
+  position: relative;
+  &:after
+    transition-timing-function ease-in-out
+    transition-duration .4s
+    transition-property opacity
+    width: 100%
+    height: 2px
+    opacity: 0
+    background-color: rgba(227,232,236, 50)
+    left: 0
+    right: 0
+    position: absolute;
+    content ''
+    top: -2px
+
+  &:hover
+    &+.{newAppName}-options-list
+      &:after
+        opacity: 1
+  &+&
+    border-top: 2px solid rgba(241,243,245, 100)
+    &:hover
+      &:after
+        opacity: 1
+
+
 
 .{newAppName}-options-list__header
   display: flex
@@ -10,7 +36,7 @@
   padding-bottom: 20px
   padding-left: 20px
   padding-right: 20px
-  transition-timing-function cubic-bezier(.67,.05,.21,.85)
+  transition-timing-function ease-in-out
   transition-duration .4s
   transition-property background-color
   cursor: pointer
@@ -68,7 +94,7 @@
   .{newAppName}-options-list__content,
   .{newAppName}-options-list--is-active .{newAppName}-options-list__content
     padding-top: 5px
-    padding-bottom: 5px
+    //padding-bottom: 5px
     max-height: 10000px
     opacity: 1
     visibility: visible
@@ -114,3 +140,15 @@
       box-shadow none
     .ripple
       padding: 0!important
+
+@media (min-width: laptop-lower-limit)
+  .{newAppName}-options-list__info-content__label
+    .rt-button
+      opacity: 0
+      visibility: hidden
+      transition-property opacity, visibility
+  .rt-options-list:hover
+    .{newAppName}-options-list__info-content__label
+      .rt-button
+        opacity: 1
+        visibility: visible

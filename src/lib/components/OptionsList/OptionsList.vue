@@ -48,31 +48,43 @@
 
       }
     },
+    computed:{
+      optionsListClass : function() {
+        let optionsListClass = "rt-options-list";
+        if (this.isActive) {
+          optionsListClass += " rt-options-list--is-active";
+        }
+        return optionsListClass
+      }
+    },
     render(h) {
 
-      let optionsListClass = "rt-options-list";
+
       console.info('this.isActive',this.isActive);
-      if (this.isActive) {
-        optionsListClass += " rt-options-list--is-active";
-      }
-      return <div class={optionsListClass}>
+
+      return <div class={this.optionsListClass}>
         <div class="rt-options-list__header" onClick={this.changeStatus}>
 
           <div class="rt-options-list__icon">
             <div class="rt-space-right">
-              {this.$slots.icon} <p>{this.isActive ? 1 : 0}</p>
+              {this.$slots.icon}
             </div>
           </div>
           <div class="rt-options-list__info">
-            <div class="rt-options-list__info-content">{this.$slots.info}</div>
+            <div class="rt-options-list__info-content">
+              <p class="rt-options-list__info-content__label">
+                <span class="rt-font-bold">{this.$slots.label}</span> <rt-button show-as-tag={true} className="rt-button-orange rt-button-small rt-options-list__info-more-button">Подробнее</rt-button>
+              </p>
+              <p class="rt-font-control color-main07">{this.$slots.info}</p>
+
+
+            </div>
             <div class="rt-options-break-mobile"></div>
             <div class="rt-options-list__info-aside">{this.$slots.aside}</div>
             <div class="rt-options-break"></div>
             <div class="rt-options-list__info-more">
               <div class="rt-space-left rt-td-space-left-none">
-                <rt-button class="rt-button-orange rt-button-small rt-options-list__info-more-button">
-                  {this.$slots.moreinfo}
-                </rt-button>
+
               </div>
             </div>
           </div>
