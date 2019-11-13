@@ -2,6 +2,13 @@
   "items": [
     {
       "name": "rt-button",
+      "property": "show-as-tag",
+      "type": "Boolean",
+      "description": "Отображение как у тега",
+      "value": "false"
+    },
+    {
+      "name": "rt-button",
       "property": "is-block",
       "type": "Boolean",
       "description": "Задаёт кнопке блочное позиционирование. Кнопка занимает 100% доступной ширины",
