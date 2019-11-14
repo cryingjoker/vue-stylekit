@@ -22,7 +22,8 @@
       }
     },
     data: () => ({
-      layout: ''
+      layout: '',
+      inTabs: false
     }),
 
     computed: {
@@ -38,10 +39,14 @@
     mounted () {
       this.specifyLayout();
       window.addEventListener('resize', this.specifyLayout);
+//      console.log(this.$el.parentNode.className === 'rt-tabs-content__item');
+      this.inTabs = this.$el.parentNode.className === 'rt-tabs-content__item';
+//      console.log(this.$parent.$el)
     },
     updated() {
       this.specifyCardClass();
       window.addEventListener('resize', this.specifyCardClass);
+      this.inTabs = this.$el.parentNode.className === 'rt-tabs-content__item';
     },
     methods: {
       specifyLayout(){
@@ -74,34 +79,59 @@
       }
     },
     render(h){
-      if(this.layout === 'swiper'){
-        return <div>
-          <rt-swiper>{this.$slots.cards}</rt-swiper>
-          <div class="rt-container">
-            <div class="rt-col">
-              <div class="row">
-                {this.$slots["side-text"]}
-              </div>
+      console.log(this.inTabs);
+      if(this.inTabs) {
+        if(this.layout === 'swiper'){
+          return <div>
+            <rt-swiper>{this.$slots.cards}</rt-swiper>
+            <div class="row">
+              {this.$slots["side-text"]}
             </div>
           </div>
-        </div>
-      } else {
-        return <div class="rt-container">
-          <div class="rt-col">
-            <div class="row">
-              <div class="specified-card-layout" ref="layout">
-                <div class={this.wrapperClass}>
-                  <div class="rt-col">
-                    <div class="row">
-                      {this.$slots.cards}
-                    </div>
+        } else {
+          return <div class="row">
+            <div class="specified-card-layout" ref="layout">
+              <div class={this.wrapperClass}>
+                <div class="rt-col">
+                  <div class="row">
+                    {this.$slots.cards}
                   </div>
                 </div>
-                {this.$slots["side-text"]}
+              </div>
+              {this.$slots["side-text"]}
+            </div>
+          </div>
+        }
+      } else {
+        if(this.layout === 'swiper'){
+          return <div>
+            <rt-swiper>{this.$slots.cards}</rt-swiper>
+            <div class="rt-container">
+              <div class="rt-col">
+                <div class="row">
+                  {this.$slots["side-text"]}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        } else {
+          return <div class="rt-container">
+            <div class="rt-col">
+              <div class="row">
+                <div class="specified-card-layout" ref="layout">
+                  <div class={this.wrapperClass}>
+                    <div class="rt-col">
+                      <div class="row">
+                        {this.$slots.cards}
+                      </div>
+                    </div>
+                  </div>
+                  {this.$slots["side-text"]}
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       }
     }
   };
