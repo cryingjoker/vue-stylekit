@@ -6,8 +6,6 @@
     props: {},
     data: () => ({}),
     mounted() {
-
-      // alert('!')
     },
     methods: {},
     computed: {},

@@ -42,14 +42,9 @@
 
         const options = optionsListStore.getStatus(this.name || this._uid);
         this.isActive = options.isActive;
-        console.info('options',options);
       },
       changeStatus() {
-
         optionsListStore.changeStatus(this.name || this._uid);
-        console.info('this.name || this._uid',this.name || this._uid);
-
-
       }
     },
     computed:{
