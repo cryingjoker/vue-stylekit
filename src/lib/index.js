@@ -96,6 +96,7 @@ import {
   GalleryCarousel,
   GalleryCarouselItem,
   OptionsList,
+  OptionsListInfoItem,
   GameArrow,
   CheckboxTabs,
   CountdownTimer
@@ -164,6 +165,7 @@ const VueRtStyle = {
       Vue.component(Filter.name, Filter);
       Vue.component(FilterWatcher.name, FilterWatcher);
       Vue.component(OptionsList.name, OptionsList);
+      Vue.component(OptionsListInfoItem.name, OptionsListInfoItem);
       Vue.component(FilterCaller.name, FilterCaller);
       Vue.component(Sticky.name, Sticky);
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);

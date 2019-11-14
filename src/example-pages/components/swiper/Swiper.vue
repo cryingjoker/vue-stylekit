@@ -42,7 +42,7 @@
       </rt-slide>
     </rt-swiper>
     <div class="rt-space-top5">
-      <rt-resize-content-height :query-selectors-names="['.rt-card']">
+      <rt-resize-content-height :query-selectors-names="['.links-block']">
         <rt-swiper :hide-navigation="true" :scroll-on-click="true">
           <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
