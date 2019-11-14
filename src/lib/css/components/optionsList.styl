@@ -1,8 +1,11 @@
 .{newAppName}-options-list
-  display: flex
+  display: grid
   width: 100%
   flex-direction column
   position: relative;
+
+  grid-template-rows auto auto
+  grid-template-columns 96px 4fr 1fr
   &:after
     transition-timing-function ease-in-out
     transition-duration .4s
@@ -16,7 +19,22 @@
     position: absolute;
     content ''
     top: -2px
-
+    display: none
+    @media (hover: hover)
+      display: block
+  @media (max-width: tablet-upper-limit)
+    margin-left: -40px
+    margin-right: -40px
+    width: calc(100% + 80px)
+    max-width 100vw
+    .rt-options-list
+      margin-left: -20px
+      width: calc(100% + 20px)
+      margin-right: 0
+  @media (max-width: mobile-upper-limit)
+    margin-left: -20px
+    margin-right: -20px
+    width: calc(100% + 40px)
   &:hover
     &+.{newAppName}-options-list
       &:after
@@ -30,7 +48,8 @@
 
 
 .{newAppName}-options-list__header
-  display: flex
+  grid-column-start 1
+  grid-column-end 4
   flex-flow: row wrap;
   padding-top: 20px
   padding-bottom: 20px
@@ -40,29 +59,59 @@
   transition-duration .4s
   transition-property background-color
   cursor: pointer
+  display: grid
+  grid-template-columns 76px 1fr
 
+
+  @media (max-width: tablet-upper-limit)
+    padding-right: 60px
   @media (max-width: mobile-upper-limit)
-    margin-left: -20px
-    margin-right: -20px
+    grid-template-rows auto 1fr 1fr
   &:hover
-    background-color: b2c-cool-grey05
+    @media (hover: hover)
+      background-color: b2c-cool-grey05
 
 
 .{newAppName}-options-list__info
   flex: 1
   display: flex
+  display: grid
+  grid-template-columns 2fr 1fr
   flex-flow: row wrap
   vertical-align middle
   align-items center
+  @media (max-width: mobile-upper-limit)
+    position: relative;
+    padding-bottom: 35px
+    .rt-options-list----is_empty &
+      padding-bottom: 0
+
 
 .{newAppName}-options-list__info-content
   flex: 1
-.{newAppName}-options-list .{newAppName}-options-list
-  margin-left: -97px
-  width: calc(100% + 97px)
+  grid-column-start: 1;
+  grid-row-start: 1;
+  position: relative;
+  @media (max-width: tablet-upper-limit)
+    padding-bottom: 35px
+    .rt-options-list----is_empty &
+      padding-bottom: 0
+    .rt-button
+      position: absolute;
+      bottom: 0
+      left: 0
   @media (max-width: mobile-upper-limit)
-    margin-left: 0
-    width: 100%
+    position: static;
+    padding-bottom: 0
+
+.{newAppName}-options-list .{newAppName}-options-list
+  .{newAppName}-options-list__content
+    grid-column-start: 2
+    grid-column-end: 3
+    @media (max-width: mobile-upper-limit)
+      grid-column-end 4
+      padding-right: 20px
+
 
 
 .{newAppName}-options-list__content
@@ -72,30 +121,48 @@
   padding-left: 96px
   opacity: 0
   visibility: hidden
+  grid-row-start 2
+  grid-column-start 2
   transition-timing-function cubic-bezier(.67,.05,.21,.85)
   transition-duration 0.6s
   transition-property max-height, padding, opacity, visibility
-  @media (max-width: mobile-upper-limit)
+  @supports (display: grid)
     padding-left: 0
+  @media (max-width: tablet-upper-limit)
+    grid-column-start: 1
+    grid-column-end 4
+    padding-left: 20px
+
+  @media (max-width: mobile-upper-limit)
+    padding-left: 20px
+
+    padding-right: 20px
+    .rt-options-list__content
+      padding-left: 0
 
 .{newAppName}-options-list--is-active
+  .{newAppName}-options-list
+    margin-bottom: -20px
+  .{newAppName}-options-list--is-active
+    margin-bottom: 0
   .{newAppName}-options-list
     .{newAppName}-options-list__content
       max-height: 0
       padding-top: 0
-      padding-bottom: 0
-      padding-left: 96px
+      padding-bottom: 20px
       opacity: 0
       visibility: hidden
       transition-timing-function cubic-bezier(.67,.05,.21,.85)
       transition-duration 0.6s
       transition-property max-height, padding, opacity, visibility
+      @media (max-width: tablet-upper-limit)
+        padding-left: 0
 
   .{newAppName}-options-list__content,
   .{newAppName}-options-list--is-active .{newAppName}-options-list__content
     padding-top: 5px
     //padding-bottom: 5px
-    max-height: 10000px
+    max-height: 1000000px
     opacity: 1
     visibility: visible
 
@@ -103,6 +170,17 @@
   vertical-align middle
   align-items center
   display: flex
+  grid-column-start: 2;
+  grid-row-start: 1;
+  justify-content: flex-end;
+  @media (max-width: mobile-upper-limit)
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
 
 .{newAppName}-options-list__icon
   max-width: 76px
@@ -144,11 +222,41 @@
 @media (min-width: laptop-lower-limit)
   .{newAppName}-options-list__info-content__label
     .rt-button
-      opacity: 0
-      visibility: hidden
-      transition-property opacity, visibility
-  .rt-options-list:hover
+      @media (hover: hover)
+        opacity: 0
+        visibility: hidden
+        transition-property opacity, visibility
+  .{newAppName}-options-list:hover
     .{newAppName}-options-list__info-content__label
       .rt-button
         opacity: 1
         visibility: visible
+
+.{newAppName}-options-list__star
+  position: relative;
+  bottom: -3px
+  margin-right: 10px
+
+.{newAppName}-options-list__option
+  display grid
+  grid-template-columns auto auto
+  @media (max-width: tablet-upper-limit)
+    padding-right: 60px
+    margin-left: -20px
+    margin-right: -20px
+    width:calc(100% + 40px)
+    padding-left: 20px
+  @media (max-width: mobile-upper-limit)
+
+
+
+    padding-right: 20px
+
+.{newAppName}-options-list__option+.{newAppName}-options-list__option
+  border-top: 2px solid b2b-cool-grey05-no-opacity
+
+.{newAppName}-options-list__option-right
+  text-align: right
+.{newAppName}-options-list__option-all
+  grid-column-start 1
+  grid-column-end 3

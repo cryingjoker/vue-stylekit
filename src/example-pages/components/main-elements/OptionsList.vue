@@ -10,7 +10,7 @@
       <div class="rt-container">
         <div class="rt-col-12 rt-col-td-6 rt-col-md-3">
 
-          <rt-options-list hash="123">
+          <rt-options-list hash="123" :has-star="true">
             <template slot="icon">
               <svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,52 +24,12 @@
             </template>
             <template slot="label">День в сети</template>
             <template slot="info">Платите только когда пользуетесь.</template>
-            <template slot="content">
-              <div>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-              </div>
-            </template>
+            <template slot="content"></template>
             <template slot="aside">
-              <div class="d-flex">
-
                 <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
+                <span class="rt-font-bold rt-space-left rt-md-space-left-none">20 руб./мес.</span>
             </template>
             <template slot="moreinfo">Подробнее</template>
-            <template slot="content">
-
-              <rt-options-list name="test2" :need-to-save="true" >
-                <template slot="icon"></template>
-                <template slot="label">День в сети</template>
-                <template slot="info">Платите только когда пользуетесь.</template>
-                <template slot="aside">
-                  <div class="d-flex">
-
-                    <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                    <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-                  </div>
-                </template>
-                <template slot="moreinfo">Подробнее</template>
-                <template slot="content">
-                  <p>Управление услугой доступно в Личном кабинете.</p>
-                  <p>Платите только когда пользуетесь.</p>
-                  <p>Управление услугой доступно в Личном кабинете.</p>
-                  <p>Платите только когда пользуетесь.</p>
-                  <p>Управление услугой доступно в Личном кабинете.</p>
-                  <p>Платите только когда пользуетесь.</p>
-                  <p>Управление услугой доступно в Личном кабинете.</p>
-                  <p>Платите только когда пользуетесь.</p>
-                </template>
-              </rt-options-list>
-            </template>
           </rt-options-list>
           <rt-options-list hash="321">
             <template slot="icon">
@@ -86,23 +46,25 @@
             <template slot="label">День в сети</template>
             <template slot="info">Платите только когда пользуетесь.</template>
             <template slot="content">
-              <div>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-                <p>Управление услугой доступно в Личном кабинете.</p>
-                <p>Платите только когда пользуетесь.</p>
-              </div>
+              <rt-options-list-info-item>
+                <template slot="left">Абонентская плата</template>
+                <template slot="right">99 руб./мес.</template>
+              </rt-options-list-info-item>
+              <rt-options-list-info-item>
+                <template slot="left">Объем трафика</template>
+                <template slot="right">2 Гб</template>
+              </rt-options-list-info-item>
+              <rt-options-list-info-item>
+                <template slot="left">Неиспользованные Гб интернет-трафика переносятся на следующий месяц</template>
+              </rt-options-list-info-item>
+              <rt-options-list-info-item>
+                <template slot="left">Как отключить</template>
+              </rt-options-list-info-item>
+
             </template>
             <template slot="aside">
-              <div class="d-flex">
-
                 <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
+                <span class="rt-font-bold rt-space-left rt-md-space-left-none">20 руб./мес.</span>
             </template>
             <template slot="moreinfo">Подробнее</template>
             <template slot="content">
@@ -112,11 +74,9 @@
                 <template slot="label">День в сети</template>
                 <template slot="info">Платите только когда пользуетесь.</template>
                 <template slot="aside">
-                  <div class="d-flex">
 
                     <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                    <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-                  </div>
+                    <span class="rt-font-bold rt-space-left rt-md-space-left-none">20 руб./мес.</span>
                 </template>
                 <template slot="moreinfo">Подробнее</template>
                 <template slot="content">
@@ -159,11 +119,9 @@
               </div>
             </template>
             <template slot="aside">
-              <div class="d-flex">
 
                 <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-              </div>
+                <span class="rt-font-bold rt-space-left rt-md-space-left-none">20 руб./мес.</span>
             </template>
             <template slot="moreinfo">Подробнее</template>
             <template slot="content">
@@ -173,11 +131,9 @@
                   <template slot="label">День в сети</template>
                 <template slot="info">Платите только когда пользуетесь.</template>
                 <template slot="aside">
-                  <div class="d-flex">
 
                     <span class="rt-space-left rt-md-space-left-none">250 мб</span>
-                    <span class="rt-font-bold rt-space-left">20 руб./мес.</span>
-                  </div>
+                    <span class="rt-font-bold rt-space-left rt-md-space-left-none">20 руб./мес.</span>
                 </template>
                 <template slot="moreinfo">Подробнее</template>
                 <template slot="content">
