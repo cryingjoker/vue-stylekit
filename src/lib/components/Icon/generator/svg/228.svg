@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>228-W56px Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="228-W56px-Copy" transform="translate(0.000000, -0.000000)">
+            <circle id="Oval-Copy-1348" fill="#FF4F12" cx="28" cy="28" r="28"></circle>
+            <g id="228-B32px-Copy-4" transform="translate(8.000000, 10.000000)">
+                <path d="M15,21.1 L16.3875,21.9625 L15,22.825 L15,21.1 L15,21.1 Z M13.75,18.8625 L13.75,25.075 L18.75,21.975 L13.75,18.8625 L13.75,18.8625 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M26.25,17.375 L27.6375,18.2375 L26.25,19.1125 L26.25,17.375 L26.25,17.375 Z M25,15.1375 L25,21.35 L30,18.25 L25,15.1375 L25,15.1375 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M15,13.65 L16.3875,14.5125 L15,15.3875 L15,13.65 L15,13.65 Z M13.75,11.4125 L13.75,17.625 L18.75,14.525 L13.75,11.4125 L13.75,11.4125 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="21.25" y="8.75" width="1.25" height="18.8"></rect>
+                <path d="M33.75,6.25 L33.75,8.75 C33.75,12.6625 32.9375,18.4875 31.5875,21.475 C29.725,25.575 26.225,30.975 20,33.65 C13.775,30.975 10.2625,25.575 8.4125,21.475 C7.0625,18.4875 6.25,12.65 6.25,8.75 L6.25,6.25 L33.75,6.25 L33.75,6.25 Z M35,5 L5,5 L5,8.75 C5,12.45 5.75,18.6125 7.275,21.9875 C9.3625,26.6 13.2,32.275 20,35 C26.8,32.275 30.6375,26.6 32.725,21.9875 C34.25,18.6125 35,12.45 35,8.75 L35,5 L35,5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
