@@ -218,15 +218,16 @@
       box-shadow none
     .ripple
       padding: 0!important
-
-@media (min-width: laptop-lower-limit)
-  .{newAppName}-options-list__info-content__label
-    .rt-button
-      @media (hover: hover)
-        opacity: 0
-        visibility: hidden
-        transition-property opacity, visibility
-  .{newAppName}-options-list:hover
+.{newAppName}-options-list
+  @media (min-width: laptop-lower-limit)
+    .{newAppName}-options-list__info-content__label
+      .rt-button
+        @media (hover: hover)
+          opacity: 0
+          visibility: hidden
+          transition-property opacity, visibility
+.{newAppName}-options-list:hover
+  @media (min-width: laptop-lower-limit)
     .{newAppName}-options-list__info-content__label
       .rt-button
         opacity: 1
