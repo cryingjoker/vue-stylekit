@@ -1303,6 +1303,137 @@
               </template>
             </rt-tabs>
           </div>
+
+          <div class="rt-col-12 rt-space-top2">
+            <rt-tabs>
+              <template slot="navigation">
+                <rt-tabs-nav-item anchor="tab1" name="tab1">Веб-камеры</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="tab2" name="tab2">Веб-камеры</rt-tabs-nav-item>
+              </template>
+              <template slot="content">
+                <rt-tabs-content-item name="tab1">
+                  <div class="rt-space-top">
+                    <rt-swiper :scroll-on-click="true" :hide-navigation="true">
+                      <rt-slide v-for="i in 3" :key="i" class="rt-space-right15">
+                        <h2>Слайд {{ i }}</h2>
+                        <rt-row-list>
+                          <rt-row-list-item v-for="i in 3" :key="i">
+                            <template slot="option">
+                              <div class="d-flex flex-row">
+                                <div>
+                                  <p>Антивирус</p>
+                                  <p class="color-main05">
+                                    Kaspersky Internet Security, месяц в подарок
+                                  </p>
+                                </div>
+                              </div>
+                            </template>
+                          </rt-row-list-item>
+                        </rt-row-list>
+                        <rt-price
+                          class="rt-space-vertical"
+                          time-interval="мес"
+                          is-option
+                          :value="i * 1000"
+                        />
+                        <rt-button class="rt-button-orange">
+                          Подключить
+                        </rt-button>
+                      </rt-slide>
+                    </rt-swiper>
+
+                  </div>
+                </rt-tabs-content-item>
+                <rt-tabs-content-item name="tab2">
+                  <div class="rt-col rt-space-bottom rt-space-top">
+                    <div class="row">
+                      <rt-button class="rt-button-transparent-purple popupButton" @click="openPopup">Попап</rt-button>
+                    </div>
+                  </div>
+                  <rt-real-popup :position-bottom="true">
+                    <template>
+                      <rt-tabs>
+                        <template slot="navigation">
+                          <rt-tabs-nav-item anchor="innertab1" name="innertab1">Веб-камеры</rt-tabs-nav-item>
+                          <rt-tabs-nav-item anchor="innertab2" name="innertab2">Веб-камеры</rt-tabs-nav-item>
+                        </template>
+                        <template slot="content">
+                          <rt-tabs-content-item name="innertab1">
+                            <h2>Слайд</h2>
+                            <rt-row-list>
+                              <rt-row-list-item>
+                                <template slot="option">
+                                  <div class="d-flex flex-row">
+                                    <p>Антивирус</p>
+                                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                                  </div>
+                                </template>
+                              </rt-row-list-item>
+                            </rt-row-list>
+                            <rt-price class="rt-space-vertical"
+                                      time-interval="мес"
+                                      is-option
+                                      :value="1000"/>
+                            <rt-button class="rt-button-orange">Подключить</rt-button>
+                            <h2>Слайд</h2>
+                            <rt-row-list>
+                              <rt-row-list-item>
+                                <template slot="option">
+                                  <div class="d-flex flex-row">
+                                    <p>Антивирус</p>
+                                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                                  </div>
+                                </template>
+                              </rt-row-list-item>
+                            </rt-row-list>
+                            <rt-price class="rt-space-vertical"
+                                      time-interval="мес"
+                                      is-option
+                                      :value="1000"/>
+                            <rt-button class="rt-button-orange">Подключить</rt-button>
+                            <h2>Слайд</h2>
+                            <rt-row-list>
+                              <rt-row-list-item>
+                                <template slot="option">
+                                  <div class="d-flex flex-row">
+                                    <p>Антивирус</p>
+                                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                                  </div>
+                                </template>
+                              </rt-row-list-item>
+                            </rt-row-list>
+                            <rt-price class="rt-space-vertical"
+                                      time-interval="мес"
+                                      is-option
+                                      :value="1000"/>
+                            <rt-button class="rt-button-orange">Подключить</rt-button>
+                          </rt-tabs-content-item>
+                          <rt-tabs-content-item name="innertab2">
+                            <h2>Слайд2</h2>
+                            <rt-row-list>
+                              <rt-row-list-item>
+                                <template slot="option">
+                                  <div class="d-flex flex-row">
+                                    <p>Антивирус</p>
+                                    <p class="color-main05">Kaspersky Internet Security, месяц в подарок</p>
+                                  </div>
+                                </template>
+                              </rt-row-list-item>
+                            </rt-row-list>
+                            <rt-price class="rt-space-vertical"
+                                      time-interval="мес"
+                                      is-option
+                                      :value="1000"/>
+                            <rt-button class="rt-button-orange">Подключить</rt-button>
+                          </rt-tabs-content-item>
+                        </template>
+                      </rt-tabs>
+                    </template>
+                  </rt-real-popup>
+                </rt-tabs-content-item>
+              </template>
+            </rt-tabs>
+          </div>
         </div>
       </div>
       <documentation-builder :json="documentation" type="components" />
@@ -1324,6 +1455,11 @@
     }),
     mounted() {
       this.documentation = documentation;
+    },
+    methods: {
+      openPopup() {
+        document.querySelector('.rtb-popup-wrapper').classList.add('rtb-popup-wrapper--active')
+      }
     }
   };
 </script>
