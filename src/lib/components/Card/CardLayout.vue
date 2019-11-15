@@ -79,7 +79,6 @@
       }
     },
     render(h){
-      console.log(this.inTabs);
       if(this.inTabs) {
         if(this.layout === 'swiper'){
           return <div>
