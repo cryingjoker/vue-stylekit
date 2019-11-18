@@ -64,6 +64,7 @@ import TariffCard3 from "../components/experiment-elements/TariffCard3.vue";
 import BenefitBlock from "../components/main-elements/BenefitBlock.vue";
 import GallaryCarousel from "../components/main-elements/GallaryCarousel.vue";
 import CheckboxTabs from "../components/main-elements/CheckboxTabs.vue";
+import StickyBottomLine from "../components/main-elements/StickyBottomLine.vue";
 
 import GameArrows from '../components/game-ui/gameArrows.vue'
 const index = [
@@ -108,6 +109,11 @@ const index = [
     path: "/gallery-carousel",
     name: "gallary-carousel",
     component: GallaryCarousel
+  },
+  {
+    path: "/sticky-bottom-line",
+    name: "Sticky Bottom Line",
+    component: StickyBottomLine
   },
   {
     path: "/color-line-text",

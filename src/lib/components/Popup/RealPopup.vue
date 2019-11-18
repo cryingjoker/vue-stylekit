@@ -19,11 +19,15 @@
       displayOnDesktop: {
         type: Boolean,
         default: true
+      },
+      popupType: {
+        type: Number,
+        default: 1
       }
     },
 
     data: () => ({
-
+      missClick: true
     }),
     computed: {
       popupClasses(){
@@ -42,13 +46,13 @@
     },
     methods:{
       popupEnter(){
-        this.popupEnter = true
+        this.missClick = false;
       },
       popupLeave(){
-        this.popupEnter = false
+        this.missClick = true;
       },
       milkClick(){
-        if(!this.popupEnter){
+        if(this.missClick){
           this.close();
         }
       },

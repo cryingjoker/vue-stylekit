@@ -98,6 +98,14 @@
       "for_b2c" : true
     },
     {
+      "name" : "Sticky Bottom Line",
+      "title" : "StickyBottomLine",
+      "url" : "/sticky-bottom-line",
+      "list_child" : [],
+      "for_b2b" : true,
+      "for_b2c" : true
+    },
+    {
       "name" : "inline-dropdown",
       "title" : "Inline dropdown",
       "url" : "/inline-dropdown",
