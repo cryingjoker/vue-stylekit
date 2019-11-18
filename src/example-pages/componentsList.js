@@ -80,7 +80,8 @@ import {
   GalleryCarousel,
   GalleryCarouselItem,
   CheckboxTabs,
-  CountdownTimer
+  CountdownTimer,
+  StickyBottomLine
 } from "../lib/components/index";
 import AppMenu from "./components/AppMenu.vue";
 const componentsList = {};
@@ -165,6 +166,9 @@ componentsList[CardLayout.name] = CardLayout;
 componentsList[Ussd.name] = Ussd.component;
 componentsList[GalleryCarousel.name] = GalleryCarousel.component;
 componentsList[GalleryCarouselItem.name] = GalleryCarouselItem.component;
+
 componentsList[CheckboxTabs.name] = CheckboxTabs;
 componentsList[CountdownTimer.name] = CountdownTimer;
+componentsList[StickyBottomLine.name] = StickyBottomLine;
+
 export default { ...componentsList };

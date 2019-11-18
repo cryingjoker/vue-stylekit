@@ -98,3 +98,6 @@
  export { default as CountdownTimer } from './CountdownTimer/CountdownTimer.vue';
 
 
+ export { default as StickyBottomLine } from './StickyBottomLine/StickyBottomLine.vue';
+
+
