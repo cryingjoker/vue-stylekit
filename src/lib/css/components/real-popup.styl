@@ -32,10 +32,10 @@
       &--bottom-center
         top 100vh
         transform translateY(-100%)
-        max-height calc(100vh - 80px)
-        @media (max-width: tablet-upper-limit)
-          //top 40px
-          max-height calc(100vh - 40px)
+        max-height 70vh
+        //@media (max-width: tablet-upper-limit)
+        //  //top 40px
+        //  max-height calc(100vh - 40px)
         @media (max-width: mobile-upper-limit)
           //top 20px
           max-height calc(100vh - 20px)
@@ -48,7 +48,7 @@
   width 100%
   height auto
   max-height 80vh
-  padding vertical-space * 2
+  padding 60px
   display inline-block
   background-color b2c-white
   box-sizing border-box
@@ -57,19 +57,30 @@
   //bottom 100vh
   top -100vh
   transition top .4s ease-in-out
-  .popup-content
-    @media (max-width: tablet-upper-limit)
-      padding-bottom: 100px
+  @media (max-width: desktop-upper-limit)
+    padding 40px 20px
   @media (max-width: tablet-upper-limit)
     max-height: calc(100vh - 40px)
   @media (max-width: mobile-upper-limit)
     max-height: calc(100vh - 20px)
+    padding-top 45px
   &-close
     position absolute
-    top 20px
-    right 20px
+    top 10px
+    right 10px
     cursor pointer
     z-index 9
 
-  .rt-annotation__content
-    max-height none!important
+  .popup-content
+    @media (max-width: tablet-upper-limit)
+      padding-bottom: 100px
+
+  //.rt-annotation__content
+  //  max-height none!important
+  @media (max-width: tablet-upper-limit)
+    .rt-tabs-navigation-wrapper
+      width 100%
+      margin-left 0
+
+    .rt-tabs-navigation
+      padding-left 0
