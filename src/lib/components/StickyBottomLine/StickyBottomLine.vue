@@ -1,5 +1,6 @@
 <script type="text/jsx">
   import debounce from "debounce";
+  import variables from "../../variables.json";
 
   export default {
     name: "RtStickyBottomLine",
@@ -11,13 +12,26 @@
       startStopPoints: {
         type: Array,
         default: []
+      },
+      hideOnDesktop: {
+        type: Boolean,
+        default: false
+      },
+      hideOnTablet: {
+        type: Boolean,
+        default: false
+      },
+      hideOnMobile: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
       active: false,
       pointsStart: [],
       pointsEnd: [],
-      activeIndex: -1
+      activeIndex: -1,
+      deviceType: ""
     }),
     watch: {
       isActive: function() {
@@ -28,11 +42,48 @@
       if (this.startStopPoints.length > 0) {
         this.setStartStopPoints();
         window.addEventListener("resize", debounce(this.setStartStopPoints, 100));
+        if (this.hideOnDesktop || this.hideOnTablet || this.hideOnMobile) {
+          window.addEventListener("resize", debounce(this.setDeviceType, 100));
+          this.setDeviceType();
+        }
         window.addEventListener("scroll", debounce(this.detectActiveIndex, 10));
         this.detectActiveIndex();
       }
     },
     methods: {
+      setDeviceType() {
+        var width = window.innerWidth;
+        const beforeType = this.deviceType;
+        if (width <= parseInt(variables["mobile-upper-limit"])) {
+          this.deviceType = "mobile";
+          if (beforeType != "mobile") {
+            setTimeout(() => {
+              this.detectActiveIndex();
+              this.checkOffsetLine();
+            }, 0);
+          }
+        } else {
+          if (width <= parseInt(variables["tablet-upper-limit"])) {
+            this.deviceType = "tablet";
+            if (beforeType != "tablet") {
+              setTimeout(() => {
+                this.detectActiveIndex();
+                this.checkOffsetLine();
+              }, 0);
+            }
+          } else {
+            this.deviceType = "desktop";
+            this.detectActiveIndex();
+            this.checkOffsetLine();
+            if (beforeType != "desktop") {
+              setTimeout(() => {
+                this.detectActiveIndex();
+                this.checkOffsetLine();
+              }, 0);
+            }
+          }
+        }
+      },
       sort(arr) {
         arr.sort((a, b) => {
           if (a < b) {
@@ -126,6 +177,11 @@
     },
     computed: {},
     render(h) {
+      if (this.deviceType === "desktop" && this.hideOnDesktop
+        || this.deviceType === "tablet" && this.hideOnTablet
+        || this.deviceType === "mobile" && this.hideOnMobile) {
+        return null;
+      }
       if (this.activeIndex >= 0) {
         return <div ref="line" class="rt-sticky-bottom-line">
           <div class="rt-container">
