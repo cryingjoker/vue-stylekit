@@ -52,7 +52,9 @@
       },
       setSelection(e) {
         this.RtSelect.setValue({ text: this.text, value: this.value });
-        this.$el.querySelector('.select-option__checkbox input[type="checkbox"]').click();
+        if(this.$el.querySelector('.select-option__checkbox input[type="checkbox"]')) {
+          this.$el.querySelector('.select-option__checkbox input[type="checkbox"]').click();
+        }
         e.preventDefault();
       },
       getTextContent() {

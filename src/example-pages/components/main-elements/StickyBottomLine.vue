@@ -15,7 +15,7 @@
             <div id="two" class="color-block--pink" style="height: 100vh; "></div>
             <div id="tree" class="color-block--black" style="height: 100vh; margin-top: 1000px"></div>
             <div id="tree2" class="color-block--black" style="height: 50vh; margin-top: 1000px"></div>
-            <rt-sticky-bottom-line :start-stop-points="['one','two','tree','tree2']">
+            <rt-sticky-bottom-line :start-stop-points="['one','two','tree','tree2']" >
               <div class="d-flex flex-center-center">
                 <rt-button class="rt-button-orange rt-button-small">Оставить заявку</rt-button>
               </div>
