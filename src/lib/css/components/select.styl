@@ -240,7 +240,10 @@
 
   .select-list
     top 60px
-
+    height: 200px
+    @supports (height: fit-content) {
+      height: fit-content
+    }
     &:hover
       .text-field__border
         border-color b2c-purple
