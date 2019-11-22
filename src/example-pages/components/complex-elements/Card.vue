@@ -13,8 +13,8 @@
     </div>
     <div class="app-body">
       <div class="rt-container">
-        <div class="rt-col">
-          <div class="row rt-space-top is-b2c">
+        <div class="rt-col is-b2c">
+          <div class="row rt-space-top">
             <div class="rt-col-4">
               <pre-code
                 text="<rt-card :ga=&quot;{ offerName: 'Kaspersky Internet Security 4' }&quot;>
@@ -144,6 +144,23 @@
                 </template>
             </rt-card>"
               />
+            </div>
+            <div class="rt-col-3 rt-col-td-3 rt-col-md-3">
+              <a href="#events">
+                <rt-card :is-white-color="true" background-color-type="green" :ga="{value:'Новости'}">
+                  <rt-template slot="content">
+                    <div class="rt-space-top2 rt-space-bottom">
+                      <img src="//static-cdn.rt.ru/sites/default/files/img/icon/news-icon.svg" width="80px" />
+                    </div>
+                    <p class="rt-font-paragraph rt-font-bold">Новости</p>
+                    <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Анонсы акций, изменения в&nbsp;тарифах
+                      и&nbsp;новости Ростелеком</p>
+                  </rt-template>
+                  <rt-template slot="footer">
+                    <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Все новости</rt-button>
+                  </rt-template>
+                </rt-card>
+              </a>
             </div>
           </div>
           <div class="row is-b2c">
