@@ -13,6 +13,10 @@
         type: Array,
         default: []
       },
+      deltaBetweenBlocks:{
+        type: Number,
+        default: 0
+      },
       hideOnDesktop: {
         type: Boolean,
         default: false
@@ -95,13 +99,14 @@
       compareArr(arrA, arrB, delta) {
         arrB.forEach((endPoint, endIndex) => {
           arrA.forEach((startPoint, startIndex) => {
-            if (startPoint === endPoint) {
+            if (startPoint >= endPoint && Math.abs(startPoint - endPoint) <= this.deltaBetweenBlocks) {
               arrA.splice(startIndex, 1);
               arrB.splice(endIndex, 1);
               return false;
             }
           });
         });
+        console.info('arrB',arrA,arrB,this.deltaBetweenBlocks)
         arrA = arrA.filter((i) => {
           return !i;
         });
