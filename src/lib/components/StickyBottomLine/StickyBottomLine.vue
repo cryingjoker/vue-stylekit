@@ -106,7 +106,6 @@
             }
           });
         });
-        console.info('arrB',arrA,arrB,this.deltaBetweenBlocks)
         arrA = arrA.filter((i) => {
           return !i;
         });
