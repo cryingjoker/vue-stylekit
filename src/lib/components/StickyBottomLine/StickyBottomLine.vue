@@ -17,7 +17,7 @@
         type: Array,
         default: []
       },
-      deltaBetweenBlocks:{
+      deltaBetweenBlocks: {
         type: Number,
         default: 0
       },
@@ -68,7 +68,7 @@
             setTimeout(() => {
               this.detectActiveIndex();
               this.checkOffsetLine();
-            }, 0);
+            }, 0);z
           }
         } else {
           if (width <= parseInt(variables["tablet-upper-limit"])) {
@@ -201,6 +201,7 @@
           </div>
         </div>;
       }
+
 
       return null;
     }

@@ -22,19 +22,30 @@
             </rt-sticky-bottom-line>
           </div>
         </div>
+        <div class="app-content rt-col-12 rt-col-md-3 rt-space-top3">
+          <documentation-builder :json="documentation" type="components"/>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import documentation from "../../../lib/components/StickyBottomLine/docs/index.json";
 
-import componentsList from "../../componentsList";
-export default {
-  name: "AppTags",
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {}
-};
+  import componentsList from "../../componentsList";
+
+  export default {
+    name: "AppTags",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>

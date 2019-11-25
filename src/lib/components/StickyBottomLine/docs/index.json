@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "name": "rt-sticky-bottom-line",
+      "property":":start-stop-points",
+      "type": ["String Array"],
+      "description":"Перечисление ids где отображается",
+      "value" :"false",
+      "version": "0.1.85"
+    },
+    {
+      "name": "rt-sticky-bottom-line",
+      "property":":delta-between-blocks",
+      "type": ["Number"],
+      "description":"дельта разницы между блоками",
+      "value" :"false",
+      "version": "0.1.85"
+    },
+    {
+      "name": "rt-sticky-bottom-line",
+      "property":":hide-on-desktop",
+      "type": ["Boolean"],
+      "description":"Флаг скрытия на декстопе",
+      "value" :"false",
+      "version": "0.1.85"
+    },
+    {
+      "name": "rt-sticky-bottom-line",
+      "property":":hide-on-tablet",
+      "type": ["Boolean"],
+      "description":"Флаг скрытия на планшете",
+      "value" :"false",
+      "version": "0.1.85"
+    },
+    {
+      "name": "rt-sticky-bottom-line",
+      "property":":hide-on-mobile",
+      "type": ["Boolean"],
+      "description":"Флаг скрытия на мобилке",
+      "value" :"false",
+      "version": "0.1.85"
+    }
+  ]
+}
