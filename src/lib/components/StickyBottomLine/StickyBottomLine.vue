@@ -9,9 +9,17 @@
         type: Boolean,
         default: true
       },
+      zIndex: {
+        type: Number,
+        default: 2
+      },
       startStopPoints: {
         type: Array,
         default: []
+      },
+      deltaBetweenBlocks: {
+        type: Number,
+        default: 0
       },
       hideOnDesktop: {
         type: Boolean,
@@ -60,7 +68,7 @@
             setTimeout(() => {
               this.detectActiveIndex();
               this.checkOffsetLine();
-            }, 0);
+            }, 0);z
           }
         } else {
           if (width <= parseInt(variables["tablet-upper-limit"])) {
@@ -93,15 +101,17 @@
         });
       },
       compareArr(arrA, arrB, delta) {
-        arrB.forEach((endPoint, endIndex) => {
-          arrA.forEach((startPoint, startIndex) => {
-            if (startPoint === endPoint) {
+        for(let endIndex = 0; endIndex < arrB.length; endIndex++){
+          let endPoint = arrB[endIndex]
+          for(let startIndex = 0; startIndex < arrB.length; startIndex++){
+            let startPoint = arrA[startIndex];
+            if (startPoint >= endPoint && Math.abs(startPoint - endPoint) <= this.deltaBetweenBlocks) {
               arrA.splice(startIndex, 1);
               arrB.splice(endIndex, 1);
-              return false;
+              endIndex --;
             }
-          });
-        });
+          };
+        };
         arrA = arrA.filter((i) => {
           return !i;
         });
@@ -183,7 +193,7 @@
         return null;
       }
       if (this.activeIndex >= 0) {
-        return <div ref="line" class="rt-sticky-bottom-line">
+        return <div ref="line" class="rt-sticky-bottom-line" style={{zIndex:this.zIndex}}>
           <div class="rt-container">
             <div class="rt-col-12">
               {this.$slots.default}
@@ -191,6 +201,7 @@
           </div>
         </div>;
       }
+
 
       return null;
     }

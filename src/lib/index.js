@@ -56,6 +56,7 @@ import {
   FilterCaller,
   Youtube,
   Sticky,
+  StickyBottomLine,
   ResizeContentHeight,
   Popup,
   Logo,
@@ -168,6 +169,7 @@ const VueRtStyle = {
       Vue.component(OptionsListInfoItem.name, OptionsListInfoItem);
       Vue.component(FilterCaller.name, FilterCaller);
       Vue.component(Sticky.name, Sticky);
+      Vue.component(StickyBottomLine.name, StickyBottomLine);
       Vue.component(ResizeContentHeight.name, ResizeContentHeight);
       Vue.component(Youtube.name, Youtube);
       Vue.component(Popup.name, Popup);

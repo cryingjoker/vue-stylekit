@@ -109,6 +109,9 @@
             <pre-code text='<rt-icon type="093"></rt-icon>'/>
           </div>
           <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="098"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
             <pre-code text='<rt-icon type="100"></rt-icon>'/>
           </div>
           <div class="rt-col-1 rt-space-bottom">
@@ -130,7 +133,13 @@
             <pre-code text='<rt-icon type="115"></rt-icon>'/>
           </div>
           <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="116"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
             <pre-code text='<rt-icon type="176"></rt-icon>'/>
+          </div>
+          <div class="rt-col-1 rt-space-bottom">
+            <pre-code text='<rt-icon type="228"></rt-icon>'/>
           </div>
           <div class="rt-col-1 rt-space-bottom">
             <pre-code text='<rt-icon type="SMART_HOME_MOVE_SENSOR" caption="200" :candy=true></rt-icon>'/>

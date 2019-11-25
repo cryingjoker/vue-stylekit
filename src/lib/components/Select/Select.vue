@@ -213,9 +213,10 @@ export default {
           if (focusedItem) {
             selectedItem = focusedItem.parentNode;
           }
-          let selectedIndex = [...selectedItem.parentNode.children].indexOf(
+
+          let selectedIndex = selectedItem ? [...selectedItem.parentNode.children].indexOf(
             selectedItem
-          );
+          ) : -1;
 
           if (e.keyCode === 38) {
             selectedIndex =

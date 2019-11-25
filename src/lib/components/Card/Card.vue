@@ -484,17 +484,19 @@ export default {
     if(this.inTabsWImage)
       this.redrawSvg();
     let anchor = this.$el.querySelector('a, button')
-    if (anchor && this.ga) {
-      anchor.addEventListener('click', Event => {
+    if (anchor && this.ga && this.$el) {
+      let parentIsLink = this.$el.parentElement.tagName === 'A'
+      let clickableEl = parentIsLink ? this.$el.parentElement : anchor
+      clickableEl.addEventListener('click', Event => {
         let el = Event.target
-        if (el.getAttribute('data-ga-pushed') || !this.ga) return
+        if (this.$el.getAttribute('data-ga-pushed') || !this.ga) return
         Event.preventDefault()
         if (!window.dataLayer) window.dataLayer = []
         window.dataLayer.push(Object.assign({
           event: window[variables.globalSettingsKey].segment,
           type: 'card_click'
         }, this.ga))
-        el.setAttribute('data-ga-pushed', 'true')
+        this.$el.setAttribute('data-ga-pushed', 'true')
         el.click()
       }, false)
     }

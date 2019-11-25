@@ -53,6 +53,10 @@
       showAsTag:{
         type:Boolean,
         default: false
+      },
+      color:{
+        type: String,
+        default: ''
       }
     },
     data: () => ({
@@ -71,6 +75,11 @@
           className += " rt-button--as-tag";
         }
         className += " " + this.buttonClassList + "";
+
+        if(this.color && this.color.length > 0){
+          className += 'rt-button-'+this.color
+        }
+
         return className;
       }
     },

@@ -12,15 +12,18 @@
         <div class="row">
           <div class="rt-col-12">
             <div id="one" class="color-block--red" style="height: 100vh; margin-top: 100vh"></div>
-            <div id="two" class="color-block--pink" style="height: 100vh; "></div>
+            <div id="two" class="color-block--pink" style="height: 100vh;"></div>
             <div id="tree" class="color-block--black" style="height: 100vh; margin-top: 1000px"></div>
             <div id="tree2" class="color-block--black" style="height: 50vh; margin-top: 1000px"></div>
-            <rt-sticky-bottom-line :start-stop-points="['one','two','tree','tree2']" >
+            <rt-sticky-bottom-line :start-stop-points="['one','two','tree','tree2']" :delta-between-blocks="50">
               <div class="d-flex flex-center-center">
                 <rt-button class="rt-button-orange rt-button-small">Оставить заявку</rt-button>
               </div>
             </rt-sticky-bottom-line>
           </div>
+        </div>
+        <div class="app-content rt-col-12 rt-col-md-3 rt-space-top3">
+          <documentation-builder :json="documentation" type="components"/>
         </div>
       </div>
     </div>
@@ -28,13 +31,21 @@
 </template>
 
 <script>
+  import documentation from "../../../lib/components/StickyBottomLine/docs/index.json";
 
-import componentsList from "../../componentsList";
-export default {
-  name: "AppTags",
-  components: componentsList,
-  mounted() {},
-  created() {},
-  methods: {}
-};
+  import componentsList from "../../componentsList";
+
+  export default {
+    name: "AppTags",
+    components: componentsList,
+    data: () => ({
+      documentation: {}
+    }),
+    mounted() {
+      this.documentation = documentation;
+    },
+    created() {
+    },
+    methods: {}
+  };
 </script>
