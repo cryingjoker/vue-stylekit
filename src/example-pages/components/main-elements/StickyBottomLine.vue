@@ -23,6 +23,7 @@
           </div>
         </div>
         <div class="app-content rt-col-12 rt-col-md-3 rt-space-top3">
+          <pre style="color:#a9b7c6;font-family:'Menlo'"><span style="color:#e8bf6a;">&lt;rt-sticky-bottom-line </span><span style="color:#bababa;">:start-stop-points</span><span style="color:#a5c261;">="</span>['one','two','tree','tree2']<span style="color:#a5c261;">" </span><span style="color:#bababa;">:delta-between-blocks</span><span style="color:#a5c261;">="</span>50<span style="color:#a5c261;">"</span><span style="color:#e8bf6a;">&gt;<br></span><span style="color:#e8bf6a;">  &lt;div </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="d-flex flex-center-center"</span><span style="color:#e8bf6a;">&gt;<br></span><span style="color:#e8bf6a;">    &lt;rt-button </span><span style="color:#bababa;">class</span><span style="color:#a5c261;">="rt-button-orange rt-button-small"</span><span style="color:#e8bf6a;">&gt;</span>Оставить заявку<span style="color:#e8bf6a;">&lt;/rt-button&gt;<br></span><span style="color:#e8bf6a;">  &lt;/div&gt;<br></span><span style="color:#e8bf6a;">&lt;/rt-sticky-bottom-line&gt;</span></pre>
           <documentation-builder :json="documentation" type="components"/>
         </div>
       </div>
