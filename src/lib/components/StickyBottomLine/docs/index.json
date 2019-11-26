@@ -5,7 +5,7 @@
       "property":":start-stop-points",
       "type": ["String Array"],
       "description":"Перечисление ids где отображается",
-      "value" :"false",
+      "value" :"[],
       "version": "0.1.85"
     },
     {
@@ -13,7 +13,7 @@
       "property":":delta-between-blocks",
       "type": ["Number"],
       "description":"дельта разницы между блоками",
-      "value" :"false",
+      "value" :"0",
       "version": "0.1.85"
     },
     {
