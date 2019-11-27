@@ -241,12 +241,6 @@ export default {
     }
   },
   computed: {
-    isMobile () {
-      return browser.isMobile()
-    },
-    isTablet () {
-      return browser.isTablet()
-    },
     bannerItemWrapperClass(){
       let bannerItemWrapperClass = "";
       if(this.isGameBannerItem){
@@ -300,9 +294,9 @@ export default {
     },
     computedLazyImage () {
       let result
-      if (this.isMobile && this.lazyImageMobile) {
+      if (this.isMobile() && this.lazyImageMobile) {
         result = this.lazyImageMobile
-      } else if (this.isTablet && this.lazyImageTablet) {
+      } else if (this.isTablet() && this.lazyImageTablet) {
         result = this.lazyImageTablet
       } else {
         result = this.lazyImage
@@ -336,11 +330,17 @@ export default {
 
   },
   methods: {
+    isMobile () {
+      return browser.isMobile()
+    },
+    isTablet () {
+      return browser.isTablet()
+    },
     computedBackgroundImageFn(){
       let result
-      if (this.isMobile && this.backgroundImageMobile) {
+      if (this.isMobile() && this.backgroundImageMobile) {
         result = this.backgroundImageMobile
-      } else if (this.isTablet && this.backgroundImageTablet) {
+      } else if (this.isTablet() && this.backgroundImageTablet) {
         result = this.backgroundImageTablet
       } else if (browser.supportedWebP && this.backgroundImageWebp) {
         result = this.backgroundImageWebp
