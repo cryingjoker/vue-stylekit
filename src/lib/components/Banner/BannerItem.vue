@@ -1,5 +1,7 @@
 <script type="text/jsx">
 import variables from "../../variables.json";
+import browser from "../../utils/browser";
+
 const componentsList = {};
 
 export default {
@@ -71,6 +73,10 @@ export default {
       default: null
     },
     backgroundImageTablet: {
+      type: String,
+      default: null
+    },
+    backgroundImageWebp: {
       type: String,
       default: null
     },
@@ -235,7 +241,6 @@ export default {
     }
   },
   computed: {
-
     bannerItemWrapperClass(){
       let bannerItemWrapperClass = "";
       if(this.isGameBannerItem){
@@ -288,15 +293,15 @@ export default {
       return this.computedBackgroundImageFn()
     },
     computedLazyImage () {
-      let lesult
-      if (this.isMobile && this.lazyImageMobile) {
-        lesult = this.lazyImageMobile
-      } else if (this.isTablet && this.lazyImageTablet) {
-        lesult = this.lazyImageTablet
+      let result
+      if (this.isMobile() && this.lazyImageMobile) {
+        result = this.lazyImageMobile
+      } else if (this.isTablet() && this.lazyImageTablet) {
+        result = this.lazyImageTablet
       } else {
-        lesult = this.lazyImage
+        result = this.lazyImage
       }
-      return lesult
+      return result
     }
   },
   mounted () {
@@ -326,21 +331,23 @@ export default {
   },
   methods: {
     isMobile () {
-      return window.innerWidth <= parseInt(variables["mobile-upper-limit"])
+      return browser.isMobile()
     },
     isTablet () {
-      return window.innerWidth >= parseInt(variables["tablet-lower-limit"]) && window.innerWidth <= parseInt(variables["tablet-upper-limit"])
+      return browser.isTablet()
     },
     computedBackgroundImageFn(){
-      let lesult
+      let result
       if (this.isMobile() && this.backgroundImageMobile) {
-        lesult = this.backgroundImageMobile
+        result = this.backgroundImageMobile
       } else if (this.isTablet() && this.backgroundImageTablet) {
-        lesult = this.backgroundImageTablet
+        result = this.backgroundImageTablet
+      } else if (browser.supportedWebP && this.backgroundImageWebp) {
+        result = this.backgroundImageWebp
       } else {
-        lesult = this.backgroundImage
+        result = this.backgroundImage
       }
-      return lesult
+      return result
     },
     normalizeVariable(variable) {
       if (typeof variable === "number") {
