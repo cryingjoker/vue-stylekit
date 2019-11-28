@@ -2,9 +2,30 @@
   "items" : [
     {
       "name" : "rt-card",
-      "property" : ":lazy-background-image",
+      "property" : "lazy-background-image, lazy-image",
       "type" : "String",
-      "description" : "Ссылка на низкого качества картинку для lazy-load",
+      "description" : "Ссылка на картинку заглушку для lazy-load (обычно это легкая замыленная версия исходного фото)",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "lazy-image-tablet",
+      "type" : "String",
+      "description" : "Ссылка на картинку заглушку для Tablet",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "lazy-image-mobile",
+      "type" : "String",
+      "description" : "Ссылка на картинку заглушку для Mobile",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "background-image",
+      "type" : "String",
+      "description" : "url-адрес картинки карточки",
       "value" : "null"
     },
     {
@@ -47,13 +68,6 @@
       "property" : "background-color-type",
       "type" : "String",
       "description" : "Устанавливает цвет фона карточки возможные значения: `dark-state`, `yellow`, `red`, `dark-blue`, `light-blue`, `orange`, `pink`, `green`",
-      "value" : "null"
-    },
-    {
-      "name" : "rt-card",
-      "property" : "background-image",
-      "type" : "String",
-      "description" : "url-адрес картинки карточки",
       "value" : "null"
     },
     {

@@ -305,6 +305,22 @@
       "version": " >= 0.0.30"
     },
     {
+      "name" : "rt-card",
+      "property" : "lazy-image-tablet",
+      "type" : "String",
+      "description" : "Ссылка на картинку заглушку для Tablet",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "lazy-image-mobile",
+      "type" : "String",
+      "description" : "Ссылка на картинку заглушку для Mobile",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
       "name": "rt-banner-item",
       "property": ":ga",
       "type": "Object",
