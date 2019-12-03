@@ -41,6 +41,9 @@
         if(this.positionCenter){
           classList += ' rtb-popup--center-center';
         }
+        if(this.popupType) {
+          classList += ` rtb-popup-type-${this.popupType}`
+        }
         return classList;
       },
     },
@@ -76,10 +79,17 @@
         this.countOffset()
       });
       this.countOffset();
-
+      document.querySelector('body').addEventListener('open-popup', (e) => {
+        if(this.$el.querySelector('.rtb-popup').classList.contains(e.detail[1])) {
+          this.$el.querySelector('.popup-content').innerHTML = e.detail[0].closest('.rt-card').querySelector('.rt-card__popup-benefits').innerHTML;
+          this.$el.classList.add('rtb-popup-wrapper--active');
+        }
+      })
     },
     render: function(h) {
-      return <div onClick={this.milkClick} ref="popupWrapper" class={"rtb-popup-wrapper" + ((!this.displayOnDesktop) ? " rtb-popup-wrapper--mobile-only": "")}>
+      return <div onClick={this.milkClick}
+                  ref="popupWrapper"
+                  class={"rtb-popup-wrapper" + ((!this.displayOnDesktop) ? " rtb-popup-wrapper--mobile-only": "")}>
         <div class="rt-container">
           <div class="rt-col">
             <div class="row">
