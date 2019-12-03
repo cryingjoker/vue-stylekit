@@ -35,7 +35,6 @@
         if(this.mobileLayout) {
           this.removePaginator();
           this.addPaginator();
-          this.fixCardHeightMobile();
 //          for(let i = 0; i < this.parentArray.length; i++) {
 //            document.querySelector('.custom-carousel__paginator').children[i].addEventListener('click', (e) => {
 //              let activePaginatorIndex = this.getChildNumber(e.target);
@@ -50,6 +49,7 @@
             this.$el.children[i].removeAttribute("style")
           }
         }
+        this.fixCardHeightMobile();
       },
 
       addPaginator() {

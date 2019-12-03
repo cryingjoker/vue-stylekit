@@ -22,15 +22,14 @@
     color transparent !important
 
   &--is-block
-
     display block
     min-width 100%
-  &-md--is-block
-    @media (max-width: mobile-upper-limit)
-      display block
-      min-width 100%
   &-td--is-block
     @media (max-width: tablet-upper-limit)
+      display block
+      min-width 100%
+  &-md--is-block
+    @media (max-width: mobile-upper-limit)
       display block
       min-width 100%
   .ripple-wave
@@ -351,7 +350,7 @@
 
   &-transparent-purple
     color b2c-purple
-    margin-top 5px
+    //margin-top 5px
 
 .fake-radiobutton-for-button
   display none
@@ -361,3 +360,12 @@
 
 .checked-text
   display none
+
+
+.rtb-button
+  .ripple
+    padding 0 20px
+
+.rt-button-small.rtb-button
+  .ripple
+    padding 0 10px!important

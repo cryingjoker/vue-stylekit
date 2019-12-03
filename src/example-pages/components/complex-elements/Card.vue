@@ -148,17 +148,17 @@
             <div class="rt-col-3 rt-col-td-3 rt-col-md-3">
               <a href="#events">
                 <rt-card :is-white-color="true" background-color-type="green" :ga="{value:'Новости'}">
-                  <rt-template slot="content">
+                  <template slot="content">
                     <div class="rt-space-top2 rt-space-bottom">
                       <img src="//static-cdn.rt.ru/sites/default/files/img/icon/news-icon.svg" width="80px" />
                     </div>
                     <p class="rt-font-paragraph rt-font-bold">Новости</p>
                     <p class="rt-font-paragraph rt-space-top05 rt-space-bottom05">Анонсы акций, изменения в&nbsp;тарифах
                       и&nbsp;новости Ростелеком</p>
-                  </rt-template>
-                  <rt-template slot="footer">
+                  </template>
+                  <template slot="footer">
                     <rt-button class="rt-button-white rt-button-small rt-space-horizontal">Все новости</rt-button>
-                  </rt-template>
+                  </template>
                 </rt-card>
               </a>
             </div>
@@ -1683,6 +1683,102 @@
             </rt-card-layout>
           <!--</div>-->
         <!--</div>-->
+      </div>
+      <div class="rt-space-top2">
+        <div class="rt-container">
+          <div class="rt-col">
+            <div class="row">
+              <div class="rt-col-3">
+                <rt-card :equal-padding="true"
+                         :has-expanded-block="true">
+                  <template slot="header">
+                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom0-half">Пакет 1 500</p>
+                  </template>
+                  <template slot="content">
+                    <div class="rtb-card__underlined-section">
+                      <p class="rt-font-small-paragraph rt-space-bottom15">Включен городской номер<br>или&nbsp;номер&nbsp;8&nbsp;800</p>
+                      <p class="rt-font-paragraph rt-font-bold">10</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom color-main05">рабочих мест</p>
+                      <p class="rt-font-paragraph rt-font-bold">1 500 минут</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom color-main05">на&nbsp;любые телефоны&nbsp;России</p>
+                    </div>
+                  </template>
+                  <template slot="expanding-block">
+                    <div class="rtb-card__expanding-button d-inline-flex d-space-between tagline color-purple rt-space-bottom05-half">
+                      <span class="card-expander">включено сервисов</span>
+                      <span class="card-expander">4</span>
+                    </div>
+                    <div class="rtb-card__expanding-content rt-space-left rt-font-control color-main07 rt-md-space-left-none">
+                      <p class="with-icon rt-space-bottom05">Переадресация</p>
+                      <p class="with-icon rt-space-bottom05">Голосовое меню IVR</p>
+                      <p class="with-icon rt-space-bottom05">Распределение звонков</p>
+                      <p class="with-icon rt-space-bottom05">Статистика и&nbsp;аналитика</p>
+                    </div>
+                  </template>
+                  <template slot="footer">
+                    <rt-price :value='400'
+                              :is-option='false'
+                              currency='₽'
+                              :b2b-price='true'
+                              time-interval='в месяц'
+                              :is-time-interval-bottom="true"/>
+                  </template>
+                </rt-card>
+              </div>
+              <div class="rt-col-3">
+                <rt-card :equal-padding="true"
+                         :has-expanded-block="true">
+                  <template slot="header">
+                    <p class="rt-font-paragraph rt-font-bold rt-space-bottom0-half">Пакет 1 500</p>
+                  </template>
+                  <template slot="content">
+                    <div class="rtb-card__underlined-section">
+                      <p class="rt-font-small-paragraph rt-space-bottom15">Включен городской номер<br>или&nbsp;номер&nbsp;8&nbsp;800</p>
+                      <p class="rt-font-paragraph rt-font-bold">10</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom color-main05">рабочих мест</p>
+                      <p class="rt-font-paragraph rt-font-bold">1 500 минут</p>
+                      <p class="rt-font-small-paragraph rt-space-bottom color-main05">на&nbsp;любые телефоны&nbsp;России</p>
+                    </div>
+                  </template>
+                  <template slot="expanding-block">
+                    <div class="rtb-card__expanding-button d-inline-flex d-space-between tagline color-purple rt-space-bottom05-half">
+                      <span class="card-expander">включено сервисов</span>
+                      <span class="card-expander">4</span>
+                    </div>
+                    <div class="rtb-card__expanding-content rt-space-left rt-font-control color-main07 rt-md-space-left-none">
+                      <p class="with-icon rt-space-bottom05">Переадресация</p>
+                      <p class="with-icon rt-space-bottom05">Голосовое меню IVR</p>
+                      <p class="with-icon rt-space-bottom05">Распределение звонков</p>
+                      <p class="with-icon rt-space-bottom05">Статистика и&nbsp;аналитика</p>
+                    </div>
+                  </template>
+                  <template slot="footer">
+                    <rt-price :value='400'
+                              :is-option='false'
+                              currency='₽'
+                              :b2b-price='true'
+                              time-interval='в месяц'
+                              :is-time-interval-bottom="true"/>
+                  </template>
+                </rt-card>
+              </div>
+              <div class="rt-col-3">
+                <rt-card :equal-padding="true"
+                         background-image="/static/images/B2B/virtual-ATS.png"
+                         :full-width-top-image="true"
+                         :has-gradient-over-image="true">
+                  <template slot="content">
+                    <p class="rt-font-small-paragraph rt-space-bottom15">Включен городской номер<br>или&nbsp;номер&nbsp;8&nbsp;800</p>
+                    <p class="rt-font-paragraph rt-font-bold">10</p>
+                    <p class="rt-font-small-paragraph rt-space-bottom color-main05">рабочих мест</p>
+                    <p class="rt-font-paragraph rt-font-bold">1 500 минут</p>
+                    <p class="rt-font-small-paragraph rt-space-bottom color-main05">на&nbsp;любые телефоны&nbsp;России</p>
+                  </template>
+                </rt-card>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="rt-container rt-space-top25">
