@@ -229,7 +229,6 @@
             </rt-button>
           </div>
           <div class="rt-col-3 rt-col-td-1" />
-          </div>
         </div>
       </div>
       <div class="rt-space-top25">
