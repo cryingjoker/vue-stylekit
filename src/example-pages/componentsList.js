@@ -31,6 +31,7 @@ import {
   Carousel,
   CarouselSlide,
   Card,
+  CardB2o,
   CardBuy,
   CardImage,
   CardImageList,
@@ -117,6 +118,7 @@ componentsList[BannerPaginatorItem.name] = BannerPaginatorItem;
 componentsList[Carousel.name] = Carousel;
 componentsList[CarouselSlide.name] = CarouselSlide;
 componentsList[Card.name] = Card;
+componentsList[CardB2o.name] = CardB2o;
 componentsList[CardBuy.name] = CardBuy;
 componentsList[CardImage.name] = CardImage;
 componentsList[CardImageList.name] = CardImageList;

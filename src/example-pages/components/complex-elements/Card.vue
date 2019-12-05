@@ -14,6 +14,158 @@
     <div class="app-body">
       <div class="rt-container">
         <div class="rt-col is-b2c">
+
+          <rt-resize-content-height
+            :query-selectors-names="[
+                '.rt-card-b2o'
+              ]" class="row rt-space-top">
+            <div class="rt-col-3">
+              <rt-card-b2o target="_blank" href="https://google.com" :is-blue-card="true" :has-hidden-footer="true">
+                <template slot="content">
+                  <div class="rt-space-top6">
+                  <svg width="50px" height="60px" viewBox="0 0 50 60" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-card-b2o-icon-fill">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="DSGN-450_B2O_new_site_1460_v2_start" transform="translate(-170.000000, -1222.000000)">
+                        <g id="Group-Copy-2" transform="translate(150.000000, 1095.000000)">
+                          <g id="005-B80px" transform="translate(5.000000, 117.000000)">
+                            <g>
+                              <path d="M40,12.5 C46.9,12.5 52.5,18.1 52.5,25 C52.5,31.9 46.9,37.5 40,37.5 C33.1,37.5 27.5,31.9 27.5,25 C27.5,18.1 33.1,12.5 40,12.5 L40,12.5 Z M40,10 C31.725,10 25,16.725 25,25 C25,33.275 31.725,40 40,40 C48.275,40 55,33.275 55,25 C55,16.725 48.275,10 40,10 L40,10 Z" id="Shape" fill-rule="nonzero"></path>
+                              <path d="M17.5,70 L17.5,55 C17.5,50.875 20.875,47.5 25,47.5 L55,47.5 C59.125,47.5 62.5,50.875 62.5,55 L62.5,70 L65,70 L65,55 C65,49.475 60.525,45 55,45 L25,45 C19.475,45 15,49.475 15,55 L15,70 L17.5,70 Z" id="Path" fill-rule="nonzero"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <p class="rt-space-top0-half">Управляйте текущими услугами и заказывайте новые через личный кабинет оператора.</p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <rt-button class="rt-button-white rt-button-small rt-button--is-block">Подключить</rt-button>
+                </template>
+              </rt-card-b2o>
+            </div>
+            <div class="rt-col-3">
+              <rt-card-b2o target="_blank" href="https://google.com" :is-blue-card="true"  :has-hidden-footer="true">
+                <template slot="content">
+                  <div class="rt-space-top6">
+                  <svg width="60px" height="56px" viewBox="0 0 60 56" version="1.1" xmlns="http://www.w3.org/2000/svg"  class="rt-card-b2o-icon-fill">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="DSGN-450_B2O_new_site_1460_v2_start" transform="translate(-755.000000, -1225.000000)">
+                        <g id="Group-Copy-7" transform="translate(740.000000, 1095.000000)">
+                          <g id="227-B80px" transform="translate(5.000000, 118.000000)">
+                            <g>
+                              <path d="M45,17.25 L58.1,26.25 L45,35.25 L45,32.5 L45,30 L42.5,30 L32.5,30 L32.5,22.5 L42.5,22.5 L45,22.5 L45,20 L45,17.25 L45,17.25 Z M42.5,12.5 L42.5,20 L30,20 L30,32.5 L42.5,32.5 L42.5,40 L62.5,26.25 L42.5,12.5 L42.5,12.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                              <path d="M35,44.75 L35,47.5 L35,50 L37.5,50 L47.5,50 L47.5,57.5 L37.5,57.5 L35,57.5 L35,60 L35,62.75 L21.9,53.75 L35,44.75 L35,44.75 Z M37.5,40 L17.5,53.75 L37.5,67.5 L37.5,60 L50,60 L50,47.5 L37.5,47.5 L37.5,40 L37.5,40 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="10" y="20" width="17.5" height="2.5"></rect>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="15" y="25" width="12.5" height="2.5"></rect>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="22.55" y="30" width="4.95" height="2.5"></rect>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="52.5" y="47.5" width="17.5" height="2.5"></rect>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="52.5" y="52.5" width="12.5" height="2.5"></rect>
+                              <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="52.5" y="57.5" width="4.95" height="2.5"></rect>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <p class="rt-space-top0-half">Подключайтесь к системе опорных маршрутизаторов, чтобы обеспечить резервы  в случае сбоя.</p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <rt-button class="rt-button-white rt-button-small rt-button--is-block">Подключить</rt-button>
+                </template>
+              </rt-card-b2o>
+            </div>
+            <div class="rt-col-3">
+              <rt-card-b2o target="_blank" href="https://google.com" :is-blue-card="true" :has-hidden-footer="true">
+                <template slot="content">
+                  <div class="rt-space-top6">
+                  <svg width="60px" height="46px" viewBox="0 0 60 46" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-card-b2o-icon-fill">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="DSGN-450_B2O_new_site_1460_v2_start" transform="translate(-460.000000, -1230.000000)">
+                        <g id="Group-Copy-6" transform="translate(445.000000, 1095.000000)">
+                          <g id="185-B80px" transform="translate(5.000000, 118.000000)">
+                            <g>
+                              <path d="M67.5,20 L67.525,52.5 L12.5,52.525 L12.475,20 L67.5,20 L67.5,20 Z M67.525,17.5 L12.475,17.5 C11.125,17.5 10,18.625 10,19.975 L10,52.5 C10,53.875 11.125,55 12.475,55 L67.5,55 C68.875,55 69.9754088,53.875 69.9754088,52.525 L69.9754088,19.975 C70,18.625 68.875,17.5 67.525,17.5 L67.525,17.5 Z" id="Shape" fill-rule="nonzero"></path>
+                              <rect id="Rectangle" fill-rule="nonzero" x="12.5" y="45" width="55" height="2.5"></rect>
+                              <rect id="Rectangle" fill-rule="nonzero" x="42.5" y="55" width="2.5" height="7.5"></rect>
+                              <rect id="Rectangle" fill-rule="nonzero" x="35" y="55" width="2.5" height="7.5"></rect>
+                              <rect id="Rectangle" fill-rule="nonzero" x="30.05" y="60" width="19.95" height="2.5"></rect>
+                              <path d="M40,51.225 C40.675,51.225 41.25,50.675 41.25,49.975 C41.25,49.275 40.7,48.725 40,48.725 C39.3,48.725 38.75,49.275 38.75,49.975 C38.75,50.675 39.325,51.225 40,51.225" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                              <path d="M23.725,35.025 C24.4,35.025 24.95,35.575 24.95,36.25 C24.95,36.925 24.4,37.475 23.725,37.475 C23.05,37.475 22.5,36.925 22.5,36.25 C22.5,35.575 23.05,35.025 23.725,35.025 L23.725,35.025 Z M23.725,32.525 C21.675,32.525 20,34.2 20,36.25 C20,38.3 21.675,39.975 23.725,39.975 C25.775,39.975 27.45,38.3 27.45,36.25 C27.45,34.2 25.775,32.525 23.725,32.525 L23.725,32.525 Z" id="Shape"  fill-rule="nonzero"></path>
+                              <path d="M56.225,27.525 C56.9,27.525 57.45,28.075 57.45,28.75 C57.45,29.425 56.9,29.975 56.225,29.975 C55.55,29.975 55,29.425 55,28.75 C55,28.075 55.55,27.525 56.225,27.525 L56.225,27.525 Z M56.225,25.025 C54.175,25.025 52.5,26.7 52.5,28.75 C52.5,30.8 54.175,32.475 56.225,32.475 C58.275,32.475 59.95,30.8 59.95,28.75 C59.95,26.675 58.275,25.025 56.225,25.025 L56.225,25.025 Z" id="Shape" fill-rule="nonzero"></path>
+                              <path d="M53.1,28.9 L41.975,34.5 L39.475,27 L25.8,33.9 C26.4,34.475 26.8,35.275 26.9,36.15 L38.025,30.525 L40.525,38.025 L54.2,31.15 C53.6,30.55 53.2,29.775 53.1,28.9 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <p class="rt-space-top0-half">Получайте статистику по всем поданым заявкам.</p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <rt-button class="rt-button-white rt-button-small rt-button--is-block">Подключить</rt-button>
+                </template>
+              </rt-card-b2o>
+            </div>
+
+            <div class="rt-col-3">
+              <rt-card-b2o target="_blank" href="https://google.com" :is-blue-card="true" :has-hidden-footer="true">
+                <template slot="content">
+                  <div class="rt-space-top6">
+
+                    <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" class="rt-card-b2o-icon-fill">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="DSGN-450_B2O_new_site_1460_v2_start" transform="translate(-1050.000000, -1223.000000)">
+                          <g id="Group-Copy-8" transform="translate(1035.000000, 1095.000000)">
+                            <g id="175-B80px" transform="translate(5.000000, 118.000000)">
+                              <g>
+                                <polygon id="Path" fill="#101828" fill-rule="nonzero" points="69.925 70 50.475 53.375 52.1 51.475 70 66.75"></polygon>
+                                <path d="M35,12.5 C47.4,12.5 57.5,22.6 57.5,35 C57.5,47.4 47.4,57.5 35,57.5 C22.6,57.5 12.5,47.4 12.5,35 C12.5,22.6 22.6,12.5 35,12.5 L35,12.5 Z M35,10 C21.2,10 10,21.2 10,35 C10,48.8 21.2,60 35,60 C48.8,60 60,48.8 60,35 C60,21.2 48.8,10 35,10 L35,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                                <g id="Group" transform="translate(27.500000, 25.000000)" fill="#101828" fill-rule="nonzero">
+                                  <path d="M5,22.5 L2.5,22.5 L2.5,12.5 L0,12.5 L0,10 L2.5,10 L2.5,0 L11.35,0 C14.75,0 17.5,2.75 17.5,6.15 C17.5,9.65 14.65,12.5 11.15,12.5 L5,12.5 L5,22.5 Z M5,10 L11.15,10 C13.275,10 15,8.275 15,6.15 C15,4.125 13.35,2.5 11.35,2.5 L5,2.5 L5,10 Z" id="Shape"></path>
+                                  <rect id="Rectangle" x="0" y="15" width="12.5" height="2.5"></rect>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  <p class="rt-space-top0-half">Оцените прозрачную тарифную политику  и стабильные расценки  на доступ к инфраструктуре.</p>
+                  </div>
+                </template>
+                <template slot="footer">
+                  <rt-button class="rt-button-white rt-button-small rt-button--is-block">Подключить</rt-button>
+                </template>
+              </rt-card-b2o>
+            </div>
+            <div class="row rt-space-top">
+            <div class="rt-col-4">
+              <rt-card-b2o :has-bottom-content="true">
+                <template slot="content">
+                  IP-транзит
+                </template>
+              </rt-card-b2o>
+            </div>
+              <div class="rt-col-4">
+              <rt-card-b2o :has-bottom-content="true">
+                <template slot="content">
+                  Аренда каналов
+                </template>
+              </rt-card-b2o>
+            </div>
+              <div class="rt-col-4">
+              <rt-card-b2o :has-bottom-content="true">
+                <template slot="content">
+                  VPN
+                </template>
+              </rt-card-b2o>
+            </div>
+          </div>
+          </rt-resize-content-height>
           <div class="row rt-space-top">
             <div class="rt-col-4">
               <pre-code
