@@ -13,10 +13,6 @@
         type: Boolean,
         default: false
       },
-      activeIndex: {
-        type: Number,
-        default: 0
-      },
       showAsTags: {
         type: Boolean,
         default: false
@@ -59,12 +55,11 @@
       }
     },
     data: () => ({
-      activeTabIndex: this.activeIndex,
+      activeTabIndex: 0,
       tabletSize: null,
       mobileSize: null,
       deviceType: "pc"
     }),
-
 
     computed: {},
 

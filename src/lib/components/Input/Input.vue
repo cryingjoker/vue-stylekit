@@ -153,7 +153,7 @@
       },
       isInvalid() {
         if (this.validate || this.hasError) {
-          return this.errors && this.errors.has(this.scope ? this.scope + '.' + this.fieldName : this.fieldName);
+          return this.hasError || this.errors && this.errors.has(this.scope ? this.scope + '.' + this.fieldName : this.fieldName);
         }
       },
       inputClass() {
