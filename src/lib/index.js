@@ -35,6 +35,7 @@ import {
   Carousel,
   CarouselSlide,
   Card,
+  CardB2o,
   CardBuy,
   CardImage,
   CardImageList,
@@ -200,6 +201,7 @@ const VueRtStyle = {
       Vue.component(Carousel.name, Carousel);
       Vue.component(CarouselSlide.name, CarouselSlide);
       Vue.component(CardCarousel.name, CardCarousel);
+      Vue.component(CardB2o.name, CardB2o);
       Vue.component(CardLayout.name, CardLayout);
       Vue.component(CountdownTimer.name, CountdownTimer);
 

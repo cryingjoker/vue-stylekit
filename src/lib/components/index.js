@@ -26,6 +26,7 @@
  export { default as Annotation } from './Annotation/Annotation.vue';
  export { default as ColorLineText } from './ColorLineText/ColorLineText.vue';
  export { default as Card} from './Card/Card.vue';
+ export { default as CardB2o} from './Card/CardB2o.vue';
  export { default as ProductCard} from './ProductCard/ProductCard.tsx';
  export { default as TariffCard} from './TariffCard/TariffCard.tsx';
  export { default as CardBuy} from './Card/CardBuy.vue';

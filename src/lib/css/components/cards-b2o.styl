@@ -1,0 +1,70 @@
+.rt-card-b2o
+  padding-left: 20px
+  padding-right: 20px
+  padding-top: 20px
+  padding-bottom: 20px
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property background-color, color, box-shadow
+  color white
+  min-height 274px
+  box-sizing border-box
+  background-color: main-color03-no-opacity
+  display: flex
+  flex-direction row
+.rt-card-b2o-inner
+  display: flex
+  flex-direction column
+.rt-card-b2o-content
+  flex 1
+.rt-card-b2o--bottom-content
+  align-items flex-end
+  .rt-card-b2o-inner
+    display: block
+  .rt-card-b2o-content
+    flex 0
+.rt-card-b2o--blue-card
+  color main-color
+  background-color: b2c-cool-grey
+  .ripple
+    transition-duration .4s
+    transition-delay 0
+  .rt-card-b2o-icon-fill
+    path, rect, polygon
+      fill #000
+      transition-timing-function ease-in-out
+      transition-duration .4s
+      transition-property fill
+  .rt-card-b2o-icon-stroke
+    path, rect, polygon
+      stroke #000
+      transition-timing-function ease-in-out
+      transition-duration .4s
+      transition-property stroke
+  &:hover
+    color white
+    background-color: b2c-dark-blue-high
+    .rt-card-b2o-icon-fill
+      path, rect, polygon
+        fill white
+    .rt-card-b2o-icon-stroke
+      path, rect, polygon
+        stroke white
+  .rt-card__body
+    padding-top: 120px
+.rt-card-b2o-footer
+  padding-top: 10px
+  transition-timing-function ease-in-out
+  transition-duration .4s
+  transition-property opacity, visibility
+.rt-card-b2o--has-hidden-footer
+  .rt-card-b2o-footer
+    opacity: 0
+    visibility: hidden
+.rt-card-b2o--has-hidden-footer:hover
+  .rt-card-b2o-footer
+    opacity: 1
+    visibility: visible
+
