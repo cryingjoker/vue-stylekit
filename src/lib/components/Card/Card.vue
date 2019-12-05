@@ -216,6 +216,18 @@ export default {
     ga: {
       type: Object,
       default: null
+    },
+    hasExpandedBlock: {
+      type: Boolean,
+      default: false
+    },
+    fullWidthTopImage: {
+      type: Boolean,
+      default: false
+    },
+    hasGradientOverImage: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -300,6 +312,9 @@ export default {
       }
       if(this.hasDiscount) {
         cardClass += " rt-card--has-discount"
+      }
+      if(this.fullWidthTopImage) {
+        cardClass += " rtb-card--img-full-width"
       }
       return cardClass;
     },
@@ -533,9 +548,17 @@ export default {
           event: window[variables.globalSettingsKey].segment,
           type: 'card_click'
         }, this.ga))
-        this.$el.setAttribute('data-ga-pushed', 'true')
+        this.$el.setAttribute('data-ga-pushed', 'true');
         el.click()
       }, false)
+    }
+
+    if(this.hasExpandedBlock) {
+      window.addEventListener('timeToExpand', () => {
+        this.$el.querySelector('.rtb-card__expanding-button').classList.contains('rtb-card__expanding-button--active') ?
+          this.$el.querySelector('.rtb-card__expanding-button').classList.remove('rtb-card__expanding-button--active') :
+          this.$el.querySelector('.rtb-card__expanding-button').classList.add('rtb-card__expanding-button--active')
+      })
     }
   },
   methods: {
@@ -663,6 +686,9 @@ export default {
       if(this.$el.querySelector('.rt-card__content')) {
         this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2));
       }
+    },
+    expandBlock() {
+      window.dispatchEvent(new CustomEvent('timeToExpand'));
     }
   },
   render(h) {
@@ -871,6 +897,32 @@ export default {
         }
       }
     })();
+    const expandBlock = (() => {
+      if(this.hasExpandedBlock) {
+        return <div class="rtb-card__expanding-block rt-space-top05 rt-space-bottom15" onClick={this.expandBlock}>
+          {this.$slots['expanding-block']}
+        </div>
+      } else {
+        return null;
+      }
+    })();
+    const headerImage = (() => {
+      if(this.fullWidthTopImage) {
+        if(this.hasGradientOverImage) {
+          return <div class="rtb-card__image-wrapper rtb-card__image-wrapper--has-gradient rt-font-center">
+            <img class="additional-possibilities__card-image"
+                 src={this.backgroundImage}/>
+          </div>
+        } else {
+          return <div class="rtb-card__image-wrapper rt-font-center">
+            <img class="additional-possibilities__card-image"
+                 src={this.backgroundImage}/>
+          </div>
+        }
+      } else {
+        return null;
+      }
+    })();
     if(this.doubleSided){
       return <div class={"rt-card " + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
         <div class={"rt-card__content" + this.cardContentClass} style={this.cardBackgroundStyle}>
@@ -888,13 +940,15 @@ export default {
         {this.backgroundImageStandAlone ? <div style={this.standAloneBackgroundStyle} class="rt-card__stand-alone-background"/> : null}
         {discount}
         {label}
-        <div style={this.cardBackgroundStyle} class={"rt-card__background" + this.cardBackgroundClass}/>
+        {!this.fullWidthTopImage ? <div style={this.cardBackgroundStyle} class={"rt-card__background" + this.cardBackgroundClass}/> : null}
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
           {productTriangle}
+          {headerImage}
           <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
             {unfoldButton}
             {this.$slots["content"]}
+            {expandBlock}
           </div>
           {bottomList}
           {contentWithoutWrapper}
