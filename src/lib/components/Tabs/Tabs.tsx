@@ -53,7 +53,7 @@ class RtTabs extends tsx.Component<{}> {
     } else {
       window.dispatchEvent(new Event("resize"));
     }
-  }
+  }k
 
   setActiveTabName(name, hashAnchor?) {
     this.RtTabs.activeName = name;
