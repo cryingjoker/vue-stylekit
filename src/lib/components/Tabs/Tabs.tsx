@@ -47,7 +47,7 @@ class RtTabs extends tsx.Component<{}> {
 
   dispatchEvent() {
     if (navigator.userAgent.indexOf("MSIE") !== -1 || navigator.appVersion.indexOf("Trident/") > 0) {
-      const resizeEvent = window.document.createEvent('UIEvents');
+      const resizeEvent : any = window.document.createEvent('UIEvents');
       resizeEvent.initUIEvent('resize', true, false, window, 0);
       window.dispatchEvent(resizeEvent);
     } else {
