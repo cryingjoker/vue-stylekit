@@ -356,6 +356,45 @@
     @media (max-width: tablet-upper-limit)
       display none
 
+  &__underlined-section
+    border-bottom 1px solid rgba(16, 24, 40, .1)
+
+  &__expanding-content
+    overflow: hidden
+    height: 0
+    transition: height 0.2s linear
+    .with-icon:before
+      top -1px
+
+  &__expanding-button
+    width 100%
+    cursor pointer
+    &--active+.rtb-card__expanding-content
+      height auto
+
+  &--img-full-width
+    padding 0
+    .rt-card__header
+      padding 0
+    .rt-card__body,
+    .rt-card__footer
+      padding 0 20px
+
+  &__image-wrapper
+    width 100%
+    position relative
+    &--has-gradient
+      &:after
+        position absolute
+        content: ''
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background linear-gradient(to bottom, rgba(b2c-white, 0), rgba(b2c-white, 0.16) 26%, rgba(b2c-white, 0.25) 47%, rgba(b2c-white, 0.65) 68%, rgba(b2c-white, 0.9) 87%, #fff);
+    .additional-possibilities__card-image
+      width 100%
+
 .is-flipped
   @media (min-width: laptop-lower-limit)
     .{b2bAppName}-card__reverse

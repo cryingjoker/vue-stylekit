@@ -57,6 +57,18 @@
       color:{
         type: String,
         default: ''
+      },
+      popupButton: {
+        type: Boolean,
+        default: false
+      },
+      targetPopup: {
+        type: String,
+        default: ''
+      },
+      smallerPadding: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
@@ -74,11 +86,14 @@
         if(this.showAsTag){
           className += " rt-button--as-tag";
         }
-        className += " " + this.buttonClassList + "";
-
         if(this.color && this.color.length > 0){
-          className += 'rt-button-'+this.color
+          className += ' rt-button-'+this.color
         }
+        if(this.smallerPadding) {
+          className += ' rtb-button'
+        }
+
+        className += " " + this.buttonClassList + "";
 
         return className;
       }
@@ -92,7 +107,6 @@
       if (this.gaB2b) {
         this.activateEventToLink('b2b', this.gaB2b);
       }
-
     },
     methods: {
       triggerClick($event) {
@@ -102,6 +116,10 @@
           } else {
             this.$el.querySelector(".fake-radiobutton-for-button").checked = false;
           }
+        } else if(this.popupButton && this.targetPopup) {
+          let target = [this.$el, this.targetPopup];
+          document.querySelector('body').dispatchEvent(new CustomEvent("open-popup", { 'detail': target }));
+          this.$emit("click", $event);
         } else {
           this.$emit("click", $event);
         }

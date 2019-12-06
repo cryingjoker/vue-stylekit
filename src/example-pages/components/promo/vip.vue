@@ -1,1131 +1,184 @@
 <template>
-  <div class="wc-inline">
-    <div class="rt-warface-page rt-dark-theme">
-      <div class="">
-        <div class="rt-l-game rt-dark-theme">
-          <div class="rt-container rt-sticky game__logo-wrapper">
-            <div class="relative">
-              <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/logo.png"
-                   class="game__logo">
-            </div>
-          </div>
-          <div
-            class="rt-banner-for-game  rt-fill-viewport rt-md-viewport-height-reset js-screen">
-            <div class="rt-container">
-              <div class="row">
-                <div class="rt-col-12">
-                  <div class="flex-column d-space-between rt-fill-viewport-height rt-md-viewport-height-reset d-flex">
-                    <div class="flex-fill rt-l-game-space"></div>
-                    <div class="flex-fill flex-start-center relement-removet-md-space-top35">
-                      <div class="flex-column rt-td-space-left rt-md-space-left-none md-flex-fill rt-game-blue-space">
-                        <div class="rt-l-game-main-text">
-                          <rt-color-line-text fill-color="white" :hide-arrow="true">
-                            <template slot="label">Победа&nbsp;<br>для каждого</template>
-                            <template slot="content">Высокоскоростной интернет<br> и уникальные игровые бонусы</template>
-
-                          </rt-color-line-text>
-                        </div>
-                        <div class="d-flex rt-space-top25 rt-md-space-top-none  md-d-inline-block">
-                          <div class="rt-orange-breaker-item md-d-inline-block">
-                            <epc-price class="color-white"
-                                       :data="{ lcs: 'active', minPrice: false, offerIds: ['369771569758', '401908075090', '401926242990', '403877433490', '406718142390'] }"></epc-price>
-                          </div>
-                          <div class="rt-orange-breaker-item md-d-inline-block">
-                            <div class="rt-price rt-price-without-space color-white">
-                              <div class="rt-price__option-value color-white">
-                                <epc-data :data="{ id: 369771569758, lcs: 'active' }">
-                                  <epc-options
-                                    :data="{ comp: 'Main_Internet_service', prop: 'internetSpeedValue', minInternetSpeed: false }"></epc-options>
-                                </epc-data>
-                                <epc-data :data="{ id: 401908075090, lcs: 'active' }">
-                                  <epc-options
-                                    :data="{ comp: 'Main_Internet_service', prop: 'internetSpeedValue', minInternetSpeed: false }"></epc-options>
-                                </epc-data>
-                                <epc-data :data="{ id: 401926242990, lcs: 'active' }">
-                                  <epc-options
-                                    :data="{ comp: 'Main_Internet_service', prop: 'internetSpeedValue', minInternetSpeed: false }"></epc-options>
-                                </epc-data>
-                                <epc-data :data="{ id: 403877433490, lcs: 'active' }">
-                                  <epc-options
-                                    :data="{ comp: 'Main_Internet_service', prop: 'internetSpeedValue', minInternetSpeed: false }"></epc-options>
-                                </epc-data>
-                                <epc-data :data="{ id: 406718142390, lcs: 'active' }">
-                                  <epc-options
-                                    :data="{ comp: 'Main_Internet_service', prop: 'internetSpeedValue', minInternetSpeed: false }"></epc-options>
-                                </epc-data>
-                              </div>
-                              <div class="rt-price__info">
-                                <div class="rt-price__info-item">Мбит</div>
-                                <div class="rt-price__info-item">сек.</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="rt-space-top25 rt-md-space-right rt-md-space-top15">
-                          <rt-button v-rt-scroll-to-on-click='{"scrollToId": "rt-game-form"}'
-                                     class="rt-button-orange js-form-button rt-button-md--is-block">Подключить
-                          </rt-button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="rt-font-center  color-white rt-space-bottom6 rt-md-space2 rt-md-space-top2">
-                      <div class="rt-font-center rt-game-text-link-center">
-                        <span class="game-item game-item-open-one">Warface</span> | <span
-                        class="game-item  game-item-open-two">ArcheAge</span> | <span
-                        class="game-item  game-item-open-tree">Crossfire</span>
-                      </div>
-                      <div class="rt-go-to-banner" v-rt-scroll-to-on-click='{"scrollToId": "rt-game-banner"}'>
-                        <rt-game-arrow></rt-game-arrow>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rt-banner-for-game__navidation">
-            <div class="rt-container">
-              <div class="rt-game-banner__paginator rt-space-bottom rt-space-top3 row--mobile-scroll">
-
-                <div class="rt-game-banner__paginator-item rt-game-banner__paginator-item--is-active">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface-icon1.svg"
-                       alt=""
-                       class="rt-game-banner__paginator-item__svg">
-                </div>
-                <div class="rt-game-banner__paginator-item">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface-icon2.svg"
-                       alt=""
-                       class="rt-game-banner__paginator-item__svg">
-                </div>
-                <div class="rt-game-banner__paginator-item">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface-icon3.svg"
-                       alt=""
-                       class="rt-game-banner__paginator-item__svg">
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="rt-game-banner" id="rt-game-banner">
-
-            <div class="rt-game-banner__item rt-game-banner__item--is-active">
-              <div class="rt-game-banner-image"
-                   style="background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface2.png')"></div>
-
-              <div class="rt-container d-flex align-center rt-game-banner__container">
-                <div class="relative rt-layer-level-2 color-white">
-                  <p class="rt-font-h1 rt-space-bottom">Warface</p>
-                  <p>Ураганный экшен и тактический шутер <br>в одном флаконе</p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="rt-game-banner__item">
-              <div class="rt-game-banner-image"
-                   style="background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface3.png')"></div>
-
-              <div class="rt-container d-flex align-center rt-game-banner__container">
-                <div class="relative rt-layer-level-2 color-white">
-                  <p class="rt-font-h1 rt-space-bottom">Crossfire</p>
-                  <p>Ураганный экшен и тактический шутер <br>в одном флаконе</p>
-                </div>
-              </div>
-
-
-            </div>
-
-
-            <div class="rt-game-banner__item">
-              <div class="rt-game-banner-image"
-                   style="background-image: url('https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface4.png')"></div>
-
-              <div class="rt-container d-flex align-center rt-game-banner__container">
-                <div class="relative rt-layer-level-2 color-white">
-                  <p class="rt-font-h1 rt-space-bottom">Warface</p>
-                  <p>Ураганный экшен и тактический шутер <br>в одном флаконе</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-
-          <div
-            class="rt-container rt-game-banner__item-container-data rt-game-banner__item-container-data--is-active rt-md-space-bottom2">
-            <div class="rt-col-12">
-              <div class="row">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold">Крутая пушка каждый день</p>
-                  <p class="rt-font-paragraph color-white05">Пока подключена игровая опция Warface пользуйся любой из
-                    четырех
-                    пушек.
-                    <br>Тип оружия можно менять каждые 24 часа в личном кабинете на
-                    <a href="wf.mail.ru" target="_blank" class="color-orange">wf.mail.ru</a>
-                  </p>
-                </div>
-              </div>
-              <div class="row rt-space-top2  row--mobile-scroll">
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface5.png" alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon1">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Снайперская винтовка</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">СВУ-АС</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface5-2.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon2">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Снайперская винтовка</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Magpul
-                      FMG-9</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface5-3.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon3">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Дробовик</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Mossberg
-                      500
-                      Custom</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface5-4.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon4">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пулемет</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">M249
-                      Para</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row rt-space-top75 rt-md-space-top4">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-md-space-top-none rt-font-bold">Крутые пушки
-                    навсегда</p>
-                  <p class="rt-font-paragraph color-white05">Копите дни РТК и обменивайте их оружие, которое останется с
-                    вами
-                    навсегда.
-                    <br>День РТК равен одному календарному дню. Ассортимент оружия обновляется <br>раз в полгода
-                  </p>
-                  <p class="rt-font-small-paragraph rt-space-top2">90 дней РТК</p>
-                </div>
-              </div>
-              <div class="row rt-space-top2  row--mobile-scroll">
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface6.png" alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon5">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Револьвер</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">S&W M&P
-                      R8</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface6-2.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon6">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Нож</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Бабочка</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface6-3.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon7">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пистолет</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">CZ-75
-                      Auto</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface6-4.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon8">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Топор</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">
-                      Тактический</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row rt-space-top5 rt-md-space-top-none">
-                <div class="rt-col-12">
-                  <p class="rt-font-small-paragraph">180 дней РТК</p>
-                </div>
-              </div>
-              <div class="row rt-space-top2  row--mobile-scroll">
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7.png" alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon9">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Винтовка</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Enfield
-                      L85A2 </p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-2.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon10">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Дробовик</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Fabarm STF
-                      12</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-3.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon11">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пистолет-пулемет</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">SCAR-L
-                      PDW</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-4.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon12">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Снайперская винтовка</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">M14 Crazy
-                      House</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row rt-space-top5 td-d-none rt-td-space-top-none  row--mobile-scroll">
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-5.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon13">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пистолет-пулемет</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">ACR CQB</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-6.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon14">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Дробовик</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">DP-12</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-7.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon15">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Штурмовая винтовка</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">HCAR</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-8.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon16">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Снайперская винтовка</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Steyr
-                    Scout</p>
-                </div>
-              </div>
-            </div>
-            <div class="row rt-space-top5 td-d-none  row--mobile-scroll">
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-9.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon17">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Винтовка</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">McMillan</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-10.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon18">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Дробовик</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">USAS-12</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-11.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon19">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пистолет-пулемет</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">XM8
-                    Compact</p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2  rt-col-td-3 rt-col-md-3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface7-12.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon20">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Пулемет</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">РПД Custom
-                    CS5</p>
-                </div>
-              </div>
-            </div>
+  <div class="wc-inline rt-space-top5">
+    <div class="rt-container">
+      <div class="rt-col-12">
+        <div class="row">
+          <div class="rt-col-6">
             <div class="row">
-              <div class="rt-col-12 rt-space-top75 rt-md-space-top4">
-                <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-md-space-top-none rt-font-bold">Кредиты каждый
-                  день</p>
-                <p class="rt-font-paragraph color-white05 rt-space-bottom2">Получайте кредиты в подарок просто за то,
-                  что
-                  оплатили тариф «Игровой»
-                  <br>в этом месяце. Вам начисляется ежедневно по 10 кредитов, пока активна <br>игровая опция.
-                </p>
-
-                <div class="rt-game-k">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface8.png" alt=""
-                       class="rt-game-k__image">
+              <div class="rt-col-persent-5">
+                <div class="d-inline-block icon-switch icon-switch--is-active ">
+                  <i class="rt-space-bottom d-block">
+                    <svg width="66px" height="58px" viewBox="0 0 66 58" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="RTRU-5477_1460_final_12" transform="translate(-158.000000, -2567.000000)">
+                          <g id="268-B80px" transform="translate(151.000000, 2556.000000)">
+                            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                            <g id="Group" transform="translate(7.000000, 11.000000)" fill="#101828" fill-rule="nonzero">
+                              <g id="Path" transform="translate(27.500000, 26.000000)">
+                                <path
+                                  d="M31.75,6 L30,4.5 C26.5,8.25 21.5,10.75 16,10.5 C10.5,10.25 5.5,7.75 2.25,3.75 L0.25,5 C4,9.5 9.5,12.5 15.75,12.75 C22,13.25 27.75,10.5 31.75,6 Z"></path>
+                                <path
+                                  d="M27,3.75 L25.25,2.25 C23,4.75 19.5,6.25 16,6 C12.25,6 9,4.25 7,1.75 L5,3 C7.75,6.25 11.5,8.25 16,8.25 C20.25,8.5 24.25,6.75 27,3.75 Z"></path>
+                                <path
+                                  d="M22.5,1.25 L20.5,0 C19.25,1 17.5,1.75 15.75,1.75 C14,1.75 12.5,1 11.25,0 L9.25,1.25 C10.75,3 13,4 15.5,4 C18.5,4 20.75,3 22.5,1.25 Z"></path>
+                              </g>
+                              <path
+                                d="M20.75,24.5 L0.25,24.5 L0.25,5.75 L20.75,5.75 L20.75,24.5 Z M2.5,22.25 L18.5,22.25 L18.5,8 L2.5,8 L2.5,22.25 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M20.75,57.75 L0.25,57.75 L0.25,42.25 L20.75,42.25 L20.75,57.75 Z M2.5,55.25 L18.5,55.25 L18.5,44.25 L2.5,44.25 L2.5,55.25 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M16.5,44.5 L4.25,44.5 L4.25,22.25 L16.5,22.25 L16.5,44.5 Z M6.5,42 L14.25,42 L14.25,24.5 L6.5,24.5 L6.5,42 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M15.25,8 L5.5,8 L5.25,7.25 C5.25,6.5 5.25,6 5.25,5.75 C5.25,2.75 7.5,0.5 10.5,0.5 C13.5,0.5 15.75,2.75 15.75,5.75 C15.75,6 15.5,6.5 15.5,7.25 L15.25,8 Z M7.5,5.75 L13.5,5.75 C13.5,5.75 13.5,5.75 13.5,5.75 C13.5,4 12,2.75 10.5,2.75 C8.75,2.75 7.5,4 7.5,5.75 C7.5,5.75 7.5,5.75 7.5,5.75 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M65.75,21.25 L18.75,21.25 L18.75,9 L65.75,9 L65.75,21.25 Z M21.25,19 L63.75,19 L63.75,11.25 L21.25,11.25 L21.25,19 Z"
+                                id="Shape"></path>
+                              <polygon id="Rectangle"
+                                       transform="translate(27.424625, 15.340275) rotate(-62.056261) translate(-27.424625, -15.340275) "
+                                       points="22.1746735 14.2152854 32.6745765 14.2152854 32.6745765 16.4652646 22.1746735 16.4652646"></polygon>
+                              <polygon id="Rectangle"
+                                       transform="translate(37.273429, 15.504125) rotate(-62.056261) translate(-37.273429, -15.504125) "
+                                       points="32.0234776 14.3791352 42.5233806 14.3791352 42.5233806 16.6291144 32.0234776 16.6291144"></polygon>
+                              <polygon id="Rectangle"
+                                       transform="translate(47.239975, 15.448375) rotate(-62.056261) translate(-47.239975, -15.448375) "
+                                       points="41.9900235 14.3233854 52.4899265 14.3233854 52.4899265 16.5733646 41.9900235 16.5733646"></polygon>
+                              <polygon id="Rectangle"
+                                       transform="translate(57.204975, 15.390375) rotate(-62.056261) translate(-57.204975, -15.390375) "
+                                       points="51.9550235 14.2653854 62.4549265 14.2653854 62.4549265 16.5153646 51.9550235 16.5153646"></polygon>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </i>
+                  <p class="rt-font-bold rt-font-h4">Умный шлагбаум</p>
+                  <p class="rt-space-top05 color-main07">Предоставляйте доступ на территорию своего жилого комплекса
+                    удаленно </p>
                 </div>
               </div>
-            </div>
-          </div><!-- -->
+              <div class="rt-col-persent-5">
+                <div class="d-inline-block icon-switch">
+                  <i class="rt-space-bottom d-block">
 
-
-          <div class="rt-container rt-game-banner__item-container-data rt-md-space-bottom2">
-            <div class="rt-col-12">
-              <div class="row">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold">Бонусы за стаж</p>
-                  <p class="rt-font-paragraph color-white05">Получайте бонус каждые два месяца.</p>
+                    <svg width="60px" height="58px" viewBox="0 0 60 58" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="RTRU-5477_1460_final_12" transform="translate(-455.000000, -2567.000000)">
+                          <g id="008-B80px" transform="translate(445.000000, 2556.000000)">
+                            <g id="Group" transform="translate(10.000000, 11.000000)" fill="#101828"
+                               fill-rule="nonzero">
+                              <path
+                                d="M34.45,26.875 C34.4,27.175 34.4,27.45 34.3,27.725 C33.65,29.575 31.925,30.825 30,30.825 C27.475,30.825 25.425,28.725 25.425,26.125 C25.425,25.55 25.525,24.975 25.725,24.45 C25.775,24.325 25.85,24.225 25.925,24.1 L23.5,23.325 C23.475,23.425 23.425,23.5 23.375,23.575 C23.075,24.375 22.925,25.225 22.925,26.125 C22.925,30.1 26.1,33.325 30,33.325 C33.075,33.325 35.675,31.35 36.65,28.55 C36.75,28.25 36.825,27.95 36.875,27.65 L34.45,26.875 Z"
+                                id="Path"></path>
+                              <path
+                                d="M54.025,22.825 L51.225,31.5 L8.375,17.675 L9.425,14.45 L9.125,14.35 C8.35,14.1 7.725,13.6 7.275,12.975 L6,16.9 C5.575,18.225 6.3,19.625 7.6,20.05 L50.425,33.875 C50.675,33.95 50.95,34 51.2,34 C52.25,34 53.225,33.325 53.575,32.275 L56.55,23.025 C56.725,22.45 56.675,21.9 56.475,21.375 L54.025,22.825 Z"
+                                id="Path"></path>
+                              <path
+                                d="M5,40.45 L5,55.325 C5,55.4 4.95,55.45 4.875,55.45 L2.5,55.45 L2.5,40.45 L5,40.45 L5,40.45 Z M5.025,37.95 L0,37.95 L0,57.95 L4.85,57.95 C6.3,57.95 7.475,56.775 7.475,55.325 L7.475,40.425 C7.5,39.05 6.375,37.95 5.025,37.95 L5.025,37.95 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M12.225,2.55 C12.3,2.55 12.375,2.55 12.45,2.575 L57,16.95 C57.35,17.075 57.45,17.35 57.475,17.55 C57.5,17.75 57.45,18.05 57.125,18.25 L47.5,23.85 C47.4,23.925 47.275,23.95 47.15,23.95 C47.075,23.95 47,23.95 46.925,23.925 L9.475,11.825 C9.1,11.725 8.9,11.3 9,10.925 L11.55,3.05 C11.675,2.725 11.975,2.55 12.225,2.55 L12.225,2.55 Z M12.225,0.05 C10.875,0.05 9.6,0.925 9.175,2.275 L6.625,10.175 C6.075,11.875 7,13.675 8.7,14.225 L46.175,26.325 C46.5,26.425 46.825,26.475 47.15,26.475 C47.7,26.475 48.275,26.325 48.75,26.05 L58.375,20.45 C60.775,19.05 60.4,15.475 57.75,14.625 L13.225,0.225 C12.875,0.1 12.55,0.05 12.225,0.05 L12.225,0.05 Z"
+                                id="Shape"></path>
+                              <polygon id="Path" points="54.25 22.125 51.55 30.5 55.75 31.875 58.45 23.475"></polygon>
+                              <path
+                                d="M10.75,49.2 L4.975,49.2 L4.975,46.7 L10.75,46.7 C15.975,46.7 20.65,43.8 22.95,39.125 L27.35,30.2 L29.6,31.3 L25.2,40.225 C22.475,45.75 16.925,49.2 10.75,49.2 Z"
+                                id="Path"></path>
+                            </g>
+                            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </i>
+                  <p class="rt-font-bold rt-font-h4">Видеонаблюдением</p>
+                  <p class="rt-space-top05 color-main07">Наблюдайте за территорий вашего жилого комплекса или
+                    подъезда</p>
                 </div>
               </div>
-              <div class="row rt-space-top2">
-                <div class="rt-col-3 rt-col-md-3">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface9.png"/>
-                    <div class="rt-space-left">
-                      <p class="tagline rt-font-label-uppercase color-white07">за 2 месяца</p>
-                      <p class="rt-space-top0-half">Универсальное хранилище</p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="rt-col-1">
-                </div>
-                <div class="rt-col-3 rt-col-md-3 rt-md-space-top2">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface9-1.png"/>
-                    <div class="rt-space-left">
-                      <p class="tagline rt-font-label-uppercase color-white07">за 4 месяца</p>
-                      <p class="rt-space-top0-half">Глайдер «Крылья Астры»</p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="rt-col-1">
-                </div>
-                <div class="rt-col-3 rt-col-md-3 rt-md-space-top2">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface9-2.png"/>
-                    <div class="rt-space-left">
-                      <p class="tagline rt-font-label-uppercase color-white07">за 6 месяцев</p>
-                      <p class="rt-space-top0-half">Ящик с махадебским тигром</p>
-                    </div>
-
-                  </div>
-                  <div class="rt-col-1">
-                  </div>
-                </div>
-
-              </div>
-              <div class="row rt-space-top75 rt-md-space-top4">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold rt-md-space-top-none">Игровые
-                    предметы
-                    навсегда</p>
-                  <p class="rt-font-paragraph color-white05">Копите дни РТК и обменивайте их оружие, которое останется с
-                    вами
-                    навсегда.
-                    <br>День РТК равен одному календарному дню.</p>
-                </div>
-              </div>
-              <div class="row  row--mobile-scroll">
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10.png"/>
-                    <div class="rt-space-left">
-
-                      <p class="rt-space-top0-half">Костюм кочевника <br>с великого луга</p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-2.png"/>
-                    <div class="rt-space-left">
-
-                      <p class="rt-space-top0-half">Универсальный костюм <br>лиссенийского патриция</p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-3.png"/>
-                    <div class="rt-space-left">
-                      <p class="rt-space-top0-half">Универсальный костюм <br>королевского гвардейца</p>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-4.png"/>
-                    <div class="rt-space-left">
-                      <p class="rt-space-top0-half">Универсальный костюм <br>наемника из Аль-Харбы</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-5.png"/>
-                    <div class="rt-space-left">
-                      <p class="rt-space-top0-half">Ирамийская гадальная <br>руна</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-6.png"/>
-                    <div class="rt-space-left">
-                      <p class="rt-space-top0-half">Зелье охотника <br>за трофеями</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex flex-start-center">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-7.png"/>
-                    <p class="rt-space-left">Лунный настой</p>
-
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex flex-start-center">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-8.png"/>
-                    <p class="rt-space-left">Солнечный настой</p>
-
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex flex-start-center">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-9.png"/>
-                    <p class="rt-space-left">Новенькая кирка</p>
-                  </div>
-                </div>
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex flex-start-center">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface10-10.png"/>
-                    <p class="rt-space-left">Добротная кирка</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="row rt-space-top55 rt-md-space-top-none">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold">Костюм за подключение</p>
-                  <p class="rt-font-paragraph color-white05">Получите костюм лучника Вискони за подключение тарифа.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="rt-col-3 rt-space-top2 rt-col-md-3 rt-space-bottom">
-                  <div class="d-flex flex-start-center">
-                    <img class="rt-game-rect-icon"
-                         src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface11.png"/>
-                    <p class="rt-space-left">Костюм лучника Висконии</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="rt-container rt-game-banner__item-container-data rt-md-space-bottom2">
-            <div class="rt-col-12">
-              <div class="row">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold">Крутая пушка каждый день</p>
-                  <p class="rt-font-paragraph color-white05">Пока подключена игровая опция Warface пользуйся любой из
-                    четырех
-                    пушек.
-                    <br>Тип оружия можно менять каждые 24 часа в личном кабинете на
-                    <a href="wf.mail.ru" target="_blank" class="color-orange">wf.mail.ru</a>
-                  </p>
-                </div>
-              </div>
-              <div class="row rt-space-top2 row--mobile-scroll">
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface12.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon21">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">М4А1 </p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Custom </p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface12-2.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon22">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Desert Eagle </p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">
-                      Silencer</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface12-3.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon23">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">AWM </p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Ultimate
-                      gold</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface12-4.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon24">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Нож</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Kukri Beast
-                      NG</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row rt-space-top75 rt-td-space-top5 rt-md-space-top-none">
-                <div class="rt-col-12">
-                  <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-md-space-top2 rt-font-bold">Крутое оружие
-                    навсегда</p>
-                  <p class="rt-font-paragraph color-white05">Копите дни РТК и обменивайте их оружие, которое останется с
-                    вами
-                    навсегда.
-                    <br>День РТК равен одному календарному дню.
-                  </p>
-                  <p class="rt-font-small-paragraph rt-space-top2">180 дней РТК</p>
-                </div>
-              </div>
-              <div class="row rt-space-top2  row--mobile-scroll">
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface13.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon25">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">М4А1-S </p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Dual Mag
-                      Ultimale
-                      Gold</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface13-2.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon26">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">AK-47</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Scope
-                      BS</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface13-3.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon27">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">AWM</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">A-Jade</p>
-                  </div>
-                </div>
-                <div class="rt-col-1 td-d-none"></div>
-                <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                  <div class="rt-game-circle">
-                    <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface13-4.png"
-                         alt=""
-                         class="rt-game-circle__weapon rt-game-circle__weapon28">
-                    <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">М200</p>
-                    <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">CheyTac</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="row rt-space-top5 rt-md-space-top-none">
-              <div class="rt-col-12">
-                <p class="rt-font-small-paragraph">90 дней РТК</p>
-              </div>
-            </div>
-            <div class="row rt-space-top2 row--mobile-scroll">
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface14.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon29">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">MK-23 </p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">SOCOM
-                    Blue-Crack </p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface14-2.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon30">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Anaconda </p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Gold </p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2 rt-td-space-bottom3">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface14-3.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon31">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Desert Eagle </p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Silver </p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-col-td-3 rt-col-md-2">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface14-4.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon32">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Нож </p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Kukri
-                    Ultimate
-                    Gold </p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-              <div class="rt-col-2 rt-space-top5 rt-td-space-top-none">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface14-5.png"
-                       alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon33">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Топор </p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Gold
-                    Phoenix </p>
-                </div>
-              </div>
-              <div class="rt-col-1 td-d-none"></div>
-            </div>
-
-            <div class="row rt-space-top75 rt-md-space-top2">
-              <div class="rt-col-12">
-                <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-md-space-top-none rt-font-bold">Уникальные
-                  пистолеты при подключении</p>
-                <p class="rt-font-paragraph color-white05">Получите эксклюзивные Dual Colt "Красный дракон" при
-                  подключении
-                  тарифа.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="rt-col-2 rt-space-top2 rt-col-md-3e">
-                <div class="rt-game-circle">
-                  <img src="https://drupal-krasnodar.south.rt.ru/sites/default/files/img/warface2/warface15.png" alt=""
-                       class="rt-game-circle__weapon rt-game-circle__weapon34">
-                  <p class="rt-game-circle__title rt-font-small-paragraph rt-font-bold">Dual Colt</p>
-                  <p class="rt-game-circle__text color-white05 rt-font-small-paragraph rt-space-top0-half">Красный
-                    дракон </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rt-space-top5 rt-md-space-top-none">
-            <div class="color-block--game-promo-steps">
-              <div class="rt-container">
-                <div class="row rt-space-top3 rt-space-bottom5 rt-md-space-horizontal05">
-                  <div class="rt-col-12 rt-space-bottom3">
-                    <p class="rt-font-h2 rt-space-bottom05 rt-space-top5 rt-font-bold">Как подключить бонусы</p>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3">
-                    <div class="rt-game-big-number rt-space-bottom">1</div>
-                    <p class="rt-space-bottom05 rt-font-h4 rt-font-bold">Подключите тариф</p>
-                    <p class="color-white05 rt-font-small-paragraph">Оставив заявку на этом лендинге</p>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3 rt-md-space-top2">
-                    <div class="rt-game-big-number rt-space-bottom">2</div>
-                    <p class="rt-space-bottom05 rt-font-h4 rt-font-bold">Укажите имя персонажа</p>
-                    <p class="color-white05 rt-font-small-paragraph">В личном кабинете Ростелекома</p>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3 rt-md-space-top2">
-                    <div class="rt-game-big-number rt-space-bottom">3</div>
-                    <p class="rt-space-bottom05 rt-font-h4 rt-font-bold">Активируйте опцию</p>
-                    <p class="color-white05 rt-font-small-paragraph">MyGames</p>
-                  </div>
-                  <div class="rt-col-3 rt-col-md-3 rt-md-space-top2">
-                    <div class="rt-game-big-number rt-space-bottom">4</div>
-                    <p class="rt-space-bottom05 rt-font-h4 rt-font-bold">Выберите игру</p>
-                    <p class="color-white05 rt-font-small-paragraph">В которой хотите получать бонусы</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="rt-game-form"
-               class="rt-fill-viewport rt-md-viewport-height-reset js-screen relative color-block--game-promo-color-form color-white rt-dark-theme rt-td-space-horizontal rt-md-space-horizontal-none rt-space-bottom5 rt-md-space-bottom-none zayavka">
-            <div class="rt-container">
-              <div class="rt-col-12">
-                <div class="row rt-space-top4 flex-row-reverse rt-td-space-top">
-                  <div class="rt-col-6 rt-col-md-3 md-d-none rt-col-td-6 rt-td-space-left">
-                    <p class="rt-font-h2 rt-space-bottom rt-space-bottom2 d-none td-d-block md-d-none">Подробнее о
-                      тарифе</p>
-                  </div>
-                  <div class="rt-col-1 md-d-none"></div>
-                  <div class="rt-col-5 rt-col-md-3 rt-col-td-6 js-form ">
-                    <order-form lcs="active" class="rt-md-reverse-left-half" scope="form-3"
-                                :offer-id="[{offerIds: [369771569758, 401908075090, 401926242990, 403877433490, 406718142390, 403788683790]}]"
-                                :prevent-send="[{ regionIds: mrfCenter, preventSend: true }]">
-                      <p class="rt-font-h2 rt-font-bold rt-space-bottom" id="zayavka">Заявка на подключение</p>
-                      <rt-checkbox-tabs>
-                        <rt-template slot="label">
-                          <span>У меня уже есть Домашний интернет от Ростелекома</span>
-                        </rt-template>
-                        <rt-template slot="content">
-                          <div class="rt-space-top2">
-                            <form data-vv-scope="form-3" @submit.prevent>
-                              <div class="row">
-                                <div class="rt-col-8 rt-col-md-3">
-                                  <full-name class="text-field--purple"></full-name>
-                                </div>
-                              </div>
-                              <div class="row rt-space-top">
-                                <div class="rt-col-8 rt-col-md-3">
-                                  <client-phone class="text-field--purple"></client-phone>
-                                </div>
-                              </div>
-                              <div class="row rt-space-top">
-                                <div class="rt-col-8 rt-col-md-3">
-                                  <email class="text-field--purple"></email>
-                                </div>
-                              </div>
-                              <p class="rt-font-paragraph rt-space-top2">Адрес подключения</p>
-                              <div class="row rt-space-top">
-                                <div class="rt-col-8 rt-col-md-3">
-                                  <street class="text-field--purple"></street>
-                                </div>
-                              </div>
-                              <div class="row rt-space-top">
-                                <div class="rt-col-4 rt-col-md-persent-5" style="min-width:80px">
-                                  <house class="text-field--purple"></house>
-                                </div>
-                                <div class="rt-col-4 rt-col-md-persent-5">
-                                  <apartment class="text-field--purple"></apartment>
-                                </div>
-                              </div>
-                              <div class="rt-space-top2">
-                                <submit-button class="rt-button-full-white rt-button--is-block rt-col-md-3 rt-col-4">
-                                  Подключить
-                                </submit-button>
-                              </div>
-                              <div class="row rt-space-top">
-                                <div class="rt-col-8 rt-col-md-3">
-                                  <div class="rt-space-top">
-                                    <agree></agree>
-                                  </div>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </rt-template>
-                        <rt-template slot="content">
-                          <div class="rt-space-top2">
-                            <p class="rt-font-small-paragraph">Подключите тариф и активируйте игровую опцию в Личном
-                              кабинете</p>
-                            <div class="rt-space-top2">
-                              <a href="http://lk.rt.ru/" target="_blank">
-                                <rt-button class="rt-button-full-white">Войти</rt-button>
-                              </a>
-                            </div>
-                          </div>
-                        </rt-template>
-                      </rt-checkbox-tabs>
-                    </order-form>
-
-                  </div>
-                </div>
-                <div class="row"></div>
-              </div>
-            </div>
-          </div>
-          <div class="rt-container">
-            <div class="row">
-              <div class="rt-col-12 rt-space-top5 rt-space-bottom4 rt-md-space-top2 rt-md-space-bottom3">
-                <rt-annotation label="Примечания">
-                  <template slot="content">
-                    <p class="rt-annotation-item color-main05">
-                      Условия оплаты и подключения могут разниться в зависимости от
-                      региона РФ.
-                    </p>
-                    <p class="rt-annotation-item color-main05">
-                      Видео за 300 рублей (Акция) — возможность для физ. лиц подключить
-                      при тех. возможности до 31.12.2018 г. Видеонаблюдение (Услуга 1)
-                      либо Пакет (Услуга 1 + видеокамера в рассрочку для абонентов
-                      Домашнего Интернета (Услуга 2), Домашнего Телефона и Телевидения
-                      (Услуга 3)) по цене от 300 руб./мес. с НДС.
-                    </p>
-                  </template>
-                </rt-annotation>
-              </div>
-            </div>
-          </div>
-          <div class="rt-main-footer">
-            <div class="rt-container">
-              <div class="row">
-                <div class="rt-col-12">
-                  <div class="rt-main-footer-container">
-                    <div class="rt-main-footer-copyright">
-                      <p class="rt-font-control color-white05">© 2019 ПАО «Ростелеком». 18+.</p>
-                    </div>
-                    <div class="rt-main-footer-social">
-                      <div class="d-flex flex-center-center md-flex-start-center">
-                        <a href="">
-                          <svg width="25px" height="21px" viewBox="0 0 25 21" version="1.1"
-                               xmlns="http://www.w3.org/2000/svg"
-                               xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="328-LP_Igrovoy_UPD-8" transform="translate(-613.000000, -3200.000000)">
-                                <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                   fill-rule="nonzero"
-                                   opacity="0.5">
-                                  <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                    <g id="App/SMM/grey/twitter">
-                                      <path
-                                        d="M25.8367347,5.93135877 C24.942884,6.32143956 23.9837952,6.58598789 22.9760951,6.70409471 C24.0050254,6.09726329 24.7926457,5.13474354 25.1659399,3.99135073 C24.2007796,4.55331563 23.1354208,4.9613743 22.0002602,5.18258031 C21.0912507,4.22752529 19.7982724,3.63265306 18.3641431,3.63265306 C15.6127894,3.63265306 13.3819524,5.8297447 13.3819524,8.53799421 C13.3819524,8.9220954 13.4259604,9.29724674 13.5109606,9.65598349 C9.37103319,9.45119205 5.70003512,7.49773969 3.24308667,4.52939724 C2.81360184,5.25281127 2.56927604,6.09573908 2.56927604,6.99553168 C2.56927604,8.69791912 3.44947589,10.2000096 4.78495426,11.078815 C3.96848468,11.0519263 3.2005866,10.8307203 2.52832359,10.4630337 L2.52832359,10.5243148 C2.52832359,12.9007553 4.24622322,14.8841056 6.52408409,15.3355066 C6.10674214,15.4461096 5.66666205,15.5073907 5.21138353,15.5073907 C4.88967666,15.5073907 4.57856504,15.4760076 4.27352486,15.4162116 C4.90785129,17.3666937 6.74717969,18.7850699 8.92642928,18.8239568 C7.22218047,20.1392337 5.07328807,20.9209195 2.73927632,20.9209195 C2.3371328,20.9209195 1.94102105,20.8970011 1.55102041,20.8536588 C3.75606369,22.2481556 6.37388543,23.0612245 9.18746146,23.0612245 C18.3520796,23.0612245 23.3616116,15.5851255 23.3616116,9.10148332 L23.3449052,8.46627812 C24.3237163,7.7787026 25.1705034,6.91482666 25.8367347,5.93135877 Z"
-                                        id="Shape"></path>
-                                    </g>
-                                  </g>
-                                </g>
+              <div class="rt-col-persent-5 rt-space-top2">
+                <div class="d-inline-block icon-switch">
+                  <i class="rt-space-bottom d-block">
+                    <svg width="42px" height="64px" viewBox="0 0 42 64" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="RTRU-5477_1460_final_12" transform="translate(-170.000000, -2817.000000)">
+                          <g id="266-B80px" transform="translate(151.000000, 2809.000000)">
+                            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+                            <g id="Group" transform="translate(18.500000, 8.500000)" fill="#101828" fill-rule="nonzero">
+                              <g id="Path" transform="translate(7.500000, 0.000000)">
+                                <path
+                                  d="M0.25,6 L1.75,7.25 C4.75,4 9.25,1.75 14,2 C18.75,2 23,4.5 26,8 L27.75,7 C24.5,3 19.75,0.5 14.25,0.25 C8.75,-0.25 3.75,2.25 0.25,6 Z"></path>
+                                <path
+                                  d="M4.25,8 L5.75,9.25 C7.75,7 10.75,5.75 14,6 C17.25,6 20,7.5 22,9.75 L23.75,8.75 C21.25,5.75 18,4 14,4 C10.25,3.75 6.75,5.5 4.25,8 Z"></path>
+                                <path
+                                  d="M8.5,10 L10,11.25 C11,10.25 12.5,9.75 14,9.75 C15.5,9.75 16.75,10.5 17.75,11.25 L19.5,10 C18,8.5 16.25,7.75 14,7.5 C12,7.75 9.75,8.75 8.5,10 Z"></path>
+                              </g>
+                              <polygon id="Path"
+                                       points="20 50 23 50 27.75 45.75 20.5 45.75 23.5 42.75 21.75 41.25 15.25 47.75 22.25 47.75"></polygon>
+                              <path
+                                d="M21.5,17 C31.75,17 40.25,25.5 40.25,35.75 C40.25,46 31.75,54.5 21.5,54.5 C11.25,54.5 2.75,46 2.75,35.75 C2.75,25.5 11.25,17 21.5,17 M21.5,15 C10,15 0.75,24.25 0.75,35.75 C0.75,47.25 10,56.5 21.5,56.5 C33,56.5 42.25,47.25 42.25,35.75 C42.25,24.25 33,15 21.5,15 L21.5,15 Z"
+                                id="Shape"></path>
+                              <path
+                                d="M30.5,63 L12.75,63 C12.25,63 12,62.75 11.75,62.25 L7.5,51.5 C7.25,51 7.5,50.25 8,50.25 C8.5,50 9.25,50.25 9.25,50.75 L13.25,61 L29.75,61 L33.5,50.75 C33.75,50.25 34.25,50 34.75,50.25 C35.25,50.5 35.5,51 35.25,51.5 L31.5,62.5 C31.5,62.75 31,63 30.5,63 Z"
+                                id="Path"></path>
+                              <g transform="translate(6.000000, 26.500000)">
+                                <path
+                                  d="M6.75,8.25 L6.75,8.25 C6.25,8.25 5.75,7.75 5.75,7.25 L5.75,5 C5.75,4.5 6.25,4 6.75,4 L6.75,4 C7.25,4 7.75,4.5 7.75,5 L7.75,7.25 C7.75,7.75 7.5,8.25 6.75,8.25 Z"
+                                  id="Path"></path>
+                                <path
+                                  d="M11.25,8.25 L11.25,8.25 C10.75,8.25 10.25,7.75 10.25,7.25 L10.25,5 C10.25,4.5 10.75,4 11.25,4 L11.25,4 C11.75,4 12.25,4.5 12.25,5 L12.25,7.25 C12.25,7.75 11.75,8.25 11.25,8.25 Z"
+                                  id="Path"></path>
+                                <path
+                                  d="M15.5,8.25 L15.5,8.25 C15,8.25 14.5,7.75 14.5,7.25 L14.5,5 C14.5,4.5 15,4 15.5,4 L15.5,4 C16,4 16.5,4.5 16.5,5 L16.5,7.25 C16.5,7.75 16,8.25 15.5,8.25 Z"
+                                  id="Path"></path>
+                                <path
+                                  d="M19.75,8.25 L19.75,8.25 C19.25,8.25 18.75,7.75 18.75,7.25 L18.75,5 C18.75,4.5 19.25,4 19.75,4 L19.75,4 C20.25,4 20.75,4.5 20.75,5 L20.75,7.25 C21,7.75 20.5,8.25 19.75,8.25 Z"
+                                  id="Path"></path>
+                                <path
+                                  d="M24.25,8.25 L24.25,8.25 C23.75,8.25 23.25,7.75 23.25,7.25 L23.25,5 C23.25,4.5 23.75,4 24.25,4 L24.25,4 C24.75,4 25.25,4.5 25.25,5 L25.25,7.25 C25.25,7.75 24.75,8.25 24.25,8.25 Z"
+                                  id="Path"></path>
+                                <path
+                                  d="M25.25,11.5 L5.75,11.5 C2.75,11.5 0.25,9 0.25,6 C0.25,3 2.75,0.5 5.75,0.5 L25.25,0.5 C28.25,0.5 30.75,3 30.75,6 C30.75,9 28.25,11.5 25.25,11.5 Z M5.75,2.75 C4,2.75 2.5,4.25 2.5,6 C2.5,7.75 4,9.25 5.75,9.25 L25.25,9.25 C27,9.25 28.5,7.75 28.5,6 C28.5,4.25 27,2.75 25.25,2.75 L5.75,2.75 L5.75,2.75 Z"
+                                  id="Shape"></path>
                               </g>
                             </g>
-                          </svg>
-                        </a>
-                        <div class="rt-space-left-half">
-                          <a href="">
-                            <svg width="25px" height="14px" viewBox="0 0 25 14" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-653.000000, -3203.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                     fill-rule="nonzero" opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/vk" transform="translate(41.000000, 0.000000)">
-                                        <path
-                                          d="M12.3998949,19.5366094 L13.810004,19.5366094 C13.810004,19.5366094 14.2358499,19.4905734 14.4536579,19.2612182 C14.6537785,19.0503435 14.6473773,18.6544996 14.6473773,18.6544996 C14.6473773,18.6544996 14.6197512,16.8011779 15.4978899,16.5280968 C16.3637316,16.2591407 17.4753442,18.3193771 18.6534953,19.1115599 C19.5444363,19.7108533 20.2216121,19.5796754 20.2216121,19.5796754 L23.372164,19.5364444 C23.372164,19.5364444 25.0201268,19.4367822 24.2386795,18.1675736 C24.1746678,18.0639513 23.7833546,17.2287025 21.8960219,15.5126639 C19.920252,13.7165985 20.1852265,14.0071701 22.5649435,10.9003152 C24.0141334,9.00838265 24.5934387,7.85319167 24.4123531,7.35867555 C24.2398586,6.88742495 23.1738963,7.01183775 23.1738963,7.01183775 L19.6266407,7.03328823 C19.6266407,7.03328823 19.3635192,6.99814244 19.1686206,7.11249002 C18.9779333,7.22419753 18.8556374,7.4852334 18.8556374,7.4852334 C18.8556374,7.4852334 18.2940194,8.94931133 17.5454201,10.1944293 C15.9658487,12.8216184 15.3341549,12.9607165 15.0759184,12.7973629 C14.4752197,12.4170293 14.6253102,11.2700885 14.6253102,10.4549702 C14.6253102,7.90879792 15.0196556,6.84716405 13.8575074,6.57226787 C13.4719215,6.48118582 13.1879119,6.42079446 12.2017957,6.41105924 C10.9360498,6.39851896 9.86486549,6.41485433 9.25827096,6.70592087 C8.85466072,6.89947023 8.543362,7.33078993 8.7330386,7.35570549 C8.96752335,7.38623117 9.49831462,7.49612364 9.77979738,7.87117708 C10.1434846,8.35579298 10.1306822,9.44349744 10.1306822,9.44349744 C10.1306822,9.44349744 10.3395623,12.4407898 9.64284616,12.8130382 C9.16478028,13.068464 8.50882941,12.5470522 7.10057331,10.1634086 C6.37909473,8.94238117 5.83432198,7.59265081 5.83432198,7.59265081 C5.83432198,7.59265081 5.72937658,7.34052514 5.5420583,7.20538711 C5.31481698,7.04186843 4.9971171,6.99005726 4.9971171,6.99005726 L1.62606194,7.01167275 C1.62606194,7.01167275 1.12003308,7.02553306 0.934230865,7.24102791 C0.768811309,7.43292722 0.921091634,7.82926614 0.921091634,7.82926614 C0.921091634,7.82926614 3.56005576,13.8771471 6.54838868,16.9249307 C9.28876072,19.7199286 12.3998949,19.5366094 12.3998949,19.5366094"
-                                          id="Shape-Copy-2"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a>
-                        </div>
-                        <div class="rt-space-left-half">
-                          <a href="">
-                            <svg width="12px" height="24px" viewBox="0 0 12 24" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-703.000000, -3199.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                     opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/facebook" transform="translate(82.000000, 0.000000)">
-                                        <path
-                                          d="M16.7133625,26 L16.7133625,15.3653215 L20.1503314,15.3653215 L20.664891,11.2207242 L16.7133625,11.2207242 L16.7133625,8.57458199 C16.7133625,7.37462436 17.0341449,6.55692042 18.6909595,6.55692042 L20.8040816,6.55589148 L20.8040816,2.84900813 C20.4385204,2.79858974 19.1842195,2.68571429 17.7249466,2.68571429 C14.678306,2.68571429 12.5926257,4.61715012 12.5926257,8.16423805 L12.5926257,11.2207242 L9.14693878,11.2207242 L9.14693878,15.3653215 L12.5926257,15.3653215 L12.5926257,26 L16.7133625,26 Z"
-                                          id="Fill-4-Copy"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a></div>
-                        <div class="rt-space-left-half">
-                          <a href="">
-                            <svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-743.000000, -3200.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                     fill-rule="nonzero" opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/ok" transform="translate(124.000000, 0.000000)">
-                                        <path
-                                          d="M15.1599552,18.0434545 C16.2488824,17.7954091 17.2974733,17.3642273 18.2624552,16.7577909 C18.9929915,16.2969364 19.2139915,15.3319545 18.7529824,14.5987909 C18.2921279,13.8656273 17.3271461,13.6446273 16.5939824,14.1054818 C14.4053097,15.4827909 11.5885643,15.4801636 9.39973698,14.1054818 C8.66657335,13.6446273 7.70159153,13.8656273 7.24073698,14.5987909 C6.77988244,15.3293273 7.00088244,16.2969364 7.73126426,16.7577909 C8.69624608,17.3642273 9.74483698,17.7955636 10.8337643,18.0434545 L7.84995517,21.0300455 C7.23810971,21.6418909 7.23810971,22.6311364 7.84995517,23.2429818 C8.15719153,23.5475909 8.55622789,23.7012091 8.95510971,23.7012091 C9.35677335,23.7012091 9.75565517,23.5475909 10.0630461,23.2429818 L12.9983279,20.3075455 L15.9337643,23.2429818 C16.5456097,23.8548273 17.5348552,23.8548273 18.1467006,23.2429818 C18.7585461,22.6311364 18.7585461,21.6391091 18.1467006,21.0300455 L15.1599552,18.0434545 L15.1599552,18.0434545 Z M12.9981733,6.13217273 C14.219237,6.13217273 15.2111097,7.12404545 15.2111097,8.34510909 C15.2111097,9.56339091 14.219237,10.5554182 12.9981733,10.5554182 C11.7798915,10.5554182 10.785237,9.56354545 10.785237,8.34510909 C10.785237,7.12404545 11.7798915,6.13217273 12.9981733,6.13217273 L12.9981733,6.13217273 Z M12.9981733,13.6848091 C15.9444279,13.6848091 18.3406552,11.2885818 18.3406552,8.34510909 C18.3406552,5.39622727 15.9444279,3 12.9981733,3 C10.0520733,3 7.65584608,5.39622727 7.65584608,8.34248182 C7.65584608,11.2887364 10.0520733,13.6848091 12.9981733,13.6848091 Z"
-                                          id="Shape"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a></div>
-                        <div class="rt-space-left-half">
-                          <a href="">
-
-                            <svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <defs>
-                                <polygon id="path-1"
-                                         points="23.5102041 12.5514546 23.5102041 5 2 5 2 12.5514546 2 20.1029092 23.5102041 20.1029092"></polygon>
-                              </defs>
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-779.000000, -3202.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/youtube" transform="translate(165.000000, 0.000000)">
-                                        <mask id="mask-2" fill="white">
-                                          <use xlink:href="#path-1"></use>
-                                        </mask>
-                                        <g id="Clip-2"></g>
-                                        <path
-                                          d="M10.5551948,15.7387775 L10.5551948,9.36413178 L16.17718,12.5515764 L10.5551948,15.7387775 Z M23.0606897,7.358368 C22.8133224,6.43002627 22.0844198,5.69899674 21.1589921,5.45089492 C19.4815628,5 12.755102,5 12.755102,5 C12.755102,5 6.02864123,5 4.35121197,5.45089492 C3.42578432,5.69899674 2.69688173,6.43002627 2.44951438,7.358368 C2,9.04088081 2,12.5514546 2,12.5514546 C2,12.5514546 2,16.0619066 2.44951438,17.7445413 C2.69688173,18.672883 3.42578432,19.4039125 4.35121197,19.6521361 C6.02864123,20.1029092 12.755102,20.1029092 12.755102,20.1029092 C12.755102,20.1029092 19.4815628,20.1029092 21.1589921,19.6521361 C22.0844198,19.4039125 22.8133224,18.672883 23.0606897,17.7445413 C23.5102041,16.0619066 23.5102041,12.5514546 23.5102041,12.5514546 C23.5102041,12.5514546 23.5102041,9.04088081 23.0606897,7.358368 L23.0606897,7.358368 Z"
-                                          id="Fill-1" fill="#E3E8EC" fill-rule="evenodd" mask="url(#mask-2)"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a></div>
-                        <div class="rt-space-left-half">
-                          <a href="">
-
-                            <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-819.000000, -3198.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                     opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/instagram" transform="translate(206.000000, 0.000000)">
-                                        <path
-                                          d="M13.1390264,1.00766638 C9.84228883,1.00766638 9.42885346,1.02164031 8.13414541,1.08071627 C6.8420394,1.13964768 5.95965845,1.3448716 5.18747874,1.64497364 C4.38927863,1.95514654 3.71226616,2.37022024 3.03742205,3.04506434 C2.36252976,3.71995663 1.94750425,4.39692092 1.63728316,5.19512103 C1.33718112,5.96730074 1.13200539,6.84968169 1.07302579,8.1417877 C1.01394983,9.43654393 1.00002409,9.84988294 1.00002409,13.1466687 C1.00002409,16.4434544 1.01394983,16.8568416 1.07302579,18.1515978 C1.13200539,19.4436556 1.33718112,20.3260848 1.63728316,21.0982163 C1.94750425,21.8964164 2.36252976,22.5734289 3.03742205,23.248273 C3.71226616,23.9231652 4.38927863,24.3381908 5.18747874,24.64846 C5.95965845,24.9485139 6.8420394,25.1537378 8.13414541,25.2127174 C9.42885346,25.2717452 9.84228883,25.2857191 13.1390264,25.2857191 C16.4358121,25.2857191 16.8491511,25.2717452 18.1439073,25.2127174 C19.4360133,25.1537378 20.3183943,24.9485139 21.090574,24.64846 C21.8888223,24.3381908 22.5657866,23.9231652 23.2406307,23.248273 C23.915523,22.5734289 24.3305485,21.8964646 24.6407696,21.0982163 C24.9408716,20.3260848 25.1460955,19.4436556 25.2050269,18.1515978 C25.2641029,16.8568416 25.2780768,16.4434544 25.2780768,13.1466687 C25.2780768,9.84993112 25.2641029,9.43654393 25.2050269,8.1417877 C25.1460955,6.84968169 24.9408716,5.96730074 24.6407696,5.19512103 C24.3305485,4.39692092 23.915523,3.71995663 23.2406307,3.04506434 C22.5657866,2.37022024 21.8888223,1.95514654 21.090574,1.64497364 C20.3183943,1.3448716 19.4360133,1.13964768 18.1439073,1.08071627 C16.8491511,1.02164031 16.4358121,1.00766638 13.1390264,1.00766638 M13.1390264,3.19487443 C16.3803019,3.19487443 16.7641993,3.20721003 18.0442106,3.26561139 C19.2277537,3.31962783 19.870506,3.51738294 20.2982526,3.68362443 C20.864871,3.90383418 21.2692956,4.16688124 21.6940547,4.59164031 C22.1188138,5.01644756 22.3818608,5.42082398 22.6021188,5.98744246 C22.7683121,6.41518906 22.9660672,7.05794133 23.0200836,8.24148441 C23.0784368,9.52149575 23.0908206,9.90544133 23.0908206,13.1466687 C23.0908206,16.3879442 23.0784368,16.7718897 23.0200836,18.0518529 C22.9660672,19.2354442 22.7683121,19.8781964 22.6021188,20.305943 C22.3818608,20.8725133 22.1188138,21.2769379 21.6940547,21.701697 C21.2692956,22.1265043 20.864871,22.3895513 20.2982526,22.6097611 C19.870506,22.7759544 19.2277537,22.9737577 18.0442106,23.0277259 C16.764392,23.0861273 16.3805428,23.0985111 13.1390264,23.0985111 C9.89750992,23.0985111 9.51366071,23.0861273 8.23384212,23.0277259 C7.05029904,22.9737577 6.40749858,22.7759544 5.97975198,22.6097611 C5.41318169,22.3895513 5.00875709,22.1265043 4.58399802,21.701697 C4.15923895,21.2769379 3.89614371,20.8725133 3.67593396,20.305943 C3.50974065,19.8781964 3.31198554,19.2354442 3.2579691,18.0519011 C3.19956774,16.7718897 3.18723214,16.3879442 3.18723214,13.1466687 C3.18723214,9.90544133 3.19956774,9.52149575 3.2579691,8.24148441 C3.31198554,7.05794133 3.50974065,6.41518906 3.67593396,5.98744246 C3.89614371,5.42082398 4.15923895,5.01644756 4.58399802,4.59168849 C5.00875709,4.16688124 5.41318169,3.90383418 5.97975198,3.68362443 C6.40749858,3.51738294 7.05029904,3.31962783 8.23379393,3.26561139 C9.51385346,3.20721003 9.89775085,3.19487443 13.1390264,3.19487443"
-                                          id="Fill-1"></path>
-                                        <path
-                                          d="M13.0344627,17.0459209 C10.8189958,17.0459209 9.02295667,15.2498817 9.02295667,13.0344149 C9.02295667,10.818948 10.8189958,9.02295667 13.0344627,9.02295667 C15.2499295,9.02295667 17.0459687,10.818948 17.0459687,13.0344149 C17.0459687,15.2498817 15.2499295,17.0459209 13.0344627,17.0459209 M13.0344627,6.85459184 C9.62142938,6.85459184 6.85459184,9.62138161 6.85459184,13.0344149 C6.85459184,16.4474959 9.62142938,19.2142857 13.0344627,19.2142857 C16.4474959,19.2142857 19.2142857,16.4474959 19.2142857,13.0344149 C19.2142857,9.62138161 16.4474959,6.85459184 13.0344627,6.85459184"
-                                          id="Fill-4"></path>
-                                        <path
-                                          d="M20.9489796,6.74617347 C20.9489796,7.52460515 20.3179829,8.15561224 19.5395641,8.15561224 C18.7611453,8.15561224 18.130102,7.52460515 18.130102,6.74617347 C18.130102,5.96774179 18.7611453,5.33673469 19.5395641,5.33673469 C20.3179829,5.33673469 20.9489796,5.96774179 20.9489796,6.74617347"
-                                          id="Fill-6"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a></div>
-                        <div class="rt-space-left-half">
-                          <a href="">
-
-                            <svg width="20px" height="10px" viewBox="0 0 20 10" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="328-LP_Igrovoy_UPD-8" transform="translate(-862.000000, -3205.000000)">
-                                  <rect fill="#101828" x="0" y="0" width="1460" height="3247"></rect>
-                                  <g id="Group-20" transform="translate(0.000000, 3063.000000)" fill="#E3E8EC"
-                                     opacity="0.5">
-                                    <g id="Group-3-Copy" transform="translate(612.000000, 134.000000)">
-                                      <g id="App/SMM/grey/flikr" transform="translate(247.000000, 0.000000)">
-                                        <path
-                                          d="M7.51363636,8.65294545 C9.91604545,8.65294545 11.8637818,10.6005273 11.8637818,13.0030909 C11.8637818,15.4056545 9.91604545,17.3532364 7.51363636,17.3532364 C5.11122727,17.3532364 3.16349091,15.4056545 3.16349091,13.0030909 C3.16349091,10.6006818 5.11122727,8.65294545 7.51363636,8.65294545 L7.51363636,8.65294545 Z"
-                                          id="Shape" fill-rule="nonzero"></path>
-                                        <path
-                                          d="M18.4925455,8.65294545 C20.8949545,8.65294545 22.8426909,10.6005273 22.8426909,13.0030909 C22.8426909,15.4056545 20.8951091,17.3532364 18.4925455,17.3532364 C16.0899818,17.3532364 14.1424,15.4056545 14.1424,13.0030909 C14.1424,10.6006818 16.0901364,8.65294545 18.4925455,8.65294545 Z"
-                                          id="Path" fill-rule="evenodd"></path>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="rt-main-footer-phone">
-                      <p class="rt-font-phone  color-white05">8 800 100 0 800</p>
-                    </div>
-                  </div>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </i>
+                  <p class="rt-font-bold rt-font-h4">Телеметрия</p>
+                  <p class="rt-space-top05 color-main07">Предоставляйте доступ на территорию своего жилого комплекса
+                    удаленно </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="rt-col-2">
+          </div>
+            <div class="rt-col-3">
+              <div class="switch-images relative">
+                <img class="switch-images__item switch-images__item--is-active"
+                     src="https://static.re-store.ru/upload/resize_cache/iblock/514/1120_1496_17f5c944b3b71591cc9304fac25365de2/51453933d56a12270ac1852cf5c67bf0.jpg"
+                     alt="">
+                <img class="switch-images__item"
+                     src="https://static.re-store.ru/upload/resize_cache/iblock/a3b/1120_1496_17f5c944b3b71591cc9304fac25365de2/a3b8711dae2ebf40b47ba636af463a25.jpg"
+                     alt="">
+                <img class="switch-images__item"
+                     src="https://static.re-store.ru/upload/resize_cache/iblock/7e3/1120_1496_17f5c944b3b71591cc9304fac25365de2/7e3d1b0cd09a706a56f1ae42c327368f.jpg"
+                     alt="">
+              </div>
+            </div>
+
+          </div>
       </div>
     </div>
+
   </div>
   <!-- Описание -->
 
@@ -1140,64 +193,16 @@
     name: "AppPromoVip",
     components: componentsList,
     mounted() {
-
       var $$ = document.querySelectorAll.bind(document);
       var $ = document.querySelector.bind(document);
-      var activeSlideIndex = 0;
-      var slideCount = $$(".rt-game-banner__item").length;
-      var sleepTime = 5000;
-      var timer = function() {
-        return setTimeout(function(){
-          nextSlide();
-          localTimer = timer()
-        },sleepTime)
-      };
-      var localTimer = timer()
-      var clearTimer = function() {
-        clearTimeout(localTimer);
-        localTimer = timer();
-      };
-      var updatePaginator = function() {
-        $(".rt-game-banner__paginator-item--is-active").classList.remove("rt-game-banner__paginator-item--is-active");
-        $$(".rt-game-banner__paginator-item")[activeSlideIndex].classList.add("rt-game-banner__paginator-item--is-active");
-      };
-
-      var prewSlide = function() {
-        $(".rt-game-banner__item--is-active").classList.remove("rt-game-banner__item--is-active");
-        activeSlideIndex -= 1;
-        if (activeSlideIndex < 0) {
-          activeSlideIndex = slideCount - 1;
-        }
-        $$(".rt-game-banner__item")[activeSlideIndex].classList.add("rt-game-banner__item--is-active");
-        updatePaginator();
-        clearTimer();
-      };
-
-      var nextSlide = function() {
-        $(".rt-game-banner__item--is-active").classList.remove("rt-game-banner__item--is-active");
-        activeSlideIndex += 1;
-        activeSlideIndex = activeSlideIndex % slideCount;
-        $$(".rt-game-banner__item")[activeSlideIndex].classList.add("rt-game-banner__item--is-active");
-        updatePaginator();
-        clearTimer();
-      };
-
-      $(".rt-game-arrow-prew").addEventListener("click", prewSlide);
-      $(".rt-game-arrow-next").addEventListener("click", nextSlide);
-      $$(".rt-game-banner__paginator-item").forEach(function(item, index) {
-        item.addEventListener("click", function() {
-          if (activeSlideIndex != index) {
-            $(".rt-game-banner__item--is-active").classList.remove("rt-game-banner__item--is-active");
-            activeSlideIndex = index;
-            $$(".rt-game-banner__item")[activeSlideIndex].classList.add("rt-game-banner__item--is-active");
-            clearTimer();
-            updatePaginator();
-          }
+      $$(".icon-switch").forEach((el, index) => {
+        el.addEventListener("click", () => {
+          $(".icon-switch--is-active").classList.remove("icon-switch--is-active");
+          $(".switch-images__item--is-active").classList.remove("switch-images__item--is-active");
+          el.classList.add("icon-switch--is-active");
+          $$('.switch-images__item')[index].classList.add("switch-images__item--is-active");
         });
       });
-      if(document.querySelector('.app-header')) {
-        document.querySelector('.app-header').remove()
-      }
     },
     created() {
     },

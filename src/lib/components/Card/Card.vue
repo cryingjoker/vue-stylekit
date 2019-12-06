@@ -1,5 +1,6 @@
 <script type="text/jsx">
 const componentsList = {};
+import browser from '../../utils/browser' 
 import variables from "../../variables.json";
 import colors from "../../color.json";
 
@@ -40,11 +41,35 @@ export default {
       type: String,
       default: null
     },
+    backgroundImageTablet: {
+      type: String,
+      default: null
+    },
+    backgroundImageMobile: {
+      type: String,
+      default: null
+    },
+    backgroundImageWebp: {
+      type: String,
+      default: null
+    },
     lazyLoad: {
       type: Boolean,
       default: true
     },
     lazyBackgroundImage: {
+      type: String,
+      default: null
+    },
+    lazyImage: {
+      type: String,
+      default: null
+    },
+    lazyImageTablet: {
+      type: String,
+      default: null
+    },
+    lazyImageMobile: {
       type: String,
       default: null
     },
@@ -191,15 +216,28 @@ export default {
     ga: {
       type: Object,
       default: null
+    },
+    hasExpandedBlock: {
+      type: Boolean,
+      default: false
+    },
+    fullWidthTopImage: {
+      type: Boolean,
+      default: false
+    },
+    hasGradientOverImage: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     index: null,
-    mobileLayout: window.innerWidth <= parseInt(variables["mobile-upper-limit"]),
-    tabletLayout: window.innerWidth <= parseInt(variables["tablet-upper-limit"]),
+    mobileLayout: browser.isMobile(),
+    tabletLayout: browser.isTablet(),
     localBackgroundImage: null,
     localProductIcon: null,
     localCategoryIconMobile: null,
+    lazyImageLoaded: false,
     mobileSvgWidth: window.innerWidth - 40
   }),
   computed: {
@@ -274,6 +312,9 @@ export default {
       }
       if(this.hasDiscount) {
         cardClass += " rt-card--has-discount"
+      }
+      if(this.fullWidthTopImage) {
+        cardClass += " rtb-card--img-full-width"
       }
       return cardClass;
     },
@@ -468,19 +509,30 @@ export default {
         styles.backgroundColor = this.backgroundColorType;
       }
       return styles;
+    },
+    computedLazyImage () {
+      let result
+      if (this.mobileLayout && this.lazyImageMobile) {
+        result = this.lazyImageMobile
+      } else if (this.tabletLayout && this.lazyImageTablet) {
+        result = this.lazyImageTablet
+      } else {
+        result = this.lazyImage || this.lazyBackgroundImage
+      }
+      return result
     }
   },
 
   mounted: function() {
     window.addEventListener('resize', () => {
-      this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
-      this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
+      this.mobileLayout = browser.isMobile()
+      this.tabletLayout = browser.isTablet()
       if(this.inTabsWImage)
         this.redrawSvg();
-    });
-    this.mobileLayout = window.innerWidth <= parseInt(variables["mobile-upper-limit"]);
-    this.tabletLayout = window.innerWidth <= parseInt(variables["tablet-upper-limit"]) && window.innerWidth >= parseInt(variables["mobile-upper-limit"]);
-    this.checkLazy();
+      this.setMainImage()
+    })
+    this.setMainImage()
+
     if(this.inTabsWImage)
       this.redrawSvg();
     let anchor = this.$el.querySelector('a, button')
@@ -496,13 +548,21 @@ export default {
           event: window[variables.globalSettingsKey].segment,
           type: 'card_click'
         }, this.ga))
-        this.$el.setAttribute('data-ga-pushed', 'true')
+        this.$el.setAttribute('data-ga-pushed', 'true');
         el.click()
       }, false)
     }
+
+    if(this.hasExpandedBlock) {
+      window.addEventListener('timeToExpand', () => {
+        this.$el.querySelector('.rtb-card__expanding-button').classList.contains('rtb-card__expanding-button--active') ?
+          this.$el.querySelector('.rtb-card__expanding-button').classList.remove('rtb-card__expanding-button--active') :
+          this.$el.querySelector('.rtb-card__expanding-button').classList.add('rtb-card__expanding-button--active')
+      })
+    }
   },
   methods: {
-    loadImageAsync (src, resolve, reject) {
+    loadImageAsync (src, resolve, reject = () => {}) {
       let image = new Image();
       image.src = src;
       image.onload = function () {
@@ -516,43 +576,73 @@ export default {
         reject(e);
       };
     },
-    checkLazy(){
 
-        if (this.lazyLoad) {
+    /**
+     * Возвращает основной src для фона, опираясь на поддержку браузером и BP
+     */
+    getMainImage () {
+      let mainImage
+      if (browser.isMobile() && this.backgroundImageMobile) {
+        mainImage = this.backgroundImageMobile
+      } else if (browser.isTablet() && this.backgroundImageTablet) {
+        mainImage = this.backgroundImageTablet
+      } else if (browser.supportedWebP && this.backgroundImageWebp) {
+        mainImage = this.backgroundImageWebp
+      } else {
+        mainImage = this.backgroundImage
+      }
+      return mainImage
+    },
 
-          if(this.backgroundImage) {
-            if(this.lazyBackgroundImage){
-              this.localBackgroundImage = this.lazyBackgroundImage;
-            }
-            this.loadImageAsync(this.backgroundImage, img => {
-              this.localBackgroundImage = this.backgroundImage;
-            },err=>{
-//              console.error(err)
-            });
-          }
-          if(this.productIcon) {
-            this.loadImageAsync(this.productIcon, img => {
-              this.localProductIcon = this.productIcon;
-            });
-          }
-          if(this.categoryIconMobile) {
-            this.loadImageAsync(this.categoryIconMobile, img => {
-              this.localCategoryIconMobile = this.categoryIconMobile;
-            });
-          }
+    /**
+     * Сеттит основной src для фона, опираясь на загруженность Lazy, поддержку браузером и BP
+     */
+    setMainImage () {
+      // Игнорируем если lazy включен и не подгружен
+      if (!this.checkLazy()) return
+      this.localBackgroundImage = this.getMainImage()
+    },
 
-        } else {
-          if(this.backgroundImage) {
-            this.localBackgroundImage = this.backgroundImage;
-          }
-          if(this.productIcon) {
-            this.localProductIcon = this.productIcon;
-          }
-          if(this.categoryIconMobile) {
-            this.localCategoryIconMobile = this.categoryIconMobile;
-          }
+    /**
+     * Заменяем фон на lazy, если есть параметр с её src
+     */
+    checkLazy () {
+      // Выключена lazy или уже загружена
+      if (!this.lazyLoad || this.lazyImageLoaded) return true
+
+      let mainImage = this.getMainImage()
+
+      if (this.lazyLoad) {
+        if (mainImage) {
+          // Заменяем основную картинку на lazy
+          this.localBackgroundImage = this.computedLazyImage
+          // Подписываемся на загрузку основной
+          this.loadImageAsync(mainImage, img => {
+            this.lazyImageLoaded = true
+            this.localBackgroundImage = mainImage
+          })
         }
-
+        if (this.productIcon) {
+          this.loadImageAsync(this.productIcon, img => {
+            this.localProductIcon = this.productIcon
+          })
+        }
+        if (this.categoryIconMobile) {
+          this.loadImageAsync(this.categoryIconMobile, img => {
+            this.localCategoryIconMobile = this.categoryIconMobile
+          })
+        }
+      } else {
+        if (mainImage) {
+          this.localBackgroundImage = mainImage
+        }
+        if (this.productIcon) {
+          this.localProductIcon = this.productIcon
+        }
+        if (this.categoryIconMobile) {
+          this.localCategoryIconMobile = this.categoryIconMobile
+        }
+      }
     },
     normalizeSize(size) {
       if (typeof size === "number") {
@@ -596,6 +686,9 @@ export default {
       if(this.$el.querySelector('.rt-card__content')) {
         this.mobileSvgWidth = +(getComputedStyle(this.$el.querySelector('.rt-card__content')).width.slice(0, -2));
       }
+    },
+    expandBlock() {
+      window.dispatchEvent(new CustomEvent('timeToExpand'));
     }
   },
   render(h) {
@@ -804,6 +897,32 @@ export default {
         }
       }
     })();
+    const expandBlock = (() => {
+      if(this.hasExpandedBlock) {
+        return <div class="rtb-card__expanding-block rt-space-top05 rt-space-bottom15" onClick={this.expandBlock}>
+          {this.$slots['expanding-block']}
+        </div>
+      } else {
+        return null;
+      }
+    })();
+    const headerImage = (() => {
+      if(this.fullWidthTopImage) {
+        if(this.hasGradientOverImage) {
+          return <div class="rtb-card__image-wrapper rtb-card__image-wrapper--has-gradient rt-font-center">
+            <img class="additional-possibilities__card-image"
+                 src={this.backgroundImage}/>
+          </div>
+        } else {
+          return <div class="rtb-card__image-wrapper rt-font-center">
+            <img class="additional-possibilities__card-image"
+                 src={this.backgroundImage}/>
+          </div>
+        }
+      } else {
+        return null;
+      }
+    })();
     if(this.doubleSided){
       return <div class={"rt-card " + this.cardClass} style={this.cardStyle} onClick={this.flipCard}>
         <div class={"rt-card__content" + this.cardContentClass} style={this.cardBackgroundStyle}>
@@ -821,13 +940,15 @@ export default {
         {this.backgroundImageStandAlone ? <div style={this.standAloneBackgroundStyle} class="rt-card__stand-alone-background"/> : null}
         {discount}
         {label}
-        <div style={this.cardBackgroundStyle} class={"rt-card__background" + this.cardBackgroundClass}/>
+        {!this.fullWidthTopImage ? <div style={this.cardBackgroundStyle} class={"rt-card__background" + this.cardBackgroundClass}/> : null}
         <div class={"rt-card__content" + this.cardContentClass}>
           {header}
           {productTriangle}
+          {headerImage}
           <div class={"rt-card__body" + this.cardBodyClass} style={this.bodyStyle}>
             {unfoldButton}
             {this.$slots["content"]}
+            {expandBlock}
           </div>
           {bottomList}
           {contentWithoutWrapper}

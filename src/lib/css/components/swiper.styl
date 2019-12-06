@@ -38,6 +38,7 @@ scrollHSpacePC = 70px
     padding 10px 0
     width calc(100vw - (100vw - 100%) - 140px)
     max-width 1340px
+    align-items stretch
     @media (max-width: laptop-upper-limit)
       width calc(100vw - (100vw - 100%) - 60px)
     @media (max-width: tablet-upper-limit)
@@ -52,7 +53,7 @@ scrollHSpacePC = 70px
     z-index swiperZIndex + 1
     backface-visibility hidden
     //user-select none
-    height 100%
+    max-height 100%
     padding 0 10px
     @media (max-width: laptop-upper-limit) and (min-width: laptop-lower-limit)
       width calc(285px + 20px)

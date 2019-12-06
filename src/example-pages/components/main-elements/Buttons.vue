@@ -349,6 +349,19 @@
               </rt-button>"
             />
           </div>
+          <div class="rt-col rt-space-top2">
+            <div class="row">
+              <div class="rt-col-2">
+                <rt-button :smaller-padding="true" class="rt-button-orange">seartsert</rt-button>
+              </div>
+              <div class="rt-col-2">
+                <rt-button :smaller-padding="true" class="rt-button-md-small rt-button-orange-border">seartsert</rt-button>
+              </div>
+              <div class="rt-col-2">
+                <rt-button :smaller-padding="true" class="rt-button-small rt-button-purple">seartsert</rt-button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="rt-space-top25">
           <documentation-builder :json="documentation" type="components"/>

@@ -13,10 +13,6 @@
       },
       styleIfCarouselOverride
     ]"
-    :style="{
-      marginTop: `${-offsetTop}px`,
-      marginBottom: `${-offsetBottom}px`
-    }"
   >
     <rt-navigation
       v-if="!isTouch && !hideNavigation"
@@ -26,10 +22,6 @@
     <div
       ref="overlay"
       :class="`${cmpName}__overlay`"
-      :style="{
-        paddingTop: `${offsetTop}px`,
-        paddingBottom: `${offsetBottom}px`
-      }"
       @scroll.passive="scrollNative"
     >
       <div
@@ -140,10 +132,10 @@ export default {
       type: Number,
       default: 200
     },
-    offsetTop: {
-      type: Number,
-      default: 20
-    },
+//    offsetTop: {
+//      type: Number,
+//      default: 20
+//    },
     offsetBottom: {
       type: Number,
       default: 20

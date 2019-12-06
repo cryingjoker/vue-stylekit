@@ -18,7 +18,6 @@
   background-position-y center
   background-repeat no-repeat
   border-radius 10px
-  box-shadow card-shadow
   position relative
   transition-timing-function ease-in-out
   transition-duration .2s
@@ -33,6 +32,7 @@
 
   &--has-discount
     margin-top: 50px
+    max-height calc(100% - 50px)
 
   &__border-content
     border-top 1px solid main-color01

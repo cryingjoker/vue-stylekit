@@ -42,7 +42,7 @@
       </rt-slide>
     </rt-swiper>
     <div class="rt-space-top5">
-      <rt-resize-content-height :query-selectors-names="['.links-block']">
+      <!--<rt-resize-content-height :query-selectors-names="['.links-block']">-->
         <rt-swiper :hide-navigation="true" :scroll-on-click="true">
           <rt-slide slide-classes="rt-col-4 in-plus-card higher-z">
             <rt-card
@@ -108,7 +108,6 @@
                     {tooltip: 'gjlcrfprf4', path: 'viber'},
                     {tooltip: 'gjlcrfprf5', path: 'whatsapp'},
                     {tooltip: 'gjlcrfprf6', path: 'tamtam'},
-                    {tooltip: 'gjlcrfprf7', path: 'odnoklassniki'}
                     ]"
                                  source-directory="/static/images/B2B/"/>
                   </div>
@@ -538,7 +537,7 @@
           </rt-card>
         </rt-slide>
       </rt-swiper>
-      </rt-resize-content-height>
+      <!--</rt-resize-content-height>-->
     </div>
     <div class="rt-space-top5">
       <rt-swiper>
