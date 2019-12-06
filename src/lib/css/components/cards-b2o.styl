@@ -28,9 +28,10 @@
 .rt-card-b2o--blue-card
   color main-color
   background-color: b2c-cool-grey
-  .ripple
+  .rt-button
     transition-duration .4s
     transition-delay 0
+    transition-timing-function ease-in-out
   .rt-card-b2o-icon-fill
     path, rect, polygon
       fill #000
@@ -46,6 +47,8 @@
   &:hover
     color white
     background-color: b2c-dark-blue-high
+    .rt-button
+      color white
     .rt-card-b2o-icon-fill
       path, rect, polygon
         fill white
