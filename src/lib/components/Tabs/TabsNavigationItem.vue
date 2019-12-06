@@ -19,11 +19,12 @@
       scrollOnTop:{
         type: Boolean,
         default: false
+      },
+      activeTab: {
+        type: Boolean,
+        default: false
       }
     },
-
-
-
 
     data: () => ({
       parentid: "",
@@ -58,6 +59,9 @@
         if (document.location.hash.replace(/^\#/, "") === this.anchor) {
           this.setActiveTabName();
         }
+      }
+      if(this.activeTab) {
+        this.setActiveTabName();
       }
       setTimeout(()=>{
         if(this.$parent['roundTabletView'] && this.$parent['roundTabletViewMaxWidth']){
