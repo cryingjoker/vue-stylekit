@@ -63,6 +63,10 @@
       noTransparencyDescription: {
         type: Boolean,
         default: false
+      },
+      threeColumnTablet: {
+        type: Boolean,
+        default: false
       }
     },
     data: () => ({
