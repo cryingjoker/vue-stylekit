@@ -61,7 +61,6 @@
       deviceType: "pc"
     }),
 
-
     computed: {},
 
     mounted: function() {

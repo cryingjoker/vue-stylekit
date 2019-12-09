@@ -691,7 +691,7 @@
                 <rt-tabs-nav-item anchor="one" name="marketing">Маркетингу</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="two" name="humanResources">Кадрам</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="three" name="sales">Отделу продаж</rt-tabs-nav-item>
-                <rt-tabs-nav-item anchor="four" name="support">Клиентскому отделу</rt-tabs-nav-item>
+                <rt-tabs-nav-item anchor="four" name="support" :active-tab="true">Клиентскому отделу</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="five" name="test111">Клиентскому отделу</rt-tabs-nav-item>
                 <rt-tabs-nav-item anchor="six" name="test112">Клиентскому отделу</rt-tabs-nav-item>
               </template>
@@ -1355,7 +1355,7 @@
                       <rt-tabs>
                         <template slot="navigation">
                           <rt-tabs-nav-item anchor="innertab1" name="innertab1">Веб-камеры</rt-tabs-nav-item>
-                          <rt-tabs-nav-item anchor="innertab2" name="innertab2">Веб-камеры</rt-tabs-nav-item>
+                          <rt-tabs-nav-item anchor="innertab2" name="innertab2" :active-tab="true">Веб-камеры</rt-tabs-nav-item>
                         </template>
                         <template slot="content">
                           <rt-tabs-content-item name="innertab1">
