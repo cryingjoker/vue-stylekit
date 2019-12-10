@@ -101,7 +101,6 @@
       "version": "0.0.29"
     },
     {
-      "value": "null",
       "name": " rt-banner",
       "property": "(:)content-mobile-min-height",
       "type": [
@@ -295,6 +294,29 @@
       "type": "Boolean",
       "description": "Устанавливает белый цвет текста слайда",
       "value": "false"
+    },
+    {
+      "name" : "rt-banner-item",
+      "property" : "background-image",
+      "type" : "String",
+      "description" : "url-адрес картинки для Desktop,Tablet,Mobile",
+      "value" : "null"
+    },
+    {
+      "name" : "rt-banner-item",
+      "property" : "background-image-tablet",
+      "type" : "String",
+      "description" : "url-адрес картинки для Tablet",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-banner-item",
+      "property" : "background-image-mobile",
+      "type" : "String",
+      "description" : "url-адрес картинки для Mobile",
+      "value" : "null",
+      "version": " >= 0.0.86"
     },
     {
       "name": "rt-banner-item",
