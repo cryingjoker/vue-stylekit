@@ -5,6 +5,8 @@
 # Node modules directory
 node_modules/
 
+package-lock.json
+
 # Sass cache directory
 .sass-cache/
 
