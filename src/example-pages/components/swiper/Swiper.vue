@@ -580,8 +580,6 @@
         </div>
       </div>
     </div>
-    <!--<div class="rt-container rt-container&#45;&#45;mobile-full-width">-->
-      <!--<div class="rt-col">-->
     <rt-card-layout :swiper-on-mobile="true" :width="9" :single-row="true">
       <template slot="cards">
         <div class="rt-col-3 rt-col-td-3 rt-col-md-3 rt-space-top" v-for="i in 3" :key="i">
@@ -624,10 +622,6 @@
         </div>
       </template>
     </rt-card-layout>
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="rt-container rt-container&#45;&#45;mobile-full-width">-->
-      <!--<div class="rt-col">-->
     <rt-card-layout :swiper-on-mobile="true" :width="8" :single-row="true">
       <template slot="cards">
         <div class="rt-col-4 rt-col-td-3 rt-col-md-3 rt-space-top" v-for="i in 2" :key="i">
@@ -668,8 +662,6 @@
         </div>
       </template>
     </rt-card-layout>
-      <!--</div>-->
-    <!--</div>-->
     <div class="rt-container">
       <div class="app-content rt-col-12 rt-col-md-3">
         <documentation-builder :json="documentation" type="components" />

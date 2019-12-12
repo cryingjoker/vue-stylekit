@@ -40,14 +40,9 @@
         setTimeout(()=> {
 //          this.hideIcons();
           this.countHiddenIconsQuantity();
-          console.log('stqh', this.quantityHidden);
         },1);
       },1);
 //      });
-      window.addEventListener('load', ()=>{
-        console.log(this.$el);
-        console.log('sqh', this.quantityHidden);
-      });
       window.addEventListener('resize', () => {
         setTimeout(() => {
           this.countHiddenIconsQuantity();
@@ -91,7 +86,6 @@
         },1);
       },
       hideIcons() {
-        console.log(this.visibleIcons);
         for(var i = this.visibleIcons; i < this.totalQuantity; i++) {
           this.iconsList[i].classList.add('rtb-card__social-link--hidden');
         }
