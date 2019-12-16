@@ -1,6 +1,6 @@
 {
   "name": "vue_rt_style",
-  "version": "0.1.87",
+  "version": "0.1.88",
   "description": "",
   "main": "lib/vue-rt-style.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build:docs": "cross-env NODE_ENV=production webpack --config ./bin/webpack.config.docs.js",
     "build:icons": "npx vsvg -s ./src/lib/components/Icon/generator/svg -t ./static/icons --tpl ./src/lib/components/Icon/generator/icon-tpl.js",
     "serve:dev": "cross-env NODE_ENV=development node bin/deаev-server.js",
-    "serve: production": "cross-env NODE_ENV=production node bin/spa-server.js",
+    "serve: production": "cross-env NODE_ENV=production node    bin/spa-server.js",
     "lint": "./node_modules/eslint/bin/eslint.js  --ext src/**/*.{js,vue} --ignore-path .gitignore --fix",
     "lintfix": "./node_modules/e3slint/bin/eslint.js --ext .js,.vue --ignore-path .gitignore --fix",
     "lint-stylelint": "stylus-supremacy format src/**/*.styl --replace --options stylus-supremacy.config.json",
