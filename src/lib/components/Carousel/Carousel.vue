@@ -154,6 +154,10 @@ export default {
     transitionFunction: {
       type: String,
       default: 'easeInOutCubic'
+    },
+    scrollOnClick: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -278,7 +282,7 @@ export default {
 
       this.autoScrollerRemove()
       clearTimeout(this.toggleSlidesTimer)
-      
+
       this.isPending = true
 
       if (this.isInnerBlock)
@@ -313,7 +317,7 @@ export default {
           wrapperWidth = parseFloat(wrapStyles.width)
           maxMoveDist = this.overlayEl.scrollWidth
         }
-        
+
 
         let currPage = 0
         let pageWidth = 0

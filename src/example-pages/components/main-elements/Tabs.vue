@@ -915,8 +915,7 @@
                             <div
                               class="rt-col-6 rt-col-td-4 rt-col-md-3 rt-space-top2 rt-td-space-top rt-md-space-top-none rt-space-right4 rt-td-space-right15 rt-md-space-right05">
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom with-icon">Таргетировать контент по
-                                полу
-                                и возрасту посетителей2 ^^</p>
+                                полу и возрасту посетителей2 ^^</p>
                               <p class="rt-font-h4 rt-font-bold rt-space-bottom45 with-icon">Собирать статистику по
                                 охвату и среднему времени просмотра контента</p>
                               <div class="rt-space-top45 rt-space-bottom2 rt-md-space-bottom-none">
@@ -1313,8 +1312,8 @@
               <template slot="content">
                 <rt-tabs-content-item name="tab1">
                   <div class="rt-space-top">
-                    <rt-swiper :scroll-on-click="true" :hide-navigation="true">
-                      <rt-slide v-for="i in 3" :key="i" class="rt-space-right15">
+                    <rt-carousel :scroll-on-click="true" :hide-navigation="true">
+                      <rt-carousel-slide v-for="i in 3" :key="i" class="rt-space-right15">
                         <h2>Слайд {{ i }}</h2>
                         <rt-row-list>
                           <rt-row-list-item v-for="i in 3" :key="i">
@@ -1339,8 +1338,8 @@
                         <rt-button class="rt-button-orange">
                           Подключить
                         </rt-button>
-                      </rt-slide>
-                    </rt-swiper>
+                      </rt-carousel-slide>
+                    </rt-carousel>
 
                   </div>
                 </rt-tabs-content-item>

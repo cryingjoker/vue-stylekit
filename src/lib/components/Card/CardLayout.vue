@@ -58,20 +58,21 @@
       },
       specifyCardClass() {
         if(this.$slots.cards && window.innerWidth <= parseInt(variables["tablet-upper-limit"])){
-          this.$el.childNodes[0].childNodes[2].childNodes[0].childNodes.forEach(el => {
-            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
+          console.log(this.$el.childNodes[0].childNodes[4].childNodes);
+          this.$el.childNodes[0].childNodes[4].childNodes.forEach(el => {
+            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rt-carousel__slide') : null;
           });
 //          this.singleRow ? this.$el.classList.add('row') : null;
 //          this.singleRow ? this.$el.parentNode.classList.add('rt-col') : null;
         } else if(!!this.$slots.cards && window.innerWidth <= parseInt(variables["laptop-upper-limit"]) && window.innerWidth >= parseInt(variables["laptop-lower-limit"])) {
           this.$refs.layout.childNodes.forEach(el => {
-            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rtk-carousel-slide') : null;
+            el.classList !== undefined && el.classList.contains('rt-col-md-3') ? el.classList.add('rt-carousel__slide') : null;
           });
 //          this.singleRow ? this.$el.classList.add('row') : null;
 //          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
         } else if(!!this.$slots.cards && window.innerWidth >= parseInt(variables["desktop-lower-limit"])) {
           this.$refs.layout.childNodes.forEach(el => {
-            el.classList !== undefined && el.classList.contains('rtk-carousel-slide') ? el.classList.remove('rtk-carousel-slide') : null;
+            el.classList !== undefined && el.classList.contains('rt-carousel__slide') ? el.classList.remove('rt-carousel__slide') : null;
           });
 //          this.singleRow ? this.$el.classList.remove('row'): null;
 //          this.singleRow ? this.$el.parentNode.classList.remove('rt-col') : null;
@@ -82,7 +83,7 @@
       if(this.inTabs) {
         if(this.layout === 'swiper'){
           return <div>
-            <rt-swiper>{this.$slots.cards}</rt-swiper>
+            <rt-carousel>{this.$slots.cards}</rt-carousel>
             <div class="row">
               {this.$slots["side-text"]}
             </div>
@@ -104,7 +105,7 @@
       } else {
         if(this.layout === 'swiper'){
           return <div>
-            <rt-swiper>{this.$slots.cards}</rt-swiper>
+            <rt-carousel>{this.$slots.cards}</rt-carousel>
             <div class="rt-container">
               <div class="rt-col">
                 <div class="row">
