@@ -68,7 +68,8 @@
         });
         this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
         this.innerWidth = this.$refs.inner.scrollWidth;
-        this.visibleIcons = Math.floor(this.innerWidth / 32) > 6 ? 6 : Math.floor(this.innerWidth / 32);
+        this.visibleIcons = Math.floor((this.innerWidth - 26) / 32) + 1 > 6 ? 6 : Math.floor((this.innerWidth - 26) / 32) + 1;
+        console.log(this.visibleIcons);
         this.quantityHidden = this.totalQuantity - this.visibleIcons;
         if(this.quantityHidden === 1 || this.quantityHidden === 0) {
           this.$refs.inner.style.maxWidth = '100%';
