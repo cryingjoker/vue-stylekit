@@ -39,6 +39,13 @@ export default {
     },
     width() {
       return this.$el.clientWidth;
+    },
+    scrollSlideIntoView() {
+      if(this.$parent.scrollOnClick) {
+        let slidesArray = this.$parent.slides;
+        let slideIndex = Array.prototype.indexOf.call(slidesArray, this);
+        this.$parent.moveTo(slideIndex);
+      }
     }
   },
   render(h){
@@ -50,6 +57,7 @@ export default {
             paddingRight: this.offsetSlide + 'px'
           }
         }
+        onClick={this.scrollSlideIntoView}
       >{ this.$slots.default }</div>
   }
 };
