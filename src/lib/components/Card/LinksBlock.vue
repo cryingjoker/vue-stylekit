@@ -48,15 +48,27 @@
           this.countHiddenIconsQuantity();
         },1);
       });
+      setTimeout(() => {
+        if(this.$refs.button) {
+          window.addEventListener('clickAll', () => {
+            this.isOpen = !this.isOpen;
+            this.$refs.inner.classList.add('rtb-card__links-block--expanded');
+            for(let i = 0; i < this.totalQuantity; i++) {
+              this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
+            }
+          })
+        }
+      }, 1)
     },
 
     methods: {
       unwrap() {
-        this.isOpen = !this.isOpen;
-        this.$el.querySelector('.rtb-card__links-block').classList.add('rtb-card__links-block--expanded');
-        for(let i = 0; i < this.totalQuantity; i++) {
-          this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
-        }
+//        this.isOpen = !this.isOpen;
+//        this.$el.querySelector('.rtb-card__links-block').classList.add('rtb-card__links-block--expanded');
+//        for(let i = 0; i < this.totalQuantity; i++) {
+//          this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
+//        }
+        window.dispatchEvent(new Event('clickAll'));
         setTimeout(() => {
           window.dispatchEvent(new Event("resizeTrigger"));
         }, 1)
@@ -69,7 +81,6 @@
         this.outerWidth = +getComputedStyle(this.$el).width.slice(0, -2);
         this.innerWidth = this.$refs.inner.scrollWidth;
         this.visibleIcons = Math.floor((this.innerWidth - 26) / 32) + 1 > 6 ? 6 : Math.floor((this.innerWidth - 26) / 32) + 1;
-        console.log(this.visibleIcons);
         this.quantityHidden = this.totalQuantity - this.visibleIcons;
         if(this.quantityHidden === 1 || this.quantityHidden === 0) {
           this.$refs.inner.style.maxWidth = '100%';
@@ -107,7 +118,7 @@
       })();
       const button = (() => {
         if(this.quantityHidden && this.totalQuantity > 6 && this.quantityHidden !== 1){
-          return <button class="rtb-card__expand-button" onClick={this.unwrap}>ещё {this.quantityHidden}</button>;
+          return <button class="rtb-card__expand-button" onClick={this.unwrap} ref="button">ещё {this.quantityHidden}</button>;
         } else {
           return null;
         }
