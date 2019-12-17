@@ -63,7 +63,7 @@
           line-height 32px
 
   &__section
-    padding 20px 0
+    padding 10px 0
 
     &+&
       border-top 1px solid main-color02
@@ -73,7 +73,7 @@
 
   &__links-block
     display inline-block
-    max-width calc(100% - 42px)
+    max-width calc(100% - 36px)
     max-height 35px
     overflow hidden
     vertical-align middle
@@ -98,7 +98,8 @@
     height 26px
     display inline-block
     vertical-align middle
-    margin-right 6px
+    &+&
+      margin-left 6px
 
     &--hidden
       display none
@@ -112,6 +113,8 @@
     cursor pointer
     min-width 41px
     margin-top -10px
+    @media (min-width laptop-lower-limit)
+      margin-left 5px
 
   .{newAppName}-card__content
     min-height auto
@@ -962,6 +965,8 @@
     padding-top 20px
 
 .links-block
+  display flex
+  justify-content space-between
   @media (min-width laptop-lower-limit)
     display flex
     justify-content flex-start

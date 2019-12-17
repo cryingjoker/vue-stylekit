@@ -80,6 +80,7 @@
       this.inlineLayout = this.$parent._props.inlineLayout;
       this.iconBackingColor = this.$parent._props.iconBackingColor;
       this.iconBackingSize = this.$parent._props.iconBackingSize;
+      this.threeColumnTablet = this.$parent._props.threeColumnTablet
     },
     updated(){
       if(this.$parent.$data.layout !== 'benefit' || this.$parent._props.swiperOnMobile) {
@@ -111,20 +112,28 @@
       })();
       const columnClass = (() => {
         if(this.columnsQuantity === 2) {
-          return 'rt-col-6 rt-col-td-3 rbi-pr1c'
+          return 'rt-col-6 rbi-pr1c'
         }
         if(this.columnsQuantity === 3) {
-          return 'rt-col-4 rt-col-td-3 rbi-pr70'
+          return 'rt-col-4 rbi-pr70'
         }
         if(this.columnsQuantity === 4) {
-          return 'rt-col-3 rt-col-td-3 rt-space-right15 rt-td-space-right05'
+          return 'rt-col-3 rt-space-right15 rt-td-space-right05'
         }
         if(this.layout === 'swiper'){
           return 'rtk-carousel-slide'
         }
       })();
 
-      return <div class={"rt-benefit-item " + columnClass + " rt-col-md-3" +
+      const tabletColumnClass = (() => {
+        if(this.threeColumnTablet) {
+          return ' rt-col-td-2'
+        } else {
+          return ' rt-col-td-3'
+        }
+      })();
+
+      return <div class={"rt-benefit-item " + columnClass + tabletColumnClass +" rt-col-md-3" +
       (this.alignCenter ? " rt-benefit-item--center" : "") +
       (this.inlineLayout ? " rt-benefit-item--inline" : "")}>
           {icon}

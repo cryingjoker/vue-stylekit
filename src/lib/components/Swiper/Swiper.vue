@@ -302,18 +302,11 @@ export default {
       if (this.autoScrolling && !this.isPending && !this.isAnimating) {
         let now = this.$refs.overlay.scrollLeft;
         this.scrollingTimer = setTimeout(() => {
-          if (
-            now === this.$refs.overlay.scrollLeft &&
-            now !== this.swipingStartPoint &&
-            (!this.isAnimating && !this.isPending)
-          ) {
+          if (now === this.$refs.overlay.scrollLeft && now !== this.swipingStartPoint && (!this.isAnimating && !this.isPending)) {
             this.scrollingAutoEnd = false;
             // Определив что скроллинг окончен получаем ближайшую позицию для доводки скролла
             let distance = this.getNearbySlide();
-            if (
-              distance !== null &&
-              this.$refs.overlay.scrollLeft !== parseInt(distance)
-            ) {
+            if (distance !== null && this.$refs.overlay.scrollLeft !== parseInt(distance)) {
               this.move(distance).then(() => {
                 this.autoScrollerRemove();
               });
@@ -399,9 +392,7 @@ export default {
     getNearbySlide(to = this.$refs.overlay.scrollLeft) {
       if (this.swipingStartPoint !== to) {
         let nextNav = this.swipingStartPoint <= to;
-        let distance = nextNav
-          ? 0
-          : this.$refs.overlay.scrollWidth - this.hSpace * 2;
+        let distance = nextNav ? 0 : (this.$refs.overlay.scrollWidth - this.hSpace * 2);
         if (nextNav) {
           this.movesArr.some(w => {
             if (distance + slideSwipingMinDistance >= to) {
@@ -432,9 +423,7 @@ export default {
       if (this.movesArr.length) {
         return this.movesArr.reduce(
           (accum, curVal) =>
-          (typeof accum === "object" && accum.constructor === Object
-            ? accum.width
-            : accum) + curVal.width
+          (typeof accum === "object" && accum.constructor === Object ? accum.width : accum) + curVal.width
         );
       }
       return 0
@@ -620,8 +609,7 @@ export default {
           let startScrolling = this.$refs.overlay.scrollLeft;
           let distance = 0;
           let distanceLeft = 0;
-          let distanceRight =
-            startScrolling + this.$refs.slidedBlock.clientWidth;
+          let distanceRight = startScrolling + this.$refs.slidedBlock.clientWidth;
           let hiddenSlides = [];
 
           if (!this.isDisableCarousel) {

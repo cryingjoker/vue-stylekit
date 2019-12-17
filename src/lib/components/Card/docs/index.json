@@ -30,6 +30,22 @@
     },
     {
       "name" : "rt-card",
+      "property" : "background-image-tablet",
+      "type" : "String",
+      "description" : "url-адрес картинки карточки для Tablet",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-card",
+      "property" : "background-image-mobile",
+      "type" : "String",
+      "description" : "url-адрес картинки карточки для Mobile",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-card",
       "property" : ":static-body-height",
       "type" : "Boolean",
       "description" : "Устанавливает `flex: 0` для card. Необходимо для случаев сброса авто ширины и высоты",

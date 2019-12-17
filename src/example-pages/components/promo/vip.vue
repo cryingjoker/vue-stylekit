@@ -1,13 +1,13 @@
 <template>
   <div class="wc-inline rt-space-top5">
     <div class="rt-container">
-      <div class="rt-col-12">
+      <div class="rt-col-12 promo-phone-container relative">
         <div class="row">
-          <div class="rt-col-6">
+          <div class="rt-col-6 promo-tablet-static">
             <div class="row">
-              <div class="rt-col-persent-5">
+              <div class="rt-col-persent-5 rt-col-td-persent-10">
                 <div class="d-inline-block icon-switch icon-switch--is-active ">
-                  <i class="rt-space-bottom d-block">
+                  <i class="rt-space-bottom d-block promo-mobile-icon">
                     <svg width="66px" height="58px" viewBox="0 0 66 58" version="1.1"
                          xmlns="http://www.w3.org/2000/svg">
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -61,9 +61,9 @@
                     удаленно </p>
                 </div>
               </div>
-              <div class="rt-col-persent-5">
+              <div class="rt-col-persent-5 rt-col-td-persent-10">
                 <div class="d-inline-block icon-switch">
-                  <i class="rt-space-bottom d-block">
+                  <i class="rt-space-bottom d-block promo-mobile-icon">
 
                     <svg width="60px" height="58px" viewBox="0 0 60 58" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -100,9 +100,9 @@
                     подъезда</p>
                 </div>
               </div>
-              <div class="rt-col-persent-5 rt-space-top2">
+              <div class="rt-col-persent-5 rt-col-td-persent-10 rt-space-top2 rt-td-space-top-none">
                 <div class="d-inline-block icon-switch">
-                  <i class="rt-space-bottom d-block">
+                  <i class="rt-space-bottom d-block promo-mobile-icon">
                     <svg width="42px" height="64px" viewBox="0 0 42 64" version="1.1"
                          xmlns="http://www.w3.org/2000/svg">
                       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -159,20 +159,26 @@
               </div>
             </div>
           </div>
-          <div class="rt-col-2">
-          </div>
-            <div class="rt-col-3">
-              <div class="switch-images relative">
-                <img class="switch-images__item switch-images__item--is-active"
-                     src="https://static.re-store.ru/upload/resize_cache/iblock/514/1120_1496_17f5c944b3b71591cc9304fac25365de2/51453933d56a12270ac1852cf5c67bf0.jpg"
-                     alt="">
-                <img class="switch-images__item"
-                     src="https://static.re-store.ru/upload/resize_cache/iblock/a3b/1120_1496_17f5c944b3b71591cc9304fac25365de2/a3b8711dae2ebf40b47ba636af463a25.jpg"
-                     alt="">
-                <img class="switch-images__item"
-                     src="https://static.re-store.ru/upload/resize_cache/iblock/7e3/1120_1496_17f5c944b3b71591cc9304fac25365de2/7e3d1b0cd09a706a56f1ae42c327368f.jpg"
-                     alt="">
-              </div>
+
+            <div class="rt-col-6 promo-tablet-static">
+                <div class="new-iphone">
+                  <div class="new-iphone__images">
+                    <img class="new-iphone__images-item new-iphone__images-item--is-active"
+                         src="/static/images/screenIphone.jpg"
+                         alt="">
+                    <img class="new-iphone__images-item"
+                         src="/static/images/screenIphone2.jpg"
+                         alt="">
+                    <img class="new-iphone__images-item"
+                         src="/static/images/screenIphone3.jpg"
+                         alt="">
+                  </div>
+                  <div class="new-iphone--paginator">
+                    <div class="new-iphone--paginator-item new-iphone--paginator-item--is-active"></div>
+                    <div class="new-iphone--paginator-item"></div>
+                    <div class="new-iphone--paginator-item"></div>
+                  </div>
+                </div>
             </div>
 
           </div>
@@ -195,12 +201,19 @@
     mounted() {
       var $$ = document.querySelectorAll.bind(document);
       var $ = document.querySelector.bind(document);
+      $$(".new-iphone--paginator-item").forEach((el, index) => {
+          el.addEventListener("click", () => {
+            $$(".icon-switch")[index].click();
+          })
+      })
       $$(".icon-switch").forEach((el, index) => {
         el.addEventListener("click", () => {
           $(".icon-switch--is-active").classList.remove("icon-switch--is-active");
-          $(".switch-images__item--is-active").classList.remove("switch-images__item--is-active");
+           $(".new-iphone__images-item--is-active").classList.remove("new-iphone__images-item--is-active");
+           $(".new-iphone--paginator-item--is-active").classList.remove("new-iphone--paginator-item--is-active");
           el.classList.add("icon-switch--is-active");
-          $$('.switch-images__item')[index].classList.add("switch-images__item--is-active");
+           $$('.new-iphone__images-item')[index].classList.add("new-iphone__images-item--is-active");
+           $$('.new-iphone--paginator-item')[index].classList.add("new-iphone--paginator-item--is-active");
         });
       });
     },

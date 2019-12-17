@@ -153,6 +153,8 @@
           let carouselLength = this.$el.querySelectorAll('.carousel-card').length;
           setTimeout(() => {
             for (var i = 0; i < carouselLength; i++) {
+              this.$el.querySelectorAll('.carousel-card')[i].style.height = 'auto';
+              this.$el.querySelectorAll('.carousel-card')[i].style.minHeight = 'none';
               var cardHeight = +window.getComputedStyle(this.$el.querySelectorAll('.carousel-card')[i].querySelector('.rt-card__content')).height.replace('px', '');
               maxHeight = maxHeight < cardHeight ? cardHeight : maxHeight;
             }

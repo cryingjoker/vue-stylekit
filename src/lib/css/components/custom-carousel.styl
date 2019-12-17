@@ -24,11 +24,18 @@
     scroll-snap-align start
     &+&
       margin-left: 20px
+  &.rt-card-b2o
+    opacity: 1
+    transition-property transform, opacity, background-color
+
+
   &--active
     @media(min-width: tablet-lower-limit)
       opacity 1
       transform translateX(0) scale(1)
       z-index 99
+    &.rt-card-b2o
+      background-color: b2c-dark-blue-high
   &--next
     transform translateX(50%) scale(.9)
     opacity .5

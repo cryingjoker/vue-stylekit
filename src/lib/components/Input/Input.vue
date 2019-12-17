@@ -43,6 +43,10 @@
         type: Boolean,
         default: false
       },
+      autocomplete: {
+        type: String,
+        default: 'disable,false,off,none'
+      },
       placeholder: {
         type: String,
         default: null
@@ -568,7 +572,7 @@
             onKeypress={this.keyPress}
             onKeyup={this.keyUp}
             ref="input"
-            autocomplete="off"
+            autocomplete={this.autocomplete}
             autocapitalize="off"
             type={this.type}
             class="input-element"
@@ -581,7 +585,7 @@
             onKeypress={this.keyPress}
             onKeyup={this.keyUp}
             ref="input"
-            autocomplete="off"
+            autocomplete={this.autocomplete}
             autocapitalize="off"
             type={this.type}
             class="input-element"

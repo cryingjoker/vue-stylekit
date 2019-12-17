@@ -61,8 +61,8 @@
       },
       close(){
         this.$refs.popupWrapper.classList.remove('rtb-popup-wrapper--active');
-        document.body.style.overflow = 'unset';
-        document.documentElement.style.overflowY = 'unset';
+        document.body.style.removeProperty('overflow');
+        document.documentElement.style.removeProperty('overflow-y');
       },
       countOffset(){
         setTimeout(() => {
