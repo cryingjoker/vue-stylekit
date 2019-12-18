@@ -30,6 +30,14 @@
     },
     {
       "name" : "rt-card",
+      "property" : "background-image-webp",
+      "type" : "String",
+      "description" : "url-адрес картинки для девайсов с поддержкой формата WebP",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-card",
       "property" : "background-image-tablet",
       "type" : "String",
       "description" : "url-адрес картинки карточки для Tablet",
