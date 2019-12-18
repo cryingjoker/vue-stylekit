@@ -312,6 +312,14 @@
     },
     {
       "name" : "rt-banner-item",
+      "property" : "background-image-webp",
+      "type" : "String",
+      "description" : "url-адрес картинки для девайсов с поддержкой формата WebP",
+      "value" : "null",
+      "version": " >= 0.0.86"
+    },
+    {
+      "name" : "rt-banner-item",
       "property" : "background-image-mobile",
       "type" : "String",
       "description" : "url-адрес картинки для Mobile",
