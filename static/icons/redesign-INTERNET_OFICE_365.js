@@ -1,0 +1,1 @@
+[{'redesign-INTERNET_OFICE_365': {width: 56,height: 56,viewBox: '0 0 56 56',data: '<g _fill="none" fill-rule="evenodd"><path pid="0" _fill="#101828" d="M10.535 40.617v-25.06L32.865 7l12.6 3.727v34.808L32.865 49l-22.33-8.383 22.33 3.15V13.615L18.217 17.22v20.563z"/><path pid="1" d="M0 0h56v56H0z"/></g>'}}]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>150-B56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="150-B56px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M47.25,33.25 L47.25,38.5 L21,38.5 L21,33.25 L47.25,33.25 L47.25,33.25 Z M47.3375,31.5 L20.9125,31.5 C19.985,31.5 19.25,32.235 19.25,33.1625 L19.25,38.605 C19.25,39.515 19.985,40.2675 20.9125,40.2675 L47.355,40.2675 C48.265,40.2675 49.0175,39.5325 49.0175,38.605 L49.0175,33.1625 C49,32.235 48.265,31.5 47.3375,31.5 L47.3375,31.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="24.5" y="35" width="5.25" height="1.75"></rect>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="45.5 38.5 40.25 38.5 40.25 42 45.5 42"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="28 38.5 22.75 38.5 22.75 42 28 42"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="36.75 35 35 35 35 36.75 36.75 36.75"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="40.25 35 38.5 35 38.5 36.75 40.25 36.75"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="43.75 35 42 35 42 36.75 43.75 36.75"></polygon>
+            <g id="Group" transform="translate(7.000000, 15.750000)" fill="#101828" fill-rule="nonzero">
+                <path d="M5.25,22.785 L10.5,22.785 L10.5,21 L1.75,21 L1.785,1.75 L40.215,1.75 L40.25,1.785 L40.215,14 L42,14 L42,1.785 C42,0.805 41.195,0 40.215,0 L1.785,0 C0.805,0 0,0.805 0,1.785 L0,21 C0,21.9275 0.7175,22.6625 1.6275,22.75 L5.25,22.75 L5.25,22.785 Z" id="Path"></path>
+                <path d="M10.5,23.415 C8.19,23.765 6.3875,24.15 5.25,24.43 L5.25,26.25 C6.265,25.9875 8.085,25.5675 10.5,25.2 L10.5,23.415 Z" id="Path"></path>
+                <path d="M36.715,26.25 C36.715,26.25 36.7325,26.25 36.75,26.25 L36.75,26.25 L36.715,26.25 Z" id="Path"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+        </g>
+    </g>
+</svg>
