@@ -4,6 +4,7 @@ scrollHSpace = 10px
 scrollHSpaceTablet = 30px
 scrollHSpacePC = 70px
 offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
+offsetCalcOverlay = "calc((100vw - (%s - (%s * 3.5 * 2))) / 2)" % (container-upper-limit horizontal-space)
 
 .{carouselSel}
   width 100%
@@ -179,7 +180,7 @@ offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
       .{carouselSel}__spacer
         min-width scrollHSpaceTablet
 
-    @media (min-width: laptop-lower-limit)
+    @media (min-width: desktop-lower-limit)
       .{carouselSel}__inner
         scroll-padding-inline-start scrollHSpacePC
 
@@ -193,12 +194,20 @@ offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
       @media (min-width: tablet-lower-limit)
         margin-left 0 - scrollHSpaceTablet - scrollHSpace
         margin-right 0 - scrollHSpaceTablet - scrollHSpace
-      @media (min-width: laptop-lower-limit)
+      @media (min-width: desktop-lower-limit)
         margin-left 0 - scrollHSpacePC - scrollHSpace
         margin-right 0 - scrollHSpacePC - scrollHSpace
       @media (min-width: container-upper-limit)
         margin-left "calc((100vw - %s)/-2)" % offsetSpacePC
-
+        .{carouselSel}__inner
+          max-width none
+          margin-left 0
+          margin-right 0
+          padding-left offsetCalcOverlay
+          padding-right offsetCalcOverlay
+          scroll-padding-inline-start offsetCalcOverlay
+          .{carouselSel}__spacer
+            min-width offsetCalcOverlay
 
   &.is-animating,
   &.is-disabled-scrolling
