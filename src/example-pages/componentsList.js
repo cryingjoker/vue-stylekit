@@ -35,6 +35,7 @@ import {
   CardBuy,
   CardImage,
   CardImageList,
+  CardPseudoSelect,
   FullscreenImage,
   RowList,
   RowListItem,
@@ -122,6 +123,7 @@ componentsList[CardB2o.name] = CardB2o;
 componentsList[CardBuy.name] = CardBuy;
 componentsList[CardImage.name] = CardImage;
 componentsList[CardImageList.name] = CardImageList;
+componentsList[CardPseudoSelect.name] = CardPseudoSelect;
 componentsList[FullscreenImage.name] = FullscreenImage;
 componentsList[RowList.name] = RowList;
 componentsList[RowListItem.name] = RowListItem;
