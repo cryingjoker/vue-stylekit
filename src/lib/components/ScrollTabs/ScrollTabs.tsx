@@ -117,6 +117,8 @@ class ScrollTabs extends Vue {
   };
 
   removeFixedElementStyle(){
+    let display = this.fixedNode.style.display
+    this.fixedNode.style.display = 'none'
     this.fixedNode.style.removeProperty('position');
     this.fixedNode.style.removeProperty('width');
     this.fixedNode.style.removeProperty('top');
@@ -130,6 +132,7 @@ class ScrollTabs extends Vue {
     this.fixedNode.style.overflow = 'hidden';
 
     this.fixedNodeParent.style.removeProperty('padding-top');
+    this.fixedNode.style.display = display || 'block'
   }
   showElement(){
     this.fixedNode.style.opacity = '1';
