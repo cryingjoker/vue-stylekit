@@ -125,6 +125,7 @@
                   placeholder="Ф.И.О."
         />
         <rt-input insert-type="number"
+                  type="number"
                   value=""
                   :max-length="2"
                   placeholder="Ваше любимое число до 99"
