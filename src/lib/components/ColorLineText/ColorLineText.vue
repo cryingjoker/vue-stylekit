@@ -26,12 +26,14 @@ export default {
   },
   data: () => ({
     isMobile: false,
+    isTablet: false,
     isSafari: /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))
   }),
   mounted(){
     const adjust = () => {
       setTimeout(() => {
         this.isMobile = window.innerWidth <= parseInt(variables['mobile-upper-limit']);
+        this.isTablet = window.innerWidth <= parseInt(variables['tablet-upper-limit']) && window.innerWidth >= parseInt(variables['tablet-lower-limit']);
       },0);
     };
     window.addEventListener('resize', () => {
@@ -66,16 +68,21 @@ export default {
     },
     topPartTransform() {
       if(this.isMobile) {
-        return this.isSafari ? "translate(-4, 0)" : null;
+        return null;
+      } else if(this.isTablet) {
+        return this.isSafari ? "translate(-.95, -.25)" : "translate(-.25, -.75)";
       } else {
-        return this.isSafari ? "translate(-0.35, -0.25)" : "translate(0.25, -0.75)";
+        return this.isSafari ? "translate(.75, -.25)" : "translate(.25, -.75)";
       }
+
     },
     bottomPartTransform() {
       if(this.isMobile) {
-        return this.isSafari ? "translate(-4, 0)" : null;
+        return null;
+      } else if(this.isTablet) {
+        return this.isSafari ? "translate(-.95, 1.25)" : "translate(0, 1)";
       } else {
-        return this.isSafari ? "translate(0, 0.5)" : "translate(0, 1)";
+        return this.isSafari ? "translate(.75, 1)" : "translate(0, 1)";
       }
     },
   },
@@ -103,37 +110,19 @@ export default {
       </svg>;
     };
     const label = ()=>{
-      if(this.$slots.content && !this.isMobile) {
-        return <p class="rt-font-banner-label color-line color-line-label">
-        <span class={'color-line-text ' + this.fillColorClass}
-        >{this.$slots.label}</span>
-        </p>;
-      }else{
-        return <p class="rt-font-banner-label color-line">
-        <span class={'color-line-text ' + this.fillColorClass}
-        >{this.$slots.label} {icon()}</span>
-        </p>;
-      }
+      return <p class="rt-font-banner-label color-line color-line-label">
+        <span class={'color-line-text ' + this.fillColorClass}>{this.$slots.label}</span>
+      </p>;
+
     };
     const content = ()=>{
-      if(!this.isMobile) {
-        if(this.$slots.content) {
-          return <p class="color-line color-line--is-paragraph rt-space-bottom">
+      if(this.$slots.content) {
+        return <p class="color-line color-line--is-paragraph rt-space-bottom">
           <span
             class={'color-line-text rt-font-paragraph ' + this.fillColorClass}>{this.$slots.content}{icon()}</span>
           </p>;
-        }else{
-          return null;
-        }
-      }else {
-        if(this.$slots.content) {
-          return <p class="color-line color-line--is-paragraph rt-space-bottom">
-          <span
-            class={'color-line-text rt-font-paragraph ' + this.fillColorClass}>{this.$slots.content}</span>
-          </p>;
-        }else{
-          return null;
-        }
+      }else{
+        return null;
       }
     };
     return <div class="color-line-wrapper">

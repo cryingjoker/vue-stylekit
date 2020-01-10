@@ -43,11 +43,11 @@ offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
     &.not-shown
       opacity .5
       pointer-events none
-    
+
     &.rt-col-td-3
       @media (min-width: tablet-lower-limit) and (max-width: tablet-upper-limit)
         max-width 47.99998%
-    
+
     @media (max-width: iphone8)
       min-width 83.33333250000001%
 
@@ -171,7 +171,7 @@ offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
       -webkit-scroll-snap-align end
       scroll-snap-align end
       min-width scrollHSpace
-    
+
     @media (min-width: tablet-lower-limit)
       .{carouselSel}__inner
         scroll-padding-inline-start scrollHSpaceTablet
@@ -179,13 +179,13 @@ offsetSpacePC = container-upper-limit - scrollHSpace * 2 - scrollHSpacePC * 2
       .{carouselSel}__spacer
         min-width scrollHSpaceTablet
 
-    @media (min-width: laptop-lower-limit)
+    @media (min-width: desktop-lower-limit)
       .{carouselSel}__inner
         scroll-padding-inline-start scrollHSpacePC
 
       .{carouselSel}__spacer
         min-width scrollHSpacePC
-    
+
     &.is-inner-block
       width 100vw
       margin-left 0 - horizontal-space
