@@ -1,10 +1,11 @@
 .{newAppName}-link
   color b2c-purple
   cursor pointer
-  transition-timing-function ease-in-out
-  transition-duration .4s
-  transition-property color
-
+  transition-timing-function linear
+  transition-duration .2s
+  transition-property opacity
+  &:hover
+    opacity .65
   .{newAppName}-dark-theme &
     color b2c-orange
 

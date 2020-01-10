@@ -32,9 +32,9 @@
 
     @media (max-width: mobile-upper-limit)
       margin-right horizontal-space * 1.5
-      left 0
-      .color-line-text
-        color b2c-white
+      //left 0
+      //.color-line-text
+      //  color b2c-white
 
   &-paragraph-icon
     width 41px
@@ -46,13 +46,13 @@
     fill b2c-orange
     @media (max-width: tablet-upper-limit)
       height 19px
-      bottom -19px
+      bottom -18px
       right -22px
     @media (max-width: mobile-upper-limit)
-      width 22px
-      height 10px
-      bottom -10px
-      right -20px
+    //  width 22px
+    //  height 10px
+      bottom -19px
+    //  right -20px
 
     &--fill-dark-state
       .color-line-paragraph-icon__background
@@ -247,11 +247,11 @@
     background-color #fff
     box-decoration-break clone
     box-shadow 15px 0 0 #fff, -15px 0 0 #fff
-    .color-line--is-paragraph &
-      @media (max-width: mobile-upper-limit)
-        box-shadow none!important
-        background-color: transparent!important
-        border-right-color transparent!important
+    //.color-line--is-paragraph &
+    //  @media (max-width: mobile-upper-limit)
+    //    box-shadow none!important
+    //    background-color: transparent!important
+    //    border-right-color transparent!important
 
     br
       @media (max-width: mobile-upper-limit)
@@ -262,7 +262,7 @@
       padding-top vertical-space * .25
       padding-bottom vertical-space * .25
       @media (max-width: mobile-upper-limit)
-        padding vertical-space 0
+        padding (vertical-space * .5) 0
 
     &--dark-state
       background-color b2b-dark-state
@@ -450,42 +450,42 @@
 .banner-page__content .banner-promo__tonque
   right -15px !important
 
-@media (max-width: mobile-upper-limit)
-  .color-line--is-paragraph
-    color main-color
-
-  .color-block
-    &--dark-state,
-    &--purple,
-    &--purple-low,
-    &--purple-high,
-    &--red,
-    &--red-low,
-    &--red-high,
-    &--dark-blue,
-    &--dark-blue-low,
-    &--dark-blue-high,
-    &--light-blue,
-    &--light-blue-low,
-    &--light-blue-high,
-    &--yellow,
-    &--yellow-low,
-    &--yellow-high,
-    &--orange,
-    &--orange-low,
-    &--orange-high,
-    &--pink,
-    &--pink-low,
-    &--pink-high,
-    &--green,
-    &--green-low,
-    &--green-high,
-    &--black,
-    &--main-color,
-    &--light-grey,
-    &--rule-color,
-    &--rule-color,
-    &--game-promo-color
-      .color-line--is-paragraph
-        color b2c-white
+//@media (max-width: mobile-upper-limit)
+//  .color-line--is-paragraph
+//    color main-color
+//
+//  .color-block
+//    &--dark-state,
+//    &--purple,
+//    &--purple-low,
+//    &--purple-high,
+//    &--red,
+//    &--red-low,
+//    &--red-high,
+//    &--dark-blue,
+//    &--dark-blue-low,
+//    &--dark-blue-high,
+//    &--light-blue,
+//    &--light-blue-low,
+//    &--light-blue-high,
+//    &--yellow,
+//    &--yellow-low,
+//    &--yellow-high,
+//    &--orange,
+//    &--orange-low,
+//    &--orange-high,
+//    &--pink,
+//    &--pink-low,
+//    &--pink-high,
+//    &--green,
+//    &--green-low,
+//    &--green-high,
+//    &--black,
+//    &--main-color,
+//    &--light-grey,
+//    &--rule-color,
+//    &--rule-color,
+//    &--game-promo-color
+//      .color-line--is-paragraph
+//        color b2c-white
 
