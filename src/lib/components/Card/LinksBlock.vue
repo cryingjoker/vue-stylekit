@@ -62,12 +62,8 @@
     },
 
     methods: {
-      unwrap() {
-//        this.isOpen = !this.isOpen;
-//        this.$el.querySelector('.rtb-card__links-block').classList.add('rtb-card__links-block--expanded');
-//        for(let i = 0; i < this.totalQuantity; i++) {
-//          this.iconsList[i].classList.remove('rtb-card__social-link--hidden');
-//        }
+      unwrap(e) {
+        e.stopPropagation();
         window.dispatchEvent(new Event('clickAll'));
         setTimeout(() => {
           window.dispatchEvent(new Event("resizeTrigger"));
