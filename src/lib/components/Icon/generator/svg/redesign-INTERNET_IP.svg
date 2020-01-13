@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>027-B56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="027-B56px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M19.25,14.7 L34.9125,20.125 L19.25,25.55 L19.25,14.7 L19.25,14.7 Z M17.5,12.25 L17.5,28 L40.25,20.125 L17.5,12.25 L17.5,12.25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M18.375,8.75 C18.865,8.75 19.25,9.135 19.25,9.625 C19.25,10.115 18.865,10.5 18.375,10.5 C17.885,10.5 17.5,10.115 17.5,9.625 C17.5,9.135 17.9025,8.75 18.375,8.75 L18.375,8.75 Z M18.375,7 C16.9225,7 15.75,8.1725 15.75,9.625 C15.75,11.0775 16.9225,12.25 18.375,12.25 C19.8275,12.25 21,11.0775 21,9.625 C21,8.1725 19.8275,7 18.375,7 L18.375,7 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="19.25 10.5 17.5 10.5 17.5 49 19.25 49"></polygon>
+            <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+        </g>
+    </g>
+</svg>
