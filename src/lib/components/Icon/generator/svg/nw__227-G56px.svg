@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>227-G56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1728.000000, -28877.000000)">
+            <g id="227-G56px" transform="translate(1728.000000, 28877.000000)">
+                <circle id="Oval-Copy-1430" fill="#E3E8EC" cx="28" cy="28" r="28"></circle>
+                <g id="227-B32px-Copy-3" transform="translate(8.000000, 8.000000)">
+                    <path d="M22.5,8.625 L29.05,13.125 L22.5,17.625 L22.5,16.25 L22.5,15 L21.25,15 L16.25,15 L16.25,11.25 L21.25,11.25 L22.5,11.25 L22.5,10 L22.5,8.625 L22.5,8.625 Z M21.25,6.25 L21.25,10 L15,10 L15,16.25 L21.25,16.25 L21.25,20 L31.25,13.125 L21.25,6.25 L21.25,6.25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M17.5,22.375 L17.5,23.75 L17.5,25 L18.75,25 L23.75,25 L23.75,28.75 L18.75,28.75 L17.5,28.75 L17.5,30 L17.5,31.375 L10.95,26.875 L17.5,22.375 L17.5,22.375 Z M18.75,20 L8.75,26.875 L18.75,33.75 L18.75,30 L25,30 L25,23.75 L18.75,23.75 L18.75,20 L18.75,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="5" y="10" width="8.75" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7.5" y="12.5" width="6.25" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="11.275" y="15" width="2.475" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="26.25" y="23.75" width="8.75" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="26.25" y="26.25" width="6.25" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="26.25" y="28.75" width="2.475" height="1.25"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

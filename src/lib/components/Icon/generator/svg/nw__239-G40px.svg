@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>239-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -30406.000000)">
+            <g id="239-G40px" transform="translate(1527.000000, 30407.000000)">
+                <circle id="Oval-Copy-816" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="239-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17.45" y="8.51" width="8.55" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="6" y="8.51" width="8.42" height="1"></rect>
+                    <path d="M16,8 C16.55,8 17,8.45 17,9 C17,9.55 16.55,10 16,10 C15.45,10 15,9.55 15,9 C15,8.45 15.45,8 16,8 L16,8 Z M16,7 C14.9,7 14,7.9 14,9 C14,10.1 14.9,11 16,11 C17.1,11 18,10.1 18,9 C18,7.9 17.1,7 16,7 L16,7 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M26.87,21 C26.42,22.72 24.86,24 23,24 C21.14,24 19.57,22.72 19.13,21 L26.87,21 L26.87,21 Z M28,20 L18,20 C18,22.76 20.24,25 23,25 C25.76,25 28,22.76 28,20 L28,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M12.87,21 C12.42,22.72 10.86,24 9,24 C7.14,24 5.57,22.72 5.13,21 L12.87,21 L12.87,21 Z M14,20 L4,20 C4,22.76 6.24,25 9,25 C11.76,25 14,22.76 14,20 L14,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="20.62 19 23 14.24 25.38 19 26.5 19 23 12 19.5 19"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="6.62 19 9 14.24 11.38 19 12.5 19 9 12 5.5 19"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

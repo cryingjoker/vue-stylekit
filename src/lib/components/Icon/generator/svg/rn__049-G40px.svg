@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="42px" viewBox="0 0 41 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>057-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="057-G40px" transform="translate(0.500000, 1.000000)">
+            <g id="057-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                <g id="Group" transform="translate(4.000000, 4.000000)" fill="#101828" fill-rule="nonzero">
+                    <path d="M23,1 L23,23 L1,23 L1,1 L23,1 L23,1 Z M23,0 L1,0 C0.4,0 0,0.4 0,1 L0,23 C0,23.6 0.4,24 1,24 L23,24 C23.6,24 24,23.6 24,23 L24,1 C24,0.4 23.6,0 23,0 L23,0 Z" id="Shape"></path>
+                    <path d="M17,16.3 C15.9,16.3 14.9,15.9 14.2,15 L12,12.7 L9.9,15 C9.1,15.8 8.1,16.3 7.1,16.3 C6,16.3 5,15.9 4.3,15 C2.8,13.3 2.8,10.6 4.3,9 C5.1,8.2 6.1,7.7 7.1,7.7 C8.2,7.7 9.2,8.1 9.9,9 L12,11.3 L14.1,9 C14.9,8.2 15.9,7.7 16.9,7.7 C18,7.7 19,8.1 19.7,9 C21.2,10.7 21.2,13.4 19.7,15 C19.1,15.8 18,16.3 17,16.3 Z M12.7,12 L14.9,14.3 C16,15.5 18,15.5 19.1,14.3 C20.3,13 20.3,10.9 19.1,9.6 C18,8.4 16,8.4 14.9,9.6 L12.7,12 Z M7,8.7 C6.2,8.7 5.5,9 4.9,9.6 C3.7,10.9 3.7,13 4.9,14.3 C6,15.5 8,15.5 9.1,14.3 L11.3,12 L9.1,9.7 C8.6,9.1 7.8,8.7 7,8.7 Z" id="Shape"></path>
+                </g>
+                <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+            </g>
+            <circle id="Oval-Copy-63" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+        </g>
+    </g>
+</svg>

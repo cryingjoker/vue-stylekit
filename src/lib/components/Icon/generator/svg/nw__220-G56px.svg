@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>220-G56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-455.000000, -28126.000000)">
+            <g id="220-G56px" transform="translate(455.000000, 28126.000000)">
+                <circle id="Oval-Copy-1330" fill="#E3E8EC" cx="28" cy="28" r="28"></circle>
+                <g id="220-B32px-Copy-3" transform="translate(8.000000, 8.000000)">
+                    <g id="Group" transform="translate(5.000000, 6.250000)" fill="#101828" fill-rule="nonzero">
+                        <circle id="Oval" cx="15" cy="13.75" r="1.25"></circle>
+                        <polygon id="Rectangle" transform="translate(26.289250, 3.712093) rotate(-45.000000) translate(-26.289250, -3.712093) " points="23.8392735 3.08709849 28.7392265 3.08709849 28.7392265 4.33708651 23.8392735 4.33708651"></polygon>
+                        <polygon id="Rectangle" transform="translate(27.578875, 2.423935) rotate(-45.000000) translate(-27.578875, -2.423935) " points="26.953881 -0.0760410249 28.203869 -0.0760410249 28.203869 4.92391102 26.953881 4.92391102"></polygon>
+                        <polygon id="Rectangle" transform="translate(3.714217, 3.711087) rotate(-44.959485) translate(-3.714217, -3.711087) " points="3.08922334 1.26111038 4.33921166 1.26111038 4.33921166 6.16106462 3.08922334 6.16106462"></polygon>
+                        <polygon id="Rectangle" transform="translate(2.428685, 2.422875) rotate(-45.000000) translate(-2.428685, -2.422875) " points="-0.0712910249 1.79788099 4.92866102 1.79788099 4.92866102 3.04786901 -0.0712910249 3.04786901"></polygon>
+                        <rect id="Rectangle" x="14.375" y="7.5" width="1.25" height="6.25"></rect>
+                        <polygon id="Rectangle" transform="translate(17.347531, 16.087036) rotate(-45.000000) translate(-17.347531, -16.087036) " points="16.7225372 12.9620662 17.9725253 12.9620662 17.9725253 19.2120063 16.7225372 19.2120063"></polygon>
+                        <path d="M15,1.25 C21.8875,1.25 27.5,6.8625 27.5,13.75 C27.5,20.6375 21.8875,26.25 15,26.25 C8.1125,26.25 2.5,20.6375 2.5,13.75 C2.5,6.8625 8.1125,1.25 15,1.25 L15,1.25 Z M15,0 C7.4,0 1.25,6.15 1.25,13.75 C1.25,21.35 7.4,27.5 15,27.5 C22.6,27.5 28.75,21.35 28.75,13.75 C28.75,6.15 22.6,0 15,0 L15,0 Z" id="Shape"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

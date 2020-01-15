@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>019-G56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1728.000000, -2608.000000)">
+            <g id="019-G56px" transform="translate(1728.000000, 2608.000000)">
+                <circle id="Oval-Copy-195" fill="#E3E8EC" cx="28" cy="28" r="28"></circle>
+                <g id="019-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="19.375" y="5.825" width="1.25" height="2.925"></rect>
+                    <g id="Group" transform="translate(8.750000, 8.750000)" fill="#101828" fill-rule="nonzero">
+                        <polygon id="Rectangle" transform="translate(20.247461, 20.233536) rotate(-45.000000) translate(-20.247461, -20.233536) " points="19.6224672 18.7710503 20.8724553 18.7710503 20.8724553 21.6960222 19.6224672 21.6960222"></polygon>
+                        <polygon id="Rectangle" transform="translate(2.264877, 2.265000) rotate(-45.000000) translate(-2.264877, -2.265000) " points="1.63988349 0.802514025 2.88987151 0.802514025 2.88987151 3.72748597 1.63988349 3.72748597"></polygon>
+                    </g>
+                    <g id="Group" transform="translate(8.750000, 8.750000)" fill="#101828" fill-rule="nonzero">
+                        <polygon id="Rectangle" transform="translate(20.249214, 2.257914) rotate(-45.000000) translate(-20.249214, -2.257914) " points="18.7867278 1.63291974 21.7116997 1.63291974 21.7116997 2.88290776 18.7867278 2.88290776"></polygon>
+                        <polygon id="Rectangle" transform="translate(2.263125, 20.240623) rotate(-45.000000) translate(-2.263125, -20.240623) " points="0.800639025 19.6156285 3.72561097 19.6156285 3.72561097 20.8656165 0.800639025 20.8656165"></polygon>
+                    </g>
+                    <g id="Group" transform="translate(18.750000, 5.000000)" fill="#101828" fill-rule="nonzero">
+                        <rect id="Rectangle" x="0.625" y="0.825" width="1.25" height="2.925"></rect>
+                        <rect id="Rectangle" x="0.625" y="26.25" width="1.25" height="2.925"></rect>
+                    </g>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="5.525" y="19.375" width="3.225" height="1.25"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="31.25" y="19.375" width="3.2375" height="1.25"></rect>
+                    <polygon id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(22.924214, 17.082554) rotate(-45.000000) translate(-22.924214, -17.082554) " points="20.2617393 16.4575597 25.5866882 16.4575597 25.5866882 17.7075478 20.2617393 17.7075478"></polygon>
+                    <path d="M20,19.3875 C20.3375,19.3875 20.6125,19.6625 20.6125,20 C20.6125,20.3375 20.3375,20.6125 20,20.6125 C19.6625,20.6125 19.3875,20.3375 19.3875,20 C19.3875,19.6625 19.6625,19.3875 20,19.3875 L20,19.3875 Z M20,18.1375 C18.975,18.1375 18.1375,18.975 18.1375,20 C18.1375,21.025 18.975,21.8625 20,21.8625 C21.025,21.8625 21.8625,21.025 21.8625,20 C21.8625,18.975 21.0375,18.1375 20,18.1375 L20,18.1375 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M20,6.25 C27.5875,6.25 33.75,12.4125 33.75,20 C33.75,27.5875 27.5875,33.75 20,33.75 C12.4125,33.75 6.25,27.5875 6.25,20 C6.25,12.4125 12.4125,6.25 20,6.25 L20,6.25 Z M20,5 C11.7125,5 5,11.7125 5,20 C5,28.2875 11.7125,35 20,35 C28.2875,35 35,28.2875 35,20 C35,11.7125 28.2875,5 20,5 L20,5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M23.75,25 L23.75,27.5 L16.25,27.5 L16.25,25 L23.75,25 L23.75,25 Z M23.75,23.75 L16.25,23.75 C15.5625,23.75 15,24.3125 15,25 L15,27.5 C15,28.1875 15.5625,28.75 16.25,28.75 L23.75,28.75 C24.4375,28.75 25,28.1875 25,27.5 L25,25 C25,24.3125 24.4375,23.75 23.75,23.75 L23.75,23.75 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

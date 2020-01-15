@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>231-B56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="231-B56px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M31.4825,19.25 C31.43,20.44 31.185,21.98 30.8525,22.715 C30.3625,23.8175 29.47,25.2175 28,26.0575 C26.53,25.2175 25.6375,23.8175 25.1475,22.715 C24.815,21.9625 24.57,20.4225 24.5175,19.25 L31.4825,19.25 L31.4825,19.25 Z M33.25,17.5 L22.75,17.5 L22.75,18.8125 C22.75,20.1075 23.0125,22.26 23.5375,23.45 C24.2725,25.06 25.62,27.055 28,28 C30.38,27.055 31.7275,25.06 32.4625,23.45 C33.005,22.2775 33.25,20.1075 33.25,18.8125 L33.25,17.5 L33.25,17.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M47.25,14 L47.2675,36.75 L8.75,36.7675 L8.7325,14 L47.25,14 L47.25,14 Z M47.2675,12.25 L8.7325,12.25 C7.7875,12.25 7,13.0375 7,13.9825 L7,36.75 C7,37.7125 7.7875,38.5 8.7325,38.5 L47.25,38.5 C48.2125,38.5 48.9827862,37.7125 48.9827862,36.7675 L48.9827862,13.9825 C49,13.0375 48.2125,12.25 47.2675,12.25 L47.2675,12.25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="8.75" y="31.5" width="38.5" height="1.75"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="29.75" y="38.5" width="1.75" height="5.25"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="24.5" y="38.5" width="1.75" height="5.25"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="21.035" y="42" width="13.965" height="1.75"></rect>
+            <path d="M28,35.8575 C28.4725,35.8575 28.875,35.4725 28.875,34.9825 C28.875,34.4925 28.49,34.1075 28,34.1075 C27.5275,34.1075 27.125,34.4925 27.125,34.9825 C27.125,35.4725 27.5275,35.8575 28,35.8575" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+        </g>
+    </g>
+</svg>

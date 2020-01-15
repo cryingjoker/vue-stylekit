@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>169-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-2284.000000, -21571.000000)">
+            <g id="169-C80px" transform="translate(2284.000000, 21571.000000)">
+                <circle id="Oval-Copy-1030" fill="#FF4F12" cx="40" cy="40" r="40"></circle>
+                <g id="169-B32px-Copy-9" transform="translate(13.000000, 12.000000)">
+                    <path d="M47.215,15.75 L8.785,15.75 C7.805,15.75 7,16.5375 7,17.535 L7,36.75 C7,37.73 7.805,38.535 8.785,38.535 L23.8175,38.535 C18.375,38.85 14.2975,39.6725 12.25,40.18 L12.25,42 C14.14,41.51 18.7775,40.4775 25.095,40.215 C24.71,39.13 24.5,37.975 24.5,36.7675 L8.75,36.75 L8.785,17.5 L47.215,17.5 L47.25,17.535 L47.215,36.785 L45.5,36.785 C45.5,37.38 45.43,37.9575 45.3425,38.535 L47.215,38.535 C48.195,38.535 49,37.73 49,36.75 L49,17.535 C49,16.5375 48.195,15.75 47.215,15.75 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <g id="Group" transform="translate(26.250000, 28.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M8.75,1.7675 C12.6,1.7675 15.75,4.9 15.75,8.7675 C15.75,12.6175 12.6175,15.7675 8.75,15.7675 C4.8825,15.7675 1.75,12.635 1.75,8.7675 C1.75,4.9 4.9,1.7675 8.75,1.7675 L8.75,1.7675 Z M8.75,0.0175 C3.92,0.0175 0,3.9375 0,8.7675 C0,13.5975 3.92,17.5175 8.75,17.5175 C13.58,17.5175 17.5,13.5975 17.5,8.7675 C17.5,3.92 13.58,0.0175 8.75,0.0175 L8.75,0.0175 Z" id="Shape"></path>
+                        <path d="M12.005,12.9325 L5.495,12.9325 L3.8675,7.07 L8.75,3.1675 L13.6325,7.07 L12.005,12.9325 Z M6.825,11.1825 L10.675,11.1825 L11.6375,7.7175 L8.75,5.4075 L5.8625,7.7175 L6.825,11.1825 Z" id="Shape"></path>
+                        <rect id="Rectangle" x="7.875" y="0.175" width="1.75" height="4.1125"></rect>
+                        <polygon id="Rectangle" transform="translate(4.580247, 13.599016) rotate(-44.521939) translate(-4.580247, -13.599016) " points="2.37519139 12.7239934 6.78530261 12.7239934 6.78530261 14.4740376 2.37519139 14.4740376"></polygon>
+                        <polygon id="Rectangle" transform="translate(12.815726, 13.606785) rotate(-43.456221) translate(-12.815726, -13.606785) " points="11.9407262 11.4717859 13.6907258 11.4717859 13.6907258 15.7417851 11.9407262 15.7417851"></polygon>
+                        <polygon id="Path" points="4.5325 8.2075 0.6475 6.6325 1.3125 5.005 5.1975 6.58"></polygon>
+                        <polygon id="Rectangle" transform="translate(14.719136, 6.559877) rotate(-21.801409) translate(-14.719136, -6.559877) " points="12.47908 5.68485478 16.9591925 5.68485478 16.9591925 7.43489872 12.47908 7.43489872"></polygon>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

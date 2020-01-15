@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>117-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -15078.000000)">
+            <g id="117-G40px" transform="translate(1527.000000, 15079.000000)">
+                <circle id="Oval-Copy-752" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="117-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <path d="M16.01,11 C18.77,11 21.01,13.24 21.01,16 C21.01,18.76 18.77,21 16.01,21 C13.25,21 11.01,18.76 11.01,16 C11.01,13.24 13.26,11 16.01,11 L16.01,11 Z M16.01,10 C12.7,10 10.01,12.69 10.01,16 C10.01,19.31 12.7,22 16.01,22 C19.32,22 22.01,19.31 22.01,16 C22.01,12.69 19.33,10 16.01,10 L16.01,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M16.01,5 C22.08,5 27.01,9.93 27.01,16 C27.01,22.07 22.08,27 16.01,27 C9.94,27 5.01,22.07 5.01,16 C5.01,9.93 9.95,5 16.01,5 L16.01,5 Z M16.01,4 C9.38,4 4.01,9.37 4.01,16 C4.01,22.63 9.38,28 16.01,28 C22.64,28 28.01,22.63 28.01,16 C28.01,9.37 22.64,4 16.01,4 L16.01,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="21.5" y="17" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="21.5" y="14" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="4.5" y="17" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="4.5" y="14" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="14" y="21.5" width="1" height="6"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17" y="21.5" width="1" height="6"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="14" y="4.5" width="1" height="6"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17" y="4.5" width="1" height="6"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

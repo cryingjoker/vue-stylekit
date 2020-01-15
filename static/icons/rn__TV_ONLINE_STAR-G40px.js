@@ -1,0 +1,1 @@
+[{'rn__TV_ONLINE_STAR-G40px': {width: 42,height: 42,viewBox: '0 0 42 42',data: '<g transform="translate(1 1)" _fill="none" fill-rule="evenodd"><circle pid="0" _stroke="#E3E8EC" cx="20" cy="20" r="20"/><path pid="1" _fill="#101828" fill-rule="nonzero" d="M13 15.58L18.22 11 27 20l-8.78 9L13 24.42 17.52 20z"/><path pid="2" d="M4 4h32v32H4z"/></g>'}}]
