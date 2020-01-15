@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>010-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1002.000000, -1580.000000)">
+            <g id="010-C80px" transform="translate(1002.000000, 1580.000000)">
+                <circle id="Oval-Copy-142" fill="#FFA307" cx="40" cy="40" r="40"></circle>
+                <g id="010-B32px-Copy-9" transform="translate(12.000000, 12.000000)">
+                    <path d="M22.7675,8.785 L40.2675,11.7425 C40.25,11.7425 40.25,11.7425 40.25,11.7775 L40.2325,44.275 L22.75,47.2325 C22.75,47.2325 22.75,47.2325 22.75,47.2325 L22.7675,8.785 L22.7675,8.785 Z M22.61,7 C21.735,7 21,7.7875 21,8.7675 L21,47.215 C21,48.2125 21.735,48.9825 22.61,48.9825 C22.6975,48.9825 22.7675,48.9825 22.855,48.965 L40.6175,45.955 C41.405,45.815 41.9825,45.08 41.9825,44.205 L41.9825,11.7775 C41.9825,10.9025 41.405,10.15 40.6175,10.0275 L22.855,7.0175 C22.785,7 22.6975,7 22.61,7 L22.61,7 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M15.75,10.5 C14.7875,10.5 14,11.2875 14,12.25 L14,45.5 L15.75,45.5 L15.75,43.75 L15.75,42.1925 L15.75,12.25 L21,12.25 L21,42.1925 L21,43.75 L21,45.5 L22.75,45.5 L22.75,10.5 L15.75,10.5 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M26.25,28.875 C26.7225,28.875 27.125,28.4725 27.125,28 C27.125,27.51 26.74,27.125 26.25,27.125 C25.76,27.125 25.375,27.5275 25.375,28 C25.375,28.49 25.7775,28.875 26.25,28.875" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

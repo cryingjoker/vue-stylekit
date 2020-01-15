@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>127-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-2284.000000, -16149.000000)">
+            <g id="127-C80px" transform="translate(2284.000000, 16149.000000)">
+                <circle id="Oval" fill="#7700FF" cx="39.7894737" cy="39.7894737" r="39.7894737"></circle>
+                <g id="Group-3" transform="translate(12.000000, 12.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                    <g id="Group" transform="translate(12.000000, 7.000000)">
+                        <g id="Group-2" transform="translate(0.000000, 0.000000)">
+                            <polygon id="Path" fill="#BA80FE" points="1.70040486 30.9851552 1.70040486 30.1916329 30.4183536 -2.25597319e-13 30.3805668 0.151147099 28 4.42105263 20.1403509 18.1754386 12.0161943 32.6099865"></polygon>
+                            <path d="M12.8852901,30.6450742 C11.6005398,28.9068826 9.48448043,27.8110661 7.10391363,27.8110661 C3.17408907,27.8110661 3.19744231e-14,30.8717949 3.19744231e-14,34.6126856 C3.19744231e-14,38.2024291 2.90958165,41.1497976 6.61268556,41.3765182 C6.61268556,41.3765182 6.65047233,41.3765182 6.65047233,41.3765182 C6.65047233,41.3765182 30.2672065,41.3765182 30.2672065,41.3765182 L30.4183536,5.71986902e-13 C30.1538462,0.717948718 19.8380567,18.5910931 12.8852901,30.6450742 Z" id="Path" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

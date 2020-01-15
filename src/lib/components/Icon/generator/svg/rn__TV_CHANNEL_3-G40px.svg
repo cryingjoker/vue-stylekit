@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>165-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -21103.000000)">
+            <g id="165-G40px" transform="translate(1527.000000, 21104.000000)">
+                <circle id="Oval-Copy-1043" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="165-B32px-Copy" transform="translate(5.000000, 4.000000)">
+                    <g id="Group" transform="translate(4.000000, 11.000000)" fill="#101828">
+                        <g id="Fill-286">
+                            <path d="M0,0.15 L0,9.83 L2.67,9.83 L2.67,6.25 L4.38,6.25 L4.38,9.83 L7.05,9.83 L7.05,0.15 L4.38,0.15 L4.38,3.8 L2.67,3.8 L2.67,0.15 L0,0.15 Z M10.01,6.08 L10.01,7.56 L11.43,7.56 C11.43,7.56 12,7.5 12,6.76 C12,6.08 11.43,6.08 11.43,6.08 L10.01,6.08 Z M10.01,2.50999606 L10.01,3.97 L11.43,3.97 C11.43,3.97 12,3.9 12,3.2 C12,2.5 11.43,2.50999606 11.43,2.50999606 L10.01,2.50999606 Z M11.72,0.15 C12.46,0.15 14.56,0.55 14.56,2.62 C14.56,4.29 13.76,4.78 13.14,4.89 C12.68,4.98 14.45,4.89 14.45,6.98 C14.45,9.94 11.89,9.82 11.89,9.82 L7.62,9.82 L7.62,0.14 L11.72,0.14 L11.72,0.15 Z" id="Shape"></path>
+                        </g>
+                        <g id="Fill-287" transform="translate(14.000000, 0.000000)">
+                            <path d="M5.05,2.55 C3.7,2.55 2.61,3.65 2.61,5 C2.61,6.35 3.71,7.44 5.05,7.44 C6.4,7.44 7.49,6.34 7.49,5 C7.5,3.65 6.4,2.55 5.05,2.55 M5.05,9.95 C2.32,9.95 0.1,7.73 0.1,5 C0.1,2.27 2.32,0.05 5.05,0.05 C7.78,0.05 10,2.27 10,5 C10,7.73 7.78,9.95 5.05,9.95" id="Shape"></path>
+                        </g>
+                        <g id="Fill-288" transform="translate(17.000000, 3.000000)">
+                            <path d="M2.05,0.27 C3,0.27 3.78,1.04 3.78,2 C3.78,2.95 3.01,3.73 2.05,3.73 C1.09,3.73 0.32,2.96 0.32,2 C0.32,1.05 1.1,0.27 2.05,0.27" id="Path"></path>
+                        </g>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

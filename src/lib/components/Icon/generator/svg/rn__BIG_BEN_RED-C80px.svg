@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>158-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1002.000000, -20309.000000)">
+            <g id="158-C80px" transform="translate(1002.000000, 20309.000000)">
+                <circle id="Oval-Copy-932" fill="#FF4F12" cx="40" cy="40" r="40"></circle>
+                <g id="158-B32px-Copy-8" transform="translate(12.000000, 12.000000)">
+                    <path d="M40.25,17.5 L40.25,40.25 L17.5,40.25 L17.5,17.5 L40.25,17.5 L40.25,17.5 Z M40.25,15.75 L17.5,15.75 C16.5375,15.75 15.75,16.5375 15.75,17.5 L15.75,40.25 C15.75,41.2125 16.5375,42 17.5,42 L40.25,42 C41.2125,42 42,41.2125 42,40.25 L42,17.5 C42,16.5375 41.2125,15.75 40.25,15.75 L40.25,15.75 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M28.875,22.75 C32.2525,22.75 35,25.4975 35,28.875 C35,32.2525 32.2525,35 28.875,35 C25.4975,35 22.75,32.2525 22.75,28.875 C22.75,25.4975 25.4975,22.75 28.875,22.75 L28.875,22.75 Z M28.875,21 C24.5175,21 21,24.5175 21,28.875 C21,33.2325 24.5175,36.75 28.875,36.75 C33.2325,36.75 36.75,33.2325 36.75,28.875 C36.75,24.5175 33.2325,21 28.875,21 L28.875,21 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="30.8875 32.1125 28 29.2425 28 25.3925 29.75 25.3925 29.75 28.5075 32.1125 30.8875"></polygon>
+                    <path d="M29.3825,12.25 L37.555,15.75 L20.195,15.75 L28.3675,12.25 L29.3825,12.25 L29.3825,12.25 Z M29.75,10.5 L28,10.5 L15.75,15.75 L15.75,17.5 L42,17.5 L42,15.75 L29.75,10.5 L29.75,10.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="28" y="7" width="1.75" height="3.5"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="38.5" y="42" width="1.75" height="7"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="33.25" y="42" width="1.75" height="7"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="28" y="42" width="1.75" height="7"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="22.75" y="42" width="1.75" height="7"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17.5" y="42" width="1.75" height="7"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

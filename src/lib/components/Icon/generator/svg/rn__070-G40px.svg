@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>095-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -12316.000000)">
+            <g id="095-G40px" transform="translate(1527.000000, 12317.000000)">
+                <circle id="Oval-Copy-650" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="095-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <path d="M24,14 L24,15 L24,15 L24.01,27 L8,27.02 L8,16 L8,15 L8,14 L7,14 L7,27.01 C7,27.56 7.44,28 7.99,28 L24.02,28 C24.56,28 25.01,27.56 25.01,27.01 L25.01,14 L24,14 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="27.18 14.56 16 5.32 4.82 14.56 4.18 13.79 16 4.02 27.82 13.79"></polygon>
+                    <path d="M16,19 C17.1,19 18,19.9 18,21 C18,22.1 17.1,23 16,23 C14.9,23 14,22.1 14,21 C14,19.9 14.9,19 16,19 L16,19 Z M16,18 C14.34,18 13,19.34 13,21 C13,22.66 14.34,24 16,24 C17.66,24 19,22.66 19,21 C19,19.35 17.66,18 16,18 L16,18 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M16,15 C16.83,15 17.5,15.67 17.5,16.5 C17.5,17.33 16.83,18 16,18 C15.17,18 14.5,17.33 14.5,16.5 C14.5,15.67 15.17,15 16,15 L16,15 Z M16,14 C14.62,14 13.5,15.12 13.5,16.5 C13.5,17.88 14.62,19 16,19 C17.38,19 18.5,17.88 18.5,16.5 C18.5,15.12 17.38,14 16,14 L16,14 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

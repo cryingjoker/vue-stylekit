@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>255-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -32410.000000)">
+            <g id="255-G40px" transform="translate(1527.000000, 32411.000000)">
+                <circle id="Oval-Copy-1461" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="255-B32px" transform="translate(4.000000, 4.000000)">
+                    <g>
+                        <path d="M18,22.52 C13.88,21.06 10.33,17.44 10.29,17.4 C10.24,17.34 5.57,12.46 5,7.65 C5,7.62 5,7.57 5.03,7.54 L7.65,5.01 C7.67,4.99 7.69,4.98 7.72,4.98 C7.75,4.98 7.77,5 7.77,5 L11.72,9.08 C11.75,9.11 11.74,9.17 11.71,9.2 L9.96,10.89 L9.48,11.36 L9.73,11.98 C9.77,12.08 10.7,14.35 12.03,15.72 C13.36,17.09 15.6,18.1 15.7,18.14 L16.32,18.41 L16.8,17.94 L18.55,16.25 C18.57,16.23 18.59,16.22 18.62,16.22 C18.65,16.22 18.67,16.24 18.67,16.24 L20.36,17.99 L21.75,17.99 L19.38,15.55 C19.17,15.33 18.89,15.22 18.61,15.22 C18.34,15.22 18.06,15.32 17.85,15.53 L16.1,17.22 C16.1,17.22 13.96,16.27 12.75,15.02 C11.54,13.77 10.66,11.6 10.66,11.6 L12.41,9.91 C12.84,9.49 12.86,8.81 12.44,8.38 L8.48,4.3 C8.27,4.09 7.99,3.98 7.71,3.98 C7.44,3.98 7.16,4.08 6.95,4.29 L4.33,6.82 C4.08,7.07 3.97,7.41 4.01,7.76 C4.63,12.98 9.57,18.08 9.57,18.08 C9.57,18.08 13.45,22.08 18,23.56 L18,22.52 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                        <path d="M26.11,25.54 L25,26.24 L25,24.85 L26.11,25.54 L26.11,25.54 Z M28,25.54 L24,23.05 L24.01,28.05 L28,25.54 L28,25.54 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                        <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(22.005020, 25.490092) rotate(-0.111984) translate(-22.005020, -25.490092) " x="19.0100141" y="24.9900906" width="5.99001144" height="1.00000191"></rect>
+                        <path d="M26.11,19.54 L25,20.24 L25,18.85 L26.11,19.54 L26.11,19.54 Z M28,19.54 L24,17.05 L24.01,22.05 L28,19.54 L28,19.54 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                        <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(22.005034, 19.490058) rotate(-0.111811) translate(-22.005034, -19.490058) " x="19.0100284" y="18.9900571" width="5.99001141" height="1.0000019"></rect>
+                        <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>109-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -14074.000000)">
+            <g id="109-G40px" transform="translate(1527.000000, 14075.000000)">
+                <circle id="Oval-Copy-751" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="109-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <path d="M13.98,21.5 C13.98,21.34 13.99,21.17 14,21.01 L5,21.02 L4.98,19 L6.98,19 L14.41,19 C14.53,18.66 14.67,18.32 14.84,18 L7,18 L6.98,7 L26,7 L26.02,15.54 C26.37,15.81 26.7,16.11 27,16.44 L27,6.98 C27,6.44 26.56,6 26.02,6 L6.98,6 C6.44,6 6,6.44 6,6.98 L6,18 L4.98,18 C4.44,18 4,18.44 4,18.98 L4,21.02 C4,21.56 4.44,22 4.98,22 L14,22 C13.99,21.83 13.98,21.67 13.98,21.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M21.47,16 C24.5,16 26.97,18.47 26.97,21.5 C26.97,24.53 24.5,27 21.47,27 C18.44,27 15.97,24.53 15.97,21.5 C15.97,18.47 18.44,16 21.47,16 L21.47,16 Z M21.47,15 C17.88,15 14.97,17.91 14.97,21.5 C14.97,25.09 17.88,28 21.47,28 C25.06,28 27.97,25.09 27.97,21.5 C27.97,17.91 25.06,15 21.47,15 L21.47,15 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17.75" y="20.74" width="1" height="2.5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17" y="21.49" width="2.5" height="1"></rect>
+                    <g id="Group" transform="translate(20.000000, 18.000000)" fill="#101828" fill-rule="nonzero">
+                        <path d="M2.51,6.42 L1.51,6.42 L1.51,4.01 L0.52,4.01 L0.52,3.01 L1.51,3.01 L1.51,0.43 L3.97,0.43 C4.94,0.43 5.74,1.22 5.74,2.2 C5.74,3.2 4.93,4.02 3.92,4.02 L2.51,4.02 L2.51,6.42 Z M2.51,3.01 L3.92,3.01 C4.37,3.01 4.74,2.64 4.74,2.19 C4.74,1.77 4.4,1.42 3.97,1.42 L2.51,1.42 L2.51,3.01 Z" id="Shape"></path>
+                        <rect id="Rectangle" x="0.51" y="4.42" width="4" height="1"></rect>
+                    </g>
+                    <g id="Group" transform="translate(12.000000, 9.000000)" fill="#101828" fill-rule="nonzero">
+                        <path d="M4.52,3 C5.05,3 5.54,3.21 5.89,3.55 L6.6,2.84 C6.06,2.32 5.33,2 4.52,2 C3.69,2 2.94,2.34 2.4,2.88 L3.11,3.59 C3.47,3.22 3.97,3 4.52,3 Z" id="Path"></path>
+                        <path d="M5.18,4.26 C5.01,4.1 4.78,4 4.52,4 C4.24,4 3.99,4.11 3.81,4.29 L4.48,4.96 L5.18,4.26 Z" id="Path"></path>
+                        <path d="M4.52,1 C5.6,1 6.59,1.44 7.31,2.14 L8.02,1.43 C7.11,0.55 5.88,0 4.52,0 C3.14,0 1.89,0.56 0.98,1.46 L1.69,2.17 C2.42,1.45 3.42,1 4.52,1 Z" id="Path"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>121-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -15582.000000)">
+            <g id="121-G40px" transform="translate(1527.000000, 15583.000000)">
+                <circle id="Oval-Copy-748" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="121-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <path d="M26.99,6 L27,6.01 L26.99,26 L5,25.98 L5.01,6 L26.99,6 L26.99,6 Z M26.99,5 L5.01,5 C4.45,5 4,5.45 4,6.01 L4,25.99 C4,26.54 4.45,27 5.01,27 L26.99,27 C27.55,27 28,26.55 28,25.99 L28,6.01 C28,5.45 27.55,5 26.99,5 L26.99,5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="13" y="8" width="12" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="13" y="10" width="12" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="8" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="10" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="23" width="4" height="1"></rect>
+                    <path d="M24.05,13 L13.95,13 C13.43,13 13,13.42 13,13.95 L13,15 L14,15 L14,14 L24,14 L24,23 L14,23 L14,22 L13,22 L13,23.05 C13,23.58 13.43,24 13.95,24 L24.04,24 C24.57,24 24.99,23.57 24.99,23.05 L24.99,13.96 C25,13.42 24.57,13 24.05,13 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M9.49,13.92 L9.52,13.93 L16,20.41 L16,21 L15.41,21 L8.93,14.52 C8.92,14.51 8.92,14.47 8.93,14.46 L9.46,13.93 C9.46,13.93 9.47,13.92 9.49,13.92 L9.49,13.92 Z M9.49,12.92 C9.22,12.92 8.96,13.02 8.75,13.23 L8.22,13.76 C7.81,14.17 7.81,14.83 8.22,15.23 L15,22 L17,22 L17,20 L10.23,13.23 C10.02,13.02 9.76,12.92 9.49,12.92 L9.49,12.92 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(10.295554, 15.288764) rotate(-45.000000) translate(-10.295554, -15.288764) " x="9.71055911" y="14.7887693" width="1.16998878" height="1"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

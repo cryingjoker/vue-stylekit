@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>027-B40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="027-B40px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M13.75,10.5 L24.9375,14.375 L13.75,18.25 L13.75,10.5 L13.75,10.5 Z M12.5,8.75 L12.5,20 L28.75,14.375 L12.5,8.75 L12.5,8.75 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M13.125,6.25 C13.475,6.25 13.75,6.525 13.75,6.875 C13.75,7.225 13.475,7.5 13.125,7.5 C12.775,7.5 12.5,7.225 12.5,6.875 C12.5,6.525 12.7875,6.25 13.125,6.25 L13.125,6.25 Z M13.125,5 C12.0875,5 11.25,5.8375 11.25,6.875 C11.25,7.9125 12.0875,8.75 13.125,8.75 C14.1625,8.75 15,7.9125 15,6.875 C15,5.8375 14.1625,5 13.125,5 L13.125,5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="13.75 7.5 12.5 7.5 12.5 35 13.75 35"></polygon>
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+        </g>
+    </g>
+</svg>

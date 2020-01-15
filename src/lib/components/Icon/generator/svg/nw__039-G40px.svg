@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>039-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -5134.000000)">
+            <g id="039-G40px" transform="translate(1527.000000, 5135.000000)">
+                <circle id="Oval-Copy-316" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="039-B32px-Copy-4" transform="translate(4.000000, 4.000000)">
+                    <path d="M4,7 L4,25 L17,27 L17,5 L4,7 Z M12.88,20.04 L11.55,20.01 L8.91,14.86 L8.91,19.82 L7.7,19.78 L7.73,12.37 L9.05,12.35 L10.27,14.76 L11.56,17.17 L11.56,12.19 L12.9,12.11 L12.88,20.04 Z" id="Shape" fill="#101828"></path>
+                    <path d="M25,8 L25,9 L26,9 L27,8.99 L27,13 L26,13 L25,13 L25,14 L25,24 L17,24 L17,8 L25,8 L25,8 Z M26,7 L25.02,7 L16,7 L16,25 L26,25 L26,14 L27,14 C27.55,14 28,13.55 28,13 L28,8.99 C28,8.44 27.56,8 27.01,8 L26,8 L26,7 L26,7 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M27,19 L27,23 L26,23 L26,19 L27,19 L27,19 Z M27,18 L25,18 L25,24 L27,24 C27.55,24 28,23.55 28,23 L28,19 C28,18.45 27.55,18 27,18 L27,18 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M27,14 L27,18 L26,18 L26,14 L27,14 L27,14 Z M27,13 L25,13 L25,19 L27,19 C27.55,19 28,18.55 28,18 L28,14 C28,13.45 27.55,13 27,13 L27,13 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 21 16 21 16 22 23 22"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 18.8 16 18.8 16 19.8 23 19.8"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 16.6 16 16.6 16 17.6 23 17.6"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 14.4 16 14.4 16 15.4 23 15.4"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 12.2 16 12.2 16 13.2 23 13.2"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23 10 16 10 16 11 23 11"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

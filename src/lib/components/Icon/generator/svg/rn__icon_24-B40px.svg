@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>138-B40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="138-B40px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M25.625,22.5 C25.975,22.5 26.25,22.225 26.25,21.875 C26.25,21.525 25.975,21.25 25.625,21.25 C25.275,21.25 25,21.525 25,21.875 C25,22.225 25.275,22.5 25.625,22.5" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M28.125,22.5 C28.475,22.5 28.75,22.225 28.75,21.875 C28.75,21.525 28.475,21.25 28.125,21.25 C27.775,21.25 27.5,21.525 27.5,21.875 C27.5,22.225 27.775,22.5 28.125,22.5" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M30.625,22.5 C30.975,22.5 31.25,22.225 31.25,21.875 C31.25,21.525 30.975,21.25 30.625,21.25 C30.275,21.25 30,21.525 30,21.875 C30,22.225 30.275,22.5 30.625,22.5" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="30" y="11.25" width="1.25" height="7.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="8.75" y="11.25" width="1.25" height="7.5"></rect>
+            <path d="M33.8125,17.5 L20,17.5 L6.1875,17.5 C5.7,17.5 5.275,17.8 5.1,18.225 C5.0375,18.3625 5,18.525 5,18.6875 L5,18.6875 L5,23.7375 L5,25.075 C5,25.725 5.525,26.25 6.1875,26.25 L21.25,26.25 L33.8125,26.25 C34.1375,26.25 34.4375,26.1125 34.65,25.9 C34.8625,25.6875 35,25.3875 35,25.0625 L35,25.0625 L35,20.0125 L35,18.675 C35,18.025 34.475,17.5 33.8125,17.5 Z M33.75,25 L21.25,25 L6.25,25 L6.25,23.7375 L6.25,18.75 L20,18.75 L33.75,18.75 L33.75,20.0125 L33.75,25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+        </g>
+    </g>
+</svg>
