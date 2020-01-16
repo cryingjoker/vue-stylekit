@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>153-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="153-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(10.000000, 20.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M15,32.475 L2.5,32.475 L2.55,4.975 L57.5,4.975 L57.5,2.475 L2.55,2.475 C1.15,2.475 0,3.625 0,5.025 L0,32.475 C0,33.875 1.15,35.025 2.55,35.025 L15,35.025 L15,32.475 Z" id="Path"></path>
+                <rect id="Rectangle" x="11.825" y="32.5" width="35.3" height="2.525"></rect>
+            </g>
+            <path d="M67.45,22.475 L65,22.475 L65,24.975 L67.45,24.975 L67.5,25.025 L67.45,52.525 L52.5,52.5 L52.5,55.025 L67.45,55.025 C68.85,55.025 70,53.875 70,52.475 L70,25.025 C70,23.625 68.85,22.475 67.45,22.475 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M39.95,54.85 C29.175,54.85 21.1,56.5 17.5,57.4 L17.5,59.975 C20.6,59.175 28.85,57.35 39.95,57.35 C51.15,57.35 59.475,59.2 62.5,60 L62.5,57.425 C58.925,56.525 50.825,54.85 39.95,54.85 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="50 37.5 50 35 47.5 35 47.5 37.5 45 37.5 45 40 47.5 40 47.5 42.5 50 42.5 50 40 52.5 40 52.5 37.5"></polygon>
+            <path d="M36.25,32.5 C38.325,32.5 40,34.175 40,36.25 L40,41.25 C40,43.325 38.325,45 36.25,45 C34.175,45 32.5,43.325 32.5,41.25 L32.5,36.25 C32.5,34.175 34.175,32.5 36.25,32.5 L36.25,32.5 Z M36.25,30 C32.8,30 30,32.8 30,36.25 L30,41.25 C30,44.7 32.8,47.5 36.25,47.5 C39.7,47.5 42.5,44.7 42.5,41.25 L42.5,36.25 C42.5,32.8 39.7,30 36.25,30 L36.25,30 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

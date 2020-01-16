@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>228-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="228-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M30,42.2 L32.775,43.925 L30,45.65 L30,42.2 L30,42.2 Z M27.5,37.725 L27.5,50.15 L37.5,43.95 L27.5,37.725 L27.5,37.725 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M52.5,34.75 L55.275,36.475 L52.5,38.225 L52.5,34.75 L52.5,34.75 Z M50,30.275 L50,42.7 L60,36.5 L50,30.275 L50,30.275 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M30,27.3 L32.775,29.025 L30,30.775 L30,27.3 L30,27.3 Z M27.5,22.825 L27.5,35.25 L37.5,29.05 L27.5,22.825 L27.5,22.825 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="42.5" y="17.5" width="2.5" height="37.6"></rect>
+            <path d="M67.5,12.5 L67.5,17.5 C67.5,25.325 65.875,36.975 63.175,42.95 C59.45,51.15 52.45,61.95 40,67.3 C27.55,61.95 20.525,51.15 16.825,42.95 C14.125,36.975 12.5,25.3 12.5,17.5 L12.5,12.5 L67.5,12.5 L67.5,12.5 Z M70,10 L10,10 L10,17.5 C10,24.9 11.5,37.225 14.55,43.975 C18.725,53.2 26.4,64.55 40,70 C53.6,64.55 61.275,53.2 65.45,43.975 C68.5,37.225 70,24.9 70,17.5 L70,10 L70,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

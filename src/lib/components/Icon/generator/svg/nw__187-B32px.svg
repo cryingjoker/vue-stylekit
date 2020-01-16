@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>187-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="187-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M18,11.77 L20.06,13 L18,14.23 L18,11.77 L18,11.77 Z M17,10 L17,16 L22,13 L17,10 L17,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="8" width="4" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="10" width="5" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="12" width="5" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="14" width="5" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="7" y="16" width="3" height="1"></rect>
+            <path d="M26.97,5 L5.03,5 C4.46,5 4,5.46 4,6.03 L4,20.96 C4,21.54 4.46,22 5.03,22 L15,22 L15,20.98 L5,20.97 L5.03,6 L26.96,6 L27,6.03 L26.97,21 L21.23,20.99 L23,22 L26.97,22 C27.54,22 28,21.54 28,20.97 L28,6.03 C28,5.46 27.54,5 26.97,5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M19.37,17.24 L20.71,18 L24,18 C24.55,18 25,17.55 25,17 L25,9 C25,8.45 24.55,8 24,8 L15,8 C14.45,8 14,8.45 14,9 L14,17 C14,17.55 14.45,18 15,18 L16.02,18 L16.02,17 L16.02,17 L15,17 L15,9 L24,9 L24,17" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M24,9 L24,17 L15,17 L15,9 L24,9 L24,9 Z M24,8 L15,8 C14.45,8 14,8.45 14,9 L14,17 C14,17.55 14.45,18 15,18 L24,18 C24.55,18 25,17.55 25,17 L25,9 C25,8.45 24.55,8 24,8 L24,8 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.01,20.77 L20.05,22.49 L19.83,22.62 L18.96,23.13 L19.46,24 L20.73,26.14 L19.87,26.64 L18.59,24.49 L18.08,23.64 L17.22,24.14 L17,24.26 L17.01,20.77 L17.01,20.77 Z M16.01,19.05 L16,26 L17.73,25 L19.51,28 L22.1,26.49 L20.32,23.48 L22.05,22.48 L16.01,19.05 L16.01,19.05 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

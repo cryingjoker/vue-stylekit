@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>061-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="061-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M25,47.5 L25,57.5 L15,57.5 L15,47.5 L25,47.5 L25,47.5 Z M27.5,45 L12.5,45 L12.5,60 L27.5,60 L27.5,45 L27.5,45 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="37.5" y="45" width="2.5" height="15"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="42.5" y="45" width="2.5" height="15"></rect>
+            <path d="M57.5,49.5 L62.75,52.5 L57.5,55.5 L57.5,49.5 L57.5,49.5 Z M55,45 L55,60 L67.5,52.5 L55,45 L55,45 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M40,20 C40.25,20 57.5,20 67.25,27.75 C67.25,27.75 67.5,28 67.5,28 L67.5,37.25 C67.5,37.5 67.5,37.5 67.25,37.5 L52.75,37.5 C52.5,37.5 52.5,37.25 52.5,37.25 L52.5,31 L52.5,29.25 L51,28.5 C50.75,28.5 45,26 40,26 C35,26 29.25,28.25 29,28.5 L27.5,29.25 L27.5,31 L27.5,37.25 C27.5,37.5 27.5,37.5 27.25,37.5 L12.75,37.5 C12.5,37.5 12.5,37.25 12.5,37.25 L12.5,28 C12.5,28 12.5,27.75 12.5,27.75 C22.75,20.25 39.75,20 40,20 L40,20 Z M40,17.5 C40,17.5 22,17.5 11,25.75 C10.5,26.25 10,27 10,28 L10,37.25 C10,38.75 11.25,40 12.75,40 L27.25,40 C28.75,40 30,38.75 30,37.25 L30,31 C30,31 35.5,28.75 40,28.75 C44.5,28.75 50,31 50,31 L50,37.25 C50,38.75 51.25,40 52.75,40 L67.25,40 C68.75,40 70,38.75 70,37.25 L70,28 C70,27 69.5,26.25 68.75,25.75 C58.25,17.5 40,17.5 40,17.5 L40,17.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

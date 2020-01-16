@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>158-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="158-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M23,10 L23,23 L10,23 L10,10 L23,10 L23,10 Z M23,9 L10,9 C9.45,9 9,9.45 9,10 L9,23 C9,23.55 9.45,24 10,24 L23,24 C23.55,24 24,23.55 24,23 L24,10 C24,9.45 23.55,9 23,9 L23,9 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M16.5,13 C18.43,13 20,14.57 20,16.5 C20,18.43 18.43,20 16.5,20 C14.57,20 13,18.43 13,16.5 C13,14.57 14.57,13 16.5,13 L16.5,13 Z M16.5,12 C14.01,12 12,14.01 12,16.5 C12,18.99 14.01,21 16.5,21 C18.99,21 21,18.99 21,16.5 C21,14.01 18.99,12 16.5,12 L16.5,12 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="17.65 18.35 16 16.71 16 14.51 17 14.51 17 16.29 18.35 17.65"></polygon>
+            <path d="M16.79,7 L21.46,9 L11.54,9 L16.21,7 L16.79,7 L16.79,7 Z M17,6 L16,6 L9,9 L9,10 L24,10 L24,9 L17,6 L17,6 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="16" y="4" width="1" height="2"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="22" y="24" width="1" height="4"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="19" y="24" width="1" height="4"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="16" y="24" width="1" height="4"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="13" y="24" width="1" height="4"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="10" y="24" width="1" height="4"></rect>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

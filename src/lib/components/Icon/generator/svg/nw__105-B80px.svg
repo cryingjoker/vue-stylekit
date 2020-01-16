@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>105-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="105-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M23.75,22.5 C29.95,22.5 35,27.55 35,33.75 C35,39.95 29.95,45 23.75,45 C17.55,45 12.5,39.95 12.5,33.75 C12.5,27.55 17.55,22.5 23.75,22.5 L23.75,22.5 Z M23.75,20 C16.15,20 10,26.15 10,33.75 C10,41.35 16.15,47.5 23.75,47.5 C31.35,47.5 37.5,41.35 37.5,33.75 C37.5,26.15 31.35,20 23.75,20 L23.75,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M56.25,22.5 C62.45,22.5 67.5,27.55 67.5,33.75 C67.5,39.95 62.45,45 56.25,45 C50.05,45 45,39.95 45,33.75 C45,27.55 50.05,22.5 56.25,22.5 L56.25,22.5 Z M56.25,20 C48.65,20 42.5,26.15 42.5,33.75 C42.5,41.35 48.65,47.5 56.25,47.5 C63.85,47.5 70,41.35 70,33.75 C70,26.15 63.85,20 56.25,20 L56.25,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M51.25,32.5 C50.55,32.5 50,33.05 50,33.75 C50,34.45 50.55,35 51.25,35 C51.95,35 52.5,34.45 52.5,33.75 C52.5,33.05 51.95,32.5 51.25,32.5 L51.25,32.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M61.25,32.5 C60.55,32.5 60,33.05 60,33.75 C60,34.45 60.55,35 61.25,35 C61.95,35 62.5,34.45 62.5,33.75 C62.5,33.05 61.95,32.5 61.25,32.5 L61.25,32.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M18.75,32.5 C18.05,32.5 17.5,33.05 17.5,33.75 C17.5,34.45 18.05,35 18.75,35 C19.45,35 20,34.45 20,33.75 C20,33.05 19.45,32.5 18.75,32.5 L18.75,32.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M28.75,32.5 C28.05,32.5 27.5,33.05 27.5,33.75 C27.5,34.45 28.05,35 28.75,35 C29.45,35 30,34.45 30,33.75 C30,33.05 29.45,32.5 28.75,32.5 L28.75,32.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M50.25,40.3 C53.725,43.225 58.8,43.225 62.25,40.3 L60.75,38.3 C58.175,40.575 54.3,40.55 51.725,38.3 L50.25,40.3 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.75,40.3 C21.225,43.225 26.3,43.225 29.75,40.3 L28.25,38.3 C25.675,40.575 21.8,40.55 19.225,38.3 L17.75,40.3 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(17.500000, 15.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M7.5,7.5 L5,7.5 C5,5.35 6.3,1.25 11.25,1.25 L11.25,3.75 C7.725,3.75 7.5,6.875 7.5,7.5 Z" id="Path"></path>
+                <path d="M5,7.5 C5,6.875 4.775,3.75 1.25,3.75 L1.25,1.25 C6.2,1.25 7.5,5.35 7.5,7.5 L5,7.5 L6.25,7.5 L5,7.5 Z" id="Path"></path>
+            </g>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="35 30 23.225 30 21.25 28.025 19.275 30 12.5 30 12.5 27.5 18.225 27.5 21.25 24.475 24.275 27.5 35 27.5"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="67.5 30 55.725 30 53.75 28.025 51.775 30 45 30 45 27.5 50.725 27.5 53.75 24.475 56.775 27.5 67.5 27.5"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="50 23.55 47.5 23.55 47.5 14.5 56.625 17.475 55.85 19.85 50 17.95"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="64.975 23.55 62.475 23.55 62.475 17.95 56.65 19.85 55.85 17.475 64.975 14.5"></polygon>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="55" y="17.5" width="2.5" height="2.5"></rect>
+            <g id="Group" transform="translate(27.500000, 47.500000)" fill="#101828" fill-rule="nonzero">
+                <rect id="Rectangle" x="21.25" y="7.55" width="2.5" height="4.975"></rect>
+                <rect id="Rectangle" x="16.25" y="5.025" width="2.5" height="10"></rect>
+                <rect id="Rectangle" x="11.25" y="0" width="2.5" height="17.5"></rect>
+                <rect id="Rectangle" x="1.25" y="7.6" width="2.5" height="4.975"></rect>
+                <rect id="Rectangle" x="6.25" y="5.025" width="2.5" height="10"></rect>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

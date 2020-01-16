@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>179-W56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1814.000000, -22848.000000)">
+            <g id="179-W56px" transform="translate(1814.000000, 22848.000000)">
+                <circle id="Oval-Copy-1145" fill="#101828" cx="28" cy="28" r="28"></circle>
+                <g id="179-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <path d="M30,6.2625 L30,33.7375 L10.7,33.7375 C10.2875,33.7375 10,33.7375 10,33.7375 L10,11.275 L15.475,6.2625 L30,6.2625 Z M29.4,5.0125 L15,5.0125 L8.75,10.7125 L8.75,33.2625 C8.75,34.2125 9.625,34.9875 10.7,34.9875 L29.425,34.9875 C30.4375,34.9875 31.25,34.2625 31.25,33.3625 L31.25,6.65 C31.25,5.75 30.425,5.0125 29.4,5.0125 L29.4,5.0125 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M20,17.175 L20.95,18.65 L21.8,19.975 L23.75,17.8625 L23.75,25 L16.25,25 L16.25,17.875 L18.2,19.975 L19.05,18.65 L20,17.175 L20,17.175 Z M20,15 C19.95,15 19.9,15.025 19.8625,15.075 L18,17.9625 L15.275,15.0625 C15.2375,15.025 15.2,15.0125 15.1625,15.0125 C15.075,15.0125 15,15.075 15,15.1875 L15,26.25 L25,26.25 L25,15.1875 C25,15.0875 24.925,15.0125 24.8375,15.0125 C24.8,15.0125 24.75,15.025 24.725,15.0625 L22,17.9625 L20.1375,15.075 C20.1,15.025 20.05,15 20,15 L20,15 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="16.25" y="22.5" width="7.5" height="1.25"></rect>
+                    <g id="Group" transform="translate(8.750000, 20.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M0,0.0125 L0,13.725 C0,14.425 0.575,15 1.275,15 L7.5,15 L7.5,13.7375 L1.25,13.7375 L1.275,-1.77635684e-15" id="Path"></path>
+                        <path d="M5.9125,13.7375 L5.9125,15" id="Path"></path>
+                    </g>
+                    <g id="Group" transform="translate(23.750000, 20.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M7.5,0.0125 L7.5,13.725 C7.5,14.425 6.925,15 6.225,15 L0,15 L0,13.7375 L6.25,13.7375 L6.225,0" id="Path"></path>
+                        <path d="M1.5875,13.7375 L1.5875,15" id="Path"></path>
+                    </g>
+                    <g id="Group" transform="translate(23.750000, 5.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M7.5,14.9875 L7.5,1.275 C7.5,0.575 6.925,0 6.225,0 L0,0 L0,1.2625 L6.25,1.2625 L6.225,15" id="Path"></path>
+                        <path d="M1.5875,1.2625 L1.5875,0" id="Path"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

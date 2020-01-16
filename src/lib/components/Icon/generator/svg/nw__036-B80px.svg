@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>036-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="036-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(10.000000, 12.500000)" fill="#101828">
+                <path d="M57.5,5 L32.5,5 L32.5,0 L0,5 L0,50 L32.5,55 L32.5,50 L57.5,50 C58.875,50 60,48.875 60,47.5 L60,7.5 C60,6.125 58.875,5 57.5,5 Z M19.2,36.975 L16.475,30.025 L13.55,36.6 L9.925,36.325 L14.075,27.2 L10.4,17.875 L14.1,17.7 L16.4,24.1 L19.35,17.275 L23.175,17 L18.825,27.15 L23.35,37.2 L19.2,36.975 Z M57.5,47.5 L32.5,47.5 L32.5,45 L40,45 L40,40 L32.5,40 L32.5,37.5 L40,37.5 L40,32.5 L32.5,32.5 L32.5,30 L40,30 L40,25 L32.5,25 L32.5,22.5 L40,22.5 L40,17.5 L32.5,17.5 L32.5,15 L40,15 L40,10 L32.5,10 L32.5,7.5 L57.5,7.5 L57.5,47.5 Z" id="Shape"></path>
+                <rect id="Rectangle" x="42.5" y="10" width="10" height="5"></rect>
+                <rect id="Rectangle" x="42.5" y="17.5" width="10" height="5"></rect>
+                <rect id="Rectangle" x="42.5" y="25" width="10" height="5"></rect>
+                <rect id="Rectangle" x="42.5" y="32.5" width="10" height="5"></rect>
+                <rect id="Rectangle" x="42.5" y="40" width="10" height="5"></rect>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

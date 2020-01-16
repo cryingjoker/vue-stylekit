@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>219-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="219-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M12,24 L5.05,24 C5.02,24 5,23.98 5,23.95 L5,22 L12,22 L12,21 L5,21 L5,7.05 C5,7.02 5.02,7 5.05,7 L15.95,7 C15.98,7 16,7.02 16,7.05 L16,16 L17,16 L17,7.05 C17,6.47 16.53,6 15.95,6 L5.05,6 C4.47,6 4,6.47 4,7.05 L4,21 L4,22 L4,23.95 C4,24.53 4.47,25 5.05,25 L12,25 L12,24 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M27,18 L27.02,26 L14,26.02 L13.98,18 L27,18 L27,18 Z M27.02,17 L13.98,17 C13.44,17 13,17.44 13,17.98 L13,26.02 C13,26.56 13.44,27 13.98,27 L27.02,27 C27.56,27 28,26.56 28,26.02 L28,17.98 C28,17.44 27.56,17 27.02,17 L27.02,17 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="13.65" y="21.01" width="13.88" height="1"></rect>
+            <path d="M20.5,15 C21.71,15 22.72,15.86 22.95,17 L18.05,17 C18.28,15.86 19.29,15 20.5,15 L20.5,15 Z M20.5,14 C18.57,14 17,15.57 17,17.5 C17,17.67 17.03,17.84 17.05,18 L23.95,18 C23.97,17.84 24,17.67 24,17.5 C24,15.57 22.43,14 20.5,14 L20.5,14 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(6.000000, 9.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M4.52,3 C5.05,3 5.54,3.21 5.89,3.55 L6.6,2.84 C6.06,2.32 5.33,2 4.52,2 C3.69,2 2.94,2.34 2.4,2.88 L3.11,3.59 C3.47,3.22 3.97,3 4.52,3 Z" id="Path"></path>
+                <path d="M5.18,4.26 C5.01,4.1 4.78,4 4.52,4 C4.24,4 3.99,4.11 3.81,4.29 L4.48,4.96 L5.18,4.26 Z" id="Path"></path>
+                <path d="M4.52,1 C5.6,1 6.59,1.44 7.31,2.14 L8.02,1.43 C7.11,0.55 5.88,0 4.52,0 C3.14,0 1.89,0.56 0.98,1.46 L1.69,2.17 C2.42,1.45 3.42,1 4.52,1 Z" id="Path"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

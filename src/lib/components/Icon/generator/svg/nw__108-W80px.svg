@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>108-W80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-869.000000, -14035.000000)">
+            <g id="108-W80px" transform="translate(869.000000, 14035.000000)">
+                <circle id="Oval-Copy-711" fill="#101828" cx="40" cy="40" r="40"></circle>
+                <g id="108-B32px-Copy-8" transform="translate(12.000000, 12.000000)">
+                    <path d="M35,16.695 L35,19.25 L34.9475,19.25 C36.05,20.72 36.75,22.5225 36.75,24.5 C36.75,29.33 32.83,33.25 28,33.25 C23.17,33.25 19.25,29.33 19.25,24.5 C19.25,22.5225 19.9325,20.72 21.0525,19.25 L21,19.25 L21,16.695 C18.865,18.62 17.5,21.4025 17.5,24.5 C17.5,30.2925 22.2075,35 28,35 C33.7925,35 38.5,30.2925 38.5,24.5 C38.5,21.4025 37.135,18.62 35,16.695 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M35,8.75 L35,17.5 L21,17.5 L21,8.75 L35,8.75 L35,8.75 Z M35,7 L21,7 C20.0375,7 19.25,7.7875 19.25,8.75 L19.25,17.5 C19.25,18.4625 20.0375,19.25 21,19.25 L35,19.25 C35.9625,19.25 36.75,18.4625 36.75,17.5 L36.75,8.75 C36.75,7.7875 35.9625,7 35,7 L35,7 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="25.375 12.25 25.375 14 27.125 14 27.125 15.75 28.875 15.75 28.875 14 30.625 14 30.625 12.25 28.875 12.25 28.875 10.5 27.125 10.5 27.125 12.25"></polygon>
+                    <path d="M14,49 L14,45.5 C14,42.6125 16.3625,40.25 19.25,40.25 L36.75,40.25 C39.6375,40.25 42,42.6125 42,45.5 L42,49 L43.75,49 L43.75,45.5 C43.75,41.6325 40.6175,38.5 36.75,38.5 L19.25,38.5 C15.3825,38.5 12.25,41.6325 12.25,45.5 L12.25,49 L14,49 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>178-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="178-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(10.000000, 17.500000)" fill="#101828" fill-rule="nonzero">
+                <path d="M2.475,2.5 L37.5,2.5 L37.5,0 L2.475,0 C1.125,0 0,1.1 0,2.475 L0,35 C0,36.375 1.125,37.5 2.475,37.5 L42.5,37.5 L42.5,35 L2.5,35 L2.5,30 L42.5,30 L42.5,27.5 L2.5,27.5 L2.475,2.5 Z" id="Path"></path>
+                <rect id="Rectangle" x="50" y="27.5" width="7.5" height="2.5"></rect>
+                <path d="M57.525,0 L55,0 L55,2.5 L57.5,2.5 L57.525,35 L50,35 L50,37.5 L57.525,37.5 C58.875,37.5 60,36.375 60,35 L60,2.475 C60,1.1 58.875,0 57.525,0 Z" id="Path"></path>
+            </g>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="45 55 42.5 55 42.5 60 37.5 60 37.5 55 35 55 35 60 30.05 60 30.05 62.5 35 62.5 37.5 62.5 42.5 62.5 45 62.5 50 62.5 50 60 45 60"></polygon>
+            <path d="M40,48.75 C39.325,48.75 38.75,49.3 38.75,50 C38.75,50.7 39.3,51.25 40,51.25 C40.675,51.25 41.25,50.7 41.25,50 C41.25,49.3 40.675,48.75 40,48.75 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="55" y="30" width="2.5" height="40"></rect>
+            <path d="M60,20 L60,26.25 C60,28.325 58.325,30 56.25,30 C54.175,30 52.5,28.325 52.5,26.25 L52.5,20 L60,20 L60,20 Z M62.5,17.5 L50,17.5 L50,26.25 C50,29.7 52.8,32.5 56.25,32.5 C59.7,32.5 62.5,29.7 62.5,26.25 L62.5,17.5 L62.5,17.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M57.5,12.5 L57.5,17.5 L55,17.5 L55,12.5 L57.5,12.5 L57.5,12.5 Z M57.5,10 L55,10 C53.625,10 52.5,11.125 52.5,12.5 L52.5,17.5 C52.5,18.875 53.625,20 55,20 L57.5,20 C58.875,20 60,18.875 60,17.5 L60,12.5 C60,11.125 58.875,10 57.5,10 L57.5,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

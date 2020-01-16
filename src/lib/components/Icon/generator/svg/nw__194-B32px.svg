@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>194-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="194-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M13.5,26 C13.77,26 14,25.78 14,25.5 C14,25.22 13.78,25 13.5,25 C13.23,25 13,25.22 13,25.5 C13.01,25.78 13.23,26 13.5,26" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="6" y="23" width="15" height="1"></rect>
+            <path d="M21.01,21 L21.02,27 L7,27.02 L6.98,5 L21,5 L21.01,14 L22,14 L22,4.98 C22,4.44 21.56,4 21.02,4 L6.98,4 C6.44,4 6,4.44 6,4.98 L6,27.02 C6,27.56 6.44,28 6.98,28 L21.02,28 C21.56,28 22,27.56 22,27.02 L22,21 L21.01,21 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="9" y="17" width="14" height="1"></rect>
+            <path d="M24,15.92 L26.26,17.5 L24,19.08 L24,15.92 L24,15.92 Z M23,14 L23,21 L28,17.5 L23,14 L23,14 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M13.71,12 L12.17,12 L12.17,13 L13.45,13 C13.12,13.6 12.52,14 11.83,14 C10.79,14 10,13.1 10,12 C10,10.9 10.79,10 11.83,10 C12.53,10 13.13,10.4 13.45,11 L14.48,11 C14.09,9.84 13.05,9 11.82,9 C10.27,9 9,10.34 9,12 C9,13.66 10.27,15 11.83,15 C13.39,15 14.66,13.66 14.66,12 L14.66,12 L13.71,12 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.24,10 C17.66,10 18,10.34 18,10.76 C18,11.18 17.66,11.52 17.24,11.52 L16,11.52 L16,10 L17.24,10 L17.24,10 Z M17.24,9 L15,9 L15,12.52 L17.24,12.52 C18.21,12.52 19,11.73 19,10.76 L19,10.76 C19,9.79 18.21,9 17.24,9 L17.24,9 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.24,12.48 C17.66,12.48 18,12.82 18,13.24 C18,13.66 17.66,14 17.24,14 L16,14 L16,12.48 L17.24,12.48 L17.24,12.48 Z M17.24,11.48 L15,11.48 L15,15 L17.24,15 C18.21,15 19,14.21 19,13.24 C19,12.27 18.21,11.48 17.24,11.48 L17.24,11.48 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

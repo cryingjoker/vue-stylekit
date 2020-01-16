@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>200-W80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-878.000000, -25587.000000)">
+            <g id="200-W80px" transform="translate(878.000000, 25587.000000)">
+                <circle id="Oval-Copy-1267" fill="#101828" cx="40" cy="40" r="40"></circle>
+                <g id="200-B32px-Copy-8" transform="translate(12.000000, 12.000000)">
+                    <g id="Group" transform="translate(7.000000, 12.250000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M10.5,17.465 L1.75,17.4475 L1.785,1.75 L27.965,1.75 L28,1.785 L27.9825,7 L29.75,7 L29.75,1.785 C29.75,0.805 28.945,0 27.965,0 L1.785,0 C0.805,0 0,0.805 0,1.785 L0,17.4475 C0,18.4275 0.805,19.2325 1.785,19.2325 L10.5,19.2325 L10.5,17.465 Z" id="Path"></path>
+                        <path d="M26.3725,22.7325 C26.46,22.7675 26.53,22.785 26.53,22.785 L26.5475,22.7325 L26.3725,22.7325 Z" id="Path"></path>
+                    </g>
+                    <path d="M47.215,22.75 L47.25,22.785 L47.215,38.4825 L21,38.4475 L21.035,22.75 L47.215,22.75 L47.215,22.75 Z M47.215,21 L21.035,21 C20.055,21 19.25,21.7875 19.25,22.785 L19.25,38.4475 C19.25,39.4275 20.055,40.2325 21.035,40.2325 L47.215,40.2325 C48.195,40.2325 49,39.4275 49,38.4475 L49,22.785 C49,21.7875 48.195,21 47.215,21 L47.215,21 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M34.1075,40.2325 C28.665,40.2325 24.5875,41.3875 22.75,42.0175 L22.75,43.75 C24.3075,43.19 28.49,41.9125 34.1075,41.9125 C39.76,41.9125 43.9775,43.2075 45.5,43.7675 L45.5,42.035 C43.6975,41.3875 39.6025,40.2325 34.1075,40.2325 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M17.4825,31.7275 C14.2275,32.095 11.7775,32.8125 10.4825,33.25 L10.5,35.035 C11.62,34.6325 14.105,33.8625 17.5,33.46 L17.4825,31.7275 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
