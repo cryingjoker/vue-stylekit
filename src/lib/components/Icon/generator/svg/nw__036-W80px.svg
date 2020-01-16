@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>036-W80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-869.000000, -4843.000000)">
+            <g id="036-W80px" transform="translate(869.000000, 4843.000000)">
+                <circle id="Oval-Copy-300" fill="#101828" cx="40" cy="40" r="40"></circle>
+                <g id="036-B32px-Copy-7" transform="translate(12.000000, 12.000000)">
+                    <path d="M47.25,12.25 L29.75,12.25 L29.75,8.75 L7,12.25 L7,43.75 L29.75,47.25 L29.75,43.75 L47.25,43.75 C48.2125,43.75 49,42.9625 49,42 L49,14 C49,13.0375 48.2125,12.25 47.25,12.25 Z M20.44,34.6325 L18.5325,29.7675 L16.485,34.37 L13.9475,34.1775 L16.8525,27.79 L14.28,21.2625 L16.87,21.14 L18.48,25.62 L20.545,20.8425 L23.2225,20.65 L20.1775,27.755 L23.345,34.79 L20.44,34.6325 Z M47.25,42 L29.75,42 L29.75,40.25 L35,40.25 L35,36.75 L29.75,36.75 L29.75,35 L35,35 L35,31.5 L29.75,31.5 L29.75,29.75 L35,29.75 L35,26.25 L29.75,26.25 L29.75,24.5 L35,24.5 L35,21 L29.75,21 L29.75,19.25 L35,19.25 L35,15.75 L29.75,15.75 L29.75,14 L47.25,14 L47.25,42 Z" id="Shape" fill="#FFFFFF"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" x="36.75" y="15.75" width="7" height="3.5"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="36.75" y="21" width="7" height="3.5"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="36.75" y="26.25" width="7" height="3.5"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="36.75" y="31.5" width="7" height="3.5"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="36.75" y="36.75" width="7" height="3.5"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>155-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="155-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M26.98,9.02 L24,9.02 L24,10.02 L26.98,10.02 L27,10.04 L26.98,21.04 L5,21.02 L5.02,10.02 L8,10.02 L8,9.02 L5.02,9.02 C4.46,9.02 4,9.48 4,10.04 L4,21.02 C4,21.58 4.46,22.04 5.02,22.04 L26.98,22.04 C27.54,22.04 28,21.58 28,21.02 L28,10.04 C28,9.48 27.54,9.02 26.98,9.02 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M22,10.02 L22,11 L10,11 L10,10.02 L22,10.02 L22,10.02 Z M23,9.02 L9,9.02 L9,12 L23,12 L23,9.02 L23,9.02 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M21.53,5.18 C21.55,5.18 21.58,5.19 21.58,5.22 L21.77,6.27 L9.9,8.53 L9.71,7.49 C9.71,7.46 9.73,7.42 9.77,7.41 L21.52,5.18 L21.53,5.18 L21.53,5.18 Z M21.53,4.18 C21.46,4.18 21.4,4.19 21.33,4.2 L9.58,6.43 C9,6.54 8.62,7.1 8.73,7.67 L9.1,9.7 L22.94,7.07 L22.56,5.04 C22.48,4.53 22.03,4.18 21.53,4.18 L21.53,4.18 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M22,10.02 L22,18.01 L10,18.01 L10,10.02 L22,10.02 L22,10.02 Z M23,9.02 L9,9.02 L9,18.01 C9,18.56 9.45,19.01 10,19.01 L22,19.01 C22.55,19.01 23,18.56 23,18.01 L23,9.02 L23,9.02 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(11.395789, 7.689105) rotate(-55.907869) translate(-11.395789, -7.689105) " x="9.74586337" y="7.18912754" width="3.29985127" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(14.330337, 7.117687) rotate(-55.907869) translate(-14.330337, -7.117687) " x="12.6804114" y="6.61770954" width="3.29985127" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(17.356654, 6.540454) rotate(-55.907869) translate(-17.356654, -6.540454) " x="15.7067284" y="6.04047654" width="3.29985127" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(20.392052, 5.968726) rotate(-55.907869) translate(-20.392052, -5.968726) " x="18.7421264" y="5.46874854" width="3.29985127" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(11.288504, 10.499923) rotate(-43.731830) translate(-11.288504, -10.499923) " x="9.68846684" y="9.99991139" width="3.20007432" height="1.00002322"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(14.369712, 10.502619) rotate(-43.731830) translate(-14.369712, -10.502619) " x="12.7696748" y="10.0026074" width="3.20007432" height="1.00002322"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(17.458146, 10.498302) rotate(-43.731830) translate(-17.458146, -10.498302) " x="15.8581088" y="9.99829039" width="3.20007432" height="1.00002322"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(20.539154, 10.500598) rotate(-43.731830) translate(-20.539154, -10.500598) " x="18.9391168" y="10.0005864" width="3.20007432" height="1.00002322"></rect>
+            <path d="M15.98,21.97 C11.67,21.97 8.44,22.63 7,22.99 L7,24.02 C8.23,23.7 11.54,22.97 15.98,22.97 C20.46,22.97 23.79,23.71 25,24.03 L25,23 C23.57,22.63 20.33,21.97 15.98,21.97 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

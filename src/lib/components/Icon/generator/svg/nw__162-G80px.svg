@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>162-G80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-768.000000, -20666.000000)">
+            <g id="162-G80px" transform="translate(768.000000, 20666.000000)">
+                <circle id="Oval-Copy-942" fill="#E3E8EC" cx="40" cy="40" r="40"></circle>
+                <g id="162-B32px-Copy-9" transform="translate(12.000000, 12.000000)">
+                    <path d="M47.25,24.5 L47.25,31.5 L8.75,31.5 L8.75,24.5 L47.25,24.5 L47.25,24.5 Z M47.3375,22.75 L8.6625,22.75 C7.735,22.75 7,23.5025 7,24.4125 L7,31.605 C7,32.515 7.735,33.25 8.6625,33.25 L47.355,33.25 C48.265,33.25 49.0175,32.515 49.0175,31.5875 L49.0175,24.395 C49,23.5025 48.265,22.75 47.3375,22.75 L47.3375,22.75 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="12.25" y="26.25" width="7" height="3.5"></rect>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="43.75 31.5 36.75 31.5 36.75 35 43.75 35"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="19.25 31.5 12.25 31.5 12.25 35 19.25 35"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="29.75 28 26.25 28 26.25 29.75 29.75 29.75"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="36.75 28 33.25 28 33.25 29.75 36.75 29.75"></polygon>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="43.75 28 40.25 28 40.25 29.75 43.75 29.75"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

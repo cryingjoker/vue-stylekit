@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>115-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="115-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="24 10 23 10 23 23 24 23"></polygon>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="10.5" y="4" width="15" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="8" y="10" width="1" height="12"></rect>
+            <path d="M25.5,5 C26.33,5 27,5.67 27,6.5 L27,9 L24,9 L24,6.5 C24,5.67 24.67,5 25.5,5 L25.5,5 Z M25.5,4 C24.12,4 23,5.12 23,6.5 L23,10 L27.03,10 C27.57,10 28,9.57 28,9.03 L28,6.5 C28,5.12 26.88,4 25.5,4 L25.5,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="6.5" y="27" width="15" height="1"></rect>
+            <path d="M10.5,4 C9.12,4 8,5.12 8,6.5 L8,10 L9,10 L9,9 L9,7 L9,6.5 C9,5.67 9.67,5 10.5,5 L10.5,4 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.99,9 C17.96,9.68 17.82,10.56 17.63,10.98 C17.35,11.61 16.84,12.41 16,12.89 C15.16,12.41 14.65,11.61 14.37,10.98 C14.18,10.55 14.04,9.67 14.01,9 L17.99,9 L17.99,9 Z M19,8 L13,8 L13,8.75 C13,9.49 13.15,10.72 13.45,11.4 C13.87,12.32 14.64,13.46 16,14 C17.36,13.46 18.13,12.32 18.55,11.4 C18.85,10.72 19,9.49 19,8.75 L19,8 L19,8 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="21 18 11 18 11 19 21 19"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="21 16 11 16 11 17 21 17"></polygon>
+            <g id="Group" transform="translate(4.000000, 22.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M15,0 L5,0 L1.03,0 C0.46,0 0,0.46 0,1.03 L0,3.5 C0,4.88 1.12,6 2.5,6 L2.5,5 C1.67,5 1,4.33 1,3.5 L1,1 L2.5,1 L4,1 L5,1 L14,1 C14,0.45 14.45,0 15,0 Z" id="Path"></path>
+                <path d="M19,0 L19,1 L19,2 L19,3.5 C19,4.33 18.33,5 17.5,5 C16.67,5 16,4.33 16,3.5 L16,2 L16,1 C16,1.55 15.55,2 15,2 L15,3.5 C15,4.88 16.12,6 17.5,6 C18.88,6 20,4.88 20,3.5 L20,0 L19,0 Z" id="Path"></path>
+                <path d="M16,1 C16,0.45 15.55,0 15,0 C14.45,0 14,0.45 14,1 L15,1 L15,2 C15.55,2 16,1.55 16,1 Z" id="Path"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

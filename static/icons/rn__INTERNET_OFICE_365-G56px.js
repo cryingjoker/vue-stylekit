@@ -1,1 +1,0 @@
-[{'rn__INTERNET_OFICE_365-G56px': {width: 56,height: 56,viewBox: '0 0 56 56',data: '<g _fill="none" fill-rule="evenodd"><circle pid="0" _fill="#E3E8EC" cx="28" cy="28" r="28"/><path pid="1" _fill="#101828" d="M15.525 37.013v-17.9L31.475 13l9 2.663v24.862l-9 2.475-15.95-5.988 15.95 2.25V17.726L21.012 20.3v14.688z"/><path pid="2" d="M8 8h40v40H8z"/></g>'}}]

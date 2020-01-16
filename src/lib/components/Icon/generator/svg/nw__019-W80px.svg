@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>019-W80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-2151.000000, -2584.000000)">
+            <g id="019-W80px" transform="translate(2151.000000, 2584.000000)">
+                <circle id="Oval-Copy-189" fill="#101828" cx="40" cy="40" r="40"></circle>
+                <g id="019-B32px-Copy-8" transform="translate(12.000000, 12.000000)">
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="27.125" y="8.155" width="1.75" height="4.095"></rect>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(40.596446, 40.576951) rotate(-45.000000) translate(-40.596446, -40.576951) " points="39.7214541 38.5294704 41.4714374 38.5294704 41.4714374 42.6244311 39.7214541 42.6244311"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(15.420829, 15.421000) rotate(-45.000000) translate(-15.420829, -15.421000) " points="14.5458369 13.3735196 16.2958201 13.3735196 16.2958201 17.4684804 14.5458369 17.4684804"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(40.598899, 15.411079) rotate(-45.000000) translate(-40.598899, -15.411079) " points="38.5514189 14.5360876 42.6463796 14.5360876 42.6463796 16.2860709 38.5514189 16.2860709"></polygon>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(15.418375, 40.586872) rotate(-45.000000) translate(-15.418375, -40.586872) " points="13.3708946 39.7118799 17.4658554 39.7118799 17.4658554 41.4618631 13.3708946 41.4618631"></polygon>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="27.125" y="8.155" width="1.75" height="4.095"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="27.125" y="43.75" width="1.75" height="4.095"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="7.735" y="27.125" width="4.515" height="1.75"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="43.75" y="27.125" width="4.5325" height="1.75"></rect>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(32.093899, 23.915575) rotate(-45.000000) translate(-32.093899, -23.915575) " points="28.366435 23.0405836 35.8213635 23.0405836 35.8213635 24.7905669 28.366435 24.7905669"></polygon>
+                    <path d="M28,27.1425 C28.4725,27.1425 28.8575,27.5275 28.8575,28 C28.8575,28.4725 28.4725,28.8575 28,28.8575 C27.5275,28.8575 27.1425,28.4725 27.1425,28 C27.1425,27.5275 27.5275,27.1425 28,27.1425 L28,27.1425 Z M28,25.3925 C26.565,25.3925 25.3925,26.565 25.3925,28 C25.3925,29.435 26.565,30.6075 28,30.6075 C29.435,30.6075 30.6075,29.435 30.6075,28 C30.6075,26.565 29.4525,25.3925 28,25.3925 L28,25.3925 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M28,8.75 C38.6225,8.75 47.25,17.3775 47.25,28 C47.25,38.6225 38.6225,47.25 28,47.25 C17.3775,47.25 8.75,38.6225 8.75,28 C8.75,17.3775 17.3775,8.75 28,8.75 L28,8.75 Z M28,7 C16.3975,7 7,16.3975 7,28 C7,39.6025 16.3975,49 28,49 C39.6025,49 49,39.6025 49,28 C49,16.3975 39.6025,7 28,7 L28,7 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M33.25,35 L33.25,38.5 L22.75,38.5 L22.75,35 L33.25,35 L33.25,35 Z M33.25,33.25 L22.75,33.25 C21.7875,33.25 21,34.0375 21,35 L21,38.5 C21,39.4625 21.7875,40.25 22.75,40.25 L33.25,40.25 C34.2125,40.25 35,39.4625 35,38.5 L35,35 C35,34.0375 34.2125,33.25 33.25,33.25 L33.25,33.25 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

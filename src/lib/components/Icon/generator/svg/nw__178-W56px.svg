@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>178-W56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-532.000000, -22698.000000)">
+            <g id="178-W56px" transform="translate(532.000000, 22698.000000)">
+                <circle id="Oval-Copy-772" fill="#101828" cx="28" cy="28" r="28"></circle>
+                <g id="178-B32px-Copy-5" transform="translate(8.000000, 7.000000)">
+                    <g id="Group" transform="translate(5.000000, 8.750000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M1.2375,1.25 L18.75,1.25 L18.75,0 L1.2375,0 C0.5625,0 0,0.55 0,1.2375 L0,17.5 C0,18.1875 0.5625,18.75 1.2375,18.75 L21.25,18.75 L21.25,17.5 L1.25,17.5 L1.25,15 L21.25,15 L21.25,13.75 L1.25,13.75 L1.2375,1.25 Z" id="Path"></path>
+                        <rect id="Rectangle" x="25" y="13.75" width="3.75" height="1.25"></rect>
+                        <path d="M28.7625,0 L27.5,0 L27.5,1.25 L28.75,1.25 L28.7625,17.5 L25,17.5 L25,18.75 L28.7625,18.75 C29.4375,18.75 30,18.1875 30,17.5 L30,1.2375 C30,0.55 29.4375,0 28.7625,0 Z" id="Path"></path>
+                    </g>
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="22.5 27.5 21.25 27.5 21.25 30 18.75 30 18.75 27.5 17.5 27.5 17.5 30 15.025 30 15.025 31.25 17.5 31.25 18.75 31.25 21.25 31.25 22.5 31.25 25 31.25 25 30 22.5 30"></polygon>
+                    <path d="M20,24.375 C19.6625,24.375 19.375,24.65 19.375,25 C19.375,25.35 19.65,25.625 20,25.625 C20.3375,25.625 20.625,25.35 20.625,25 C20.625,24.65 20.3375,24.375 20,24.375 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="27.5" y="15" width="1.25" height="20"></rect>
+                    <path d="M30,10 L30,13.125 C30,14.1625 29.1625,15 28.125,15 C27.0875,15 26.25,14.1625 26.25,13.125 L26.25,10 L30,10 L30,10 Z M31.25,8.75 L25,8.75 L25,13.125 C25,14.85 26.4,16.25 28.125,16.25 C29.85,16.25 31.25,14.85 31.25,13.125 L31.25,8.75 L31.25,8.75 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M28.75,6.25 L28.75,8.75 L27.5,8.75 L27.5,6.25 L28.75,6.25 L28.75,6.25 Z M28.75,5 L27.5,5 C26.8125,5 26.25,5.5625 26.25,6.25 L26.25,8.75 C26.25,9.4375 26.8125,10 27.5,10 L28.75,10 C29.4375,10 30,9.4375 30,8.75 L30,6.25 C30,5.5625 29.4375,5 28.75,5 L28.75,5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

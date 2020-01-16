@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>241-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="241-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M10,5.23 L10,8 L7.18,8 L10,5.23 L10,5.23 Z M11,4 L10.23,4 C9.97,4 9.72,4.1 9.53,4.29 L6.3,7.47 C6.11,7.66 6,7.91 6,8.18 L6,9 L10,9 C10.55,9 11,8.55 11,8 L11,4 L11,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M25.45,12.99 L25.47,13 L26,13.53 C26.02,13.55 26.02,13.57 26,13.59 L19.58,20.01 L19,20.01 L19,19.43 L25.42,13 C25.42,13 25.43,12.99 25.45,12.99 L25.45,12.99 Z M25.45,12 C25.19,12 24.92,12.1 24.72,12.3 L18,19.02 L18,21 L19.98,21 L26.69,14.29 C27.09,13.89 27.09,13.23 26.69,12.83 L26.17,12.31 C25.97,12.1 25.71,12 25.45,12 L25.45,12 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="23.08 17.41 21.55 15.88 22.25 15.17 23.78 16.7"></polygon>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="9" y="15" width="7" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="9" y="12" width="7" height="1"></rect>
+            <path d="M22.96,27 L7,27 L7,9 L9.75,9 C10.43,9 10.99,8.44 10.99,7.76 L10.99,5 L22.95,5 L22.95,12.59 L23.95,11.59 L23.95,5 C23.95,4.45 23.5,4 22.95,4 L10.29,4 C10.13,4 10,4.13 10,4.29 L9.99,8 L6.37,8 C6.16,8 6,8.17 6,8.37 L6,27 C6,27.55 6.45,28 7,28 L22.96,28 C23.51,28 23.96,27.55 23.96,27 L23.96,18.39 L22.96,19.39 L22.96,27 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

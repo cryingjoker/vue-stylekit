@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>220-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="220-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(10.000000, 12.500000)" fill="#101828" fill-rule="nonzero">
+                <circle id="Oval" cx="30" cy="27.5" r="2.5"></circle>
+                <polygon id="Rectangle" transform="translate(52.578500, 7.424185) rotate(-45.000000) translate(-52.578500, -7.424185) " points="47.678547 6.17419699 57.478453 6.17419699 57.478453 8.67417301 47.678547 8.67417301"></polygon>
+                <polygon id="Rectangle" transform="translate(55.157750, 4.847870) rotate(-45.000000) translate(-55.157750, -4.847870) " points="53.907762 -0.15208205 56.407738 -0.15208205 56.407738 9.84782205 53.907762 9.84782205"></polygon>
+                <polygon id="Rectangle" transform="translate(7.428435, 7.422175) rotate(-44.959485) translate(-7.428435, -7.422175) " points="6.17844668 2.52222077 8.67842332 2.52222077 8.67842332 12.3221292 6.17844668 12.3221292"></polygon>
+                <polygon id="Rectangle" transform="translate(4.857370, 4.845750) rotate(-45.000000) translate(-4.857370, -4.845750) " points="-0.14258205 3.59576199 9.85732205 3.59576199 9.85732205 6.09573801 -0.14258205 6.09573801"></polygon>
+                <rect id="Rectangle" x="28.75" y="15" width="2.5" height="12.5"></rect>
+                <polygon id="Rectangle" transform="translate(34.695063, 32.174072) rotate(-45.000000) translate(-34.695063, -32.174072) " points="33.4450745 25.9241324 35.9450505 25.9241324 35.9450505 38.4240126 33.4450745 38.4240126"></polygon>
+                <path d="M30,2.5 C43.775,2.5 55,13.725 55,27.5 C55,41.275 43.775,52.5 30,52.5 C16.225,52.5 5,41.275 5,27.5 C5,13.725 16.225,2.5 30,2.5 L30,2.5 Z M30,0 C14.8,0 2.5,12.3 2.5,27.5 C2.5,42.7 14.8,55 30,55 C45.2,55 57.5,42.7 57.5,27.5 C57.5,12.3 45.2,0 30,0 L30,0 Z" id="Shape"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

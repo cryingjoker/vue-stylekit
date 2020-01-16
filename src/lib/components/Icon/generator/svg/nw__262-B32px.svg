@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>262-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="262-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(4.000000, 6.000000)" stroke="#101828">
+                <path d="M1.64,10.21 C1.2,9.69 1.1,9.45 0.86,8.77 C0.6,8.02 0.48,7.21 0.53,6.36 C0.73,3.35 3.28,0.89 6.29,0.77 C8.59,0.68 10.63,1.9 11.71,3.74 C11.76,3.82 11.81,3.91 11.85,4 L11.91,4.1" id="Path"></path>
+                <path d="M9.62,18.26 C10.94,19.56 13.05,19.56 14.37,18.26 L21.72,11.02 L21.72,11.02 C22.34,10.4 22.82,9.65 23.12,8.82 C23.46,7.87 23.57,6.81 23.38,5.71 C22.95,3.23 20.91,1.23 18.42,0.85 C16.18,0.51 14.13,1.41 12.84,2.96 L7.5,9.5 C7.03,10.08 6.45,10.55 5.77,10.86 C4.71,11.33 3.18,11.57 1.63,10.21 C1.63,10.19 6.71,15.38 9.62,18.26 Z" id="Path" fill="#101828" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Path" points="1.64 10.21 1.95 10.52 2.48 11.06"></polyline>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

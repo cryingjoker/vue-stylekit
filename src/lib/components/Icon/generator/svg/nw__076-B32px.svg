@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>076-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="076-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M22.95,5 C22.98,5 23,5.02 23,5.05 L23,26.95 C23,26.98 22.98,27 22.95,27 L9.05,27 C9.02,27 9,26.98 9,26.95 L9,5.05 C9,5.02 9.02,5 9.05,5 L22.95,5 L22.95,5 Z M22.95,4 L9.05,4 C8.47,4 8,4.47 8,5.05 L8,26.95 C8,27.53 8.47,28 9.05,28 L22.95,28 C23.53,28 24,27.53 24,26.95 L24,5.05 C24,4.47 23.53,4 22.95,4 L22.95,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M16,26 C16.27,26 16.5,25.78 16.5,25.5 C16.5,25.22 16.27,25 16,25 C15.73,25 15.5,25.22 15.5,25.5 C15.5,25.78 15.73,26 16,26" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="8" y="23" width="16" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="19" y="9" width="2" height="10"></rect>
+            <path d="M17.33,12 L17.33,18 L17.33,12 L17.33,12 Z M18.33,11 L16.33,11 L16.33,19 L18.33,19 L18.33,11 L18.33,11 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M14.67,14 L14.67,18 L14.67,14 L14.67,14 Z M15.67,13 L13.67,13 L13.67,19 L15.67,19 L15.67,13 L15.67,13 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M12,16 L12,18 L12,16 L12,16 Z M13,15 L11,15 L11,19 L13,19 L13,15 L13,15 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

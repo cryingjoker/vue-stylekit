@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>196-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="196-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M23.99,15 L23.99,25 L19.99,25 L19.99,15 L23.99,15 L23.99,15 Z M24.03,14 L19.95,14 C19.42,14 18.99,14.43 18.99,14.96 L18.99,25.03 C18.99,25.56 19.42,25.99 19.95,25.99 L24.03,25.99 C24.56,25.99 24.99,25.56 24.99,25.03 L24.99,14.96 C24.99,14.43 24.56,14 24.03,14 L24.03,14 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M21.99,16 C21.44,16 20.99,16.45 20.99,17 C20.99,17.55 21.44,18 21.99,18 C22.54,18 22.99,17.55 22.99,17 C22.99,16.45 22.54,16 21.99,16 L21.99,16 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="20.99" y="21" width="2" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="20.99" y="19" width="2" height="1"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="20.99" y="23" width="2" height="1"></rect>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="6.98 10 6.98 11 8.47 11 8.47 16 9.47 16 9.47 11 11.02 11 11.02 10"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="12 10 13.5 16 14.5 16 16 10 15 10 14 14.49 13 10"></polygon>
+            <path d="M26.98,7 L5.02,7 C4.46,7 4,7.45 4,8.02 L4,19 C4,19.53 4.41,19.95 4.93,20 L7,20 L7,20.02 L13.55,20.02 C10.46,20.2 8.16,20.68 7,20.96 L7,22 C8.23,21.68 11.54,20.95 15.98,20.95 C16.68,20.95 17.36,20.97 18,21 L18,19.01 L5,19 L5.02,8 L26.98,8 L27,8.02 L26.98,19.02 L26,19.02 L26,20 L27.07,20 C27.59,19.95 28,19.53 28,19 L28,8.02 C28,7.45 27.54,7 26.98,7 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

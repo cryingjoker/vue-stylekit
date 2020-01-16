@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>132-W56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-532.000000, -17072.000000)">
+            <g id="132-W56px" transform="translate(532.000000, 17072.000000)">
+                <circle id="Oval-Copy-869" fill="#101828" cx="28" cy="28" r="28"></circle>
+                <g id="132-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <path d="M20,8.7625 C26.2,8.7625 31.25,13.8125 31.25,20.0125 C31.25,26.2125 26.2,31.2625 20,31.2625 C13.8,31.2625 8.75,26.2125 8.75,20.0125 C8.75,13.8125 13.8,8.7625 20,8.7625 L20,8.7625 Z M20,7.5125 C13.1,7.5125 7.5,13.1125 7.5,20.0125 C7.5,26.9125 13.1,32.5125 20,32.5125 C26.9,32.5125 32.5,26.9125 32.5,20.0125 C32.5,13.1 26.9,7.5125 20,7.5125 L20,7.5125 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(20.007758, 20.006544) rotate(-45.000000) translate(-20.007758, -20.006544) " points="-0.323296897 19.3815504 40.3388131 19.3815504 40.3388131 20.6315384 -0.323296897 20.6315384"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

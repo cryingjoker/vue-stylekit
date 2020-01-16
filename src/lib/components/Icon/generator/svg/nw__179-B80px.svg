@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>179-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="179-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M60,12.525 L60,67.475 L21.4,67.475 C20.575,67.475 20,67.475 20,67.475 L20,22.55 L30.95,12.525 L60,12.525 Z M58.8,10.025 L30,10.025 L17.5,21.425 L17.5,66.525 C17.5,68.425 19.25,69.975 21.4,69.975 L58.85,69.975 C60.875,69.975 62.5,68.525 62.5,66.725 L62.5,13.3 C62.5,11.5 60.85,10.025 58.8,10.025 L58.8,10.025 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M40,34.35 L41.9,37.3 L43.6,39.95 L47.5,35.725 L47.5,50 L32.5,50 L32.5,35.75 L36.4,39.95 L38.1,37.3 L40,34.35 L40,34.35 Z M40,30 C39.9,30 39.8,30.05 39.725,30.15 L36,35.925 L30.55,30.125 C30.475,30.05 30.4,30.025 30.325,30.025 C30.15,30.025 30,30.15 30,30.375 L30,52.5 L50,52.5 L50,30.375 C50,30.175 49.85,30.025 49.675,30.025 C49.6,30.025 49.5,30.05 49.45,30.125 L44,35.925 L40.275,30.15 C40.2,30.05 40.1,30 40,30 L40,30 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="32.5" y="45" width="15" height="2.5"></rect>
+            <g id="Group" transform="translate(17.500000, 40.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M0,0.025 L0,27.45 C0,28.85 1.15,30 2.55,30 L15,30 L15,27.475 L2.5,27.475 L2.55,-1.77635684e-15" id="Path"></path>
+                <path d="M11.825,27.475 L11.825,30" id="Path"></path>
+            </g>
+            <g id="Group" transform="translate(47.500000, 40.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M15,0.025 L15,27.45 C15,28.85 13.85,30 12.45,30 L0,30 L0,27.475 L12.5,27.475 L12.45,0" id="Path"></path>
+                <path d="M3.175,27.475 L3.175,30" id="Path"></path>
+            </g>
+            <g id="Group" transform="translate(47.500000, 10.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M15,29.975 L15,2.55 C15,1.15 13.85,0 12.45,0 L0,0 L0,2.525 L12.5,2.525 L12.45,30" id="Path"></path>
+                <path d="M3.175,2.525 L3.175,0" id="Path"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

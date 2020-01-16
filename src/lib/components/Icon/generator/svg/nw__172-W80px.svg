@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>172-W80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-869.000000, -22072.000000)">
+            <g id="172-W80px" transform="translate(869.000000, 22072.000000)">
+                <circle id="Oval-Copy-973" fill="#101828" cx="40" cy="40" r="40"></circle>
+                <g id="172-B32px-Copy-6" transform="translate(12.000000, 12.000000)">
+                    <g id="Group" transform="translate(10.500000, 12.250000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M7.2975,3.9375 C7.875,5.285 8.47,6.65 9.065,8.015 C11.06,12.6175 13.055,17.2375 15.05,21.84 C15.12,21.9975 15.3825,22.1725 15.5575,22.1725 C16.9225,22.19 18.305,22.1375 19.67,22.155 C20.055,22.155 20.23,22.015 20.3875,21.665 C22.8725,16.03 25.375,10.395 27.8775,4.76 C27.9475,4.6025 28.035,4.4275 28.1225,4.2175 C29.19,5.2325 30.135,6.3175 30.8875,7.56 C35.0175,14.5075 33.915,23.6425 26.18,28.8575 C18.97,33.7225 9.59,31.675 4.5675,24.5525 C2.695,21.8925 1.6275,18.9525 1.75,15.645 C1.925,11.025 3.7275,7.1575 7.07,4.0425 C7.105,4.0075 7.14,3.99 7.1925,3.955 C7.21,3.9375 7.2275,3.9375 7.2975,3.9375 Z" id="Path"></path>
+                        <path d="M17.535,11.6725 C16.2575,7.8925 15.0325,4.2525 13.7725,0.5425 C16.3625,-0.245 18.9,-0.0875 21.525,0.525 C20.195,4.2175 18.8825,7.8925 17.535,11.6725 Z" id="Path"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

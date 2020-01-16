@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>045-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="045-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <polygon id="Path" fill="#101828" points="47.5 20 32.75 20 32.75 23.925 36.6 27.025 36.6 29.325 28.9 29.325 28.9 32.925 34.675 36.175 36.35 36.175 36.35 50 32.1 47.55 32.1 40.45 25.3 36.125 25.3 51.525 40.125 60 54.7 51.525 54.7 36.125 48.15 40 48.15 47.425 43.925 50 43.925 36.175 45.7 36.175 51.475 32.925 51.475 29.2 43.775 29.2 43.775 26.75 47.5 23.675"></polygon>
+            <path d="M49.725,17.075 L56.675,22.25 L56.675,53.325 L40,62.625 L23.325,53.35 L23.325,22.275 L30.325,17.075 L49.725,17.075 L49.725,17.075 Z M50.425,15 L29.65,15 L21.25,21.225 L21.25,54.575 L40,65 L58.75,54.575 L58.75,21.225 L50.425,15 L50.425,15 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>
