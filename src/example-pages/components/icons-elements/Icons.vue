@@ -10,6 +10,50 @@
     </div>
     <div class="rt-container">
       <div class="rt-space-horizontal05">
+        <div class="row rt-space-bottom5">
+          <div class="rt-col-3">
+            <rt-input
+              placeholder="Найти иконку"
+              v-model.trim="searched"
+              @input="doSearch"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div  class="rt-space-horizontal05">
+        <div v-if="filteredIcons.length > 0" class="row">
+
+          <div
+            v-for="(icon, key) in filteredIcons"
+            :key="key"
+            class="rt-col-1 rt-space-bottom"
+          >
+            <div v-if="icon">
+              <div class="name">{{icon}}</div>
+              <div
+                class="preview"
+              >
+                <rt-icon :type="icon" />
+              </div>
+            </div>
+          </div>
+
+          <div
+            v-if="listLimited()"
+            class="rt-col-12 rt-space-top2"
+          >
+            <rt-button @click="loadMore">Ещё</rt-button>
+          </div>
+          {{findedIcons.length}} {{filteredIcons.length}}
+
+        </div>
+        <div v-else>
+          <h3>Ничего не нашлось по запросу «{{searched}}»</h3>
+        </div>
+      </div>
+
+      <!-- <div class="rt-space-horizontal05">
         <div class="row">
           <div class="rt-col-1 rt-space-bottom">
             <pre-code
@@ -456,7 +500,7 @@
             <pre-code text='<rt-icon type="icon_403" :candy=true caption="100"></rt-icon>'/>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="rt-container rt-space-top25">
@@ -467,8 +511,12 @@
 
 <script>
 import documentation from "../../../lib/components/Icon/docs/index.json";
+import listIcons from "../../../../static/list-icons.json"
 
 const componentsList = {};
+const prefixNewIcons = 'mw__'
+const listSize = 50
+
 if (!window.RTK_STYLE) window.RTK_STYLE = {};
 if (window.location.hostname === 'localhost')
   window.RTK_STYLE.icons_path = '/static/icons/'
@@ -477,12 +525,34 @@ export default {
   name: "AppIcons",
   components: componentsList,
   data: () => ({
-    documentation: {}
+    documentation: {},
+    findedIcons: [],
+    filteredIcons: [],
+    searched: ''
   }),
   mounted() {
     this.documentation = documentation
+
+    this.findedIcons = listIcons.filter(n => n.indexOf(this.searched) !== -1)
+    this.filteredIcons = this.findedIcons.slice(0, listSize)
   },
   created() {},
-  methods: {}
+  methods: {
+    doSearch (e) {
+      this.findedIcons = listIcons.filter(n => n.indexOf(this.searched) !== -1)
+      this.filteredIcons = this.findedIcons.slice(0, listSize)
+    },
+    loadMore () {
+      this.filteredIcons = this.filteredIcons.concat(
+        this.findedIcons.slice(
+          this.filteredIcons.length,
+          this.filteredIcons.length + listSize
+        )
+      )
+    },
+    listLimited () {
+      return (this.findedIcons.length > this.filteredIcons.length)
+    }
+  }
 };
 </script>
