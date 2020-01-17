@@ -18,7 +18,7 @@
 
                 <rt-template slot=&quot;header&quot;>
                   <rt-table-head-item>Территория</rt-table-head-item>
-                  <rt-table-head-item colspan='4'>Наименование услуги</rt-table-head-item>
+                  <rt-table-head-item :colspan='4'>Наименование услуги</rt-table-head-item>
                   <rt-table-head-item>Мораторий на блокировку</rt-table-head-item>
                   <rt-table-head-item>Минимальный период блокировки</rt-table-head-item>
                   <rt-table-head-item>Стоимость добровольной блокировки в базовый период</rt-table-head-item>

@@ -13,7 +13,7 @@ export default {
     const style = {};
     if (this.width) {
       style.width =
-        String(this.width).replace(/[0-9]/gi).length === 0
+        String(this.width).replace(/[0-9]/gi, '').length === 0
           ? String(this.width) + "px"
           : this.width;
     }
