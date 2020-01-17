@@ -2,15 +2,11 @@
   <div class="rt-container">
     <div class="app-content rt-col-12 rt-col-md-3">
       <div class="app-title">
-        <h1 class="rt-font-hero rt-col">
-          Input
-        </h1>
+        <h1 class="rt-font-hero">Input</h1>
       </div>
       <div class="app-body">
         <div class="app-row row">
-          <p class="rt-font-h3 rt-col">
-            Input with js
-          </p>
+          <p class="rt-font-h3 rt-col">Input with js</p>
         </div>
         <!--<div class="is-b2c">-->
         <div class="app-row row">
@@ -129,6 +125,8 @@
                   value=""
                   :max-length="2"
                   placeholder="Ваше любимое число до 99"
+                  :min-number="0"
+                  :max-number="99"
         />
         <rt-input insert-type="string"
                   value=""
