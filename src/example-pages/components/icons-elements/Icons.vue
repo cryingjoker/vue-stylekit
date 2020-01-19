@@ -14,42 +14,101 @@
           <div class="rt-col-3">
             <rt-input
               placeholder="Найти иконку"
-              v-model.trim="searched"
               @input="doSearch"
             />
           </div>
         </div>
       </div>
 
-      <div  class="rt-space-horizontal05">
-        <div v-if="filteredIcons.length > 0" class="row">
+      <div class="rt-space-horizontal05">
 
-          <div
-            v-for="(icon, key) in filteredIcons"
-            :key="key"
-            class="rt-col-1 rt-space-bottom"
-          >
-            <div v-if="icon">
-              <div class="name">{{icon}}</div>
+        <div v-if="isLoading">
+          <rt-spinner />
+        </div>
+
+        <rt-annotation
+          label="Новые иконки"
+          :open="true"
+          class="rt-space-top rt-space-bottom3"
+        >
+          <template slot="content">
+            <div v-if="filteredlistIcons.length > 0" class="row">
               <div
-                class="preview"
+                v-for="(icon, key) in filteredlistIcons"
+                :key="key"
+                class="rt-col-1"
               >
-                <rt-icon :type="icon" />
+                <div
+                  class="preview btn"
+                  @click="detailIconShow(icon)"
+                  :class="{ selected: icon === selectedIcon }"
+                >
+                  <div class="preview__name">{{icon}}</div>
+                  <div class="preview__el">
+                    <rt-icon :type="previewType(icon)" />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                v-if="listLimited()"
+                class="rt-col-12 rt-space-top2"
+              >
+                <rt-button @click="loadMore">Ещё</rt-button>
+              </div>
+
+              <!-- <div class="rt-col-12">
+                === 
+                {{findedIcons.length}} {{filteredIcons.length}}
+                ===
+              </div> -->
+
+            </div>
+            <div v-else>
+              <h3>Ничего не нашлось по запросу «{{searched}}»</h3>
+            </div>
+          </template>
+        </rt-annotation>
+
+        <div
+          v-if="selectedIcon"
+          class="detail row"
+          :style="{ background: detailBg }"
+        >
+          <div class="detail__name rt-col-12">Выбрана иконка <strong>{{ selectedIcon }}</strong></div>
+          <div class="detail__bg">
+            <input type="color" v-model="detailBg" />
+          </div>
+          <div class="detail__el rt-col-auto">
+            <!-- Big preview -->
+            <rt-icon :type="detailCopyType" size="120" />
+          </div>
+          <div class="detail__code rt-col-8">
+            <code class="monokai">
+              &lt;<font class="c_tag">rt-icon</font> <font class="c_attr">type</font>=<font class="c_val0">"<font class="c_val1">{{detailCopyType}}</font>"</font> &frasl;&gt;
+            </code>
+            <textarea
+              ref="detailCopyText"
+              v-model="detailCopyType"
+            ></textarea>
+            <rt-button
+              @click="iconTypeCopy"
+              class="rt-button-purple rt-button-small"
+            >Копировать</rt-button>
+          </div>
+          <div class="detail__types rt-col-12">
+            <div
+              class="detail-type btn"
+              v-for="(iconType, key) in detailIcon(selectedIcon).list"
+              @click="() => { detailCopyType = iconType.type }"
+              :key="key"
+            >
+              <div class="detail-type__name">{{iconType.style.substr(1)}}</div>
+              <div class="detail-type__el">
+                <rt-icon :type="iconType.type" :size="iconType.style.substr(2,2)" />
               </div>
             </div>
           </div>
-
-          <div
-            v-if="listLimited()"
-            class="rt-col-12 rt-space-top2"
-          >
-            <rt-button @click="loadMore">Ещё</rt-button>
-          </div>
-          {{findedIcons.length}} {{filteredIcons.length}}
-
-        </div>
-        <div v-else>
-          <h3>Ничего не нашлось по запросу «{{searched}}»</h3>
         </div>
       </div>
 
@@ -504,7 +563,7 @@
     </div>
 
     <div class="rt-container rt-space-top25">
-      <documentation-builder :json="documentation" type="components" />
+      <documentation-builder :json="documentation" type="props" />
     </div>
   </div>
 </template>
@@ -514,8 +573,9 @@ import documentation from "../../../lib/components/Icon/docs/index.json";
 import listIcons from "../../../../static/list-icons.json"
 
 const componentsList = {};
-const prefixNewIcons = 'mw__'
-const listSize = 50
+const prefixNewIcons = 'nw__'
+const newIconsNameLength = 3
+const listSize = 500
 
 if (!window.RTK_STYLE) window.RTK_STYLE = {};
 if (window.location.hostname === 'localhost')
@@ -528,19 +588,94 @@ export default {
     documentation: {},
     findedIcons: [],
     filteredIcons: [],
-    searched: ''
+    newIcons: {},
+    oldIcons: [],
+    searched: '',
+    selectedIcon: null,
+    detailBg: 'linear-gradient(240deg, #777, #aaa)',
+    detailCopyType: null,
+    isDarkTheme: localStorage.getItem('rt-dark') === '1',
+    isLoading: true
   }),
+  computed: {
+    filteredlistIcons () {
+      return this.findedIcons.slice(0, listSize)
+    },
+    previewStyle() {
+      return this.isDarkTheme ? '-G56px' : '-B56px'
+    }
+  },
+  beforeMount() {
+    let newIconsStack = []
+    listIcons.forEach(icon => {
+      (icon.indexOf(prefixNewIcons) === 0)
+        ? newIconsStack.push(icon)
+        : this.oldIcons.push(icon)
+    })
+    newIconsStack.forEach(icon => {
+      let name = icon.substr(prefixNewIcons.length, newIconsNameLength)
+      let type = icon
+      let style = icon.substr(prefixNewIcons.length + newIconsNameLength, icon.length)
+      let iconObj = { name, type, style }
+      if (!this.newIcons[name]) {
+        this.newIcons[name] = { name, list: [iconObj] }
+      } else {
+        this.newIcons[name].list.push(iconObj)
+      }
+    })
+    this.findedIcons = Object.keys(this.newIcons)
+      .filter(n => n.indexOf(this.searched) !== -1)
+      .sort((a, b) => {
+        let nA = parseInt(a)
+        let nB = parseInt(b)
+        if (nA > nB) return 1
+        if (nA < nB) return -1
+        return 0
+      })
+    // this.findedIcons = this.oldIcons.filter(n => n.indexOf(this.searched) !== -1)
+    // console.log('start', this.findedIcons, this.newIcons)
+    this.isLoading = false
+  },
   mounted() {
     this.documentation = documentation
-
-    this.findedIcons = listIcons.filter(n => n.indexOf(this.searched) !== -1)
-    this.filteredIcons = this.findedIcons.slice(0, listSize)
   },
   created() {},
   methods: {
+    detailIcon(icon) {
+      return this.newIcons[icon]
+    },
+    iconTypeCopy() {
+      let codeTxt = this.$refs.detailCopyText
+      codeTxt.select()
+      codeTxt.setSelectionRange(0, 99999)
+      document.execCommand('copy')
+    },
+    detailIconShow(icon) {
+      if (this.selectedIcon === icon) return this.selectedIcon = null
+      // console.log('detailIconShow', this, this.$el.getBoundingClientRect().bottom, this.$createElement('div', 'Olo-lo'))
+      this.detailCopyType = this.previewType(icon)
+      this.selectedIcon = icon
+      // let detailView = document.createElement('DIV')
+      // this.$el.parentElement.parentElement.append(detailView)
+    },
     doSearch (e) {
-      this.findedIcons = listIcons.filter(n => n.indexOf(this.searched) !== -1)
-      this.filteredIcons = this.findedIcons.slice(0, listSize)
+      // this.isLoading = true
+      // console.log('doSearch', e, this.searched)
+      // this.findedIcons = listIcons.filter(n => n.indexOf(e) !== -1)
+      this.findedIcons = Object.keys(this.newIcons)
+        .filter(n => n.indexOf(e) !== -1)
+        .sort((a, b) => {
+          let nA = parseInt(a)
+          let nB = parseInt(b)
+          if (nA > nB) return 1
+          if (nA < nB) return -1
+          return 0
+        })
+      this.findedIcons.splice(this.findedIcons.length)
+      // this.$nextTick(() => {
+      //   this.isLoading = false
+        // this.$set(this, 'findedIcons', listIcons.filter(n => n.indexOf(e) !== -1))
+      // })
     },
     loadMore () {
       this.filteredIcons = this.filteredIcons.concat(
@@ -551,8 +686,75 @@ export default {
       )
     },
     listLimited () {
-      return (this.findedIcons.length > this.filteredIcons.length)
+      return (this.findedIcons.length > this.filteredlistIcons.length)
+    },
+    previewType(icon) {
+      if (!this.newIcons[icon]) return
+      let t = this.newIcons[icon].list.filter(n => n.style === this.previewStyle)
+      return t && t[0] && t[0].type
+        ? t[0].type
+        : this.newIcons[icon].list[0].type
     }
   }
 };
 </script>
+
+<style lang="stylus">
+  iconName = rt-icon
+  selectedBg = #E3E8EC
+  space = 8px
+
+  .btn
+    cursor pointer
+
+  .preview
+    padding space
+    &:hover,
+    &.selected
+      background selectedBg
+
+  .detail
+    position relative
+    &__name
+      background selectedBg
+      padding space
+    &__bg
+      position absolute
+      top space
+      right space
+    &__el
+      padding-left space
+      padding-top space * 2
+    &__code
+      padding-top 30px
+      code
+        background #272822
+        margin-right space
+        padding space
+      textarea
+        opacity 0
+        position absolute
+        width 0
+        height 0
+    &__types
+      display flex
+    &-type
+      padding space
+      &__name
+        font-size 10px
+        padding-bottom 2px
+        text-align center
+
+  .monokai
+    color #F8F8F2
+    .c
+      &_tag
+        color #F92672
+      &_attr
+        color #A6E22E
+      &_val0
+        color #E6DB74
+
+  .rt-annotation--is-open > .rt-annotation__content
+    max-height max-content !important
+</style>

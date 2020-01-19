@@ -85,9 +85,9 @@ const arrKey = 'RTK_ICONS'
 
 export default {
   name: "RtIcon",
-  data: function() {
+  data: () => {
     return {
-      iconPath: null,
+      iconPath: false,
       iconCaptionColor: null
     }
   },
@@ -186,6 +186,7 @@ export default {
       var name = this.iconName
       var base_path = window.RTK_STYLE && window.RTK_STYLE.base_path ? window.RTK_STYLE.base_path : '';
       var icons_path = window.RTK_STYLE && window.RTK_STYLE.icons_path ? window.RTK_STYLE.icons_path : 'https://cryingjoker.github.io/vue-stylekit/static/icons/';
+      // console.log('getPath', name, this.type)
       if (name) {
         window[arrKey][name] = {}
         return axios.request({
@@ -203,8 +204,8 @@ export default {
     },
     setPath() {
       let pathSource = window[arrKey][this.iconName]
-      var icon = require('vue-svgicon')
-      var arr = {}
+      let icon = require('vue-svgicon')
+      let arr = {}
       arr[this.iconName] = pathSource
       icon.register(arr)
       this.iconPath = true
@@ -247,8 +248,22 @@ export default {
       }
     }
   },
-  mounted() {
+  created() {
+    if (this.type.indexOf('nw__251') === 0) {
+      console.log('created', this.type)
+    }
+  },
+  // updated() {
+  //   if (this.iconPath && !window[arrKey][this.iconName]) {
+  //     // console.log('up', this.$el)
+  //     this.getPath()
+  //   }
+  // },
+  beforeMount() {
     if (!window[arrKey]) window[arrKey] = {}
+    if (this.type.indexOf('nw__251') === 0) {
+      console.log('mounted', this.type)
+    }
     // @TODO - add watcher for loaded icons
     this.getPath()
   }
