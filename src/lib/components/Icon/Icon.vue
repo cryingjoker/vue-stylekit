@@ -85,7 +85,7 @@ const arrKey = 'RTK_ICONS'
 
 export default {
   name: "RtIcon",
-  data: function() {
+  data: () => {
     return {
       iconPath: null,
       iconCaptionColor: null
@@ -203,8 +203,8 @@ export default {
     },
     setPath() {
       let pathSource = window[arrKey][this.iconName]
-      var icon = require('vue-svgicon')
-      var arr = {}
+      let icon = require('vue-svgicon')
+      let arr = {}
       arr[this.iconName] = pathSource
       icon.register(arr)
       this.iconPath = true
@@ -247,10 +247,10 @@ export default {
       }
     }
   },
-  mounted() {
+  beforeMount() {
     if (!window[arrKey]) window[arrKey] = {}
     // @TODO - add watcher for loaded icons
     this.getPath()
   }
-};
+}
 </script>
