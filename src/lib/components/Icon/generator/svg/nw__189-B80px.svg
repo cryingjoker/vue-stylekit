@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>189-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="189-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M40,27.5 L40,32.5 L20,32.5 L20,27.5 L40,27.5 L40,27.5 Z M42.5,25 L17.5,25 L17.5,35 L42.5,35 L42.5,25 L42.5,25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M40,20 L40,25 L20,25 L20,20 L40,20 L40,20 Z M42.5,17.5 L17.5,17.5 L17.5,27.5 L42.5,27.5 L42.5,17.5 L42.5,17.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="36.25" cy="37.5" r="1.25"></circle>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="36.25" cy="30" r="1.25"></circle>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="36.25" cy="22.5" r="1.25"></circle>
+            <path d="M30,57.5 C27.25,57.5 25,55.25 25,52.5 C25,49.75 27.25,47.5 30,47.5 C32.75,47.5 35,49.75 35,52.5 C35,55.25 32.75,57.5 30,57.5 Z M30,50 C28.625,50 27.5,51.125 27.5,52.5 C27.5,53.875 28.625,55 30,55 C31.375,55 32.5,53.875 32.5,52.5 C32.5,51.125 31.375,50 30,50 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="18.75" cy="61.25" r="1.25"></circle>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="18.75" cy="56.25" r="1.25"></circle>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="18.75" cy="51.25" r="1.25"></circle>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="18.75" cy="46.25" r="1.25"></circle>
+            <path d="M38.775,65 L12.625,65 C12.55,65 12.5,64.95 12.5,64.875 L12.5,12.625 C12.5,12.55 12.55,12.5 12.625,12.5 L47.4,12.5 C47.45,12.5 47.5,12.55 47.5,12.625 L47.5,36.1 C48.3,35.825 49.15,35.55 50,35.375 L50,12.625 C50,11.175 48.825,10 47.375,10 L12.625,10 C11.175,10 10,11.175 10,12.625 L10,64.9 C10,66.325 11.175,67.5 12.625,67.5 L41.05,67.5 C40.2,66.725 39.45,65.9 38.775,65 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M53.75,40 C61.325,40 67.5,46.175 67.5,53.75 C67.5,61.325 61.325,67.5 53.75,67.5 C46.175,67.5 40,61.325 40,53.75 C40,46.175 46.175,40 53.75,40 L53.75,40 Z M53.75,37.5 C44.775,37.5 37.5,44.775 37.5,53.75 C37.5,62.725 44.775,70 53.75,70 C62.725,70 70,62.725 70,53.75 C70,44.775 62.725,37.5 53.75,37.5 L53.75,37.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M42.5,38.775 L42.5,32.5 L17.5,32.5 L17.5,42.5 L38.775,42.5 C39.825,41.1 41.1,39.825 42.5,38.775 Z M20,35 L40,35 L40,40 L20,40 L20,35 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="42.5" y="53.725" width="6.25" height="2.5"></rect>
+            <g id="Group" transform="translate(50.000000, 45.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M6.275,16.05 L3.775,16.05 L3.775,10.025 L1.3,10.025 L1.3,7.525 L3.775,7.525 L3.775,1.075 L9.925,1.075 C12.35,1.075 14.35,3.05 14.35,5.5 C14.35,8 12.325,10.05 9.8,10.05 L6.275,10.05 L6.275,16.05 Z M6.275,7.525 L9.8,7.525 C10.925,7.525 11.85,6.6 11.85,5.475 C11.85,4.425 11,3.55 9.925,3.55 L6.275,3.55 L6.275,7.525 Z" id="Shape"></path>
+                <rect id="Rectangle" x="1.275" y="11.05" width="10" height="2.5"></rect>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

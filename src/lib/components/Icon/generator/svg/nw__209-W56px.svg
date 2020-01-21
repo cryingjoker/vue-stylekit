@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>209-W56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1814.000000, -26617.000000)">
+            <g id="209-W56px" transform="translate(1814.000000, 26617.000000)">
+                <circle id="Oval-Copy-1229" fill="#101828" cx="28" cy="28" r="28"></circle>
+                <g id="209-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <path d="M33.75,7.5 L33.75,7.5125 L33.75,10.0375 L33.75,10.7125 L21.7125,20.4625 L21.25,20.8375 L21.25,21.4375 L21.25,30.1875 L18.75,32.4875 L18.75,21.4375 L18.75,20.8375 L18.2875,20.4625 L6.25,10.7125 L6.25,10.05 L6.25,7.5 L33.75,7.5 L33.75,7.5 Z M33.75,6.25 L6.25,6.25 C5.5625,6.25 5,6.8125 5,7.5125 L5,10.0375 L5,11.3 L17.5,21.425 L17.5,32.475 C17.5,33.2375 18.1125,33.7375 18.7625,33.7375 C19.05,33.7375 19.35,33.6375 19.6,33.4 L22.1,31.0875 C22.3625,30.85 22.5,30.5125 22.5,30.15 L22.5,21.425 L35,11.3 L35,10.05 L35,7.5125 C35,6.8125 34.4375,6.25 33.75,6.25 L33.75,6.25 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="5.625" y="10.05" width="28.75" height="1.25"></rect>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

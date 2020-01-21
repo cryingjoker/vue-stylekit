@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>126-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="126-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval" fill="#101828" fill-rule="nonzero" cx="13" cy="13" r="1"></circle>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="12.5" y="8" width="1" height="5"></rect>
+            <path d="M15.59,14.89 L13.35,12.65 L12.64,13.36 L15.02,15.74 C15.2,15.44 15.39,15.15 15.59,14.89 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(15.000000, 13.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M4.14,11.46 C2.29,10.57 1,8.69 1,6.5 C1,3.99 2.69,1.87 5,1.21 L5,0.18 C2.13,0.86 0,3.43 0,6.5 C0,8.87 1.27,10.94 3.17,12.08 L4.14,11.46 Z" id="Path"></path>
+                <path d="M9.83,0.93 L8.86,1.55 C10.72,2.43 12,4.32 12,6.5 C12,9.01 10.31,11.13 8,11.79 L8,12.82 C10.87,12.14 13,9.57 13,6.5 C13,4.13 11.73,2.06 9.83,0.93 Z" id="Path"></path>
+            </g>
+            <path d="M21,12.81 L22.11,13.51 L21,14.2 L21,12.81 L21,12.81 Z M20,11 L20,16 L24,13.5 L20,11 L20,11 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M22,24.81 L22,26.2 L20.89,25.5 L22,24.81 L22,24.81 Z M23,23 L19,25.5 L23,28 L23,23 L23,23 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M25,17 L24,17 L22,19.99 L22,20.21 L22,21 L24,20.99 L24,22 L25,22.01 L25,21 L26,21.01 L26,20 L25,20 L25,17 Z M23.12,20 L24,18.7 L24,20 L23.12,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M20.25,20.12 C20.82,19.5 21,19.09 21,18.45 C21,17.57 20.42,17.01 19.52,17.01 C18.53,17.01 18,17.78 18,18.5 C18,18.65 18.01,18.8 18.04,18.95 L18.05,19.03 L19,18.95 L18.98,18.85 C18.96,18.75 18.95,18.67 18.95,18.54 C18.95,18.18 19.17,17.96 19.52,17.96 C19.86,17.96 20.08,18.19 20.08,18.55 C20.08,18.84 19.97,19.06 19.61,19.45 L18,21.24 L18,22 L21,22 L21,21 L19.45,21 L20.25,20.12 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M14.14,20.92 C13.77,20.97 13.39,21 13,21 C8.59,21 5,17.41 5,13 C5,8.59 8.59,5 13,5 C16.48,5 19.44,7.24 20.54,10.35 L21.81,11.16 C20.96,7.07 17.34,4 13,4 C8.03,4 4,8.03 4,13 C4,17.97 8.03,22 13,22 C13.48,22 13.94,21.96 14.4,21.89 C14.29,21.57 14.2,21.25 14.14,20.92 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

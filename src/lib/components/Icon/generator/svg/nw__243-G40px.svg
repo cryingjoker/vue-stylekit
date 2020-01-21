@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>243-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -30911.000000)">
+            <g id="243-G40px" transform="translate(1527.000000, 30912.000000)">
+                <circle id="Oval-Copy-818" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="243-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(14.496165, 8.503135) rotate(-45.000000) translate(-14.496165, -8.503135) " x="8.84121873" y="8.0031403" width="11.3098915" height="1"></rect>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="19 8 18 8 18 5 15 5 15 4 19 4"></polygon>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="4" y="27" width="24" height="1"></rect>
+                    <path d="M26,11 L26,27 L22,27 L22,11 L26,11 L26,11 Z M26,10 L22,10 C21.45,10 21,10.45 21,11 L21,27 C21,27.55 21.45,28 22,28 L26,28 C26.55,28 27,27.55 27,27 L27,11 C27,10.45 26.55,10 26,10 L26,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M18,16 L18,27 L14,27 L14,16 L18,16 L18,16 Z M18,15 L14,15 C13.45,15 13,15.45 13,16 L13,27 C13,27.55 13.45,28 14,28 L18,28 C18.55,28 19,27.55 19,27 L19,16 C19,15.45 18.55,15 18,15 L18,15 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M10,21 L10,27 L6,27 L6,21 L10,21 L10,21 Z M10,20 L6,20 C5.45,20 5,20.45 5,21 L5,27 C5,27.55 5.45,28 6,28 L10,28 C10.55,28 11,27.55 11,27 L11,21 C11,20.45 10.55,20 10,20 L10,20 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

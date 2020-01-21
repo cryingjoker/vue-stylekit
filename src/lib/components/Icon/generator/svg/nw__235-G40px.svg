@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>235-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -29905.000000)">
+            <g id="235-G40px" transform="translate(1527.000000, 29906.000000)">
+                <circle id="Oval-Copy-795" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="235-B32px-Copy" transform="translate(4.000000, 7.000000)">
+                    <path d="M27,5 L27,7 C27,10.13 26.35,14.79 25.27,17.18 C23.78,20.46 20.98,24.78 16,26.92 C11.02,24.78 8.21,20.46 6.73,17.18 C5.65,14.79 5,10.12 5,7 L5,5 L27,5 L27,5 Z M28,4 L4,4 L4,7 C4,9.96 4.6,14.89 5.82,17.59 C7.49,21.28 10.56,25.82 16,28 C21.44,25.82 24.51,21.28 26.18,17.59 C27.4,14.89 28,9.96 28,7 L28,4 L28,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="20.5" y="12" width="1" height="3.13"></rect>
+                    <path d="M16,15.06 L9.88,12 L16,8.94 L22.12,12 L16,15.06 Z M12.12,12 L16,13.94 L19.88,12 L16,10.06 L12.12,12 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="16.13 17.55 12.01 15.64 12.01 12.82 13.01 12.82 13.01 15 16.13 16.45 19.02 15.11 19.02 12.93 20.02 12.93 20.02 15.75"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>183-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-2284.000000, -23326.000000)">
+            <g id="183-C80px" transform="translate(2284.000000, 23326.000000)">
+                <circle id="Oval-Copy-1148" fill="#FF4F12" cx="40" cy="40" r="40"></circle>
+                <g id="183-B32px-Copy-9" transform="translate(12.000000, 12.000000)">
+                    <g id="Group" transform="translate(33.250000, 17.500000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M4.8475,10.5 L3.0975,10.5 L3.0975,6.2825 L1.365,6.2825 L1.365,4.5325 L3.0975,4.5325 L3.0975,0.0175 L7.4025,0.0175 C9.1,0.0175 10.5,1.4 10.5,3.115 C10.5,4.865 9.0825,6.3 7.315,6.3 L4.8475,6.3 L4.8475,10.5 Z M4.8475,4.5325 L7.315,4.5325 C8.1025,4.5325 8.75,3.885 8.75,3.0975 C8.75,2.3625 8.155,1.75 7.4025,1.75 L4.8475,1.75 L4.8475,4.5325 Z" id="Shape"></path>
+                        <rect id="Rectangle" x="1.3475" y="7" width="7" height="1.75"></rect>
+                    </g>
+                    <g id="Group" transform="translate(12.250000, 17.500000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M3.4825,10.5 L1.7325,10.5 L1.7325,6.2825 L0,6.2825 L0,4.5325 L1.7325,4.5325 L1.7325,0.0175 L6.0375,0.0175 C7.735,0.0175 9.135,1.4 9.135,3.115 C9.135,4.865 7.7175,6.3 5.95,6.3 L3.4825,6.3 L3.4825,10.5 Z M3.4825,4.5325 L5.95,4.5325 C6.7375,4.5325 7.385,3.885 7.385,3.0975 C7.385,2.3625 6.79,1.75 6.0375,1.75 L3.4825,1.75 L3.4825,4.5325 Z" id="Shape"></path>
+                        <rect id="Rectangle" x="0" y="7" width="7" height="1.75"></rect>
+                    </g>
+                    <path d="M47.25,14 L47.2675,36.75 L8.75,36.7675 L8.7325,14 L47.25,14 L47.25,14 Z M47.2675,12.25 L8.7325,12.25 C7.7875,12.25 7,13.0375 7,13.9825 L7,36.75 C7,37.7125 7.7875,38.5 8.7325,38.5 L47.25,38.5 C48.2125,38.5 48.9827862,37.7125 48.9827862,36.7675 L48.9827862,13.9825 C49,13.0375 48.2125,12.25 47.2675,12.25 L47.2675,12.25 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="8.75" y="31.5" width="38.5" height="1.75"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="29.75" y="38.5" width="1.75" height="5.25"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="24.5" y="38.5" width="1.75" height="5.25"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="21.035" y="42" width="13.965" height="1.75"></rect>
+                    <path d="M28.0175,35.8575 C28.49,35.8575 28.8925,35.4725 28.8925,34.9825 C28.8925,34.4925 28.5075,34.1075 28.0175,34.1075 C27.5275,34.1075 27.1425,34.4925 27.1425,34.9825 C27.1425,35.4725 27.545,35.8575 28.0175,35.8575" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="23.625 21.875 23.625 23.625 27.125 23.625 27.125 27.125 28.875 27.125 28.875 23.625 32.375 23.625 32.375 21.875 28.875 21.875 28.875 18.375 27.125 18.375 27.125 21.875"></polygon>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

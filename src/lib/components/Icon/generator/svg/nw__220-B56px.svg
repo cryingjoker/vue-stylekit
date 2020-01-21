@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>220-B56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="220-B56px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Group" transform="translate(7.000000, 8.750000)" fill="#101828" fill-rule="nonzero">
+                <circle id="Oval" cx="21" cy="19.25" r="1.75"></circle>
+                <polygon id="Rectangle" transform="translate(36.804950, 5.196929) rotate(-45.000000) translate(-36.804950, -5.196929) " points="33.3749829 4.32193789 40.2349171 4.32193789 40.2349171 6.07192111 33.3749829 6.07192111"></polygon>
+                <polygon id="Rectangle" transform="translate(38.610425, 3.393509) rotate(-45.000000) translate(-38.610425, -3.393509) " points="37.7354334 -0.106457435 39.4854166 -0.106457435 39.4854166 6.89347543 37.7354334 6.89347543"></polygon>
+                <polygon id="Rectangle" transform="translate(5.199904, 5.195523) rotate(-44.959485) translate(-5.199904, -5.195523) " points="4.32491267 1.76555454 6.07489633 1.76555454 6.07489633 8.62549046 4.32491267 8.62549046"></polygon>
+                <polygon id="Rectangle" transform="translate(3.400159, 3.392025) rotate(-45.000000) translate(-3.400159, -3.392025) " points="-0.0998074348 2.51703339 6.90012543 2.51703339 6.90012543 4.26701661 -0.0998074348 4.26701661"></polygon>
+                <rect id="Rectangle" x="20.125" y="10.5" width="1.75" height="8.75"></rect>
+                <polygon id="Rectangle" transform="translate(24.286544, 22.521851) rotate(-45.000000) translate(-24.286544, -22.521851) " points="23.4115521 18.1468927 25.1615354 18.1468927 25.1615354 26.8968088 23.4115521 26.8968088"></polygon>
+                <path d="M21,1.75 C30.6425,1.75 38.5,9.6075 38.5,19.25 C38.5,28.8925 30.6425,36.75 21,36.75 C11.3575,36.75 3.5,28.8925 3.5,19.25 C3.5,9.6075 11.3575,1.75 21,1.75 L21,1.75 Z M21,0 C10.36,0 1.75,8.61 1.75,19.25 C1.75,29.89 10.36,38.5 21,38.5 C31.64,38.5 40.25,29.89 40.25,19.25 C40.25,8.61 31.64,0 21,0 L21,0 Z" id="Shape"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+        </g>
+    </g>
+</svg>

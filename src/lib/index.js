@@ -39,6 +39,7 @@ import {
   CardBuy,
   CardImage,
   CardImageList,
+  CardPseudoSelect,
   FullscreenImage,
   RowList,
   RowListItem,
@@ -203,6 +204,7 @@ const VueRtStyle = {
       Vue.component(CardCarousel.name, CardCarousel);
       Vue.component(CardB2o.name, CardB2o);
       Vue.component(CardLayout.name, CardLayout);
+      Vue.component(CardPseudoSelect.name, CardPseudoSelect);
       Vue.component(CountdownTimer.name, CountdownTimer);
 
       // tsx components

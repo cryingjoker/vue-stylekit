@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>206-W56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-541.000000, -26365.000000)">
+            <g id="206-W56px" transform="translate(541.000000, 26365.000000)">
+                <circle id="Oval-Copy-1289" fill="#101828" cx="28" cy="28" r="28"></circle>
+                <g id="206-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <g id="Group" transform="translate(5.000000, 11.250000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M28.725,0 L21.575,0 L20.6625,1.25 L28.725,1.25 L28.75,1.275 L28.725,15.0125 L1.25,14.9875 L1.275,1.25 L9.3375,1.25 L8.425,0 L1.275,0 C0.575,0 0,0.575 0,1.275 L0,14.9875 C0,15.6875 0.575,16.2625 1.275,16.2625 L28.725,16.2625 C29.425,16.2625 30,15.6875 30,14.9875 L30,1.275 C30,0.575 29.425,0 28.725,0 Z" id="Path"></path>
+                        <polygon id="Path" points="13.9875 1.25 16.0125 1.25 16.9375 0 13.075 0"></polygon>
+                    </g>
+                    <path d="M30,19.9875 L24.475,19.9875 L25.3875,21.2375 L30,21.2375 L30,22.4875 L24.7,22.4125 L23.8375,21.2375 L23.85,21.2375 L23.0125,20.1 L23.0125,20.1125 L15.6125,10 L14.0625,10 L23.65,23.0875 C23.875,23.4875 24.3,23.7375 24.75,23.7375 L30,23.7375 C30.6875,23.7375 31.25,23.175 31.25,22.4875 L31.25,21.2375 C31.25,20.55 30.6875,19.9875 30,19.9875 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M19.975,27.425 C14.5875,27.425 10.55,28.25 8.75,28.7 L8.75,29.9875 C10.3,29.5875 14.425,28.675 19.975,28.675 C25.575,28.675 29.7375,29.6 31.25,30 L31.25,28.7125 C29.4625,28.2625 25.4125,27.425 19.975,27.425 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="21.55 16 25.95 10.0125 24.3875 10.0125 20.775 14.9375"></polygon>
+                    <path d="M18.4875,18.075 L16.9875,20.125 L16.9875,20.1125 L16.15,21.25 L16.1625,21.25 L15.25,22.5 L10,22.5 L10,21.25 L14.6,21.25 L15.5125,20 L10,20 C9.3125,20 8.75,20.5625 8.75,21.25 L8.75,22.5 C8.75,23.1875 9.3125,23.75 10,23.75 L15.25,23.75 C15.7125,23.75 16.1375,23.5 16.3125,23.1625 L19.2625,19.1375 L18.4875,18.075 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

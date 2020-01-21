@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>222-C80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1002.000000, -28198.000000)">
+            <g id="222-C80px" transform="translate(1002.000000, 28198.000000)">
+                <circle id="Oval-Copy-724" fill="#FF4F12" cx="40" cy="40" r="40"></circle>
+                <g id="222-B32px-Copy-9" transform="translate(12.000000, 12.000000)">
+                    <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="24.5 26.4075 7.455 15.61 8.3825 14.14 24.5 24.3425 40.6175 14.14 41.545 15.61"></polygon>
+                    <path d="M40.285,14 L8.715,14 C7.77,14 7,14.77 7,15.715 L7,35.0175 C7,35.98 7.77,36.75 8.715,36.75 L33.25,36.75 L33.25,35 L8.75,35.035 L8.715,15.75 L40.25,15.75 L40.25,21 L42,21 L42,15.715 C42,14.77 41.23,14 40.285,14 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M43.75,29.75 L43.75,29.75 L38.5,29.75 L38.5,28 C38.5,26.075 40.075,24.5 42,24.5 C43.925,24.5 45.5,26.075 45.5,28 L45.5,29.75 L47.25,29.75 L47.25,28 C47.25,25.095 44.905,22.75 42,22.75 C39.095,22.75 36.75,25.095 36.75,28 L36.75,31.5 L47.25,31.5 L47.25,29.75 L43.75,29.75 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M47.25,31.5 L47.25,42 L36.75,42 L36.75,31.5 L47.25,31.5 L47.25,31.5 Z M47.32,29.75 L36.68,29.75 C35.7525,29.75 35,30.5025 35,31.43 L35,42.0875 C35,43.015 35.7525,43.7675 36.68,43.7675 L47.32,43.7675 C48.2475,43.7675 49,43.015 49,42.0875 L49,31.43 C49,30.5025 48.2475,29.75 47.32,29.75 L47.32,29.75 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M42,38.5 C41.51,38.5 41.125,38.115 41.125,37.625 L41.125,35.875 C41.125,35.385 41.51,35 42,35 C42.49,35 42.875,35.385 42.875,35.875 L42.875,37.625 C42.875,38.115 42.49,38.5 42,38.5 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="56" height="56"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

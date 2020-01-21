@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>117-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="117-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M40.025,27.5 C46.925,27.5 52.525,33.1 52.525,40 C52.525,46.9 46.925,52.5 40.025,52.5 C33.125,52.5 27.525,46.9 27.525,40 C27.525,33.1 33.15,27.5 40.025,27.5 L40.025,27.5 Z M40.025,25 C31.75,25 25.025,31.725 25.025,40 C25.025,48.275 31.75,55 40.025,55 C48.3,55 55.025,48.275 55.025,40 C55.025,31.725 48.325,25 40.025,25 L40.025,25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M40.025,12.5 C55.2,12.5 67.525,24.825 67.525,40 C67.525,55.175 55.2,67.5 40.025,67.5 C24.85,67.5 12.525,55.175 12.525,40 C12.525,24.825 24.875,12.5 40.025,12.5 L40.025,12.5 Z M40.025,10 C23.45,10 10.025,23.425 10.025,40 C10.025,56.575 23.45,70 40.025,70 C56.6,70 70.025,56.575 70.025,40 C70.025,23.425 56.6,10 40.025,10 L40.025,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="53.75" y="42.5" width="15" height="2.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="53.75" y="35" width="15" height="2.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="11.25" y="42.5" width="15" height="2.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="11.25" y="35" width="15" height="2.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="35" y="53.75" width="2.5" height="15"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="42.5" y="53.75" width="2.5" height="15"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="35" y="11.25" width="2.5" height="15"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="42.5" y="11.25" width="2.5" height="15"></rect>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

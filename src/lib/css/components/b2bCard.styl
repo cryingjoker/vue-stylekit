@@ -73,21 +73,22 @@
 
   &__links-block
     display inline-block
-    max-width calc(100% - 36px)
-    max-height 35px
+    max-width calc(32px * 6) //calc(100% - 36px)
+    //max-height 35px
+    min-height 28px
     overflow hidden
     vertical-align middle
 
     &--expanded
       max-height none
-      max-width 252px!important
+      max-width 224px!important
 
       & + .rtb-card__expand-button
         display none
 
-      .{b2bAppName}-card__social-link
-        &:nth-child(5+n)
-          display inline-block
+      //.{b2bAppName}-card__social-link
+      //  &:nth-child(5+n)
+      //    display inline-block
 
     &__footnote
       margin-top 5px
@@ -98,8 +99,9 @@
     height 26px
     display inline-block
     vertical-align middle
-    &+&
-      margin-left 6px
+    //&+&
+    //  margin-left 6px
+    margin-right 6px
 
     &--hidden
       display none
@@ -946,23 +948,47 @@
     width 75%
     @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
       min-width 75%
-      width calc(295px * 3)
+      width calc(322px * 3)
       //.rt-card
       //  min-width calc(275px + 10px)
+  &-layout
     .rt-col-3
       max-width calc(100% / 3)
       flex-basis calc(100% / 3)
     .rt-col-4
       max-width calc(100% / 9 * 4)
       flex-basis calc(100% / 9 * 4)
+  &-layout-12
+    width 100%
+  &-layout--nowrap
+    .row
+      flex-wrap nowrap
+
+.rt-col-ld-12
+  @media (min-width laptop-lower-limit) and (max-width laptop-upper-limit)
+    max-width calc(100% / 3 * 2)
+    flex-basis calc(100% / 3 * 2)
 
 .specified-card-layout
   justify-content space-between
   display flex
   width 100%
   flex-wrap wrap
-  .rtk-carousel-slide
-    padding-top 20px
+  //.rtk-carousel-slide
+  //  padding-top 20px
+  .card-layout__slide
+    @media (max-width: laptop-upper-limit) and (min-width: laptop-lower-limit)
+      width calc(275px + 20px)
+      flex-basis calc(275px + 20px)!important
+      max-width calc(275px + 20px)!important
+    @media (max-width: tablet-upper-limit)
+      width calc(35vw + 20px)
+      flex-basis calc(35vw + 20px)!important
+      max-width calc(35vw + 20px)!important
+    @media (max-width: mobile-upper-limit)
+      width calc(75vw + 20px)
+      flex-basis calc(75vw + 20px)!important
+      max-width calc(75vw + 20px)!important
 
 .links-block
   display flex
@@ -1018,3 +1044,65 @@
       transition transform .2s linear
       &--reverse
         transform rotate(180deg)
+
+.pseudo-select
+  overflow hidden
+  position absolute
+  top 0
+  left 0
+  transition height 0.3s ease-out
+  height 80px
+  width 100%
+  padding 5px 0
+  background-color #fff
+  &:before,
+  &:after
+    position absolute
+    content ''
+    left 0
+    right 0
+    height 1px
+    background-color #e3e8ec
+  &:before
+    top 0
+  &:after
+    bottom 0
+  &--opened
+    box-shadow 0 5px 4px -2px rgba(16,24,40,0.2)
+    height 240px
+    .pseudo-select__arrow
+      transform rotate(0deg)
+  &__title
+    position absolute
+    top 35px
+    left 20px
+  &__option
+    padding 15px 20px
+    cursor pointer
+    &:hover
+      background-color #8348fc
+      color #fff
+    &--chosen
+      background-color #fff
+      padding-bottom 45px
+      padding-top 5px
+      &:hover
+        background-color #fff
+        color #101828
+    &--clicked
+      background-color #70f
+      color #fff
+  &__arrow
+    position absolute
+    top 15px
+    right 10px
+    width 20px
+    height 20px
+    cursor pointer
+    transform rotate(180deg)
+    transition transform 0.3s linear
+  &-wrapper
+    height 80px
+    position relative
+.rt-card--body-no-padding .rt-card__body
+  padding 0

@@ -1,0 +1,1 @@
+[{'nw__119-B80px': {width: 80,height: 80,viewBox: '0 0 80 80',data: '<g _fill="none" fill-rule="evenodd"><path pid="0" _fill="#101828" fill-rule="nonzero" d="M35 15h10v10H35zM35 30h10v35H35z"/><path pid="1" d="M0 0h80v80H0z"/></g>'}}]

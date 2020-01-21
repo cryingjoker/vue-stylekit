@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>193-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -24623.000000)">
+            <g id="193-G40px" transform="translate(1527.000000, 24624.000000)">
+                <circle id="Oval-Copy-1179" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="193-B32px-Copy" transform="translate(4.000000, 4.000000)">
+                    <path d="M27,7.99 L27.02,25 L5,25.02 L5.02,7.99 L27,7.99 L27,7.99 Z M27.01,6.99 L5.02,6.99 C4.46,6.99 4,7.45 4,8.01 L4,25.02 C4,25.56 4.44,26 4.98,26 L27.02,26 C27.56,26 28,25.56 28,25.02 L28,7.98 C28,7.44 27.56,6.99 27.01,6.99 L27.01,6.99 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="23" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="20" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="14" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="11" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="8" y="4.99" width="1" height="5"></rect>
+                    <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="11" y="21" width="10" height="1"></rect>
+                    <path d="M11.5,18 L13.74,16.02 C14.22,15.55 14.43,15.25 14.43,14.82 C14.43,14.32 14.09,13.98 13.53,13.98 C12.99,13.98 12.61,14.29 12.61,14.81 C12.61,14.98 12.63,15.09 12.65,15.21 L11.56,15.29 C11.52,15.1 11.5,14.93 11.5,14.75 C11.5,13.83 12.26,13 13.52,13 C14.81,13 15.5,13.73 15.5,14.69 C15.5,15.46 15.24,15.95 14.47,16.69 L12.94,18 L15.5,18 L15.5,19 L11.5,19 L11.5,18 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M18.5,15 C17.9,15 17.68,15.09 17.5,15.18 L17.5,13.99 L20.02,14.01 L20.02,12.99 L16.5,12.99 L16.5,16.25 L17.5,16.47 C17.59,16.35 17.88,15.99 18.5,15.99 C19.05,15.99 19.5,16.41 19.5,16.94 C19.5,17.63 18.97,17.99 18.5,17.99 C17.97,17.99 17.62,17.62 17.52,17.34 L16.48,17.57 C16.6,18.27 17.17,19 18.5,19 C19.66,19 20.5,18.14 20.5,16.95 C20.5,15.76 19.7,15 18.5,15 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

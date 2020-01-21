@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>224-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="224-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="43.225 70 37.425 64.2 39.2 62.425 46.775 70"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="34.275 70 30.725 70 38.3 62.425 40.075 64.2"></polygon>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="37.5" y="63.725" width="2.5" height="6.275"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="17.5" y="62.475" width="42.5" height="2.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="37.5" y="22.45" width="2.5" height="40.025"></rect>
+            <polygon id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(44.375340, 35.731517) rotate(-45.607697) translate(-44.375340, -35.731517) " points="36.337465 34.4814592 52.413215 34.4814592 52.413215 36.9815758 36.337465 36.9815758"></polygon>
+            <polygon id="Rectangle" fill="#101828" fill-rule="nonzero" transform="translate(33.745630, 43.654450) rotate(-45.332216) translate(-33.745630, -43.654450) " points="32.495621 36.6293993 34.995639 36.6293993 34.995639 50.6795007 32.495621 50.6795007"></polygon>
+            <path d="M55,20.625 C54.575,20.625 54.175,20.65 53.775,20.7 C51.35,14.425 45.525,10 38.75,10 C31.05,10 24.625,15.7 22.95,23.325 C15.725,23.775 10,30.1 10,37.875 C10,45.95 16.15,52.475 23.75,52.475 C23.775,52.475 23.775,52.475 23.8,52.475 L23.8,52.475 L30,52.475 L30,49.975 L26.3,49.975 L26.3,49.975 L23.8,49.975 L23.675,49.975 L23.675,49.975 C17.5,49.925 12.5,44.525 12.5,37.875 C12.5,31.475 17.15,26.175 23.1,25.8 L24.975,25.675 L25.375,23.825 C26.85,17.175 32.35,12.5 38.75,12.5 C44.325,12.5 49.3,16.075 51.45,21.6 L52.125,23.35 L54,23.2 C54.325,23.175 54.675,23.15 55,23.15 C61.9,23.15 67.5,29.175 67.5,36.575 C67.5,43.975 61.9,50 55,50 L47.55,50 L47.55,52.5 L55,52.5 C63.275,52.5 70,45.375 70,36.575 C70,27.75 63.275,20.625 55,20.625 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

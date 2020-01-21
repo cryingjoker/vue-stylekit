@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>233-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="233-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M27,5 L27,7 C27,10.13 26.35,14.79 25.27,17.18 C23.78,20.46 20.98,24.78 16,26.92 C11.02,24.78 8.21,20.46 6.73,17.18 C5.65,14.79 5,10.12 5,7 L5,5 L27,5 L27,5 Z M28,4 L4,4 L4,7 C4,9.96 4.6,14.89 5.82,17.59 C7.49,21.28 10.56,25.82 16,28 C21.44,25.82 24.51,21.28 26.18,17.59 C27.4,14.89 28,9.96 28,7 L28,4 L28,4 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(13.000000, 8.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M1.5,1 C1.78,1 2,1.22 2,1.5 C2,1.78 1.78,2 1.5,2 C1.22,2 1,1.77 1,1.5 C1,1.23 1.22,1 1.5,1 L1.5,1 Z M1.5,0 C0.67,0 0,0.67 0,1.5 C0,2.33 0.67,3 1.5,3 C2.33,3 3,2.33 3,1.5 C3,0.67 2.33,0 1.5,0 L1.5,0 Z" id="Shape"></path>
+                <path d="M3,8 L4.25,8 L5,7 L5,8.52 C5,9.34 4.33,10 3.52,10 C2.68,10 2,9.32 2,8.48 L2,2.5 L1,2.5 L1,8.48 C1,9.87 2.13,11 3.52,11 C4.89,11 6,9.89 6,8.52 L6,4 L3,8 Z" id="Path"></path>
+            </g>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

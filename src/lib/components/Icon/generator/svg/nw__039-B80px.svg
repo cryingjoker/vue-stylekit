@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>039-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="039-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M10,17.5 L10,62.5 L42.5,67.5 L42.5,12.5 L10,17.5 Z M32.2,50.1 L28.875,50.025 L22.275,37.15 L22.275,49.55 L19.25,49.45 L19.325,30.925 L22.625,30.875 L25.675,36.9 L28.9,42.925 L28.9,30.475 L32.25,30.275 L32.2,50.1 Z" id="Shape" fill="#101828"></path>
+            <path d="M62.5,20 L62.5,22.5 L65,22.5 L67.5,22.475 L67.5,32.5 L65,32.5 L62.5,32.5 L62.5,35 L62.5,60 L42.5,60 L42.5,20 L62.5,20 L62.5,20 Z M65,17.5 L62.55,17.5 L40,17.5 L40,62.5 L65,62.5 L65,35 L67.5,35 C68.875,35 70,33.875 70,32.5 L70,22.475 C70,21.1 68.9,20 67.525,20 L65,20 L65,17.5 L65,17.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M67.5,47.5 L67.5,57.5 L65,57.5 L65,47.5 L67.5,47.5 L67.5,47.5 Z M67.5,45 L62.5,45 L62.5,60 L67.5,60 C68.875,60 70,58.875 70,57.5 L70,47.5 C70,46.125 68.875,45 67.5,45 L67.5,45 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M67.5,35 L67.5,45 L65,45 L65,35 L67.5,35 L67.5,35 Z M67.5,32.5 L62.5,32.5 L62.5,47.5 L67.5,47.5 C68.875,47.5 70,46.375 70,45 L70,35 C70,33.625 68.875,32.5 67.5,32.5 L67.5,32.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 52.5 40 52.5 40 55 57.5 55"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 47 40 47 40 49.5 57.5 49.5"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 41.5 40 41.5 40 44 57.5 44"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 36 40 36 40 38.5 57.5 38.5"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 30.5 40 30.5 40 33 57.5 33"></polygon>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="57.5 25 40 25 40 27.5 57.5 27.5"></polygon>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

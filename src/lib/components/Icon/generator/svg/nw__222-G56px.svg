@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>222-G56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-446.000000, -28222.000000)">
+            <g id="222-G56px" transform="translate(446.000000, 28222.000000)">
+                <circle id="Oval-Copy-756" fill="#E3E8EC" cx="28" cy="28" r="28"></circle>
+                <g id="222-B32px-Copy-4" transform="translate(8.000000, 8.000000)">
+                    <polygon id="Path" fill="#101828" fill-rule="nonzero" points="17.5 18.8625 5.325 11.15 5.9875 10.1 17.5 17.3875 29.0125 10.1 29.675 11.15"></polygon>
+                    <path d="M28.775,10 L6.225,10 C5.55,10 5,10.55 5,11.225 L5,25.0125 C5,25.7 5.55,26.25 6.225,26.25 L23.75,26.25 L23.75,25 L6.25,25.025 L6.225,11.25 L28.75,11.25 L28.75,15 L30,15 L30,11.225 C30,10.55 29.45,10 28.775,10 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M31.25,21.25 L31.25,21.25 L27.5,21.25 L27.5,20 C27.5,18.625 28.625,17.5 30,17.5 C31.375,17.5 32.5,18.625 32.5,20 L32.5,21.25 L33.75,21.25 L33.75,20 C33.75,17.925 32.075,16.25 30,16.25 C27.925,16.25 26.25,17.925 26.25,20 L26.25,22.5 L33.75,22.5 L33.75,21.25 L31.25,21.25 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M33.75,22.5 L33.75,30 L26.25,30 L26.25,22.5 L33.75,22.5 L33.75,22.5 Z M33.8,21.25 L26.2,21.25 C25.5375,21.25 25,21.7875 25,22.45 L25,30.0625 C25,30.725 25.5375,31.2625 26.2,31.2625 L33.8,31.2625 C34.4625,31.2625 35,30.725 35,30.0625 L35,22.45 C35,21.7875 34.4625,21.25 33.8,21.25 L33.8,21.25 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <path d="M30,27.5 C29.65,27.5 29.375,27.225 29.375,26.875 L29.375,25.625 C29.375,25.275 29.65,25 30,25 C30.35,25 30.625,25.275 30.625,25.625 L30.625,26.875 C30.625,27.225 30.35,27.5 30,27.5 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

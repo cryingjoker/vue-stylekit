@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>211-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="211-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M17.5,13 C17.22,13 17,13.22 17,13.5 C17,13.78 17.22,14 17.5,14 C17.78,14 18,13.78 18,13.5 C18,13.22 17.78,13 17.5,13 L17.5,13 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M14.5,13 C14.22,13 14,13.22 14,13.5 C14,13.78 14.22,14 14.5,14 C14.78,14 15,13.78 15,13.5 C15,13.22 14.78,13 14.5,13 L14.5,13 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M11.5,13 C11.22,13 11,13.22 11,13.5 C11,13.78 11.22,14 11.5,14 C11.78,14 12,13.78 12,13.5 C12,13.22 11.78,13 11.5,13 L11.5,13 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(22.000000, 16.000000)" fill="#101828" fill-rule="nonzero">
+                <rect id="Rectangle" transform="translate(1.359393, 4.624181) rotate(-45.000000) translate(-1.359393, -4.624181) " x="0.859398295" y="3.21919497" width="1" height="2.80997305"></rect>
+                <rect id="Rectangle" x="0" y="0.99" width="1" height="3"></rect>
+            </g>
+            <g id="Group" transform="translate(4.000000, 7.000000)" fill="#101828" fill-rule="nonzero">
+                <path d="M12.03,12.01 L6.27,12.01 C5.88,12.01 5.49,12.13 5.17,12.35 L0,15.79 L0,15.79 L0.01,17 L5.72,13.17 C5.88,13.06 6.07,13 6.27,13 L12.03,13 C12.02,12.83 12,12.66 12,12.49 C12.01,12.34 12.02,12.17 12.03,12.01 Z" id="Path"></path>
+                <path d="M20.01,0 L12.03,0 C12.03,0 12.03,0 12.03,0 L0.99,0 C0.45,0 0.01,0.44 0.01,0.99 L0.01,10 L1,10 L0.99,1 L7.44,1 C7.44,1 7.44,1 7.44,1 L20,1 L20.01,6.18 C20.35,6.26 20.68,6.36 21,6.5 L21,0.99 C21,0.45 20.56,0 20.01,0 Z" id="Path"></path>
+            </g>
+            <path d="M22.5,15 C24.98,15 27,17.02 27,19.5 C27,21.98 24.98,24 22.5,24 C20.02,24 18,21.98 18,19.5 C18,17.02 20.02,15 22.5,15 L22.5,15 Z M22.5,14 C19.46,14 17,16.46 17,19.5 C17,22.54 19.46,25 22.5,25 C25.54,25 28,22.54 28,19.5 C28,16.46 25.54,14 22.5,14 L22.5,14 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>

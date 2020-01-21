@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>169-G40px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1526.000000, -21606.000000)">
+            <g id="169-G40px" transform="translate(1527.000000, 21607.000000)">
+                <circle id="Oval-Copy-1045" stroke="#E3E8EC" cx="20" cy="20" r="20"></circle>
+                <g id="169-B32px-Copy" transform="translate(5.000000, 4.000000)">
+                    <path d="M26.98,9 L5.02,9 C4.46,9 4,9.45 4,10.02 L4,21 C4,21.56 4.46,22.02 5.02,22.02 L13.61,22.02 C10.5,22.2 8.17,22.67 7,22.96 L7,24 C8.08,23.72 10.73,23.13 14.34,22.98 C14.12,22.36 14,21.7 14,21.01 L5,21 L5.02,10 L26.98,10 L27,10.02 L26.98,21.02 L26,21.02 C26,21.36 25.96,21.69 25.91,22.02 L26.98,22.02 C27.54,22.02 28,21.56 28,21 L28,10.02 C28,9.45 27.54,9 26.98,9 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+                    <g id="Group" transform="translate(15.000000, 16.000000)" fill="#101828" fill-rule="nonzero">
+                        <path d="M5,1.01 C7.2,1.01 9,2.8 9,5.01 C9,7.21 7.21,9.01 5,9.01 C2.79,9.01 1,7.22 1,5.01 C1,2.8 2.8,1.01 5,1.01 L5,1.01 Z M5,0.01 C2.24,0.01 0,2.25 0,5.01 C0,7.77 2.24,10.01 5,10.01 C7.76,10.01 10,7.77 10,5.01 C10,2.24 7.76,0.01 5,0.01 L5,0.01 Z" id="Shape"></path>
+                        <path d="M6.86,7.39 L3.14,7.39 L2.21,4.04 L5,1.81 L7.79,4.04 L6.86,7.39 Z M3.9,6.39 L6.1,6.39 L6.65,4.41 L5,3.09 L3.35,4.41 L3.9,6.39 Z" id="Shape"></path>
+                        <rect id="Rectangle" x="4.5" y="0.1" width="1" height="2.35"></rect>
+                        <rect id="Rectangle" transform="translate(2.617284, 7.770866) rotate(-44.521939) translate(-2.617284, -7.770866) " x="1.35725222" y="7.27085339" width="2.52006355" height="1.00002522"></rect>
+                        <rect id="Rectangle" transform="translate(7.323272, 7.775306) rotate(-43.456221) translate(-7.323272, -7.775306) " x="6.82327209" y="6.55530621" width="1" height="2.43999957"></rect>
+                        <polygon id="Path" points="2.59 4.69 0.37 3.79 0.75 2.86 2.97 3.76"></polygon>
+                        <rect id="Rectangle" transform="translate(8.410935, 3.748501) rotate(-21.801409) translate(-8.410935, -3.748501) " x="7.13090287" y="3.24848845" width="2.56006427" height="1.0000251"></rect>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

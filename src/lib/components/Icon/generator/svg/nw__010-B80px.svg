@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>010-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="010-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M32.525,12.55 L57.525,16.775 C57.5,16.775 57.5,16.775 57.5,16.825 L57.475,63.25 L32.5,67.475 C32.5,67.475 32.5,67.475 32.5,67.475 L32.525,12.55 L32.525,12.55 Z M32.3,10 C31.05,10 30,11.125 30,12.525 L30,67.45 C30,68.875 31.05,69.975 32.3,69.975 C32.425,69.975 32.525,69.975 32.65,69.95 L58.025,65.65 C59.15,65.45 59.975,64.4 59.975,63.15 L59.975,16.825 C59.975,15.575 59.15,14.5 58.025,14.325 L32.65,10.025 C32.55,10 32.425,10 32.3,10 L32.3,10 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M22.5,15 C21.125,15 20,16.125 20,17.5 L20,65 L22.5,65 L22.5,62.5 L22.5,60.275 L22.5,17.5 L30,17.5 L30,60.275 L30,62.5 L30,65 L32.5,65 L32.5,15 L22.5,15 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M37.5,41.25 C38.175,41.25 38.75,40.675 38.75,40 C38.75,39.3 38.2,38.75 37.5,38.75 C36.8,38.75 36.25,39.325 36.25,40 C36.25,40.7 36.825,41.25 37.5,41.25" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

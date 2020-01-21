@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>233-G56px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="NEW_icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons_UD_new-Copy" transform="translate(-1728.000000, -29638.000000)">
+            <g id="233-G56px" transform="translate(1728.000000, 29638.000000)">
+                <circle id="Oval-Copy-790" fill="#E3E8EC" cx="28" cy="28" r="28"></circle>
+                <g id="233-B32px-Copy-3" transform="translate(8.000000, 11.000000)">
+                    <path d="M33.75,6.25 L33.75,8.75 C33.75,12.6625 32.9375,18.4875 31.5875,21.475 C29.725,25.575 26.225,30.975 20,33.65 C13.775,30.975 10.2625,25.575 8.4125,21.475 C7.0625,18.4875 6.25,12.65 6.25,8.75 L6.25,6.25 L33.75,6.25 L33.75,6.25 Z M35,5 L5,5 L5,8.75 C5,12.45 5.75,18.6125 7.275,21.9875 C9.3625,26.6 13.2,32.275 20,35 C26.8,32.275 30.6375,26.6 32.725,21.9875 C34.25,18.6125 35,12.45 35,8.75 L35,5 L35,5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+                    <g id="Group" transform="translate(16.250000, 10.000000)" fill="#101828" fill-rule="nonzero">
+                        <path d="M1.875,1.25 C2.225,1.25 2.5,1.525 2.5,1.875 C2.5,2.225 2.225,2.5 1.875,2.5 C1.525,2.5 1.25,2.2125 1.25,1.875 C1.25,1.5375 1.525,1.25 1.875,1.25 L1.875,1.25 Z M1.875,0 C0.8375,0 0,0.8375 0,1.875 C0,2.9125 0.8375,3.75 1.875,3.75 C2.9125,3.75 3.75,2.9125 3.75,1.875 C3.75,0.8375 2.9125,0 1.875,0 L1.875,0 Z" id="Shape"></path>
+                        <path d="M3.75,10 L5.3125,10 L6.25,8.75 L6.25,10.65 C6.25,11.675 5.4125,12.5 4.4,12.5 C3.35,12.5 2.5,11.65 2.5,10.6 L2.5,3.125 L1.25,3.125 L1.25,10.6 C1.25,12.3375 2.6625,13.75 4.4,13.75 C6.1125,13.75 7.5,12.3625 7.5,10.65 L7.5,5 L3.75,10 Z" id="Path"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="0" width="40" height="40"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

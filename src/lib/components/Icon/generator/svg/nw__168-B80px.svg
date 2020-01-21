@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>168-B80px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="168-B80px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M40,32.5 C43.45,32.5 46.25,35.3 46.25,38.75 C46.25,42.2 43.45,45 40,45 C36.55,45 33.75,42.2 33.75,38.75 C33.75,35.3 36.55,32.5 40,32.5 L40,32.5 Z M40,30 C35.175,30 31.25,33.925 31.25,38.75 C31.25,43.575 35.175,47.5 40,47.5 C44.825,47.5 48.75,43.575 48.75,38.75 C48.75,33.925 44.825,30 40,30 L40,30 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M67.5,32.5 L67.5,45 L62.5,45 L62.5,32.5 L67.5,32.5 L67.5,32.5 Z M70,30 L60,30 L60,47.5 L70,47.5 L70,30 L70,30 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M17.5,32.5 L17.5,45 L12.5,45 L12.5,32.5 L17.5,32.5 L17.5,32.5 Z M20,30 L10,30 L10,47.5 L20,47.5 L20,30 L20,30 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <path d="M67.45,25 L67.5,25.05 L67.45,52.475 L12.5,52.425 L12.55,25 L67.45,25 L67.45,25 Z M67.45,22.5 L12.55,22.5 C11.15,22.5 10,23.65 10,25.05 L10,52.425 C10,53.825 11.15,54.975 12.55,54.975 L67.45,54.975 C68.85,54.975 70,53.825 70,52.425 L70,25.05 C70,23.65 68.85,22.5 67.45,22.5 L67.45,22.5 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="38.75" y="44.975" width="2.5" height="7.5"></rect>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="38.75" y="25" width="2.5" height="7.5"></rect>
+            <path d="M39.95,54.85 C29.175,54.85 21.1,56.5 17.5,57.4 L17.5,59.975 C20.6,59.175 28.85,57.35 39.95,57.35 C51.15,57.35 59.475,59.2 62.5,60 L62.5,57.425 C58.925,56.525 50.825,54.85 39.95,54.85 Z" id="Path" fill="#101828" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="0" y="0" width="80" height="80"></rect>
+        </g>
+    </g>
+</svg>

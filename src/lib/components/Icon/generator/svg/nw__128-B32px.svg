@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>128-B32px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="128-B32px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle" fill="#101828" fill-rule="nonzero" x="25.01" y="12.5" width="1" height="5.5"></rect>
+            <path d="M16,17.55 L3.98,12.29 L16.01,7.97 L28.02,12.29 L16,17.55 Z M6.69,12.38 L16,16.45 L25.32,12.37 L16.01,9.02 L6.69,12.38 Z" id="Shape" fill="#101828" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#101828" fill-rule="nonzero" points="16.01 23.55 8.01 19.82 8.01 14 9.01 14 9.01 19.18 16.01 22.45 23.01 19.18 23.01 14 24.01 14 24.01 19.82"></polygon>
+            <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+        </g>
+    </g>
+</svg>
