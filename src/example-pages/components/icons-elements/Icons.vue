@@ -27,7 +27,7 @@
         </div>
 
         <rt-annotation
-          label="Новые иконки"
+          label="Пакет 2020"
           :open="true"
           class="rt-space-top rt-space-bottom3"
         >
@@ -37,6 +37,7 @@
                 v-for="(icon, key) in filteredlistIcons"
                 :key="key"
                 class="rt-col-1"
+                :data-icon="icon"
               >
                 <div
                   class="preview btn"
@@ -49,67 +50,57 @@
                   </div>
                 </div>
               </div>
-
               <div
-                v-if="listLimited()"
-                class="rt-col-12 rt-space-top2"
+                ref="detailEl"
+                class="detail"
+                :style="detailStyle"
               >
-                <rt-button @click="loadMore">Ещё</rt-button>
+                <div
+                  v-if="selectedIcon"
+                  class="detail__wrap row"
+                >
+                  <div class="detail__name rt-col-12">Выбрана иконка <strong>{{ selectedIcon }}</strong></div>
+                  <div class="detail__bg">
+                    <input type="color" v-model="detailBg" />
+                  </div>
+                  <div class="detail__el rt-col-auto">
+                    <!-- Big preview -->
+                    <rt-icon :type="detailCopyType" size="120" />
+                  </div>
+                  <div class="detail__code rt-col-8">
+                    <code class="monokai">
+                      &lt;<font class="c_tag">rt-icon</font> <font class="c_attr">type</font>=<font class="c_val0">"<font class="c_val1">{{detailCopyType}}</font>"</font> &frasl;&gt;
+                    </code>
+                    <textarea
+                      ref="detailCopyText"
+                      v-model="detailCopyType"
+                    ></textarea>
+                    <rt-button
+                      @click="iconTypeCopy"
+                      class="rt-button-purple rt-button-small"
+                    >Копировать</rt-button>
+                  </div>
+                  <div class="detail__types rt-col-12">
+                    <div
+                      class="detail-type btn"
+                      v-for="(iconType, key) in detailIcon(selectedIcon).list"
+                      @click="() => { detailCopyType = iconType.type }"
+                      :key="key"
+                    >
+                      <div class="detail-type__name">{{iconType.style.substr(1)}}</div>
+                      <div class="detail-type__el">
+                        <rt-icon :type="iconType.type" :size="iconType.style.substr(2,2)" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <!-- <div class="rt-col-12">
-                === 
-                {{findedIcons.length}} {{filteredIcons.length}}
-                ===
-              </div> -->
-
             </div>
             <div v-else>
               <h3>Ничего не нашлось по запросу «{{searched}}»</h3>
             </div>
           </template>
         </rt-annotation>
-
-        <div
-          v-if="selectedIcon"
-          class="detail row"
-          :style="{ background: detailBg }"
-        >
-          <div class="detail__name rt-col-12">Выбрана иконка <strong>{{ selectedIcon }}</strong></div>
-          <div class="detail__bg">
-            <input type="color" v-model="detailBg" />
-          </div>
-          <div class="detail__el rt-col-auto">
-            <!-- Big preview -->
-            <rt-icon :type="detailCopyType" size="120" />
-          </div>
-          <div class="detail__code rt-col-8">
-            <code class="monokai">
-              &lt;<font class="c_tag">rt-icon</font> <font class="c_attr">type</font>=<font class="c_val0">"<font class="c_val1">{{detailCopyType}}</font>"</font> &frasl;&gt;
-            </code>
-            <textarea
-              ref="detailCopyText"
-              v-model="detailCopyType"
-            ></textarea>
-            <rt-button
-              @click="iconTypeCopy"
-              class="rt-button-purple rt-button-small"
-            >Копировать</rt-button>
-          </div>
-          <div class="detail__types rt-col-12">
-            <div
-              class="detail-type btn"
-              v-for="(iconType, key) in detailIcon(selectedIcon).list"
-              @click="() => { detailCopyType = iconType.type }"
-              :key="key"
-            >
-              <div class="detail-type__name">{{iconType.style.substr(1)}}</div>
-              <div class="detail-type__el">
-                <rt-icon :type="iconType.type" :size="iconType.style.substr(2,2)" />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- <div class="rt-space-horizontal05">
@@ -593,15 +584,25 @@ export default {
     searched: '',
     selectedIcon: null,
     detailBg: 'linear-gradient(240deg, #777, #aaa)',
+    detailTop: null,
     detailCopyType: null,
+    detailViewEl: null,
+    detailViewReady: false,
     isDarkTheme: localStorage.getItem('rt-dark') === '1',
     isLoading: true
   }),
   computed: {
+    detailStyle () {
+      return {
+        background: this.detailBg,
+        top: `${this.detailTop}px`,
+        zIndex: this.detailViewReady ? 'auto' : '-1'
+      }
+    },
     filteredlistIcons () {
       return this.findedIcons.slice(0, listSize)
     },
-    previewStyle() {
+    previewStyle () {
       return this.isDarkTheme ? '-G56px' : '-B56px'
     }
   },
@@ -632,8 +633,6 @@ export default {
         if (nA < nB) return -1
         return 0
       })
-    // this.findedIcons = this.oldIcons.filter(n => n.indexOf(this.searched) !== -1)
-    // console.log('start', this.findedIcons, this.newIcons)
     this.isLoading = false
   },
   mounted() {
@@ -651,17 +650,47 @@ export default {
       document.execCommand('copy')
     },
     detailIconShow(icon) {
-      if (this.selectedIcon === icon) return this.selectedIcon = null
-      // console.log('detailIconShow', this, this.$el.getBoundingClientRect().bottom, this.$createElement('div', 'Olo-lo'))
+      let iconEl = this.$el.querySelector(`div[data-icon="${icon}"]`)
+      if (!iconEl) return
+      if (this.selectedIcon === icon) {
+        return this.detailIconClose(iconEl)
+      } else if (this.detailViewEl) {
+        this.detailIconClose(iconEl)
+      }
+
       this.detailCopyType = this.previewType(icon)
       this.selectedIcon = icon
-      // let detailView = document.createElement('DIV')
-      // this.$el.parentElement.parentElement.append(detailView)
+
+      this.$nextTick(() => {
+        this.detailIconAppend(iconEl)
+      })
+    },
+    detailIconClose(iconEl) {
+      this.selectedIcon = null
+      if (this.detailViewEl && this.detailViewEl.parentElement) {
+        this.detailViewEl.parentElement.removeChild(this.detailViewEl)
+        this.detailViewEl = null
+        this.detailViewReady = false
+      }
+    },
+    detailIconAppend(iconEl) {
+      let x = iconEl.parentElement.getBoundingClientRect().left
+      let y = iconEl.getBoundingClientRect().bottom
+      let parent = iconEl.parentElement
+      let appendBeforeEl = document.elementFromPoint(x, y)
+      this.detailTop = iconEl.offsetTop + iconEl.clientHeight
+
+      this.detailViewEl = document.createElement('DIV')
+      this.detailViewEl.className = 'rt-col-12 detail__view'
+      this.detailViewEl.style.height = `${this.$refs.detailEl.clientHeight}px`
+      if (parent.contains(appendBeforeEl)) {
+        parent.insertBefore(this.detailViewEl, appendBeforeEl)
+      } else {
+        parent.append(this.detailViewEl)
+      }
+      this.detailViewReady = true
     },
     doSearch (e) {
-      // this.isLoading = true
-      // console.log('doSearch', e, this.searched)
-      // this.findedIcons = listIcons.filter(n => n.indexOf(e) !== -1)
       this.findedIcons = Object.keys(this.newIcons)
         .filter(n => n.indexOf(e) !== -1)
         .sort((a, b) => {
@@ -672,10 +701,6 @@ export default {
           return 0
         })
       this.findedIcons.splice(this.findedIcons.length)
-      // this.$nextTick(() => {
-      //   this.isLoading = false
-        // this.$set(this, 'findedIcons', listIcons.filter(n => n.indexOf(e) !== -1))
-      // })
     },
     loadMore () {
       this.filteredIcons = this.filteredIcons.concat(
@@ -706,6 +731,7 @@ export default {
 
   .btn
     cursor pointer
+    user-select none
 
   .preview
     padding space
@@ -714,7 +740,11 @@ export default {
       background selectedBg
 
   .detail
-    position relative
+    margin-left 20px
+    margin-right 20px
+    position absolute
+    &__view
+      position absolute
     &__name
       background selectedBg
       padding space
